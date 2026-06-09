@@ -1,8 +1,26 @@
+---
+hide:
+  - navigation
+  - toc
+---
+
+<section class="hero" markdown>
+
 # Oqil E-kitoblar
 
-**Dasturlash bo'yicha o'zbekcha qo'llanmalar — mutlaqo boshlovchidan ekspertgacha.**
+<p class="hero-sub">Dasturlash bo'yicha o'zbekcha qo'llanmalar — mutlaqo boshlovchidan ekspertgacha. Har bir tushuncha SVG diagrammalar va ishlab tekshirilgan kod bilan.</p>
 
-8 ta to'liq kitob · 297 ta SVG diagramma · ishlab tekshirilgan kod misollari. Chap menyudan kitob tanlang yoki quyidagilardan birini bosing.
+[HTML & CSS dan boshlash](html-css/README.md){ .md-button .md-button--primary }
+[GitHub](https://github.com/iOqil/e-book){ .md-button }
+
+<div class="hero-stats">
+  <div class="stat"><b>8</b><span>kitob</span></div>
+  <div class="stat"><b>297</b><span>diagramma</span></div>
+  <div class="stat"><b>150+</b><span>bob</span></div>
+  <div class="stat"><b>1000+</b><span>masala</span></div>
+</div>
+
+</section>
 
 <div class="grid cards" markdown>
 

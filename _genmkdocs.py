@@ -45,10 +45,24 @@ docs_dir: docs
 site_dir: site
 use_directory_urls: true
 
+extra_css:
+  - assets/extra.css
+
 theme:
   name: material
   language: uz
+  logo: assets/logo.svg
+  favicon: assets/logo.svg
+  font:
+    text: Inter
+    code: JetBrains Mono
   features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.instant.prefetch
+    - navigation.tabs.sticky
+    - content.tooltips
+    - search.share
     - navigation.tabs
     - navigation.top
     - navigation.tracking
