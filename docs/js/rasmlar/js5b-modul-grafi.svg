@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="720" height="400">
+  <title>ES modul grafi: fayllar orasida export va import bog'lanishi</title>
+
+  <defs>
+    <marker id="okMOD" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <!-- Sarlavha -->
+  <text x="360" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">ES Modullar — export / import grafi</text>
+  <text x="360" y="54" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Har fayl o'z vazifasini bajaradi; main.js kerakli narsalarni boshqa fayllardan import qiladi</text>
+
+  <!-- matematika.js (chap-yuqori) -->
+  <rect x="40" y="86" width="240" height="120" rx="12" fill="#f8fafc" stroke="#16a34a" stroke-width="2"/>
+  <text x="160" y="110" text-anchor="middle" font-family="Consolas, monospace" font-size="14" font-weight="bold" fill="#16a34a">matematika.js</text>
+  <line x1="56" y1="120" x2="264" y2="120" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="56" y="142" font-family="Consolas, monospace" font-size="13" fill="#1e293b">export const PI</text>
+  <text x="56" y="164" font-family="Consolas, monospace" font-size="13" fill="#1e293b">export function qoshish</text>
+  <text x="56" y="186" font-family="Consolas, monospace" font-size="13" fill="#1e293b">export function ayirish</text>
+  <text x="160" y="200" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" font-weight="bold">named export</text>
+
+  <!-- User.js (chap-past) -->
+  <rect x="40" y="240" width="240" height="100" rx="12" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"/>
+  <text x="160" y="264" text-anchor="middle" font-family="Consolas, monospace" font-size="14" font-weight="bold" fill="#b45309">User.js</text>
+  <line x1="56" y1="274" x2="264" y2="274" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="56" y="298" font-family="Consolas, monospace" font-size="13" fill="#1e293b">export default</text>
+  <text x="56" y="318" font-family="Consolas, monospace" font-size="13" fill="#1e293b">  class User { ... }</text>
+  <text x="160" y="334" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309" font-weight="bold">default export (bitta)</text>
+
+  <!-- main.js (o'ng) -->
+  <rect x="440" y="150" width="240" height="160" rx="12" fill="#2563eb" fill-opacity="0.08" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="560" y="176" text-anchor="middle" font-family="Consolas, monospace" font-size="15" font-weight="bold" fill="#2563eb">main.js</text>
+  <text x="560" y="194" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(kirish nuqtasi)</text>
+  <line x1="456" y1="204" x2="664" y2="204" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="456" y="228" font-family="Consolas, monospace" font-size="13" fill="#1e293b">import { PI, qoshish }</text>
+  <text x="456" y="246" font-family="Consolas, monospace" font-size="13" fill="#475569">  from "./matematika.js"</text>
+  <text x="456" y="272" font-family="Consolas, monospace" font-size="13" fill="#1e293b">import User</text>
+  <text x="456" y="290" font-family="Consolas, monospace" font-size="13" fill="#475569">  from "./User.js"</text>
+
+  <!-- Strelkalar: export'dan main'ga import -->
+  <path d="M280,150 C360,130 380,200 438,212" fill="none" stroke="#2563eb" stroke-width="2.5" marker-end="url(#okMOD)"/>
+  <text x="360" y="148" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb" font-weight="bold">import</text>
+
+  <path d="M280,288 C360,288 380,272 438,268" fill="none" stroke="#2563eb" stroke-width="2.5" marker-end="url(#okMOD)"/>
+  <text x="360" y="300" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb" font-weight="bold">import</text>
+
+  <!-- Pastki izoh -->
+  <rect x="40" y="356" width="640" height="36" rx="9" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="360" y="379" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">named import {} qavs bilan, default import qavssiz; yo'llar "./" bilan va ".js" kengaytmasi bilan</text>
+</svg>

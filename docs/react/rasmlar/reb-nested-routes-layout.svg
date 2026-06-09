@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 420" width="740" height="420">
+  <title>Nested route va layout: Outlet ichida child route chiziladi</title>
+  <defs>
+    <marker id="nr-arr" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="740" height="420" fill="#f8fafc"/>
+  <text x="370" y="32" font-family="Segoe UI, system-ui, sans-serif" font-size="19" font-weight="bold" fill="#1e293b" text-anchor="middle">Nested route + Layout: Outlet child route'ni chizadi</text>
+
+  <!-- left: route tree -->
+  <text x="180" y="66" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb" text-anchor="middle">Route daraxti</text>
+  <rect x="40" y="80" width="290" height="40" rx="8" fill="#e2e8f0" stroke="#2563eb" stroke-width="2"/>
+  <text x="56" y="105" font-family="monospace" font-size="13" fill="#1e293b">/dashboard  -&gt; DashboardLayout</text>
+
+  <rect x="80" y="135" width="250" height="36" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="96" y="158" font-family="monospace" font-size="13" fill="#1e293b">index -&gt; Overview</text>
+
+  <rect x="80" y="183" width="250" height="36" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="96" y="206" font-family="monospace" font-size="13" fill="#1e293b">settings -&gt; Settings</text>
+
+  <rect x="80" y="231" width="250" height="36" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="96" y="254" font-family="monospace" font-size="13" fill="#1e293b">profile -&gt; Profile</text>
+
+  <line x1="60" y1="120" x2="60" y2="249" stroke="#475569" stroke-width="2"/>
+  <line x1="60" y1="153" x2="78" y2="153" stroke="#475569" stroke-width="2"/>
+  <line x1="60" y1="201" x2="78" y2="201" stroke="#475569" stroke-width="2"/>
+  <line x1="60" y1="249" x2="78" y2="249" stroke="#475569" stroke-width="2"/>
+
+  <!-- right: rendered screen -->
+  <text x="560" y="66" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="middle">Ekran (/dashboard/settings)</text>
+  <rect x="420" y="80" width="280" height="240" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="560" y="104" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb" text-anchor="middle">DashboardLayout (doimiy)</text>
+
+  <rect x="438" y="118" width="80" height="184" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="478" y="212" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">Sidebar</text>
+
+  <rect x="530" y="118" width="156" height="184" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="608" y="160" font-family="monospace" font-size="13" font-weight="bold" fill="#16a34a" text-anchor="middle">&lt;Outlet /&gt;</text>
+  <text x="608" y="200" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">child shu yerga</text>
+  <text x="608" y="220" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">chiziladi:</text>
+  <text x="608" y="248" font-family="monospace" font-size="13" font-weight="bold" fill="#16a34a" text-anchor="middle">&lt;Settings /&gt;</text>
+
+  <path d="M332 201 Q380 201 530 201" fill="none" stroke="#16a34a" stroke-width="2.5" marker-end="url(#nr-arr)"/>
+
+  <text x="370" y="356" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Layout (Sidebar) doimiy qoladi — faqat Outlet ichidagi qism URL'ga qarab almashadi</text>
+  <text x="370" y="380" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">index route = ota path bilan bir xil (/dashboard) ochilganda ko'rinadigan default</text>
+  <text x="370" y="402" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626" text-anchor="middle">Outlet'ni unutsangiz — child route'lar umuman ko'rinmaydi</text>
+</svg>

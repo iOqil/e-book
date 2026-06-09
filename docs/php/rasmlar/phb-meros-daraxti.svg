@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480">
+  <title>Meros daraxti: ota class Hayvon dagi nom va ovqatlan() bolalarga meros bo'ladi, har bola o'z ovoz() ini qo'shadi yoki override qiladi</title>
+  <rect x="0" y="0" width="760" height="480" fill="#f8fafc"/>
+
+  <text x="380" y="32" font-family="Segoe UI, system-ui, sans-serif" font-size="18" font-weight="bold" fill="#1e293b" text-anchor="middle">Meros daraxti (extends)</text>
+  <text x="380" y="54" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">ota class xususiyat va metodlari bolalarga o'tadi</text>
+
+  <defs>
+    <marker id="ar2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <!-- Ota class -->
+  <rect x="270" y="76" width="220" height="104" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <rect x="270" y="76" width="220" height="30" rx="8" fill="#2563eb"/>
+  <text x="380" y="97" font-family="monospace" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">class Hayvon (ota)</text>
+  <text x="284" y="128" font-family="monospace" font-size="13" fill="#1e293b">public $nom</text>
+  <text x="284" y="150" font-family="monospace" font-size="13" fill="#1e293b">ovqatlan()</text>
+  <text x="284" y="172" font-family="monospace" font-size="13" fill="#1e293b">ovoz()  // umumiy</text>
+
+  <!-- Vertikal va shoxlar -->
+  <line x1="380" y1="180" x2="380" y2="210" stroke="#2563eb" stroke-width="2"/>
+  <line x1="140" y1="210" x2="620" y2="210" stroke="#2563eb" stroke-width="2"/>
+  <line x1="140" y1="210" x2="140" y2="248" stroke="#2563eb" stroke-width="2" marker-end="url(#ar2)"/>
+  <line x1="380" y1="210" x2="380" y2="248" stroke="#2563eb" stroke-width="2" marker-end="url(#ar2)"/>
+  <line x1="620" y1="210" x2="620" y2="248" stroke="#2563eb" stroke-width="2" marker-end="url(#ar2)"/>
+  <text x="408" y="200" font-family="monospace" font-size="13" fill="#475569" text-anchor="middle">extends</text>
+
+  <!-- Bola 1: It -->
+  <rect x="40" y="250" width="200" height="120" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="140" y="273" font-family="monospace" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">class It</text>
+  <text x="54" y="298" font-family="monospace" font-size="13" fill="#94a3b8">$nom (meros)</text>
+  <text x="54" y="318" font-family="monospace" font-size="13" fill="#94a3b8">ovqatlan() (meros)</text>
+  <text x="54" y="344" font-family="monospace" font-size="13" fill="#1e293b" font-weight="bold">ovoz(): "Vov-vov"</text>
+  <text x="54" y="362" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">(override)</text>
+
+  <!-- Bola 2: Mushuk -->
+  <rect x="280" y="250" width="200" height="120" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="380" y="273" font-family="monospace" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">class Mushuk</text>
+  <text x="294" y="298" font-family="monospace" font-size="13" fill="#94a3b8">$nom (meros)</text>
+  <text x="294" y="318" font-family="monospace" font-size="13" fill="#94a3b8">ovqatlan() (meros)</text>
+  <text x="294" y="344" font-family="monospace" font-size="13" fill="#1e293b" font-weight="bold">ovoz(): "Miyov"</text>
+  <text x="294" y="362" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">(override)</text>
+
+  <!-- Bola 3: Sigir -->
+  <rect x="520" y="250" width="200" height="120" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="620" y="273" font-family="monospace" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">class Sigir</text>
+  <text x="534" y="298" font-family="monospace" font-size="13" fill="#94a3b8">$nom (meros)</text>
+  <text x="534" y="318" font-family="monospace" font-size="13" fill="#94a3b8">ovqatlan() (meros)</text>
+  <text x="534" y="344" font-family="monospace" font-size="13" fill="#1e293b" font-weight="bold">ovoz(): "Mooo"</text>
+  <text x="534" y="362" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">(override)</text>
+
+  <!-- Izoh -->
+  <rect x="40" y="400" width="680" height="62" rx="8" fill="#fef9c3" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="380" y="425" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">Har bola ota'dagi <tspan font-family="monospace">$nom</tspan> va <tspan font-family="monospace">ovqatlan()</tspan> ni MEROS oladi (qayta yozmaydi).</text>
+  <text x="380" y="448" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="middle"><tspan font-family="monospace">ovoz()</tspan> ni esa har biri o'ziga moslab OVERRIDE qiladi.</text>
+</svg>

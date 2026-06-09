@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 410" width="760" height="410">
+  <title>v-model two-way binding: props + emit ning qisqartmasi</title>
+
+  <defs>
+    <marker id="vu03mDown" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/>
+    </marker>
+    <marker id="vu03mUp" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="410" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">v-model -- ikki tomonlama (two-way) bog'lanish</text>
+  <text x="380" y="56" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Bu sehr emas: props (pastga) + emit (yuqoriga) ning "shirin" qisqartmasi</text>
+
+  <!-- Ota -->
+  <rect x="250" y="80" width="260" height="74" rx="10" fill="#2563eb" fill-opacity="0.12" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="380" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">Ota</text>
+  <text x="380" y="133" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">&lt;MyInput v-model="name" /&gt;</text>
+
+  <!-- Bola -->
+  <rect x="250" y="270" width="260" height="74" rx="10" fill="#16a34a" fill-opacity="0.12" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="380" y="298" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">Bola (MyInput)</text>
+  <text x="380" y="323" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">const model = defineModel()</text>
+
+  <!-- pastga: model-value -->
+  <line x1="320" y1="154" x2="320" y2="270" stroke="#2563eb" stroke-width="2.5" marker-end="url(#vu03mDown)"/>
+  <text x="150" y="200" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">:model-value</text>
+  <text x="150" y="221" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">prop -- joriy qiymat pastga</text>
+
+  <!-- yuqoriga: update:model-value -->
+  <line x1="440" y1="270" x2="440" y2="154" stroke="#16a34a" stroke-width="2.5" marker-end="url(#vu03mUp)"/>
+  <text x="610" y="200" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">@update:model-value</text>
+  <text x="610" y="221" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">emit -- yangi qiymat yuqoriga</text>
+
+  <!-- Pastki izoh -->
+  <rect x="40" y="360" width="680" height="40" rx="9" fill="#f59e0b" fill-opacity="0.10" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="380" y="385" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#b45309">v-model="name"  ===  :model-value="name" @update:model-value="name = $event"</text>
+</svg>

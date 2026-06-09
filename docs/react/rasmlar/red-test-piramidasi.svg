@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" width="780" height="470">
+  <title>Test piramidasi: unit, integration va e2e testlar nisbati</title>
+  <rect x="0" y="0" width="780" height="470" fill="#f8fafc"/>
+  <text x="390" y="32" font-family="Segoe UI, system-ui, sans-serif" font-size="19" font-weight="bold" fill="#1e293b" text-anchor="middle">Test piramidasi — qaysi testdan qancha?</text>
+
+  <!-- E2E (top) -->
+  <polygon points="390,60 478,138 302,138" fill="#fecaca" stroke="#dc2626" stroke-width="2"/>
+  <text x="390" y="108" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626" text-anchor="middle">E2E</text>
+  <text x="390" y="128" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">kam</text>
+
+  <!-- Integration (middle) -->
+  <polygon points="302,142 478,142 560,254 220,254" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="390" y="190" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#f59e0b" text-anchor="middle">Integration</text>
+  <text x="390" y="212" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">o'rtacha</text>
+  <text x="390" y="232" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">eng qimmatli</text>
+
+  <!-- Unit (bottom) -->
+  <polygon points="220,258 560,258 650,400 130,400" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="390" y="306" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="middle">Unit</text>
+  <text x="390" y="328" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">ko'p — tez va arzon</text>
+
+  <!-- right side annotations -->
+  <text x="600" y="100" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">↑ sekin, qimmat</text>
+  <text x="600" y="120" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">butun ilova, brauzer</text>
+
+  <text x="600" y="300" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">↓ tez, arzon</text>
+  <text x="600" y="320" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">bitta funksiya/komponent</text>
+
+  <!-- explanation rows -->
+  <rect x="40" y="416" width="700" height="42" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="56" y="442" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b"><tspan font-weight="bold" fill="#16a34a">Unit:</tspan> bitta funksiya yoki komponent (Vitest + RTL). Integration: bir nechta komponent birga. E2E: Playwright bilan real brauzer.</text>
+</svg>

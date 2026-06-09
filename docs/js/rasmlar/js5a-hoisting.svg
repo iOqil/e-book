@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480">
+  <title>Hoisting: compile fazasida e'lonlar yuqoriga ko'tariladi, run fazasida kod ishlaydi</title>
+
+  <rect x="0" y="0" width="760" height="480" fill="#f8fafc"/>
+  <text x="380" y="38" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1e293b">Hoisting — 2 faza: avval e'lonlar, keyin ishga tushish</text>
+
+  <defs>
+    <marker id="arh" markerWidth="12" markerHeight="12" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L9,4 L0,8 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- Vaqt o'qi -->
+  <line x1="380" y1="70" x2="380" y2="450" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4 4"/>
+  <text x="392" y="68" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">vaqt</text>
+
+  <!-- COMPILE FAZASI -->
+  <rect x="40" y="80" width="320" height="350" rx="12" fill="#e2e8f0" stroke="#2563eb" stroke-width="2"/>
+  <text x="200" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">1) Compile fazasi</text>
+  <text x="200" y="130" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">e'lonlar "yuqoriga ko'tariladi"</text>
+
+  <rect x="60" y="148" width="280" height="44" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="74" y="167" font-family="Consolas, Courier New, monospace" font-size="14" fill="#1e293b">var x = undefined</text>
+  <text x="74" y="186" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#f59e0b">var: ko'tariladi, qiymat undefined</text>
+
+  <rect x="60" y="202" width="280" height="44" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="74" y="221" font-family="Consolas, Courier New, monospace" font-size="14" fill="#1e293b">function salom() { ... }</text>
+  <text x="74" y="240" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">function: to'liq ko'tariladi</text>
+
+  <rect x="60" y="256" width="280" height="44" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="74" y="275" font-family="Consolas, Courier New, monospace" font-size="14" fill="#1e293b">let y  (TDZ)</text>
+  <text x="74" y="294" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">let/const: "o'lik zona"da turadi</text>
+
+  <text x="200" y="340" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">kod hali ISHLAMAYDI —</text>
+  <text x="200" y="360" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">faqat e'lonlar ro'yxatga olinadi</text>
+
+  <!-- Faza o'tish strelkasi -->
+  <line x1="360" y1="255" x2="400" y2="255" stroke="#475569" stroke-width="3" marker-end="url(#arh)"/>
+
+  <!-- RUN FAZASI -->
+  <rect x="400" y="80" width="320" height="350" rx="12" fill="#f8fafc" stroke="#16a34a" stroke-width="2"/>
+  <text x="560" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">2) Run fazasi</text>
+  <text x="560" y="130" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">kod qatorma-qator ishlaydi</text>
+
+  <rect x="420" y="148" width="280" height="40" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="434" y="166" font-family="Consolas, Courier New, monospace" font-size="14" fill="#1e293b">console.log(x)</text>
+  <text x="434" y="184" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#f59e0b">-> undefined (xato emas)</text>
+
+  <rect x="420" y="198" width="280" height="40" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="434" y="216" font-family="Consolas, Courier New, monospace" font-size="14" fill="#1e293b">salom()</text>
+  <text x="434" y="234" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">-> ishlaydi (to'liq ko'tarilgan)</text>
+
+  <rect x="420" y="248" width="280" height="40" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="434" y="266" font-family="Consolas, Courier New, monospace" font-size="14" fill="#1e293b">console.log(y)</text>
+  <text x="434" y="284" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">-> ReferenceError (TDZ)</text>
+
+  <rect x="420" y="300" width="280" height="40" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="434" y="318" font-family="Consolas, Courier New, monospace" font-size="14" fill="#1e293b">var x = 5  ·  let y = 10</text>
+  <text x="434" y="336" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">endi qiymatlar tayinlanadi</text>
+
+  <text x="560" y="375" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">qoida: o'zgaruvchini</text>
+  <text x="560" y="395" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">ishlatishdan oldin e'lon qil</text>
+</svg>

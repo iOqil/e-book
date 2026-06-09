@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" width="760" height="470">
+  <title>Class va obyekt: bitta class (qolip) dan new bilan ko'p mustaqil obyekt yaratiladi</title>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+
+  <text x="380" y="32" font-family="Segoe UI, system-ui, sans-serif" font-size="18" font-weight="bold" fill="#1e293b" text-anchor="middle">Class (qolip) va undan yaratilgan obyektlar</text>
+  <text x="380" y="54" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">bitta class — ko'p, bir-biridan mustaqil obyekt</text>
+
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- Class (qolip) -->
+  <rect x="50" y="100" width="210" height="180" rx="8" fill="#e2e8f0" stroke="#2563eb" stroke-width="2.5"/>
+  <rect x="50" y="100" width="210" height="34" rx="8" fill="#2563eb"/>
+  <text x="155" y="123" font-family="monospace" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">class Mashina</text>
+  <text x="64" y="160" font-family="monospace" font-size="13" fill="#1e293b">public $rang;</text>
+  <text x="64" y="182" font-family="monospace" font-size="13" fill="#1e293b">public $tezlik;</text>
+  <line x1="64" y1="196" x2="246" y2="196" stroke="#94a3b8" stroke-width="1"/>
+  <text x="64" y="220" font-family="monospace" font-size="13" fill="#1e293b">function yur()</text>
+  <text x="64" y="242" font-family="monospace" font-size="13" fill="#1e293b">function toxta()</text>
+  <text x="155" y="268" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">qolip / chizma (hali obyekt emas)</text>
+
+  <!-- new strelkalar -->
+  <line x1="260" y1="150" x2="500" y2="118" stroke="#475569" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="260" y1="200" x2="500" y2="258" stroke="#475569" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="378" y="124" font-family="monospace" font-size="13" font-weight="bold" fill="#16a34a" text-anchor="middle">new Mashina()</text>
+  <text x="378" y="252" font-family="monospace" font-size="13" font-weight="bold" fill="#16a34a" text-anchor="middle">new Mashina()</text>
+
+  <!-- Obyekt 1 -->
+  <rect x="505" y="80" width="210" height="92" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <rect x="505" y="80" width="210" height="30" rx="8" fill="#16a34a"/>
+  <text x="610" y="101" font-family="monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">$mashina1 (obyekt)</text>
+  <text x="519" y="133" font-family="monospace" font-size="13" fill="#1e293b">$rang = "qizil"</text>
+  <text x="519" y="155" font-family="monospace" font-size="13" fill="#1e293b">$tezlik = 120</text>
+
+  <!-- Obyekt 2 -->
+  <rect x="505" y="220" width="210" height="92" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <rect x="505" y="220" width="210" height="30" rx="8" fill="#16a34a"/>
+  <text x="610" y="241" font-family="monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">$mashina2 (obyekt)</text>
+  <text x="519" y="273" font-family="monospace" font-size="13" fill="#1e293b">$rang = "ko'k"</text>
+  <text x="519" y="295" font-family="monospace" font-size="13" fill="#1e293b">$tezlik = 60</text>
+
+  <!-- $this izoh -->
+  <rect x="50" y="360" width="660" height="74" rx="8" fill="#fef9c3" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="380" y="386" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">$this — metod ichida "shu obyektning o'zi"</text>
+  <text x="380" y="410" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">$mashina1->yur() ichida $this = $mashina1</text>
+  <text x="380" y="428" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">$mashina2->yur() ichida $this = $mashina2</text>
+</svg>

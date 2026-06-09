@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" width="720" height="380">
+  <title>Controlled component: state va input value o'rtasidagi ikki tomonlama bog'lanish</title>
+  <defs>
+    <marker id="cc-blue" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#2563eb"/>
+    </marker>
+    <marker id="cc-amber" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="720" height="380" fill="#f8fafc"/>
+  <text x="360" y="32" font-family="Segoe UI, system-ui, sans-serif" font-size="19" font-weight="bold" fill="#1e293b" text-anchor="middle">Controlled component: state va input ikki tomonlama bog'liq</text>
+
+  <!-- state box -->
+  <rect x="80" y="120" width="220" height="100" rx="10" fill="#e2e8f0" stroke="#2563eb" stroke-width="2"/>
+  <text x="190" y="152" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb" text-anchor="middle">React state</text>
+  <text x="190" y="180" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">const [form, setForm]</text>
+  <text x="190" y="200" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">= useState({...})</text>
+
+  <!-- input box -->
+  <rect x="420" y="120" width="220" height="100" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="530" y="152" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a" text-anchor="middle">&lt;input&gt;</text>
+  <text x="530" y="180" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">value={form.name}</text>
+  <text x="530" y="200" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">onChange={...}</text>
+
+  <!-- arrow state -> input (value) -->
+  <path d="M300 152 L416 152" fill="none" stroke="#2563eb" stroke-width="2.5" marker-end="url(#cc-blue)"/>
+  <text x="358" y="140" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb" text-anchor="middle">value (state -&gt; ekran)</text>
+
+  <!-- arrow input -> state (onChange) -->
+  <path d="M416 190 L304 190" fill="none" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#cc-amber)"/>
+  <text x="360" y="212" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#f59e0b" text-anchor="middle">onChange (yozish -&gt; setForm)</text>
+
+  <!-- bottom note -->
+  <rect x="80" y="270" width="560" height="84" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="360" y="297" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Yagona haqiqat manbai = state</text>
+  <text x="360" y="321" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">Foydalanuvchi yozadi -&gt; onChange -&gt; setForm -&gt; re-render -&gt; input qiymati yangilanadi</text>
+  <text x="360" y="343" font-family="monospace" font-size="13" fill="#475569" text-anchor="middle">setForm(prev =&gt; ({ ...prev, [name]: value }))  // bitta handler, ko'p maydon</text>
+</svg>

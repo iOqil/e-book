@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420">
+  <title>raise bilan xato ko'tarish: funksiya xatoni ko'taradi, chaqiruvchi uni except bilan ushlaydi</title>
+
+  <defs>
+    <marker id="arrRAISE" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- Sarlavha -->
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">raise — o'zing xato ko'tarish</text>
+  <text x="380" y="54" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">funksiya noto'g'ri qiymatda xato ko'taradi; xato yuqoriga chaqiruvchiga uzatiladi</text>
+
+  <!-- 1. Funksiya chaqiruvi -->
+  <rect x="60" y="80" width="280" height="70" rx="10" fill="#2563eb" fill-opacity="0.10" stroke="#2563eb" stroke-width="2"/>
+  <text x="200" y="106" text-anchor="middle" font-family="Consolas, monospace" font-size="14" font-weight="bold" fill="#2563eb">yosh_tekshir(-5)</text>
+  <text x="200" y="128" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">try ichida funksiya chaqiriladi</text>
+  <text x="200" y="145" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">chaqiruvchi tomon</text>
+
+  <!-- strelka -->
+  <line x1="340" y1="115" x2="420" y2="115" stroke="#475569" stroke-width="2" marker-end="url(#arrRAISE)"/>
+  <text x="380" y="105" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">kiradi</text>
+
+  <!-- 2. Funksiya ichi: shart va raise -->
+  <rect x="420" y="80" width="280" height="70" rx="10" fill="#f59e0b" fill-opacity="0.12" stroke="#f59e0b" stroke-width="2"/>
+  <text x="560" y="104" text-anchor="middle" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#b45309">if yosh &lt; 0:</text>
+  <text x="560" y="124" text-anchor="middle" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#dc2626">raise ValueError(...)</text>
+  <text x="560" y="143" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">shart buzilsa xato ko'tariladi</text>
+
+  <!-- raise -> xato ob'ekti pastga -->
+  <line x1="560" y1="150" x2="560" y2="200" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arrRAISE)"/>
+  <text x="640" y="180" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626" font-weight="bold">xato yuqoriga</text>
+
+  <!-- 3. Xato ob'ekti -->
+  <rect x="400" y="202" width="320" height="58" rx="10" fill="#dc2626" fill-opacity="0.10" stroke="#dc2626" stroke-width="2"/>
+  <text x="560" y="226" text-anchor="middle" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#dc2626">ValueError("Yosh manfiy bo'lmaydi")</text>
+  <text x="560" y="248" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">xato ob'ekti hosil bo'ladi, funksiya to'xtaydi</text>
+
+  <!-- xato chaqiruvchiga qaytadi -->
+  <line x1="400" y1="231" x2="200" y2="280" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arrRAISE)"/>
+  <text x="300" y="248" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626" font-weight="bold">chaqiruvchiga uzatiladi</text>
+
+  <!-- 4. except ushlaydi -->
+  <rect x="60" y="282" width="320" height="70" rx="10" fill="#16a34a" fill-opacity="0.10" stroke="#16a34a" stroke-width="2"/>
+  <text x="220" y="308" text-anchor="middle" font-family="Consolas, monospace" font-size="14" font-weight="bold" fill="#16a34a">except ValueError as e:</text>
+  <text x="220" y="330" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#16a34a">print(e)</text>
+  <text x="220" y="347" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">xato ushlanadi, dastur qulamaydi</text>
+
+  <!-- Pastki izoh -->
+  <rect x="60" y="372" width="640" height="34" rx="9" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="380" y="394" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Ushlanmasa: xato eng yuqoriga ko'tarilib boradi va dastur to'xtaydi (traceback chiqadi)</text>
+</svg>

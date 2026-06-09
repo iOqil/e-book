@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 500" width="760" height="500">
+  <title>Python exception ierarxiyasi: BaseException dan Exception va aniq xato turlarigacha</title>
+
+  <defs>
+    <marker id="arrHIER" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- Sarlavha -->
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Exception ierarxiyasi (vorislik daraxti)</text>
+  <text x="380" y="54" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Yuqori turni ushlasang, uning ostidagi barcha turlar ham ushlanadi</text>
+
+  <!-- BaseException -->
+  <rect x="280" y="76" width="200" height="46" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="380" y="100" text-anchor="middle" font-family="Consolas, monospace" font-size="15" font-weight="bold" fill="#1e293b">BaseException</text>
+  <text x="380" y="117" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">eng yuqori bazaviy sinf</text>
+
+  <!-- BaseException -> Exception (chap) va tizim (o'ng) -->
+  <line x1="330" y1="122" x2="220" y2="152" stroke="#475569" stroke-width="2" marker-end="url(#arrHIER)"/>
+  <line x1="430" y1="122" x2="560" y2="152" stroke="#475569" stroke-width="2" marker-end="url(#arrHIER)"/>
+
+  <!-- Exception -->
+  <rect x="100" y="154" width="240" height="46" rx="10" fill="#2563eb" fill-opacity="0.12" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="220" y="178" text-anchor="middle" font-family="Consolas, monospace" font-size="15" font-weight="bold" fill="#2563eb">Exception</text>
+  <text x="220" y="195" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">odatiy xatolar shu yerdan</text>
+
+  <!-- Tizimli xatolar (alohida shox) -->
+  <rect x="440" y="154" width="280" height="46" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="580" y="176" text-anchor="middle" font-family="Consolas, monospace" font-size="14" fill="#475569">SystemExit · KeyboardInterrupt</text>
+  <text x="580" y="194" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">odatda ushlamaymiz</text>
+
+  <!-- Exception -> bolalar -->
+  <line x1="160" y1="200" x2="110" y2="248" stroke="#475569" stroke-width="2" marker-end="url(#arrHIER)"/>
+  <line x1="200" y1="200" x2="200" y2="248" stroke="#475569" stroke-width="2" marker-end="url(#arrHIER)"/>
+  <line x1="245" y1="200" x2="300" y2="248" stroke="#475569" stroke-width="2" marker-end="url(#arrHIER)"/>
+  <line x1="280" y1="200" x2="430" y2="248" stroke="#475569" stroke-width="2" marker-end="url(#arrHIER)"/>
+
+  <!-- ValueError -->
+  <rect x="40" y="250" width="150" height="44" rx="9" fill="#dc2626" fill-opacity="0.10" stroke="#dc2626" stroke-width="2"/>
+  <text x="115" y="270" text-anchor="middle" font-family="Consolas, monospace" font-size="14" font-weight="bold" fill="#dc2626">ValueError</text>
+  <text x="115" y="287" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">int("salom")</text>
+
+  <!-- TypeError -->
+  <rect x="200" y="250" width="150" height="44" rx="9" fill="#dc2626" fill-opacity="0.10" stroke="#dc2626" stroke-width="2"/>
+  <text x="275" y="270" text-anchor="middle" font-family="Consolas, monospace" font-size="14" font-weight="bold" fill="#dc2626">TypeError</text>
+  <text x="275" y="287" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">"matn" + 5</text>
+
+  <!-- ArithmeticError -->
+  <rect x="360" y="250" width="170" height="44" rx="9" fill="#f59e0b" fill-opacity="0.12" stroke="#f59e0b" stroke-width="2"/>
+  <text x="445" y="270" text-anchor="middle" font-family="Consolas, monospace" font-size="14" font-weight="bold" fill="#b45309">ArithmeticError</text>
+  <text x="445" y="287" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">oraliq (vorisi bor)</text>
+
+  <!-- LookupError -->
+  <rect x="540" y="250" width="180" height="44" rx="9" fill="#f59e0b" fill-opacity="0.12" stroke="#f59e0b" stroke-width="2"/>
+  <text x="630" y="270" text-anchor="middle" font-family="Consolas, monospace" font-size="14" font-weight="bold" fill="#b45309">LookupError</text>
+  <text x="630" y="287" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">oraliq (vorisi bor)</text>
+
+  <!-- ArithmeticError -> ZeroDivisionError -->
+  <line x1="445" y1="294" x2="445" y2="340" stroke="#475569" stroke-width="2" marker-end="url(#arrHIER)"/>
+  <rect x="350" y="342" width="190" height="44" rx="9" fill="#dc2626" fill-opacity="0.10" stroke="#dc2626" stroke-width="2"/>
+  <text x="445" y="362" text-anchor="middle" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#dc2626">ZeroDivisionError</text>
+  <text x="445" y="379" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">10 / 0</text>
+
+  <!-- LookupError -> KeyError, IndexError -->
+  <line x1="610" y1="294" x2="595" y2="340" stroke="#475569" stroke-width="2" marker-end="url(#arrHIER)"/>
+  <line x1="650" y1="294" x2="680" y2="340" stroke="#475569" stroke-width="2" marker-end="url(#arrHIER)"/>
+  <rect x="560" y="342" width="80" height="44" rx="9" fill="#dc2626" fill-opacity="0.10" stroke="#dc2626" stroke-width="2"/>
+  <text x="600" y="362" text-anchor="middle" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#dc2626">KeyError</text>
+  <text x="600" y="379" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">lugat[?]</text>
+  <rect x="648" y="342" width="92" height="44" rx="9" fill="#dc2626" fill-opacity="0.10" stroke="#dc2626" stroke-width="2"/>
+  <text x="694" y="362" text-anchor="middle" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#dc2626">IndexError</text>
+  <text x="694" y="379" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">royxat[100]</text>
+
+  <!-- Izoh -->
+  <rect x="40" y="416" width="680" height="62" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="60" y="440" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Muhim qoida:</text>
+  <text x="60" y="462" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">except Exception barcha odatiy xatolarni ushlaydi · except LookupError esa KeyError va IndexError ni (chunki ular vorislari)</text>
+</svg>

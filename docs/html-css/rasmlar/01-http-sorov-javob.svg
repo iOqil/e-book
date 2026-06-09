@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" width="720" height="360">
+  <title>HTTP so'rov-javob: brauzer serverga so'rov yuboradi, server HTML javob qaytaradi</title>
+  <defs>
+    <marker id="ok-strelka" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="720" height="360" fill="#f8fafc"/>
+
+  <!-- Brauzer (klient) qutisi -->
+  <rect x="40" y="120" width="200" height="130" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="140" y="100" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="18" font-weight="bold" fill="#2563eb">Brauzer (klient)</text>
+  <text x="140" y="170" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">Sizning kompyuteringiz</text>
+  <text x="140" y="195" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">Chrome / Firefox</text>
+  <text x="140" y="220" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">so'raydi, ko'rsatadi</text>
+
+  <!-- Server qutisi -->
+  <rect x="480" y="120" width="200" height="130" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="580" y="100" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="18" font-weight="bold" fill="#16a34a">Server</text>
+  <text x="580" y="170" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">Doim ishlab turgan</text>
+  <text x="580" y="195" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">kompyuter</text>
+  <text x="580" y="220" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">fayllarni saqlaydi</text>
+
+  <!-- So'rov strelkasi (chapdan o'ngga) -->
+  <line x1="240" y1="160" x2="478" y2="160" stroke="#475569" stroke-width="2.5" marker-end="url(#ok-strelka)"/>
+  <rect x="270" y="128" width="180" height="26" rx="6" fill="#2563eb"/>
+  <text x="360" y="146" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#f8fafc">HTTP so'rov (GET /index.html)</text>
+
+  <!-- Javob strelkasi (o'ngdan chapga) -->
+  <line x1="478" y1="210" x2="242" y2="210" stroke="#475569" stroke-width="2.5" marker-end="url(#ok-strelka)"/>
+  <rect x="270" y="216" width="180" height="26" rx="6" fill="#16a34a"/>
+  <text x="360" y="234" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#f8fafc">HTTP javob (HTML fayl)</text>
+
+  <!-- Pastdagi izoh -->
+  <text x="360" y="300" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">1) Brauzer manzilni so'raydi  →  2) Server HTML qaytaradi  →  3) Brauzer chizadi</text>
+  <text x="360" y="40" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Web qanday ishlaydi: so'rov va javob</text>
+</svg>

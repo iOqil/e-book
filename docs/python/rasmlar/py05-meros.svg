@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440">
+  <title>Meros daraxti: ota klassdan bola klasslarga metod merosi</title>
+  <defs>
+    <marker id="up" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+
+  <!-- Ota klass: Hayvon -->
+  <rect x="270" y="30" width="220" height="120" rx="10" fill="#e2e8f0" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="380" y="56" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#2563eb">Hayvon (ota)</text>
+  <line x1="282" y1="66" x2="478" y2="66" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="290" y="90" font-family="monospace" font-size="14" fill="#1e293b">__init__(self, ism)</text>
+  <text x="290" y="114" font-family="monospace" font-size="14" fill="#1e293b">self.ism = ism</text>
+  <text x="290" y="138" font-family="monospace" font-size="14" fill="#16a34a">ovqatlanish()</text>
+
+  <!-- Strelkalar: bola -> ota (meros yo'nalishi) -->
+  <line x1="180" y1="300" x2="320" y2="152" stroke="#2563eb" stroke-width="2" marker-end="url(#up)"/>
+  <line x1="580" y1="300" x2="440" y2="152" stroke="#2563eb" stroke-width="2" marker-end="url(#up)"/>
+  <text x="210" y="235" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">meros oladi ↗</text>
+  <text x="552" y="235" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">↖ meros oladi</text>
+
+  <!-- Bola klass: It -->
+  <rect x="40" y="300" width="270" height="118" rx="10" fill="#f8fafc" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="175" y="326" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#f59e0b">It(Hayvon) — bola</text>
+  <line x1="52" y1="336" x2="298" y2="336" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="60" y="360" font-family="monospace" font-size="14" fill="#475569">ovqatlanish()  (meros)</text>
+  <text x="60" y="384" font-family="monospace" font-size="14" fill="#1e293b">vovullash()  (o'ziniki)</text>
+  <text x="60" y="408" font-family="monospace" font-size="13" fill="#16a34a">it.ovqatlanish() ishlaydi</text>
+
+  <!-- Bola klass: Mushuk -->
+  <rect x="450" y="300" width="270" height="118" rx="10" fill="#f8fafc" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="585" y="326" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#f59e0b">Mushuk(Hayvon) — bola</text>
+  <line x1="462" y1="336" x2="708" y2="336" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="470" y="360" font-family="monospace" font-size="14" fill="#475569">ovqatlanish()  (meros)</text>
+  <text x="470" y="384" font-family="monospace" font-size="14" fill="#1e293b">miyovlash()  (o'ziniki)</text>
+  <text x="470" y="408" font-family="monospace" font-size="13" fill="#16a34a">m.ovqatlanish() ishlaydi</text>
+
+  <!-- Izoh -->
+  <text x="380" y="190" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Umumiy kod otada — bolalar uni qayta yozmaydi (super() bilan ota __init__ ham chaqiriladi)</text>
+</svg>

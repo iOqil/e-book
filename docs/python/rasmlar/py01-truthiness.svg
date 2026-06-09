@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430">
+  <title>Truthiness: qaysi qiymatlar Python'da False, qaysilari True deb baholanadi</title>
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Truthiness: nima False, nima True</text>
+  <text x="380" y="58" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">if ichida qiymat avtomatik bool() bilan baholanadi</text>
+
+  <!-- LEFT: Falsy -->
+  <rect x="30" y="80" width="340" height="320" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="200" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#dc2626">False deb baholanadi</text>
+  <text x="200" y="130" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">bo'sh yoki nol qiymatlar (aniq ro'yxat)</text>
+
+  <rect x="52" y="146" width="138" height="40" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="121" y="172" text-anchor="middle" font-family="monospace" font-size="15" fill="#1e293b">0</text>
+  <rect x="210" y="146" width="138" height="40" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="279" y="172" text-anchor="middle" font-family="monospace" font-size="15" fill="#1e293b">0.0</text>
+
+  <rect x="52" y="194" width="138" height="40" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="121" y="220" text-anchor="middle" font-family="monospace" font-size="15" fill="#1e293b">""</text>
+  <rect x="210" y="194" width="138" height="40" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="279" y="220" text-anchor="middle" font-family="monospace" font-size="15" fill="#1e293b">None</text>
+
+  <rect x="52" y="242" width="138" height="40" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="121" y="268" text-anchor="middle" font-family="monospace" font-size="15" fill="#1e293b">[]</text>
+  <rect x="210" y="242" width="138" height="40" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="279" y="268" text-anchor="middle" font-family="monospace" font-size="15" fill="#1e293b">{}</text>
+
+  <rect x="52" y="290" width="138" height="40" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="121" y="316" text-anchor="middle" font-family="monospace" font-size="15" fill="#1e293b">set()</text>
+  <rect x="210" y="290" width="138" height="40" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="279" y="316" text-anchor="middle" font-family="monospace" font-size="15" fill="#1e293b">False</text>
+
+  <rect x="52" y="348" width="296" height="40" rx="6" fill="#f8fafc" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="200" y="373" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#dc2626">if items:  bo'sh bo'lsa BAJARILMAYDI</text>
+
+  <!-- RIGHT: Truthy -->
+  <rect x="390" y="80" width="340" height="320" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="560" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#16a34a">True deb baholanadi</text>
+  <text x="560" y="130" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">deyarli hamma narsa — diqqat: bo'lmagan-bo'sh ham!</text>
+
+  <rect x="412" y="146" width="138" height="40" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="481" y="172" text-anchor="middle" font-family="monospace" font-size="15" fill="#1e293b">"0"</text>
+  <rect x="570" y="146" width="138" height="40" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="639" y="172" text-anchor="middle" font-family="monospace" font-size="15" fill="#1e293b">" "</text>
+
+  <rect x="412" y="194" width="138" height="40" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="481" y="220" text-anchor="middle" font-family="monospace" font-size="15" fill="#1e293b">[0]</text>
+  <rect x="570" y="194" width="138" height="40" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="639" y="220" text-anchor="middle" font-family="monospace" font-size="15" fill="#1e293b">42</text>
+
+  <rect x="412" y="242" width="138" height="40" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="481" y="268" text-anchor="middle" font-family="monospace" font-size="15" fill="#1e293b">-1</text>
+  <rect x="570" y="242" width="138" height="40" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="639" y="268" text-anchor="middle" font-family="monospace" font-size="15" fill="#1e293b">True</text>
+
+  <text x="560" y="312" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">"0" string — bo'sh emas, demak True.</text>
+  <text x="560" y="334" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">[0] list ham bo'sh emas → True.</text>
+
+  <rect x="412" y="348" width="296" height="40" rx="6" fill="#f8fafc" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="560" y="373" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#16a34a">if items:  bo'sh bo'lmasa BAJARILADI</text>
+
+  <text x="380" y="420" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Idioma: if len(items) &gt; 0 o'rniga if items: yoz.</text>
+</svg>

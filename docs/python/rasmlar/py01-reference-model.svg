@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430">
+  <title>Python reference model: nom obyektga ishora qiladi, bir obyektga ikki nom</title>
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">O'zgaruvchi = nom, obyektga ishora qiladi</text>
+  <text x="380" y="58" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Python'da o'zgaruvchi qiymatni saqlamaydi — u obyektga bog'langan nomdir</text>
+
+  <defs>
+    <marker id="ref1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- LEFT: bitta nom -->
+  <rect x="30" y="80" width="340" height="310" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="200" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">Bitta nom, bitta obyekt</text>
+
+  <text x="50" y="142" font-family="monospace" font-size="14" fill="#1e293b">x = [1, 2, 3]</text>
+
+  <!-- name namespace -->
+  <text x="110" y="190" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">nom (namespace)</text>
+  <rect x="60" y="200" width="100" height="48" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="110" y="230" text-anchor="middle" font-family="monospace" font-size="16" fill="#2563eb">x</text>
+
+  <!-- object on heap -->
+  <text x="290" y="190" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">obyekt (xotirada)</text>
+  <rect x="220" y="200" width="120" height="48" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="280" y="222" text-anchor="middle" font-family="monospace" font-size="14" fill="#1e293b">[1, 2, 3]</text>
+  <text x="280" y="240" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">list</text>
+
+  <line x1="160" y1="224" x2="216" y2="224" stroke="#475569" stroke-width="2" marker-end="url(#ref1)"/>
+  <text x="188" y="216" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">ishora</text>
+
+  <text x="200" y="300" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Nom va obyekt alohida narsa.</text>
+  <text x="200" y="324" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Nom faqat obyektga yo'l ko'rsatadi.</text>
+
+  <!-- RIGHT: ikki nom bir obyekt -->
+  <rect x="390" y="80" width="340" height="310" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="560" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#f59e0b">Bir obyektga ikki nom</text>
+
+  <text x="410" y="142" font-family="monospace" font-size="14" fill="#1e293b">a = [1, 2]</text>
+  <text x="410" y="164" font-family="monospace" font-size="14" fill="#1e293b">b = a</text>
+
+  <!-- two names -->
+  <rect x="410" y="196" width="80" height="44" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="450" y="224" text-anchor="middle" font-family="monospace" font-size="16" fill="#f59e0b">a</text>
+
+  <rect x="410" y="256" width="80" height="44" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="450" y="284" text-anchor="middle" font-family="monospace" font-size="16" fill="#f59e0b">b</text>
+
+  <!-- shared object -->
+  <rect x="580" y="224" width="120" height="50" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="640" y="246" text-anchor="middle" font-family="monospace" font-size="14" fill="#1e293b">[1, 2]</text>
+  <text x="640" y="266" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">bitta list</text>
+
+  <line x1="490" y1="218" x2="576" y2="240" stroke="#475569" stroke-width="2" marker-end="url(#ref1)"/>
+  <line x1="490" y1="278" x2="576" y2="258" stroke="#475569" stroke-width="2" marker-end="url(#ref1)"/>
+
+  <text x="560" y="328" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">b = a obyektni NUSXALAMAYDI.</text>
+  <text x="560" y="352" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">a.append(3) bo'lsa, b ham o'zgaradi.</text>
+
+  <!-- bottom rule -->
+  <rect x="30" y="402" width="700" height="0" fill="none"/>
+</svg>

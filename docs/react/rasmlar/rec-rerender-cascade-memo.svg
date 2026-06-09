@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 440" width="780" height="440">
+  <title>Re-render kaskadi va React.memo keraksiz re-render'ni to'sishi</title>
+  <defs>
+    <marker id="rc2-red" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#dc2626"/>
+    </marker>
+    <marker id="rc2-slate" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="780" height="440" fill="#f8fafc"/>
+  <text x="390" y="30" font-family="Segoe UI, system-ui, sans-serif" font-size="19" font-weight="bold" fill="#1e293b" text-anchor="middle">Re-render kaskadi: ota re-render bo'lsa, bolalar ham</text>
+
+  <!-- LEFT: without memo -->
+  <text x="200" y="62" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626" text-anchor="middle">memo'siz — barchasi qayta render</text>
+
+  <rect x="130" y="76" width="140" height="48" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="200" y="100" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626" text-anchor="middle">Ota (state o'zgardi)</text>
+  <text x="200" y="118" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">render</text>
+
+  <rect x="40" y="172" width="140" height="48" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="110" y="196" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626" text-anchor="middle">Bola A</text>
+  <text x="110" y="214" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">re-render</text>
+
+  <rect x="220" y="172" width="140" height="48" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="290" y="196" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626" text-anchor="middle">Bola B</text>
+  <text x="290" y="214" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">re-render</text>
+
+  <rect x="130" y="268" width="140" height="48" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="200" y="292" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626" text-anchor="middle">Nabira</text>
+  <text x="200" y="310" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">re-render</text>
+
+  <path d="M170 124 L120 170" fill="none" stroke="#dc2626" stroke-width="2.5" marker-end="url(#rc2-red)"/>
+  <path d="M230 124 L280 170" fill="none" stroke="#dc2626" stroke-width="2.5" marker-end="url(#rc2-red)"/>
+  <path d="M290 220 L210 266" fill="none" stroke="#dc2626" stroke-width="2.5" marker-end="url(#rc2-red)"/>
+
+  <!-- divider -->
+  <line x1="390" y1="56" x2="390" y2="336" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5 4"/>
+
+  <!-- RIGHT: with memo -->
+  <text x="580" y="62" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="middle">React.memo — keraksizini to'sadi</text>
+
+  <rect x="510" y="76" width="140" height="48" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="580" y="100" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626" text-anchor="middle">Ota (state o'zgardi)</text>
+  <text x="580" y="118" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">render</text>
+
+  <rect x="420" y="172" width="140" height="48" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="490" y="196" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">memo(Bola A)</text>
+  <text x="490" y="214" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" text-anchor="middle">props bir xil → o'tkazib yuboradi</text>
+
+  <rect x="600" y="172" width="140" height="48" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="670" y="196" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626" text-anchor="middle">Bola B</text>
+  <text x="670" y="214" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">props o'zgardi → re-render</text>
+
+  <rect x="420" y="268" width="140" height="48" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="490" y="292" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">Nabira</text>
+  <text x="490" y="310" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" text-anchor="middle">ham o'tkazib yuboriladi</text>
+
+  <path d="M550 124 L500 170" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-dasharray="5 4" marker-end="url(#rc2-slate)"/>
+  <path d="M610 124 L660 170" fill="none" stroke="#dc2626" stroke-width="2.5" marker-end="url(#rc2-red)"/>
+  <path d="M490 220 L490 266" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-dasharray="5 4" marker-end="url(#rc2-slate)"/>
+
+  <!-- note -->
+  <rect x="40" y="348" width="700" height="76" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="58" y="372" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">Muhim:</text>
+  <text x="125" y="372" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">memo faqat props o'zgarmaganda to'sadi. Har render'da yangi obyekt/funksiya props bersangiz, memo</text>
+  <text x="58" y="394" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">ishlamaydi — shuning uchun props'ni useCallback / useMemo bilan barqarorlang.</text>
+  <text x="58" y="416" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">React 19 Compiler bu memoizatsiyani ko'p holatda avtomatik bajaradi.</text>
+</svg>

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" width="760" height="470">
+  <title>Closure: tashqi() tugaganidan keyin ham ichki funksiya hisob o'zgaruvchisini eslab qoladi</title>
+
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="38" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1e293b">Closure — funksiya o'zgaruvchini "eslab qoladi"</text>
+
+  <defs>
+    <marker id="arc" markerWidth="11" markerHeight="11" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- 1-bosqich: tashqi() ishlayapti -->
+  <text x="200" y="78" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">1) tashqi() chaqirildi</text>
+
+  <rect x="50" y="92" width="300" height="200" rx="12" fill="#e2e8f0" stroke="#2563eb" stroke-width="2"/>
+  <text x="70" y="118" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">tashqi() scope</text>
+
+  <!-- hisob o'zgaruvchisi -->
+  <rect x="72" y="132" width="170" height="38" rx="8" fill="#f59e0b"/>
+  <text x="157" y="156" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="15" fill="#1e293b">let hisob = 0</text>
+
+  <!-- ichki funksiya -->
+  <rect x="72" y="190" width="256" height="86" rx="10" fill="#f8fafc" stroke="#16a34a" stroke-width="2"/>
+  <text x="88" y="214" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">return function() {</text>
+  <text x="100" y="238" font-family="Consolas, Courier New, monospace" font-size="14" fill="#1e293b">hisob++</text>
+  <text x="88" y="262" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">}</text>
+
+  <!-- ichki -> hisob bog'lanish -->
+  <line x1="155" y1="190" x2="155" y2="172" stroke="#475569" stroke-width="2.5" marker-end="url(#arc)"/>
+
+  <!-- O'tish strelkasi -->
+  <line x1="360" y1="190" x2="430" y2="190" stroke="#dc2626" stroke-width="3" marker-end="url(#arc)"/>
+  <text x="395" y="180" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">return</text>
+
+  <!-- 2-bosqich: tashqi() tugadi -->
+  <text x="565" y="78" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">2) tashqi() tugadi, lekin...</text>
+
+  <rect x="430" y="92" width="290" height="200" rx="12" fill="#f8fafc" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6 5"/>
+  <text x="450" y="118" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#94a3b8">tashqi() stack'dan o'chdi</text>
+
+  <!-- saqlangan closure -->
+  <rect x="452" y="190" width="246" height="86" rx="10" fill="#f8fafc" stroke="#16a34a" stroke-width="2"/>
+  <text x="468" y="214" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">sanagich (closure)</text>
+  <text x="468" y="240" font-family="Consolas, Courier New, monospace" font-size="14" fill="#1e293b">hisob++  return hisob</text>
+
+  <!-- saqlangan hisob -->
+  <rect x="475" y="132" width="200" height="38" rx="8" fill="#f59e0b"/>
+  <text x="575" y="156" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="15" fill="#1e293b">hisob "yashaydi"</text>
+  <line x1="575" y1="190" x2="575" y2="172" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arc)"/>
+
+  <!-- Natija -->
+  <rect x="50" y="330" width="670" height="100" rx="12" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="385" y="362" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Natija — har chaqiriqda hisob saqlanib boradi:</text>
+  <text x="385" y="394" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="16" fill="#2563eb">sanagich() -> 1  ·  sanagich() -> 2  ·  sanagich() -> 3</text>
+  <text x="385" y="418" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">o'zgaruvchi o'chmaydi, chunki ichki funksiya unga bog'langan</text>
+</svg>

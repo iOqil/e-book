@@ -1,0 +1,172 @@
+site_name: Oqil E-kitoblar
+site_description: "Dasturlash bo'yicha o'zbekcha e-kitoblar — 0 dan expertgacha. 8 ta qo'llanma, 297 SVG diagramma."
+docs_dir: docs
+site_dir: site
+use_directory_urls: true
+
+theme:
+  name: material
+  language: uz
+  features:
+    - navigation.tabs
+    - navigation.top
+    - navigation.tracking
+    - navigation.indexes
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: "Qorong'i rejim"
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: "Yorug' rejim"
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+
+plugins:
+  - search
+
+nav:
+  - Bosh sahifa: index.md
+  - "HTML & CSS":
+      - "HTML & CSS — 0 dan Expertgacha (o'zbek tilida)": html-css/README.md
+      - "01 — Web va HTML asoslari": html-css/01-web-html-asoslari.md
+      - "02 — Matn elementlari": html-css/02-matn-elementlari.md
+      - "03 — Havolalar va media": html-css/03-havolalar-media.md
+      - "04 — Jadvallar": html-css/04-jadvallar.md
+      - "05 — Formalar": html-css/05-formalar.md
+      - "06 — Semantik HTML va accessibility": html-css/06-semantik-accessibility.md
+      - "07 — Head, meta va SEO": html-css/07-head-meta-seo.md
+      - "08 — CSS asoslari": html-css/08-css-asoslari.md
+      - "09 — Selektorlar": html-css/09-selektorlar.md
+      - "10 — Cascade, specificity va inheritance": html-css/10-cascade-specificity-inheritance.md
+      - "11 — Box model": html-css/11-box-model.md
+      - "12 — O'lchovlar, tipografiya va ranglar": html-css/12-oolchovlar-tipografiya-ranglar.md
+      - "13 — Fon, chegara va soyalar": html-css/13-fon-chegara-soyalar.md
+      - "14 — Positioning va z-index": html-css/14-positioning.md
+      - "15 — Flexbox": html-css/15-flexbox.md
+      - "16 — CSS Grid": html-css/16-grid.md
+      - "17 — Responsive dizayn": html-css/17-responsive.md
+      - "18 — Transitions, transforms va animatsiyalar": html-css/18-transitions-transforms-animations.md
+      - "19 — Zamonaviy CSS": html-css/19-zamonaviy-css.md
+      - "20 — CSS arxitekturasi va uslublar": html-css/20-arxitektura-uslublar.md
+      - "21 — Formalar, UI holatlari va kirish imkoniyati": html-css/21-amaliy-forma-ui-states.md
+      - "22 — Yakuniy loyiha — responsive landing page": html-css/22-capstone-loyiha.md
+  - "JavaScript":
+      - "JavaScript — 0 dan Expertgacha (O'zbek tilida)": js/README.md
+      - "JavaScript — 0 dan Expertgacha (O'zbek tilida)": js/javascript-qollanma-1-qism.md
+      - "JavaScript — 0 dan Expertgacha (O'zbek tilida)": js/javascript-qollanma-2-qism.md
+      - "JavaScript — 0 dan Expertgacha (O'zbek tilida)": js/javascript-qollanma-3-qism.md
+      - "JavaScript — 0 dan Expertgacha (O'zbek tilida)": js/javascript-qollanma-4-qism.md
+      - "JavaScript — 0 dan Expertgacha (O'zbek tilida)": js/javascript-qollanma-5-qism-1.md
+      - "JavaScript — 0 dan Expertgacha (O'zbek tilida)": js/javascript-qollanma-5-qism-2.md
+      - "JavaScript — 0 dan Expertgacha (O'zbek tilida)": js/javascript-qollanma-6-qism-1.md
+      - "JavaScript — 0 dan Expertgacha (O'zbek tilida)": js/javascript-qollanma-6-qism-2.md
+  - "Python":
+      - "Python: Noldan boshlab — Boshlovchilar uchun": python/README.md
+      - "01 — Asoslar: sintaksis, tiplar, \"Pythonic\" tafakkur": python/01-asoslar.md
+      - "02 — Boshqaruv va funksiyalar": python/02-boshqaruv-funksiyalar.md
+      - "03 — Ma'lumot tuzilmalari": python/03-malumot-tuzilmalari.md
+      - "04 — Stringlar (matn bilan ishlash)": python/04-stringlar.md
+      - "05 — OOP: klasslar va obyektlar": python/05-oop.md
+      - "06 — Modullar va muhit": python/06-modullar-muhit.md
+      - "07 — Xatolarni boshqarish (try / except)": python/07-xatolar-context.md
+      - "08 — Fayllar, JSON va CSV": python/08-fayl-malumot.md
+      - "09 — Generatorlar va dekoratorlar": python/09-iterator-generator-decorator.md
+      - "10 — Tip ko'rsatmalari va map/filter": python/10-typing-functional.md
+      - "11 — Standart kutubxona (\"hammasi ichida\")": python/11-standart-kutubxona.md
+      - "12 — Parallel ishlash va asyncio": python/12-concurrency-async.md
+      - "13 — Dasturni test qilish (pytest)": python/13-testlash.md
+      - "14 — FastAPI bilan veb API": python/14-web-capstone.md
+      - "15 — Ma'lumotlar bazasi va SQL": python/15-malumotlar-bazasi.md
+  - "Vue & Nuxt":
+      - "Vue 3 + Nuxt — Zero to Hero (o'zbek tilida)": vue/README.md
+      - "01 — Vue asoslari va Template Syntax": vue/01-vue-asoslari.md
+      - "02 — Reactivity (Reaktivlik)": vue/02-reactivity.md
+      - "03 — Komponentlar": vue/03-komponentlar.md
+      - "04 — Composition API & Composables": vue/04-composition-api.md
+      - "05 — Vue Router": vue/05-vue-router.md
+      - "06 — Pinia (State Management)": vue/06-pinia.md
+      - "07 — Nuxt asoslari": vue/07-nuxt-asoslari.md
+      - "08 — Data Fetching & Server (Nitro)": vue/08-nuxt-data-server.md
+      - "09 — Nuxt UI: asoslar, o'rnatish va theming": vue/09-nuxt-ui-asoslar.md
+      - "10 — Nuxt UI komponentlari (to'liq ma'lumotnoma)": vue/10-nuxt-ui-komponentlar.md
+  - "React":
+      - "ReactJS — 0 dan Expert darajagacha (2026 nashri)": react/reactjs-qollanma.md
+  - "Next.js":
+      - "Next.js — 0 dan Expert darajagacha (o'zbek tilida)": nextjs/README.md
+      - "Next.js — 0 dan Expert darajagacha (1-QISM)": nextjs/Nextjs-0-dan-Expert-1-qism.md
+      - "Next.js — 0 dan Expert darajagacha (2-QISM)": nextjs/Nextjs-0-dan-Expert-2-qism.md
+      - "Next.js — 0 dan Expert darajagacha (3-QISM)": nextjs/Nextjs-0-dan-Expert-3-qism.md
+      - "Next.js — 0 dan Expert darajagacha (4-QISM, YAKUNIY)": nextjs/Nextjs-0-dan-Expert-4-qism.md
+      - "Next.js — 0 dan Expert: BONUS BOBLAR": nextjs/Nextjs-0-dan-Expert-Bonus-i18n-Stripe-Realtime.md
+  - "PHP":
+      - "PHP — Mutlaqo Noldan Boshlovchilar Uchun": php/php-qollanma.md
+  - "1000 masala":
+      - "1000 amaliy dasturlash masalasi — JS / PHP / Python yechimlari": 1000-masala/README.md
+      - "1-bo'lim: Asoslar": 1000-masala/bo-lim-01.md
+      - "2-bo'lim: Sikllar": 1000-masala/bo-lim-02.md
+      - "3-bo'lim: Sonlar va matematika": 1000-masala/bo-lim-03.md
+      - "4-bo'lim: Satrlar": 1000-masala/bo-lim-04.md
+      - "5-bo'lim: Massivlar / ro'yxatlar": 1000-masala/bo-lim-05.md
+      - "6-bo'lim: Hash map / obyekt / lug'at": 1000-masala/bo-lim-06.md
+      - "7-bo'lim: Rekursiya": 1000-masala/bo-lim-07.md
+      - "8-bo'lim: Saralash algoritmlari": 1000-masala/bo-lim-08.md
+      - "9-bo'lim: Qidiruv": 1000-masala/bo-lim-09.md
+      - "10-bo'lim: Stack / Queue": 1000-masala/bo-lim-10.md
+      - "11-bo'lim: Linked List": 1000-masala/bo-lim-11.md
+      - "12-bo'lim: Daraxtlar (Binary Tree / BST)": 1000-masala/bo-lim-12.md
+      - "13-bo'lim: Graflar (BFS / DFS)": 1000-masala/bo-lim-13.md
+      - "14-bo'lim: Dinamik dasturlash (DP)": 1000-masala/bo-lim-14.md
+      - "15-bo'lim: Two pointers / Sliding window": 1000-masala/bo-lim-15.md
+      - "16-bo'lim: Greedy (ochko'z algoritmlar)": 1000-masala/bo-lim-16.md
+      - "17-bo'lim: Bit operatsiyalari": 1000-masala/bo-lim-17.md
+      - "18-bo'lim: Sana / vaqt": 1000-masala/bo-lim-18.md
+      - "19-bo'lim: Validatsiya (email, telefon, parol)": 1000-masala/bo-lim-19.md
+      - "20-bo'lim: Amaliy masalalar (parsing, formatting)": 1000-masala/bo-lim-20.md
+      - "21-bo'lim: Backtracking": 1000-masala/bo-lim-21.md
+      - "22-bo'lim: Trie va string algoritmlari": 1000-masala/bo-lim-22.md
+      - "23-bo'lim: Ilg'or graflar": 1000-masala/bo-lim-23.md
+      - "24-bo'lim: Segment tree, Fenwick tree va range so'rovlar": 1000-masala/bo-lim-24.md
+      - "25-bo'lim: Heap va Priority Queue": 1000-masala/bo-lim-25.md
+      - "26-bo'lim: Ilg'or dinamik dasturlash (DP)": 1000-masala/bo-lim-26.md
+      - "27-bo'lim: Matematika va sonlar nazariyasi": 1000-masala/bo-lim-27.md
+      - "28-bo'lim: Matritsa masalalari": 1000-masala/bo-lim-28.md
+      - "29-bo'lim: Ilg'or stringlar": 1000-masala/bo-lim-29.md
+      - "30-bo'lim: Dizayn patternlar (OOP)": 1000-masala/bo-lim-30.md
+      - "31-bo'lim: Real-world komponentlar": 1000-masala/bo-lim-31.md
+      - "32-bo'lim: Konkurensiya va async": 1000-masala/bo-lim-32.md
+      - "33-bo'lim: Funksional dasturlash": 1000-masala/bo-lim-33.md
+      - "34-bo'lim: Qo'shimcha ma'lumotlar tuzilmalari": 1000-masala/bo-lim-34.md
+      - "35-bo'lim: Ilg'or saralash va qidiruv": 1000-masala/bo-lim-35.md
+      - "36-bo'lim: Geometriya": 1000-masala/bo-lim-36.md
+      - "37-bo'lim: Greedy (qo'shimcha)": 1000-masala/bo-lim-37.md
+      - "38-bo'lim: Bit operatsiyalari (ilg'or)": 1000-masala/bo-lim-38.md
+      - "39-bo'lim: Amaliy va kundalik masalalar": 1000-masala/bo-lim-39.md
+      - "40-bo'lim: Klassik intervyu masalalari": 1000-masala/bo-lim-40.md

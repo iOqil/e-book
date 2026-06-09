@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 500" width="760" height="500">
+  <title>Bitta tugma ikki uslubda: semantik klass va utility klasslar yondashuvi taqqoslandi</title>
+  <rect x="0" y="0" width="760" height="500" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Bir xil tugma — ikki xil yondashuv</text>
+
+  <!-- bo'luvchi chiziq -->
+  <line x1="380" y1="56" x2="380" y2="464" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="6 5"/>
+
+  <!-- CHAP: semantik -->
+  <rect x="40" y="60" width="300" height="36" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="190" y="84" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">Semantik klass</text>
+
+  <!-- HTML -->
+  <rect x="40" y="108" width="300" height="60" rx="8" fill="#1e293b"/>
+  <text x="58" y="134" font-family="Consolas, monospace" font-size="13" fill="#94a3b8">&lt;button class=</text>
+  <text x="178" y="134" font-family="Consolas, monospace" font-size="13" fill="#60a5fa">"tugma"</text>
+  <text x="236" y="134" font-family="Consolas, monospace" font-size="13" fill="#94a3b8">&gt;</text>
+  <text x="58" y="156" font-family="Consolas, monospace" font-size="13" fill="#e2e8f0">  Yuborish</text>
+
+  <!-- CSS -->
+  <rect x="40" y="180" width="300" height="138" rx="8" fill="#1e293b"/>
+  <text x="58" y="204" font-family="Consolas, monospace" font-size="13" fill="#60a5fa">.tugma {</text>
+  <text x="58" y="224" font-family="Consolas, monospace" font-size="13" fill="#e2e8f0">  padding: 8px 16px;</text>
+  <text x="58" y="244" font-family="Consolas, monospace" font-size="13" fill="#e2e8f0">  background: #2563eb;</text>
+  <text x="58" y="264" font-family="Consolas, monospace" font-size="13" fill="#e2e8f0">  color: white;</text>
+  <text x="58" y="284" font-family="Consolas, monospace" font-size="13" fill="#e2e8f0">  border-radius: 6px;</text>
+  <text x="58" y="304" font-family="Consolas, monospace" font-size="13" fill="#60a5fa">}</text>
+
+  <!-- pluslar/minuslar -->
+  <text x="58" y="346" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">+ HTML toza, ma'noli o'qiladi</text>
+  <text x="58" y="368" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">+ Stil bir joyda, qayta ishlatiladi</text>
+  <text x="58" y="390" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">- Har variant uchun CSS yozasan</text>
+  <text x="58" y="412" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">- Nom o'ylab topish kerak</text>
+
+  <!-- O'NG: utility -->
+  <rect x="420" y="60" width="300" height="36" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="570" y="84" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">Utility klasslar</text>
+
+  <!-- HTML -->
+  <rect x="420" y="108" width="300" height="84" rx="8" fill="#1e293b"/>
+  <text x="438" y="132" font-family="Consolas, monospace" font-size="13" fill="#94a3b8">&lt;button class=</text>
+  <text x="438" y="154" font-family="Consolas, monospace" font-size="13" fill="#fcd34d">  "px-4 py-2 bg-blue-600</text>
+  <text x="438" y="173" font-family="Consolas, monospace" font-size="13" fill="#fcd34d">   text-white rounded"</text>
+  <text x="438" y="190" font-family="Consolas, monospace" font-size="13" fill="#94a3b8">&gt;Yuborish&lt;/button&gt;</text>
+
+  <!-- CSS (yo'q) -->
+  <rect x="420" y="204" width="300" height="114" rx="8" fill="#1e293b"/>
+  <text x="570" y="248" text-anchor="middle" font-family="Consolas, monospace" font-size="14" fill="#94a3b8">/* o'z CSS yozilmaydi */</text>
+  <text x="570" y="274" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#86efac">Har klass = bitta tayyor xossa</text>
+  <text x="570" y="296" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">px-4 = padding-inline; bg-blue-600 = fon</text>
+
+  <!-- pluslar/minuslar -->
+  <text x="438" y="346" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">+ Tez: yangi CSS yozilmaydi</text>
+  <text x="438" y="368" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">+ Nom o'ylamaysan, scope muammosi yo'q</text>
+  <text x="438" y="390" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">- HTML uzun, klass to'planib ketadi</text>
+  <text x="438" y="412" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">- Atomar klass tilini o'rganish kerak</text>
+
+  <!-- yagona xulosa -->
+  <rect x="120" y="440" width="520" height="44" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="380" y="467" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Ikkalasi ham bir xil tugmani chizadi — farq qayerga stil yozilishida</text>
+</svg>

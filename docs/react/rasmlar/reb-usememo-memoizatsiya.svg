@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430">
+  <title>useMemo va useCallback memoizatsiyasi: deps o'zgarmasa qayta hisoblamaydi</title>
+  <defs>
+    <marker id="mm-green" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#16a34a"/>
+    </marker>
+    <marker id="mm-blue" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="32" font-family="Segoe UI, system-ui, sans-serif" font-size="19" font-weight="bold" fill="#1e293b" text-anchor="middle">useMemo / useCallback: deps o'zgarmasa qayta hisoblamaydi</text>
+
+  <!-- render trigger -->
+  <rect x="280" y="62" width="200" height="56" rx="8" fill="#e2e8f0" stroke="#f59e0b" stroke-width="2"/>
+  <text x="380" y="86" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#f59e0b" text-anchor="middle">Komponent re-render</text>
+  <text x="380" y="107" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">useMemo(fn, [items, filter])</text>
+
+  <!-- decision -->
+  <path d="M380 140 L500 200 L380 260 L260 200 Z" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="195" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb" text-anchor="middle">deps o'zgardimi?</text>
+  <text x="380" y="216" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">[items, filter]</text>
+
+  <path d="M380 118 L380 138" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#mm-blue)"/>
+
+  <!-- YES recompute -->
+  <rect x="540" y="170" width="190" height="64" rx="8" fill="#e2e8f0" stroke="#2563eb" stroke-width="2"/>
+  <text x="635" y="196" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb" text-anchor="middle">Qayta hisoblaydi</text>
+  <text x="635" y="218" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">fn() ishlaydi, kesh yangilanadi</text>
+
+  <!-- NO cached -->
+  <rect x="30" y="170" width="190" height="64" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="125" y="196" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="middle">Keshdan qaytaradi</text>
+  <text x="125" y="218" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">eski natija, hisob yo'q</text>
+
+  <path d="M500 200 L536 200" fill="none" stroke="#2563eb" stroke-width="2.5" marker-end="url(#mm-blue)"/>
+  <text x="520" y="190" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#2563eb" text-anchor="middle">Ha</text>
+  <path d="M260 200 L224 200" fill="none" stroke="#16a34a" stroke-width="2.5" marker-end="url(#mm-green)"/>
+  <text x="244" y="190" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a" text-anchor="middle">Yo'q</text>
+
+  <!-- info box -->
+  <rect x="40" y="290" width="680" height="120" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="60" y="316" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Farqi:</text>
+  <text x="60" y="342" font-family="monospace" font-size="13" fill="#2563eb">useMemo</text>
+  <text x="160" y="342" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">qiymatni (qimmat hisob natijasi) keshlaydi</text>
+  <text x="60" y="366" font-family="monospace" font-size="13" fill="#2563eb">useCallback</text>
+  <text x="185" y="366" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">funksiya identifikatorini keshlaydi (child re-render'ini oldini oladi)</text>
+  <text x="60" y="394" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">React 19 Compiler buni avtomatik qiladi — avval profiling, keyin memo</text>
+</svg>

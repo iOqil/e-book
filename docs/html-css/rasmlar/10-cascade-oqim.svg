@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 470" width="720" height="470">
+  <title>Cascade oqimi: qoidalar muhimlik, specificity va manba tartibi orqali g'olibni tanlaydi</title>
+  <defs>
+    <marker id="ok10" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="720" height="470" fill="#f8fafc"/>
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Cascade qaror oqimi (g'olib qoida qanday tanlanadi)</text>
+
+  <!-- Bir nechta qoida -->
+  <rect x="240" y="55" width="240" height="50" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="360" y="80" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">Bir elementga tegadigan</text>
+  <text x="360" y="98" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">bir nechta qoida</text>
+  <line x1="360" y1="105" x2="360" y2="130" stroke="#475569" stroke-width="2" marker-end="url(#ok10)"/>
+
+  <!-- Bosqich 1: muhimlik -->
+  <rect x="220" y="132" width="280" height="56" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="360" y="155" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">1. Muhimlik (origin / !important)</text>
+  <text x="360" y="176" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">!important va manba kim ustun?</text>
+  <line x1="360" y1="188" x2="360" y2="213" stroke="#475569" stroke-width="2" marker-end="url(#ok10)"/>
+  <text x="470" y="206" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">teng bo'lsa pastga</text>
+
+  <!-- Bosqich 2: specificity -->
+  <rect x="220" y="215" width="280" height="56" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="360" y="238" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">2. Specificity (aniqlik bali)</text>
+  <text x="360" y="259" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">inline &gt; id &gt; class &gt; element</text>
+  <line x1="360" y1="271" x2="360" y2="296" stroke="#475569" stroke-width="2" marker-end="url(#ok10)"/>
+  <text x="470" y="289" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">teng bo'lsa pastga</text>
+
+  <!-- Bosqich 3: manba tartibi -->
+  <rect x="220" y="298" width="280" height="56" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="360" y="321" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">3. Manba tartibi (source order)</text>
+  <text x="360" y="342" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">oxirgi yozilgan qoida yutadi</text>
+  <line x1="360" y1="354" x2="360" y2="379" stroke="#475569" stroke-width="2" marker-end="url(#ok10)"/>
+
+  <!-- G'olib -->
+  <rect x="270" y="381" width="180" height="54" rx="10" fill="#16a34a" stroke="#94a3b8" stroke-width="2"/>
+  <text x="360" y="406" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#ffffff">G'OLIB QOIDA</text>
+  <text x="360" y="426" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#ffffff">qiymat qo'llaniladi</text>
+
+  <!-- yon izoh -->
+  <text x="30" y="160" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Yuqoridan</text>
+  <text x="30" y="178" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">pastga</text>
+  <text x="30" y="196" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tekshiriladi</text>
+</svg>

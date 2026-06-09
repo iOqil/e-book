@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480">
+  <title>Prototype zanjiri: obyekt -> Constructor.prototype -> Object.prototype -> null</title>
+
+  <rect x="0" y="0" width="760" height="480" fill="#f8fafc"/>
+  <text x="380" y="38" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1e293b">Prototype zanjiri — xususiyat qaerdan topiladi</text>
+  <text x="380" y="62" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">obyektda topilmasa, JS zanjir bo'ylab yuqoriga qaraydi</text>
+
+  <defs>
+    <marker id="arp" markerWidth="12" markerHeight="12" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L9,4 L0,8 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- 1. obyekt (it) -->
+  <rect x="230" y="84" width="300" height="74" rx="12" fill="#2563eb"/>
+  <text x="380" y="110" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#f8fafc">it (instansiya)</text>
+  <text x="380" y="136" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="14" fill="#f8fafc">ism: "Bobik"</text>
+
+  <line x1="380" y1="158" x2="380" y2="190" stroke="#475569" stroke-width="2.5" marker-end="url(#arp)"/>
+  <text x="396" y="180" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">[[Prototype]]</text>
+
+  <!-- 2. Hayvon.prototype -->
+  <rect x="210" y="192" width="340" height="74" rx="12" fill="#e2e8f0" stroke="#16a34a" stroke-width="2"/>
+  <text x="380" y="218" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">Hayvon.prototype</text>
+  <text x="380" y="244" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="14" fill="#1e293b">ovoz() { ... }</text>
+
+  <line x1="380" y1="266" x2="380" y2="298" stroke="#475569" stroke-width="2.5" marker-end="url(#arp)"/>
+  <text x="396" y="288" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">[[Prototype]]</text>
+
+  <!-- 3. Object.prototype -->
+  <rect x="210" y="300" width="340" height="74" rx="12" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="380" y="326" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#475569">Object.prototype</text>
+  <text x="380" y="352" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="14" fill="#1e293b">toString()  hasOwnProperty()</text>
+
+  <line x1="380" y1="374" x2="380" y2="406" stroke="#475569" stroke-width="2.5" marker-end="url(#arp)"/>
+  <text x="396" y="396" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">[[Prototype]]</text>
+
+  <!-- 4. null -->
+  <rect x="305" y="408" width="150" height="44" rx="12" fill="#f8fafc" stroke="#dc2626" stroke-width="2"/>
+  <text x="380" y="436" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="16" font-weight="bold" fill="#dc2626">null</text>
+
+  <!-- O'ng tomon: qidiruv izohi -->
+  <text x="572" y="120" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">it.ovoz()?</text>
+  <text x="572" y="140" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">o'zida yo'q</text>
+
+  <text x="572" y="228" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">topildi!</text>
+  <text x="572" y="248" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">shu yerda ishlatiladi</text>
+
+  <text x="572" y="430" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">zanjir oxiri</text>
+</svg>

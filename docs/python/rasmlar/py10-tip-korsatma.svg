@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430">
+  <title>Tip ko'rsatmasi nimani bildiradi: faqat hujjat va muharrir uchun belgi, Python uni tekshirmaydi</title>
+  <defs>
+    <marker id="th-arrow" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="38" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1e293b">Tip ko'rsatmasi nimani bildiradi</text>
+  <text x="380" y="62" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">annotatsiya = "bu yerga shu tur kutilmoqda" degan belgi</text>
+
+  <!-- Annotatsiyali funksiya satri -->
+  <rect x="80" y="86" width="600" height="58" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="100" y="122" font-family="Consolas, Courier New, monospace" font-size="18" fill="#1e293b"><tspan fill="#2563eb">def</tspan> salomla(ism<tspan fill="#dc2626">: str</tspan>) <tspan fill="#f59e0b">-&gt; str</tspan>:</text>
+
+  <!-- Parametr tipi belgisi -->
+  <line x1="270" y1="150" x2="270" y2="195" stroke="#475569" stroke-width="2" marker-end="url(#th-arrow)"/>
+  <rect x="150" y="200" width="250" height="64" rx="10" fill="#f8fafc" stroke="#dc2626" stroke-width="2"/>
+  <text x="275" y="226" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">: str</text>
+  <text x="275" y="250" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">parametr turi — matn kutiladi</text>
+
+  <!-- Qaytish tipi belgisi -->
+  <line x1="500" y1="150" x2="500" y2="195" stroke="#475569" stroke-width="2" marker-end="url(#th-arrow)"/>
+  <rect x="430" y="200" width="250" height="64" rx="10" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"/>
+  <text x="555" y="226" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#f59e0b">-&gt; str</text>
+  <text x="555" y="250" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">funksiya matn qaytaradi</text>
+
+  <!-- Muhim ogohlantirish -->
+  <rect x="80" y="296" width="600" height="106" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="100" y="324" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Python annotatsiyani TEKSHIRMAYDI</text>
+  <text x="100" y="350" font-family="Consolas, Courier New, monospace" font-size="14" fill="#1e293b">salomla(<tspan fill="#16a34a">123</tspan>)  <tspan fill="#475569"># xato bermaydi — ishlab ketadi</tspan></text>
+  <text x="100" y="378" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Foydasi: hujjat + muharrir yordami + xatolarni erta sezish</text>
+</svg>

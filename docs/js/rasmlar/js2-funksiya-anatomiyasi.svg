@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 360" width="780" height="360">
+  <title>Funksiya anatomiyasi: argument parametr orqali kiradi, funksiya tanasi ishlaydi, return natijani qaytaradi</title>
+  <defs>
+    <marker id="fa-arrow" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="780" height="360" fill="#f8fafc"/>
+  <text x="390" y="40" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1e293b">Funksiya: kirish -&gt; ishlov -&gt; chiqish</text>
+
+  <!-- Kirish: argument -->
+  <rect x="30" y="150" width="150" height="64" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="105" y="180" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">Argument</text>
+  <text x="105" y="202" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="16" fill="#2563eb">5, 3</text>
+
+  <!-- Strelka kirish -> funksiya -->
+  <line x1="180" y1="182" x2="260" y2="182" stroke="#475569" stroke-width="2.5" marker-end="url(#fa-arrow)"/>
+  <text x="220" y="172" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">kiradi</text>
+
+  <!-- Funksiya tanasi -->
+  <rect x="270" y="110" width="240" height="150" rx="12" fill="#f8fafc" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="390" y="138" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="16" fill="#1e293b">function summa(<tspan fill="#f59e0b">a, b</tspan>) {</text>
+  <text x="390" y="178" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">tanasi: amallar</text>
+  <text x="390" y="210" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="16" fill="#1e293b"><tspan fill="#16a34a">return</tspan> a + b;</text>
+  <text x="390" y="240" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="16" fill="#1e293b">}</text>
+
+  <!-- Parametr yorlig'i -->
+  <line x1="390" y1="108" x2="390" y2="78" stroke="#475569" stroke-width="2" marker-end="url(#fa-arrow)"/>
+  <rect x="300" y="52" width="180" height="26" rx="6" fill="#f59e0b"/>
+  <text x="390" y="70" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Parametr (bo'sh joy)</text>
+
+  <!-- Strelka funksiya -> chiqish -->
+  <line x1="510" y1="182" x2="590" y2="182" stroke="#475569" stroke-width="2.5" marker-end="url(#fa-arrow)"/>
+  <text x="550" y="172" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">chiqadi</text>
+
+  <!-- Chiqish: return qiymat -->
+  <rect x="600" y="150" width="150" height="64" rx="10" fill="#e2e8f0" stroke="#16a34a" stroke-width="2"/>
+  <text x="675" y="180" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">Natija (return)</text>
+  <text x="675" y="202" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="16" fill="#16a34a">8</text>
+
+  <!-- Pastki izoh -->
+  <text x="390" y="312" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#475569">Argument parametrga bog'lanadi, funksiya ishlaydi, return qiymatni tashqariga uzatadi.</text>
+  <text x="390" y="336" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#dc2626">return bo'lmasa, funksiya undefined qaytaradi.</text>
+</svg>

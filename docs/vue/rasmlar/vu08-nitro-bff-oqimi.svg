@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 430" width="800" height="430">
+  <title>Klient-server ma'lumot oqimi: Nitro server API BFF sifatida tashqi API'ni proxy qiladi va maxfiy kalitni yashiradi</title>
+  <rect x="0" y="0" width="800" height="430" fill="#f8fafc"/>
+
+  <text x="400" y="34" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Klient-server ma'lumot oqimi (Nitro server API — BFF)</text>
+
+  <defs>
+    <marker id="arr3" markerWidth="11" markerHeight="11" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- 1. Client -->
+  <rect x="30" y="120" width="170" height="120" rx="10" fill="#e2e8f0" stroke="#2563eb" stroke-width="2"/>
+  <text x="115" y="148" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb" text-anchor="middle">CLIENT</text>
+  <text x="115" y="172" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">Vue komponent</text>
+  <rect x="48" y="185" width="134" height="40" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+  <text x="115" y="210" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">useFetch(</text>
+  <text x="115" y="226" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">'/api/courses')</text>
+
+  <!-- 2. Nitro -->
+  <rect x="300" y="100" width="200" height="160" rx="10" fill="#e2e8f0" stroke="#16a34a" stroke-width="2"/>
+  <text x="400" y="128" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a" text-anchor="middle">NITRO SERVER</text>
+  <text x="400" y="148" font-family="monospace" font-size="13" fill="#475569" text-anchor="middle">server/api/courses.get.ts</text>
+  <rect x="318" y="160" width="164" height="42" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+  <text x="400" y="178" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">defineEventHandler</text>
+  <text x="400" y="195" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">useRuntimeConfig()</text>
+  <rect x="318" y="210" width="164" height="38" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="400" y="234" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">apiSecret (maxfiy)</text>
+
+  <!-- 3. Tashqi API -->
+  <rect x="600" y="120" width="170" height="120" rx="10" fill="#e2e8f0" stroke="#dc2626" stroke-width="2"/>
+  <text x="685" y="148" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#dc2626" text-anchor="middle">TASHQI API</text>
+  <text x="685" y="172" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">api.educore.uz</text>
+  <text x="685" y="196" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">(yoki Laravel</text>
+  <text x="685" y="214" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">backend)</text>
+
+  <!-- Oqim o'qlari: client -> nitro -->
+  <line x1="200" y1="172" x2="296" y2="150" stroke="#475569" stroke-width="2.5" marker-end="url(#arr3)"/>
+  <text x="248" y="148" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" text-anchor="middle">1. so'rov</text>
+
+  <!-- nitro -> tashqi (Bearer) -->
+  <line x1="500" y1="150" x2="596" y2="172" stroke="#475569" stroke-width="2.5" marker-end="url(#arr3)"/>
+  <text x="548" y="142" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#f59e0b" text-anchor="middle">2. $fetch</text>
+  <text x="548" y="158" font-family="monospace" font-size="13" fill="#475569" text-anchor="middle">Bearer key</text>
+
+  <!-- tashqi -> nitro (data) -->
+  <line x1="596" y1="210" x2="500" y2="232" stroke="#475569" stroke-width="2.5" marker-end="url(#arr3)" stroke-dasharray="6 4"/>
+  <text x="548" y="248" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">3. data</text>
+
+  <!-- nitro -> client (data) -->
+  <line x1="296" y1="232" x2="200" y2="210" stroke="#475569" stroke-width="2.5" marker-end="url(#arr3)" stroke-dasharray="6 4"/>
+  <text x="248" y="248" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">4. data</text>
+
+  <!-- Xavfsizlik izohi -->
+  <rect x="30" y="290" width="740" height="120" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="50" y="318" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Nega BFF (Backend-for-Frontend)?</text>
+  <text x="50" y="344" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">• Client faqat o'z domenidagi /api/courses ni biladi — tashqi API URL'ini ko'rmaydi.</text>
+  <text x="50" y="368" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">• apiSecret faqat serverda qoladi — brauzerga (DevTools, Network) HECH QACHON chiqmaydi.</text>
+  <text x="50" y="392" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">• Nitro proxy qiladi, maxfiy kalitni yashiradi, bir nechta so'rovni birlashtirishi mumkin.</text>
+</svg>

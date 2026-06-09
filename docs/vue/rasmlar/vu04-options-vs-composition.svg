@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 470" width="860" height="470">
+  <title>Options API vs Composition API — xossa turi bo'yicha vs xususiyat bo'yicha tashkillash</title>
+  <defs>
+    <marker id="vuArr" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L9 5 L0 10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="860" height="470" fill="#f8fafc"/>
+  <text x="430" y="34" font-family="Segoe UI, system-ui, sans-serif" font-size="21" font-weight="bold" fill="#1e293b" text-anchor="middle">Bitta xususiyat ("qidiruv") kodi qayerda turadi?</text>
+
+  <!-- ============ LEFT: Options API ============ -->
+  <rect x="30" y="60" width="380" height="370" rx="12" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="220" y="90" font-family="Segoe UI, system-ui, sans-serif" font-size="18" font-weight="bold" fill="#dc2626" text-anchor="middle">Options API — xossa TURI bo'yicha</text>
+  <text x="220" y="112" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">bitta feature 4 ta "qutiga" tarqaladi</text>
+
+  <!-- data box -->
+  <rect x="55" y="130" width="330" height="58" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="70" y="153" font-family="monospace" font-size="14" font-weight="bold" fill="#1e293b">data</text>
+  <rect x="250" y="140" width="120" height="20" rx="4" fill="#f59e0b"/>
+  <text x="310" y="155" font-family="monospace" font-size="13" fill="#ffffff" text-anchor="middle">search, results</text>
+  <text x="70" y="178" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">holat saqlash</text>
+
+  <!-- methods box -->
+  <rect x="55" y="196" width="330" height="58" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="70" y="219" font-family="monospace" font-size="14" font-weight="bold" fill="#1e293b">methods</text>
+  <rect x="270" y="206" width="100" height="20" rx="4" fill="#f59e0b"/>
+  <text x="320" y="221" font-family="monospace" font-size="13" fill="#ffffff" text-anchor="middle">doSearch</text>
+  <text x="70" y="244" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">funksiyalar</text>
+
+  <!-- computed box -->
+  <rect x="55" y="262" width="330" height="58" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="70" y="285" font-family="monospace" font-size="14" font-weight="bold" fill="#1e293b">computed</text>
+  <rect x="280" y="272" width="90" height="20" rx="4" fill="#f59e0b"/>
+  <text x="325" y="287" font-family="monospace" font-size="13" fill="#ffffff" text-anchor="middle">filtered</text>
+  <text x="70" y="310" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">hosilaviy qiymat</text>
+
+  <!-- watch box -->
+  <rect x="55" y="328" width="330" height="58" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="70" y="351" font-family="monospace" font-size="14" font-weight="bold" fill="#1e293b">watch</text>
+  <rect x="290" y="338" width="80" height="20" rx="4" fill="#f59e0b"/>
+  <text x="330" y="353" font-family="monospace" font-size="13" fill="#ffffff" text-anchor="middle">search</text>
+  <text x="70" y="376" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">kuzatish</text>
+
+  <text x="220" y="412" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626" text-anchor="middle">amber bo'laklar = bitta feature, 4 joyga sochilgan</text>
+
+  <!-- arrow between -->
+  <path d="M420 245 L444 245" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#vuArr)"/>
+
+  <!-- ============ RIGHT: Composition API ============ -->
+  <rect x="450" y="60" width="380" height="370" rx="12" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="640" y="90" font-family="Segoe UI, system-ui, sans-serif" font-size="18" font-weight="bold" fill="#16a34a" text-anchor="middle">Composition API — feature bo'yicha</text>
+  <text x="640" y="112" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">bitta feature — bitta joyda, qayta ishlatsa boladi</text>
+
+  <!-- useSearch composable block -->
+  <rect x="475" y="135" width="330" height="210" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="640" y="162" font-family="monospace" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="middle">useSearch()</text>
+
+  <rect x="500" y="178" width="280" height="30" rx="5" fill="#f8fafc" stroke="#16a34a" stroke-width="1.2"/>
+  <text x="515" y="198" font-family="monospace" font-size="13" fill="#1e293b">search, results  (ref)</text>
+  <rect x="500" y="214" width="280" height="30" rx="5" fill="#f8fafc" stroke="#16a34a" stroke-width="1.2"/>
+  <text x="515" y="234" font-family="monospace" font-size="13" fill="#1e293b">doSearch()  (funksiya)</text>
+  <rect x="500" y="250" width="280" height="30" rx="5" fill="#f8fafc" stroke="#16a34a" stroke-width="1.2"/>
+  <text x="515" y="270" font-family="monospace" font-size="13" fill="#1e293b">filtered  (computed)</text>
+  <rect x="500" y="286" width="280" height="30" rx="5" fill="#f8fafc" stroke="#16a34a" stroke-width="1.2"/>
+  <text x="515" y="306" font-family="monospace" font-size="13" fill="#1e293b">watch(search, ...)</text>
+
+  <text x="640" y="334" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#15803d" text-anchor="middle">hammasi jamlangan = composable</text>
+
+  <!-- component uses it -->
+  <rect x="510" y="362" width="260" height="48" rx="8" fill="#2563eb"/>
+  <text x="640" y="383" font-family="monospace" font-size="14" fill="#ffffff" text-anchor="middle">const { results } = useSearch()</text>
+  <text x="640" y="402" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dbeafe" text-anchor="middle">komponent ingichka qoladi</text>
+
+  <path d="M640 345 L640 360" fill="none" stroke="#2563eb" stroke-width="2.5" marker-end="url(#vuArr)"/>
+
+  <text x="430" y="452" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Reaktivlik ikkalasida ham bir xil (Proxy) — farq faqat KODNI TASHKIL qilishda</text>
+</svg>

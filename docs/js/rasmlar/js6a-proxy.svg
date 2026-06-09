@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="760" height="380">
+  <title>Proxy — get/set trap amallarni ushlab qoladi</title>
+  <defs>
+    <marker id="ar5" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="760" height="380" fill="#f8fafc"/>
+  <text x="380" y="34" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Proxy: trap o'qish/yozishni ushlab qoladi</text>
+
+  <!-- code -->
+  <rect x="40" y="56" width="270" height="56" rx="8" fill="#e2e8f0" stroke="#94a3b8"/>
+  <text x="56" y="80" font-family="monospace" font-size="14" fill="#2563eb">proxy.ism</text>
+  <text x="56" y="100" font-family="monospace" font-size="14" fill="#2563eb">proxy.yosh = 25</text>
+
+  <!-- proxy / handler box -->
+  <rect x="250" y="130" width="260" height="180" rx="12" fill="#fff7ed" stroke="#f59e0b" stroke-width="2"/>
+  <text x="380" y="158" font-family="monospace" font-size="16" fill="#1e293b" text-anchor="middle" font-weight="bold">Proxy (handler)</text>
+
+  <rect x="270" y="172" width="220" height="58" rx="8" fill="#2563eb"/>
+  <text x="380" y="195" font-family="monospace" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">get(obj, kalit)</text>
+  <text x="380" y="217" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dbeafe" text-anchor="middle">o'qishni ushlaydi: log, default</text>
+
+  <rect x="270" y="240" width="220" height="58" rx="8" fill="#dc2626"/>
+  <text x="380" y="263" font-family="monospace" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">set(obj, kalit, qiymat)</text>
+  <text x="380" y="285" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#fee2e2" text-anchor="middle">yozishni ushlaydi: validatsiya</text>
+
+  <!-- target -->
+  <rect x="560" y="160" width="170" height="120" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="645" y="188" font-family="monospace" font-size="15" fill="#1e293b" text-anchor="middle" font-weight="bold">target</text>
+  <text x="645" y="214" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">asl obyekt</text>
+  <text x="645" y="244" font-family="monospace" font-size="14" fill="#16a34a" text-anchor="middle">{ ism: "Oqil" }</text>
+  <text x="645" y="266" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">o'zi tegmaydi</text>
+
+  <!-- arrows: code -> proxy -->
+  <line x1="175" y1="112" x2="300" y2="166" stroke="#475569" stroke-width="2.5" marker-end="url(#ar5)"/>
+  <text x="210" y="148" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">amal proxy orqali o'tadi</text>
+
+  <!-- proxy -> target (standart amal) -->
+  <line x1="490" y1="201" x2="556" y2="210" stroke="#475569" stroke-width="2.5" marker-end="url(#ar5)"/>
+  <line x1="490" y1="269" x2="556" y2="248" stroke="#475569" stroke-width="2.5" marker-end="url(#ar5)"/>
+  <text x="525" y="320" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">trap ruxsat bersa, target ga uzatiladi</text>
+
+  <text x="380" y="350" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">Bu mexanizm ustida Vue 3 reaktivligi qurilgan: get =&gt; track, set =&gt; trigger</text>
+</svg>

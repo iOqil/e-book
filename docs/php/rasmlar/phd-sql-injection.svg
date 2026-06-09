@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" width="720" height="480">
+  <title>SQL injection va prepared statement: xavfli vs xavfsiz so'rov</title>
+  <rect x="0" y="0" width="720" height="480" fill="#f8fafc"/>
+
+  <text x="360" y="30" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="18" font-weight="bold" fill="#1e293b">SQL injection va undan himoya</text>
+
+  <defs>
+    <marker id="arX" markerWidth="11" markerHeight="11" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 Z" fill="#dc2626"/>
+    </marker>
+    <marker id="arXg" markerWidth="11" markerHeight="11" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <!-- LEFT: dangerous -->
+  <rect x="20" y="55" width="330" height="395" rx="12" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="185" y="82" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#dc2626">XAVFLI — to'g'ridan-to'g'ri</text>
+
+  <rect x="40" y="98" width="290" height="56" rx="8" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="55" y="120" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Foydalanuvchi kiritadi:</text>
+  <text x="55" y="142" font-family="monospace" font-size="13" fill="#dc2626">' OR '1'='1</text>
+
+  <line x1="185" y1="156" x2="185" y2="186" stroke="#dc2626" stroke-width="2" marker-end="url(#arX)"/>
+
+  <rect x="40" y="190" width="290" height="74" rx="8" fill="#ffffff" stroke="#dc2626"/>
+  <text x="55" y="212" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">So'rov matniga QO'SHIB qo'yiladi:</text>
+  <text x="55" y="234" font-family="monospace" font-size="13" fill="#1e293b">"... WHERE login = '$login'"</text>
+  <text x="55" y="254" font-family="monospace" font-size="13" fill="#dc2626">... login = '' OR '1'='1'</text>
+
+  <line x1="185" y1="266" x2="185" y2="296" stroke="#dc2626" stroke-width="2" marker-end="url(#arX)"/>
+
+  <rect x="40" y="300" width="290" height="70" rx="8" fill="#fee2e2" stroke="#dc2626"/>
+  <text x="185" y="322" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626">Kiritma KOD sifatida bajariladi!</text>
+  <text x="185" y="344" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">'1'='1' doim rost -&gt; hamma</text>
+  <text x="185" y="362" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">qatorlar ochiladi (buzg'unchi kiradi)</text>
+
+  <text x="185" y="400" text-anchor="middle" font-family="monospace" font-size="13" fill="#dc2626">$pdo-&gt;query("... '$login'")</text>
+  <text x="185" y="428" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">Hech qachon shunday qilmang</text>
+
+  <!-- RIGHT: safe -->
+  <rect x="370" y="55" width="330" height="395" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="535" y="82" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">XAVFSIZ — prepared statement</text>
+
+  <rect x="390" y="98" width="290" height="56" rx="8" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="405" y="120" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Foydalanuvchi kiritadi:</text>
+  <text x="405" y="142" font-family="monospace" font-size="13" fill="#dc2626">' OR '1'='1</text>
+
+  <line x1="535" y1="156" x2="535" y2="186" stroke="#16a34a" stroke-width="2" marker-end="url(#arXg)"/>
+
+  <rect x="390" y="190" width="290" height="74" rx="8" fill="#ffffff" stroke="#16a34a"/>
+  <text x="405" y="212" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">So'rov ALOHIDA, qiymat ALOHIDA:</text>
+  <text x="405" y="234" font-family="monospace" font-size="13" fill="#1e293b">prepare("... login = ?")</text>
+  <text x="405" y="254" font-family="monospace" font-size="13" fill="#16a34a">execute([$login])</text>
+
+  <line x1="535" y1="266" x2="535" y2="296" stroke="#16a34a" stroke-width="2" marker-end="url(#arXg)"/>
+
+  <rect x="390" y="300" width="290" height="70" rx="8" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="535" y="322" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">Kiritma faqat MA'LUMOT</text>
+  <text x="535" y="344" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">U hech qachon SQL buyruq</text>
+  <text x="535" y="362" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">sifatida bajarilmaydi</text>
+
+  <text x="535" y="400" text-anchor="middle" font-family="monospace" font-size="13" fill="#16a34a">prepare(...) + execute([...])</text>
+  <text x="535" y="428" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">Doim shunday qiling</text>
+</svg>

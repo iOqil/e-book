@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 500" width="880" height="500">
+  <title>Composable — mantiqni ajratib, ko'p komponentda qayta ishlatish</title>
+  <defs>
+    <marker id="vuCm" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L9 5 L0 10 z" fill="#475569"/>
+    </marker>
+    <marker id="vuCmBlue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L9 5 L0 10 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="880" height="500" fill="#f8fafc"/>
+  <text x="440" y="34" font-family="Segoe UI, system-ui, sans-serif" font-size="21" font-weight="bold" fill="#1e293b" text-anchor="middle">Composable — logikani bir marta yoz, ko'p joyda ishlat</text>
+
+  <!-- ===== central composable ===== -->
+  <rect x="300" y="70" width="280" height="200" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="440" y="98" font-family="monospace" font-size="16" font-weight="bold" fill="#16a34a" text-anchor="middle">useMouse()</text>
+  <text x="440" y="118" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#15803d" text-anchor="middle">reaktiv holat + logika, kapsulalangan</text>
+
+  <rect x="324" y="132" width="232" height="28" rx="5" fill="#f8fafc" stroke="#16a34a" stroke-width="1.2"/>
+  <text x="338" y="151" font-family="monospace" font-size="13" fill="#1e293b">const x = ref(0), y = ref(0)</text>
+  <rect x="324" y="166" width="232" height="28" rx="5" fill="#f8fafc" stroke="#16a34a" stroke-width="1.2"/>
+  <text x="338" y="185" font-family="monospace" font-size="13" fill="#1e293b">onMounted(add listener)</text>
+  <rect x="324" y="200" width="232" height="28" rx="5" fill="#f8fafc" stroke="#16a34a" stroke-width="1.2"/>
+  <text x="338" y="219" font-family="monospace" font-size="13" fill="#1e293b">onUnmounted(cleanup)</text>
+  <rect x="324" y="234" width="232" height="28" rx="5" fill="#2563eb"/>
+  <text x="440" y="253" font-family="monospace" font-size="13" fill="#ffffff" text-anchor="middle">return { x, y }</text>
+
+  <!-- ===== three components reuse it ===== -->
+  <!-- comp A -->
+  <rect x="40" y="330" width="220" height="100" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="150" y="356" font-family="monospace" font-size="14" font-weight="bold" fill="#2563eb" text-anchor="middle">Tracker.vue</text>
+  <text x="150" y="382" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">const {x,y} = useMouse()</text>
+  <text x="150" y="406" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">kursorni ko'rsatadi</text>
+
+  <!-- comp B -->
+  <rect x="330" y="330" width="220" height="100" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="440" y="356" font-family="monospace" font-size="14" font-weight="bold" fill="#2563eb" text-anchor="middle">Tooltip.vue</text>
+  <text x="440" y="382" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">const {x,y} = useMouse()</text>
+  <text x="440" y="406" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">tooltip joyini boshqaradi</text>
+
+  <!-- comp C -->
+  <rect x="620" y="330" width="220" height="100" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="730" y="356" font-family="monospace" font-size="14" font-weight="bold" fill="#2563eb" text-anchor="middle">Canvas.vue</text>
+  <text x="730" y="382" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">const {x,y} = useMouse()</text>
+  <text x="730" y="406" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">chizish koordinatasi</text>
+
+  <!-- arrows composable -> components -->
+  <path d="M380 270 C 300 300, 220 310, 160 328" fill="none" stroke="#16a34a" stroke-width="2.5" marker-end="url(#vuCm)"/>
+  <path d="M440 272 L440 328" fill="none" stroke="#16a34a" stroke-width="2.5" marker-end="url(#vuCm)"/>
+  <path d="M500 270 C 580 300, 660 310, 720 328" fill="none" stroke="#16a34a" stroke-width="2.5" marker-end="url(#vuCm)"/>
+  <text x="440" y="300" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#15803d" text-anchor="middle">bitta manba — qayta ishlatiladi (DRY)</text>
+
+  <!-- left note: what stays inside -->
+  <rect x="610" y="78" width="250" height="180" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="630" y="102" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Composable qoidalari:</text>
+  <text x="630" y="126" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">• nomi use... bilan boshlanadi</text>
+  <text x="630" y="148" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">• ref / computed / fn qaytaradi</text>
+  <text x="630" y="170" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">• ref qaytargani uchun destructure</text>
+  <text x="644" y="188" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">reaktivlikni buzmaydi</text>
+  <text x="630" y="210" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">• lifecycle ham ichida</text>
+  <text x="644" y="228" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">("custom hook" kabi)</text>
+  <text x="630" y="250" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#15803d">= frontend'dagi "service"</text>
+
+  <!-- left empty area: contrast note -->
+  <rect x="20" y="78" width="250" height="180" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="40" y="102" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Nega composable?</text>
+  <text x="40" y="126" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Listener qo'shish ham,</text>
+  <text x="40" y="144" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tozalash ham — bitta</text>
+  <text x="40" y="162" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">joyda. Komponent faqat</text>
+  <text x="40" y="180" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">natijani oladi, ingichka</text>
+  <text x="40" y="198" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(thin) qoladi.</text>
+  <text x="40" y="226" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">Testlanadigan,</text>
+  <text x="40" y="244" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">qayta ishlatiladigan.</text>
+
+  <text x="440" y="464" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Har komponent useMouse() ni chaqirsa — o'z mustaqil x/y nusxasini oladi (alohida holat)</text>
+  <text x="440" y="486" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Kichik composable'lardan kattalarini quryapsan — service'lardan biznes-logika qatlamini qurgandek</text>
+</svg>

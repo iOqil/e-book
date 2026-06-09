@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 520" width="780" height="520">
+  <title>asyncio event loop: await boshqaruvni qaytaradi, loop boshqa coroutine ishini boshlaydi</title>
+  <defs>
+    <marker id="el-arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 z" fill="#2563eb"/>
+    </marker>
+    <marker id="el-back" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="780" height="520" fill="#f8fafc"/>
+  <text x="390" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1e293b">asyncio event loop</text>
+  <text x="390" y="60" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">await - boshqaruvni qaytaradi, loop boshqa ishni boshlaydi (bitta thread)</text>
+
+  <!-- Event loop in the center -->
+  <circle cx="390" cy="270" r="92" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+  <text x="390" y="262" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="18" font-weight="bold" fill="#2563eb">Event loop</text>
+  <text x="390" y="286" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tayyor ishni</text>
+  <text x="390" y="304" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tanlab ishlatadi</text>
+
+  <!-- Coroutine A -->
+  <rect x="40" y="150" width="200" height="74" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="140" y="178" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Coroutine A</text>
+  <text x="140" y="202" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="13" fill="#1e293b">await sleep(2)</text>
+
+  <!-- Coroutine B -->
+  <rect x="40" y="316" width="200" height="74" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="140" y="344" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#f59e0b">Coroutine B</text>
+  <text x="140" y="368" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="13" fill="#1e293b">await sleep(2)</text>
+
+  <!-- Coroutine C -->
+  <rect x="540" y="233" width="200" height="74" rx="10" fill="#e0f2fe" stroke="#0284c7" stroke-width="2.5"/>
+  <text x="640" y="261" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#0284c7">Coroutine C</text>
+  <text x="640" y="285" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="13" fill="#1e293b">await sleep(2)</text>
+
+  <!-- A: await gives control back to loop -->
+  <line x1="240" y1="180" x2="300" y2="232" stroke="#16a34a" stroke-width="2.5" marker-end="url(#el-back)"/>
+  <text x="232" y="150" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">await: boshqaruvni qaytaradi &#8594;</text>
+
+  <!-- loop hands work to B -->
+  <line x1="300" y1="318" x2="240" y2="356" stroke="#2563eb" stroke-width="2.5" marker-end="url(#el-arrow)"/>
+  <text x="252" y="404" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#2563eb">loop B ni boshlaydi</text>
+
+  <!-- loop hands work to C -->
+  <line x1="482" y1="270" x2="540" y2="270" stroke="#2563eb" stroke-width="2.5" marker-end="url(#el-arrow)"/>
+  <text x="490" y="258" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#2563eb">keyin C</text>
+
+  <!-- timeline at bottom -->
+  <rect x="40" y="430" width="700" height="68" rx="12" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="60" y="456" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Natija: A, B, C kutishlari ustma-ust ketadi - hammasi ~2 soniyada (6 emas).</text>
+  <text x="60" y="482" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">await joyida pauza bo'ladi; loop bekor turmay, kutayotgan boshqa coroutine ishini oladi.</text>
+</svg>

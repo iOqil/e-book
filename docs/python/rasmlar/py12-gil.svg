@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 500" width="760" height="500">
+  <title>GIL: bir vaqtda faqat bitta thread Python bytecode bajaradi (qulf navbatma-navbat o'tadi)</title>
+  <defs>
+    <marker id="gil-arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="500" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1e293b">GIL - Global Interpreter Lock</text>
+  <text x="380" y="60" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Bir vaqtda faqat BITTA thread Python bytecode bajaradi</text>
+
+  <!-- The single lock token -->
+  <rect x="320" y="86" width="120" height="46" rx="10" fill="#f59e0b" stroke="#94a3b8" stroke-width="2"/>
+  <text x="380" y="115" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">GIL qulfi (1 ta)</text>
+
+  <!-- Three threads waiting for the lock -->
+  <text x="70" y="172" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Threadlar:</text>
+
+  <!-- Thread A: holding the lock (running) -->
+  <rect x="190" y="150" width="160" height="56" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="270" y="174" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">Thread A</text>
+  <text x="270" y="195" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">qulfni ushlagan - ishlaydi</text>
+
+  <!-- Thread B: waiting -->
+  <rect x="410" y="150" width="160" height="56" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="490" y="174" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#475569">Thread B</text>
+  <text x="490" y="195" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">navbatda kutadi</text>
+
+  <!-- Thread C: waiting -->
+  <rect x="590" y="150" width="150" height="56" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="665" y="174" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#475569">Thread C</text>
+  <text x="665" y="195" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">navbatda kutadi</text>
+
+  <!-- lock pointing to A -->
+  <line x1="370" y1="132" x2="300" y2="150" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#gil-arrow)"/>
+
+  <!-- CPU work scenario -->
+  <rect x="40" y="232" width="700" height="116" rx="12" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="60" y="258" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">Hisob ishi (CPU): GIL tufayli navbatga turadi</text>
+  <text x="60" y="282" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Vaqt &#8594;  A ishlaydi, keyin B, keyin C - parallel emas, ketma-ket. Tezlashmaydi.</text>
+  <g font-family="Consolas, Courier New, monospace" font-size="13">
+    <rect x="60" y="298" width="180" height="34" rx="5" fill="#16a34a"/><text x="150" y="320" text-anchor="middle" fill="#ffffff">A hisoblaydi</text>
+    <rect x="248" y="298" width="180" height="34" rx="5" fill="#2563eb"/><text x="338" y="320" text-anchor="middle" fill="#ffffff">B hisoblaydi</text>
+    <rect x="436" y="298" width="180" height="34" rx="5" fill="#f59e0b"/><text x="526" y="320" text-anchor="middle" fill="#1e293b">C hisoblaydi</text>
+  </g>
+
+  <!-- I/O work scenario -->
+  <rect x="40" y="364" width="700" height="116" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="60" y="390" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Kutish ishi (I/O): kutish paytida GIL bo'shaydi - foydali</text>
+  <text x="60" y="414" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">A kutganda (internet/fayl) qulf bo'shaydi, B ishlay boshlaydi - vaqt tejaladi.</text>
+  <g font-family="Consolas, Courier New, monospace" font-size="13">
+    <rect x="60" y="430" width="120" height="34" rx="5" fill="#16a34a"/><text x="120" y="452" text-anchor="middle" fill="#ffffff">A kutadi</text>
+    <rect x="188" y="430" width="120" height="34" rx="5" fill="#2563eb"/><text x="248" y="452" text-anchor="middle" fill="#ffffff">B kutadi</text>
+    <rect x="316" y="430" width="120" height="34" rx="5" fill="#f59e0b"/><text x="376" y="452" text-anchor="middle" fill="#1e293b">C kutadi</text>
+    <text x="470" y="452" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(kutishlar bir-biriga ustma-ust)</text>
+  </g>
+</svg>

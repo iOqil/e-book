@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 460" width="740" height="460">
+  <title>Callback Hell — ichma-ich joylashgan callbacklar piramidasi</title>
+  <rect x="0" y="0" width="740" height="460" fill="#f8fafc"/>
+  <text x="370" y="34" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1e293b" text-anchor="middle">Callback Hell (callback do'zaxi)</text>
+  <text x="370" y="58" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569" text-anchor="middle">Har bosqich oldingisining ichida — kod o'ngga "qiyshayadi"</text>
+
+  <!-- nested boxes -->
+  <rect x="40" y="80" width="660" height="320" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="60" y="106" font-family="monospace" font-size="14" fill="#dc2626">userOl((user) =&gt; {</text>
+
+  <rect x="110" y="120" width="560" height="240" rx="8" fill="#fde2c4" stroke="#f59e0b" stroke-width="2"/>
+  <text x="130" y="146" font-family="monospace" font-size="14" fill="#b45309">postlarOl(user.id, (postlar) =&gt; {</text>
+
+  <rect x="180" y="160" width="460" height="160" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="200" y="186" font-family="monospace" font-size="14" fill="#92400e">izohlarOl(postlar[0].id, (izohlar) =&gt; {</text>
+
+  <rect x="250" y="200" width="320" height="80" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="270" y="234" font-family="monospace" font-size="14" fill="#15803d">// ... yana chuqurroq</text>
+  <text x="270" y="262" font-family="monospace" font-size="14" fill="#15803d">console.log(izohlar);</text>
+
+  <text x="200" y="306" font-family="monospace" font-size="14" fill="#92400e">});</text>
+  <text x="130" y="346" font-family="monospace" font-size="14" fill="#b45309">});</text>
+  <text x="60" y="388" font-family="monospace" font-size="14" fill="#dc2626">});</text>
+
+  <!-- arrow showing drift -->
+  <path d="M690 110 L640 350" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="6,5"/>
+  <text x="700" y="240" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626" text-anchor="middle" transform="rotate(78 700 240)">tobora chuqurlashadi →</text>
+
+  <text x="370" y="430" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">O'qish qiyin, xato boshqaruvi takrorlanadi — yechim: Promise va async/await</text>
+</svg>

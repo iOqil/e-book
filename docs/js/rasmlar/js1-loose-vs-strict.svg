@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 450" width="760" height="450">
+  <title>== va === farqi: type coercion (tur o'zgartirish)</title>
+  <rect x="0" y="0" width="760" height="450" fill="#f8fafc"/>
+
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">== va === : tur o'zgartirish (coercion)</text>
+
+  <text x="380" y="60" text-anchor="middle" font-family="monospace" font-size="15" fill="#1e293b">Misol:  5 == "5"   va   5 === "5"</text>
+
+  <defs>
+    <marker id="a3" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- LEFT: == loose -->
+  <rect x="30" y="80" width="340" height="300" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="200" y="108" text-anchor="middle" font-family="monospace" font-size="18" font-weight="bold" fill="#dc2626">==  (loose)</text>
+  <text x="200" y="130" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">avval turlarni moslashtiradi</text>
+
+  <rect x="60" y="148" width="120" height="42" rx="6" fill="#e2e8f0" stroke="#94a3b8"/>
+  <text x="120" y="174" text-anchor="middle" font-family="monospace" font-size="14" fill="#2563eb">5</text>
+  <text x="120" y="188" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569"> </text>
+
+  <rect x="220" y="148" width="120" height="42" rx="6" fill="#e2e8f0" stroke="#94a3b8"/>
+  <text x="280" y="174" text-anchor="middle" font-family="monospace" font-size="14" fill="#16a34a">"5"</text>
+
+  <text x="120" y="142" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">number</text>
+  <text x="280" y="142" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">string</text>
+
+  <!-- coercion step -->
+  <line x1="280" y1="190" x2="280" y2="216" stroke="#475569" stroke-width="2" marker-end="url(#a3)"/>
+  <text x="200" y="232" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">"5" → 5 ga aylantiriladi (coercion)</text>
+
+  <rect x="220" y="244" width="120" height="42" rx="6" fill="#fee2e2" stroke="#dc2626"/>
+  <text x="280" y="270" text-anchor="middle" font-family="monospace" font-size="14" fill="#1e293b">5</text>
+
+  <text x="200" y="316" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">endi 5 == 5 ni solishtiradi</text>
+  <rect x="90" y="332" width="220" height="36" rx="6" fill="#f8fafc" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="200" y="356" text-anchor="middle" font-family="monospace" font-size="15" fill="#dc2626">natija: true (adashtiradi!)</text>
+
+  <!-- RIGHT: === strict -->
+  <rect x="390" y="80" width="340" height="300" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="560" y="108" text-anchor="middle" font-family="monospace" font-size="18" font-weight="bold" fill="#16a34a">===  (strict)</text>
+  <text x="560" y="130" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">turni HAM, qiymatni HAM tekshiradi</text>
+
+  <rect x="420" y="148" width="120" height="42" rx="6" fill="#e2e8f0" stroke="#94a3b8"/>
+  <text x="480" y="174" text-anchor="middle" font-family="monospace" font-size="14" fill="#2563eb">5</text>
+
+  <rect x="580" y="148" width="120" height="42" rx="6" fill="#e2e8f0" stroke="#94a3b8"/>
+  <text x="640" y="174" text-anchor="middle" font-family="monospace" font-size="14" fill="#16a34a">"5"</text>
+
+  <text x="480" y="142" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">number</text>
+  <text x="640" y="142" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">string</text>
+
+  <text x="560" y="232" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">turlar har xil: number ≠ string</text>
+  <text x="560" y="258" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">moslashtirish YO'Q — to'g'ridan-to'g'ri</text>
+  <text x="560" y="280" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">solishtiradi</text>
+
+  <rect x="450" y="332" width="220" height="36" rx="6" fill="#f8fafc" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="560" y="356" text-anchor="middle" font-family="monospace" font-size="15" fill="#16a34a">natija: false (aniq!)</text>
+
+  <!-- bottom rule -->
+  <rect x="30" y="396" width="700" height="40" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="380" y="421" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Qoida: doim === va !== ishlat. == kutilmagan natija beradi (0 == false, "" == false).</text>
+</svg>

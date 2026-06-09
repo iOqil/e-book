@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520" width="760" height="520">
+  <title>Union-Find (DSU) — union to'plamlarni birlashtiradi, path compression yo'lni qisqartiradi</title>
+  <rect x="0" y="0" width="760" height="520" fill="#f8fafc"/>
+  <text x="380" y="30" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Union-Find (DSU) — union va path compression</text>
+  <text x="380" y="54" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">parent[] orqali daraxt; find ildizni topadi, union ildizlarni ulaydi</text>
+
+  <defs>
+    <marker id="du" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto">
+      <path d="M0,0 L7,3.2 L0,6.4 Z" fill="#475569"/>
+    </marker>
+    <marker id="duG" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto">
+      <path d="M0,0 L7,3.2 L0,6.4 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <!-- ===== union(a, b) panel ===== -->
+  <text x="190" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">1) union(1, 4)</text>
+  <text x="190" y="112" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">ikki ildiz: 0 va 3 → birini ikkinchisiga ula</text>
+
+  <!-- set A: 0 root, 1,2 children -->
+  <circle cx="120" cy="160" r="18" fill="#2563eb"/>
+  <text x="120" y="165" text-anchor="middle" font-family="monospace" font-size="14" fill="#ffffff">0</text>
+  <circle cx="90" cy="220" r="16" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="90" y="225" text-anchor="middle" font-family="monospace" font-size="14" fill="#1e293b">1</text>
+  <circle cx="150" cy="220" r="16" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="150" y="225" text-anchor="middle" font-family="monospace" font-size="14" fill="#1e293b">2</text>
+  <line x1="106" y1="210" x2="116" y2="176" stroke="#475569" stroke-width="2" marker-end="url(#du)"/>
+  <line x1="146" y1="206" x2="126" y2="176" stroke="#475569" stroke-width="2" marker-end="url(#du)"/>
+
+  <!-- set B: 3 root, 4 child -->
+  <circle cx="270" cy="160" r="18" fill="#2563eb"/>
+  <text x="270" y="165" text-anchor="middle" font-family="monospace" font-size="14" fill="#ffffff">3</text>
+  <circle cx="270" cy="220" r="16" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="270" y="225" text-anchor="middle" font-family="monospace" font-size="14" fill="#1e293b">4</text>
+  <line x1="270" y1="204" x2="270" y2="180" stroke="#475569" stroke-width="2" marker-end="url(#du)"/>
+
+  <!-- union arrow: attach root 3 -> root 0 -->
+  <path d="M252,158 C210,120 170,130 138,150" fill="none" stroke="#16a34a" stroke-width="2.5" marker-end="url(#duG)"/>
+  <text x="178" y="118" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">parent[3]=0</text>
+
+  <!-- divider -->
+  <line x1="380" y1="80" x2="380" y2="300" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4 4"/>
+
+  <!-- ===== path compression panel ===== -->
+  <text x="570" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#f59e0b">2) path compression</text>
+  <text x="570" y="112" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">find(3) chaqirilganda tugunlar to'g'ridan ildizga ulanadi</text>
+
+  <!-- before (left chain) -->
+  <text x="490" y="140" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">oldin</text>
+  <circle cx="490" cy="160" r="16" fill="#2563eb"/>
+  <text x="490" y="165" text-anchor="middle" font-family="monospace" font-size="13" fill="#ffffff">0</text>
+  <circle cx="490" cy="210" r="15" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="490" y="215" text-anchor="middle" font-family="monospace" font-size="13" fill="#1e293b">1</text>
+  <circle cx="490" cy="258" r="15" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="490" y="263" text-anchor="middle" font-family="monospace" font-size="13" fill="#1e293b">3</text>
+  <line x1="490" y1="195" x2="490" y2="178" stroke="#475569" stroke-width="2" marker-end="url(#du)"/>
+  <line x1="490" y1="243" x2="490" y2="227" stroke="#475569" stroke-width="2" marker-end="url(#du)"/>
+
+  <!-- arrow between -->
+  <line x1="525" y1="210" x2="575" y2="210" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#du)"/>
+  <text x="550" y="200" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#f59e0b">find</text>
+
+  <!-- after (flat) -->
+  <text x="640" y="140" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">keyin (yassi)</text>
+  <circle cx="640" cy="160" r="16" fill="#2563eb"/>
+  <text x="640" y="165" text-anchor="middle" font-family="monospace" font-size="13" fill="#ffffff">0</text>
+  <circle cx="610" cy="240" r="15" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="610" y="245" text-anchor="middle" font-family="monospace" font-size="13" fill="#1e293b">1</text>
+  <circle cx="680" cy="240" r="15" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="680" y="245" text-anchor="middle" font-family="monospace" font-size="13" fill="#1e293b">3</text>
+  <line x1="617" y1="226" x2="632" y2="176" stroke="#16a34a" stroke-width="2" marker-end="url(#duG)"/>
+  <line x1="673" y1="226" x2="648" y2="176" stroke="#16a34a" stroke-width="2" marker-end="url(#duG)"/>
+
+  <!-- parent array snapshot -->
+  <text x="100" y="330" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">parent[] union(1,4) dan keyin:</text>
+  <g font-family="monospace" font-size="14">
+    <rect x="100" y="344" width="48" height="34" fill="#e2e8f0" stroke="#94a3b8"/>
+    <rect x="148" y="344" width="48" height="34" fill="#e2e8f0" stroke="#94a3b8"/>
+    <rect x="196" y="344" width="48" height="34" fill="#e2e8f0" stroke="#94a3b8"/>
+    <rect x="244" y="344" width="48" height="34" fill="#dcfce7" stroke="#16a34a"/>
+    <rect x="292" y="344" width="48" height="34" fill="#e2e8f0" stroke="#94a3b8"/>
+    <text x="124" y="367" text-anchor="middle" fill="#1e293b">0</text>
+    <text x="172" y="367" text-anchor="middle" fill="#1e293b">0</text>
+    <text x="220" y="367" text-anchor="middle" fill="#1e293b">0</text>
+    <text x="268" y="367" text-anchor="middle" fill="#16a34a">0</text>
+    <text x="316" y="367" text-anchor="middle" fill="#1e293b">3</text>
+    <text x="124" y="394" text-anchor="middle" fill="#94a3b8">i=0</text>
+    <text x="172" y="394" text-anchor="middle" fill="#94a3b8">1</text>
+    <text x="220" y="394" text-anchor="middle" fill="#94a3b8">2</text>
+    <text x="268" y="394" text-anchor="middle" fill="#94a3b8">3</text>
+    <text x="316" y="394" text-anchor="middle" fill="#94a3b8">4</text>
+  </g>
+  <text x="360" y="367" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">parent[i]==i bo'lsa — ildiz</text>
+
+  <!-- legend -->
+  <rect x="80" y="426" width="600" height="78" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="100" y="452" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b"><tspan font-weight="bold" fill="#2563eb">find(x):</tspan> ildizgacha ko'tarilamiz; yo'lda har tugunni ildizga yaqinlashtiramiz (compression).</text>
+  <text x="100" y="474" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b"><tspan font-weight="bold" fill="#16a34a">union(a,b):</tspan> ikki ildiz topiladi; rank kichigi kattasiga ulanadi (daraxt past qoladi).</text>
+  <text x="100" y="496" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Rank + compression bilan har amal deyarli O(1) — aniqrog'i O(α(n)).</text>
+</svg>

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 470" width="720" height="470">
+  <title>Forma serverga: GET vs POST, $_POST -&gt; PHP</title>
+  <rect x="0" y="0" width="720" height="470" fill="#f8fafc"/>
+
+  <text x="360" y="30" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="18" font-weight="bold" fill="#1e293b">Forma serverga qanday boradi (GET va POST)</text>
+
+  <defs>
+    <marker id="arF" markerWidth="11" markerHeight="11" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- Brauzer / forma -->
+  <rect x="30" y="60" width="220" height="150" rx="10" fill="#e2e8f0" stroke="#2563eb" stroke-width="2"/>
+  <text x="140" y="86" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">Brauzer (forma)</text>
+  <rect x="50" y="100" width="180" height="26" rx="4" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="60" y="118" font-family="monospace" font-size="13" fill="#1e293b">ism: Ali</text>
+  <rect x="50" y="132" width="180" height="26" rx="4" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="60" y="150" font-family="monospace" font-size="13" fill="#1e293b">yosh: 19</text>
+  <rect x="80" y="170" width="120" height="28" rx="6" fill="#2563eb"/>
+  <text x="140" y="189" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">Yuborish</text>
+
+  <!-- Server / PHP -->
+  <rect x="470" y="60" width="220" height="150" rx="10" fill="#e2e8f0" stroke="#16a34a" stroke-width="2"/>
+  <text x="580" y="86" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">Server (PHP)</text>
+  <text x="580" y="110" text-anchor="middle" font-family="monospace" font-size="13" fill="#1e293b">natija.php</text>
+  <text x="580" y="138" text-anchor="middle" font-family="monospace" font-size="13" fill="#1e293b">$_POST['ism'] = "Ali"</text>
+  <text x="580" y="160" text-anchor="middle" font-family="monospace" font-size="13" fill="#1e293b">$_POST['yosh'] = "19"</text>
+  <text x="580" y="190" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">kalit = name maydoni</text>
+
+  <!-- Arrow form -> server -->
+  <line x1="252" y1="135" x2="466" y2="135" stroke="#475569" stroke-width="2.5" marker-end="url(#arF)"/>
+  <text x="360" y="125" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">HTTP so'rov</text>
+
+  <!-- POST row -->
+  <rect x="30" y="240" width="660" height="95" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="50" y="266" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">POST (method="post")</text>
+  <text x="50" y="290" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Ma'lumot so'rov "tanasida" yashirin yuboriladi — manzilda KO'RINMAYDI.</text>
+  <text x="50" y="312" font-family="monospace" font-size="13" fill="#1e293b">PHP'da olamiz:  $_POST['ism']</text>
+  <text x="50" y="330" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Ishlatiladi: ma'lumot saqlash, ro'yxatdan o'tish, parol (o'zgartirish/saqlash).</text>
+
+  <!-- GET row -->
+  <rect x="30" y="350" width="660" height="100" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="50" y="376" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">GET (method="get")</text>
+  <text x="50" y="400" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Ma'lumot MANZIL qatorida ko'rinadi:</text>
+  <text x="318" y="400" font-family="monospace" font-size="13" fill="#dc2626">natija.php?ism=Ali&amp;yosh=19</text>
+  <text x="50" y="422" font-family="monospace" font-size="13" fill="#1e293b">PHP'da olamiz:  $_GET['ism']</text>
+  <text x="50" y="442" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Ishlatiladi: qidirish, filtrlash, havola orqali ma'lumot uzatish (ma'lumot olish).</text>
+</svg>

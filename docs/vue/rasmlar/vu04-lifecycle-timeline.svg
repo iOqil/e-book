@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 470" width="900" height="470">
+  <title>Lifecycle hooks vaqt o'qi — setup, onMounted, onUpdated, onUnmounted</title>
+  <defs>
+    <marker id="vuLine" markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto">
+      <path d="M0 0 L10 5.5 L0 11 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="900" height="470" fill="#f8fafc"/>
+  <text x="450" y="34" font-family="Segoe UI, system-ui, sans-serif" font-size="21" font-weight="bold" fill="#1e293b" text-anchor="middle">Komponent hayot tsikli — yaratilishdan yo'q qilinishigacha</text>
+
+  <!-- timeline axis -->
+  <line x1="60" y1="150" x2="840" y2="150" stroke="#475569" stroke-width="3" marker-end="url(#vuLine)"/>
+  <text x="850" y="146" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="end">vaqt →</text>
+
+  <!-- 1. setup -->
+  <circle cx="120" cy="150" r="9" fill="#2563eb"/>
+  <rect x="60" y="68" width="130" height="60" rx="8" fill="#2563eb"/>
+  <text x="125" y="92" font-family="monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">setup</text>
+  <text x="125" y="113" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dbeafe" text-anchor="middle">ref, computed</text>
+  <line x1="120" y1="128" x2="120" y2="142" stroke="#2563eb" stroke-width="2"/>
+
+  <!-- 2. onBeforeMount -->
+  <circle cx="290" cy="150" r="9" fill="#94a3b8"/>
+  <rect x="225" y="170" width="130" height="44" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="290" y="190" font-family="monospace" font-size="13" font-weight="bold" fill="#1e293b" text-anchor="middle">onBeforeMount</text>
+  <text x="290" y="207" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">DOM dan oldin</text>
+  <line x1="290" y1="158" x2="290" y2="168" stroke="#94a3b8" stroke-width="2"/>
+
+  <!-- 3. onMounted -->
+  <circle cx="450" cy="150" r="9" fill="#16a34a"/>
+  <rect x="380" y="62" width="150" height="66" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="455" y="84" font-family="monospace" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">onMounted</text>
+  <text x="455" y="103" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#15803d" text-anchor="middle">DOM tayyor: fetch,</text>
+  <text x="455" y="120" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#15803d" text-anchor="middle">addEventListener</text>
+  <line x1="450" y1="128" x2="450" y2="142" stroke="#16a34a" stroke-width="2"/>
+
+  <!-- 4. onUpdated (loop) -->
+  <circle cx="600" cy="150" r="9" fill="#f59e0b"/>
+  <rect x="535" y="170" width="130" height="60" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="600" y="192" font-family="monospace" font-size="14" font-weight="bold" fill="#b45309" text-anchor="middle">onUpdated</text>
+  <text x="600" y="210" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#92400e" text-anchor="middle">reaktiv o'zgarish</text>
+  <text x="600" y="226" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#92400e" text-anchor="middle">DOM ga tushgach</text>
+  <line x1="600" y1="158" x2="600" y2="168" stroke="#f59e0b" stroke-width="2"/>
+  <!-- loop arrow showing repeats -->
+  <path d="M620 168 C 660 130, 660 100, 615 96" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#vuLine)"/>
+  <text x="668" y="120" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309">qayta-qayta ⟳</text>
+
+  <!-- 5. onBeforeUnmount -->
+  <circle cx="730" cy="150" r="9" fill="#94a3b8"/>
+  <rect x="665" y="62" width="130" height="44" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="730" y="82" font-family="monospace" font-size="13" font-weight="bold" fill="#1e293b" text-anchor="middle">onBeforeUnmount</text>
+  <text x="730" y="99" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">o'chishdan oldin</text>
+  <line x1="730" y1="142" x2="730" y2="106" stroke="#94a3b8" stroke-width="2"/>
+
+  <!-- 6. onUnmounted -->
+  <circle cx="810" cy="150" r="9" fill="#dc2626"/>
+  <rect x="700" y="170" width="170" height="66" rx="8" fill="#f8fafc" stroke="#dc2626" stroke-width="2"/>
+  <text x="785" y="192" font-family="monospace" font-size="14" font-weight="bold" fill="#dc2626" text-anchor="middle">onUnmounted</text>
+  <text x="785" y="210" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">tozalash: clearInterval,</text>
+  <text x="785" y="227" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">removeEventListener</text>
+  <line x1="810" y1="158" x2="810" y2="168" stroke="#dc2626" stroke-width="2"/>
+
+  <!-- phase labels under axis -->
+  <text x="200" y="270" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb" text-anchor="middle">YARATISH (mount)</text>
+  <text x="600" y="270" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#f59e0b" text-anchor="middle">YANGILANISH</text>
+  <text x="790" y="270" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626" text-anchor="middle">YO'Q QILISH</text>
+
+  <!-- key pairing note -->
+  <rect x="60" y="300" width="780" height="64" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="80" y="324" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Eng muhim juftlik:</text>
+  <text x="80" y="346" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">onMounted da ochilgan har bir resurs (interval, listener, socket) — onUnmounted da tozalansin. Aks holda leak.</text>
+
+  <!-- SSR note -->
+  <rect x="60" y="380" width="780" height="64" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="80" y="404" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309">Nuxt SSR:</text>
+  <text x="80" y="426" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#92400e">Serverda DOM yo'q — onMounted FAQAT brauzerda (hydration dan keyin) ishlaydi. window/document shu yerda.</text>
+</svg>

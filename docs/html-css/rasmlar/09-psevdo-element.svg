@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" width="720" height="420">
+  <title>::before va ::after element ichida qayerga qo'shilishi</title>
+  <rect x="0" y="0" width="720" height="420" fill="#f8fafc"/>
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">::before va ::after qayerga joylashadi?</text>
+
+  <!-- HTML reminder -->
+  <text x="360" y="64" text-anchor="middle" font-family="Consolas, monospace" font-size="15" fill="#475569">&lt;button&gt; Saqlash &lt;/button&gt;</text>
+
+  <!-- The element box (button) -->
+  <rect x="120" y="110" width="480" height="120" rx="12" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="360" y="98" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">button elementi (uning ichki maydoni)</text>
+
+  <!-- ::before chunk -->
+  <rect x="150" y="150" width="120" height="44" rx="8" fill="#2563eb" stroke="#1e40af" stroke-width="2"/>
+  <text x="210" y="178" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#ffffff" font-weight="bold">::before</text>
+
+  <!-- real content -->
+  <rect x="290" y="150" width="140" height="44" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
+  <text x="360" y="178" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">Saqlash</text>
+  <text x="360" y="214" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(HTML dagi haqiqiy matn)</text>
+
+  <!-- ::after chunk -->
+  <rect x="450" y="150" width="120" height="44" rx="8" fill="#16a34a" stroke="#15803d" stroke-width="2"/>
+  <text x="510" y="178" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#ffffff" font-weight="bold">::after</text>
+
+  <!-- arrows -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/>
+    </marker>
+  </defs>
+  <text x="210" y="270" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">eng boshiga qo'shiladi</text>
+  <text x="510" y="270" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">eng oxiriga qo'shiladi</text>
+  <line x1="210" y1="278" x2="210" y2="200" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="510" y1="278" x2="510" y2="200" stroke="#16a34a" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- CSS example -->
+  <rect x="120" y="300" width="480" height="96" rx="10" fill="#1e293b" stroke="#0f172a" stroke-width="2"/>
+  <text x="140" y="326" font-family="Consolas, monospace" font-size="14" fill="#f8fafc">button::before { content: "&#9733; "; }</text>
+  <text x="140" y="350" font-family="Consolas, monospace" font-size="14" fill="#f8fafc">button::after  { content: " &#8594;"; }</text>
+  <text x="140" y="380" font-family="Consolas, monospace" font-size="14" fill="#16a34a">Natija:  &#9733; Saqlash &#8594;</text>
+</svg>

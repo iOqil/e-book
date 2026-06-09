@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480">
+  <title>Promise zanjiri — .then pipeline va bitta .catch</title>
+  <defs>
+    <marker id="arB" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L9 5 L0 10 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arRd" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L9 5 L0 10 z" fill="#dc2626"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="760" height="480" fill="#f8fafc"/>
+  <text x="380" y="36" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1e293b" text-anchor="middle">Promise zanjiri (.then pipeline)</text>
+  <text x="380" y="60" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569" text-anchor="middle">Piramida emas — tekis, tepadan pastga oqadi</text>
+
+  <!-- stages -->
+  <rect x="230" y="80" width="300" height="56" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="105" font-family="monospace" font-size="14" fill="#1e3a8a" text-anchor="middle">userOl()</text>
+  <text x="380" y="125" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">birinchi promise</text>
+
+  <rect x="230" y="166" width="300" height="56" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="191" font-family="monospace" font-size="14" fill="#1e3a8a" text-anchor="middle">.then(user =&gt; postlarOl(user.id))</text>
+  <text x="380" y="211" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">natijani keyingisiga uzatadi</text>
+
+  <rect x="230" y="252" width="300" height="56" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="277" font-family="monospace" font-size="13" fill="#1e3a8a" text-anchor="middle">.then(postlar =&gt; izohlarOl(...))</text>
+  <text x="380" y="297" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">yana promise qaytaradi</text>
+
+  <rect x="230" y="338" width="300" height="56" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="380" y="363" font-family="monospace" font-size="14" fill="#15803d" text-anchor="middle">.then(izohlar =&gt; console.log(...))</text>
+  <text x="380" y="383" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">oxirgi natija</text>
+
+  <!-- vertical arrows -->
+  <path d="M380 136 L380 164" fill="none" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arB)"/>
+  <path d="M380 222 L380 250" fill="none" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arB)"/>
+  <path d="M380 308 L380 336" fill="none" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arB)"/>
+
+  <!-- single catch -->
+  <rect x="230" y="424" width="300" height="44" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="380" y="451" font-family="monospace" font-size="14" fill="#b91c1c" text-anchor="middle">.catch(xato =&gt; ...)</text>
+
+  <!-- errors from each stage feed into one catch -->
+  <path d="M530 108 C 660 108, 660 446, 532 446" fill="none" stroke="#dc2626" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arRd)"/>
+  <path d="M530 194 C 620 194, 620 446, 532 446" fill="none" stroke="#dc2626" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arRd)"/>
+  <path d="M530 280 C 600 280, 600 446, 532 446" fill="none" stroke="#dc2626" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arRd)"/>
+  <text x="700" y="280" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b91c1c" text-anchor="middle" transform="rotate(90 700 280)">istalgan xato → bitta catch</text>
+
+  <text x="120" y="240" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb" text-anchor="middle" transform="rotate(-90 120 240)">oqim tepadan pastga</text>
+</svg>

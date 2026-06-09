@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="720" height="440">
+  <title>Margin collapse: ikki blokning vertikal margin'i qo'shilmay, kattasi bilan birlashadi</title>
+  <rect x="0" y="0" width="720" height="440" fill="#f8fafc"/>
+
+  <!-- Sarlavha -->
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Margin collapse — vertikal margin'lar birlashishi</text>
+
+  <!-- ===== KUTILGAN (chap): 30 + 20 = 50 ===== -->
+  <text x="190" y="72" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">Kutilgan (noto'g'ri): 30 + 20 = 50px</text>
+
+  <!-- A bloki -->
+  <rect x="90" y="90" width="200" height="44" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="190" y="117" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">A · margin-bottom: 30px</text>
+
+  <!-- margin oralig'i (kutilgan) -->
+  <rect x="90" y="134" width="200" height="50" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="190" y="163" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309">50px ?</text>
+
+  <!-- B bloki -->
+  <rect x="90" y="184" width="200" height="44" rx="4" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="190" y="211" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">B · margin-top: 20px</text>
+
+  <!-- ===== HAQIQAT (o'ng): max(30,20) = 30 ===== -->
+  <text x="530" y="72" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Haqiqat: max(30, 20) = 30px</text>
+
+  <!-- A bloki -->
+  <rect x="430" y="90" width="200" height="44" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="530" y="117" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">A · margin-bottom: 30px</text>
+
+  <!-- margin oralig'i (birlashgan) -->
+  <rect x="430" y="134" width="200" height="30" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="530" y="153" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309">30px</text>
+
+  <!-- B bloki -->
+  <rect x="430" y="164" width="200" height="44" rx="4" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="530" y="191" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">B · margin-top: 20px</text>
+
+  <!-- xulosa qutisi -->
+  <rect x="60" y="252" width="600" height="160" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="360" y="280" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">Qoida va "nega"</text>
+  <text x="360" y="306" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">Yonma-yon turgan ikki blokning VERTIKAL margin'lari qo'shilmaydi —</text>
+  <text x="360" y="326" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">faqat KATTAROG'I qoladi (birlashadi = collapse).</text>
+  <text x="360" y="352" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Nega: matn oqimida paragraflar orasi ikki barobar kengaymasligi uchun.</text>
+  <text x="360" y="376" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Faqat vertikal (yuqori/past) margin'ga taalluqli — gorizontal birlashmaydi.</text>
+  <text x="360" y="398" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">padding, border yoki flex/grid orada bo'lsa — birlashmaydi.</text>
+</svg>

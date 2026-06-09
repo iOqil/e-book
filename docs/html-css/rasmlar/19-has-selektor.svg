@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460">
+  <title>has selektor: ota element ichidagi farzandga qarab tanlanadi - rasmga ega kartalar boshqacha stillanadi</title>
+  <defs>
+    <marker id="hasArr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="720" height="460" fill="#f8fafc"/>
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">:has() — "ota" selektor</text>
+  <text x="360" y="58" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">.karta:has(img) { border: 2px solid green; }</text>
+
+  <!-- Karta A: rasmsiz -->
+  <rect x="60" y="90" width="280" height="320" rx="12" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="200" y="120" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">.karta (rasmsiz)</text>
+  <!-- ichida faqat matn -->
+  <rect x="90" y="145" width="220" height="60" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="200" y="180" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">&lt;p&gt; matn &lt;/p&gt;</text>
+  <text x="200" y="240" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">ichida &lt;img&gt; YO'Q</text>
+  <text x="200" y="300" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#dc2626" font-weight="bold">:has(img) mos kelmadi</text>
+  <text x="200" y="328" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">oddiy kulrang chegara</text>
+
+  <!-- Karta B: rasmli (yashil chegara) -->
+  <rect x="380" y="90" width="280" height="320" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="4"/>
+  <text x="520" y="120" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">.karta (rasmli)</text>
+  <!-- ichida img -->
+  <rect x="410" y="145" width="220" height="80" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="520" y="190" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">&lt;img&gt; rasm &lt;/img&gt;</text>
+  <!-- strelka farzanddan otaga -->
+  <line x1="520" y1="225" x2="520" y2="262" stroke="#16a34a" stroke-width="2.5" marker-end="url(#hasArr)"/>
+  <text x="520" y="252" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">farzand otani tanlatdi</text>
+  <text x="520" y="300" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#16a34a" font-weight="bold">:has(img) MOS keldi</text>
+  <text x="520" y="328" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">yashil chegara qo'shildi</text>
+
+  <text x="360" y="438" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">:has() ota elementni ICHIDAGI farzandiga qarab tanlaydi — CSS tarixida yo'q bo'lgan imkoniyat</text>
+</svg>

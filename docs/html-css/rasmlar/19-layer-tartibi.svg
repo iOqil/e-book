@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" width="720" height="480">
+  <title>Cascade qatlamlari tartibi: reset, base, components, utilities qatlamlari va keyingisi avvalgisini yengishi</title>
+  <defs>
+    <marker id="lyArr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="720" height="480" fill="#f8fafc"/>
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">@layer tartibi — kim kimni yengadi</text>
+  <text x="360" y="58" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">@layer reset, base, components, utilities;  (e'lon tartibi kuchni belgilaydi)</text>
+
+  <!-- kuch o'qi -->
+  <line x1="60" y1="110" x2="60" y2="420" stroke="#475569" stroke-width="2" marker-end="url(#lyArr)"/>
+  <text x="40" y="270" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" transform="rotate(-90 40 270)">kuch ortib boradi (pastdagi yengadi)</text>
+
+  <!-- reset (eng kuchsiz) -->
+  <rect x="110" y="98" width="540" height="66" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="135" y="128" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">1. reset</text>
+  <text x="135" y="150" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">margin: 0; box-sizing: border-box;  — eng kuchsiz qatlam</text>
+
+  <!-- base -->
+  <rect x="110" y="174" width="540" height="66" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="135" y="204" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">2. base</text>
+  <text x="135" y="226" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">body { font; color }  — reset'ni yengadi</text>
+
+  <!-- components -->
+  <rect x="110" y="250" width="540" height="66" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="135" y="280" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">3. components</text>
+  <text x="135" y="302" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">.tugma { background }  — base'ni yengadi</text>
+
+  <!-- utilities (eng kuchli) -->
+  <rect x="110" y="326" width="540" height="66" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="135" y="356" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">4. utilities</text>
+  <text x="135" y="378" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309">.matn-qizil { color: red }  — HAMMASINI yengadi (eng kuchli)</text>
+
+  <text x="360" y="420" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Diqqat: qatlam ichidagi specificity emas, QATLAM TARTIBI hal qiladi</text>
+  <text x="360" y="448" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">.tugma#asosiy (komponentda) bo'lsa ham, utilities'dagi oddiy .matn-qizil g'olib chiqadi</text>
+  <text x="360" y="470" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Qatlamsiz (unlayered) qoidalar esa barcha qatlamlardan kuchliroq turadi</text>
+</svg>

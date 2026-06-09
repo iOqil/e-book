@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 500" width="720" height="500">
+  <title>Sessiya va login oqimi: login -&gt; session_id cookie -&gt; keyingi so'rovlarda taniydi</title>
+  <rect x="0" y="0" width="720" height="500" fill="#f8fafc"/>
+
+  <text x="360" y="30" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="18" font-weight="bold" fill="#1e293b">Sessiya va login: server sizni qanday eslab qoladi</text>
+
+  <defs>
+    <marker id="arS" markerWidth="11" markerHeight="11" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 Z" fill="#475569"/>
+    </marker>
+    <marker id="arSg" markerWidth="11" markerHeight="11" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <!-- Column heads -->
+  <text x="140" y="62" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">Brauzer</text>
+  <text x="580" y="62" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">Server (PHP)</text>
+  <line x1="140" y1="70" x2="140" y2="470" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <line x1="580" y1="70" x2="580" y2="470" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4 4"/>
+
+  <!-- Step 1: login -->
+  <text x="30" y="95" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">1</text>
+  <line x1="150" y1="105" x2="570" y2="105" stroke="#475569" stroke-width="2.5" marker-end="url(#arS)"/>
+  <text x="360" y="98" text-anchor="middle" font-family="monospace" font-size="13" fill="#475569">POST login + parol</text>
+  <rect x="430" y="118" width="290" height="48" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="442" y="138" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">parol to'g'ri -&gt; session_start()</text>
+  <text x="442" y="158" font-family="monospace" font-size="13" fill="#1e293b">$_SESSION['kirgan'] = true;</text>
+
+  <!-- Step 2: cookie back -->
+  <text x="30" y="200" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">2</text>
+  <line x1="570" y1="200" x2="150" y2="200" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arSg)"/>
+  <text x="360" y="193" text-anchor="middle" font-family="monospace" font-size="13" fill="#16a34a">cookie: session_id=ABC123</text>
+  <rect x="40" y="213" width="220" height="44" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="52" y="233" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Brauzer cookie'ni</text>
+  <text x="52" y="251" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">saqlaydi (eslab qoladi)</text>
+
+  <!-- Step 3: next request -->
+  <text x="30" y="293" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">3</text>
+  <line x1="150" y1="298" x2="570" y2="298" stroke="#475569" stroke-width="2.5" marker-end="url(#arS)"/>
+  <text x="360" y="291" text-anchor="middle" font-family="monospace" font-size="13" fill="#475569">panel.php + session_id=ABC123</text>
+  <rect x="400" y="311" width="320" height="66" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="412" y="331" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">session_id orqali sizni TANIYDI:</text>
+  <text x="412" y="351" font-family="monospace" font-size="13" fill="#16a34a">$_SESSION['kirgan'] == true</text>
+  <text x="412" y="371" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">-&gt; sahifani ko'rsatadi</text>
+
+  <!-- Step 4 -->
+  <text x="30" y="410" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">4</text>
+  <line x1="570" y1="415" x2="150" y2="415" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arSg)"/>
+  <text x="360" y="408" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">himoyalangan sahifa (HTML)</text>
+
+  <!-- note -->
+  <rect x="40" y="438" width="640" height="48" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="360" y="458" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Asosiy g'oya: ma'lumot SERVERda ($_SESSION), brauzerda faqat session_id (kalit) turadi.</text>
+  <text x="360" y="476" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">session_destroy() — sessiyani o'chiradi (chiqish): server endi sizni tanimaydi.</text>
+</svg>

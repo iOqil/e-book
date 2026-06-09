@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" width="760" height="470">
+  <title>Abstract class va interface farqi: abstract class qisman tayyor kod beradi va bittadan meros olinadi, interface faqat metod nomlarini talab qiladi va bir nechtasi qo'shilishi mumkin</title>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+
+  <text x="380" y="32" font-family="Segoe UI, system-ui, sans-serif" font-size="18" font-weight="bold" fill="#1e293b" text-anchor="middle">Abstract class vs Interface</text>
+  <text x="380" y="54" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">ikkalasi ham majburlaydi — lekin farqi bor</text>
+
+  <!-- Chap: abstract class -->
+  <rect x="40" y="78" width="330" height="230" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="205" y="104" font-family="monospace" font-size="15" font-weight="bold" fill="#2563eb" text-anchor="middle">abstract class Shakl</text>
+  <rect x="58" y="120" width="294" height="30" rx="5" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="68" y="140" font-family="monospace" font-size="13" fill="#1e293b">abstract function yuza();  // faqat nom</text>
+  <rect x="58" y="156" width="294" height="48" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="68" y="176" font-family="monospace" font-size="13" fill="#1e293b">function tasvirla() {</text>
+  <text x="68" y="196" font-family="monospace" font-size="13" fill="#1e293b">  echo $this->yuza();  // tayyor kod</text>
+  <text x="205" y="226" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">+ xususiyat bo'lishi mumkin</text>
+
+  <rect x="58" y="240" width="294" height="56" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="205" y="262" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">Bola: <tspan font-family="monospace">class Kvadrat extends Shakl</tspan></text>
+  <text x="205" y="284" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626" text-anchor="middle">faqat BITTA class'dan meros</text>
+
+  <!-- O'ng: interface -->
+  <rect x="390" y="78" width="330" height="230" rx="10" fill="#fde7f3" stroke="#9333ea" stroke-width="2.5"/>
+  <text x="555" y="104" font-family="monospace" font-size="15" font-weight="bold" fill="#9333ea" text-anchor="middle">interface Tolov</text>
+  <rect x="408" y="120" width="294" height="30" rx="5" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="418" y="140" font-family="monospace" font-size="13" fill="#1e293b">function tasdiqla($s);  // faqat nom</text>
+  <rect x="408" y="156" width="294" height="30" rx="5" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="418" y="176" font-family="monospace" font-size="13" fill="#1e293b">function bekorQil();    // faqat nom</text>
+  <text x="555" y="208" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626" text-anchor="middle">kod YO'Q, xususiyat YO'Q — faqat ro'yxat</text>
+
+  <rect x="408" y="240" width="294" height="56" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="555" y="262" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">Class: <tspan font-family="monospace">implements Tolov</tspan></text>
+  <text x="555" y="284" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a" text-anchor="middle">BIR NECHTA interfeys: implements A, B</text>
+
+  <!-- Pastdagi izoh -->
+  <rect x="40" y="328" width="680" height="120" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="380" y="352" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Qisqacha</text>
+  <line x1="380" y1="362" x2="380" y2="442" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="205" y="384" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb" text-anchor="middle" font-weight="bold">abstract class</text>
+  <text x="205" y="406" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">qisman tayyor andoza +</text>
+  <text x="205" y="424" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">umumiy kod + qoidalar</text>
+  <text x="555" y="384" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#9333ea" text-anchor="middle" font-weight="bold">interface</text>
+  <text x="555" y="406" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">faqat qoidalar ro'yxati</text>
+  <text x="555" y="424" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">("shartnoma")</text>
+</svg>

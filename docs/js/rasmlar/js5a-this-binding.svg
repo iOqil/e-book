@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" width="760" height="470">
+  <title>this binding 4 qoidasi: default, implicit, explicit, new — qanday chaqirilishiga bog'liq</title>
+
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="38" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1e293b">this — 4 qoida (qanday chaqirilganiga bog'liq)</text>
+
+  <!-- 1. Default -->
+  <rect x="40" y="70" width="330" height="170" rx="12" fill="#e2e8f0" stroke="#dc2626" stroke-width="2"/>
+  <circle cx="68" cy="98" r="15" fill="#dc2626"/>
+  <text x="68" y="103" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#f8fafc">1</text>
+  <text x="92" y="103" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#dc2626">Default — oddiy funksiya</text>
+  <rect x="60" y="118" width="290" height="64" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="74" y="140" font-family="Consolas, Courier New, monospace" font-size="14" fill="#1e293b">function f() { ... }</text>
+  <text x="74" y="164" font-family="Consolas, Courier New, monospace" font-size="14" fill="#1e293b">f()</text>
+  <text x="60" y="206" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">this = undefined (yoki window)</text>
+  <text x="60" y="228" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">nuqtasiz, alohida chaqiruv</text>
+
+  <!-- 2. Implicit -->
+  <rect x="390" y="70" width="330" height="170" rx="12" fill="#e2e8f0" stroke="#2563eb" stroke-width="2"/>
+  <circle cx="418" cy="98" r="15" fill="#2563eb"/>
+  <text x="418" y="103" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#f8fafc">2</text>
+  <text x="442" y="103" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">Implicit — metod sifatida</text>
+  <rect x="410" y="118" width="290" height="64" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="424" y="140" font-family="Consolas, Courier New, monospace" font-size="14" fill="#1e293b">const user = { salom() {} }</text>
+  <text x="424" y="164" font-family="Consolas, Courier New, monospace" font-size="14" fill="#1e293b">user.salom()</text>
+  <text x="410" y="206" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">this = nuqtadan oldingi obyekt</text>
+  <text x="410" y="228" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">this = user</text>
+
+  <!-- 3. Explicit -->
+  <rect x="40" y="258" width="330" height="170" rx="12" fill="#e2e8f0" stroke="#f59e0b" stroke-width="2"/>
+  <circle cx="68" cy="286" r="15" fill="#f59e0b"/>
+  <text x="68" y="291" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">3</text>
+  <text x="92" y="291" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">Explicit — call / apply / bind</text>
+  <rect x="60" y="306" width="290" height="64" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="74" y="328" font-family="Consolas, Courier New, monospace" font-size="14" fill="#1e293b">f.call(obj)</text>
+  <text x="74" y="352" font-family="Consolas, Courier New, monospace" font-size="14" fill="#1e293b">f.bind(obj)</text>
+  <text x="60" y="394" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">this = sen bergan qiymat (obj)</text>
+  <text x="60" y="416" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">this'ni qo'lda belgilaysan</text>
+
+  <!-- 4. new -->
+  <rect x="390" y="258" width="330" height="170" rx="12" fill="#e2e8f0" stroke="#16a34a" stroke-width="2"/>
+  <circle cx="418" cy="286" r="15" fill="#16a34a"/>
+  <text x="418" y="291" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#f8fafc">4</text>
+  <text x="442" y="291" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">new — konstruktor</text>
+  <rect x="410" y="306" width="290" height="64" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="424" y="328" font-family="Consolas, Courier New, monospace" font-size="14" fill="#1e293b">function User(ism) {}</text>
+  <text x="424" y="352" font-family="Consolas, Courier New, monospace" font-size="14" fill="#1e293b">new User("Oqil")</text>
+  <text x="410" y="394" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">this = yangi yaratilgan obyekt</text>
+  <text x="410" y="416" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">bo'sh obyekt yaratiladi</text>
+
+  <text x="380" y="452" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Arrow funksiya bundan mustasno: u this'ni yozilgan joydan (lexical) oladi</text>
+</svg>

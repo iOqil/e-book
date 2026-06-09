@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 560" width="720" height="560">
+  <title>if / elseif / else qaror oqimi: shartlar yuqoridan pastga tekshiriladi, birinchi rost shart bajariladi</title>
+  <rect x="0" y="0" width="720" height="560" fill="#f8fafc"/>
+
+  <text x="360" y="34" font-family="Segoe UI, system-ui, sans-serif" font-size="18" font-weight="bold" fill="#1e293b" text-anchor="middle">if / elseif / else qaror oqimi</text>
+  <text x="360" y="56" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">misol: $ball = 75 (yuqoridan pastga tekshiriladi)</text>
+
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- Start -->
+  <rect x="280" y="70" width="160" height="38" rx="19" fill="#2563eb"/>
+  <text x="360" y="94" font-family="monospace" font-size="14" fill="#ffffff" text-anchor="middle">$ball = 75</text>
+  <line x1="360" y1="108" x2="360" y2="128" stroke="#475569" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Shart 1: ball >= 90 -->
+  <polygon points="360,132 470,172 360,212 250,172" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="360" y="178" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">$ball &gt;= 90 ?</text>
+  <!-- rost yo'li (o'ng) -->
+  <line x1="470" y1="172" x2="560" y2="172" stroke="#16a34a" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="500" y="163" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" text-anchor="middle">rost</text>
+  <rect x="560" y="153" width="130" height="38" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="625" y="177" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">"A baho"</text>
+  <!-- yolg'on yo'li (past) -->
+  <line x1="360" y1="212" x2="360" y2="232" stroke="#475569" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="386" y="227" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626" text-anchor="middle">yolg'on</text>
+
+  <!-- Shart 2: ball >= 80 -->
+  <polygon points="360,236 470,276 360,316 250,276" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="360" y="282" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">$ball &gt;= 80 ?</text>
+  <line x1="470" y1="276" x2="560" y2="276" stroke="#16a34a" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="500" y="267" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" text-anchor="middle">rost</text>
+  <rect x="560" y="257" width="130" height="38" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="625" y="281" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">"B baho"</text>
+  <line x1="360" y1="316" x2="360" y2="336" stroke="#475569" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="386" y="331" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626" text-anchor="middle">yolg'on</text>
+
+  <!-- Shart 3: ball >= 70 (75 shu yerda rost) -->
+  <polygon points="360,340 470,380 360,420 250,380" fill="#fef9c3" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="360" y="386" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">$ball &gt;= 70 ?</text>
+  <line x1="470" y1="380" x2="560" y2="380" stroke="#16a34a" stroke-width="3" marker-end="url(#ar)"/>
+  <text x="500" y="371" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a" text-anchor="middle">rost</text>
+  <rect x="560" y="361" width="130" height="38" rx="6" fill="#16a34a" stroke="#15803d" stroke-width="2"/>
+  <text x="625" y="385" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">"C baho" ✓</text>
+  <line x1="360" y1="420" x2="360" y2="440" stroke="#475569" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="386" y="435" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626" text-anchor="middle">yolg'on</text>
+
+  <!-- else -->
+  <rect x="290" y="444" width="140" height="38" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="360" y="468" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">else: "Yiqildi"</text>
+
+  <!-- Izoh -->
+  <text x="360" y="515" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">Birinchi rost shart bajariladi va qolgani tekshirilmaydi.</text>
+  <text x="360" y="537" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">75 uchun: 90 yo'q, 80 yo'q, 70 — ha → "C baho".</text>
+</svg>

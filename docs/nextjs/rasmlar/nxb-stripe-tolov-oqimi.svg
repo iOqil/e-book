@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" width="780" height="470">
+  <title>Stripe to'lov oqimi: checkout sessiya -> Stripe to'lov sahifasi -> webhook -> bazada tasdiqlash</title>
+  <rect x="0" y="0" width="780" height="470" fill="#f8fafc"/>
+
+  <!-- Uchta ustun: Mijoz brauzeri / Sizning serveringiz / Stripe -->
+  <text x="125" y="34" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">Mijoz (brauzer)</text>
+  <text x="390" y="34" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">Sizning serveringiz</text>
+  <text x="655" y="34" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">Stripe (kassir)</text>
+
+  <line x1="250" y1="44" x2="250" y2="450" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 4"/>
+  <line x1="530" y1="44" x2="530" y2="450" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- 1. Tugma -->
+  <rect x="25" y="56" width="200" height="44" rx="8" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="125" y="83" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">1. "To'lash" tugmasi</text>
+
+  <!-- strelka 1 -> server -->
+  <line x1="225" y1="78" x2="295" y2="125" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- 2. Server Action sessiya -->
+  <rect x="290" y="106" width="200" height="58" rx="8" fill="#fff7ed" stroke="#f59e0b"/>
+  <text x="390" y="130" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">2. Server Action</text>
+  <text x="390" y="151" font-family="monospace" font-size="13" fill="#475569" text-anchor="middle">checkout.sessions.create</text>
+
+  <!-- strelka 2 -> stripe -->
+  <line x1="490" y1="135" x2="565" y2="135" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+  <rect x="560" y="112" width="195" height="46" rx="8" fill="#e2e8f0" stroke="#94a3b8"/>
+  <text x="657" y="140" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">sessiya + to'lov URL</text>
+
+  <!-- strelka redirect: stripe url -> mijoz -->
+  <line x1="560" y1="150" x2="225" y2="190" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+  <text x="395" y="180" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">3. redirect(session.url)</text>
+
+  <!-- 4. Mijoz to'laydi (Stripe sahifasida) -->
+  <rect x="560" y="200" width="195" height="62" rx="8" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="657" y="224" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">4. Mijoz to'laydi</text>
+  <text x="657" y="245" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Stripe xavfsiz sahifasida</text>
+  <!-- mijoz stripe sahifasiga ketdi -->
+  <line x1="225" y1="195" x2="555" y2="222" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+  <rect x="25" y="178" width="200" height="40" rx="8" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="125" y="203" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">Stripe sahifasiga o'tadi</text>
+
+  <!-- 5. webhook -->
+  <line x1="560" y1="255" x2="495" y2="300" stroke="#dc2626" stroke-width="2.5" marker-end="url(#ar)"/>
+  <text x="585" y="290" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626" text-anchor="middle">5. webhook</text>
+  <rect x="290" y="288" width="200" height="74" rx="8" fill="#fee2e2" stroke="#dc2626"/>
+  <text x="390" y="311" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Route Handler</text>
+  <text x="390" y="331" font-family="monospace" font-size="13" fill="#475569" text-anchor="middle">api/webhooks/stripe</text>
+  <text x="390" y="351" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">imzo tekshiruvi (xom body)</text>
+
+  <!-- 6. tasdiqlash -->
+  <line x1="390" y1="362" x2="390" y2="392" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+  <rect x="270" y="394" width="240" height="50" rx="8" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="390" y="416" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">6. Bazada "to'langan" belgilash</text>
+  <text x="390" y="436" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">faqat shu yerda mahsulot ochiladi</text>
+
+  <!-- ogohlantirish -->
+  <text x="125" y="320" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626" text-anchor="middle" font-weight="bold">success sahifasiga</text>
+  <text x="125" y="340" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626" text-anchor="middle">ISHONMANG —</text>
+  <text x="125" y="360" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626" text-anchor="middle">webhook ishonchli manba</text>
+
+  <defs>
+    <marker id="a" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#475569"/>
+    </marker>
+    <marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#dc2626"/>
+    </marker>
+  </defs>
+</svg>

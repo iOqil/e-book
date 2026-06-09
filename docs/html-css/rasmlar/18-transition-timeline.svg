@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" width="760" height="360">
+  <title>transition vaqt o'qi: delay (kutish), keyin duration (o'zgarish davomiyligi), boshlanish va oxirgi holat</title>
+  <defs>
+    <marker id="oq18t" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="760" height="360" fill="#f8fafc"/>
+
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">transition vaqt o'qi</text>
+  <text x="380" y="58" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">transition: opacity 0.6s ease 0.2s — delay 0.2s, duration 0.6s</text>
+
+  <!-- Trigger nuqtasi -->
+  <line x1="90" y1="90" x2="90" y2="250" stroke="#dc2626" stroke-width="2" stroke-dasharray="4 3"/>
+  <text x="90" y="84" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626">trigger (masalan :hover)</text>
+
+  <!-- Vaqt o'qi -->
+  <line x1="60" y1="220" x2="710" y2="220" stroke="#475569" stroke-width="2.5" marker-end="url(#oq18t)"/>
+  <text x="700" y="245" text-anchor="end" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">vaqt &#8594;</text>
+
+  <!-- delay segmenti -->
+  <rect x="90" y="120" width="120" height="60" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="150" y="148" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309">delay</text>
+  <text x="150" y="168" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309">0.2s — kutish</text>
+
+  <!-- duration segmenti -->
+  <rect x="210" y="120" width="360" height="60" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="390" y="148" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">duration</text>
+  <text x="390" y="168" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">0.6s — o'zgarish davom etadi</text>
+
+  <!-- boshlanish nuqtasi -->
+  <circle cx="210" cy="220" r="6" fill="#16a34a"/>
+  <text x="210" y="280" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">boshlanish</text>
+  <text x="210" y="300" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">opacity: 0</text>
+
+  <!-- oxir nuqtasi -->
+  <circle cx="570" cy="220" r="6" fill="#16a34a"/>
+  <text x="570" y="280" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">oxir</text>
+  <text x="570" y="300" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">opacity: 1</text>
+
+  <!-- 0s belgisi -->
+  <text x="90" y="338" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">0s</text>
+  <text x="390" y="338" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">0.5s</text>
+</svg>

@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440">
+  <title>CSS ni HTMLga ulashning uch usuli: inline, internal va external</title>
+
+  <!-- Sarlavha -->
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">CSS ni HTMLga ulashning uch usuli</text>
+
+  <!-- ============ 1. INLINE ============ -->
+  <rect x="24" y="64" width="230" height="340" rx="12" fill="#f8fafc" stroke="#dc2626" stroke-width="2"/>
+  <rect x="24" y="64" width="230" height="44" rx="12" fill="#dc2626" fill-opacity="0.12"/>
+  <text x="139" y="84" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#dc2626">1. Inline</text>
+  <text x="139" y="101" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">style atributi ichida</text>
+
+  <!-- inline kod qutisi -->
+  <rect x="40" y="124" width="198" height="62" rx="8" fill="#1e293b"/>
+  <text x="52" y="148" font-family="Consolas, monospace" font-size="13" fill="#f8fafc"><tspan fill="#94a3b8">&lt;p </tspan><tspan fill="#f59e0b">style=</tspan></text>
+  <text x="52" y="166" font-family="Consolas, monospace" font-size="13" fill="#16a34a">"color:red;"</text>
+  <text x="52" y="180" font-family="Consolas, monospace" font-size="13" fill="#94a3b8">&gt;Salom&lt;/p&gt;</text>
+
+  <text x="40" y="214" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">+ Tez sinab ko'rish</text>
+  <text x="40" y="236" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">+ Bitta elementga</text>
+  <text x="40" y="266" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">- Takrorlanadi</text>
+  <text x="40" y="288" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">- Aralashib ketadi</text>
+  <text x="40" y="310" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">- Eng kuchli (qiyin</text>
+  <text x="52" y="326" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">bekor qilinadi)</text>
+
+  <rect x="40" y="350" width="198" height="40" rx="8" fill="#dc2626" fill-opacity="0.10" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="139" y="368" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626">Qachon: faqat tezkor</text>
+  <text x="139" y="383" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">sinov, email shablonlar</text>
+
+  <!-- ============ 2. INTERNAL ============ -->
+  <rect x="265" y="64" width="230" height="340" rx="12" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="265" y="64" width="230" height="44" rx="12" fill="#f59e0b" fill-opacity="0.14"/>
+  <text x="380" y="84" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#b45309">2. Internal</text>
+  <text x="380" y="101" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">&lt;style&gt; teg ichida (head)</text>
+
+  <!-- internal kod qutisi -->
+  <rect x="281" y="124" width="198" height="62" rx="8" fill="#1e293b"/>
+  <text x="293" y="146" font-family="Consolas, monospace" font-size="13" fill="#94a3b8">&lt;style&gt;</text>
+  <text x="293" y="163" font-family="Consolas, monospace" font-size="13" fill="#f8fafc"><tspan fill="#60a5fa">p</tspan> { <tspan fill="#16a34a">color</tspan>:red; }</text>
+  <text x="293" y="180" font-family="Consolas, monospace" font-size="13" fill="#94a3b8">&lt;/style&gt;</text>
+
+  <text x="281" y="214" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">+ Bitta sahifaga qulay</text>
+  <text x="281" y="236" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">+ Bir joyda turadi</text>
+  <text x="281" y="266" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">- Boshqa sahifalarda</text>
+  <text x="293" y="282" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">qayta ishlatib bo'lmaydi</text>
+  <text x="281" y="304" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">- HTML faylni</text>
+  <text x="293" y="320" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">kattalashtiradi</text>
+
+  <rect x="281" y="350" width="198" height="40" rx="8" fill="#f59e0b" fill-opacity="0.12" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="380" y="368" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#b45309">Qachon: bir sahifalik</text>
+  <text x="380" y="383" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309">demo, tez prototip</text>
+
+  <!-- ============ 3. EXTERNAL ============ -->
+  <rect x="506" y="64" width="230" height="340" rx="12" fill="#f8fafc" stroke="#16a34a" stroke-width="2.5"/>
+  <rect x="506" y="64" width="230" height="44" rx="12" fill="#16a34a" fill-opacity="0.12"/>
+  <text x="621" y="84" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#16a34a">3. External</text>
+  <text x="621" y="101" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">alohida .css fayl</text>
+
+  <!-- external kod qutisi -->
+  <rect x="522" y="124" width="198" height="62" rx="8" fill="#1e293b"/>
+  <text x="534" y="148" font-family="Consolas, monospace" font-size="13" fill="#94a3b8">&lt;link rel=</text>
+  <text x="534" y="164" font-family="Consolas, monospace" font-size="13" fill="#16a34a">"stylesheet"</text>
+  <text x="534" y="180" font-family="Consolas, monospace" font-size="13" fill="#f8fafc"> href=<tspan fill="#f59e0b">"style.css"</tspan>&gt;</text>
+
+  <text x="522" y="214" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">+ Ko'p sahifa bir fayl</text>
+  <text x="522" y="236" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">+ Brauzer keshlaydi</text>
+  <text x="522" y="258" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">+ HTML va CSS ajratilgan</text>
+  <text x="522" y="280" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">+ Toza, professional</text>
+  <text x="522" y="308" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">~ Qo'shimcha fayl so'rovi</text>
+
+  <rect x="522" y="350" width="198" height="40" rx="8" fill="#16a34a" fill-opacity="0.12" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="621" y="368" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">Qachon: deyarli HAMMA</text>
+  <text x="621" y="383" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">real loyiha — TAVSIYA</text>
+
+  <!-- Tavsiya yulduzcha -->
+  <polygon points="621,420 627,432 640,433 630,442 633,435 621,430 609,435 612,442 602,433 615,432" fill="#16a34a" opacity="0"/>
+  <text x="621" y="428" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">★ Tavsiya etiladi ★</text>
+</svg>

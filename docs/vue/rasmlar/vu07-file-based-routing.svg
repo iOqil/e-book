@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 470" width="820" height="470">
+  <title>File-based routing: app/pages papkasidagi har bir fayl avtomatik route'ga aylanadi</title>
+  <defs>
+    <marker id="vu07r-strelka" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="820" height="470" fill="#f8fafc"/>
+  <text x="410" y="38" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1e293b">File-based routing: fayl tuzilishi = route ro'yxati</text>
+  <text x="410" y="62" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">router/index.js YO'Q — Nuxt papkani o'qib route'larni o'zi yasaydi</text>
+
+  <!-- Chap panel: pages/ daraxti -->
+  <rect x="30" y="86" width="320" height="350" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="50" y="112" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">app/pages/  (fayllar)</text>
+
+  <text font-family="Consolas, Courier New, monospace" font-size="15" fill="#1e293b">
+    <tspan x="50" y="146">index.vue</tspan>
+    <tspan x="50" y="180">about.vue</tspan>
+    <tspan x="50" y="214">blog/</tspan>
+    <tspan x="74" y="244">index.vue</tspan>
+    <tspan x="74" y="274" fill="#f59e0b">[slug].vue</tspan>
+    <tspan x="50" y="304">users/</tspan>
+    <tspan x="74" y="334" fill="#f59e0b">[id].vue</tspan>
+    <tspan x="50" y="368" fill="#dc2626">[...slug].vue</tspan>
+  </text>
+
+  <!-- O'ng panel: route'lar -->
+  <rect x="500" y="86" width="290" height="350" rx="10" fill="#f8fafc" stroke="#16a34a" stroke-width="2"/>
+  <text x="520" y="112" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Avtomatik route'lar (URL)</text>
+
+  <text font-family="Consolas, Courier New, monospace" font-size="15" fill="#1e293b">
+    <tspan x="520" y="146">/</tspan>
+    <tspan x="520" y="180">/about</tspan>
+    <tspan x="520" y="244">/blog</tspan>
+    <tspan x="520" y="274" fill="#f59e0b">/blog/:slug</tspan>
+    <tspan x="520" y="334" fill="#f59e0b">/users/:id</tspan>
+    <tspan x="520" y="368" fill="#dc2626">404 catch-all</tspan>
+  </text>
+
+  <!-- Strelkalar: fayl -> route -->
+  <line x1="355" y1="142" x2="495" y2="142" stroke="#475569" stroke-width="2" marker-end="url(#vu07r-strelka)"/>
+  <line x1="355" y1="176" x2="495" y2="176" stroke="#475569" stroke-width="2" marker-end="url(#vu07r-strelka)"/>
+  <line x1="355" y1="240" x2="495" y2="240" stroke="#475569" stroke-width="2" marker-end="url(#vu07r-strelka)"/>
+  <line x1="355" y1="270" x2="495" y2="270" stroke="#f59e0b" stroke-width="2" marker-end="url(#vu07r-strelka)"/>
+  <line x1="355" y1="330" x2="495" y2="330" stroke="#f59e0b" stroke-width="2" marker-end="url(#vu07r-strelka)"/>
+  <line x1="355" y1="364" x2="495" y2="364" stroke="#dc2626" stroke-width="2" marker-end="url(#vu07r-strelka)"/>
+
+  <!-- Pastki yorliqlar -->
+  <text x="410" y="220" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">papka = ota segment</text>
+  <text x="410" y="412" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#f59e0b">[nom] = dynamic (:param)</text>
+  <text x="410" y="430" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">[...nom] = catch-all (404)</text>
+</svg>

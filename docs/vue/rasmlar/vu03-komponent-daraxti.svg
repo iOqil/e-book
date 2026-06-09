@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>Vue komponentlar daraxti: App ildizidan bola komponentlargacha</title>
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Komponentlar daraxti (ota / bola)</text>
+  <text x="360" y="56" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Butun Vue ilova -- bitta ildizdan o'sgan komponentlar iyerarxiyasi</text>
+
+  <!-- ulovchi chiziqlar -->
+  <g stroke="#475569" stroke-width="2" fill="none">
+    <!-- App -> Header, ProductList, Footer -->
+    <line x1="360" y1="118" x2="160" y2="168"/>
+    <line x1="360" y1="118" x2="360" y2="168"/>
+    <line x1="360" y1="118" x2="580" y2="168"/>
+    <!-- Header -> Nav -->
+    <line x1="160" y1="216" x2="160" y2="266"/>
+    <!-- ProductList -> ProductCard x N -->
+    <line x1="360" y1="216" x2="300" y2="266"/>
+    <line x1="360" y1="216" x2="420" y2="266"/>
+  </g>
+
+  <!-- App (ildiz) -->
+  <g>
+    <rect x="295" y="84" width="130" height="34" rx="6" fill="#2563eb" stroke="#1e293b" stroke-width="1.5"/>
+    <text x="360" y="106" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#ffffff">App</text>
+  </g>
+  <text x="438" y="106" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">ildiz komponent</text>
+
+  <!-- Header -->
+  <g>
+    <rect x="100" y="182" width="120" height="34" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="160" y="204" text-anchor="middle" font-family="monospace" font-size="15" fill="#1e293b">Header</text>
+  </g>
+  <!-- ProductList -->
+  <g>
+    <rect x="290" y="182" width="140" height="34" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="360" y="204" text-anchor="middle" font-family="monospace" font-size="15" fill="#1e293b">ProductList</text>
+  </g>
+  <!-- Footer -->
+  <g>
+    <rect x="520" y="182" width="120" height="34" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="580" y="204" text-anchor="middle" font-family="monospace" font-size="15" fill="#1e293b">Footer</text>
+  </g>
+
+  <!-- Nav -->
+  <g>
+    <rect x="108" y="280" width="104" height="32" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="160" y="301" text-anchor="middle" font-family="monospace" font-size="14" fill="#1e293b">Nav</text>
+  </g>
+
+  <!-- ProductCard x N -->
+  <g>
+    <rect x="246" y="280" width="108" height="32" rx="6" fill="#f59e0b" stroke="#1e293b" stroke-width="1.5"/>
+    <text x="300" y="301" text-anchor="middle" font-family="monospace" font-size="13" fill="#1e293b">ProductCard</text>
+  </g>
+  <g>
+    <rect x="366" y="280" width="108" height="32" rx="6" fill="#f59e0b" stroke="#1e293b" stroke-width="1.5"/>
+    <text x="420" y="301" text-anchor="middle" font-family="monospace" font-size="13" fill="#1e293b">ProductCard</text>
+  </g>
+  <text x="360" y="334" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309">ProductCard -- bir komponent, ko'p marta qayta ishlatiladi (x N)</text>
+
+  <!-- Pastki izoh -->
+  <rect x="40" y="362" width="640" height="48" rx="9" fill="#2563eb" fill-opacity="0.10" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="360" y="383" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Har komponent -- mustaqil UI bo'lagi: o'z template + logika + stilga ega.</text>
+  <text x="360" y="402" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Yuqoridagi komponent -- ota, ostidagi -- bola.</text>
+</svg>

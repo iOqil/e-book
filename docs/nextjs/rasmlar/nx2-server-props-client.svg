@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 460" width="860" height="460">
+  <title>Server Component'dan Client Component'ga props orqali ma'lumot uzatish</title>
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L9 5 L0 10 z" fill="#475569"/>
+    </marker>
+    <marker id="arrRed" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L9 5 L0 10 z" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="860" height="460" fill="#f8fafc"/>
+  <text x="430" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1e293b">Server'dan Client'ga props uzatish</text>
+  <text x="430" y="58" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Server ma'lumot oladi → Client'ga props sifatida beradi → interaktivlik</text>
+
+  <!-- Server Component box -->
+  <rect x="40" y="90" width="330" height="250" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="205" y="116" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">Server Component</text>
+  <rect x="60" y="132" width="290" height="150" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+  <text x="74" y="156" font-family="monospace" font-size="13" fill="#2563eb">async function Page() {</text>
+  <text x="74" y="180" font-family="monospace" font-size="13" fill="#1e293b">  const ism = "Oqil";</text>
+  <text x="74" y="202" font-family="monospace" font-size="13" fill="#475569">  // yoki bazadan</text>
+  <text x="74" y="226" font-family="monospace" font-size="13" fill="#1e293b">  return (</text>
+  <text x="74" y="250" font-family="monospace" font-size="13" fill="#16a34a">    &lt;SalomTugma ism={ism} /&gt;</text>
+  <text x="74" y="272" font-family="monospace" font-size="13" fill="#1e293b">  )</text>
+  <text x="205" y="310" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">serverda ishlaydi, ma'lumotni</text>
+  <text x="205" y="328" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">props orqali pastga uzatadi</text>
+
+  <!-- Client Component box -->
+  <rect x="490" y="90" width="330" height="250" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="655" y="116" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#b45309">Client Component</text>
+  <rect x="510" y="132" width="290" height="150" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+  <text x="524" y="156" font-family="monospace" font-size="13" fill="#b45309">"use client";</text>
+  <text x="524" y="180" font-family="monospace" font-size="13" fill="#16a34a">function SalomTugma({ ism }) {</text>
+  <text x="524" y="204" font-family="monospace" font-size="13" fill="#1e293b">  const [b, setB] = useState()</text>
+  <text x="524" y="228" font-family="monospace" font-size="13" fill="#1e293b">  return &lt;button</text>
+  <text x="524" y="252" font-family="monospace" font-size="13" fill="#1e293b">    onClick={...}&gt;</text>
+  <text x="524" y="274" font-family="monospace" font-size="13" fill="#2563eb">    Salom, {ism}!</text>
+  <text x="655" y="310" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">props'ni qabul qiladi,</text>
+  <text x="655" y="328" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">interaktivlikni qo'shadi</text>
+
+  <!-- arrow props down -->
+  <path d="M372 200 L488 200" fill="none" stroke="#16a34a" stroke-width="3" marker-end="url(#arr)"/>
+  <rect x="388" y="168" width="84" height="26" rx="4" fill="#dcfce7" stroke="#16a34a" stroke-width="1.2"/>
+  <text x="430" y="186" text-anchor="middle" font-family="monospace" font-size="13" fill="#15803d">ism="Oqil"</text>
+  <text x="430" y="226" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#15803d">props (oddiy ma'lumot)</text>
+
+  <!-- rule boxes -->
+  <rect x="40" y="362" width="380" height="78" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="60" y="386" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#15803d">✓ Uzatish mumkin:</text>
+  <text x="60" y="410" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#15803d">matn, son, boolean,</text>
+  <text x="60" y="430" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#15803d">obyekt, massiv (serializable)</text>
+
+  <rect x="440" y="362" width="380" height="78" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="460" y="386" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">✗ Uzatib bo'lmaydi:</text>
+  <text x="460" y="410" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">oddiy funksiya, murakkab obyekt</text>
+  <text x="460" y="430" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">(Server Actions bundan mustasno)</text>
+</svg>

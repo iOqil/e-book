@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" width="600" height="320">
+  <title>Queue (FIFO) — enqueue oxiriga qo'shadi, dequeue boshidan oladi</title>
+  <rect x="0" y="0" width="600" height="320" fill="#f8fafc"/>
+  <text x="300" y="32" font-family="Segoe UI, system-ui, sans-serif" font-size="19" font-weight="bold" fill="#1e293b" text-anchor="middle">Queue — FIFO (birinchi kirgan birinchi chiqadi)</text>
+
+  <defs>
+    <marker id="arrB" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- dequeue (chap, bosh) -->
+  <text x="90" y="120" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626" text-anchor="middle">dequeue()</text>
+  <text x="90" y="142" font-family="monospace" font-size="14" fill="#dc2626" text-anchor="middle">→ 10</text>
+  <line x1="135" y1="170" x2="175" y2="170" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arrB)"/>
+
+  <!-- enqueue (o'ng, oxir) -->
+  <text x="510" y="120" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="middle">enqueue(50)</text>
+  <line x1="465" y1="170" x2="505" y2="170" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arrB)"/>
+
+  <!-- navbat qutilari: bosh=10 ... oxir=40, 50 keladi -->
+  <rect x="180" y="150" width="64" height="44" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="212" y="178" font-family="monospace" font-size="16" fill="#1e293b" text-anchor="middle">10</text>
+
+  <rect x="244" y="150" width="64" height="44" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="276" y="178" font-family="monospace" font-size="16" fill="#1e293b" text-anchor="middle">20</text>
+
+  <rect x="308" y="150" width="64" height="44" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="340" y="178" font-family="monospace" font-size="16" fill="#1e293b" text-anchor="middle">30</text>
+
+  <rect x="372" y="150" width="64" height="44" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="404" y="178" font-family="monospace" font-size="16" fill="#1e293b" text-anchor="middle">40</text>
+
+  <!-- bosh / oxir yorliqlari -->
+  <text x="212" y="222" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb" text-anchor="middle">bosh (head)</text>
+  <text x="404" y="222" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">oxir (tail)</text>
+
+  <text x="300" y="270" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">Element bir uchidan kiradi (oxir), boshqa uchidan chiqadi (bosh)</text>
+  <text x="300" y="294" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#64748b" text-anchor="middle">head/tail indeks bilan har ikki amal O(1) — shift O(n) dan qochiladi</text>
+</svg>

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 470" width="720" height="470">
+  <title>Composer autoload: paket -&gt; vendor/ -&gt; autoload.php -&gt; avtomatik yuklash</title>
+  <rect x="0" y="0" width="720" height="470" fill="#f8fafc"/>
+
+  <text x="360" y="30" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="18" font-weight="bold" fill="#1e293b">Composer va autoloading</text>
+
+  <defs>
+    <marker id="arA" markerWidth="11" markerHeight="11" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- Step 1: composer require -->
+  <rect x="30" y="60" width="200" height="90" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="130" y="86" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">1. Buyruq</text>
+  <text x="130" y="110" text-anchor="middle" font-family="monospace" font-size="13" fill="#1e293b">composer require</text>
+  <text x="130" y="128" text-anchor="middle" font-family="monospace" font-size="13" fill="#1e293b">nesbot/carbon</text>
+  <text x="130" y="146" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">terminalda</text>
+
+  <line x1="232" y1="105" x2="296" y2="105" stroke="#475569" stroke-width="2.5" marker-end="url(#arA)"/>
+
+  <!-- Step 2: internet -->
+  <rect x="300" y="60" width="180" height="90" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="390" y="86" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">2. Internet</text>
+  <text x="390" y="110" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">paketni yuklab</text>
+  <text x="390" y="128" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">oladi (Packagist)</text>
+
+  <line x1="482" y1="105" x2="546" y2="105" stroke="#475569" stroke-width="2.5" marker-end="url(#arA)"/>
+
+  <!-- Step 3: vendor folder -->
+  <rect x="550" y="60" width="150" height="90" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="625" y="86" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">3. vendor/</text>
+  <text x="625" y="110" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">paket shu yerga</text>
+  <text x="625" y="128" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">joylanadi</text>
+
+  <!-- composer.json note -->
+  <rect x="300" y="170" width="180" height="50" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="390" y="190" text-anchor="middle" font-family="monospace" font-size="13" fill="#1e293b">composer.json</text>
+  <text x="390" y="210" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">bog'liqlikni eslab qoladi</text>
+  <line x1="390" y1="150" x2="390" y2="166" stroke="#475569" stroke-width="2" marker-end="url(#arA)"/>
+
+  <!-- vendor down to autoload -->
+  <line x1="625" y1="150" x2="625" y2="256" stroke="#475569" stroke-width="2.5" marker-end="url(#arA)"/>
+
+  <!-- autoload box -->
+  <rect x="470" y="260" width="230" height="80" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="585" y="286" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">vendor/autoload.php</text>
+  <text x="585" y="308" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">avtomatik yuklovchi</text>
+  <text x="585" y="328" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">kerakli class'ni o'zi topadi</text>
+
+  <!-- code box -->
+  <rect x="20" y="260" width="410" height="180" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="40" y="286" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">4. Kodda ishlatish</text>
+  <text x="40" y="312" font-family="monospace" font-size="13" fill="#16a34a">require 'vendor/autoload.php';</text>
+  <text x="40" y="334" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">// bir marta — bitta qator</text>
+  <text x="40" y="360" font-family="monospace" font-size="13" fill="#1e293b">use Carbon\Carbon;</text>
+  <text x="40" y="384" font-family="monospace" font-size="13" fill="#1e293b">echo Carbon::now();</text>
+  <text x="40" y="412" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Endi har class'ni qo'lda require</text>
+  <text x="40" y="430" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">qilmaysiz — PHP o'zi yuklaydi.</text>
+
+  <!-- autoload -> code arrow -->
+  <line x1="468" y1="300" x2="434" y2="320" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arA)"/>
+</svg>

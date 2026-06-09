@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="760" height="380">
+  <title>border-radius qiymatlarining burchaklarga ta'siri: 0, kichik radius, katta radius, to'liq doira va har burchak alohida</title>
+  <rect x="0" y="0" width="760" height="380" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">border-radius: burchaklarni yumshatish</text>
+
+  <!-- 1: 0 -->
+  <rect x="40" y="70" width="120" height="120" rx="0" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="100" y="216" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">0</text>
+  <text x="100" y="236" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">o'tkir burchak</text>
+
+  <!-- 2: kichik -->
+  <rect x="200" y="70" width="120" height="120" rx="16" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="260" y="216" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">16px</text>
+  <text x="260" y="236" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">yengil yumaloq</text>
+
+  <!-- 3: katta -->
+  <rect x="360" y="70" width="120" height="120" rx="40" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="420" y="216" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#d97706">40px</text>
+  <text x="420" y="236" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">kuchli yumaloq</text>
+
+  <!-- 4: 50% doira -->
+  <circle cx="580" cy="130" r="60" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="580" y="216" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">50%</text>
+  <text x="580" y="236" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">to'liq doira (kvadratda)</text>
+
+  <!-- pastki qator: har burchak alohida (faqat past-o'ng burchak yumaloq) -->
+  <path d="M130 282 H250 V332 A40 40 0 0 1 210 372 H130 Z" fill="#ede9fe" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="190" y="332" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#7c3aed">40px</text>
+  <text x="234" y="356" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#7c3aed">past-o'ng</text>
+
+  <text x="470" y="300" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#7c3aed">Har burchak alohida</text>
+  <text x="470" y="324" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">border-radius: 0 0 40px 0;</text>
+  <text x="470" y="346" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tartib: yuqori-chap, yuqori-o'ng,</text>
+  <text x="470" y="364" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">past-o'ng, past-chap (soat yo'nalishi)</text>
+</svg>

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430">
+  <title>JSON matn va Python dict orasidagi moslik: json.dump/dumps va json.load/loads</title>
+
+  <defs>
+    <marker id="arrPy08j" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- Sarlavha -->
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">JSON matn  &lt;=&gt;  Python obyekti</text>
+  <text x="380" y="54" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">dump/dumps obyektni matnga aylantiradi; load/loads matnni obyektga qaytaradi</text>
+
+  <!-- Python dict qutisi (chap) -->
+  <rect x="40" y="86" width="290" height="210" rx="12" fill="#2563eb" fill-opacity="0.08" stroke="#2563eb" stroke-width="2"/>
+  <text x="185" y="112" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">Python dict / list</text>
+  <text x="60" y="146" font-family="Consolas, monospace" font-size="13" fill="#1e293b">malumot = {</text>
+  <text x="80" y="170" font-family="Consolas, monospace" font-size="13" fill="#1e293b">"ism": "Aziz",</text>
+  <text x="80" y="194" font-family="Consolas, monospace" font-size="13" fill="#1e293b">"yosh": 20,</text>
+  <text x="80" y="218" font-family="Consolas, monospace" font-size="13" fill="#1e293b">"tillar": ["uz","en"]</text>
+  <text x="60" y="242" font-family="Consolas, monospace" font-size="13" fill="#1e293b">}</text>
+  <text x="185" y="276" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">xotirada jonli obyekt</text>
+
+  <!-- JSON matn qutisi (o'ng) -->
+  <rect x="430" y="86" width="290" height="210" rx="12" fill="#16a34a" fill-opacity="0.08" stroke="#16a34a" stroke-width="2"/>
+  <text x="575" y="112" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">JSON matn (fayl yoki str)</text>
+  <text x="450" y="146" font-family="Consolas, monospace" font-size="13" fill="#1e293b">{</text>
+  <text x="470" y="170" font-family="Consolas, monospace" font-size="13" fill="#1e293b">"ism": "Aziz",</text>
+  <text x="470" y="194" font-family="Consolas, monospace" font-size="13" fill="#1e293b">"yosh": 20,</text>
+  <text x="470" y="218" font-family="Consolas, monospace" font-size="13" fill="#1e293b">"tillar": ["uz","en"]</text>
+  <text x="450" y="242" font-family="Consolas, monospace" font-size="13" fill="#1e293b">}</text>
+  <text x="575" y="276" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">oddiy matn (saqlanadi)</text>
+
+  <!-- dump strelka (chapdan o'ngga) -->
+  <line x1="332" y1="150" x2="428" y2="150" stroke="#475569" stroke-width="2.5" marker-end="url(#arrPy08j)"/>
+  <text x="380" y="142" text-anchor="middle" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#1e293b">json.dump</text>
+  <text x="380" y="168" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(faylga)</text>
+
+  <!-- load strelka (o'ngdan chapga) -->
+  <line x1="428" y1="232" x2="332" y2="232" stroke="#475569" stroke-width="2.5" marker-end="url(#arrPy08j)"/>
+  <text x="380" y="224" text-anchor="middle" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#1e293b">json.load</text>
+  <text x="380" y="250" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(fayldan)</text>
+
+  <!-- Pastki izoh: dumps/loads -->
+  <rect x="120" y="320" width="520" height="84" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="380" y="346" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Faylsiz (matn bilan to'g'ridan-to'g'ri):</text>
+  <text x="380" y="372" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#2563eb">json.dumps(obyekt)  =&gt;  '{"a": 1}'  (matn)</text>
+  <text x="380" y="394" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#16a34a">json.loads('{"a": 1}')  =&gt;  {'a': 1}  (dict)</text>
+</svg>

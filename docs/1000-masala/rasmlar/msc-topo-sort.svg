@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" width="600" height="420">
+  <title>Topologik saralash — Kahn algoritmi, in-degree 0 tugunlardan boshlanadi</title>
+  <rect x="0" y="0" width="600" height="420" fill="#f8fafc"/>
+  <text x="300" y="30" font-family="Segoe UI, system-ui, sans-serif" font-size="19" font-weight="bold" fill="#1e293b" text-anchor="middle">Topologik saralash (Kahn) — DAG uchun</text>
+  <text x="300" y="52" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#64748b" text-anchor="middle">in-degree = tugunga kiruvchi qirralar soni</text>
+
+  <defs>
+    <marker id="arrE" markerWidth="11" markerHeight="11" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- yo'naltirilgan qirralar: A->C, B->C, C->D, C->E, D->F, E->F -->
+  <line x1="118" y1="118" x2="222" y2="160" stroke="#475569" stroke-width="2" marker-end="url(#arrE)"/>
+  <line x1="118" y1="220" x2="222" y2="182" stroke="#475569" stroke-width="2" marker-end="url(#arrE)"/>
+  <line x1="278" y1="170" x2="372" y2="130" stroke="#475569" stroke-width="2" marker-end="url(#arrE)"/>
+  <line x1="278" y1="180" x2="372" y2="220" stroke="#475569" stroke-width="2" marker-end="url(#arrE)"/>
+  <line x1="428" y1="130" x2="492" y2="160" stroke="#475569" stroke-width="2" marker-end="url(#arrE)"/>
+  <line x1="428" y1="220" x2="492" y2="182" stroke="#475569" stroke-width="2" marker-end="url(#arrE)"/>
+
+  <!-- tugunlar + in-degree -->
+  <!-- A (indeg 0) -->
+  <circle cx="90" cy="110" r="26" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="90" y="116" font-family="monospace" font-size="17" fill="#1e293b" text-anchor="middle">A</text>
+  <text x="90" y="84" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" text-anchor="middle">in=0</text>
+
+  <!-- B (indeg 0) -->
+  <circle cx="90" cy="230" r="26" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="90" y="236" font-family="monospace" font-size="17" fill="#1e293b" text-anchor="middle">B</text>
+  <text x="90" y="270" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" text-anchor="middle">in=0</text>
+
+  <!-- C (indeg 2) -->
+  <circle cx="250" cy="172" r="26" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="250" y="178" font-family="monospace" font-size="17" fill="#1e293b" text-anchor="middle">C</text>
+  <text x="250" y="138" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#64748b" text-anchor="middle">in=2</text>
+
+  <!-- D (indeg 1) -->
+  <circle cx="400" cy="110" r="26" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="400" y="116" font-family="monospace" font-size="17" fill="#1e293b" text-anchor="middle">D</text>
+  <text x="400" y="84" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#64748b" text-anchor="middle">in=1</text>
+
+  <!-- E (indeg 1) -->
+  <circle cx="400" cy="234" r="26" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="400" y="240" font-family="monospace" font-size="17" fill="#1e293b" text-anchor="middle">E</text>
+  <text x="400" y="274" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#64748b" text-anchor="middle">in=1</text>
+
+  <!-- F (indeg 2) -->
+  <circle cx="520" cy="172" r="26" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="520" y="178" font-family="monospace" font-size="17" fill="#1e293b" text-anchor="middle">F</text>
+  <text x="520" y="138" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#64748b" text-anchor="middle">in=2</text>
+
+  <!-- bosqich izohi -->
+  <text x="300" y="316" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">in=0 tugun olinadi → natijaga qo'shiladi → qo'shnilarining in-degree'si 1 ga kamayadi</text>
+
+  <!-- natija lentasi -->
+  <text x="300" y="350" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">Yaroqli tartiblardan biri:</text>
+  <g font-family="monospace" font-size="16" fill="#1e293b" text-anchor="middle">
+    <rect x="120" y="362" width="50" height="38" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="145" y="387">A</text>
+    <rect x="178" y="362" width="50" height="38" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="203" y="387">B</text>
+    <rect x="236" y="362" width="50" height="38" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="261" y="387">C</text>
+    <rect x="294" y="362" width="50" height="38" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="319" y="387">D</text>
+    <rect x="352" y="362" width="50" height="38" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="377" y="387">E</text>
+    <rect x="410" y="362" width="50" height="38" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="435" y="387">F</text>
+  </g>
+  <text x="495" y="387" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#64748b" text-anchor="start">har strelka</text>
+  <text x="495" y="404" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#64748b" text-anchor="start">chapdan o'ngga</text>
+</svg>

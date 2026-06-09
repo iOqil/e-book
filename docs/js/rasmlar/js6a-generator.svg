@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400">
+  <title>Generator — yield bilan to'xtab-davom etadi (pause/resume)</title>
+  <defs>
+    <marker id="ar4" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="760" height="400" fill="#f8fafc"/>
+  <text x="380" y="34" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Generator: yield da to'xtaydi, next() da davom etadi</text>
+
+  <!-- generator body, left column -->
+  <rect x="30" y="60" width="300" height="310" rx="10" fill="#e2e8f0" stroke="#94a3b8"/>
+  <text x="180" y="86" font-family="monospace" font-size="15" fill="#1e293b" text-anchor="middle" font-weight="bold">function* sanagich()</text>
+
+  <rect x="55" y="104" width="250" height="40" rx="6" fill="#2563eb"/>
+  <text x="70" y="130" font-family="monospace" font-size="15" fill="#ffffff">yield 1;</text>
+  <text x="290" y="130" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#fde68a" text-anchor="end">to'xta</text>
+
+  <rect x="55" y="184" width="250" height="40" rx="6" fill="#2563eb"/>
+  <text x="70" y="210" font-family="monospace" font-size="15" fill="#ffffff">yield 2;</text>
+  <text x="290" y="210" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#fde68a" text-anchor="end">to'xta</text>
+
+  <rect x="55" y="264" width="250" height="40" rx="6" fill="#2563eb"/>
+  <text x="70" y="290" font-family="monospace" font-size="15" fill="#ffffff">yield 3;</text>
+  <text x="290" y="290" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#fde68a" text-anchor="end">to'xta</text>
+
+  <text x="180" y="344" font-family="monospace" font-size="14" fill="#475569" text-anchor="middle">// funksiya tugadi</text>
+  <text x="180" y="362" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626" text-anchor="middle">done: true</text>
+
+  <!-- right column: caller next() calls and results -->
+  <g font-family="monospace" font-size="14">
+    <rect x="430" y="104" width="290" height="40" rx="6" fill="#dcfce7" stroke="#16a34a"/>
+    <text x="445" y="130" fill="#1e293b">g.next() =&gt; {value: <tspan fill="#2563eb" font-weight="bold">1</tspan>, done:false}</text>
+
+    <rect x="430" y="184" width="290" height="40" rx="6" fill="#dcfce7" stroke="#16a34a"/>
+    <text x="445" y="210" fill="#1e293b">g.next() =&gt; {value: <tspan fill="#2563eb" font-weight="bold">2</tspan>, done:false}</text>
+
+    <rect x="430" y="264" width="290" height="40" rx="6" fill="#dcfce7" stroke="#16a34a"/>
+    <text x="445" y="290" fill="#1e293b">g.next() =&gt; {value: <tspan fill="#2563eb" font-weight="bold">3</tspan>, done:false}</text>
+
+    <rect x="430" y="332" width="290" height="40" rx="6" fill="#fee2e2" stroke="#dc2626"/>
+    <text x="445" y="358" fill="#1e293b">g.next() =&gt; {value:undefined, done:<tspan fill="#dc2626" font-weight="bold">true</tspan>}</text>
+  </g>
+
+  <!-- pause/resume arrows -->
+  <line x1="305" y1="124" x2="426" y2="124" stroke="#16a34a" stroke-width="2.5" marker-end="url(#ar4)"/>
+  <text x="365" y="98" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" text-anchor="middle">qiymat chiqdi</text>
+  <path d="M426,170 C380,160 360,150 310,150" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-dasharray="5,4" marker-end="url(#ar4)"/>
+  <text x="375" y="178" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#f59e0b" text-anchor="middle">next() davom ettiradi</text>
+
+  <line x1="305" y1="204" x2="426" y2="204" stroke="#16a34a" stroke-width="2.5" marker-end="url(#ar4)"/>
+  <path d="M426,250 C380,240 360,230 310,230" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-dasharray="5,4" marker-end="url(#ar4)"/>
+  <line x1="305" y1="284" x2="426" y2="284" stroke="#16a34a" stroke-width="2.5" marker-end="url(#ar4)"/>
+</svg>

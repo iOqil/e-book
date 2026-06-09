@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 470" width="820" height="470">
+  <title>Two-pointer: saralangan massivda ikki uchidan yig'indi qidirish, target = 13</title>
+  <rect x="0" y="0" width="820" height="470" fill="#f8fafc"/>
+  <text x="30" y="32" font-family="Segoe UI, system-ui, sans-serif" font-size="18" font-weight="bold" fill="#2563eb">Two-pointer — saralangan massivda yig'indi = target qidirish</text>
+  <text x="30" y="55" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Saralangan: [1, 4, 5, 9, 11] · target = 13 · lo chap uchda, hi o'ng uchda; bir-biriga yaqinlashadi.</text>
+
+  <defs>
+    <marker id="mt-ar" markerWidth="10" markerHeight="10" refX="2" refY="4" orient="auto">
+      <path d="M9,0 L0,4 L9,8 Z" fill="#16a34a"/>
+    </marker>
+    <marker id="mt-ar2" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L9,4 L0,8 Z" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+  <text x="30" y="98" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Qoida: yig'indi &lt; target → lo++ (kattalashtirish) · yig'indi &gt; target → hi-- (kichraytirish) · teng → topildi.</text>
+
+  <!-- STEP 1: sum too small -> lo++ -->
+  <g font-family="monospace" font-size="16" text-anchor="middle" fill="#1e293b">
+    <rect x="110" y="112" width="60" height="44" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><text x="140" y="141">1</text>
+    <rect x="170" y="112" width="60" height="44" fill="#fff" stroke="#94a3b8"/><text x="200" y="141">4</text>
+    <rect x="230" y="112" width="60" height="44" fill="#fff" stroke="#94a3b8"/><text x="260" y="141">5</text>
+    <rect x="290" y="112" width="60" height="44" fill="#fff" stroke="#94a3b8"/><text x="320" y="141">9</text>
+    <rect x="350" y="112" width="60" height="44" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/><text x="380" y="141">11</text>
+  </g>
+  <text x="140" y="176" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" text-anchor="middle">lo</text>
+  <text x="380" y="176" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626" text-anchor="middle">hi</text>
+  <path d="M 156 134 L 194 134" stroke="#16a34a" stroke-width="2" marker-end="url(#mt-ar)"/>
+  <text x="450" y="141" font-family="monospace" font-size="15" fill="#1e293b">1 + 11 = 12 &lt; 13 → lo++</text>
+
+  <!-- STEP 2: sum too big, move hi left -->
+  <g font-family="monospace" font-size="16" text-anchor="middle" fill="#1e293b">
+    <rect x="110" y="206" width="60" height="44" fill="#e2e8f0" stroke="#94a3b8"/><text x="140" y="235">1</text>
+    <rect x="170" y="206" width="60" height="44" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><text x="200" y="235">4</text>
+    <rect x="230" y="206" width="60" height="44" fill="#fff" stroke="#94a3b8"/><text x="260" y="235">5</text>
+    <rect x="290" y="206" width="60" height="44" fill="#fff" stroke="#94a3b8"/><text x="320" y="235">9</text>
+    <rect x="350" y="206" width="60" height="44" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/><text x="380" y="235">11</text>
+  </g>
+  <text x="200" y="270" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" text-anchor="middle">lo</text>
+  <text x="380" y="270" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626" text-anchor="middle">hi</text>
+  <path d="M 366 228 L 328 228" stroke="#dc2626" stroke-width="2" marker-end="url(#mt-ar2)"/>
+  <text x="450" y="235" font-family="monospace" font-size="15" fill="#1e293b">4 + 11 = 15 &gt; 13 → hi--</text>
+
+  <!-- STEP 3: match -->
+  <g font-family="monospace" font-size="16" text-anchor="middle" fill="#1e293b">
+    <rect x="110" y="300" width="60" height="44" fill="#e2e8f0" stroke="#94a3b8"/><text x="140" y="329">1</text>
+    <rect x="170" y="300" width="60" height="44" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/><text x="200" y="329">4</text>
+    <rect x="230" y="300" width="60" height="44" fill="#fff" stroke="#94a3b8"/><text x="260" y="329">5</text>
+    <rect x="290" y="300" width="60" height="44" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/><text x="320" y="329">9</text>
+    <rect x="350" y="300" width="60" height="44" fill="#e2e8f0" stroke="#94a3b8"/><text x="380" y="329">11</text>
+  </g>
+  <text x="200" y="364" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" text-anchor="middle">lo</text>
+  <text x="320" y="364" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626" text-anchor="middle">hi</text>
+  <text x="450" y="329" font-family="monospace" font-size="15" fill="#16a34a">4 + 9 = 13 = target ✓</text>
+
+  <text x="30" y="416" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Har qadam diapazonni bir uchidan 1 ta qisqartiradi (lo &lt; hi shart): O(n²) o'rniga butun massiv</text>
+  <text x="30" y="438" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">bir o'tishda tekshiriladi. ⏱ O(n) · 💾 O(1). Saralanganlik qaysi uchni surishni aniqlab beradi.</text>
+</svg>

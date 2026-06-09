@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 620" width="860" height="620">
+  <title>Event Loop — Call Stack, Web APIs, navbatlar va loop strelkasi</title>
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L9 5 L0 10 z" fill="#475569"/>
+    </marker>
+    <marker id="arrBlue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L9 5 L0 10 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrGreen" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L9 5 L0 10 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="860" height="620" fill="#f8fafc"/>
+  <text x="430" y="34" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1e293b" text-anchor="middle">Event Loop — JS qanday "kutadi"</text>
+
+  <!-- Call Stack -->
+  <rect x="40" y="70" width="240" height="300" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="160" y="98" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#2563eb" text-anchor="middle">Call Stack</text>
+  <text x="160" y="120" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">(bitta yo'lak, sinxron)</text>
+
+  <rect x="70" y="300" width="180" height="40" rx="5" fill="#2563eb"/>
+  <text x="160" y="325" font-family="monospace" font-size="14" fill="#ffffff" text-anchor="middle">main()</text>
+  <rect x="70" y="256" width="180" height="40" rx="5" fill="#3b82f6"/>
+  <text x="160" y="281" font-family="monospace" font-size="14" fill="#ffffff" text-anchor="middle">console.log()</text>
+  <text x="160" y="160" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">funksiya chaqirilsa</text>
+  <text x="160" y="178" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">tepaga qo'shiladi,</text>
+  <text x="160" y="196" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">tugasa olib tashlanadi</text>
+
+  <!-- Web APIs -->
+  <rect x="580" y="70" width="240" height="180" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="700" y="98" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#f59e0b" text-anchor="middle">Web APIs</text>
+  <text x="700" y="120" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">(brauzer, fonda)</text>
+  <rect x="610" y="135" width="180" height="32" rx="5" fill="#f8fafc" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="700" y="156" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">setTimeout</text>
+  <rect x="610" y="172" width="180" height="32" rx="5" fill="#f8fafc" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="700" y="193" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">fetch / hodisalar</text>
+  <rect x="610" y="209" width="180" height="32" rx="5" fill="#f8fafc" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="700" y="230" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">Promise</text>
+
+  <!-- Call Stack -> Web APIs -->
+  <path d="M280 150 L578 150" fill="none" stroke="#f59e0b" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="430" y="142" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309" text-anchor="middle">fonga beradi</text>
+
+  <!-- Microtask Queue -->
+  <rect x="500" y="300" width="320" height="70" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="660" y="324" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a" text-anchor="middle">Microtask Queue (Promise)</text>
+  <text x="660" y="346" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#15803d" text-anchor="middle">YUQORI ustuvorlik — avval to'liq bo'shaydi</text>
+  <rect x="520" y="350" width="34" height="14" rx="3" fill="#16a34a"/>
+  <rect x="560" y="350" width="34" height="14" rx="3" fill="#16a34a"/>
+
+  <!-- Callback (macrotask) Queue -->
+  <rect x="500" y="420" width="320" height="70" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="660" y="444" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#b45309" text-anchor="middle">Callback Queue (macrotask)</text>
+  <text x="660" y="466" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#92400e" text-anchor="middle">setTimeout, hodisa callbacklari</text>
+  <rect x="520" y="470" width="34" height="14" rx="3" fill="#f59e0b"/>
+  <rect x="560" y="470" width="34" height="14" rx="3" fill="#f59e0b"/>
+
+  <!-- Web APIs -> queues -->
+  <path d="M660 250 L660 298" fill="none" stroke="#16a34a" stroke-width="2" marker-end="url(#arrGreen)"/>
+  <text x="752" y="278" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#15803d" text-anchor="middle">Promise.then</text>
+  <path d="M600 240 C 560 360, 560 390, 600 418" fill="none" stroke="#f59e0b" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="540" y="410" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#92400e" text-anchor="middle">taymer tugadi</text>
+
+  <!-- Event Loop -->
+  <circle cx="160" cy="470" r="78" fill="none" stroke="#dc2626" stroke-width="3"/>
+  <path d="M160 392 A78 78 0 1 1 95 432" fill="none" stroke="#dc2626" stroke-width="3" marker-end="url(#arr)"/>
+  <text x="160" y="462" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#dc2626" text-anchor="middle">Event</text>
+  <text x="160" y="484" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#dc2626" text-anchor="middle">Loop ⟳</text>
+
+  <!-- Event loop pushes to stack -->
+  <path d="M160 392 L160 372" fill="none" stroke="#dc2626" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="160" y="560" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Stack bo'shasa — navbatdan ish oladi</text>
+
+  <!-- Queues -> Event Loop -->
+  <path d="M500 350 C 320 380, 280 420, 240 450" fill="none" stroke="#16a34a" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arrGreen)"/>
+  <path d="M500 455 C 360 470, 320 472, 240 472" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arr)"/>
+
+  <!-- order note -->
+  <rect x="300" y="510" width="540" height="86" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="318" y="534" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Tartib:</text>
+  <text x="318" y="556" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">1. Barcha sinxron kod (Call Stack)  →  2. Microtask navbati TO'LIQ</text>
+  <text x="318" y="578" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">3. BITTA macrotask  →  4. Yana microtasklar...  (Promise &gt; setTimeout)</text>
+</svg>

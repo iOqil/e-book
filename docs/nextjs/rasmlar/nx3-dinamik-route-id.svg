@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420">
+  <title>Dinamik route segmenti [id]: bitta route.ts har xil id qiymatlarini ushlaydi (Next.js 16 async params)</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+
+  <defs>
+    <marker id="dynArrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <text x="380" y="34" font-family="Segoe UI, system-ui, sans-serif" font-size="21" font-weight="bold" fill="#1e293b" text-anchor="middle">Dinamik segment — app/api/users/[id]/route.ts</text>
+
+  <!-- URLs -->
+  <text x="120" y="78" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Kelgan URL'lar</text>
+  <rect x="40" y="92" width="220" height="40" rx="7" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="150" y="117" font-family="monospace" font-size="14" fill="#1e293b" text-anchor="middle">/api/users/5</text>
+  <rect x="40" y="142" width="220" height="40" rx="7" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="150" y="167" font-family="monospace" font-size="14" fill="#1e293b" text-anchor="middle">/api/users/42</text>
+  <rect x="40" y="192" width="220" height="40" rx="7" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="150" y="217" font-family="monospace" font-size="14" fill="#1e293b" text-anchor="middle">/api/users/abc</text>
+
+  <!-- Arrows to handler -->
+  <line x1="262" y1="112" x2="345" y2="150" stroke="#475569" stroke-width="2" marker-end="url(#dynArrow)"/>
+  <line x1="262" y1="162" x2="345" y2="162" stroke="#475569" stroke-width="2" marker-end="url(#dynArrow)"/>
+  <line x1="262" y1="212" x2="345" y2="174" stroke="#475569" stroke-width="2" marker-end="url(#dynArrow)"/>
+
+  <!-- Handler box -->
+  <rect x="350" y="100" width="370" height="130" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="535" y="128" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb" text-anchor="middle">[id] — bitta dinamik handler</text>
+  <text x="370" y="158" font-family="monospace" font-size="13.5" fill="#1e293b">export async function GET(</text>
+  <text x="370" y="180" font-family="monospace" font-size="13.5" fill="#1e293b">  req, { params }) {</text>
+  <text x="370" y="202" font-family="monospace" font-size="13.5" fill="#dc2626">  const { id } = await params;</text>
+  <text x="370" y="222" font-family="monospace" font-size="13.5" fill="#1e293b">  ... }</text>
+
+  <!-- params box -->
+  <rect x="350" y="262" width="370" height="62" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="535" y="288" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">params = Promise&lt;{ id: string }&gt;</text>
+  <text x="535" y="312" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#dc2626" text-anchor="middle">Next.js 16: params asinxron — await SHART</text>
+
+  <line x1="535" y1="232" x2="535" y2="258" stroke="#475569" stroke-width="2" marker-end="url(#dynArrow)"/>
+
+  <!-- bottom note -->
+  <rect x="40" y="350" width="680" height="48" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="60" y="370" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">URL'dagi qism o'zgaruvchiga aylanadi: /api/users/<tspan font-family="monospace" fill="#16a34a">5</tspan> &#8594; id = "<tspan font-family="monospace" fill="#16a34a">5</tspan>"</text>
+  <text x="60" y="390" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">Bitta fayl cheksiz id qiymatini ushlaydi — har biriga alohida fayl yozish shart emas.</text>
+</svg>

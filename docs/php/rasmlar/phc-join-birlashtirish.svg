@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 440" width="680" height="440">
+  <title>JOIN: ikki jadval id orqali bog'lanib bir natijaga birlashadi</title>
+  <rect x="0" y="0" width="680" height="440" fill="#f8fafc"/>
+
+  <text x="340" y="30" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="18" font-weight="bold" fill="#1e293b">JOIN — ikki jadvalni id orqali birlashtirish</text>
+  <text x="340" y="52" text-anchor="middle" font-family="monospace" font-size="13" fill="#475569">FROM kitoblar JOIN mualliflar ON kitoblar.muallif_id = mualliflar.id</text>
+
+  <!-- mualliflar table (left) -->
+  <text x="135" y="84" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">mualliflar</text>
+  <g font-family="monospace" font-size="13">
+    <rect x="40" y="92" width="50" height="30" fill="#2563eb"/>
+    <rect x="90" y="92" width="140" height="30" fill="#e2e8f0" stroke="#94a3b8"/>
+    <text x="65"  y="112" text-anchor="middle" fill="#ffffff" font-weight="bold">id</text>
+    <text x="160" y="112" text-anchor="middle" fill="#1e293b" font-weight="bold">ism</text>
+
+    <rect x="40" y="122" width="50"  height="30" fill="#dbeafe" stroke="#94a3b8"/>
+    <rect x="90" y="122" width="140" height="30" fill="#ffffff" stroke="#94a3b8"/>
+    <text x="65"  y="142" text-anchor="middle" fill="#1e293b">1</text>
+    <text x="160" y="142" text-anchor="middle" fill="#1e293b">Abdulla Qodiriy</text>
+
+    <rect x="40" y="152" width="50"  height="30" fill="#dbeafe" stroke="#94a3b8"/>
+    <rect x="90" y="152" width="140" height="30" fill="#ffffff" stroke="#94a3b8"/>
+    <text x="65"  y="172" text-anchor="middle" fill="#1e293b">2</text>
+    <text x="160" y="172" text-anchor="middle" fill="#1e293b">Abdulla Qahhor</text>
+  </g>
+
+  <!-- kitoblar table (right) -->
+  <text x="540" y="84" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">kitoblar</text>
+  <g font-family="monospace" font-size="13">
+    <rect x="420" y="92" width="150" height="30" fill="#16a34a"/>
+    <rect x="570" y="92" width="90"  height="30" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+    <text x="495" y="112" text-anchor="middle" fill="#ffffff" font-weight="bold">nom</text>
+    <text x="615" y="112" text-anchor="middle" fill="#1e293b" font-weight="bold">muallif_id</text>
+
+    <rect x="420" y="122" width="150" height="30" fill="#ffffff" stroke="#94a3b8"/>
+    <rect x="570" y="122" width="90"  height="30" fill="#fef3c7" stroke="#f59e0b"/>
+    <text x="495" y="142" text-anchor="middle" fill="#1e293b">O'tkan kunlar</text>
+    <text x="615" y="142" text-anchor="middle" fill="#1e293b">1</text>
+
+    <rect x="420" y="152" width="150" height="30" fill="#ffffff" stroke="#94a3b8"/>
+    <rect x="570" y="152" width="90"  height="30" fill="#fef3c7" stroke="#f59e0b"/>
+    <text x="495" y="172" text-anchor="middle" fill="#1e293b">Mehrobdan chayon</text>
+    <text x="615" y="172" text-anchor="middle" fill="#1e293b">1</text>
+
+    <rect x="420" y="182" width="150" height="30" fill="#ffffff" stroke="#94a3b8"/>
+    <rect x="570" y="182" width="90"  height="30" fill="#fef3c7" stroke="#f59e0b"/>
+    <text x="495" y="202" text-anchor="middle" fill="#1e293b">Sarob</text>
+    <text x="615" y="202" text-anchor="middle" fill="#1e293b">2</text>
+  </g>
+
+  <!-- ON link arrows: foreign key -> primary key -->
+  <defs>
+    <marker id="arrowJoin" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+  <!-- muallif_id 1 (book1) -> mualliflar id 1 -->
+  <path d="M 570 137 C 320 137, 300 137, 92 137" fill="none" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrowJoin)"/>
+  <!-- muallif_id 2 (book3) -> mualliflar id 2 -->
+  <path d="M 570 197 C 330 197, 280 167, 92 167" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrowJoin)"/>
+
+  <text x="340" y="232" text-anchor="middle" font-family="monospace" font-size="13" fill="#f59e0b">ON kitoblar.muallif_id = mualliflar.id</text>
+
+  <!-- big down arrow to result -->
+  <line x1="340" y1="244" x2="340" y2="270" stroke="#475569" stroke-width="2.5" marker-end="url(#arrowJoinDown)"/>
+  <defs>
+    <marker id="arrowJoinDown" markerWidth="12" markerHeight="12" refX="4" refY="9" orient="auto">
+      <path d="M0,0 L8,0 L4,9 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- Result table (joined) -->
+  <text x="340" y="288" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Birlashgan natija</text>
+  <g font-family="monospace" font-size="13">
+    <rect x="210" y="298" width="150" height="30" fill="#16a34a"/>
+    <rect x="360" y="298" width="150" height="30" fill="#2563eb"/>
+    <text x="285" y="318" text-anchor="middle" fill="#ffffff" font-weight="bold">nom</text>
+    <text x="435" y="318" text-anchor="middle" fill="#ffffff" font-weight="bold">ism</text>
+
+    <rect x="210" y="328" width="150" height="30" fill="#ffffff" stroke="#94a3b8"/>
+    <rect x="360" y="328" width="150" height="30" fill="#dbeafe" stroke="#94a3b8"/>
+    <text x="285" y="348" text-anchor="middle" fill="#1e293b">O'tkan kunlar</text>
+    <text x="435" y="348" text-anchor="middle" fill="#1e293b">Abdulla Qodiriy</text>
+
+    <rect x="210" y="358" width="150" height="30" fill="#ffffff" stroke="#94a3b8"/>
+    <rect x="360" y="358" width="150" height="30" fill="#dbeafe" stroke="#94a3b8"/>
+    <text x="285" y="378" text-anchor="middle" fill="#1e293b">Mehrobdan chayon</text>
+    <text x="435" y="378" text-anchor="middle" fill="#1e293b">Abdulla Qodiriy</text>
+
+    <rect x="210" y="388" width="150" height="30" fill="#ffffff" stroke="#94a3b8"/>
+    <rect x="360" y="388" width="150" height="30" fill="#dbeafe" stroke="#94a3b8"/>
+    <text x="285" y="408" text-anchor="middle" fill="#1e293b">Sarob</text>
+    <text x="435" y="408" text-anchor="middle" fill="#1e293b">Abdulla Qahhor</text>
+  </g>
+
+  <text x="340" y="434" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">muallif bir marta saqlanadi (tashqi kalit muallif_id orqali bog'lanadi)</text>
+</svg>

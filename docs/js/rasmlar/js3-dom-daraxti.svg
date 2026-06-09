@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 470" width="720" height="470">
+  <title>DOM daraxti: document ildizidan html, head/body va elementlargacha</title>
+  <rect x="0" y="0" width="720" height="470" fill="#f8fafc"/>
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">DOM daraxti (tugunlar iyerarxiyasi)</text>
+
+  <!-- ulovchi chiziqlar (avval, kvadratlar tagida qolishi uchun) -->
+  <g stroke="#475569" stroke-width="2" fill="none">
+    <!-- document -> html -->
+    <line x1="360" y1="92" x2="360" y2="128"/>
+    <!-- html -> head, html -> body -->
+    <line x1="360" y1="180" x2="200" y2="216"/>
+    <line x1="360" y1="180" x2="520" y2="216"/>
+    <!-- head -> title, meta -->
+    <line x1="200" y1="268" x2="130" y2="304"/>
+    <line x1="200" y1="268" x2="270" y2="304"/>
+    <!-- body -> h1, p, div -->
+    <line x1="520" y1="268" x2="420" y2="304"/>
+    <line x1="520" y1="268" x2="520" y2="304"/>
+    <line x1="520" y1="268" x2="620" y2="304"/>
+    <!-- div -> button -->
+    <line x1="620" y1="356" x2="620" y2="392"/>
+  </g>
+
+  <!-- document (ildiz) -->
+  <g>
+    <rect x="295" y="58" width="130" height="34" rx="6" fill="#2563eb" stroke="#1e293b" stroke-width="1.5"/>
+    <text x="360" y="80" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#ffffff">document</text>
+  </g>
+  <text x="438" y="80" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">ildiz</text>
+
+  <!-- html -->
+  <g>
+    <rect x="305" y="146" width="110" height="34" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="360" y="168" text-anchor="middle" font-family="monospace" font-size="15" fill="#1e293b">&lt;html&gt;</text>
+  </g>
+
+  <!-- head -->
+  <g>
+    <rect x="148" y="234" width="104" height="34" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="200" y="256" text-anchor="middle" font-family="monospace" font-size="15" fill="#1e293b">&lt;head&gt;</text>
+  </g>
+  <!-- body -->
+  <g>
+    <rect x="468" y="234" width="104" height="34" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="520" y="256" text-anchor="middle" font-family="monospace" font-size="15" fill="#1e293b">&lt;body&gt;</text>
+  </g>
+
+  <!-- head bolalari -->
+  <g>
+    <rect x="84" y="304" width="92" height="32" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="130" y="325" text-anchor="middle" font-family="monospace" font-size="14" fill="#1e293b">&lt;title&gt;</text>
+  </g>
+  <g>
+    <rect x="226" y="304" width="92" height="32" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="272" y="325" text-anchor="middle" font-family="monospace" font-size="14" fill="#1e293b">&lt;meta&gt;</text>
+  </g>
+
+  <!-- body bolalari -->
+  <g>
+    <rect x="382" y="304" width="76" height="32" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="420" y="325" text-anchor="middle" font-family="monospace" font-size="14" fill="#1e293b">&lt;h1&gt;</text>
+  </g>
+  <g>
+    <rect x="484" y="304" width="72" height="32" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="520" y="325" text-anchor="middle" font-family="monospace" font-size="14" fill="#1e293b">&lt;p&gt;</text>
+  </g>
+  <g>
+    <rect x="580" y="304" width="80" height="32" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="620" y="325" text-anchor="middle" font-family="monospace" font-size="14" fill="#1e293b">&lt;div&gt;</text>
+  </g>
+
+  <!-- div bolasi: button -->
+  <g>
+    <rect x="568" y="392" width="104" height="32" rx="6" fill="#f59e0b" stroke="#1e293b" stroke-width="1.5"/>
+    <text x="620" y="413" text-anchor="middle" font-family="monospace" font-size="14" fill="#1e293b">&lt;button&gt;</text>
+  </g>
+
+  <text x="360" y="452" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Har bir HTML tegi -- daraxtdagi bitta tugun (node). JS shu tugunlarni topib o'zgartiradi.</text>
+</svg>

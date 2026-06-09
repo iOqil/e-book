@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 360" width="820" height="360">
+  <title>Server Actions oqimi: forma yuboriladi, server funksiyasi ishlaydi, natija qaytadi</title>
+  <defs>
+    <marker id="rd3-blue" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#2563eb"/>
+    </marker>
+    <marker id="rd3-green" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="820" height="360" fill="#f8fafc"/>
+  <text x="410" y="32" font-family="Segoe UI, system-ui, sans-serif" font-size="19" font-weight="bold" fill="#1e293b" text-anchor="middle">Server Actions — forma to'g'ridan server funksiyasiga</text>
+
+  <!-- 1. form (browser) -->
+  <rect x="30" y="74" width="220" height="150" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="140" y="100" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#f59e0b" text-anchor="middle">1. Forma (brauzer)</text>
+  <text x="140" y="126" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">&lt;form action={createUser}&gt;</text>
+  <text x="140" y="148" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">&lt;input name="name" /&gt;</text>
+  <text x="140" y="170" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">foydalanuvchi yozadi</text>
+  <text x="140" y="192" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">va "Yaratish" bosadi</text>
+  <text x="140" y="212" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" text-anchor="middle">alohida API endpoint kerakmas</text>
+
+  <!-- 2. server function -->
+  <rect x="300" y="74" width="240" height="150" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="420" y="100" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb" text-anchor="middle">2. Server funksiya</text>
+  <text x="420" y="126" font-family="monospace" font-size="13" fill="#2563eb" text-anchor="middle">'use server'</text>
+  <text x="420" y="148" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">createUser(formData)</text>
+  <text x="420" y="170" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">formData.get("name")</text>
+  <text x="420" y="192" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">await db.users.create(...)</text>
+  <text x="420" y="212" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" text-anchor="middle">faqat serverda ishlaydi</text>
+
+  <!-- 3. result -->
+  <rect x="590" y="74" width="200" height="150" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="690" y="100" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="middle">3. Natija</text>
+  <text x="690" y="128" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">DB yangilandi</text>
+  <text x="690" y="150" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">UI qayta render</text>
+  <text x="690" y="172" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">revalidatePath()</text>
+  <text x="690" y="194" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">yangi ma'lumot</text>
+  <text x="690" y="210" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">ko'rinadi</text>
+
+  <!-- arrows -->
+  <path d="M250 149 L296 149" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#rd3-blue)"/>
+  <text x="273" y="140" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb" text-anchor="middle">submit</text>
+  <path d="M540 149 L586 149" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#rd3-green)"/>
+
+  <!-- note -->
+  <rect x="30" y="250" width="760" height="86" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="50" y="276" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">Backend dasturchi uchun:</text>
+  <text x="232" y="276" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">bu Laravel controller action'iga o'xshaydi, lekin to'g'ridan komponentdan chaqiriladi.</text>
+  <text x="50" y="302" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Frontend va backend orasidagi chegara yumshaydi: forma → server funksiya → natija, ortiqcha fetch yo'q.</text>
+  <text x="50" y="324" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">Eslatma: server funksiyasi hech qachon brauzerga yuborilmaydi — secret'lar xavfsiz qoladi.</text>
+</svg>

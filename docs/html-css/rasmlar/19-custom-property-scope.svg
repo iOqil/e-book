@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 470" width="720" height="470">
+  <title>Custom property scope: --rang ota elementda e'lon qilinib farzandlarga meros tarqaladi va bitta farzandda override qilinadi</title>
+  <defs>
+    <marker id="cpArr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="cpArrOv" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="720" height="470" fill="#f8fafc"/>
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Custom property scope va meros</text>
+
+  <!-- ota: :root -->
+  <rect x="250" y="56" width="220" height="80" rx="10" fill="#2563eb" stroke="#94a3b8" stroke-width="2"/>
+  <text x="360" y="82" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">:root (ota)</text>
+  <text x="360" y="104" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#ffffff">--rang: blue;</text>
+  <text x="360" y="124" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dbeafe">bu yerda e'lon qilindi</text>
+
+  <!-- strelkalar: meros tarqaladi -->
+  <line x1="310" y1="136" x2="150" y2="205" stroke="#2563eb" stroke-width="2.5" marker-end="url(#cpArr)"/>
+  <line x1="360" y1="136" x2="360" y2="205" stroke="#2563eb" stroke-width="2.5" marker-end="url(#cpArr)"/>
+  <line x1="410" y1="136" x2="570" y2="205" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#cpArrOv)"/>
+  <text x="205" y="178" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">var() meros</text>
+  <text x="515" y="178" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#f59e0b">qayta e'lon</text>
+
+  <!-- farzand 1 -->
+  <rect x="70" y="208" width="180" height="86" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="160" y="234" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">.karta</text>
+  <text x="160" y="256" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">color: var(--rang)</text>
+  <text x="160" y="278" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb" font-weight="bold">= blue</text>
+
+  <!-- farzand 2 -->
+  <rect x="270" y="208" width="180" height="86" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="360" y="234" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">.matn</text>
+  <text x="360" y="256" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">color: var(--rang)</text>
+  <text x="360" y="278" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb" font-weight="bold">= blue</text>
+
+  <!-- farzand 3: override -->
+  <rect x="490" y="208" width="180" height="86" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="580" y="232" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">.ogohlantirish</text>
+  <text x="580" y="252" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309">--rang: red;</text>
+  <text x="580" y="270" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">color: var(--rang)</text>
+  <text x="580" y="288" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626" font-weight="bold">= red</text>
+
+  <!-- nevara: override pastga ham tarqaladi -->
+  <line x1="580" y1="294" x2="580" y2="338" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#cpArrOv)"/>
+  <rect x="490" y="341" width="180" height="74" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="580" y="367" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">.belgi (nevara)</text>
+  <text x="580" y="389" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">color: var(--rang)</text>
+  <text x="580" y="408" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626" font-weight="bold">= red (override meros)</text>
+
+  <!-- izoh paneli -->
+  <rect x="40" y="330" width="410" height="92" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="60" y="354" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Ko'k strelka: --rang :root'da e'lon qilinib,</text>
+  <text x="60" y="374" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">barcha farzandlarga meros bo'lib tarqaladi.</text>
+  <text x="60" y="397" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309">Amber: .ogohlantirish o'zida --rang'ni qayta e'lon</text>
+  <text x="60" y="415" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309">qiladi — yangi qiymat faqat o'sha shox'ga ta'sir qiladi.</text>
+
+  <text x="360" y="450" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Custom property = oddiy xossa kabi meros bo'ladi; override faqat o'z shoxiga tushadi</text>
+</svg>

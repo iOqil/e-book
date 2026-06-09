@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" width="880" height="420">
+  <title>Server Component'da ma'lumot olish: async komponent → await fetch → render → HTML</title>
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L9 5 L0 10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="880" height="420" fill="#f8fafc"/>
+  <text x="440" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1e293b">Server Component'da data fetching (useEffect'siz)</text>
+  <text x="440" y="58" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Hammasi SERVER'da yuz beradi — brauzer faqat tayyor natijani oladi</text>
+
+  <!-- Step 1: async component -->
+  <rect x="30" y="90" width="190" height="220" rx="10" fill="#e2e8f0" stroke="#2563eb" stroke-width="2"/>
+  <text x="125" y="116" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">1. async komponent</text>
+  <rect x="46" y="132" width="158" height="120" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+  <text x="56" y="156" font-family="monospace" font-size="13" fill="#1e293b">export default</text>
+  <text x="56" y="178" font-family="monospace" font-size="13" fill="#2563eb">async function</text>
+  <text x="56" y="200" font-family="monospace" font-size="13" fill="#1e293b">Page() {</text>
+  <text x="56" y="222" font-family="monospace" font-size="13" fill="#475569">  ...</text>
+  <text x="56" y="244" font-family="monospace" font-size="13" fill="#1e293b">}</text>
+  <text x="125" y="284" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">serverda chaqiriladi,</text>
+  <text x="125" y="302" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">render boshlanadi</text>
+
+  <!-- Step 2: await fetch -->
+  <rect x="258" y="90" width="200" height="220" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="358" y="116" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b45309">2. await fetch</text>
+  <rect x="274" y="132" width="168" height="86" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+  <text x="284" y="156" font-family="monospace" font-size="13" fill="#2563eb">const res =</text>
+  <text x="284" y="178" font-family="monospace" font-size="13" fill="#1e293b">  await fetch(url)</text>
+  <text x="284" y="200" font-family="monospace" font-size="13" fill="#1e293b">await res.json()</text>
+  <text x="358" y="244" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#92400e">"javob kelguncha</text>
+  <text x="358" y="262" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#92400e">kutib tur"</text>
+  <text x="358" y="290" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">shu vaqt loading.tsx</text>
+
+  <!-- Step 3: render -->
+  <rect x="496" y="90" width="180" height="220" rx="10" fill="#e2e8f0" stroke="#2563eb" stroke-width="2"/>
+  <text x="586" y="116" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">3. render</text>
+  <rect x="512" y="132" width="148" height="100" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+  <text x="522" y="156" font-family="monospace" font-size="13" fill="#1e293b">return (</text>
+  <text x="522" y="178" font-family="monospace" font-size="13" fill="#2563eb">  &lt;ul&gt;{users</text>
+  <text x="522" y="200" font-family="monospace" font-size="13" fill="#1e293b">  .map(...)}&lt;/ul&gt;</text>
+  <text x="522" y="222" font-family="monospace" font-size="13" fill="#1e293b">)</text>
+  <text x="586" y="266" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">ma'lumot bilan</text>
+  <text x="586" y="284" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">to'ldirilgan JSX</text>
+
+  <!-- Step 4: HTML -->
+  <rect x="714" y="90" width="140" height="220" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="784" y="116" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#15803d">4. HTML</text>
+  <rect x="728" y="132" width="112" height="96" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+  <text x="740" y="156" font-family="monospace" font-size="13" fill="#1e293b">&lt;ul&gt;</text>
+  <text x="740" y="178" font-family="monospace" font-size="13" fill="#16a34a"> &lt;li&gt;Oqil</text>
+  <text x="740" y="200" font-family="monospace" font-size="13" fill="#16a34a"> &lt;li&gt;Ali</text>
+  <text x="740" y="222" font-family="monospace" font-size="13" fill="#1e293b">&lt;/ul&gt;</text>
+  <text x="784" y="266" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#15803d">brauzerga</text>
+  <text x="784" y="284" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#15803d">tayyor jo'natiladi</text>
+
+  <!-- arrows -->
+  <path d="M220 200 L256 200" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arr)"/>
+  <path d="M458 200 L494 200" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arr)"/>
+  <path d="M676 200 L712 200" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <text x="440" y="356" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">useState yo'q · useEffect yo'q · loading state yo'q — faqat async/await</text>
+  <text x="440" y="386" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Next.js 16: fetch sukut bo'yicha keshlanmaydi (dinamik) — har so'rovda yangi ma'lumot.</text>
+</svg>

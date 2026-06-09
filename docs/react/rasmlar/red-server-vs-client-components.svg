@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 470" width="820" height="470">
+  <title>Server Components va Client Components: server'da render, JS faqat client komponentlarga yuboriladi</title>
+  <defs>
+    <marker id="rd2-blue" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#2563eb"/>
+    </marker>
+    <marker id="rd2-amber" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="820" height="470" fill="#f8fafc"/>
+  <text x="410" y="32" font-family="Segoe UI, system-ui, sans-serif" font-size="19" font-weight="bold" fill="#1e293b" text-anchor="middle">Server Components va Client Components</text>
+
+  <!-- SERVER side -->
+  <rect x="24" y="56" width="380" height="290" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="214" y="82" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb" text-anchor="middle">SERVER (default)</text>
+
+  <rect x="48" y="98" width="332" height="92" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="214" y="122" font-family="monospace" font-size="14" font-weight="bold" fill="#2563eb" text-anchor="middle">UsersPage (Server Component)</text>
+  <text x="64" y="146" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">await db.users.findMany() — to'g'ridan DB</text>
+  <text x="64" y="166" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">useState / useEffect YO'Q</text>
+  <text x="64" y="183" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">JS brauzerga yuborilmaydi → kichik bundle</text>
+
+  <!-- use client boundary -->
+  <rect x="48" y="206" width="332" height="120" rx="8" fill="#fff7ed" stroke="#f59e0b" stroke-width="2" stroke-dasharray="7 4"/>
+  <text x="214" y="230" font-family="monospace" font-size="14" font-weight="bold" fill="#f59e0b" text-anchor="middle">'use client' chegarasi</text>
+  <text x="64" y="254" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Bu yerdan pastdagi daraxt — Client.</text>
+  <rect x="72" y="266" width="284" height="48" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="214" y="287" font-family="monospace" font-size="13" font-weight="bold" fill="#f59e0b" text-anchor="middle">Counter (Client Component)</text>
+  <text x="214" y="305" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">interaktiv: useState, onClick</text>
+
+  <!-- arrow server -> client -->
+  <path d="M214 190 L214 204" fill="none" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#rd2-amber)"/>
+
+  <!-- BROWSER side -->
+  <rect x="436" y="56" width="360" height="290" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="616" y="82" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a" text-anchor="middle">BRAUZER (client)</text>
+
+  <rect x="460" y="98" width="312" height="92" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="616" y="124" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Tayyor HTML (server chizdi)</text>
+  <text x="476" y="150" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Foydalanuvchilar ro'yxati darrov ko'rinadi</text>
+  <text x="476" y="170" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Server Component uchun JS = 0</text>
+
+  <rect x="460" y="206" width="312" height="92" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="616" y="232" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#f59e0b" text-anchor="middle">Faqat Counter'ning JS'i keladi</text>
+  <text x="476" y="258" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">"hydration" → tugma bosiladigan bo'ladi</text>
+  <text x="476" y="278" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">interaktivlik shu yerda yashaydi</text>
+
+  <!-- network arrows -->
+  <path d="M380 144 L456 144" fill="none" stroke="#2563eb" stroke-width="2.5" marker-end="url(#rd2-blue)"/>
+  <text x="418" y="136" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb" text-anchor="middle">HTML</text>
+  <path d="M380 290 L456 252" fill="none" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#rd2-amber)"/>
+  <text x="418" y="290" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#f59e0b" text-anchor="middle">JS</text>
+
+  <!-- note -->
+  <rect x="24" y="362" width="772" height="92" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="44" y="388" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">Aqliy model:</text>
+  <text x="148" y="388" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">ma'lumotni serverda oling va statik UI chizing; faqat interaktiv barglar Client bo'lsin.</text>
+  <text x="44" y="412" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">'use client' — bir tomonlama chegara: u belgilangan fayl va uning ostidagi import'lar Client bo'ladi.</text>
+  <text x="44" y="436" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">Natija: kamroq JS brauzerga ketadi → tezroq sahifa, yaxshi SEO.</text>
+</svg>

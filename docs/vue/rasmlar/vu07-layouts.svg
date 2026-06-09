@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 460" width="820" height="460">
+  <title>Layouts: doimiy ramka (header/footer) ichidagi slot'ga har sahifa kontenti tushadi</title>
+  <defs>
+    <marker id="vu07l-strelka" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="820" height="460" fill="#f8fafc"/>
+  <text x="410" y="38" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1e293b">Layout = qayta ishlatiladigan ramka, sahifa slot'ga tushadi</text>
+  <text x="410" y="62" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">layout doimiy qoladi; faqat slot ichidagi kontent sahifaga qarab almashadi</text>
+
+  <!-- Layout qutisi (ramka) -->
+  <rect x="280" y="90" width="260" height="330" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="410" y="114" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="14" fill="#2563eb">app/layouts/default.vue</text>
+
+  <!-- Header (doimiy) -->
+  <rect x="300" y="128" width="220" height="46" rx="6" fill="#2563eb"/>
+  <text x="410" y="156" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#f8fafc">AppHeader (doimiy)</text>
+
+  <!-- Slot (almashadigan joy) -->
+  <rect x="300" y="184" width="220" height="142" rx="6" fill="#f8fafc" stroke="#f59e0b" stroke-width="3" stroke-dasharray="7 5"/>
+  <text x="410" y="220" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="16" font-weight="bold" fill="#f59e0b">&lt;slot /&gt;</text>
+  <text x="410" y="248" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">sahifa kontenti</text>
+  <text x="410" y="266" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">shu yerga tushadi</text>
+
+  <!-- Footer (doimiy) -->
+  <rect x="300" y="336" width="220" height="46" rx="6" fill="#2563eb"/>
+  <text x="410" y="364" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#f8fafc">AppFooter (doimiy)</text>
+
+  <!-- Chapdagi sahifalar -->
+  <rect x="30" y="150" width="190" height="44" rx="8" fill="#f8fafc" stroke="#16a34a" stroke-width="2"/>
+  <text x="125" y="177" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="14" fill="#16a34a">pages/index.vue</text>
+
+  <rect x="30" y="234" width="190" height="44" rx="8" fill="#f8fafc" stroke="#16a34a" stroke-width="2"/>
+  <text x="125" y="261" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="14" fill="#16a34a">pages/about.vue</text>
+
+  <rect x="30" y="318" width="190" height="44" rx="8" fill="#f8fafc" stroke="#16a34a" stroke-width="2"/>
+  <text x="125" y="345" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="14" fill="#16a34a">pages/blog.vue</text>
+
+  <!-- Strelkalar sahifa -> slot -->
+  <line x1="222" y1="172" x2="296" y2="220" stroke="#475569" stroke-width="2" marker-end="url(#vu07l-strelka)"/>
+  <line x1="222" y1="256" x2="296" y2="250" stroke="#475569" stroke-width="2" marker-end="url(#vu07l-strelka)"/>
+  <line x1="222" y1="340" x2="296" y2="280" stroke="#475569" stroke-width="2" marker-end="url(#vu07l-strelka)"/>
+  <text x="250" y="300" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">biriga</text>
+
+  <!-- O'ng izoh -->
+  <rect x="590" y="150" width="200" height="232" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="690" y="178" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Layout tanlash</text>
+  <text font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">
+    <tspan x="606" y="206">default.vue —</tspan>
+    <tspan x="606" y="224">avtomatik standart</tspan>
+    <tspan x="606" y="258">Boshqasini xohlasang:</tspan>
+  </text>
+  <text x="606" y="290" font-family="Consolas, Courier New, monospace" font-size="13" fill="#1e293b">definePageMeta(</text>
+  <text x="606" y="308" font-family="Consolas, Courier New, monospace" font-size="13" fill="#1e293b">  { layout:</text>
+  <text x="606" y="326" font-family="Consolas, Courier New, monospace" font-size="13" fill="#16a34a">  'admin' </text>
+  <text x="606" y="344" font-family="Consolas, Courier New, monospace" font-size="13" fill="#1e293b">})</text>
+  <text x="690" y="372" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(Blade @extends kabi)</text>
+
+  <text x="410" y="442" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">app.vue: &lt;NuxtLayout&gt; &lt;NuxtPage /&gt; &lt;/NuxtLayout&gt;</text>
+</svg>

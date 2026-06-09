@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 420" width="780" height="420">
+  <title>map, filter va reduce metodlari massivni qanday o'zgartiradi: map yangi massiv, filter qisqaroq massiv, reduce bitta qiymat</title>
+  <defs>
+    <marker id="mfr-arrow" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="780" height="420" fill="#f8fafc"/>
+  <text x="390" y="38" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1e293b">map / filter / reduce — massivni qanday o'zgartiradi?</text>
+
+  <!-- Yacheyka shabloni: kirish massivi har qatorda -->
+  <!-- MAP qatori -->
+  <text x="40" y="92" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#2563eb">map</text>
+  <text x="40" y="112" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">har elementni o'zgartiradi</text>
+  <!-- kirish -->
+  <g font-family="Consolas, Courier New, monospace" font-size="16" fill="#1e293b">
+    <rect x="150" y="78" width="34" height="34" rx="5" fill="#e2e8f0" stroke="#94a3b8"/><text x="167" y="100" text-anchor="middle">1</text>
+    <rect x="186" y="78" width="34" height="34" rx="5" fill="#e2e8f0" stroke="#94a3b8"/><text x="203" y="100" text-anchor="middle">2</text>
+    <rect x="222" y="78" width="34" height="34" rx="5" fill="#e2e8f0" stroke="#94a3b8"/><text x="239" y="100" text-anchor="middle">3</text>
+    <rect x="258" y="78" width="34" height="34" rx="5" fill="#e2e8f0" stroke="#94a3b8"/><text x="275" y="100" text-anchor="middle">4</text>
+  </g>
+  <line x1="300" y1="95" x2="420" y2="95" stroke="#475569" stroke-width="2.5" marker-end="url(#mfr-arrow)"/>
+  <text x="360" y="86" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="14" fill="#16a34a">n =&gt; n * 2</text>
+  <!-- chiqish -->
+  <g font-family="Consolas, Courier New, monospace" font-size="16" fill="#1e293b">
+    <rect x="436" y="78" width="34" height="34" rx="5" fill="#dbeafe" stroke="#2563eb"/><text x="453" y="100" text-anchor="middle">2</text>
+    <rect x="472" y="78" width="34" height="34" rx="5" fill="#dbeafe" stroke="#2563eb"/><text x="489" y="100" text-anchor="middle">4</text>
+    <rect x="508" y="78" width="34" height="34" rx="5" fill="#dbeafe" stroke="#2563eb"/><text x="525" y="100" text-anchor="middle">6</text>
+    <rect x="544" y="78" width="34" height="34" rx="5" fill="#dbeafe" stroke="#2563eb"/><text x="561" y="100" text-anchor="middle">8</text>
+  </g>
+  <text x="650" y="100" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#2563eb">massiv (bir xil uzunlik)</text>
+
+  <!-- FILTER qatori -->
+  <text x="40" y="202" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#16a34a">filter</text>
+  <text x="40" y="222" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">shartga mos qoldiradi</text>
+  <g font-family="Consolas, Courier New, monospace" font-size="16" fill="#1e293b">
+    <rect x="150" y="188" width="34" height="34" rx="5" fill="#e2e8f0" stroke="#94a3b8"/><text x="167" y="210" text-anchor="middle">1</text>
+    <rect x="186" y="188" width="34" height="34" rx="5" fill="#e2e8f0" stroke="#94a3b8"/><text x="203" y="210" text-anchor="middle">2</text>
+    <rect x="222" y="188" width="34" height="34" rx="5" fill="#e2e8f0" stroke="#94a3b8"/><text x="239" y="210" text-anchor="middle">3</text>
+    <rect x="258" y="188" width="34" height="34" rx="5" fill="#e2e8f0" stroke="#94a3b8"/><text x="275" y="210" text-anchor="middle">4</text>
+  </g>
+  <line x1="300" y1="205" x2="420" y2="205" stroke="#475569" stroke-width="2.5" marker-end="url(#mfr-arrow)"/>
+  <text x="360" y="196" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="14" fill="#16a34a">n % 2 === 0</text>
+  <g font-family="Consolas, Courier New, monospace" font-size="16" fill="#1e293b">
+    <rect x="436" y="188" width="34" height="34" rx="5" fill="#dcfce7" stroke="#16a34a"/><text x="453" y="210" text-anchor="middle">2</text>
+    <rect x="472" y="188" width="34" height="34" rx="5" fill="#dcfce7" stroke="#16a34a"/><text x="489" y="210" text-anchor="middle">4</text>
+  </g>
+  <text x="650" y="210" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#16a34a">massiv (qisqaroq)</text>
+
+  <!-- REDUCE qatori -->
+  <text x="40" y="312" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#f59e0b">reduce</text>
+  <text x="40" y="332" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">bitta qiymatga yig'adi</text>
+  <g font-family="Consolas, Courier New, monospace" font-size="16" fill="#1e293b">
+    <rect x="150" y="298" width="34" height="34" rx="5" fill="#e2e8f0" stroke="#94a3b8"/><text x="167" y="320" text-anchor="middle">1</text>
+    <rect x="186" y="298" width="34" height="34" rx="5" fill="#e2e8f0" stroke="#94a3b8"/><text x="203" y="320" text-anchor="middle">2</text>
+    <rect x="222" y="298" width="34" height="34" rx="5" fill="#e2e8f0" stroke="#94a3b8"/><text x="239" y="320" text-anchor="middle">3</text>
+    <rect x="258" y="298" width="34" height="34" rx="5" fill="#e2e8f0" stroke="#94a3b8"/><text x="275" y="320" text-anchor="middle">4</text>
+  </g>
+  <line x1="300" y1="315" x2="420" y2="315" stroke="#475569" stroke-width="2.5" marker-end="url(#mfr-arrow)"/>
+  <text x="360" y="306" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="14" fill="#f59e0b">(j, n) =&gt; j + n</text>
+  <rect x="436" y="298" width="60" height="34" rx="5" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="466" y="320" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="16" fill="#1e293b">10</text>
+  <text x="650" y="320" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#f59e0b">bitta qiymat</text>
+
+  <text x="390" y="392" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#475569">Uchchalasi ham asil massivni buzmaydi (immutable). map -&gt; massiv, filter -&gt; massiv, reduce -&gt; qiymat.</text>
+</svg>

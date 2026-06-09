@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 560" width="860" height="560">
+  <title>Navigation guard oqimi — beforeEach tekshiradi, davom etadi yoki yo'naltiradi</title>
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L9 5 L0 10 z" fill="#475569"/>
+    </marker>
+    <marker id="arrGreen" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L9 5 L0 10 z" fill="#16a34a"/>
+    </marker>
+    <marker id="arrRed" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L9 5 L0 10 z" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="860" height="560" fill="#f8fafc"/>
+  <text x="430" y="34" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1e293b" text-anchor="middle">Navigation guard oqimi (middleware ekvivalenti)</text>
+  <text x="430" y="58" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Har bosqich qaror qiladi: davom et (true) yoki to'xtat/yo'naltir (obyekt qaytar)</text>
+
+  <!-- start -->
+  <rect x="330" y="78" width="200" height="48" rx="24" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="430" y="100" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">Navigatsiya boshlandi</text>
+  <text x="430" y="118" font-family="monospace" font-size="13" fill="#475569" text-anchor="middle">RouterLink yoki router.push</text>
+
+  <path d="M430 126 L430 154" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- beforeEach -->
+  <rect x="300" y="156" width="260" height="56" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="430" y="180" font-family="monospace" font-size="15" font-weight="bold" fill="#2563eb" text-anchor="middle">beforeEach (global)</text>
+  <text x="430" y="200" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">(to, from) =&gt; ...   to.meta ni tekshiradi</text>
+
+  <path d="M430 212 L430 240" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- decision diamond -->
+  <polygon points="430,242 560,308 430,374 300,308" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="430" y="300" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#92400e" text-anchor="middle">requiresAuth va</text>
+  <text x="430" y="320" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#92400e" text-anchor="middle">token YO'Qmi?</text>
+
+  <!-- HA -> redirect -->
+  <path d="M300 308 L150 308" fill="none" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arrRed)"/>
+  <text x="226" y="298" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626" text-anchor="middle">HA</text>
+
+  <rect x="20" y="282" width="130" height="64" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="85" y="306" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626" text-anchor="middle">obyekt qaytar:</text>
+  <text x="85" y="326" font-family="monospace" font-size="13" fill="#991b1b" text-anchor="middle">{ name:</text>
+  <text x="85" y="342" font-family="monospace" font-size="13" fill="#991b1b" text-anchor="middle">'login' }</text>
+
+  <path d="M85 282 L85 168 L296 168" fill="none" stroke="#dc2626" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arrRed)"/>
+  <text x="150" y="160" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">/login ga yo'naltiradi (to'xtaydi)</text>
+
+  <!-- YO'Q -> beforeEnter -->
+  <path d="M430 374 L430 402" fill="none" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arrGreen)"/>
+  <text x="460" y="394" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">YO'Q — davom et</text>
+
+  <!-- beforeEnter -->
+  <rect x="300" y="404" width="260" height="44" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="430" y="426" font-family="monospace" font-size="14" fill="#2563eb" text-anchor="middle">beforeEnter (route)</text>
+  <text x="430" y="442" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">o'sha logika: ruxsat / yo'naltir</text>
+
+  <path d="M430 448 L430 468" fill="none" stroke="#16a34a" stroke-width="2" marker-end="url(#arrGreen)"/>
+
+  <!-- in-component guard -->
+  <rect x="300" y="470" width="260" height="40" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="430" y="495" font-family="monospace" font-size="13" fill="#2563eb" text-anchor="middle">onBeforeRouteLeave (komponent)</text>
+
+  <!-- final allow -->
+  <path d="M560 426 L700 426 L700 320" fill="none" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arrGreen)"/>
+  <rect x="620" y="262" width="160" height="58" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="700" y="286" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">Navigatsiya</text>
+  <text x="700" y="306" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">yakunlanadi ✓</text>
+  <text x="700" y="338" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#15803d" text-anchor="middle">RouterView yangilanadi</text>
+
+  <!-- order note -->
+  <rect x="40" y="430" width="240" height="100" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="58" y="454" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Ketma-ketlik:</text>
+  <text x="58" y="476" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">1. beforeEach (global)</text>
+  <text x="58" y="496" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">2. beforeEnter (route)</text>
+  <text x="58" y="516" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">3. komponent guard → yakun</text>
+</svg>

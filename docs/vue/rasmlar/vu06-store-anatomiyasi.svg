@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 470" width="820" height="470">
+  <title>Pinia store anatomiyasi — Setup syntax: state (ref), getters (computed), actions (function)</title>
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="820" height="470" fill="#f8fafc"/>
+  <text x="410" y="34" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">defineStore('counter', () =&gt; { ... }) — store ichi</text>
+
+  <!-- Outer store box -->
+  <rect x="30" y="56" width="760" height="330" rx="14" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="50" y="84" font-family="monospace" font-size="15" fill="#1e293b" font-weight="bold">useCounterStore</text>
+  <text x="770" y="84" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="end">singleton — bir instansiya, hammaga bir xil</text>
+
+  <!-- STATE -->
+  <rect x="56" y="104" width="220" height="256" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="166" y="132" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#2563eb" text-anchor="middle">STATE</text>
+  <text x="166" y="152" font-family="monospace" font-size="13" fill="#475569" text-anchor="middle">ref(...) — manba</text>
+  <rect x="74" y="166" width="184" height="44" rx="7" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="166" y="194" font-family="monospace" font-size="14" fill="#1e293b" text-anchor="middle">count = ref(0)</text>
+  <rect x="74" y="222" width="184" height="44" rx="7" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="166" y="250" font-family="monospace" font-size="14" fill="#1e293b" text-anchor="middle">history = ref([])</text>
+  <text x="166" y="300" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Proxy reaktiv:</text>
+  <text x="166" y="320" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">o'qishni kuzatadi,</text>
+  <text x="166" y="340" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">o'zgarishni e'lon qiladi</text>
+
+  <!-- GETTERS -->
+  <rect x="300" y="104" width="220" height="256" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="410" y="132" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#16a34a" text-anchor="middle">GETTERS</text>
+  <text x="410" y="152" font-family="monospace" font-size="13" fill="#475569" text-anchor="middle">computed(...) — hosila</text>
+  <rect x="318" y="166" width="184" height="44" rx="7" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="410" y="194" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">double = count*2</text>
+  <rect x="318" y="222" width="184" height="44" rx="7" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="410" y="250" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">isEven = count%2==0</text>
+  <text x="410" y="300" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">state'dan hisoblanadi,</text>
+  <text x="410" y="320" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">keshlanadi — faqat manba</text>
+  <text x="410" y="340" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">o'zgarsa qayta hisoblar</text>
+
+  <!-- ACTIONS -->
+  <rect x="544" y="104" width="220" height="256" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="654" y="132" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#b45309" text-anchor="middle">ACTIONS</text>
+  <text x="654" y="152" font-family="monospace" font-size="13" fill="#475569" text-anchor="middle">function — biznes-logika</text>
+  <rect x="562" y="166" width="184" height="44" rx="7" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="654" y="194" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">increment()</text>
+  <rect x="562" y="222" width="184" height="44" rx="7" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="654" y="250" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">async fetchInitial()</text>
+  <text x="654" y="300" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">state'ni o'zgartiradi</text>
+  <text x="654" y="320" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">(sync yoki async).</text>
+  <text x="654" y="340" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Mutations YO'Q!</text>
+
+  <!-- arrow actions -> state (yozadi) -->
+  <line x1="562" y1="188" x2="262" y2="188" stroke="#475569" stroke-width="2.5" marker-end="url(#ar)" stroke-dasharray="6 4"/>
+  <text x="412" y="182" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309" text-anchor="middle" font-weight="bold">action state'ni yozadi</text>
+
+  <!-- arrow state -> getters (o'qiydi) -->
+  <line x1="276" y1="244" x2="316" y2="244" stroke="#475569" stroke-width="2.5" marker-end="url(#ar)"/>
+  <text x="296" y="280" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" text-anchor="middle">o'qiydi</text>
+
+  <!-- return line -->
+  <text x="410" y="412" font-family="monospace" font-size="14" fill="#1e293b" text-anchor="middle">return { count, history, double, isEven, increment, fetchInitial }</text>
+  <text x="410" y="444" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569" text-anchor="middle">qaytarilgan hamma narsa store'ning ommaviy yuzasi bo'ladi</text>
+</svg>

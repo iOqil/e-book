@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+  <title>Massiv indeksatsiyasi va yig'indi/map amallari</title>
+  <rect x="0" y="0" width="640" height="360" fill="#f8fafc"/>
+
+  <text x="320" y="30" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="18" font-weight="bold" fill="#1e293b">Massiv: indeks va asosiy amallar</text>
+
+  <!-- Indekslar -->
+  <text x="40" y="72" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">indeks:</text>
+  <text x="135" y="72" text-anchor="middle" font-family="monospace" font-size="14" fill="#2563eb">0</text>
+  <text x="215" y="72" text-anchor="middle" font-family="monospace" font-size="14" fill="#2563eb">1</text>
+  <text x="295" y="72" text-anchor="middle" font-family="monospace" font-size="14" fill="#2563eb">2</text>
+  <text x="375" y="72" text-anchor="middle" font-family="monospace" font-size="14" fill="#2563eb">3</text>
+  <text x="455" y="72" text-anchor="middle" font-family="monospace" font-size="14" fill="#2563eb">4</text>
+
+  <!-- Katakchalar -->
+  <g font-family="monospace" font-size="18" fill="#1e293b" text-anchor="middle">
+    <rect x="95" y="82" width="80" height="56" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="135" y="118">10</text>
+    <rect x="175" y="82" width="80" height="56" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="215" y="118">20</text>
+    <rect x="255" y="82" width="80" height="56" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="295" y="118">30</text>
+    <rect x="335" y="82" width="80" height="56" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="375" y="118">40</text>
+    <rect x="415" y="82" width="80" height="56" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="455" y="118">50</text>
+  </g>
+  <text x="510" y="118" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">arr</text>
+  <text x="135" y="160" text-anchor="middle" font-family="monospace" font-size="13" fill="#16a34a">arr[0]=10</text>
+  <text x="455" y="160" text-anchor="middle" font-family="monospace" font-size="13" fill="#16a34a">arr[4]=50</text>
+
+  <!-- Yig'indi (reduce / sum) -->
+  <text x="40" y="210" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Yig'indi (har elementni qo'shib boramiz):</text>
+  <g font-family="monospace" font-size="14" fill="#1e293b">
+    <text x="50" y="238">0 → +10 → 10 → +20 → 30 → +30 → 60 → +40 → 100 → +50 → 150</text>
+  </g>
+  <text x="50" y="262" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#dc2626">natija = 150</text>
+
+  <!-- Map: har elementni 2 ga ko'paytirish -->
+  <text x="40" y="300" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">map (har elementni *2):</text>
+  <g font-family="monospace" font-size="15" fill="#1e293b">
+    <text x="50" y="328">[10, 20, 30, 40, 50]</text>
+    <text x="330" y="328" font-size="16" fill="#f59e0b">→ x*2 →</text>
+    <text x="450" y="328" fill="#16a34a">[20, 40, 60, 80, 100]</text>
+  </g>
+</svg>

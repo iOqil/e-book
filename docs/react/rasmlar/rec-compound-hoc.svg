@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <title>Advanced patternlar: compound components va HOC komponentni o'rab kuchaytirish</title>
+  <defs>
+    <marker id="rc4-blue" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#2563eb"/>
+    </marker>
+    <marker id="rc4-green" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="800" height="450" fill="#f8fafc"/>
+  <text x="400" y="30" font-family="Segoe UI, system-ui, sans-serif" font-size="19" font-weight="bold" fill="#1e293b" text-anchor="middle">Ikki pattern: Compound components va HOC</text>
+
+  <!-- LEFT: compound -->
+  <text x="200" y="62" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb" text-anchor="middle">Compound components</text>
+  <text x="200" y="82" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">holatni Context orqali ulashadigan oila</text>
+
+  <!-- outer Tabs with shared context -->
+  <rect x="40" y="98" width="320" height="240" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="200" y="122" font-family="monospace" font-size="14" font-weight="bold" fill="#2563eb" text-anchor="middle">&lt;Tabs&gt; — Context: {'{'} active {'}'}</text>
+
+  <rect x="62" y="140" width="276" height="74" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="200" y="164" font-family="monospace" font-size="14" font-weight="bold" fill="#2563eb" text-anchor="middle">&lt;Tabs.List&gt;</text>
+  <rect x="80" y="176" width="110" height="30" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="135" y="196" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">Tabs.Tab</text>
+  <rect x="210" y="176" width="110" height="30" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="265" y="196" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">Tabs.Tab</text>
+
+  <rect x="62" y="226" width="276" height="92" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="200" y="250" font-family="monospace" font-size="14" font-weight="bold" fill="#2563eb" text-anchor="middle">&lt;Tabs.Panel&gt;</text>
+  <text x="200" y="276" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">active === value bo'lsa</text>
+  <text x="200" y="298" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">kontentni ko'rsatadi</text>
+
+  <!-- divider -->
+  <line x1="400" y1="56" x2="400" y2="344" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5 4"/>
+
+  <!-- RIGHT: HOC -->
+  <text x="600" y="62" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="middle">HOC — komponentni o'rab funksiya qo'shadi</text>
+
+  <rect x="470" y="98" width="160" height="56" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="550" y="122" font-family="monospace" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">UserList</text>
+  <text x="550" y="143" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">oddiy komponent</text>
+
+  <rect x="470" y="190" width="160" height="56" rx="8" fill="#f59e0b" stroke="#f59e0b" stroke-width="2" fill-opacity="0.18"/>
+  <text x="550" y="214" font-family="monospace" font-size="14" font-weight="bold" fill="#f59e0b" text-anchor="middle">withLoading(...)</text>
+  <text x="550" y="235" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">o'rovchi funksiya</text>
+
+  <rect x="450" y="282" width="200" height="64" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="550" y="306" font-family="monospace" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">UserListWithLoading</text>
+  <text x="550" y="328" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">isLoading mantig'i qo'shildi</text>
+
+  <path d="M550 154 L550 188" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#rc4-blue)"/>
+  <path d="M550 246 L550 280" fill="none" stroke="#16a34a" stroke-width="2.5" marker-end="url(#rc4-green)"/>
+
+  <!-- note -->
+  <rect x="40" y="362" width="720" height="72" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="58" y="386" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#2563eb">Compound:</text>
+  <text x="150" y="386" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">deklarativ API, qismlar Context bilan bog'lanadi (Radix, shadcn/ui shu uslubda).</text>
+  <text x="58" y="410" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">HOC:</text>
+  <text x="110" y="410" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">komponentni qabul qilib, kuchaytirilganini qaytaradi (legacy: connect, withRouter).</text>
+  <text x="58" y="430" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">Yangi kodda ko'p holatni custom hooks soddaroq hal qiladi.</text>
+</svg>

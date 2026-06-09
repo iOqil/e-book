@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="760" height="380">
+  <title>3D transform: perspective qiymati kuzatuvchi masofasini belgilaydi va rotateY element chuqurlik hissini beradi</title>
+  <defs>
+    <marker id="oq18p" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="760" height="380" fill="#f8fafc"/>
+
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">3D: perspective va rotateY</text>
+  <text x="380" y="58" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">perspective — ko'z bilan ekran orasidagi masofa; kichik qiymat = kuchli 3D effekt</text>
+
+  <!-- Ko'z (kuzatuvchi) -->
+  <circle cx="80" cy="200" r="22" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <circle cx="80" cy="200" r="8" fill="#b45309"/>
+  <text x="80" y="250" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#b45309">ko'z</text>
+
+  <!-- perspective masofa chizig'i -->
+  <line x1="102" y1="200" x2="300" y2="200" stroke="#475569" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#oq18p)"/>
+  <text x="200" y="190" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">perspective: 600px</text>
+
+  <!-- rotateY qilingan plastinka (parallelogram bilan 3D effekt) -->
+  <polygon points="340,120 470,150 470,290 340,320" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="400" y="225" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb" transform="translate(400 225) skewY(13) translate(-400 -225)">karta</text>
+  <text x="405" y="345" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">rotateY(40deg) — yon tomonga burilgan</text>
+
+  <!-- normal (rotatesiz) karta solishtirish uchun -->
+  <rect x="560" y="150" width="110" height="140" rx="6" fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="615" y="225" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">3D'siz</text>
+  <text x="615" y="320" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tekis (rotateY: 0)</text>
+</svg>

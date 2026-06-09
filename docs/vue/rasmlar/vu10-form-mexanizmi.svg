@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 520" width="880" height="520">
+  <title>Nuxt UI Form mexanizmi: name proli schema kaliti bilan bog'lanadi, props pastga emits tepaga</title>
+  <defs>
+    <marker id="var" markerWidth="11" markerHeight="11" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L9,4 L0,8 Z" fill="#475569"/>
+    </marker>
+    <marker id="varg" markerWidth="11" markerHeight="11" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L9,4 L0,8 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="880" height="520" fill="#f8fafc"/>
+
+  <text x="440" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">UForm mexanizmi: name = schema kaliti</text>
+  <text x="440" y="58" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Standard Schema (Zod) bitta haqiqat manbai · client UX + server xavfsizlik bir fayldan</text>
+
+  <!-- Zod schema box -->
+  <rect x="40" y="84" width="260" height="150" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="170" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Zod schema (:schema)</text>
+  <text x="56" y="136" font-family="monospace" font-size="13" fill="#1e293b">z.object({</text>
+  <text x="72" y="158" font-family="monospace" font-size="13" fill="#2563eb">email</text>
+  <text x="130" y="158" font-family="monospace" font-size="13" fill="#1e293b">: z.email(...),</text>
+  <text x="72" y="180" font-family="monospace" font-size="13" fill="#2563eb">password</text>
+  <text x="150" y="180" font-family="monospace" font-size="13" fill="#1e293b">: z.string()</text>
+  <text x="88" y="200" font-family="monospace" font-size="13" fill="#1e293b">.min(8, ...)</text>
+  <text x="56" y="222" font-family="monospace" font-size="13" fill="#1e293b">})</text>
+
+  <!-- state box -->
+  <rect x="40" y="270" width="260" height="120" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="170" y="294" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">reactive state (:state)</text>
+  <text x="56" y="322" font-family="monospace" font-size="13" fill="#1e293b">reactive({</text>
+  <text x="72" y="344" font-family="monospace" font-size="13" fill="#2563eb">email</text>
+  <text x="130" y="344" font-family="monospace" font-size="13" fill="#1e293b">: undefined,</text>
+  <text x="72" y="366" font-family="monospace" font-size="13" fill="#2563eb">password</text>
+  <text x="150" y="366" font-family="monospace" font-size="13" fill="#1e293b">: undefined</text>
+  <text x="56" y="386" font-family="monospace" font-size="13" fill="#1e293b">})</text>
+
+  <!-- UForm container -->
+  <rect x="360" y="84" width="480" height="306" rx="12" fill="#ffffff" stroke="#1e293b" stroke-width="2"/>
+  <text x="380" y="110" font-family="monospace" font-size="15" font-weight="bold" fill="#1e293b">&lt;UForm&gt;</text>
+
+  <!-- UFormField 1 -->
+  <rect x="384" y="126" width="432" height="86" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="400" y="148" font-family="monospace" font-size="14" fill="#1e293b">&lt;UFormField name=</text>
+  <text x="558" y="148" font-family="monospace" font-size="14" font-weight="bold" fill="#16a34a">"email"</text>
+  <text x="624" y="148" font-family="monospace" font-size="14" fill="#1e293b">&gt;</text>
+  <rect x="400" y="160" width="280" height="34" rx="6" fill="#e2e8f0" stroke="#94a3b8"/>
+  <text x="412" y="182" font-family="monospace" font-size="13" fill="#1e293b">&lt;UInput v-model="state.email" /&gt;</text>
+  <text x="700" y="178" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">xato shu</text>
+  <text x="700" y="194" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">yerda chiqadi</text>
+
+  <!-- UFormField 2 -->
+  <rect x="384" y="222" width="432" height="86" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="400" y="244" font-family="monospace" font-size="14" fill="#1e293b">&lt;UFormField name=</text>
+  <text x="558" y="244" font-family="monospace" font-size="14" font-weight="bold" fill="#16a34a">"password"</text>
+  <text x="648" y="244" font-family="monospace" font-size="14" fill="#1e293b">&gt;</text>
+  <rect x="400" y="256" width="280" height="34" rx="6" fill="#e2e8f0" stroke="#94a3b8"/>
+  <text x="412" y="278" font-family="monospace" font-size="13" fill="#1e293b">&lt;UInput v-model="state.password"/&gt;</text>
+  <text x="700" y="274" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">xato shu</text>
+  <text x="700" y="290" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">yerda chiqadi</text>
+
+  <!-- submit -->
+  <rect x="384" y="318" width="200" height="40" rx="8" fill="#2563eb"/>
+  <text x="484" y="343" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#ffffff">@submit → event.data</text>
+  <text x="600" y="343" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">type-safe, validatsiyadan o'tgan</text>
+
+  <!-- name == key arrows -->
+  <path d="M300 152 C 340 152, 350 168, 382 168" fill="none" stroke="#16a34a" stroke-width="2.5" marker-end="url(#varg)"/>
+  <path d="M300 188 C 340 200, 350 250, 382 262" fill="none" stroke="#16a34a" stroke-width="2.5" marker-end="url(#varg)"/>
+  <text x="330" y="138" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">kalit = name</text>
+
+  <!-- state binding arrows (two-way v-model) -->
+  <path d="M300 330 C 330 330, 350 177, 398 177" fill="none" stroke="#2563eb" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#var)"/>
+  <text x="318" y="312" font-family="monospace" font-size="13" fill="#2563eb">v-model</text>
+
+  <!-- bottom explanation: one-way data flow -->
+  <rect x="40" y="408" width="800" height="92" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="56" y="432" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Vue 3 oqim semantikasi:</text>
+  <text x="56" y="456" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">props ↓ pastga oqadi (ota → bola, faqat o'qish) · emits ↑ tepaga signal beradi (bola → ota)</text>
+  <text x="56" y="478" font-family="monospace" font-size="13" fill="#475569">v-model = :modelValue (prop, pastga) + @update:modelValue (emit, tepaga) — sun'iy ikki tomon</text>
+  <text x="56" y="496" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Agar name schema kaliti bilan mos kelmasa — xato o'sha maydonga ulanmaydi, umumiy bo'lib qoladi.</text>
+</svg>

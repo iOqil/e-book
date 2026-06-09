@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 470" width="720" height="470">
+  <title>String immutability — metod aslini o'zgartirmaydi, yangi obyekt yaratadi</title>
+
+  <rect x="0" y="0" width="720" height="470" fill="#f8fafc"/>
+
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+    <marker id="arrGreen" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Matn o'zgarmas (immutable): metod yangi obyekt yaratadi</text>
+
+  <!-- BOSQICH 1 -->
+  <text x="40" y="80" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">1) gap = "  Salom  "</text>
+
+  <!-- name box -->
+  <rect x="60" y="96" width="120" height="48" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="120" y="126" text-anchor="middle" font-family="monospace" font-size="18" fill="#1e293b">gap</text>
+
+  <!-- arrow -->
+  <line x1="180" y1="120" x2="290" y2="120" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- object box -->
+  <rect x="295" y="96" width="200" height="48" rx="6" fill="#f8fafc" stroke="#2563eb" stroke-width="2"/>
+  <text x="395" y="126" text-anchor="middle" font-family="monospace" font-size="18" fill="#2563eb">"  Salom  "</text>
+  <text x="510" y="118" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#64748b">obyekt 1</text>
+  <text x="510" y="138" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#64748b">o'zgarmas</text>
+
+  <!-- BOSQICH 2 -->
+  <text x="40" y="200" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">2) gap.strip() — yangi obyekt qaytaradi (aslini tegmaydi)</text>
+
+  <!-- name box still points to obyekt 1 -->
+  <rect x="60" y="216" width="120" height="48" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="120" y="246" text-anchor="middle" font-family="monospace" font-size="18" fill="#1e293b">gap</text>
+
+  <line x1="180" y1="240" x2="290" y2="240" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+
+  <rect x="295" y="216" width="200" height="48" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
+  <text x="395" y="246" text-anchor="middle" font-family="monospace" font-size="18" fill="#475569">"  Salom  "</text>
+  <text x="510" y="244" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#64748b">o'zgarmadi</text>
+
+  <!-- new object created -->
+  <rect x="295" y="278" width="200" height="48" rx="6" fill="#f8fafc" stroke="#16a34a" stroke-width="2"/>
+  <text x="395" y="308" text-anchor="middle" font-family="monospace" font-size="18" fill="#16a34a">"Salom"</text>
+  <text x="510" y="300" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#16a34a">obyekt 2 (yangi)</text>
+  <text x="510" y="320" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#64748b">hech kim ushlamasa</text>
+  <text x="510" y="340" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#64748b">yo'qoladi</text>
+
+  <!-- BOSQICH 3 -->
+  <text x="40" y="390" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">3) gap = gap.strip() — nomni yangi obyektga ulaymiz</text>
+
+  <rect x="60" y="406" width="120" height="48" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="120" y="436" text-anchor="middle" font-family="monospace" font-size="18" fill="#1e293b">gap</text>
+
+  <line x1="180" y1="430" x2="290" y2="430" stroke="#16a34a" stroke-width="2" marker-end="url(#arrGreen)"/>
+
+  <rect x="295" y="406" width="200" height="48" rx="6" fill="#f8fafc" stroke="#16a34a" stroke-width="2"/>
+  <text x="395" y="436" text-anchor="middle" font-family="monospace" font-size="18" fill="#16a34a">"Salom"</text>
+  <text x="510" y="434" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#64748b">endi gap shuni ko'rsatadi</text>
+</svg>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480">
+  <title>easing (timing) egri chiziqlari: linear, ease, ease-in-out va cubic-bezier ning progress grafigidagi shakli</title>
+  <rect x="0" y="0" width="760" height="480" fill="#f8fafc"/>
+
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">easing egri chiziqlari: vaqt (gorizontal) va progress (vertikal)</text>
+  <text x="380" y="58" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">egri qanchalik tik bo'lsa, harakat shu paytda shuncha tez ketadi</text>
+
+  <!-- Grafik o'qlari -->
+  <!-- y o'qi -->
+  <line x1="120" y1="100" x2="120" y2="400" stroke="#475569" stroke-width="2"/>
+  <!-- x o'qi -->
+  <line x1="120" y1="400" x2="640" y2="400" stroke="#475569" stroke-width="2"/>
+
+  <!-- O'q yorliqlari -->
+  <text x="60" y="110" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">progress</text>
+  <text x="60" y="128" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(100%)</text>
+  <text x="100" y="406" text-anchor="end" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">0</text>
+  <text x="640" y="424" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">vaqt (100%)</text>
+
+  <!-- to'r chiziqlari -->
+  <line x1="120" y1="100" x2="640" y2="100" stroke="#e2e8f0" stroke-width="1.5"/>
+  <line x1="640" y1="100" x2="640" y2="400" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <!-- linear: to'g'ri chiziq, (120,400) -> (640,100) -->
+  <path d="M 120 400 L 640 100" fill="none" stroke="#94a3b8" stroke-width="2.5" stroke-dasharray="6 5"/>
+  <text x="648" y="104" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#64748b">linear</text>
+
+  <!-- ease: cubic-bezier(0.25,0.1,0.25,1) tez boshlanib sekin tugaydi -->
+  <path d="M 120 400 C 250 370 250 100 640 100" fill="none" stroke="#2563eb" stroke-width="3"/>
+  <text x="270" y="160" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#2563eb">ease</text>
+
+  <!-- ease-in-out: cubic-bezier(0.42,0,0.58,1) S shakli -->
+  <path d="M 120 400 C 270 400 490 100 640 100" fill="none" stroke="#16a34a" stroke-width="3"/>
+  <text x="380" y="280" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">ease-in-out</text>
+
+  <!-- cubic-bezier maxsus (sakrash): oshib ketib qaytadi -->
+  <path d="M 120 400 C 320 460 360 60 640 100" fill="none" stroke="#dc2626" stroke-width="3"/>
+  <text x="500" y="70" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626">cubic-bezier (sakrash)</text>
+
+  <!-- Izoh -->
+  <text x="380" y="460" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">linear — bir tekis · ease — tabiiy · ease-in-out — sekin-tez-sekin · cubic-bezier — o'zing yasaysan</text>
+</svg>

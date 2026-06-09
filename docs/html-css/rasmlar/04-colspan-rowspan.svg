@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>colspan va rowspan: yacheykalarni gorizontal va vertikal birlashtirish</title>
+
+  <text x="360" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Yacheykalarni birlashtirish</text>
+
+  <!-- ============ CHAP: colspan ============ -->
+  <text x="170" y="66" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">colspan="2" — gorizontal</text>
+
+  <!-- Grid: 2x3 (lekin yuqori qator 1 ta colspan=2) -->
+  <!-- 1-qator: colspan=2 -->
+  <rect x="40" y="80" width="260" height="50" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="170" y="103" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Sarlavha</text>
+  <text x="170" y="120" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">colspan="2"</text>
+
+  <!-- 2-qator: 2 ta oddiy yacheyka -->
+  <rect x="40" y="134" width="128" height="46" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="104" y="161" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">A1</text>
+  <rect x="172" y="134" width="128" height="46" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="236" y="161" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">B1</text>
+
+  <!-- 3-qator: 2 ta oddiy yacheyka -->
+  <rect x="40" y="184" width="128" height="46" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="104" y="211" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">A2</text>
+  <rect x="172" y="184" width="128" height="46" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="236" y="211" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">B2</text>
+
+  <text x="170" y="256" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Bitta yacheyka 2 ustunni egallaydi</text>
+
+  <!-- chap kod bloki -->
+  <rect x="40" y="272" width="260" height="118" rx="8" fill="#1e293b"/>
+  <text x="56" y="294" font-family="Consolas, monospace" font-size="13" fill="#f8fafc">&lt;tr&gt;</text>
+  <text x="72" y="312" font-family="Consolas, monospace" font-size="13" fill="#7dd3fc">&lt;th colspan="2"&gt;</text>
+  <text x="190" y="312" font-family="Consolas, monospace" font-size="13" fill="#fcd34d">Sarlavha</text>
+  <text x="56" y="330" font-family="Consolas, monospace" font-size="13" fill="#f8fafc">&lt;/tr&gt;</text>
+  <text x="56" y="350" font-family="Consolas, monospace" font-size="13" fill="#f8fafc">&lt;tr&gt;</text>
+  <text x="72" y="368" font-family="Consolas, monospace" font-size="13" fill="#7dd3fc">&lt;td&gt;A1&lt;/td&gt; &lt;td&gt;B1&lt;/td&gt;</text>
+  <text x="56" y="386" font-family="Consolas, monospace" font-size="13" fill="#f8fafc">&lt;/tr&gt;</text>
+
+  <!-- ajratuvchi -->
+  <line x1="360" y1="60" x2="360" y2="396" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="6 5"/>
+
+  <!-- ============ O'NG: rowspan ============ -->
+  <text x="540" y="66" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">rowspan="2" — vertikal</text>
+
+  <!-- 1-qator: chap (rowspan=2) + o'ng -->
+  <rect x="420" y="80" width="100" height="100" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="470" y="124" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">Toshkent</text>
+  <text x="470" y="142" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">rowspan="2"</text>
+
+  <rect x="524" y="80" width="116" height="46" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="582" y="107" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Ali</text>
+
+  <!-- 2-qator: faqat o'ng (chap allaqachon band) -->
+  <rect x="524" y="130" width="116" height="50" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="582" y="160" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Lola</text>
+
+  <!-- 3-qator: 2 ta oddiy -->
+  <rect x="420" y="184" width="100" height="46" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="470" y="211" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Buxoro</text>
+  <rect x="524" y="184" width="116" height="46" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="582" y="211" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Vali</text>
+
+  <text x="540" y="256" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Bitta yacheyka 2 qatorni egallaydi</text>
+
+  <!-- o'ng kod bloki -->
+  <rect x="420" y="272" width="260" height="118" rx="8" fill="#1e293b"/>
+  <text x="436" y="294" font-family="Consolas, monospace" font-size="13" fill="#f8fafc">&lt;tr&gt;</text>
+  <text x="452" y="312" font-family="Consolas, monospace" font-size="13" fill="#86efac">&lt;td rowspan="2"&gt;</text>
+  <text x="572" y="312" font-family="Consolas, monospace" font-size="13" fill="#fcd34d">Toshkent</text>
+  <text x="452" y="330" font-family="Consolas, monospace" font-size="13" fill="#7dd3fc">&lt;td&gt;Ali&lt;/td&gt; &lt;/tr&gt;</text>
+  <text x="436" y="350" font-family="Consolas, monospace" font-size="13" fill="#f8fafc">&lt;tr&gt;</text>
+  <text x="452" y="368" font-family="Consolas, monospace" font-size="13" fill="#7dd3fc">&lt;td&gt;Lola&lt;/td&gt;</text>
+  <text x="436" y="386" font-family="Consolas, monospace" font-size="13" fill="#dc2626">&#9888; bu qatorda 1 ta td!</text>
+</svg>

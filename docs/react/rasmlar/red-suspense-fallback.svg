@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 400" width="820" height="400">
+  <title>Suspense: yuklanayotganda fallback, tayyor bo'lganda haqiqiy kontent</title>
+  <defs>
+    <marker id="rd4-green" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="820" height="400" fill="#f8fafc"/>
+  <text x="410" y="32" font-family="Segoe UI, system-ui, sans-serif" font-size="19" font-weight="bold" fill="#1e293b" text-anchor="middle">Suspense — yuklanish holatini boshqarish</text>
+
+  <!-- LEFT: loading -->
+  <text x="210" y="64" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#f59e0b" text-anchor="middle">Ma'lumot yuklanmoqda</text>
+  <rect x="36" y="80" width="348" height="216" rx="10" fill="#fff7ed" stroke="#f59e0b" stroke-width="2"/>
+
+  <rect x="62" y="100" width="296" height="44" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="210" y="128" font-family="monospace" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">&lt;Header /&gt; — darrov ko'rinadi</text>
+
+  <rect x="62" y="156" width="296" height="120" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="210" y="182" font-family="monospace" font-size="14" font-weight="bold" fill="#f59e0b" text-anchor="middle">&lt;Suspense&gt;</text>
+  <rect x="86" y="196" width="248" height="64" rx="6" fill="#fde68a" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="210" y="222" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309" text-anchor="middle">fallback: &lt;Spinner /&gt;</text>
+  <text x="210" y="244" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">SlowDataComponent hali tayyor emas</text>
+
+  <!-- center arrow -->
+  <path d="M392 188 L428 188" fill="none" stroke="#16a34a" stroke-width="3" marker-end="url(#rd4-green)"/>
+  <text x="410" y="178" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" text-anchor="middle">tayyor</text>
+
+  <!-- RIGHT: ready -->
+  <text x="610" y="64" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="middle">Ma'lumot keldi</text>
+  <rect x="436" y="80" width="348" height="216" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+
+  <rect x="462" y="100" width="296" height="44" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="610" y="128" font-family="monospace" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">&lt;Header /&gt; — o'zgarmaydi</text>
+
+  <rect x="462" y="156" width="296" height="120" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="610" y="182" font-family="monospace" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">&lt;Suspense&gt;</text>
+  <rect x="486" y="196" width="248" height="64" rx="6" fill="#bbf7d0" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="610" y="222" font-family="monospace" font-size="14" font-weight="bold" fill="#15803d" text-anchor="middle">&lt;SlowDataComponent /&gt;</text>
+  <text x="610" y="244" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">haqiqiy kontent fallback o'rnini bosadi</text>
+
+  <!-- note -->
+  <rect x="36" y="316" width="748" height="70" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="56" y="342" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">Streaming:</text>
+  <text x="142" y="342" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Server Components + Suspense bilan sahifaning tayyor qismlari darhol ko'rsatiladi.</text>
+  <text x="56" y="368" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Sekin qism (masalan, DB so'rovi) "oqib keladi" — foydalanuvchi bo'sh ekranni kutib o'tirmaydi.</text>
+</svg>

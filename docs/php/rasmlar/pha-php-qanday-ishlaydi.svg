@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" width="760" height="360">
+  <title>PHP qanday ishlaydi: brauzer so'rov yuboradi, server PHP kodni bajaradi va HTML javob qaytaradi</title>
+  <rect x="0" y="0" width="760" height="360" fill="#f8fafc"/>
+
+  <!-- Brauzer qutisi -->
+  <rect x="30" y="120" width="180" height="120" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="30" y="120" width="180" height="26" rx="8" fill="#2563eb"/>
+  <text x="120" y="138" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">Brauzer (foydalanuvchi)</text>
+  <text x="120" y="178" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">localhost/salom.php</text>
+  <text x="120" y="200" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">manzilni ochadi</text>
+
+  <!-- Server qutisi -->
+  <rect x="540" y="100" width="190" height="160" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="540" y="100" width="190" height="26" rx="8" fill="#16a34a"/>
+  <text x="635" y="118" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">Server (PHP)</text>
+  <rect x="560" y="140" width="150" height="48" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="635" y="160" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">&lt;?php</text>
+  <text x="635" y="180" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">echo "Salom";</text>
+  <text x="635" y="215" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">PHP kodni bajaradi,</text>
+  <text x="635" y="234" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">natijani tayyorlaydi</text>
+
+  <!-- So'rov strelkasi (chapdan o'ngga) -->
+  <defs>
+    <marker id="ok" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+  <line x1="215" y1="155" x2="535" y2="155" stroke="#475569" stroke-width="2.5" marker-end="url(#ok)"/>
+  <rect x="270" y="120" width="210" height="28" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="375" y="139" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">1. So'rov (HTTP) →</text>
+
+  <!-- Javob strelkasi (o'ngdan chapga) -->
+  <line x1="535" y1="210" x2="215" y2="210" stroke="#475569" stroke-width="2.5" marker-end="url(#ok)"/>
+  <rect x="260" y="216" width="230" height="28" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="375" y="235" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">← 2. HTML javob qaytadi</text>
+
+  <!-- Pastki izoh -->
+  <text x="380" y="295" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">Brauzer faqat tayyor natijani (HTML) ko'radi —</text>
+  <text x="380" y="316" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">PHP kodning o'zi serverda qoladi, ko'rinmaydi.</text>
+
+  <!-- Sarlavha -->
+  <text x="380" y="55" font-family="Segoe UI, system-ui, sans-serif" font-size="18" font-weight="bold" fill="#1e293b" text-anchor="middle">PHP qanday ishlaydi</text>
+  <text x="380" y="80" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">so'rov → server kodni bajaradi → javob</text>
+</svg>

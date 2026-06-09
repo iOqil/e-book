@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" width="780" height="470">
+  <title>Server state va client state farqi hamda TanStack Query kesh hayoti</title>
+  <defs>
+    <marker id="rc1-blue" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#2563eb"/>
+    </marker>
+    <marker id="rc1-green" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#16a34a"/>
+    </marker>
+    <marker id="rc1-amber" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="780" height="470" fill="#f8fafc"/>
+  <text x="390" y="30" font-family="Segoe UI, system-ui, sans-serif" font-size="19" font-weight="bold" fill="#1e293b" text-anchor="middle">Server state va Client state — ikki xil ma'lumot</text>
+
+  <!-- Server state box -->
+  <rect x="30" y="52" width="345" height="116" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="202" y="78" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb" text-anchor="middle">Server state (TanStack Query)</text>
+  <text x="50" y="103" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">API'dan keladi, kesh va sync kerak</text>
+  <text x="50" y="125" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Misol: foydalanuvchilar, postlar, tenant</text>
+  <text x="50" y="150" font-family="monospace" font-size="13" fill="#2563eb">useQuery({'{'} queryKey, queryFn {'}'})</text>
+
+  <!-- Client state box -->
+  <rect x="405" y="52" width="345" height="116" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="577" y="78" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a" text-anchor="middle">Client state (Zustand / useState)</text>
+  <text x="425" y="103" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Faqat brauzerdagi UI holati</text>
+  <text x="425" y="125" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Misol: modal ochiq, theme, sidebar</text>
+  <text x="425" y="150" font-family="monospace" font-size="13" fill="#16a34a">create((set) => ...)</text>
+
+  <text x="390" y="196" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626" text-anchor="middle">Qoida: server javobini Zustand/Redux'ga dublikat qilma</text>
+
+  <!-- cache lifecycle title -->
+  <text x="390" y="232" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b" text-anchor="middle">TanStack Query kesh hayoti</text>
+
+  <!-- fetch -->
+  <rect x="36" y="258" width="150" height="60" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="111" y="284" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">1. fetch</text>
+  <text x="111" y="306" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">queryFn() ishlaydi</text>
+
+  <!-- cache -->
+  <rect x="240" y="258" width="150" height="60" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="315" y="284" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb" text-anchor="middle">2. cache</text>
+  <text x="315" y="306" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">queryKey bilan saqlanadi</text>
+
+  <!-- fresh / stale -->
+  <rect x="444" y="258" width="150" height="60" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="519" y="284" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#f59e0b" text-anchor="middle">3. stale</text>
+  <text x="519" y="306" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">staleTime tugadi</text>
+
+  <!-- refetch -->
+  <rect x="630" y="258" width="118" height="60" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="689" y="284" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">4. refetch</text>
+  <text x="689" y="306" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">fonda yangilash</text>
+
+  <path d="M186 288 L236 288" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#rc1-blue)"/>
+  <path d="M390 288 L440 288" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#rc1-amber)"/>
+  <path d="M594 288 L626 288" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#rc1-green)"/>
+
+  <!-- refetch loops back to cache -->
+  <path d="M689 318 L689 350 L315 350 L315 322" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-dasharray="6 4" marker-end="url(#rc1-green)"/>
+  <text x="500" y="370" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" text-anchor="middle">yangi ma'lumot keshni yangilaydi (⟳)</text>
+
+  <!-- benefit note -->
+  <rect x="36" y="392" width="712" height="58" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="56" y="416" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">Bepul keladi:</text>
+  <text x="170" y="416" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">caching, background refetch, dedupe, isLoading / error holatlari.</text>
+  <text x="56" y="438" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Bir xil queryKey'li bir nechta komponent bitta so'rovni baham ko'radi (deduplication).</text>
+</svg>

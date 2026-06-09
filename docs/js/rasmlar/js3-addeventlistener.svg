@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 460" width="760" height="460">
+  <title>addEventListener hodisani tinglaydi va listenerga event obyektini uzatadi</title>
+  <rect x="0" y="0" width="760" height="460" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">addEventListener va event obyekti (e)</text>
+
+  <defs>
+    <marker id="a-arrow" markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto">
+      <path d="M0,0 L11,5.5 L0,11 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- 1. element -->
+  <rect x="40" y="70" width="180" height="70" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="130" y="100" text-anchor="middle" font-family="monospace" font-size="15" fill="#1e293b">&lt;button&gt;</text>
+  <text x="130" y="124" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">element</text>
+
+  <!-- ro'yxatdan o'tkazish -->
+  <line x1="130" y1="140" x2="130" y2="186" stroke="#475569" stroke-width="2.5" marker-end="url(#a-arrow)"/>
+  <text x="142" y="168" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tinglovchini ulaymiz</text>
+
+  <!-- 2. addEventListener chaqiruvi -->
+  <rect x="30" y="190" width="380" height="46" rx="8" fill="#1e293b"/>
+  <text x="220" y="219" text-anchor="middle" font-family="monospace" font-size="15" fill="#ffffff">el.addEventListener("click", fn)</text>
+
+  <!-- foydalanuvchi klik qiladi -->
+  <line x1="220" y1="236" x2="220" y2="282" stroke="#475569" stroke-width="2.5" marker-end="url(#a-arrow)"/>
+  <text x="232" y="264" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">foydalanuvchi bosadi -> hodisa yuz beradi</text>
+
+  <!-- 3. listener fn ishlaydi -->
+  <rect x="30" y="286" width="380" height="120" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="220" y="312" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">listener funksiyasi ishlaydi</text>
+  <text x="52" y="342" font-family="monospace" font-size="15" fill="#1e293b">function (e) {</text>
+  <text x="76" y="368" font-family="monospace" font-size="15" fill="#1e293b">console.log(e.target);</text>
+  <text x="52" y="394" font-family="monospace" font-size="15" fill="#1e293b">}</text>
+
+  <!-- event obyekti panel -->
+  <rect x="450" y="190" width="290" height="216" rx="10" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"/>
+  <text x="595" y="216" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#b45309">event obyekti (e)</text>
+  <text x="595" y="238" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">brauzer hodisa haqida ma'lumot beradi</text>
+
+  <line x1="466" y1="252" x2="724" y2="252" stroke="#94a3b8" stroke-width="1"/>
+  <text x="470" y="278" font-family="monospace" font-size="14" fill="#1e293b">e.target</text>
+  <text x="470" y="298" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">hodisa bo'lgan element</text>
+
+  <text x="470" y="324" font-family="monospace" font-size="14" fill="#1e293b">e.target.value</text>
+  <text x="470" y="344" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">input qiymati</text>
+
+  <text x="470" y="370" font-family="monospace" font-size="14" fill="#1e293b">e.key</text>
+  <text x="470" y="390" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">bosilgan klavisha</text>
+
+  <!-- listener va event bog'lovchi strelka -->
+  <line x1="410" y1="346" x2="450" y2="300" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#a-arrow2)"/>
+  <defs>
+    <marker id="a-arrow2" markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto">
+      <path d="M0,0 L11,5.5 L0,11 z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+
+  <text x="380" y="440" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Hodisa yuz berganda brauzer listenerni chaqiradi va unga "e" obyektini uzatadi.</text>
+</svg>

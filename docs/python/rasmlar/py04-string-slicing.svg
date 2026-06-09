@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>String slicing chizg'ichi — "Python" uchun musbat va manfiy indeks, hamda step</title>
+
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">gap = "Python" — slicing chizg'ichi</text>
+
+  <!-- Musbat indekslar (tepada) -->
+  <text x="60" y="78" text-anchor="end" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#2563eb">Musbat indeks →</text>
+
+  <!-- 6 ta harf qutisi -->
+  <!-- P -->
+  <text x="115" y="80" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#2563eb">0</text>
+  <rect x="85" y="92" width="60" height="60" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="115" y="132" text-anchor="middle" font-family="monospace" font-size="28" font-weight="bold" fill="#1e293b">P</text>
+  <text x="115" y="182" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#dc2626">-6</text>
+  <!-- y -->
+  <text x="180" y="80" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#2563eb">1</text>
+  <rect x="150" y="92" width="60" height="60" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="180" y="132" text-anchor="middle" font-family="monospace" font-size="28" font-weight="bold" fill="#1e293b">y</text>
+  <text x="180" y="182" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#dc2626">-5</text>
+  <!-- t -->
+  <text x="245" y="80" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#2563eb">2</text>
+  <rect x="215" y="92" width="60" height="60" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="245" y="132" text-anchor="middle" font-family="monospace" font-size="28" font-weight="bold" fill="#1e293b">t</text>
+  <text x="245" y="182" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#dc2626">-4</text>
+  <!-- h -->
+  <text x="310" y="80" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#2563eb">3</text>
+  <rect x="280" y="92" width="60" height="60" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="310" y="132" text-anchor="middle" font-family="monospace" font-size="28" font-weight="bold" fill="#1e293b">h</text>
+  <text x="310" y="182" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#dc2626">-3</text>
+  <!-- o -->
+  <text x="375" y="80" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#2563eb">4</text>
+  <rect x="345" y="92" width="60" height="60" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="375" y="132" text-anchor="middle" font-family="monospace" font-size="28" font-weight="bold" fill="#1e293b">o</text>
+  <text x="375" y="182" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#dc2626">-2</text>
+  <!-- n -->
+  <text x="440" y="80" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#2563eb">5</text>
+  <rect x="410" y="92" width="60" height="60" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="440" y="132" text-anchor="middle" font-family="monospace" font-size="28" font-weight="bold" fill="#1e293b">n</text>
+  <text x="440" y="182" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#dc2626">-1</text>
+
+  <!-- Manfiy indeks yorlig'i -->
+  <text x="540" y="182" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#dc2626">← Manfiy indeks (oxiridan)</text>
+
+  <!-- Misol slicelar -->
+  <text x="60" y="240" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">Slicing misollari:</text>
+
+  <!-- gap[0:3] -->
+  <rect x="60" y="256" width="300" height="34" rx="5" fill="#f8fafc" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="74" y="279" font-family="monospace" font-size="15" fill="#16a34a">gap[0:3]</text>
+  <text x="180" y="279" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">→ "Pyt"  (3 kirmaydi)</text>
+
+  <!-- gap[2:] -->
+  <rect x="60" y="296" width="300" height="34" rx="5" fill="#f8fafc" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="74" y="319" font-family="monospace" font-size="15" fill="#16a34a">gap[2:]</text>
+  <text x="180" y="319" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">→ "thon"</text>
+
+  <!-- gap[-1] -->
+  <rect x="380" y="256" width="280" height="34" rx="5" fill="#f8fafc" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="394" y="279" font-family="monospace" font-size="15" fill="#dc2626">gap[-1]</text>
+  <text x="494" y="279" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">→ "n"</text>
+
+  <!-- gap[:3] -->
+  <rect x="380" y="296" width="280" height="34" rx="5" fill="#f8fafc" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="394" y="319" font-family="monospace" font-size="15" fill="#16a34a">gap[:3]</text>
+  <text x="494" y="319" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">→ "Pyt"</text>
+
+  <!-- Step / qadam -->
+  <text x="60" y="372" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">Qadam (step):</text>
+  <rect x="60" y="386" width="600" height="34" rx="5" fill="#f8fafc" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="74" y="409" font-family="monospace" font-size="15" fill="#f59e0b">gap[::-1]</text>
+  <text x="200" y="409" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">→ "nohtyP"  (qadam -1: teskari aylantiradi)</text>
+</svg>

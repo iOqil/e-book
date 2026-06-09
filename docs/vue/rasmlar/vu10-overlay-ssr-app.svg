@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 540" width="880" height="540">
+  <title>Overlay guruhi va UApp Provider: SSR/hydration oqimi, deklarativ va dasturiy ochish</title>
+  <defs>
+    <marker id="oa" markerWidth="11" markerHeight="11" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L9,4 L0,8 Z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="880" height="540" fill="#f8fafc"/>
+
+  <text x="440" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Overlay nega UApp ga muhtoj: SSR → hydration</text>
+
+  <!-- SSR pipeline -->
+  <rect x="40" y="64" width="180" height="74" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="130" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">Server (SSR)</text>
+  <text x="130" y="114" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">HTML chizadi</text>
+  <text x="130" y="131" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(jonsiz, statik)</text>
+
+  <rect x="300" y="64" width="180" height="74" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="390" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Brauzer</text>
+  <text x="390" y="114" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">HTML ni darrov</text>
+  <text x="390" y="131" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">ko'rsatadi</text>
+
+  <rect x="560" y="64" width="280" height="74" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="700" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">Hydration</text>
+  <text x="700" y="114" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Vue jonli tinglovchilarni ulaydi —</text>
+  <text x="700" y="131" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">endi reaktiv va bosiladigan</text>
+
+  <line x1="220" y1="101" x2="296" y2="101" stroke="#475569" stroke-width="2.5" marker-end="url(#oa)"/>
+  <line x1="480" y1="101" x2="556" y2="101" stroke="#475569" stroke-width="2.5" marker-end="url(#oa)"/>
+
+  <!-- UApp wrapper -->
+  <rect x="40" y="166" width="800" height="180" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="60" y="192" font-family="monospace" font-size="15" font-weight="bold" fill="#dc2626">&lt;UApp&gt;</text>
+  <text x="130" y="192" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">— root wrapper (Provider): OverlayProvider · ToastProvider · TooltipProvider</text>
+
+  <rect x="64" y="206" width="752" height="40" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="80" y="231" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Overlay/Toast/Tooltip mijoz tomonda yashaydi — ularni ushlab turadigan yagona joy kerak: UApp</text>
+
+  <!-- two usage modes -->
+  <rect x="64" y="258" width="360" height="74" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="244" y="282" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">A · Deklarativ</text>
+  <text x="244" y="304" text-anchor="middle" font-family="monospace" font-size="13" fill="#1e293b">v-model:open="open"</text>
+  <text x="244" y="324" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">trigger shablonda, ref bilan ochiladi</text>
+
+  <rect x="456" y="258" width="360" height="74" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="636" y="282" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">B · Dasturiy</text>
+  <text x="636" y="304" text-anchor="middle" font-family="monospace" font-size="13" fill="#1e293b">useOverlay() → .open() → await .result</text>
+  <text x="636" y="324" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">trigger ajraladi, natija qaytaradi (confirm)</text>
+
+  <!-- members list -->
+  <rect x="40" y="372" width="800" height="68" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="56" y="396" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Overlay guruhi a'zolari:</text>
+  <text x="56" y="420" font-family="monospace" font-size="13" fill="#1e293b">UModal · USlideover · UDrawer · UPopover · UTooltip · UDropdownMenu · UContextMenu</text>
+
+  <!-- bottom note -->
+  <rect x="40" y="460" width="800" height="56" rx="10" fill="#f8fafc" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="440" y="484" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626" font-weight="bold">UApp bo'lmasa: Overlay/Toast/Tooltip ishlamaydi (Provider topilmaydi).</text>
+  <text x="440" y="504" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Shuning uchun UApp ni app.vue da eng tashqi o'ramga qo'yasan — bir marta, butun ilova uchun.</text>
+</svg>

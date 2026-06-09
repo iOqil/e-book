@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 460" width="780" height="460">
+  <title>useFetch vs $fetch: qaysi birini qachon ishlatish kerakligini ko'rsatuvchi qaror diagrammasi</title>
+  <rect x="0" y="0" width="780" height="460" fill="#f8fafc"/>
+
+  <text x="390" y="34" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">useFetch vs $fetch — qachon qaysi biri?</text>
+
+  <defs>
+    <marker id="arr2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- Savol romb -->
+  <polygon points="390,64 560,124 390,184 220,124" fill="#e2e8f0" stroke="#2563eb" stroke-width="2"/>
+  <text x="390" y="116" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">Data qachon kerak?</text>
+  <text x="390" y="138" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">sahifa yuklanishida yoki harakatda?</text>
+
+  <!-- Chap shox -->
+  <line x1="300" y1="160" x2="195" y2="218" stroke="#475569" stroke-width="2" marker-end="url(#arr2)"/>
+  <text x="210" y="195" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" font-weight="bold" text-anchor="middle">sahifa yuklanishi</text>
+
+  <!-- O'ng shox -->
+  <line x1="480" y1="160" x2="585" y2="218" stroke="#475569" stroke-width="2" marker-end="url(#arr2)"/>
+  <text x="575" y="195" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#f59e0b" font-weight="bold" text-anchor="middle">foydalanuvchi harakati</text>
+
+  <!-- Chap quti: useFetch -->
+  <rect x="40" y="226" width="320" height="150" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="200" y="254" font-family="monospace" font-size="16" font-weight="bold" fill="#16a34a" text-anchor="middle">useFetch / useAsyncData</text>
+  <text x="60" y="282" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">• top-level setup'da (await bilan)</text>
+  <text x="60" y="305" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">• SSR'da serverda ishlaydi</text>
+  <text x="60" y="328" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">• payload + dedupe + cache (key)</text>
+  <text x="60" y="351" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">• client QAYTA fetch qilmaydi</text>
+  <text x="60" y="372" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">misol: GET ro'yxat, sahifa data</text>
+
+  <!-- O'ng quti: $fetch -->
+  <rect x="420" y="226" width="320" height="150" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="580" y="254" font-family="monospace" font-size="16" font-weight="bold" fill="#f59e0b" text-anchor="middle">$fetch</text>
+  <text x="440" y="282" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">• event handler ichida (tugma, forma)</text>
+  <text x="440" y="305" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">• POST / PUT / DELETE</text>
+  <text x="440" y="328" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">• oddiy HTTP client (ofetch)</text>
+  <text x="440" y="351" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">• payload/dedupe YO'Q</text>
+  <text x="440" y="372" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">misol: createPost(), keyin refresh()</text>
+
+  <!-- Ogohlantirish -->
+  <rect x="40" y="392" width="700" height="52" rx="8" fill="#f8fafc" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="60" y="416" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">✗ Xato:</text>
+  <text x="118" y="416" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">top-level'da $fetch ishlatish → client hydration paytida ikkinchi marta fetch (2x so'rov).</text>
+  <text x="60" y="436" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Top-level data uchun DOIM useFetch/useAsyncData ishlat.</text>
+</svg>

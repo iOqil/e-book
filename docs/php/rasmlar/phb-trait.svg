@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440">
+  <title>Trait: bir trait dagi metodlar use orqali bir nechta aloqasiz class ga aralashtiriladi, meros bo'lmagan holda umumiy qobiliyat ulashiladi</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+
+  <text x="380" y="32" font-family="Segoe UI, system-ui, sans-serif" font-size="18" font-weight="bold" fill="#1e293b" text-anchor="middle">Trait — metodlarni class'larga "aralashtirish"</text>
+  <text x="380" y="54" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">use bilan bir trait — bir nechta aloqasiz class'ga</text>
+
+  <defs>
+    <marker id="art" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+
+  <!-- Trait quti (markazda yuqorida) -->
+  <rect x="270" y="78" width="220" height="86" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <rect x="270" y="78" width="220" height="30" rx="8" fill="#f59e0b"/>
+  <text x="380" y="99" font-family="monospace" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">trait Loglovchi</text>
+  <text x="284" y="130" font-family="monospace" font-size="13" fill="#1e293b">function log($xabar) {</text>
+  <text x="284" y="150" font-family="monospace" font-size="13" fill="#1e293b">  echo "[LOG] ".$xabar;</text>
+
+  <!-- use strelkalari -->
+  <line x1="300" y1="164" x2="150" y2="248" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#art)"/>
+  <line x1="380" y1="164" x2="380" y2="248" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#art)"/>
+  <line x1="460" y1="164" x2="610" y2="248" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#art)"/>
+  <text x="205" y="208" font-family="monospace" font-size="13" font-weight="bold" fill="#f59e0b" text-anchor="middle">use Loglovchi</text>
+  <text x="555" y="208" font-family="monospace" font-size="13" font-weight="bold" fill="#f59e0b" text-anchor="middle">use Loglovchi</text>
+
+  <!-- Class 1 -->
+  <rect x="50" y="250" width="200" height="110" rx="8" fill="#e2e8f0" stroke="#2563eb" stroke-width="2"/>
+  <text x="150" y="274" font-family="monospace" font-size="14" font-weight="bold" fill="#2563eb" text-anchor="middle">class Maqola</text>
+  <text x="64" y="300" font-family="monospace" font-size="13" fill="#16a34a">log()  (trait'dan)</text>
+  <line x1="64" y1="310" x2="236" y2="310" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="64" y="332" font-family="monospace" font-size="13" fill="#1e293b">chop()  // o'ziniki</text>
+
+  <!-- Class 2 -->
+  <rect x="280" y="250" width="200" height="110" rx="8" fill="#e2e8f0" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="274" font-family="monospace" font-size="14" font-weight="bold" fill="#2563eb" text-anchor="middle">class Mahsulot</text>
+  <text x="294" y="300" font-family="monospace" font-size="13" fill="#16a34a">log()  (trait'dan)</text>
+  <line x1="294" y1="310" x2="466" y2="310" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="294" y="332" font-family="monospace" font-size="13" fill="#1e293b">sotib()  // o'ziniki</text>
+
+  <!-- Class 3 -->
+  <rect x="510" y="250" width="200" height="110" rx="8" fill="#e2e8f0" stroke="#2563eb" stroke-width="2"/>
+  <text x="610" y="274" font-family="monospace" font-size="14" font-weight="bold" fill="#2563eb" text-anchor="middle">class Foydalanuvchi</text>
+  <text x="524" y="300" font-family="monospace" font-size="13" fill="#16a34a">log()  (trait'dan)</text>
+  <line x1="524" y1="310" x2="696" y2="310" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="524" y="332" font-family="monospace" font-size="13" fill="#1e293b">kir()  // o'ziniki</text>
+
+  <!-- Izoh -->
+  <rect x="50" y="378" width="660" height="48" rx="8" fill="#fef9c3" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="380" y="408" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">Uch class bir-biriga ALOQASIZ (umumiy ota yo'q), lekin uchovi ham trait'dan <tspan font-family="monospace" font-weight="bold">log()</tspan> qobiliyatini oldi.</text>
+</svg>

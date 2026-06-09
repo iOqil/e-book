@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" width="720" height="420">
+  <title>JS engine kodni qanday o'qiydi: Call Stack va Memory Heap</title>
+  <rect x="0" y="0" width="720" height="420" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">JS Engine ichi: kodni qanday bajaradi</text>
+
+  <!-- Source code box -->
+  <rect x="30" y="60" width="200" height="120" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="130" y="84" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Sening kodingni</text>
+  <text x="48" y="112" font-family="monospace" font-size="13" fill="#2563eb">let x = 5;</text>
+  <text x="48" y="134" font-family="monospace" font-size="13" fill="#2563eb">salom();</text>
+  <text x="48" y="156" font-family="monospace" font-size="13" fill="#2563eb">console.log(x);</text>
+
+  <!-- Engine box (V8) -->
+  <rect x="290" y="60" width="400" height="300" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="490" y="86" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">Engine (masalan V8)</text>
+
+  <!-- Call Stack -->
+  <rect x="310" y="104" width="170" height="234" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="395" y="126" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Call Stack</text>
+  <text x="395" y="146" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(amallar navbati)</text>
+
+  <rect x="324" y="290" width="142" height="34" rx="4" fill="#16a34a" stroke="#16a34a"/>
+  <text x="395" y="312" text-anchor="middle" font-family="monospace" font-size="13" fill="#ffffff">main()</text>
+
+  <rect x="324" y="252" width="142" height="34" rx="4" fill="#2563eb" stroke="#2563eb"/>
+  <text x="395" y="274" text-anchor="middle" font-family="monospace" font-size="13" fill="#ffffff">salom()</text>
+
+  <rect x="324" y="214" width="142" height="34" rx="4" fill="#f59e0b" stroke="#f59e0b"/>
+  <text x="395" y="236" text-anchor="middle" font-family="monospace" font-size="13" fill="#1e293b">console.log()</text>
+
+  <text x="395" y="186" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tepaga qo'shiladi ↑</text>
+  <text x="395" y="204" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tugagach olinadi ↓</text>
+
+  <!-- Memory Heap -->
+  <rect x="500" y="104" width="170" height="234" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="585" y="126" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Memory Heap</text>
+  <text x="585" y="146" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(xotira ombori)</text>
+
+  <rect x="516" y="164" width="60" height="44" rx="6" fill="#e2e8f0" stroke="#94a3b8"/>
+  <text x="546" y="190" text-anchor="middle" font-family="monospace" font-size="13" fill="#1e293b">x = 5</text>
+
+  <rect x="596" y="164" width="60" height="44" rx="6" fill="#e2e8f0" stroke="#94a3b8"/>
+  <text x="626" y="184" text-anchor="middle" font-family="monospace" font-size="13" fill="#1e293b">obyekt</text>
+  <text x="626" y="200" text-anchor="middle" font-family="monospace" font-size="13" fill="#1e293b">{...}</text>
+
+  <rect x="516" y="222" width="60" height="44" rx="6" fill="#e2e8f0" stroke="#94a3b8"/>
+  <text x="546" y="248" text-anchor="middle" font-family="monospace" font-size="13" fill="#1e293b">massiv</text>
+
+  <text x="585" y="300" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tartibsiz, katta</text>
+  <text x="585" y="318" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">qiymatlar shu yerda</text>
+
+  <!-- Arrow from code to engine -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+  <line x1="230" y1="120" x2="284" y2="120" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="257" y="110" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">o'qiydi</text>
+
+  <text x="360" y="390" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Engine kodni o'qiydi → amallarni Call Stack ga teradi → qiymatlarni Heap da saqlaydi → mashina tilida bajaradi.</text>
+</svg>

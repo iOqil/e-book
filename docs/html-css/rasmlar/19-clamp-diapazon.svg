@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" width="720" height="360">
+  <title>clamp funksiyasi: qiymat minimum va maksimum oralig'ida ushlanadi, oralig'da ekran kengligiga moslashadi</title>
+  <defs>
+    <marker id="clArr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="720" height="360" fill="#f8fafc"/>
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">clamp(MIN, MOSLASHUVCHAN, MAX)</text>
+  <text x="360" y="58" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">font-size: clamp(1rem, 2vw + 1rem, 2rem);</text>
+
+  <!-- gorizontal o'q: ekran kengligi -->
+  <line x1="70" y1="250" x2="650" y2="250" stroke="#475569" stroke-width="2" marker-end="url(#clArr)"/>
+  <text x="650" y="278" text-anchor="end" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">ekran kengligi ortadi</text>
+
+  <!-- min zona (tekis past) -->
+  <rect x="70" y="160" width="160" height="90" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5" opacity="0.6"/>
+  <line x1="70" y1="200" x2="230" y2="200" stroke="#2563eb" stroke-width="3"/>
+  <text x="150" y="148" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb" font-weight="bold">MIN da to'xtaydi</text>
+  <text x="150" y="190" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">= 1rem</text>
+
+  <!-- moslashuvchan zona (qiyalik) -->
+  <rect x="230" y="110" width="260" height="140" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5" opacity="0.5"/>
+  <line x1="230" y1="200" x2="490" y2="120" stroke="#16a34a" stroke-width="3"/>
+  <text x="360" y="100" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" font-weight="bold">moslashuvchan o'sadi</text>
+  <text x="360" y="165" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">= 2vw + 1rem</text>
+
+  <!-- max zona (tekis baland) -->
+  <rect x="490" y="110" width="160" height="140" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5" opacity="0.6"/>
+  <line x1="490" y1="120" x2="650" y2="120" stroke="#f59e0b" stroke-width="3"/>
+  <text x="570" y="100" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309" font-weight="bold">MAX da to'xtaydi</text>
+  <text x="570" y="145" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">= 2rem</text>
+
+  <text x="360" y="320" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Qiymat hech qachon MIN'dan kichik yoki MAX'dan katta bo'lmaydi — oralig'da silliq moslashadi</text>
+</svg>

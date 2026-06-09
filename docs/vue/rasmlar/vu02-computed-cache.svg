@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 500" width="860" height="500">
+  <title>computed keshlash: bog'liqlik o'zgarmasa qayta hisoblamaydi</title>
+  <defs>
+    <marker id="cArr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="860" height="500" fill="#f8fafc"/>
+  <text x="430" y="34" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1e293b" text-anchor="middle">computed keshlash: qachon qayta hisoblanadi</text>
+
+  <!-- access node -->
+  <rect x="40" y="80" width="200" height="80" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="140" y="115" font-family="monospace" font-size="15" fill="#1e293b" text-anchor="middle">fullName.value</text>
+  <text x="140" y="140" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">qiymatga murojaat</text>
+
+  <!-- decision diamond -->
+  <polygon points="430,70 560,140 430,210 300,140" fill="#f8fafc" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="430" y="132" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Bog'liqlik</text>
+  <text x="430" y="153" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">o'zgardimi?</text>
+
+  <line x1="240" y1="120" x2="298" y2="135" stroke="#475569" stroke-width="2.5" marker-end="url(#cArr)"/>
+
+  <!-- YES branch -->
+  <rect x="620" y="60" width="200" height="100" rx="10" fill="#f8fafc" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="720" y="90" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="middle">HA -&gt; qayta hisobla</text>
+  <text x="720" y="116" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">getter ishlaydi,</text>
+  <text x="720" y="138" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">natija keshga yoziladi</text>
+  <line x1="560" y1="125" x2="618" y2="110" stroke="#16a34a" stroke-width="2.5" marker-end="url(#cArr)"/>
+  <text x="575" y="98" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">HA</text>
+
+  <!-- NO branch -->
+  <rect x="330" y="270" width="200" height="100" rx="10" fill="#f8fafc" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="430" y="300" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb" text-anchor="middle">YO'Q -&gt; keshdan</text>
+  <text x="430" y="326" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">eski qiymat qaytadi,</text>
+  <text x="430" y="348" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">getter ISHLAMAYDI</text>
+  <line x1="430" y1="210" x2="430" y2="268" stroke="#2563eb" stroke-width="2.5" marker-end="url(#cArr)"/>
+  <text x="442" y="248" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">YO'Q</text>
+
+  <!-- comparison: computed vs method -->
+  <rect x="40" y="400" width="780" height="80" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="60" y="428" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">computed:</text>
+  <text x="160" y="428" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">bog'liqlik o'zgarmaguncha qayta hisoblanmaydi (keshlanadi).</text>
+  <text x="60" y="458" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">method:</text>
+  <text x="160" y="458" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">har re-render'da qayta ishlaydi -- kesh yo'q.</text>
+</svg>

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420">
+  <title>useReducer oqimi: dispatch(action) reducer orqali yangi state hosil qiladi</title>
+  <defs>
+    <marker id="rd-arr" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#2563eb"/>
+    </marker>
+    <marker id="rd-green" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="32" font-family="Segoe UI, system-ui, sans-serif" font-size="19" font-weight="bold" fill="#1e293b" text-anchor="middle">useReducer: dispatch(action) -&gt; reducer -&gt; yangi state</text>
+
+  <!-- Component / event -->
+  <rect x="40" y="80" width="170" height="80" rx="8" fill="#e2e8f0" stroke="#f59e0b" stroke-width="2"/>
+  <text x="125" y="108" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#f59e0b" text-anchor="middle">1. Komponent</text>
+  <text x="125" y="130" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">tugma bosildi</text>
+  <text x="125" y="148" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">onClick</text>
+
+  <!-- dispatch -->
+  <rect x="295" y="80" width="170" height="80" rx="8" fill="#e2e8f0" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="108" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb" text-anchor="middle">2. dispatch(action)</text>
+  <text x="380" y="130" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">{ type:</text>
+  <text x="380" y="148" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">"increment" }</text>
+
+  <!-- reducer -->
+  <rect x="550" y="80" width="180" height="80" rx="8" fill="#e2e8f0" stroke="#2563eb" stroke-width="2"/>
+  <text x="640" y="108" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb" text-anchor="middle">3. reducer</text>
+  <text x="640" y="130" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">sof funksiya</text>
+  <text x="640" y="148" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">(state, action)</text>
+
+  <!-- new state -->
+  <rect x="295" y="250" width="180" height="80" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="385" y="278" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="middle">4. Yangi state</text>
+  <text x="385" y="300" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">{ count: 1 }</text>
+  <text x="385" y="318" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">re-render</text>
+
+  <!-- arrows -->
+  <path d="M210 120 L291 120" fill="none" stroke="#2563eb" stroke-width="2.5" marker-end="url(#rd-arr)"/>
+  <path d="M465 120 L546 120" fill="none" stroke="#2563eb" stroke-width="2.5" marker-end="url(#rd-arr)"/>
+  <path d="M640 160 Q640 248 479 290" fill="none" stroke="#16a34a" stroke-width="2.5" marker-end="url(#rd-green)"/>
+  <text x="600" y="210" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" text-anchor="middle">return</text>
+  <path d="M295 290 Q120 290 124 162" fill="none" stroke="#475569" stroke-width="2.5" stroke-dasharray="6 5" marker-end="url(#rd-arr)"/>
+  <text x="150" y="240" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">UI yangilanadi</text>
+
+  <text x="380" y="375" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">reducer state'ni o'zgartirmaydi — har doim YANGI state qaytaradi (sof funksiya)</text>
+  <text x="380" y="400" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">action = "nima sodir bo'ldi" (domain event kabi), reducer = "state qanday o'zgaradi"</text>
+</svg>

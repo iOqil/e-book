@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" width="720" height="380">
+  <title>Lug'at (dict) ichki ishlashi — kalit, hash va bucket bog'lanishi</title>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="720" height="380" fill="#f8fafc"/>
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">dict — kalit → hash → bucket</text>
+  <text x="360" y="58" text-anchor="middle" font-family="monospace" font-size="14" fill="#475569">talaba["ism"]  qiymatni kalit orqali topadi</text>
+
+  <!-- Column headers -->
+  <text x="110" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">Kalit</text>
+  <text x="320" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#f59e0b">hash(kalit)</text>
+  <text x="600" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">bucket (qiymat)</text>
+
+  <!-- Row 1 -->
+  <rect x="40" y="105" width="140" height="48" fill="#e2e8f0" stroke="#94a3b8"/>
+  <text x="110" y="135" text-anchor="middle" font-family="monospace" font-size="15" fill="#1e293b">"ism"</text>
+  <rect x="250" y="105" width="140" height="48" fill="#fff7ed" stroke="#f59e0b"/>
+  <text x="320" y="135" text-anchor="middle" font-family="monospace" font-size="14" fill="#1e293b">→ 4</text>
+  <rect x="470" y="105" width="210" height="48" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="575" y="135" text-anchor="middle" font-family="monospace" font-size="14" fill="#16a34a">[4] = "Aziz"</text>
+  <line x1="180" y1="129" x2="248" y2="129" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="390" y1="129" x2="468" y2="129" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Row 2 -->
+  <rect x="40" y="165" width="140" height="48" fill="#e2e8f0" stroke="#94a3b8"/>
+  <text x="110" y="195" text-anchor="middle" font-family="monospace" font-size="15" fill="#1e293b">"yosh"</text>
+  <rect x="250" y="165" width="140" height="48" fill="#fff7ed" stroke="#f59e0b"/>
+  <text x="320" y="195" text-anchor="middle" font-family="monospace" font-size="14" fill="#1e293b">→ 1</text>
+  <rect x="470" y="165" width="210" height="48" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="575" y="195" text-anchor="middle" font-family="monospace" font-size="14" fill="#16a34a">[1] = 20</text>
+  <line x1="180" y1="189" x2="248" y2="189" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="390" y1="189" x2="468" y2="189" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Row 3 -->
+  <rect x="40" y="225" width="140" height="48" fill="#e2e8f0" stroke="#94a3b8"/>
+  <text x="110" y="255" text-anchor="middle" font-family="monospace" font-size="14" fill="#1e293b">"shahar"</text>
+  <rect x="250" y="225" width="140" height="48" fill="#fff7ed" stroke="#f59e0b"/>
+  <text x="320" y="255" text-anchor="middle" font-family="monospace" font-size="14" fill="#1e293b">→ 6</text>
+  <rect x="470" y="225" width="210" height="48" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="575" y="255" text-anchor="middle" font-family="monospace" font-size="13" fill="#16a34a">[6] = "Toshkent"</text>
+  <line x1="180" y1="249" x2="248" y2="249" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="390" y1="249" x2="468" y2="249" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Explanation -->
+  <rect x="40" y="300" width="640" height="60" fill="#eff6ff" stroke="#2563eb"/>
+  <text x="360" y="324" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Kalit hash funksiyasi orqali joyga (bucket) aylanadi — shuning uchun</text>
+  <text x="360" y="346" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">qiymat tez topiladi. Hash raqamlar shartli (taxminiy) ko'rsatilgan.</text>
+</svg>

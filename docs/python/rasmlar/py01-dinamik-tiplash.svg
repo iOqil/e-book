@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400">
+  <title>Dinamik tiplash: bitta nom har xil turdagi obyektlarga qayta bog'lanadi</title>
+  <rect x="0" y="0" width="760" height="400" fill="#f8fafc"/>
+
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Dinamik tiplash</text>
+  <text x="380" y="58" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Tur o'zgaruvchida emas — obyektda. Bitta nom turli obyektlarga qayta bog'lanishi mumkin.</text>
+
+  <defs>
+    <marker id="dyn1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- code -->
+  <rect x="30" y="82" width="200" height="280" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="130" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Kod</text>
+  <text x="50" y="150" font-family="monospace" font-size="14" fill="#2563eb">x = 5</text>
+  <text x="50" y="190" font-family="monospace" font-size="13" fill="#475569"># keyin:</text>
+  <text x="50" y="222" font-family="monospace" font-size="14" fill="#2563eb">x = "salom"</text>
+  <text x="50" y="262" font-family="monospace" font-size="13" fill="#475569"># keyin:</text>
+  <text x="50" y="294" font-family="monospace" font-size="14" fill="#2563eb">x = [1, 2]</text>
+  <text x="130" y="338" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">muammo yo'q!</text>
+
+  <!-- single name box -->
+  <rect x="300" y="200" width="100" height="50" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="350" y="232" text-anchor="middle" font-family="monospace" font-size="18" fill="#2563eb">x</text>
+  <text x="350" y="188" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">bitta nom</text>
+
+  <!-- three objects, each with type -->
+  <!-- int -->
+  <rect x="520" y="98" width="200" height="64" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="620" y="124" text-anchor="middle" font-family="monospace" font-size="16" fill="#1e293b">5</text>
+  <text x="620" y="146" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tur: int</text>
+
+  <!-- str -->
+  <rect x="520" y="194" width="200" height="64" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="620" y="220" text-anchor="middle" font-family="monospace" font-size="16" fill="#1e293b">"salom"</text>
+  <text x="620" y="242" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tur: str</text>
+
+  <!-- list -->
+  <rect x="520" y="290" width="200" height="64" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="620" y="316" text-anchor="middle" font-family="monospace" font-size="16" fill="#1e293b">[1, 2]</text>
+  <text x="620" y="338" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tur: list</text>
+
+  <!-- arrows: name re-binds in sequence -->
+  <line x1="400" y1="212" x2="516" y2="130" stroke="#2563eb" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#dyn1)"/>
+  <text x="448" y="158" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">1</text>
+
+  <line x1="400" y1="225" x2="516" y2="225" stroke="#16a34a" stroke-width="2" marker-end="url(#dyn1)"/>
+  <text x="458" y="218" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">2 (hozir)</text>
+
+  <line x1="400" y1="238" x2="516" y2="318" stroke="#f59e0b" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#dyn1)"/>
+  <text x="448" y="302" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#f59e0b">3</text>
+
+  <text x="380" y="388" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Har bog'lanishda x boshqa obyektga ishora qiladi; turi obyektga qarab aniqlanadi.</text>
+</svg>

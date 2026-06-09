@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 500" width="860" height="500">
+  <title>LRU kesh — hash map va ikki tomonlama bog'langan ro'yxat; eng eski element chiqadi</title>
+  <rect x="0" y="0" width="860" height="500" fill="#f8fafc"/>
+  <text x="430" y="30" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">LRU kesh — hash map + ikki tomonlama ro'yxat</text>
+  <text x="430" y="54" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Map kalitni tugunga bog'laydi (O(1) topish) · ro'yxat ishlatilish tartibini saqlaydi</text>
+
+  <defs>
+    <marker id="lr" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto">
+      <path d="M0,0 L7,3.2 L0,6.4 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- hash map qismi -->
+  <text x="120" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Hash map</text>
+  <g font-family="monospace" font-size="14">
+    <rect x="40" y="105" width="160" height="34" fill="#e2e8f0" stroke="#94a3b8"/><text x="55" y="127" fill="#1e293b">kalit 1 → tugun</text>
+    <rect x="40" y="139" width="160" height="34" fill="#e2e8f0" stroke="#94a3b8"/><text x="55" y="161" fill="#1e293b">kalit 2 → tugun</text>
+    <rect x="40" y="173" width="160" height="34" fill="#e2e8f0" stroke="#94a3b8"/><text x="55" y="195" fill="#1e293b">kalit 3 → tugun</text>
+  </g>
+  <text x="120" y="232" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">kalitdan tugunga O(1)</text>
+
+  <!-- map -> list bog'lanish strelkalari -->
+  <line x1="200" y1="122" x2="300" y2="300" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#lr)"/>
+  <line x1="200" y1="156" x2="455" y2="300" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#lr)"/>
+  <line x1="200" y1="190" x2="610" y2="300" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#lr)"/>
+
+  <!-- doubly linked list -->
+  <text x="430" y="278" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Ikki tomonlama bog'langan ro'yxat (ishlatilish tartibi)</text>
+
+  <!-- HEAD label -->
+  <text x="160" y="332" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">HEAD</text>
+  <text x="160" y="352" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">(eng yangi)</text>
+
+  <!-- node 1 -->
+  <rect x="230" y="305" width="140" height="50" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="300" y="326" text-anchor="middle" font-family="monospace" font-size="14" fill="#1e293b">k=3</text>
+  <text x="300" y="346" text-anchor="middle" font-family="monospace" font-size="14" fill="#1e293b">v=C</text>
+  <!-- node 2 -->
+  <rect x="385" y="305" width="140" height="50" rx="6" fill="#e2e8f0" stroke="#94a3b8"/>
+  <text x="455" y="326" text-anchor="middle" font-family="monospace" font-size="14" fill="#1e293b">k=1</text>
+  <text x="455" y="346" text-anchor="middle" font-family="monospace" font-size="14" fill="#1e293b">v=A</text>
+  <!-- node 3 -->
+  <rect x="540" y="305" width="140" height="50" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="610" y="326" text-anchor="middle" font-family="monospace" font-size="14" fill="#1e293b">k=2</text>
+  <text x="610" y="346" text-anchor="middle" font-family="monospace" font-size="14" fill="#1e293b">v=B</text>
+
+  <!-- TAIL label -->
+  <text x="745" y="332" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">TAIL</text>
+  <text x="745" y="352" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">(eng eski)</text>
+
+  <!-- next/prev strelkalar (ikki tomonlama) -->
+  <line x1="372" y1="320" x2="383" y2="320" stroke="#475569" stroke-width="2" marker-end="url(#lr)"/>
+  <line x1="383" y1="340" x2="372" y2="340" stroke="#475569" stroke-width="2" marker-end="url(#lr)"/>
+  <line x1="527" y1="320" x2="538" y2="320" stroke="#475569" stroke-width="2" marker-end="url(#lr)"/>
+  <line x1="538" y1="340" x2="527" y2="340" stroke="#475569" stroke-width="2" marker-end="url(#lr)"/>
+  <text x="600" y="296" text-anchor="middle" font-family="monospace" font-size="13" fill="#475569">next →   ← prev</text>
+
+  <!-- amal izohlari -->
+  <rect x="40" y="378" width="780" height="106" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="60" y="404" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Amallar (har biri O(1)):</text>
+  <circle cx="70" cy="424" r="7" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="86" y="429" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">get(k): map'dan tugunni top → uni HEAD ga ko'chir (eng yangi bo'ldi).</text>
+  <circle cx="70" cy="448" r="7" fill="#2563eb"/>
+  <text x="86" y="453" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">put(k,v): yangi tugunni HEAD ga qo'y; map'ga kalit→tugun yoz.</text>
+  <circle cx="70" cy="472" r="7" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="86" y="477" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Sig'im to'lsa: TAIL (eng eski) tugunni o'chir va uni map'dan ham olib tashla.</text>
+</svg>

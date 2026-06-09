@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 400" width="740" height="400">
+  <title>Routing: URL manzili mos komponentga moslab chiziladi</title>
+  <defs>
+    <marker id="rt-arr" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#2563eb"/>
+    </marker>
+    <marker id="rt-green" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="740" height="400" fill="#f8fafc"/>
+  <text x="370" y="32" font-family="Segoe UI, system-ui, sans-serif" font-size="19" font-weight="bold" fill="#1e293b" text-anchor="middle">Routing: URL -&gt; mos komponent</text>
+
+  <!-- URL bar -->
+  <rect x="60" y="60" width="620" height="44" rx="8" fill="#e2e8f0" stroke="#f59e0b" stroke-width="2"/>
+  <text x="80" y="88" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#f59e0b">URL</text>
+  <text x="130" y="88" font-family="monospace" font-size="13" fill="#1e293b">https://app.uz/users/42</text>
+
+  <!-- Router -->
+  <rect x="250" y="140" width="240" height="56" rx="8" fill="#e2e8f0" stroke="#2563eb" stroke-width="2"/>
+  <text x="370" y="165" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb" text-anchor="middle">Router (Routes)</text>
+  <text x="370" y="186" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">mos path qidiradi</text>
+
+  <path d="M370 104 L370 138" fill="none" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#rt-arr)"/>
+
+  <!-- routes -->
+  <rect x="40" y="250" width="200" height="70" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="140" y="276" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">path="/"</text>
+  <text x="140" y="300" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">&lt;Home /&gt;</text>
+
+  <rect x="270" y="250" width="200" height="70" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="370" y="276" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">path="/users/:id"</text>
+  <text x="370" y="300" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a" text-anchor="middle">&lt;UserDetail /&gt;  MOS</text>
+
+  <rect x="500" y="250" width="200" height="70" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="600" y="276" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">path="*"</text>
+  <text x="600" y="300" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">&lt;NotFound /&gt; (404)</text>
+
+  <path d="M320 196 L160 248" fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#rt-arr)"/>
+  <path d="M370 196 L370 248" fill="none" stroke="#16a34a" stroke-width="2.5" marker-end="url(#rt-green)"/>
+  <path d="M420 196 L580 248" fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#rt-arr)"/>
+
+  <text x="370" y="360" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">":id" dinamik segment -&gt; useParams() bilan o'qiladi (bu yerda id = 42)</text>
+  <text x="370" y="384" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">&lt;Link&gt; URL'ni o'zgartiradi, sahifa qayta yuklanmaydi (SPA tezligi)</text>
+</svg>

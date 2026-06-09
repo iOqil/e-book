@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 430" width="700" height="430">
+  <title>Bubble sort: har o'tishda qo'shni juftlarni qiyoslab almashtirish, eng katta element oxiriga suriladi</title>
+  <rect x="0" y="0" width="700" height="430" fill="#f8fafc"/>
+  <defs>
+    <marker id="ba" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <text x="350" y="28" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="18" font-weight="bold" fill="#1e293b">Bubble sort — bir o'tish (pass)</text>
+  <text x="350" y="50" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Qo'shni juftni qiyoslaymiz: kattasi o'ngga "ko'tariladi" (5 oxiriga suriladi)</text>
+
+  <!-- Qadam 1: 5 va 1 -->
+  <text x="40" y="92" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">1-qiyos: 5 &gt; 1 → almashadi</text>
+  <g font-family="monospace" font-size="16" text-anchor="middle">
+    <rect x="40" y="100" width="44" height="44" rx="5" fill="#f59e0b" stroke="#94a3b8"/><text x="62" y="128" fill="#1e293b">5</text>
+    <rect x="86" y="100" width="44" height="44" rx="5" fill="#f59e0b" stroke="#94a3b8"/><text x="108" y="128" fill="#1e293b">1</text>
+    <rect x="132" y="100" width="44" height="44" rx="5" fill="#e2e8f0" stroke="#94a3b8"/><text x="154" y="128" fill="#1e293b">4</text>
+    <rect x="178" y="100" width="44" height="44" rx="5" fill="#e2e8f0" stroke="#94a3b8"/><text x="200" y="128" fill="#1e293b">2</text>
+    <rect x="224" y="100" width="44" height="44" rx="5" fill="#e2e8f0" stroke="#94a3b8"/><text x="246" y="128" fill="#1e293b">3</text>
+  </g>
+  <path d="M62,156 A30,30 0 0 1 108,156" fill="none" stroke="#dc2626" stroke-width="1.8" marker-end="url(#ba)"/>
+
+  <!-- Qadam 2 -->
+  <text x="430" y="92" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">2-qiyos: 5 &gt; 4 → almashadi</text>
+  <g font-family="monospace" font-size="16" text-anchor="middle">
+    <rect x="430" y="100" width="44" height="44" rx="5" fill="#e2e8f0" stroke="#94a3b8"/><text x="452" y="128" fill="#1e293b">1</text>
+    <rect x="476" y="100" width="44" height="44" rx="5" fill="#f59e0b" stroke="#94a3b8"/><text x="498" y="128" fill="#1e293b">5</text>
+    <rect x="522" y="100" width="44" height="44" rx="5" fill="#f59e0b" stroke="#94a3b8"/><text x="544" y="128" fill="#1e293b">4</text>
+    <rect x="568" y="100" width="44" height="44" rx="5" fill="#e2e8f0" stroke="#94a3b8"/><text x="590" y="128" fill="#1e293b">2</text>
+    <rect x="614" y="100" width="44" height="44" rx="5" fill="#e2e8f0" stroke="#94a3b8"/><text x="636" y="128" fill="#1e293b">3</text>
+  </g>
+  <path d="M498,156 A30,30 0 0 1 544,156" fill="none" stroke="#dc2626" stroke-width="1.8" marker-end="url(#ba)"/>
+
+  <!-- Qadam 3 -->
+  <text x="40" y="208" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">3-qiyos: 5 &gt; 2 → almashadi</text>
+  <g font-family="monospace" font-size="16" text-anchor="middle">
+    <rect x="40" y="216" width="44" height="44" rx="5" fill="#e2e8f0" stroke="#94a3b8"/><text x="62" y="244" fill="#1e293b">1</text>
+    <rect x="86" y="216" width="44" height="44" rx="5" fill="#e2e8f0" stroke="#94a3b8"/><text x="108" y="244" fill="#1e293b">4</text>
+    <rect x="132" y="216" width="44" height="44" rx="5" fill="#f59e0b" stroke="#94a3b8"/><text x="154" y="244" fill="#1e293b">5</text>
+    <rect x="178" y="216" width="44" height="44" rx="5" fill="#f59e0b" stroke="#94a3b8"/><text x="200" y="244" fill="#1e293b">2</text>
+    <rect x="224" y="216" width="44" height="44" rx="5" fill="#e2e8f0" stroke="#94a3b8"/><text x="246" y="244" fill="#1e293b">3</text>
+  </g>
+  <path d="M154,272 A30,30 0 0 1 200,272" fill="none" stroke="#dc2626" stroke-width="1.8" marker-end="url(#ba)"/>
+
+  <!-- Qadam 4 -->
+  <text x="430" y="208" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">4-qiyos: 5 &gt; 3 → almashadi</text>
+  <g font-family="monospace" font-size="16" text-anchor="middle">
+    <rect x="430" y="216" width="44" height="44" rx="5" fill="#e2e8f0" stroke="#94a3b8"/><text x="452" y="244" fill="#1e293b">1</text>
+    <rect x="476" y="216" width="44" height="44" rx="5" fill="#e2e8f0" stroke="#94a3b8"/><text x="498" y="244" fill="#1e293b">4</text>
+    <rect x="522" y="216" width="44" height="44" rx="5" fill="#e2e8f0" stroke="#94a3b8"/><text x="544" y="244" fill="#1e293b">2</text>
+    <rect x="568" y="216" width="44" height="44" rx="5" fill="#f59e0b" stroke="#94a3b8"/><text x="590" y="244" fill="#1e293b">5</text>
+    <rect x="614" y="216" width="44" height="44" rx="5" fill="#f59e0b" stroke="#94a3b8"/><text x="636" y="244" fill="#1e293b">3</text>
+  </g>
+  <path d="M590,272 A30,30 0 0 1 636,272" fill="none" stroke="#dc2626" stroke-width="1.8" marker-end="url(#ba)"/>
+
+  <!-- Natija: bir o'tishdan keyin -->
+  <text x="350" y="316" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#16a34a" font-weight="bold">Bir o'tishdan keyin: eng katta (5) joyida — oxirgi katak qotadi</text>
+  <g font-family="monospace" font-size="16" text-anchor="middle">
+    <rect x="222" y="328" width="44" height="44" rx="5" fill="#e2e8f0" stroke="#94a3b8"/><text x="244" y="356" fill="#1e293b">1</text>
+    <rect x="268" y="328" width="44" height="44" rx="5" fill="#e2e8f0" stroke="#94a3b8"/><text x="290" y="356" fill="#1e293b">4</text>
+    <rect x="314" y="328" width="44" height="44" rx="5" fill="#e2e8f0" stroke="#94a3b8"/><text x="336" y="356" fill="#1e293b">2</text>
+    <rect x="360" y="328" width="44" height="44" rx="5" fill="#e2e8f0" stroke="#94a3b8"/><text x="382" y="356" fill="#1e293b">3</text>
+    <rect x="406" y="328" width="44" height="44" rx="5" fill="#16a34a" stroke="#94a3b8"/><text x="428" y="356" fill="#f8fafc">5</text>
+  </g>
+
+  <rect x="40" y="388" width="620" height="32" rx="6" fill="#fff" stroke="#94a3b8"/>
+  <text x="52" y="408" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Keyingi o'tish faqat qolgan qismda ishlaydi. Agar bironta almashish bo'lmasa (swapped=false) — to'xtaydi.</text>
+</svg>

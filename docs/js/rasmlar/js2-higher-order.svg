@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 380" width="780" height="380">
+  <title>Higher-order function: funksiya boshqa funksiyaga argument (callback) sifatida uzatiladi va ichida chaqiriladi</title>
+  <defs>
+    <marker id="ho-arrow" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="780" height="380" fill="#f8fafc"/>
+  <text x="390" y="40" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1e293b">Higher-order function: funksiya — argument sifatida</text>
+
+  <!-- Callback funksiya quti -->
+  <rect x="40" y="100" width="230" height="90" rx="12" fill="#e2e8f0" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="155" y="126" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">Callback funksiya</text>
+  <text x="155" y="158" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="16" fill="#1e293b">const ikkilantir</text>
+  <text x="155" y="180" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="16" fill="#1e293b">= n =&gt; n * 2;</text>
+
+  <!-- Strelka: uzatiladi -->
+  <path d="M270,145 C340,145 360,210 430,210" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#ho-arrow)"/>
+  <rect x="290" y="148" width="170" height="26" rx="6" fill="#f59e0b"/>
+  <text x="375" y="166" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">argument sifatida uzatiladi</text>
+
+  <!-- Higher-order funksiya quti -->
+  <rect x="440" y="100" width="300" height="160" rx="12" fill="#f8fafc" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="590" y="126" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#2563eb">Higher-order funksiya</text>
+  <text x="460" y="162" font-family="Consolas, Courier New, monospace" font-size="16" fill="#1e293b">function bajar(<tspan fill="#f59e0b">funksiya</tspan>, qiymat){</text>
+  <text x="460" y="190" font-family="Consolas, Courier New, monospace" font-size="16" fill="#1e293b">  <tspan fill="#16a34a">return</tspan> <tspan fill="#f59e0b">funksiya</tspan>(qiymat);</text>
+  <text x="460" y="216" font-family="Consolas, Courier New, monospace" font-size="16" fill="#1e293b">}</text>
+  <text x="590" y="244" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">ichida callbackni chaqiradi</text>
+
+  <!-- Chaqiruv va natija -->
+  <rect x="440" y="288" width="300" height="40" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="460" y="313" font-family="Consolas, Courier New, monospace" font-size="16" fill="#1e293b">bajar(ikkilantir, 5)  <tspan fill="#16a34a">// 10</tspan></text>
+
+  <line x1="590" y1="260" x2="590" y2="286" stroke="#475569" stroke-width="2" marker-end="url(#ho-arrow)"/>
+
+  <text x="390" y="358" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">map, filter, setTimeout — hammasi callback (funksiya) qabul qiladigan higher-order funksiyalar.</text>
+</svg>

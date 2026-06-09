@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420">
+  <title>List comprehension oqimi: for bo'ylab aylanish, ixtiyoriy if shart, har element uchun ifoda - yangi ro'yxat</title>
+  <defs>
+    <marker id="lc-arrow" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="38" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1e293b">List comprehension oqimi</text>
+
+  <!-- Anatomiya satri -->
+  <rect x="60" y="62" width="640" height="54" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="80" y="96" font-family="Consolas, Courier New, monospace" font-size="18" fill="#1e293b">[ <tspan fill="#16a34a">x ** 2</tspan>  <tspan fill="#2563eb">for x in sonlar</tspan>  <tspan fill="#f59e0b">if x % 2 == 0</tspan> ]</text>
+
+  <!-- Uch qismni belgilash -->
+  <text x="135" y="140" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">ifoda</text>
+  <text x="320" y="140" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#2563eb">aylanish</text>
+  <text x="520" y="140" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#f59e0b">shart (ixtiyoriy)</text>
+
+  <!-- Bosqich 1: aylanish -->
+  <rect x="90" y="162" width="580" height="48" rx="10" fill="#f8fafc" stroke="#2563eb" stroke-width="2"/>
+  <text x="110" y="183" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">1) for x in sonlar</text>
+  <text x="110" y="203" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">ro'yxatning har elementini navbat bilan x ga oladi</text>
+  <line x1="380" y1="210" x2="380" y2="232" stroke="#475569" stroke-width="2" marker-end="url(#lc-arrow)"/>
+
+  <!-- Bosqich 2: shart -->
+  <rect x="90" y="236" width="580" height="48" rx="10" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"/>
+  <text x="110" y="257" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#f59e0b">2) if x % 2 == 0 ?</text>
+  <text x="110" y="277" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">shart False bo'lsa — bu element o'tkazib yuboriladi</text>
+  <line x1="380" y1="284" x2="380" y2="306" stroke="#475569" stroke-width="2" marker-end="url(#lc-arrow)"/>
+
+  <!-- Bosqich 3: ifoda -->
+  <rect x="90" y="310" width="580" height="48" rx="10" fill="#f8fafc" stroke="#16a34a" stroke-width="2"/>
+  <text x="110" y="331" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">3) x ** 2 hisoblanadi</text>
+  <text x="110" y="351" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">natija yangi ro'yxatga qo'shiladi</text>
+
+  <!-- Natija -->
+  <rect x="220" y="376" width="320" height="34" rx="8" fill="#16a34a"/>
+  <text x="380" y="399" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="16" fill="#f8fafc">yangi ro'yxat = [4, 16, 36, ...]</text>
+</svg>

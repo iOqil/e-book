@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 500" width="760" height="500">
+  <title>grid-template-areas: header, sidebar, main va footer nomli sohalardan tuzilgan sahifa layout</title>
+  <rect x="0" y="0" width="760" height="500" fill="#f8fafc"/>
+
+  <!-- Sarlavha -->
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">grid-template-areas: nomli sohalar bilan layout</text>
+
+  <!-- ===== Chap: CSS kodi (ASCII xarita) ===== -->
+  <rect x="30" y="70" width="300" height="180" rx="8" fill="#1e293b"/>
+  <text x="48" y="98" font-family="Consolas, monospace" font-size="13" fill="#e2e8f0">grid-template-areas:</text>
+  <text x="62" y="122" font-family="Consolas, monospace" font-size="13" fill="#93c5fd">"header  header"</text>
+  <text x="62" y="146" font-family="Consolas, monospace" font-size="13" fill="#86efac">"sidebar main"</text>
+  <text x="62" y="170" font-family="Consolas, monospace" font-size="13" fill="#fcd34d">"footer  footer"</text>
+  <text x="48" y="200" font-family="Consolas, monospace" font-size="13" fill="#94a3b8">/* har qator = bitta */</text>
+  <text x="48" y="218" font-family="Consolas, monospace" font-size="13" fill="#94a3b8">/* grid qatori */</text>
+  <text x="48" y="236" font-family="Consolas, monospace" font-size="13" fill="#94a3b8">/* har so'z = bitta katak */</text>
+
+  <!-- O'q strelka chapdan o'ngga -->
+  <defs>
+    <marker id="strelka" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+  <line x1="340" y1="160" x2="395" y2="160" stroke="#475569" stroke-width="2.5" marker-end="url(#strelka)"/>
+
+  <!-- ===== O'ng: vizual natija ===== -->
+  <!-- header (yuqori, ikki ustunni qamraydi) -->
+  <rect x="410" y="70" width="320" height="70" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="570" y="110" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">header</text>
+
+  <!-- sidebar (chap) -->
+  <rect x="410" y="152" width="100" height="200" rx="4" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="460" y="248" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#7c3aed">sidebar</text>
+
+  <!-- main (o'ng) -->
+  <rect x="522" y="152" width="208" height="200" rx="4" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="626" y="248" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">main</text>
+
+  <!-- footer (past, ikki ustunni qamraydi) -->
+  <rect x="410" y="364" width="320" height="70" rx="4" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="570" y="404" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#b45309">footer</text>
+
+  <!-- Pastki izoh -->
+  <rect x="30" y="290" width="300" height="144" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="180" y="316" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309">Nega bu qulay?</text>
+  <text x="180" y="342" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Layoutni "rasm" kabi ko'rasiz —</text>
+  <text x="180" y="362" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">kod aynan natijaga o'xshaydi.</text>
+  <text x="180" y="386" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Bir nomni takrorlasangiz, soha</text>
+  <text x="180" y="406" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">o'sha kataklarga cho'ziladi</text>
+  <text x="180" y="424" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">("header header" = 2 ustun keng).</text>
+
+  <!-- pastki global izoh -->
+  <text x="380" y="466" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Har element o'zini soha nomiga ulaydi: .head { grid-area: header; }</text>
+  <text x="380" y="486" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Bo'sh katak kerak bo'lsa nuqta yoziladi: "." (point).</text>
+</svg>

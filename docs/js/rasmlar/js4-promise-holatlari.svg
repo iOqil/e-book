@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="760" height="380">
+  <title>Promise holatlari — pending dan fulfilled yoki rejected ga</title>
+  <defs>
+    <marker id="arrG" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L9 5 L0 10 z" fill="#16a34a"/>
+    </marker>
+    <marker id="arrR" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L9 5 L0 10 z" fill="#dc2626"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="760" height="380" fill="#f8fafc"/>
+  <text x="380" y="36" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1e293b" text-anchor="middle">Promise — 3 holat</text>
+
+  <!-- pending -->
+  <rect x="40" y="140" width="200" height="100" rx="12" fill="#e2e8f0" stroke="#f59e0b" stroke-width="3"/>
+  <text x="140" y="180" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#b45309" text-anchor="middle">pending</text>
+  <text x="140" y="208" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">kutilmoqda</text>
+  <text x="140" y="228" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">(hali tugamagan)</text>
+
+  <!-- fulfilled -->
+  <rect x="520" y="50" width="210" height="105" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+  <text x="625" y="88" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#16a34a" text-anchor="middle">fulfilled</text>
+  <text x="625" y="114" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">muvaffaqiyatli tugadi</text>
+  <text x="625" y="136" font-family="monospace" font-size="13" fill="#15803d" text-anchor="middle">.then(natija)</text>
+
+  <!-- rejected -->
+  <rect x="520" y="225" width="210" height="105" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="3"/>
+  <text x="625" y="263" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#dc2626" text-anchor="middle">rejected</text>
+  <text x="625" y="289" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">xato bilan tugadi</text>
+  <text x="625" y="311" font-family="monospace" font-size="13" fill="#b91c1c" text-anchor="middle">.catch(xato)</text>
+
+  <!-- arrows -->
+  <path d="M240 170 C 360 120, 420 100, 518 100" fill="none" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arrG)"/>
+  <text x="380" y="118" font-family="monospace" font-size="14" fill="#15803d" text-anchor="middle">resolve(qiymat)</text>
+
+  <path d="M240 210 C 360 260, 420 278, 518 278" fill="none" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arrR)"/>
+  <text x="380" y="298" font-family="monospace" font-size="14" fill="#b91c1c" text-anchor="middle">reject(xato)</text>
+
+  <text x="380" y="360" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Holat bir marta o'zgaradi va qaytmaydi (settled = fulfilled yoki rejected)</text>
+</svg>

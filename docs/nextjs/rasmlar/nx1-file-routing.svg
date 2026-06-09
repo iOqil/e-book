@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 510" width="780" height="510">
+  <title>App Router file-based routing: app/ papkadagi page.tsx fayllar URL route'larga aylanadi</title>
+  <rect x="0" y="0" width="780" height="510" fill="#f8fafc"/>
+
+  <text x="390" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">File-based routing: papka tuzilishi → URL</text>
+
+  <defs>
+    <marker id="rarr" markerWidth="12" markerHeight="12" refX="9" refY="4" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L9,4 L0,8 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- Left: folder tree -->
+  <rect x="30" y="58" width="330" height="404" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="195" y="84" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">app/ papka tuzilishi</text>
+
+  <text x="50" y="118" font-family="monospace" font-size="14" fill="#1e293b">app/</text>
+  <text x="74" y="148" font-family="monospace" font-size="14" fill="#16a34a">├─ page.tsx</text>
+  <text x="74" y="178" font-family="monospace" font-size="14" fill="#1e293b">├─ about/</text>
+  <text x="98" y="208" font-family="monospace" font-size="14" fill="#16a34a">└─ page.tsx</text>
+  <text x="74" y="238" font-family="monospace" font-size="14" fill="#1e293b">├─ blog/</text>
+  <text x="98" y="268" font-family="monospace" font-size="14" fill="#16a34a">├─ page.tsx</text>
+  <text x="98" y="298" font-family="monospace" font-size="14" fill="#1e293b">└─ [slug]/</text>
+  <text x="122" y="328" font-family="monospace" font-size="14" fill="#16a34a">└─ page.tsx</text>
+  <text x="74" y="358" font-family="monospace" font-size="14" fill="#1e293b">└─ dashboard/</text>
+  <text x="98" y="388" font-family="monospace" font-size="14" fill="#1e293b">└─ sozlamalar/</text>
+  <text x="122" y="418" font-family="monospace" font-size="14" fill="#16a34a">└─ page.tsx</text>
+
+  <text x="195" y="448" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">page.tsx (yashil) = URL hosil qiladi</text>
+
+  <!-- Arrows pointing right -->
+  <line x1="364" y1="143" x2="424" y2="118" stroke="#475569" stroke-width="2.5" marker-end="url(#rarr)"/>
+  <line x1="364" y1="203" x2="424" y2="178" stroke="#475569" stroke-width="2.5" marker-end="url(#rarr)"/>
+  <line x1="364" y1="263" x2="424" y2="238" stroke="#475569" stroke-width="2.5" marker-end="url(#rarr)"/>
+  <line x1="364" y1="323" x2="424" y2="298" stroke="#475569" stroke-width="2.5" marker-end="url(#rarr)"/>
+  <line x1="364" y1="413" x2="424" y2="378" stroke="#475569" stroke-width="2.5" marker-end="url(#rarr)"/>
+
+  <!-- Right: URL list -->
+  <rect x="430" y="58" width="320" height="404" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="590" y="84" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">Brauzerdagi URL manzil</text>
+
+  <rect x="448" y="100" width="284" height="38" rx="6" fill="#e2e8f0" stroke="#94a3b8"/>
+  <text x="462" y="124" font-family="monospace" font-size="14" fill="#2563eb">/</text>
+  <text x="488" y="124" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(bosh sahifa)</text>
+
+  <rect x="448" y="160" width="284" height="38" rx="6" fill="#e2e8f0" stroke="#94a3b8"/>
+  <text x="462" y="184" font-family="monospace" font-size="14" fill="#2563eb">/about</text>
+
+  <rect x="448" y="220" width="284" height="38" rx="6" fill="#e2e8f0" stroke="#94a3b8"/>
+  <text x="462" y="244" font-family="monospace" font-size="14" fill="#2563eb">/blog</text>
+
+  <rect x="448" y="280" width="284" height="38" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="462" y="304" font-family="monospace" font-size="14" fill="#2563eb">/blog/salom-dunyo</text>
+
+  <rect x="448" y="360" width="284" height="38" rx="6" fill="#e2e8f0" stroke="#94a3b8"/>
+  <text x="462" y="384" font-family="monospace" font-size="13" fill="#2563eb">/dashboard/sozlamalar</text>
+
+  <text x="590" y="430" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#f59e0b">[slug] = dinamik (har xil qiymat)</text>
+  <text x="590" y="450" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">papka ichida papka = ichma-ich URL</text>
+
+  <text x="390" y="492" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Papka yo'li = URL yo'li. page.tsx qo'shsangiz — sahifa o'zi paydo bo'ladi, sozlash yozmaysiz.</text>
+</svg>

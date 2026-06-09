@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" width="780" height="470">
+  <title>Server Actions va Route Handlers: qaysi birini qachon ishlatish</title>
+  <rect x="0" y="0" width="780" height="470" fill="#f8fafc"/>
+
+  <defs>
+    <marker id="saArrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <text x="390" y="34" font-family="Segoe UI, system-ui, sans-serif" font-size="21" font-weight="bold" fill="#1e293b" text-anchor="middle">Server Action yoki Route Handler — qaysi qachon?</text>
+
+  <!-- Decision diamond -->
+  <polygon points="390,60 530,120 390,180 250,120" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="390" y="112" font-family="Segoe UI, system-ui, sans-serif" font-size="14.5" font-weight="bold" fill="#1e293b" text-anchor="middle">Kim murojaat</text>
+  <text x="390" y="134" font-family="Segoe UI, system-ui, sans-serif" font-size="14.5" font-weight="bold" fill="#1e293b" text-anchor="middle">qiladi?</text>
+
+  <!-- left branch -->
+  <line x1="280" y1="140" x2="200" y2="210" stroke="#475569" stroke-width="2.5" marker-end="url(#saArrow)"/>
+  <text x="200" y="200" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#16a34a" text-anchor="middle">o'z saytim ichidan</text>
+
+  <!-- right branch -->
+  <line x1="500" y1="140" x2="580" y2="210" stroke="#475569" stroke-width="2.5" marker-end="url(#saArrow)"/>
+  <text x="585" y="200" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#2563eb" text-anchor="middle">tashqi dastur</text>
+
+  <!-- Server Action box -->
+  <rect x="40" y="220" width="320" height="210" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="200" y="250" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#16a34a" text-anchor="middle">Server Action</text>
+  <text x="200" y="275" font-family="monospace" font-size="14" fill="#1e293b" text-anchor="middle">"use server"</text>
+  <text x="60" y="305" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">+ Forma yuborish, ma'lumot saqlash</text>
+  <text x="60" y="330" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">+ Ilova ichida ishlatiladi</text>
+  <text x="60" y="355" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">+ HTTP manzili (URL) yo'q</text>
+  <text x="60" y="380" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">+ React komponentidan to'g'ridan</text>
+  <text x="60" y="400" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">  chaqiriladi</text>
+  <text x="200" y="423" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-style="italic" fill="#475569" text-anchor="middle">misol: forma orqali user qo'shish</text>
+
+  <!-- Route Handler box -->
+  <rect x="420" y="220" width="320" height="210" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="580" y="250" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#2563eb" text-anchor="middle">Route Handler</text>
+  <text x="580" y="275" font-family="monospace" font-size="14" fill="#1e293b" text-anchor="middle">route.ts (GET/POST)</text>
+  <text x="440" y="305" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">+ Mobil ilova, webhook, boshqa sayt</text>
+  <text x="440" y="330" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">+ Tashqi dunyoga ochiq</text>
+  <text x="440" y="355" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">+ HTTP manzili bor (/api/...)</text>
+  <text x="440" y="380" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">+ Har qanday HTTP mijoz so'roy oladi</text>
+  <text x="580" y="423" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-style="italic" fill="#475569" text-anchor="middle">misol: /api/users JSON beradi</text>
+</svg>

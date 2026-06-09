@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" width="800" height="560">
+  <title>Next.js 16 App Router render oqimi: Server Components, caching qatlamlari va PPR</title>
+  <rect x="0" y="0" width="800" height="560" fill="#f8fafc"/>
+
+  <text x="400" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Next.js 16: so'rov serverda qanday tayyorlanadi</text>
+
+  <defs>
+    <marker id="darr" markerWidth="12" markerHeight="12" refX="9" refY="4" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L9,4 L0,8 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- Step 1: browser request -->
+  <rect x="40" y="64" width="180" height="74" rx="9" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="130" y="96" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">1. Brauzer so'rovi</text>
+  <text x="130" y="120" text-anchor="middle" font-family="monospace" font-size="13" fill="#2563eb">GET /blog/salom</text>
+
+  <line x1="222" y1="101" x2="278" y2="101" stroke="#475569" stroke-width="2.5" marker-end="url(#darr)"/>
+
+  <!-- Step 2: server / RSC -->
+  <rect x="280" y="64" width="200" height="74" rx="9" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="380" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">2. Server Components</text>
+  <text x="380" y="114" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">serverda render bo'ladi</text>
+  <text x="380" y="132" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(RSC — standart holat)</text>
+
+  <line x1="482" y1="101" x2="538" y2="101" stroke="#475569" stroke-width="2.5" marker-end="url(#darr)"/>
+
+  <!-- Step 3: HTML+RSC payload -->
+  <rect x="540" y="64" width="220" height="74" rx="9" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="650" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">3. Brauzerga javob</text>
+  <text x="650" y="114" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">tayyor HTML (SEO zo'r)</text>
+  <text x="650" y="132" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">+ keyin interaktiv bo'ladi</text>
+
+  <!-- Caching layers box -->
+  <rect x="40" y="170" width="720" height="184" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="400" y="196" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">Server render paytida ishlaydigan caching qatlamlari</text>
+
+  <rect x="62" y="214" width="216" height="120" rx="8" fill="#f8fafc" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="170" y="240" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">Data Cache</text>
+  <text x="170" y="266" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">fetch / "use cache"</text>
+  <text x="170" y="288" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">natijalarini saqlaydi</text>
+  <text x="170" y="314" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">qayta hisoblamaslik uchun</text>
+
+  <rect x="292" y="214" width="216" height="120" rx="8" fill="#f8fafc" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="400" y="240" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#f59e0b">Full Route Cache</text>
+  <text x="400" y="266" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">statik sahifa natijasini</text>
+  <text x="400" y="288" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">oldindan saqlaydi</text>
+  <text x="400" y="314" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tez qaytarish uchun</text>
+
+  <rect x="522" y="214" width="216" height="120" rx="8" fill="#f8fafc" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="630" y="240" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">Client Router Cache</text>
+  <text x="630" y="266" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">brauzerda ko'rilgan</text>
+  <text x="630" y="288" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">sahifalarni saqlaydi</text>
+  <text x="630" y="314" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Link bilan tez o'tish</text>
+
+  <!-- PPR box -->
+  <rect x="40" y="372" width="720" height="120" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="400" y="398" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">PPR — Partial Prerendering (qisman oldindan render)</text>
+
+  <rect x="64" y="414" width="320" height="60" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="224" y="438" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">Statik qobiq (darrov)</text>
+  <text x="224" y="460" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">menyu, sarlavha — oldindan tayyor</text>
+
+  <rect x="416" y="414" width="320" height="60" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="576" y="438" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#f59e0b">Dinamik qism (Suspense)</text>
+  <text x="576" y="460" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">shaxsiy ma'lumot — keyin oqib keladi</text>
+
+  <text x="400" y="524" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Standart holat — server (RSC). Caching qayta ishni kamaytiradi, PPR esa statik va dinamikni</text>
+  <text x="400" y="546" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">bitta sahifada birlashtiradi — tez ham, yangi ham. Batafsil 2-qismda.</text>
+</svg>

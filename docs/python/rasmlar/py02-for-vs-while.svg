@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 520" width="780" height="520">
+  <title>for va while sikllari: for ketma-ketlik bo'ylab yuradi, while shart True turguncha takrorlaydi</title>
+  <defs>
+    <marker id="fw-arrow" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="780" height="520" fill="#f8fafc"/>
+  <text x="390" y="38" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1e293b">for va while - sikl oqimi</text>
+  <text x="390" y="62" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">for: necha marta ekani ma'lum | while: qachongacha ekani noma'lum</text>
+
+  <!-- FOR ustun -->
+  <text x="195" y="100" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#2563eb">for - ketma-ketlik bo'ylab</text>
+  <text x="195" y="124" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="14" fill="#475569">for i in range(3):</text>
+
+  <!-- elementlar zanjiri -->
+  <rect x="60" y="150" width="70" height="44" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="95" y="178" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="15" fill="#1e293b">0</text>
+  <rect x="160" y="150" width="70" height="44" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="195" y="178" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="15" fill="#1e293b">1</text>
+  <rect x="260" y="150" width="70" height="44" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="295" y="178" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="15" fill="#1e293b">2</text>
+  <line x1="130" y1="172" x2="158" y2="172" stroke="#475569" stroke-width="2.5" marker-end="url(#fw-arrow)"/>
+  <line x1="230" y1="172" x2="258" y2="172" stroke="#475569" stroke-width="2.5" marker-end="url(#fw-arrow)"/>
+
+  <!-- har element -> blok -->
+  <line x1="195" y1="194" x2="195" y2="232" stroke="#475569" stroke-width="2.5" marker-end="url(#fw-arrow)"/>
+  <text x="290" y="220" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">har element uchun</text>
+  <rect x="95" y="232" width="200" height="50" rx="10" fill="#f8fafc" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="195" y="263" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="14" fill="#1e293b">print(i)  # blok</text>
+
+  <!-- tugadi -->
+  <line x1="195" y1="282" x2="195" y2="320" stroke="#475569" stroke-width="2.5" marker-end="url(#fw-arrow)"/>
+  <text x="195" y="308" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">elementlar tugadi</text>
+  <rect x="120" y="320" width="150" height="44" rx="10" fill="#e2e8f0" stroke="#16a34a" stroke-width="2"/>
+  <text x="195" y="348" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#16a34a">sikldan chiqadi</text>
+
+  <!-- ajratuvchi chiziq -->
+  <line x1="390" y1="90" x2="390" y2="430" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="6 5"/>
+
+  <!-- WHILE ustun -->
+  <text x="585" y="100" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#f59e0b">while - shart bilan</text>
+  <text x="585" y="124" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="14" fill="#475569">while son &lt;= 5:</text>
+
+  <!-- shart romb -->
+  <polygon points="585,150 685,185 585,220 485,185" fill="#e2e8f0" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="585" y="182" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="14" fill="#1e293b">shart True ?</text>
+  <text x="585" y="200" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tekshir</text>
+
+  <!-- True -> blok -->
+  <line x1="585" y1="220" x2="585" y2="252" stroke="#475569" stroke-width="2.5" marker-end="url(#fw-arrow)"/>
+  <text x="603" y="240" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">True</text>
+  <rect x="475" y="252" width="220" height="60" rx="10" fill="#f8fafc" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="585" y="277" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="14" fill="#1e293b">print(son)</text>
+  <text x="585" y="299" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="14" fill="#dc2626">son = son + 1</text>
+
+  <!-- qayta shartga (loop) -->
+  <path d="M695,282 L740,282 L740,185 L687,185" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#fw-arrow)"/>
+  <text x="742" y="238" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" transform="rotate(90 742 238)">qayta tekshir</text>
+
+  <!-- False -> chiqish -->
+  <line x1="485" y1="185" x2="430" y2="185" stroke="#475569" stroke-width="2.5" marker-end="url(#fw-arrow)"/>
+  <text x="455" y="174" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">False</text>
+  <line x1="585" y1="312" x2="585" y2="356" stroke="#475569" stroke-width="2.5" marker-end="url(#fw-arrow)"/>
+  <rect x="510" y="356" width="150" height="44" rx="10" fill="#e2e8f0" stroke="#16a34a" stroke-width="2"/>
+  <text x="585" y="384" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#16a34a">sikldan chiqadi</text>
+
+  <text x="390" y="455" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#dc2626">while'da shartni o'zgartirmasang (son = son + 1) sikl cheksiz bo'ladi.</text>
+  <text x="390" y="482" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">for ketma-ketlik tugaganda o'zi to'xtaydi; while shart False bo'lganda to'xtaydi.</text>
+</svg>

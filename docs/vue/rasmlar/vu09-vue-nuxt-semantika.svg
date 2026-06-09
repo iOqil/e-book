@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560" width="880" height="560">
+  <title>Vue 3 / Nuxt semantikasi: Proxy reaktivlik, bir tomonlama props/emits, SSR va hydration</title>
+  <defs>
+    <marker id="a1" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 z" fill="#475569"/>
+    </marker>
+    <marker id="a2" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 z" fill="#2563eb"/>
+    </marker>
+    <marker id="a3" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="880" height="560" fill="#f8fafc"/>
+  <text x="440" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Diagramma ostidagi haqiqat: Vue 3 / Nuxt semantikasi</text>
+
+  <!-- ===== A. Proxy reaktivlik ===== -->
+  <rect x="24" y="56" width="404" height="214" rx="10" fill="#e2e8f0" stroke="#94a3b8"/>
+  <text x="44" y="82" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">A. Reaktivlik = Proxy</text>
+  <text x="44" y="104" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">reactive() / ref() obyektni Proxy bilan o'raydi</text>
+
+  <rect x="44" y="118" width="150" height="50" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="119" y="138" text-anchor="middle" font-family="monospace" font-size="13" fill="#1e293b">app.config ui</text>
+  <text x="119" y="156" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">xom obyekt</text>
+
+  <line x1="194" y1="143" x2="248" y2="143" stroke="#2563eb" stroke-width="2" marker-end="url(#a2)"/>
+  <text x="221" y="135" text-anchor="middle" font-family="monospace" font-size="13" fill="#2563eb">Proxy</text>
+
+  <rect x="250" y="118" width="158" height="50" rx="6" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="329" y="138" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#2563eb">get / set ushlanadi</text>
+  <text x="329" y="156" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">track / trigger</text>
+
+  <text x="44" y="194" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">get  →  bog'liqlik kuzatiladi (track)</text>
+  <text x="44" y="214" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">set  →  faqat bog'liq effekt qayta ishlaydi</text>
+  <text x="44" y="240" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">Shu sabab tema runtime'da o'zgaradi:</text>
+  <text x="44" y="258" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">ui.colors.primary o'zgarsa — UI qayta render.</text>
+
+  <!-- ===== B. props down / emit up ===== -->
+  <rect x="452" y="56" width="404" height="214" rx="10" fill="#e2e8f0" stroke="#94a3b8"/>
+  <text x="472" y="82" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#f59e0b">B. Bir tomonlama oqim</text>
+
+  <rect x="592" y="98" width="124" height="44" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="654" y="118" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">Ota komponent</text>
+  <text x="654" y="135" text-anchor="middle" font-family="monospace" font-size="13" fill="#475569">&lt;UButton&gt;</text>
+
+  <rect x="592" y="200" width="124" height="44" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="654" y="220" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">Bola komponent</text>
+  <text x="654" y="237" text-anchor="middle" font-family="monospace" font-size="13" fill="#475569">ichki Reka UI</text>
+
+  <line x1="610" y1="142" x2="610" y2="200" stroke="#2563eb" stroke-width="2" marker-end="url(#a2)"/>
+  <text x="540" y="166" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#2563eb">props pastga</text>
+  <text x="540" y="183" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">color, variant, size</text>
+
+  <line x1="698" y1="200" x2="698" y2="142" stroke="#f59e0b" stroke-width="2" marker-end="url(#a3)"/>
+  <text x="724" y="166" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#b45309">emit yuqoriga</text>
+  <text x="724" y="183" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">@click</text>
+
+  <text x="472" y="260" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">Bola prop'ni o'zgartira olmaydi — faqat emit qiladi.</text>
+
+  <!-- ===== C. SSR -> hydration ===== -->
+  <rect x="24" y="288" width="832" height="248" rx="10" fill="#e2e8f0" stroke="#94a3b8"/>
+  <text x="44" y="314" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">C. Nuxt SSR  →  Hydration</text>
+
+  <!-- server -->
+  <rect x="44" y="330" width="240" height="180" rx="8" fill="#f8fafc" stroke="#16a34a"/>
+  <text x="164" y="354" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">1. Server (Nitro)</text>
+  <text x="164" y="378" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Vue komponent ishlaydi</text>
+  <text x="164" y="398" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">tayyor HTML matni</text>
+  <rect x="74" y="414" width="180" height="80" rx="6" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="164" y="438" text-anchor="middle" font-family="monospace" font-size="13" fill="#166534">&lt;button class=...&gt;</text>
+  <text x="164" y="458" text-anchor="middle" font-family="monospace" font-size="13" fill="#166534">  Saqlash</text>
+  <text x="164" y="478" text-anchor="middle" font-family="monospace" font-size="13" fill="#166534">&lt;/button&gt;</text>
+
+  <line x1="284" y1="420" x2="338" y2="420" stroke="#475569" stroke-width="2" marker-end="url(#a1)"/>
+  <text x="311" y="412" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">HTML</text>
+
+  <!-- browser static -->
+  <rect x="340" y="330" width="240" height="180" rx="8" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="460" y="354" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">2. Brauzer: tez ko'rinish</text>
+  <text x="460" y="378" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">foydalanuvchi darhol ko'radi</text>
+  <text x="460" y="398" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">lekin hali "jonsiz"</text>
+  <rect x="370" y="414" width="180" height="80" rx="6" fill="#fef9c3" stroke="#f59e0b"/>
+  <text x="460" y="448" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#92400e">statik HTML</text>
+  <text x="460" y="468" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#92400e">@click ishlamaydi</text>
+
+  <line x1="580" y1="420" x2="634" y2="420" stroke="#2563eb" stroke-width="2" marker-end="url(#a2)"/>
+  <text x="607" y="412" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">JS</text>
+
+  <!-- browser hydrated -->
+  <rect x="636" y="330" width="200" height="180" rx="8" fill="#f8fafc" stroke="#2563eb"/>
+  <text x="736" y="354" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">3. Hydration</text>
+  <text x="736" y="378" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Vue mavjud HTML'ni</text>
+  <text x="736" y="396" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">qayta yaratmaydi —</text>
+  <text x="736" y="414" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">unga hodisa ulaydi</text>
+  <rect x="666" y="430" width="140" height="64" rx="6" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="736" y="458" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e40af">endi interaktiv</text>
+  <text x="736" y="478" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e40af">@click ishlaydi</text>
+
+  <text x="44" y="530" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">Diqqat: server va brauzer HTML'i AYNAN bir xil bo'lishi kerak — aks holda hydration mismatch.</text>
+</svg>

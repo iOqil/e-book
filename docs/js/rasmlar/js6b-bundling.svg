@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400">
+  <title>Modul bundling: ko'p modul -&gt; bundler -&gt; bitta optimallashtirilgan bundle</title>
+
+  <defs>
+    <marker id="bndArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="760" height="400" fill="#f8fafc"/>
+
+  <!-- Sarlavha -->
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Bundling: ko'p faylni bitta faylga yig'ish</text>
+  <text x="380" y="56" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Brauzerga 30 ta so'rov o'rniga 1 ta -- tezroq yuklanish</text>
+
+  <!-- Chap: ko'p modul -->
+  <text x="120" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Manba modullar</text>
+
+  <rect x="40" y="106" width="160" height="40" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="120" y="131" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">main.js</text>
+
+  <rect x="40" y="156" width="160" height="40" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="120" y="181" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">utils.js</text>
+
+  <rect x="40" y="206" width="160" height="40" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="120" y="231" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">store.js</text>
+
+  <rect x="40" y="256" width="160" height="40" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="120" y="281" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">vue (node_modules)</text>
+
+  <!-- Strelkalar bundlerga -->
+  <line x1="200" y1="126" x2="296" y2="180" stroke="#475569" stroke-width="2" marker-end="url(#bndArrow)"/>
+  <line x1="200" y1="176" x2="296" y2="190" stroke="#475569" stroke-width="2" marker-end="url(#bndArrow)"/>
+  <line x1="200" y1="226" x2="296" y2="210" stroke="#475569" stroke-width="2" marker-end="url(#bndArrow)"/>
+  <line x1="200" y1="276" x2="296" y2="220" stroke="#475569" stroke-width="2" marker-end="url(#bndArrow)"/>
+
+  <!-- Markaz: bundler -->
+  <rect x="298" y="150" width="164" height="100" rx="10" fill="#2563eb" fill-opacity="0.12" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="380" y="180" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">Bundler</text>
+  <text x="380" y="202" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Vite / Webpack</text>
+  <text x="380" y="224" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">yig'adi, optimallaydi</text>
+
+  <line x1="462" y1="200" x2="556" y2="200" stroke="#475569" stroke-width="2.5" marker-end="url(#bndArrow)"/>
+
+  <!-- O'ng: bitta bundle -->
+  <rect x="558" y="160" width="170" height="80" rx="10" fill="#16a34a" fill-opacity="0.12" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="643" y="190" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Bitta bundle</text>
+  <text x="643" y="214" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#475569">dist/bundle.js</text>
+
+  <!-- Bundler ichidagi bosqichlar (izoh) -->
+  <rect x="40" y="320" width="688" height="60" rx="9" fill="#f59e0b" fill-opacity="0.10" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="384" y="343" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#b45309">Bundler ichida bo'ladigan ishlar:</text>
+  <text x="384" y="365" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tree-shaking (keraksiz kodni olib tashlash) + minification (kichraytirish) + transpilation</text>
+</svg>

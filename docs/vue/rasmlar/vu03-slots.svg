@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420">
+  <title>Slots: ota markup'i bola template'idagi slot teshigiga uzatiladi</title>
+
+  <defs>
+    <marker id="vu03sArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Slots -- kontent (markup) uzatish</text>
+  <text x="380" y="56" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Props data uzatadi; slot esa HTML/markup uzatadi -- ota'dan bola template'iga</text>
+
+  <!-- Ota: bergan markup -->
+  <rect x="40" y="86" width="290" height="160" rx="10" fill="#2563eb" fill-opacity="0.10" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="185" y="112" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">Ota -- markup beradi</text>
+  <text x="60" y="142" font-family="Consolas, monospace" font-size="13" fill="#1e293b">&lt;Card&gt;</text>
+  <rect x="74" y="152" width="226" height="60" rx="6" fill="#f59e0b" fill-opacity="0.18" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="84" y="174" font-family="Consolas, monospace" font-size="13" fill="#b45309">&lt;h2&gt;Sarlavha&lt;/h2&gt;</text>
+  <text x="84" y="196" font-family="Consolas, monospace" font-size="13" fill="#b45309">&lt;p&gt;Istalgan kontent&lt;/p&gt;</text>
+  <text x="60" y="232" font-family="Consolas, monospace" font-size="13" fill="#1e293b">&lt;/Card&gt;</text>
+
+  <!-- Bola: slot teshigi -->
+  <rect x="430" y="86" width="290" height="160" rx="10" fill="#16a34a" fill-opacity="0.10" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="575" y="112" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Bola (Card) template</text>
+  <text x="450" y="142" font-family="Consolas, monospace" font-size="13" fill="#1e293b">&lt;div class="card"&gt;</text>
+  <rect x="464" y="152" width="226" height="60" rx="6" fill="#16a34a" fill-opacity="0.16" stroke="#16a34a" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="577" y="178" text-anchor="middle" font-family="Consolas, monospace" font-size="14" font-weight="bold" fill="#16a34a">&lt;slot /&gt;</text>
+  <text x="577" y="200" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">kontent shu yerga joylashadi</text>
+  <text x="450" y="232" font-family="Consolas, monospace" font-size="13" fill="#1e293b">&lt;/div&gt;</text>
+
+  <!-- strelka ota markupdan slotga -->
+  <line x1="300" y1="182" x2="462" y2="182" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#vu03sArrow)"/>
+  <text x="381" y="172" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#b45309">uzatiladi</text>
+
+  <!-- Pastki izoh: scoped slot -->
+  <rect x="40" y="272" width="680" height="124" rx="9" fill="#2563eb" fill-opacity="0.08" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="380" y="298" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Scoped slot -- bola slot orqali data'ni tashqariga "ochib" beradi</text>
+  <text x="380" y="324" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">Bola: &lt;slot :item="item" /&gt;   -->   Ota: &lt;template #default="{ item }"&gt;</text>
+  <text x="380" y="350" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Bola elementni beradi, ota uni qanday ko'rsatishni O'ZI hal qiladi (render'ni topshiradi).</text>
+  <text x="380" y="376" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Turlari: default slot · named slot (#header) · scoped slot (data bilan).</text>
+</svg>

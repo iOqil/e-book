@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" width="760" height="360">
+  <title>clamp funksiyasi: minimum, afzal va maksimum qiymat orasida silliq o'sish</title>
+  <rect x="0" y="0" width="760" height="360" fill="#f8fafc"/>
+
+  <text x="380" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">clamp(MIN, AFZAL, MAX) qanday ishlaydi</text>
+
+  <text x="380" y="60" text-anchor="middle" font-family="Consolas, monospace" font-size="14" fill="#2563eb">font-size: clamp(1rem, 2.5vw, 2rem)</text>
+
+  <!-- O'qlar -->
+  <line x1="90" y1="280" x2="700" y2="280" stroke="#475569" stroke-width="2"/>
+  <polygon points="700,280 690,275 690,285" fill="#475569"/>
+  <text x="700" y="304" text-anchor="end" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">ekran eni →</text>
+
+  <line x1="90" y1="280" x2="90" y2="90" stroke="#475569" stroke-width="2"/>
+  <polygon points="90,90 85,100 95,100" fill="#475569"/>
+  <text x="80" y="100" text-anchor="end" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">o'lcham</text>
+
+  <!-- MIN tekislik -->
+  <line x1="90" y1="240" x2="250" y2="240" stroke="#16a34a" stroke-width="3"/>
+  <text x="170" y="232" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">MIN = 1rem</text>
+  <text x="170" y="262" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">kichik ekran: pol</text>
+
+  <!-- AFZAL qiya chiziq -->
+  <line x1="250" y1="240" x2="510" y2="140" stroke="#2563eb" stroke-width="3"/>
+  <text x="380" y="178" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#2563eb" transform="rotate(-21 380 178)">AFZAL = 2.5vw (o'sadi)</text>
+
+  <!-- MAX tekislik -->
+  <line x1="510" y1="140" x2="680" y2="140" stroke="#dc2626" stroke-width="3"/>
+  <text x="595" y="132" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626">MAX = 2rem</text>
+  <text x="595" y="162" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">katta ekran: shift</text>
+
+  <!-- Burilish nuqtalari -->
+  <circle cx="250" cy="240" r="5" fill="#1e293b"/>
+  <circle cx="510" cy="140" r="5" fill="#1e293b"/>
+  <line x1="250" y1="240" x2="250" y2="288" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="510" y1="140" x2="510" y2="288" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3 3"/>
+
+  <text x="380" y="330" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Matn na juda kichik, na juda katta — orada silliq o'zgaradi. Media query'siz!</text>
+</svg>

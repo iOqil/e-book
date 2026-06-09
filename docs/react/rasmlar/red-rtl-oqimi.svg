@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 320" width="820" height="320">
+  <title>React Testing Library oqimi: render, query, interact, assert</title>
+  <defs>
+    <marker id="rd1-blue" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="820" height="320" fill="#f8fafc"/>
+  <text x="410" y="32" font-family="Segoe UI, system-ui, sans-serif" font-size="19" font-weight="bold" fill="#1e293b" text-anchor="middle">RTL oqimi — foydalanuvchi kabi test qilish</text>
+
+  <!-- step 1: render -->
+  <rect x="24" y="74" width="180" height="120" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="114" y="102" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb" text-anchor="middle">1. render</text>
+  <text x="114" y="126" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">render(&lt;Comp /&gt;)</text>
+  <text x="114" y="150" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">komponentni</text>
+  <text x="114" y="168" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">virtual DOM'ga chizadi</text>
+
+  <!-- step 2: query -->
+  <rect x="234" y="74" width="180" height="120" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="324" y="102" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">2. query</text>
+  <text x="324" y="126" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">screen.getByRole</text>
+  <text x="324" y="150" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">elementni topadi</text>
+  <text x="324" y="168" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">(rol/matn bo'yicha)</text>
+
+  <!-- step 3: interact -->
+  <rect x="444" y="74" width="180" height="120" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="534" y="102" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#f59e0b" text-anchor="middle">3. interact</text>
+  <text x="534" y="126" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">userEvent.click</text>
+  <text x="534" y="150" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">bosadi / yozadi</text>
+  <text x="534" y="168" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">(har doim await)</text>
+
+  <!-- step 4: assert -->
+  <rect x="654" y="74" width="180" height="120" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="744" y="102" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="middle">4. assert</text>
+  <text x="744" y="126" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">expect(...)</text>
+  <text x="744" y="150" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">natijani tekshiradi</text>
+  <text x="744" y="168" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">ekranda nima ko'rinadi</text>
+
+  <!-- arrows (x of right edge: 204, 414, 624) -->
+  <path d="M204 134 L232 134" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#rd1-blue)"/>
+  <path d="M414 134 L442 134" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#rd1-blue)"/>
+  <path d="M624 134 L652 134" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#rd1-blue)"/>
+
+  <!-- note -->
+  <rect x="24" y="222" width="810" height="74" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="44" y="248" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">Asosiy g'oya:</text>
+  <text x="150" y="248" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">state yoki ichki funksiyani emas, foydalanuvchi ko'rgan va bosgan narsani test qiling.</text>
+  <text x="44" y="276" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Async bo'lsa (ma'lumot keyin keladi): query'da getBy o'rniga findBy ishlating — u element paydo bo'lguncha kutadi.</text>
+</svg>

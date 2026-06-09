@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 560" width="760" height="560">
+  <title>position qiymatlarining besh turi: static, relative, absolute, fixed va sticky sahifada qanday joylashishi</title>
+  <rect x="0" y="0" width="760" height="560" fill="#f8fafc"/>
+
+  <!-- Sarlavha -->
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">position'ning besh turi: element qayerga joylashadi?</text>
+
+  <!-- STATIC -->
+  <rect x="30" y="60" width="210" height="150" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="135" y="84" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">static (default)</text>
+  <rect x="50" y="98" width="170" height="26" rx="4" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <rect x="50" y="130" width="170" height="26" rx="4" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <rect x="50" y="162" width="170" height="26" rx="4" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="135" y="148" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">normal oqimda, tartib bilan</text>
+  <text x="135" y="204" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">top/left ta'sir qilmaydi</text>
+
+  <!-- RELATIVE -->
+  <rect x="270" y="60" width="210" height="150" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="375" y="84" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">relative</text>
+  <rect x="290" y="98" width="170" height="26" rx="4" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <!-- bo'sh joy (asl o'rin) -->
+  <rect x="290" y="130" width="170" height="26" rx="4" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="375" y="147" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">asl joyi (saqlanadi)</text>
+  <rect x="290" y="162" width="170" height="26" rx="4" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <!-- siljigan element -->
+  <rect x="318" y="118" width="170" height="26" rx="4" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="403" y="135" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">siljidi</text>
+  <path d="M 375 143 L 403 131" stroke="#16a34a" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <text x="375" y="204" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">o'zidan siljiydi, joyi qoladi</text>
+
+  <!-- ABSOLUTE -->
+  <rect x="510" y="60" width="220" height="150" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="620" y="84" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">absolute</text>
+  <!-- positioned ota -->
+  <rect x="530" y="98" width="180" height="90" rx="5" fill="#fff7ed" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="538" y="113" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309">positioned ota</text>
+  <rect x="640" y="150" width="62" height="30" rx="4" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="671" y="169" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">absolute</text>
+  <text x="620" y="204" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">oqimdan chiqadi, otaga nisbatan</text>
+
+  <!-- FIXED -->
+  <rect x="30" y="240" width="340" height="290" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="200" y="264" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#7c3aed">fixed</text>
+  <!-- viewport ramkasi -->
+  <rect x="50" y="278" width="300" height="200" rx="6" fill="#ffffff" stroke="#475569" stroke-width="2"/>
+  <text x="200" y="296" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">viewport (ekran oynasi)</text>
+  <!-- fixed banner top -->
+  <rect x="50" y="306" width="300" height="30" rx="0" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="200" y="325" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#7c3aed">fixed header (doim tepada)</text>
+  <!-- skroll mazmuni -->
+  <rect x="68" y="350" width="264" height="18" rx="3" fill="#e2e8f0"/>
+  <rect x="68" y="376" width="264" height="18" rx="3" fill="#e2e8f0"/>
+  <rect x="68" y="402" width="264" height="18" rx="3" fill="#e2e8f0"/>
+  <rect x="68" y="428" width="264" height="18" rx="3" fill="#e2e8f0"/>
+  <text x="200" y="466" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">skroll qilsang ham qotib turadi</text>
+  <text x="200" y="510" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">viewport'ga nisbatan, skroll bilan qimirlamaydi</text>
+
+  <!-- STICKY -->
+  <rect x="390" y="240" width="340" height="290" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="560" y="264" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#f59e0b">sticky</text>
+  <rect x="410" y="278" width="300" height="200" rx="6" fill="#ffffff" stroke="#475569" stroke-width="2"/>
+  <text x="560" y="296" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">viewport (skroll paytida)</text>
+  <!-- sticky element top'ga yopishgan -->
+  <rect x="410" y="306" width="300" height="28" rx="0" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="560" y="324" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309">sticky sarlavha (tepaga yopishdi)</text>
+  <rect x="428" y="348" width="264" height="18" rx="3" fill="#e2e8f0"/>
+  <rect x="428" y="374" width="264" height="18" rx="3" fill="#e2e8f0"/>
+  <rect x="428" y="400" width="264" height="18" rx="3" fill="#e2e8f0"/>
+  <rect x="428" y="426" width="264" height="18" rx="3" fill="#e2e8f0"/>
+  <text x="560" y="466" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">chegaraga yetguncha oddiy, keyin yopishadi</text>
+  <text x="560" y="510" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">relative + fixed aralashmasi (skroll bilan)</text>
+</svg>

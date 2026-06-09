@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420">
+  <title>ESM va CommonJS taqqoslash: sintaksis, muhit va tree-shaking farqi</title>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+
+  <!-- Sarlavha -->
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">ESM vs CommonJS: ikki modul tizimi</text>
+  <text x="380" y="56" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Yangi loyihada ESM ishlat -- brauzerda native, tree-shaking qo'llab-quvvatlaydi</text>
+
+  <!-- Chap ustun: ESM -->
+  <rect x="36" y="78" width="340" height="280" rx="12" fill="#2563eb" fill-opacity="0.08" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="206" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#2563eb">ESM (zamonaviy)</text>
+
+  <rect x="56" y="124" width="300" height="62" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="72" y="148" font-family="Consolas, monospace" font-size="13" fill="#1e293b">import { qoshish } from "./mat.js";</text>
+  <text x="72" y="172" font-family="Consolas, monospace" font-size="13" fill="#1e293b">export const x = 1;</text>
+
+  <circle cx="68" cy="212" r="4" fill="#16a34a"/>
+  <text x="84" y="217" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Brauzer + Node, ikkalasida ishlaydi</text>
+
+  <circle cx="68" cy="244" r="4" fill="#16a34a"/>
+  <text x="84" y="249" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Statik: import/export tepada turadi</text>
+
+  <circle cx="68" cy="276" r="4" fill="#16a34a"/>
+  <text x="84" y="281" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Tree-shaking yaxshi ishlaydi</text>
+
+  <circle cx="68" cy="308" r="4" fill="#16a34a"/>
+  <text x="84" y="313" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Zamonaviy standart</text>
+
+  <text x="206" y="344" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">Tavsiya etiladi</text>
+
+  <!-- O'ng ustun: CommonJS -->
+  <rect x="392" y="78" width="332" height="280" rx="12" fill="#f59e0b" fill-opacity="0.08" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="558" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#b45309">CommonJS (eski Node)</text>
+
+  <rect x="412" y="124" width="292" height="62" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="428" y="148" font-family="Consolas, monospace" font-size="13" fill="#1e293b">const { qoshish } =</text>
+  <text x="428" y="166" font-family="Consolas, monospace" font-size="13" fill="#1e293b">  require("./mat.js");</text>
+
+  <circle cx="424" cy="212" r="4" fill="#475569"/>
+  <text x="440" y="217" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Asosan Node muhitida</text>
+
+  <circle cx="424" cy="244" r="4" fill="#475569"/>
+  <text x="440" y="249" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Dinamik: require() istalgan joyda</text>
+
+  <circle cx="424" cy="276" r="4" fill="#dc2626"/>
+  <text x="440" y="281" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Tree-shaking qiyinroq</text>
+
+  <circle cx="424" cy="308" r="4" fill="#475569"/>
+  <text x="440" y="313" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Eski kodda hali ko'p uchraydi</text>
+
+  <text x="558" y="344" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#b45309">Meros (legacy) kod</text>
+
+  <!-- Pastki izoh -->
+  <text x="380" y="392" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">module.exports = {...} (CommonJS)  vs  export default {...} (ESM)</text>
+</svg>

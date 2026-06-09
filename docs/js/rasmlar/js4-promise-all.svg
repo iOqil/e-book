@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" width="800" height="440">
+  <title>Promise.all — bir nechta promise ni parallel kutish</title>
+  <defs>
+    <marker id="aB" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L9 5 L0 10 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="800" height="440" fill="#f8fafc"/>
+  <text x="400" y="34" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1e293b" text-anchor="middle">Promise.all — parallel kutish</text>
+  <text x="400" y="58" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569" text-anchor="middle">Hammasi bir vaqtda boshlanadi — faqat eng uzunini kutasan</text>
+
+  <!-- start point -->
+  <circle cx="70" cy="200" r="10" fill="#2563eb"/>
+  <text x="70" y="240" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">boshlanish</text>
+
+  <!-- time axis -->
+  <line x1="120" y1="370" x2="700" y2="370" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="120" y="392" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">0s</text>
+  <text x="320" y="392" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">1s</text>
+  <text x="610" y="392" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">2s</text>
+  <text x="700" y="392" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">vaqt →</text>
+
+  <!-- three parallel bars -->
+  <rect x="120" y="100" width="200" height="34" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="220" y="122" font-family="monospace" font-size="14" fill="#1e3a8a" text-anchor="middle">soxtaApi("A", 1000)</text>
+
+  <rect x="120" y="150" width="490" height="34" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="365" y="172" font-family="monospace" font-size="14" fill="#92400e" text-anchor="middle">soxtaApi("B", 2000)  ← eng uzuni</text>
+
+  <rect x="120" y="200" width="345" height="34" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="290" y="222" font-family="monospace" font-size="14" fill="#1e3a8a" text-anchor="middle">soxtaApi("C", 1500)</text>
+
+  <!-- start lines -->
+  <path d="M78 196 C 100 150, 100 120, 118 117" fill="none" stroke="#2563eb" stroke-width="2" marker-end="url(#aB)"/>
+  <path d="M80 200 L118 167" fill="none" stroke="#2563eb" stroke-width="2" marker-end="url(#aB)"/>
+  <path d="M78 204 C 100 250, 100 220, 118 217" fill="none" stroke="#2563eb" stroke-width="2" marker-end="url(#aB)"/>
+
+  <!-- finish line at 2s -->
+  <line x1="610" y1="90" x2="610" y2="375" stroke="#16a34a" stroke-width="2" stroke-dasharray="6,4"/>
+  <circle cx="610" cy="167" r="9" fill="#16a34a"/>
+  <text x="640" y="120" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">hammasi tayyor</text>
+  <text x="640" y="140" font-family="monospace" font-size="13" fill="#15803d">.then(natijalar)</text>
+  <text x="640" y="160" font-family="monospace" font-size="13" fill="#15803d">["A","B","C"]</text>
+
+  <!-- comparison note -->
+  <rect x="120" y="262" width="560" height="44" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="400" y="289" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#15803d" text-anchor="middle">Jami ~2 soniya (eng uzuni), 4.5 emas! Ketma-ket kutish sekin bo'lardi.</text>
+</svg>

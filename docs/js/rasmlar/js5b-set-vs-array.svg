@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" width="720" height="360">
+  <title>Set (unikal qiymatlar) va Array (takror bo'lishi mumkin) farqi</title>
+
+  <defs>
+    <marker id="okSVA" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- Sarlavha -->
+  <text x="360" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Set vs Array — takror bormi?</text>
+  <text x="360" y="54" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Array dublikatni saqlaydi, Set esa har qiymatni faqat BIR marta saqlaydi</text>
+
+  <!-- Array (chap) -->
+  <rect x="40" y="78" width="290" height="200" rx="12" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="185" y="104" text-anchor="middle" font-family="Consolas, monospace" font-size="15" font-weight="bold" fill="#1e293b">Array [1, 2, 2, 3, 3, 3]</text>
+  <text x="185" y="124" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tartiblangan, indeksli, takror MUMKIN</text>
+
+  <!-- Array katakchalar -->
+  <g font-family="Consolas, monospace" font-size="15" font-weight="bold">
+    <rect x="58" y="146" width="40" height="40" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="78" y="172" text-anchor="middle" fill="#1e293b">1</text>
+    <rect x="102" y="146" width="40" height="40" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="122" y="172" text-anchor="middle" fill="#1e293b">2</text>
+    <rect x="146" y="146" width="40" height="40" rx="6" fill="#fde7e7" stroke="#dc2626" stroke-width="1.5"/>
+    <text x="166" y="172" text-anchor="middle" fill="#dc2626">2</text>
+    <rect x="190" y="146" width="40" height="40" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="210" y="172" text-anchor="middle" fill="#1e293b">3</text>
+    <rect x="234" y="146" width="40" height="40" rx="6" fill="#fde7e7" stroke="#dc2626" stroke-width="1.5"/>
+    <text x="254" y="172" text-anchor="middle" fill="#dc2626">3</text>
+    <rect x="278" y="146" width="40" height="40" rx="6" fill="#fde7e7" stroke="#dc2626" stroke-width="1.5"/>
+    <text x="298" y="172" text-anchor="middle" fill="#dc2626">3</text>
+  </g>
+  <!-- indekslar -->
+  <g font-family="Consolas, monospace" font-size="13" fill="#475569">
+    <text x="78" y="204" text-anchor="middle">0</text>
+    <text x="122" y="204" text-anchor="middle">1</text>
+    <text x="166" y="204" text-anchor="middle">2</text>
+    <text x="210" y="204" text-anchor="middle">3</text>
+    <text x="254" y="204" text-anchor="middle">4</text>
+    <text x="298" y="204" text-anchor="middle">5</text>
+  </g>
+  <text x="185" y="240" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626" font-weight="bold">Qizil = dublikatlar (6 ta element)</text>
+  <text x="185" y="262" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">length = 6</text>
+
+  <!-- Strelka o'rtada -->
+  <line x1="342" y1="178" x2="388" y2="178" stroke="#475569" stroke-width="2.5" marker-end="url(#okSVA)"/>
+  <text x="365" y="166" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#16a34a" font-weight="bold">new Set</text>
+
+  <!-- Set (o'ng) -->
+  <rect x="400" y="78" width="280" height="200" rx="12" fill="#f8fafc" stroke="#16a34a" stroke-width="2"/>
+  <text x="540" y="104" text-anchor="middle" font-family="Consolas, monospace" font-size="15" font-weight="bold" fill="#16a34a">Set(3) {1, 2, 3}</text>
+  <text x="540" y="124" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">indekssiz, har qiymat UNIKAL (bir marta)</text>
+
+  <!-- Set katakchalar -->
+  <g font-family="Consolas, monospace" font-size="15" font-weight="bold">
+    <circle cx="460" cy="170" r="24" fill="#16a34a" fill-opacity="0.12" stroke="#16a34a" stroke-width="1.5"/>
+    <text x="460" y="176" text-anchor="middle" fill="#16a34a">1</text>
+    <circle cx="540" cy="170" r="24" fill="#16a34a" fill-opacity="0.12" stroke="#16a34a" stroke-width="1.5"/>
+    <text x="540" y="176" text-anchor="middle" fill="#16a34a">2</text>
+    <circle cx="620" cy="170" r="24" fill="#16a34a" fill-opacity="0.12" stroke="#16a34a" stroke-width="1.5"/>
+    <text x="620" y="176" text-anchor="middle" fill="#16a34a">3</text>
+  </g>
+
+  <text x="540" y="222" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" font-weight="bold">Dublikatlar avtomatik tushib qoldi</text>
+  <text x="540" y="244" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#475569">.size = 3 · .has(2) -> true</text>
+  <text x="540" y="262" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">.add() · .delete() · for...of</text>
+
+  <!-- Pastki maslahat -->
+  <rect x="40" y="296" width="640" height="48" rx="10" fill="#f59e0b" fill-opacity="0.10" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="360" y="318" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#b45309">Eng ko'p ishlatish: massivdan dublikatlarni olib tashlash</text>
+  <text x="360" y="336" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#475569">const unikal = [...new Set(arr)];</text>
+</svg>

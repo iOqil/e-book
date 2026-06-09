@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 500" width="700" height="500">
+  <title>CRUD sikli: Create / Read / Update / Delete -&gt; ma'lumotlar bazasi</title>
+  <rect x="0" y="0" width="700" height="500" fill="#f8fafc"/>
+
+  <text x="350" y="30" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="18" font-weight="bold" fill="#1e293b">CRUD — baza bilan to'rt amal</text>
+
+  <defs>
+    <marker id="arC" markerWidth="11" markerHeight="11" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- Center: database cylinder -->
+  <ellipse cx="350" cy="225" rx="80" ry="22" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <rect x="270" y="225" width="160" height="90" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <line x1="270" y1="225" x2="270" y2="315" stroke="#16a34a" stroke-width="2"/>
+  <line x1="430" y1="225" x2="430" y2="315" stroke="#16a34a" stroke-width="2"/>
+  <ellipse cx="350" cy="315" rx="80" ry="22" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="350" y="265" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">Ma'lumotlar</text>
+  <text x="350" y="287" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">bazasi</text>
+  <text x="350" y="307" text-anchor="middle" font-family="monospace" font-size="13" fill="#1e293b">talabalar</text>
+
+  <!-- Create (top-left) -->
+  <rect x="40" y="70" width="250" height="70" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="58" y="94" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">C — Create (qo'shish)</text>
+  <text x="58" y="115" font-family="monospace" font-size="13" fill="#1e293b">INSERT INTO talabalar ...</text>
+  <text x="58" y="133" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">yangi qator qo'shadi</text>
+  <line x1="270" y1="140" x2="320" y2="208" stroke="#475569" stroke-width="2" marker-end="url(#arC)"/>
+
+  <!-- Read (top-right) -->
+  <rect x="410" y="70" width="250" height="70" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="428" y="94" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">R — Read (o'qish)</text>
+  <text x="428" y="115" font-family="monospace" font-size="13" fill="#1e293b">SELECT * FROM talabalar</text>
+  <text x="428" y="133" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">qatorlarni o'qiydi</text>
+  <line x1="430" y1="140" x2="380" y2="208" stroke="#475569" stroke-width="2" marker-end="url(#arC)"/>
+
+  <!-- Update (bottom-left) -->
+  <rect x="40" y="400" width="250" height="70" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="58" y="424" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">U — Update (o'zgartirish)</text>
+  <text x="58" y="445" font-family="monospace" font-size="13" fill="#1e293b">UPDATE talabalar SET ...</text>
+  <text x="58" y="463" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">mavjud qatorni yangilaydi</text>
+  <line x1="270" y1="400" x2="320" y2="332" stroke="#475569" stroke-width="2" marker-end="url(#arC)"/>
+
+  <!-- Delete (bottom-right) -->
+  <rect x="410" y="400" width="250" height="70" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="428" y="424" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">D — Delete (o'chirish)</text>
+  <text x="428" y="445" font-family="monospace" font-size="13" fill="#1e293b">DELETE FROM talabalar ...</text>
+  <text x="428" y="463" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">qatorni o'chiradi</text>
+  <line x1="430" y1="400" x2="380" y2="332" stroke="#475569" stroke-width="2" marker-end="url(#arC)"/>
+
+  <!-- center note -->
+  <text x="350" y="360" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Deyarli har bir dastur — asosan shu to'rt amal</text>
+</svg>

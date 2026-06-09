@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 500" width="860" height="500">
+  <title>Partial Prerendering — statik shell oldindan tayyor, dinamik teshik jonli to'ldiriladi</title>
+  <defs>
+    <marker id="ppArr" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L9 5 L0 10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="860" height="500" fill="#f8fafc"/>
+  <text x="430" y="34" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1e293b" text-anchor="middle">Partial Prerendering — statik shell + dinamik teshik</text>
+  <text x="430" y="58" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Bir sahifa: statik qism oldindan (juda tez), dinamik qism &lt;Suspense&gt; ostida jonli</text>
+
+  <!-- Bitta sahifa maketi -->
+  <rect x="250" y="90" width="360" height="300" rx="12" fill="#ffffff" stroke="#1e293b" stroke-width="2"/>
+  <text x="430" y="84" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">/mahsulot sahifasi (bitta HTML)</text>
+
+  <!-- Statik header -->
+  <rect x="266" y="106" width="328" height="42" rx="6" fill="#2563eb" fill-opacity="0.15" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="430" y="132" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb" text-anchor="middle">Header · Logo · Navigatsiya (STATIK)</text>
+
+  <!-- Statik mahsulot tavsifi -->
+  <rect x="266" y="156" width="160" height="160" rx="6" fill="#2563eb" fill-opacity="0.10" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="346" y="182" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#2563eb" text-anchor="middle">Mahsulot rasmi</text>
+  <text x="346" y="204" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#2563eb" text-anchor="middle">va tavsifi</text>
+  <text x="346" y="240" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">STATIK SHELL</text>
+  <text x="346" y="262" font-family="monospace" font-size="13" fill="#475569" text-anchor="middle">"use cache"</text>
+  <text x="346" y="288" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">oldindan tayyor</text>
+
+  <!-- Dinamik teshik -->
+  <rect x="434" y="156" width="160" height="160" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6,4"/>
+  <text x="514" y="182" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#b45309" text-anchor="middle">Savat / narx</text>
+  <text x="514" y="204" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#b45309" text-anchor="middle">foydalanuvchiga</text>
+  <text x="514" y="240" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309" text-anchor="middle">DINAMIK TESHIK</text>
+  <text x="514" y="262" font-family="monospace" font-size="13" fill="#92400e" text-anchor="middle">&lt;Suspense&gt;</text>
+  <text x="514" y="288" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#92400e" text-anchor="middle">jonli to'ldiriladi</text>
+
+  <!-- Statik footer -->
+  <rect x="266" y="324" width="328" height="42" rx="6" fill="#2563eb" fill-opacity="0.15" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="430" y="350" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb" text-anchor="middle">Footer (STATIK)</text>
+
+  <!-- Chap izoh: statik -->
+  <rect x="20" y="160" width="200" height="100" rx="10" fill="#2563eb" fill-opacity="0.08" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="120" y="186" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb" text-anchor="middle">Statik (ko'k)</text>
+  <text x="36" y="210" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Build paytida tayyor.</text>
+  <text x="36" y="230" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">CDN'dan darhol</text>
+  <text x="36" y="250" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">yetkaziladi.</text>
+  <path d="M222 210 L264 200" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#ppArr)"/>
+
+  <!-- O'ng izoh: dinamik -->
+  <rect x="640" y="160" width="200" height="100" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="740" y="186" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309" text-anchor="middle">Dinamik (sariq)</text>
+  <text x="656" y="210" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Har so'rovda jonli</text>
+  <text x="656" y="230" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">hisoblanadi va</text>
+  <text x="656" y="250" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">teshikka oqib keladi.</text>
+  <path d="M638 210 L596 200" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#ppArr)"/>
+
+  <!-- Pastki izoh -->
+  <rect x="60" y="410" width="740" height="76" rx="10" fill="#16a34a" fill-opacity="0.10" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="430" y="438" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">Yagona so'rov, ikki tezlik</text>
+  <text x="80" y="464" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">cacheComponents: true yoqilganda — "use cache" qismlar statik shell, qolgani dinamik.</text>
+</svg>

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" width="760" height="470">
+  <title>BEM nomlash anatomiyasi: Block, Element va Modifier qismlari karta misolida yorliqlangan</title>
+  <defs>
+    <marker id="bemArr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">BEM anatomiyasi: Block__Element--Modifier</text>
+
+  <!-- block qismi -->
+  <rect x="110" y="86" width="150" height="56" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="185" y="121" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1e293b">karta</text>
+
+  <!-- ajratuvchi __ -->
+  <text x="276" y="121" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#475569">__</text>
+
+  <!-- element qismi -->
+  <rect x="296" y="86" width="170" height="56" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="381" y="121" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1e293b">sarlavha</text>
+
+  <!-- ajratuvchi tire belgisi -->
+  <text x="482" y="121" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#475569">--</text>
+
+  <!-- modifier qismi -->
+  <rect x="502" y="86" width="150" height="56" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="577" y="121" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1e293b">katta</text>
+
+  <!-- yorliq strelkalari -->
+  <line x1="185" y1="172" x2="185" y2="144" stroke="#2563eb" stroke-width="2" marker-end="url(#bemArr)"/>
+  <line x1="381" y1="172" x2="381" y2="144" stroke="#16a34a" stroke-width="2" marker-end="url(#bemArr)"/>
+  <line x1="577" y1="172" x2="577" y2="144" stroke="#f59e0b" stroke-width="2" marker-end="url(#bemArr)"/>
+
+  <!-- yorliq qutilari -->
+  <rect x="95" y="176" width="180" height="94" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="185" y="200" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">Block (blok)</text>
+  <text x="185" y="223" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Mustaqil komponent.</text>
+  <text x="185" y="242" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Bir o'zi ma'noga ega.</text>
+  <text x="185" y="261" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">.menu, .tugma, .karta</text>
+
+  <rect x="291" y="176" width="180" height="94" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="381" y="200" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Element</text>
+  <text x="381" y="223" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Blokning bir qismi.</text>
+  <text x="381" y="242" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Yolg'iz yashamaydi.</text>
+  <text x="381" y="261" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">__ ikki tagchiziq</text>
+
+  <rect x="487" y="176" width="180" height="94" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="577" y="200" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b45309">Modifier</text>
+  <text x="577" y="223" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Ko'rinish yoki holat.</text>
+  <text x="577" y="242" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Variant yasaydi.</text>
+  <text x="577" y="261" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">-- ikki tire</text>
+
+  <!-- amaliy HTML misoli -->
+  <rect x="60" y="298" width="640" height="118" rx="10" fill="#1e293b"/>
+  <text x="80" y="326" font-family="Consolas, monospace" font-size="14" fill="#94a3b8">&lt;div class=</text>
+  <text x="174" y="326" font-family="Consolas, monospace" font-size="14" fill="#60a5fa">"karta"</text>
+  <text x="234" y="326" font-family="Consolas, monospace" font-size="14" fill="#94a3b8">&gt;</text>
+
+  <text x="104" y="354" font-family="Consolas, monospace" font-size="14" fill="#94a3b8">&lt;h2 class=</text>
+  <text x="198" y="354" font-family="Consolas, monospace" font-size="14" fill="#86efac">"karta__sarlavha karta__sarlavha--katta"</text>
+  <text x="572" y="354" font-family="Consolas, monospace" font-size="14" fill="#94a3b8">&gt;...&lt;/h2&gt;</text>
+
+  <text x="80" y="394" font-family="Consolas, monospace" font-size="14" fill="#94a3b8">&lt;/div&gt;</text>
+
+  <text x="380" y="446" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Bitta elementda block, element va modifier klasslari birga turishi mumkin</text>
+</svg>

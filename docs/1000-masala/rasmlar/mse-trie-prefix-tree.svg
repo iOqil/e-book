@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520" width="760" height="520">
+  <title>Trie (prefiks daraxti) — so'zlar bir xil prefiksni birga ulashadi, oxiri so'z belgisi</title>
+  <rect x="0" y="0" width="760" height="520" fill="#f8fafc"/>
+  <text x="380" y="30" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Trie — prefiks daraxti</text>
+  <text x="380" y="54" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">So'zlar: "olma", "ol", "ona", "od" — umumiy prefiks bir yo'lni baham ko'radi</text>
+
+  <defs>
+    <marker id="te" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto">
+      <path d="M0,0 L7,3.2 L0,6.4 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- edges first (under nodes) -->
+  <!-- root -> o -->
+  <line x1="380" y1="108" x2="380" y2="150" stroke="#475569" stroke-width="2" marker-end="url(#te)"/>
+  <!-- o -> l ; o -> n ; o -> d -->
+  <line x1="362" y1="184" x2="230" y2="234" stroke="#475569" stroke-width="2" marker-end="url(#te)"/>
+  <line x1="380" y1="184" x2="380" y2="234" stroke="#475569" stroke-width="2" marker-end="url(#te)"/>
+  <line x1="398" y1="184" x2="520" y2="234" stroke="#475569" stroke-width="2" marker-end="url(#te)"/>
+  <!-- l -> m ; n -> a -->
+  <line x1="210" y1="268" x2="210" y2="318" stroke="#475569" stroke-width="2" marker-end="url(#te)"/>
+  <line x1="380" y1="268" x2="380" y2="318" stroke="#475569" stroke-width="2" marker-end="url(#te)"/>
+  <!-- m -> a -->
+  <line x1="210" y1="352" x2="210" y2="402" stroke="#475569" stroke-width="2" marker-end="url(#te)"/>
+
+  <!-- edge letter labels -->
+  <text x="392" y="134" font-family="monospace" font-size="14" fill="#2563eb">o</text>
+  <text x="285" y="206" font-family="monospace" font-size="14" fill="#2563eb">l</text>
+  <text x="388" y="212" font-family="monospace" font-size="14" fill="#2563eb">n</text>
+  <text x="465" y="206" font-family="monospace" font-size="14" fill="#2563eb">d</text>
+  <text x="220" y="298" font-family="monospace" font-size="14" fill="#2563eb">m</text>
+  <text x="390" y="298" font-family="monospace" font-size="14" fill="#2563eb">a</text>
+  <text x="220" y="382" font-family="monospace" font-size="14" fill="#2563eb">a</text>
+
+  <!-- nodes -->
+  <!-- root -->
+  <circle cx="380" cy="92" r="20" fill="#2563eb"/>
+  <text x="380" y="97" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#ffffff" font-weight="bold">root</text>
+
+  <!-- o (not word end) -->
+  <circle cx="380" cy="168" r="18" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="380" y="173" text-anchor="middle" font-family="monospace" font-size="14" fill="#1e293b">o</text>
+
+  <!-- l (not end) -->
+  <circle cx="210" cy="252" r="18" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="210" y="257" text-anchor="middle" font-family="monospace" font-size="14" fill="#1e293b">l</text>
+
+  <!-- n (not end) -->
+  <circle cx="380" cy="252" r="18" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="380" y="257" text-anchor="middle" font-family="monospace" font-size="14" fill="#1e293b">n</text>
+
+  <!-- d = "od" word end -->
+  <circle cx="540" cy="252" r="18" fill="#16a34a" stroke="#15803d" stroke-width="2"/>
+  <text x="540" y="257" text-anchor="middle" font-family="monospace" font-size="14" fill="#ffffff">d</text>
+  <text x="566" y="248" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">end ✓ "od"</text>
+
+  <!-- m (not end) -->
+  <circle cx="210" cy="336" r="18" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="210" y="341" text-anchor="middle" font-family="monospace" font-size="14" fill="#1e293b">m</text>
+
+  <!-- a under n = "ona" end -->
+  <circle cx="380" cy="336" r="18" fill="#16a34a" stroke="#15803d" stroke-width="2"/>
+  <text x="380" y="341" text-anchor="middle" font-family="monospace" font-size="14" fill="#ffffff">a</text>
+  <text x="406" y="341" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">end ✓ "ona"</text>
+
+  <!-- a under m = "olma" end -->
+  <circle cx="210" cy="420" r="18" fill="#16a34a" stroke="#15803d" stroke-width="2"/>
+  <text x="210" y="425" text-anchor="middle" font-family="monospace" font-size="14" fill="#ffffff">a</text>
+  <text x="236" y="425" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">end ✓ "olma"</text>
+
+  <!-- "ol" is also a word: mark l as end -->
+  <circle cx="210" cy="252" r="23" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="4 3"/>
+  <text x="120" y="248" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#f59e0b">end ✓ "ol"</text>
+
+  <!-- legend -->
+  <rect x="80" y="452" width="600" height="56" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+  <circle cx="110" cy="472" r="9" fill="#16a34a"/>
+  <text x="126" y="477" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">so'z oxiri (end=true)</text>
+  <circle cx="300" cy="472" r="9" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="316" y="477" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">oraliq belgi tuguni</text>
+  <text x="110" y="498" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">search(s): yo'l bo'ylab tushib, oxirgi tugunda end=true bo'lsa topildi · startsWith(p): faqat yo'l bor-yo'qligini tekshiradi</text>
+</svg>

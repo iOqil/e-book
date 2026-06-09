@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 470" width="720" height="470">
+  <title>Quick sort: Lomuto partition — pivot (oxirgi element) bo'yicha massivni kichik va katta qismlarga ajratish</title>
+  <rect x="0" y="0" width="720" height="470" fill="#f8fafc"/>
+  <defs>
+    <marker id="qa" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="26" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="18" font-weight="bold" fill="#1e293b">Quick sort — Lomuto bo'lish (partition)</text>
+  <text x="360" y="48" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Pivot = oxirgi element. Pivotdan kichiklari chap tomonga to'planadi</text>
+
+  <!-- Boshlang'ich massiv -->
+  <text x="60" y="84" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Boshlang'ich (pivot = 4):</text>
+  <g font-family="monospace" font-size="16" text-anchor="middle">
+    <rect x="60" y="92" width="50" height="44" rx="5" fill="#e2e8f0" stroke="#94a3b8"/><text x="85" y="120" fill="#1e293b">2</text>
+    <rect x="112" y="92" width="50" height="44" rx="5" fill="#e2e8f0" stroke="#94a3b8"/><text x="137" y="120" fill="#1e293b">5</text>
+    <rect x="164" y="92" width="50" height="44" rx="5" fill="#e2e8f0" stroke="#94a3b8"/><text x="189" y="120" fill="#1e293b">1</text>
+    <rect x="216" y="92" width="50" height="44" rx="5" fill="#e2e8f0" stroke="#94a3b8"/><text x="241" y="120" fill="#1e293b">3</text>
+    <rect x="268" y="92" width="50" height="44" rx="5" fill="#2563eb" stroke="#94a3b8"/><text x="293" y="120" fill="#f8fafc">4</text>
+  </g>
+  <text x="293" y="154" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">pivot</text>
+
+  <!-- Skaner tushuntirish -->
+  <rect x="380" y="86" width="280" height="74" rx="8" fill="#fff" stroke="#94a3b8"/>
+  <text x="520" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">j barcha elementlarni aylanadi.</text>
+  <text x="520" y="128" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Agar a[j] ≤ pivot bo'lsa: i++ va</text>
+  <text x="520" y="148" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">a[i] ↔ a[j] almashtiriladi</text>
+
+  <!-- Skanerlash qadamlari -->
+  <text x="60" y="190" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Skanerdan keyin: 2 ≤ 4 va 1 ≤ 4, 3 ≤ 4 chapga; 5 &gt; 4 joyida qoladi</text>
+  <g font-family="monospace" font-size="16" text-anchor="middle">
+    <rect x="60" y="200" width="50" height="44" rx="5" fill="#16a34a" stroke="#94a3b8"/><text x="85" y="228" fill="#f8fafc">2</text>
+    <rect x="112" y="200" width="50" height="44" rx="5" fill="#16a34a" stroke="#94a3b8"/><text x="137" y="228" fill="#f8fafc">1</text>
+    <rect x="164" y="200" width="50" height="44" rx="5" fill="#16a34a" stroke="#94a3b8"/><text x="189" y="228" fill="#f8fafc">3</text>
+    <rect x="216" y="200" width="50" height="44" rx="5" fill="#dc2626" stroke="#94a3b8"/><text x="241" y="228" fill="#f8fafc">5</text>
+    <rect x="268" y="200" width="50" height="44" rx="5" fill="#2563eb" stroke="#94a3b8"/><text x="293" y="228" fill="#f8fafc">4</text>
+  </g>
+  <text x="137" y="262" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">≤ pivot</text>
+  <text x="241" y="262" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">&gt; pivot</text>
+
+  <!-- Pivotni joyiga qo'yish -->
+  <path d="M241,200 A60,60 0 0 1 293,200" fill="none" stroke="#475569" stroke-width="1.8" marker-end="url(#qa)"/>
+  <text x="60" y="296" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Pivot o'z o'rniga: a[i+1] ↔ a[hi] → pivot endi to'g'ri pozitsiyada (qotadi)</text>
+  <g font-family="monospace" font-size="16" text-anchor="middle">
+    <rect x="60" y="306" width="50" height="44" rx="5" fill="#16a34a" stroke="#94a3b8"/><text x="85" y="334" fill="#f8fafc">2</text>
+    <rect x="112" y="306" width="50" height="44" rx="5" fill="#16a34a" stroke="#94a3b8"/><text x="137" y="334" fill="#f8fafc">1</text>
+    <rect x="164" y="306" width="50" height="44" rx="5" fill="#16a34a" stroke="#94a3b8"/><text x="189" y="334" fill="#f8fafc">3</text>
+    <rect x="216" y="306" width="50" height="44" rx="5" fill="#2563eb" stroke="#94a3b8"/><text x="241" y="334" fill="#f8fafc">4</text>
+    <rect x="268" y="306" width="50" height="44" rx="5" fill="#dc2626" stroke="#94a3b8"/><text x="293" y="334" fill="#f8fafc">5</text>
+  </g>
+  <text x="241" y="368" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">pivot joyida</text>
+
+  <!-- Rekursiya: chap va o'ng -->
+  <g stroke="#475569" stroke-width="1.6" marker-end="url(#qa)">
+    <line x1="160" y1="380" x2="160" y2="410"/>
+    <line x1="293" y1="380" x2="293" y2="410"/>
+  </g>
+  <g font-family="monospace" font-size="15" text-anchor="middle">
+    <rect x="70" y="414" width="180" height="34" rx="5" fill="#dcfce7" stroke="#16a34a"/>
+    <text x="160" y="436" fill="#1e293b">chap: [ 2 , 1 , 3 ]</text>
+    <rect x="270" y="414" width="120" height="34" rx="5" fill="#fee2e2" stroke="#dc2626"/>
+    <text x="330" y="436" fill="#1e293b">o'ng: [ 5 ]</text>
+  </g>
+  <text x="470" y="436" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Har qism uchun jarayon rekursiv takrorlanadi</text>
+</svg>

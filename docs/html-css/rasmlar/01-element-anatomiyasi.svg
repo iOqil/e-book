@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="760" height="380">
+  <title>HTML element anatomiyasi: ochuvchi teg, atribut, content va yopuvchi teg yorliqlangan</title>
+  <defs>
+    <marker id="anat-strelka" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="380" fill="#f8fafc"/>
+  <text x="380" y="44" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1e293b">Bitta HTML element nimalardan iborat?</text>
+
+  <!-- Kod qatori (monospace ko'rinishi uchun mono shrift) -->
+  <rect x="70" y="150" width="620" height="60" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+
+  <!-- Kod bo'laklari: <a href="sahifa.html">Bosing</a> -->
+  <text font-family="Consolas, Courier New, monospace" font-size="26" fill="#1e293b">
+    <tspan x="100" y="190" fill="#2563eb">&lt;a</tspan><tspan dx="6" fill="#dc2626"> href</tspan><tspan fill="#1e293b">=</tspan><tspan fill="#16a34a">"sahifa.html"</tspan><tspan dx="6" fill="#2563eb">&gt;</tspan><tspan dx="8" fill="#1e293b">Bosing</tspan><tspan dx="8" fill="#2563eb">&lt;/a&gt;</tspan>
+  </text>
+
+  <!-- Ochuvchi teg yorlig'i -->
+  <line x1="118" y1="150" x2="118" y2="100" stroke="#475569" stroke-width="2" marker-end="url(#anat-strelka)"/>
+  <rect x="40" y="74" width="150" height="26" rx="6" fill="#2563eb"/>
+  <text x="115" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#f8fafc">Ochuvchi teg</text>
+
+  <!-- Atribut yorlig'i -->
+  <line x1="300" y1="150" x2="300" y2="100" stroke="#475569" stroke-width="2" marker-end="url(#anat-strelka)"/>
+  <rect x="215" y="74" width="240" height="26" rx="6" fill="#dc2626"/>
+  <text x="335" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#f8fafc">Atribut: nom="qiymat"</text>
+
+  <!-- Content yorlig'i -->
+  <line x1="510" y1="210" x2="510" y2="270" stroke="#475569" stroke-width="2" marker-end="url(#anat-strelka)"/>
+  <rect x="438" y="276" width="150" height="26" rx="6" fill="#f59e0b"/>
+  <text x="513" y="294" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Content (matn)</text>
+
+  <!-- Yopuvchi teg yorlig'i -->
+  <line x1="612" y1="210" x2="612" y2="270" stroke="#475569" stroke-width="2" marker-end="url(#anat-strelka)"/>
+  <rect x="560" y="276" width="150" height="26" rx="6" fill="#2563eb"/>
+  <text x="635" y="294" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#f8fafc">Yopuvchi teg</text>
+
+  <!-- Pastki izoh -->
+  <text x="380" y="345" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#475569">Ochuvchi teg + content + yopuvchi teg = bitta element. Yopuvchi tegda qiya chiziq /</text>
+</svg>

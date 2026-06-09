@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 540" width="820" height="540">
+  <title>Layout nesting: root layout ichida nested layout, uning ichida page ichma-ich joylashadi</title>
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L9 5 L0 10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="820" height="540" fill="#f8fafc"/>
+  <text x="410" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1e293b">Layout'lar ichma-ich (nesting) — App Router</text>
+  <text x="410" y="58" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Har layout o'z {children}'ini ichiga oladi — qatlamlar bir-birini o'raydi</text>
+
+  <!-- Root layout outer box -->
+  <rect x="60" y="80" width="500" height="420" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="80" y="108" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">Root layout — app/layout.tsx</text>
+  <text x="80" y="130" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">&lt;html&gt; &lt;body&gt; · har sahifada bor (umumiy)</text>
+
+  <!-- Nested layout box -->
+  <rect x="100" y="150" width="420" height="320" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="120" y="178" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#b45309">Nested layout — app/dashboard/layout.tsx</text>
+  <text x="120" y="200" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#92400e">faqat /dashboard ostidagi sahifalarda (sidebar)</text>
+
+  <!-- Sidebar inside nested -->
+  <rect x="120" y="218" width="110" height="230" rx="8" fill="#fff7ed" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="175" y="244" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309">Sidebar</text>
+  <text x="175" y="272" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#92400e">Bosh</text>
+  <text x="175" y="296" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#92400e">Profil</text>
+  <text x="175" y="320" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#92400e">Sozlamalar</text>
+
+  <!-- Page box (innermost) -->
+  <rect x="248" y="218" width="252" height="230" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="374" y="244" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#15803d">Page — page.tsx</text>
+  <text x="374" y="266" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#15803d">aynan shu sahifa tarkibi</text>
+  <rect x="270" y="288" width="208" height="140" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+  <text x="374" y="318" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Dashboard kontenti</text>
+  <text x="374" y="346" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">grafiklar, jadval, ...</text>
+  <text x="374" y="392" text-anchor="middle" font-family="monospace" font-size="13" fill="#16a34a">= {children}</text>
+  <text x="374" y="414" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">eng ichki qatlam</text>
+
+  <!-- children labels with arrows -->
+  <text x="630" y="120" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">{children} = ichidagi qatlam</text>
+
+  <path d="M628 150 L562 200" fill="none" stroke="#2563eb" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="640" y="162" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">Root.children →</text>
+  <text x="640" y="182" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">nested layout</text>
+
+  <path d="M628 300 L505 330" fill="none" stroke="#f59e0b" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="640" y="300" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309">Nested.children →</text>
+  <text x="640" y="320" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309">page</text>
+
+  <!-- nesting formula -->
+  <rect x="600" y="380" width="200" height="100" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="700" y="404" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Yakuniy daraxt:</text>
+  <text x="700" y="428" text-anchor="middle" font-family="monospace" font-size="13" fill="#2563eb">Root</text>
+  <text x="700" y="448" text-anchor="middle" font-family="monospace" font-size="13" fill="#b45309">&#8627; Nested</text>
+  <text x="700" y="468" text-anchor="middle" font-family="monospace" font-size="13" fill="#16a34a">&#8627; Page</text>
+
+  <text x="410" y="528" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Navigatsiyada tashqi layout'lar saqlanadi, faqat ichki {children} almashadi.</text>
+</svg>

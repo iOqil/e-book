@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560" width="880" height="560">
+  <title>Nuxt UI theming: 3 qatlamli tizim — @theme tokendan komponent override gacha</title>
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="880" height="560" fill="#f8fafc"/>
+
+  <text x="440" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Theming — 3 qatlamli tizim</text>
+  <text x="440" y="56" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">xom tokendan tortib bitta komponent instansiyasigacha</text>
+
+  <!-- Layer 1 -->
+  <rect x="40" y="76" width="800" height="92" rx="10" fill="#e2e8f0" stroke="#2563eb" stroke-width="2"/>
+  <circle cx="74" cy="106" r="16" fill="#2563eb"/><text x="74" y="112" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#f8fafc">1</text>
+  <text x="104" y="104" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">main.css  →  @theme (Tailwind v4 xom token)</text>
+  <text x="104" y="126" font-family="monospace" font-size="13" fill="#2563eb">--color-brand-50 ... --color-brand-950   ·   --font-sans: 'Inter'</text>
+  <text x="104" y="148" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">"Brend DNA": rangning to'liq 50-950 shkalasi. Build vaqtida CSS o'zgaruvchilarga aylanadi.</text>
+
+  <line x1="440" y1="168" x2="440" y2="192" stroke="#475569" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Layer 2 -->
+  <rect x="40" y="194" width="800" height="92" rx="10" fill="#e2e8f0" stroke="#16a34a" stroke-width="2"/>
+  <circle cx="74" cy="224" r="16" fill="#16a34a"/><text x="74" y="230" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#f8fafc">2</text>
+  <text x="104" y="222" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">app.config.ts  →  ui.colors (semantik mapping)</text>
+  <text x="104" y="244" font-family="monospace" font-size="13" fill="#16a34a">primary: 'brand'  ·  neutral: 'slate'  ·  error: 'red'</text>
+  <text x="104" y="266" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Qaysi xom rang qaysi rolga? Runtime-reaktiv — qayta build qilmasdan o'zgaradi (HMR).</text>
+
+  <line x1="440" y1="286" x2="440" y2="310" stroke="#475569" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Layer 3 -->
+  <rect x="40" y="312" width="800" height="92" rx="10" fill="#e2e8f0" stroke="#f59e0b" stroke-width="2"/>
+  <circle cx="74" cy="342" r="16" fill="#f59e0b"/><text x="74" y="348" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">3</text>
+  <text x="104" y="340" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">app.config.ts  →  ui.&lt;komponent&gt; (default override)</text>
+  <text x="104" y="362" font-family="monospace" font-size="13" fill="#b45309">button.slots.base · button.defaultVariants · card.slots.root</text>
+  <text x="104" y="384" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Har bir komponentning global default ko'rinishi (barcha button'lar, barcha card'lar).</text>
+
+  <text x="440" y="430" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Bitta instansiyani sozlash — ustuvorlik (priority)</text>
+
+  <!-- priority chain -->
+  <g font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold">
+    <rect x="44"  y="448" width="150" height="52" rx="8" fill="#dc2626"/><text x="119" y="472" text-anchor="middle" fill="#f8fafc" font-size="14">class prop</text><text x="119" y="490" text-anchor="middle" fill="#fecaca" font-size="13">eng kuchli</text>
+    <rect x="232" y="448" width="150" height="52" rx="8" fill="#f59e0b"/><text x="307" y="472" text-anchor="middle" fill="#1e293b" font-size="14">:ui prop</text><text x="307" y="490" text-anchor="middle" fill="#7c4a03" font-size="13">shu instansiya</text>
+    <rect x="420" y="448" width="180" height="52" rx="8" fill="#16a34a"/><text x="510" y="472" text-anchor="middle" fill="#f8fafc" font-size="14">app.config global</text><text x="510" y="490" text-anchor="middle" fill="#bbf7d0" font-size="13">butun ilova</text>
+    <rect x="638" y="448" width="180" height="52" rx="8" fill="#94a3b8"/><text x="728" y="472" text-anchor="middle" fill="#1e293b" font-size="14">komponent default</text><text x="728" y="490" text-anchor="middle" fill="#334155" font-size="13">eng zaif</text>
+  </g>
+  <text x="206" y="479" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" fill="#475569">&gt;</text>
+  <text x="403" y="479" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" fill="#475569">&gt;</text>
+  <text x="621" y="479" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" fill="#475569">&gt;</text>
+
+  <text x="440" y="532" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Konflikt bo'lsa: Tailwind Variants + tailwind-merge aqlli birlashtiradi (chapdagisi yutadi).</text>
+</svg>

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 420" width="680" height="420">
+  <title>Rekursiv Fibonachchi chaqiruv daraxti (fib(5)) va takroriy hisoblar</title>
+  <rect x="0" y="0" width="680" height="420" fill="#f8fafc"/>
+  <defs>
+    <marker id="fa" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <text x="340" y="28" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="18" font-weight="bold" fill="#1e293b">fib(5) rekursiya chaqiruv daraxti</text>
+  <text x="340" y="50" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">fib(n) = fib(n-1) + fib(n-2) — bir xil qiymat qayta-qayta hisoblanadi</text>
+
+  <!-- chiziqlar (avval, ostida tugunlar bo'lsin) -->
+  <g stroke="#475569" stroke-width="1.6" marker-end="url(#fa)">
+    <!-- 5 -> 4, 3 -->
+    <line x1="340" y1="92" x2="190" y2="142"/>
+    <line x1="340" y1="92" x2="500" y2="142"/>
+    <!-- 4 -> 3, 2 -->
+    <line x1="180" y1="172" x2="100" y2="222"/>
+    <line x1="190" y1="172" x2="270" y2="222"/>
+    <!-- 3(o'ng) -> 2, 1 -->
+    <line x1="500" y1="172" x2="430" y2="222"/>
+    <line x1="510" y1="172" x2="580" y2="222"/>
+    <!-- 3(chap) -> 2, 1 -->
+    <line x1="95" y1="252" x2="55" y2="302"/>
+    <line x1="105" y1="252" x2="160" y2="302"/>
+    <!-- 2(o'ng tomon) -> 1, 0 -->
+    <line x1="425" y1="252" x2="385" y2="302"/>
+    <line x1="435" y1="252" x2="490" y2="302"/>
+  </g>
+
+  <!-- tugunlar -->
+  <g font-family="monospace" font-size="14" text-anchor="middle">
+    <!-- root -->
+    <circle cx="340" cy="80" r="22" fill="#2563eb"/>
+    <text x="340" y="85" fill="#f8fafc">fib(5)</text>
+
+    <!-- daraja 2 -->
+    <circle cx="180" cy="160" r="22" fill="#2563eb"/>
+    <text x="180" y="165" fill="#f8fafc">fib(4)</text>
+    <circle cx="510" cy="160" r="22" fill="#f59e0b"/>
+    <text x="510" y="165" fill="#1e293b">fib(3)</text>
+
+    <!-- daraja 3 -->
+    <circle cx="100" cy="240" r="22" fill="#f59e0b"/>
+    <text x="100" y="245" fill="#1e293b">fib(3)</text>
+    <circle cx="270" cy="240" r="20" fill="#16a34a"/>
+    <text x="270" y="245" fill="#f8fafc">fib(2)</text>
+    <circle cx="430" cy="240" r="20" fill="#16a34a"/>
+    <text x="430" y="245" fill="#f8fafc">fib(2)</text>
+    <circle cx="580" cy="240" r="20" fill="#dc2626"/>
+    <text x="580" y="245" fill="#f8fafc">fib(1)</text>
+
+    <!-- daraja 4 -->
+    <circle cx="50" cy="320" r="20" fill="#16a34a"/>
+    <text x="50" y="325" fill="#f8fafc">fib(2)</text>
+    <circle cx="165" cy="320" r="20" fill="#dc2626"/>
+    <text x="165" y="325" fill="#f8fafc">fib(1)</text>
+    <circle cx="385" cy="320" r="20" fill="#dc2626"/>
+    <text x="385" y="325" fill="#f8fafc">fib(1)</text>
+    <circle cx="490" cy="320" r="20" fill="#dc2626"/>
+    <text x="490" y="325" fill="#f8fafc">fib(0)</text>
+  </g>
+
+  <!-- Izoh / legenda -->
+  <rect x="40" y="360" width="600" height="46" rx="6" fill="#fff" stroke="#94a3b8"/>
+  <circle cx="62" cy="383" r="9" fill="#f59e0b"/>
+  <text x="78" y="388" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">fib(3) ikki marta</text>
+  <circle cx="222" cy="383" r="9" fill="#16a34a"/>
+  <text x="238" y="388" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">fib(2) uch marta — takroriy hisob</text>
+  <text x="470" y="388" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">shu sabab O(2ⁿ)</text>
+</svg>

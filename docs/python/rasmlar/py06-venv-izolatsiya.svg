@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430">
+  <title>venv izolatsiyasi: har loyiha o'z virtual muhitida kutubxonalarning alohida versiyasini saqlaydi, shuning uchun to'qnashmaydi</title>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">venv: har loyihaga alohida, izolyatsiyalangan muhit</text>
+
+  <!-- chap: venv'siz (muammo) -->
+  <text x="190" y="68" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">venv'siz — to'qnashuv</text>
+
+  <!-- tizim Python qutisi -->
+  <rect x="50" y="82" width="280" height="240" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="190" y="106" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">Tizim Python (bitta umumiy)</text>
+
+  <!-- loyiha A -->
+  <rect x="74" y="124" width="232" height="40" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="90" y="142" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">A loyiha</text>
+  <text x="90" y="158" text-anchor="start" font-family="monospace" font-size="13" fill="#475569">requests 1-versiya kerak</text>
+
+  <!-- loyiha B -->
+  <rect x="74" y="172" width="232" height="40" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="90" y="190" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">B loyiha</text>
+  <text x="90" y="206" text-anchor="start" font-family="monospace" font-size="13" fill="#475569">requests 2-versiya kerak</text>
+
+  <!-- bitta umumiy kutubxona -->
+  <rect x="74" y="232" width="232" height="44" rx="8" fill="#dc2626"/>
+  <text x="190" y="250" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#f8fafc">requests (faqat 1 versiya)</text>
+  <text x="190" y="268" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#f8fafc">birini o'rnatsang, boshqasi buziladi</text>
+
+  <text x="190" y="302" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#dc2626">× ikkalasi bir versiyani baham ko'radi</text>
+
+  <!-- o'ng: venv bilan (yechim) -->
+  <text x="570" y="68" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">venv bilan — izolyatsiya</text>
+
+  <!-- A loyiha + venv -->
+  <rect x="430" y="82" width="280" height="108" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="446" y="106" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">A loyiha</text>
+  <text x="640" y="106" text-anchor="end" font-family="monospace" font-size="13" fill="#16a34a">(venv)</text>
+  <rect x="446" y="118" width="248" height="56" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="458" y="140" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">o'z venv/ papkasi:</text>
+  <text x="458" y="162" text-anchor="start" font-family="monospace" font-size="14" fill="#2563eb">requests 1-versiya</text>
+
+  <!-- B loyiha + venv -->
+  <rect x="430" y="206" width="280" height="108" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="446" y="230" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">B loyiha</text>
+  <text x="640" y="230" text-anchor="end" font-family="monospace" font-size="13" fill="#16a34a">(venv)</text>
+  <rect x="446" y="242" width="248" height="56" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="458" y="264" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">o'z venv/ papkasi:</text>
+  <text x="458" y="286" text-anchor="start" font-family="monospace" font-size="14" fill="#2563eb">requests 2-versiya</text>
+
+  <!-- ajratuvchi to'siq -->
+  <line x1="380" y1="84" x2="380" y2="320" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="6 5"/>
+
+  <!-- pastki izoh -->
+  <rect x="50" y="344" width="660" height="66" rx="10" fill="#1e293b"/>
+  <text x="380" y="368" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#f59e0b">Har loyiha o'z muhitini yaratadi:</text>
+  <text x="380" y="392" text-anchor="middle" font-family="monospace" font-size="14" fill="#f8fafc">python -m venv venv  →  faollashtir  →  pip install (faqat shu muhitga)</text>
+</svg>

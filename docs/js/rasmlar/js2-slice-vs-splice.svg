@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 400" width="780" height="400">
+  <title>slice va splice farqi: slice asil massivni buzmaydi va nusxa qaytaradi, splice asil massivni o'zgartiradi</title>
+  <defs>
+    <marker id="ss-arrow" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="780" height="400" fill="#f8fafc"/>
+  <text x="390" y="38" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1e293b">slice vs splice — o'xshash nom, boshqa ish</text>
+
+  <text x="390" y="66" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="15" fill="#475569">const arr = [1, 2, 3, 4, 5]</text>
+
+  <!-- SLICE tomoni -->
+  <rect x="30" y="86" width="350" height="280" rx="12" fill="#f8fafc" stroke="#16a34a" stroke-width="2.5"/>
+  <rect x="30" y="86" width="350" height="34" rx="12" fill="#16a34a"/>
+  <text x="205" y="109" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" fill="#f8fafc">slice — TOZA (nusxa)</text>
+  <text x="205" y="146" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="16" fill="#1e293b">arr.slice(1, 3)</text>
+
+  <!-- slice: asil massiv -->
+  <text x="50" y="184" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Asil arr:</text>
+  <g font-family="Consolas, Courier New, monospace" font-size="16" fill="#1e293b">
+    <rect x="50" y="196" width="60" height="34" rx="5" fill="#e2e8f0" stroke="#94a3b8"/><text x="80" y="218" text-anchor="middle">1</text>
+    <rect x="112" y="196" width="60" height="34" rx="5" fill="#dcfce7" stroke="#16a34a"/><text x="142" y="218" text-anchor="middle">2</text>
+    <rect x="174" y="196" width="60" height="34" rx="5" fill="#dcfce7" stroke="#16a34a"/><text x="204" y="218" text-anchor="middle">3</text>
+    <rect x="236" y="196" width="60" height="34" rx="5" fill="#e2e8f0" stroke="#94a3b8"/><text x="266" y="218" text-anchor="middle">4</text>
+    <rect x="298" y="196" width="60" height="34" rx="5" fill="#e2e8f0" stroke="#94a3b8"/><text x="328" y="218" text-anchor="middle">5</text>
+  </g>
+  <text x="205" y="252" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">[1,2,3,4,5] — o'zgarmaydi</text>
+
+  <line x1="205" y1="262" x2="205" y2="284" stroke="#475569" stroke-width="2" marker-end="url(#ss-arrow)"/>
+
+  <!-- slice: yangi nusxa -->
+  <text x="50" y="306" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Qaytadi (yangi):</text>
+  <g font-family="Consolas, Courier New, monospace" font-size="16" fill="#1e293b">
+    <rect x="174" y="294" width="60" height="34" rx="5" fill="#dcfce7" stroke="#16a34a"/><text x="204" y="316" text-anchor="middle">2</text>
+    <rect x="236" y="294" width="60" height="34" rx="5" fill="#dcfce7" stroke="#16a34a"/><text x="266" y="316" text-anchor="middle">3</text>
+  </g>
+  <text x="205" y="352" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">[2, 3] (oxiri kirmaydi)</text>
+
+  <!-- SPLICE tomoni -->
+  <rect x="400" y="86" width="350" height="280" rx="12" fill="#f8fafc" stroke="#dc2626" stroke-width="2.5"/>
+  <rect x="400" y="86" width="350" height="34" rx="12" fill="#dc2626"/>
+  <text x="575" y="109" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" fill="#f8fafc">splice — ASILNI BUZADI</text>
+  <text x="575" y="146" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="16" fill="#1e293b">arr.splice(1, 2)</text>
+
+  <!-- splice: oldin -->
+  <text x="420" y="184" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Oldin arr:</text>
+  <g font-family="Consolas, Courier New, monospace" font-size="16" fill="#1e293b">
+    <rect x="420" y="196" width="60" height="34" rx="5" fill="#e2e8f0" stroke="#94a3b8"/><text x="450" y="218" text-anchor="middle">1</text>
+    <rect x="482" y="196" width="60" height="34" rx="5" fill="#fee2e2" stroke="#dc2626"/><text x="512" y="218" text-anchor="middle">2</text>
+    <rect x="544" y="196" width="60" height="34" rx="5" fill="#fee2e2" stroke="#dc2626"/><text x="574" y="218" text-anchor="middle">3</text>
+    <rect x="606" y="196" width="60" height="34" rx="5" fill="#e2e8f0" stroke="#94a3b8"/><text x="636" y="218" text-anchor="middle">4</text>
+    <rect x="668" y="196" width="60" height="34" rx="5" fill="#e2e8f0" stroke="#94a3b8"/><text x="698" y="218" text-anchor="middle">5</text>
+  </g>
+  <text x="575" y="252" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">1-indeksdan 2 ta o'chiriladi</text>
+
+  <line x1="575" y1="262" x2="575" y2="284" stroke="#475569" stroke-width="2" marker-end="url(#ss-arrow)"/>
+
+  <!-- splice: keyin -->
+  <text x="420" y="306" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Keyin arr:</text>
+  <g font-family="Consolas, Courier New, monospace" font-size="16" fill="#1e293b">
+    <rect x="512" y="294" width="60" height="34" rx="5" fill="#e2e8f0" stroke="#94a3b8"/><text x="542" y="316" text-anchor="middle">1</text>
+    <rect x="574" y="294" width="60" height="34" rx="5" fill="#e2e8f0" stroke="#94a3b8"/><text x="604" y="316" text-anchor="middle">4</text>
+    <rect x="636" y="294" width="60" height="34" rx="5" fill="#e2e8f0" stroke="#94a3b8"/><text x="666" y="316" text-anchor="middle">5</text>
+  </g>
+  <text x="575" y="352" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">arr endi [1, 4, 5] — buzildi!</text>
+
+  <text x="390" y="388" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Asilni saqlash kerak bo'lsa — slice. Asilni joyida o'zgartirmoqchi bo'lsang — splice.</text>
+</svg>

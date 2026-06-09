@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 320" width="760" height="320">
+  <title>Gradient turlari: linear-gradient, radial-gradient va conic-gradient yonma-yon namunalari</title>
+  <defs>
+    <linearGradient id="lin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#16a34a"/>
+    </linearGradient>
+    <radialGradient id="rad" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#dc2626"/>
+    </radialGradient>
+    <linearGradient id="con1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#16a34a"/>
+    </linearGradient>
+    <marker id="wtip" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0 0 L9 4.5 L0 9 Z" fill="#f8fafc"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="320" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Gradient (rang o'tishi) turlari</text>
+
+  <!-- LINEAR -->
+  <rect x="40" y="64" width="200" height="160" rx="10" fill="url(#lin)" stroke="#94a3b8" stroke-width="2"/>
+  <text x="140" y="252" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">linear-gradient</text>
+  <text x="140" y="274" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">chiziqli — to'g'ri</text>
+  <text x="140" y="292" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">yo'nalish bo'ylab</text>
+  <!-- yo'nalish strelkasi -->
+  <line x1="140" y1="80" x2="140" y2="208" stroke="#f8fafc" stroke-width="2.5" marker-end="url(#wtip)"/>
+
+  <!-- RADIAL -->
+  <rect x="280" y="64" width="200" height="160" rx="10" fill="url(#rad)" stroke="#94a3b8" stroke-width="2"/>
+  <text x="380" y="252" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#dc2626">radial-gradient</text>
+  <text x="380" y="274" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">aylanma — markazdan</text>
+  <text x="380" y="292" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">chetga tarqaladi</text>
+
+  <!-- CONIC (4 ta sektor bilan taqlid) -->
+  <g>
+    <path d="M620 144 L620 64 A80 80 0 0 1 700 144 Z" fill="#2563eb"/>
+    <path d="M620 144 L700 144 A80 80 0 0 1 620 224 Z" fill="#16a34a"/>
+    <path d="M620 144 L620 224 A80 80 0 0 1 540 144 Z" fill="#f59e0b"/>
+    <path d="M620 144 L540 144 A80 80 0 0 1 620 64 Z" fill="#dc2626"/>
+    <circle cx="620" cy="144" r="80" fill="none" stroke="#94a3b8" stroke-width="2"/>
+  </g>
+  <text x="620" y="252" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">conic-gradient</text>
+  <text x="620" y="274" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">konusli — markaz</text>
+  <text x="620" y="292" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">atrofida aylanadi</text>
+</svg>

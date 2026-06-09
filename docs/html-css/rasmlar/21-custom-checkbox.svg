@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 300" width="780" height="300">
+  <title>Accessible custom checkbox tuzilishi: haqiqiy input ekrandan yashiriladi lekin qoladi, label ichidagi belgi vizual checkbox vazifasini bajaradi</title>
+  <rect x="0" y="0" width="780" height="300" fill="#f8fafc"/>
+  <text x="390" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Accessible custom checkbox tuzilishi</text>
+
+  <!-- haqiqiy input qatlami -->
+  <rect x="60" y="74" width="300" height="150" rx="10" fill="#fff7ed" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="210" y="100" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#f59e0b">1. Haqiqiy &lt;input type="checkbox"&gt;</text>
+  <rect x="90" y="118" width="240" height="44" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="210" y="145" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">vizual yashirin, lekin DOM'da QOLADI</text>
+  <text x="210" y="186" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">holatni saqlaydi (:checked),</text>
+  <text x="210" y="204" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">klaviatura va skrinrider uchun</text>
+
+  <!-- strelka -->
+  <line x1="372" y1="149" x2="408" y2="149" stroke="#475569" stroke-width="2.5"/>
+  <polygon points="414,149 402,143 402,155" fill="#475569"/>
+
+  <!-- vizual qatlam -->
+  <rect x="420" y="74" width="300" height="150" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="570" y="100" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">2. &lt;label&gt; ichidagi vizual belgi</text>
+  <!-- belgilanmagan -->
+  <rect x="450" y="120" width="26" height="26" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="540" y="138" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">belgilanmagan</text>
+  <!-- belgilangan -->
+  <rect x="450" y="160" width="26" height="26" rx="6" fill="#2563eb" stroke="#2563eb" stroke-width="2"/>
+  <path d="M456 173 l5 6 l9 -11" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="535" y="178" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">:checked holati</text>
+  <text x="570" y="208" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">CSS bilan istalgan ko'rinish</text>
+
+  <!-- pastki izoh -->
+  <rect x="60" y="246" width="660" height="42" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="390" y="272" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Sirti CSS bilan chizilgan, ichi haqiqiy input — shuning uchun ham chiroyli, ham accessible.</text>
+</svg>

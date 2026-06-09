@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 470" width="860" height="470">
+  <title>Vue Router — URL o'zgaradi, mos komponent RouterView ichida render bo'ladi</title>
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L9 5 L0 10 z" fill="#475569"/>
+    </marker>
+    <marker id="arrBlue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L9 5 L0 10 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="860" height="470" fill="#f8fafc"/>
+  <text x="430" y="34" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1e293b" text-anchor="middle">Routing — URL bir komponentga bog'lanadi</text>
+  <text x="430" y="58" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Sahifa QAYTA YUKLANMAYDI — JS faqat RouterView ichini almashtiradi (SPA)</text>
+
+  <!-- URL bar -->
+  <rect x="40" y="84" width="280" height="46" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="60" y="113" font-family="monospace" font-size="14" fill="#1e293b">/about</text>
+  <text x="180" y="78" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb" text-anchor="middle">Brauzer URL (yo'l)</text>
+
+  <!-- routes table -->
+  <rect x="40" y="170" width="380" height="226" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="230" y="196" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb" text-anchor="middle">routes jadvali (moslik qidiruvi)</text>
+
+  <rect x="62" y="212" width="336" height="40" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="78" y="237" font-family="monospace" font-size="14" fill="#1e293b">path: '/'  →  Home</text>
+
+  <rect x="62" y="258" width="336" height="40" rx="6" fill="#f8fafc" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="78" y="283" font-family="monospace" font-size="14" fill="#1e293b">path: '/about'  →  About</text>
+  <text x="376" y="283" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" text-anchor="end">mos!</text>
+
+  <rect x="62" y="304" width="336" height="40" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="78" y="329" font-family="monospace" font-size="14" fill="#1e293b">path: '/users/:id'  →  UserDetail</text>
+
+  <text x="230" y="372" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">tepadan pastga: birinchi mos kelgan yo'l tanlanadi</text>
+
+  <!-- URL -> routes arrow -->
+  <path d="M180 132 L180 168" fill="none" stroke="#2563eb" stroke-width="2" marker-end="url(#arrBlue)"/>
+
+  <!-- routes -> RouterView arrow -->
+  <path d="M420 280 L508 280" fill="none" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="464" y="270" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#15803d" text-anchor="middle">render</text>
+
+  <!-- App layout -->
+  <rect x="512" y="84" width="308" height="312" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="666" y="108" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b" text-anchor="middle">App.vue (sahifa)</text>
+
+  <rect x="534" y="122" width="264" height="44" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="666" y="142" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">nav — RouterLink (a o'rniga)</text>
+  <text x="666" y="160" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">o'zgarmaydi, doim qoladi</text>
+
+  <rect x="534" y="178" width="264" height="200" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="666" y="204" font-family="monospace" font-size="15" font-weight="bold" fill="#2563eb" text-anchor="middle">&lt;RouterView /&gt;</text>
+  <text x="666" y="226" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">faqat shu joy almashadi</text>
+
+  <rect x="560" y="244" width="212" height="118" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="666" y="300" font-family="monospace" font-size="16" font-weight="bold" fill="#16a34a" text-anchor="middle">About.vue</text>
+  <text x="666" y="324" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">mos komponent shu yerda</text>
+</svg>

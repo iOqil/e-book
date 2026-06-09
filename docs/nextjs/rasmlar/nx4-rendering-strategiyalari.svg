@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 620" width="880" height="620">
+  <title>Rendering strategiyalari — SSG, ISR, SSR, PPR qachon qaysi biri kerak</title>
+  <defs>
+    <marker id="rsArr" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L9 5 L0 10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="880" height="620" fill="#f8fafc"/>
+  <text x="440" y="34" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1e293b" text-anchor="middle">Rendering strategiyalari — qachon qaysi?</text>
+  <text x="440" y="58" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">App Router'da bu sahifa kodidan avtomatik tanlanadi (cache va dinamik API'larga qarab)</text>
+
+  <!-- Savol 1 -->
+  <rect x="320" y="80" width="240" height="56" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="440" y="106" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Ma'lumot har so'rovda</text>
+  <text x="440" y="126" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">o'zgaradimi?</text>
+
+  <!-- Yo'q tarmoq -->
+  <path d="M320 108 L180 108 L180 180" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#rsArr)"/>
+  <text x="230" y="100" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" font-weight="bold">Yo'q</text>
+
+  <!-- Ha tarmoq -->
+  <path d="M560 108 L700 108 L700 180" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#rsArr)"/>
+  <text x="640" y="100" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626" font-weight="bold">Ha</text>
+
+  <!-- Savol 2 (chap): vaqti-vaqti yangilanadimi -->
+  <rect x="60" y="184" width="240" height="56" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="180" y="210" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Vaqti-vaqti bilan</text>
+  <text x="180" y="230" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">yangilanadimi?</text>
+
+  <path d="M120 240 L120 300" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#rsArr)"/>
+  <text x="100" y="276" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" font-weight="bold" text-anchor="end">Yo'q</text>
+  <path d="M240 240 L240 300" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#rsArr)"/>
+  <text x="262" y="276" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#f59e0b" font-weight="bold">Ha</text>
+
+  <!-- Savol 3 (o'ng): sahifaning faqat bir qismimi dinamik -->
+  <rect x="580" y="184" width="240" height="56" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="700" y="210" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Faqat bir QISMI</text>
+  <text x="700" y="230" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">dinamikmi?</text>
+
+  <path d="M640 240 L640 300" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#rsArr)"/>
+  <text x="620" y="276" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb" font-weight="bold" text-anchor="end">Ha</text>
+  <path d="M760 240 L760 300" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#rsArr)"/>
+  <text x="782" y="276" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626" font-weight="bold">Yo'q</text>
+
+  <!-- SSG karta -->
+  <rect x="40" y="304" width="200" height="146" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="140" y="330" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a" text-anchor="middle">SSG (statik)</text>
+  <text x="140" y="352" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">Build paytida 1 marta</text>
+  <text x="140" y="372" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">tayyorlanadi, CDN'da</text>
+  <text x="140" y="396" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a" text-anchor="middle">Eng tez</text>
+  <text x="140" y="420" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Blog, hujjat, lending</text>
+  <text x="140" y="440" font-family="monospace" font-size="13" fill="#475569" text-anchor="middle">default + cache</text>
+
+  <!-- ISR karta -->
+  <rect x="260" y="304" width="200" height="146" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="360" y="330" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#b45309" text-anchor="middle">ISR (yangilanuvchi)</text>
+  <text x="360" y="352" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">Statik, lekin vaqt yoki</text>
+  <text x="360" y="372" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">signal bilan qayta tiklanadi</text>
+  <text x="360" y="396" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#b45309" text-anchor="middle">Tez + yangi</text>
+  <text x="360" y="420" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Mahsulot, narxlar</text>
+  <text x="360" y="440" font-family="monospace" font-size="13" fill="#475569" text-anchor="middle">revalidate</text>
+
+  <!-- PPR karta -->
+  <rect x="480" y="304" width="200" height="146" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="580" y="330" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb" text-anchor="middle">PPR (aralash)</text>
+  <text x="580" y="352" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">Statik shell darhol +</text>
+  <text x="580" y="372" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">dinamik teshik stream</text>
+  <text x="580" y="396" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#2563eb" text-anchor="middle">Tez + shaxsiy</text>
+  <text x="580" y="420" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Savatli do'kon sahifasi</text>
+  <text x="580" y="440" font-family="monospace" font-size="13" fill="#475569" text-anchor="middle">cache + Suspense</text>
+
+  <!-- SSR karta -->
+  <rect x="700" y="304" width="200" height="146" rx="10" fill="#fde7e7" stroke="#dc2626" stroke-width="2"/>
+  <text x="800" y="330" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#dc2626" text-anchor="middle">SSR (dinamik)</text>
+  <text x="800" y="352" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">Har so'rovda serverda</text>
+  <text x="800" y="372" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">yangidan chiziladi</text>
+  <text x="800" y="396" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626" text-anchor="middle">Doim yangi</text>
+  <text x="800" y="420" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Profil, dashboard</text>
+  <text x="800" y="440" font-family="monospace" font-size="13" fill="#475569" text-anchor="middle">cookies/headers</text>
+
+  <!-- Pastki izoh -->
+  <rect x="40" y="480" width="800" height="116" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="60" y="508" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">App Router'da nima farqni hal qiladi:</text>
+  <text x="60" y="534" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">• cookies(), headers(), searchParams ishlatsangiz — sahifa DINAMIK (SSR) bo'ladi.</text>
+  <text x="60" y="556" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">• "use cache" + revalidate — statik (SSG) yoki vaqtli yangilanuvchi (ISR) qiladi.</text>
+  <text x="60" y="578" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">• Statik shellni dinamik teshik bilan birlashtirsangiz (Suspense) — bu PPR.</text>
+</svg>

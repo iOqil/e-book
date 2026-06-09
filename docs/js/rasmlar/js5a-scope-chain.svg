@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" width="720" height="480">
+  <title>Scope chain: o'zgaruvchi ichki scope'dan tashqariga, global'gacha qidiriladi</title>
+
+  <rect x="0" y="0" width="720" height="480" fill="#f8fafc"/>
+  <text x="360" y="38" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1e293b">Scope chain — o'zgaruvchi qidirish yo'nalishi</text>
+  <text x="360" y="62" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">topilmasa: ichkaridan tashqariga, keyin global'ga</text>
+
+  <!-- Global scope (eng tashqi) -->
+  <rect x="60" y="82" width="600" height="370" rx="12" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="80" y="108" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">Global scope</text>
+  <text x="80" y="132" font-family="Consolas, Courier New, monospace" font-size="14" fill="#475569">const global = "hammaga"</text>
+
+  <!-- tashqi() function scope -->
+  <rect x="110" y="152" width="500" height="270" rx="12" fill="#f8fafc" stroke="#2563eb" stroke-width="2"/>
+  <text x="130" y="178" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">tashqi() scope</text>
+  <text x="130" y="202" font-family="Consolas, Courier New, monospace" font-size="14" fill="#475569">const xabar = "Salom"</text>
+
+  <!-- ichki() function scope -->
+  <rect x="160" y="222" width="400" height="180" rx="12" fill="#e2e8f0" stroke="#16a34a" stroke-width="2"/>
+  <text x="180" y="248" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">ichki() scope</text>
+  <text x="180" y="272" font-family="Consolas, Courier New, monospace" font-size="14" fill="#475569">const local = 1</text>
+  <text x="180" y="300" font-family="Consolas, Courier New, monospace" font-size="14" fill="#1e293b">console.log(xabar)</text>
+
+  <!-- Qidiruv strelkasi: ichkaridan tashqariga -->
+  <defs>
+    <marker id="ar1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+  <!-- 1: ichki ichida qidir -->
+  <text x="400" y="276" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">1) ichki'da yo'q</text>
+  <line x1="395" y1="290" x2="395" y2="320" stroke="#dc2626" stroke-width="2.5" marker-end="url(#ar1)"/>
+
+  <!-- 2: tashqi'da topildi -->
+  <text x="400" y="340" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">2) tashqi'da topildi: "Salom"</text>
+
+  <!-- Pastki izoh -->
+  <text x="360" y="440" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Ichki tashqarini ko'radi; tashqi ichkini ko'rmaydi</text>
+</svg>

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 400" width="780" height="400">
+  <title>datetime va timedelta — sana arifmetikasi vaqt o'qida</title>
+  <defs>
+    <marker id="dt-arrow" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="780" height="400" fill="#f8fafc"/>
+  <text x="390" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1e293b">datetime + timedelta — sana arifmetikasi</text>
+  <text x="390" y="60" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">sana - bu nuqta, timedelta - bu oraliq (kunlar soni)</text>
+
+  <!-- Vaqt o'qi -->
+  <line x1="60" y1="190" x2="720" y2="190" stroke="#475569" stroke-width="2.5" marker-end="url(#dt-arrow)"/>
+  <text x="725" y="208" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">vaqt</text>
+
+  <!-- bugun nuqtasi -->
+  <circle cx="230" cy="190" r="8" fill="#2563eb"/>
+  <line x1="230" y1="120" x2="230" y2="182" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <rect x="150" y="84" width="160" height="42" rx="8" fill="#e2e8f0" stroke="#2563eb" stroke-width="2"/>
+  <text x="230" y="103" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">bugun</text>
+  <text x="230" y="120" text-anchor="middle" font-family="monospace" font-size="13" fill="#1e293b">2026-06-09</text>
+
+  <!-- keyingi_hafta nuqtasi -->
+  <circle cx="470" cy="190" r="8" fill="#16a34a"/>
+  <line x1="470" y1="230" x2="470" y2="258" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <rect x="390" y="258" width="170" height="42" rx="8" fill="#e2e8f0" stroke="#16a34a" stroke-width="2"/>
+  <text x="475" y="277" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">keyingi_hafta</text>
+  <text x="475" y="294" text-anchor="middle" font-family="monospace" font-size="13" fill="#1e293b">2026-06-16</text>
+
+  <!-- timedelta oraliq -->
+  <path d="M230,150 C300,118 400,118 470,150" fill="none" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#dt-arrow)"/>
+  <rect x="290" y="112" width="120" height="34" rx="8" fill="#fff7ed" stroke="#f59e0b" stroke-width="2"/>
+  <text x="350" y="134" text-anchor="middle" font-family="monospace" font-size="14" fill="#1e293b">+ timedelta(days=7)</text>
+
+  <!-- ayirma (farq) oraliq -->
+  <path d="M470,225 C400,255 300,255 230,225" fill="none" stroke="#dc2626" stroke-width="2.5" marker-end="url(#dt-arrow)"/>
+  <text x="350" y="248" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">sana2 - sana1 -> timedelta (farq.days = 7)</text>
+
+  <!-- formulalar -->
+  <rect x="50" y="330" width="340" height="52" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="220" y="352" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">sana + timedelta = yangi sana</text>
+  <text x="220" y="372" text-anchor="middle" font-family="monospace" font-size="13" fill="#2563eb">bugun + timedelta(days=7)</text>
+
+  <rect x="400" y="330" width="330" height="52" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="565" y="352" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">sana - sana = timedelta (farq)</text>
+  <text x="565" y="372" text-anchor="middle" font-family="monospace" font-size="13" fill="#dc2626">date(2026,12,31) - bugun</text>
+</svg>

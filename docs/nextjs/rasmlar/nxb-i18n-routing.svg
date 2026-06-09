@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430">
+  <title>i18n routing: [locale] segmenti URL tilini aniqlaydi va tilga mos kontentni ko'rsatadi (uz/ru/en)</title>
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+
+  <!-- Brauzer URL qatori -->
+  <text x="30" y="38" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">1. Brauzer URL'i</text>
+  <rect x="30" y="50" width="700" height="46" rx="8" fill="#e2e8f0" stroke="#94a3b8"/>
+  <text x="50" y="79" font-family="monospace" font-size="16" fill="#1e293b">example.uz/</text>
+  <rect x="150" y="60" width="56" height="28" rx="5" fill="#2563eb"/>
+  <text x="178" y="79" font-family="monospace" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">uz</text>
+  <text x="208" y="79" font-family="monospace" font-size="16" fill="#475569">/about</text>
+  <text x="430" y="79" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">← bu bo'lak = [locale] segmenti</text>
+
+  <!-- pastga strelka -->
+  <line x1="380" y1="100" x2="380" y2="132" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- proxy / matcher -->
+  <rect x="190" y="134" width="380" height="56" rx="8" fill="#fff7ed" stroke="#f59e0b"/>
+  <text x="380" y="158" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">proxy.ts (createMiddleware)</text>
+  <text x="380" y="179" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">tilni aniqlaydi: cookie → brauzer tili → standart (uz)</text>
+
+  <line x1="380" y1="190" x2="380" y2="222" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- [locale] route -->
+  <rect x="240" y="224" width="280" height="46" rx="8" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="380" y="252" font-family="monospace" font-size="15" fill="#1e293b" text-anchor="middle">app/[locale]/about/page.tsx</text>
+
+  <!-- uchta strelka -->
+  <line x1="290" y1="270" x2="160" y2="312" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="380" y1="270" x2="380" y2="312" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="470" y1="270" x2="600" y2="312" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- uchta til natijasi -->
+  <rect x="40" y="314" width="200" height="86" rx="8" fill="#ffffff" stroke="#16a34a"/>
+  <text x="140" y="338" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">/uz → messages/uz.json</text>
+  <text x="140" y="362" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b" text-anchor="middle">"Biz haqimizda"</text>
+  <text x="140" y="386" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">t("haqida")</text>
+
+  <rect x="280" y="314" width="200" height="86" rx="8" fill="#ffffff" stroke="#2563eb"/>
+  <text x="380" y="338" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb" text-anchor="middle">/ru → messages/ru.json</text>
+  <text x="380" y="362" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b" text-anchor="middle">ru tarjima</text>
+  <text x="380" y="386" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">t("haqida")</text>
+
+  <rect x="520" y="314" width="200" height="86" rx="8" fill="#ffffff" stroke="#f59e0b"/>
+  <text x="620" y="338" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#f59e0b" text-anchor="middle">/en → messages/en.json</text>
+  <text x="620" y="362" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b" text-anchor="middle">"About us"</text>
+  <text x="620" y="386" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">t("haqida")</text>
+
+  <text x="380" y="420" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Bitta sahifa kodi — uch til. Sahifalar generateStaticParams bilan oldindan tayyorlanadi (statik).</text>
+
+  <defs>
+    <marker id="arr" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+</svg>

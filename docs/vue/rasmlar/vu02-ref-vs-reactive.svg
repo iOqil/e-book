@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 470" width="860" height="470">
+  <title>ref va reactive: qaysi birini qachon ishlatish</title>
+  <rect x="0" y="0" width="860" height="470" fill="#f8fafc"/>
+  <text x="430" y="34" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1e293b" text-anchor="middle">ref va reactive: qaysi birini qachon</text>
+
+  <!-- ref column -->
+  <rect x="40" y="60" width="370" height="320" rx="10" fill="#f8fafc" stroke="#2563eb" stroke-width="2.5"/>
+  <rect x="40" y="60" width="370" height="46" rx="10" fill="#2563eb"/>
+  <text x="225" y="90" font-family="monospace" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">ref()</text>
+
+  <text x="60" y="138" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#16a34a">+ Har qanday tur (primitiv + obyekt)</text>
+  <text x="60" y="168" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#16a34a">+ Reassign ishlaydi: x.value = newObj</text>
+  <text x="60" y="198" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#16a34a">+ Bitta qoida: doim .value (script'da)</text>
+  <text x="60" y="228" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#16a34a">+ Default tanlov, har joyda ishlat</text>
+
+  <rect x="60" y="252" width="330" height="106" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="74" y="278" font-family="monospace" font-size="14" fill="#1e293b">const count = ref(0)</text>
+  <text x="74" y="302" font-family="monospace" font-size="14" fill="#475569">count.value++   // script</text>
+  <text x="74" y="326" font-family="monospace" font-size="14" fill="#475569">{{ count }}     // template</text>
+  <text x="74" y="350" font-family="monospace" font-size="14" fill="#dc2626">count = 5  // XATO (ref buziladi)</text>
+
+  <!-- reactive column -->
+  <rect x="450" y="60" width="370" height="320" rx="10" fill="#f8fafc" stroke="#f59e0b" stroke-width="2.5"/>
+  <rect x="450" y="60" width="370" height="46" rx="10" fill="#f59e0b"/>
+  <text x="635" y="90" font-family="monospace" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">reactive()</text>
+
+  <text x="470" y="138" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">Faqat obyekt / massiv / Map / Set</text>
+  <text x="470" y="168" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#16a34a">+ .value yo'q, to'g'ridan-to'g'ri</text>
+  <text x="470" y="198" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#dc2626">- Reassign reaktivlikni uzadi</text>
+  <text x="470" y="228" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#dc2626">- Destructure reaktivlikni uzadi</text>
+
+  <rect x="470" y="252" width="330" height="106" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="484" y="278" font-family="monospace" font-size="14" fill="#1e293b">const s = reactive({ n: 0 })</text>
+  <text x="484" y="302" font-family="monospace" font-size="14" fill="#475569">s.n++           // ishlaydi</text>
+  <text x="484" y="326" font-family="monospace" font-size="14" fill="#dc2626">s = reactive({}) // bog'lanish uzilad</text>
+  <text x="484" y="350" font-family="monospace" font-size="14" fill="#dc2626">const {n} = s    // reaktiv emas</text>
+
+  <!-- bottom rule -->
+  <rect x="40" y="400" width="780" height="50" rx="8" fill="#2563eb"/>
+  <text x="430" y="431" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Qoida: default -&gt; ref. reactive ni faqat aniq sabab bo'lsa ishlat.</text>
+</svg>

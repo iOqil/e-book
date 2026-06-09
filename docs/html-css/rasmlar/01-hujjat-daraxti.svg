@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="720" height="440">
+  <title>HTML hujjat daraxti (DOM): html elementi head va body ni o'z ichiga oladi</title>
+
+  <rect x="0" y="0" width="720" height="440" fill="#f8fafc"/>
+  <text x="360" y="40" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1e293b">Hujjat daraxti (DOM): elementlar bir-birining ichida</text>
+
+  <!-- Bog'lovchi chiziqlar (avval, qutilar tagida tursin) -->
+  <!-- html -> head -->
+  <line x1="360" y1="115" x2="200" y2="180" stroke="#475569" stroke-width="2"/>
+  <!-- html -> body -->
+  <line x1="360" y1="115" x2="520" y2="180" stroke="#475569" stroke-width="2"/>
+  <!-- head -> title -->
+  <line x1="200" y1="235" x2="200" y2="300" stroke="#475569" stroke-width="2"/>
+  <!-- head -> meta -->
+  <line x1="200" y1="235" x2="120" y2="300" stroke="#475569" stroke-width="2"/>
+  <!-- body -> h1 -->
+  <line x1="520" y1="235" x2="440" y2="300" stroke="#475569" stroke-width="2"/>
+  <!-- body -> p -->
+  <line x1="520" y1="235" x2="600" y2="300" stroke="#475569" stroke-width="2"/>
+  <!-- p -> matn -->
+  <line x1="600" y1="335" x2="600" y2="385" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5 4"/>
+
+  <!-- html (ildiz) -->
+  <rect x="295" y="80" width="130" height="36" rx="8" fill="#2563eb"/>
+  <text x="360" y="104" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="17" fill="#f8fafc">&lt;html&gt;</text>
+
+  <!-- head -->
+  <rect x="140" y="180" width="120" height="36" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="200" y="204" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="16" fill="#1e293b">&lt;head&gt;</text>
+
+  <!-- body -->
+  <rect x="460" y="180" width="120" height="36" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="520" y="204" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="16" fill="#1e293b">&lt;body&gt;</text>
+
+  <!-- meta (head ichida) -->
+  <rect x="62" y="300" width="116" height="34" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
+  <text x="120" y="322" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="15" fill="#1e293b">&lt;meta&gt;</text>
+
+  <!-- title (head ichida) -->
+  <rect x="142" y="300" width="116" height="34" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
+  <text x="200" y="322" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="15" fill="#1e293b">&lt;title&gt;</text>
+
+  <!-- h1 (body ichida) -->
+  <rect x="382" y="300" width="116" height="34" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
+  <text x="440" y="322" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="15" fill="#1e293b">&lt;h1&gt;</text>
+
+  <!-- p (body ichida) -->
+  <rect x="542" y="300" width="116" height="34" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
+  <text x="600" y="322" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="15" fill="#1e293b">&lt;p&gt;</text>
+
+  <!-- matn tuguni -->
+  <rect x="540" y="385" width="150" height="32" rx="8" fill="#f59e0b"/>
+  <text x="615" y="406" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">"matn" (text node)</text>
+
+  <!-- Izohlar -->
+  <text x="360" y="64" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">ildiz (root) element</text>
+</svg>

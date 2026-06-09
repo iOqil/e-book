@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" width="800" height="320">
+  <title>URL tuzilishi: protokol, domen, yo'l va so'rov qismlari yorliqlangan</title>
+  <defs>
+    <marker id="url-strelka" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="800" height="320" fill="#f8fafc"/>
+  <text x="400" y="42" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1e293b">URL (manzil) qanday tuzilgan?</text>
+
+  <!-- URL satri foni -->
+  <rect x="40" y="130" width="720" height="56" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+
+  <!-- URL matni bo'laklarga ranglangan -->
+  <text font-family="Consolas, Courier New, monospace" font-size="24" fill="#1e293b">
+    <tspan x="60" y="165" fill="#2563eb">https://</tspan><tspan fill="#16a34a">www.misol.uz</tspan><tspan fill="#1e293b">/maqola/html</tspan><tspan fill="#f59e0b">?id=5</tspan>
+  </text>
+
+  <!-- protokol -->
+  <line x1="110" y1="186" x2="110" y2="230" stroke="#475569" stroke-width="2" marker-end="url(#url-strelka)"/>
+  <rect x="50" y="234" width="130" height="48" rx="6" fill="#2563eb"/>
+  <text x="115" y="254" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#f8fafc">protokol</text>
+  <text x="115" y="272" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#f8fafc">(qanday aloqa)</text>
+
+  <!-- domen -->
+  <line x1="270" y1="186" x2="270" y2="230" stroke="#475569" stroke-width="2" marker-end="url(#url-strelka)"/>
+  <rect x="205" y="234" width="150" height="48" rx="6" fill="#16a34a"/>
+  <text x="280" y="254" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#f8fafc">domen (manzil)</text>
+  <text x="280" y="272" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#f8fafc">qaysi server</text>
+
+  <!-- yo'l -->
+  <line x1="450" y1="186" x2="450" y2="230" stroke="#475569" stroke-width="2" marker-end="url(#url-strelka)"/>
+  <rect x="385" y="234" width="150" height="48" rx="6" fill="#94a3b8"/>
+  <text x="460" y="254" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">yo'l (path)</text>
+  <text x="460" y="272" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">qaysi sahifa</text>
+
+  <!-- so'rov -->
+  <line x1="610" y1="186" x2="610" y2="230" stroke="#475569" stroke-width="2" marker-end="url(#url-strelka)"/>
+  <rect x="565" y="234" width="170" height="48" rx="6" fill="#f59e0b"/>
+  <text x="650" y="254" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">so'rov (query)</text>
+  <text x="650" y="272" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">qo'shimcha ma'lumot</text>
+</svg>

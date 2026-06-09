@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 450" width="760" height="450">
+  <title>== (qiymat tengligi) va is (ayniyat: bir xil obyektmi) farqi</title>
+  <rect x="0" y="0" width="760" height="450" fill="#f8fafc"/>
+
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">==  va  is  farqi</text>
+  <text x="380" y="60" text-anchor="middle" font-family="monospace" font-size="15" fill="#1e293b">a = [1, 2]    b = [1, 2]</text>
+
+  <defs>
+    <marker id="is1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- shared diagram of a and b -> two separate objects -->
+  <rect x="30" y="80" width="700" height="150" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+
+  <!-- a name -->
+  <rect x="70" y="120" width="80" height="44" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="110" y="148" text-anchor="middle" font-family="monospace" font-size="16" fill="#2563eb">a</text>
+  <!-- b name -->
+  <rect x="70" y="176" width="80" height="44" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="110" y="204" text-anchor="middle" font-family="monospace" font-size="16" fill="#f59e0b">b</text>
+
+  <!-- object 1 -->
+  <rect x="320" y="104" width="160" height="56" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="400" y="128" text-anchor="middle" font-family="monospace" font-size="15" fill="#1e293b">[1, 2]</text>
+  <text x="400" y="148" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">obyekt #1 (id: 0xAA)</text>
+
+  <!-- object 2 -->
+  <rect x="320" y="172" width="160" height="56" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="400" y="196" text-anchor="middle" font-family="monospace" font-size="15" fill="#1e293b">[1, 2]</text>
+  <text x="400" y="216" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">obyekt #2 (id: 0xBB)</text>
+
+  <line x1="150" y1="142" x2="316" y2="132" stroke="#2563eb" stroke-width="2" marker-end="url(#is1)"/>
+  <line x1="150" y1="198" x2="316" y2="200" stroke="#f59e0b" stroke-width="2" marker-end="url(#is1)"/>
+
+  <text x="600" y="138" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Ikki alohida obyekt,</text>
+  <text x="600" y="160" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">qiymatlari bir xil,</text>
+  <text x="600" y="182" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">id (xotira) har xil.</text>
+
+  <!-- LEFT: == -->
+  <rect x="30" y="250" width="340" height="170" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="200" y="278" text-anchor="middle" font-family="monospace" font-size="18" font-weight="bold" fill="#16a34a">==  (qiymat)</text>
+  <text x="200" y="302" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">qiymatlar tengmi? (turni ham hisobga oladi)</text>
+  <text x="200" y="334" text-anchor="middle" font-family="monospace" font-size="15" fill="#1e293b">a == b</text>
+  <rect x="90" y="352" width="220" height="42" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="200" y="379" text-anchor="middle" font-family="monospace" font-size="16" fill="#16a34a">True</text>
+
+  <!-- RIGHT: is -->
+  <rect x="390" y="250" width="340" height="170" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="560" y="278" text-anchor="middle" font-family="monospace" font-size="18" font-weight="bold" fill="#2563eb">is  (ayniyat)</text>
+  <text x="560" y="302" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">bir xil obyektmi? (id bir xilmi?)</text>
+  <text x="560" y="334" text-anchor="middle" font-family="monospace" font-size="15" fill="#1e293b">a is b</text>
+  <rect x="450" y="352" width="220" height="42" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="560" y="379" text-anchor="middle" font-family="monospace" font-size="16" fill="#dc2626">False</text>
+
+  <text x="380" y="440" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">None, True, False bilan doim is ishlat:  x is None</text>
+</svg>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 470" width="720" height="470">
+  <title>box-sizing taqqosi: content-box va border-box bir xil width=200px da qanday farq qiladi</title>
+  <rect x="0" y="0" width="720" height="470" fill="#f8fafc"/>
+
+  <!-- Sarlavha -->
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">box-sizing: ikkalasida ham width: 200px</text>
+
+  <!-- ===== content-box (chap) ===== -->
+  <text x="190" y="74" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#dc2626">content-box (default)</text>
+
+  <!-- to'liq quti: content 200 + padding 2x20 + border 2x10 = 260 -->
+  <rect x="50" y="90" width="280" height="150" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="6"/>
+  <rect x="80" y="120" width="220" height="90" rx="4" fill="#dcfce7" stroke="#16a34a" stroke-width="2" stroke-dasharray="5 4"/>
+  <rect x="120" y="150" width="140" height="30" rx="3" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="190" y="170" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">content 200px</text>
+
+  <!-- content o'lcham strelkasi -->
+  <line x1="120" y1="196" x2="260" y2="196" stroke="#1e293b" stroke-width="1.5"/>
+  <text x="190" y="138" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">+ padding</text>
+  <text x="190" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">+ border</text>
+
+  <!-- jami eni -->
+  <line x1="50" y1="256" x2="330" y2="256" stroke="#dc2626" stroke-width="2"/>
+  <line x1="50" y1="250" x2="50" y2="262" stroke="#dc2626" stroke-width="2"/>
+  <line x1="330" y1="250" x2="330" y2="262" stroke="#dc2626" stroke-width="2"/>
+  <text x="190" y="280" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">jami eni = 260px</text>
+  <text x="190" y="300" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">200 + 20·2 + 10·2</text>
+
+  <!-- ===== border-box (o'ng) ===== -->
+  <text x="530" y="74" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">border-box (tavsiya)</text>
+
+  <!-- to'liq quti aynan 200px keng (mos masshtabda 200 -> 200) -->
+  <rect x="430" y="90" width="200" height="150" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="6"/>
+  <rect x="460" y="120" width="140" height="90" rx="4" fill="#dcfce7" stroke="#16a34a" stroke-width="2" stroke-dasharray="5 4"/>
+  <rect x="490" y="150" width="80" height="30" rx="3" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="530" y="170" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">content</text>
+  <text x="530" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">border ichkarida</text>
+
+  <!-- jami eni -->
+  <line x1="430" y1="256" x2="630" y2="256" stroke="#16a34a" stroke-width="2"/>
+  <line x1="430" y1="250" x2="430" y2="262" stroke="#16a34a" stroke-width="2"/>
+  <line x1="630" y1="250" x2="630" y2="262" stroke="#16a34a" stroke-width="2"/>
+  <text x="530" y="280" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">jami eni = 200px</text>
+  <text x="530" y="300" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">padding va border ICHIGA kiradi</text>
+
+  <!-- pastki xulosa -->
+  <rect x="60" y="334" width="600" height="106" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="360" y="362" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b45309">Nega border-box afzal?</text>
+  <text x="360" y="388" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">content-box da padding/border qo'shsangiz quti KENGAYIB ketadi —</text>
+  <text x="360" y="408" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">layout buziladi. border-box da yozgan width o'sha-o'sha qoladi.</text>
+  <text x="360" y="430" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Shuning uchun ko'pchilik * { box-sizing: border-box } yozadi.</text>
+</svg>

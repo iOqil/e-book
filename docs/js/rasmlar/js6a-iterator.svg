@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="760" height="380">
+  <title>Iterator protokoli — next() har safar {value, done} qaytaradi</title>
+  <defs>
+    <marker id="ar3" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="760" height="380" fill="#f8fafc"/>
+  <text x="380" y="34" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Iterator protokoli: next() =&gt; { value, done }</text>
+  <text x="380" y="58" font-family="monospace" font-size="14" fill="#2563eb" text-anchor="middle">const it = [10, 20, 30][Symbol.iterator]();</text>
+
+  <!-- iterator box -->
+  <rect x="40" y="86" width="160" height="240" rx="10" fill="#e2e8f0" stroke="#94a3b8"/>
+  <text x="120" y="112" font-family="monospace" font-size="15" fill="#1e293b" text-anchor="middle" font-weight="bold">iterator</text>
+  <text x="120" y="134" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">joriy holatni</text>
+  <text x="120" y="151" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">eslab turadi</text>
+  <text x="120" y="200" font-family="monospace" font-size="40" fill="#2563eb" text-anchor="middle">.next()</text>
+  <text x="120" y="232" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">har chaqiriqda</text>
+  <text x="120" y="249" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">keyingisini beradi</text>
+
+  <!-- result rows -->
+  <g font-family="monospace" font-size="14">
+    <rect x="260" y="92" width="440" height="44" rx="8" fill="#dcfce7" stroke="#16a34a"/>
+    <text x="280" y="120" fill="#1e293b">next() =&gt; { value: <tspan fill="#2563eb" font-weight="bold">10</tspan>, done: <tspan fill="#16a34a" font-weight="bold">false</tspan> }</text>
+
+    <rect x="260" y="146" width="440" height="44" rx="8" fill="#dcfce7" stroke="#16a34a"/>
+    <text x="280" y="174" fill="#1e293b">next() =&gt; { value: <tspan fill="#2563eb" font-weight="bold">20</tspan>, done: <tspan fill="#16a34a" font-weight="bold">false</tspan> }</text>
+
+    <rect x="260" y="200" width="440" height="44" rx="8" fill="#dcfce7" stroke="#16a34a"/>
+    <text x="280" y="228" fill="#1e293b">next() =&gt; { value: <tspan fill="#2563eb" font-weight="bold">30</tspan>, done: <tspan fill="#16a34a" font-weight="bold">false</tspan> }</text>
+
+    <rect x="260" y="254" width="440" height="44" rx="8" fill="#fee2e2" stroke="#dc2626"/>
+    <text x="280" y="282" fill="#1e293b">next() =&gt; { value: <tspan fill="#dc2626">undefined</tspan>, done: <tspan fill="#dc2626" font-weight="bold">true</tspan> }</text>
+  </g>
+
+  <line x1="200" y1="114" x2="256" y2="114" stroke="#475569" stroke-width="2" marker-end="url(#ar3)"/>
+  <line x1="200" y1="168" x2="256" y2="168" stroke="#475569" stroke-width="2" marker-end="url(#ar3)"/>
+  <line x1="200" y1="222" x2="256" y2="222" stroke="#475569" stroke-width="2" marker-end="url(#ar3)"/>
+  <line x1="200" y1="276" x2="256" y2="276" stroke="#475569" stroke-width="2" marker-end="url(#ar3)"/>
+
+  <text x="380" y="348" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569" text-anchor="middle">done: true bo'lganda for...of va spread to'xtaydi — qiymatlar tugadi</text>
+</svg>

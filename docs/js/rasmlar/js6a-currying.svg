@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" width="760" height="360">
+  <title>Currying — qoshishCurry(a)(b)(c) bosqichma-bosqich</title>
+  <defs>
+    <marker id="ar2" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="760" height="360" fill="#f8fafc"/>
+  <text x="380" y="34" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Currying: a =&gt; b =&gt; c =&gt; a + b + c</text>
+  <text x="380" y="58" font-family="monospace" font-size="15" fill="#2563eb" text-anchor="middle">qoshishCurry(1)(2)(3)  // 6</text>
+
+  <!-- stage 1 -->
+  <rect x="40" y="90" width="200" height="100" rx="10" fill="#e2e8f0" stroke="#94a3b8"/>
+  <text x="140" y="116" font-family="monospace" font-size="15" fill="#1e293b" text-anchor="middle" font-weight="bold">qoshishCurry(1)</text>
+  <text x="140" y="140" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">a = 1 ni eslab qoladi</text>
+  <text x="140" y="166" font-family="monospace" font-size="14" fill="#16a34a" text-anchor="middle">=&gt; funksiya(b)</text>
+  <text x="140" y="183" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#f59e0b" text-anchor="middle">1-bosqich</text>
+
+  <!-- stage 2 -->
+  <rect x="280" y="90" width="200" height="100" rx="10" fill="#e2e8f0" stroke="#94a3b8"/>
+  <text x="380" y="116" font-family="monospace" font-size="15" fill="#1e293b" text-anchor="middle" font-weight="bold">(2)</text>
+  <text x="380" y="140" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">a=1, b=2 ni eslaydi</text>
+  <text x="380" y="166" font-family="monospace" font-size="14" fill="#16a34a" text-anchor="middle">=&gt; funksiya(c)</text>
+  <text x="380" y="183" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#f59e0b" text-anchor="middle">2-bosqich</text>
+
+  <!-- stage 3 -->
+  <rect x="520" y="90" width="200" height="100" rx="10" fill="#2563eb" stroke="#1e293b"/>
+  <text x="620" y="116" font-family="monospace" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">(3)</text>
+  <text x="620" y="140" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dbeafe" text-anchor="middle">a=1, b=2, c=3</text>
+  <text x="620" y="166" font-family="monospace" font-size="15" fill="#bbf7d0" text-anchor="middle" font-weight="bold">1 + 2 + 3 = 6</text>
+  <text x="620" y="183" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#fde68a" text-anchor="middle">3-bosqich: natija</text>
+
+  <line x1="240" y1="140" x2="276" y2="140" stroke="#475569" stroke-width="2.5" marker-end="url(#ar2)"/>
+  <line x1="480" y1="140" x2="516" y2="140" stroke="#475569" stroke-width="2.5" marker-end="url(#ar2)"/>
+
+  <!-- partial application -->
+  <rect x="40" y="232" width="680" height="100" rx="10" fill="#fff7ed" stroke="#f59e0b"/>
+  <text x="60" y="260" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b" font-weight="bold">Partial application (qisman qo'llash): oraliq bosqichni saqlab qo'yasan</text>
+  <text x="60" y="288" font-family="monospace" font-size="14" fill="#2563eb">const besh = qoshishCurry(5);   // a=5 biriktirildi, qayta ishlatish mumkin</text>
+  <text x="60" y="312" font-family="monospace" font-size="14" fill="#2563eb">const beshUch = besh(3);        // beshUch(2) =&gt; <tspan fill="#16a34a" font-weight="bold">10</tspan></text>
+</svg>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" width="800" height="460">
+  <title>Fixture: bitta @pytest.fixture funksiyasi tayyor ma'lumot qaytaradi; pytest uni argument nomi orqali har testga avtomatik uzatadi</title>
+  <defs>
+    <marker id="fx-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="800" height="460" fill="#f8fafc"/>
+  <text x="400" y="38" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1e293b">Fixture: testga tayyor ma'lumot beradi</text>
+  <text x="400" y="62" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">bir marta tayyorla, ko'p test ishlatsin (takror tayyorgarlik yo'q)</text>
+
+  <!-- Fixture funksiya -->
+  <rect x="40" y="150" width="260" height="160" rx="12" fill="#f59e0b" fill-opacity="0.12" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="170" y="180" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="15" fill="#b45309">@pytest.fixture</text>
+  <text x="170" y="204" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="15" fill="#1e293b">def namuna_talaba():</text>
+  <text x="170" y="234" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="14" fill="#16a34a">return {...}</text>
+  <rect x="70" y="252" width="200" height="44" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
+  <text x="170" y="280" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="13" fill="#1e293b">{"ism":"Aziz","yosh":20}</text>
+
+  <text x="170" y="338" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309">tayyor ma'lumot manbai</text>
+
+  <!-- pytest avtomatik uzatadi yorlig'i -->
+  <text x="470" y="118" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569" font-style="italic">argument nomi fixture nomiga mos -&gt; pytest avtomatik chaqirib uzatadi</text>
+
+  <!-- Test 1 -->
+  <line x1="300" y1="200" x2="500" y2="170" stroke="#475569" stroke-width="2.5" marker-end="url(#fx-arrow)"/>
+  <rect x="510" y="140" width="250" height="70" rx="10" fill="#2563eb" fill-opacity="0.10" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="635" y="168" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="14" fill="#2563eb">def test_ism(namuna_talaba):</text>
+  <text x="635" y="194" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="13" fill="#1e293b">assert ...["ism"]=="Aziz"</text>
+
+  <!-- Test 2 -->
+  <line x1="300" y1="262" x2="500" y2="292" stroke="#475569" stroke-width="2.5" marker-end="url(#fx-arrow)"/>
+  <rect x="510" y="262" width="250" height="70" rx="10" fill="#2563eb" fill-opacity="0.10" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="635" y="290" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="14" fill="#2563eb">def test_yosh(namuna_talaba):</text>
+  <text x="635" y="316" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="13" fill="#1e293b">assert ...["yosh"]&gt;=18</text>
+
+  <!-- izoh -->
+  <rect x="120" y="382" width="560" height="58" rx="12" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="400" y="410" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Test argument sifatida fixture nomini yozsa, tayyor ma'lumotni oladi</text>
+  <text x="400" y="430" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">har test fixturedan o'z nusxasini oladi -&gt; testlar bir-biriga aralashmaydi</text>
+</svg>

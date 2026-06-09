@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 380" width="640" height="380">
+  <title>Jadval anatomiyasi: ustun, qator va primary kalit (talabalar jadvali)</title>
+  <rect x="0" y="0" width="640" height="380" fill="#f8fafc"/>
+
+  <text x="320" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="19" font-weight="bold" fill="#1e293b">Jadval anatomiyasi — talabalar</text>
+
+  <!-- Table grid -->
+  <!-- columns: id(80) ism(180) yosh(110) shahar(150) -> starts x=120 -->
+  <!-- header row -->
+  <g font-family="Segoe UI, system-ui, sans-serif">
+    <!-- header background -->
+    <rect x="120" y="80" width="80"  height="44" fill="#2563eb"/>
+    <rect x="200" y="80" width="180" height="44" fill="#e2e8f0" stroke="#94a3b8"/>
+    <rect x="380" y="80" width="110" height="44" fill="#e2e8f0" stroke="#94a3b8"/>
+    <rect x="490" y="80" width="150" height="44" fill="#e2e8f0" stroke="#94a3b8"/>
+    <text x="160" y="108" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">id</text>
+    <text x="290" y="108" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e293b">ism</text>
+    <text x="435" y="108" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e293b">yosh</text>
+    <text x="565" y="108" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e293b">shahar</text>
+
+    <!-- data row 1 -->
+    <rect x="120" y="124" width="80"  height="40" fill="#dbeafe" stroke="#94a3b8"/>
+    <rect x="200" y="124" width="180" height="40" fill="#ffffff" stroke="#94a3b8"/>
+    <rect x="380" y="124" width="110" height="40" fill="#ffffff" stroke="#94a3b8"/>
+    <rect x="490" y="124" width="150" height="40" fill="#ffffff" stroke="#94a3b8"/>
+    <text x="160" y="150" text-anchor="middle" font-size="14" fill="#1e293b">1</text>
+    <text x="290" y="150" text-anchor="middle" font-size="14" fill="#1e293b">Ali Valiyev</text>
+    <text x="435" y="150" text-anchor="middle" font-size="14" fill="#1e293b">19</text>
+    <text x="565" y="150" text-anchor="middle" font-size="14" fill="#1e293b">Toshkent</text>
+
+    <!-- data row 2 (highlighted as one qator) -->
+    <rect x="120" y="164" width="80"  height="40" fill="#dbeafe" stroke="#94a3b8"/>
+    <rect x="200" y="164" width="180" height="40" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+    <rect x="380" y="164" width="110" height="40" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+    <rect x="490" y="164" width="150" height="40" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+    <rect x="120" y="164" width="80"  height="40" fill="#bfdbfe" stroke="#f59e0b" stroke-width="2"/>
+    <text x="160" y="190" text-anchor="middle" font-size="14" fill="#1e293b">2</text>
+    <text x="290" y="190" text-anchor="middle" font-size="14" fill="#1e293b">Vali Karimov</text>
+    <text x="435" y="190" text-anchor="middle" font-size="14" fill="#1e293b">22</text>
+    <text x="565" y="190" text-anchor="middle" font-size="14" fill="#1e293b">Samarqand</text>
+
+    <!-- data row 3 -->
+    <rect x="120" y="204" width="80"  height="40" fill="#dbeafe" stroke="#94a3b8"/>
+    <rect x="200" y="204" width="180" height="40" fill="#ffffff" stroke="#94a3b8"/>
+    <rect x="380" y="204" width="110" height="40" fill="#ffffff" stroke="#94a3b8"/>
+    <rect x="490" y="204" width="150" height="40" fill="#ffffff" stroke="#94a3b8"/>
+    <text x="160" y="230" text-anchor="middle" font-size="14" fill="#1e293b">3</text>
+    <text x="290" y="230" text-anchor="middle" font-size="14" fill="#1e293b">Hasan Aliyev</text>
+    <text x="435" y="230" text-anchor="middle" font-size="14" fill="#1e293b">19</text>
+    <text x="565" y="230" text-anchor="middle" font-size="14" fill="#1e293b">Toshkent</text>
+  </g>
+
+  <!-- Annotation: ustun (column) -->
+  <g font-family="Segoe UI, system-ui, sans-serif">
+    <line x1="435" y1="68" x2="435" y2="80" stroke="#16a34a" stroke-width="2"/>
+    <text x="435" y="62" text-anchor="middle" font-size="14" font-weight="bold" fill="#16a34a">ustun (column)</text>
+    <line x1="380" y1="252" x2="490" y2="252" stroke="#16a34a" stroke-width="2"/>
+    <text x="435" y="270" text-anchor="middle" font-size="13" fill="#16a34a">bir xil turdagi qiymatlar</text>
+  </g>
+
+  <!-- Annotation: qator (row) -->
+  <g font-family="Segoe UI, system-ui, sans-serif">
+    <text x="105" y="188" text-anchor="end" font-size="14" font-weight="bold" fill="#f59e0b">qator</text>
+    <text x="105" y="204" text-anchor="end" font-size="13" fill="#f59e0b">(row) — 1 talaba</text>
+  </g>
+
+  <!-- Annotation: primary key -->
+  <g font-family="Segoe UI, system-ui, sans-serif">
+    <text x="160" y="312" text-anchor="middle" font-size="14" font-weight="bold" fill="#2563eb">PRIMARY KEY (id)</text>
+    <line x1="160" y1="244" x2="160" y2="296" stroke="#2563eb" stroke-width="2" stroke-dasharray="4 3"/>
+    <polygon points="160,244 156,252 164,252" fill="#2563eb"/>
+    <text x="320" y="338" text-anchor="middle" font-size="13" fill="#1e293b">Har qatorni noyob qiladi · AUTO_INCREMENT bilan o'zi 1,2,3... ortadi</text>
+    <text x="320" y="360" text-anchor="middle" font-size="13" fill="#475569">Ikki qatorda bir xil id bo'lmaydi</text>
+  </g>
+</svg>

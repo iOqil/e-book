@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>try / catch / finally oqimi: xato bo'lsa va bo'lmasa qaysi blok ishlaydi</title>
+
+  <defs>
+    <marker id="okTCF" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- Sarlavha -->
+  <text x="360" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">try / catch / finally oqimi</text>
+  <text x="360" y="54" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">try ichida xato chiqsa catch ushlaydi; finally esa HAR DOIM ishlaydi</text>
+
+  <!-- try bloki -->
+  <rect x="260" y="74" width="200" height="58" rx="10" fill="#2563eb" fill-opacity="0.10" stroke="#2563eb" stroke-width="2"/>
+  <text x="360" y="100" text-anchor="middle" font-family="Consolas, monospace" font-size="15" font-weight="bold" fill="#2563eb">try { ... }</text>
+  <text x="360" y="120" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">"xavfli" kod bajariladi</text>
+
+  <!-- Ayri yo'l: chap (xato yo'q), o'ng (xato bor) -->
+  <line x1="320" y1="132" x2="180" y2="178" stroke="#16a34a" stroke-width="2" marker-end="url(#okTCF)"/>
+  <text x="210" y="158" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" font-weight="bold">xato YO'Q</text>
+
+  <line x1="400" y1="132" x2="540" y2="178" stroke="#dc2626" stroke-width="2" marker-end="url(#okTCF)"/>
+  <text x="510" y="158" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626" font-weight="bold">xato BOR (throw)</text>
+
+  <!-- Chap: catch o'tkazib yuboriladi -->
+  <rect x="60" y="180" width="240" height="64" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="180" y="206" text-anchor="middle" font-family="Consolas, monospace" font-size="15" font-weight="bold" fill="#94a3b8">catch (e) { ... }</text>
+  <text x="180" y="228" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">o'tkazib yuboriladi (skip)</text>
+
+  <!-- O'ng: catch ishlaydi -->
+  <rect x="420" y="180" width="240" height="64" rx="10" fill="#dc2626" fill-opacity="0.10" stroke="#dc2626" stroke-width="2"/>
+  <text x="540" y="206" text-anchor="middle" font-family="Consolas, monospace" font-size="15" font-weight="bold" fill="#dc2626">catch (e) { ... }</text>
+  <text x="540" y="228" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">xato ushlanadi (e.message)</text>
+
+  <!-- Ikkala yo'l finally'ga birlashadi -->
+  <line x1="180" y1="244" x2="320" y2="290" stroke="#475569" stroke-width="2" marker-end="url(#okTCF)"/>
+  <line x1="540" y1="244" x2="400" y2="290" stroke="#475569" stroke-width="2" marker-end="url(#okTCF)"/>
+
+  <!-- finally bloki -->
+  <rect x="240" y="292" width="240" height="64" rx="10" fill="#f59e0b" fill-opacity="0.12" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="360" y="318" text-anchor="middle" font-family="Consolas, monospace" font-size="15" font-weight="bold" fill="#b45309">finally { ... }</text>
+  <text x="360" y="340" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">HAR DOIM ishlaydi (tozalash)</text>
+
+  <!-- Davom -->
+  <line x1="360" y1="356" x2="360" y2="378" stroke="#475569" stroke-width="2" marker-end="url(#okTCF)"/>
+  <rect x="280" y="380" width="160" height="40" rx="10" fill="#16a34a" fill-opacity="0.12" stroke="#16a34a" stroke-width="2"/>
+  <text x="360" y="405" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">Dastur davom etadi</text>
+</svg>

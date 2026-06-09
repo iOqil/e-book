@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" width="760" height="470">
+  <title>Dekorator: asl funksiya -> wrapper (ichki) -> qo'shimcha xulq qo'shilgan funksiya</title>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+
+  <text x="380" y="30" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="19" font-weight="bold" fill="#1e293b">Dekorator qanday ishlaydi</text>
+  <text x="380" y="52" text-anchor="middle" font-family="monospace" font-size="14" fill="#2563eb">salomla = log_qiluvchi(salomla)</text>
+
+  <defs>
+    <marker id="arrD" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- step 1: original function -->
+  <rect x="30" y="90" width="190" height="120" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="125" y="114" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#475569">1. Asl funksiya</text>
+  <rect x="50" y="128" width="150" height="64" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="125" y="152" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#2563eb">salomla(ism)</text>
+  <text x="125" y="176" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">faqat salom beradi</text>
+
+  <!-- arrow to decorator -->
+  <line x1="222" y1="150" x2="282" y2="150" stroke="#475569" stroke-width="2.5" marker-end="url(#arrD)"/>
+  <text x="252" y="138" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">uzatiladi</text>
+
+  <!-- step 2: decorator wraps -->
+  <rect x="285" y="78" width="200" height="170" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="385" y="100" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#f59e0b">2. Dekorator o'raydi</text>
+  <text x="385" y="118" text-anchor="middle" font-family="monospace" font-size="13" fill="#475569">def ichki(*args):</text>
+
+  <text x="385" y="142" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">+ oldin: log yozadi</text>
+  <!-- inner holds original -->
+  <rect x="305" y="150" width="160" height="48" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="385" y="171" text-anchor="middle" font-family="monospace" font-size="13" fill="#2563eb">funk(*args)</text>
+  <text x="385" y="190" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">asl funksiya chaqiriladi</text>
+  <text x="385" y="222" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">+ keyin: log yozadi</text>
+  <text x="385" y="240" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">return ichki (wrapper)</text>
+
+  <!-- arrow to result -->
+  <line x1="487" y1="160" x2="547" y2="160" stroke="#475569" stroke-width="2.5" marker-end="url(#arrD)"/>
+  <text x="517" y="148" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">qaytaradi</text>
+
+  <!-- step 3: enhanced function -->
+  <rect x="550" y="90" width="190" height="120" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="645" y="114" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">3. Yangi salomla</text>
+  <rect x="570" y="128" width="150" height="64" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="645" y="150" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">log + salom + log</text>
+  <text x="645" y="174" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">asl o'zgartirilmagan</text>
+
+  <!-- @ shorthand note -->
+  <rect x="30" y="270" width="710" height="60" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="385" y="294" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">@ belgisi — xuddi shu ishning qisqa yozuvi:</text>
+  <text x="385" y="318" text-anchor="middle" font-family="monospace" font-size="14" fill="#2563eb">@log_qiluvchi   ↔   salomla = log_qiluvchi(salomla)</text>
+
+  <!-- runtime call flow -->
+  <rect x="30" y="350" width="710" height="100" rx="10" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="385" y="374" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">salomla("Aziz") chaqirilganda:</text>
+  <text x="120" y="408" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#f59e0b">chaqirilmoqda...</text>
+  <line x1="200" y1="403" x2="290" y2="403" stroke="#475569" stroke-width="2" marker-end="url(#arrD)"/>
+  <text x="380" y="408" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">Salom, Aziz! (asl)</text>
+  <line x1="470" y1="403" x2="560" y2="403" stroke="#475569" stroke-width="2" marker-end="url(#arrD)"/>
+  <text x="645" y="408" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#f59e0b">tugadi</text>
+  <text x="385" y="436" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Asl funksiya tegmasdan, atrofiga qo'shimcha xulq qo'shildi.</text>
+</svg>

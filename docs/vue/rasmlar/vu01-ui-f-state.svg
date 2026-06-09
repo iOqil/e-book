@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" width="720" height="340">
+  <title>UI = f(state) — holat o'zgaradi, ko'rinish avtomatik yangilanadi</title>
+  <defs>
+    <marker id="arrUi" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="720" height="340" fill="#f8fafc"/>
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">UI = f(state)</text>
+  <text x="360" y="58" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Ko'rinish — holatning natijasi. Sen holatni o'zgartirasan, DOM'ni Vue yangilaydi.</text>
+
+  <!-- state box -->
+  <rect x="40" y="110" width="190" height="120" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="135" y="138" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">state (holat)</text>
+  <text x="135" y="166" text-anchor="middle" font-family="monospace" font-size="14" fill="#1e293b">count = ref(0)</text>
+  <text x="135" y="190" text-anchor="middle" font-family="monospace" font-size="14" fill="#1e293b">name = ref('Oqil')</text>
+  <text x="135" y="214" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">reaktiv ma'lumot</text>
+
+  <!-- f() box -->
+  <rect x="295" y="120" width="130" height="100" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="360" y="160" text-anchor="middle" font-family="monospace" font-size="22" font-weight="bold" fill="#f59e0b">f( )</text>
+  <text x="360" y="190" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">template</text>
+  <text x="360" y="208" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">(render funksiyasi)</text>
+
+  <!-- UI box -->
+  <rect x="490" y="110" width="190" height="120" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="585" y="138" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">UI (ko'rinish)</text>
+  <text x="585" y="168" text-anchor="middle" font-family="monospace" font-size="14" fill="#1e293b">&lt;h1&gt;Oqil&lt;/h1&gt;</text>
+  <text x="585" y="194" text-anchor="middle" font-family="monospace" font-size="14" fill="#1e293b">Bosildi: 0</text>
+  <text x="585" y="216" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">brauzerdagi DOM</text>
+
+  <!-- arrows -->
+  <line x1="230" y1="170" x2="290" y2="170" stroke="#475569" stroke-width="2.5" marker-end="url(#arrUi)"/>
+  <line x1="425" y1="170" x2="485" y2="170" stroke="#475569" stroke-width="2.5" marker-end="url(#arrUi)"/>
+
+  <!-- feedback note -->
+  <rect x="170" y="270" width="380" height="46" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="360" y="291" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#dc2626" font-weight="bold">state o'zgardi ⟳ Vue UI'ni avtomatik qayta hisoblaydi</text>
+  <text x="360" y="309" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">document.querySelector(...) qo'lda yozish kerak emas</text>
+</svg>

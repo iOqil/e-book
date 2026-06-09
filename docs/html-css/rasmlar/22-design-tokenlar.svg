@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" width="760" height="470">
+  <title>Design tokenlar: :root da bir marta e'lon qilingan custom property qiymatlari butun sahifaga tarqalishi</title>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Design tokenlar — bitta manba</text>
+  <text x="380" y="56" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">:root da bir marta e'lon qil, hamma joyda ishlat</text>
+
+  <!-- Manba: :root -->
+  <rect x="60" y="86" width="260" height="320" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="190" y="112" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e3a8a">:root { ... }</text>
+
+  <!-- Rang tokeni -->
+  <rect x="80" y="128" width="220" height="50" rx="6" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+  <rect x="92" y="140" width="26" height="26" rx="5" fill="#2563eb"/>
+  <text x="128" y="150" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">--rang-asosiy</text>
+  <text x="128" y="168" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">#2563eb</text>
+
+  <!-- Masofa tokeni -->
+  <rect x="80" y="186" width="220" height="50" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <rect x="92" y="198" width="26" height="26" rx="5" fill="#16a34a"/>
+  <text x="128" y="208" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">--masofa-md</text>
+  <text x="128" y="226" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">16px</text>
+
+  <!-- Radius tokeni -->
+  <rect x="80" y="244" width="220" height="50" rx="6" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5"/>
+  <rect x="92" y="256" width="26" height="26" rx="10" fill="#f59e0b"/>
+  <text x="128" y="266" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">--radius</text>
+  <text x="128" y="284" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">12px</text>
+
+  <!-- Shrift tokeni -->
+  <rect x="80" y="302" width="220" height="50" rx="6" fill="#ffffff" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="92" y="334" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#dc2626">Aa</text>
+  <text x="128" y="324" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">--shrift-asosiy</text>
+  <text x="128" y="342" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">system-ui, sans-serif</text>
+
+  <text x="190" y="382" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e3a8a">bitta haqiqat manbai</text>
+  <text x="190" y="399" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(single source of truth)</text>
+
+  <!-- Strelkalar -->
+  <line x1="320" y1="200" x2="430" y2="140" stroke="#475569" stroke-width="2"/>
+  <polygon points="438,135 424,135 432,147" fill="#475569"/>
+  <line x1="320" y1="240" x2="430" y2="240" stroke="#475569" stroke-width="2"/>
+  <polygon points="438,240 426,233 426,247" fill="#475569"/>
+  <line x1="320" y1="280" x2="430" y2="340" stroke="#475569" stroke-width="2"/>
+  <polygon points="438,345 432,333 424,345" fill="#475569"/>
+
+  <text x="375" y="195" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">var(--...)</text>
+
+  <!-- Iste'molchilar -->
+  <rect x="446" y="110" width="250" height="56" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="571" y="134" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">.tugma</text>
+  <text x="571" y="153" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">background: var(--rang-asosiy)</text>
+
+  <rect x="446" y="212" width="250" height="56" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="571" y="236" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">.karta</text>
+  <text x="571" y="255" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">padding: var(--masofa-md)</text>
+
+  <rect x="446" y="314" width="250" height="56" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="571" y="338" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">body</text>
+  <text x="571" y="357" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">font-family: var(--shrift-asosiy)</text>
+
+  <!-- Pastki izoh -->
+  <rect x="60" y="424" width="636" height="34" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="378" y="445" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Rangni o'zgartirmoqchimisiz? :root dagi BITTA qiymatni tahrirlang — hamma joyda yangilanadi.</text>
+</svg>

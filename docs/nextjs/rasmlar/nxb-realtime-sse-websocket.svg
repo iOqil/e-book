@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" width="780" height="470">
+  <title>Real-time: polling vs push, SSE bir tomonlama va WebSocket ikki tomonlama aloqa</title>
+  <rect x="0" y="0" width="780" height="470" fill="#f8fafc"/>
+
+  <!-- POLLING (eski usul) -->
+  <rect x="20" y="20" width="350" height="200" rx="10" fill="#fee2e2" stroke="#dc2626"/>
+  <text x="195" y="46" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#dc2626" text-anchor="middle">Polling (so'rab turish) — eski</text>
+
+  <rect x="40" y="70" width="110" height="42" rx="7" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="95" y="96" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">Brauzer</text>
+  <rect x="240" y="70" width="110" height="42" rx="7" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="295" y="96" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">Server</text>
+
+  <line x1="150" y1="84" x2="236" y2="84" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+  <text x="193" y="78" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">yangilik bormi?</text>
+  <line x1="240" y1="104" x2="154" y2="104" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+  <text x="193" y="128" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">yo'q</text>
+  <line x1="150" y1="148" x2="236" y2="148" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+  <text x="193" y="142" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">yangilik bormi?</text>
+  <line x1="240" y1="168" x2="154" y2="168" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+  <text x="193" y="192" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">yana yo'q...</text>
+  <text x="195" y="212" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626" text-anchor="middle">qayta-qayta so'rash — isrof</text>
+
+  <!-- PUSH (real-time) -->
+  <rect x="410" y="20" width="350" height="200" rx="10" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="585" y="46" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a" text-anchor="middle">Push (real-time) — yangi</text>
+
+  <rect x="430" y="80" width="110" height="42" rx="7" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="485" y="106" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">Brauzer</text>
+  <rect x="630" y="80" width="110" height="42" rx="7" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="685" y="106" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">Server</text>
+
+  <line x1="540" y1="92" x2="626" y2="92" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+  <text x="583" y="86" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">bir marta ulanish</text>
+  <line x1="630" y1="148" x2="544" y2="148" stroke="#16a34a" stroke-width="2.5" marker-end="url(#g)"/>
+  <text x="585" y="142" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" text-anchor="middle">yangilik!</text>
+  <line x1="630" y1="180" x2="544" y2="180" stroke="#16a34a" stroke-width="2.5" marker-end="url(#g)"/>
+  <text x="585" y="174" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" text-anchor="middle">yana yangilik!</text>
+  <text x="585" y="212" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" text-anchor="middle">server o'zi yuboradi — tez</text>
+
+  <!-- pastki qism: SSE vs WebSocket -->
+  <rect x="20" y="245" width="350" height="200" rx="10" fill="#ffffff" stroke="#2563eb"/>
+  <text x="195" y="271" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb" text-anchor="middle">SSE — bir tomonlama</text>
+  <text x="195" y="293" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">faqat server → brauzer (radio kabi)</text>
+
+  <rect x="40" y="320" width="120" height="46" rx="7" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="100" y="348" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">Server</text>
+  <rect x="230" y="320" width="120" height="46" rx="7" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="290" y="348" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">Brauzer</text>
+  <line x1="160" y1="343" x2="226" y2="343" stroke="#2563eb" stroke-width="2.5" marker-end="url(#b)"/>
+  <text x="195" y="392" font-family="monospace" font-size="13" fill="#475569" text-anchor="middle">EventSource + Route Handler</text>
+  <text x="195" y="414" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">Bildirishnoma, jonli hisoblagich</text>
+  <text x="195" y="434" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" text-anchor="middle">Vercel'da ham ishlaydi</text>
+
+  <rect x="410" y="245" width="350" height="200" rx="10" fill="#ffffff" stroke="#f59e0b"/>
+  <text x="585" y="271" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#f59e0b" text-anchor="middle">WebSocket — ikki tomonlama</text>
+  <text x="585" y="293" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">server ↔ brauzer (telefon liniyasi kabi)</text>
+
+  <rect x="430" y="320" width="120" height="46" rx="7" fill="#fff7ed" stroke="#f59e0b"/>
+  <text x="490" y="348" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">Server</text>
+  <rect x="620" y="320" width="120" height="46" rx="7" fill="#fff7ed" stroke="#f59e0b"/>
+  <text x="680" y="348" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">Brauzer</text>
+  <line x1="550" y1="336" x2="616" y2="336" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#o)"/>
+  <line x1="620" y1="352" x2="554" y2="352" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#o)"/>
+  <text x="585" y="392" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Chat, hamkorlikda tahrirlash</text>
+  <text x="585" y="414" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">Pusher/Ably (Vercel) yoki</text>
+  <text x="585" y="434" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">Socket.IO (VPS)</text>
+
+  <defs>
+    <marker id="a" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#475569"/>
+    </marker>
+    <marker id="g" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+    <marker id="b" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="o" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 540" width="840" height="540">
+  <title>Bit niqobi: k-bitni olish, o'rnatish, tozalash va almashtirish amallari</title>
+  <rect x="0" y="0" width="840" height="540" fill="#f8fafc"/>
+  <text x="30" y="32" font-family="Segoe UI, system-ui, sans-serif" font-size="18" font-weight="bold" fill="#2563eb">Bit niqobi (mask) — bitta bit ustida amallar, niqob = (1 &lt;&lt; k)</text>
+  <text x="30" y="55" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Misol: n = 0b1010 (= 10) · k = 1 · Niqob (1 &lt;&lt; 1) = 0b0010 faqat 1-bitni ajratadi.</text>
+
+  <!-- bit position legend -->
+  <g font-family="monospace" font-size="13" fill="#475569" text-anchor="middle">
+    <text x="630" y="92">bit:</text>
+    <text x="690" y="92">3</text><text x="730" y="92">2</text><text x="770" y="92">1</text><text x="810" y="92">0</text>
+  </g>
+
+  <!-- helper macro implemented inline as rows -->
+  <!-- ROW: n -->
+  <text x="30" y="120" font-family="monospace" font-size="15" fill="#1e293b">n   = 1010</text>
+  <g font-family="monospace" font-size="16" text-anchor="middle" fill="#1e293b">
+    <rect x="670" y="100" width="40" height="34" fill="#bfdbfe" stroke="#2563eb"/><text x="690" y="124">1</text>
+    <rect x="710" y="100" width="40" height="34" fill="#e2e8f0" stroke="#94a3b8"/><text x="730" y="124">0</text>
+    <rect x="750" y="100" width="40" height="34" fill="#bfdbfe" stroke="#2563eb"/><text x="770" y="124">1</text>
+    <rect x="790" y="100" width="40" height="34" fill="#e2e8f0" stroke="#94a3b8"/><text x="810" y="124">0</text>
+  </g>
+
+  <!-- ROW: mask -->
+  <text x="30" y="160" font-family="monospace" font-size="15" fill="#f59e0b">mask= 0010   (1 &lt;&lt; k)</text>
+  <g font-family="monospace" font-size="16" text-anchor="middle" fill="#1e293b">
+    <rect x="670" y="140" width="40" height="34" fill="#e2e8f0" stroke="#94a3b8"/><text x="690" y="164">0</text>
+    <rect x="710" y="140" width="40" height="34" fill="#e2e8f0" stroke="#94a3b8"/><text x="730" y="164">0</text>
+    <rect x="750" y="140" width="40" height="34" fill="#fde68a" stroke="#f59e0b"/><text x="770" y="164">1</text>
+    <rect x="790" y="140" width="40" height="34" fill="#e2e8f0" stroke="#94a3b8"/><text x="810" y="164">0</text>
+  </g>
+  <text x="770" y="194" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#f59e0b" text-anchor="middle">k=1</text>
+
+  <line x1="30" y1="208" x2="810" y2="208" stroke="#94a3b8" stroke-width="1" stroke-dasharray="5 4"/>
+
+  <!-- GET BIT -->
+  <text x="30" y="238" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">OLISH (get):  (n &gt;&gt; k) &amp; 1</text>
+  <text x="30" y="262" font-family="monospace" font-size="14" fill="#1e293b">n &gt;&gt; 1 = 0101, &amp; 1 → 1.  k-bit qiymati = 1.</text>
+
+  <!-- SET BIT -->
+  <text x="30" y="300" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">O'RNATISH (set → 1):  n | mask</text>
+  <text x="30" y="324" font-family="monospace" font-size="14" fill="#1e293b">1010 | 0010 = 1010.  OR — k-bitni majburan 1 qiladi.</text>
+  <g font-family="monospace" font-size="15" text-anchor="middle" fill="#1e293b">
+    <rect x="670" y="288" width="40" height="32" fill="#bfdbfe" stroke="#2563eb"/><text x="690" y="311">1</text>
+    <rect x="710" y="288" width="40" height="32" fill="#e2e8f0" stroke="#94a3b8"/><text x="730" y="311">0</text>
+    <rect x="750" y="288" width="40" height="32" fill="#bfdbfe" stroke="#2563eb"/><text x="770" y="311">1</text>
+    <rect x="790" y="288" width="40" height="32" fill="#e2e8f0" stroke="#94a3b8"/><text x="810" y="311">0</text>
+  </g>
+
+  <!-- CLEAR BIT -->
+  <text x="30" y="362" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">TOZALASH (clear → 0):  n &amp; ~mask</text>
+  <text x="30" y="386" font-family="monospace" font-size="14" fill="#1e293b">~mask = 1101.  1010 &amp; 1101 = 1000.  k-bit majburan 0.</text>
+  <g font-family="monospace" font-size="15" text-anchor="middle" fill="#1e293b">
+    <rect x="670" y="350" width="40" height="32" fill="#bfdbfe" stroke="#2563eb"/><text x="690" y="373">1</text>
+    <rect x="710" y="350" width="40" height="32" fill="#e2e8f0" stroke="#94a3b8"/><text x="730" y="373">0</text>
+    <rect x="750" y="350" width="40" height="32" fill="#fee2e2" stroke="#dc2626"/><text x="770" y="373">0</text>
+    <rect x="790" y="350" width="40" height="32" fill="#e2e8f0" stroke="#94a3b8"/><text x="810" y="373">0</text>
+  </g>
+
+  <!-- TOGGLE BIT -->
+  <text x="30" y="424" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#f59e0b">ALMASHTIRISH (toggle):  n ^ mask</text>
+  <text x="30" y="448" font-family="monospace" font-size="14" fill="#1e293b">1010 ^ 0010 = 1000.  XOR — k-bitni teskari (1↔0) qiladi.</text>
+  <g font-family="monospace" font-size="15" text-anchor="middle" fill="#1e293b">
+    <rect x="670" y="412" width="40" height="32" fill="#bfdbfe" stroke="#2563eb"/><text x="690" y="435">1</text>
+    <rect x="710" y="412" width="40" height="32" fill="#e2e8f0" stroke="#94a3b8"/><text x="730" y="435">0</text>
+    <rect x="750" y="412" width="40" height="32" fill="#fde68a" stroke="#f59e0b"/><text x="770" y="435">0</text>
+    <rect x="790" y="412" width="40" height="32" fill="#e2e8f0" stroke="#94a3b8"/><text x="810" y="435">0</text>
+  </g>
+
+  <line x1="30" y1="470" x2="810" y2="470" stroke="#94a3b8" stroke-width="1" stroke-dasharray="5 4"/>
+  <text x="30" y="496" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Niqob (1 &lt;&lt; k) faqat k-pozitsiyani "yoritadi". OR yoqadi, AND ~mask o'chiradi, XOR teskari qiladi.</text>
+  <text x="30" y="518" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Sariq — niqob tegadigan bit · Ko'k — 1 qiymatli bitlar. Har amal ⏱ O(1), boshqa bitlar o'zgarmaydi.</text>
+</svg>

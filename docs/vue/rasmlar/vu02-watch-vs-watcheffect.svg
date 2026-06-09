@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 480" width="860" height="480">
+  <title>watch va watchEffect farqi</title>
+  <rect x="0" y="0" width="860" height="480" fill="#f8fafc"/>
+  <text x="430" y="34" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1e293b" text-anchor="middle">watch va watchEffect farqi</text>
+
+  <!-- watch column -->
+  <rect x="40" y="60" width="370" height="350" rx="10" fill="#f8fafc" stroke="#2563eb" stroke-width="2.5"/>
+  <rect x="40" y="60" width="370" height="46" rx="10" fill="#2563eb"/>
+  <text x="225" y="90" font-family="monospace" font-size="19" font-weight="bold" fill="#ffffff" text-anchor="middle">watch()</text>
+
+  <text x="60" y="138" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">Manba ANIQ ko'rsatiladi</text>
+  <text x="60" y="166" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#16a34a">+ Eski qiymat bor (oldVal)</text>
+  <text x="60" y="194" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">Default: darrov ishlamaydi</text>
+  <text x="60" y="222" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">(immediate: true bilan ishlaydi)</text>
+
+  <rect x="60" y="244" width="330" height="116" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="74" y="270" font-family="monospace" font-size="14" fill="#1e293b">watch(query,</text>
+  <text x="74" y="294" font-family="monospace" font-size="14" fill="#475569">  (newVal, oldVal) =&gt; {</text>
+  <text x="74" y="318" font-family="monospace" font-size="14" fill="#475569">    // API qidiruv</text>
+  <text x="74" y="342" font-family="monospace" font-size="14" fill="#1e293b">})</text>
+
+  <text x="225" y="392" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb" text-anchor="middle">Aniq manbaga reaksiya</text>
+
+  <!-- watchEffect column -->
+  <rect x="450" y="60" width="370" height="350" rx="10" fill="#f8fafc" stroke="#16a34a" stroke-width="2.5"/>
+  <rect x="450" y="60" width="370" height="46" rx="10" fill="#16a34a"/>
+  <text x="635" y="90" font-family="monospace" font-size="19" font-weight="bold" fill="#ffffff" text-anchor="middle">watchEffect()</text>
+
+  <text x="470" y="138" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">Bog'liqlik AVTOMATIK aniqlanadi</text>
+  <text x="470" y="166" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#dc2626">- Eski qiymat yo'q</text>
+  <text x="470" y="194" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#16a34a">+ Doim darrov ishlaydi</text>
+  <text x="470" y="222" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">(o'qilgan har reaktiv qiymat = bog'liqlik)</text>
+
+  <rect x="470" y="244" width="330" height="116" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="484" y="270" font-family="monospace" font-size="14" fill="#1e293b">watchEffect(() =&gt; {</text>
+  <text x="484" y="294" font-family="monospace" font-size="14" fill="#475569">  // userId o'qildi -&gt;</text>
+  <text x="484" y="318" font-family="monospace" font-size="14" fill="#475569">  fetchUser(userId.value)</text>
+  <text x="484" y="342" font-family="monospace" font-size="14" fill="#1e293b">})</text>
+
+  <text x="635" y="392" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">Bir nechta manbaga side-effect</text>
+
+  <!-- bottom rule -->
+  <rect x="40" y="426" width="780" height="44" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="430" y="453" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b" text-anchor="middle">Qiymat kerakmi -&gt; computed. Harakat kerakmi -&gt; watch / watchEffect.</text>
+</svg>

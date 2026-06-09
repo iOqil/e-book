@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 320" width="760" height="320">
+  <title>outline va border farqi: border joy egallaydi va box-model ichida, outline joy egallamaydi va tashqarida chiziladi</title>
+  <rect x="0" y="0" width="760" height="320" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">border va outline farqi</text>
+
+  <!-- CHAP: border -->
+  <text x="190" y="70" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">border</text>
+  <!-- qo'shni element joyini ko'rsatuvchi yo'l-yo'l fon -->
+  <rect x="70" y="90" width="240" height="150" rx="4" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <text x="190" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#64748b">atrofdagi joy (layout)</text>
+  <!-- border quti: chegara joyni surib chiqaradi -->
+  <rect x="110" y="125" width="160" height="90" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="8"/>
+  <text x="190" y="175" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">element</text>
+  <text x="190" y="270" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">JOY egallaydi — qo'shni</text>
+  <text x="190" y="288" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">elementlarni suradi</text>
+
+  <!-- O'NG: outline -->
+  <text x="570" y="70" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#dc2626">outline</text>
+  <rect x="450" y="90" width="240" height="150" rx="4" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <text x="570" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#64748b">atrofdagi joy (layout)</text>
+  <!-- outline: element ustiga chiziladi, joy egallamaydi -->
+  <rect x="490" y="125" width="160" height="90" rx="4" fill="#fee2e2" stroke="#94a3b8" stroke-width="1.5"/>
+  <rect x="484" y="119" width="172" height="102" rx="4" fill="none" stroke="#dc2626" stroke-width="4"/>
+  <text x="570" y="175" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">element</text>
+  <text x="570" y="270" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">JOY egallamaydi — ustidan</text>
+  <text x="570" y="288" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">chiziladi, layout o'zgarmas</text>
+</svg>

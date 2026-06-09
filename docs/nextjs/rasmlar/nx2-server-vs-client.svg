@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" width="900" height="560">
+  <title>Server Component va Client Component: kod qayerda ishlaydi va "use client" chegarasi</title>
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L9 5 L0 10 z" fill="#475569"/>
+    </marker>
+    <marker id="arrBlue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L9 5 L0 10 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="900" height="560" fill="#f8fafc"/>
+  <text x="450" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1e293b">Server vs Client Component — kod qayerda ishlaydi?</text>
+
+  <!-- SERVER side -->
+  <rect x="30" y="60" width="400" height="430" rx="12" fill="#e2e8f0" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="230" y="90" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="18" font-weight="bold" fill="#2563eb">SERVER (oshxona)</text>
+  <text x="230" y="112" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">bu yerda render bo'ladi → HTML</text>
+
+  <!-- Server Component box -->
+  <rect x="55" y="130" width="350" height="160" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="230" y="154" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Server Component (default)</text>
+  <text x="72" y="180" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">✓ async + await fetch</text>
+  <text x="72" y="202" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">✓ to'g'ridan-to'g'ri baza</text>
+  <text x="72" y="224" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">✓ maxfiy kalit (xavfsiz)</text>
+  <text x="72" y="246" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">✗ useState / onClick yo'q</text>
+  <text x="72" y="268" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Kodi brauzerga YUBORILMAYDI</text>
+
+  <!-- secret data -->
+  <rect x="55" y="306" width="160" height="62" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="135" y="330" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#b45309">Maxfiy kalit</text>
+  <text x="135" y="352" text-anchor="middle" font-family="monospace" font-size="13" fill="#92400e">DB_PASSWORD</text>
+
+  <rect x="245" y="306" width="160" height="62" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="325" y="330" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#15803d">Ma'lumotlar bazasi</text>
+  <text x="325" y="352" text-anchor="middle" font-family="monospace" font-size="13" fill="#15803d">SELECT ...</text>
+
+  <text x="230" y="400" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" font-weight="bold">Natija: tayyor HTML + minimal JS</text>
+  <rect x="90" y="416" width="280" height="56" rx="6" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="230" y="440" text-anchor="middle" font-family="monospace" font-size="13" fill="#2563eb">&lt;h1&gt;Salom&lt;/h1&gt;  + tugma JS</text>
+  <text x="230" y="460" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">brauzerga jo'natiladi ↓</text>
+
+  <!-- 'use client' boundary -->
+  <line x1="465" y1="60" x2="465" y2="490" stroke="#dc2626" stroke-width="3" stroke-dasharray="8,5"/>
+  <rect x="395" y="500" width="240" height="36" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="515" y="523" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#dc2626">"use client" chegarasi</text>
+
+  <!-- arrow server -> client -->
+  <path d="M430 444 L498 444" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <!-- CLIENT side -->
+  <rect x="500" y="60" width="370" height="430" rx="12" fill="#e2e8f0" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="685" y="90" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="18" font-weight="bold" fill="#b45309">CLIENT / BRAUZER (stol)</text>
+  <text x="685" y="112" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">interaktivlik shu yerda</text>
+
+  <!-- HTML received -->
+  <rect x="525" y="130" width="320" height="56" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="685" y="154" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Tayyor HTML keldi (tez ko'rinadi)</text>
+  <text x="685" y="174" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">+ faqat Client komponent JS yuklanadi</text>
+
+  <!-- Client Component box -->
+  <rect x="525" y="202" width="320" height="170" rx="8" fill="#f8fafc" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="685" y="226" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Client Component</text>
+  <text x="542" y="250" font-family="monospace" font-size="13" fill="#b45309">"use client";</text>
+  <text x="542" y="276" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">✓ useState / useEffect</text>
+  <text x="542" y="298" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">✓ onClick / onChange</text>
+  <text x="542" y="320" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">✓ window / localStorage</text>
+  <text x="542" y="342" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">✗ maxfiy kalit (ko'rinib qoladi!)</text>
+  <text x="542" y="364" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">✗ to'g'ridan-to'g'ri baza yo'q</text>
+
+  <!-- interactive button -->
+  <rect x="565" y="392" width="240" height="44" rx="6" fill="#2563eb"/>
+  <text x="685" y="419" text-anchor="middle" font-family="monospace" font-size="14" fill="#ffffff">onClick → Bosildi: 1</text>
+  <text x="685" y="460" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">JS faqat shu Client komponentga yuboriladi</text>
+
+  <text x="450" y="552" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Sukut bo'yicha hammasi Server'da render. "use client" — interaktiv qism uchun brauzerga o'tish chizig'i.</text>
+</svg>

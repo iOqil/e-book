@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="760" height="380">
+  <title>Observer / Pub-Sub: subject hodisani obunachilarga tarqatadi</title>
+
+  <defs>
+    <marker id="obsArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="760" height="380" fill="#f8fafc"/>
+
+  <!-- Sarlavha -->
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Observer / Pub-Sub: bitta xabar, ko'p obunachi</text>
+  <text x="380" y="56" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Subject o'zgaradi -&gt; emit() -&gt; obuna bo'lganlarning hammasi xabar oladi</text>
+
+  <!-- Subject qutisi -->
+  <rect x="40" y="140" width="200" height="100" rx="10" fill="#2563eb" fill-opacity="0.12" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="140" y="170" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">Subject (manba)</text>
+  <text x="140" y="195" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">EventEmitter</text>
+  <text x="140" y="218" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">emit("login", "Oqil")</text>
+
+  <!-- Markaziy oqim yorlig'i -->
+  <text x="350" y="118" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">xabar tarqatiladi</text>
+
+  <!-- Strelkalar subjectdan obunachilarga -->
+  <line x1="240" y1="170" x2="500" y2="100" stroke="#475569" stroke-width="2" marker-end="url(#obsArrow)"/>
+  <line x1="240" y1="190" x2="500" y2="190" stroke="#475569" stroke-width="2" marker-end="url(#obsArrow)"/>
+  <line x1="240" y1="210" x2="500" y2="280" stroke="#475569" stroke-width="2" marker-end="url(#obsArrow)"/>
+
+  <!-- Obunachi 1 -->
+  <rect x="505" y="74" width="215" height="54" rx="9" fill="#16a34a" fill-opacity="0.12" stroke="#16a34a" stroke-width="2"/>
+  <text x="612" y="98" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">Obunachi 1</text>
+  <text x="612" y="118" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">UI ni yangilaydi</text>
+
+  <!-- Obunachi 2 -->
+  <rect x="505" y="163" width="215" height="54" rx="9" fill="#16a34a" fill-opacity="0.12" stroke="#16a34a" stroke-width="2"/>
+  <text x="612" y="187" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">Obunachi 2</text>
+  <text x="612" y="207" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Log yozadi</text>
+
+  <!-- Obunachi 3 -->
+  <rect x="505" y="252" width="215" height="54" rx="9" fill="#16a34a" fill-opacity="0.12" stroke="#16a34a" stroke-width="2"/>
+  <text x="612" y="276" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">Obunachi 3</text>
+  <text x="612" y="296" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Bildirishnoma yuboradi</text>
+
+  <!-- Pastki izoh -->
+  <rect x="40" y="320" width="680" height="44" rx="9" fill="#f59e0b" fill-opacity="0.10" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="380" y="347" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309">Bo'sh bog'lanish: subject obunachilarni bilmaydi, ular faqat on() bilan obuna bo'ladi</text>
+</svg>

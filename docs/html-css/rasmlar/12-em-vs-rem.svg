@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 470" width="720" height="470">
+  <title>em vs rem: em ichma-ich elementlarda ko'payib ketadi, rem esa root'ga bog'lanib barqaror qoladi</title>
+  <rect x="0" y="0" width="720" height="470" fill="#f8fafc"/>
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">em vs rem — ichma-ich elementlarda nima bo'ladi?</text>
+  <text x="360" y="58" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">html { font-size: 16px } · har element font-size: 1.5(em yoki rem)</text>
+
+  <!-- em ustun -->
+  <text x="190" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#dc2626">em — otaga bog'liq (ko'payadi)</text>
+
+  <rect x="60" y="105" width="260" height="300" rx="8" fill="#fde2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="74" y="128" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#dc2626">1.5em &#215; 16 = 24px</text>
+
+  <rect x="84" y="142" width="212" height="246" rx="6" fill="#fbcaca" stroke="#dc2626" stroke-width="2"/>
+  <text x="98" y="166" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#dc2626">1.5em &#215; 24 = 36px</text>
+
+  <rect x="108" y="180" width="164" height="190" rx="6" fill="#f7a8a8" stroke="#dc2626" stroke-width="2"/>
+  <text x="122" y="206" font-family="Segoe UI, system-ui, sans-serif" font-size="17" fill="#7f1d1d">1.5em &#215; 36 = 54px</text>
+
+  <rect x="132" y="222" width="116" height="130" rx="6" fill="#f08080" stroke="#dc2626" stroke-width="2"/>
+  <text x="146" y="252" font-family="Segoe UI, system-ui, sans-serif" font-size="19" fill="#7f1d1d">81px!</text>
+  <text x="190" y="300" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#7f1d1d">tobora</text>
+  <text x="190" y="320" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#7f1d1d">kattalashadi</text>
+
+  <!-- rem ustun -->
+  <text x="530" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#16a34a">rem — root'ga bog'liq (barqaror)</text>
+
+  <rect x="400" y="105" width="260" height="300" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="414" y="128" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#15803d">1.5rem &#215; 16 = 24px</text>
+
+  <rect x="424" y="142" width="212" height="246" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="438" y="166" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#15803d">1.5rem &#215; 16 = 24px</text>
+
+  <rect x="448" y="180" width="164" height="190" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="462" y="206" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#15803d">1.5rem &#215; 16 = 24px</text>
+
+  <rect x="472" y="222" width="116" height="130" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="530" y="280" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="19" fill="#15803d">24px</text>
+  <text x="530" y="310" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#15803d">hammasi</text>
+  <text x="530" y="330" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#15803d">bir xil</text>
+
+  <text x="360" y="438" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">em har bosqichda OTA o'lchamiga ko'payadi · rem doim ROOT (16px) ga bog'lanadi</text>
+  <text x="360" y="460" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#2563eb">Shuning uchun barqarorlik kerak bo'lsa rem afzal</text>
+</svg>

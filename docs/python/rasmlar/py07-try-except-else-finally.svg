@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" width="760" height="470">
+  <title>try / except / else / finally oqimi: xato bo'lganda va bo'lmaganda qaysi blok ishlaydi</title>
+
+  <defs>
+    <marker id="arrTEF" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- Sarlavha -->
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">try / except / else / finally oqimi</text>
+  <text x="380" y="54" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">try ichida xato chiqsa except ushlaydi; else faqat xato bo'lmasa; finally HAR DOIM</text>
+
+  <!-- try bloki -->
+  <rect x="280" y="76" width="200" height="58" rx="10" fill="#2563eb" fill-opacity="0.10" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="102" text-anchor="middle" font-family="Consolas, monospace" font-size="15" font-weight="bold" fill="#2563eb">try:</text>
+  <text x="380" y="122" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">"xavfli" kod bajariladi</text>
+
+  <!-- Ayri yo'l: chap (xato bor) va o'ng (xato yo'q) -->
+  <line x1="320" y1="134" x2="180" y2="180" stroke="#dc2626" stroke-width="2" marker-end="url(#arrTEF)"/>
+  <text x="208" y="160" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626" font-weight="bold">xato BOR</text>
+
+  <line x1="440" y1="134" x2="580" y2="180" stroke="#16a34a" stroke-width="2" marker-end="url(#arrTEF)"/>
+  <text x="556" y="160" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" font-weight="bold">xato YO'Q</text>
+
+  <!-- Chap: except ishlaydi -->
+  <rect x="60" y="182" width="240" height="64" rx="10" fill="#dc2626" fill-opacity="0.10" stroke="#dc2626" stroke-width="2"/>
+  <text x="180" y="208" text-anchor="middle" font-family="Consolas, monospace" font-size="15" font-weight="bold" fill="#dc2626">except Xato:</text>
+  <text x="180" y="230" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">xato ushlanadi (as e)</text>
+
+  <!-- O'ng: else ishlaydi -->
+  <rect x="460" y="182" width="240" height="64" rx="10" fill="#16a34a" fill-opacity="0.10" stroke="#16a34a" stroke-width="2"/>
+  <text x="580" y="208" text-anchor="middle" font-family="Consolas, monospace" font-size="15" font-weight="bold" fill="#16a34a">else:</text>
+  <text x="580" y="230" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">faqat xato bo'lmasa ishlaydi</text>
+
+  <!-- O'ngdagi except o'tkazib yuboriladi (xabar) -->
+  <text x="580" y="262" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8" font-style="italic">(except o'tkazib yuboriladi)</text>
+  <text x="180" y="262" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8" font-style="italic">(else o'tkazib yuboriladi)</text>
+
+  <!-- Ikkala yo'l finally'ga birlashadi -->
+  <line x1="180" y1="270" x2="330" y2="320" stroke="#475569" stroke-width="2" marker-end="url(#arrTEF)"/>
+  <line x1="580" y1="270" x2="430" y2="320" stroke="#475569" stroke-width="2" marker-end="url(#arrTEF)"/>
+
+  <!-- finally bloki -->
+  <rect x="260" y="322" width="240" height="64" rx="10" fill="#f59e0b" fill-opacity="0.12" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="380" y="348" text-anchor="middle" font-family="Consolas, monospace" font-size="15" font-weight="bold" fill="#b45309">finally:</text>
+  <text x="380" y="370" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">HAR DOIM ishlaydi (tozalash)</text>
+
+  <!-- Davom -->
+  <line x1="380" y1="386" x2="380" y2="410" stroke="#475569" stroke-width="2" marker-end="url(#arrTEF)"/>
+  <rect x="300" y="412" width="160" height="42" rx="10" fill="#2563eb" fill-opacity="0.10" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="439" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">Dastur davom etadi</text>
+</svg>

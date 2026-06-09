@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440">
+  <title>Primitiv qiymat nusxasi va obyekt havolasi farqi</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Primitiv (nusxa) va Reference (havola)</text>
+
+  <defs>
+    <marker id="a2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- LEFT: primitive -->
+  <rect x="30" y="58" width="340" height="350" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="200" y="84" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">Primitiv: qiymat NUSXALANADI</text>
+
+  <text x="50" y="116" font-family="monospace" font-size="13" fill="#2563eb">let a = 5;</text>
+  <text x="50" y="138" font-family="monospace" font-size="13" fill="#2563eb">let b = a;   // nusxa</text>
+  <text x="50" y="160" font-family="monospace" font-size="13" fill="#2563eb">b = 99;</text>
+
+  <!-- a box -->
+  <text x="90" y="206" text-anchor="middle" font-family="monospace" font-size="14" fill="#1e293b">a</text>
+  <rect x="60" y="216" width="120" height="50" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="120" y="248" text-anchor="middle" font-family="monospace" font-size="16" fill="#1e293b">5</text>
+
+  <!-- b box -->
+  <text x="280" y="206" text-anchor="middle" font-family="monospace" font-size="14" fill="#1e293b">b</text>
+  <rect x="220" y="216" width="120" height="50" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="280" y="248" text-anchor="middle" font-family="monospace" font-size="16" fill="#1e293b">99</text>
+
+  <text x="200" y="306" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Har biri o'z qiymatini saqlaydi.</text>
+  <text x="200" y="328" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">b ni o'zgartirsang, a o'zgarmaydi.</text>
+  <rect x="60" y="350" width="280" height="40" rx="6" fill="#f8fafc" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="200" y="375" text-anchor="middle" font-family="monospace" font-size="14" fill="#16a34a">a = 5,  b = 99</text>
+
+  <!-- RIGHT: reference -->
+  <rect x="390" y="58" width="340" height="350" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="560" y="84" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#f59e0b">Obyekt: HAVOLA nusxalanadi</text>
+
+  <text x="410" y="116" font-family="monospace" font-size="13" fill="#2563eb">let x = {son: 5};</text>
+  <text x="410" y="138" font-family="monospace" font-size="13" fill="#2563eb">let y = x;   // havola</text>
+  <text x="410" y="160" font-family="monospace" font-size="13" fill="#2563eb">y.son = 99;</text>
+
+  <!-- x box -->
+  <text x="450" y="206" text-anchor="middle" font-family="monospace" font-size="14" fill="#1e293b">x</text>
+  <rect x="420" y="216" width="80" height="50" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="460" y="246" text-anchor="middle" font-family="monospace" font-size="13" fill="#475569">havola</text>
+
+  <!-- y box -->
+  <text x="540" y="206" text-anchor="middle" font-family="monospace" font-size="14" fill="#1e293b">y</text>
+  <rect x="510" y="216" width="80" height="50" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="550" y="246" text-anchor="middle" font-family="monospace" font-size="13" fill="#475569">havola</text>
+
+  <!-- heap object -->
+  <rect x="620" y="206" width="96" height="70" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="668" y="230" text-anchor="middle" font-family="monospace" font-size="13" fill="#1e293b">obyekt</text>
+  <text x="668" y="254" text-anchor="middle" font-family="monospace" font-size="13" fill="#1e293b">{son: 99}</text>
+
+  <!-- arrows both pointing to same object -->
+  <line x1="500" y1="241" x2="616" y2="226" stroke="#475569" stroke-width="2" marker-end="url(#a2)"/>
+  <line x1="590" y1="241" x2="616" y2="252" stroke="#475569" stroke-width="2" marker-end="url(#a2)"/>
+
+  <text x="560" y="316" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">x va y bitta obyektga ishora qiladi.</text>
+  <text x="560" y="338" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">y orqali o'zgartirsang, x ham o'zgaradi!</text>
+  <rect x="420" y="356" width="290" height="40" rx="6" fill="#f8fafc" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="565" y="381" text-anchor="middle" font-family="monospace" font-size="14" fill="#f59e0b">x.son = 99,  y.son = 99</text>
+</svg>

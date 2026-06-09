@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 420" width="740" height="420">
+  <title>Vue yangilanish oqimi — reaktiv data, qayta render, DOM</title>
+  <defs>
+    <marker id="arrFlow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="740" height="420" fill="#f8fafc"/>
+  <text x="370" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Vue yangilanish oqimi</text>
+  <text x="370" y="58" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">reaktiv data o'zgaradi → qayta render → faqat kerakli DOM yangilanadi</text>
+
+  <!-- step 1: change -->
+  <rect x="40" y="92" width="290" height="86" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="60" y="118" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">1. Qiymat o'zgaradi</text>
+  <text x="60" y="144" font-family="monospace" font-size="14" fill="#1e293b">count.value++</text>
+  <text x="60" y="166" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(&lt;script&gt; ichida .value bilan)</text>
+
+  <!-- step 2: proxy -->
+  <rect x="410" y="92" width="290" height="86" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="430" y="118" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">2. Proxy ushlaydi</text>
+  <text x="430" y="144" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Proxy set tuzog'i ishga tushadi</text>
+  <text x="430" y="166" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">bog'liq effektlar belgilanadi</text>
+
+  <!-- step 3: re-render -->
+  <rect x="410" y="216" width="290" height="86" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="430" y="242" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#f59e0b">3. Qayta render</text>
+  <text x="430" y="268" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">render → yangi Virtual DOM</text>
+  <text x="430" y="290" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">eski va yangi solishtiriladi (diff)</text>
+
+  <!-- step 4: dom patch -->
+  <rect x="40" y="216" width="290" height="86" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="60" y="242" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">4. DOM yangilanadi</text>
+  <text x="60" y="268" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">faqat o'zgargan tugun (patch)</text>
+  <text x="60" y="290" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">ekranda yangi qiymat ko'rinadi</text>
+
+  <!-- arrows -->
+  <line x1="330" y1="135" x2="406" y2="135" stroke="#475569" stroke-width="2.5" marker-end="url(#arrFlow)"/>
+  <line x1="555" y1="178" x2="555" y2="212" stroke="#475569" stroke-width="2.5" marker-end="url(#arrFlow)"/>
+  <line x1="410" y1="259" x2="334" y2="259" stroke="#475569" stroke-width="2.5" marker-end="url(#arrFlow)"/>
+
+  <!-- note -->
+  <rect x="90" y="338" width="560" height="56" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="370" y="361" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" font-weight="bold">Vue 3 reaktivlik asosi — JavaScript Proxy</text>
+  <text x="370" y="382" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">obyekt o'qilishi/yozilishini kuzatadi; butun sahifa emas, faqat bog'liq qism yangilanadi</text>
+</svg>

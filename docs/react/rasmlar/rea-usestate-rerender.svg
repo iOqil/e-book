@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 460" width="700" height="460">
+  <title>useState re-render sikli: setState dan qayta render orqali yangi UI</title>
+  <defs>
+    <marker id="cyc" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="700" height="460" fill="#f8fafc"/>
+  <text x="350" y="32" font-family="Segoe UI, system-ui, sans-serif" font-size="19" font-weight="bold" fill="#1e293b" text-anchor="middle">useState sikli: setState -&gt; qayta render -&gt; yangi UI</text>
+
+  <!-- 1 event -->
+  <rect x="270" y="58" width="160" height="56" rx="8" fill="#e2e8f0" stroke="#f59e0b" stroke-width="2"/>
+  <text x="350" y="82" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#f59e0b" text-anchor="middle">1. Event (onClick)</text>
+  <text x="350" y="103" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">tugma bosildi</text>
+
+  <!-- 2 setState -->
+  <rect x="470" y="170" width="190" height="64" rx="8" fill="#e2e8f0" stroke="#2563eb" stroke-width="2"/>
+  <text x="565" y="194" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb" text-anchor="middle">2. setState chaqiriladi</text>
+  <text x="565" y="216" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">setCount(count + 1)</text>
+
+  <!-- 3 re-render -->
+  <rect x="255" y="300" width="190" height="64" rx="8" fill="#e2e8f0" stroke="#2563eb" stroke-width="2"/>
+  <text x="350" y="324" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb" text-anchor="middle">3. React qayta render</text>
+  <text x="350" y="346" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">funksiya yangidan chaqiriladi</text>
+
+  <!-- 4 new UI -->
+  <rect x="40" y="170" width="190" height="64" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="135" y="194" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="middle">4. Yangi UI</text>
+  <text x="135" y="216" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">ekranda yangi qiymat</text>
+
+  <!-- cycle arrows -->
+  <path d="M420 100 Q540 120 560 168" fill="none" stroke="#2563eb" stroke-width="2.5" marker-end="url(#cyc)"/>
+  <path d="M540 236 Q480 290 447 320" fill="none" stroke="#2563eb" stroke-width="2.5" marker-end="url(#cyc)"/>
+  <path d="M255 320 Q150 290 135 236" fill="none" stroke="#2563eb" stroke-width="2.5" marker-end="url(#cyc)"/>
+  <path d="M155 168 Q230 110 300 112" fill="none" stroke="#475569" stroke-width="2.5" stroke-dasharray="6 5" marker-end="url(#cyc)"/>
+  <text x="225" y="135" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">keyingi bosish</text>
+
+  <text x="350" y="408" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="middle" font-weight="bold">Muhim: state to'g'ridan o'zgartirilmaydi — setState orqali React xabardor qilinadi</text>
+  <text x="350" y="434" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569" text-anchor="middle">Oldingi qiymatga tayanganda funksiya bering: setCount(prev =&gt; prev + 1)</text>
+</svg>

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 560" width="860" height="560">
+  <title>Reaktivlik ichki mexanizmi: Proxy get (track) va set (trigger)</title>
+  <defs>
+    <marker id="arrBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/>
+    </marker>
+    <marker id="arrGray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="860" height="560" fill="#f8fafc"/>
+  <text x="430" y="34" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1e293b" text-anchor="middle">Reaktivlik ichki mexanizmi: track va trigger</text>
+
+  <!-- reactive object / Proxy -->
+  <rect x="320" y="70" width="220" height="120" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="430" y="98" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b" text-anchor="middle">ref / reactive</text>
+  <text x="430" y="122" font-family="monospace" font-size="14" fill="#2563eb" text-anchor="middle">ES6 Proxy</text>
+  <text x="430" y="150" font-family="monospace" font-size="14" fill="#16a34a" text-anchor="middle">get  (o'qish)</text>
+  <text x="430" y="172" font-family="monospace" font-size="14" fill="#dc2626" text-anchor="middle">set  (yozish)</text>
+
+  <!-- LEFT: effects that read -->
+  <rect x="40" y="250" width="240" height="150" rx="10" fill="#f8fafc" stroke="#16a34a" stroke-width="2"/>
+  <text x="160" y="278" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="middle">Effektlar (o'quvchilar)</text>
+  <text x="160" y="306" font-family="monospace" font-size="14" fill="#1e293b" text-anchor="middle">render funksiyasi</text>
+  <text x="160" y="330" font-family="monospace" font-size="14" fill="#1e293b" text-anchor="middle">computed</text>
+  <text x="160" y="354" font-family="monospace" font-size="14" fill="#1e293b" text-anchor="middle">watchEffect</text>
+  <text x="160" y="382" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">qiymatni o'qiydi</text>
+
+  <!-- RIGHT: dependency map -->
+  <rect x="580" y="250" width="240" height="150" rx="10" fill="#f8fafc" stroke="#2563eb" stroke-width="2"/>
+  <text x="700" y="278" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb" text-anchor="middle">Bog'liqliklar xaritasi</text>
+  <text x="700" y="306" font-family="monospace" font-size="14" fill="#1e293b" text-anchor="middle">property -&gt; effektlar</text>
+  <text x="700" y="332" font-family="monospace" font-size="13" fill="#475569" text-anchor="middle">count -&gt; [render]</text>
+  <text x="700" y="356" font-family="monospace" font-size="13" fill="#475569" text-anchor="middle">name  -&gt; [computed]</text>
+  <text x="700" y="382" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">kim kimga bog'liq</text>
+
+  <!-- TRACK arrows: effect reads -> get -> record dependency -->
+  <line x1="160" y1="250" x2="345" y2="160" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arrBlue)"/>
+  <text x="195" y="218" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">1. get -&gt; TRACK</text>
+  <text x="200" y="237" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">o'qiganda kuzat</text>
+
+  <line x1="515" y1="160" x2="640" y2="250" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrBlue)"/>
+  <text x="560" y="222" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">bog'liqlikni</text>
+  <text x="560" y="240" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">qayd qil</text>
+
+  <!-- TRIGGER: set changes -> re-run dependent effects -->
+  <line x1="700" y1="250" x2="510" y2="178" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arrRed)"/>
+  <text x="430" y="455" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626" text-anchor="middle">2. set -&gt; TRIGGER: o'zgarsa, bog'liq effektlarni qayta ishga tushir</text>
+
+  <line x1="600" y1="385" x2="280" y2="385" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arrRed)"/>
+
+  <!-- bottom note -->
+  <rect x="40" y="480" width="780" height="60" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="430" y="506" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">Excel kabi: A1 o'zgarsa, C1 = A1 + B1 o'zi qayta hisoblanadi.</text>
+  <text x="430" y="528" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">Vue ham xuddi shu bog'liqliklar grafini Proxy orqali yuritadi.</text>
+</svg>

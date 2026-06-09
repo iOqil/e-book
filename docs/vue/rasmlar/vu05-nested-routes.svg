@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 500" width="860" height="500">
+  <title>Nested routes — ota layout qoladi, bola route ota RouterView ichida almashadi</title>
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L9 5 L0 10 z" fill="#475569"/>
+    </marker>
+    <marker id="arrBlue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L9 5 L0 10 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="860" height="500" fill="#f8fafc"/>
+  <text x="430" y="34" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1e293b" text-anchor="middle">Nested routes — ichma-ich RouterView</text>
+  <text x="430" y="58" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Har nest darajasiga bittadan RouterView; ota qoladi, ichidagi bola almashadi</text>
+
+  <!-- route config -->
+  <rect x="36" y="82" width="300" height="280" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="186" y="108" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb" text-anchor="middle">routes (children bilan)</text>
+
+  <rect x="56" y="124" width="260" height="50" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="72" y="146" font-family="monospace" font-size="13" fill="#1e293b">path: '/dashboard'</text>
+  <text x="72" y="165" font-family="monospace" font-size="13" fill="#2563eb">component: DashboardLayout</text>
+
+  <text x="80" y="196" font-family="monospace" font-size="13" fill="#475569">children: [</text>
+
+  <rect x="80" y="204" width="236" height="36" rx="5" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="94" y="227" font-family="monospace" font-size="13" fill="#1e293b">'' → DashHome</text>
+
+  <rect x="80" y="246" width="236" height="36" rx="5" fill="#f8fafc" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="94" y="269" font-family="monospace" font-size="13" fill="#1e293b">'profile' → Profile</text>
+
+  <rect x="80" y="288" width="236" height="36" rx="5" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="94" y="311" font-family="monospace" font-size="13" fill="#1e293b">'settings' → Settings</text>
+
+  <text x="80" y="346" font-family="monospace" font-size="13" fill="#475569">]</text>
+
+  <!-- URL note -->
+  <rect x="36" y="378" width="300" height="42" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="186" y="404" font-family="monospace" font-size="14" fill="#92400e" text-anchor="middle">URL: /dashboard/profile</text>
+
+  <!-- arrow to render -->
+  <path d="M340 250 L404 250" fill="none" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="372" y="240" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#15803d" text-anchor="middle">render</text>
+
+  <!-- outer layout -->
+  <rect x="410" y="82" width="418" height="338" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="619" y="108" font-family="monospace" font-size="15" font-weight="bold" fill="#2563eb" text-anchor="middle">DashboardLayout (ota — QOLADI)</text>
+
+  <!-- aside -->
+  <rect x="430" y="124" width="120" height="276" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="490" y="252" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">Yon menyu</text>
+  <text x="490" y="274" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">(doim qoladi)</text>
+
+  <!-- main with nested RouterView -->
+  <rect x="566" y="124" width="246" height="276" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="689" y="150" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">main</text>
+  <text x="689" y="174" font-family="monospace" font-size="14" font-weight="bold" fill="#2563eb" text-anchor="middle">&lt;RouterView /&gt;</text>
+  <text x="689" y="194" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">(ota ichidagi — bola shu yerda)</text>
+
+  <rect x="588" y="214" width="202" height="166" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="689" y="296" font-family="monospace" font-size="16" font-weight="bold" fill="#16a34a" text-anchor="middle">Profile.vue</text>
+  <text x="689" y="320" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">bola route — FAQAT shu</text>
+  <text x="689" y="340" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">qism almashadi</text>
+
+  <!-- bottom note -->
+  <text x="619" y="448" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">/profile dan /settings ga o'tsa: ota va yon menyu o'sha-o'sha, ichidagi bola almashadi</text>
+</svg>

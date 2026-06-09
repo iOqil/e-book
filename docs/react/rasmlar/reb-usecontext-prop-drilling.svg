@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480">
+  <title>useContext: prop drilling va Context Provider yondashuvini solishtirish</title>
+  <defs>
+    <marker id="ctx-red" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#dc2626"/>
+    </marker>
+    <marker id="ctx-green" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="760" height="480" fill="#f8fafc"/>
+
+  <!-- Left: prop drilling -->
+  <text x="190" y="32" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#dc2626" text-anchor="middle">Prop drilling (mashaqqatli)</text>
+
+  <rect x="120" y="50" width="140" height="44" rx="8" fill="#e2e8f0" stroke="#dc2626" stroke-width="2"/>
+  <text x="190" y="77" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">App (theme)</text>
+
+  <rect x="120" y="140" width="140" height="44" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="190" y="167" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">Toolbar</text>
+
+  <rect x="120" y="230" width="140" height="44" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="190" y="257" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">Panel</text>
+
+  <rect x="120" y="320" width="140" height="44" rx="8" fill="#e2e8f0" stroke="#dc2626" stroke-width="2"/>
+  <text x="190" y="347" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">Button</text>
+
+  <path d="M190 94 L190 138" fill="none" stroke="#dc2626" stroke-width="2.5" marker-end="url(#ctx-red)"/>
+  <path d="M190 184 L190 228" fill="none" stroke="#dc2626" stroke-width="2.5" marker-end="url(#ctx-red)"/>
+  <path d="M190 274 L190 318" fill="none" stroke="#dc2626" stroke-width="2.5" marker-end="url(#ctx-red)"/>
+  <text x="280" y="120" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">theme</text>
+  <text x="280" y="210" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">theme</text>
+  <text x="280" y="300" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">theme</text>
+  <text x="190" y="400" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">har qatlam keraksiz</text>
+  <text x="190" y="420" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">prop uzatib o'tadi</text>
+
+  <!-- divider -->
+  <line x1="380" y1="50" x2="380" y2="430" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="6 5"/>
+
+  <!-- Right: context -->
+  <text x="570" y="32" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#16a34a" text-anchor="middle">Context Provider (toza)</text>
+
+  <rect x="450" y="50" width="240" height="320" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2" stroke-dasharray="7 5"/>
+  <text x="570" y="72" font-family="monospace" font-size="13" font-weight="bold" fill="#16a34a" text-anchor="middle">ThemeContext.Provider</text>
+
+  <rect x="500" y="90" width="140" height="40" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="570" y="115" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">App (theme)</text>
+
+  <rect x="500" y="160" width="140" height="40" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="570" y="185" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">Toolbar</text>
+
+  <rect x="500" y="230" width="140" height="40" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="570" y="255" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">Panel</text>
+
+  <rect x="500" y="300" width="140" height="40" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="570" y="325" font-family="monospace" font-size="13" fill="#1e293b" text-anchor="middle">Button</text>
+
+  <path d="M500 110 Q435 110 435 320 Q435 330 496 320" fill="none" stroke="#16a34a" stroke-width="2.5" marker-end="url(#ctx-green)"/>
+  <text x="412" y="215" font-family="monospace" font-size="13" fill="#16a34a" text-anchor="middle" transform="rotate(-90 412 215)">useContext()</text>
+  <text x="570" y="400" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">Button to'g'ridan-to'g'ri o'qiydi</text>
+  <text x="570" y="420" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">oraliq qatlamlarga tegmaydi</text>
+
+  <text x="380" y="462" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Context = dependency injection: ma'lumotni daraxt bo'ylab to'g'ridan uzatadi</text>
+</svg>

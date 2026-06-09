@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 430" width="700" height="430">
+  <title>Inheritance daraxti: ota body elementdagi color farzand elementlarga meros o'tadi, lekin border o'tmaydi</title>
+  <defs>
+    <marker id="inh10" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="700" height="430" fill="#f8fafc"/>
+  <text x="350" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Inheritance (meros) daraxti</text>
+
+  <!-- ota: body -->
+  <rect x="270" y="55" width="160" height="74" rx="10" fill="#2563eb" stroke="#94a3b8" stroke-width="2"/>
+  <text x="350" y="82" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#ffffff">&lt;body&gt;</text>
+  <text x="350" y="104" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#ffffff">color: navy</text>
+  <text x="350" y="122" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#ffffff">border: 2px solid</text>
+
+  <!-- strelkalar (meros o'tadi - yashil) -->
+  <line x1="320" y1="129" x2="170" y2="195" stroke="#16a34a" stroke-width="2.5" marker-end="url(#inh10)"/>
+  <line x1="350" y1="129" x2="350" y2="195" stroke="#16a34a" stroke-width="2.5" marker-end="url(#inh10)"/>
+  <line x1="380" y1="129" x2="530" y2="195" stroke="#16a34a" stroke-width="2.5" marker-end="url(#inh10)"/>
+  <text x="225" y="165" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">color meros</text>
+  <text x="475" y="165" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">color meros</text>
+
+  <!-- farzandlar -->
+  <rect x="90" y="198" width="160" height="66" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="170" y="224" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">&lt;h1&gt;</text>
+  <text x="170" y="246" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">color: navy (meros)</text>
+
+  <rect x="270" y="198" width="160" height="66" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="350" y="224" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">&lt;p&gt;</text>
+  <text x="350" y="246" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">color: navy (meros)</text>
+
+  <rect x="450" y="198" width="160" height="66" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="530" y="224" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">&lt;a&gt;</text>
+  <text x="530" y="246" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">color: navy (meros)</text>
+
+  <!-- nevara: span p ichida -->
+  <line x1="350" y1="264" x2="350" y2="305" stroke="#16a34a" stroke-width="2.5" marker-end="url(#inh10)"/>
+  <rect x="270" y="308" width="160" height="60" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="350" y="333" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">&lt;span&gt;</text>
+  <text x="350" y="354" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">color: navy (meros)</text>
+
+  <!-- izoh: border meros bo'lmaydi -->
+  <rect x="40" y="300" width="200" height="86" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="140" y="324" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">border meros BO'LMAYDI</text>
+  <text x="140" y="346" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">faqat body'da qoladi,</text>
+  <text x="140" y="364" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">farzandlarga o'tmaydi</text>
+
+  <text x="350" y="408" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Yashil strelka = color (matn xossalari) ota'dan farzandga oqib tushadi</text>
+</svg>

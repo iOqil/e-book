@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420">
+  <title>Forma jo'natilganda ma'lumot oqimi: brauzerdagi forma -> jo'natish -> server name=value juftliklari bilan oladi</title>
+  <defs>
+    <marker id="strelka" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="30" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Forma jo'natilganda nima bo'ladi?</text>
+
+  <!-- 1. Brauzer / forma -->
+  <rect x="30" y="70" width="240" height="220" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="150" y="96" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">1. Brauzer (forma)</text>
+
+  <!-- input maydonlari -->
+  <rect x="55" y="112" width="190" height="34" rx="5" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="62" y="134" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Ism: Ali</text>
+
+  <rect x="55" y="156" width="190" height="34" rx="5" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="62" y="178" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Email: ali@mail.uz</text>
+
+  <!-- jo'natish tugmasi -->
+  <rect x="55" y="206" width="130" height="40" rx="6" fill="#2563eb"/>
+  <text x="120" y="231" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Jo'natish</text>
+  <text x="150" y="272" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">name="ism", name="email"</text>
+
+  <!-- strelka 1 -> 2 -->
+  <line x1="270" y1="180" x2="345" y2="180" stroke="#475569" stroke-width="2.5" marker-end="url(#strelka)"/>
+  <text x="307" y="170" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">submit</text>
+
+  <!-- 2. So'rov (HTTP) -->
+  <rect x="350" y="100" width="180" height="160" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="440" y="126" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#f59e0b">2. HTTP so'rov</text>
+  <text x="440" y="152" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">action manzilga</text>
+  <text x="440" y="174" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">ketadi</text>
+  <rect x="368" y="190" width="144" height="56" rx="5" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="440" y="212" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">ism=Ali</text>
+  <text x="440" y="232" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">email=ali%40mail.uz</text>
+
+  <!-- strelka 2 -> 3 -->
+  <line x1="530" y1="180" x2="605" y2="180" stroke="#475569" stroke-width="2.5" marker-end="url(#strelka)"/>
+
+  <!-- 3. Server -->
+  <rect x="610" y="100" width="120" height="160" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="670" y="126" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">3. Server</text>
+  <text x="670" y="158" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">name=value</text>
+  <text x="670" y="176" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">juftlarini</text>
+  <text x="670" y="194" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">o'qiydi va</text>
+  <text x="670" y="212" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">saqlaydi</text>
+
+  <!-- pastki izoh: GET vs POST -->
+  <rect x="30" y="320" width="700" height="80" rx="10" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="50" y="346" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">method qiymati so'rov turini belgilaydi:</text>
+  <text x="50" y="372" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">GET  — name=value URL'ga qo'shiladi:  /qidiruv?ism=Ali&amp;email=...</text>
+  <text x="50" y="392" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">POST — name=value so'rov tanasida (body) yashirin ketadi (maxfiy ma'lumot uchun)</text>
+</svg>

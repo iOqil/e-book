@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" width="760" height="470">
+  <title>Hodisa oqimi uch fazasi: capturing, target va bubbling</title>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Hodisa oqimining uch fazasi</text>
+
+  <defs>
+    <marker id="ok-blue" markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto">
+      <path d="M0,0 L11,5.5 L0,11 z" fill="#2563eb"/>
+    </marker>
+    <marker id="ok-amber" markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto">
+      <path d="M0,0 L11,5.5 L0,11 z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+
+  <!-- ichma-ich qutilar: document > html > body > button -->
+  <rect x="200" y="64" width="360" height="320" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="214" y="86" font-family="monospace" font-size="15" fill="#1e293b">document</text>
+
+  <rect x="240" y="100" width="280" height="248" rx="10" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="254" y="122" font-family="monospace" font-size="15" fill="#1e293b">&lt;html&gt;</text>
+
+  <rect x="280" y="138" width="200" height="174" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="294" y="160" font-family="monospace" font-size="15" fill="#1e293b">&lt;body&gt;</text>
+
+  <!-- target: button -->
+  <rect x="312" y="200" width="136" height="74" rx="8" fill="#f59e0b" stroke="#1e293b" stroke-width="2"/>
+  <text x="380" y="232" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#1e293b">&lt;button&gt;</text>
+  <text x="380" y="254" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">TARGET (klik)</text>
+
+  <!-- 1. CAPTURING: tepadan pastga (chap tomon) -->
+  <line x1="150" y1="76" x2="150" y2="232" stroke="#2563eb" stroke-width="3" marker-end="url(#ok-blue)"/>
+  <text x="138" y="70" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">1. Capturing</text>
+  <text x="86" y="150" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">document</text>
+  <text x="98" y="172" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">dan pastga</text>
+  <text x="100" y="194" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">target sari</text>
+
+  <!-- 2. TARGET faza yorlig'i -->
+  <text x="380" y="300" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">2. Target fazasi</text>
+  <text x="380" y="322" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">hodisa o'z manziliga yetadi</text>
+
+  <!-- 3. BUBBLING: pastdan tepaga (o'ng tomon) -->
+  <line x1="610" y1="232" x2="610" y2="76" stroke="#f59e0b" stroke-width="3" marker-end="url(#ok-amber)"/>
+  <text x="640" y="70" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#f59e0b">3. Bubbling</text>
+  <text x="628" y="150" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309">target dan</text>
+  <text x="628" y="172" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309">document</text>
+  <text x="628" y="194" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309">sari tepaga</text>
+
+  <text x="380" y="416" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Hodisa avval tepadan tushadi (capturing), maqsadga yetadi (target),</text>
+  <text x="380" y="438" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">so'ng yana tepaga ko'tariladi (bubbling). Listener odatda bubbling fazasida ishlaydi.</text>
+</svg>

@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 540" width="760" height="540">
+  <title>Bir xil landing page mobil (bitta ustun) va desktop (uch ustun) ekranlarda qanday o'zgarishi</title>
+  <rect x="0" y="0" width="760" height="540" fill="#f8fafc"/>
+
+  <!-- Sarlavha -->
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Bir sahifa — ikki ekran</text>
+  <text x="380" y="56" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">HTML bitta, layout media query bilan o'zgaradi</text>
+
+  <!-- ===================== CHAP: MOBIL ===================== -->
+  <text x="170" y="86" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">Mobil (&lt; 768px)</text>
+
+  <!-- Telefon ramkasi -->
+  <rect x="100" y="98" width="140" height="380" rx="18" fill="#ffffff" stroke="#1e293b" stroke-width="3"/>
+  <rect x="146" y="106" width="48" height="6" rx="3" fill="#cbd5e1"/>
+
+  <!-- Header -->
+  <rect x="112" y="122" width="116" height="30" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <rect x="120" y="131" width="34" height="12" rx="2" fill="#2563eb"/>
+  <!-- Hamburger menyu (mobilda) -->
+  <line x1="206" y1="132" x2="220" y2="132" stroke="#2563eb" stroke-width="2"/>
+  <line x1="206" y1="137" x2="220" y2="137" stroke="#2563eb" stroke-width="2"/>
+  <line x1="206" y1="142" x2="220" y2="142" stroke="#2563eb" stroke-width="2"/>
+
+  <!-- Hero -->
+  <rect x="112" y="160" width="116" height="70" rx="4" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <rect x="128" y="174" width="84" height="12" rx="3" fill="#f59e0b"/>
+  <rect x="136" y="192" width="68" height="7" rx="2" fill="#fcd34d"/>
+  <rect x="142" y="208" width="56" height="14" rx="7" fill="#16a34a"/>
+
+  <!-- Kartalar: BITTA USTUN (tik) -->
+  <rect x="112" y="238" width="116" height="56" rx="4" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <rect x="112" y="302" width="116" height="56" rx="4" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <rect x="112" y="366" width="116" height="56" rx="4" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <circle cx="128" cy="254" r="7" fill="#16a34a"/>
+  <circle cx="128" cy="318" r="7" fill="#16a34a"/>
+  <circle cx="128" cy="382" r="7" fill="#16a34a"/>
+
+  <!-- Footer -->
+  <rect x="112" y="430" width="116" height="38" rx="4" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+
+  <text x="170" y="500" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">grid-template-columns: 1fr</text>
+  <text x="170" y="518" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">kartalar tik ustun bo'lib taxlanadi</text>
+
+  <!-- ===================== STRELKA ===================== -->
+  <line x1="318" y1="290" x2="392" y2="290" stroke="#475569" stroke-width="3"/>
+  <polygon points="400,290 386,283 386,297" fill="#475569"/>
+  <rect x="318" y="248" width="84" height="30" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="360" y="268" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#b45309">min-width</text>
+  <text x="360" y="316" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">ekran kengaydi</text>
+
+  <!-- ===================== O'NG: DESKTOP ===================== -->
+  <text x="560" y="86" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Desktop (&#8805; 1024px)</text>
+
+  <!-- Monitor ramkasi -->
+  <rect x="420" y="98" width="280" height="200" rx="10" fill="#ffffff" stroke="#1e293b" stroke-width="3"/>
+  <!-- Stend -->
+  <rect x="546" y="298" width="28" height="20" fill="#94a3b8"/>
+  <rect x="510" y="318" width="100" height="8" rx="4" fill="#94a3b8"/>
+
+  <!-- Header (to'liq menyu) -->
+  <rect x="434" y="112" width="252" height="26" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <rect x="442" y="120" width="40" height="10" rx="2" fill="#2563eb"/>
+  <rect x="560" y="121" width="30" height="8" rx="2" fill="#93c5fd"/>
+  <rect x="598" y="121" width="30" height="8" rx="2" fill="#93c5fd"/>
+  <rect x="636" y="121" width="42" height="8" rx="2" fill="#93c5fd"/>
+
+  <!-- Hero -->
+  <rect x="434" y="146" width="252" height="56" rx="4" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <rect x="494" y="158" width="132" height="12" rx="3" fill="#f59e0b"/>
+  <rect x="524" y="176" width="72" height="7" rx="2" fill="#fcd34d"/>
+  <rect x="528" y="188" width="64" height="10" rx="5" fill="#16a34a"/>
+
+  <!-- Kartalar: UCH USTUN (yonma-yon) -->
+  <rect x="434" y="210" width="78" height="74" rx="4" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <rect x="521" y="210" width="78" height="74" rx="4" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <rect x="608" y="210" width="78" height="74" rx="4" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <circle cx="473" cy="232" r="8" fill="#16a34a"/>
+  <circle cx="560" cy="232" r="8" fill="#16a34a"/>
+  <circle cx="647" cy="232" r="8" fill="#16a34a"/>
+
+  <text x="560" y="500" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">grid-template-columns: repeat(3, 1fr)</text>
+  <text x="560" y="518" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">kartalar yonma-yon uch ustun bo'ladi</text>
+</svg>

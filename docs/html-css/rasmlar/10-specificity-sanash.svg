@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" width="720" height="360">
+  <title>Specificity balini sanash: selektordagi id, class va element soni to'rt xonali balga aylanadi</title>
+  <rect x="0" y="0" width="720" height="360" fill="#f8fafc"/>
+  <text x="360" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Specificity balini qanday sanaymiz?</text>
+  <text x="360" y="56" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Format: (inline, id, class/attr/pseudo-class, element/pseudo-element)</text>
+
+  <!-- sarlavha qatori -->
+  <rect x="40" y="78" width="360" height="36" fill="#1e293b"/>
+  <text x="60" y="102" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">Selektor</text>
+  <rect x="400" y="78" width="80" height="36" fill="#dc2626"/>
+  <text x="440" y="102" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">id</text>
+  <rect x="480" y="78" width="100" height="36" fill="#2563eb"/>
+  <text x="530" y="102" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">class</text>
+  <rect x="580" y="78" width="100" height="36" fill="#16a34a"/>
+  <text x="630" y="102" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">element</text>
+
+  <!-- 1-qator: p -->
+  <rect x="40" y="114" width="360" height="40" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="60" y="139" font-family="Consolas, monospace" font-size="15" fill="#1e293b">p</text>
+  <rect x="400" y="114" width="80" height="40" fill="#fef2f2" stroke="#94a3b8" stroke-width="1"/>
+  <text x="440" y="139" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">0</text>
+  <rect x="480" y="114" width="100" height="40" fill="#eff6ff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="530" y="139" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">0</text>
+  <rect x="580" y="114" width="100" height="40" fill="#f0fdf4" stroke="#94a3b8" stroke-width="1"/>
+  <text x="630" y="139" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">1</text>
+
+  <!-- 2-qator: .menu -->
+  <rect x="40" y="154" width="360" height="40" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="60" y="179" font-family="Consolas, monospace" font-size="15" fill="#1e293b">.menu</text>
+  <rect x="400" y="154" width="80" height="40" fill="#fef2f2" stroke="#94a3b8" stroke-width="1"/>
+  <text x="440" y="179" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">0</text>
+  <rect x="480" y="154" width="100" height="40" fill="#eff6ff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="530" y="179" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">1</text>
+  <rect x="580" y="154" width="100" height="40" fill="#f0fdf4" stroke="#94a3b8" stroke-width="1"/>
+  <text x="630" y="179" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">0</text>
+
+  <!-- 3-qator: nav .menu li -->
+  <rect x="40" y="194" width="360" height="40" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="60" y="219" font-family="Consolas, monospace" font-size="15" fill="#1e293b">nav .menu li</text>
+  <rect x="400" y="194" width="80" height="40" fill="#fef2f2" stroke="#94a3b8" stroke-width="1"/>
+  <text x="440" y="219" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">0</text>
+  <rect x="480" y="194" width="100" height="40" fill="#eff6ff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="530" y="219" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">1</text>
+  <rect x="580" y="194" width="100" height="40" fill="#f0fdf4" stroke="#94a3b8" stroke-width="1"/>
+  <text x="630" y="219" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">2</text>
+
+  <!-- 4-qator: #header .menu a -->
+  <rect x="40" y="234" width="360" height="40" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="60" y="259" font-family="Consolas, monospace" font-size="15" fill="#1e293b">#header .menu a</text>
+  <rect x="400" y="234" width="80" height="40" fill="#fef2f2" stroke="#94a3b8" stroke-width="1"/>
+  <text x="440" y="259" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">1</text>
+  <rect x="480" y="234" width="100" height="40" fill="#eff6ff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="530" y="259" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">1</text>
+  <rect x="580" y="234" width="100" height="40" fill="#f0fdf4" stroke="#94a3b8" stroke-width="1"/>
+  <text x="630" y="259" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">1</text>
+
+  <text x="60" y="306" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Eng katta bal eng chapdan boshlab solishtiriladi:</text>
+  <text x="60" y="330" font-family="Consolas, monospace" font-size="14" fill="#dc2626">#header .menu a (0,1,1,1)</text>
+  <text x="290" y="330" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">eng kuchli — id bor.</text>
+</svg>

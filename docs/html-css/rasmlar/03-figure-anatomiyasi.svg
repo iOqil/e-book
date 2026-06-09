@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="720" height="440">
+  <title>figure elementi anatomiyasi: img va figcaption</title>
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1e293b">&lt;figure&gt; anatomiyasi</text>
+  <text x="360" y="58" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#64748b">Rasm + izoh bir butun sifatida guruhlanadi</text>
+
+  <!-- Tashqi figure quti -->
+  <rect x="60" y="80" width="360" height="320" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2.5"/>
+  <rect x="60" y="80" width="150" height="28" rx="0" fill="#2563eb"/>
+  <text x="72" y="100" font-family="Consolas, monospace" font-size="15" font-weight="bold" fill="#f8fafc">&lt;figure&gt;</text>
+
+  <!-- ichidagi img -->
+  <rect x="90" y="128" width="300" height="186" rx="8" fill="#dbeafe" stroke="#94a3b8" stroke-width="2"/>
+  <!-- soddalashtirilgan rasm: quyosh + tog' -->
+  <circle cx="320" cy="172" r="20" fill="#f59e0b"/>
+  <polygon points="100,300 180,200 250,300" fill="#16a34a"/>
+  <polygon points="210,300 300,180 380,300" fill="#15803d"/>
+  <rect x="90" y="300" width="300" height="14" fill="#94a3b8"/>
+  <rect x="98" y="136" width="120" height="24" rx="5" fill="#1e293b" opacity="0.85"/>
+  <text x="108" y="153" font-family="Consolas, monospace" font-size="13" fill="#f8fafc">&lt;img&gt;</text>
+
+  <!-- figcaption -->
+  <rect x="90" y="328" width="300" height="56" rx="8" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="100" y="349" font-family="Consolas, monospace" font-size="13" fill="#b45309">&lt;figcaption&gt;</text>
+  <text x="100" y="372" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Rasm 1. Tog'dagi quyosh chiqishi</text>
+
+  <!-- O'ng tomonda izohlar -->
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- figure izoh -->
+  <line x1="220" y1="94" x2="470" y2="94" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+  <rect x="470" y="78" width="240" height="62" rx="8" fill="#f8fafc" stroke="#2563eb" stroke-width="2"/>
+  <text x="482" y="100" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#2563eb">figure</text>
+  <text x="482" y="120" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Rasm va izohni bitta mustaqil</text>
+  <text x="482" y="135" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">birlik qilib o'raydi.</text>
+
+  <!-- img izoh -->
+  <line x1="390" y1="200" x2="470" y2="200" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+  <rect x="470" y="170" width="240" height="80" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
+  <text x="482" y="192" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">img</text>
+  <text x="482" y="212" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Asosiy rasm. src + alt majburiy.</text>
+  <text x="482" y="231" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Bu yerda "ko'rinadigan" qism.</text>
+
+  <!-- figcaption izoh -->
+  <line x1="390" y1="356" x2="470" y2="356" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+  <rect x="470" y="320" width="240" height="86" rx="8" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="482" y="342" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#b45309">figcaption</text>
+  <text x="482" y="362" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Rasmga ko'rinadigan izoh/sarlavha.</text>
+  <text x="482" y="381" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">figure ichida birinchi yoki</text>
+  <text x="482" y="398" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">oxirgi bo'lishi mumkin.</text>
+</svg>

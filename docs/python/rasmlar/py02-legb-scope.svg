@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 540" width="760" height="540">
+  <title>LEGB qoidasi: Python o'zgaruvchini Local -&gt; Enclosing -&gt; Global -&gt; Built-in tartibida qidiradi</title>
+  <defs>
+    <marker id="lg-arrow" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 z" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="540" fill="#f8fafc"/>
+  <text x="380" y="38" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1e293b">LEGB - o'zgaruvchi qidirish tartibi</text>
+  <text x="380" y="62" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Local -&gt; Enclosing -&gt; Global -&gt; Built-in (ichkaridan tashqariga)</text>
+
+  <!-- B: Built-in (eng tashqi) -->
+  <rect x="50" y="82" width="660" height="420" rx="14" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="70" y="108" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">B - Built-in (Python o'rnatgan)</text>
+  <text x="70" y="130" font-family="Consolas, Courier New, monospace" font-size="14" fill="#475569">print, len, range ...</text>
+
+  <!-- G: Global -->
+  <rect x="95" y="148" width="570" height="320" rx="14" fill="#f8fafc" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="115" y="174" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">G - Global (modul darajasi)</text>
+  <text x="115" y="196" font-family="Consolas, Courier New, monospace" font-size="14" fill="#475569">x = "global"</text>
+
+  <!-- E: Enclosing -->
+  <rect x="140" y="214" width="480" height="220" rx="14" fill="#e2e8f0" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="160" y="240" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#f59e0b">E - Enclosing (tashqi funksiya)</text>
+  <text x="160" y="262" font-family="Consolas, Courier New, monospace" font-size="14" fill="#475569">def tashqi(): y = "enclosing"</text>
+
+  <!-- L: Local -->
+  <rect x="185" y="280" width="390" height="130" rx="14" fill="#f8fafc" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="205" y="306" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">L - Local (joriy funksiya)</text>
+  <text x="205" y="328" font-family="Consolas, Courier New, monospace" font-size="14" fill="#475569">def ichki(): z = "local"</text>
+  <text x="205" y="356" font-family="Consolas, Courier New, monospace" font-size="14" fill="#1e293b">print(z)  # nomi qidiriladi</text>
+
+  <!-- Qidiruv strelkalari: ichkaridan tashqariga -->
+  <text x="600" y="370" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626">Qidiruv yo'nalishi</text>
+  <line x1="540" y1="372" x2="540" y2="320" stroke="#dc2626" stroke-width="2.5" marker-end="url(#lg-arrow)"/>
+  <text x="640" y="300" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">1) Local</text>
+  <text x="640" y="248" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#f59e0b">2) Enclosing</text>
+  <text x="640" y="200" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">3) Global</text>
+  <text x="640" y="135" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">4) Built-in</text>
+
+  <text x="380" y="496" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Birinchi topilgan joyda to'xtaydi; hammasida topilmasa NameError.</text>
+  <text x="380" y="524" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Ichki tashqarini ko'radi, tashqi ichkini ko'rmaydi.</text>
+</svg>

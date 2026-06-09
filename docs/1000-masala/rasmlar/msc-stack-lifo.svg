@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" width="560" height="360">
+  <title>Stack (LIFO) — push tepaga qo'yadi, pop tepadan oladi</title>
+  <rect x="0" y="0" width="560" height="360" fill="#f8fafc"/>
+  <text x="280" y="30" font-family="Segoe UI, system-ui, sans-serif" font-size="19" font-weight="bold" fill="#1e293b" text-anchor="middle">Stack — LIFO (oxirgi kirgan birinchi chiqadi)</text>
+
+  <defs>
+    <marker id="arrA" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- push -->
+  <text x="150" y="68" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="middle">push(40)</text>
+  <line x1="150" y1="78" x2="150" y2="118" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arrA)"/>
+  <!-- pop -->
+  <text x="410" y="68" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626" text-anchor="middle">pop() → 40</text>
+  <line x1="410" y1="118" x2="410" y2="78" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arrA)"/>
+
+  <!-- TEPA label -->
+  <text x="280" y="118" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#2563eb" text-anchor="middle" font-style="italic">tepa (top) — faqat shu uchdan kirib-chiqiladi</text>
+
+  <!-- Stack idishi -->
+  <!-- elementlar pastdan yuqoriga: 10 (tag), 20, 30, 40 (tepa) -->
+  <rect x="220" y="130" width="120" height="40" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="280" y="156" font-family="monospace" font-size="16" fill="#1e293b" text-anchor="middle">40</text>
+
+  <rect x="220" y="170" width="120" height="40" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="280" y="196" font-family="monospace" font-size="16" fill="#1e293b" text-anchor="middle">30</text>
+
+  <rect x="220" y="210" width="120" height="40" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="280" y="236" font-family="monospace" font-size="16" fill="#1e293b" text-anchor="middle">20</text>
+
+  <rect x="220" y="250" width="120" height="40" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="280" y="276" font-family="monospace" font-size="16" fill="#1e293b" text-anchor="middle">10</text>
+
+  <!-- idish chizig'i (pastki yon) -->
+  <line x1="218" y1="130" x2="218" y2="292" stroke="#475569" stroke-width="3"/>
+  <line x1="342" y1="130" x2="342" y2="292" stroke="#475569" stroke-width="3"/>
+  <line x1="216" y1="291" x2="344" y2="291" stroke="#475569" stroke-width="3"/>
+
+  <text x="370" y="276" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#64748b" text-anchor="start">tag (birinchi kirgan)</text>
+
+  <text x="280" y="324" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">push va pop — har ikkalasi ham faqat tepada ishlaydi → O(1)</text>
+  <text x="280" y="346" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#64748b" text-anchor="middle">peek() tepadagi qiymatni o'chirmasdan ko'rsatadi</text>
+</svg>

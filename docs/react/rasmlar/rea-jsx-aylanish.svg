@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" width="760" height="360">
+  <title>JSX qanday ishlaydi: JSX dan React.createElement orqali obyektga</title>
+  <defs>
+    <marker id="ok" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="760" height="360" fill="#f8fafc"/>
+  <text x="380" y="32" font-family="Segoe UI, system-ui, sans-serif" font-size="19" font-weight="bold" fill="#1e293b" text-anchor="middle">JSX brauzergacha bormaydi — u obyektga aylanadi</text>
+
+  <!-- Step 1: JSX -->
+  <rect x="30" y="80" width="210" height="120" rx="8" fill="#e2e8f0" stroke="#2563eb" stroke-width="2"/>
+  <text x="135" y="106" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb" text-anchor="middle">1. JSX (siz yozasiz)</text>
+  <text x="50" y="140" font-family="monospace" font-size="14" fill="#1e293b">&lt;h1 className="t"&gt;</text>
+  <text x="66" y="162" font-family="monospace" font-size="14" fill="#1e293b">Salom</text>
+  <text x="50" y="184" font-family="monospace" font-size="14" fill="#1e293b">&lt;/h1&gt;</text>
+
+  <!-- Step 2: createElement -->
+  <rect x="275" y="80" width="210" height="120" rx="8" fill="#e2e8f0" stroke="#f59e0b" stroke-width="2"/>
+  <text x="380" y="106" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#f59e0b" text-anchor="middle">2. Vite/Babel kompilyatsiya</text>
+  <text x="293" y="140" font-family="monospace" font-size="13" fill="#1e293b">React.createElement(</text>
+  <text x="309" y="160" font-family="monospace" font-size="13" fill="#1e293b">"h1",</text>
+  <text x="309" y="178" font-family="monospace" font-size="13" fill="#1e293b">{className:"t"},</text>
+  <text x="309" y="196" font-family="monospace" font-size="13" fill="#1e293b">"Salom")</text>
+
+  <!-- Step 3: object -->
+  <rect x="520" y="80" width="215" height="120" rx="8" fill="#e2e8f0" stroke="#16a34a" stroke-width="2"/>
+  <text x="627" y="106" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="middle">3. React element (obyekt)</text>
+  <text x="538" y="140" font-family="monospace" font-size="13" fill="#1e293b">{</text>
+  <text x="554" y="158" font-family="monospace" font-size="13" fill="#1e293b">type: "h1",</text>
+  <text x="554" y="176" font-family="monospace" font-size="13" fill="#1e293b">props: { ... }</text>
+  <text x="538" y="194" font-family="monospace" font-size="13" fill="#1e293b">}</text>
+
+  <!-- arrows -->
+  <line x1="240" y1="140" x2="272" y2="140" stroke="#475569" stroke-width="2.5" marker-end="url(#ok)"/>
+  <line x1="485" y1="140" x2="517" y2="140" stroke="#475569" stroke-width="2.5" marker-end="url(#ok)"/>
+
+  <!-- bottom: to DOM -->
+  <rect x="275" y="252" width="210" height="56" rx="8" fill="#2563eb" stroke="#1e40af" stroke-width="2"/>
+  <text x="380" y="276" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">React DOM ni yangilaydi</text>
+  <text x="380" y="297" font-family="monospace" font-size="13" fill="#dbeafe" text-anchor="middle">&lt;h1 class="t"&gt;Salom&lt;/h1&gt;</text>
+  <line x1="627" y1="200" x2="627" y2="280" stroke="#475569" stroke-width="2.5"/>
+  <line x1="627" y1="280" x2="488" y2="280" stroke="#475569" stroke-width="2.5" marker-end="url(#ok)"/>
+
+  <text x="380" y="340" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569" text-anchor="middle">JSX = oddiy JavaScript chaqiruvi uchun qulay yozuv (sintaksis shakari)</text>
+</svg>

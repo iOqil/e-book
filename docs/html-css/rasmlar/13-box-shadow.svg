@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 460" width="760" height="460">
+  <title>box-shadow parametrlari: offset-x, offset-y, blur, spread va color strelkalar bilan ko'rsatilgan</title>
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#475569"/>
+    </marker>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="14" dy="18" stdDeviation="8" flood-color="#94a3b8" flood-opacity="0.9"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="460" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">box-shadow parametrlari</text>
+  <text x="380" y="60" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">box-shadow: offset-x  offset-y  blur  spread  color;</text>
+
+  <!-- soyali quti -->
+  <rect x="230" y="150" width="220" height="160" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5" filter="url(#soft)"/>
+  <text x="340" y="236" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">element</text>
+
+  <!-- offset-x strelkasi (gorizontal) -->
+  <line x1="450" y1="125" x2="486" y2="125" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="492" y="122" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">offset-x</text>
+  <text x="492" y="140" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">o'ngga siljish (+)</text>
+
+  <!-- offset-y strelkasi (vertikal) -->
+  <line x1="200" y1="150" x2="200" y2="172" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="80" y="160" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">offset-y</text>
+  <text x="60" y="178" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">pastga siljish (+)</text>
+
+  <!-- blur yorlig'i (soyaning yumshoq cheti) -->
+  <line x1="500" y1="360" x2="470" y2="338" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="505" y="356" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#d97706">blur</text>
+  <text x="505" y="374" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">yumshatish (loyqalik)</text>
+  <text x="505" y="392" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">qancha katta — shuncha</text>
+  <text x="505" y="410" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tarqoq soya</text>
+
+  <!-- spread yorlig'i -->
+  <line x1="230" y1="360" x2="262" y2="338" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="120" y="356" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#7c3aed">spread</text>
+  <text x="100" y="374" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">kengaytirish: soyani</text>
+  <text x="100" y="392" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">kattalashtiradi (+) yoki</text>
+  <text x="100" y="410" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">kichraytiradi (-)</text>
+
+  <!-- color yorlig'i -->
+  <rect x="600" y="148" width="22" height="22" rx="3" fill="#94a3b8" stroke="#64748b" stroke-width="1.5"/>
+  <text x="630" y="164" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#475569">color</text>
+  <text x="600" y="190" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">soya rangi</text>
+
+  <text x="380" y="446" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Misol: box-shadow: 14px 18px 8px 0 #94a3b8;</text>
+</svg>
