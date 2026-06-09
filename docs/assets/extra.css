@@ -175,3 +175,19 @@
 * { scrollbar-width: thin; scrollbar-color: var(--md-primary-fg-color--light) transparent; }
 .md-content img[src$=".svg"] { border-radius: 10px; }
 .md-typeset .md-content__inner > :is(h1,h2) { scroll-margin-top: 4rem; }
+
+/* Bosh sahifada (hero) edit/view amal tugmalarini yashirish — ular xalaqit qilardi */
+.md-content:has(.hero) .md-content__button { display: none !important; }
+.md-content__inner:has(> .hero) .md-content__button { display: none !important; }
+
+/* ---------------- Mobil moslashuv ---------------- */
+@media screen and (max-width: 600px) {
+  .hero { padding: 2rem 1.1rem 1.8rem; border-radius: 18px; margin: 0 0 1.6rem; }
+  .hero h1 { font-size: 2rem; line-height: 1.12; }
+  .hero .hero-sub { font-size: 1rem; }
+  .hero .md-button { display: block; width: 100%; margin: .45rem 0; }
+  .hero-stats { gap: 1rem 1.3rem; margin-top: 1.5rem; }
+  .hero-stats .stat { min-width: 62px; }
+  .hero-stats .stat b { font-size: 1.5rem; }
+  .md-typeset .grid.cards > ul > li { padding: 1.1rem; }
+}
