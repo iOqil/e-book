@@ -38,9 +38,14 @@ for d, name in BOOKS:
     for f in book_files(d):
         t = title(f'docs/{d}/{f}')
         nav_lines.append(f'      - {yq(t)}: {d}/{f}')
+nav_lines.append('  - "Litsenziya va muallif": litsenziya.md')
 
 config = f'''site_name: Oqil E-kitoblar
 site_description: "Dasturlash bo'yicha o'zbekcha e-kitoblar — 0 dan expertgacha. 8 ta qo'llanma, 297 SVG diagramma."
+copyright: '© 2026 <a href="/litsenziya/">Oqil Imomnazarov</a> · bepul · savdo taqiqlanadi · CC BY-NC-SA 4.0'
+repo_url: https://github.com/iOqil/e-book
+repo_name: iOqil/e-book
+edit_uri: edit/main/docs/
 docs_dir: docs
 site_dir: site
 use_directory_urls: true
@@ -72,6 +77,8 @@ theme:
     - search.suggest
     - search.highlight
     - content.code.copy
+    - content.action.edit
+    - content.action.view
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
