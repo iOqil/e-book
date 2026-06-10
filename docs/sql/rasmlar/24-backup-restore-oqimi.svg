@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" width="720" height="380">
+  <title>Backup va tiklash oqimi: mysqldump bazani .sql faylga to'kadi, nusxa boshqa joyda saqlanadi, mysql buyrug'i tiklaydi</title>
+  <defs>
+    <marker id="bk-ok" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="720" height="380" fill="#f8fafc"/>
+
+  <!-- sarlavha -->
+  <text x="360" y="38" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Backup va tiklash oqimi (mysqldump)</text>
+
+  <!-- 1: MySQL server -->
+  <rect x="20" y="90" width="140" height="80" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="90" y="116" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">MySQL server</text>
+  <text x="90" y="138" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">dokon bazasi</text>
+  <text x="90" y="158" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#475569">ishlab turibdi</text>
+
+  <!-- 2: .sql fayl -->
+  <rect x="290" y="90" width="140" height="80" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="360" y="116" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" font-weight="bold" fill="#1e293b">dokon_backup.sql</text>
+  <text x="360" y="138" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#1e293b">CREATE TABLE +</text>
+  <text x="360" y="158" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#1e293b">INSERT buyruqlari</text>
+
+  <!-- 3: boshqa joy -->
+  <rect x="560" y="90" width="140" height="80" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="630" y="116" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">Boshqa joy</text>
+  <text x="630" y="138" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">disk / bulut</text>
+  <text x="630" y="158" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#475569">avtomatik (cron)</text>
+
+  <!-- strelka 1: mysqldump -->
+  <line x1="160" y1="142" x2="286" y2="142" stroke="#475569" stroke-width="2.5" marker-end="url(#bk-ok)"/>
+  <rect x="173" y="108" width="104" height="24" rx="6" fill="#2563eb"/>
+  <text x="225" y="125" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#f8fafc">mysqldump</text>
+
+  <!-- strelka 2: nusxa -->
+  <line x1="430" y1="142" x2="556" y2="142" stroke="#475569" stroke-width="2.5" marker-end="url(#bk-ok)"/>
+  <rect x="433" y="108" width="120" height="24" rx="6" fill="#d97706"/>
+  <text x="493" y="125" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#f8fafc">nusxa ko'chirish</text>
+
+  <!-- tiklash yo'li: fayldan serverga qaytish -->
+  <path d="M360,172 V250 H90 V176" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#bk-ok)"/>
+  <rect x="80" y="238" width="290" height="24" rx="6" fill="#16a34a"/>
+  <text x="225" y="255" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#f8fafc">tiklash: mysql -u root -p dokon &lt; fayl</text>
+
+  <!-- pastki izohlar -->
+  <text x="360" y="320" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">Temir qoida: tiklab KO'RILMAGAN backup — backup emas!</text>
+  <text x="360" y="348" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Nusxani server bilan BIR joyda qoldirmang — server kuysa, backup ham birga kuyadi</text>
+</svg>

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 450" width="720" height="450">
+  <title>Trigger qachon ishga tushadi: so'rov kelganda BEFORE trigger yozishdan oldin, AFTER trigger yozilgandan keyin avtomatik bajariladi</title>
+  <defs>
+    <marker id="strelka-t" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="720" height="450" fill="#f8fafc"/>
+
+  <text x="360" y="38" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Trigger qachon ishga tushadi?</text>
+
+  <!-- 1. So'rov -->
+  <rect x="20" y="80" width="150" height="90" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="95" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">1. So'rov</text>
+  <text x="95" y="132" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">INSERT, UPDATE</text>
+  <text x="95" y="152" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">yoki DELETE</text>
+
+  <!-- 2. BEFORE -->
+  <rect x="200" y="80" width="150" height="90" rx="10" fill="#e2e8f0" stroke="#2563eb" stroke-width="2"/>
+  <text x="275" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">2. BEFORE</text>
+  <text x="275" y="132" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">yozishdan oldin</text>
+  <text x="275" y="152" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#475569">NEW'ni tuzata oladi</text>
+
+  <!-- 3. Yozish -->
+  <rect x="380" y="80" width="150" height="90" rx="10" fill="#e2e8f0" stroke="#16a34a" stroke-width="2"/>
+  <text x="455" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">3. Yozish</text>
+  <text x="455" y="132" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">qator jadvalga</text>
+  <text x="455" y="152" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">yoziladi</text>
+
+  <!-- 4. AFTER -->
+  <rect x="560" y="80" width="150" height="90" rx="10" fill="#e2e8f0" stroke="#d97706" stroke-width="2"/>
+  <text x="635" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#d97706">4. AFTER</text>
+  <text x="635" y="132" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">yozilgandan keyin</text>
+  <text x="635" y="152" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">log, audit</text>
+
+  <!-- strelkalar -->
+  <line x1="170" y1="125" x2="196" y2="125" stroke="#475569" stroke-width="2.5" marker-end="url(#strelka-t)"/>
+  <line x1="350" y1="125" x2="376" y2="125" stroke="#475569" stroke-width="2.5" marker-end="url(#strelka-t)"/>
+  <line x1="530" y1="125" x2="556" y2="125" stroke="#475569" stroke-width="2.5" marker-end="url(#strelka-t)"/>
+
+  <!-- misol chiplari -->
+  <line x1="275" y1="170" x2="275" y2="184" stroke="#2563eb" stroke-width="1.5"/>
+  <rect x="205" y="186" width="140" height="24" rx="6" fill="#2563eb"/>
+  <text x="275" y="202" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#f8fafc">SET NEW.narx = 0</text>
+
+  <line x1="635" y1="170" x2="635" y2="184" stroke="#d97706" stroke-width="1.5"/>
+  <rect x="565" y="186" width="140" height="24" rx="6" fill="#d97706"/>
+  <text x="635" y="202" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#f8fafc">INSERT INTO log...</text>
+
+  <!-- OLD va NEW paneli -->
+  <rect x="110" y="245" width="500" height="120" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="360" y="272" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">OLD va NEW kimda bor?</text>
+
+  <text x="150" y="300" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">INSERT</text>
+  <text x="240" y="300" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">OLD yo'q · NEW — kiritilayotgan qator</text>
+
+  <text x="150" y="325" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#d97706">UPDATE</text>
+  <text x="240" y="325" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">OLD — eski qiymat · NEW — yangi qiymat</text>
+
+  <text x="150" y="350" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">DELETE</text>
+  <text x="240" y="350" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">OLD — o'chirilayotgan qator · NEW yo'q</text>
+
+  <!-- Pastdagi izoh -->
+  <text x="360" y="402" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Trigger'ni hech kim chaqirmaydi — hodisaning o'zi ishga tushiradi</text>
+  <text x="360" y="426" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">2 vaqt (BEFORE/AFTER) × 3 hodisa (INSERT/UPDATE/DELETE) = jami 6 xil trigger</text>
+</svg>

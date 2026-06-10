@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 445" width="720" height="445">
+  <title>Normalizatsiya qadamlari: 1NF, 2NF va 3NF bitta misolda</title>
+  <defs>
+    <marker id="nq-strelka" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="720" height="445" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Normalizatsiya qadamlari — bitta misolda</text>
+
+  <!-- 1NF -->
+  <rect x="40" y="58" width="640" height="96" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="58" y="72" width="62" height="30" rx="8" fill="#2563eb"/>
+  <text x="89" y="93" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#f8fafc">1NF</text>
+  <text x="140" y="90" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Bitta katak — bitta qiymat</text>
+  <text x="140" y="116" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#dc2626">Avval: mahsulotlar katagida 'Telefon, Chexol' — ikki qiymat</text>
+  <text x="140" y="138" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#16a34a">Keyin: har mahsulot alohida qatorda (buyurtma_qatorlari)</text>
+
+  <line x1="360" y1="156" x2="360" y2="172" stroke="#475569" stroke-width="2.5" marker-end="url(#nq-strelka)"/>
+
+  <!-- 2NF -->
+  <rect x="40" y="176" width="640" height="96" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="58" y="190" width="62" height="30" rx="8" fill="#d97706"/>
+  <text x="89" y="211" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#f8fafc">2NF</text>
+  <text x="140" y="208" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Har fakt o'z jadvalida, bir marta</text>
+  <text x="140" y="234" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#dc2626">Avval: mijoz telefoni har buyurtma qatorida takrorlanadi</text>
+  <text x="140" y="256" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#16a34a">Keyin: telefon faqat mijozlar'da, buyurtmada — mijoz_id (FK)</text>
+
+  <line x1="360" y1="274" x2="360" y2="290" stroke="#475569" stroke-width="2.5" marker-end="url(#nq-strelka)"/>
+
+  <!-- 3NF -->
+  <rect x="40" y="294" width="640" height="96" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="58" y="308" width="62" height="30" rx="8" fill="#16a34a"/>
+  <text x="89" y="329" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#f8fafc">3NF</text>
+  <text x="140" y="326" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Oddiy ustun boshqa oddiy ustunga bog'liq bo'lmasin</text>
+  <text x="140" y="352" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#dc2626">Avval: kategoriya_nomi har mahsulot qatorida takrorlanadi</text>
+  <text x="140" y="374" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#16a34a">Keyin: kategoriyalar jadvali, mahsulotda — kategoriya_id (FK)</text>
+
+  <!-- pastki xulosa -->
+  <text x="360" y="425" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Uchala qadam ham bitta g'oya: takrorni yo'qotish — har faktga bitta "uy"</text>
+</svg>

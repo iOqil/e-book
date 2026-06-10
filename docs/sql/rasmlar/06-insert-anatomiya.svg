@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" width="720" height="340">
+  <title>INSERT INTO sintaksis anatomiyasi: buyruq, jadval nomi, ustunlar ro'yxati va qiymatlar mosligi</title>
+  <defs>
+    <marker id="ins-yashil" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/>
+    </marker>
+    <marker id="ins-kok" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="720" height="340" fill="#f8fafc"/>
+
+  <text x="360" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">INSERT anatomiyasi: ustun va qiymat mosligi</text>
+
+  <!-- yuqori yorliqlar -->
+  <text x="87" y="86" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">buyruq</text>
+  <line x1="87" y1="92" x2="87" y2="116" stroke="#94a3b8" stroke-width="1.5"/>
+
+  <text x="174" y="62" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">jadval nomi</text>
+  <line x1="174" y1="68" x2="174" y2="116" stroke="#94a3b8" stroke-width="1.5"/>
+
+  <text x="268" y="86" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">ustunlar ro'yxati</text>
+  <line x1="268" y1="92" x2="268" y2="116" stroke="#94a3b8" stroke-width="1.5"/>
+
+  <text x="495" y="62" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">qiymatlar — shu tartibda</text>
+  <line x1="495" y1="68" x2="495" y2="116" stroke="#94a3b8" stroke-width="1.5"/>
+
+  <!-- kod qutisi -->
+  <rect x="26" y="120" width="668" height="48" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="40" y="151" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">INSERT INTO</text>
+  <text x="148" y="151" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">azolar</text>
+  <text x="212" y="151" font-family="Segoe UI, system-ui, sans-serif" font-size="16" fill="#d97706">(ism, telefon)</text>
+  <text x="340" y="151" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">VALUES</text>
+  <text x="408" y="151" font-family="Segoe UI, system-ui, sans-serif" font-size="16" fill="#1e293b">('Aziz', '+99890...');</text>
+
+  <!-- moslik strelkalari -->
+  <path d="M233,172 C233,222 439,222 439,176" fill="none" stroke="#16a34a" stroke-width="2" marker-end="url(#ins-yashil)"/>
+  <text x="336" y="196" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">1-ustun → 1-qiymat</text>
+
+  <path d="M290,172 C290,268 522,268 522,176" fill="none" stroke="#2563eb" stroke-width="2" marker-end="url(#ins-kok)"/>
+  <text x="406" y="232" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">2-ustun → 2-qiymat</text>
+
+  <!-- pastki izoh -->
+  <text x="360" y="292" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">Nechta ustun bo'lsa — shuncha qiymat, ayni shu tartibda.</text>
+  <text x="360" y="316" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">id ro'yxatda yo'q — uni AUTO_INCREMENT o'zi beradi.</text>
+</svg>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="720" height="440">
+  <title>DELETE, TRUNCATE va DROP taqqoslash: nima o'chadi, nima qoladi</title>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="720" height="440" fill="#f8fafc"/>
+
+  <!-- sarlavha -->
+  <text x="360" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">DELETE vs TRUNCATE vs DROP — nima yo'qoladi?</text>
+
+  <!-- DELETE ustuni -->
+  <rect x="25" y="60" width="210" height="34" rx="8" fill="#2563eb"/>
+  <text x="130" y="82" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#f8fafc">DELETE FROM jadval</text>
+
+  <rect x="50" y="110" width="160" height="100" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="50" y="110" width="160" height="22" rx="6" fill="#e2e8f0" stroke="#94a3b8"/>
+  <text x="130" y="126" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="bold" fill="#475569">jadval</text>
+  <rect x="58" y="140" width="144" height="18" rx="4" fill="none" stroke="#dc2626" stroke-dasharray="4 3"/>
+  <text x="130" y="153" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#dc2626">o'chdi (WHERE mos)</text>
+  <rect x="58" y="162" width="144" height="18" rx="4" fill="#e2e8f0" stroke="#94a3b8"/>
+  <text x="130" y="175" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#1e293b">qoldi</text>
+  <rect x="58" y="184" width="144" height="18" rx="4" fill="#e2e8f0" stroke="#94a3b8"/>
+  <text x="130" y="197" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#1e293b">qoldi</text>
+
+  <text x="37" y="248" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">• WHERE bilan tanlaydi</text>
+  <text x="37" y="272" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">• jadval qoladi</text>
+  <text x="37" y="296" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">• id davom etadi</text>
+  <text x="37" y="320" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">• ROLLBACK mumkin (19-bob)</text>
+  <text x="37" y="344" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">• sekinroq (qatorma-qator)</text>
+
+  <!-- TRUNCATE ustuni -->
+  <rect x="255" y="60" width="210" height="34" rx="8" fill="#d97706"/>
+  <text x="360" y="82" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#f8fafc">TRUNCATE TABLE jadval</text>
+
+  <rect x="280" y="110" width="160" height="100" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="280" y="110" width="160" height="22" rx="6" fill="#e2e8f0" stroke="#94a3b8"/>
+  <text x="360" y="126" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="bold" fill="#475569">jadval</text>
+  <text x="360" y="176" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">bo'm-bo'sh</text>
+
+  <text x="267" y="248" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">• HAMMA qator o'chadi</text>
+  <text x="267" y="272" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">• jadval qoladi (bo'sh)</text>
+  <text x="267" y="296" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">• id yana 1 dan boshlanadi</text>
+  <text x="267" y="320" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">• ROLLBACK ishlamaydi</text>
+  <text x="267" y="344" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">• juda tez</text>
+
+  <!-- DROP ustuni -->
+  <rect x="485" y="60" width="210" height="34" rx="8" fill="#dc2626"/>
+  <text x="590" y="82" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#f8fafc">DROP TABLE jadval</text>
+
+  <rect x="510" y="110" width="160" height="100" rx="6" fill="none" stroke="#dc2626" stroke-width="2" stroke-dasharray="6 4"/>
+  <line x1="525" y1="125" x2="655" y2="195" stroke="#dc2626" stroke-width="3"/>
+  <line x1="655" y1="125" x2="525" y2="195" stroke="#dc2626" stroke-width="3"/>
+  <text x="590" y="230" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="bold" fill="#dc2626">jadvalning o'zi yo'q</text>
+
+  <text x="497" y="272" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">• struktura ham, qator ham</text>
+  <text x="497" y="296" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">• hech narsa qolmaydi</text>
+  <text x="497" y="320" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">• qaytarib bo'lmaydi!</text>
+  <text x="497" y="344" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">• juda tez</text>
+
+  <!-- pastki izoh -->
+  <text x="360" y="402" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">Tanlab o'chirish faqat DELETE'da — qolgan ikkisi "hammasi birdan" ishlaydi</text>
+</svg>

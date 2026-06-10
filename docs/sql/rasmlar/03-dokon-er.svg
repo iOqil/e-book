@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460">
+  <title>Do'kon bazasi ER-diagrammasi: kategoriyalar, mahsulotlar, mijozlar, buyurtmalar va buyurtma qatorlari jadvallari</title>
+  <defs>
+    <marker id="fk-strelka-dokon" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="720" height="460" fill="#f8fafc"/>
+
+  <text x="360" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">DO'KON bazasi — 5 jadval (ER)</text>
+
+  <!-- kategoriyalar -->
+  <text x="110" y="86" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">kategoriyalar</text>
+  <rect x="30" y="94" width="160" height="58" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="44" y="118" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">id (PK)</text>
+  <text x="44" y="138" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">nomi</text>
+
+  <!-- mahsulotlar -->
+  <text x="345" y="78" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">mahsulotlar</text>
+  <rect x="250" y="86" width="190" height="138" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="264" y="110" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">id (PK)</text>
+  <text x="264" y="130" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">nomi</text>
+  <text x="264" y="150" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">kategoriya_id (FK)</text>
+  <text x="264" y="170" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">narx</text>
+  <text x="264" y="190" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">soni</text>
+  <text x="264" y="210" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">yaratilgan_sana</text>
+
+  <!-- mijozlar -->
+  <text x="605" y="78" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">mijozlar</text>
+  <rect x="520" y="86" width="170" height="118" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="534" y="110" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">id (PK)</text>
+  <text x="534" y="130" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">ism</text>
+  <text x="534" y="150" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">telefon</text>
+  <text x="534" y="170" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">shahar</text>
+  <text x="534" y="190" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">royxatdan_otgan</text>
+
+  <!-- buyurtma_qatorlari (bog'lovchi) -->
+  <text x="345" y="300" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#d97706">buyurtma_qatorlari</text>
+  <rect x="250" y="308" width="190" height="118" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="264" y="332" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">id (PK)</text>
+  <text x="264" y="352" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">buyurtma_id (FK)</text>
+  <text x="264" y="372" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">mahsulot_id (FK)</text>
+  <text x="264" y="392" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">soni</text>
+  <text x="264" y="412" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">narx</text>
+
+  <!-- buyurtmalar -->
+  <text x="600" y="300" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">buyurtmalar</text>
+  <rect x="510" y="308" width="180" height="98" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="524" y="332" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">id (PK)</text>
+  <text x="524" y="352" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">mijoz_id (FK)</text>
+  <text x="524" y="372" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">sana</text>
+  <text x="524" y="392" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">holat</text>
+
+  <!-- strelkalar: FK -> ishora qilingan jadval -->
+  <line x1="248" y1="145" x2="194" y2="145" stroke="#475569" stroke-width="2.5" marker-end="url(#fk-strelka-dokon)"/>
+  <line x1="428" y1="306" x2="428" y2="228" stroke="#475569" stroke-width="2.5" marker-end="url(#fk-strelka-dokon)"/>
+  <line x1="442" y1="347" x2="506" y2="347" stroke="#475569" stroke-width="2.5" marker-end="url(#fk-strelka-dokon)"/>
+  <line x1="670" y1="306" x2="670" y2="208" stroke="#475569" stroke-width="2.5" marker-end="url(#fk-strelka-dokon)"/>
+
+  <!-- izoh -->
+  <text x="360" y="452" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">PK — asosiy kalit · FK — tashqi kalit · to'q sariq nom — bog'lovchi jadval ("chek qatorlari")</text>
+</svg>

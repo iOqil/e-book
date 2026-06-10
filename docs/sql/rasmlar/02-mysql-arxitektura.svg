@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="720" height="400">
+  <title>MySQL arxitekturasi: bitta server doim ishlab turadi, unga terminal, grafik dastur va kod klient sifatida ulanadi</title>
+  <defs>
+    <marker id="strelka" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="720" height="400" fill="#f8fafc"/>
+
+  <!-- sarlavha -->
+  <text x="360" y="38" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">MySQL arxitekturasi: bitta server, ko'p klient</text>
+
+  <!-- Klient 1: Terminal -->
+  <rect x="40" y="80" width="220" height="64" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="150" y="106" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">Terminal (CLI)</text>
+  <text x="150" y="128" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">mysql -u root -p</text>
+
+  <!-- Klient 2: Grafik dastur -->
+  <rect x="40" y="168" width="220" height="64" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="150" y="194" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">Grafik dastur</text>
+  <text x="150" y="216" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">DBeaver, Workbench</text>
+
+  <!-- Klient 3: Kod -->
+  <rect x="40" y="256" width="220" height="64" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="150" y="282" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">Dastur kodi</text>
+  <text x="150" y="304" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">PHP, Python, Node.js</text>
+
+  <!-- Server qutisi -->
+  <rect x="470" y="80" width="210" height="240" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="575" y="112" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="18" font-weight="bold" fill="#16a34a">MySQL server</text>
+  <text x="575" y="142" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Doim fonda ishlab turadi</text>
+  <text x="575" y="164" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Port: 3306</text>
+  <rect x="495" y="186" width="160" height="110" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="575" y="212" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#475569">Diskdagi bazalar</text>
+  <text x="575" y="236" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">mysql, sys, ...</text>
+  <text x="575" y="258" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">+ sizning bazalaringiz</text>
+  <text x="575" y="280" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(jadvallar, qatorlar)</text>
+
+  <!-- Klient 1 -> server -->
+  <line x1="260" y1="112" x2="468" y2="135" stroke="#475569" stroke-width="2.5" marker-end="url(#strelka)"/>
+  <!-- Klient 2 -> server (so'rov) -->
+  <line x1="260" y1="188" x2="468" y2="188" stroke="#475569" stroke-width="2.5" marker-end="url(#strelka)"/>
+  <!-- server -> Klient 2 (natija) -->
+  <line x1="468" y1="214" x2="262" y2="214" stroke="#475569" stroke-width="2.5" marker-end="url(#strelka)"/>
+  <!-- Klient 3 -> server -->
+  <line x1="260" y1="288" x2="468" y2="265" stroke="#475569" stroke-width="2.5" marker-end="url(#strelka)"/>
+
+  <!-- yorliqlar (pilllar) -->
+  <rect x="305" y="164" width="118" height="24" rx="6" fill="#2563eb"/>
+  <text x="364" y="181" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#f8fafc">SQL so'rov</text>
+  <rect x="298" y="214" width="132" height="24" rx="6" fill="#16a34a"/>
+  <text x="364" y="231" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#f8fafc">natija (jadval)</text>
+
+  <!-- pastdagi izoh -->
+  <text x="360" y="368" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">Server bitta — klientlar ko'p, hammasi bir vaqtda ulanishi mumkin</text>
+</svg>

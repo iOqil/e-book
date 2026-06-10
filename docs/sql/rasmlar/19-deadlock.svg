@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="720" height="400">
+  <title>Deadlock: 1-tranzaksiya A qatorni qulflab B ni kutadi, 2-tranzaksiya B ni qulflab A ni kutadi</title>
+  <defs>
+    <marker id="dl-yashil" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/>
+    </marker>
+    <marker id="dl-qizil" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="720" height="400" fill="#f8fafc"/>
+
+  <text x="360" y="40" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Deadlock: ikki tranzaksiya bir-birini kutadi</text>
+
+  <!-- 1-tranzaksiya -->
+  <text x="130" y="82" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">1-tranzaksiya</text>
+  <rect x="35" y="90" width="190" height="150" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="130" y="124" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#16a34a">A qatorni qulfladi</text>
+  <text x="130" y="216" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#dc2626">B qatorni kutmoqda...</text>
+
+  <!-- 2-tranzaksiya -->
+  <text x="590" y="82" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#d97706">2-tranzaksiya</text>
+  <rect x="495" y="90" width="190" height="150" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="590" y="124" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#dc2626">A qatorni kutmoqda...</text>
+  <text x="590" y="216" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#16a34a">B qatorni qulfladi</text>
+
+  <!-- O'rtadagi qatorlar -->
+  <rect x="300" y="96" width="120" height="46" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="360" y="124" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">A qator</text>
+
+  <rect x="300" y="188" width="120" height="46" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="360" y="216" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">B qator</text>
+
+  <!-- T1 -> A: qulfladi -->
+  <line x1="225" y1="119" x2="294" y2="119" stroke="#16a34a" stroke-width="2.5" marker-end="url(#dl-yashil)"/>
+  <text x="260" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#16a34a">qulfladi</text>
+
+  <!-- T1 -> B: kutmoqda -->
+  <line x1="225" y1="211" x2="294" y2="211" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="6 4" marker-end="url(#dl-qizil)"/>
+  <text x="260" y="200" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#dc2626">kutmoqda</text>
+
+  <!-- T2 -> A: kutmoqda -->
+  <line x1="495" y1="119" x2="426" y2="119" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="6 4" marker-end="url(#dl-qizil)"/>
+  <text x="460" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#dc2626">kutmoqda</text>
+
+  <!-- T2 -> B: qulfladi -->
+  <line x1="495" y1="211" x2="426" y2="211" stroke="#16a34a" stroke-width="2.5" marker-end="url(#dl-yashil)"/>
+  <text x="460" y="200" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#16a34a">qulfladi</text>
+
+  <!-- Pastdagi izoh -->
+  <text x="360" y="288" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Ikkalasi ham abadiy kutishi mumkin edi, lekin MySQL buni o'zi payqaydi:</text>
+  <text x="360" y="313" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#dc2626">birini tanlab ROLLBACK qiladi — "Deadlock found..." xatosi.</text>
+  <text x="360" y="352" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Oldini olish: qatorlarni doim bir xil tartibda qulflang, tranzaksiyani qisqa tuting.</text>
+</svg>

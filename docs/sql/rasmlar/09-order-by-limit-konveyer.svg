@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="720" height="400">
+  <title>ORDER BY va LIMIT konveyeri: avval qatorlar saralanadi, keyin tepadagi 3 tasi kesib olinadi</title>
+  <defs>
+    <marker id="strelka9a" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="720" height="400" fill="#f8fafc"/>
+
+  <text x="360" y="38" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Top-N konveyeri: avval saralash, keyin kesish</text>
+
+  <!-- qadam yorliqlari (pill) -->
+  <rect x="158" y="66" width="164" height="26" rx="13" fill="#2563eb"/>
+  <text x="240" y="84" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#f8fafc">ORDER BY sahifa DESC</text>
+  <rect x="438" y="66" width="84" height="26" rx="13" fill="#16a34a"/>
+  <text x="480" y="84" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#f8fafc">LIMIT 3</text>
+
+  <!-- 1-panel: tartibsiz jadval -->
+  <rect x="30" y="110" width="180" height="210" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="120" y="134" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">kitoblar — tartibsiz</text>
+  <rect x="45" y="146" width="150" height="24" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="120" y="163" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">432 bet</text>
+  <rect x="45" y="176" width="150" height="24" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="120" y="193" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">96 bet</text>
+  <rect x="45" y="206" width="150" height="24" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="120" y="223" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">1225 bet</text>
+  <rect x="45" y="236" width="150" height="24" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="120" y="253" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">256 bet</text>
+  <rect x="45" y="266" width="150" height="24" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="120" y="283" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">864 bet</text>
+
+  <!-- 2-panel: saralangan -->
+  <rect x="270" y="110" width="180" height="210" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="360" y="134" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Saralangan (DESC)</text>
+  <rect x="285" y="146" width="150" height="24" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="360" y="163" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">1225 bet</text>
+  <rect x="285" y="176" width="150" height="24" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="360" y="193" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">864 bet</text>
+  <rect x="285" y="206" width="150" height="24" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="360" y="223" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">432 bet</text>
+  <line x1="283" y1="233" x2="437" y2="233" stroke="#dc2626" stroke-width="2" stroke-dasharray="6 4"/>
+  <g opacity="0.45">
+    <rect x="285" y="238" width="150" height="24" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+    <text x="360" y="255" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">256 bet</text>
+    <rect x="285" y="268" width="150" height="24" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+    <text x="360" y="285" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">96 bet</text>
+  </g>
+
+  <!-- 3-panel: natija -->
+  <rect x="510" y="110" width="180" height="210" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="600" y="134" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">Natija — 3 qator</text>
+  <rect x="525" y="146" width="150" height="24" rx="6" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="600" y="163" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">1225 bet</text>
+  <rect x="525" y="176" width="150" height="24" rx="6" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="600" y="193" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">864 bet</text>
+  <rect x="525" y="206" width="150" height="24" rx="6" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="600" y="223" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">432 bet</text>
+
+  <!-- strelkalar -->
+  <line x1="214" y1="215" x2="264" y2="215" stroke="#475569" stroke-width="2.5" marker-end="url(#strelka9a)"/>
+  <line x1="454" y1="215" x2="504" y2="215" stroke="#475569" stroke-width="2.5" marker-end="url(#strelka9a)"/>
+
+  <!-- pastki izohlar -->
+  <text x="360" y="350" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">LIMIT'ni ORDER BY'siz yozsangiz, qaysi 3 qator kelishi kafolatlanmaydi!</text>
+  <text x="360" y="380" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Qolip: ORDER BY ustun DESC LIMIT N — "eng katta N ta"</text>
+</svg>

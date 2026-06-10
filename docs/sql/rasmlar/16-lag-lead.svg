@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 370" width="720" height="370">
+  <title>LAG joriy qatordan oldingi qatorga, LEAD esa keyingi qatorga qaraydi</title>
+  <defs>
+    <marker id="strelka16lag" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/>
+    </marker>
+    <marker id="strelka16lead" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="720" height="370" fill="#f8fafc"/>
+
+  <text x="360" y="30" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">LAG — orqaga, LEAD — oldinga qarash</text>
+
+  <!-- ustun sarlavhalari -->
+  <text x="260" y="58" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="bold" fill="#475569">kun</text>
+  <text x="460" y="58" text-anchor="end" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="bold" fill="#475569">tushum</text>
+
+  <!-- qatorlar -->
+  <rect x="240" y="64" width="240" height="36" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="260" y="87" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">2026-06-01</text>
+  <text x="460" y="87" text-anchor="end" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">77 000</text>
+
+  <rect x="240" y="110" width="240" height="36" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="260" y="133" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">2026-06-02</text>
+  <text x="460" y="133" text-anchor="end" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">20 000</text>
+
+  <rect x="240" y="156" width="240" height="36" rx="8" fill="#e2e8f0" stroke="#2563eb" stroke-width="3"/>
+  <text x="260" y="179" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">2026-06-03</text>
+  <text x="460" y="179" text-anchor="end" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">25 000</text>
+
+  <rect x="240" y="202" width="240" height="36" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="260" y="225" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">2026-06-04</text>
+  <text x="460" y="225" text-anchor="end" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">50 000</text>
+
+  <rect x="240" y="248" width="240" height="36" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="260" y="271" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">2026-06-05</text>
+  <text x="460" y="271" text-anchor="end" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">28 000</text>
+
+  <!-- LAG strelkasi: joriy qatordan oldingi qatorga (chap tomonda, yuqoriga) -->
+  <path d="M 234,174 C 190,174 190,128 230,128" fill="none" stroke="#2563eb" stroke-width="2.5" marker-end="url(#strelka16lag)"/>
+  <text x="115" y="140" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">LAG(tushum)</text>
+  <text x="115" y="160" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">= 20 000 (kechagi)</text>
+
+  <!-- LEAD strelkasi: joriy qatordan keyingi qatorga (o'ng tomonda, pastga) -->
+  <path d="M 486,174 C 530,174 530,220 490,220" fill="none" stroke="#16a34a" stroke-width="2.5" marker-end="url(#strelka16lead)"/>
+  <text x="605" y="190" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">LEAD(tushum)</text>
+  <text x="605" y="210" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">= 50 000 (ertangi)</text>
+
+  <!-- Pastdagi izoh -->
+  <text x="360" y="318" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Joriy qator — 06-03 (ko'k ramka): LAG kechagi 20 000 ni,</text>
+  <text x="360" y="340" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">LEAD ertangi 50 000 ni olib keladi. Chetda qo'shni bo'lmasa — NULL.</text>
+</svg>

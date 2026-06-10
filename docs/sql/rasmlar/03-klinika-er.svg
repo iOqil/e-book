@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>Klinika bazasi ER-diagrammasi: qabullar jadvali bemorlar va shifokorlarni bog'laydi</title>
+  <defs>
+    <marker id="fk-strelka-klinika" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">KLINIKA bazasi — 3 jadval (ER)</text>
+  <text x="360" y="54" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">qabullar — bemor va shifokor orasidagi bog'lovchi jadval</text>
+
+  <!-- bemorlar -->
+  <text x="140" y="86" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">bemorlar</text>
+  <rect x="50" y="94" width="180" height="118" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="64" y="118" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">id (PK)</text>
+  <text x="64" y="138" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">ism</text>
+  <text x="64" y="158" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">tugilgan_sana</text>
+  <text x="64" y="178" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">telefon</text>
+  <text x="64" y="198" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">jins</text>
+
+  <!-- shifokorlar -->
+  <text x="585" y="86" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">shifokorlar</text>
+  <rect x="490" y="94" width="190" height="118" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="504" y="118" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">id (PK)</text>
+  <text x="504" y="138" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">ism</text>
+  <text x="504" y="158" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">mutaxassislik</text>
+  <text x="504" y="178" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">tajriba_yil</text>
+  <text x="504" y="198" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">qabul_narxi</text>
+
+  <!-- qabullar (bog'lovchi) -->
+  <text x="360" y="258" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#d97706">qabullar</text>
+  <rect x="260" y="266" width="200" height="138" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="274" y="290" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">id (PK)</text>
+  <text x="274" y="310" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">bemor_id (FK)</text>
+  <text x="274" y="330" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">shifokor_id (FK)</text>
+  <text x="274" y="350" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">sana</text>
+  <text x="274" y="370" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">tashxis</text>
+  <text x="274" y="390" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">tolov</text>
+
+  <!-- strelkalar: FK -> ishora qilingan jadval -->
+  <path d="M258,305 L140,305 L140,216" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#fk-strelka-klinika)"/>
+  <path d="M462,325 L585,325 L585,216" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#fk-strelka-klinika)"/>
+
+  <!-- izoh -->
+  <text x="360" y="422" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">PK — asosiy kalit · FK — tashqi kalit · bitta bemor ko'p qabulda, bitta shifokor ko'p qabulda</text>
+</svg>

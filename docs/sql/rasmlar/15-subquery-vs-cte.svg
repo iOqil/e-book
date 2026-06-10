@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="720" height="400">
+  <title>Ichma-ich subquery ichkaridan tashqariga o'qiladi, CTE esa yuqoridan pastga retseptdek o'qiladi</title>
+  <defs>
+    <marker id="svc-strelka" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+    <marker id="svc-strelka-yashil" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="720" height="400" fill="#f8fafc"/>
+
+  <text x="360" y="38" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Nega CTE o'qilishi oson?</text>
+
+  <!-- ajratuvchi chiziq -->
+  <line x1="360" y1="62" x2="360" y2="368" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="6 6"/>
+
+  <!-- CHAP: ichma-ich subquery -->
+  <text x="185" y="82" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="18" font-weight="bold" fill="#dc2626">Ichma-ich subquery</text>
+
+  <rect x="45" y="100" width="280" height="230" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="185" y="128" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">3) SELECT MAX(jami) FROM (</text>
+
+  <rect x="70" y="145" width="230" height="150" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
+  <text x="185" y="173" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">2) SELECT SUM(...) FROM (</text>
+
+  <rect x="95" y="195" width="180" height="68" rx="10" fill="#e2e8f0" stroke="#dc2626" stroke-width="2"/>
+  <text x="185" y="223" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#dc2626">1) eng ichki SELECT</text>
+  <text x="185" y="245" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#475569">shu yerdan boshlanadi</text>
+  <text x="185" y="318" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#475569">qavslarni kuzatib borish kerak</text>
+
+  <text x="185" y="362" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#dc2626">ichkaridan tashqariga — teskari tartib</text>
+
+  <!-- O'NG: CTE -->
+  <text x="545" y="82" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="18" font-weight="bold" fill="#16a34a">CTE bilan</text>
+
+  <rect x="410" y="100" width="270" height="58" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="545" y="124" text-anchor="middle" font-family="Consolas, monospace" font-size="13.5" fill="#1e293b">1) WITH summalar AS (...)</text>
+  <text x="545" y="146" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#475569">har buyurtma jami</text>
+
+  <line x1="545" y1="162" x2="545" y2="184" stroke="#16a34a" stroke-width="2.5" marker-end="url(#svc-strelka-yashil)"/>
+
+  <rect x="410" y="190" width="270" height="58" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="545" y="214" text-anchor="middle" font-family="Consolas, monospace" font-size="13.5" fill="#1e293b">2) ortacha AS (...)</text>
+  <text x="545" y="236" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#475569">oldingi bosqichdan foydalanadi</text>
+
+  <line x1="545" y1="252" x2="545" y2="274" stroke="#16a34a" stroke-width="2.5" marker-end="url(#svc-strelka-yashil)"/>
+
+  <rect x="410" y="280" width="270" height="58" rx="10" fill="#e2e8f0" stroke="#16a34a" stroke-width="2"/>
+  <text x="545" y="304" text-anchor="middle" font-family="Consolas, monospace" font-size="13.5" fill="#1e293b">3) SELECT — asosiy query</text>
+  <text x="545" y="326" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#475569">tayyor bo'laklardan yig'adi</text>
+
+  <text x="545" y="362" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#16a34a">yuqoridan pastga — retseptdek o'qiladi</text>
+</svg>

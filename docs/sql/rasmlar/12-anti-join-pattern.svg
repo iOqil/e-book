@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" width="720" height="380">
+  <title>Anti-join pattern: LEFT JOIN natijasida (rasmda qisqartirilgan) mosi yo'q qatorlar NULL bo'ladi, WHERE i.id IS NULL faqat o'sha qatorlarni qoldiradi</title>
+  <defs>
+    <marker id="aj-strelka" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="720" height="380" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Anti-join: LEFT JOIN + WHERE ... IS NULL</text>
+
+  <!-- 1) LEFT JOIN natijasi -->
+  <text x="180" y="78" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">1) LEFT JOIN natijasi</text>
+  <rect x="40" y="88" width="280" height="150" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="42" y="209" width="276" height="27" fill="#fef3c7"/>
+  <line x1="40" y1="118" x2="320" y2="118" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="40" y1="148" x2="320" y2="148" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="40" y1="178" x2="320" y2="178" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="40" y1="208" x2="320" y2="208" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="180" y1="88" x2="180" y2="238" stroke="#94a3b8" stroke-width="1"/>
+  <text x="110" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#475569">a.ism</text>
+  <text x="250" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#475569">i.id</text>
+  <text x="110" y="138" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Aziz Karimov</text>
+  <text x="250" y="138" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">1</text>
+  <text x="110" y="168" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Malika Tosheva</text>
+  <text x="250" y="168" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">3</text>
+  <text x="110" y="198" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">... (davomi bor)</text>
+  <text x="250" y="198" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">...</text>
+  <text x="110" y="228" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Sevara Nizomova</text>
+  <text x="250" y="228" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">NULL</text>
+
+  <!-- 2) filtr strelkasi -->
+  <text x="385" y="135" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="bold" fill="#dc2626">2) WHERE</text>
+  <text x="385" y="151" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="bold" fill="#dc2626">i.id IS NULL</text>
+  <line x1="326" y1="163" x2="444" y2="163" stroke="#475569" stroke-width="2.5" marker-end="url(#aj-strelka)"/>
+  <text x="180" y="258" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#475569">(har ijara — alohida qator: Aziz/Malika 2 martadan)</text>
+
+  <!-- 3) natija -->
+  <text x="570" y="78" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">3) Kitob olmaganlar</text>
+  <rect x="450" y="88" width="240" height="90" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="450" y1="118" x2="690" y2="118" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="450" y1="148" x2="690" y2="148" stroke="#94a3b8" stroke-width="1"/>
+  <text x="570" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#475569">a.ism</text>
+  <text x="570" y="138" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Sevara Nizomova</text>
+  <text x="570" y="168" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(faqat 1 qator qoldi)</text>
+
+  <!-- pastki tushuntirish -->
+  <text x="360" y="290" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">LEFT JOIN hammaga joy beradi — ijarasi yo'qlarda ijara ustunlari NULL</text>
+  <text x="360" y="318" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">WHERE i.id IS NULL faqat o'sha "bo'sh" qatorlarni ushlab qoladi</text>
+  <text x="360" y="346" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">i.id — PRIMARY KEY: jadvalda hech qachon NULL emas, NULL faqat JOIN'dan keladi</text>
+</svg>

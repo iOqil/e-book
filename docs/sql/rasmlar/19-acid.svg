@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" width="720" height="420">
+  <title>ACID xossalari: Atomicity (butunlik), Consistency (izchillik), Isolation (izolyatsiya), Durability (mustahkamlik)</title>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="720" height="420" fill="#f8fafc"/>
+
+  <text x="360" y="40" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">ACID — ishonchli tranzaksiyaning 4 xossasi</text>
+
+  <!-- A: Atomicity -->
+  <rect x="30" y="70" width="325" height="130" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="72" y="152" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="46" font-weight="bold" fill="#2563eb">A</text>
+  <text x="112" y="112" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Atomicity — butunlik</text>
+  <text x="112" y="140" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">Yo hammasi, yo hech narsa.</text>
+  <text x="112" y="162" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">Paket o'rtasidan bo'linmaydi.</text>
+
+  <!-- C: Consistency -->
+  <rect x="365" y="70" width="325" height="130" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="407" y="152" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="46" font-weight="bold" fill="#d97706">C</text>
+  <text x="447" y="112" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Consistency — izchillik</text>
+  <text x="447" y="140" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">Qoidalar (constraint, FK)</text>
+  <text x="447" y="162" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">hech qachon buzilmaydi.</text>
+
+  <!-- I: Isolation -->
+  <rect x="30" y="220" width="325" height="130" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="72" y="302" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="46" font-weight="bold" fill="#16a34a">I</text>
+  <text x="112" y="262" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Isolation — izolyatsiya</text>
+  <text x="112" y="290" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">Parallel tranzaksiyalar</text>
+  <text x="112" y="312" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">bir-biriga xalaqit qilmaydi.</text>
+
+  <!-- D: Durability -->
+  <rect x="365" y="220" width="325" height="130" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="407" y="302" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="46" font-weight="bold" fill="#dc2626">D</text>
+  <text x="447" y="262" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Durability — mustahkamlik</text>
+  <text x="447" y="290" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">COMMIT bo'ldimi — svet</text>
+  <text x="447" y="312" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">o'chsa ham saqlanib qoladi.</text>
+
+  <!-- Pastdagi izoh -->
+  <text x="360" y="392" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Bularning hammasini InnoDB ta'minlaydi — MySQL 8 da standart dvigatel.</text>
+</svg>

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 330" width="720" height="330">
+  <title>CTE oqimi: WITH bosqichi vaqtinchalik nomli natija yasaydi, asosiy query undan oddiy jadvaldek foydalanadi</title>
+  <defs>
+    <marker id="cte-strelka" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="720" height="330" fill="#f8fafc"/>
+
+  <text x="360" y="40" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">CTE: avval nomli bosqich, keyin asosiy query</text>
+
+  <!-- 1: WITH bosqichi -->
+  <text x="125" y="88" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#2563eb">1. WITH bosqichi</text>
+  <rect x="30" y="100" width="190" height="115" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="125" y="132" text-anchor="middle" font-family="Consolas, monospace" font-size="14" fill="#1e293b">buyurtma_summalari</text>
+  <text x="125" y="158" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">har buyurtma jami</text>
+  <text x="125" y="184" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">vaqtinchalik natija</text>
+
+  <!-- strelka 1 -->
+  <line x1="222" y1="157" x2="260" y2="157" stroke="#475569" stroke-width="2.5" marker-end="url(#cte-strelka)"/>
+
+  <!-- 2: Asosiy query -->
+  <text x="360" y="88" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#2563eb">2. Asosiy query</text>
+  <rect x="265" y="100" width="190" height="115" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="360" y="132" text-anchor="middle" font-family="Consolas, monospace" font-size="14" fill="#1e293b">SELECT ... JOIN ...</text>
+  <text x="360" y="158" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">CTE'ni oddiy jadvaldek</text>
+  <text x="360" y="180" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">ishlatadi</text>
+
+  <!-- strelka 2 -->
+  <line x1="457" y1="157" x2="495" y2="157" stroke="#475569" stroke-width="2.5" marker-end="url(#cte-strelka)"/>
+
+  <!-- 3: Natija -->
+  <text x="595" y="88" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#16a34a">3. Natija</text>
+  <rect x="500" y="100" width="190" height="115" rx="10" fill="#e2e8f0" stroke="#16a34a" stroke-width="2"/>
+  <text x="595" y="132" text-anchor="middle" font-family="Consolas, monospace" font-size="13.5" fill="#475569">ism | jami</text>
+  <line x1="515" y1="142" x2="675" y2="142" stroke="#94a3b8" stroke-width="1"/>
+  <text x="595" y="162" text-anchor="middle" font-family="Consolas, monospace" font-size="13.5" fill="#1e293b">Davron | 6 680 000</text>
+  <text x="595" y="186" text-anchor="middle" font-family="Consolas, monospace" font-size="13.5" fill="#1e293b">Sevara | 16 000 000</text>
+  <text x="595" y="208" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#475569">... (jami 5 qator)</text>
+
+  <!-- pastdagi izohlar -->
+  <text x="360" y="262" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">O'qilishi: "AVVAL nomli bosqichni yasa, KEYIN asosiy query'ni bajar"</text>
+  <text x="360" y="292" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">CTE faqat shu bitta query davomida yashaydi — query tugashi bilan yo'qoladi</text>
+</svg>

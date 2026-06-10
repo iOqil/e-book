@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" width="720" height="360">
+  <title>NOT IN va NULL tuzog'i: subquery natijasida bitta NULL bo'lsa NOT IN bo'sh natija qaytaradi, yechim — NOT EXISTS yoki IS NOT NULL</title>
+  <defs>
+    <marker id="strelka14c" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="720" height="360" fill="#f8fafc"/>
+
+  <text x="360" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">NOT IN + NULL tuzog'i</text>
+  <text x="360" y="66" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-size="14" fill="#475569">id NOT IN (2, 5, NULL)  =  id&lt;&gt;2 AND id&lt;&gt;5 AND id&lt;&gt;NULL</text>
+
+  <!-- Tuzoq qutisi -->
+  <rect x="45" y="88" width="305" height="178" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="197" y="116" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#dc2626">Tuzoq</text>
+  <text x="197" y="146" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">id &lt;&gt; NULL &#8594; javobi NOMA'LUM</text>
+  <text x="197" y="170" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">AND zanjiri ROST bo'lolmaydi</text>
+  <text x="197" y="194" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">WHERE faqat ROSTni o'tkazadi</text>
+  <rect x="110" y="214" width="175" height="30" rx="6" fill="#dc2626"/>
+  <text x="197" y="234" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#f8fafc">Natija: 0 qator!</text>
+
+  <line x1="352" y1="177" x2="370" y2="177" stroke="#475569" stroke-width="2.5" marker-end="url(#strelka14c)"/>
+
+  <!-- Yechim qutisi -->
+  <rect x="375" y="88" width="300" height="178" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="525" y="116" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">Yechim</text>
+  <text x="525" y="146" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">1) NOT EXISTS ishlating:</text>
+  <text x="525" y="168" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-size="13" fill="#16a34a">WHERE NOT EXISTS (...)</text>
+  <text x="525" y="200" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">2) NULL'larni chiqarib tashlang:</text>
+  <text x="525" y="226" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-size="13" fill="#16a34a">... WHERE ustun IS NOT NULL</text>
+
+  <text x="360" y="304" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Bittagina NULL butun NOT IN natijasini bo'shatadi &#8212; xato xabari ham chiqmaydi!</text>
+  <text x="360" y="330" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">NOT EXISTS bu tuzoqqa hech qachon tushmaydi</text>
+</svg>

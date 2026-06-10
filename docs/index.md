@@ -14,10 +14,10 @@ hide:
 [GitHub](https://github.com/iOqil/e-book){ .md-button }
 
 <div class="hero-stats">
-  <div class="stat"><b>8</b><span>kitob</span></div>
-  <div class="stat"><b>297</b><span>diagramma</span></div>
-  <div class="stat"><b>150+</b><span>bob</span></div>
-  <div class="stat"><b>1000+</b><span>masala</span></div>
+  <div class="stat"><b>9</b><span>kitob</span></div>
+  <div class="stat"><b>375</b><span>diagramma</span></div>
+  <div class="stat"><b>175+</b><span>bob</span></div>
+  <div class="stat"><b>1500+</b><span>masala</span></div>
 </div>
 
 </section>
@@ -79,6 +79,14 @@ hide:
     Asoslardan OOP, baza va MVC'gacha. So'rov lifecycle, PDO, xavfsizlik. 21 diagramma.
 
     [Boshlash →](php/php-qollanma.md) · [📄 PDF](/pdf/php.pdf)
+
+-   🗄️ **SQL & MySQL**
+
+    ---
+
+    Noldan amaliy: SELECT, JOIN, GROUP BY, indeks, tranzaksiya. 25 bob · 78 diagramma · 500 masala.
+
+    [Boshlash →](sql/README.md) · [📄 PDF](/pdf/sql.pdf)
 
 -   🧩 **1000 masala**
 

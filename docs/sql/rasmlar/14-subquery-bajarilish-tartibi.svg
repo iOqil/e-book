@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="720" height="440">
+  <title>Subquery bajarilish tartibi: ichki query avval bajariladi, natijasi tashqi query'ga qiymat bo'lib qo'yiladi</title>
+  <defs>
+    <marker id="strelka14a" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="720" height="440" fill="#f8fafc"/>
+
+  <text x="360" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Subquery qanday bajariladi: ichkaridan tashqariga</text>
+
+  <!-- 1-bosqich -->
+  <rect x="70" y="64" width="580" height="90" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <circle cx="106" cy="109" r="16" fill="#2563eb"/>
+  <text x="106" y="114" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#f8fafc">1</text>
+  <text x="136" y="96" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">Ichki query AVVAL bajariladi</text>
+  <text x="136" y="130" font-family="Consolas, Menlo, monospace" font-size="14" fill="#1e293b">SELECT AVG(narx) FROM mahsulotlar</text>
+  <line x1="400" y1="125" x2="456" y2="125" stroke="#475569" stroke-width="2.5" marker-end="url(#strelka14a)"/>
+  <rect x="464" y="107" width="152" height="28" rx="6" fill="#2563eb"/>
+  <text x="540" y="126" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#f8fafc">&#8776; 5 235 833</text>
+
+  <line x1="360" y1="158" x2="360" y2="186" stroke="#475569" stroke-width="2.5" marker-end="url(#strelka14a)"/>
+
+  <!-- 2-bosqich -->
+  <rect x="70" y="192" width="580" height="90" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <circle cx="106" cy="237" r="16" fill="#d97706"/>
+  <text x="106" y="242" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#f8fafc">2</text>
+  <text x="136" y="224" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#d97706">Natija tashqi query'ga qiymat bo'lib qo'yiladi</text>
+  <text x="136" y="252" font-family="Consolas, Menlo, monospace" font-size="14" fill="#1e293b">WHERE narx &gt; (SELECT AVG(narx) ...)</text>
+  <text x="136" y="274" font-family="Consolas, Menlo, monospace" font-size="14" fill="#1e293b">&#8594;  WHERE narx &gt; 5 235 833</text>
+
+  <line x1="360" y1="286" x2="360" y2="314" stroke="#475569" stroke-width="2.5" marker-end="url(#strelka14a)"/>
+
+  <!-- 3-bosqich -->
+  <rect x="70" y="320" width="580" height="90" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <circle cx="106" cy="365" r="16" fill="#16a34a"/>
+  <text x="106" y="370" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#f8fafc">3</text>
+  <text x="136" y="352" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Tashqi query odatdagidek ishlaydi</text>
+  <text x="136" y="384" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Natija: o'rtachadan qimmat 5 ta mahsulot</text>
+</svg>

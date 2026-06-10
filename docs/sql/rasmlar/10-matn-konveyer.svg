@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" width="720" height="300">
+  <title>Matn funksiyalari konveyeri: avval ichkaridagi TRIM, keyin tashqaridagi UPPER bajariladi</title>
+  <defs>
+    <marker id="konv-strelka" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="720" height="300" fill="#f8fafc"/>
+
+  <!-- sarlavha -->
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Matn konveyeri: ichkaridan tashqariga</text>
+
+  <!-- 1-quti: kirish -->
+  <rect x="20" y="110" width="190" height="50" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="115" y="140" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">'  aziz karimov  '</text>
+  <text x="115" y="185" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">kirish qiymati</text>
+
+  <!-- strelka 1 + TRIM -->
+  <line x1="210" y1="135" x2="293" y2="135" stroke="#475569" stroke-width="2.5" marker-end="url(#konv-strelka)"/>
+  <rect x="216" y="123" width="72" height="24" rx="6" fill="#2563eb"/>
+  <text x="252" y="140" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#f8fafc">TRIM</text>
+
+  <!-- 2-quti -->
+  <rect x="295" y="110" width="170" height="50" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="380" y="140" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">'aziz karimov'</text>
+  <text x="380" y="185" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">bo'shliqlar ketdi</text>
+
+  <!-- strelka 2 + UPPER -->
+  <line x1="465" y1="135" x2="548" y2="135" stroke="#475569" stroke-width="2.5" marker-end="url(#konv-strelka)"/>
+  <rect x="468" y="123" width="78" height="24" rx="6" fill="#16a34a"/>
+  <text x="507" y="140" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#f8fafc">UPPER</text>
+
+  <!-- 3-quti: natija -->
+  <rect x="550" y="110" width="155" height="50" rx="10" fill="#e2e8f0" stroke="#16a34a" stroke-width="2"/>
+  <text x="627" y="140" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">'AZIZ KARIMOV'</text>
+  <text x="627" y="185" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">natija</text>
+
+  <!-- kod -->
+  <text x="360" y="235" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">SELECT UPPER(TRIM('  aziz karimov  '));   →   'AZIZ KARIMOV'</text>
+
+  <!-- izoh -->
+  <text x="360" y="272" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">Avval eng ichkaridagi TRIM ishlaydi, uning natijasi UPPER'ga uzatiladi</text>
+</svg>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 350" width="720" height="350">
+  <title>FOREIGN KEY mexanikasi: bola jadval ota jadvaldagi mavjud id'ga ishora qiladi, mavjud bo'lmagan 999 ishorasi rad etiladi</title>
+  <defs>
+    <marker id="fk-ok" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/>
+    </marker>
+    <marker id="fk-xato" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="720" height="350" fill="#f8fafc"/>
+
+  <text x="360" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">FOREIGN KEY: bola jadval otaga ishora qiladi</text>
+
+  <!-- kitoblar (bola) jadvali -->
+  <rect x="40" y="64" width="250" height="32" rx="8" fill="#2563eb"/>
+  <text x="165" y="85" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#f8fafc">kitoblar (bola jadval)</text>
+
+  <rect x="40" y="100" width="250" height="32" rx="4" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="52" y="121" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">'Otkan kunlar' · muallif_id = 1</text>
+
+  <rect x="40" y="136" width="250" height="32" rx="4" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="52" y="157" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">'Sariq devni minib' · muallif_id = 2</text>
+
+  <rect x="40" y="172" width="250" height="32" rx="4" fill="#e2e8f0" stroke="#dc2626" stroke-width="2"/>
+  <text x="52" y="193" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626">'Test' · muallif_id = 999</text>
+
+  <!-- mualliflar (ota) jadvali -->
+  <rect x="460" y="64" width="220" height="32" rx="8" fill="#16a34a"/>
+  <text x="570" y="85" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#f8fafc">mualliflar (ota jadval)</text>
+
+  <rect x="460" y="100" width="220" height="32" rx="4" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="472" y="121" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">id = 1 · Abdulla Qodiriy</text>
+
+  <rect x="460" y="136" width="220" height="32" rx="4" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="472" y="157" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">id = 2 · Xudoyberdi Toxtaboyev</text>
+
+  <rect x="460" y="172" width="220" height="32" rx="4" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="472" y="193" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">id = 3 · Erkin Vohidov</text>
+
+  <!-- to'g'ri ishoralar (yashil) -->
+  <line x1="290" y1="116" x2="456" y2="116" stroke="#16a34a" stroke-width="2.5" marker-end="url(#fk-ok)"/>
+  <text x="373" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#16a34a">mavjud</text>
+  <line x1="290" y1="152" x2="456" y2="152" stroke="#16a34a" stroke-width="2.5" marker-end="url(#fk-ok)"/>
+  <text x="373" y="144" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#16a34a">mavjud</text>
+
+  <!-- buzilgan ishora (qizil, uzuq chiziq) -->
+  <line x1="290" y1="188" x2="380" y2="188" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="6 5" marker-end="url(#fk-xato)"/>
+  <circle cx="408" cy="188" r="13" fill="#f8fafc" stroke="#dc2626" stroke-width="2.5"/>
+  <line x1="401" y1="181" x2="415" y2="195" stroke="#dc2626" stroke-width="2.5"/>
+  <line x1="415" y1="181" x2="401" y2="195" stroke="#dc2626" stroke-width="2.5"/>
+
+  <!-- xato izohi -->
+  <text x="360" y="245" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">999 ota jadvalda YO'Q — MySQL bu qatorni RAD ETADI</text>
+  <text x="360" y="270" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-style="italic" fill="#475569">Xato: Cannot add or update a child row: a foreign key constraint fails</text>
+
+  <!-- pastdagi xulosa -->
+  <text x="360" y="318" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">FK kafolati: boladagi har bir ishora otada mavjud bo'lishi SHART</text>
+</svg>

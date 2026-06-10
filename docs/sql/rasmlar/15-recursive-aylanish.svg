@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>Recursive CTE aylanishi: boshlang'ich qator, qoida, to'xtash sharti va yig'ilib boruvchi natija</title>
+  <defs>
+    <marker id="rec-strelka" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+    <marker id="rec-strelka-yashil" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/>
+    </marker>
+    <marker id="rec-strelka-qizil" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="38" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Recursive CTE qanday aylanadi (1 dan 10 gacha)</text>
+
+  <!-- 1: anchor -->
+  <rect x="50" y="80" width="240" height="64" rx="10" fill="#e2e8f0" stroke="#2563eb" stroke-width="2"/>
+  <text x="170" y="106" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">1. Boshlang'ich (anchor)</text>
+  <text x="170" y="130" text-anchor="middle" font-family="Consolas, monospace" font-size="14" fill="#1e293b">SELECT 1 AS n</text>
+
+  <line x1="170" y1="146" x2="170" y2="174" stroke="#475569" stroke-width="2.5" marker-end="url(#rec-strelka)"/>
+
+  <!-- 2: qoida -->
+  <rect x="50" y="180" width="240" height="64" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="170" y="206" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">2. Qoida (recursive)</text>
+  <text x="170" y="230" text-anchor="middle" font-family="Consolas, monospace" font-size="13.5" fill="#1e293b">SELECT n + 1 FROM sonlar</text>
+
+  <line x1="170" y1="246" x2="170" y2="274" stroke="#475569" stroke-width="2.5" marker-end="url(#rec-strelka)"/>
+
+  <!-- 3: shart -->
+  <rect x="50" y="280" width="240" height="56" rx="10" fill="#e2e8f0" stroke="#d97706" stroke-width="2"/>
+  <text x="170" y="313" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#d97706">3. Shart: n &lt; 10 ?</text>
+
+  <!-- ha: orqaga aylanish -->
+  <path d="M 290,308 C 348,308 348,212 296,212" fill="none" stroke="#16a34a" stroke-width="2.5" marker-end="url(#rec-strelka-yashil)"/>
+  <text x="340" y="250" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">ha</text>
+  <text x="340" y="268" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#16a34a">yana 1 qator</text>
+
+  <!-- yo'q: to'xtash -->
+  <line x1="170" y1="338" x2="170" y2="364" stroke="#dc2626" stroke-width="2.5" marker-end="url(#rec-strelka-qizil)"/>
+  <text x="182" y="358" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626">yo'q</text>
+  <rect x="50" y="368" width="240" height="46" rx="10" fill="#e2e8f0" stroke="#dc2626" stroke-width="2"/>
+  <text x="170" y="396" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14.5" font-weight="bold" fill="#dc2626">4. To'xtaydi — natija tayyor</text>
+
+  <!-- natija jadvali -->
+  <text x="565" y="74" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">Natija (qator-qator yig'iladi)</text>
+  <rect x="440" y="84" width="250" height="226" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="460" y="116" text-anchor="start" font-family="Consolas, monospace" font-size="14" fill="#1e293b">n = 1   &#8592; anchor</text>
+  <text x="460" y="146" text-anchor="start" font-family="Consolas, monospace" font-size="14" fill="#1e293b">n = 2   &#8592; 1 + 1</text>
+  <text x="460" y="176" text-anchor="start" font-family="Consolas, monospace" font-size="14" fill="#1e293b">n = 3   &#8592; 2 + 1</text>
+  <text x="460" y="206" text-anchor="start" font-family="Consolas, monospace" font-size="14" fill="#475569">...</text>
+  <text x="460" y="236" text-anchor="start" font-family="Consolas, monospace" font-size="14" fill="#1e293b">n = 10  &#8592; oxirgisi</text>
+  <text x="460" y="282" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">jami 10 qator</text>
+
+  <!-- anchor -> natija strelkasi -->
+  <line x1="292" y1="112" x2="436" y2="112" stroke="#475569" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#rec-strelka)"/>
+
+  <!-- ogohlantirish -->
+  <text x="565" y="356" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">Diqqat: shartni unutsangiz, MySQL</text>
+  <text x="565" y="376" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">1000 aylanishda xato berib to'xtatadi</text>
+</svg>

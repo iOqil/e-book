@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" width="720" height="420">
+  <title>Eng kam huquq modeli: root hamma narsaga, ilova useri faqat o'z bazasiga, hisobotchi faqat o'qishga ruxsatli</title>
+  <defs>
+    <marker id="huq-ok" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="720" height="420" fill="#f8fafc"/>
+
+  <!-- sarlavha -->
+  <text x="360" y="38" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Eng kam huquq tamoyili: kimga qancha ruxsat?</text>
+
+  <!-- chap: userlar -->
+  <rect x="40" y="78" width="200" height="64" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="140" y="105" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">root — administrator</text>
+  <text x="140" y="128" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">faqat DBA ishlatadi</text>
+
+  <rect x="40" y="170" width="200" height="64" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="140" y="197" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">dokon_app — ilova</text>
+  <text x="140" y="220" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">veb-ilova shu bilan ulanadi</text>
+
+  <rect x="40" y="262" width="200" height="64" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="140" y="289" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">hisobotchi — tahlilchi</text>
+  <text x="140" y="312" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">faqat o'qiydi</text>
+
+  <!-- o'ng: bazalar -->
+  <rect x="520" y="78" width="170" height="64" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="605" y="105" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Barcha bazalar</text>
+  <text x="605" y="128" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">*.* — butun server</text>
+
+  <rect x="520" y="170" width="170" height="64" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="605" y="197" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">dokon bazasi</text>
+  <text x="605" y="220" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">faqat shu baza</text>
+
+  <!-- root strelkasi -->
+  <line x1="240" y1="110" x2="518" y2="110" stroke="#475569" stroke-width="2.5" marker-end="url(#huq-ok)"/>
+  <rect x="320" y="86" width="120" height="24" rx="6" fill="#dc2626"/>
+  <text x="380" y="103" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#f8fafc">ALL PRIVILEGES</text>
+
+  <!-- dokon_app strelkasi -->
+  <line x1="240" y1="202" x2="518" y2="202" stroke="#475569" stroke-width="2.5" marker-end="url(#huq-ok)"/>
+  <rect x="268" y="178" width="225" height="24" rx="6" fill="#2563eb"/>
+  <text x="380" y="195" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#f8fafc">SELECT, INSERT, UPDATE, DELETE</text>
+
+  <!-- hisobotchi strelkasi (aylanib, barcha bazalarga) -->
+  <path d="M240,294 H705 V110 H686" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#huq-ok)"/>
+  <rect x="355" y="282" width="165" height="24" rx="6" fill="#16a34a"/>
+  <text x="437" y="299" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#f8fafc">faqat SELECT (o'qish)</text>
+
+  <!-- pastki izohlar -->
+  <text x="360" y="372" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Har userga — ishi uchun yetarli MINIMAL huquq, ortig'i yo'q</text>
+  <text x="360" y="398" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Ilova hech qachon root bilan ulanmaydi: kod xatosi yoki xakerlik butun serverni xavf ostiga qo'ymasin</text>
+</svg>

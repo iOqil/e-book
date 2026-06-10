@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" width="720" height="300">
+  <title>WHERE guruhlashdan oldin qatorlarni filtrlaydi, HAVING guruhlashdan keyin tayyor guruhlarni filtrlaydi</title>
+  <defs>
+    <marker id="wh-strelka" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="720" height="300" fill="#f8fafc"/>
+
+  <text x="360" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="19" font-weight="bold" fill="#1e293b">WHERE — guruhlashdan OLDIN, HAVING — KEYIN</text>
+
+  <!-- 1: jadval -->
+  <rect x="16" y="70" width="110" height="84" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="71" y="104" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">kitoblar</text>
+  <text x="71" y="128" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">10 qator</text>
+
+  <line x1="128" y1="112" x2="143" y2="112" stroke="#475569" stroke-width="2" marker-end="url(#wh-strelka)"/>
+
+  <!-- 2: WHERE -->
+  <rect x="147" y="70" width="128" height="84" rx="10" fill="#e2e8f0" stroke="#2563eb" stroke-width="2"/>
+  <text x="211" y="96" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">WHERE</text>
+  <text x="211" y="118" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">yil &gt; 1900</text>
+  <text x="211" y="140" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#475569">qatorlarni filtrlaydi</text>
+
+  <line x1="277" y1="112" x2="292" y2="112" stroke="#475569" stroke-width="2" marker-end="url(#wh-strelka)"/>
+
+  <!-- 3: GROUP BY -->
+  <rect x="296" y="70" width="128" height="84" rx="10" fill="#e2e8f0" stroke="#475569" stroke-width="2"/>
+  <text x="360" y="96" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#475569">GROUP BY</text>
+  <text x="360" y="118" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">janr</text>
+  <text x="360" y="140" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#475569">to'plarga ajratadi</text>
+
+  <line x1="426" y1="112" x2="441" y2="112" stroke="#475569" stroke-width="2" marker-end="url(#wh-strelka)"/>
+
+  <!-- 4: HAVING -->
+  <rect x="445" y="70" width="128" height="84" rx="10" fill="#e2e8f0" stroke="#16a34a" stroke-width="2"/>
+  <text x="509" y="96" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">HAVING</text>
+  <text x="509" y="118" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">soni &gt;= 2</text>
+  <text x="509" y="140" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#475569">guruhlarni filtrlaydi</text>
+
+  <line x1="575" y1="112" x2="590" y2="112" stroke="#475569" stroke-width="2" marker-end="url(#wh-strelka)"/>
+
+  <!-- 5: natija -->
+  <rect x="594" y="70" width="110" height="84" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="649" y="104" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Natija</text>
+  <text x="649" y="128" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">3 qator</text>
+
+  <!-- oqim hisobi -->
+  <text x="360" y="194" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">10 qator  →  8 qator  →  4 to'p  →  3 to'p</text>
+
+  <!-- izohlar -->
+  <text x="360" y="238" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#dc2626">WHERE ichida COUNT/SUM ishlamaydi — u paytda to'plar hali yo'q!</text>
+  <text x="360" y="264" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Guruh sharti doim HAVING'da: HAVING COUNT(*) &gt;= 2</text>
+</svg>

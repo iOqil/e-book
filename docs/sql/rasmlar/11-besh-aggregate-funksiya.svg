@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" width="720" height="380">
+  <title>Beshta aggregate funksiya: COUNT, SUM, AVG, MIN, MAX — ko'p qator kiradi, bitta qiymat chiqadi</title>
+  <defs>
+    <marker id="agg-strelka" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="720" height="380" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Aggregate: ko'p qator kiradi — bitta qiymat chiqadi</text>
+
+  <!-- chap: mini jadval -->
+  <text x="150" y="76" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#475569">kitoblar.sahifa (5 qator)</text>
+  <rect x="80" y="92" width="140" height="26" rx="4" fill="#e2e8f0" stroke="#94a3b8"/>
+  <text x="150" y="110" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">432</text>
+  <rect x="80" y="122" width="140" height="26" rx="4" fill="#e2e8f0" stroke="#94a3b8"/>
+  <text x="150" y="140" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">380</text>
+  <rect x="80" y="152" width="140" height="26" rx="4" fill="#e2e8f0" stroke="#94a3b8"/>
+  <text x="150" y="170" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">256</text>
+  <rect x="80" y="182" width="140" height="26" rx="4" fill="#e2e8f0" stroke="#94a3b8"/>
+  <text x="150" y="200" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">120</text>
+  <rect x="80" y="212" width="140" height="26" rx="4" fill="#e2e8f0" stroke="#94a3b8"/>
+  <text x="150" y="230" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">96</text>
+
+  <!-- strelkalar (jadvaldan har funksiyaga) -->
+  <line x1="224" y1="165" x2="412" y2="97" stroke="#475569" stroke-width="1.5" marker-end="url(#agg-strelka)"/>
+  <line x1="224" y1="165" x2="412" y2="141" stroke="#475569" stroke-width="1.5" marker-end="url(#agg-strelka)"/>
+  <line x1="224" y1="165" x2="412" y2="185" stroke="#475569" stroke-width="1.5" marker-end="url(#agg-strelka)"/>
+  <line x1="224" y1="165" x2="412" y2="229" stroke="#475569" stroke-width="1.5" marker-end="url(#agg-strelka)"/>
+  <line x1="224" y1="165" x2="412" y2="273" stroke="#475569" stroke-width="1.5" marker-end="url(#agg-strelka)"/>
+
+  <!-- o'ng: 5 funksiya qutisi -->
+  <rect x="420" y="80" width="240" height="34" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="540" y="102" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b"><tspan font-weight="bold" fill="#2563eb">COUNT(sahifa)</tspan>  →  <tspan font-weight="bold" fill="#16a34a">5</tspan></text>
+  <rect x="420" y="124" width="240" height="34" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="540" y="146" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b"><tspan font-weight="bold" fill="#2563eb">SUM(sahifa)</tspan>  →  <tspan font-weight="bold" fill="#16a34a">1284</tspan></text>
+  <rect x="420" y="168" width="240" height="34" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="540" y="190" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b"><tspan font-weight="bold" fill="#2563eb">AVG(sahifa)</tspan>  →  <tspan font-weight="bold" fill="#16a34a">256.8</tspan></text>
+  <rect x="420" y="212" width="240" height="34" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="540" y="234" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b"><tspan font-weight="bold" fill="#2563eb">MIN(sahifa)</tspan>  →  <tspan font-weight="bold" fill="#16a34a">96</tspan></text>
+  <rect x="420" y="256" width="240" height="34" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="540" y="278" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b"><tspan font-weight="bold" fill="#2563eb">MAX(sahifa)</tspan>  →  <tspan font-weight="bold" fill="#16a34a">432</tspan></text>
+
+  <!-- pastki izoh -->
+  <text x="360" y="330" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">COUNT(ustun), SUM, AVG, MIN, MAX — hammasi NULL qiymatlarni tashlab ketadi.</text>
+  <text x="360" y="354" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Faqat COUNT(*) hech narsaga qaramay HAMMA qatorni sanaydi.</text>
+</svg>

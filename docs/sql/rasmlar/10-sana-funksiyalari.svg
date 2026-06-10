@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="720" height="440">
+  <title>Sana funksiyalari ishda: DATEDIFF kunlar farqini, DATE_ADD muddat qo'shishni, DATE_FORMAT ko'rinishni bezashni bajaradi</title>
+  <defs>
+    <marker id="sana-strelka" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="720" height="440" fill="#f8fafc"/>
+
+  <!-- sarlavha -->
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Sana funksiyalari ishda</text>
+
+  <!-- A: DATEDIFF -->
+  <text x="40" y="74" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">DATEDIFF — ikki sana orasida necha kun?</text>
+  <line x1="80" y1="130" x2="640" y2="130" stroke="#94a3b8" stroke-width="3"/>
+  <line x1="360" y1="100" x2="185" y2="100" stroke="#475569" stroke-width="2" marker-end="url(#sana-strelka)"/>
+  <line x1="360" y1="100" x2="535" y2="100" stroke="#475569" stroke-width="2" marker-end="url(#sana-strelka)"/>
+  <rect x="312" y="88" width="96" height="24" rx="6" fill="#475569"/>
+  <text x="360" y="105" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#f8fafc">39 kun</text>
+  <circle cx="170" cy="130" r="8" fill="#2563eb"/>
+  <text x="170" y="158" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">2026-05-01</text>
+  <text x="170" y="176" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#475569">olingan_sana</text>
+  <circle cx="550" cy="130" r="8" fill="#16a34a"/>
+  <text x="550" y="158" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">2026-06-09</text>
+  <text x="550" y="176" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#475569">bugun (CURDATE)</text>
+
+  <!-- B: DATE_ADD -->
+  <text x="40" y="216" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">DATE_ADD — sanaga muddat qo'shish</text>
+  <rect x="70" y="234" width="150" height="42" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="145" y="260" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">2026-06-09</text>
+  <line x1="220" y1="255" x2="428" y2="255" stroke="#475569" stroke-width="2.5" marker-end="url(#sana-strelka)"/>
+  <rect x="252" y="243" width="146" height="24" rx="6" fill="#16a34a"/>
+  <text x="325" y="260" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#f8fafc">+ INTERVAL 15 DAY</text>
+  <rect x="430" y="234" width="150" height="42" rx="10" fill="#e2e8f0" stroke="#16a34a" stroke-width="2"/>
+  <text x="505" y="260" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">2026-06-24</text>
+
+  <!-- C: DATE_FORMAT -->
+  <text x="40" y="320" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#d97706">DATE_FORMAT — ko'rinishni bezash</text>
+  <rect x="70" y="338" width="215" height="42" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="177" y="364" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">2026-06-09 18:30:00</text>
+  <text x="177" y="398" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#475569">bazada saqlangani (DATETIME)</text>
+  <line x1="285" y1="359" x2="478" y2="359" stroke="#475569" stroke-width="2.5" marker-end="url(#sana-strelka)"/>
+  <rect x="312" y="347" width="140" height="24" rx="6" fill="#d97706"/>
+  <text x="382" y="364" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#f8fafc">'%d.%m.%Y %H:%i'</text>
+  <rect x="480" y="338" width="170" height="42" rx="10" fill="#e2e8f0" stroke="#d97706" stroke-width="2"/>
+  <text x="565" y="364" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">09.06.2026 18:30</text>
+  <text x="565" y="398" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#475569">foydalanuvchiga ko'rinishi</text>
+
+  <!-- pastki izoh -->
+  <text x="360" y="428" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">DATE_FORMAT bazadagi sanani o'zgartirmaydi — faqat chiqish ko'rinishini bezaydi</text>
+</svg>

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" width="720" height="380">
+  <title>ON DELETE uch ssenariysi: RESTRICT o'chirishni rad etadi, CASCADE bola qatorlarni ham o'chiradi, SET NULL ishorani NULL qiladi</title>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="720" height="380" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">ON DELETE: ota qator o'chirilsa nima bo'ladi?</text>
+  <text x="360" y="62" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Ssenariy: DELETE FROM mualliflar WHERE id = 2 — bu muallifning kitoblari bor</text>
+
+  <!-- RESTRICT ustuni -->
+  <rect x="30" y="86" width="200" height="34" rx="8" fill="#2563eb"/>
+  <text x="130" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#f8fafc">RESTRICT (default)</text>
+  <rect x="30" y="124" width="200" height="160" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="130" y="152" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">O'chirish RAD etiladi</text>
+  <text x="130" y="176" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">Muallif ham, kitoblar</text>
+  <text x="130" y="196" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">ham joyida qoladi</text>
+  <text x="130" y="226" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#475569">MySQL xato qaytaradi,</text>
+  <text x="130" y="244" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#475569">hech narsa o'zgarmaydi</text>
+  <text x="130" y="272" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#2563eb">Eng xavfsiz yo'l</text>
+
+  <!-- CASCADE ustuni -->
+  <rect x="260" y="86" width="200" height="34" rx="8" fill="#dc2626"/>
+  <text x="360" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#f8fafc">CASCADE</text>
+  <rect x="260" y="124" width="200" height="160" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="360" y="152" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">Muallif o'chadi —</text>
+  <text x="360" y="176" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">kitoblari HAM</text>
+  <text x="360" y="196" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">birga o'chadi</text>
+  <text x="360" y="226" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#475569">Zanjir bo'ylab davom</text>
+  <text x="360" y="244" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#475569">etadi (nabiralar ham!)</text>
+  <text x="360" y="272" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#dc2626">Ehtiyot bo'ling!</text>
+
+  <!-- SET NULL ustuni -->
+  <rect x="490" y="86" width="200" height="34" rx="8" fill="#d97706"/>
+  <text x="590" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#f8fafc">SET NULL</text>
+  <rect x="490" y="124" width="200" height="160" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="590" y="152" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">Muallif o'chadi —</text>
+  <text x="590" y="176" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">kitoblarda muallif_id</text>
+  <text x="590" y="196" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">NULL bo'lib qoladi</text>
+  <text x="590" y="226" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#475569">(ustun NULL'ga ruxsat</text>
+  <text x="590" y="244" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#475569">berishi shart)</text>
+  <text x="590" y="272" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#d97706">Ega noma'lum qoladi</text>
+
+  <!-- pastdagi tavsiya -->
+  <text x="360" y="322" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14.5" font-weight="bold" fill="#1e293b">Qachon qaysi?</text>
+  <text x="360" y="348" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Pul/tarix — RESTRICT · komment/layk — CASCADE · ega noma'lum qolsin — SET NULL</text>
+</svg>

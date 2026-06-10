@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="720" height="440">
+  <title>B-tree daraxti bo'ylab qidiruv yo'li: ildizdan bargigacha 3 qadamda 56 topiladi</title>
+  <defs>
+    <marker id="bt-kok" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="720" height="440" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">B-tree bo'ylab qidiruv: 56 ni topamiz</text>
+  <text x="360" y="56" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">misol: yosh ustunidagi indeks — WHERE yosh = 56</text>
+
+  <!-- shoxlar (chiziqlar) -->
+  <line x1="360" y1="114" x2="130" y2="178" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="360" y1="114" x2="360" y2="172" stroke="#2563eb" stroke-width="3" marker-end="url(#bt-kok)"/>
+  <line x1="360" y1="114" x2="590" y2="178" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="360" y1="220" x2="215" y2="288" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="360" y1="220" x2="360" y2="282" stroke="#2563eb" stroke-width="3" marker-end="url(#bt-kok)"/>
+  <line x1="360" y1="220" x2="505" y2="288" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="130" y1="220" x2="130" y2="246" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4 4"/>
+  <line x1="590" y1="220" x2="590" y2="246" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4 4"/>
+  <text x="130" y="266" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" fill="#94a3b8">...</text>
+  <text x="590" y="266" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" fill="#94a3b8">...</text>
+
+  <!-- ildiz -->
+  <rect x="300" y="72" width="120" height="42" rx="8" fill="#e2e8f0" stroke="#2563eb" stroke-width="3"/>
+  <text x="360" y="99" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">40 | 80</text>
+
+  <!-- 2-qavat -->
+  <rect x="70" y="178" width="120" height="42" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="130" y="205" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">10 | 25</text>
+  <rect x="300" y="178" width="120" height="42" rx="8" fill="#e2e8f0" stroke="#2563eb" stroke-width="3"/>
+  <text x="360" y="205" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">55 | 68</text>
+  <rect x="530" y="178" width="120" height="42" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="590" y="205" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">90 | 95</text>
+
+  <!-- barglar -->
+  <rect x="160" y="288" width="110" height="42" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="215" y="315" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">40 ... 54</text>
+  <rect x="305" y="288" width="110" height="42" rx="8" fill="#e2e8f0" stroke="#16a34a" stroke-width="3"/>
+  <text x="360" y="315" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">55 56 57 ...</text>
+  <rect x="450" y="288" width="110" height="42" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="505" y="315" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">68 ... 79</text>
+
+  <!-- qadam belgilari -->
+  <circle cx="385" cy="146" r="11" fill="#2563eb"/>
+  <text x="385" y="151" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="bold" fill="#f8fafc">1</text>
+  <circle cx="385" cy="254" r="11" fill="#2563eb"/>
+  <text x="385" y="259" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="bold" fill="#f8fafc">2</text>
+  <circle cx="432" cy="309" r="11" fill="#16a34a"/>
+  <text x="432" y="314" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="bold" fill="#f8fafc">3</text>
+
+  <!-- qadamlar izohi -->
+  <text x="360" y="372" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#2563eb">1) 56 — 40 bilan 80 orasida, demak o'rta shoxga</text>
+  <text x="360" y="394" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#2563eb">2) 56 — 55 bilan 68 orasida, demak o'rta bargga</text>
+  <text x="360" y="416" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#16a34a">3) Bargda 56 topildi — million qatorda bor-yo'g'i 3-4 qadam!</text>
+</svg>

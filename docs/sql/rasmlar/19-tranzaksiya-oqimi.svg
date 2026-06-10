@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" width="720" height="380">
+  <title>Tranzaksiya oqimi: START TRANSACTION dan buyruqlar orqali COMMIT yoki ROLLBACK gacha</title>
+  <defs>
+    <marker id="oqim-strelka" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+    <marker id="oqim-yashil" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/>
+    </marker>
+    <marker id="oqim-qizil" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="720" height="380" fill="#f8fafc"/>
+
+  <text x="360" y="40" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Tranzaksiya oqimi: yo COMMIT, yo ROLLBACK</text>
+
+  <!-- 1: START TRANSACTION -->
+  <rect x="30" y="110" width="170" height="64" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="115" y="138" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">START</text>
+  <text x="115" y="160" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">TRANSACTION</text>
+
+  <line x1="200" y1="142" x2="226" y2="142" stroke="#475569" stroke-width="2.5" marker-end="url(#oqim-strelka)"/>
+
+  <!-- 2: Buyruqlar -->
+  <rect x="230" y="110" width="190" height="64" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="325" y="138" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Buyruqlar</text>
+  <text x="325" y="160" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">UPDATE, INSERT, ...</text>
+
+  <line x1="420" y1="142" x2="446" y2="142" stroke="#475569" stroke-width="2.5" marker-end="url(#oqim-strelka)"/>
+
+  <!-- 3: Qaror -->
+  <rect x="450" y="110" width="240" height="64" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="570" y="148" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Hammasi joyidami?</text>
+
+  <!-- qoralama izohi -->
+  <text x="225" y="205" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#d97706">COMMIT'gacha o'zgarishlar "qoralama"da — boshqalar ko'rmaydi</text>
+
+  <!-- ha → COMMIT -->
+  <line x1="530" y1="176" x2="418" y2="246" stroke="#16a34a" stroke-width="2.5" marker-end="url(#oqim-yashil)"/>
+  <text x="450" y="202" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">ha</text>
+
+  <!-- yo'q → ROLLBACK -->
+  <line x1="610" y1="176" x2="610" y2="246" stroke="#dc2626" stroke-width="2.5" marker-end="url(#oqim-qizil)"/>
+  <text x="643" y="214" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">yo'q</text>
+
+  <!-- COMMIT qutisi -->
+  <rect x="325" y="250" width="170" height="70" rx="10" fill="#e2e8f0" stroke="#16a34a" stroke-width="2"/>
+  <text x="410" y="280" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">COMMIT</text>
+  <text x="410" y="303" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">o'zgarishlar saqlandi</text>
+
+  <!-- ROLLBACK qutisi -->
+  <rect x="525" y="250" width="170" height="70" rx="10" fill="#e2e8f0" stroke="#dc2626" stroke-width="2"/>
+  <text x="610" y="280" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#dc2626">ROLLBACK</text>
+  <text x="610" y="303" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">hammasi bekor</text>
+
+  <!-- Pastdagi izoh -->
+  <text x="360" y="356" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">ROLLBACK — baza tranzaksiya boshlanishidagi holatiga qaytadi</text>
+</svg>

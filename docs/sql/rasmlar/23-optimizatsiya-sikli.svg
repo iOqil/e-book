@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 410" width="720" height="410">
+  <title>Optimizatsiya sikli: sekin query'ni topish, EXPLAIN, davo, qayta EXPLAIN va vaqtni qayta o'lchash</title>
+  <defs>
+    <marker id="strelka23c" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+    <marker id="strelka23c-yashil" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/>
+    </marker>
+    <marker id="strelka23c-qizil" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="720" height="410" fill="#f8fafc"/>
+
+  <text x="360" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Optimizatsiya sikli — 5 qadam</text>
+
+  <!-- 1-qadam -->
+  <rect x="30" y="64" width="200" height="62" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="130" y="90" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">1. Sekin query'ni toping</text>
+  <text x="130" y="110" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">vaqtini yozib qo'ying</text>
+
+  <!-- 2-qadam -->
+  <rect x="260" y="64" width="200" height="62" rx="10" fill="#e2e8f0" stroke="#2563eb" stroke-width="2"/>
+  <text x="360" y="90" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">2. EXPLAIN qiling</text>
+  <text x="360" y="110" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">type, key, rows nima deydi?</text>
+
+  <!-- 3-qadam -->
+  <rect x="490" y="64" width="200" height="62" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="590" y="90" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">3. Davolang</text>
+  <text x="590" y="110" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">indeks yoki qayta yozish</text>
+
+  <!-- yuqori qator strelkalari -->
+  <line x1="230" y1="95" x2="256" y2="95" stroke="#475569" stroke-width="2.5" marker-end="url(#strelka23c)"/>
+  <line x1="460" y1="95" x2="486" y2="95" stroke="#475569" stroke-width="2.5" marker-end="url(#strelka23c)"/>
+
+  <!-- 3 -> 4 pastga -->
+  <line x1="590" y1="126" x2="590" y2="194" stroke="#475569" stroke-width="2.5" marker-end="url(#strelka23c)"/>
+
+  <!-- 4-qadam -->
+  <rect x="490" y="198" width="200" height="62" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="590" y="224" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">4. Qayta EXPLAIN</text>
+  <text x="590" y="244" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">reja yaxshilandimi?</text>
+
+  <!-- 4 -> 5 chapga -->
+  <line x1="488" y1="229" x2="464" y2="229" stroke="#475569" stroke-width="2.5" marker-end="url(#strelka23c)"/>
+
+  <!-- 5-qadam -->
+  <rect x="260" y="198" width="200" height="62" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="360" y="224" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">5. Vaqtni qayta o'lchang</text>
+  <text x="360" y="244" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">raqam bilan tasdiqlang</text>
+
+  <!-- tezlashmadi: 5 -> 2 qaytish -->
+  <line x1="310" y1="196" x2="310" y2="130" stroke="#dc2626" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#strelka23c-qizil)"/>
+  <text x="298" y="156" text-anchor="end" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">tezlashmadi:</text>
+  <text x="298" y="174" text-anchor="end" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">2-qadamga qayt</text>
+
+  <!-- tezlashdi: 5 -> natija -->
+  <line x1="360" y1="260" x2="360" y2="314" stroke="#16a34a" stroke-width="2.5" marker-end="url(#strelka23c-yashil)"/>
+  <text x="372" y="292" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">tezlashdi</text>
+
+  <!-- natija -->
+  <rect x="260" y="318" width="200" height="44" rx="10" fill="#16a34a"/>
+  <text x="360" y="346" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#f8fafc">Tezlashdi — tayyor!</text>
+
+  <!-- izoh -->
+  <text x="360" y="394" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">5-qadamni tashlamang: foydalanuvchiga reja emas, soniya muhim.</text>
+</svg>

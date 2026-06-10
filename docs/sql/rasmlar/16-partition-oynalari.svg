@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 370" width="720" height="370">
+  <title>OVER (PARTITION BY haydovchi_id) jadvalni haydovchi bo'yicha alohida oynalarga bo'ladi va har oyna o'z summasini hisoblaydi</title>
+  <defs>
+    <marker id="strelka16b" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="720" height="370" fill="#f8fafc"/>
+
+  <text x="360" y="30" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">OVER (PARTITION BY haydovchi_id) — oynalar</text>
+
+  <!-- Jadval -->
+  <rect x="140" y="60" width="270" height="216" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="140" y1="84" x2="410" y2="84" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="260" y1="60" x2="260" y2="276" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="200" y="77" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#475569">haydovchi</text>
+  <text x="335" y="77" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#475569">narx</text>
+
+  <!-- 1-oyna (haydovchi 1) -->
+  <rect x="140" y="84" width="270" height="72" fill="#2563eb" opacity="0.10"/>
+  <rect x="140" y="84" width="270" height="72" fill="none" stroke="#2563eb" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="200" y="101" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">1</text>
+  <text x="335" y="101" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">35 000</text>
+  <text x="200" y="125" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">1</text>
+  <text x="335" y="125" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">20 000</text>
+  <text x="200" y="149" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">1</text>
+  <text x="335" y="149" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">45 000</text>
+
+  <!-- 2-oyna (haydovchi 2) -->
+  <rect x="140" y="156" width="270" height="72" fill="#16a34a" opacity="0.10"/>
+  <rect x="140" y="156" width="270" height="72" fill="none" stroke="#16a34a" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="200" y="173" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">2</text>
+  <text x="335" y="173" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">42 000</text>
+  <text x="200" y="197" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">2</text>
+  <text x="335" y="197" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">28 000</text>
+  <text x="200" y="221" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">2</text>
+  <text x="335" y="221" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">26 000</text>
+
+  <!-- 3-oyna (haydovchi 3) -->
+  <rect x="140" y="228" width="270" height="48" fill="#d97706" opacity="0.12"/>
+  <rect x="140" y="228" width="270" height="48" fill="none" stroke="#d97706" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="200" y="245" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">3</text>
+  <text x="335" y="245" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">25 000</text>
+  <text x="200" y="269" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">3</text>
+  <text x="335" y="269" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">32 000</text>
+
+  <!-- Chap yorliqlar -->
+  <text x="100" y="125" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#2563eb">1-oyna</text>
+  <text x="100" y="197" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">2-oyna</text>
+  <text x="100" y="257" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#d97706">3-oyna</text>
+
+  <!-- O'ng tomondagi natijalar -->
+  <line x1="414" y1="120" x2="464" y2="120" stroke="#475569" stroke-width="2.5" marker-end="url(#strelka16b)"/>
+  <rect x="470" y="102" width="215" height="36" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="577" y="125" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#2563eb">SUM(narx) = 100 000</text>
+
+  <line x1="414" y1="192" x2="464" y2="192" stroke="#475569" stroke-width="2.5" marker-end="url(#strelka16b)"/>
+  <rect x="470" y="174" width="215" height="36" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="577" y="197" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#16a34a">SUM(narx) = 96 000</text>
+
+  <line x1="414" y1="252" x2="464" y2="252" stroke="#475569" stroke-width="2.5" marker-end="url(#strelka16b)"/>
+  <rect x="470" y="234" width="215" height="36" rx="8" fill="#ffffff" stroke="#d97706" stroke-width="2"/>
+  <text x="577" y="257" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#d97706">SUM(narx) = 57 000</text>
+
+  <!-- Pastdagi izoh -->
+  <text x="360" y="318" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Har qator faqat O'Z oynasidagi qatorlarni ko'radi —</text>
+  <text x="360" y="340" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">natija ustunida har qatorga o'z oynasining summasi yoziladi</text>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" width="720" height="380">
+  <title>DECIMAL va FLOAT taqqoslash: 0.1 + 0.2 sinovi, pul uchun nega DECIMAL kerakligi</title>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="720" height="380" fill="#f8fafc"/>
+
+  <text x="360" y="38" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Pul uchun nega DECIMAL? 0.1 + 0.2 sinovi</text>
+
+  <!-- DECIMAL qutisi -->
+  <rect x="40" y="65" width="310" height="190" rx="10" fill="#e2e8f0" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="180" y="97" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#16a34a">DECIMAL — aniq</text>
+  <text x="325" y="98" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#16a34a">✓</text>
+  <text x="195" y="132" text-anchor="middle" font-family="Consolas, monospace" font-size="15" fill="#1e293b">SELECT 0.1 + 0.2;</text>
+  <text x="195" y="168" text-anchor="middle" font-family="Consolas, monospace" font-size="22" font-weight="bold" fill="#16a34a">= 0.3</text>
+  <text x="195" y="202" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">raqamlar aynan saqlanadi</text>
+  <text x="195" y="228" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">narx DECIMAL(12,2)</text>
+
+  <!-- FLOAT qutisi -->
+  <rect x="370" y="65" width="310" height="190" rx="10" fill="#e2e8f0" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="510" y="97" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#dc2626">FLOAT — taxminiy</text>
+  <text x="655" y="98" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#dc2626">✗</text>
+  <text x="525" y="132" text-anchor="middle" font-family="Consolas, monospace" font-size="15" fill="#1e293b">SELECT 0.1e0 + 0.2e0;</text>
+  <text x="525" y="168" text-anchor="middle" font-family="Consolas, monospace" font-size="16" font-weight="bold" fill="#dc2626">= 0.30000000000000004</text>
+  <text x="525" y="202" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">ikkilikda 0.1 aniq ifodalanmaydi</text>
+  <text x="525" y="228" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">million amalda — yo'qolgan tiyinlar</text>
+
+  <!-- Oltin qoida -->
+  <rect x="40" y="285" width="640" height="62" rx="10" fill="#e2e8f0" stroke="#d97706" stroke-width="2"/>
+  <text x="360" y="312" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">OLTIN QOIDA: pul = DECIMAL. Hech qachon FLOAT emas!</text>
+  <text x="360" y="334" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">FLOAT faqat taxminiy o'lchovlar uchun: harorat, sensor, ilmiy hisob</text>
+</svg>

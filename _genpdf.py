@@ -6,7 +6,7 @@ BASE = 'http://127.0.0.1:8013'
 BOOKS = [
     ('html-css', 'HTML & CSS'), ('js', 'JavaScript'), ('python', 'Python'),
     ('vue', 'Vue & Nuxt'), ('react', 'React'), ('nextjs', 'Next.js'),
-    ('php', 'PHP'), ('1000-masala', '1000 masala'),
+    ('php', 'PHP'), ('sql', 'SQL & MySQL'), ('1000-masala', '1000 masala'),
 ]
 
 def natkey(s):

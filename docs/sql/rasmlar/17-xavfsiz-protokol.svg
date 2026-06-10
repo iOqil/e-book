@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" width="720" height="360">
+  <title>Xavfsiz protokol: avval SELECT bilan tekshirish, natijani ko'rish, keyin UPDATE'ga aylantirish</title>
+  <defs>
+    <marker id="protokol-strelka" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="720" height="360" fill="#f8fafc"/>
+
+  <!-- sarlavha -->
+  <text x="360" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Xavfsiz protokol: avval SELECT, keyin UPDATE</text>
+
+  <!-- 1-qadam -->
+  <text x="130" y="80" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">1-qadam: SELECT</text>
+  <rect x="30" y="92" width="200" height="150" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="130" y="124" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">SELECT *</text>
+  <text x="130" y="146" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">FROM mahsulotlar</text>
+  <text x="130" y="168" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">WHERE id = 3;</text>
+  <text x="130" y="210" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">hali hech narsa o'zgarmadi</text>
+
+  <!-- strelka 1 -->
+  <line x1="232" y1="167" x2="256" y2="167" stroke="#475569" stroke-width="2.5" marker-end="url(#protokol-strelka)"/>
+
+  <!-- 2-qadam -->
+  <text x="360" y="80" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#d97706">2-qadam: tekshiring</text>
+  <rect x="260" y="92" width="200" height="150" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="360" y="124" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Kerakli qatorlarmi?</text>
+  <text x="360" y="146" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Soni to'g'rimi?</text>
+  <text x="360" y="190" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">Noto'g'ri bo'lsa —</text>
+  <text x="360" y="210" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">WHERE'ni tuzating</text>
+
+  <!-- strelka 2 -->
+  <line x1="462" y1="167" x2="486" y2="167" stroke="#475569" stroke-width="2.5" marker-end="url(#protokol-strelka)"/>
+
+  <!-- 3-qadam -->
+  <text x="590" y="80" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">3-qadam: UPDATE</text>
+  <rect x="490" y="92" width="200" height="150" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="590" y="124" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">UPDATE mahsulotlar</text>
+  <text x="590" y="146" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">SET narx = 2600000</text>
+  <text x="590" y="168" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">WHERE id = 3;</text>
+  <text x="590" y="210" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">WHERE o'sha-o'sha!</text>
+
+  <!-- pastki xulosa -->
+  <rect x="110" y="284" width="500" height="36" rx="8" fill="#16a34a"/>
+  <text x="360" y="307" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#f8fafc">WHERE sharti SELECT'dan UPDATE'ga o'zgarishsiz ko'chadi</text>
+</svg>

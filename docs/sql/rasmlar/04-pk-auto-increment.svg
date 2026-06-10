@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="720" height="400">
+  <title>PRIMARY KEY va AUTO_INCREMENT qanday ishlaydi: MySQL har yangi qatorga id raqamini o'zi beradi</title>
+  <defs>
+    <marker id="pk-strelka" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="720" height="400" fill="#f8fafc"/>
+
+  <!-- sarlavha -->
+  <text x="360" y="38" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">PRIMARY KEY + AUTO_INCREMENT qanday ishlaydi</text>
+
+  <!-- chap: siz yozasiz -->
+  <text x="155" y="76" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">Siz yozasiz — id'siz!</text>
+  <rect x="30" y="88" width="250" height="160" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="48" y="118" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">INSERT INTO talabalar (ism)</text>
+  <text x="48" y="140" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">VALUES ('Aziz');</text>
+  <text x="48" y="168" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">INSERT ... ('Malika');</text>
+  <text x="48" y="196" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">INSERT ... ('Jasur');</text>
+  <text x="48" y="228" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">id ustunini umuman yozmadik</text>
+
+  <!-- strelka -->
+  <line x1="290" y1="165" x2="372" y2="165" stroke="#475569" stroke-width="2.5" marker-end="url(#pk-strelka)"/>
+
+  <!-- o'ng: jadval -->
+  <text x="510" y="76" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">Jadvalda — id tayyor!</text>
+  <!-- sarlavha qatori -->
+  <rect x="390" y="88" width="70" height="34" rx="4" fill="#2563eb"/>
+  <text x="425" y="111" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#f8fafc">id</text>
+  <rect x="460" y="88" width="170" height="34" rx="4" fill="#2563eb"/>
+  <text x="545" y="111" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#f8fafc">ism</text>
+  <!-- 1-qator -->
+  <rect x="390" y="122" width="70" height="34" rx="4" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="425" y="145" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">1</text>
+  <rect x="460" y="122" width="170" height="34" rx="4" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="545" y="145" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Aziz</text>
+  <!-- 2-qator -->
+  <rect x="390" y="156" width="70" height="34" rx="4" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="425" y="179" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">2</text>
+  <rect x="460" y="156" width="170" height="34" rx="4" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="545" y="179" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Malika</text>
+  <!-- 3-qator -->
+  <rect x="390" y="190" width="70" height="34" rx="4" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="425" y="213" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">3</text>
+  <rect x="460" y="190" width="170" height="34" rx="4" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="545" y="213" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Jasur</text>
+  <!-- hisoblagich -->
+  <rect x="390" y="240" width="240" height="32" rx="8" fill="#d97706"/>
+  <text x="510" y="261" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#f8fafc">Hisoblagich: keyingi id = 4</text>
+
+  <!-- pastdagi izohlar -->
+  <text x="360" y="316" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14.5" fill="#1e293b">PRIMARY KEY — pasport raqami kabi: takrorlanmaydi, bo'sh bo'lmaydi</text>
+  <text x="360" y="344" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">AUTO_INCREMENT — hisoblagich: har yangi qatorga keyingi raqamni o'zi beradi</text>
+  <text x="360" y="372" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#dc2626">O'chirilgan raqam qayta berilmaydi: 3-qator o'chsa ham, keyingi yangi qator baribir 4</text>
+</svg>
