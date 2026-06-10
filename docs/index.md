@@ -10,7 +10,8 @@ hide:
 
 <p class="hero-sub">Dasturlash bo'yicha o'zbekcha qo'llanmalar — mutlaqo boshlovchidan ekspertgacha. Har bir tushuncha SVG diagrammalar va ishlab tekshirilgan kod bilan.</p>
 
-[HTML & CSS dan boshlash](html-css/README.md){ .md-button .md-button--primary }
+[🗺️ Qayerdan boshlash? (Yo'l xaritasi)](roadmap.md){ .md-button .md-button--primary }
+[HTML & CSS dan boshlash](html-css/README.md){ .md-button }
 [GitHub](https://github.com/iOqil/e-book){ .md-button }
 
 <div class="hero-stats">
@@ -24,7 +25,7 @@ hide:
 
 <div class="grid cards" markdown>
 
--   🎨 **HTML & CSS**
+-   🎨 **1. HTML & CSS**
 
     ---
 
@@ -32,7 +33,7 @@ hide:
 
     [Boshlash →](html-css/README.md) · [📄 PDF](/pdf/html-css.pdf)
 
--   🟨 **JavaScript**
+-   🟨 **2. JavaScript**
 
     ---
 
@@ -40,23 +41,7 @@ hide:
 
     [Boshlash →](js/javascript-qollanma-1-qism.md) · [📄 PDF](/pdf/js.pdf)
 
--   🐍 **Python**
-
-    ---
-
-    Sintaksisdan web/baza/async'gacha. Reference model, LEGB, generator. 15 bob · 47 diagramma.
-
-    [Boshlash →](python/README.md) · [📄 PDF](/pdf/python.pdf)
-
--   💚 **Vue & Nuxt**
-
-    ---
-
-    Reaktivlik, komponentlar, Nuxt SSR. props/emits, lifecycle. 10 bob · 31 diagramma.
-
-    [Boshlash →](vue/README.md) · [📄 PDF](/pdf/vue.pdf)
-
--   ⚛️ **React**
+-   ⚛️ **3. React**
 
     ---
 
@@ -64,7 +49,7 @@ hide:
 
     [Boshlash →](react/reactjs-qollanma.md) · [📄 PDF](/pdf/react.pdf)
 
--   ▲ **Next.js**
+-   ▲ **4. Next.js**
 
     ---
 
@@ -72,15 +57,15 @@ hide:
 
     [Boshlash →](nextjs/README.md) · [📄 PDF](/pdf/nextjs.pdf)
 
--   🐘 **PHP**
+-   💚 **5. Vue & Nuxt**
 
     ---
 
-    Asoslardan OOP, baza va MVC'gacha. So'rov lifecycle, PDO, xavfsizlik. 21 diagramma.
+    Reaktivlik, komponentlar, Nuxt SSR. props/emits, lifecycle. 10 bob · 31 diagramma.
 
-    [Boshlash →](php/php-qollanma.md) · [📄 PDF](/pdf/php.pdf)
+    [Boshlash →](vue/README.md) · [📄 PDF](/pdf/vue.pdf)
 
--   🗄️ **SQL & MySQL**
+-   🗄️ **6. SQL & MySQL**
 
     ---
 
@@ -88,7 +73,23 @@ hide:
 
     [Boshlash →](sql/README.md) · [📄 PDF](/pdf/sql.pdf)
 
--   🧩 **1000 masala**
+-   🐘 **7. PHP**
+
+    ---
+
+    Asoslardan OOP, baza va MVC'gacha. So'rov lifecycle, PDO, xavfsizlik. 21 diagramma.
+
+    [Boshlash →](php/php-qollanma.md) · [📄 PDF](/pdf/php.pdf)
+
+-   🐍 **8. Python**
+
+    ---
+
+    Sintaksisdan web/baza/async'gacha. Reference model, LEGB, generator. 15 bob · 47 diagramma.
+
+    [Boshlash →](python/README.md) · [📄 PDF](/pdf/python.pdf)
+
+-   🧩 **9. 1000 masala**
 
     ---
 

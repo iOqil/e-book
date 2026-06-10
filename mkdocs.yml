@@ -11,6 +11,9 @@ use_directory_urls: true
 extra_css:
   - assets/extra.css
 
+extra_javascript:
+  - assets/goatcounter.js
+
 theme:
   name: material
   language: uz
@@ -86,6 +89,7 @@ plugins:
 
 nav:
   - Bosh sahifa: index.md
+  - "🗺️ Yo'l xaritasi": roadmap.md
   - "HTML & CSS":
       - "HTML & CSS — 0 dan Expertgacha (o'zbek tilida)": html-css/README.md
       - "01 — Web va HTML asoslari": html-css/01-web-html-asoslari.md
@@ -120,23 +124,15 @@ nav:
       - "5-qism (B) — ES6+ modullar, xatolar, Regex (21–23)": js/javascript-qollanma-5-qism-2.md
       - "6-qism (A) — FP, generatorlar, Proxy, performance (24–27)": js/javascript-qollanma-6-qism-1.md
       - "6-qism (B) — Design patterns, bundlers, TypeScript (28–30)": js/javascript-qollanma-6-qism-2.md
-  - "Python":
-      - "Python: Noldan boshlab — Boshlovchilar uchun": python/README.md
-      - "01 — Asoslar: sintaksis, tiplar, \"Pythonic\" tafakkur": python/01-asoslar.md
-      - "02 — Boshqaruv va funksiyalar": python/02-boshqaruv-funksiyalar.md
-      - "03 — Ma'lumot tuzilmalari": python/03-malumot-tuzilmalari.md
-      - "04 — Stringlar (matn bilan ishlash)": python/04-stringlar.md
-      - "05 — OOP: klasslar va obyektlar": python/05-oop.md
-      - "06 — Modullar va muhit": python/06-modullar-muhit.md
-      - "07 — Xatolarni boshqarish (try / except)": python/07-xatolar-context.md
-      - "08 — Fayllar, JSON va CSV": python/08-fayl-malumot.md
-      - "09 — Generatorlar va dekoratorlar": python/09-iterator-generator-decorator.md
-      - "10 — Tip ko'rsatmalari va map/filter": python/10-typing-functional.md
-      - "11 — Standart kutubxona (\"hammasi ichida\")": python/11-standart-kutubxona.md
-      - "12 — Parallel ishlash va asyncio": python/12-concurrency-async.md
-      - "13 — Dasturni test qilish (pytest)": python/13-testlash.md
-      - "14 — FastAPI bilan veb API": python/14-web-capstone.md
-      - "15 — Ma'lumotlar bazasi va SQL": python/15-malumotlar-bazasi.md
+  - "React":
+      - "ReactJS — 0 dan Expert darajagacha (2026 nashri)": react/reactjs-qollanma.md
+  - "Next.js":
+      - "Next.js — 0 dan Expert darajagacha (o'zbek tilida)": nextjs/README.md
+      - "Next.js — 0 dan Expert darajagacha (1-QISM)": nextjs/Nextjs-0-dan-Expert-1-qism.md
+      - "Next.js — 0 dan Expert darajagacha (2-QISM)": nextjs/Nextjs-0-dan-Expert-2-qism.md
+      - "Next.js — 0 dan Expert darajagacha (3-QISM)": nextjs/Nextjs-0-dan-Expert-3-qism.md
+      - "Next.js — 0 dan Expert darajagacha (4-QISM, YAKUNIY)": nextjs/Nextjs-0-dan-Expert-4-qism.md
+      - "Next.js — 0 dan Expert: BONUS BOBLAR": nextjs/Nextjs-0-dan-Expert-Bonus-i18n-Stripe-Realtime.md
   - "Vue & Nuxt":
       - "Vue 3 + Nuxt — Zero to Hero (o'zbek tilida)": vue/README.md
       - "01 — Vue asoslari va Template Syntax": vue/01-vue-asoslari.md
@@ -149,17 +145,6 @@ nav:
       - "08 — Data Fetching & Server (Nitro)": vue/08-nuxt-data-server.md
       - "09 — Nuxt UI: asoslar, o'rnatish va theming": vue/09-nuxt-ui-asoslar.md
       - "10 — Nuxt UI komponentlari (to'liq ma'lumotnoma)": vue/10-nuxt-ui-komponentlar.md
-  - "React":
-      - "ReactJS — 0 dan Expert darajagacha (2026 nashri)": react/reactjs-qollanma.md
-  - "Next.js":
-      - "Next.js — 0 dan Expert darajagacha (o'zbek tilida)": nextjs/README.md
-      - "Next.js — 0 dan Expert darajagacha (1-QISM)": nextjs/Nextjs-0-dan-Expert-1-qism.md
-      - "Next.js — 0 dan Expert darajagacha (2-QISM)": nextjs/Nextjs-0-dan-Expert-2-qism.md
-      - "Next.js — 0 dan Expert darajagacha (3-QISM)": nextjs/Nextjs-0-dan-Expert-3-qism.md
-      - "Next.js — 0 dan Expert darajagacha (4-QISM, YAKUNIY)": nextjs/Nextjs-0-dan-Expert-4-qism.md
-      - "Next.js — 0 dan Expert: BONUS BOBLAR": nextjs/Nextjs-0-dan-Expert-Bonus-i18n-Stripe-Realtime.md
-  - "PHP":
-      - "PHP — Mutlaqo Noldan Boshlovchilar Uchun": php/php-qollanma.md
   - "SQL & MySQL":
       - "SQL va MySQL — Noldan boshlovchilar uchun amaliy kitob": sql/README.md
       - "01 — Ma'lumotlar bazasi nima?": sql/01-malumotlar-bazasi-nima.md
@@ -187,6 +172,25 @@ nav:
       - "23 — EXPLAIN va optimizatsiya": sql/23-explain-optimizatsiya.md
       - "24 — Xavfsizlik va administratsiya": sql/24-xavfsizlik-admin.md
       - "25 — Yakuniy loyihalar": sql/25-yakuniy-loyihalar.md
+  - "PHP":
+      - "PHP — Mutlaqo Noldan Boshlovchilar Uchun": php/php-qollanma.md
+  - "Python":
+      - "Python: Noldan boshlab — Boshlovchilar uchun": python/README.md
+      - "01 — Asoslar: sintaksis, tiplar, \"Pythonic\" tafakkur": python/01-asoslar.md
+      - "02 — Boshqaruv va funksiyalar": python/02-boshqaruv-funksiyalar.md
+      - "03 — Ma'lumot tuzilmalari": python/03-malumot-tuzilmalari.md
+      - "04 — Stringlar (matn bilan ishlash)": python/04-stringlar.md
+      - "05 — OOP: klasslar va obyektlar": python/05-oop.md
+      - "06 — Modullar va muhit": python/06-modullar-muhit.md
+      - "07 — Xatolarni boshqarish (try / except)": python/07-xatolar-context.md
+      - "08 — Fayllar, JSON va CSV": python/08-fayl-malumot.md
+      - "09 — Generatorlar va dekoratorlar": python/09-iterator-generator-decorator.md
+      - "10 — Tip ko'rsatmalari va map/filter": python/10-typing-functional.md
+      - "11 — Standart kutubxona (\"hammasi ichida\")": python/11-standart-kutubxona.md
+      - "12 — Parallel ishlash va asyncio": python/12-concurrency-async.md
+      - "13 — Dasturni test qilish (pytest)": python/13-testlash.md
+      - "14 — FastAPI bilan veb API": python/14-web-capstone.md
+      - "15 — Ma'lumotlar bazasi va SQL": python/15-malumotlar-bazasi.md
   - "1000 masala":
       - "1000 amaliy dasturlash masalasi — JS / PHP / Python yechimlari": 1000-masala/README.md
       - "1-bo'lim: Asoslar": 1000-masala/bo-lim-01.md

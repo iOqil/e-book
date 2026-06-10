@@ -170,6 +170,20 @@
 .md-social__link svg { transition: transform .2s ease, fill .2s ease; }
 .md-social__link:hover svg { transform: translateY(-2px) scale(1.12); fill: var(--md-accent-fg-color); }
 
+/* ---------------- Footer ko'rishlar hisoblagichi (GoatCounter) ---------------- */
+.gc-views {
+  display: inline-block;
+  margin-left: .5rem;
+  padding-left: .55rem;
+  border-left: 1px solid color-mix(in srgb, currentColor 25%, transparent);
+  opacity: .82;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+@media screen and (max-width: 600px) {
+  .gc-views { display: block; margin: .35rem 0 0; padding-left: 0; border-left: 0; }
+}
+
 /* ---------------- Misc polish ---------------- */
 ::selection { background: color-mix(in srgb, var(--brand-2) 30%, transparent); }
 * { scrollbar-width: thin; scrollbar-color: var(--md-primary-fg-color--light) transparent; }
