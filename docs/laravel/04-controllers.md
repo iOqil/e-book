@@ -48,7 +48,7 @@ Route::get('/postlar', [PostController::class, 'index']);
 
 ![So'rov oqimi: brauzer route faylga so'rov yuboradi, route uni controller metodiga yo'naltiradi, metod javob qaytaradi](rasmlar/4-route-controller-oqim.svg)
 
-📌 Controller — bu oddiy PHP klass, sehr emas. PHP'dagi klass va metodlarni bilasiz (agar yodingizdan chiqqan bo'lsa, [PHP kitobi](../php/php-qollanma.md)ga qarang). Laravel shu klasslar uchun bitta uy (`app/Http/Controllers/`) va ularni route'ga ulashning qulay usulini beradi, xolos.
+📌 Controller — bu oddiy PHP klass, sehr emas. PHP'dagi klass va metodlarni bilasiz (agar yodingizdan chiqqan bo'lsa, [PHP kitobi](../php/README.md)ga qarang). Laravel shu klasslar uchun bitta uy (`app/Http/Controllers/`) va ularni route'ga ulashning qulay usulini beradi, xolos.
 
 ## Birinchi controllerni yaratish
 

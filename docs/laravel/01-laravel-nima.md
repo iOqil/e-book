@@ -207,7 +207,7 @@ Halol bo'laylik: Laravel har doim ham to'g'ri tanlov emas.
 - Bittagina mayda skript kerak bo'lsa (masalan, bitta faylni o'qib chiqadigan vosita).
 - Dasturlashni endigina o'rganayotgan bo'lsangiz va avval **PHP asoslarini** mustahkamlamoqchi bo'lsangiz.
 
-📌 Mana shu oxirgisi muhim: framework PHP asoslarining o'rnini **bosmaydi**. Aksincha, PHP'ni qanchalik yaxshi bilsangiz, Laravel shunchalik tushunarli bo'ladi. Agar OOP, massiv yoki Composer'da qiynalsangiz, avval [PHP kitobi](../php/php-qollanma.md) ga qayting — bu kitob siz PHP'ni bilasiz deb hisoblaydi.
+📌 Mana shu oxirgisi muhim: framework PHP asoslarining o'rnini **bosmaydi**. Aksincha, PHP'ni qanchalik yaxshi bilsangiz, Laravel shunchalik tushunarli bo'ladi. Agar OOP, massiv yoki Composer'da qiynalsangiz, avval [PHP kitobi](../php/README.md) ga qayting — bu kitob siz PHP'ni bilasiz deb hisoblaydi.
 
 💡 Oltin qoida: **takror ish boshlangan paytda** framework kerak. Birinchi loyihangizda routing yozasiz, ikkinchisida yana, uchinchisida yana — ana o'sha "yana" — framework chaqirig'i. Laravel sizni shu takrordan qutqaradi.
 

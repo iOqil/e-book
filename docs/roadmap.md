@@ -58,7 +58,7 @@ Yo'nalishingizdan qat'i nazar, **birinchi kunlardanoq** kodingizni Git bilan saq
 1. **[HTML & CSS](html-css/README.md)** — sahifa strukturasi va dizayni. Box model, flexbox, grid, responsive.
 2. **[JavaScript](js/javascript-qollanma-1-qism.md)** — sahifaga jonlilik va mantiq. Bu yo'nalishning **eng muhim** kitobi, shoshilmang.
 3. **[TypeScript](typescript/README.md)** — JavaScript'ga tip xavfsizligi. Zamonaviy React/Next.js loyihalari deyarli har doim TypeScript'da yoziladi, shuning uchun React'dan oldin o'rganib qo'ying.
-4. **[React](react/reactjs-qollanma.md)** — zamonaviy interfeyslar komponentlardan quriladi. Bugungi bozorda eng ko'p so'raladigan.
+4. **[React](react/README.md)** — zamonaviy interfeyslar komponentlardan quriladi. Bugungi bozorda eng ko'p so'raladigan.
 5. **[Next.js](nextjs/README.md)** — React'ni production darajasiga olib chiqadi: SSR, marshrutlash, tezlik.
 
 !!! note "Muqobil yo'l"
@@ -77,7 +77,7 @@ Yo'nalishingizdan qat'i nazar, **birinchi kunlardanoq** kodingizni Git bilan saq
 **Tartib:**
 
 1. **Web asoslari** — [HTML & CSS](html-css/README.md) va [JavaScript](js/javascript-qollanma-1-qism.md) ni yengil darajada (chuqur dizayn shart emas, lekin "web nima?" ni biling).
-2. **Bitta server tili** — [PHP](php/php-qollanma.md) yoki [Python](python/README.md) (pastdagi maslahatga qarang).
+2. **Bitta server tili** — [PHP](php/README.md) yoki [Python](python/README.md) (pastdagi maslahatga qarang).
 3. **[SQL & MySQL](sql/README.md)** — ma'lumotlar bazasi. Backend'ning poydevori: har bir login, buyurtma, post shu yerda saqlanadi.
 4. **Framework / API** — tilning web qismi: PHP'da [Laravel](laravel/README.md), Python'da FastAPI/Django. Real server ilova quring.
 
@@ -100,8 +100,8 @@ Yo'nalishingizdan qat'i nazar, **birinchi kunlardanoq** kodingizni Git bilan saq
 **Tartib:**
 
 1. **Web poydevor** — [HTML & CSS](html-css/README.md) + [JavaScript](js/javascript-qollanma-1-qism.md).
-2. **Frontend qismi** — [React](react/reactjs-qollanma.md) → [Next.js](nextjs/README.md) (yoki [Vue & Nuxt](vue/README.md)).
-3. **Backend qismi** — [SQL & MySQL](sql/README.md) + [PHP](php/php-qollanma.md) yoki [Python](python/README.md).
+2. **Frontend qismi** — [React](react/README.md) → [Next.js](nextjs/README.md) (yoki [Vue & Nuxt](vue/README.md)).
+3. **Backend qismi** — [SQL & MySQL](sql/README.md) + [PHP](php/README.md) yoki [Python](python/README.md).
 4. **To'liq loyiha** — frontend va backend'ni bog'lab, boshidan oxirigacha ishlaydigan ilova quring.
 
 !!! warning "Maslahat"
@@ -149,4 +149,4 @@ Yo'nalishingizdan qat'i nazar, **birinchi kunlardanoq** kodingizni Git bilan saq
 **Tayyormisiz?** Yo'nalishingizni tanladingiz — endi birinchi kitobni oching:
 
 [🎨 Frontend — HTML & CSS'dan boshlash](html-css/README.md){ .md-button .md-button--primary }
-[⚙️ Backend — PHP yoki Python](php/php-qollanma.md){ .md-button }
+[⚙️ Backend — PHP yoki Python](php/README.md){ .md-button }

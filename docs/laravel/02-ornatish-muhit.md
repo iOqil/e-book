@@ -40,7 +40,7 @@ PHP 8.4.0 (cli) (built: ...)
 Composer version 2.9.3 ...
 ```
 
-📌 Agar `php` yoki `composer` "topilmadi" (`command not found`) desa — ular o'rnatilmagan yoki `PATH`ga qo'shilmagan. Eng oson yechim — pastdagi **Laravel Herd** (u PHP'ni ham, Composer'ni ham o'zi bilan olib keladi). PHP'ning o'zini alohida o'rnatish kerak bo'lsa, [PHP kitobidagi o'rnatish bobiga](../php/php-qollanma.md) qarang — bu yerda PHP asoslarini takrorlamaymiz.
+📌 Agar `php` yoki `composer` "topilmadi" (`command not found`) desa — ular o'rnatilmagan yoki `PATH`ga qo'shilmagan. Eng oson yechim — pastdagi **Laravel Herd** (u PHP'ni ham, Composer'ni ham o'zi bilan olib keladi). PHP'ning o'zini alohida o'rnatish kerak bo'lsa, [PHP kitobidagi o'rnatish bobiga](../php/README.md) qarang — bu yerda PHP asoslarini takrorlamaymiz.
 
 💡 Versiya raqamlari aniq bir xil bo'lishi shart emas. Muhimi: PHP 8.2 dan yuqori, Composer 2.x bo'lsin. Laravel 13 PHP 8.2 ni minimum talab qiladi, lekin 8.4 da eng yangi imkoniyatlardan foydalanasiz.
 

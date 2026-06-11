@@ -17,7 +17,7 @@ hide:
 <div class="hero-stats">
   <div class="stat"><b>12</b><span>kitob</span></div>
   <div class="stat"><b>600</b><span>diagramma</span></div>
-  <div class="stat"><b>240+</b><span>bob</span></div>
+  <div class="stat"><b>290+</b><span>bob</span></div>
   <div class="stat"><b>2800+</b><span>masala</span></div>
 </div>
 
@@ -47,7 +47,7 @@ hide:
 
     Hooks, render sikli, Server Components. useState/useEffect, re-render. 23 diagramma.
 
-    [Boshlash →](react/reactjs-qollanma.md)
+    [Boshlash →](react/README.md)
 
 -   ▲ **4. Next.js**
 
@@ -79,7 +79,7 @@ hide:
 
     Asoslardan OOP, baza va MVC'gacha. So'rov lifecycle, PDO, xavfsizlik. 21 diagramma.
 
-    [Boshlash →](php/php-qollanma.md)
+    [Boshlash →](php/README.md)
 
 -   🐍 **8. Python**
 

@@ -80,7 +80,7 @@ Uchta metodga e'tibor bering:
 - `content()` — xat **ichi**: qaysi Blade (yoki Markdown) shablon ko'rsatiladi.
 - `attachments()` — ilova fayllar (PDF hisob-faktura kabi). Hozircha bo'sh.
 
-📌 **Konstruktor sehri.** `public User $user` deb yozilgan har qanday public xossa shabloningizda avtomatik `$user` nomi bilan ko'rinadi — alohida uzatish shart emas. PHP'ning "constructor property promotion" usuli (klass ichida `$this->user = $user` yozishdan qutqaradi). Agar bu sintaksis yangi bo'lsa — [PHP kitobi](../php/php-qollanma.md)dagi OOP bobiga qarang.
+📌 **Konstruktor sehri.** `public User $user` deb yozilgan har qanday public xossa shabloningizda avtomatik `$user` nomi bilan ko'rinadi — alohida uzatish shart emas. PHP'ning "constructor property promotion" usuli (klass ichida `$this->user = $user` yozishdan qutqaradi). Agar bu sintaksis yangi bo'lsa — [PHP kitobi](../php/README.md)dagi OOP bobiga qarang.
 
 ![Mail yuborish oqimi: Mailable klass xatni tayyorlaydi, Mail::to()->send() uni driverga topshiradi, driver esa pochtaga yetkazadi yoki log faylga yozadi](rasmlar/19-mailable-driver-oqimi.svg)
 

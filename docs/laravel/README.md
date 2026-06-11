@@ -6,7 +6,7 @@ Bu kitob **PHP'ni biladigan** o'quvchini **Laravel 13** (PHP 8.4) bo'yicha 0 dan
 
 > **Qoida:** Laravel o'qib emas — **qilib** o'rganiladi. Har bir artisan buyrug'ini o'z kompyuteringizda tering, har misolni ishga tushiring. Bu kitob **zamonaviy slim struktura** (Laravel 11+) konvensiyasiga mos — eski `Kernel.php`'li darsliklardan farqli.
 
-> ℹ️ Bu kitob siz PHP asoslarini (OOP, klasslar, composer) bilasiz deb hisoblaydi. PHP yangi bo'lsa, avval [PHP — Mutlaqo Noldan Boshlovchilar Uchun](../php/php-qollanma.md) kitobini o'qing.
+> ℹ️ Bu kitob siz PHP asoslarini (OOP, klasslar, composer) bilasiz deb hisoblaydi. PHP yangi bo'lsa, avval [PHP — Mutlaqo Noldan Boshlovchilar Uchun](../php/README.md) kitobini o'qing.
 
 ---
 
