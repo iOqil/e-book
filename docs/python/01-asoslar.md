@@ -88,9 +88,155 @@ c = 2 + 3j       # complex (kamdan-kam kerak)
 divmod(7, 2)  # (3, 1) — butun va qoldiq birga
 ```
 
+### Sonli literallar — katta sonlarni o'qiladigan yozish
+
+Katta sonni `1000000` deb yozsang, nollarni sanab adashish oson. Python sonlar ichida **pastki chiziq** (`_`) ni ajratgich sifatida ruxsat beradi — u faqat ko'z uchun, qiymatga umuman ta'sir qilmaydi:
+
+```python
+mln = 1_000_000          # 1000000 — o'qish ancha oson
+budjet = 12_500_000      # 12500000
+karta = 1234_5678_9012   # raqamlarni guruhlab yozish mumkin
+print(mln)               # 1000000  — chiziqlar yo'qoladi
+```
+
+Sonni boshqa sanoq sistemalarida ham yozsa bo'ladi — prefiks bilan:
+
+```python
+0xFF      # 255  — 16-lik (hex), 0x prefiks
+0o17      # 15   — 8-lik (oktal), 0o prefiks
+0b1010    # 10   — 2-lik (binar), 0b prefiks
+
+1e6       # 1000000.0  — ilmiy yozuv (1 * 10**6), natija FLOAT
+2.5e-3    # 0.0025     — 2.5 * 10**-3
+1_000.5   # 1000.5     — kasr sonda ham _ ishlaydi
+```
+
+> **Diqqat:** `1e6` natijasi `int` emas, **`float`** (`1000000.0`). Butun son kerak bo'lsa `1_000_000` yoki `10**6` yoz.
+
+### `round()` va yaxlitlash — bir nechta "kutilmagan" joy
+
+`round(son, n)` sonni `n` ta kasr xonasigacha yaxlitlaydi (`n` berilmasa — eng yaqin butunga):
+
+```python
+round(3.14159, 2)     # 3.14
+round(2.71828, 3)     # 2.718
+round(1234.5678, -2)  # 1200.0  — manfiy n: O'NLIK, YUZLIK xonalarga yaxlitlaydi
+```
+
+Ammo ikkita narsa ko'pchilikni chalg'itadi:
+
+```python
+# 1) "Banker's rounding" — .5 ENG YAQIN JUFT songa yaxlitlanadi (yarmini yuqoriga emas):
+round(0.5)    # 0   (1 emas!)
+round(1.5)    # 2
+round(2.5)    # 2   (3 emas!)
+round(3.5)    # 4
+
+# 2) Float aniqligi tufayli .5 ham "aniq" bo'lmasligi mumkin:
+round(2.675, 2)   # 2.67  (2.68 emas!) — chunki 2.675 aslida 2.67499... bo'lib saqlanadi
+```
+
+> **Why:** "Banker's rounding" (yarmni juftga yaxlitlash) ko'p yaxlitlashda xatoni o'rtacha nolga yaqinlashtiradi — moliyada shu sabab standart. Bu Python xatosi emas, IEEE 754 qoidasi. Aniq pul hisobi kerak bo'lsa — pastdagi `Decimal` ni ishlat.
+
 ---
 
-## 1.4 Boolean va "truthiness"
+## 1.4 Float aniqligi muammosi va `Decimal`/`Fraction`
+
+`float` (kasr son) kompyuterda **ikkilik (binar) kasr** sifatida saqlanadi va `0.1`, `0.2` kabi ko'p o'nlik sonlar binar ko'rinishda **aniq ifodalanmaydi**. Natijada eng mashhur "tuzoq":
+
+```python
+0.1 + 0.2            # 0.30000000000000004  — 0.3 EMAS!
+0.1 + 0.2 == 0.3     # False                — shuning uchun
+```
+
+Bu Python xatosi emas — bu barcha tillarda (C, Java, JavaScript...) mavjud, chunki ular bir xil IEEE 754 standartiga amal qiladi. Float'larni **`==` bilan solishtirish xavfli**.
+
+![Float 0.1 ni aniq saqlay olmaydi: 0.1 + 0.2 nega 0.3 ga teng emas](rasmlar/py01-float-aniqlik.svg)
+
+### Float'larni qanday to'g'ri solishtirish kerak
+
+```python
+import math
+
+a = 0.1 + 0.2
+math.isclose(a, 0.3)              # True  — ✅ TO'G'RI yo'l (nisbiy tolerantlik bilan)
+round(a, 10) == round(0.3, 10)    # True  — yaxlitlab solishtirish (oddiyroq, lekin qo'polroq)
+abs(a - 0.3) < 1e-9               # True  — qo'lda tolerantlik (epsilon)
+```
+
+> **Idioma:** Ikki float teng-tengmasligini tekshirish kerak bo'lsa — `==` emas, `math.isclose(a, b)` ishlat.
+
+### `Decimal` — pul va narx uchun aniq o'nlik son
+
+`decimal` modulidagi `Decimal` sonni biz yozgandek **o'nlik** ko'rinishda aniq saqlaydi. Pul, narx, soliq, foiz hisoblarida `float` o'rniga **doim `Decimal`** ishlat:
+
+```python
+from decimal import Decimal
+
+Decimal("0.1") + Decimal("0.2")           # Decimal('0.3')  — aniq!
+Decimal("0.1") + Decimal("0.2") == Decimal("0.3")   # True   ✅
+
+narx = Decimal("19.99")
+soni = 3
+narx * soni                                # Decimal('59.97')  — aniq, tiyin yo'qolmaydi
+```
+
+> **Eng muhim qoida:** `Decimal` ni **string'dan** yarat — `Decimal("0.1")`. Agar `Decimal(0.1)` (float'dan) yozsang, allaqachon buzilgan `0.1000000...0055` ni olasan, ma'no qolmaydi.
+
+`Decimal` ni `.quantize()` bilan kerakli kasrgacha aniq yaxlitlash mumkin (chek, hisob-faktura uchun):
+
+```python
+from decimal import Decimal, ROUND_HALF_UP
+
+jami = Decimal("28.745")
+jami.quantize(Decimal("0.01"))                       # Decimal('28.74')  — banker's rounding
+jami.quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)  # Decimal('28.75')  — odatiy "yarmni yuqoriga"
+```
+
+Mana, savatcha narxini `Decimal` bilan aniq hisoblash:
+
+```python
+from decimal import Decimal
+
+narxlar = [Decimal("19.99"), Decimal("5.50"), Decimal("3.25")]
+jami = sum(narxlar)                                  # Decimal('28.74')
+chegirma = (jami * Decimal("0.10")).quantize(Decimal("0.01"))   # Decimal('2.87')
+tolov = jami - chegirma
+
+print(f"Jami:     {jami}")        # Jami:     28.74
+print(f"Chegirma: {chegirma}")    # Chegirma: 2.87
+print(f"To'lov:   {tolov}")       # To'lov:   25.87
+```
+
+### `Fraction` — aniq oddiy kasr (1/3 kabi)
+
+`fractions` modulidagi `Fraction` sonni **surat/maxraj** ko'rinishida aniq saqlaydi — `1/3` float'da `0.333...` bo'lib yaxlitlanmaydi, balki aniq `1/3` bo'lib qoladi:
+
+```python
+from fractions import Fraction
+
+Fraction(1, 3) + Fraction(1, 6)    # Fraction(1, 2)  — aniq qisqartiriladi
+Fraction("0.1") + Fraction("0.2")  # Fraction(3, 10) — ya'ni aniq 0.3
+Fraction(1, 3) * 3                  # Fraction(1, 1)  — aniq 1, yaxlitlanish yo'q!
+
+float(Fraction(1, 3))              # 0.3333333333333333  — kerak bo'lsa float'ga o'tkaz
+```
+
+Retsept porsiyasini ko'paytirish — kasrlar aniq qolishi kerak bo'lgan tipik misol:
+
+```python
+from fractions import Fraction
+
+bir_porsiya_un = Fraction(2, 3)    # 2/3 stakan
+odamlar = 4
+print(f"Kerak: {bir_porsiya_un * odamlar} stakan un")   # Kerak: 8/3 stakan un
+```
+
+> **Qisqacha:** tezlik kerak va kichik xato muhim emas → `float`. Pul/narx → `Decimal`. Aniq oddiy kasr (3/7, retsept, ehtimollik) → `Fraction`.
+
+---
+
+## 1.5 Boolean va "truthiness"
 
 ```python
 True, False          # bosh harf bilan!
@@ -124,7 +270,41 @@ name = user_input or "Mehmon"   # bo'sh bo'lsa "Mehmon" (qisqa, qulay yozuv)
 
 ---
 
-## 1.5 `None`, `==` va `is`
+## 1.6 Zanjirli taqqoslash (chained comparison)
+
+Ko'p tillarda `0 < x < 10` deb yozib bo'lmaydi — `0 < x and x < 10` deyish kerak. Python'da esa **taqqoslashlarni zanjir qilish** mumkin, xuddi matematikadagidek o'qiladi:
+
+```python
+x = 5
+0 < x < 10        # True   — "x noldan katta VA o'ndan kichik"
+1 <= x <= 5       # True   — chegaralarni ham qamrab oladi
+0 < x < 10 < 100  # True   — istalgancha uzun zanjir
+```
+
+Bu shunchaki qisqartma emas — o'rtadagi qiymat **bir marta** hisoblanadi (`and` orqali yozsang ikki marta hisoblanardi):
+
+```python
+yosh = 25
+18 <= yosh < 65         # True   — "ishchi yoshdami?"
+
+# Tipik foydalanish — chegaralarni tekshirish:
+def baho(ball: int) -> str:
+    if 90 <= ball <= 100:
+        return "A'lo"
+    elif 70 <= ball < 90:
+        return "Yaxshi"
+    elif 60 <= ball < 70:
+        return "Qoniqarli"
+    return "Qoniqarsiz"
+
+print(baho(95), baho(72), baho(40))   # A'lo Yaxshi Qoniqarsiz
+```
+
+> **Idioma:** `if 0 <= i and i < len(arr):` o'rniga `if 0 <= i < len(arr):` yoz — qisqaroq va o'qish osonroq.
+
+---
+
+## 1.7 `None`, `==` va `is`
 
 ```python
 x = None
@@ -148,7 +328,40 @@ Bu farqni vizual ko'rinishda: `a` va `b` qiymati bir xil, ammo xotirada ikki **a
 
 ---
 
-## 1.6 Tip konvertatsiyasi
+## 1.8 Bitwise (bit darajasidagi) operatorlar
+
+Bu operatorlar sonni **ikkilik (bit)** ko'rinishida — har bir 0/1 raqami ustida ishlaydi. Kundalik kodda kam, lekin bayroqlar (flags), ruxsatlar, maska va past darajadagi ishlarda kerak bo'ladi:
+
+```python
+5 & 3     # 1   — AND  (har ikkalasida ham 1 bo'lsa)   0b101 & 0b011 = 0b001
+5 | 3     # 7   — OR   (kamida birida 1 bo'lsa)         0b101 | 0b011 = 0b111
+5 ^ 3     # 6   — XOR  (faqat bittasida 1 bo'lsa)        0b101 ^ 0b011 = 0b110
+~5        # -6  — NOT  (barcha bitlarni teskari qiladi)
+1 << 4    # 16  — chapga surish (= 1 * 2**4)
+64 >> 2   # 16  — o'ngga surish (= 64 // 2**2)
+```
+
+Eng amaliy foydalanish — **bayroqlarni** bitta songa joylash (har bayroq alohida bit):
+
+```python
+OQISH   = 0b001    # 1
+YOZISH  = 0b010    # 2
+BAJARISH = 0b100   # 4
+
+ruxsat = OQISH | YOZISH        # 0b011 — oqish va yozishni yoqdik
+print(bin(ruxsat))             # 0b11
+
+bool(ruxsat & YOZISH)          # True  — yozish ruxsati bormi?
+bool(ruxsat & BAJARISH)        # False — bajarish ruxsati yo'q
+ruxsat |= BAJARISH             # bajarishni qo'shamiz
+ruxsat &= ~YOZISH              # yozishni o'chiramiz
+```
+
+> **Diqqat:** `&` va `|` — bu **bit** operatorlari, mantiqiy `and`/`or` emas. `x and y` bilan adashtirma: `5 & 3` → `1` (bit), `5 and 3` → `3` (oxirgi qiymat). Mantiq uchun `and`/`or`, bitlar uchun `&`/`|`.
+
+---
+
+## 1.9 Tip konvertatsiyasi
 
 ```python
 int("42")        # 42
@@ -164,7 +377,7 @@ int("abc")       # ValueError — try/except kerak (07-modulda)
 
 ---
 
-## 1.7 Kiritish/chiqarish (I/O)
+## 1.10 Kiritish/chiqarish (I/O)
 
 ```python
 print("Salom", "dunyo")              # Salom dunyo  (probel bilan ajraladi)
@@ -180,7 +393,7 @@ yosh = int(input("Yoshing: "))       # raqam kerak bo'lsa konvertatsiya qil
 
 ---
 
-## 1.8 f-string — formatlashning to'g'ri yo'li
+## 1.11 f-string — formatlashning to'g'ri yo'li
 
 ```python
 name = "Oqil"
@@ -197,9 +410,60 @@ f"{2 + 2}"                           # 4 — ichida ifoda yozish mumkin
 
 > f-string — matn ichiga to'g'ridan-to'g'ri o'zgaruvchi va ifoda joylashning eng toza yo'li: `f"..."` ichida `{...}` qavslar orasiga istalgan ifoda va formatlashni yozasan. **Eski usullar (`.format()`, `%`) ni unut — f-string ishlat.**
 
+### Konversiya bayroqlari: `!r`, `!s`, `!a`
+
+`{...}` ichida format'dan oldin `!` bilan qiymatni qaysi ko'rinishga o'tkazishni aytsa bo'ladi:
+
+```python
+s = "salom\n"
+f"{s}"      # salom    (va yangi qator) — odatiy: str()
+f"{s!s}"    # salom    (va yangi qator) — !s = str() (aniq yozilgan)
+f"{s!r}"    # 'salom\n'                 — !r = repr(): debug uchun, qo'shtirnoq va \n ko'rinadi
+f"{'kofe'!a}"   # 'kofe'                — !a = ascii(): ASCII'dan tashqari belgilarni \u... qiladi
+```
+
+- **`!r`** eng foydali: log/debug'da matnni qo'shtirnoq bilan, yashirin belgilar (`\n`, `\t`) ko'rinadigan qilib chiqaradi. "Bu yerda bo'shliq bormi?" degan savolga aniq javob beradi.
+- **`!s`** — odatiy holat (str), ko'pincha yozish shart emas.
+- **`!a`** — natija faqat ASCII bo'lishi kerak bo'lganda.
+
+```python
+class Pul:
+    def __init__(self, miqdor): self.miqdor = miqdor
+    def __str__(self):  return f"{self.miqdor} so'm"     # odam uchun
+    def __repr__(self): return f"Pul({self.miqdor!r})"   # dasturchi uchun
+
+p = Pul(5000)
+print(f"{p!s}")    # 5000 so'm   — chiroyli ko'rinish
+print(f"{p!r}")    # Pul(5000)   — debug ko'rinishi
+```
+
+### Ichma-ich (nested) format: `{val:.{n}f}`
+
+Format spetsifikatori ichida ham `{...}` ishlatib, **kenglik yoki aniqlikni o'zgaruvchidan** olsa bo'ladi:
+
+```python
+import math
+
+aniqlik = 3
+f"{math.pi:.{aniqlik}f}"     # 3.142   — kasr xona soni o'zgaruvchidan!
+
+kenglik = 10
+f"{42:>{kenglik}}"           # '        42'  — o'ng tomonga, kenglik 10
+f"{'Oqil':^{kenglik}}"       # '   Oqil   '  — markazga tekislash
+
+# Dinamik jadval ustuni:
+def chiqar(qiymat: float, aniqlik: int, kenglik: int) -> str:
+    return f"{qiymat:>{kenglik}.{aniqlik}f}"
+
+print(chiqar(3.14159, 2, 8))    # '    3.14'
+print(chiqar(3.14159, 4, 8))    # '  3.1416'
+```
+
+> **Why:** Aniqlik yoki ustun kengligini foydalanuvchi sozlamasidan yoki hisobdan olishing kerak bo'lsa, nested format yagona toza yechim — `{val:.{n}f}` ko'rinishida `n` ni tashqaridan beradi.
+
 ---
 
-## 1.9 Bir nechta qiymat berish (multiple assignment)
+## 1.12 Bir nechta qiymat berish (multiple assignment)
 
 ```python
 a, b, c = 1, 2, 3            # bir vaqtda
@@ -213,7 +477,7 @@ first, *rest = [1, 2, 3, 4]  # first=1, rest=[2,3,4]  (unpacking)
 
 ---
 
-## 1.10 Walrus operatori `:=` (3.8+)
+## 1.13 Walrus operatori `:=` (3.8+)
 
 Ifoda ichida o'zgaruvchiga qiymat berish:
 
@@ -233,7 +497,7 @@ while (data := input()) != "quit":
 
 ---
 
-## 1.11 Izohlar va docstring
+## 1.14 Izohlar va docstring
 
 ```python
 # Bir qatorli izoh
@@ -252,7 +516,7 @@ help(hisobla)   # docstring'ni chiqaradi
 
 ---
 
-## ✍️ Masalalar (20 ta)
+## ✍️ Masalalar (26 ta)
 
 > Yechimga qaramasdan ishla. REPL'da sina. Yechimlar fayl oxirida.
 
@@ -284,6 +548,15 @@ help(hisobla)   # docstring'ni chiqaradi
 18. `2 ** 1000` ni hisobla — natija nechta xonali ekanini top. *(Maslahat: stringga aylantirib uzunligini ol.)*
 19. Bir xonali son `n` (1–9) berilganda, uning quyidagi jadvalini chiqar: `n x 1 = n` dan `n x 9 = 9n` gacha (f-string, hozircha `for` ishlatmasdan 9 ta `print` bilan ham bo'ladi — yoki `for` bilsang, ishlat).
 20. `divmod()` dan foydalanib, 1000 daqiqani kun:soat:daqiqaga aylantir (masalan `1500 → 1 kun 1 soat 0 daqiqa`).
+
+**Aniqlik, sonlar va format (21–26):**
+
+21. `0.1 + 0.2 == 0.3` nega `False` ekanini tushuntir va uchta to'g'ri solishtirish usulini yoz (`math.isclose`, `round`, epsilon). Har birini sinab natijani chiqar.
+22. Savatchada uchta narx bor: `19.99`, `5.50`, `3.25` (so'm). `Decimal` bilan jami summani hisobla, 10% chegirma qo'llab, to'lovni 2 kasrgacha aniq chiqar. *(Nega `float` emas, `Decimal`?)*
+23. `Fraction` bilan: bir retsept 2 odamga `3/4` stakan un talab qiladi. 5 odamga qancha kerak? Natijani aniq kasr ko'rinishida, keyin float'ga aylantirib chiqar.
+24. Quyidagi literallarni o'qib, har birining o'nlik (decimal) qiymatini chiqar: `0xFF`, `0o17`, `0b1011`, `1_000_000`, `1e6`. Qaysi biri `float`?
+25. Foydalanuvchi yoshini ol va zanjirli taqqoslash bilan toifaga ajrat: `0–12` bola, `13–17` o'smir, `18–64` katta, `65+` keksa.
+26. Bitwise bayroqlar bilan fayl ruxsatini modellashtir: `OQISH=1`, `YOZISH=2`, `BAJARISH=4`. `OQISH | YOZISH` ruxsatini yarat, unda `YOZISH` va `BAJARISH` bor-yo'qligini tekshir, keyin `BAJARISH` ni qo'shib `bin()` bilan chiqar.
 
 ---
 
@@ -387,6 +660,119 @@ daqiqa = 1500
 kun, qoldiq = divmod(daqiqa, 24 * 60)
 soat, daq = divmod(qoldiq, 60)
 print(f"{kun} kun {soat} soat {daq} daqiqa")   # 1 kun 1 soat 0 daqiqa
+```
+
+</details>
+
+<details markdown="1">
+<summary>Masala 21</summary>
+
+```python
+import math
+
+a = 0.1 + 0.2
+# Nega False: 0.1 va 0.2 binar float'da aniq saqlanmaydi,
+# yig'indi 0.30000000000000004 bo'lib chiqadi.
+print(a)                       # 0.30000000000000004
+print(a == 0.3)                # False
+
+# 1) math.isclose — eng to'g'ri yo'l
+print(math.isclose(a, 0.3))    # True
+
+# 2) round bilan yaxlitlab solishtirish
+print(round(a, 10) == round(0.3, 10))   # True
+
+# 3) qo'lda epsilon (tolerantlik)
+print(abs(a - 0.3) < 1e-9)     # True
+```
+
+</details>
+
+<details markdown="1">
+<summary>Masala 22</summary>
+
+```python
+from decimal import Decimal
+
+# Nega Decimal: pul hisobida float xatosi tiyinlarni yo'qotadi/qo'shadi.
+# Decimal o'nlik sonni aniq saqlaydi.
+narxlar = [Decimal("19.99"), Decimal("5.50"), Decimal("3.25")]
+jami = sum(narxlar)                                  # Decimal('28.74')
+chegirma = (jami * Decimal("0.10")).quantize(Decimal("0.01"))   # Decimal('2.87')
+tolov = jami - chegirma
+
+print(f"Jami:     {jami}")        # Jami:     28.74
+print(f"Chegirma: {chegirma}")    # Chegirma: 2.87
+print(f"To'lov:   {tolov}")       # To'lov:   25.87
+```
+
+</details>
+
+<details markdown="1">
+<summary>Masala 23</summary>
+
+```python
+from fractions import Fraction
+
+un_2_odam = Fraction(3, 4)        # 2 odamga 3/4 stakan
+bir_odam = un_2_odam / 2          # Fraction(3, 8)
+besh_odam = bir_odam * 5          # Fraction(15, 8)
+
+print(besh_odam)                  # 15/8   — aniq kasr
+print(float(besh_odam))           # 1.875  — float ko'rinishi
+```
+
+</details>
+
+<details markdown="1">
+<summary>Masala 24</summary>
+
+```python
+print(0xFF)         # 255       — int (16-lik)
+print(0o17)         # 15        — int (8-lik)
+print(0b1011)       # 11        — int (2-lik)
+print(1_000_000)    # 1000000   — int (_ faqat o'qish uchun)
+print(1e6)          # 1000000.0 — FLOAT (ilmiy yozuv har doim float)
+
+# Faqat 1e6 — float. Qolganlari int.
+print(type(1e6))    # <class 'float'>
+```
+
+</details>
+
+<details markdown="1">
+<summary>Masala 25</summary>
+
+```python
+yosh = int(input("Yoshing: "))
+
+if 0 <= yosh <= 12:
+    toifa = "bola"
+elif 13 <= yosh <= 17:
+    toifa = "o'smir"
+elif 18 <= yosh <= 64:
+    toifa = "katta"
+else:
+    toifa = "keksa"
+
+print(toifa)
+```
+
+</details>
+
+<details markdown="1">
+<summary>Masala 26</summary>
+
+```python
+OQISH, YOZISH, BAJARISH = 1, 2, 4
+
+ruxsat = OQISH | YOZISH            # 0b011
+
+print("yozish bormi:  ", bool(ruxsat & YOZISH))     # True
+print("bajarish bormi:", bool(ruxsat & BAJARISH))   # False
+
+ruxsat |= BAJARISH                 # bajarishni qo'shamiz
+print(bin(ruxsat))                 # 0b111
 ```
 
 </details>

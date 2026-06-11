@@ -207,12 +207,14 @@ Endi to'rttala tuzilmani bir joyda taqqoslab ko'ramiz — qaysi biri o'zgaruvcha
 Funksiyadan bir nechta qiymat qaytarishda tuple qulay:
 
 ```python
-def min_max(sonlar):
+def min_max(sonlar: list[int]) -> tuple[int, int]:
     return min(sonlar), max(sonlar)   # tuple qaytaradi
 
 eng_kichik, eng_katta = min_max([5, 2, 8, 1])
 print(eng_kichik, eng_katta)          # 1 8
 ```
+
+> Type hint'lar (`list[int]`, `-> tuple[int, int]`) — kodni o'qishni osonlashtiradi va muharrir xatolarni oldindan ko'rsatishga yordam beradi. Python 3.9 dan beri `list`, `tuple`, `dict` ni to'g'ridan-to'g'ri qavs bilan yozish mumkin (eski `List`, `Tuple` import qilish shart emas). 10-modulda bu mavzuga chuqurroq kiramiz.
 
 ---
 
@@ -242,7 +244,368 @@ print(juftlar)            # [2, 4, 6, 8, 10]
 
 ---
 
-## ✍️ Masalalar (20 ta)
+## 3.8 Dict va set comprehension, generator ifoda
+
+List comprehension yolg'iz emas — xuddi shu g'oya **lug'at** va **to'plam** uchun ham ishlaydi. Faqat kvadrat qavs o'rniga jingalak qavs ishlatiladi.
+
+**Dict comprehension** — `{kalit: qiymat for ...}` ko'rinishida. Ikki ro'yxatdan lug'at yasash uchun ayniqsa qulay:
+
+```python
+nomlar = ["olma", "banan", "uzum"]
+narxlar = [12000, 9000, 15000]
+
+katalog = {nom: narx for nom, narx in zip(nomlar, narxlar)}
+print(katalog)        # {'olma': 12000, 'banan': 9000, 'uzum': 15000}
+
+# Son -> uning kvadrati lug'ati:
+kvadrat_lugat = {i: i * i for i in range(1, 6)}
+print(kvadrat_lugat)  # {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+```
+
+`if` shartini ham qo'shsa bo'ladi — faqat shartni qondiradigan juftliklar qoladi:
+
+```python
+arzonlar = {nom: narx for nom, narx in katalog.items() if narx < 13000}
+print(arzonlar)       # {'olma': 12000, 'banan': 9000}
+```
+
+**Set comprehension** — `{ifoda for ...}` (kalit-qiymat emas, faqat qiymat). Natijada takror avtomatik tushib qoladi:
+
+```python
+sozlar = ["olma", "banan", "olma", "uzum", "banan"]
+
+noyob_uzunliklar = {len(s) for s in sozlar}
+print(noyob_uzunliklar)   # {4, 5}  -- takrorlanmagan uzunliklar
+
+birinchi_harflar = {s[0] for s in sozlar}
+print(birinchi_harflar)   # {'o', 'b', 'u'}  -- noyob bosh harflar
+```
+
+**Generator ifoda** — `(ifoda for ...)` (oddiy qavs). U list comprehension'ga o'xshaydi, lekin **butun ro'yxatni xotirada yasamaydi** — elementlarni bittalab, kerak bo'lganda ishlab beradi. Shuning uchun katta hajmlarda xotirani tejaydi:
+
+```python
+# List comprehension butun ro'yxatni yasaydi (xotirada saqlanadi):
+royxat = [i * i for i in range(1, 6)]
+print(royxat)             # [1, 4, 9, 16, 25]
+
+# Generator ifoda esa "retsept" qaytaradi, qiymatlarni darrov yasamaydi:
+gen = (i * i for i in range(1, 6))
+print(gen)                # <generator object <genexpr> at 0x...>  (manzil har xil)
+
+# U bilan ham aylanish mumkin (bir martalik):
+for q in gen:
+    print(q, end=" ")     # 1 4 9 16 25
+print()
+```
+
+Eng tez-tez ishlatilishi — `sum()`, `max()`, `min()` kabi funksiyalarga to'g'ridan-to'g'ri uzatish. Bunda oraliq ro'yxat umuman yasalmaydi:
+
+```python
+# 1 dan 1000 gacha kvadratlar yig'indisi -- ro'yxat yasamasdan:
+jami = sum(i * i for i in range(1, 1001))
+print(jami)               # 333833500
+```
+
+> **Qaysi qavs nima yasaydi?** `[...]` -> list, `{...}` (kalit:qiymat bilan) -> dict, `{...}` (faqat qiymat) -> set, `(...)` -> generator. Bitta g'oya, to'rtta tuzilma.
+
+---
+
+## 3.9 Shartli va ichma-ich (nested) comprehension
+
+Comprehension ichida shart ikki xil joyda turishi mumkin — va ular **butunlay boshqa** ma'no beradi.
+
+**1) Oxirida `if` — filtrlash** (elementni o'tkazadi yoki tashlaydi):
+
+```python
+sonlar = [-3, 5, -1, 8, -7]
+musbatlar = [s for s in sonlar if s > 0]
+print(musbatlar)          # [5, 8]
+```
+
+**2) Boshida `if/else` — har bir element uchun tanlash** (`[a if shart else b for ...]`). Bu yerda hamma element qoladi, lekin qiymati shartga qarab o'zgaradi:
+
+```python
+sonlar = [-3, 5, -1, 8, -7]
+belgilar = ["musbat" if s > 0 else "manfiy" for s in sonlar]
+print(belgilar)           # ['manfiy', 'musbat', 'manfiy', 'musbat', 'manfiy']
+```
+
+> **Tuzoq:** `[x for x in ... if shart]` (filtr) va `[x if shart else y for x in ...]` (tanlash) — `if` ning joyiga qarab butunlay boshqa narsa. Filtrda `else` yo'q; tanlashda `else` shart.
+
+**Ichma-ich (nested) comprehension** — ikkita `for` bilan. Masalan, matritsani (ro'yxatlar ro'yxatini) bitta tekis ro'yxatga aylantirish:
+
+```python
+matritsa = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+tekis = [son for qator in matritsa for son in qator]
+print(tekis)              # [1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+
+> O'qish tartibi chapdan o'ngga: avval `for qator in matritsa`, keyin `for son in qator` — xuddi ikki ichma-ich `for` siklidek.
+
+Comprehension ichida yana comprehension qo'yib, jadval (ro'yxatlar ro'yxati) yasash ham mumkin:
+
+```python
+jadval = [[i * j for j in range(1, 4)] for i in range(1, 4)]
+print(jadval)             # [[1, 2, 3], [2, 4, 6], [3, 6, 9]]
+```
+
+---
+
+## 3.10 Ro'yxat metodlari — yana ko'proq
+
+3.2 da `append`, `insert`, `remove`, `pop`, `sort`, `reverse` bilan tanishding. Endi qolgan muhimlarini ko'ramiz.
+
+**`extend()` va `append()` farqi** — bu eng ko'p adashtiradigan juftlik:
+
+```python
+a = [1, 2, 3]
+a.append([4, 5])
+print(a)              # [1, 2, 3, [4, 5]]  -- ro'yxatni bitta element qilib qo'shdi
+
+b = [1, 2, 3]
+b.extend([4, 5])
+print(b)              # [1, 2, 3, 4, 5]    -- elementlarni birma-bir qo'shdi
+```
+
+**`index()`** — qiymat qaysi indeksda turganini topadi (birinchi uchraganini):
+
+```python
+mevalar = ["olma", "banan", "uzum", "banan"]
+print(mevalar.index("banan"))   # 1
+print("uzum" in mevalar)        # True  -- avval mavjudligini tekshirgan ma'qul
+```
+
+**`sorted()` va `.sort()` farqi** — ikkalasi ham tartiblaydi, lekin:
+
+- `lst.sort()` — ro'yxatning **o'zini** o'zgartiradi, `None` qaytaradi.
+- `sorted(lst)` — **yangi** ro'yxat qaytaradi, aslini o'zgartirmaydi.
+
+```python
+asl = [3, 1, 2]
+yangi = sorted(asl)
+print(yangi)          # [1, 2, 3]  -- yangi ro'yxat
+print(asl)            # [3, 1, 2]  -- asl o'zgarmadi
+```
+
+Ikkalasi ham `key=` va `reverse=` qabul qiladi. `key=` — har bir elementni nima bo'yicha solishtirishni belgilaydi (funksiya beradi):
+
+```python
+sozlar = ["olma", "non", "banan", "uzum"]
+print(sorted(sozlar, key=len))          # ['non', 'olma', 'uzum', 'banan']  -- uzunligi bo'yicha
+print(sorted(sozlar, reverse=True))     # ['uzum', 'olma', 'non', 'banan']  -- teskari alifbo
+
+# Lug'atlar ro'yxatini biror maydon bo'yicha tartiblash -- juda ko'p ishlatiladi:
+talabalar = [
+    {"ism": "Aziz", "ball": 85},
+    {"ism": "Malika", "ball": 92},
+    {"ism": "Bobur", "ball": 78},
+]
+eng_yaxshilar = sorted(talabalar, key=lambda t: t["ball"], reverse=True)
+print(eng_yaxshilar[0]["ism"])          # Malika
+```
+
+**`copy()`** — ro'yxatning nusxasini oladi (buni 3.13 da chuqur tushuntiramiz):
+
+```python
+asl = [1, 2, 3]
+nusxa = asl.copy()
+nusxa.append(4)
+print(asl, nusxa)     # [1, 2, 3] [1, 2, 3, 4]  -- mustaqil
+```
+
+**`del` va slice'ga qiymat berish** — `del` indeks yoki slice bo'yicha o'chiradi; slice'ga ro'yxat tenglab, bir qismni butunlay almashtirish mumkin:
+
+```python
+sonlar = [0, 1, 2, 3, 4, 5]
+del sonlar[0]
+print(sonlar)         # [1, 2, 3, 4, 5]
+del sonlar[1:3]
+print(sonlar)         # [1, 4, 5]
+
+# Slice'ga qiymat berish -- o'lchami har xil bo'lsa ham bo'ladi:
+sonlar = [0, 1, 2, 3, 4]
+sonlar[1:3] = [10, 20, 30]
+print(sonlar)         # [0, 10, 20, 30, 3, 4]
+```
+
+---
+
+## 3.11 Lug'at metodlari — yana ko'proq
+
+3.4 da `get`, `items` bilan tanishding. Endi kundalik ishda kerak bo'ladiganlarini ko'ramiz.
+
+**`update()`** — bir lug'atga boshqa lug'at (yoki juftliklar)ni qo'shadi/yangilaydi:
+
+```python
+talaba = {"ism": "Aziz", "yosh": 20}
+talaba.update({"yosh": 21, "shahar": "Toshkent"})
+print(talaba)         # {'ism': 'Aziz', 'yosh': 21, 'shahar': 'Toshkent'}
+```
+
+**`setdefault()`** — kalit bo'lmasa qo'shadi va qiymatini qaytaradi; bo'lsa mavjudini qaytaradi (tegmaydi):
+
+```python
+talaba.setdefault("email", "yo'q")   # email yo'q edi -> qo'shildi
+talaba.setdefault("ism", "X")        # ism bor edi -> tegmadi
+print(talaba["email"])               # yo'q
+print(talaba["ism"])                 # Aziz
+```
+
+**`keys()`, `values()`, `items()`** — mos ravishda kalitlar, qiymatlar va juftliklar ustidan aylanish imkonini beradi:
+
+```python
+narxlar = {"olma": 12000, "non": 4000}
+print(list(narxlar.keys()))     # ['olma', 'non']
+print(list(narxlar.values()))   # [12000, 4000]
+print(list(narxlar.items()))    # [('olma', 12000), ('non', 4000)]
+print(sum(narxlar.values()))    # 16000  -- qiymatlar yig'indisi
+```
+
+**`pop()`** — kalitni o'chiradi va qiymatini qaytaradi. Standart qiymat bersang, yo'q kalitda ham xato bermaydi:
+
+```python
+yosh = talaba.pop("yosh")
+print(yosh)                      # 21
+print(talaba.pop("telefon", "yo'q"))   # yo'q  -- kalit yo'q, standart qaytdi
+```
+
+**`dict.fromkeys()`** — bir xil boshlang'ich qiymat bilan lug'at yasaydi:
+
+```python
+hisob = dict.fromkeys(["a", "b", "c"], 0)
+print(hisob)          # {'a': 0, 'b': 0, 'c': 0}
+```
+
+**Tartib kafolati (3.7+):** Python 3.7 dan boshlab lug'at kalitlarni **qo'shilish tartibida** saqlaydi — aylanishda ular qaysi tartibda qo'shilgan bo'lsa, shu tartibda chiqadi:
+
+```python
+d = {}
+d["z"] = 1
+d["a"] = 2
+d["m"] = 3
+print(list(d))        # ['z', 'a', 'm']  -- alifbo emas, qo'shilish tartibi
+```
+
+**`|` bilan birlashtirish (3.9+):** Ikki lug'atni `|` bilan qo'shib, yangi lug'at olish mumkin. Bir xil kalitda **o'ngdagi** g'olib:
+
+```python
+x = {"a": 1, "b": 2}
+y = {"b": 20, "c": 3}
+print(x | y)          # {'a': 1, 'b': 20, 'c': 3}
+
+x |= y                # x ni o'rnida yangilaydi (update kabi)
+print(x)              # {'a': 1, 'b': 20, 'c': 3}
+```
+
+---
+
+## 3.12 To'plam metodlari va frozenset
+
+3.5 da `&`, `|`, `-` operatorlarini ko'rgan eding. Ularning **metod** ko'rinishi ham bor, ustiga `^` (symmetric difference) qo'shiladi.
+
+**Element qo'shish/o'chirish:**
+
+```python
+ranglar = {"qizil", "yashil"}
+ranglar.add("ko'k")        # qo'shadi
+ranglar.discard("sariq")   # yo'q bo'lsa ham XATO BERMAYDI
+ranglar.remove("qizil")    # bor elementni o'chiradi
+# ranglar.remove("sariq")  # KeyError -- remove yo'q elementda xato beradi
+print(ranglar)             # {"ko'k", 'yashil'}
+```
+
+> `discard` vs `remove`: ikkalasi ham o'chiradi, lekin `discard` yo'q elementda jim turadi, `remove` esa xato beradi. Ishonchsiz bo'lsang — `discard`.
+
+**To'plam amallari — operator va metod (bir xil natija):**
+
+```python
+a = {1, 2, 3}
+b = {2, 3, 4}
+print(a | b,  a.union(b))                  # {1,2,3,4}  birlashma
+print(a & b,  a.intersection(b))           # {2,3}      kesishma
+print(a - b,  a.difference(b))             # {1}        a da bor, b da yo'q
+print(a ^ b,  a.symmetric_difference(b))   # {1,4}      faqat bittasida bor
+```
+
+`^` (symmetric difference) — "ikkalasida ham emas, faqat bittasida" degani: birlashmadan kesishmani ayirgancha.
+
+**Qism-to'plam tekshiruvi:**
+
+```python
+print({1, 2}.issubset({1, 2, 3}))      # True  -- {1,2} ichida-mi?
+print({1, 2, 3}.issuperset({1, 2}))    # True  -- {1,2} ni qamrab oladimi?
+```
+
+**`frozenset` — o'zgarmas to'plam.** Oddiy `set` o'zgaruvchan (`add`/`remove` bo'ladi), shuning uchun uni lug'at kaliti yoki boshqa set elementi qilib bo'lmaydi. `frozenset` esa o'zgarmas — shuning uchun kalit bo'la oladi:
+
+```python
+muzlatilgan = frozenset([1, 2, 3])
+print(muzlatilgan)         # frozenset({1, 2, 3})
+# muzlatilgan.add(4)       # XATO -- frozenset o'zgartirib bo'lmaydi
+
+# Lug'at kaliti sifatida ishlatish mumkin:
+xarita = {frozenset([1, 2]): "juftlik", frozenset([3]): "yakka"}
+print(xarita[frozenset([1, 2])])   # juftlik
+```
+
+> **Tuple list'ga nima bo'lsa, frozenset set'ga ham shu:** o'zgarmas variant. O'zgarmaslik kalit bo'la olish va tasodifiy o'zgartirishdan himoya beradi.
+
+---
+
+## 3.13 Yuza (shallow) va chuqur (deep) nusxalash
+
+01-modulda ko'rgan eding: o'zgaruvchi obyektni **o'z ichida saqlamaydi**, balki unga ishora qiladigan nom (reference model). Shu sabab `b = a` obyektni nusxalamaydi — bitta obyektga ikkinchi nom beradi, xolos:
+
+```python
+a = [1, 2, 3]
+b = a               # nusxa EMAS -- bitta obyekt, ikki nom
+b.append(4)
+print(a)            # [1, 2, 3, 4]  -- a ham "o'zgardi", chunki a va b bir narsa
+print(a is b)       # True
+```
+
+Haqiqiy nusxa kerak bo'lsa, `a.copy()` (yoki `list(a)`, yoki `a[:]`) ishlatiladi. Bu **yuza (shallow) nusxa** — yuqori darajadagi ro'yxat ko'chiriladi:
+
+```python
+asl = [1, 2, 3]
+yuza = asl.copy()
+yuza.append(4)
+print(asl, yuza)    # [1, 2, 3] [1, 2, 3, 4]  -- mustaqil
+print(asl is yuza)  # False  -- alohida obyektlar
+```
+
+**Lekin tuzoq bor:** yuza nusxa faqat eng tashqi ro'yxatni ko'chiradi. Ichidagi ro'yxatlar (yoki boshqa o'zgaruvchan obyektlar) **baribir baham ko'riladi** — ikkala nusxa ham o'sha bitta ichki obyektga ishora qiladi:
+
+```python
+asl = [[1, 2], [3, 4]]
+yuza = asl.copy()
+yuza[0].append(99)
+print(asl)          # [[1, 2, 99], [3, 4]]  -- asl ham o'zgardi!
+print(yuza)         # [[1, 2, 99], [3, 4]]
+```
+
+Bunday "ichma-ich" tuzilmalarni to'liq mustaqil nusxalash uchun `copy.deepcopy()` kerak — u **har bir darajani** rekursiv nusxalaydi:
+
+```python
+import copy
+
+asl = [[1, 2], [3, 4]]
+chuqur = copy.deepcopy(asl)
+chuqur[0].append(99)
+print(asl)          # [[1, 2], [3, 4]]      -- asl butunlay himoyalangan
+print(chuqur)       # [[1, 2, 99], [3, 4]]
+```
+
+> **Uchta darajani ajrat:**
+> - `b = a` — nusxa yo'q, bitta obyekt ikki nom (`is` -> `True`).
+> - `b = a.copy()` — yuza nusxa: tashqisi alohida, ichkisi baham ko'riladi.
+> - `b = copy.deepcopy(a)` — chuqur nusxa: har bir daraja alohida, butunlay mustaqil.
+>
+> Oddiy (ichma-ich bo'lmagan) ro'yxat uchun `copy()` yetarli; ichida ro'yxat/lug'at bo'lsa — `deepcopy` o'yla.
+
+---
+
+## ✍️ Masalalar (26 ta)
 
 > Bu masalalar 1–3 modullar mavzulariga asoslangan.
 
@@ -274,6 +637,15 @@ print(juftlar)            # [2, 4, 6, 8, 10]
 18. Foydalanuvchidan so'zlar kiritishini so'ra ("stop" deguncha), ularni ro'yxatga yig'. Oxirida nechta so'z kiritilganini va ularni alifbo tartibida chiqar.
 19. Bir lug'atda mahsulot nomi → narxi saqlangan. Barcha narxlar yig'indisini hisobla va eng qimmat mahsulot nomini top.
 20. Telefon kitobchasi: foydalanuvchi "qo'shish", "qidirish" yoki "chiqish" tanlasin. Qo'shishda ism va raqamni lug'atga saqla, qidirishda ism bo'yicha raqamni chiqar (`while` sikli bilan davomli ishlasin).
+
+**Qo'shimcha (21–26) — comprehension, yangi metodlar va nusxalash:**
+
+21. Dict comprehension bilan `["olma", "non", "banan"]` so'zlaridan `{so'z: uzunligi}` lug'atini yasa.
+22. `zip` bilan ikkita ro'yxatdan (`nomlar`, `narxlar`) lug'at tuz, keyin set comprehension bilan narxi 10000 dan yuqori mahsulot **nomlari to'plamini** ajrat.
+23. Talabalar ro'yxati berilgan (har biri `ism`, `ball` lug'at). `sorted(key=...)` bilan ularni ball bo'yicha kamayish tartibida tartibla va eng yuqori 3 tasini chiqar.
+24. `[[1, 2], [3, 4]]` ichma-ich ro'yxat uchun `copy()` (yuza) va `copy.deepcopy()` (chuqur) farqini ko'rsat: ichki ro'yxatni o'zgartirib, qaysi holatda asl o'zgarishini namoyish qil.
+25. Ikki guruh (to'plam): `{"Aziz","Malika","Bobur"}` va `{"Malika","Sardor"}`. Birlashma, kesishma, ayirma va symmetric difference (`^`) ni chiqar.
+26. Generator ifoda bilan 1 dan 1000 gacha sonlarning kvadratlari yig'indisini hisobla (oraliq ro'yxat yasamasdan).
 
 ---
 
@@ -417,6 +789,96 @@ while True:
     elif amal == "qidirish":
         ism = input("Ism: ")
         print(kitobcha.get(ism, "topilmadi"))
+```
+
+</details>
+
+<details markdown="1">
+<summary>Masala 21</summary>
+
+```python
+sozlar = ["olma", "non", "banan"]
+uzunliklar = {s: len(s) for s in sozlar}
+print(uzunliklar)         # {'olma': 4, 'non': 3, 'banan': 5}
+```
+
+</details>
+
+<details markdown="1">
+<summary>Masala 22</summary>
+
+```python
+nomlar = ["olma", "non", "go'sht"]
+narxlar = [12000, 4000, 90000]
+
+katalog = {n: p for n, p in zip(nomlar, narxlar)}
+qimmatlar = {n for n, p in katalog.items() if p > 10000}
+print(katalog)            # {'olma': 12000, 'non': 4000, "go'sht": 90000}
+print(qimmatlar)          # {'olma', "go'sht"}
+```
+
+</details>
+
+<details markdown="1">
+<summary>Masala 23</summary>
+
+```python
+talabalar = [
+    {"ism": "Aziz", "ball": 85},
+    {"ism": "Malika", "ball": 92},
+    {"ism": "Bobur", "ball": 78},
+]
+tartibli = sorted(talabalar, key=lambda t: t["ball"], reverse=True)
+for t in tartibli[:3]:
+    print(t["ism"], t["ball"])
+# Malika 92
+# Aziz 85
+# Bobur 78
+```
+
+</details>
+
+<details markdown="1">
+<summary>Masala 24</summary>
+
+```python
+import copy
+
+asl = [[1, 2], [3, 4]]
+yuza = asl.copy()
+chuqur = copy.deepcopy(asl)
+
+yuza[0].append(99)
+print("yuza o'zgartirdi -> asl:", asl)   # [[1, 2, 99], [3, 4]]  -- asl ham o'zgardi!
+
+chuqur[1].append(77)
+print("chuqur o'zgartirdi -> asl:", asl) # [[1, 2, 99], [3, 4]]  -- asl tegmadi
+print("chuqur:", chuqur)                 # [[1, 2, 99], [3, 4, 77]]
+```
+
+</details>
+
+<details markdown="1">
+<summary>Masala 25</summary>
+
+```python
+guruh_a = {"Aziz", "Malika", "Bobur"}
+guruh_b = {"Malika", "Sardor"}
+
+print(guruh_a | guruh_b)   # hamma: {'Aziz', 'Malika', 'Bobur', 'Sardor'}
+print(guruh_a & guruh_b)   # ikkalasida: {'Malika'}
+print(guruh_a - guruh_b)   # faqat A da: {'Aziz', 'Bobur'}
+print(guruh_a ^ guruh_b)   # faqat bittasida: {'Aziz', 'Bobur', 'Sardor'}
+```
+
+</details>
+
+<details markdown="1">
+<summary>Masala 26</summary>
+
+```python
+jami = sum(i * i for i in range(1, 1001))
+print(jami)               # 333833500
 ```
 
 </details>

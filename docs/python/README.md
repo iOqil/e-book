@@ -28,6 +28,10 @@ Bu — Python'ni **mutlaqo noldan** o'rgatadigan qo'llanma. Hech qanday oldingi 
 | 13 | [`13-testlash.md`](./13-testlash.md) | dasturni test qilish | ✅ Tayyor |
 | 14 | [`14-web-capstone.md`](./14-web-capstone.md) | FastAPI bilan veb API | ✅ Tayyor |
 | 15 | [`15-malumotlar-bazasi.md`](./15-malumotlar-bazasi.md) | ma'lumotlar bazasi, SQL | ✅ Tayyor |
+| 16 | [`16-regex.md`](./16-regex.md) | muntazam ifodalar (regex, `re`) | ✅ Tayyor |
+| 17 | [`17-oop-ilgor.md`](./17-oop-ilgor.md) | OOP ilg'or: property, dunder, dataclass | ✅ Tayyor |
+| 18 | [`18-typing-chuqur.md`](./18-typing-chuqur.md) | type hints: Protocol, Generic, mypy | ✅ Tayyor |
+| 19 | [`19-funksional.md`](./19-funksional.md) | functools, itertools, funksional | ✅ Tayyor |
 
 ---
 

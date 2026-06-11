@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" width="800" height="460">
+  <title>patch test davomida haqiqiy funksiyani (masalan urlopen) soxta mock bilan almashtiradi; test tugagach haqiqiysi qaytariladi</title>
+  <defs>
+    <marker id="mp-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="800" height="460" fill="#f8fafc"/>
+  <text x="400" y="38" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1e293b">patch: haqiqiyni soxta bilan almashtirish</text>
+  <text x="400" y="62" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">test davomida tarmoq/baza chaqirilmaydi -&gt; tez va ishonchli</text>
+
+  <!-- Test bloki (with patch ...) -->
+  <rect x="40" y="100" width="720" height="220" rx="14" fill="#2563eb" fill-opacity="0.06" stroke="#2563eb" stroke-width="2" stroke-dasharray="7 5"/>
+  <text x="70" y="128" font-family="Consolas, Courier New, monospace" font-size="14" fill="#2563eb">with patch("urllib.request.urlopen") as soxta:</text>
+
+  <!-- Haqiqiy funksiya (o'chirilgan) -->
+  <rect x="80" y="160" width="260" height="120" rx="12" fill="#ef4444" fill-opacity="0.10" stroke="#ef4444" stroke-width="2.5"/>
+  <text x="210" y="190" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#b91c1c">HAQIQIY (vaqtincha o'chiq)</text>
+  <text x="210" y="218" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="14" fill="#1e293b">urllib.request.urlopen</text>
+  <text x="210" y="244" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b91c1c">internetga chiqardi</text>
+  <line x1="100" y1="262" x2="320" y2="172" stroke="#ef4444" stroke-width="2"/>
+
+  <!-- almashtirish o'qi -->
+  <line x1="345" y1="220" x2="455" y2="220" stroke="#475569" stroke-width="2.5" marker-end="url(#mp-arrow)"/>
+  <text x="400" y="210" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#475569" font-style="italic">almashtirildi</text>
+
+  <!-- Soxta mock -->
+  <rect x="460" y="160" width="260" height="120" rx="12" fill="#16a34a" fill-opacity="0.10" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="590" y="190" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#15803d">SOXTA (mock)</text>
+  <text x="590" y="218" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="13" fill="#1e293b">soxta...read.return_value</text>
+  <text x="590" y="242" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="13" fill="#16a34a">= b"Quyoshli, +25"</text>
+  <text x="590" y="266" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#15803d">biz nazorat qilamiz</text>
+
+  <!-- Test tugagach -->
+  <rect x="120" y="350" width="560" height="80" rx="12" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="400" y="380" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">with bloki tugagach -&gt; haqiqiy urlopen O'Z JOYIGA qaytadi</text>
+  <text x="400" y="404" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">almashtirish faqat test ichida; boshqa kod ta'sirlanmaydi</text>
+  <text x="400" y="423" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="12" fill="#475569">soxta.assert_called_once_with(...) -&gt; to'g'ri chaqirilganini tekshir</text>
+</svg>
