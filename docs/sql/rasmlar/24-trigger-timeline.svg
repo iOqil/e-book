@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>Trigger vaqt o'qi: BEFORE trigger qator yozilishidan oldin NEW ni o'zgartira oladi, so'ng INSERT/UPDATE/DELETE diskka tushadi, undan keyin AFTER trigger faqat o'qish uchun ishlaydi</title>
+  <defs>
+    <marker id="tl-ok" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <!-- sarlavha -->
+  <text x="360" y="38" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Trigger vaqt o'qi: BEFORE, yozish, AFTER</text>
+
+  <!-- vaqt o'qi -->
+  <line x1="40" y1="120" x2="680" y2="120" stroke="#475569" stroke-width="2.5" marker-end="url(#tl-ok)"/>
+  <text x="664" y="108" text-anchor="end" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-style="italic" fill="#475569">vaqt</text>
+
+  <!-- 1. BEFORE trigger -->
+  <rect x="60" y="150" width="180" height="120" rx="10" fill="#e2e8f0" stroke="#2563eb" stroke-width="2"/>
+  <text x="150" y="178" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">1. BEFORE trigger</text>
+  <text x="150" y="202" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">qator hali yozilmagan</text>
+  <rect x="78" y="216" width="144" height="26" rx="6" fill="#2563eb"/>
+  <text x="150" y="234" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#f8fafc">SET NEW.x = ...</text>
+  <text x="150" y="258" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="bold" fill="#16a34a">NEW tahrirlash mumkin</text>
+
+  <!-- 2. Yozish (disk) -->
+  <rect x="270" y="150" width="180" height="120" rx="10" fill="#e2e8f0" stroke="#16a34a" stroke-width="2"/>
+  <text x="360" y="178" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">2. Yozish</text>
+  <text x="360" y="202" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">INSERT / UPDATE /</text>
+  <text x="360" y="220" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">DELETE</text>
+  <text x="360" y="248" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" font-weight="bold" fill="#1e293b">qator diskka tushadi</text>
+
+  <!-- 3. AFTER trigger -->
+  <rect x="480" y="150" width="180" height="120" rx="10" fill="#e2e8f0" stroke="#d97706" stroke-width="2"/>
+  <text x="570" y="178" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#d97706">3. AFTER trigger</text>
+  <text x="570" y="202" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">qator allaqachon yozilgan</text>
+  <rect x="498" y="216" width="144" height="26" rx="6" fill="#d97706"/>
+  <text x="570" y="234" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#f8fafc">INSERT INTO log...</text>
+  <text x="570" y="258" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="bold" fill="#dc2626">faqat o'qish (audit)</text>
+
+  <!-- o'qiga tushuvchi belgilar -->
+  <line x1="150" y1="120" x2="150" y2="150" stroke="#2563eb" stroke-width="2"/>
+  <circle cx="150" cy="120" r="5" fill="#2563eb"/>
+  <line x1="360" y1="120" x2="360" y2="150" stroke="#16a34a" stroke-width="2"/>
+  <circle cx="360" cy="120" r="5" fill="#16a34a"/>
+  <line x1="570" y1="120" x2="570" y2="150" stroke="#d97706" stroke-width="2"/>
+  <circle cx="570" cy="120" r="5" fill="#d97706"/>
+
+  <!-- bosqichlararo strelkalar -->
+  <line x1="240" y1="210" x2="266" y2="210" stroke="#475569" stroke-width="2.5" marker-end="url(#tl-ok)"/>
+  <line x1="450" y1="210" x2="476" y2="210" stroke="#475569" stroke-width="2.5" marker-end="url(#tl-ok)"/>
+
+  <!-- OLD/NEW xotira xaritasi -->
+  <rect x="90" y="300" width="540" height="60" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="360" y="326" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Xotira xaritasi: BEFORE + NEW = tahrirlash mumkin</text>
+  <text x="360" y="348" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Qolgan barchasi (AFTER'dagi NEW, har joydagi OLD) — faqat o'qish</text>
+
+  <!-- pastki izoh -->
+  <text x="360" y="396" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#dc2626">SIGNAL bilan amalni rad etish — odatda BEFORE triggerda, qator yozilishidan oldin</text>
+</svg>

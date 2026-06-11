@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="720" height="440">
+  <title>Primitive obsession vs Value Object: chap tarafda hamma joyda 'string $email' tarqab ketadi va validatsiya takrorlanadi; o'ng tarafda Email Value Object validatsiyani bir joyga yig'adi, tip-xavfsiz va o'zgarmas (immutable)</title>
+
+  <rect x="0" y="0" width="720" height="440" fill="#f8fafc"/>
+
+  <text x="360" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="19" font-weight="bold" fill="#1e293b">Primitive obsession  vs  Value Object</text>
+  <text x="360" y="53" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#475569">bir xil g'oya, ikki yondashuv: tarqoq tekshiruv  yoki  bitta ishonchli tip</text>
+
+  <!-- CHAP: primitive obsession -->
+  <rect x="24" y="74" width="320" height="338" rx="12" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="184" y="100" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14.5" font-weight="bold" fill="#dc2626">Primitive obsession (string $email)</text>
+
+  <rect x="44" y="116" width="280" height="58" rx="8" fill="#ffffff" stroke="#dc2626" stroke-width="1.3"/>
+  <text x="56" y="138" font-family="Consolas, Courier New, monospace" font-size="11.5" fill="#1e293b">register(string $email)</text>
+  <text x="56" y="158" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#dc2626">validatsiya BU YERDA takrorlanadi</text>
+
+  <rect x="44" y="184" width="280" height="58" rx="8" fill="#ffffff" stroke="#dc2626" stroke-width="1.3"/>
+  <text x="56" y="206" font-family="Consolas, Courier New, monospace" font-size="11.5" fill="#1e293b">sendMail(string $email)</text>
+  <text x="56" y="226" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#dc2626">yana validatsiya... yoki UNUTILADI</text>
+
+  <rect x="44" y="252" width="280" height="58" rx="8" fill="#ffffff" stroke="#dc2626" stroke-width="1.3"/>
+  <text x="56" y="274" font-family="Consolas, Courier New, monospace" font-size="11.5" fill="#1e293b">User { public string $email; }</text>
+  <text x="56" y="294" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#dc2626">istalgan satr kirib qoladi</text>
+
+  <rect x="44" y="324" width="280" height="70" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="1.3"/>
+  <text x="184" y="346" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" font-weight="bold" fill="#dc2626">Muammolar</text>
+  <text x="56" y="366" font-family="Segoe UI, system-ui, sans-serif" font-size="10.5" fill="#7f1d1d">- tekshiruv har joyda qaytariladi (DRY buziladi)</text>
+  <text x="56" y="383" font-family="Segoe UI, system-ui, sans-serif" font-size="10.5" fill="#7f1d1d">- '$email' va '$name' ni adashtirish oson</text>
+
+  <!-- O'NG: Value Object -->
+  <rect x="376" y="74" width="320" height="338" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="536" y="100" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14.5" font-weight="bold" fill="#16a34a">Value Object (Email tipi)</text>
+
+  <rect x="396" y="116" width="280" height="96" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="1.3"/>
+  <text x="408" y="138" font-family="Consolas, Courier New, monospace" font-size="11.5" font-weight="bold" fill="#16a34a">final readonly class Email</text>
+  <text x="408" y="158" font-family="Consolas, Courier New, monospace" font-size="11" fill="#1e293b">__construct(string $v) {</text>
+  <text x="424" y="176" font-family="Consolas, Courier New, monospace" font-size="11" fill="#1e293b">validate($v); // BIR MARTA</text>
+  <text x="424" y="194" font-family="Consolas, Courier New, monospace" font-size="11" fill="#1e293b">$this-&gt;value = $v;</text>
+  <text x="408" y="206" font-family="Consolas, Courier New, monospace" font-size="11" fill="#1e293b">}</text>
+
+  <rect x="396" y="222" width="280" height="48" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="1.3"/>
+  <text x="408" y="244" font-family="Consolas, Courier New, monospace" font-size="11.5" fill="#1e293b">register(Email $email)</text>
+  <text x="408" y="262" font-family="Segoe UI, system-ui, sans-serif" font-size="10.5" fill="#16a34a">tip kafolatlaydi: tekshirilgan</text>
+
+  <rect x="396" y="280" width="280" height="48" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="1.3"/>
+  <text x="408" y="302" font-family="Consolas, Courier New, monospace" font-size="11.5" fill="#1e293b">sendMail(Email $email)</text>
+  <text x="408" y="320" font-family="Segoe UI, system-ui, sans-serif" font-size="10.5" fill="#16a34a">qayta tekshirish SHART EMAS</text>
+
+  <rect x="396" y="338" width="280" height="56" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.3"/>
+  <text x="536" y="358" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" font-weight="bold" fill="#15803d">Foydalari</text>
+  <text x="408" y="378" font-family="Segoe UI, system-ui, sans-serif" font-size="10.5" fill="#14532d">- validatsiya bitta joyda, takrorlanmaydi</text>
+  <text x="408" y="391" font-family="Segoe UI, system-ui, sans-serif" font-size="10.5" fill="#14532d">- noto'g'ri qiymatli Email umuman mavjud bo'lmaydi</text>
+</svg>

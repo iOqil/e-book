@@ -1,6 +1,6 @@
-# 24 — Xavfsizlik va administratsiya
+# 27 — Xavfsizlik va administratsiya
 
-[⬅️ Oldingi: 23 — EXPLAIN va optimizatsiya](./23-explain-optimizatsiya.md) · [🏠 README](./README.md) · [Keyingi: 25 — Yakuniy loyihalar ➡️](./25-yakuniy-loyihalar.md)
+[⬅️ Oldingi: 26 — EXPLAIN va optimizatsiya](./26-explain-optimizatsiya.md) · [🏠 README](./README.md) · [Keyingi: 28 — Yakuniy loyihalar ➡️](./28-yakuniy-loyihalar.md)
 
 > **Bu bobda:** bazani himoya qilishni o'rganamiz: SQL injection hujumi qanday ishlashini va prepared statement bilan undan qutulishni, har ilovaga alohida user yaratib minimal huquq berishni (CREATE USER, GRANT, REVOKE), mysqldump bilan backup olish va tiklashni, oxirida server holatini ko'rsatadigan diagnostika buyruqlarini ko'rib chiqamiz.
 
@@ -121,7 +121,7 @@ FROM information_schema.tables GROUP BY table_schema;   -- baza hajmlari (MB)
 
 `SHOW PROCESSLIST` — serverning "kim bor?" ro'yxati: har bir ulanish qaysi bazada, qancha vaqtdan beri qaysi query'ni bajarayotganini ko'rsatadi. Sayt sekinlashganda birinchi qaraladigan joy — shu. Uzun query matni `...` bilan kesilib ko'rinsa, `SHOW FULL PROCESSLIST;` to'liq ko'rsatadi. Osilib qolgan query'ni `KILL <id>` bilan to'xtatasiz — buni 15-masalada o'zingiz sinab ko'rasiz. Nozik farq: `KILL 42` butun ulanishni uzadi, `KILL QUERY 42` esa ulanishni saqlab faqat hozirgi query'ni to'xtatadi.
 
-## 24-bob masalalari
+## 27-bob masalalari
 
 1. Qog'ozda: `login = ' OR '1'='1` qanday ishlashini qadam-baqadam yozing (query qanday ko'rinishga keladi?)
 2. `'; DROP TABLE userlar; -- ` payloadini tahlil qiling: `--` SQL'da nima? (komment — qolgan qismni o'chiradi; MySQL'da `--` dan keyin bo'sh joy bo'lishi shartligini ham eslang)

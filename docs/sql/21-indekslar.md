@@ -1,6 +1,6 @@
 # 21 — Indekslar
 
-[⬅️ Oldingi: 20 — Normalizatsiya — to'g'ri schema](./20-normalizatsiya.md) · [🏠 README](./README.md) · [Keyingi: 22 — VIEW, Stored Procedure, Trigger, Event ➡️](./22-view-procedure-trigger.md)
+[⬅️ Oldingi: 20 — Normalizatsiya — to'g'ri schema](./20-normalizatsiya.md) · [🏠 README](./README.md) · [Keyingi: 22 — VIEW ➡️](./22-view.md)
 
 > **Bu bobda:** indeks nima ekanini kitob oxiridagi alfavit ko'rsatkich o'xshatishi bilan tushunamiz, 1 million qatorli jadval yasab full scan va indeksli qidiruv farqini o'z qo'limiz bilan o'lchaymiz, indeks ichidagi B-tree daraxtini, indeks ishlamay qoladigan tuzoqlarni, kompozit indeks va chap prefiks qoidasini hamda indeksning narxini o'rganamiz.
 
@@ -92,7 +92,7 @@ EXPLAIN SELECT * FROM foydalanuvchilar WHERE ism = 'User777777';
 -- type: ref  → indeks orqali (idx_ism ishladi)
 ```
 
-`EXPLAIN`ni 23-bobda chuqur o'rganamiz, hozircha `type` va `rows` ustunlariga qarash yetarli.
+`EXPLAIN`ni 26-bobda chuqur o'rganamiz, hozircha `type` va `rows` ustunlariga qarash yetarli.
 
 ## Indeks ISHLAMAYDIGAN holatlar
 

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="720" height="400">
+  <title>Procedure CALL oqimi: IN parametr ichkariga kiradi, tana bajariladi, OUT parametr tashqariga natija qaytaradi</title>
+  <defs>
+    <marker id="strelka23pc" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+    <marker id="strelka23pc-kok" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/>
+    </marker>
+    <marker id="strelka23pc-yashil" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="720" height="400" fill="#f8fafc"/>
+
+  <text x="360" y="38" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Parametr oqimi: IN ichkariga, OUT tashqariga</text>
+
+  <!-- chaqiruvchi tomon -->
+  <rect x="30" y="80" width="180" height="240" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="120" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Chaqiruvchi tomon</text>
+  <text x="120" y="150" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#2563eb">CALL janr_soni(</text>
+  <text x="120" y="172" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">'roman',</text>
+  <text x="120" y="194" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">@natija);</text>
+  <text x="120" y="262" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">'roman' — kiruvchi qiymat</text>
+  <text x="120" y="284" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">@natija — bo'sh idish</text>
+  <text x="120" y="306" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(natija shu yerga yoziladi)</text>
+
+  <!-- procedure tanasi -->
+  <rect x="490" y="80" width="200" height="240" rx="10" fill="#e2e8f0" stroke="#16a34a" stroke-width="2"/>
+  <text x="590" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Procedure tanasi</text>
+  <text x="590" y="132" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#475569">BEGIN ... END</text>
+  <text x="590" y="172" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#1e293b">SELECT COUNT(*)</text>
+  <text x="590" y="194" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#1e293b">INTO p_soni</text>
+  <text x="590" y="216" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#1e293b">FROM kitoblar</text>
+  <text x="590" y="238" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#1e293b">WHERE janr = p_janr;</text>
+  <text x="590" y="282" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#475569">p_janr = 'roman'</text>
+  <text x="590" y="302" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#475569">p_soni = 4 (hisoblandi)</text>
+
+  <!-- IN strelka: chaqiruvchidan tanaga -->
+  <line x1="212" y1="150" x2="486" y2="150" stroke="#2563eb" stroke-width="2.5" marker-end="url(#strelka23pc-kok)"/>
+  <text x="349" y="140" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">IN  p_janr</text>
+  <text x="349" y="168" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#475569">qiymat ichkariga kiradi</text>
+
+  <!-- OUT strelka: tanadan chaqiruvchiga -->
+  <line x1="488" y1="250" x2="214" y2="250" stroke="#16a34a" stroke-width="2.5" marker-end="url(#strelka23pc-yashil)"/>
+  <text x="351" y="240" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">OUT  p_soni</text>
+  <text x="351" y="268" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#475569">natija tashqariga qaytadi</text>
+
+  <!-- pastki izoh -->
+  <text x="360" y="362" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">IN — faqat o'qiladi · OUT — natija yozib qaytariladi · INOUT — ikkalasi ham</text>
+</svg>

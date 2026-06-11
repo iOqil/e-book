@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 470" width="720" height="470">
+  <title>Strict va coercive tiplash oqimi taqqoslangan: string "5" qiymati int parametrga uzatilganda strict_types=1 rejimi TypeError tashlaydi, coercive rejim esa uni jimgina 5 raqamiga aylantiradi</title>
+
+  <rect x="0" y="0" width="720" height="470" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Bir xil kod, ikki xil natija: strict vs coercive</text>
+
+  <!-- umumiy kirish -->
+  <rect x="250" y="52" width="220" height="46" rx="8" fill="#0f172a"/>
+  <text x="360" y="74" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#e2e8f0">add(int $a, int $b)</text>
+  <text x="360" y="91" text-anchor="middle" font-family="Consolas, monospace" font-size="12.5" fill="#fbbf24">add("5", 3)  // string keldi</text>
+
+  <!-- ikki yo'nalish strelkalari -->
+  <line x1="300" y1="98" x2="180" y2="128" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="420" y1="98" x2="540" y2="128" stroke="#94a3b8" stroke-width="2"/>
+
+  <!-- CHAP: COERCIVE -->
+  <rect x="24" y="130" width="320" height="280" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <rect x="24" y="130" width="320" height="34" rx="10" fill="#dc2626"/>
+  <rect x="24" y="147" width="320" height="17" fill="#dc2626"/>
+  <text x="184" y="153" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">COERCIVE (declare YO'Q)</text>
+
+  <rect x="44" y="180" width="280" height="40" rx="6" fill="#fef2f2"/>
+  <text x="184" y="205" text-anchor="middle" font-family="Consolas, monospace" font-size="12.5" fill="#7f1d1d">"5" ni int ga AYLANTIRADI</text>
+
+  <text x="184" y="246" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="22">↓</text>
+
+  <rect x="44" y="258" width="280" height="40" rx="6" fill="#fef2f2"/>
+  <text x="184" y="283" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#7f1d1d">$a = 5 (int) — jimgina</text>
+
+  <text x="184" y="324" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="22">↓</text>
+
+  <rect x="44" y="336" width="280" height="40" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="184" y="361" text-anchor="middle" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#7f1d1d">natija: 8 (xato YASHIRINDI)</text>
+
+  <text x="184" y="396" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#dc2626">"abc" kelsa — 0 ga aylanadi: xavfli!</text>
+
+  <!-- O'NG: STRICT -->
+  <rect x="376" y="130" width="320" height="280" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <rect x="376" y="130" width="320" height="34" rx="10" fill="#16a34a"/>
+  <rect x="376" y="147" width="320" height="17" fill="#16a34a"/>
+  <text x="536" y="153" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">STRICT (declare(strict_types=1))</text>
+
+  <rect x="396" y="180" width="280" height="40" rx="6" fill="#f0fdf4"/>
+  <text x="536" y="205" text-anchor="middle" font-family="Consolas, monospace" font-size="12.5" fill="#14532d">tur MOS kelmaydi: string != int</text>
+
+  <text x="536" y="246" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="22">↓</text>
+
+  <rect x="396" y="258" width="280" height="40" rx="6" fill="#f0fdf4"/>
+  <text x="536" y="283" text-anchor="middle" font-family="Consolas, monospace" font-size="12.5" fill="#14532d">AYLANTIRMAYDI — darhol to'xtaydi</text>
+
+  <text x="536" y="324" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="22">↓</text>
+
+  <rect x="396" y="336" width="280" height="40" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="536" y="361" text-anchor="middle" font-family="Consolas, monospace" font-size="12.5" font-weight="bold" fill="#14532d">TypeError tashlanadi</text>
+
+  <text x="536" y="396" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#16a34a">xato DARHOL ko'rinadi — erta tutiladi</text>
+
+  <!-- pastki xulosa -->
+  <rect x="24" y="424" width="672" height="36" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="360" y="447" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">Yagona istisno: int qiymat float parametrga o'tadi (5 → 5.0) — bu xavfsiz kengayish. Teskarisi (5.0 → int) YO'Q.</text>
+</svg>

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="720" height="440">
+  <title>Asymmetric visibility: public private(set) property uchun o'qish (get) hamma uchun ochiq, lekin yozish (set) faqat sinf ichidan ruxsat etiladi. Tashqi koddan yozishga urinish Error tashlaydi; sinf ichidagi metodlar esa ko'p marta o'zgartira oladi (readonly'dan farqi)</title>
+
+  <rect x="0" y="0" width="720" height="440" fill="#f8fafc"/>
+  <text x="360" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="19" font-weight="bold" fill="#1e293b">Asimmetrik ko'rinish: public private(set)</text>
+  <text x="360" y="54" text-anchor="middle" font-family="Consolas, monospace" font-size="12.5" fill="#475569">o'qish OCHIQ  /  yozish YOPIQ</text>
+
+  <defs>
+    <marker id="av-arg" markerWidth="11" markerHeight="11" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 Z" fill="#16a34a"/>
+    </marker>
+    <marker id="av-arr" markerWidth="11" markerHeight="11" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 Z" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+  <!-- Sinf qutisi -->
+  <rect x="250" y="100" width="220" height="220" rx="14" fill="#ffffff" stroke="#7c3aed" stroke-width="2.5"/>
+  <rect x="250" y="100" width="220" height="34" rx="14" fill="#7c3aed"/>
+  <rect x="250" y="118" width="220" height="16" fill="#7c3aed"/>
+  <text x="360" y="123" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">class Hisob</text>
+
+  <!-- property -->
+  <rect x="272" y="152" width="176" height="58" rx="9" fill="#fff7ed" stroke="#f59e0b" stroke-width="2"/>
+  <text x="360" y="173" text-anchor="middle" font-family="Consolas, monospace" font-size="11.5" fill="#1e293b">public private(set)</text>
+  <text x="360" y="190" text-anchor="middle" font-family="Consolas, monospace" font-size="12" font-weight="bold" fill="#b45309">int $balans</text>
+  <text x="360" y="204" text-anchor="middle" font-family="Consolas, monospace" font-size="10.5" fill="#16a34a">= 100</text>
+
+  <!-- ichki metod -->
+  <rect x="272" y="232" width="176" height="68" rx="9" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="360" y="252" text-anchor="middle" font-family="Consolas, monospace" font-size="11" fill="#15803d">depozit($n) {</text>
+  <text x="360" y="270" text-anchor="middle" font-family="Consolas, monospace" font-size="11" fill="#1e293b">$this-&gt;balans += $n;</text>
+  <text x="360" y="287" text-anchor="middle" font-family="Consolas, monospace" font-size="11" fill="#15803d">}  // OK, ko'p marta</text>
+
+  <!-- O'qish (tashqi, ochiq) -->
+  <rect x="500" y="120" width="190" height="84" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="595" y="143" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="13" font-weight="bold" fill="#15803d">O'QISH — ochiq</text>
+  <text x="515" y="166" font-family="Consolas, monospace" font-size="11" fill="#1e293b">echo $h-&gt;balans;</text>
+  <text x="515" y="186" font-family="Segoe UI, sans-serif" font-size="10.5" fill="#475569">tashqaridan ko'rinadi</text>
+  <line x1="498" y1="180" x2="450" y2="180" stroke="#16a34a" stroke-width="2.5" marker-end="url(#av-arg)"/>
+  <text x="475" y="172" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="9" fill="#16a34a">get</text>
+
+  <!-- Yozish (tashqi, yopiq) -->
+  <rect x="500" y="226" width="190" height="94" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="595" y="249" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="13" font-weight="bold" fill="#b91c1c">YOZISH — yopiq</text>
+  <text x="515" y="272" font-family="Consolas, monospace" font-size="11" fill="#1e293b">$h-&gt;balans = 999;</text>
+  <text x="515" y="291" font-family="Segoe UI, sans-serif" font-size="10.5" fill="#b91c1c">// &#10060; Error: cannot</text>
+  <text x="515" y="307" font-family="Segoe UI, sans-serif" font-size="10.5" fill="#b91c1c">modify private(set)</text>
+  <line x1="498" y1="262" x2="450" y2="240" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="5 4" marker-end="url(#av-arr)"/>
+  <text x="470" y="240" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="13" fill="#dc2626">&#10060;</text>
+
+  <!-- readonly farqi panel -->
+  <rect x="30" y="350" width="660" height="70" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="48" y="372" font-family="Segoe UI, sans-serif" font-size="12.5" font-weight="bold" fill="#1e293b">readonly'dan farqi:</text>
+  <text x="48" y="393" font-family="Segoe UI, sans-serif" font-size="11" fill="#475569"><tspan font-weight="bold" fill="#dc2626">readonly</tspan> — faqat BIR marta yoziladi (hatto sinf ichidan ham ikkinchi marta = Error).</text>
+  <text x="48" y="411" font-family="Segoe UI, sans-serif" font-size="11" fill="#475569"><tspan font-weight="bold" fill="#16a34a">private(set)</tspan> — KO'P marta yoziladi, lekin FAQAT sinf ichidan. Tashqaridan har doim yopiq.</text>
+</svg>

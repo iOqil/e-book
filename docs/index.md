@@ -15,10 +15,10 @@ hide:
 [GitHub](https://github.com/iOqil/e-book){ .md-button }
 
 <div class="hero-stats">
-  <div class="stat"><b>12</b><span>kitob</span></div>
-  <div class="stat"><b>600</b><span>diagramma</span></div>
-  <div class="stat"><b>290+</b><span>bob</span></div>
-  <div class="stat"><b>2800+</b><span>masala</span></div>
+  <div class="stat"><b>13</b><span>kitob</span></div>
+  <div class="stat"><b>632</b><span>diagramma</span></div>
+  <div class="stat"><b>300+</b><span>bob</span></div>
+  <div class="stat"><b>2900+</b><span>masala</span></div>
 </div>
 
 </section>
@@ -69,7 +69,7 @@ hide:
 
     ---
 
-    Noldan amaliy: SELECT, JOIN, GROUP BY, indeks, tranzaksiya. 25 bob · 78 diagramma · 500 masala.
+    Noldan amaliy: SELECT, JOIN, GROUP BY, indeks, tranzaksiya, VIEW, procedure, trigger, cursor. 28 bob · 83 diagramma · 560 masala.
 
     [Boshlash →](sql/README.md)
 
@@ -120,5 +120,13 @@ hide:
     PHP'ning eng mashhur frameworki (Laravel 13): routing, Eloquent ORM, Blade, auth, API/Sanctum, queue, testing, deploy. 24 bob · 74 diagramma · 480 mashq.
 
     [Boshlash →](laravel/README.md)
+
+-   🔐 **13. PHP Expert**
+
+    ---
+
+    Junior PHP'dan keyingi qadam — ishlab chiqarish darajasi: ekspert REST API (RFC 7807), cURL/Guzzle, RBAC, JWT, zamonaviy PHP 8.4 tip tizimi (property hooks, readonly VO, Reflection/FFI, PSR). Kod real PHP 8.4 da ishga tushirib tekshirilgan. 10 bob · 20 diagramma (kengaymoqda).
+
+    [Boshlash →](php-expert/README.md)
 
 </div>

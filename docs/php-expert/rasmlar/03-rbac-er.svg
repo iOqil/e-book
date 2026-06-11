@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 470" width="720" height="470">
+  <title>RBAC jadval munosabatlari: users va roles user_role bog'lovchisi orqali, roles va permissions role_permission bog'lovchisi orqali ko'p-ko'pga bog'lanadi; foydalanuvchi rollar orqali ruxsatlarni meros qilib oladi</title>
+
+  <rect x="0" y="0" width="720" height="470" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="19" font-weight="bold" fill="#1e293b">RBAC sxemasi: user -> role -> permission</text>
+  <text x="360" y="55" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#475569">ikkita ko'p-ko'pga aloqa, ikkita bog'lovchi jadval</text>
+
+  <defs>
+    <marker id="rel" markerWidth="11" markerHeight="11" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- USERS jadvali -->
+  <rect x="30" y="92" width="158" height="118" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <rect x="30" y="92" width="158" height="30" rx="10" fill="#2563eb"/>
+  <rect x="30" y="108" width="158" height="14" fill="#2563eb"/>
+  <text x="109" y="113" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="13.5" font-weight="bold" fill="#ffffff">users</text>
+  <text x="44" y="143" font-family="Consolas, Courier New, monospace" font-size="11.5" fill="#1e293b">id  (PK)</text>
+  <text x="44" y="163" font-family="Consolas, Courier New, monospace" font-size="11.5" fill="#475569">name</text>
+  <text x="44" y="183" font-family="Consolas, Courier New, monospace" font-size="11.5" fill="#475569">email</text>
+  <text x="44" y="201" font-family="Consolas, Courier New, monospace" font-size="11.5" fill="#475569">password_hash</text>
+
+  <!-- ROLES jadvali (markazda) -->
+  <rect x="281" y="92" width="158" height="118" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <rect x="281" y="92" width="158" height="30" rx="10" fill="#16a34a"/>
+  <rect x="281" y="108" width="158" height="14" fill="#16a34a"/>
+  <text x="360" y="113" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="13.5" font-weight="bold" fill="#ffffff">roles</text>
+  <text x="295" y="143" font-family="Consolas, Courier New, monospace" font-size="11.5" fill="#1e293b">id  (PK)</text>
+  <text x="295" y="163" font-family="Consolas, Courier New, monospace" font-size="11.5" fill="#475569">slug</text>
+  <text x="295" y="183" font-family="Consolas, Courier New, monospace" font-size="11.5" fill="#475569">name</text>
+  <text x="295" y="201" font-family="Consolas, Courier New, monospace" font-size="11.5" fill="#475569">level</text>
+
+  <!-- PERMISSIONS jadvali (o'ngda) -->
+  <rect x="532" y="92" width="158" height="118" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <rect x="532" y="92" width="158" height="30" rx="10" fill="#7c3aed"/>
+  <rect x="532" y="108" width="158" height="14" fill="#7c3aed"/>
+  <text x="611" y="113" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="13.5" font-weight="bold" fill="#ffffff">permissions</text>
+  <text x="546" y="143" font-family="Consolas, Courier New, monospace" font-size="11.5" fill="#1e293b">id  (PK)</text>
+  <text x="546" y="163" font-family="Consolas, Courier New, monospace" font-size="11.5" fill="#475569">slug</text>
+  <text x="546" y="183" font-family="Consolas, Courier New, monospace" font-size="11.5" fill="#475569">name</text>
+  <text x="546" y="207" font-family="Segoe UI, system-ui, sans-serif" font-size="10.5" fill="#7c3aed">masalan 'maqola.tahrir'</text>
+
+  <!-- user_role bog'lovchi (users va roles orasida, pastda) -->
+  <rect x="100" y="290" width="218" height="92" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="209" y="313" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="13" font-weight="bold" fill="#b45309">user_role</text>
+  <line x1="114" y1="324" x2="304" y2="324" stroke="#f59e0b" stroke-width="1"/>
+  <text x="114" y="344" font-family="Consolas, Courier New, monospace" font-size="11.5" fill="#1e293b">user_id  (FK)</text>
+  <text x="114" y="363" font-family="Consolas, Courier New, monospace" font-size="11.5" fill="#1e293b">role_id  (FK)</text>
+  <text x="209" y="377" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="10" fill="#b45309">PK (user_id, role_id)</text>
+
+  <!-- role_permission bog'lovchi (roles va permissions orasida, pastda) -->
+  <rect x="402" y="290" width="218" height="92" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="511" y="313" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="13" font-weight="bold" fill="#b45309">role_permission</text>
+  <line x1="416" y1="324" x2="606" y2="324" stroke="#f59e0b" stroke-width="1"/>
+  <text x="416" y="344" font-family="Consolas, Courier New, monospace" font-size="11.5" fill="#1e293b">role_id        (FK)</text>
+  <text x="416" y="363" font-family="Consolas, Courier New, monospace" font-size="11.5" fill="#1e293b">permission_id  (FK)</text>
+  <text x="511" y="377" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="10" fill="#b45309">PK (role_id, permission_id)</text>
+
+  <!-- Aloqa chiziqlari: users -> user_role -> roles -->
+  <line x1="109" y1="210" x2="160" y2="288" stroke="#475569" stroke-width="1.8" marker-end="url(#rel)"/>
+  <text x="92" y="258" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#475569">1</text>
+  <text x="158" y="270" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#475569">N</text>
+
+  <line x1="260" y1="288" x2="320" y2="210" stroke="#475569" stroke-width="1.8" marker-end="url(#rel)"/>
+  <text x="262" y="270" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#475569">N</text>
+  <text x="326" y="258" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#475569">1</text>
+
+  <!-- Aloqa chiziqlari: roles -> role_permission -> permissions -->
+  <line x1="400" y1="210" x2="462" y2="288" stroke="#475569" stroke-width="1.8" marker-end="url(#rel)"/>
+  <text x="392" y="258" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#475569">1</text>
+  <text x="460" y="270" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#475569">N</text>
+
+  <line x1="562" y1="288" x2="611" y2="210" stroke="#475569" stroke-width="1.8" marker-end="url(#rel)"/>
+  <text x="562" y="270" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#475569">N</text>
+  <text x="617" y="258" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#475569">1</text>
+
+  <!-- pastki xulosa -->
+  <rect x="30" y="406" width="660" height="48" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="360" y="427" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" font-weight="bold" fill="#1e293b">Foydalanuvchi -> rollari -> ruxsatlari</text>
+  <text x="360" y="446" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#475569">kod doim ruxsatga qaraydi: can('maqola.tahrir'); yangi qoida = bazaga bitta qator</text>
+</svg>

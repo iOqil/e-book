@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 470" width="720" height="470">
+  <title>PSR interoperability: turli vendor paketlari umumiy interfeyslar (PSR-3 LoggerInterface, PSR-7, PSR-11) orqali bir-biriga ulanadi, vendor lock-in bo'lmaydi</title>
+
+  <rect x="0" y="0" width="720" height="470" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">PSR — PHP ekotizimining "umumiy tili"</text>
+  <text x="360" y="56" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Interoperability: kontraktga dasturlaysiz, konkret paketga emas</text>
+
+  <!-- Markaziy interfeys (kontrakt) -->
+  <rect x="270" y="190" width="180" height="90" rx="12" fill="#7c3aed" />
+  <text x="360" y="222" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">PSR interfeys</text>
+  <text x="360" y="244" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="12.5" fill="#ede9fe">LoggerInterface</text>
+  <text x="360" y="263" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#ede9fe">(PHP-FIG kontrakti)</text>
+
+  <!-- Chap: sizning kodingiz / framework -->
+  <rect x="40" y="200" width="160" height="70" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="120" y="228" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e3a8a">Sizning kodingiz</text>
+  <text x="120" y="250" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#475569">$logger->info(...)</text>
+
+  <!-- strelka chapdan markazga -->
+  <line x1="200" y1="235" x2="268" y2="235" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="234" y="225" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#2563eb">ulanadi</text>
+
+  <!-- O'ng tarafda almashtiriladigan vendor implementatsiyalari -->
+  <rect x="520" y="100" width="170" height="56" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="605" y="124" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#14532d">Monolog</text>
+  <text x="605" y="143" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#475569">faylga / Slack ga yozadi</text>
+
+  <rect x="520" y="172" width="170" height="56" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="605" y="196" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#14532d">Sizning logger</text>
+  <text x="605" y="215" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#475569">echo qiladi (test)</text>
+
+  <rect x="520" y="244" width="170" height="56" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="605" y="268" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#14532d">NullLogger</text>
+  <text x="605" y="287" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#475569">hech narsa qilmaydi</text>
+
+  <!-- strelkalar markazdan o'ngga (implementsiya) -->
+  <line x1="452" y1="225" x2="518" y2="135" stroke="#16a34a" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arrg)"/>
+  <line x1="452" y1="235" x2="518" y2="200" stroke="#16a34a" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arrg)"/>
+  <line x1="452" y1="250" x2="518" y2="265" stroke="#16a34a" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arrg)"/>
+  <text x="487" y="318" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#16a34a">implements (almashtiriladi)</text>
+
+  <!-- pastki tushuntirish -->
+  <rect x="40" y="350" width="640" height="98" rx="10" fill="#eef2ff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="60" y="378" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#1e293b">Foyda: vendor lock-in yo'q</text>
+  <text x="60" y="402" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#334155">Kodingiz faqat interfeysga (kontrakt) bog'lanadi. Konkret paketni — Monolog ni boshqasiga,</text>
+  <text x="60" y="422" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#334155">testda NullLogger ga — bitta qatorni o'zgartirib almashtirasiz. Kodga TEGMAYSIZ.</text>
+  <text x="60" y="440" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#dc2626">Bu — PHP-FIG ning butun maqsadi: turli kutubxonalar bir tilda gaplashadi.</text>
+
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrg" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+</svg>

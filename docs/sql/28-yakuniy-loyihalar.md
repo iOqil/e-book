@@ -1,8 +1,8 @@
-# 25 — Yakuniy loyihalar
+# 28 — Yakuniy loyihalar
 
-[⬅️ Oldingi: 24 — Xavfsizlik va administratsiya](./24-xavfsizlik-admin.md) · [🏠 README](./README.md)
+[⬅️ Oldingi: 27 — Xavfsizlik va administratsiya](./27-xavfsizlik-admin.md) · [🏠 README](./README.md)
 
-> **Bu bobda:** kitob davomida o'rganganlarimizning hammasini jamlab, 3 ta to'liq tizimni noldan quramiz — kinoteatr, onlayn kurslar platformasi va yetkazib berish xizmati. Har birida yo'l bir xil: talablar → schema → CREATE → test ma'lumot → query'lar → hisobotlar. Oxirida kitobdan keyingi yo'l xaritasi va 25-bob masalalari — intervyuga tayyorgarlik uchun 20 ta klassik savol bor.
+> **Bu bobda:** kitob davomida o'rganganlarimizning hammasini jamlab, 3 ta to'liq tizimni noldan quramiz — kinoteatr, onlayn kurslar platformasi va yetkazib berish xizmati. Har birida yo'l bir xil: talablar → schema → CREATE → test ma'lumot → query'lar → hisobotlar. Oxirida kitobdan keyingi yo'l xaritasi va 28-bob masalalari — intervyuga tayyorgarlik uchun 20 ta klassik savol bor.
 
 ---
 
@@ -19,7 +19,7 @@ Uchala loyihada ham ish tartibi bir xil. Real ishda ham xuddi shunday:
 3. **CREATE.** Jadvallarni FK, CHECK, UNIQUE bilan yarating (4 va 18-boblar). Tartib muhim: avval "ota" jadvallar, keyin ularga FK bilan bog'lanadigan "bola"lar.
 4. **Test ma'lumot.** INSERT bilan boy va xilma-xil data kiriting (6-bob). NULL'lar, bekor qilingan buyurtmalar, sotuvsiz filmlar ham bo'lsin — "ideal" data hech narsani sinamaydi.
 5. **Query'lar.** Topshiriqlardagi savollarga javob yozing (7–16-boblar). GROUP BY'da SELECT'ga faqat guruhlangan ustunlar va aggregate'lar yozilishini unutmang — MySQL 8 buni qattiq tekshiradi (ONLY_FULL_GROUP_BY, 11-bob).
-6. **Hisobot va jilo.** VIEW, PROCEDURE, TRIGGER, indeks va EXPLAIN (21–23-boblar) — loyihani "mahsulot" darajasiga ko'taring.
+6. **Hisobot va jilo.** VIEW, PROCEDURE, TRIGGER, indeks va EXPLAIN (21–26-boblar) — loyihani "mahsulot" darajasiga ko'taring.
 
 📌 Schema tavsiflarida ustun nomlari apostrofsiz yozilgan (`o'rin` emas, `orin_raqami`) — SQL identifikatorlarida apostrof ishlatilmaydi, jadval yaratganingizda siz ham shunday yozing.
 
@@ -46,7 +46,7 @@ Tanish mavzu, 4 jadval — qizishish uchun ideal. Asosiy "tuz" — bitta o'rin i
 9. `v_afisha` view yarating
 10. Har janr bo'yicha o'rtacha chipta narxi va jami daromad
 
-💡 Maslahatlar: 4-topshiriq — LEFT JOIN + COUNT (12-bob); 5-da natijani ROUND bilan chiroyli qiling; 7 — anti-join qolipi (12-bob); 8-procedure ichida IF + EXISTS tekshiruvi bo'ladi (22-bob).
+💡 Maslahatlar: 4-topshiriq — LEFT JOIN + COUNT (12-bob); 5-da natijani ROUND bilan chiroyli qiling; 7 — anti-join qolipi (12-bob); 8-procedure ichida IF + EXISTS tekshiruvi bo'ladi (23-bob).
 
 ## LOYIHA B: Onlayn kurslar platformasi (o'rta)
 
@@ -90,7 +90,7 @@ Endi 5 jadval va eng muhim yangi tushuncha — talabaning **progressi**: ikki xi
 11. EXPLAIN audit: 5 ta asosiy query'ngizni tekshirib, kerakli indekslarni isbot bilan qo'ying
 12. To'liq backup + tiklash sinovi
 
-💡 Maslahatlar: `holat` ustuni uchun ENUM mos keladi (5-bob); 3-topshiriqda START TRANSACTION + COMMIT/ROLLBACK (19-bob); 9-dagi 3 kunlik o'rtacha — window frame: `ROWS BETWEEN 2 PRECEDING AND CURRENT ROW` (16-bob); 12-da mysqldump (24-bob). `yetkazilgan_vaqt` faqat 'yetkazildi' holatida to'ladi — qolganlarida NULL bo'lishi tabiiy.
+💡 Maslahatlar: `holat` ustuni uchun ENUM mos keladi (5-bob); 3-topshiriqda START TRANSACTION + COMMIT/ROLLBACK (19-bob); 9-dagi 3 kunlik o'rtacha — window frame: `ROWS BETWEEN 2 PRECEDING AND CURRENT ROW` (16-bob); 12-da mysqldump (27-bob). `yetkazilgan_vaqt` faqat 'yetkazildi' holatida to'ladi — qolganlarida NULL bo'lishi tabiiy.
 
 ## Loyihalardan keyin — keyingi qadamlar
 
@@ -104,7 +104,7 @@ Kitob tugadi, lekin yo'l endi boshlanadi. Mana xarita:
 4. **Kengayish:** PostgreSQL bilan tanishing — sintaksisning 90 foizi sizga tanish bo'ladi; ORM nima ekanini ko'ring (Django ORM, Prisma, Eloquent) — lekin ORM ostida baribir SQL yotganini unutmang
 5. **Chuqurlashish:** indekslarning B-Tree tuzilishi, isolation levels, replikatsiya — bular keyingi bosqich
 
-## 25-bob masalalari (intervyuga tayyorgarlik — 20 ta klassik savol)
+## 28-bob masalalari (intervyuga tayyorgarlik — 20 ta klassik savol)
 
 Bu bobning 20 masalasi — intervyu formatida. Har savolga avval o'zingiz **yozma** javob bering (og'zaki "bilaman" hisobga o'tmaydi!), keyin quyidagi jadval orqali tegishli bobdan tekshiring:
 
@@ -148,7 +148,7 @@ Hammasiga bu kitobda javob bor — bilmaganingizga duch kelsangiz, tegishli bobg
 
 ## So'nggi so'z
 
-Siz 25 bob va 500 ta masalani bosib o'tdingiz. Endi siz:
+Siz 28 bob va 560 ta masalani bosib o'tdingiz. Endi siz:
 
 - Noldan baza loyihalay olasiz
 - Istalgan murakkablikdagi query yoza olasiz

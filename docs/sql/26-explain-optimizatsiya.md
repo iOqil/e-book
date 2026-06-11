@@ -1,6 +1,6 @@
-# 23 — EXPLAIN va optimizatsiya
+# 26 — EXPLAIN va optimizatsiya
 
-[⬅️ Oldingi: 22 — VIEW, Stored Procedure, Trigger, Event](./22-view-procedure-trigger.md) · [🏠 README](./README.md) · [Keyingi: 24 — Xavfsizlik va administratsiya ➡️](./24-xavfsizlik-admin.md)
+[⬅️ Oldingi: 25 — Cursor va qatorma-qator ishlov](./25-cursor.md) · [🏠 README](./README.md) · [Keyingi: 27 — Xavfsizlik va administratsiya ➡️](./27-xavfsizlik-admin.md)
 
 > **Bu bobda:** sekin query'ning sababini taxmin bilan emas, dalil bilan topishni o'rganamiz: EXPLAIN rejasidagi muhim ustunlarni (type, key, rows, Extra) o'qishni, type shkalasini (const'dan ALL'gacha), EXPLAIN ANALYZE bilan real vaqtlarni ko'rishni, optimizatsiyaning 5 qadamli siklini va eng ko'p uchraydigan 4 ta "kasallik"ni (ustunga funksiya, SELECT *, katta OFFSET, indekssiz JOIN) davolari bilan ko'rib chiqamiz.
 
@@ -141,7 +141,7 @@ SELECT * FROM foydalanuvchilar WHERE id > 900000 ORDER BY id LIMIT 10;  -- darro
 
 **KASALLIK 4: indekssiz JOIN.** JOIN'da MySQL birinchi jadvalning HAR qatori uchun ikkinchisidan mosini qidiradi. Ulanish ustuni indekssiz bo'lsa, eski MySQL'larda har bir qidiruv full scan'ga aylanardi: ming × million = falokat. MySQL 8 esa bunday holatda **hash join** ishlatib falokatni ancha yumshatadi, lekin indeksli ulanish baribir odatda tezroq va xotirani tejaydi. DAVO: `ON`dagi ustunlar (ayniqsa FK) indeksli bo'lsin. FOREIGN KEY constraint qo'ygan bo'lsangiz, indeks avtomatik bor (18-bob); qo'ymagan bo'lsangiz — o'zingiz qo'ying.
 
-## 23-bob masalalari
+## 26-bob masalalari
 
 > `katta` bazasida (1 mln qator) ishlang — kichik jadvalda EXPLAIN doim "hammasi yaxshi" deyveradi, chunki 50 qatorga indeksning o'zi shart emas. Boshlashdan oldin `SHOW INDEX FROM foydalanuvchilar;` bilan **hamma** indekslarni ko'rib chiqing: 21-bobdagi `idx_ism` va bob matnida yaratgan `idx_yosh` turgan bo'lsin; qolgan "meros" indekslarni esa o'chirib tashlang — xususan 21-bob matnidagi `idx_shahar_yosh` kompozitini: `DROP INDEX idx_shahar_yosh ON foydalanuvchilar;`. U turaversa, 10/13/15/16-masalalar natijasi "oldindan berilgan" bo'lib chiqadi va tajribalardan hech narsa o'rganmaysiz.
 

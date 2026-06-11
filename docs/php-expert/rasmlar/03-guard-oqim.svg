@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 500" width="720" height="500">
+  <title>So'rov -> guard -> ruxsat qarori oqimi: kelgan so'rov avval autentifikatsiya tekshiruvidan o'tadi (yo'q bo'lsa 401), keyin ruxsat tekshiruvidan (yo'q bo'lsa 403), keyin egalik tekshiruvidan (begona resurs bo'lsa 403); hammasi o'tsa amal bajariladi</title>
+
+  <rect x="0" y="0" width="720" height="500" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="19" font-weight="bold" fill="#1e293b">So'rov -> guard -> ruxsat qarori oqimi</text>
+  <text x="360" y="55" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#475569">deny by default: har bir tekshiruv "yo'q" bo'lsa, darrov to'xtatadi</text>
+
+  <defs>
+    <marker id="gflow" markerWidth="11" markerHeight="11" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 Z" fill="#16a34a"/>
+    </marker>
+    <marker id="gstop" markerWidth="11" markerHeight="11" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 Z" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+  <!-- SO'ROV qutisi -->
+  <rect x="40" y="90" width="150" height="64" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="115" y="118" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#2563eb">SO'ROV</text>
+  <text x="115" y="138" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="11" fill="#475569">POST /maqola/11</text>
+
+  <!-- 1. Authn tekshiruvi -->
+  <rect x="245" y="84" width="210" height="76" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="350" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">1. Autentifikatsiya</text>
+  <text x="350" y="127" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#475569">currentUser() != null?</text>
+  <text x="350" y="147" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="11" fill="#475569">"sen kimsan?"</text>
+
+  <!-- so'rov -> authn -->
+  <line x1="190" y1="122" x2="243" y2="122" stroke="#16a34a" stroke-width="2.2" marker-end="url(#gflow)"/>
+
+  <!-- 2. Authz (ruxsat) tekshiruvi -->
+  <rect x="245" y="206" width="210" height="76" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="350" y="230" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">2. Ruxsat (authz)</text>
+  <text x="350" y="249" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="11" fill="#475569">can('maqola.tahrir')?</text>
+  <text x="350" y="269" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#475569">"umuman qila olasanmi?"</text>
+
+  <!-- authn -> authz (ha) -->
+  <line x1="350" y1="160" x2="350" y2="204" stroke="#16a34a" stroke-width="2.2" marker-end="url(#gflow)"/>
+  <text x="364" y="186" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" font-weight="bold" fill="#16a34a">ha</text>
+
+  <!-- 3. Egalik tekshiruvi -->
+  <rect x="245" y="328" width="210" height="84" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="350" y="352" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">3. Egalik (ownership)</text>
+  <text x="350" y="371" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="11" fill="#475569">can('*') || egasimi?</text>
+  <text x="350" y="391" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#475569">"AYNAN bu resurs senikimi?"</text>
+  <text x="350" y="406" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="10" fill="#dc2626">IDOR ni shu bosqich bloklaydi</text>
+
+  <!-- authz -> egalik (ha) -->
+  <line x1="350" y1="282" x2="350" y2="326" stroke="#16a34a" stroke-width="2.2" marker-end="url(#gflow)"/>
+  <text x="364" y="308" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" font-weight="bold" fill="#16a34a">ha</text>
+
+  <!-- AMAL (muvaffaqiyat) -->
+  <rect x="245" y="448" width="210" height="42" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="350" y="474" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">AMAL BAJARILADI (200/201)</text>
+
+  <!-- egalik -> amal (ha) -->
+  <line x1="350" y1="412" x2="350" y2="446" stroke="#16a34a" stroke-width="2.2" marker-end="url(#gflow)"/>
+  <text x="364" y="436" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" font-weight="bold" fill="#16a34a">ha</text>
+
+  <!-- 401 chiqishi -->
+  <rect x="520" y="86" width="160" height="72" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="600" y="112" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">401</text>
+  <text x="600" y="131" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#1e293b">Unauthorized</text>
+  <text x="600" y="148" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="10.5" fill="#475569">"seni tanimayman"</text>
+  <line x1="455" y1="110" x2="518" y2="110" stroke="#dc2626" stroke-width="2.2" marker-end="url(#gstop)"/>
+  <text x="486" y="102" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" font-weight="bold" fill="#dc2626">yo'q</text>
+
+  <!-- 403 (ruxsat yo'q) chiqishi -->
+  <rect x="520" y="208" width="160" height="72" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="600" y="234" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">403</text>
+  <text x="600" y="253" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#1e293b">Forbidden</text>
+  <text x="600" y="270" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="10.5" fill="#475569">"huquqing yo'q"</text>
+  <line x1="455" y1="244" x2="518" y2="244" stroke="#dc2626" stroke-width="2.2" marker-end="url(#gstop)"/>
+  <text x="486" y="236" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" font-weight="bold" fill="#dc2626">yo'q</text>
+
+  <!-- 403 (begona resurs) chiqishi -->
+  <rect x="520" y="334" width="160" height="72" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="600" y="360" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">403</text>
+  <text x="600" y="379" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#1e293b">Forbidden</text>
+  <text x="600" y="396" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="10.5" fill="#475569">"bu resurs sizniki emas"</text>
+  <line x1="455" y1="370" x2="518" y2="370" stroke="#dc2626" stroke-width="2.2" marker-end="url(#gstop)"/>
+  <text x="486" y="362" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" font-weight="bold" fill="#dc2626">yo'q</text>
+</svg>

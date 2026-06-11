@@ -1,6 +1,6 @@
 # SQL va MySQL — Noldan boshlovchilar uchun amaliy kitob
 
-Bu kitob **hech qachon dasturlash qilmagan** odam ham tushunadigan tilda yozilgan. Har bir bobda: sodda nazariya → tayyor misollar → **20 ta masala** (o'zingiz yechasiz). Jami 25 bob, 500 masala.
+Bu kitob **hech qachon dasturlash qilmagan** odam ham tushunadigan tilda yozilgan. Har bir bobda: sodda nazariya → tayyor misollar → **20 ta masala** (o'zingiz yechasiz). Jami 28 bob, 560 masala.
 
 > 🎨 Har bob **SVG diagrammalar** bilan boyitilgan — JOIN, GROUP BY, indeks, tranzaksiya, normalizatsiya kabi tushunchalar ko'z bilan ko'rib o'rganiladi.
 
@@ -70,10 +70,13 @@ Bu kitob **hech qachon dasturlash qilmagan** odam ham tushunadigan tilda yozilga
 | # | Bob | Nima o'rganasiz |
 |---|---|---|
 | 21 | [Indekslar](./21-indekslar.md) | Indeksni kitob oxiridagi alfavit ko'rsatkich o'xshatishi bilan tushunamiz: 1 million qatorli jadvalda full scan va indeksli qidiruv farqini o'z qo'limiz bilan o'lchaymiz, B-tree daraxti, indeks ishlamaydigan tuzoqlar, kompozit indeks (chap prefiks qoidasi) va indeksning narxini o'rganamiz. |
-| 22 | [VIEW, Stored Procedure, Trigger, Event](./22-view-procedure-trigger.md) | Takrorlanadigan query'larni VIEW qilib nomlab qo'yishni, parametr qabul qiladigan stored procedure yozish va CALL bilan chaqirishni, jadvaldagi o'zgarishlarga avtomatik javob beradigan trigger hamda jadval bo'yicha o'z-o'zidan ishlaydigan EVENT'larni o'rganamiz. |
-| 23 | [EXPLAIN va optimizatsiya](./23-explain-optimizatsiya.md) | Sekin query'ning sababini EXPLAIN bilan ochishni o'rganamiz: type/rows/key ustunlarini o'qish, const'dan ALL'gacha shkala, va to'liq optimizatsiya sikli — sekin query → EXPLAIN → indeks → qayta o'lchash. |
-| 24 | [Xavfsizlik va administratsiya](./24-xavfsizlik-admin.md) | Har ilovaga alohida foydalanuvchi yaratish va GRANT bilan minimal ruxsat berishni, SQL injection hujumi qanday ishlashini va prepared statement bilan himoyalanishni, mysqldump bilan backup/restore qilishni o'rganamiz. |
-| 25 | [Yakuniy loyihalar](./25-yakuniy-loyihalar.md) | O'rganganlarimizni jamlab 3 ta to'liq tizimni noldan quramiz: talablar → schema → CREATE → ma'lumotlar → hisobot query'lari. Oxirida kitobdan keyingi yo'l xaritasi: PostgreSQL, ORM va backend tomon. |
+| 22 | [VIEW](./22-view.md) | Takrorlanadigan SELECT'ni bazada nom berib saqlaydigan VIEW'ni chuqur o'rganamiz: CREATE va CREATE OR REPLACE VIEW, ustunlarni qayta nomlash, view'ning ichki mexanikasi (ma'lumot saqlamasligi va nega tezlik bermasligi), yangilanadigan va faqat-o'qish view'lar, WITH CHECK OPTION, ALGORITHM turlari, view'ni xavfsizlik qatlami sifatida ishlatish va MySQL'da materialized view'ni jadval + EVENT bilan simulyatsiya qilish. |
+| 23 | [Stored Procedure va Function](./23-procedure-function.md) | Bazaning ichida yashaydigan kod — stored PROCEDURE va FUNCTION'ni o'rganamiz: DELIMITER, IN/OUT/INOUT parametrlar, DECLARE bilan lokal o'zgaruvchi, boshqaruv oqimi (IF/CASE/WHILE/REPEAT/LOOP), xatolarni DECLARE ... HANDLER bilan ushlash va SIGNAL/RESIGNAL bilan o'z xatongni "otish", CREATE FUNCTION (RETURNS, DETERMINISTIC) hamda "biznes-mantiq bazadami yoki ilovadami?" munozarasi. |
+| 24 | [Trigger va Event](./24-trigger-event.md) | Bazaning ikkita "avtomat" mexanizmi: jadval ustiga qo'yilgan soqchi — TRIGGER (BEFORE/AFTER × INSERT/UPDATE/DELETE 6 turi, OLD/NEW psevdo-jadvallari, FOLLOWS/PRECEDES tartibi, audit/tarix naqshi va cheklovlari) hamda bazaning budilnigi — EVENT (event_scheduler, CREATE EVENT, ON SCHEDULE, ON COMPLETION PRESERVE) bilan eski log tozalash va arxivlash kabi vazifalarni o'rganamiz. |
+| 25 | [Cursor va qatorma-qator ishlov](./25-cursor.md) | Stored program ichida natija to'plamini qatorma-qator aylanadigan cursor (DECLARE/OPEN/FETCH/CLOSE va NOT FOUND handler) sintaksisini, RBAR antipatternini va deyarli har doim tezroq bo'lgan to'plam-asosli (set-based) muqobilni o'rganamiz. Stored procedure (23-bob) ustiga quriladi — cursor faqat procedure ichida yashaydi. |
+| 26 | [EXPLAIN va optimizatsiya](./26-explain-optimizatsiya.md) | Sekin query'ning sababini EXPLAIN bilan ochishni o'rganamiz: type/rows/key ustunlarini o'qish, const'dan ALL'gacha shkala, va to'liq optimizatsiya sikli — sekin query → EXPLAIN → indeks → qayta o'lchash. |
+| 27 | [Xavfsizlik va administratsiya](./27-xavfsizlik-admin.md) | Har ilovaga alohida foydalanuvchi yaratish va GRANT bilan minimal ruxsat berishni, SQL injection hujumi qanday ishlashini va prepared statement bilan himoyalanishni, mysqldump bilan backup/restore qilishni o'rganamiz. |
+| 28 | [Yakuniy loyihalar](./28-yakuniy-loyihalar.md) | O'rganganlarimizni jamlab 3 ta to'liq tizimni noldan quramiz: talablar → schema → CREATE → ma'lumotlar → hisobot query'lari. Oxirida kitobdan keyingi yo'l xaritasi: PostgreSQL, ORM va backend tomon. |
 
 ---
 

@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" width="720" height="480">
+  <title>RFC 7807 Problem Details anatomiyasi: application/problem+json javobining type, title, status, detail va errors maydonlari va ularning ma'nosi</title>
+
+  <rect x="0" y="0" width="720" height="480" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="19" font-weight="bold" fill="#1e293b">RFC 7807 — Problem Details anatomiyasi</text>
+  <text x="360" y="56" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="12.5" fill="#475569">Content-Type: application/problem+json</text>
+
+  <defs>
+    <marker id="arP" markerWidth="10" markerHeight="10" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0 L8,3.5 L0,7 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <!-- Chap: JSON tana -->
+  <rect x="28" y="76" width="318" height="380" rx="10" fill="#0f172a"/>
+  <text x="48" y="106" font-family="Consolas, Courier New, monospace" font-size="13.5" fill="#94a3b8">{</text>
+
+  <text x="62" y="134" font-family="Consolas, Courier New, monospace" font-size="13" fill="#60a5fa">"type"</text>
+  <text x="120" y="134" font-family="Consolas, Courier New, monospace" font-size="13" fill="#e2e8f0">: "https://.../422",</text>
+
+  <text x="62" y="172" font-family="Consolas, Courier New, monospace" font-size="13" fill="#4ade80">"title"</text>
+  <text x="124" y="172" font-family="Consolas, Courier New, monospace" font-size="13" fill="#e2e8f0">: "Validatsiya xatosi",</text>
+
+  <text x="62" y="210" font-family="Consolas, Courier New, monospace" font-size="13" fill="#fbbf24">"status"</text>
+  <text x="132" y="210" font-family="Consolas, Courier New, monospace" font-size="13" fill="#e2e8f0">: 422,</text>
+
+  <text x="62" y="248" font-family="Consolas, Courier New, monospace" font-size="13" fill="#f472b6">"detail"</text>
+  <text x="132" y="248" font-family="Consolas, Courier New, monospace" font-size="13" fill="#e2e8f0">: "Kiruvchi malumot</text>
+  <text x="132" y="266" font-family="Consolas, Courier New, monospace" font-size="13" fill="#e2e8f0">noto'g'ri.",</text>
+
+  <text x="62" y="304" font-family="Consolas, Courier New, monospace" font-size="13" fill="#a78bfa">"errors"</text>
+  <text x="132" y="304" font-family="Consolas, Courier New, monospace" font-size="13" fill="#e2e8f0">: {</text>
+  <text x="82" y="328" font-family="Consolas, Courier New, monospace" font-size="12" fill="#cbd5e1">"ism": ["Ism majburiy."],</text>
+  <text x="82" y="350" font-family="Consolas, Courier New, monospace" font-size="12" fill="#cbd5e1">"yosh": ["Butun son</text>
+  <text x="124" y="368" font-family="Consolas, Courier New, monospace" font-size="12" fill="#cbd5e1">bo'lishi kerak."]</text>
+  <text x="132" y="392" font-family="Consolas, Courier New, monospace" font-size="13" fill="#e2e8f0">}</text>
+  <text x="48" y="420" font-family="Consolas, Courier New, monospace" font-size="13.5" fill="#94a3b8">}</text>
+  <text x="187" y="446" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#64748b">standart, bashorat qilinadigan shakl</text>
+
+  <!-- O'ng: maydon izohlari -->
+  <!-- type -->
+  <line x1="346" y1="130" x2="384" y2="130" stroke="#64748b" stroke-width="1.5" marker-end="url(#arP)"/>
+  <rect x="388" y="112" width="304" height="42" rx="7" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="400" y="131" font-family="Consolas, Courier New, monospace" font-size="12.5" font-weight="bold" fill="#2563eb">type</text>
+  <text x="446" y="131" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#1e293b">— xato turi (URI). Hujjatga havola;</text>
+  <text x="400" y="147" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#475569">yo'q bo'lsa "about:blank".</text>
+
+  <!-- title -->
+  <line x1="346" y1="168" x2="384" y2="172" stroke="#64748b" stroke-width="1.5" marker-end="url(#arP)"/>
+  <rect x="388" y="162" width="304" height="42" rx="7" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="400" y="181" font-family="Consolas, Courier New, monospace" font-size="12.5" font-weight="bold" fill="#16a34a">title</text>
+  <text x="444" y="181" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#1e293b">— qisqa, inson o'qiy oladigan nom.</text>
+  <text x="400" y="197" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#475569">Holatdan qat'i nazar o'zgarmas.</text>
+
+  <!-- status -->
+  <line x1="346" y1="206" x2="384" y2="216" stroke="#64748b" stroke-width="1.5" marker-end="url(#arP)"/>
+  <rect x="388" y="212" width="304" height="42" rx="7" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="400" y="231" font-family="Consolas, Courier New, monospace" font-size="12.5" font-weight="bold" fill="#b45309">status</text>
+  <text x="452" y="231" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#1e293b">— HTTP status kodi (tanaga ham</text>
+  <text x="400" y="247" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#475569">nusxalanadi, qulaylik uchun).</text>
+
+  <!-- detail -->
+  <line x1="346" y1="252" x2="384" y2="270" stroke="#64748b" stroke-width="1.5" marker-end="url(#arP)"/>
+  <rect x="388" y="262" width="304" height="42" rx="7" fill="#fdf2f8" stroke="#db2777" stroke-width="1.5"/>
+  <text x="400" y="281" font-family="Consolas, Courier New, monospace" font-size="12.5" font-weight="bold" fill="#db2777">detail</text>
+  <text x="450" y="281" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#1e293b">— aynan shu holatga oid</text>
+  <text x="400" y="297" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#475569">tushuntirish (kontekstga bog'liq).</text>
+
+  <!-- errors -->
+  <line x1="346" y1="304" x2="384" y2="330" stroke="#64748b" stroke-width="1.5" marker-end="url(#arP)"/>
+  <rect x="388" y="314" width="304" height="58" rx="7" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="400" y="333" font-family="Consolas, Courier New, monospace" font-size="12.5" font-weight="bold" fill="#7c3aed">errors</text>
+  <text x="452" y="333" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#1e293b">— kengaytma (RFC 7807 ruxsat</text>
+  <text x="400" y="349" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#475569">beradi): maydon bo'yicha validatsiya</text>
+  <text x="400" y="365" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#475569">xatolari ro'yxati.</text>
+
+  <!-- pastki xulosa -->
+  <rect x="388" y="392" width="304" height="64" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="540" y="414" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" font-weight="bold" fill="#1e293b">Nega standart?</text>
+  <text x="540" y="433" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#475569">Har API uchun alohida xato shakliga</text>
+  <text x="540" y="449" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#475569">moslashish shart emas — mijoz bir o'rganadi.</text>
+</svg>

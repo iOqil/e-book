@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="720" height="440">
+  <title>SPL interfeyslar oddiy obyektga til imkoniyatlarini ochadi: ArrayAccess interfeysi obyektni massiv kabi indekslash imkonini beradi, Countable count funksiyasini, IteratorAggregate va Iterator foreach siklini, JsonSerializable json_encode chiqishini boshqarishni, Stringable esa string ga aylantirishni qo'shadi</title>
+
+  <rect x="0" y="0" width="720" height="440" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">SPL interfeyslar: obyekt -&gt; til imkoniyati</text>
+  <text x="360" y="56" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#64748b">bitta interfeysni implement qilsangiz — PHP sintaksisi sizning obyektingiz bilan ishlaydi</text>
+
+  <!-- markaziy obyekt -->
+  <rect x="285" y="186" width="150" height="68" rx="12" fill="#7c3aed"/>
+  <text x="360" y="214" text-anchor="middle" font-family="Consolas, monospace" font-size="15" font-weight="bold" fill="#ffffff">class Savat</text>
+  <text x="360" y="236" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="12" fill="#e9d5ff">sizning obyektingiz</text>
+
+  <!-- 1. ArrayAccess -->
+  <rect x="36" y="84" width="200" height="64" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="136" y="108" text-anchor="middle" font-family="Consolas, monospace" font-size="13.5" font-weight="bold" fill="#2563eb">ArrayAccess</text>
+  <text x="136" y="130" text-anchor="middle" font-family="Consolas, monospace" font-size="12.5" fill="#475569">$savat['olma'] = 3;</text>
+
+  <!-- 2. Countable -->
+  <rect x="36" y="166" width="200" height="64" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="136" y="190" text-anchor="middle" font-family="Consolas, monospace" font-size="13.5" font-weight="bold" fill="#16a34a">Countable</text>
+  <text x="136" y="212" text-anchor="middle" font-family="Consolas, monospace" font-size="12.5" fill="#475569">count($savat)</text>
+
+  <!-- 3. IteratorAggregate -->
+  <rect x="36" y="248" width="200" height="64" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="136" y="272" text-anchor="middle" font-family="Consolas, monospace" font-size="12.5" font-weight="bold" fill="#d97706">IteratorAggregate</text>
+  <text x="136" y="294" text-anchor="middle" font-family="Consolas, monospace" font-size="12" fill="#475569">foreach ($savat as $x)</text>
+
+  <!-- 4. JsonSerializable -->
+  <rect x="484" y="125" width="200" height="64" rx="10" fill="#ffffff" stroke="#db2777" stroke-width="2"/>
+  <text x="584" y="149" text-anchor="middle" font-family="Consolas, monospace" font-size="12.5" font-weight="bold" fill="#db2777">JsonSerializable</text>
+  <text x="584" y="171" text-anchor="middle" font-family="Consolas, monospace" font-size="12.5" fill="#475569">json_encode($savat)</text>
+
+  <!-- 5. Stringable -->
+  <rect x="484" y="207" width="200" height="64" rx="10" fill="#ffffff" stroke="#0891b2" stroke-width="2"/>
+  <text x="584" y="231" text-anchor="middle" font-family="Consolas, monospace" font-size="13.5" font-weight="bold" fill="#0891b2">Stringable</text>
+  <text x="584" y="253" text-anchor="middle" font-family="Consolas, monospace" font-size="12.5" fill="#475569">(string) $savat</text>
+
+  <!-- bog'lovchi chiziqlar -->
+  <line x1="236" y1="116" x2="285" y2="200" stroke="#2563eb" stroke-width="2" marker-end="url(#oqA)"/>
+  <line x1="236" y1="198" x2="285" y2="212" stroke="#16a34a" stroke-width="2" marker-end="url(#oqB)"/>
+  <line x1="236" y1="280" x2="285" y2="232" stroke="#f59e0b" stroke-width="2" marker-end="url(#oqC)"/>
+  <line x1="435" y1="208" x2="484" y2="157" stroke="#db2777" stroke-width="2" marker-end="url(#oqD)"/>
+  <line x1="435" y1="228" x2="484" y2="239" stroke="#0891b2" stroke-width="2" marker-end="url(#oqE)"/>
+
+  <!-- pastki xulosa -->
+  <rect x="36" y="346" width="648" height="74" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="360" y="372" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="13.5" font-weight="bold" fill="#5b21b6">Sehr emas — KONTRAKT: PHP til konstruktsiyasi (count, foreach, [], json_encode) maxsus metodlarni chaqiradi.</text>
+  <text x="360" y="394" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="12.5" fill="#475569">Obyektingiz "massivdek", "sanaladigan", "aylanadigan" bo'lib ko'rinadi — lekin to'liq logikani siz boshqarasiz.</text>
+  <text x="360" y="412" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="12" fill="#64748b">Stringable va Countable __toString / count metodini, ArrayAccess esa to'rt offset* metodini talab qiladi.</text>
+
+  <defs>
+    <marker id="oqA" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#2563eb"/></marker>
+    <marker id="oqB" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#16a34a"/></marker>
+    <marker id="oqC" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#f59e0b"/></marker>
+    <marker id="oqD" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#db2777"/></marker>
+    <marker id="oqE" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#0891b2"/></marker>
+  </defs>
+</svg>

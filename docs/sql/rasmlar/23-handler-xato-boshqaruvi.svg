@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>HANDLER bilan xato boshqaruvi: SQL amal xato bersa mos HANDLER ishga tushadi, CONTINUE davom etadi, EXIT esa blokdan chiqadi</title>
+  <defs>
+    <marker id="strelka23h" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+    <marker id="strelka23h-qizil" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/>
+    </marker>
+    <marker id="strelka23h-yashil" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/>
+    </marker>
+    <marker id="strelka23h-amber" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#d97706"/>
+    </marker>
+  </defs>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">DECLARE ... HANDLER: xato yuzaga kelganda</text>
+
+  <!-- SQL amal qutisi -->
+  <rect x="260" y="58" width="200" height="64" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="360" y="84" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">SQL amal bajariladi</text>
+  <text x="360" y="106" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#475569">INSERT / SELECT ... INTO ...</text>
+
+  <!-- xato strelka -->
+  <line x1="360" y1="122" x2="360" y2="156" stroke="#dc2626" stroke-width="2.5" marker-end="url(#strelka23h-qizil)"/>
+  <text x="372" y="144" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">xato yuz berdi</text>
+
+  <!-- HANDLER tanlovi qutisi -->
+  <rect x="210" y="160" width="300" height="92" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="360" y="186" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#92400e">Mos HANDLER topiladi</text>
+  <text x="360" y="210" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#1e293b">aniqlikdan umumiyga:</text>
+  <text x="360" y="230" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#475569">SQLSTATE '23000' &gt; NOT FOUND &gt; SQLEXCEPTION</text>
+
+  <!-- amal bajariladi strelka -->
+  <line x1="360" y1="252" x2="360" y2="282" stroke="#d97706" stroke-width="2.5" marker-end="url(#strelka23h-amber)"/>
+  <text x="372" y="272" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#92400e">amal bajariladi (SET ...)</text>
+
+  <!-- ikki yo'l ajraladi -->
+  <rect x="260" y="286" width="200" height="44" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="360" y="313" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">CONTINUE yoki EXIT?</text>
+
+  <!-- CONTINUE shoxi -->
+  <line x1="290" y1="330" x2="200" y2="364" stroke="#16a34a" stroke-width="2.5" marker-end="url(#strelka23h-yashil)"/>
+  <rect x="40" y="368" width="270" height="48" rx="10" fill="#16a34a"/>
+  <text x="175" y="390" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#f8fafc">CONTINUE — keyingi buyruqdan</text>
+  <text x="175" y="408" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#f8fafc">procedure davom etadi</text>
+
+  <!-- EXIT shoxi -->
+  <line x1="430" y1="330" x2="520" y2="364" stroke="#dc2626" stroke-width="2.5" marker-end="url(#strelka23h-qizil)"/>
+  <rect x="410" y="368" width="270" height="48" rx="10" fill="#dc2626"/>
+  <text x="545" y="390" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#f8fafc">EXIT — eng yaqin BEGIN..END</text>
+  <text x="545" y="408" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#f8fafc">blokidan chiqib ketadi</text>
+</svg>

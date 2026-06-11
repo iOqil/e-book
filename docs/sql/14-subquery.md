@@ -105,7 +105,7 @@ WHERE sahifa > (SELECT AVG(sahifa) FROM kitoblar WHERE janr = k.janr);
 
 Bu yerda har kitob umumiy o'rtacha bilan emas, **janrdoshlari** o'rtachasi bilan solishtiriladi: roman — romanlar bilan, ertak — ertaklar bilan.
 
-⚠️ Correlated subquery har qator uchun bajarilgani sababli juda katta jadvallarda sekinlashishi mumkin. MySQL 8 optimizatori ko'p hollarda buni o'zi samaraliroq rejaga aylantiradi, lekin shubha tug'ilsa — 23-bobdagi `EXPLAIN` bilan tekshiramiz.
+⚠️ Correlated subquery har qator uchun bajarilgani sababli juda katta jadvallarda sekinlashishi mumkin. MySQL 8 optimizatori ko'p hollarda buni o'zi samaraliroq rejaga aylantiradi, lekin shubha tug'ilsa — 26-bobdagi `EXPLAIN` bilan tekshiramiz.
 
 ![Subquery turlari: skalyar, ro'yxat (IN) va correlated](rasmlar/14-subquery-turlari.svg)
 

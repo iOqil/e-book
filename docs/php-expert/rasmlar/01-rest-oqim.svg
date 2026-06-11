@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 470" width="720" height="470">
+  <title>REST so'rov-javob oqimi: mijoz HTTP verb va URI yuboradi, front-controller marshrutlaydi, controller validatsiya qiladi, PDO bazaga boradi va mos status kod bilan JSON javob qaytadi</title>
+
+  <rect x="0" y="0" width="720" height="470" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="19" font-weight="bold" fill="#1e293b">REST so'rov-javob oqimi (verb + status kod)</text>
+
+  <defs>
+    <marker id="ar1" markerWidth="11" markerHeight="11" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 Z" fill="#475569"/>
+    </marker>
+    <marker id="ar1g" markerWidth="11" markerHeight="11" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <!-- MIJOZ qutisi -->
+  <rect x="28" y="70" width="150" height="120" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <rect x="28" y="70" width="150" height="34" rx="10" fill="#2563eb"/>
+  <rect x="28" y="88" width="150" height="16" fill="#2563eb"/>
+  <text x="103" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">MIJOZ</text>
+  <text x="103" y="126" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#475569">mobil ilova,</text>
+  <text x="103" y="143" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#475569">frontend, server</text>
+  <text x="103" y="168" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="11.5" fill="#1e293b">verb + URI</text>
+  <text x="103" y="184" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="11.5" fill="#1e293b">+ JSON tana</text>
+
+  <!-- so'rov strelkasi -->
+  <line x1="180" y1="100" x2="252" y2="100" stroke="#475569" stroke-width="2" marker-end="url(#ar1)"/>
+  <text x="216" y="92" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="11" fill="#475569">so'rov</text>
+
+  <!-- FRONT-CONTROLLER qutisi -->
+  <rect x="254" y="62" width="206" height="146" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="357" y="86" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">FRONT-CONTROLLER</text>
+  <text x="357" y="103" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="11.5" fill="#475569">index.php</text>
+  <line x1="266" y1="114" x2="448" y2="114" stroke="#f59e0b" stroke-width="1"/>
+  <text x="357" y="134" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#1e293b">1. marshrutlash (verb + yo'l)</text>
+  <text x="357" y="154" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#1e293b">2. JSON tanani o'qish</text>
+  <text x="357" y="174" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#1e293b">3. validatsiya qatlami</text>
+  <text x="357" y="194" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#dc2626">xato bo'lsa -> 400 / 404 / 422</text>
+
+  <!-- baza strelkasi -->
+  <line x1="462" y1="120" x2="534" y2="120" stroke="#475569" stroke-width="2" marker-end="url(#ar1)"/>
+  <text x="498" y="112" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="11" fill="#475569">PDO</text>
+
+  <!-- BAZA qutisi -->
+  <rect x="536" y="70" width="156" height="120" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <ellipse cx="614" cy="100" rx="40" ry="11" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="614" y="105" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">BAZA</text>
+  <text x="614" y="138" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#1e293b">talabalar jadvali</text>
+  <text x="614" y="158" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#475569">prepared statement</text>
+  <text x="614" y="176" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#475569">(parametrlangan)</text>
+
+  <!-- qatorlar qaytadi -->
+  <line x1="534" y1="150" x2="462" y2="150" stroke="#16a34a" stroke-width="2" marker-end="url(#ar1g)"/>
+  <text x="498" y="168" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="11" fill="#16a34a">qatorlar</text>
+
+  <!-- javob strelkasi: front-controller -> mijoz (pastdan) -->
+  <line x1="357" y1="208" x2="357" y2="244" stroke="#16a34a" stroke-width="2.5" marker-end="url(#ar1gDown)"/>
+  <defs>
+    <marker id="ar1gDown" markerWidth="12" markerHeight="12" refX="4" refY="9" orient="auto">
+      <path d="M0,0 L8,0 L4,9 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <!-- JAVOB qutisi -->
+  <rect x="200" y="252" width="316" height="74" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="358" y="276" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#16a34a">JAVOB — mijozga qaytadi</text>
+  <text x="358" y="298" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="11.5" fill="#1e293b">status kod + Content-Type + JSON</text>
+  <text x="358" y="316" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#475569">muvaffaqiyat: 200 / 201 / 204</text>
+
+  <!-- verb -> status kod jadvali -->
+  <rect x="30" y="346" width="660" height="108" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="360" y="368" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#1e293b">Verb -> tipik muvaffaqiyat status kodi</text>
+
+  <text x="92" y="396" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="12.5" font-weight="bold" fill="#2563eb">GET</text>
+  <text x="92" y="414" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#475569">o'qish</text>
+  <text x="92" y="436" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">200 OK</text>
+
+  <text x="226" y="396" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="12.5" font-weight="bold" fill="#2563eb">POST</text>
+  <text x="226" y="414" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#475569">yaratish</text>
+  <text x="226" y="436" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">201 Created</text>
+
+  <text x="360" y="396" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="12.5" font-weight="bold" fill="#2563eb">PUT / PATCH</text>
+  <text x="360" y="414" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#475569">yangilash</text>
+  <text x="360" y="436" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">200 OK</text>
+
+  <text x="494" y="396" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="12.5" font-weight="bold" fill="#2563eb">DELETE</text>
+  <text x="494" y="414" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#475569">o'chirish</text>
+  <text x="494" y="436" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">204 No Content</text>
+
+  <line x1="628" y1="382" x2="628" y2="442" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="660" y="396" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#475569">xato:</text>
+  <text x="660" y="414" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" font-weight="bold" fill="#dc2626">4xx</text>
+  <text x="660" y="436" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" font-weight="bold" fill="#dc2626">5xx</text>
+</svg>

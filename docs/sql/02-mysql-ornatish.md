@@ -37,7 +37,7 @@ sudo systemctl start mysql
 ```
 Server ishlayotganini tekshirish: `sudo systemctl status mysql` — yashil **active (running)** yozuvi chiqsa, hammasi joyida.
 
-⚠️ Ubuntu'da bitta nozik joy bor: yangi o'rnatilgan MySQL'da `root` foydalanuvchisi parol bilan emas, tizim foydalanuvchisi orqali kiradi. Shuning uchun birinchi marta `mysql -u root -p` emas, **`sudo mysql`** deb ulaning. Keyinchalik xohlasangiz `root`'ga parol qo'yib olasiz (foydalanuvchilar va parollarni 24-bobda batafsil ko'ramiz).
+⚠️ Ubuntu'da bitta nozik joy bor: yangi o'rnatilgan MySQL'da `root` foydalanuvchisi parol bilan emas, tizim foydalanuvchisi orqali kiradi. Shuning uchun birinchi marta `mysql -u root -p` emas, **`sudo mysql`** deb ulaning. Keyinchalik xohlasangiz `root`'ga parol qo'yib olasiz (foydalanuvchilar va parollarni 27-bobda batafsil ko'ramiz).
 
 ![O'rnatishdan birinchi buyruqqacha yo'l xaritasi: Windows, macOS, Linux](rasmlar/02-ornatish-yol-xaritasi.svg)
 

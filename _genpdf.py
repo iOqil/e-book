@@ -10,6 +10,7 @@ BOOKS = [
     ('git-github', 'Git & GitHub'),
     ('typescript', 'TypeScript'),
     ('laravel', 'Laravel'),
+    ('php-expert', 'PHP Expert'),
 ]
 
 def natkey(s):
