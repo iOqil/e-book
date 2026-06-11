@@ -1,6 +1,6 @@
 # 16 — Twig va xavfsiz shablon
 
-[⬅️ Oldingi: 15 — O'z mini-frameworkingizni yig'ish](./15-mini-framework.md) · [🏠 README](./README.md) · [Keyingi: README ➡️](./README.md)
+[⬅️ Oldingi: 15 — O'z mini-frameworkingizni yig'ish](./15-mini-framework.md) · [🏠 README](./README.md) · [Keyingi: 17 — Fayllar, oqimlar va katta ma'lumot ➡️](./17-fayllar-oqimlar.md)
 
 > **Bu bobda:** framework ning oxirgi qatlami — **view (ko'rinish) qatlami** ni quramiz. Avval PHP'ning O'ZI shablon dvigateli ekanini (`<?= ?>` bilan) ko'ramiz va uning eng katta tuzog'ini ochamiz: escaping **qo'lda** (`htmlspecialchars`) qilinadi — bir marta unutilsa **XSS** teshigi ochiladi (bu boshlovchi kitobdagi [xavfsizlik asoslari](../php/34-xavfsizlik-asoslari.md) ga to'g'ridan-to'g'ri ko'prik). So'ng **Twig** ni o'rganamiz: nega kerak (**avtomatik escaping** — XSS ni template **darajasida** oldini oladi), `composer require twig/twig`, `Environment` + `FilesystemLoader` sozlash, sintaksis (`{{ ifoda }}`, `{% for/if %}`, filtrlar `|date`/`|upper`), **shablon merosi** (`{% extends %}` + `{% block %}`, `{% include %}` partial, makrolar = komponent g'oyasi). Keyin xavfsizlikning yuragi: **escaping konteksti** (`html` standart, `|e('js')`, `|e('url')` — qaysi joyda qaysi) va `|raw` ning xavfi. Oxirida view ni 15-bobdagi mini-framework ga ulaymiz: **kontroller → Twig render → Response**. Hamma natija haqiqiy `php` + `twig/twig` 3.27 bilan tasdiqlangan: XSS payload haqiqatan escape bo'lishini ko'rasiz.
 
@@ -904,4 +904,4 @@ Bu — **Wave 3 (framework internals) ning yakuniy bobi.** Endi sizda to'liq fra
 
 ---
 
-[⬅️ Oldingi: 15 — O'z mini-frameworkingizni yig'ish](./15-mini-framework.md) · [🏠 README](./README.md) · [Keyingi: README ➡️](./README.md)
+[⬅️ Oldingi: 15 — O'z mini-frameworkingizni yig'ish](./15-mini-framework.md) · [🏠 README](./README.md) · [Keyingi: 17 — Fayllar, oqimlar va katta ma'lumot ➡️](./17-fayllar-oqimlar.md)

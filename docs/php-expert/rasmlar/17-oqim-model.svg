@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="720" height="440">
+  <title>PHP oqim (stream) modeli: manba (wrapper - file/php/data) -> fopen resurs -> stream filtrlar (deflate, base64) -> fread/fwrite operatsiyalari. Wrapper qayerdan, filtr nima qiladi.</title>
+
+  <rect x="0" y="0" width="720" height="440" fill="#f8fafc"/>
+
+  <text x="360" y="30" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">PHP oqim modeli: wrapper + filtr</text>
+  <text x="360" y="52" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Manba qayerda (wrapper) &#8594; resurs (fopen) &#8594; transformatsiya (filtr) &#8594; bayt</text>
+
+  <!-- 1. Wrapperlar (manba) -->
+  <rect x="24" y="84" width="180" height="190" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="114" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e40af">1. Stream wrapper</text>
+  <text x="114" y="125" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#64748b">"manba qayerda?"</text>
+
+  <rect x="38" y="136" width="152" height="26" rx="5" fill="#eff6ff"/>
+  <text x="48" y="153" font-family="Consolas, monospace" font-size="11.5" fill="#1e40af">file://</text>
+  <text x="120" y="153" font-family="Segoe UI, sans-serif" font-size="10.5" fill="#64748b">disk fayli</text>
+
+  <rect x="38" y="166" width="152" height="26" rx="5" fill="#eff6ff"/>
+  <text x="48" y="183" font-family="Consolas, monospace" font-size="11.5" fill="#1e40af">php://memory</text>
+  <text x="146" y="183" font-family="Segoe UI, sans-serif" font-size="10.5" fill="#64748b">RAM</text>
+
+  <rect x="38" y="196" width="152" height="26" rx="5" fill="#eff6ff"/>
+  <text x="48" y="213" font-family="Consolas, monospace" font-size="11.5" fill="#1e40af">php://temp</text>
+  <text x="125" y="213" font-family="Segoe UI, sans-serif" font-size="10" fill="#64748b">RAM&#8594;disk</text>
+
+  <rect x="38" y="226" width="152" height="26" rx="5" fill="#eff6ff"/>
+  <text x="48" y="243" font-family="Consolas, monospace" font-size="11.5" fill="#1e40af">php://input</text>
+  <text x="138" y="243" font-family="Segoe UI, sans-serif" font-size="10.5" fill="#64748b">so'rov</text>
+
+  <!-- strelka -->
+  <line x1="204" y1="180" x2="252" y2="180" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#a)"/>
+
+  <!-- 2. Resurs (fopen) -->
+  <rect x="252" y="120" width="150" height="120" rx="10" fill="#7c3aed"/>
+  <text x="327" y="148" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">2. Resurs</text>
+  <text x="327" y="170" text-anchor="middle" font-family="Consolas, monospace" font-size="12" fill="#ede9fe">$h = fopen(...)</text>
+  <text x="327" y="192" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="11" fill="#ddd6fe">rejim: r w a x b +</text>
+  <text x="327" y="212" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="11" fill="#ddd6fe">kursor (pozitsiya)</text>
+  <text x="327" y="230" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="10.5" fill="#c4b5fd">fclose() bilan yopiladi</text>
+
+  <!-- strelka -->
+  <line x1="402" y1="180" x2="450" y2="180" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#o)"/>
+
+  <!-- 3. Filtr -->
+  <rect x="450" y="120" width="150" height="120" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="525" y="146" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309">3. Filtr</text>
+  <text x="525" y="163" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="10.5" fill="#92400e">oqim ustida o'zgartirish</text>
+  <rect x="462" y="172" width="126" height="22" rx="4" fill="#fffbeb"/>
+  <text x="525" y="187" text-anchor="middle" font-family="Consolas, monospace" font-size="10.5" fill="#b45309">zlib.deflate</text>
+  <rect x="462" y="198" width="126" height="22" rx="4" fill="#fffbeb"/>
+  <text x="525" y="213" text-anchor="middle" font-family="Consolas, monospace" font-size="9.5" fill="#b45309">convert.base64</text>
+  <text x="525" y="234" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="9.5" fill="#92400e">stream_filter_append</text>
+
+  <!-- strelka -->
+  <line x1="600" y1="180" x2="648" y2="180" stroke="#16a34a" stroke-width="2.5" marker-end="url(#g)"/>
+
+  <!-- 4. Operatsiya (chiqish) -->
+  <rect x="648" y="138" width="56" height="84" rx="8" fill="#16a34a"/>
+  <text x="676" y="166" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="11" font-weight="bold" fill="#ffffff">bayt</text>
+  <text x="676" y="184" text-anchor="middle" font-family="Consolas, monospace" font-size="9.5" fill="#dcfce7">fread</text>
+  <text x="676" y="200" text-anchor="middle" font-family="Consolas, monospace" font-size="9.5" fill="#dcfce7">fwrite</text>
+
+  <!-- pastki tushuntirish paneli -->
+  <rect x="24" y="296" width="680" height="120" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="44" y="322" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Asosiy g'oya: hamma I/O bir xil interfeys</text>
+
+  <circle cx="52" cy="346" r="4" fill="#2563eb"/>
+  <text x="64" y="350" font-family="Segoe UI, sans-serif" font-size="12" fill="#334155">Wrapper manbani yashiradi: disk, RAM, HTTP so'rov &#8212; kod bir xil (fread/fwrite).</text>
+
+  <circle cx="52" cy="370" r="4" fill="#f59e0b"/>
+  <text x="64" y="374" font-family="Segoe UI, sans-serif" font-size="12" fill="#334155">Filtr oqimga "tirqishga" o'rnatiladi: o'qishda inflate, yozishda deflate &#8212; shaffof.</text>
+
+  <circle cx="52" cy="394" r="4" fill="#16a34a"/>
+  <text x="64" y="398" font-family="Segoe UI, sans-serif" font-size="12" fill="#334155">php://temp: kichik bo'lsa RAMda, chegaradan oshsa avtomatik diskka ko'chadi.</text>
+
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/></marker>
+    <marker id="o" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#f59e0b"/></marker>
+    <marker id="g" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker>
+  </defs>
+</svg>

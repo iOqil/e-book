@@ -26,8 +26,10 @@
 - [14 — Routing va front controller](./14-routing.md) — front controller (bitta `index.php`), route table, parametrli path, `#[Route]` atribut-asosli routing, dispatch va 404/405.
 - [15 — O'z mini-frameworkingizni yig'ish](./15-mini-framework.md) — kernel = konteyner + router + middleware + PSR-7 birga; to'liq ishlaydigan mini-app; Slim/Symfony/Laravel internals bilan solishtirish.
 - [16 — Twig va xavfsiz shablon](./16-twig-shablon.md) — avtomatik escaping (XSS template-darajada), shablon merosi (`extends`/`block`), escaping konteksti (`html`/`js`/`url`) va `|raw` xavfi.
+- [17 — Fayllar, oqimlar va katta ma'lumot](./17-fayllar-oqimlar.md) — stream wrappers/filters, `SplFileObject`, generator bilan katta fayl (xotira tejash), `flock`/atomik yozish, `RecursiveDirectoryIterator`, `ZipArchive`, finfo MIME va path-traversal xavfsizligi.
+- [18 — Fayl formatlari, rasm va bulutli saqlash](./18-fayl-formatlari.md) — CSV chuqur, Excel (**PhpSpreadsheet**), PDF (**Dompdf**), rasm (**GD** — resize/thumbnail/optimize) va **league/flysystem** bilan bulutli saqlash (lokal + S3-mos object storage).
 
-> **Eslatma:** bu trek bosqichma-bosqich kengaymoqda. Hozircha uch to'plam tayyor: **birinchi** (01-04 — REST API, HTTP klient, avtorizatsiya, JWT), **ikkinchi** (05-10 — zamonaviy PHP 8.4 tip tizimi va meta-dasturlash) va **uchinchi** (11-16 — framework internals: o'z mini-frameworkingizni noldan qurish). Keyingi to'plamlarda: sifat va testlash (PHPStan/Infection/CI), performance (OPcache/JIT/Redis) va async. Boblar mustaqil o'qilishi mumkin, lekin tartib bilan o'qish tavsiya etiladi.
+> **Eslatma:** bu trek bosqichma-bosqich kengaymoqda. Hozircha tayyor: **birinchi** (01-04 — REST API, HTTP klient, avtorizatsiya, JWT), **ikkinchi** (05-10 — zamonaviy PHP 8.4 tip tizimi va meta-dasturlash), **uchinchi** (11-16 — framework internals: o'z mini-frameworkingizni noldan qurish) va **amaliy I/O** (17-18 — fayllar, oqimlar, formatlar va bulutli saqlash). Keyingi to'plamlarda: sifat va testlash (PHPStan/Infection/CI), performance (OPcache/JIT/Redis) va async. Boblar mustaqil o'qilishi mumkin, lekin tartib bilan o'qish tavsiya etiladi.
 
 ---
 
