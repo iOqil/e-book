@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" width="720" height="480">
+  <title>So'rovning to'liq hayot tsikli: brauzer so'rovi index.php ga keladi, ServerRequest quriladi, error middleware so'rovni o'raydi, auth middleware tokenni tekshiradi, router mos route topadi, kontroller konteynerdan autowire bo'lib service'ni chaqiradi va Response qaytaradi, javob middleware'lar orqali ortga qaytib emit qilinadi; xato bo'lsa error middleware uni RFC 7807 Problem Details ga aylantiradi</title>
+
+  <rect x="0" y="0" width="720" height="480" fill="#f8fafc"/>
+
+  <text x="360" y="30" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="19" font-weight="bold" fill="#1e293b">So'rovning to'liq hayot tsikli</text>
+  <text x="360" y="51" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#475569">ichkariga: kirish (ko'k) — tashqariga: javob (yashil) — xato: qizil</text>
+
+  <defs>
+    <marker id="lin" markerWidth="11" markerHeight="11" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="lout" markerWidth="11" markerHeight="11" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 Z" fill="#16a34a"/>
+    </marker>
+    <marker id="lerr" markerWidth="11" markerHeight="11" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 Z" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+  <!-- Bosqichlar (chap ustun, yuqoridan pastga) -->
+  <!-- 1 Brauzer -->
+  <rect x="40" y="80" width="180" height="46" rx="9" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="130" y="100" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" font-weight="bold" fill="#2563eb">1. Brauzer / klient</text>
+  <text x="130" y="117" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="10.5" fill="#475569">GET /me  Bearer ...</text>
+
+  <!-- 2 index.php -->
+  <rect x="40" y="142" width="180" height="46" rx="9" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="130" y="162" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="12" font-weight="bold" fill="#2563eb">index.php</text>
+  <text x="130" y="179" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="10.5" fill="#475569">ServerRequest quradi</text>
+
+  <!-- 3 Error MW -->
+  <rect x="40" y="204" width="180" height="46" rx="9" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="130" y="224" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="bold" fill="#1e293b">Error middleware</text>
+  <text x="130" y="241" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="10.5" fill="#475569">try { ... } catch (Throwable)</text>
+
+  <!-- 4 Auth MW -->
+  <rect x="40" y="266" width="180" height="46" rx="9" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="130" y="286" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="bold" fill="#1e293b">Auth middleware</text>
+  <text x="130" y="303" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="10.5" fill="#475569">token? -> user (yoki 401)</text>
+
+  <!-- 5 Router -->
+  <rect x="40" y="328" width="180" height="46" rx="9" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="130" y="348" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="bold" fill="#16a34a">Router dispatch</text>
+  <text x="130" y="365" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="10.5" fill="#475569">mos route + params</text>
+
+  <!-- 6 Controller + service -->
+  <rect x="40" y="390" width="180" height="56" rx="9" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="130" y="410" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="bold" fill="#dc2626">Controller</text>
+  <text x="130" y="427" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="10.5" fill="#475569">konteyner -> autowire service</text>
+  <text x="130" y="440" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="10" fill="#64748b">Response qaytaradi</text>
+
+  <!-- kirish strelkalari (ko'k, pastga) -->
+  <line x1="130" y1="126" x2="130" y2="140" stroke="#2563eb" stroke-width="2" marker-end="url(#lin)"/>
+  <line x1="130" y1="188" x2="130" y2="202" stroke="#2563eb" stroke-width="2" marker-end="url(#lin)"/>
+  <line x1="130" y1="250" x2="130" y2="264" stroke="#2563eb" stroke-width="2" marker-end="url(#lin)"/>
+  <line x1="130" y1="312" x2="130" y2="326" stroke="#2563eb" stroke-width="2" marker-end="url(#lin)"/>
+  <line x1="130" y1="374" x2="130" y2="388" stroke="#2563eb" stroke-width="2" marker-end="url(#lin)"/>
+
+  <!-- javob qaytishi (yashil, o'ng tomonda yuqoriga) -->
+  <path d="M220 418 H300 V104 H222" fill="none" stroke="#16a34a" stroke-width="2.2" marker-end="url(#lout)"/>
+  <text x="312" y="270" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" font-weight="bold" fill="#16a34a">Response ortga qaytadi</text>
+  <text x="312" y="288" font-family="Segoe UI, system-ui, sans-serif" font-size="10.5" fill="#475569">har middleware "chiqish"</text>
+  <text x="312" y="303" font-family="Segoe UI, system-ui, sans-serif" font-size="10.5" fill="#475569">qismini bajaradi, so'ng emit</text>
+
+  <!-- xato yo'li (qizil) -->
+  <rect x="470" y="204" width="210" height="80" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="575" y="228" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" font-weight="bold" fill="#dc2626">Throwable -> RFC 7807</text>
+  <text x="575" y="247" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="10" fill="#475569">application/problem+json</text>
+  <text x="575" y="263" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="10.5" fill="#475569">dev: detail ko'rinadi</text>
+  <text x="575" y="278" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="10.5" fill="#475569">prod: yashirin (500)</text>
+
+  <!-- xato strelkalari: controller/auth -> error MW -->
+  <path d="M220 412 H440 V230 H320" fill="none" stroke="#dc2626" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#lerr)"/>
+  <text x="470" y="320" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="10.5" fill="#dc2626">istalgan bosqichdagi exception</text>
+  <text x="470" y="335" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="10.5" fill="#dc2626">yuqoriga ko'tarilib error MW ga tushadi</text>
+
+  <text x="575" y="160" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#64748b">Error MW eng tashqarida joylashgani uchun</text>
+  <text x="575" y="177" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#64748b">pastdagi har qanday xatoni ushlaydi.</text>
+</svg>

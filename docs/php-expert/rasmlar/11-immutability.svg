@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" font-family="Segoe UI, sans-serif" font-size="13">
+  <title>PSR-7 immutability: withHeader asl obyektni o'zgartirmasdan yangi nusxa qaytaradi</title>
+  <rect width="720" height="440" fill="#f8fafc"/>
+  <text x="360" y="30" text-anchor="middle" font-size="17" font-weight="bold" fill="#0f172a">PSR-7 immutability: withHeader() yangi nusxa qaytaradi</text>
+
+  <!-- original -->
+  <rect x="40" y="70" width="240" height="150" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <rect x="40" y="70" width="240" height="30" rx="10" fill="#2563eb"/>
+  <text x="160" y="91" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">$asl  (Response)</text>
+  <text x="56" y="124" font-family="Consolas, monospace" fill="#0f172a">status: 200</text>
+  <text x="56" y="148" font-family="Consolas, monospace" fill="#0f172a">headers: {</text>
+  <text x="72" y="170" font-family="Consolas, monospace" fill="#0f172a">"content-type":</text>
+  <text x="88" y="190" font-family="Consolas, monospace" fill="#0f172a">"text/plain"</text>
+  <text x="56" y="210" font-family="Consolas, monospace" fill="#0f172a">}</text>
+  <text x="160" y="238" text-anchor="middle" font-size="12" fill="#16a34a" font-weight="bold">O'ZGARMAYDI ✓</text>
+
+  <!-- method call -->
+  <rect x="312" y="118" width="220" height="54" rx="8" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="422" y="140" text-anchor="middle" font-family="Consolas, monospace" font-weight="bold" fill="#5b21b6">$asl-&gt;withHeader(</text>
+  <text x="422" y="160" text-anchor="middle" font-family="Consolas, monospace" fill="#5b21b6">'X-Trace', 'abc')</text>
+
+  <!-- arrows: asl -> call -> new -->
+  <line x1="280" y1="145" x2="310" y2="145" stroke="#7c3aed" stroke-width="2" marker-end="url(#a2)"/>
+  <line x1="532" y1="145" x2="560" y2="145" stroke="#7c3aed" stroke-width="2" marker-end="url(#a2)"/>
+  <defs>
+    <marker id="a2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#7c3aed"/>
+    </marker>
+  </defs>
+
+  <!-- internal steps -->
+  <rect x="312" y="186" width="220" height="78" rx="8" fill="#fffbeb" stroke="#f59e0b"/>
+  <text x="422" y="206" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400e">Ichkarida:</text>
+  <text x="324" y="226" font-family="Consolas, monospace" font-size="12" fill="#0f172a">$c = clone $this;</text>
+  <text x="324" y="244" font-family="Consolas, monospace" font-size="12" fill="#0f172a">$c-&gt;headers[..] = ..;</text>
+  <text x="324" y="260" font-family="Consolas, monospace" font-size="12" fill="#0f172a">return $c;  // yangi</text>
+
+  <!-- new copy -->
+  <rect x="468" y="276" width="240" height="150" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <rect x="468" y="276" width="240" height="30" rx="10" fill="#16a34a"/>
+  <text x="588" y="297" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">$yangi  (Response)</text>
+  <text x="484" y="330" font-family="Consolas, monospace" fill="#0f172a">status: 200</text>
+  <text x="484" y="354" font-family="Consolas, monospace" fill="#0f172a">headers: {</text>
+  <text x="500" y="376" font-family="Consolas, monospace" fill="#0f172a">"content-type":..,</text>
+  <text x="500" y="396" font-family="Consolas, monospace" fill="#16a34a" font-weight="bold">"x-trace":"abc"  +</text>
+  <text x="484" y="416" font-family="Consolas, monospace" fill="#0f172a">}</text>
+
+  <!-- diagonal arrow from steps to new -->
+  <line x1="470" y1="250" x2="540" y2="274" stroke="#16a34a" stroke-width="2" marker-end="url(#a3)"/>
+  <defs>
+    <marker id="a3" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <!-- note box -->
+  <rect x="40" y="276" width="400" height="150" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-dasharray="5,4"/>
+  <text x="56" y="300" font-weight="bold" fill="#1e3a8a">Nega bu middleware uchun xavfsiz?</text>
+  <text x="56" y="324" fill="#0f172a">• Har middleware $request/$response ni</text>
+  <text x="68" y="342" fill="#0f172a">o'zgartirsa — boshqalarining nusxasiga</text>
+  <text x="68" y="360" fill="#0f172a">ta'sir qilmaydi (yon-ta'sir yo'q).</text>
+  <text x="56" y="384" fill="#0f172a">• Asl obyekt qayta ishlatilsa ham xavfsiz.</text>
+  <text x="56" y="408" fill="#0f172a">• Test: kirish va chiqishni aniq solishtirasiz.</text>
+</svg>

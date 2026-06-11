@@ -20,8 +20,14 @@
 - [08 — Reflection, attributes va FFI](./08-reflection-attributes.md) — `ReflectionClass`/`Method`/`Property`, `#[Attribute]` bilan o'z atributingni yozish va o'qish (router/validator/DI "sehri"), Reflection cache hamda FFI bilan C kutubxonaga ulanish.
 - [09 — WeakMap, SPL va reference semantikasi](./09-weakmap-spl.md) — `WeakReference`/`WeakMap` (memory-leak'siz cache), SPL interfeyslar (`ArrayAccess`/`Countable`/`Iterator`/`JsonSerializable`), SPL data strukturalar va reference/COW/GC semantikasi.
 - [10 — PSR standartlari va PHP-FIG](./10-psr-standartlar.md) — PHP-FIG va interoperability, PSR-1/12 + PHP-CS-Fixer, PSR-4 autoload, PSR-3 Logger, PSR-7/17 HTTP, PSR-11 Container — paketlar almashinuvining "umumiy tili".
+- [11 — HTTP xabarlari: PSR-7 va PSR-17](./11-psr7-http.md) — HTTP so'rov/javobni immutable obyekt sifatida: `ServerRequest`/`Response`/`Uri`/`Stream`, `withX` (yangi nusxa) va nega bu middleware uchun xavfsiz.
+- [12 — PSR-15 middleware pipeline](./12-middleware.md) — "piyoz" (onion) modeli, `MiddlewareInterface`/`RequestHandlerInterface`, pipeline/dispatcher qurish va short-circuit (auth 401).
+- [13 — PSR-11 DI konteyner qurish](./13-di-konteyner.md) — Reflection bilan autowiring, binding (interfeys→implementatsiya), singleton vs factory, aylanma bog'liqlik aniqlash va compiled konteyner.
+- [14 — Routing va front controller](./14-routing.md) — front controller (bitta `index.php`), route table, parametrli path, `#[Route]` atribut-asosli routing, dispatch va 404/405.
+- [15 — O'z mini-frameworkingizni yig'ish](./15-mini-framework.md) — kernel = konteyner + router + middleware + PSR-7 birga; to'liq ishlaydigan mini-app; Slim/Symfony/Laravel internals bilan solishtirish.
+- [16 — Twig va xavfsiz shablon](./16-twig-shablon.md) — avtomatik escaping (XSS template-darajada), shablon merosi (`extends`/`block`), escaping konteksti (`html`/`js`/`url`) va `|raw` xavfi.
 
-> **Eslatma:** bu trek bosqichma-bosqich kengaymoqda. Hozircha ikki to'plam tayyor: **birinchi** (01-04 — REST API, HTTP klient, avtorizatsiya, JWT) va **ikkinchi** (05-10 — zamonaviy PHP 8.4 tip tizimi va meta-dasturlash). Keyingi to'plamlarda: o'z mini-frameworkingizni qurish (router + DI konteyner), performance (OPcache/JIT), async va chuqur testing (PHPStan/Infection). Boblar mustaqil o'qilishi mumkin, lekin tartib bilan o'qish tavsiya etiladi.
+> **Eslatma:** bu trek bosqichma-bosqich kengaymoqda. Hozircha uch to'plam tayyor: **birinchi** (01-04 — REST API, HTTP klient, avtorizatsiya, JWT), **ikkinchi** (05-10 — zamonaviy PHP 8.4 tip tizimi va meta-dasturlash) va **uchinchi** (11-16 — framework internals: o'z mini-frameworkingizni noldan qurish). Keyingi to'plamlarda: sifat va testlash (PHPStan/Infection/CI), performance (OPcache/JIT/Redis) va async. Boblar mustaqil o'qilishi mumkin, lekin tartib bilan o'qish tavsiya etiladi.
 
 ---
 

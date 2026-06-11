@@ -16,7 +16,7 @@ hide:
 
 <div class="hero-stats">
   <div class="stat"><b>13</b><span>kitob</span></div>
-  <div class="stat"><b>632</b><span>diagramma</span></div>
+  <div class="stat"><b>644</b><span>diagramma</span></div>
   <div class="stat"><b>300+</b><span>bob</span></div>
   <div class="stat"><b>2900+</b><span>masala</span></div>
 </div>
@@ -125,7 +125,7 @@ hide:
 
     ---
 
-    Junior PHP'dan keyingi qadam — ishlab chiqarish darajasi: ekspert REST API (RFC 7807), cURL/Guzzle, RBAC, JWT, zamonaviy PHP 8.4 tip tizimi (property hooks, readonly VO, Reflection/FFI, PSR). Kod real PHP 8.4 da ishga tushirib tekshirilgan. 10 bob · 20 diagramma (kengaymoqda).
+    Junior PHP'dan keyingi qadam — ishlab chiqarish darajasi: ekspert REST API, cURL/Guzzle, RBAC, JWT, zamonaviy PHP 8.4 tip tizimi (property hooks, readonly VO, Reflection/FFI) va **o'z mini-frameworkingizni** noldan qurish (PSR-7/15/11, DI konteyner, router, Twig). Kod real PHP 8.4 da ishga tushirib tekshirilgan. 16 bob · 32 diagramma (kengaymoqda).
 
     [Boshlash →](php-expert/README.md)
 

@@ -1,6 +1,6 @@
 # 10 — PSR standartlari va PHP-FIG
 
-[⬅️ Oldingi: 09 — WeakMap, SPL va reference](./09-weakmap-spl.md) · [🏠 README](./README.md) · [Keyingi: README ➡️](./README.md)
+[⬅️ Oldingi: 09 — WeakMap, SPL va reference](./09-weakmap-spl.md) · [🏠 README](./README.md) · [Keyingi: 11 — HTTP xabarlari: PSR-7 va PSR-17 ➡️](./11-psr7-http.md)
 
 > **Bu bobda:** PHP ekotizimining "umumiy tili" — PSR standartlarini o'rganamiz. Avval **PHP-FIG nima** va **PSR** (PHP Standards Recommendation) **nima uchun** kerakligini — eng muhim g'oya **interoperability** (turli vendor paketlari bir-biriga moslashishi: istalgan PSR-3 logger ni istalgan framework ga ulay olish) — tushunamiz. So'ng amaliy standartlarni ketma-ket ochamiz: **PSR-1 / PSR-12** kod stili (+ avtomatlashtirish: PHP-CS-Fixer, phpcs, Composer scripts), **PSR-4** autoload (Composer namespace ni fayl yo'liga qanday moslaydi), **PSR-3** LoggerInterface (log darajalari, kontekst, nega aynan interfeys), **PSR-7 / PSR-17 / PSR-15** (HTTP Message immutable, factory, middleware — qisqacha, kelajakdagi framework boblariga ko'prik) va **PSR-11** ContainerInterface (DI konteyner kontrakti). Har bir PSR uchun bir xil sxema: **muammo → standart → foyda**. Amalda o'z kodimizni PSR-12 ga moslaymiz va konkret implementatsiyaga emas, **interfeysga dasturlash**ni ko'rsatamiz. Bu bob boshlovchi kitobdagi [class va obyekt](../php/14-class-va-obyekt-eng-asosiy-tushuncha.md), [kirish darajalari](../php/16-kirish-darajalari-public-va-private.md), [enum](../php/22-enum-cheklangan-tanlovlar.md), [xatolarni boshqarish](../php/23-xatolarni-boshqarish.md) va [namespace va autoloading](../php/namespace-autoloading.md) boblariga tayanadi.
 
@@ -961,4 +961,4 @@ Bu — Wave 2 ning yakuniy bobi. Endi siz zamonaviy PHP tip tizimi, atributlar, 
 
 ---
 
-[⬅️ Oldingi: 09 — WeakMap, SPL va reference](./09-weakmap-spl.md) · [🏠 README](./README.md) · [Keyingi: README ➡️](./README.md)
+[⬅️ Oldingi: 09 — WeakMap, SPL va reference](./09-weakmap-spl.md) · [🏠 README](./README.md) · [Keyingi: 11 — HTTP xabarlari: PSR-7 va PSR-17 ➡️](./11-psr7-http.md)

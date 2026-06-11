@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 470" width="720" height="470">
+  <title>PSR-15 middleware "piyoz" (onion) modeli: so'rov tashqi qatlamdan markazga (handler) kiradi, javob teskari tartibda tashqariga qaytadi; har middleware before va after mantiqqa ega</title>
+
+  <rect x="0" y="0" width="720" height="470" fill="#f8fafc"/>
+
+  <text x="360" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">"Piyoz" modeli: middleware qatlamlari</text>
+  <text x="360" y="54" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">So'rov ICHKARIGA kiradi, javob TASHQARIGA qaytadi (har qatlam before + after)</text>
+
+  <!-- Tashqi qatlam: Logging -->
+  <rect x="120" y="80" width="480" height="310" rx="16" fill="#eff6ff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="142" y="104" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#1e3a8a">Logging middleware</text>
+
+  <!-- O'rta qatlam: Auth -->
+  <rect x="190" y="130" width="340" height="210" rx="14" fill="#f0fdf4" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="212" y="154" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#14532d">Auth middleware</text>
+
+  <!-- Ichki qatlam: CORS -->
+  <rect x="258" y="180" width="204" height="110" rx="12" fill="#faf5ff" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="280" y="204" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#5b21b6">CORS middleware</text>
+
+  <!-- Markaz: final handler -->
+  <rect x="300" y="218" width="120" height="56" rx="10" fill="#f59e0b"/>
+  <text x="360" y="244" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">Final handler</text>
+  <text x="360" y="262" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#fffbeb">(javob yasaydi)</text>
+
+  <!-- Kirish strelkasi (so'rov, ichkariga) -->
+  <line x1="30" y1="150" x2="118" y2="150" stroke="#2563eb" stroke-width="3" marker-end="url(#ablue)"/>
+  <text x="74" y="140" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="bold" fill="#2563eb">So'rov</text>
+  <text x="225" y="320" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#2563eb">before &#8594; ichkariga</text>
+
+  <!-- Chiqish strelkasi (javob, tashqariga) -->
+  <line x1="118" y1="330" x2="30" y2="330" stroke="#16a34a" stroke-width="3" marker-end="url(#agreen)"/>
+  <text x="74" y="352" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="bold" fill="#16a34a">Javob</text>
+  <text x="470" y="320" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#16a34a">after &#8592; tashqariga</text>
+
+  <!-- pastki izoh: bajarilish tartibi -->
+  <rect x="40" y="408" width="640" height="48" rx="10" fill="#fef9c3" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="56" y="430" font-family="Consolas, Courier New, monospace" font-size="12" fill="#92400e">Tartib: LOG&#8594; AUTH&#8594; CORS&#8594; [HANDLER] &#8594;CORS &#8594;AUTH &#8594;LOG</text>
+  <text x="56" y="449" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#713f12">before lar ichkariga kiradi, after lar TESKARI tartibda tashqariga chiqadi (stek kabi).</text>
+
+  <defs>
+    <marker id="ablue" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/>
+    </marker>
+    <marker id="agreen" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+</svg>
