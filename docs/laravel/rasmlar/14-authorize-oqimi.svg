@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="720" height="440">
+  <title>authorize() va @can tekshiruv oqimi: sorov controllerga keladi, authorize() PostPolicy metodini chaqiradi, ruxsat bolsa amal bajariladi, aks holda 403 xato qaytariladi</title>
+  <rect x="0" y="0" width="720" height="440" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">authorize() tekshiruv oqimi</text>
+
+  <!-- 1. so'rov -->
+  <rect x="40" y="64" width="180" height="56" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="130" y="90" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Aziz so'rov yuboradi</text>
+  <text x="130" y="110" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">PUT /posts/7</text>
+
+  <line x1="220" y1="92" x2="258" y2="92" stroke="#475569" stroke-width="2.5"/>
+  <polygon points="258,87 270,92 258,97" fill="#475569"/>
+
+  <!-- 2. controller -->
+  <rect x="270" y="64" width="200" height="56" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="370" y="88" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">PostController@update</text>
+  <text x="370" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Gate::authorize('update', $post)</text>
+
+  <line x1="370" y1="120" x2="370" y2="156" stroke="#475569" stroke-width="2.5"/>
+  <polygon points="365,156 370,168 375,156" fill="#475569"/>
+
+  <!-- 3. policy -->
+  <rect x="250" y="170" width="240" height="62" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="370" y="196" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">PostPolicy::update($user, $post)</text>
+  <text x="370" y="218" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">return $post-&gt;user_id === $user-&gt;id;</text>
+
+  <!-- ayri: ha / yo'q -->
+  <line x1="370" y1="232" x2="370" y2="258" stroke="#475569" stroke-width="2.5"/>
+  <line x1="200" y1="258" x2="540" y2="258" stroke="#475569" stroke-width="2.5"/>
+  <line x1="200" y1="258" x2="200" y2="286" stroke="#16a34a" stroke-width="2.5"/>
+  <polygon points="195,286 200,298 205,286" fill="#16a34a"/>
+  <line x1="540" y1="258" x2="540" y2="286" stroke="#dc2626" stroke-width="2.5"/>
+  <polygon points="535,286 540,298 545,286" fill="#dc2626"/>
+
+  <text x="240" y="252" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">true (egasi)</text>
+  <text x="505" y="252" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626">false (begona)</text>
+
+  <!-- ha quti -->
+  <rect x="80" y="300" width="240" height="70" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="200" y="326" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">Ruxsat berildi</text>
+  <text x="200" y="348" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Post yangilanadi, davom etadi</text>
+
+  <!-- yo'q quti -->
+  <rect x="420" y="300" width="240" height="70" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="540" y="326" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">403 Forbidden</text>
+  <text x="540" y="348" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Amal to'xtaydi, xato qaytadi</text>
+
+  <!-- pastki izoh -->
+  <text x="360" y="406" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Blade'da @can('update', $post) ... @endcan — xuddi shu Policy'ni chaqiradi,</text>
+  <text x="360" y="428" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">faqat 403 o'rniga tugmani ko'rsatadi yoki yashiradi</text>
+</svg>

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 470" width="720" height="470">
+  <title>never tipi qayerda paydo bo'ladi: xato otkazadigan (throw) funksiya, hech qachon tugamaydigan (cheksiz sikl) funksiya va exhaustiveness tekshiruvida (hamma holat qoplangach qolgan qiymat never bo'ladi)</title>
+
+  <rect x="0" y="0" width="720" height="470" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">never — "hech qachon bo'lmaydigan qiymat" qayerda chiqadi?</text>
+
+  <!-- markaz never tugmasi -->
+  <circle cx="360" cy="120" r="44" fill="#7c3aed" stroke="#5b21b6" stroke-width="2"/>
+  <text x="360" y="116" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff">never</text>
+  <text x="360" y="138" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#ede9fe">hech qiymat yo'q</text>
+
+  <!-- uchta strelka markazdan pastga -->
+  <line x1="200" y1="230" x2="320" y2="160" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="360" y1="230" x2="360" y2="166" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="520" y1="230" x2="400" y2="160" stroke="#94a3b8" stroke-width="2"/>
+
+  <!-- 1: throw -->
+  <rect x="40" y="234" width="206" height="150" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="143" y="260" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">1. Xato otkazadi</text>
+  <rect x="56" y="274" width="174" height="62" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="66" y="296" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">function x(): never {</text>
+  <text x="66" y="316" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">  throw new Error()</text>
+  <text x="66" y="333" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">}</text>
+  <text x="143" y="362" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">hech qachon</text>
+  <text x="143" y="378" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">return qilmaydi</text>
+
+  <!-- 2: cheksiz sikl -->
+  <rect x="257" y="234" width="206" height="150" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="360" y="260" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b45309">2. Cheksiz sikl</text>
+  <rect x="273" y="274" width="174" height="62" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="283" y="296" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">function y(): never {</text>
+  <text x="283" y="316" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">  while (true) {}</text>
+  <text x="283" y="333" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">}</text>
+  <text x="360" y="362" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">hech qachon</text>
+  <text x="360" y="378" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tugamaydi</text>
+
+  <!-- 3: exhaustiveness -->
+  <rect x="474" y="234" width="206" height="150" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="577" y="260" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">3. Exhaustiveness</text>
+  <rect x="490" y="274" width="174" height="62" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="500" y="296" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">// hamma case</text>
+  <text x="500" y="316" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">// qoplangach:</text>
+  <text x="500" y="333" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">const z: never = h</text>
+  <text x="577" y="362" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">qolgan qiymat yo'q —</text>
+  <text x="577" y="378" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">demak never</text>
+
+  <text x="360" y="420" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Umumiy g'oya: "bu nuqtaga oqim hech qachon yetib kelmaydi" yoki "bu yerda qoladigan qiymat yo'q"</text>
+  <text x="360" y="448" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">3-holatda yangi union a'zosi qo'shsangiz, never xatosi sizni eslatadi — bu juda foydali tuzoq qo'riqchisi</text>
+</svg>

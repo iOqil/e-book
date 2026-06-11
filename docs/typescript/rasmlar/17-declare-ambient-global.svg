@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 450" width="720" height="450">
+  <title>declare kalit so'zi ambient (atrof-muhitda mavjud) e'lon qiladi: 'shu nom allaqachon bor, mana uning tipi' deydi, lekin hech qanday kod yaratmaydi; TypeScript ishonadi va tekshirishda foydalanadi</title>
+  <rect x="0" y="0" width="720" height="450" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">declare — "bu nom allaqachon mavjud" deb e'lon qilish</text>
+
+  <!-- declare bloki -->
+  <rect x="40" y="62" width="300" height="150" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="190" y="88" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#7c3aed">globals.d.ts</text>
+  <line x1="40" y1="100" x2="340" y2="100" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="58" y="128" font-family="Consolas, monospace" font-size="14" fill="#1e293b">declare const</text>
+  <text x="58" y="150" font-family="Consolas, monospace" font-size="14" fill="#1e293b">APP_VERSIYA: string;</text>
+  <text x="58" y="186" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tan yo'q, qiymat yo'q —</text>
+  <text x="58" y="204" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">faqat "tip va'dasi"</text>
+
+  <!-- qiymat qayerdan keladi -->
+  <rect x="380" y="62" width="300" height="150" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="530" y="88" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b45309">Haqiqiy qiymat — boshqa joydan</text>
+  <line x1="380" y1="100" x2="680" y2="100" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="398" y="128" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">HTML &lt;script&gt; tegi,</text>
+  <text x="398" y="150" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">build paytida o'rnatilgan o'zgaruvchi,</text>
+  <text x="398" y="172" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">yoki global muhit beradi.</text>
+  <text x="398" y="200" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">declare uni YARATMAYDI — faqat tanaydi</text>
+
+  <!-- o'qlar pastga -->
+  <line x1="190" y1="212" x2="190" y2="262" stroke="#7c3aed" stroke-width="2"/>
+  <polygon points="190,262 184,250 196,250" fill="#7c3aed"/>
+  <line x1="530" y1="212" x2="530" y2="262" stroke="#f59e0b" stroke-width="2"/>
+  <polygon points="530,262 524,250 536,250" fill="#f59e0b"/>
+
+  <!-- ishlatish -->
+  <rect x="40" y="268" width="640" height="110" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="60" y="294" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">main.ts da ishlatamiz:</text>
+  <text x="60" y="324" font-family="Consolas, monospace" font-size="14" fill="#1e293b">console.log("Versiya:", APP_VERSIYA);</text>
+  <text x="60" y="352" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">TS xato bermaydi: u APP_VERSIYA string ekanini "biladi" (declare aytdi)</text>
+
+  <!-- xulosa -->
+  <text x="360" y="412" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">declare = TS'ga "men bu nomni va'da qilaman" demoq. Tekshirishda yashaydi,</text>
+  <text x="360" y="434" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">kompilyatsiyadan keyin JS'da undan asar qolmaydi.</text>
+</svg>

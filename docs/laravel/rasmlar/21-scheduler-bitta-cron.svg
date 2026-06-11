@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 450" width="720" height="450">
+  <title>Serverda bitta cron yozuvi har daqiqada schedule:run ni chaqiradi, u routes/console.php dagi jadvalga qaraydi va aynan shu daqiqada bajariladigan vazifalarnigina ishga tushiradi</title>
+
+  <rect x="0" y="0" width="720" height="450" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Bitta cron — ko'p rejalashtirilgan vazifa</text>
+
+  <!-- Server cron box -->
+  <rect x="40" y="74" width="220" height="96" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="150" y="100" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b45309">Server crontab</text>
+  <text x="150" y="124" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">FAQAT BITTA yozuv:</text>
+  <text x="150" y="146" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">* * * * *</text>
+  <text x="150" y="162" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">har daqiqada</text>
+
+  <!-- arrow to schedule:run -->
+  <line x1="260" y1="122" x2="338" y2="122" stroke="#2563eb" stroke-width="2.5" marker-end="url(#a)"/>
+  <text x="299" y="112" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">chaqiradi</text>
+
+  <!-- schedule:run box -->
+  <rect x="340" y="84" width="200" height="76" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="440" y="114" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">schedule:run</text>
+  <text x="440" y="138" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">jadvalga qaraydi</text>
+
+  <!-- decision: vaqti kelganmi? -->
+  <text x="440" y="196" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">"Aynan hozir kimga vaqt keldi?"</text>
+
+  <!-- fan-out to tasks -->
+  <line x1="440" y1="206" x2="180" y2="252" stroke="#16a34a" stroke-width="2" marker-end="url(#ag)"/>
+  <line x1="440" y1="206" x2="440" y2="252" stroke="#16a34a" stroke-width="2" marker-end="url(#ag)"/>
+  <line x1="440" y1="206" x2="600" y2="252" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#agray)"/>
+
+  <!-- task 1 (due) -->
+  <rect x="70" y="256" width="200" height="64" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="170" y="282" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">report:daily</text>
+  <text x="170" y="304" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">-&gt;dailyAt('02:00')</text>
+
+  <!-- task 2 (due) -->
+  <rect x="340" y="256" width="200" height="64" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="440" y="282" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">cleanup:temp</text>
+  <text x="440" y="304" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">-&gt;hourly()</text>
+
+  <!-- task 3 (not due) -->
+  <rect x="500" y="256" width="200" height="64" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5 4"/>
+  <text x="600" y="282" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#475569">backup:run</text>
+  <text x="600" y="304" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">-&gt;weekly() (vaqti emas)</text>
+
+  <!-- labels -->
+  <text x="270" y="350" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">vaqti kelgan -&gt; ishga tushadi</text>
+  <text x="600" y="350" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">vaqti emas -&gt; o'tkazib yuboriladi</text>
+
+  <!-- bottom note -->
+  <rect x="60" y="382" width="600" height="46" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="360" y="403" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">Jadval routes/console.php da kodda yoziladi — yangi vazifa = bir qator kod,</text>
+  <text x="360" y="421" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">serverning crontab iga umuman tegilmaydi</text>
+
+  <defs>
+    <marker id="a" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#2563eb"/></marker>
+    <marker id="ag" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#16a34a"/></marker>
+    <marker id="agray" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#94a3b8"/></marker>
+  </defs>
+</svg>

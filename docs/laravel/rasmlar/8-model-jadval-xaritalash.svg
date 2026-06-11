@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>Eloquent xaritalash: Post modeli posts jadvaliga, model obyekti bitta qatorga, xususiyat esa ustunga mos keladi</title>
+  <defs>
+    <marker id="em-blue" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Eloquent: model bilan jadval bir-biriga mos keladi</text>
+
+  <!-- chap: PHP model dunyosi -->
+  <text x="185" y="72" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#7c3aed">PHP dunyosi (model)</text>
+  <rect x="40" y="86" width="290" height="120" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="58" y="112" font-family="Consolas, monospace" font-size="14" fill="#1e293b">class Post extends Model</text>
+  <text x="58" y="138" font-family="Consolas, monospace" font-size="13" fill="#475569">{</text>
+  <text x="58" y="162" font-family="Consolas, monospace" font-size="13" fill="#475569">  // ustunlar avtomatik</text>
+  <text x="58" y="184" font-family="Consolas, monospace" font-size="13" fill="#475569">}</text>
+
+  <text x="185" y="240" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#7c3aed">$post (obyekt)</text>
+  <rect x="40" y="252" width="290" height="120" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="58" y="280" font-family="Consolas, monospace" font-size="14" fill="#1e293b">$post-&gt;id     = 1</text>
+  <text x="58" y="306" font-family="Consolas, monospace" font-size="14" fill="#1e293b">$post-&gt;title  = "Salom"</text>
+  <text x="58" y="332" font-family="Consolas, monospace" font-size="14" fill="#1e293b">$post-&gt;body   = "..."</text>
+  <text x="58" y="358" font-family="Consolas, monospace" font-size="13" fill="#475569">// bitta qator = bitta obyekt</text>
+
+  <!-- o'ng: baza dunyosi -->
+  <text x="535" y="72" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">Baza dunyosi (jadval)</text>
+  <text x="535" y="118" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">posts</text>
+  <rect x="400" y="128" width="280" height="120" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="400" y1="158" x2="680" y2="158" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="400" y1="188" x2="680" y2="188" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="447" y1="128" x2="447" y2="248" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="555" y1="128" x2="555" y2="248" stroke="#94a3b8" stroke-width="1"/>
+  <text x="423" y="148" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#475569">id</text>
+  <text x="501" y="148" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#475569">title</text>
+  <text x="617" y="148" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#475569">body</text>
+  <text x="423" y="178" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">1</text>
+  <text x="501" y="178" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Salom</text>
+  <text x="617" y="178" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">...</text>
+  <text x="423" y="208" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">2</text>
+  <text x="501" y="208" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Xayr</text>
+  <text x="617" y="208" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">...</text>
+  <text x="423" y="238" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">...</text>
+  <text x="501" y="238" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">...</text>
+  <text x="617" y="238" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">...</text>
+
+  <!-- xaritalash izohlari -->
+  <text x="535" y="290" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">model nomi (Post) -&gt; jadval nomi (posts)</text>
+  <text x="535" y="316" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">obyekt -&gt; bitta qator</text>
+  <text x="535" y="342" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">xususiyat ($post-&gt;title) -&gt; ustun</text>
+
+  <!-- ulanish o'qi -->
+  <line x1="335" y1="312" x2="395" y2="200" stroke="#2563eb" stroke-width="2" marker-end="url(#em-blue)"/>
+
+  <text x="360" y="406" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Sen PHP obyekti bilan ishlaysan, Eloquent uni jadval qatoriga tarjima qiladi</text>
+</svg>

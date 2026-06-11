@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>Controller'dan kelgan ma'lumot Blade shabloniga uzatiladi, Blade uni HTML'ga render qiladi va {{ }} ichidagi xavfli belgilarni avtomatik escape qiladi</title>
+
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Controller -&gt; Blade -&gt; HTML (escape bilan)</text>
+
+  <!-- 1. Controller -->
+  <rect x="30" y="70" width="200" height="150" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="130" y="94" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">1. Controller</text>
+  <text x="46" y="122" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">$ism =</text>
+  <text x="46" y="142" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">'&lt;b&gt;Oqil&lt;/b&gt;';</text>
+  <text x="46" y="172" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">return view(</text>
+  <text x="46" y="190" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">  'salom',</text>
+  <text x="46" y="208" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">  compact('ism'));</text>
+
+  <!-- arrow 1->2 -->
+  <line x1="234" y1="145" x2="284" y2="145" stroke="#475569" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="259" y="135" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">data</text>
+
+  <!-- 2. Blade -->
+  <rect x="288" y="70" width="200" height="150" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="388" y="94" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">2. Blade shablon</text>
+  <text x="304" y="124" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">salom.blade.php</text>
+  <text x="304" y="158" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">&lt;h1&gt;Salom,</text>
+  <text x="304" y="180" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#7c3aed">{{ $ism }}</text>
+  <text x="304" y="202" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">!&lt;/h1&gt;</text>
+
+  <!-- arrow 2->3 -->
+  <line x1="492" y1="145" x2="542" y2="145" stroke="#475569" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="517" y="135" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">render</text>
+
+  <!-- 3. HTML output -->
+  <rect x="546" y="70" width="150" height="150" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="621" y="94" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#475569">3. HTML</text>
+  <text x="560" y="124" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">&lt;h1&gt;Salom,</text>
+  <text x="560" y="150" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626">&amp;lt;b&amp;gt;Oqil</text>
+  <text x="560" y="170" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626">&amp;lt;/b&amp;gt;</text>
+  <text x="560" y="190" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">!&lt;/h1&gt;</text>
+
+  <!-- escape callout -->
+  <rect x="546" y="232" width="150" height="58" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="621" y="254" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#b45309">XSS himoyasi</text>
+  <text x="621" y="274" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309">&lt; va &gt; zararsiz</text>
+
+  <!-- bottom explanation -->
+  <rect x="30" y="320" width="666" height="86" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="363" y="346" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">{{ }} avtomatik escape qiladi — brauzer &lt;b&gt; ni teg emas, oddiy matn deb ko'radi</text>
+  <text x="363" y="372" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Shu sabab foydalanuvchi kiritgan ma'lumot sahifaga skript joylab qo'ya olmaydi.</text>
+  <text x="363" y="394" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Faqat o'zingiz ishonadigan HTML uchun {!! !!} ishlatiladi.</text>
+
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+</svg>

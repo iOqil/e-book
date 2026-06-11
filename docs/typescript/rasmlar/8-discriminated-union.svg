@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="720" height="440">
+  <title>Discriminated union: Shakl tipining kind maydonidagi literal qiymat bo'yicha switch har bir tarmoqni aniq tipga (Doira, Tortburchak, Uchburchak) ajratadi</title>
+  <rect x="0" y="0" width="720" height="440" fill="#f8fafc"/>
+
+  <text x="360" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Discriminated union: tag bo'yicha tarmoqlanish</text>
+
+  <!-- Union qutisi -->
+  <rect x="245" y="60" width="230" height="70" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="360" y="84" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">type Shakl</text>
+  <text x="360" y="106" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Doira | Tortburchak | Uchburchak</text>
+  <text x="360" y="124" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">umumiy tag: kind</text>
+
+  <!-- switch romb -->
+  <line x1="360" y1="130" x2="360" y2="150" stroke="#475569" stroke-width="2"/>
+  <polygon points="360,158 354,148 366,148" fill="#475569"/>
+  <rect x="290" y="160" width="140" height="40" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="360" y="185" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b45309">switch (shakl.kind)</text>
+
+  <!-- uchta tarmoq chizig'i -->
+  <line x1="360" y1="200" x2="360" y2="218" stroke="#475569" stroke-width="2"/>
+  <line x1="135" y1="218" x2="585" y2="218" stroke="#475569" stroke-width="2"/>
+  <line x1="135" y1="218" x2="135" y2="248" stroke="#16a34a" stroke-width="2"/>
+  <line x1="360" y1="218" x2="360" y2="248" stroke="#16a34a" stroke-width="2"/>
+  <line x1="585" y1="218" x2="585" y2="248" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="135,256 129,246 141,246" fill="#16a34a"/>
+  <polygon points="360,256 354,246 366,246" fill="#16a34a"/>
+  <polygon points="585,256 579,246 591,246" fill="#16a34a"/>
+
+  <!-- case yorliqlari -->
+  <text x="135" y="240" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">case "doira"</text>
+  <text x="360" y="240" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">case "tortburchak"</text>
+  <text x="585" y="240" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">case "uchburchak"</text>
+
+  <!-- uchta natija qutisi -->
+  <rect x="40" y="258" width="190" height="96" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="135" y="282" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">shakl: Doira</text>
+  <text x="135" y="306" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">radius mavjud</text>
+  <text x="135" y="328" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tomon — yo'q</text>
+  <text x="135" y="347" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">PI * radius**2</text>
+
+  <rect x="265" y="258" width="190" height="96" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="360" y="282" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">shakl: Tortburchak</text>
+  <text x="360" y="306" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">tomon mavjud</text>
+  <text x="360" y="328" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">radius — yo'q</text>
+  <text x="360" y="347" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tomon**2</text>
+
+  <rect x="490" y="258" width="190" height="96" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="585" y="282" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">shakl: Uchburchak</text>
+  <text x="585" y="306" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">asos, balandlik</text>
+  <text x="585" y="328" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">radius — yo'q</text>
+  <text x="585" y="347" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">asos*balandlik/2</text>
+
+  <!-- pastki izoh -->
+  <text x="360" y="392" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Har case ichida shakl o'sha aniq tipga torayadi — faqat mos maydonlar ko'rinadi</text>
+  <text x="360" y="420" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">kind maydoni literal qiymat ("doira") bo'lgani uchun ishlaydi, oddiy string emas</text>
+</svg>

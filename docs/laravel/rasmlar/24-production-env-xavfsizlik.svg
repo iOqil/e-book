@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="720" height="440">
+  <title>Production .env xavfsizligi: chap tomonda APP_DEBUG=true xatosi butun stack-trace va baza parolini ko'rsatadi, o'ng tomonda APP_DEBUG=false faqat umumiy xato sahifasini ko'rsatadi va batafsil xatoni log faylga yozadi</title>
+
+  <rect x="0" y="0" width="720" height="440" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">APP_DEBUG: production'da nega false bo'lishi shart?</text>
+
+  <!-- CHAP: DEBUG=true (xavfli) -->
+  <text x="190" y="72" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#dc2626">APP_DEBUG=true</text>
+  <text x="190" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">(production'da XAVFLI)</text>
+
+  <rect x="40" y="104" width="300" height="230" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2.5"/>
+  <rect x="40" y="104" width="300" height="34" rx="10" fill="#fee2e2"/>
+  <text x="190" y="126" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">500 — har mehmon ko'radigan ekran</text>
+
+  <text x="58" y="162" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">SQLSTATE[42S02]: table not found</text>
+  <text x="58" y="184" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">at app/Http/Controllers/Task.php:24</text>
+  <text x="58" y="206" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">stack-trace: 40 ta qator...</text>
+
+  <rect x="58" y="222" width="264" height="56" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="68" y="242" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#b45309">.env qiymatlari ko'rinadi:</text>
+  <text x="68" y="262" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">DB_PASSWORD=parol123 (oshkor!)</text>
+
+  <text x="190" y="306" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626">Baza paroli, fayl yo'llari</text>
+  <text x="190" y="326" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626">begonaga ochiq — falokat</text>
+
+  <!-- O'NG: DEBUG=false (xavfsiz) -->
+  <text x="530" y="72" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">APP_DEBUG=false</text>
+  <text x="530" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">(production'da TO'G'RI)</text>
+
+  <rect x="380" y="104" width="300" height="124" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <rect x="380" y="104" width="300" height="34" rx="10" fill="#dcfce7"/>
+  <text x="530" y="126" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">Mehmon faqat shuni ko'radi</text>
+
+  <text x="530" y="170" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1e293b">500</text>
+  <text x="530" y="198" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Server xatosi. Keyinroq urinib ko'ring.</text>
+
+  <!-- arrow to log -->
+  <line x1="530" y1="228" x2="530" y2="258" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow2)"/>
+  <text x="600" y="248" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">batafsil xato</text>
+
+  <rect x="380" y="258" width="300" height="76" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="530" y="284" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">storage/logs/laravel.log</text>
+  <text x="530" y="308" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">to'liq stack-trace shu yerda —</text>
+  <text x="530" y="326" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">faqat dasturchi o'qiydi, mehmon emas</text>
+
+  <!-- pastki xulosa -->
+  <text x="360" y="378" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Qoida: production .env da har doim</text>
+  <text x="360" y="404" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">APP_ENV=production, APP_DEBUG=false, kuchli APP_KEY</text>
+
+  <defs>
+    <marker id="arrow2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" width="720" height="420">
+  <title>SSH kalit jufti: maxfiy kalit foydalanuvchi kompyuterida qoladi, ochiq kalit GitHubda turadi, ular handshake orqali bir-birini tasdiqlaydi</title>
+
+  <rect x="0" y="0" width="720" height="420" fill="#f8fafc"/>
+
+  <text x="360" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">SSH kalit jufti: bittasi sizda, bittasi GitHubda</text>
+
+  <!-- chap: kompyuter -->
+  <rect x="40" y="74" width="270" height="250" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="175" y="104" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#2563eb">Sizning kompyuteringiz</text>
+  <text x="175" y="126" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">~/.ssh/ katalogi</text>
+
+  <!-- maxfiy kalit -->
+  <rect x="66" y="146" width="218" height="70" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="175" y="172" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">Maxfiy kalit</text>
+  <text x="175" y="192" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">id_ed25519</text>
+  <text x="175" y="209" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">hech qachon chiqmaydi</text>
+
+  <!-- ochiq kalit nusxasi -->
+  <rect x="66" y="228" width="218" height="70" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="175" y="254" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Ochiq kalit</text>
+  <text x="175" y="274" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">id_ed25519.pub</text>
+  <text x="175" y="291" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">ulashish mumkin</text>
+
+  <!-- o'ng: GitHub -->
+  <rect x="410" y="74" width="270" height="250" rx="12" fill="#e2e8f0" stroke="#1e293b" stroke-width="2.5"/>
+  <text x="545" y="104" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#1e293b">GitHub server</text>
+  <text x="545" y="126" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Settings -> SSH keys</text>
+
+  <rect x="436" y="186" width="218" height="80" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="545" y="216" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Ochiq kalit nusxasi</text>
+  <text x="545" y="238" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">id_ed25519.pub</text>
+  <text x="545" y="256" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">siz qo'shasiz</text>
+
+  <!-- handshake o'qlari -->
+  <line x1="310" y1="262" x2="436" y2="226" stroke="#16a34a" stroke-width="2.5" stroke-dasharray="6 4"/>
+  <polygon points="436,226 424,225 429,235" fill="#16a34a"/>
+  <text x="372" y="232" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">qo'shasiz</text>
+
+  <!-- handshake markazda -->
+  <text x="360" y="360" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#7c3aed">Handshake: GitHub topshiriq beradi, maxfiy kalit uni yechadi</text>
+  <text x="360" y="388" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">To'g'ri yechilsa -> kirasiz. Maxfiy kalit kompyuterdan chiqmaydi.</text>
+</svg>

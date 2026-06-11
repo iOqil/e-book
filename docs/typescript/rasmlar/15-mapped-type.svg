@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 470" width="720" height="470">
+  <title>Mapped type qanday ishlaydi: kirish tipidagi har bir maydon (keyof bilan iteratsiya) ustidan o'tib, har biriga modifikator (masalan readonly) qo'shib, yangi tip hosil qiladi</title>
+  <rect x="0" y="0" width="720" height="470" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Mapped type: har maydon ustidan o'tib o'zgartirish</text>
+
+  <!-- formula -->
+  <rect x="170" y="52" width="380" height="40" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="360" y="78" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#7c3aed">{ readonly [K in keyof T]: T[K] }</text>
+
+  <!-- kirish tip (chap) -->
+  <text x="150" y="128" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">Kirish tip T</text>
+  <rect x="40" y="140" width="220" height="170" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="60" y="172" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">id: number</text>
+  <line x1="40" y1="186" x2="260" y2="186" stroke="#93c5fd" stroke-width="1"/>
+  <text x="60" y="212" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">ism: string</text>
+  <line x1="40" y1="226" x2="260" y2="226" stroke="#93c5fd" stroke-width="1"/>
+  <text x="60" y="252" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">email: string</text>
+  <text x="150" y="292" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">keyof T = "id" | "ism" | "email"</text>
+
+  <!-- strelka + jarayon -->
+  <text x="360" y="200" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">har K uchun:</text>
+  <text x="360" y="222" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">readonly qo'sh</text>
+  <line x1="270" y1="225" x2="450" y2="225" stroke="#16a34a" stroke-width="3"/>
+  <polygon points="450,219 462,225 450,231" fill="#16a34a"/>
+
+  <!-- chiqish tip (o'ng) -->
+  <text x="572" y="128" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Chiqish tip Readonly&lt;T&gt;</text>
+  <rect x="462" y="140" width="220" height="170" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="482" y="172" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#16a34a" font-weight="bold">readonly <tspan fill="#1e293b" font-weight="normal">id: number</tspan></text>
+  <line x1="462" y1="186" x2="682" y2="186" stroke="#86efac" stroke-width="1"/>
+  <text x="482" y="212" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#16a34a" font-weight="bold">readonly <tspan fill="#1e293b" font-weight="normal">ism: string</tspan></text>
+  <line x1="462" y1="226" x2="682" y2="226" stroke="#86efac" stroke-width="1"/>
+  <text x="482" y="252" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#16a34a" font-weight="bold">readonly <tspan fill="#1e293b" font-weight="normal">email: string</tspan></text>
+  <text x="572" y="292" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">har maydon endi qotgan</text>
+
+  <!-- pastki izoh -->
+  <rect x="40" y="340" width="642" height="100" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="60" y="368" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b45309">Uch bo'lak:</text>
+  <text x="60" y="392" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">1) [K in keyof T] — har maydon nomini navbatma-navbat oladi (massivdagi for...in kabi)</text>
+  <text x="60" y="414" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">2) modifikator (readonly, ?) — har maydonga qo'shiladi yoki olib tashlanadi</text>
+  <text x="60" y="434" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">3) T[K] — o'sha maydonning tipi (indexed access — "K maydoning tipi")</text>
+</svg>

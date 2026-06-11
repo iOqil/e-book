@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="720" height="440">
+  <title>fetch json() any xavfi: javob.json() Promise any qaytaradi va tip tekshiruvi o'chadi, har qanday murojaat xatosiz o'tadi; yechim — natijani interface bilan tiplash yoki validatsiya qilish</title>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="720" height="440" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">fetch + json(): yashirin any xavfi</text>
+
+  <!-- quvur: fetch -> Response -> json() -> any -->
+  <rect x="40" y="62" width="120" height="50" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="100" y="84" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">await fetch()</text>
+  <text x="100" y="103" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">-&gt; Response</text>
+
+  <line x1="162" y1="87" x2="208" y2="87" stroke="#475569" stroke-width="2.5"/>
+  <polygon points="208,87 198,82 198,92" fill="#475569"/>
+
+  <rect x="210" y="62" width="140" height="50" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="280" y="84" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">await .json()</text>
+  <text x="280" y="103" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">-&gt; Promise&lt;any&gt;</text>
+
+  <line x1="352" y1="87" x2="398" y2="87" stroke="#475569" stroke-width="2.5"/>
+  <polygon points="398,87 388,82 388,92" fill="#475569"/>
+
+  <rect x="400" y="60" width="120" height="54" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="460" y="84" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#dc2626">any</text>
+  <text x="460" y="105" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">tekshiruv O'CHIQ</text>
+
+  <!-- xavf qutisi -->
+  <rect x="40" y="138" width="480" height="96" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="58" y="162" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">any bo'lgani uchun hammasi xatosiz "o'tadi":</text>
+  <text x="58" y="186" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">data.ism.toUpperCase()</text>
+  <text x="300" y="186" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#16a34a">kompilyatsiya OK</text>
+  <text x="58" y="210" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">data.fooBar.x.y.z</text>
+  <text x="300" y="210" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#16a34a">kompilyatsiya OK (!)</text>
+  <text x="58" y="228" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">...lekin runtime'da portlashi mumkin — JS'dagidek himoyasiz</text>
+
+  <!-- yechim panel -->
+  <text x="360" y="268" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Yechim: any'ni darrov aniq tipga aylantir</text>
+
+  <!-- yechim 1 -->
+  <rect x="40" y="284" width="320" height="120" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="200" y="308" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">Ishonchli (ichki) API</text>
+  <text x="58" y="334" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">const data = (await javob.json())</text>
+  <text x="58" y="354" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#2563eb">    as Foydalanuvchi;</text>
+  <text x="58" y="380" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tez, lekin faqat VA'DA —</text>
+  <text x="58" y="398" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">runtime'da tekshirilmaydi</text>
+
+  <!-- yechim 2 -->
+  <rect x="380" y="284" width="300" height="120" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="530" y="308" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">Ishonchsiz (tashqi) API</text>
+  <text x="396" y="334" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">const data: unknown = await</text>
+  <text x="396" y="354" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">    javob.json();</text>
+  <text x="396" y="378" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">if (!foydalanuvchimi(data))...</text>
+  <text x="396" y="398" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">ISBOT — runtime validatsiya</text>
+
+  <!-- pastki izoh -->
+  <text x="360" y="430" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Tip runtime'da yo'q: as faqat kompilyatorga gapiradi, validatsiya esa ma'lumotni haqiqatan tekshiradi</text>
+</svg>

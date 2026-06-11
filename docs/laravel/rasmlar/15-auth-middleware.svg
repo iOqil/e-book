@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>Auth middleware qaror oqimi: so'rov keladi, foydalanuvchi tizimga kirganmi tekshiriladi; kirgan bo'lsa so'rov controllerga o'tadi, kirmagan bo'lsa login sahifasiga yo'naltiriladi</title>
+
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">auth middleware: kirmaganni to'xtatadi</text>
+
+  <defs>
+    <marker id="kok2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 z" fill="#2563eb"/>
+    </marker>
+    <marker id="yashil2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 z" fill="#16a34a"/>
+    </marker>
+    <marker id="qizil2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 z" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+  <!-- So'rov -->
+  <rect x="40" y="170" width="130" height="80" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="105" y="203" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">So'rov</text>
+  <text x="105" y="225" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">GET /dashboard</text>
+
+  <!-- Romb: tekshiruv -->
+  <polygon points="330,150 430,210 330,270 230,210" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="330" y="200" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309">auth</text>
+  <text x="330" y="222" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">kirganmi?</text>
+
+  <!-- So'rov -> romb -->
+  <path d="M170 210 L226 210" fill="none" stroke="#2563eb" stroke-width="2.5" marker-end="url(#kok2)"/>
+
+  <!-- HA -> controller -->
+  <path d="M430 210 L556 210" fill="none" stroke="#16a34a" stroke-width="2.5" marker-end="url(#yashil2)"/>
+  <text x="495" y="198" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">HA</text>
+  <text x="495" y="232" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">$next($request)</text>
+
+  <!-- Controller -->
+  <rect x="560" y="170" width="130" height="80" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="625" y="203" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Controller</text>
+  <text x="625" y="225" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">sahifa ochiladi</text>
+
+  <!-- YO'Q -> login -->
+  <path d="M330 270 L330 330" fill="none" stroke="#dc2626" stroke-width="2.5" marker-end="url(#qizil2)"/>
+  <text x="368" y="305" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">YO'Q</text>
+
+  <!-- Login sahifasi -->
+  <rect x="250" y="335" width="160" height="70" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="330" y="365" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">redirect('/login')</text>
+  <text x="330" y="387" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">controllerga umuman bormaydi</text>
+
+  <text x="360" y="425" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8"></text>
+</svg>

@@ -35,7 +35,15 @@ Qaysi yo'nalishni tanlasangiz ham, **ikkita kitobdan boshlaysiz**: HTML & CSS va
 
 ![Dasturlashning umumiy yo'l xaritasi: poydevordan uch yo'nalishga](assets/roadmap-umumiy.svg)
 
-Va butun yo'l davomida, **parallel ravishda** — [1000 masala](1000-masala/README.md) bilan algoritmik fikrlashni mashq qiling. Bu intervyularda eng ko'p so'raladigan qism.
+Va butun yo'l davomida, **parallel ravishda** ikki narsani mashq qiling: [1000 masala](1000-masala/README.md) bilan algoritmik fikrlashni (intervyularda eng ko'p so'raladigan qism) va [Git & GitHub](git-github/README.md) bilan kodingizni saqlashni.
+
+---
+
+## 🐙 Git & GitHub — birinchi kundan
+
+Yo'nalishingizdan qat'i nazar, **birinchi kunlardanoq** kodingizni Git bilan saqlashni boshlang. Git — loyihangiz uchun "vaqt mashinasi"; GitHub esa ishingizni saqlash, jamoada hamkorlik va portfolio ko'rsatish joyi. Deyarli har bir vakansiya buni talab qiladi, lekin uni alohida "bosqich" emas, **butun yo'lga parallel** o'rganing — o'rgangan har bir kichik loyihangizni Git bilan saqlab, GitHub'ga yuklab boring.
+
+[🐙 Git & GitHub — 0 dan Expertgacha](git-github/README.md) — commit, branch, merge, rebase, Pull Request, GitHub Actions. 24 bob, har biri SVG diagrammalar bilan.
 
 ---
 
@@ -49,8 +57,9 @@ Va butun yo'l davomida, **parallel ravishda** — [1000 masala](1000-masala/READ
 
 1. **[HTML & CSS](html-css/README.md)** — sahifa strukturasi va dizayni. Box model, flexbox, grid, responsive.
 2. **[JavaScript](js/javascript-qollanma-1-qism.md)** — sahifaga jonlilik va mantiq. Bu yo'nalishning **eng muhim** kitobi, shoshilmang.
-3. **[React](react/reactjs-qollanma.md)** — zamonaviy interfeyslar komponentlardan quriladi. Bugungi bozorda eng ko'p so'raladigan.
-4. **[Next.js](nextjs/README.md)** — React'ni production darajasiga olib chiqadi: SSR, marshrutlash, tezlik.
+3. **[TypeScript](typescript/README.md)** — JavaScript'ga tip xavfsizligi. Zamonaviy React/Next.js loyihalari deyarli har doim TypeScript'da yoziladi, shuning uchun React'dan oldin o'rganib qo'ying.
+4. **[React](react/reactjs-qollanma.md)** — zamonaviy interfeyslar komponentlardan quriladi. Bugungi bozorda eng ko'p so'raladigan.
+5. **[Next.js](nextjs/README.md)** — React'ni production darajasiga olib chiqadi: SSR, marshrutlash, tezlik.
 
 !!! note "Muqobil yo'l"
     React/Next.js o'rniga **[Vue & Nuxt](vue/README.md)** ni tanlashingiz mumkin — u ham kuchli va o'rganish biroz yengilroq. Bittasini tanlang, ikkalasini bir vaqtda emas. (Keyinroq ikkinchisi oson o'rganiladi.)
@@ -70,7 +79,7 @@ Va butun yo'l davomida, **parallel ravishda** — [1000 masala](1000-masala/READ
 1. **Web asoslari** — [HTML & CSS](html-css/README.md) va [JavaScript](js/javascript-qollanma-1-qism.md) ni yengil darajada (chuqur dizayn shart emas, lekin "web nima?" ni biling).
 2. **Bitta server tili** — [PHP](php/php-qollanma.md) yoki [Python](python/README.md) (pastdagi maslahatga qarang).
 3. **[SQL & MySQL](sql/README.md)** — ma'lumotlar bazasi. Backend'ning poydevori: har bir login, buyurtma, post shu yerda saqlanadi.
-4. **API / loyiha** — tilning web qismi: Python'da FastAPI, PHP'da MVC. Real server ilova quring.
+4. **Framework / API** — tilning web qismi: PHP'da [Laravel](laravel/README.md), Python'da FastAPI/Django. Real server ilova quring.
 
 !!! question "PHP yoki Python — qaysi biri?"
     - **Python** — agar AI, ma'lumot tahlili, avtomatlashtirish yoki zamonaviy startaplar qiziqtirsa. Sintaksisi sodda, FastAPI tez.
@@ -117,10 +126,11 @@ Va butun yo'l davomida, **parallel ravishda** — [1000 masala](1000-masala/READ
 
 | Yo'nalish | Kitoblar (tartib bilan) | Taxminiy vaqt\* |
 |---|---|---|
-| 🎨 **Frontend** | HTML & CSS → JavaScript → React → Next.js | ~6–9 oy |
-| ⚙️ **Backend** | (Web asoslari) → PHP yoki Python → SQL & MySQL → API | ~5–8 oy |
-| 🚀 **Full Stack** | HTML & CSS → JavaScript → React/Next → SQL → PHP/Python | ~9–14 oy |
+| 🎨 **Frontend** | HTML & CSS → JavaScript → TypeScript → React → Next.js | ~6–9 oy |
+| ⚙️ **Backend** | (Web asoslari) → PHP yoki Python → SQL & MySQL → Laravel / FastAPI | ~5–8 oy |
+| 🚀 **Full Stack** | HTML & CSS → JavaScript → TypeScript → React/Next → SQL → PHP/Python | ~9–14 oy |
 | 🧩 **Algoritmlar** | 1000 masala (barcha yo'nalishlar uchun, parallel) | uzluksiz |
+| 🐙 **Git & GitHub** | Barcha yo'nalishlar uchun (parallel, birinchi kundan) | uzluksiz |
 
 \* *Kuniga 1–2 soat muntazam mashq qilingan holatda. Vaqt — yo'l-yo'riq, qonun emas: kimdir tezroq, kimdir sekinroq o'rganadi. Asosiysi — to'xtamaslik.*
 

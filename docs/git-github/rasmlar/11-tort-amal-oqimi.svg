@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="720" height="440">
+  <title>Lokal repo va remote (origin) orasidagi to'rt amal: clone va fetch/pull pastga (oladi), push yuqoriga (yuboradi); clone bo'sh papkani to'liq nusxa qiladi, push lokal commitlarni yuboradi, fetch/pull remote yangiliklarini oladi</title>
+
+  <rect x="0" y="0" width="720" height="440" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">To'rt amal: lokal va remote (origin) almashinuvi</text>
+
+  <!-- chap: lokal -->
+  <rect x="48" y="118" width="230" height="220" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="163" y="148" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">Lokal repo</text>
+  <text x="163" y="170" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(sizning kompyuteringiz)</text>
+  <rect x="78" y="188" width="170" height="120" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="163" y="214" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">.git katalogi</text>
+  <text x="163" y="238" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">commitlar</text>
+  <text x="163" y="262" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">branchlar</text>
+  <text x="163" y="290" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">internet kerak emas</text>
+
+  <!-- o'ng: remote -->
+  <rect x="442" y="118" width="230" height="220" rx="12" fill="#e2e8f0" stroke="#1e293b" stroke-width="2.5"/>
+  <text x="557" y="148" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">Remote (origin)</text>
+  <text x="557" y="170" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(GitHub serveri)</text>
+  <rect x="472" y="188" width="170" height="120" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="557" y="214" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#7c3aed">internetdagi nusxa</text>
+  <text x="557" y="238" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">commitlar</text>
+  <text x="557" y="262" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">branchlar</text>
+  <text x="557" y="290" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">jamoa ko'ra oladi</text>
+
+  <!-- push o'q: lokaldan remotega (yuqorida) -->
+  <line x1="278" y1="186" x2="472" y2="186" stroke="#16a34a" stroke-width="3.5" marker-end="url(#arrG)"/>
+  <text x="375" y="178" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">git push</text>
+  <text x="375" y="160" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">lokal commitlarni yuboradi</text>
+
+  <!-- fetch/pull o'q: remotedan lokalga (pastda) -->
+  <line x1="472" y1="240" x2="278" y2="240" stroke="#2563eb" stroke-width="3.5" marker-end="url(#arrB)"/>
+  <text x="375" y="232" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">git fetch / pull</text>
+  <text x="375" y="262" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">remote yangiliklarini oladi</text>
+
+  <!-- clone o'q (pastdan, alohida) -->
+  <line x1="557" y1="338" x2="557" y2="372" stroke="#f59e0b" stroke-width="3"/>
+  <line x1="557" y1="372" x2="163" y2="372" stroke="#f59e0b" stroke-width="3"/>
+  <line x1="163" y1="372" x2="163" y2="340" stroke="#f59e0b" stroke-width="3" marker-end="url(#arrY)"/>
+  <text x="360" y="392" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309">git clone</text>
+  <text x="360" y="412" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">mavjud reponi butun tarixi bilan birinchi marta nusxalaydi (origin avtomatik)</text>
+
+  <defs>
+    <marker id="arrG" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+    <marker id="arrB" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrY" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+</svg>

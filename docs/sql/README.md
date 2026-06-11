@@ -1,7 +1,5 @@
 # SQL va MySQL — Noldan boshlovchilar uchun amaliy kitob
 
-> 📄 **[Butun kitobni PDF formatda yuklab olish →](/pdf/sql.pdf)**
-
 Bu kitob **hech qachon dasturlash qilmagan** odam ham tushunadigan tilda yozilgan. Har bir bobda: sodda nazariya → tayyor misollar → **20 ta masala** (o'zingiz yechasiz). Jami 25 bob, 500 masala.
 
 > 🎨 Har bob **SVG diagrammalar** bilan boyitilgan — JOIN, GROUP BY, indeks, tranzaksiya, normalizatsiya kabi tushunchalar ko'z bilan ko'rib o'rganiladi.

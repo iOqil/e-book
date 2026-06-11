@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="720" height="400">
+  <title>API so'rovi Bearer token bilan keladi, auth:sanctum middleware tokenni tekshiradi: yaroqli bo'lsa controller JSON qaytaradi, yo'q yoki yaroqsiz bo'lsa 401 qaytadi</title>
+  <defs>
+    <marker id="m3-strelka" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+    <marker id="m3-yashil" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/>
+    </marker>
+    <marker id="m3-qizil" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="720" height="400" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">auth:sanctum — har so'rovni tekshiradi</text>
+
+  <!-- 1) so'rov -->
+  <rect x="28" y="150" width="170" height="96" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="113" y="178" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">API so'rovi</text>
+  <text x="113" y="201" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">POST /api/products</text>
+  <text x="113" y="222" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Authorization:</text>
+  <text x="113" y="240" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Bearer &lt;token&gt;</text>
+
+  <line x1="198" y1="198" x2="270" y2="198" stroke="#475569" stroke-width="2.5" marker-end="url(#m3-strelka)"/>
+
+  <!-- 2) Sanctum tekshiruv (markaz romb shaklida to'rtburchak) -->
+  <rect x="272" y="146" width="180" height="104" rx="10" fill="#1e293b"/>
+  <text x="362" y="178" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">auth:sanctum</text>
+  <text x="362" y="202" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#e2e8f0">tokenni xeshlab</text>
+  <text x="362" y="222" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#e2e8f0">bazadan qidiradi</text>
+  <text x="362" y="242" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">yaroqli? muddati?</text>
+
+  <!-- yashil yo'l: controller -> JSON -->
+  <line x1="452" y1="176" x2="540" y2="120" stroke="#16a34a" stroke-width="2.5" marker-end="url(#m3-yashil)"/>
+  <text x="500" y="132" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">yaroqli</text>
+
+  <rect x="544" y="76" width="150" height="84" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="619" y="104" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Controller</text>
+  <text x="619" y="127" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">$request-&gt;user() bor</text>
+  <text x="619" y="148" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">JSON 200 / 201</text>
+
+  <!-- qizil yo'l: 401 -->
+  <line x1="452" y1="220" x2="540" y2="288" stroke="#dc2626" stroke-width="2.5" marker-end="url(#m3-qizil)"/>
+  <text x="496" y="270" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626">yo'q / yaroqsiz</text>
+
+  <rect x="544" y="246" width="150" height="84" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="619" y="274" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">401</text>
+  <text x="619" y="297" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Unauthenticated</text>
+  <text x="619" y="318" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">controller chaqirilmaydi</text>
+
+  <!-- pastki izoh -->
+  <text x="360" y="364" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Middleware controllerdan oldin turadi: token o'tmasa, so'rov kontrollerga umuman yetib bormaydi</text>
+  <text x="360" y="388" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Bearer token topilmasa, Sanctum SPA cookie sessiyasini ham sinaydi (o'sha domen uchun)</text>
+</svg>

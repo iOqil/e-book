@@ -1,7 +1,5 @@
 # 1000 amaliy dasturlash masalasi — JS / PHP / Python yechimlari
 
-> 📄 **[Butun kitobni PDF formatda yuklab olish →](/pdf/1000-masala.pdf)**
-
 > Oddiylikdan murakkablikgacha. Har bir masala uchta tilda — JavaScript, PHP, Python — bir xil yondashuv, lekin **har tilning idiomatik uslubida** yechilgan. Maqsad: bir g'oya turli tillarda qanday ko'rinishini ko'rsatish.
 
 ## Kelishuvlar (conventions)

@@ -7,6 +7,9 @@ BOOKS = [
     ('html-css', 'HTML & CSS'), ('js', 'JavaScript'), ('python', 'Python'),
     ('vue', 'Vue & Nuxt'), ('react', 'React'), ('nextjs', 'Next.js'),
     ('php', 'PHP'), ('sql', 'SQL & MySQL'), ('1000-masala', '1000 masala'),
+    ('git-github', 'Git & GitHub'),
+    ('typescript', 'TypeScript'),
+    ('laravel', 'Laravel'),
 ]
 
 def natkey(s):
@@ -33,7 +36,7 @@ img,svg{max-width:100%!important;height:auto!important}
 '''
 
 async def main():
-    os.makedirs('docs/pdf', exist_ok=True)
+    os.makedirs('_paid-pdf', exist_ok=True)
     results = []
     async with async_playwright() as p:
         browser = await p.chromium.launch()
@@ -52,10 +55,10 @@ async def main():
                 await page.add_style_tag(content=CSS)
                 data = await page.pdf(format='A4', print_background=True,
                                       margin={'top':'12mm','bottom':'12mm','left':'10mm','right':'10mm'})
-                tmp = 'docs/pdf/_t.pdf'
+                tmp = '_paid-pdf/_t.pdf'
                 open(tmp, 'wb').write(data)
                 writer.append(tmp)
-            out = f'docs/pdf/{d}.pdf'
+            out = f'_paid-pdf/{d}.pdf'
             with open(out, 'wb') as fo:
                 writer.write(fo)
             writer.close()
@@ -63,8 +66,8 @@ async def main():
             results.append((d, len(files), round(mb, 1)))
             print(f'{d}.pdf tayyor — {len(files)} sahifa, {mb:.1f} MB', flush=True)
         await browser.close()
-    if os.path.exists('docs/pdf/_t.pdf'):
-        os.remove('docs/pdf/_t.pdf')
+    if os.path.exists('_paid-pdf/_t.pdf'):
+        os.remove('_paid-pdf/_t.pdf')
     print('=== YAKUN ===')
     for d, n, mb in results:
         print(f'  {d}: {n} sahifa, {mb} MB')

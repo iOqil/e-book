@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 380" width="740" height="380">
+  <title>Konfliktni hal qilish oqimi: merge konfliktni keltirib chiqaradi, keyin faylni qo'lda tahrirlash, git add bilan belgilash va git commit bilan yakunlash; istalgan paytda git merge --abort orqali ortga qaytish mumkin</title>
+
+  <rect x="0" y="0" width="740" height="380" fill="#f8fafc"/>
+
+  <text x="370" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Konfliktni hal qilish: 4 ta qadam</text>
+
+  <!-- 1: KONFLIKT -->
+  <rect x="30" y="90" width="150" height="86" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="105" y="120" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">1. KONFLIKT</text>
+  <text x="105" y="143" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">git merge feature</text>
+  <text x="105" y="162" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">merge to'xtadi</text>
+
+  <!-- strelka 1->2 -->
+  <line x1="180" y1="133" x2="218" y2="133" stroke="#475569" stroke-width="2.5"/>
+  <polygon points="218,127 230,133 218,139" fill="#475569"/>
+
+  <!-- 2: TAHRIR -->
+  <rect x="232" y="90" width="150" height="86" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="307" y="118" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b45309">2. TAHRIR</text>
+  <text x="307" y="140" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">markerlarni olib,</text>
+  <text x="307" y="159" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">to'g'ri matn qoldir</text>
+
+  <!-- strelka 2->3 -->
+  <line x1="382" y1="133" x2="420" y2="133" stroke="#475569" stroke-width="2.5"/>
+  <polygon points="420,127 432,133 420,139" fill="#475569"/>
+
+  <!-- 3: ADD -->
+  <rect x="434" y="90" width="150" height="86" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="509" y="118" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">3. git add</text>
+  <text x="509" y="140" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">"hal qildim" deb</text>
+  <text x="509" y="159" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">belgilash</text>
+
+  <!-- strelka 3->4 -->
+  <line x1="584" y1="133" x2="622" y2="133" stroke="#475569" stroke-width="2.5"/>
+  <polygon points="622,127 634,133 622,139" fill="#475569"/>
+
+  <!-- 4: COMMIT -->
+  <rect x="586" y="200" width="124" height="86" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="648" y="230" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">4. git commit</text>
+  <text x="648" y="252" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">merge commit</text>
+  <text x="648" y="271" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">tayyor</text>
+
+  <!-- strelka 3 pastga 4 ga -->
+  <line x1="634" y1="176" x2="648" y2="196" stroke="#475569" stroke-width="2.5"/>
+  <polygon points="642,193 650,202 654,191" fill="#475569"/>
+
+  <!-- ABORT yo'li -->
+  <rect x="30" y="265" width="320" height="56" rx="10" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="190" y="290" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#7c3aed">Fikringizdan qaytdingizmi?</text>
+  <text x="190" y="311" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">git merge --abort  →  merge boshlanishigacha tiklanadi</text>
+
+  <!-- abort strelka 1 dan pastga -->
+  <line x1="105" y1="176" x2="105" y2="261" stroke="#7c3aed" stroke-width="2" stroke-dasharray="5 3"/>
+  <polygon points="99,261 105,272 111,261" fill="#7c3aed"/>
+
+  <!-- pastki eslatma -->
+  <text x="370" y="355" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">Eslatma: konfliktda har bir to'qnashgan faylni alohida tahrir qilib, git add qilasiz.</text>
+</svg>

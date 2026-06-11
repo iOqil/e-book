@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>whenLoaded: relation faqat oldindan yuklangan bolsa JSON ga qoshiladi, aks holda chiqmaydi va N+1 qoshimcha sorovlardan saqlaydi</title>
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">whenLoaded — relation faqat yuklangan bo'lsa chiqadi</text>
+
+  <!-- chap: with() yo'q -->
+  <rect x="30" y="64" width="320" height="320" rx="10" fill="#fff" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="190" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">Post::find(1)  — relation yuklanmagan</text>
+  <rect x="50" y="108" width="280" height="48" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="190" y="138" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">'user' => whenLoaded('user')</text>
+  <text x="190" y="184" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">user yuklanmagan -> shart o'tmaydi</text>
+  <rect x="50" y="206" width="280" height="150" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="68" y="232" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">{</text>
+  <text x="84" y="256" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">"id": 1,</text>
+  <text x="84" y="280" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">"sarlavha": "Post"</text>
+  <text x="68" y="304" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">}</text>
+  <text x="190" y="338" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#dc2626">"user" yo'q — qo'shimcha so'rov ham yo'q</text>
+
+  <!-- o'ng: with() bilan -->
+  <rect x="370" y="64" width="320" height="320" rx="10" fill="#fff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="530" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Post::with('user')->find(1)</text>
+  <rect x="390" y="108" width="280" height="48" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="530" y="138" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">'user' => whenLoaded('user')</text>
+  <text x="530" y="184" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">user yuklangan -> shart o'tadi</text>
+  <rect x="390" y="206" width="280" height="150" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="408" y="230" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">{</text>
+  <text x="424" y="252" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">"id": 1,</text>
+  <text x="424" y="274" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">"sarlavha": "Post",</text>
+  <text x="424" y="296" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#16a34a">"user": { "ism": "Ali" }</text>
+  <text x="408" y="318" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">}</text>
+  <text x="530" y="344" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#16a34a">"user" bor — N+1 yo'q, oldindan yuklangan</text>
+
+  <text x="360" y="412" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Bir xil Resource, bir xil kod — farq faqat relation yuklangan-yuklanmaganida</text>
+</svg>

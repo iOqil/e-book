@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 430" width="700" height="430">
+  <title>restore vs reset farqi: restore alohida fayllar bilan working/staging zonalarda ishlaydi, reset esa butun branch'ni (HEAD'ni) orqaga suradi</title>
+  <rect x="0" y="0" width="700" height="430" fill="#f8fafc"/>
+
+  <text x="350" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">restore va reset — qayerga ta'sir qiladi?</text>
+
+  <!-- uch zona qutilari -->
+  <rect x="40" y="70" width="180" height="90" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="130" y="98" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">working</text>
+  <text x="130" y="122" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">siz tahrirlayotgan</text>
+  <text x="130" y="140" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">fayllar</text>
+
+  <rect x="260" y="70" width="180" height="90" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="350" y="98" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#b45309">staging</text>
+  <text x="350" y="122" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">commitga tayyor</text>
+  <text x="350" y="140" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">o'zgarishlar</text>
+
+  <rect x="480" y="70" width="180" height="90" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="570" y="98" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">repository</text>
+  <text x="570" y="122" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">commit qilingan</text>
+  <text x="570" y="140" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tarix (HEAD)</text>
+
+  <!-- restore qatori -->
+  <text x="40" y="210" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">git restore</text>
+  <text x="155" y="210" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">— alohida fayllar bilan ishlaydi, HEAD'ga TEGMAYDI</text>
+
+  <!-- restore strelka working <- staging <- repo -->
+  <line x1="255" y1="240" x2="135" y2="240" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arrG)"/>
+  <text x="195" y="232" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">restore --staged</text>
+  <line x1="475" y1="265" x2="135" y2="265" stroke="#16a34a" stroke-width="2.5" stroke-dasharray="6 4" marker-end="url(#arrG)"/>
+  <text x="305" y="282" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">restore --source=&lt;commit&gt;</text>
+
+  <!-- reset qatori -->
+  <text x="40" y="330" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#dc2626">git reset</text>
+  <text x="140" y="330" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">— butun branch'ni (HEAD'ni) ORQAGA suradi</text>
+
+  <!-- reset strelka HEAD orqaga -->
+  <path d="M 570 350 q 0 35 -30 35 L 360 385" fill="none" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arrR)"/>
+  <text x="465" y="408" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">HEAD~1 ga (--soft / --mixed / --hard zonalarni turlicha bo'shatadi)</text>
+
+  <defs>
+    <marker id="arrG" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto">
+      <path d="M0,0 L7,3.5 L0,7 Z" fill="#16a34a"/>
+    </marker>
+    <marker id="arrR" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto">
+      <path d="M0,0 L7,3.5 L0,7 Z" fill="#dc2626"/>
+    </marker>
+  </defs>
+</svg>

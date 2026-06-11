@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 470" width="720" height="470">
+  <title>RESTful endpoint xaritasi: bitta products resursiga GET POST PUT PATCH DELETE metodlari turli amal va status kod bilan bog'lanadi; URL ot, metod fe'l</title>
+  <defs>
+    <marker id="m4-strelka" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="720" height="470" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">RESTful xarita: URL — ot, metod — fe'l</text>
+
+  <!-- markaziy resurs -->
+  <rect x="290" y="210" width="140" height="60" rx="10" fill="#1e293b"/>
+  <text x="360" y="236" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">resurs:</text>
+  <text x="360" y="258" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#e2e8f0">/api/products</text>
+
+  <!-- GET ro'yxat (chap yuqori) -->
+  <rect x="36" y="64" width="220" height="62" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="50" y="88" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">GET /products</text>
+  <text x="50" y="110" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">ro'yxat  ->  200 OK</text>
+  <line x1="256" y1="95" x2="300" y2="216" stroke="#475569" stroke-width="1.8" marker-end="url(#m4-strelka)"/>
+
+  <!-- GET bittasi (chap o'rta) -->
+  <rect x="36" y="150" width="220" height="62" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="50" y="174" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">GET /products/15</text>
+  <text x="50" y="196" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">bittasi  ->  200 OK</text>
+  <line x1="256" y1="181" x2="288" y2="226" stroke="#475569" stroke-width="1.8" marker-end="url(#m4-strelka)"/>
+
+  <!-- POST (chap past) -->
+  <rect x="36" y="270" width="220" height="62" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="50" y="294" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">POST /products</text>
+  <text x="50" y="316" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">yaratish  ->  201 Created</text>
+  <line x1="256" y1="301" x2="288" y2="256" stroke="#475569" stroke-width="1.8" marker-end="url(#m4-strelka)"/>
+
+  <!-- PUT/PATCH (o'ng yuqori) -->
+  <rect x="464" y="120" width="220" height="62" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="478" y="144" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b45309">PUT/PATCH /products/15</text>
+  <text x="478" y="166" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">yangilash  ->  200 OK</text>
+  <line x1="464" y1="151" x2="432" y2="220" stroke="#475569" stroke-width="1.8" marker-end="url(#m4-strelka)"/>
+
+  <!-- DELETE (o'ng past) -->
+  <rect x="464" y="270" width="220" height="62" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="478" y="294" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">DELETE /products/15</text>
+  <text x="478" y="316" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">o'chirish  ->  204 No Content</text>
+  <line x1="464" y1="301" x2="432" y2="262" stroke="#475569" stroke-width="1.8" marker-end="url(#m4-strelka)"/>
+
+  <!-- pastki: artisan qatori -->
+  <rect x="120" y="372" width="480" height="38" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="360" y="396" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Route::apiResource('products', ProductController::class);  ->  5 marshrut</text>
+
+  <text x="360" y="436" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Bir xil URL (/products/15) turli metod bilan turli amal bajaradi</text>
+  <text x="360" y="458" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">apiResource web resource'dan farqli — create/edit (HTML forma) sahifalarisiz</text>
+</svg>

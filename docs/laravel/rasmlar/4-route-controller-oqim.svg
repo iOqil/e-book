@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" width="720" height="360">
+  <title>So'rov oqimi: brauzer so'rovi route faylga keladi, route uni controller metodiga yo'naltiradi, metod javob qaytaradi</title>
+  <rect x="0" y="0" width="720" height="360" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Route controllerga ishni topshiradi</text>
+
+  <!-- Brauzer -->
+  <rect x="30" y="100" width="140" height="90" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="100" y="135" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">Brauzer</text>
+  <text x="100" y="160" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">GET /postlar</text>
+  <text x="100" y="179" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">so'rov yuboradi</text>
+
+  <!-- strelka 1 -->
+  <line x1="170" y1="145" x2="222" y2="145" stroke="#1e293b" stroke-width="2.5"/>
+  <polygon points="222,145 212,140 212,150" fill="#1e293b"/>
+
+  <!-- routes/web.php -->
+  <rect x="226" y="90" width="180" height="110" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="316" y="118" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">routes/web.php</text>
+  <text x="316" y="146" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Route::get('/postlar',</text>
+  <text x="316" y="166" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">[PostController::class,</text>
+  <text x="316" y="186" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">'index']);</text>
+
+  <!-- strelka 2 -->
+  <line x1="406" y1="145" x2="458" y2="145" stroke="#1e293b" stroke-width="2.5"/>
+  <polygon points="458,145 448,140 448,150" fill="#1e293b"/>
+  <text x="432" y="135" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">chaqiradi</text>
+
+  <!-- Controller -->
+  <rect x="462" y="90" width="228" height="110" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="576" y="116" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">PostController</text>
+  <text x="576" y="140" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">public function index() {</text>
+  <text x="576" y="160" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">return view('postlar.index',</text>
+  <text x="576" y="180" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">['postlar' =&gt; $postlar]); }</text>
+
+  <!-- javob strelkasi pastdan -->
+  <line x1="576" y1="200" x2="576" y2="250" stroke="#f59e0b" stroke-width="2.5"/>
+  <line x1="576" y1="250" x2="100" y2="250" stroke="#f59e0b" stroke-width="2.5"/>
+  <line x1="100" y1="250" x2="100" y2="200" stroke="#f59e0b" stroke-width="2.5"/>
+  <polygon points="100,200 95,210 105,210" fill="#f59e0b"/>
+  <rect x="300" y="236" width="160" height="28" rx="6" fill="#fef3c7"/>
+  <text x="380" y="255" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#b45309">HTML / JSON javob qaytadi</text>
+
+  <!-- pastki izoh -->
+  <text x="360" y="310" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Route faqat yo'naltiradi (kim ishlaydi), controller esa asl ishni bajaradi (nima qilinadi).</text>
+  <text x="360" y="334" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Mantiq route faylida emas, alohida controller klassida tartibli turadi.</text>
+</svg>

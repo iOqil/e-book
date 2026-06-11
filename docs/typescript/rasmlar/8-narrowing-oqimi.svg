@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" width="720" height="420">
+  <title>Narrowing oqimi: string yoki number union qiymat typeof tekshiruvidan o'tib aniq string yoki number tipiga torayadi</title>
+  <rect x="0" y="0" width="720" height="420" fill="#f8fafc"/>
+
+  <text x="360" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Narrowing: union qiymat aniq tipga torayadi</text>
+
+  <!-- Union qutisi -->
+  <rect x="270" y="62" width="180" height="58" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="360" y="86" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">id</text>
+  <text x="360" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">string | number</text>
+
+  <!-- strelka pastga -->
+  <line x1="360" y1="120" x2="360" y2="150" stroke="#475569" stroke-width="2"/>
+  <polygon points="360,158 354,148 366,148" fill="#475569"/>
+
+  <!-- tekshiruv romb -->
+  <polygon points="360,160 470,205 360,250 250,205" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="360" y="200" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b45309">typeof id</text>
+  <text x="360" y="220" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#b45309">=== "string" ?</text>
+
+  <!-- ROST shoxi (chap) -->
+  <line x1="250" y1="205" x2="160" y2="205" stroke="#16a34a" stroke-width="2"/>
+  <line x1="160" y1="205" x2="160" y2="300" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="160,308 154,298 166,298" fill="#16a34a"/>
+  <text x="200" y="198" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">rost</text>
+
+  <rect x="60" y="310" width="200" height="74" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="160" y="336" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">if shoxi ichida</text>
+  <text x="160" y="358" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">id: string</text>
+  <text x="160" y="378" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">id.padStart() mavjud</text>
+
+  <!-- YOLG'ON shoxi (o'ng) -->
+  <line x1="470" y1="205" x2="560" y2="205" stroke="#dc2626" stroke-width="2"/>
+  <line x1="560" y1="205" x2="560" y2="300" stroke="#dc2626" stroke-width="2"/>
+  <polygon points="560,308 554,298 566,298" fill="#dc2626"/>
+  <text x="520" y="198" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">yolg'on</text>
+
+  <rect x="460" y="310" width="200" height="74" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="560" y="336" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">else shoxi ichida</text>
+  <text x="560" y="358" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">id: number</text>
+  <text x="560" y="378" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">id.toFixed() mavjud</text>
+
+  <!-- pastki izoh -->
+  <text x="360" y="408" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">TypeScript har shoxda aynan qaysi tip ekanini biladi (control flow analysis)</text>
+</svg>

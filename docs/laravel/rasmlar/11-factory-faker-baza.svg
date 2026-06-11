@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>Model factory oqimi: definition() faker yordamida soxta real qiymatlarni tuzadi, create() ularni baza jadvaliga qator qilib yozadi</title>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Factory + Faker: bitta namuna qatorni qanday yasaydi</text>
+
+  <!-- 1: definition -->
+  <rect x="30" y="64" width="200" height="150" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="130" y="90" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">PostFactory</text>
+  <text x="130" y="112" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">definition() metodi</text>
+  <line x1="50" y1="124" x2="210" y2="124" stroke="#94a3b8" stroke-width="1"/>
+  <text x="130" y="146" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">'title' =&gt; fake()-&gt;sentence()</text>
+  <text x="130" y="168" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">'body' =&gt; fake()-&gt;paragraph()</text>
+  <text x="130" y="190" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">'published' =&gt; true</text>
+
+  <!-- strelka 1 -->
+  <line x1="230" y1="139" x2="288" y2="139" stroke="#1e293b" stroke-width="2"/>
+  <polygon points="288,134 298,139 288,144" fill="#1e293b"/>
+
+  <!-- 2: faker -->
+  <rect x="300" y="64" width="200" height="150" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="400" y="90" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b45309">Faker</text>
+  <text x="400" y="112" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">soxta real qiymat tuzadi</text>
+  <line x1="320" y1="124" x2="480" y2="124" stroke="#f59e0b" stroke-width="1"/>
+  <text x="400" y="146" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">"Qui dolorem ipsum"</text>
+  <text x="400" y="168" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">"Lorem ipsum dolor..."</text>
+  <text x="400" y="190" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">true</text>
+
+  <!-- strelka 2 -->
+  <line x1="500" y1="139" x2="558" y2="139" stroke="#1e293b" stroke-width="2"/>
+  <polygon points="558,134 568,139 558,144" fill="#1e293b"/>
+
+  <!-- 3: create natijasi -->
+  <text x="630" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">-&gt;create()</text>
+  <rect x="570" y="104" width="120" height="70" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="630" y="128" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Post obyekti</text>
+  <text x="630" y="150" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">id: 1, ...</text>
+  <text x="630" y="168" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">bazaga yozildi</text>
+
+  <!-- pastga strelka -->
+  <line x1="630" y1="174" x2="630" y2="246" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="625,246 630,256 635,246" fill="#16a34a"/>
+
+  <!-- baza jadvali -->
+  <text x="360" y="284" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">posts jadvali (count(3) bilan 3 qator)</text>
+  <rect x="120" y="298" width="480" height="100" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="120" y1="326" x2="600" y2="326" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="120" y1="350" x2="600" y2="350" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="120" y1="374" x2="600" y2="374" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="170" y1="298" x2="170" y2="398" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="400" y1="298" x2="400" y2="398" stroke="#94a3b8" stroke-width="1"/>
+  <text x="145" y="318" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#475569">id</text>
+  <text x="285" y="318" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#475569">title</text>
+  <text x="500" y="318" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#475569">body</text>
+  <text x="145" y="343" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">1</text>
+  <text x="285" y="343" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Qui dolorem ipsum</text>
+  <text x="500" y="343" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Lorem ipsum dolor...</text>
+  <text x="145" y="367" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">2</text>
+  <text x="285" y="367" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Aut quia rerum</text>
+  <text x="500" y="367" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Sed ut perspiciatis...</text>
+  <text x="145" y="391" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">3</text>
+  <text x="285" y="391" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Nam libero tempore</text>
+  <text x="500" y="391" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Itaque earum rerum...</text>
+
+  <text x="360" y="420" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Har qator har xil: faker chaqirilgan sayin yangi soxta qiymat beradi</text>
+</svg>

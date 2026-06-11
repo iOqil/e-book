@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 520" width="740" height="520">
+  <title>TypeScript tip shpargalkasi: asosiy sintaksislar to'rt guruhga (asoslar, tip yasash, generics, xavfsizlik) bo'lib ko'rsatilgan vizual jadval</title>
+  <rect x="0" y="0" width="740" height="520" fill="#f8fafc"/>
+
+  <text x="370" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">TypeScript tip shpargalkasi</text>
+
+  <!-- Guruh 1: Asoslar -->
+  <rect x="24" y="56" width="340" height="200" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="44" y="82" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">Asoslar (3-6 bob)</text>
+  <text x="44" y="108" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">let x: number | string</text>
+  <text x="44" y="132" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">arr: number[]   tuple: [string, number]</text>
+  <text x="44" y="156" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">interface User { id: number }</text>
+  <text x="44" y="180" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">email?: string   readonly id</text>
+  <text x="44" y="204" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">fn: (a: number) =&gt; string</text>
+  <text x="44" y="228" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">"todo" | "done"  (literal union)</text>
+
+  <!-- Guruh 2: Tip yasash -->
+  <rect x="376" y="56" width="340" height="200" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="396" y="82" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Tip yasash (10-16 bob)</text>
+  <text x="396" y="108" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">type ID = string | number</text>
+  <text x="396" y="132" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">A &amp; B   (intersection)</text>
+  <text x="396" y="156" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">Partial&lt;T&gt;  Pick&lt;T,K&gt;  Omit&lt;T,K&gt;</text>
+  <text x="396" y="180" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">Record&lt;K,V&gt;  ReturnType&lt;F&gt;</text>
+  <text x="396" y="204" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">{ [K in keyof T]: ... }  (mapped)</text>
+  <text x="396" y="228" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">T extends U ? X : Y  (conditional)</text>
+
+  <!-- Guruh 3: Generics -->
+  <rect x="24" y="272" width="340" height="160" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="44" y="298" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#7c3aed">Generics (11-12 bob)</text>
+  <text x="44" y="324" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">function f&lt;T&gt;(x: T): T</text>
+  <text x="44" y="348" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">&lt;T extends { id: number }&gt;</text>
+  <text x="44" y="372" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">keyof T   T["maydon"]</text>
+  <text x="44" y="396" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">class C&lt;T&gt; implements I</text>
+  <text x="44" y="420" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">&lt;const T&gt;  (literal tutadi)</text>
+
+  <!-- Guruh 4: Xavfsizlik -->
+  <rect x="376" y="272" width="340" height="160" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="396" y="298" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b45309">Xavfsizlik (8-9 bob)</text>
+  <text x="396" y="324" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">typeof / in / instanceof  (narrowing)</text>
+  <text x="396" y="348" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">function f(x): x is T  (type guard)</text>
+  <text x="396" y="372" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">const c: never = x  (exhaustiveness)</text>
+  <text x="396" y="396" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">unknown  (any EMAS!)</text>
+  <text x="396" y="420" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">satisfies   as const   x as T (ehtiyot)</text>
+
+  <!-- pastki izoh -->
+  <text x="370" y="468" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Oltin yo'l: union/interface -&gt; utility -&gt; generic -&gt; narrowing -&gt; runtime validatsiya</text>
+  <text x="370" y="496" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">strict: true bilan ishlang — himoyaning yarmi shu bayroqda</text>
+</svg>

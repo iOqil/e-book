@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="720" height="440">
+  <title>Deklaratsiya fayli .d.ts JavaScript kodi ustida turuvchi tip qatlami: JS faylda faqat kod bor, .d.ts faylda faqat tiplar; TypeScript ikkalasini birga ko'rib import paytida tekshiradi</title>
+  <rect x="0" y="0" width="720" height="440" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">.d.ts — JavaScript ustidagi tip qatlami</text>
+
+  <!-- pastki qatlam: JS -->
+  <rect x="80" y="250" width="560" height="120" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="100" y="278" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#b45309">salom.js  —  KOD (ishlaydi, lekin tipsiz)</text>
+  <text x="100" y="306" font-family="Consolas, monospace" font-size="14" fill="#1e293b">function salomBer(ism) {</text>
+  <text x="120" y="328" font-family="Consolas, monospace" font-size="14" fill="#1e293b">return "Salom, " + ism;</text>
+  <text x="100" y="350" font-family="Consolas, monospace" font-size="14" fill="#1e293b">}</text>
+
+  <!-- yuqori qatlam: d.ts -->
+  <rect x="80" y="70" width="560" height="120" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="100" y="98" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">salom.d.ts  —  FAQAT TIPLAR (kod yo'q)</text>
+  <text x="100" y="128" font-family="Consolas, monospace" font-size="14" fill="#1e293b">export function salomBer(</text>
+  <text x="120" y="150" font-family="Consolas, monospace" font-size="14" fill="#16a34a">ism: string</text>
+  <text x="280" y="150" font-family="Consolas, monospace" font-size="14" fill="#16a34a">): string;</text>
+  <text x="100" y="174" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(tana yo'q — faqat "shakl" e'lon qilinadi)</text>
+
+  <!-- bog'lovchi o'q -->
+  <line x1="360" y1="190" x2="360" y2="250" stroke="#475569" stroke-width="2" stroke-dasharray="5 4"/>
+  <text x="378" y="225" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">bir nom, ikki fayl: "ust qatlam"</text>
+
+  <!-- o'ngdan TS oynasi -->
+  <text x="360" y="404" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">import { salomBer } qilganda TS .d.ts'dagi tipni ko'radi:</text>
+  <text x="360" y="426" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#dc2626">salomBer(123) -&gt; ❌ xato, salomBer("Ali") -&gt; ✅ to'g'ri</text>
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 420" width="700" height="420">
+  <title>keyof T operatori: obyekt tipidan uning kalitlari union'ini hosil qiladi. Kitob tipidagi id, nomi, yil, bepulmi maydonlari "id" | "nomi" | "yil" | "bepulmi" string literal union'iga aylanadi</title>
+  <rect x="0" y="0" width="700" height="420" fill="#f8fafc"/>
+
+  <text x="350" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">keyof T — obyekt kalitlari union'i</text>
+
+  <!-- chap: obyekt tipi -->
+  <text x="170" y="74" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">type Kitob = { ... }</text>
+  <rect x="50" y="90" width="240" height="200" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <line x1="50" y1="130" x2="290" y2="130" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="50" y1="170" x2="290" y2="170" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="50" y1="210" x2="290" y2="210" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="50" y1="250" x2="290" y2="250" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="170" y1="90" x2="170" y2="290" stroke="#e2e8f0" stroke-width="1"/>
+
+  <text x="105" y="116" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">id</text>
+  <text x="232" y="116" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">number</text>
+  <text x="105" y="156" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">nomi</text>
+  <text x="232" y="156" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">string</text>
+  <text x="105" y="196" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">yil</text>
+  <text x="232" y="196" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">number</text>
+  <text x="105" y="236" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">bepulmi</text>
+  <text x="232" y="236" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">boolean</text>
+  <text x="170" y="276" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">kalit          tip</text>
+
+  <!-- strelka -->
+  <text x="350" y="178" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#7c3aed">keyof</text>
+  <line x1="300" y1="190" x2="410" y2="190" stroke="#7c3aed" stroke-width="3"/>
+  <polygon points="410,184 422,190 410,196" fill="#7c3aed"/>
+  <text x="350" y="212" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">faqat kalitlar</text>
+
+  <!-- o'ng: kalitlar union'i -->
+  <text x="540" y="74" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">keyof Kitob</text>
+  <rect x="430" y="90" width="230" height="200" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="545" y="128" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#166534">"id"</text>
+  <text x="545" y="128" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#166534"> </text>
+  <text x="545" y="156" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#94a3b8">|</text>
+  <text x="545" y="184" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#166534">"nomi"</text>
+  <text x="545" y="212" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#94a3b8">|</text>
+  <text x="545" y="240" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#166534">"yil"  |  "bepulmi"</text>
+  <text x="545" y="276" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">string literal'lar union'i</text>
+
+  <!-- pastki izoh -->
+  <text x="350" y="332" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">keyof — maydon nomlarini matn emas, TIP darajasidagi qiymatlarga aylantiradi</text>
+  <text x="350" y="360" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">Endi "faqat shu to'rt kalitdan biri" degan cheklovni tip bilan ifodalash mumkin</text>
+  <text x="350" y="388" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">Maydon qo'shsangiz — union avtomatik kengayadi, qo'lda yangilash shart emas</text>
+</svg>

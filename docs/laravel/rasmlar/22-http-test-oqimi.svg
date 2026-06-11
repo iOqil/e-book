@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="720" height="400">
+  <title>HTTP feature test oqimi: test soxta so'rov yuboradi, ilova javob qaytaradi, so'ng assert metodlari status kod, HTML matn va bazadagi yozuvni tekshiradi</title>
+
+  <rect x="0" y="0" width="720" height="400" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">HTTP feature test oqimi</text>
+
+  <!-- 1: TEST -->
+  <rect x="40" y="80" width="180" height="120" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="130" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#7c3aed">TEST</text>
+  <text x="130" y="134" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">$this-&gt;post(</text>
+  <text x="130" y="156" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">'/orders',</text>
+  <text x="130" y="178" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">[...ma'lumot])</text>
+
+  <!-- strelka so'rov -->
+  <line x1="220" y1="124" x2="300" y2="124" stroke="#2563eb" stroke-width="2.5"/>
+  <polygon points="300,118 312,124 300,130" fill="#2563eb"/>
+  <text x="262" y="114" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">so'rov</text>
+
+  <!-- 2: ILOVA -->
+  <rect x="312" y="80" width="190" height="120" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="407" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">ILOVA</text>
+  <text x="407" y="132" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">marshrut &#8594; kontroller</text>
+  <text x="407" y="156" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#166534">baza'ga yozadi</text>
+  <text x="407" y="180" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">javob quradi</text>
+
+  <!-- strelka javob -->
+  <line x1="502" y1="160" x2="582" y2="160" stroke="#16a34a" stroke-width="2.5"/>
+  <polygon points="582,154 594,160 582,166" fill="#16a34a"/>
+  <text x="544" y="150" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">javob</text>
+
+  <!-- 3: JAVOB obyekt -->
+  <rect x="594" y="100" width="100" height="80" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="644" y="132" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#166534">JAVOB</text>
+  <text x="644" y="156" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">status+HTML</text>
+
+  <!-- pastga: ASSERT bo'lim -->
+  <line x1="644" y1="180" x2="644" y2="240" stroke="#16a34a" stroke-width="2.5"/>
+  <line x1="130" y1="240" x2="644" y2="240" stroke="#16a34a" stroke-width="2.5"/>
+  <polygon points="124,240 136,234 136,246" fill="#16a34a"/>
+  <text x="660" y="214" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">assert</text>
+
+  <text x="360" y="268" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Test javobni tekshiradi (assertion'lar)</text>
+
+  <rect x="40" y="284" width="200" height="76" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="140" y="310" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">Javobni</text>
+  <text x="140" y="334" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">assertStatus(200)</text>
+  <text x="140" y="353" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">assertRedirect()</text>
+
+  <rect x="260" y="284" width="200" height="76" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="360" y="310" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#7c3aed">HTML/JSON'ni</text>
+  <text x="360" y="334" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">assertSee('matn')</text>
+  <text x="360" y="353" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">assertJson([...])</text>
+
+  <rect x="480" y="284" width="200" height="76" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="580" y="310" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">Bazani</text>
+  <text x="580" y="334" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">assertDatabaseHas()</text>
+  <text x="580" y="353" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">assertDatabaseMissing()</text>
+
+  <text x="360" y="388" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">Brauzer kerak emas: Laravel so'rovni o'z ichida (in-memory) qayta ishlaydi &#8212; juda tez</text>
+</svg>

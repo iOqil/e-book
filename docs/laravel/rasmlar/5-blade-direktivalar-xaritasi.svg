@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" width="720" height="520">
+  <title>Blade direktivalari xaritasi: chiqarish, shartlar, sikllar, layout, qism va xavfsizlik kategoriyalari bo'yicha guruhlangan asosiy direktivalar</title>
+
+  <rect x="0" y="0" width="720" height="520" fill="#f8fafc"/>
+
+  <text x="360" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Blade direktivalari xaritasi</text>
+
+  <!-- Group 1: Chiqarish -->
+  <rect x="24" y="56" width="216" height="140" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="132" y="80" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">Chiqarish</text>
+  <text x="40" y="106" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">{{ $x }}</text>
+  <text x="40" y="124" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">escape qilingan (xavfsiz)</text>
+  <text x="40" y="148" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">{!! $x !!}</text>
+  <text x="40" y="166" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">raw HTML (ehtiyot!)</text>
+  <text x="40" y="188" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">@php ... @endphp</text>
+
+  <!-- Group 2: Shartlar -->
+  <rect x="252" y="56" width="216" height="140" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="360" y="80" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Shartlar</text>
+  <text x="268" y="106" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">@if @elseif @else</text>
+  <text x="268" y="128" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">@unless</text>
+  <text x="268" y="150" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">@isset @empty</text>
+  <text x="268" y="172" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">@switch @case</text>
+  <text x="268" y="190" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">@endif bilan yopiladi</text>
+
+  <!-- Group 3: Sikllar -->
+  <rect x="480" y="56" width="216" height="140" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="588" y="80" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b45309">Sikllar</text>
+  <text x="496" y="106" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">@foreach @endforeach</text>
+  <text x="496" y="128" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">@forelse @empty</text>
+  <text x="496" y="150" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">@for @while</text>
+  <text x="496" y="172" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">@break @continue</text>
+  <text x="496" y="190" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">$loop o'zgaruvchisi</text>
+
+  <!-- Group 4: Layout / komponent -->
+  <rect x="24" y="212" width="216" height="150" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="132" y="236" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#7c3aed">Layout / komponent</text>
+  <text x="40" y="262" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">&lt;x-layout&gt; ... &lt;/x-layout&gt;</text>
+  <text x="40" y="284" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">@props  $slot</text>
+  <text x="40" y="306" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">zamonaviy yo'l</text>
+  <text x="40" y="332" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">@extends @section</text>
+  <text x="40" y="352" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">@yield  (klassik yo'l)</text>
+
+  <!-- Group 5: Qism qo'shish -->
+  <rect x="252" y="212" width="216" height="150" rx="10" fill="#e2e8f0" stroke="#475569" stroke-width="2"/>
+  <text x="360" y="236" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#475569">Qism qo'shish</text>
+  <text x="268" y="262" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">@include('partials.x')</text>
+  <text x="268" y="284" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">@includeIf @includeWhen</text>
+  <text x="268" y="306" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">@once</text>
+  <text x="268" y="328" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">@push @stack</text>
+  <text x="268" y="350" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">CSS/JS to'plash</text>
+
+  <!-- Group 6: Xavfsizlik -->
+  <rect x="480" y="212" width="216" height="150" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="588" y="236" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">Xavfsizlik / auth</text>
+  <text x="496" y="262" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">@csrf</text>
+  <text x="496" y="284" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">@method('PUT')</text>
+  <text x="496" y="306" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">@auth @guest</text>
+  <text x="496" y="328" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">@can @cannot</text>
+  <text x="496" y="350" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">ruxsat tekshirish</text>
+
+  <!-- bottom note -->
+  <rect x="24" y="384" width="672" height="112" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="360" y="410" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Qoida: har bir ochuvchi direktiva o'z @end... juftiga ega</text>
+  <text x="360" y="436" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">@if -&gt; @endif,  @foreach -&gt; @endforeach,  @forelse -&gt; @endforelse,  @auth -&gt; @endauth</text>
+  <text x="360" y="462" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Barcha direktivalar oddiy PHP'ga kompilyatsiya bo'ladi — sehr yo'q, faqat qisqartma.</text>
+  <text x="360" y="486" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">@{{ ... }} — Blade'ga tegmaslik kerak bo'lganda (mas. Vue/Alpine bilan).</text>
+</svg>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" width="720" height="360">
+  <title>add va commit oqimi: git add fayllarni Working Directory'dan Staging zonasiga, git commit esa Staging'dan Repository'ga (tarixga) ko'chiradi</title>
+  <rect x="0" y="0" width="720" height="360" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Ikki qadam: add fayllarni tanlaydi, commit muhrlaydi</text>
+
+  <!-- Working Directory -->
+  <rect x="30" y="80" width="180" height="170" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="120" y="106" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b45309">Working Directory</text>
+  <text x="120" y="126" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#92400e">(ish papkasi)</text>
+  <rect x="52" y="142" width="136" height="26" rx="4" fill="#fff" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="120" y="160" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">index.html</text>
+  <rect x="52" y="176" width="136" height="26" rx="4" fill="#fff" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="120" y="194" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">style.css</text>
+  <text x="120" y="228" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#92400e">o'zgartiryapsiz</text>
+
+  <!-- Staging -->
+  <rect x="270" y="80" width="180" height="170" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="360" y="106" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">Staging Area</text>
+  <text x="360" y="126" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e40af">(tayyorlangan zona)</text>
+  <rect x="292" y="142" width="136" height="26" rx="4" fill="#fff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="360" y="160" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">index.html</text>
+  <text x="360" y="200" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e40af">keyingi commitga</text>
+  <text x="360" y="218" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e40af">tanlangan</text>
+
+  <!-- Repository -->
+  <rect x="510" y="80" width="180" height="170" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="600" y="106" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Repository</text>
+  <text x="600" y="126" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#15803d">(.git — tarix)</text>
+  <circle cx="540" cy="170" r="9" fill="#16a34a"/>
+  <circle cx="572" cy="170" r="9" fill="#16a34a"/>
+  <circle cx="604" cy="170" r="9" fill="#16a34a"/>
+  <line x1="549" y1="170" x2="563" y2="170" stroke="#16a34a" stroke-width="2"/>
+  <line x1="581" y1="170" x2="595" y2="170" stroke="#16a34a" stroke-width="2"/>
+  <text x="600" y="208" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#15803d">commit'lar zanjiri</text>
+  <text x="600" y="226" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#15803d">(o'chmas snapshotlar)</text>
+
+  <!-- strelka add -->
+  <defs>
+    <marker id="arrB" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrG" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+  <line x1="212" y1="165" x2="266" y2="165" stroke="#2563eb" stroke-width="3" marker-end="url(#arrB)"/>
+  <text x="239" y="155" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">git add</text>
+
+  <line x1="452" y1="165" x2="506" y2="165" stroke="#16a34a" stroke-width="3" marker-end="url(#arrG)"/>
+  <text x="479" y="155" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">git commit</text>
+
+  <!-- pastki izohlar -->
+  <text x="360" y="300" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">add = "buni keyingi suratga qo'shaman" deb belgilash</text>
+  <text x="360" y="326" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">commit = belgilanganlardan abadiy "surat" (snapshot) olish</text>
+</svg>

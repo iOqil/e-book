@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>JSDoc bilan tip berish: .js faylda izoh sifatida yozilgan tip annotatsiyalari checkJs ostida TypeScript tomonidan tekshiriladi, fayl hali ham oddiy JavaScript bo'lib qoladi</title>
+
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">JSDoc tiplari — .ts ga o'tmasdan tip xavfsizligi</text>
+
+  <!-- chap: .js fayl JSDoc bilan -->
+  <text x="200" y="76" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">kod.js  (oddiy JavaScript)</text>
+  <rect x="40" y="90" width="320" height="210" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+
+  <rect x="56" y="106" width="288" height="80" rx="5" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="70" y="128" font-family="Consolas, Menlo, monospace" font-size="13" fill="#b45309">/**</text>
+  <text x="70" y="148" font-family="Consolas, Menlo, monospace" font-size="13" fill="#b45309"> * @param {number} a</text>
+  <text x="70" y="168" font-family="Consolas, Menlo, monospace" font-size="13" fill="#b45309"> * @returns {number}</text>
+
+  <text x="70" y="212" font-family="Consolas, Menlo, monospace" font-size="13" fill="#1e293b">function ikkilantir(a) {</text>
+  <text x="86" y="234" font-family="Consolas, Menlo, monospace" font-size="13" fill="#1e293b">return a * 2;</text>
+  <text x="70" y="256" font-family="Consolas, Menlo, monospace" font-size="13" fill="#1e293b">}</text>
+  <text x="70" y="284" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">Tiplar IZOH ichida -&gt; runtime'ga ta'sir yo'q</text>
+
+  <!-- o'ng: TypeScript tekshiruvi -->
+  <text x="530" y="76" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">checkJs ostida TypeScript</text>
+  <rect x="400" y="90" width="280" height="210" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+
+  <text x="540" y="124" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">ikkilantir("salom")</text>
+  <rect x="420" y="138" width="240" height="36" rx="5" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="540" y="161" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">TS2345: string -&gt; number emas</text>
+
+  <text x="540" y="206" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">ikkilantir(21)</text>
+  <rect x="420" y="220" width="240" height="36" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="540" y="243" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">to'g'ri -&gt; 42, xato yo'q</text>
+
+  <text x="540" y="284" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">tsc xatoni IZOHdagi tipdan biladi</text>
+
+  <!-- strelka -->
+  <path d="M 363 195 L 397 195" stroke="#475569" stroke-width="2.5" fill="none" marker-end="url(#ok3)"/>
+  <text x="380" y="186" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tekshiradi</text>
+
+  <defs>
+    <marker id="ok3" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- pastki izoh -->
+  <rect x="40" y="324" width="640" height="80" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="360" y="352" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14.5" font-weight="bold" fill="#1e293b">Qachon JSDoc, qachon .ts?</text>
+  <text x="360" y="376" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">JSDoc: build qadami qo'sha olmaganda yoki migratsiyaning birinchi kichik qadamlarida qulay.</text>
+  <text x="360" y="396" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">.ts: jiddiy loyiha uchun toza va qisqaroq — pirovardida shunga o'tiladi.</text>
+</svg>

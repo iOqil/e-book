@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" width="720" height="420">
+  <title>S3-mos disk sozlash: .env faylidagi kalitlar (KEY, SECRET, REGION, BUCKET, ENDPOINT, USE_PATH_STYLE) config/filesystems.php dagi s3 disk sozlamalariga ulanadi. AWS uchun endpoint shart emas, Contabo kabi S3-mos xizmatlar uchun endpoint va path-style endpoint shart</title>
+  <rect x="0" y="0" width="720" height="420" fill="#f8fafc"/>
+
+  <text x="360" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">S3-mos disk sozlash (.env -&gt; config)</text>
+
+  <!-- .env paneli -->
+  <text x="190" y="66" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">.env (maxfiy kalitlar)</text>
+  <rect x="24" y="78" width="332" height="296" rx="10" fill="#1e293b"/>
+  <text x="44" y="108" font-family="Consolas, monospace" font-size="14" fill="#86efac">AWS_ACCESS_KEY_ID=...</text>
+  <text x="44" y="134" font-family="Consolas, monospace" font-size="14" fill="#86efac">AWS_SECRET_ACCESS_KEY=...</text>
+  <text x="44" y="160" font-family="Consolas, monospace" font-size="14" fill="#86efac">AWS_DEFAULT_REGION=eu</text>
+  <text x="44" y="186" font-family="Consolas, monospace" font-size="14" fill="#86efac">AWS_BUCKET=mening-bucket</text>
+  <text x="44" y="222" font-family="Consolas, monospace" font-size="13" fill="#fcd34d">// S3-mos xizmat uchun:</text>
+  <text x="44" y="248" font-family="Consolas, monospace" font-size="14" fill="#fca5a5">AWS_ENDPOINT=</text>
+  <text x="60" y="270" font-family="Consolas, monospace" font-size="13" fill="#fca5a5">https://eu2.contabostorage.com</text>
+  <text x="44" y="300" font-family="Consolas, monospace" font-size="14" fill="#fca5a5">AWS_USE_PATH_STYLE_</text>
+  <text x="60" y="322" font-family="Consolas, monospace" font-size="14" fill="#fca5a5">ENDPOINT=true</text>
+  <text x="44" y="356" font-family="Consolas, monospace" font-size="13" fill="#94a3b8">// AWS uchun bu 2 qator shart emas</text>
+
+  <!-- strelka -->
+  <line x1="356" y1="220" x2="402" y2="220" stroke="#94a3b8" stroke-width="3" marker-end="url(#a18s)"/>
+  <text x="379" y="210" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">env()</text>
+
+  <!-- config paneli -->
+  <text x="540" y="66" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">config/filesystems.php</text>
+  <rect x="408" y="78" width="288" height="296" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="424" y="104" font-family="Consolas, monospace" font-size="13.5" fill="#1e293b">'s3' =&gt; [</text>
+  <text x="440" y="126" font-family="Consolas, monospace" font-size="13.5" fill="#475569">'driver' =&gt; 's3',</text>
+  <text x="440" y="148" font-family="Consolas, monospace" font-size="13.5" fill="#475569">'key' =&gt; env('AWS_ACCESS...'),</text>
+  <text x="440" y="170" font-family="Consolas, monospace" font-size="13.5" fill="#475569">'secret' =&gt; env('AWS_SECRET..'),</text>
+  <text x="440" y="192" font-family="Consolas, monospace" font-size="13.5" fill="#475569">'region' =&gt; env('AWS_DEF...'),</text>
+  <text x="440" y="214" font-family="Consolas, monospace" font-size="13.5" fill="#475569">'bucket' =&gt; env('AWS_BUCKET'),</text>
+  <text x="440" y="240" font-family="Consolas, monospace" font-size="13.5" fill="#2563eb">'endpoint' =&gt; env('AWS_END...'),</text>
+  <text x="440" y="262" font-family="Consolas, monospace" font-size="13" fill="#2563eb">'use_path_style_endpoint' =&gt;</text>
+  <text x="456" y="282" font-family="Consolas, monospace" font-size="13.5" fill="#2563eb">env('AWS_USE_PATH...', false),</text>
+  <text x="424" y="304" font-family="Consolas, monospace" font-size="13.5" fill="#1e293b">],</text>
+
+  <rect x="424" y="320" width="256" height="44" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="552" y="338" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309">path-style: bucket.host EMAS,</text>
+  <text x="552" y="356" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309">host/bucket ko'rinishida URL</text>
+
+  <text x="360" y="404" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Kalitlar .env'da turadi (Git'ga tushmaydi), config ularni env() bilan o'qiydi — kod o'zgarmaydi</text>
+
+  <defs>
+    <marker id="a18s" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/></marker>
+  </defs>
+</svg>

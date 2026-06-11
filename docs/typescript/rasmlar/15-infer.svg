@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 450" width="720" height="450">
+  <title>infer kalit so'zi conditional type ichida tipning bir qismini ushlab oladi: funksiya tipidan return tipini ajratib, R nomli vaqtinchalik tip o'zgaruvchisiga joylaydi va shartdan keyin uni qaytaradi</title>
+  <rect x="0" y="0" width="720" height="450" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">infer: conditional ichidan tipni ajratib olish</text>
+
+  <!-- formula -->
+  <rect x="80" y="52" width="560" height="44" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="360" y="80" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#7c3aed">T extends (...args: any[]) =&gt; infer R ? R : never</text>
+
+  <!-- kirish -->
+  <text x="360" y="128" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">Kirish: funksiya tipi</text>
+  <rect x="200" y="140" width="320" height="44" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="360" y="168" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">(a: number, b: number) =&gt; string</text>
+
+  <!-- infer ushlash -->
+  <line x1="360" y1="184" x2="360" y2="216" stroke="#7c3aed" stroke-width="3"/>
+  <polygon points="354,216 360,228 366,216" fill="#7c3aed"/>
+
+  <rect x="160" y="232" width="400" height="62" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="360" y="258" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309">infer R — return joyiga "qopqon" qo'yadi</text>
+  <text x="360" y="282" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">TS o'zi to'ldiradi:  R = string</text>
+
+  <!-- chiqish -->
+  <line x1="360" y1="294" x2="360" y2="326" stroke="#16a34a" stroke-width="3"/>
+  <polygon points="354,326 360,338 366,326" fill="#16a34a"/>
+  <rect x="240" y="342" width="240" height="48" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="360" y="372" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">Natija tip: string</text>
+
+  <!-- izoh -->
+  <text x="360" y="420" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">ReturnType, Parameters, Awaited — hammasi shu infer hiylasi ustiga qurilgan</text>
+</svg>

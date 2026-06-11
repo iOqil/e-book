@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="720" height="440">
+  <title>git cherry-pick boshqa branchdagi bitta kerakli commitni (masalan hotfix) joriy branchga nusxalaydi: o'sha o'zgarish yangi commit sifatida (yangi hash bilan) qo'shiladi</title>
+  <rect x="0" y="0" width="720" height="440" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">git cherry-pick — bitta commitni ko'chirish</text>
+
+  <!-- main branch chizig'i -->
+  <text x="60" y="118" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">main</text>
+  <line x1="120" y1="130" x2="650" y2="130" stroke="#94a3b8" stroke-width="3"/>
+  <circle cx="160" cy="130" r="20" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="160" y="135" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">A</text>
+  <circle cx="300" cy="130" r="20" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="300" y="135" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">B</text>
+  <circle cx="600" cy="130" r="20" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+  <text x="600" y="135" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">X'</text>
+
+  <!-- feature branch chizig'i -->
+  <text x="60" y="318" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#f59e0b">feature</text>
+  <line x1="120" y1="310" x2="520" y2="310" stroke="#94a3b8" stroke-width="3"/>
+  <circle cx="160" cy="310" r="20" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="160" y="315" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">C</text>
+  <circle cx="300" cy="310" r="20" fill="#fef3c7" stroke="#16a34a" stroke-width="3"/>
+  <text x="300" y="315" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">X</text>
+  <circle cx="440" cy="310" r="20" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="440" y="315" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">D</text>
+
+  <!-- ulanish feature->main boshlanishi -->
+  <line x1="160" y1="290" x2="160" y2="150" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="4 4"/>
+
+  <!-- cherry-pick strelkasi X -> X' -->
+  <path d="M 300 287 C 380 200, 520 200, 595 152" fill="none" stroke="#16a34a" stroke-width="3" marker-end="url(#cpArr)"/>
+  <text x="450" y="205" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">git cherry-pick X</text>
+
+  <!-- belgilar -->
+  <text x="300" y="358" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">kerakli commit (asl)</text>
+  <text x="600" y="180" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">nusxa (yangi hash)</text>
+
+  <!-- pastki izoh -->
+  <text x="360" y="402" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Faqat X commitining o'zgarishi main'ga ko'chadi — C va D ko'chmaydi.</text>
+  <text x="360" y="424" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Asl X o'rnida qoladi; main'da X' — bir xil mazmun, lekin yangi commit (boshqa hash).</text>
+
+  <defs>
+    <marker id="cpArr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+</svg>

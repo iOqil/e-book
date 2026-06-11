@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" width="720" height="420">
+  <title>Narrowing va exhaustiveness oqimi: Holat union kirim switch shoxlari orqali bittama-bitta toraytirilib, default shoxida qolgan tip never bo'lishi tekshiriladi; union kengaytirilsa never xato beradi</title>
+  <rect x="0" y="0" width="720" height="420" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Narrowing + never bilan to'liqlik tekshiruvi</text>
+
+  <!-- Kirim union -->
+  <rect x="240" y="56" width="240" height="50" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="360" y="78" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">holat: Holat</text>
+  <text x="360" y="98" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">"todo" | "doing" | "done"</text>
+
+  <line x1="360" y1="106" x2="360" y2="132" stroke="#475569" stroke-width="2"/>
+  <polygon points="360,134 355,124 365,124" fill="#475569"/>
+  <text x="430" y="126" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">switch (holat)</text>
+
+  <!-- 3 shox -->
+  <rect x="40" y="138" width="190" height="58" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.8"/>
+  <text x="135" y="160" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#16a34a">case "todo"</text>
+  <text x="135" y="182" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">holat: "todo"</text>
+
+  <rect x="265" y="138" width="190" height="58" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.8"/>
+  <text x="360" y="160" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#16a34a">case "doing"</text>
+  <text x="360" y="182" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">holat: "doing"</text>
+
+  <rect x="490" y="138" width="190" height="58" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.8"/>
+  <text x="585" y="160" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#16a34a">case "done"</text>
+  <text x="585" y="182" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">holat: "done"</text>
+
+  <!-- shox strelkalari -->
+  <line x1="300" y1="134" x2="170" y2="136" stroke="#16a34a" stroke-width="1.6"/>
+  <polygon points="168,136 178,132 178,141" fill="#16a34a"/>
+  <line x1="360" y1="134" x2="360" y2="136" stroke="#16a34a" stroke-width="1.6"/>
+  <polygon points="360,138 355,128 365,128" fill="#16a34a"/>
+  <line x1="420" y1="134" x2="550" y2="136" stroke="#16a34a" stroke-width="1.6"/>
+  <polygon points="552,136 542,132 542,141" fill="#16a34a"/>
+
+  <!-- default -->
+  <line x1="360" y1="196" x2="360" y2="232" stroke="#475569" stroke-width="2"/>
+  <polygon points="360,234 355,224 365,224" fill="#475569"/>
+  <text x="445" y="218" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">qolgan barcha holat default'ga</text>
+
+  <rect x="200" y="238" width="320" height="64" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="360" y="262" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309">default: const c: never = holat</text>
+  <text x="360" y="286" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">3 holat qoplangan -&gt; bu yerda holat = never</text>
+
+  <!-- natijalar -->
+  <rect x="40" y="326" width="310" height="64" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="195" y="350" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#16a34a">✅ Hammasi qoplangan</text>
+  <text x="195" y="372" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">never'ga never beriladi -&gt; toza o'tadi</text>
+
+  <rect x="370" y="326" width="310" height="64" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="525" y="350" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#dc2626">❌ Union kengaysa ("bekor")</text>
+  <text x="525" y="372" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">"bekor" never'ga sig'maydi -&gt; xato</text>
+</svg>

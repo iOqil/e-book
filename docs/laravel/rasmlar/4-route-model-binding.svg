@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="720" height="400">
+  <title>Route model binding: URL'dagi {post} id raqami Laravel tomonidan avtomatik bazadan topiladi va tayyor Post obyekti sifatida metodga uzatiladi</title>
+  <rect x="0" y="0" width="720" height="400" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Route model binding: id'dan tayyor obyektgacha</text>
+
+  <!-- URL -->
+  <rect x="40" y="80" width="200" height="70" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="140" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">URL so'rovi</text>
+  <text x="140" y="133" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">GET /postlar/7</text>
+
+  <!-- strelka -->
+  <line x1="240" y1="115" x2="296" y2="115" stroke="#1e293b" stroke-width="2.5"/>
+  <polygon points="296,115 286,110 286,120" fill="#1e293b"/>
+
+  <!-- Laravel avtomatik qidiruv -->
+  <rect x="300" y="74" width="220" height="82" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="410" y="100" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309">Laravel avtomatik</text>
+  <text x="410" y="123" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Post::findOrFail(7)</text>
+  <text x="410" y="143" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">ni o'zi chaqiradi</text>
+
+  <!-- strelka -->
+  <line x1="520" y1="115" x2="576" y2="115" stroke="#1e293b" stroke-width="2.5"/>
+  <polygon points="576,115 566,110 566,120" fill="#1e293b"/>
+
+  <!-- baza -->
+  <ellipse cx="640" cy="92" rx="44" ry="12" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <path d="M 596 92 L 596 138 A 44 12 0 0 0 684 138 L 684 92" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="640" y="124" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">posts</text>
+  <text x="640" y="142" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">jadvali</text>
+
+  <!-- pastga: metod -->
+  <line x1="410" y1="156" x2="410" y2="210" stroke="#16a34a" stroke-width="2.5"/>
+  <polygon points="410,210 405,200 415,200" fill="#16a34a"/>
+  <text x="510" y="188" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">tayyor obyekt uzatiladi</text>
+
+  <!-- metod qutisi -->
+  <rect x="120" y="216" width="480" height="110" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="360" y="244" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">PostController metodi</text>
+  <text x="360" y="274" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">public function show(Post $post)</text>
+  <text x="360" y="298" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">$post — bazadan topilgan, to'ldirilgan Post obyekti</text>
+  <text x="360" y="318" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(id'ni o'zingiz qidirib o'tirmaysiz)</text>
+
+  <!-- pastki izoh -->
+  <text x="360" y="364" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Parametr nomi ({post}) va tip ko'rsatkichi (Post $post) mos kelsa, bog'lanish avtomatik ishlaydi.</text>
+  <text x="360" y="388" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">id topilmasa, Laravel o'zi 404 sahifa qaytaradi — qo'shimcha tekshiruv yozish shart emas.</text>
+</svg>

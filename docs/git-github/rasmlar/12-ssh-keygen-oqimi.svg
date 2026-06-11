@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" width="720" height="360">
+  <title>SSH sozlash oqimi: ssh-keygen kalit yasaydi, ochiq kalit GitHub Settings ga qo'yiladi, ssh -T bilan aloqa tekshiriladi</title>
+
+  <rect x="0" y="0" width="720" height="360" fill="#f8fafc"/>
+
+  <text x="360" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">SSH sozlashning uch qadami</text>
+
+  <!-- 1-qadam -->
+  <rect x="30" y="80" width="190" height="160" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <circle cx="60" cy="110" r="18" fill="#2563eb"/>
+  <text x="60" y="116" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#ffffff">1</text>
+  <text x="125" y="116" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">Yarat</text>
+  <text x="125" y="150" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">ssh-keygen</text>
+  <text x="125" y="170" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">-t ed25519</text>
+  <text x="125" y="200" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">2 fayl chiqadi:</text>
+  <text x="125" y="220" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">maxfiy + ochiq</text>
+
+  <!-- o'q 1->2 -->
+  <line x1="220" y1="160" x2="265" y2="160" stroke="#475569" stroke-width="2.5"/>
+  <polygon points="265,160 253,154 253,166" fill="#475569"/>
+
+  <!-- 2-qadam -->
+  <rect x="265" y="80" width="190" height="160" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <circle cx="295" cy="110" r="18" fill="#16a34a"/>
+  <text x="295" y="116" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#ffffff">2</text>
+  <text x="368" y="116" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">Qo'sh</text>
+  <text x="360" y="150" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Ochiq kalitni</text>
+  <text x="360" y="170" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">(.pub) nusxalab</text>
+  <text x="360" y="200" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">GitHub Settings -></text>
+  <text x="360" y="220" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">SSH keys ga qo'y</text>
+
+  <!-- o'q 2->3 -->
+  <line x1="455" y1="160" x2="500" y2="160" stroke="#475569" stroke-width="2.5"/>
+  <polygon points="500,160 488,154 488,166" fill="#475569"/>
+
+  <!-- 3-qadam -->
+  <rect x="500" y="80" width="190" height="160" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <circle cx="530" cy="110" r="18" fill="#f59e0b"/>
+  <text x="530" y="116" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#ffffff">3</text>
+  <text x="605" y="116" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#b45309">Tekshir</text>
+  <text x="595" y="150" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">ssh -T</text>
+  <text x="595" y="170" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">git@github.com</text>
+  <text x="595" y="200" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">"Hi username!</text>
+  <text x="595" y="220" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">authenticated"</text>
+
+  <!-- pastki izoh -->
+  <text x="360" y="290" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Bir marta sozlanadi -> keyin push'da parol so'ralmaydi</text>
+  <text x="360" y="322" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">Maxfiy kalitni (.pub'siz) hech qachon GitHubga yoki boshqaga bermang</text>
+</svg>

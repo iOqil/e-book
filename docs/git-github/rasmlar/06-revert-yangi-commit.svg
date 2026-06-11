@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="720" height="400">
+  <title>git revert eski xato commitni o'chirmaydi, balki uning ta'sirini bekor qiluvchi yangi commit qo'shadi; reset esa commitni butunlay olib tashlaydi va tarixni o'zgartiradi</title>
+  <rect x="0" y="0" width="720" height="400" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">revert vs reset — tarixga ta'siri</text>
+
+  <!-- REVERT qatori -->
+  <text x="40" y="80" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">git revert C3</text>
+  <text x="190" y="80" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">— tarix saqlanadi, ustiga bekor qiluvchi commit qo'shiladi</text>
+
+  <!-- revert commit doiralari -->
+  <line x1="100" y1="130" x2="560" y2="130" stroke="#94a3b8" stroke-width="2"/>
+  <circle cx="120" cy="130" r="26" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="120" y="136" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">C1</text>
+  <circle cx="240" cy="130" r="26" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="240" y="136" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">C2</text>
+  <circle cx="360" cy="130" r="26" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="360" y="136" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309">C3</text>
+  <text x="360" y="178" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309">xato (joyida)</text>
+  <circle cx="480" cy="130" r="28" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="480" y="136" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">Revert</text>
+  <text x="480" y="178" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">yangi commit</text>
+  <text x="560" y="135" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">← HEAD</text>
+  <text x="480" y="205" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">C3 ta'sirini bekor qiladi</text>
+
+  <!-- ajratuvchi -->
+  <line x1="40" y1="235" x2="680" y2="235" stroke="#e2e8f0" stroke-width="2"/>
+
+  <!-- RESET qatori -->
+  <text x="40" y="275" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#dc2626">git reset C3</text>
+  <text x="190" y="275" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">— C3 butunlay olib tashlanadi, tarix o'zgaradi (faqat lokalda!)</text>
+
+  <line x1="100" y1="325" x2="280" y2="325" stroke="#94a3b8" stroke-width="2"/>
+  <circle cx="120" cy="325" r="26" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="120" y="331" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">C1</text>
+  <circle cx="240" cy="325" r="26" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="240" y="331" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">C2</text>
+  <text x="320" y="330" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">← HEAD</text>
+  <!-- o'chirilgan C3 -->
+  <circle cx="360" cy="325" r="26" fill="#f8fafc" stroke="#dc2626" stroke-width="2" stroke-dasharray="5 4"/>
+  <text x="360" y="331" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#dc2626">C3</text>
+  <line x1="343" y1="308" x2="377" y2="342" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="360" y="375" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">o'chirildi (go'yo bo'lmagandek)</text>
+</svg>

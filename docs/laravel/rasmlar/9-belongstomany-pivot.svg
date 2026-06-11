@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 480" width="740" height="480">
+  <title>belongsToMany va pivot jadval: posts va tags jadvallari orasidagi post_tag bog'lovchi jadval, har bir qator bitta post-tag juftligini saqlaydi, withPivot bilan qo'shimcha ustun</title>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="740" height="480" fill="#f8fafc"/>
+
+  <text x="370" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">belongsToMany — pivot jadval qanday ishlaydi</text>
+
+  <!-- posts jadvali -->
+  <text x="115" y="76" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">posts</text>
+  <rect x="30" y="86" width="170" height="118" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="30" y1="112" x2="200" y2="112" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="80" y1="86" x2="80" y2="204" stroke="#94a3b8" stroke-width="1"/>
+  <text x="55" y="104" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#475569">id</text>
+  <text x="140" y="104" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#475569">title</text>
+  <text x="55" y="132" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">1</text>
+  <text x="140" y="132" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Laravel kirish</text>
+  <text x="55" y="156" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">2</text>
+  <text x="140" y="156" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Eloquent sirlari</text>
+  <text x="55" y="180" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">3</text>
+  <text x="140" y="180" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Deploy yoli</text>
+
+  <!-- tags jadvali -->
+  <text x="625" y="76" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">tags</text>
+  <rect x="540" y="86" width="170" height="118" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="540" y1="112" x2="710" y2="112" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="590" y1="86" x2="590" y2="204" stroke="#94a3b8" stroke-width="1"/>
+  <text x="565" y="104" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#475569">id</text>
+  <text x="650" y="104" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#475569">name</text>
+  <text x="565" y="132" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">7</text>
+  <text x="650" y="132" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">php</text>
+  <text x="565" y="156" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">8</text>
+  <text x="650" y="156" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">laravel</text>
+  <text x="565" y="180" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">9</text>
+  <text x="650" y="180" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">devops</text>
+
+  <!-- pivot jadval (markazda, pastda) -->
+  <text x="370" y="262" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b45309">post_tag (pivot jadval)</text>
+  <rect x="250" y="272" width="240" height="146" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <line x1="250" y1="298" x2="490" y2="298" stroke="#f59e0b" stroke-width="1.5"/>
+  <line x1="330" y1="272" x2="330" y2="418" stroke="#f59e0b" stroke-width="1"/>
+  <line x1="410" y1="272" x2="410" y2="418" stroke="#f59e0b" stroke-width="1"/>
+  <text x="290" y="290" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#2563eb">post_id</text>
+  <text x="370" y="290" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#2563eb">tag_id</text>
+  <text x="450" y="290" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">added_by</text>
+  <text x="290" y="318" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">1</text>
+  <text x="370" y="318" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">7</text>
+  <text x="450" y="318" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Oqil</text>
+  <text x="290" y="342" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">1</text>
+  <text x="370" y="342" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">8</text>
+  <text x="450" y="342" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Oqil</text>
+  <text x="290" y="366" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">2</text>
+  <text x="370" y="366" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">8</text>
+  <text x="450" y="366" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Ali</text>
+  <text x="290" y="390" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">3</text>
+  <text x="370" y="390" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">9</text>
+  <text x="450" y="390" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Ali</text>
+  <text x="290" y="410" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">...</text>
+
+  <!-- bog'lovchi chiziqlar -->
+  <path d="M115,204 L115,335 L250,335" fill="none" stroke="#2563eb" stroke-width="2" stroke-dasharray="5 4"/>
+  <path d="M625,204 L625,355 L490,355" fill="none" stroke="#2563eb" stroke-width="2" stroke-dasharray="5 4"/>
+  <text x="160" y="228" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">post_id -> posts.id</text>
+  <text x="500" y="228" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">tag_id -> tags.id</text>
+
+  <!-- izohlar -->
+  <text x="120" y="300" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">$post->tags()</text>
+  <text x="120" y="320" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">  ->attach(7)</text>
+  <text x="620" y="300" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">$tag->posts()</text>
+  <text x="620" y="320" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">  ham ishlaydi</text>
+
+  <!-- pastki izoh -->
+  <rect x="30" y="438" width="680" height="30" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="370" y="458" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Yashil "added_by" — pivotdagi qo'shimcha ustun: withPivot('added_by') bilan o'qiladi.</text>
+</svg>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" width="720" height="480">
+  <title>Munosabatga ikki xil murojaat: $user->posts xususiyat sifatida tayyor Collection qaytaradi, $user->posts() metod sifatida query builder qaytaradi — unga ->create() yoki ->where() zanjirlash mumkin</title>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="720" height="480" fill="#f8fafc"/>
+
+  <text x="360" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">$user->posts  va  $user->posts()  — farqi</text>
+
+  <!-- markaziy $user -->
+  <rect x="290" y="56" width="140" height="48" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="360" y="86" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">$user</text>
+
+  <!-- chap shox: xususiyat -->
+  <path d="M330,104 L180,150" fill="none" stroke="#16a34a" stroke-width="2.5"/>
+  <rect x="40" y="150" width="290" height="150" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="185" y="176" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">$user->posts</text>
+  <text x="185" y="198" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(qavssiz — XUSUSIYAT)</text>
+  <text x="56" y="226" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Natija: tayyor Collection</text>
+  <text x="56" y="248" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">(Post obyektlari to'plami)</text>
+  <text x="56" y="270" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">foreach bilan aylanasiz:</text>
+  <text x="56" y="290" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">foreach ($user->posts as $p)</text>
+
+  <!-- o'ng shox: metod -->
+  <path d="M390,104 L540,150" fill="none" stroke="#f59e0b" stroke-width="2.5"/>
+  <rect x="390" y="150" width="290" height="150" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="535" y="176" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#b45309">$user->posts()</text>
+  <text x="535" y="198" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(qavs bilan — METOD)</text>
+  <text x="406" y="226" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Natija: query builder</text>
+  <text x="406" y="248" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Zanjirlaysiz:</text>
+  <text x="406" y="270" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">->where('active', 1)->get()</text>
+  <text x="406" y="290" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">->create([...])</text>
+
+  <!-- pastki: create oqimi -->
+  <text x="360" y="338" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Yaratish: $user->posts()->create([...]) nima qiladi?</text>
+
+  <rect x="40" y="356" width="180" height="56" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="130" y="380" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">$user->posts()</text>
+  <text x="130" y="400" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">->create([...])</text>
+
+  <line x1="220" y1="384" x2="280" y2="384" stroke="#475569" stroke-width="2.5" marker-end="url(#strelka9)"/>
+
+  <rect x="285" y="356" width="180" height="56" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="375" y="380" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">user_id avtomatik</text>
+  <text x="375" y="400" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">to'ldiriladi!</text>
+
+  <line x1="465" y1="384" x2="525" y2="384" stroke="#475569" stroke-width="2.5" marker-end="url(#strelka9)"/>
+
+  <rect x="530" y="356" width="150" height="56" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="605" y="380" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">posts jadvaliga</text>
+  <text x="605" y="400" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">INSERT</text>
+
+  <defs>
+    <marker id="strelka9" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- pastki izoh -->
+  <rect x="40" y="430" width="640" height="34" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="360" y="452" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Eslab qoling: qavssiz = ma'lumot (Collection), qavs bilan = davom ettiriladigan so'rov (query).</text>
+</svg>

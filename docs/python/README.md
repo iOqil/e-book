@@ -1,7 +1,5 @@
 # Python: Noldan boshlab — Boshlovchilar uchun
 
-> 📄 **[Butun kitobni PDF formatda yuklab olish →](/pdf/python.pdf)**
-
 Bu — Python'ni **mutlaqo noldan** o'rgatadigan qo'llanma. Hech qanday oldingi dasturlash tajribasi talab qilinmaydi. Bu yerda:
 
 - Boshqa tillar bilan solishtirish **yo'q** — faqat sof Python. Boshqa til bilmasang ham hammasi tushunarli.

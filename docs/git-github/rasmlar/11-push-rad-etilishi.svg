@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" width="720" height="480">
+  <title>Push nega rad etiladi va yechimi: siz commit qilgan vaqtda boshqa odam ham push qilgan, shuning uchun remote sizdan oldinga ketgan; git push rad etiladi (rejected, fetch first); yechim avval git pull qilib remote o'zgarishlarni olib birlashtirish, keyin git push</title>
+
+  <rect x="0" y="0" width="720" height="480" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Push rad etildi — nega va qanday hal qilinadi</text>
+
+  <!-- 1-holat: boshlang'ich -->
+  <text x="120" y="78" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#475569">1. Ikkalangiz bir nuqtadan boshladingiz</text>
+
+  <!-- sizning commit -->
+  <rect x="36" y="96" width="168" height="60" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="120" y="120" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#2563eb">Siz (lokal)</text>
+  <text x="120" y="142" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">yangi commit qildingiz</text>
+
+  <!-- remote -->
+  <rect x="516" y="96" width="168" height="60" rx="8" fill="#e2e8f0" stroke="#1e293b" stroke-width="2"/>
+  <text x="600" y="120" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">Remote (origin)</text>
+  <text x="600" y="142" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">sherigingiz push qildi</text>
+
+  <text x="360" y="124" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">remote endi</text>
+  <text x="360" y="142" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">sizdan oldinda</text>
+
+  <!-- 2-holat: push urinishi RAD -->
+  <text x="120" y="196" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#475569">2. git push — RAD ETILADI</text>
+
+  <line x1="204" y1="220" x2="500" y2="220" stroke="#dc2626" stroke-width="3" stroke-dasharray="8 5" marker-end="url(#aR)"/>
+  <text x="352" y="210" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">git push</text>
+  <!-- X belgi -->
+  <circle cx="352" cy="240" r="15" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <line x1="345" y1="233" x2="359" y2="247" stroke="#dc2626" stroke-width="2.5"/>
+  <line x1="359" y1="233" x2="345" y2="247" stroke="#dc2626" stroke-width="2.5"/>
+
+  <rect x="120" y="268" width="480" height="62" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="360" y="292" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626">! [rejected] main -&gt; main (fetch first)</text>
+  <text x="360" y="316" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Sabab: remote'da sizda yo'q ish bor. Avval uni oling.</text>
+
+  <!-- 3-holat: yechim -->
+  <text x="360" y="368" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">3. Yechim: avval pull, keyin push</text>
+
+  <rect x="60" y="386" width="180" height="54" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="150" y="409" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#15803d">git pull</text>
+  <text x="150" y="429" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">remoteni olib birlashtirish</text>
+
+  <line x1="240" y1="413" x2="290" y2="413" stroke="#16a34a" stroke-width="3" marker-end="url(#aG)"/>
+
+  <rect x="296" y="386" width="180" height="54" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="386" y="409" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#15803d">git push</text>
+  <text x="386" y="429" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">endi qabul qilinadi</text>
+
+  <line x1="476" y1="413" x2="526" y2="413" stroke="#16a34a" stroke-width="3" marker-end="url(#aG)"/>
+
+  <rect x="532" y="386" width="156" height="54" rx="8" fill="#e2e8f0" stroke="#1e293b" stroke-width="2"/>
+  <text x="610" y="409" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">tayyor</text>
+  <text x="610" y="429" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">ikkala ish saqlandi</text>
+
+  <text x="360" y="466" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Qoida: push rad etilsa, panika emas — git pull qiling, so'ng qayta push qiling</text>
+
+  <defs>
+    <marker id="aR" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#dc2626"/>
+    </marker>
+    <marker id="aG" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+</svg>

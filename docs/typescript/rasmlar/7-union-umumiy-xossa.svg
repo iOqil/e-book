@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="720" height="440">
+  <title>Union string | number da faqat ikkala tipda ham mavjud bo'lgan xossalarga ruxsat beriladi: toString umumiy bo'lgani uchun ishlaydi, length faqat string tomonda bo'lgani uchun rad etiladi</title>
+  <rect x="0" y="0" width="720" height="440" fill="#f8fafc"/>
+
+  <text x="360" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Union'da faqat UMUMIY xossalar mavjud</text>
+  <text x="360" y="60" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">x: string | number  —  TypeScript "hozir aynan qaysi tip" ekanini bilmaydi</text>
+
+  <!-- chap quti: string xossalari -->
+  <rect x="50" y="90" width="250" height="200" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="175" y="118" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#2563eb">string</text>
+  <line x1="50" y1="130" x2="300" y2="130" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="175" y="158" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">.toString()</text>
+  <text x="175" y="186" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">.length</text>
+  <text x="175" y="214" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">.trim()</text>
+  <text x="175" y="242" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">.toUpperCase()</text>
+
+  <!-- o'ng quti: number xossalari -->
+  <rect x="420" y="90" width="250" height="200" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="545" y="118" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#16a34a">number</text>
+  <line x1="420" y1="130" x2="670" y2="130" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="545" y="158" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">.toString()</text>
+  <text x="545" y="186" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">.toFixed()</text>
+  <text x="545" y="214" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">.toPrecision()</text>
+
+  <!-- markaz: umumiy -->
+  <rect x="305" y="150" width="110" height="80" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="360" y="178" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309">UMUMIY</text>
+  <text x="360" y="204" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309">.toString()</text>
+
+  <!-- pastki xulosa qatorlari -->
+  <rect x="70" y="320" width="580" height="40" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="92" y="345" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#16a34a" font-weight="bold">RUXSAT:</text>
+  <text x="180" y="345" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">x.toString() — ikkala tipda ham bor</text>
+
+  <rect x="70" y="372" width="580" height="40" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="92" y="397" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#dc2626" font-weight="bold">RAD:</text>
+  <text x="180" y="397" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">x.length — number bo'lsa-chi? (faqat string'da bor)</text>
+</svg>

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="720" height="440">
+  <title>Foreign key constrained va cascade: izohlar jadvalidagi maqola_id maqolalar jadvalining id ustuniga bog'lanadi; maqola o'chirilsa, cascadeOnDelete tufayli unga tegishli izohlar ham avtomatik o'chadi</title>
+
+  <rect x="0" y="0" width="720" height="440" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Foreign key: constrained() + cascadeOnDelete()</text>
+
+  <!-- maqolalar jadvali (ota) -->
+  <text x="170" y="72" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">maqolalar (ota jadval)</text>
+  <rect x="50" y="82" width="240" height="116" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <line x1="50" y1="110" x2="290" y2="110" stroke="#2563eb" stroke-width="1.5"/>
+  <line x1="120" y1="82" x2="120" y2="198" stroke="#94a3b8" stroke-width="1"/>
+  <text x="85" y="102" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">id</text>
+  <text x="205" y="102" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">sarlavha</text>
+  <text x="85" y="132" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">5</text>
+  <text x="205" y="132" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Laravel kirish</text>
+  <text x="85" y="160" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">6</text>
+  <text x="205" y="160" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Eloquent</text>
+  <text x="85" y="188" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">7</text>
+  <text x="205" y="188" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Migration</text>
+
+  <!-- izohlar jadvali (bola) -->
+  <text x="550" y="72" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">izohlar (bola jadval)</text>
+  <rect x="430" y="82" width="240" height="116" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <line x1="430" y1="110" x2="670" y2="110" stroke="#16a34a" stroke-width="1.5"/>
+  <line x1="500" y1="82" x2="500" y2="198" stroke="#94a3b8" stroke-width="1"/>
+  <text x="465" y="102" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">id</text>
+  <text x="585" y="102" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">maqola_id</text>
+  <text x="465" y="132" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">1</text>
+  <text x="585" y="132" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">5</text>
+  <text x="465" y="160" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">2</text>
+  <text x="585" y="160" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">5</text>
+  <text x="465" y="188" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">3</text>
+  <text x="585" y="188" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">6</text>
+
+  <!-- bog'lanish chizig'i -->
+  <path d="M 585 200 C 585 230, 205 230, 205 200" fill="none" stroke="#dc2626" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arrFk)"/>
+  <text x="360" y="248" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">maqola_id -&gt; maqolalar.id ga ishora qiladi (constrained)</text>
+
+  <!-- kod bloki -->
+  <rect x="120" y="266" width="480" height="64" rx="8" fill="#1e293b"/>
+  <text x="138" y="292" font-family="Consolas, monospace" font-size="14" fill="#e2e8f0">$table-&gt;foreignId('maqola_id')</text>
+  <text x="158" y="314" font-family="Consolas, monospace" font-size="14" fill="#7dd3fc">-&gt;constrained()-&gt;cascadeOnDelete();</text>
+
+  <!-- ssenariy -->
+  <rect x="50" y="350" width="620" height="70" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="360" y="376" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309">Cascade ssenariysi:</text>
+  <text x="360" y="400" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">id=5 maqola o'chirilsa -&gt; unga tegishli 1 va 2 izoh ham AVTOMATIK o'chadi (yetim qolmaydi)</text>
+
+  <defs>
+    <marker id="arrFk" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 z" fill="#dc2626"/>
+    </marker>
+  </defs>
+</svg>

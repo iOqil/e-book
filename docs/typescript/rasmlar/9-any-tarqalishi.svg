@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>any 'yuqishi': bitta any qiymatdan kelib chiqqan har qanday natija ham any bo'ladi, shu tariqa tip xavfsizligi zanjir bo'ylab yo'qoladi va xatolar tutilmay qoladi</title>
+
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">any "yuqadi" — bittadan butun zanjirga tarqaladi</text>
+
+  <!-- manba: any -->
+  <rect x="40" y="80" width="200" height="74" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="140" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">const data: any</text>
+  <text x="140" y="132" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">JSON.parse(...) natijasi</text>
+
+  <!-- strelka 1 -->
+  <line x1="240" y1="117" x2="300" y2="117" stroke="#dc2626" stroke-width="2.5"/>
+  <polygon points="300,111 314,117 300,123" fill="#dc2626"/>
+
+  <!-- bosqich 1 -->
+  <rect x="318" y="80" width="200" height="74" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="418" y="106" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">const narx =</text>
+  <text x="418" y="126" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">  data.narx</text>
+  <text x="418" y="146" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626">narx: any</text>
+
+  <!-- strelka 2 (pastga burilish) -->
+  <line x1="418" y1="154" x2="418" y2="186" stroke="#dc2626" stroke-width="2.5"/>
+  <polygon points="412,186 418,200 424,186" fill="#dc2626"/>
+
+  <!-- bosqich 2 -->
+  <rect x="318" y="204" width="200" height="74" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="418" y="230" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">const jami =</text>
+  <text x="418" y="250" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">  narx * 2</text>
+  <text x="418" y="270" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626">jami: any</text>
+
+  <!-- strelka 3 (chapga) -->
+  <line x1="318" y1="241" x2="258" y2="241" stroke="#dc2626" stroke-width="2.5"/>
+  <polygon points="258,235 244,241 258,247" fill="#dc2626"/>
+
+  <!-- bosqich 3 -->
+  <rect x="40" y="204" width="200" height="74" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="140" y="230" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">jami.toFixed(2)</text>
+  <text x="140" y="252" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">har metodga "ruxsat"</text>
+  <text x="140" y="270" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626">natija: any</text>
+
+  <!-- pastki ogohlantirish paneli -->
+  <rect x="40" y="312" width="640" height="86" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="360" y="340" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b45309">Xavfi: data.narx aslida "120ming" (matn) bo'lsa ham,</text>
+  <text x="360" y="364" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#b45309">"120ming" * 2 = NaN, NaN.toFixed(2) = "NaN" — Compiler bironta xato bermaydi.</text>
+  <text x="360" y="388" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">any — ketgan joyida tip xavfsizligini "o'chirib" yuradi.</text>
+</svg>

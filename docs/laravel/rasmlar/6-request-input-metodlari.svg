@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 450" width="720" height="450">
+  <title>Request input metodlari: input() GET va POST ni, query() faqat URL parametrlarini, all() hammasini, only() faqat tanlangan maydonlarni oladi</title>
+
+  <rect x="0" y="0" width="720" height="450" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Request: qaysi metod nimani oladi?</text>
+
+  <!-- Kelgan so'rov manbasi -->
+  <rect x="40" y="64" width="300" height="150" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="190" y="88" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Kelgan so'rov</text>
+
+  <text x="60" y="116" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#2563eb">URL (query string):</text>
+  <text x="60" y="136" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">?soz=laravel&amp;sahifa=2</text>
+
+  <text x="60" y="166" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">POST tanasi (forma):</text>
+  <text x="60" y="186" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">ism=Ali, email=a@b.uz</text>
+  <text x="60" y="204" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">_token=...</text>
+
+  <defs>
+    <marker id="m1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- input() -->
+  <rect x="420" y="64" width="260" height="58" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="436" y="88" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">input('ism')</text>
+  <text x="436" y="110" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">URL + POST — ikkalasidan</text>
+
+  <!-- query() -->
+  <rect x="420" y="134" width="260" height="58" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="436" y="158" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">query('soz')</text>
+  <text x="436" y="180" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">faqat URL parametrlari</text>
+
+  <!-- all() -->
+  <rect x="420" y="204" width="260" height="58" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="436" y="228" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">all()</text>
+  <text x="436" y="250" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">HAMMASI massiv bo'lib (_token ham)</text>
+
+  <!-- only() -->
+  <rect x="420" y="274" width="260" height="58" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="436" y="298" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">only(['ism','email'])</text>
+  <text x="436" y="320" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">faqat tanlanganlar (xavfsizroq)</text>
+
+  <!-- strelkalar -->
+  <path d="M340 110 L420 93" fill="none" stroke="#475569" stroke-width="1.8" marker-end="url(#m1)"/>
+  <path d="M340 120 L420 162" fill="none" stroke="#475569" stroke-width="1.8" marker-end="url(#m1)"/>
+  <path d="M340 150 L420 232" fill="none" stroke="#475569" stroke-width="1.8" marker-end="url(#m1)"/>
+  <path d="M340 165 L420 302" fill="none" stroke="#475569" stroke-width="1.8" marker-end="url(#m1)"/>
+
+  <!-- pastki maslahat -->
+  <rect x="40" y="370" width="640" height="56" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="360" y="394" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309">Maslahat</text>
+  <text x="360" y="415" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Bazaga yozishdan oldin all() emas, only() yoki validate() ishlating — keraksiz maydon o'tib ketmasin</text>
+</svg>

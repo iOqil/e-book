@@ -1,7 +1,5 @@
 # ReactJS — 0 dan Expert darajagacha (2026 nashri)
 
-> 📄 **[Butun kitobni PDF formatda yuklab olish →](/pdf/react.pdf)**
-
 > **Bu qo'llanma kim uchun?** Hech qachon React ko'rmagan, lekin JavaScript bilan ozgina tanish bo'lgan boshlovchilar uchun. Oxirida siz production-ready React ilovalarini yoza oladigan, ekotizimni tushunadigan va arxitektura qaror qabul qila oladigan dasturchi bo'lasiz.
 >
 > **Qoidalar:**

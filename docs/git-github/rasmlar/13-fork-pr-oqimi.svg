@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440">
+  <title>Begona repoga hissa qo'shishning to'liq oqimi: asl loyihani fork qilish, fork'ni clone qilish, branch ochish, push qilish, Pull Request yaratish, code review va merge</title>
+
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Fork modeli: begona loyihaga hissa qo'shish oqimi</text>
+
+  <!-- GitHub zonasi (yuqori) -->
+  <rect x="30" y="54" width="700" height="146" rx="10" fill="#eef2ff" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="48" y="76" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#7c3aed">GitHub (internet)</text>
+
+  <!-- Asl repo -->
+  <rect x="60" y="92" width="180" height="60" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="150" y="116" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">Asl loyiha</text>
+  <text x="150" y="138" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">begona/loyiha (upstream)</text>
+
+  <!-- Fork -->
+  <rect x="320" y="92" width="180" height="60" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="410" y="116" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Fork (nusxangiz)</text>
+  <text x="410" y="138" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">siz/loyiha (origin)</text>
+
+  <!-- Pull Request -->
+  <rect x="558" y="92" width="148" height="60" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="632" y="116" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b45309">Pull Request</text>
+  <text x="632" y="138" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">+ code review</text>
+
+  <!-- 1) fork: asl -> fork -->
+  <line x1="240" y1="122" x2="316" y2="122" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arrG)"/>
+  <text x="278" y="112" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">1. Fork</text>
+
+  <!-- Lokal zonasi (past) -->
+  <rect x="320" y="250" width="180" height="70" rx="10" fill="#e2e8f0" stroke="#475569" stroke-width="2"/>
+  <text x="410" y="276" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Lokal nusxa</text>
+  <text x="410" y="298" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">kompyuteringiz + branch</text>
+
+  <!-- 2) clone: fork -> lokal -->
+  <line x1="410" y1="152" x2="410" y2="246" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrB)"/>
+  <text x="468" y="204" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#2563eb">2. Clone + 3. branch</text>
+
+  <!-- 4) push: lokal -> fork (yon o'q chap tomondan) -->
+  <path d="M 320 285 L 280 285 L 280 152" fill="none" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arrG)"/>
+  <text x="232" y="210" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">4. Push</text>
+
+  <!-- 5) PR: fork -> asl (PR quti orqali) -->
+  <line x1="500" y1="122" x2="554" y2="122" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#arrY)"/>
+  <text x="527" y="112" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#b45309">5. PR</text>
+
+  <!-- 6) merge: PR -> asl (egri o'q yuqoridan) -->
+  <path d="M 632 92 L 632 70 L 150 70 L 150 90" fill="none" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arrR)"/>
+  <text x="390" y="64" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626">6. Review o'tgach -> Merge (asl loyihaga qo'shiladi)</text>
+
+  <!-- pastki izoh -->
+  <text x="380" y="358" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" font-weight="bold">Tartib: Fork -> Clone -> Branch -> Push -> Pull Request -> Review -> Merge</text>
+  <text x="380" y="386" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">O'z repongizda fork bosqichi tushib qoladi: shunchaki Branch -> Push -> Pull Request -> Merge</text>
+  <text x="380" y="412" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">origin = sizning fork, upstream = asl loyiha — ikki remote bilan ishlaysiz</text>
+
+  <defs>
+    <marker id="arrB" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#2563eb"/></marker>
+    <marker id="arrG" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#16a34a"/></marker>
+    <marker id="arrY" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#f59e0b"/></marker>
+    <marker id="arrR" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#dc2626"/></marker>
+  </defs>
+</svg>

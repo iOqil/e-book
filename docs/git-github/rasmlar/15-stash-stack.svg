@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 470" width="720" height="470">
+  <title>git stash ish daraxtidagi yarim ishni vaqtincha alohida "javon"ga (stash stack) qo'yib turadi; pop bilan ish daraxti yana toza holatga qaytib, o'zgarishlar tiklanadi</title>
+  <rect x="0" y="0" width="720" height="470" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">git stash — yarim ishni vaqtincha javonga qo'yish</text>
+
+  <!-- chap: ish daraxti (oldin) -->
+  <text x="150" y="78" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">Ish daraxti (oldin)</text>
+  <rect x="40" y="92" width="220" height="150" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="150" y="120" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">login.js — yarim ish</text>
+  <text x="150" y="146" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">style.css — yarim ish</text>
+  <text x="150" y="172" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">qoralama.txt (untracked)</text>
+  <text x="150" y="214" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309">commit qilgani tayyor emas</text>
+
+  <!-- strelka push -->
+  <line x1="270" y1="167" x2="455" y2="167" stroke="#2563eb" stroke-width="3" marker-end="url(#arrPush)"/>
+  <text x="362" y="155" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">git stash push -u</text>
+
+  <!-- o'ng: stash stack -->
+  <text x="575" y="78" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">Stash "javoni" (stack)</text>
+  <rect x="465" y="92" width="220" height="44" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="575" y="120" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">stash@{0} — yangi (tepada)</text>
+  <rect x="465" y="142" width="220" height="40" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="575" y="167" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">stash@{1} — oldingi</text>
+  <rect x="465" y="188" width="220" height="40" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="575" y="213" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">stash@{2} — eng eski</text>
+
+  <!-- o'rtada: toza ish daraxti -->
+  <text x="150" y="290" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">Ish daraxti (keyin)</text>
+  <rect x="40" y="304" width="220" height="90" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="150" y="345" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">TOZA</text>
+  <text x="150" y="370" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">boshqa branchga o'tsa bo'ladi</text>
+
+  <!-- strelka pop -->
+  <line x1="455" y1="349" x2="270" y2="349" stroke="#16a34a" stroke-width="3" marker-end="url(#arrPop)"/>
+  <text x="362" y="338" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">git stash pop</text>
+  <text x="362" y="372" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(tepadagini olib, javondan o'chiradi)</text>
+
+  <!-- pastki izoh -->
+  <text x="360" y="430" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">push = ishni javonga qo'y va ish daraxtini tozala &#160;&#160;|&#160;&#160; pop = qaytar va javondan o'chir</text>
+  <text x="360" y="454" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">apply = qaytar, lekin javonda qoldir &#160;&#160;|&#160;&#160; drop = qaytarmasdan o'chir &#160;&#160;|&#160;&#160; -u = untracked fayllarni ham ol</text>
+
+  <defs>
+    <marker id="arrPush" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrPop" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+</svg>

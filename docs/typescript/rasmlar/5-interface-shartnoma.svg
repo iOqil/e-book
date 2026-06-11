@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>interface — obyektning shartnomasi: har maydon nomi va tipini belgilaydi; mos obyekt qabul qilinadi, tip mos kelmasa yoki maydon yetishmasa rad etiladi</title>
+
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">interface = obyekt shakli uchun shartnoma</text>
+
+  <!-- interface ta'rifi (markaz-chap) -->
+  <rect x="40" y="64" width="270" height="200" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="175" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">interface Foydalanuvchi</text>
+  <line x1="60" y1="104" x2="290" y2="104" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="64" y="134" font-family="Consolas, Menlo, monospace" font-size="15" fill="#1e293b">ism:   <tspan fill="#16a34a" font-weight="bold">string</tspan></text>
+  <text x="64" y="166" font-family="Consolas, Menlo, monospace" font-size="15" fill="#1e293b">yosh:  <tspan fill="#16a34a" font-weight="bold">number</tspan></text>
+  <text x="64" y="198" font-family="Consolas, Menlo, monospace" font-size="15" fill="#1e293b">faol:  <tspan fill="#16a34a" font-weight="bold">boolean</tspan></text>
+  <text x="175" y="236" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">maydon nomi  +  maydon tipi</text>
+  <text x="175" y="256" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">("obyekt qanday ko'rinishi kerak")</text>
+
+  <!-- o'q -->
+  <text x="345" y="120" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tekshiradi</text>
+  <line x1="320" y1="135" x2="395" y2="135" stroke="#475569" stroke-width="2"/>
+  <polygon points="395,130 405,135 395,140" fill="#475569"/>
+  <line x1="320" y1="200" x2="395" y2="200" stroke="#475569" stroke-width="2"/>
+  <polygon points="395,195 405,200 395,205" fill="#475569"/>
+
+  <!-- mos obyekt (yashil) -->
+  <rect x="420" y="64" width="270" height="100" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="438" y="90" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">✅ Mos — qabul qilinadi</text>
+  <text x="438" y="120" font-family="Consolas, Menlo, monospace" font-size="14" fill="#1e293b">{ ism: "Olim",</text>
+  <text x="438" y="142" font-family="Consolas, Menlo, monospace" font-size="14" fill="#1e293b">  yosh: 25, faol: true }</text>
+
+  <!-- xato obyekt (qizil) -->
+  <rect x="420" y="180" width="270" height="120" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="438" y="206" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">❌ Mos emas — rad etiladi</text>
+  <text x="438" y="236" font-family="Consolas, Menlo, monospace" font-size="14" fill="#1e293b">{ ism: "Olim",</text>
+  <text x="438" y="258" font-family="Consolas, Menlo, monospace" font-size="14" fill="#1e293b">  yosh: <tspan fill="#dc2626" font-weight="bold">"25"</tspan> }</text>
+  <text x="438" y="284" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">yosh string + faol yo'q</text>
+
+  <!-- pastki izoh -->
+  <text x="360" y="345" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Compiler obyektni shartnoma bilan solishtiradi: shakl to'g'ri kelsa — o'tadi.</text>
+  <text x="360" y="375" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Bir maydon yetishsa yoki tip mos kelmasa — kod yozilishidayoq xato chiqadi,</text>
+  <text x="360" y="399" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">dastur ishga tushib runtime'da qulamaydi.</text>
+</svg>

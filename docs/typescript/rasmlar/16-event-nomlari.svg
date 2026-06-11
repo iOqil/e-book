@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>Real misol: obyekt kalitlari Capitalize bilan bosh harfga aylanadi, on prefiksi va Change suffiksi qo'shilib tiplangan event handler nomlari (onNameChange, onAgeChange) hosil bo'ladi (mapped type + template literal)</title>
+
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">on + Capitalize&lt;Kalit&gt; + Change -&gt; handler nomlari</text>
+
+  <!-- chap: manba obyekt kalitlari -->
+  <text x="135" y="80" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">Holatlar kalitlari</text>
+  <rect x="50" y="94" width="170" height="42" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="135" y="121" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">"name"</text>
+  <rect x="50" y="148" width="170" height="42" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="135" y="175" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">"age"</text>
+
+  <!-- o'rta: Capitalize bosqichi -->
+  <text x="360" y="80" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Capitalize (bosh harf)</text>
+  <rect x="285" y="94" width="150" height="42" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="360" y="121" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">"Name"</text>
+  <rect x="285" y="148" width="150" height="42" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="360" y="175" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">"Age"</text>
+
+  <!-- o'ng: on + template natija -->
+  <text x="597" y="80" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b45309">`on${...}Change` natija</text>
+  <rect x="495" y="94" width="205" height="42" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="597" y="121" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b45309">"onNameChange"</text>
+  <rect x="495" y="148" width="205" height="42" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="597" y="175" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b45309">"onAgeChange"</text>
+
+  <!-- strelkalar -->
+  <line x1="220" y1="115" x2="283" y2="115" stroke="#475569" stroke-width="2"/>
+  <polygon points="285,115 273,110 273,120" fill="#475569"/>
+  <line x1="220" y1="169" x2="283" y2="169" stroke="#475569" stroke-width="2"/>
+  <polygon points="285,169 273,164 273,174" fill="#475569"/>
+  <line x1="435" y1="115" x2="493" y2="115" stroke="#475569" stroke-width="2"/>
+  <polygon points="495,115 483,110 483,120" fill="#475569"/>
+  <line x1="435" y1="169" x2="493" y2="169" stroke="#475569" stroke-width="2"/>
+  <polygon points="495,169 483,164 483,174" fill="#475569"/>
+
+  <!-- pastki blok: kod va foyda -->
+  <rect x="50" y="222" width="620" height="120" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="70" y="250" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">type Handlerlar = {</text>
+  <text x="90" y="276" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">[K in keyof Holatlar as `on${Capitalize&lt;string &amp; K&gt;}Change`]: (yangi) =&gt; void</text>
+  <text x="70" y="302" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">}</text>
+  <text x="70" y="328" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">Natija: { onNameChange: (yangi: string) =&gt; void; onAgeChange: (yangi: number) =&gt; void }</text>
+
+  <!-- foyda izoh -->
+  <text x="360" y="372" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">Bitta manba tipdan handler nomlari avtomatik chiqadi</text>
+  <text x="360" y="398" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">"name" ni "ism" ga o'zgartirsangiz, "onIsmChange" o'zi paydo bo'ladi — qo'lda yozish shart emas</text>
+</svg>

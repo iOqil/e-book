@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" width="720" height="360">
+  <title>git diff variantlari qaysi zonalarni solishtiradi: oddiy diff ish papkasi va staging orasini, --staged staging va repozitoriy orasini taqqoslaydi</title>
+
+  <rect x="0" y="0" width="720" height="360" fill="#f8fafc"/>
+
+  <text x="360" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">git diff qaysi zonalarni solishtiradi?</text>
+
+  <defs>
+    <marker id="ar2" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#dc2626"/>
+    </marker>
+    <marker id="ar2b" markerWidth="10" markerHeight="10" refX="2" refY="5" orient="auto">
+      <path d="M10,0 L0,5 L10,10 Z" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+  <!-- uchta zona -->
+  <!-- Ish papkasi -->
+  <rect x="40" y="100" width="180" height="100" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="130" y="130" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#b45309">Ish papkasi</text>
+  <text x="130" y="152" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tahrir qilayotgan</text>
+  <text x="130" y="170" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">fayllaringiz</text>
+  <text x="130" y="190" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">(working dir)</text>
+
+  <!-- Staging -->
+  <rect x="270" y="100" width="180" height="100" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="360" y="130" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">Staging</text>
+  <text x="360" y="152" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">git add bilan</text>
+  <text x="360" y="170" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tayyorlangan</text>
+  <text x="360" y="190" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">(index)</text>
+
+  <!-- Repozitoriy -->
+  <rect x="500" y="100" width="180" height="100" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="590" y="130" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">Repozitoriy</text>
+  <text x="590" y="152" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">commit qilingan</text>
+  <text x="590" y="170" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tarix (HEAD)</text>
+  <text x="590" y="190" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">(.git)</text>
+
+  <!-- diff (oddiy): ish papkasi vs staging -->
+  <line x1="135" y1="232" x2="355" y2="232" stroke="#dc2626" stroke-width="2.5" marker-start="url(#ar2b)" marker-end="url(#ar2)"/>
+  <rect x="170" y="218" width="150" height="28" rx="6" fill="#f8fafc" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="245" y="237" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="14" font-weight="bold" fill="#dc2626">git diff</text>
+
+  <!-- diff staged: staging vs repo -->
+  <line x1="365" y1="280" x2="585" y2="280" stroke="#16a34a" stroke-width="2.5" marker-start="url(#ar2b)" marker-end="url(#ar2)"/>
+  <rect x="390" y="266" width="170" height="28" rx="6" fill="#f8fafc" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="475" y="285" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="14" font-weight="bold" fill="#16a34a">git diff --staged</text>
+  <line x1="365" y1="280" x2="365" y2="246" stroke="#16a34a" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <line x1="585" y1="280" x2="585" y2="246" stroke="#16a34a" stroke-width="1.2" stroke-dasharray="4 3"/>
+
+  <!-- pastki izoh -->
+  <text x="360" y="332" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">git diff &lt;c1&gt; &lt;c2&gt; esa ikki commit (repozitoriy ichidagi ikki nuqta) orasini solishtiradi.</text>
+</svg>

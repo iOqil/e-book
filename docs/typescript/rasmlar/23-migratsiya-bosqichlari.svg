@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>JS'dan TypeScript'ga migratsiya bosqichlari: allowJs bilan aralash loyiha, fayllarni .ts ga ko'chirish, any'larni aniqlashtirish va oxirida strict yoqish</title>
+
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Migratsiya bosqichlari (noldan emas, asta-sekin)</text>
+
+  <!-- 1-bosqich -->
+  <rect x="40" y="70" width="290" height="120" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <circle cx="70" cy="98" r="15" fill="#2563eb"/>
+  <text x="70" y="103" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">1</text>
+  <text x="96" y="103" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">allowJs yoqish</text>
+  <text x="58" y="130" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">.js va .ts yonma-yon yashaydi.</text>
+  <text x="58" y="152" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">Hech narsa buzilmaydi, loyiha</text>
+  <text x="58" y="174" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">avvalgidek ishlayveradi.</text>
+
+  <!-- 2-bosqich -->
+  <rect x="390" y="70" width="290" height="120" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <circle cx="420" cy="98" r="15" fill="#16a34a"/>
+  <text x="420" y="103" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">2</text>
+  <text x="446" y="103" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">.js -&gt; .ts bittalab</text>
+  <text x="408" y="130" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">Tashqi chegaradan (API, model)</text>
+  <text x="408" y="152" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">ichkariga. Har fayl alohida PR,</text>
+  <text x="408" y="174" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">any bilan boshlasa bo'ladi.</text>
+
+  <!-- 3-bosqich -->
+  <rect x="40" y="230" width="290" height="120" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <circle cx="70" cy="258" r="15" fill="#f59e0b"/>
+  <text x="70" y="263" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">3</text>
+  <text x="96" y="263" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#b45309">any'ni aniqlashtirish</text>
+  <text x="58" y="290" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">Vaqtinchalik any'larni asta</text>
+  <text x="58" y="312" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">interface va aniq tiplarga</text>
+  <text x="58" y="334" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">almashtirib boring.</text>
+
+  <!-- 4-bosqich -->
+  <rect x="390" y="230" width="290" height="120" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <circle cx="420" cy="258" r="15" fill="#7c3aed"/>
+  <text x="420" y="263" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">4</text>
+  <text x="446" y="263" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#7c3aed">strict yoqish</text>
+  <text x="408" y="290" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">Eng OXIRIDA. Flagma-flag yoki</text>
+  <text x="408" y="312" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">birvarakayiga. To'liq tip</text>
+  <text x="408" y="334" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">xavfsizligi shu yerda boshlanadi.</text>
+
+  <!-- strelkalar: 1 -> 2 -> 3 -> 4 (to'g'ri ketma-ketlik) -->
+  <!-- 1 -> 2: yuqori qator, chapdan o'ngga -->
+  <path d="M 335 130 L 385 130" stroke="#475569" stroke-width="2.5" fill="none" marker-end="url(#ok)"/>
+  <!-- 2 -> 3: diagonal, yuqori-o'ngdan past-chapga -->
+  <path d="M 470 192 L 300 228" stroke="#475569" stroke-width="2.5" fill="none" marker-end="url(#ok)"/>
+  <!-- 3 -> 4: pastki qator, chapdan o'ngga (strict eng oxirida) -->
+  <path d="M 335 290 L 385 290" stroke="#475569" stroke-width="2.5" fill="none" marker-end="url(#ok)"/>
+
+  <defs>
+    <marker id="ok" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="392" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14.5" font-weight="bold" fill="#475569">Asosiy qoida: loyiha har bosqichda ishlab turadi, hech qachon "hammasini bir kunda" qilmang</text>
+  <text x="360" y="416" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#94a3b8">Har bosqich kunlar yoki haftalar davom etishi mumkin — bu normal</text>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="720" height="440">
+  <title>Funksiya parametrlarining uch xil turi: majburiy, optional, default qiymatli va rest parametrlar</title>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="720" height="440" fill="#f8fafc"/>
+
+  <text x="360" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Parametr turlari: majburiy, optional, default, rest</text>
+
+  <!-- 1. majburiy -->
+  <rect x="40" y="62" width="640" height="76" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="60" y="90" font-family="Consolas, Segoe UI, monospace" font-size="16" fill="#1e293b"><tspan fill="#2563eb">a: number</tspan></text>
+  <text x="200" y="90" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">Majburiy parametr</text>
+  <text x="200" y="114" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">Chaqirishda berish SHART. Bermasangiz — compiler xato beradi.</text>
+  <text x="200" y="132" font-family="Consolas, Segoe UI, monospace" font-size="13" fill="#16a34a">f(5)  ✓</text>
+
+  <!-- 2. optional -->
+  <rect x="40" y="150" width="640" height="76" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="60" y="178" font-family="Consolas, Segoe UI, monospace" font-size="16" fill="#1e293b"><tspan fill="#16a34a">b?: number</tspan></text>
+  <text x="200" y="178" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Optional parametr (? belgisi)</text>
+  <text x="200" y="202" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">Berish ixtiyoriy. Berilmasa qiymati — undefined.</text>
+  <text x="200" y="220" font-family="Consolas, Segoe UI, monospace" font-size="13" fill="#16a34a">f(5)  yoki  f(5, 9)  ✓</text>
+
+  <!-- 3. default -->
+  <rect x="40" y="238" width="640" height="76" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="60" y="266" font-family="Consolas, Segoe UI, monospace" font-size="16" fill="#1e293b"><tspan fill="#b45309">c: number = 2</tspan></text>
+  <text x="220" y="266" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b45309">Default qiymatli parametr</text>
+  <text x="220" y="290" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">Berilmasa, default qiymat (2) ishlatiladi. Tip avtomatik aniqlanadi.</text>
+  <text x="220" y="308" font-family="Consolas, Segoe UI, monospace" font-size="13" fill="#16a34a">f(5)  →  c = 2  ✓</text>
+
+  <!-- 4. rest -->
+  <rect x="40" y="326" width="640" height="84" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="60" y="356" font-family="Consolas, Segoe UI, monospace" font-size="16" fill="#1e293b"><tspan fill="#7c3aed">...args: number[]</tspan></text>
+  <text x="270" y="356" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#7c3aed">Rest parametr (...)</text>
+  <text x="270" y="380" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">Cheksiz argumentni bitta massivga yigadi. Doim oxirgi boladi.</text>
+  <text x="270" y="398" font-family="Consolas, Segoe UI, monospace" font-size="13" fill="#16a34a">f(1, 2, 3, 4)  →  args = [1,2,3,4]  ✓</text>
+</svg>

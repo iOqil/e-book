@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="720" height="440">
+  <title>Optional maydon (?) bo'lishi shart emas va undefined bo'lishi mumkin; readonly maydon faqat yaratishda yoziladi, keyin o'zgartirib bo'lmaydi</title>
+
+  <rect x="0" y="0" width="720" height="440" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Maxsus maydonlar: optional ? va readonly</text>
+
+  <!-- optional panel -->
+  <rect x="36" y="62" width="318" height="320" rx="10" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+  <rect x="36" y="62" width="318" height="40" rx="10" fill="#dbeafe"/>
+  <text x="195" y="89" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">optional  —  maydon?</text>
+
+  <text x="56" y="132" font-family="Consolas, Menlo, monospace" font-size="14" fill="#1e293b">interface Profil {</text>
+  <text x="56" y="156" font-family="Consolas, Menlo, monospace" font-size="14" fill="#1e293b">  ism: string;</text>
+  <text x="56" y="180" font-family="Consolas, Menlo, monospace" font-size="14" fill="#1e293b">  telefon<tspan fill="#f59e0b" font-weight="bold">?</tspan>: string;</text>
+  <text x="56" y="204" font-family="Consolas, Menlo, monospace" font-size="14" fill="#1e293b">}</text>
+
+  <rect x="56" y="222" width="280" height="64" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="68" y="246" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#16a34a">✅ { ism: "Ali" }  — telefon yo'q, mayli</text>
+  <text x="68" y="270" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#16a34a">✅ { ism: "Ali", telefon: "99..." }</text>
+
+  <rect x="56" y="296" width="280" height="68" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="68" y="320" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#b45309">tipi: string | undefined</text>
+  <text x="68" y="344" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#b45309">"bo'lishi shart emas, bo'lmasligi mumkin"</text>
+
+  <!-- readonly panel -->
+  <rect x="366" y="62" width="318" height="320" rx="10" fill="#fff" stroke="#7c3aed" stroke-width="2"/>
+  <rect x="366" y="62" width="318" height="40" rx="10" fill="#ede9fe"/>
+  <text x="525" y="89" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#7c3aed">readonly  —  faqat o'qish</text>
+
+  <text x="386" y="132" font-family="Consolas, Menlo, monospace" font-size="14" fill="#1e293b">interface Hisob {</text>
+  <text x="386" y="156" font-family="Consolas, Menlo, monospace" font-size="14" fill="#1e293b">  <tspan fill="#7c3aed" font-weight="bold">readonly</tspan> id: number;</text>
+  <text x="386" y="180" font-family="Consolas, Menlo, monospace" font-size="14" fill="#1e293b">  balans: number;</text>
+  <text x="386" y="204" font-family="Consolas, Menlo, monospace" font-size="14" fill="#1e293b">}</text>
+
+  <rect x="386" y="222" width="280" height="44" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="398" y="250" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#16a34a">✅ h.balans = 500  — o'zgartirsa bo'ladi</text>
+
+  <rect x="386" y="276" width="280" height="88" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="398" y="300" font-family="Consolas, Menlo, monospace" font-size="13.5" fill="#1e293b">h.id = 99;</text>
+  <text x="398" y="324" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#dc2626">❌ Cannot assign to 'id' because</text>
+  <text x="398" y="344" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#dc2626">it is a read-only property.</text>
+  <text x="398" y="360" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">id faqat yaratishda yoziladi</text>
+
+  <!-- pastki izoh -->
+  <text x="360" y="416" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">? — maydon majburiy emas;   readonly — qiymat o'rnatilgach qulflanadi.</text>
+</svg>

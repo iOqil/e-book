@@ -15,10 +15,10 @@ hide:
 [GitHub](https://github.com/iOqil/e-book){ .md-button }
 
 <div class="hero-stats">
-  <div class="stat"><b>9</b><span>kitob</span></div>
-  <div class="stat"><b>375</b><span>diagramma</span></div>
-  <div class="stat"><b>175+</b><span>bob</span></div>
-  <div class="stat"><b>1500+</b><span>masala</span></div>
+  <div class="stat"><b>12</b><span>kitob</span></div>
+  <div class="stat"><b>600</b><span>diagramma</span></div>
+  <div class="stat"><b>240+</b><span>bob</span></div>
+  <div class="stat"><b>2800+</b><span>masala</span></div>
 </div>
 
 </section>
@@ -31,7 +31,7 @@ hide:
 
     Web sahifa qurish — box model, flexbox, grid, responsive. 22 bob · 86 diagramma.
 
-    [Boshlash →](html-css/README.md) · [📄 PDF](/pdf/html-css.pdf)
+    [Boshlash →](html-css/README.md)
 
 -   🟨 **2. JavaScript**
 
@@ -39,7 +39,7 @@ hide:
 
     Tildan brauzergacha. Event loop, closure, prototype, async. 8 qism · 36 diagramma.
 
-    [Boshlash →](js/javascript-qollanma-1-qism.md) · [📄 PDF](/pdf/js.pdf)
+    [Boshlash →](js/javascript-qollanma-1-qism.md)
 
 -   ⚛️ **3. React**
 
@@ -47,7 +47,7 @@ hide:
 
     Hooks, render sikli, Server Components. useState/useEffect, re-render. 23 diagramma.
 
-    [Boshlash →](react/reactjs-qollanma.md) · [📄 PDF](/pdf/react.pdf)
+    [Boshlash →](react/reactjs-qollanma.md)
 
 -   ▲ **4. Next.js**
 
@@ -55,7 +55,7 @@ hide:
 
     App Router, Server/Client Components, caching, streaming. 5 fayl · 19 diagramma.
 
-    [Boshlash →](nextjs/README.md) · [📄 PDF](/pdf/nextjs.pdf)
+    [Boshlash →](nextjs/README.md)
 
 -   💚 **5. Vue & Nuxt**
 
@@ -63,7 +63,7 @@ hide:
 
     Reaktivlik, komponentlar, Nuxt SSR. props/emits, lifecycle. 10 bob · 31 diagramma.
 
-    [Boshlash →](vue/README.md) · [📄 PDF](/pdf/vue.pdf)
+    [Boshlash →](vue/README.md)
 
 -   🗄️ **6. SQL & MySQL**
 
@@ -71,7 +71,7 @@ hide:
 
     Noldan amaliy: SELECT, JOIN, GROUP BY, indeks, tranzaksiya. 25 bob · 78 diagramma · 500 masala.
 
-    [Boshlash →](sql/README.md) · [📄 PDF](/pdf/sql.pdf)
+    [Boshlash →](sql/README.md)
 
 -   🐘 **7. PHP**
 
@@ -79,7 +79,7 @@ hide:
 
     Asoslardan OOP, baza va MVC'gacha. So'rov lifecycle, PDO, xavfsizlik. 21 diagramma.
 
-    [Boshlash →](php/php-qollanma.md) · [📄 PDF](/pdf/php.pdf)
+    [Boshlash →](php/php-qollanma.md)
 
 -   🐍 **8. Python**
 
@@ -87,7 +87,7 @@ hide:
 
     Sintaksisdan web/baza/async'gacha. Reference model, LEGB, generator. 15 bob · 47 diagramma.
 
-    [Boshlash →](python/README.md) · [📄 PDF](/pdf/python.pdf)
+    [Boshlash →](python/README.md)
 
 -   🧩 **9. 1000 masala**
 
@@ -95,6 +95,30 @@ hide:
 
     JS / PHP / Python yechimlari. Saralash, daraxt, graf, DP — algoritm diagrammalari. 34 diagramma.
 
-    [Boshlash →](1000-masala/README.md) · [📄 PDF](/pdf/1000-masala.pdf)
+    [Boshlash →](1000-masala/README.md)
+
+-   🐙 **10. Git & GitHub**
+
+    ---
+
+    Versiya nazorati 0 dan ekspertgacha: commit, branch, merge, rebase, PR, GitHub Actions. 24 bob · 74 diagramma · 480 mashq.
+
+    [Boshlash →](git-github/README.md)
+
+-   🔷 **11. TypeScript**
+
+    ---
+
+    JavaScript'ga tip xavfsizligi: interface, generics, narrowing, utility & mapped types, tsconfig. 24 bob · 77 diagramma · 480 mashq.
+
+    [Boshlash →](typescript/README.md)
+
+-   🔺 **12. Laravel**
+
+    ---
+
+    PHP'ning eng mashhur frameworki (Laravel 13): routing, Eloquent ORM, Blade, auth, API/Sanctum, queue, testing, deploy. 24 bob · 74 diagramma · 480 mashq.
+
+    [Boshlash →](laravel/README.md)
 
 </div>

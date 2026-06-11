@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460">
+  <title>TypeScript best practices xaritasi: chap ustunda DO (tavsiya etiladigan) yashil qoidalar, ong ustunda DON'T (qochiladigan) qizil qoidalar yonma-yon ko'rsatilgan</title>
+  <rect x="0" y="0" width="720" height="460" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Best practices: shunday qiling va qilmang</text>
+
+  <!-- DO ustuni sarlavhasi -->
+  <rect x="30" y="56" width="320" height="36" rx="8" fill="#16a34a"/>
+  <text x="190" y="80" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">DO — shunday qiling</text>
+
+  <!-- DON'T ustuni sarlavhasi -->
+  <rect x="370" y="56" width="320" height="36" rx="8" fill="#dc2626"/>
+  <text x="530" y="80" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">DON'T — qilmang</text>
+
+  <!-- 1-juftlik -->
+  <rect x="30" y="100" width="320" height="52" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.8"/>
+  <text x="46" y="122" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">Inference'ga tayan</text>
+  <text x="46" y="142" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">const son = 5</text>
+  <rect x="370" y="100" width="320" height="52" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="1.8"/>
+  <text x="386" y="122" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">Ortiqcha annotation</text>
+  <text x="386" y="142" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">const son: number = 5</text>
+
+  <!-- 2-juftlik -->
+  <rect x="30" y="160" width="320" height="52" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.8"/>
+  <text x="46" y="182" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">unknown ishlat</text>
+  <text x="46" y="202" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">tekshirishga majbur qiladi</text>
+  <rect x="370" y="160" width="320" height="52" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="1.8"/>
+  <text x="386" y="182" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">any yozma</text>
+  <text x="386" y="202" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">butun zanjirni zaharlaydi</text>
+
+  <!-- 3-juftlik -->
+  <rect x="30" y="220" width="320" height="52" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.8"/>
+  <text x="46" y="242" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">Chegarada validatsiya</text>
+  <text x="46" y="262" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">type guard bilan tekshir</text>
+  <rect x="370" y="220" width="320" height="52" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="1.8"/>
+  <text x="386" y="242" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">as bilan ishonma</text>
+  <text x="386" y="262" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">cast tekshiruv emas</text>
+
+  <!-- 4-juftlik -->
+  <rect x="30" y="280" width="320" height="52" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.8"/>
+  <text x="46" y="302" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">strict yoq</text>
+  <text x="46" y="322" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">birinchi kundan</text>
+  <rect x="370" y="280" width="320" height="52" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="1.8"/>
+  <text x="386" y="302" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">@ts-ignore bilan ko'mma</text>
+  <text x="386" y="322" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">xatoni tuzat, yashirma</text>
+
+  <!-- 5-juftlik -->
+  <rect x="30" y="340" width="320" height="52" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.8"/>
+  <text x="46" y="362" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">never bilan exhaustiveness</text>
+  <text x="46" y="382" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">switch default'da tekshir</text>
+  <rect x="370" y="340" width="320" height="52" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="1.8"/>
+  <text x="386" y="362" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">{}, Object, Function</text>
+  <text x="386" y="382" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">keng tiplar hech nimani tutmaydi</text>
+
+  <!-- pastki izoh -->
+  <text x="360" y="430" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">Oltin qoida: tip != runtime. Tiplar kompilyatsiyada o'chadi, ma'lumotni runtime'da o'zingiz tekshiring.</text>
+</svg>

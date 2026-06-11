@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>Uch xil mijoz API ga murojaat qiladi: web brauzer cookie/sessiya bilan, mobil ilova va SPA esa Bearer token bilan; Laravel API JSON qaytaradi</title>
+  <defs>
+    <marker id="m1-strelka" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">API mijozlari: kim qanday murojaat qiladi?</text>
+
+  <!-- 3 ta mijoz (chap) -->
+  <!-- web brauzer -->
+  <rect x="36" y="70" width="180" height="70" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="126" y="98" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">Web brauzer</text>
+  <text x="126" y="121" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">cookie / sessiya</text>
+
+  <!-- mobil ilova -->
+  <rect x="36" y="170" width="180" height="70" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="126" y="198" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">Mobil ilova</text>
+  <text x="126" y="221" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Bearer token</text>
+
+  <!-- SPA -->
+  <rect x="36" y="270" width="180" height="70" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="126" y="298" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">SPA (Vue/React)</text>
+  <text x="126" y="321" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Bearer token / cookie</text>
+
+  <!-- strelkalar markazga -->
+  <line x1="216" y1="105" x2="320" y2="200" stroke="#475569" stroke-width="2" marker-end="url(#m1-strelka)"/>
+  <line x1="216" y1="205" x2="320" y2="220" stroke="#475569" stroke-width="2" marker-end="url(#m1-strelka)"/>
+  <line x1="216" y1="305" x2="320" y2="240" stroke="#475569" stroke-width="2" marker-end="url(#m1-strelka)"/>
+  <text x="262" y="135" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">HTTP</text>
+
+  <!-- Laravel API (markaz) -->
+  <rect x="324" y="160" width="180" height="120" rx="12" fill="#1e293b"/>
+  <text x="414" y="200" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#ffffff">Laravel API</text>
+  <text x="414" y="226" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#e2e8f0">routes/api.php</text>
+  <text x="414" y="248" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#e2e8f0">Sanctum + controller</text>
+  <text x="414" y="270" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">/api prefiksi</text>
+
+  <!-- strelka -> JSON -->
+  <line x1="504" y1="220" x2="600" y2="220" stroke="#475569" stroke-width="2.5" marker-end="url(#m1-strelka)"/>
+
+  <!-- JSON javob (o'ng) -->
+  <rect x="600" y="180" width="92" height="80" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="646" y="212" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#b45309">JSON</text>
+  <text x="646" y="234" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309">+ status</text>
+  <text x="646" y="252" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309">200 / 201 / 401</text>
+
+  <!-- pastki izoh -->
+  <text x="360" y="372" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Web brauzer cookie/sessiya bilan tanaladi (routes/web.php uslubi)</text>
+  <text x="360" y="398" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Mobil ilova va tashqi mijoz token bilan: Authorization: Bearer &lt;token&gt;</text>
+  <text x="360" y="422" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Ikkala holatda ham API HTML emas, JSON va to'g'ri status kod qaytaradi</text>
+</svg>

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" width="720" height="420">
+  <title>RefreshDatabase trait har test oldidan bazani toza holatga keltiradi va har testni tranzaksiyada izolyatsiya qiladi; factory toza ma'lumot yaratadi, test tugagach hammasi qaytariladi shuning uchun testlar bir-biriga xalal bermaydi</title>
+
+  <rect x="0" y="0" width="720" height="420" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">RefreshDatabase: har test toza baza bilan boshlanadi</text>
+
+  <!-- Test 1 -->
+  <text x="180" y="74" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">Test A</text>
+  <rect x="40" y="86" width="280" height="270" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+
+  <rect x="65" y="104" width="230" height="44" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="180" y="125" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#166534">1. Toza baza (migratsiya)</text>
+  <text x="180" y="142" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">jadvallar bo'sh</text>
+  <text x="180" y="166" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">&#8595;</text>
+
+  <rect x="65" y="174" width="230" height="44" rx="6" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="180" y="195" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#7c3aed">2. factory()-&gt;create()</text>
+  <text x="180" y="212" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">3 ta yozuv qo'shildi</text>
+  <text x="180" y="236" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">&#8595;</text>
+
+  <rect x="65" y="244" width="230" height="44" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="180" y="265" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#2563eb">3. assert + tekshiruv</text>
+  <text x="180" y="282" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">DatabaseCount = 3</text>
+  <text x="180" y="306" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">&#8595;</text>
+
+  <rect x="65" y="314" width="230" height="32" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="180" y="335" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#dc2626">4. hammasi bekor qilinadi</text>
+
+  <!-- strelka -->
+  <line x1="320" y1="220" x2="392" y2="220" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="392,214 404,220 392,226" fill="#94a3b8"/>
+  <text x="362" y="210" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">keyingi</text>
+
+  <!-- Test 2 -->
+  <text x="540" y="74" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">Test B</text>
+  <rect x="400" y="86" width="280" height="270" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+
+  <rect x="425" y="104" width="230" height="44" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="540" y="125" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#166534">1. YANA toza baza</text>
+  <text x="540" y="142" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Test A yozuvlari YO'Q</text>
+  <text x="540" y="166" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">&#8595;</text>
+
+  <rect x="425" y="174" width="230" height="44" rx="6" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="540" y="195" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#7c3aed">2. o'z factory ma'lumoti</text>
+  <text x="540" y="212" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">faqat shu testniki</text>
+  <text x="540" y="236" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">&#8595;</text>
+
+  <rect x="425" y="244" width="230" height="44" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="540" y="265" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#2563eb">3. mustaqil tekshiruv</text>
+  <text x="540" y="282" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">A ga bog'liq emas</text>
+  <text x="540" y="306" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">&#8595;</text>
+
+  <rect x="425" y="314" width="230" height="32" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="540" y="335" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#dc2626">4. yana bekor qilinadi</text>
+
+  <!-- pastki xulosa -->
+  <text x="360" y="388" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">Natija: testlar tartibi natijaga ta'sir qilmaydi &#8212; har biri izolyatsiyalangan</text>
+  <text x="360" y="410" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Testlar tezligi uchun odatda xotiradagi SQLite (:memory:) ishlatiladi</text>
+</svg>

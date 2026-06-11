@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="720" height="440">
+  <title>Fork'ni upstream bilan sinxronlash: asl loyiha (upstream) oldinga ketganda fork eskiradi, git fetch upstream va merge upstream/main bilan fork yangilanadi</title>
+  <rect x="0" y="0" width="720" height="440" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Fork eskirdi — uni upstream bilan yangilash</text>
+
+  <!-- MUAMMO bo'limi -->
+  <text x="40" y="70" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">Muammo: fork qilganingizdan keyin asl loyiha oldinga ketdi</text>
+
+  <!-- upstream zanjiri (oldinda) -->
+  <text x="50" y="104" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#7c3aed">upstream/main</text>
+  <circle cx="180" cy="128" r="15" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="180" y="133" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">A</text>
+  <line x1="195" y1="128" x2="245" y2="128" stroke="#94a3b8" stroke-width="2"/>
+  <circle cx="260" cy="128" r="15" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="260" y="133" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">B</text>
+  <line x1="275" y1="128" x2="325" y2="128" stroke="#94a3b8" stroke-width="2"/>
+  <circle cx="340" cy="128" r="15" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="340" y="133" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">C</text>
+  <line x1="355" y1="128" x2="405" y2="128" stroke="#94a3b8" stroke-width="2"/>
+  <circle cx="420" cy="128" r="15" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="420" y="133" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">D</text>
+  <text x="470" y="133" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#7c3aed">yangi kommitlar</text>
+
+  <!-- fork zanjiri (orqada) -->
+  <text x="50" y="170" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#2563eb">fork main</text>
+  <circle cx="180" cy="190" r="15" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="180" y="195" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">A</text>
+  <line x1="195" y1="190" x2="245" y2="190" stroke="#94a3b8" stroke-width="2"/>
+  <circle cx="260" cy="190" r="15" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="260" y="195" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">B</text>
+  <text x="300" y="195" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">forkingiz shu yerda qotib qoldi (C, D yo'q)</text>
+
+  <!-- YECHIM bo'limi -->
+  <line x1="40" y1="222" x2="680" y2="222" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="40" y="252" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Yechim: upstream'dan tortib olib, fork'ga qo'shamiz</text>
+
+  <!-- buyruq qadamlar -->
+  <rect x="40" y="268" width="305" height="40" rx="8" fill="#1e293b"/>
+  <text x="56" y="293" font-family="Consolas, Menlo, monospace" font-size="14" fill="#e2e8f0">git fetch upstream</text>
+  <text x="56" y="328" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">asl loyiha yangiliklarini yuklab oladi</text>
+
+  <rect x="375" y="268" width="305" height="40" rx="8" fill="#1e293b"/>
+  <text x="391" y="293" font-family="Consolas, Menlo, monospace" font-size="14" fill="#e2e8f0">git merge upstream/main</text>
+  <text x="391" y="328" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">C, D kommitlarni fork'ingizga qo'shadi</text>
+
+  <!-- natija -->
+  <rect x="40" y="348" width="640" height="64" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="360" y="374" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">Natija: fork main endi A - B - C - D — upstream bilan teng!</text>
+  <text x="360" y="398" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Yangi ish boshlashdan oldin har doim sinxronlang — konfliktlar kamayadi</text>
+</svg>

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" width="720" height="360">
+  <title>Migration oqimi: migration fayl PHP kodda yoziladi, php artisan migrate buyrugi uni ishga tushiradi va baza ichida haqiqiy jadval paydo boladi</title>
+
+  <rect x="0" y="0" width="720" height="360" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Migration: koddan haqiqiy jadvalgacha</text>
+
+  <!-- 1: migration fayl -->
+  <rect x="34" y="80" width="190" height="150" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="129" y="106" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">1. Migration fayl</text>
+  <text x="129" y="128" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">database/migrations/</text>
+  <rect x="50" y="142" width="158" height="74" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="60" y="162" font-family="Consolas, monospace" font-size="13" fill="#1e293b">Schema::create(</text>
+  <text x="60" y="180" font-family="Consolas, monospace" font-size="13" fill="#1e293b">  'kitoblar',</text>
+  <text x="60" y="198" font-family="Consolas, monospace" font-size="13" fill="#16a34a">  ...ustunlar...</text>
+  <text x="129" y="252" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">PHP kod (qoldagi SQL emas)</text>
+
+  <!-- arrow 1 -->
+  <line x1="228" y1="155" x2="288" y2="155" stroke="#1e293b" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="258" y="142" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">migrate</text>
+
+  <!-- 2: artisan -->
+  <rect x="292" y="100" width="136" height="110" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="360" y="138" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b45309">2. artisan</text>
+  <text x="360" y="162" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">php artisan</text>
+  <text x="360" y="182" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">migrate</text>
+  <text x="360" y="232" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">kodni SQL ga aylantiradi</text>
+
+  <!-- arrow 2 -->
+  <line x1="432" y1="155" x2="492" y2="155" stroke="#1e293b" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="462" y="142" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">CREATE</text>
+
+  <!-- 3: baza jadval -->
+  <rect x="496" y="80" width="190" height="150" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="591" y="106" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">3. Baza jadvali</text>
+  <rect x="512" y="120" width="158" height="96" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="512" y1="144" x2="670" y2="144" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="591" y1="120" x2="591" y2="216" stroke="#94a3b8" stroke-width="1"/>
+  <text x="551" y="138" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#475569">id</text>
+  <text x="630" y="138" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#475569">nomi</text>
+  <text x="551" y="164" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">1</text>
+  <text x="630" y="164" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">...</text>
+  <text x="551" y="186" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">2</text>
+  <text x="630" y="186" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">...</text>
+  <text x="591" y="208" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">kitoblar</text>
+  <text x="591" y="252" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">MySQL / SQLite ichida</text>
+
+  <!-- rollback arrow -->
+  <line x1="496" y1="290" x2="224" y2="290" stroke="#dc2626" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arrR)"/>
+  <text x="360" y="282" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626">php artisan migrate:rollback — down() ishga tushib jadvalni o'chiradi</text>
+
+  <text x="360" y="334" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Bir yo'nalish: up() jadval yaratadi · Teskari yo'nalish: down() uni qaytaradi</text>
+
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 z" fill="#1e293b"/>
+    </marker>
+    <marker id="arrR" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 z" fill="#dc2626"/>
+    </marker>
+  </defs>
+</svg>

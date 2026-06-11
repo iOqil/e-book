@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460">
+  <title>Discriminated union: shakl tag maydoni qiymatiga qarab switch har bir tarmoqda aniq tipni ochadi, doira tarmog'ida radius, tortburchak tarmog'ida eni va boyi mavjud bo'ladi</title>
+  <rect x="0" y="0" width="720" height="460" fill="#f8fafc"/>
+
+  <text x="360" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Discriminated union: tag maydon yo'l ko'rsatadi</text>
+  <text x="360" y="60" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">type Shakl = Doira | Tortburchak  —  "shakl" maydoni tag bo'lib xizmat qiladi</text>
+
+  <!-- markaziy switch qutisi -->
+  <rect x="270" y="86" width="180" height="58" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="360" y="114" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#7c3aed">switch (s.shakl)</text>
+  <text x="360" y="134" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#7c3aed">tag'ni tekshiradi</text>
+
+  <!-- yo'naltiruvchi chiziqlar -->
+  <line x1="320" y1="144" x2="190" y2="206" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="400" y1="144" x2="530" y2="206" stroke="#94a3b8" stroke-width="2"/>
+  <text x="232" y="184" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">"doira"</text>
+  <text x="488" y="184" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">"tortburchak"</text>
+
+  <!-- chap tarmoq: Doira -->
+  <rect x="55" y="208" width="270" height="150" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="190" y="234" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">case "doira": s — Doira</text>
+  <line x1="55" y1="246" x2="325" y2="246" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="190" y="276" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#16a34a">s.radius — bor</text>
+  <text x="190" y="304" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#dc2626">s.eni — yo'q</text>
+  <text x="190" y="338" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">PI * s.radius ** 2</text>
+
+  <!-- o'ng tarmoq: Tortburchak -->
+  <rect x="395" y="208" width="270" height="150" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="530" y="234" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">case "tortburchak": s — Tortburchak</text>
+  <line x1="395" y1="246" x2="665" y2="246" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="530" y="276" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#16a34a">s.eni, s.boyi — bor</text>
+  <text x="530" y="304" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#dc2626">s.radius — yo'q</text>
+  <text x="530" y="338" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">s.eni * s.boyi</text>
+
+  <!-- pastki izoh -->
+  <rect x="100" y="386" width="520" height="56" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="360" y="409" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Tag (shakl) qiymatiga qarab TypeScript har tarmoqda aniq tipni "ochadi" —</text>
+  <text x="360" y="430" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">noto'g'ri maydonga murojaat qilishga yo'l qo'ymaydi</text>
+</svg>

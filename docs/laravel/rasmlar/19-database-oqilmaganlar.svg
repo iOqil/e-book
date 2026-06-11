@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 420" width="740" height="420">
+  <title>Database notification oqimi: notify() xabarni notifications jadvaliga yozadi, read_at ustuni NULL bo'lgani uchun u o'qilmagan hisoblanadi, $user->unreadNotifications ro'yxati va soni qo'ng'iroq belgisida ko'rsatiladi, markAsRead() read_at ga vaqt yozib uni o'qilganga aylantiradi</title>
+  <rect x="0" y="0" width="740" height="420" fill="#f8fafc"/>
+
+  <text x="370" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Database notification: o'qilmaganlar ro'yxati</text>
+
+  <!-- 1: notify -->
+  <rect x="28" y="64" width="200" height="64" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="128" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">$user-&gt;notify(...)</text>
+  <text x="128" y="114" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">via() = ['database']</text>
+
+  <line x1="128" y1="128" x2="128" y2="156" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#a19d)"/>
+  <text x="143" y="148" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">qator qo'shadi</text>
+
+  <!-- jadval: notifications -->
+  <text x="370" y="178" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#475569">notifications jadvali</text>
+  <rect x="28" y="188" width="684" height="120" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <!-- sarlavha qatori -->
+  <line x1="28" y1="216" x2="712" y2="216" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="28" y1="252" x2="712" y2="252" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="28" y1="280" x2="712" y2="280" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="320" y1="188" x2="320" y2="308" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="520" y1="188" x2="520" y2="308" stroke="#94a3b8" stroke-width="1"/>
+  <text x="174" y="208" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#475569">data (xabar mazmuni)</text>
+  <text x="420" y="208" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#475569">read_at</text>
+  <text x="616" y="208" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#475569">holat</text>
+
+  <text x="174" y="238" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">"Hisobingiz tasdiqlandi"</text>
+  <text x="420" y="238" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626">NULL</text>
+  <text x="616" y="238" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626">o'qilmagan</text>
+
+  <text x="174" y="270" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">"Yangi izoh keldi"</text>
+  <text x="420" y="270" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626">NULL</text>
+  <text x="616" y="270" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626">o'qilmagan</text>
+
+  <text x="174" y="298" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">"To'lov qabul qilindi"</text>
+  <text x="420" y="298" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">2026-06-10 14:20</text>
+  <text x="616" y="298" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">o'qilgan</text>
+
+  <!-- pastki: ro'yxat va qongiroq -->
+  <rect x="28" y="332" width="330" height="72" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="193" y="358" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">$user-&gt;unreadNotifications</text>
+  <text x="193" y="382" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">read_at IS NULL bo'lganlar -&gt; soni 2</text>
+
+  <rect x="382" y="332" width="330" height="72" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="547" y="358" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309">$notification-&gt;markAsRead()</text>
+  <text x="547" y="382" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">read_at ga vaqt yozadi -&gt; o'qilganga o'tadi</text>
+
+  <defs>
+    <marker id="a19d" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#94a3b8"/></marker>
+  </defs>
+</svg>

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>Eloquent model API Resource orqali nazorat ostidagi JSON ga aylanadi: barcha ustun emas, faqat tanlangan maydonlar chiqadi</title>
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">API Resource — javob shaklini nazorat qiladi</text>
+
+  <!-- chap: model (hamma ustun) -->
+  <text x="130" y="74" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">User model (baza qatori)</text>
+  <rect x="30" y="88" width="200" height="240" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="50" y="118" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#16a34a">id: 7</text>
+  <text x="50" y="146" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#16a34a">name: "Ali"</text>
+  <text x="50" y="174" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#16a34a">email: "ali@..."</text>
+  <text x="50" y="202" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#dc2626">password: "$2y$.."</text>
+  <text x="50" y="230" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#dc2626">remember_token</text>
+  <text x="50" y="258" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#dc2626">is_admin: 1</text>
+  <text x="50" y="286" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">created_at: ...</text>
+  <text x="50" y="314" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">updated_at: ...</text>
+
+  <!-- o'rta: resource filtri -->
+  <rect x="270" y="150" width="180" height="116" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="360" y="184" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">UserResource</text>
+  <text x="360" y="210" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">toArray() —</text>
+  <text x="360" y="232" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">qaysi maydon, qanday</text>
+  <text x="360" y="254" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">nom bilan chiqsin</text>
+
+  <!-- strelkalar -->
+  <line x1="230" y1="200" x2="268" y2="200" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arr)"/>
+  <line x1="450" y1="200" x2="488" y2="200" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arr)"/>
+  <defs>
+    <marker id="arr" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <!-- o'ng: toza JSON -->
+  <text x="610" y="74" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">Mijozga ketadigan JSON</text>
+  <rect x="490" y="88" width="200" height="170" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="510" y="116" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">{</text>
+  <text x="524" y="142" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">"id": 7,</text>
+  <text x="524" y="168" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">"ism": "Ali",</text>
+  <text x="524" y="194" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">"email": "ali@.."</text>
+  <text x="510" y="220" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">}</text>
+  <text x="590" y="248" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">faqat kerakli maydon</text>
+
+  <!-- pastki izoh -->
+  <text x="360" y="360" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#dc2626">password, remember_token, is_admin — Resource ularni JSON ga chiqarmaydi</text>
+  <text x="360" y="392" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">Siz hech qachon butun modelni "ochib" qoldirmaysiz — nimani ko'rsatishni o'zingiz tanlaysiz</text>
+</svg>

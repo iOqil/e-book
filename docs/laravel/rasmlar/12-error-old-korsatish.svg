@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460">
+  <title>Bladeda xatoni ko'rsatish: @error direktivasi maydon ostida qizil xabar chiqaradi, old() esa foydalanuvchi avval yozgan qiymatni input ichiga qaytaradi</title>
+
+  <rect x="0" y="0" width="720" height="460" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Xatodan keyin forma: @error + old()</text>
+
+  <!-- left: blade code -->
+  <rect x="30" y="60" width="320" height="350" rx="10" fill="#1e293b" stroke="#475569" stroke-width="2"/>
+  <text x="50" y="86" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#94a3b8">resources/views/posts/create.blade.php</text>
+
+  <text x="50" y="120" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#e2e8f0">&lt;input name="title"</text>
+  <text x="68" y="142" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#f59e0b">value="@{{ old('title') }}"</text>
+  <text x="68" y="164" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#e2e8f0">@@error('title') is-invalid</text>
+  <text x="68" y="186" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#e2e8f0">@@enderror&gt;</text>
+
+  <text x="50" y="226" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#7dd3fc">@@error('title')</text>
+  <text x="68" y="248" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#e2e8f0">&lt;span class="xato"&gt;</text>
+  <text x="86" y="270" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#fca5a5">@{{ $message }}</text>
+  <text x="68" y="292" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#e2e8f0">&lt;/span&gt;</text>
+  <text x="50" y="314" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#7dd3fc">@@enderror</text>
+
+  <text x="50" y="354" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">old('title') -> avval yozilgan qiymat</text>
+  <text x="50" y="374" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">@error -> faqat shu maydonda xato bo'lsa</text>
+  <text x="50" y="394" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">$message -> shu maydon xato matni</text>
+
+  <!-- arrow -->
+  <line x1="358" y1="235" x2="392" y2="235" stroke="#475569" stroke-width="2.5"/>
+  <polygon points="398,235 388,230 388,240" fill="#475569"/>
+  <text x="378" y="222" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">render</text>
+
+  <!-- right: rendered result -->
+  <rect x="406" y="60" width="290" height="350" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="551" y="88" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#475569">Brauzerda ko'rinishi</text>
+
+  <text x="428" y="122" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Sarlavha</text>
+
+  <!-- input with old value, red border -->
+  <rect x="428" y="134" width="246" height="40" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="442" y="160" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Me</text>
+  <text x="560" y="160" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">old() qaytardi</text>
+
+  <!-- error message under input -->
+  <text x="428" y="198" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#dc2626">Sarlavha kamida 5 belgidan iborat</text>
+  <text x="428" y="216" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#dc2626">bo'lishi kerak.</text>
+
+  <text x="428" y="256" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Matn</text>
+  <rect x="428" y="268" width="246" height="56" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="442" y="294" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">(bu maydon to'g'ri edi, saqlandi)</text>
+
+  <rect x="428" y="340" width="120" height="40" rx="6" fill="#2563eb"/>
+  <text x="488" y="365" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Saqlash</text>
+
+  <!-- bottom note -->
+  <text x="360" y="440" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">Foydalanuvchi hamma narsani qaytadan yozmaydi: to'g'ri maydonlar joyida qoladi, xatosi ko'rsatiladi.</text>
+</svg>

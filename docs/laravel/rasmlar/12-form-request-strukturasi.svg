@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="720" height="440">
+  <title>Form Request strukturasi: authorize() ruxsatni, rules() validatsiya qoidalarini qaytaradi; controller faqat tipni e'lon qiladi va validated() bilan toza ma'lumotni oladi</title>
+
+  <rect x="0" y="0" width="720" height="440" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Form Request: tekshirishni alohida klassga ko'chirish</text>
+
+  <!-- Form Request class box -->
+  <rect x="40" y="60" width="340" height="300" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="2.5"/>
+  <rect x="40" y="60" width="340" height="40" rx="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="2.5"/>
+  <rect x="40" y="86" width="340" height="14" fill="#ede9fe"/>
+  <text x="210" y="86" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#7c3aed">class StorePostRequest</text>
+
+  <!-- authorize -->
+  <rect x="62" y="118" width="296" height="92" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="80" y="142" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">authorize(): bool</text>
+  <text x="80" y="166" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Kim yubora oladi? Ruxsat bormi?</text>
+  <text x="80" y="186" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">return true; // hamma uchun ochiq</text>
+  <text x="80" y="204" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">false -> 403 Forbidden</text>
+
+  <!-- rules -->
+  <rect x="62" y="222" width="296" height="118" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="80" y="246" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">rules(): array</text>
+  <text x="80" y="270" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Validatsiya qoidalari shu yerda:</text>
+  <text x="80" y="292" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">'title' =&gt; 'required|string|max:255'</text>
+  <text x="80" y="312" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">'body'  =&gt; 'required'</text>
+  <text x="80" y="332" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">+ messages(), attributes() (ixtiyoriy)</text>
+
+  <!-- arrow to controller -->
+  <line x1="380" y1="210" x2="430" y2="210" stroke="#475569" stroke-width="2"/>
+  <polygon points="436,210 426,205 426,215" fill="#475569"/>
+  <text x="408" y="200" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tip</text>
+
+  <!-- controller box -->
+  <rect x="438" y="120" width="252" height="180" rx="12" fill="#ffffff" stroke="#475569" stroke-width="2"/>
+  <text x="564" y="148" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Controller</text>
+  <text x="456" y="180" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">function store(</text>
+  <text x="466" y="200" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#7c3aed">StorePostRequest $request</text>
+  <text x="456" y="220" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">) {</text>
+  <text x="466" y="244" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">$data = $request</text>
+  <text x="476" y="262" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">-&gt;validated();</text>
+  <text x="456" y="284" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">} // tekshirish o'z-o'zidan bo'ldi</text>
+
+  <!-- bottom note -->
+  <text x="360" y="392" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Tekshirish controller metodiga KIRISHIDAN OLDIN avtomatik bajariladi.</text>
+  <text x="360" y="416" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Xato bo'lsa metod umuman ishlamaydi — controller toza qoladi.</text>
+</svg>

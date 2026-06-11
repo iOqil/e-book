@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 440" width="740" height="440">
+  <title>Laravel MVC so'rov oqimi: brauzerdan kelgan so'rov route orqali controllerga boradi, controller Model bilan bazadan ma'lumot oladi, View (Blade) HTML tayyorlaydi va javob brauzerga qaytadi</title>
+
+  <rect x="0" y="0" width="740" height="440" fill="#f8fafc"/>
+
+  <text x="370" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Bitta so'rov Laravel ichidan qanday o'tadi (MVC)</text>
+
+  <!-- Brauzer -->
+  <rect x="36" y="70" width="130" height="70" rx="10" fill="#e2e8f0" stroke="#475569" stroke-width="2"/>
+  <text x="101" y="100" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Brauzer</text>
+  <text x="101" y="122" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">foydalanuvchi</text>
+
+  <!-- Route -->
+  <rect x="230" y="70" width="150" height="70" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="305" y="100" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">Route</text>
+  <text x="305" y="122" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e3a8a">routes/web.php</text>
+
+  <!-- Controller -->
+  <rect x="450" y="70" width="160" height="70" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="530" y="100" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">Controller</text>
+  <text x="530" y="122" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e3a8a">boshqaruvchi</text>
+
+  <!-- Model -->
+  <rect x="450" y="220" width="160" height="80" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="530" y="250" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Model</text>
+  <text x="530" y="272" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#166534">Eloquent — baza</text>
+  <text x="530" y="290" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#166534">Kitob, User ...</text>
+
+  <!-- Baza -->
+  <rect x="640" y="232" width="76" height="56" rx="8" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2"/>
+  <text x="678" y="258" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#475569">Baza</text>
+  <text x="678" y="277" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">MySQL</text>
+
+  <!-- View -->
+  <rect x="230" y="220" width="150" height="80" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="305" y="250" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#7c3aed">View</text>
+  <text x="305" y="272" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#5b21b6">Blade shablon</text>
+  <text x="305" y="290" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#5b21b6">HTML tayyorlaydi</text>
+
+  <!-- strelkalar -->
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#1e293b"/>
+    </marker>
+  </defs>
+
+  <!-- brauzer -> route -->
+  <line x1="166" y1="95" x2="226" y2="95" stroke="#1e293b" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="196" y="86" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">1</text>
+  <!-- route -> controller -->
+  <line x1="380" y1="105" x2="446" y2="105" stroke="#1e293b" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="413" y="96" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">2</text>
+  <!-- controller -> model -->
+  <line x1="530" y1="140" x2="530" y2="216" stroke="#1e293b" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="544" y="182" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">3</text>
+  <!-- model <-> baza -->
+  <line x1="610" y1="260" x2="636" y2="260" stroke="#16a34a" stroke-width="2" marker-end="url(#ar)"/>
+  <!-- model -> controller (qaytish) -->
+  <line x1="500" y1="216" x2="500" y2="144" stroke="#16a34a" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#ar)"/>
+  <text x="486" y="182" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">4</text>
+  <!-- controller -> view -->
+  <line x1="450" y1="118" x2="392" y2="245" stroke="#7c3aed" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="436" y="186" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#7c3aed">5</text>
+  <!-- view -> brauzer (javob) -->
+  <line x1="230" y1="250" x2="120" y2="146" stroke="#1e293b" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="160" y="210" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">6 javob (HTML)</text>
+
+  <!-- izoh -->
+  <text x="370" y="350" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Vazifa taqsimoti: har kim o'z ishini qiladi</text>
+  <text x="370" y="376" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Route — qaysi URL kimga boradi   ·   Controller — boshqaradi   ·   Model — ma'lumot   ·   View — ko'rinish</text>
+  <text x="370" y="402" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Uzluksiz chiziq — borish yo'li (so'rov)   ·   Uzuq chiziq — qaytish yo'li (ma'lumot va javob)</text>
+</svg>

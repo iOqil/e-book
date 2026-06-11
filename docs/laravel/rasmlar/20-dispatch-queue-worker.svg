@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" width="720" height="380">
+  <title>Job hayot sikli: controller dispatch bilan ishni navbatga (queue) qo'yadi, navbat jadvalda saqlanadi, queue worker esa navbatdan ishni olib handle() metodini ishga tushiradi</title>
+  <rect x="0" y="0" width="720" height="380" fill="#f8fafc"/>
+
+  <text x="360" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Job yo'li: dispatch -&gt; queue -&gt; worker</text>
+
+  <!-- 1. controller dispatch -->
+  <rect x="30" y="78" width="160" height="92" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="110" y="106" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">Controller</text>
+  <text x="110" y="132" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">SendEmail::dispatch()</text>
+  <text x="110" y="154" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">"ishni navbatga qo'y"</text>
+
+  <line x1="190" y1="124" x2="262" y2="124" stroke="#475569" stroke-width="2.5" marker-end="url(#a)"/>
+  <text x="226" y="116" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">push</text>
+
+  <!-- 2. queue (jadval) -->
+  <rect x="268" y="70" width="184" height="108" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="360" y="96" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b45309">Queue (navbat)</text>
+  <text x="360" y="116" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">jobs jadvali / Redis</text>
+  <rect x="286" y="126" width="148" height="20" rx="3" fill="#fde68a" stroke="#f59e0b" stroke-width="1"/>
+  <text x="360" y="141" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#92400e">job #1 — kutmoqda</text>
+  <rect x="286" y="150" width="148" height="20" rx="3" fill="#fde68a" stroke="#f59e0b" stroke-width="1"/>
+  <text x="360" y="165" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#92400e">job #2 — kutmoqda</text>
+
+  <line x1="452" y1="124" x2="524" y2="124" stroke="#475569" stroke-width="2.5" marker-end="url(#a)"/>
+  <text x="488" y="116" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">pop</text>
+
+  <!-- 3. worker -->
+  <rect x="530" y="78" width="160" height="92" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="610" y="106" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Queue Worker</text>
+  <text x="610" y="132" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">queue:work</text>
+  <text x="610" y="154" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">handle() ni chaqiradi</text>
+
+  <!-- worker ish bajaradi -->
+  <line x1="610" y1="170" x2="610" y2="216" stroke="#16a34a" stroke-width="2.5" marker-end="url(#ag)"/>
+  <rect x="500" y="220" width="220" height="58" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="610" y="244" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">og'ir ish bajariladi</text>
+  <text x="610" y="264" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(email yuborildi)</text>
+
+  <!-- foydalanuvchi javobi -->
+  <rect x="30" y="220" width="160" height="58" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="110" y="244" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">javob: darhol</text>
+  <text x="110" y="264" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">foydalanuvchi kutmaydi</text>
+  <line x1="110" y1="170" x2="110" y2="216" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#ad)"/>
+
+  <text x="360" y="324" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Controller ishni navbatga qo'yadi va tezda javob qaytaradi; worker esa alohida, fonda ishlaydi</text>
+  <text x="360" y="350" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Worker doim ishlab turishi kerak: php artisan queue:work</text>
+
+  <defs>
+    <marker id="a" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#475569"/>
+    </marker>
+    <marker id="ag" markerWidth="9" markerHeight="9" refX="4" refY="7" orient="auto">
+      <path d="M0,0 L8,0 L4,8 Z" fill="#16a34a"/>
+    </marker>
+    <marker id="ad" markerWidth="9" markerHeight="9" refX="4" refY="7" orient="auto">
+      <path d="M0,0 L8,0 L4,8 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+</svg>

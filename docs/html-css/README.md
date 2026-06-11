@@ -1,7 +1,5 @@
 # HTML & CSS — 0 dan Expertgacha (o'zbek tilida)
 
-> 📄 **[Butun kitobni PDF formatda yuklab olish →](/pdf/html-css.pdf)**
-
 Bu qo'llanma **HTML va CSS** ni mutlaqo noldan professional darajagacha o'rgatadi. Hech qanday oldingi tajriba shart emas — birinchi bob "internet qanday ishlaydi?" dan boshlanadi, oxirgi bob esa to'liq responsive sayt quradi.
 
 > 🎨 Har bob **SVG diagramlar** bilan boyitilgan — box model, flexbox, grid, specificity, positioning kabi tushunchalar ko'z bilan ko'rib o'rganiladi. Jami 22 bob, 86+ diagramma.

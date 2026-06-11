@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" width="720" height="480">
+  <title>Accessor, mutator va cast: ma'lumot bazadan modelga o'qilganda accessor va cast uni o'qishga qulay shaklga aylantiradi, modeldan bazaga yozilganda mutator va cast uni saqlash shakliga qaytaradi</title>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="720" height="480" fill="#f8fafc"/>
+
+  <text x="360" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Baza ↔ Model: accessor, mutator va cast</text>
+
+  <!-- BAZA qutisi (chap) -->
+  <rect x="36" y="120" width="200" height="240" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="136" y="150" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">BAZA (ustun)</text>
+  <text x="136" y="190" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">narx_tiyin: 1500000</text>
+  <text x="136" y="222" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">sozlamalar:</text>
+  <text x="136" y="242" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">'{"til":"uz"}'</text>
+  <text x="136" y="274" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">holat: 'faol'</text>
+  <text x="136" y="306" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(hammasi matn/son)</text>
+
+  <!-- MODEL qutisi (o'ng) -->
+  <rect x="484" y="120" width="200" height="240" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="584" y="150" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">MODEL (xossa)</text>
+  <text x="584" y="190" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">$p->narx: 15000.00</text>
+  <text x="584" y="222" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">$p->sozlamalar:</text>
+  <text x="584" y="242" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">['til' => 'uz'] (massiv)</text>
+  <text x="584" y="274" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">$p->holat: Holat::Faol</text>
+  <text x="584" y="306" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">(enum, massiv, son)</text>
+
+  <!-- O'QISH strelkasi (baza -> model), tepada -->
+  <defs>
+    <marker id="oq" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+    <marker id="yoz" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <!-- accessor / cast (o'qish): chapdan o'ngga -->
+  <rect x="266" y="146" width="188" height="58" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="360" y="170" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">accessor + cast</text>
+  <text x="360" y="192" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">o'qishga qulay shaklga</text>
+  <line x1="236" y1="175" x2="262" y2="175" stroke="#16a34a" stroke-width="2.5" marker-end="url(#oq)"/>
+  <line x1="456" y1="175" x2="480" y2="175" stroke="#16a34a" stroke-width="2.5" marker-end="url(#oq)"/>
+  <text x="360" y="132" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">O'QISH (get) →</text>
+
+  <!-- mutator / cast (yozish): o'ngdan chapga -->
+  <rect x="266" y="276" width="188" height="58" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="360" y="300" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">mutator + cast</text>
+  <text x="360" y="322" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">saqlash shakliga qaytaradi</text>
+  <line x1="480" y1="305" x2="456" y2="305" stroke="#2563eb" stroke-width="2.5" marker-end="url(#yoz)"/>
+  <line x1="262" y1="305" x2="236" y2="305" stroke="#2563eb" stroke-width="2.5" marker-end="url(#yoz)"/>
+  <text x="360" y="358" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">← YOZISH (set)</text>
+
+  <!-- pastki xulosa -->
+  <line x1="36" y1="388" x2="684" y2="388" stroke="#e2e8f0" stroke-width="2"/>
+  <rect x="36" y="404" width="648" height="62" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="360" y="430" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309">cast — turni avtomatik o'zgartiradi (json↔massiv, matn↔enum, datetime)</text>
+  <text x="360" y="454" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">accessor/mutator — bitta xossani o'qish/yozishda o'zing belgilagan o'zgartirish</text>
+</svg>

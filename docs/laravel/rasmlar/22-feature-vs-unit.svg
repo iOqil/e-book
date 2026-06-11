@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="720" height="440">
+  <title>Unit test bitta metod yoki klassni alohida sinaydi; feature test esa so'rovdan javobgacha marshrut, middleware, kontroller va baza orqali butun oqimni sinaydi</title>
+
+  <rect x="0" y="0" width="720" height="440" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Unit test vs Feature test — nimani sinaydi?</text>
+
+  <!-- chap: UNIT -->
+  <text x="185" y="72" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#7c3aed">UNIT test</text>
+  <text x="185" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">bitta klass/metod, alohida</text>
+
+  <rect x="40" y="108" width="290" height="230" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="6 4"/>
+
+  <rect x="95" y="150" width="180" height="80" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="185" y="183" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#7c3aed">NarxHisoblagich</text>
+  <text x="185" y="207" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">chegirmaBilan()</text>
+
+  <text x="185" y="266" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">kirish: 1000, 20%</text>
+  <text x="185" y="290" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#16a34a" font-weight="bold">expect()-&gt;toBe(800)</text>
+  <text x="185" y="320" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">Baza yo'q &#183; HTTP yo'q &#183; tez</text>
+
+  <!-- o'ng: FEATURE -->
+  <text x="535" y="72" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#2563eb">FEATURE test</text>
+  <text x="535" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">butun oqim, HTTP orqali</text>
+
+  <rect x="390" y="108" width="300" height="290" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="6 4"/>
+
+  <rect x="430" y="124" width="220" height="34" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="540" y="146" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#2563eb">$this-&gt;post('/orders')</text>
+  <text x="540" y="174" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#475569">&#8595;</text>
+
+  <rect x="430" y="182" width="220" height="30" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="540" y="202" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">Marshrut + Middleware</text>
+  <text x="540" y="226" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#475569">&#8595;</text>
+
+  <rect x="430" y="234" width="220" height="30" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="540" y="254" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">Kontroller</text>
+  <text x="540" y="278" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#475569">&#8595;</text>
+
+  <rect x="430" y="286" width="220" height="30" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="540" y="306" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#166534">Baza (yoziladi)</text>
+  <text x="540" y="330" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#475569">&#8595;</text>
+
+  <rect x="430" y="338" width="220" height="34" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="540" y="360" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#16a34a" font-weight="bold">assertRedirect / DatabaseHas</text>
+
+  <!-- pastki xulosa -->
+  <text x="360" y="424" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Boshlovchiga maslahat: feature testdan boshlang &#8212; ko'proq qiymat beradi</text>
+</svg>

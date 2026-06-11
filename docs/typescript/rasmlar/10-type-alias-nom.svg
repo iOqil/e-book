@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460">
+  <title>type alias har qanday tipga nom beradi: markazdagi bitta nom (UserId, Status, Koordinata, Quti) chap tomondagi turli tip shakllariga (primitiv, union, tuple, object, funksiya) ishora qiladi</title>
+
+  <rect x="0" y="0" width="720" height="460" fill="#f8fafc"/>
+
+  <text x="360" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">type alias — har qanday tipga qisqa nom</text>
+  <text x="360" y="60" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">"type Nom = ..." yozsangiz, o'ng tomondagi har qanday tip shakliga nom berasiz</text>
+
+  <!-- chap: nomlar -->
+  <!-- 1 primitiv -->
+  <rect x="40" y="92" width="180" height="48" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="130" y="113" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">type UserId</text>
+  <text x="130" y="131" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(nom)</text>
+
+  <rect x="40" y="158" width="180" height="48" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="130" y="179" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">type Status</text>
+  <text x="130" y="197" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(nom)</text>
+
+  <rect x="40" y="224" width="180" height="48" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="130" y="245" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">type Koordinata</text>
+  <text x="130" y="263" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(nom)</text>
+
+  <rect x="40" y="290" width="180" height="48" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="130" y="311" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">type User</text>
+  <text x="130" y="329" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(nom)</text>
+
+  <rect x="40" y="356" width="180" height="48" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="130" y="377" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">type Hisoblagich</text>
+  <text x="130" y="395" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(nom)</text>
+
+  <!-- strelkalar va = belgisi -->
+  <text x="245" y="122" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#16a34a">=</text>
+  <text x="245" y="188" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#16a34a">=</text>
+  <text x="245" y="254" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#16a34a">=</text>
+  <text x="245" y="320" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#16a34a">=</text>
+  <text x="245" y="386" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#16a34a">=</text>
+
+  <!-- o'ng: tip shakllari -->
+  <rect x="280" y="92" width="400" height="48" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="300" y="115" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">number</text>
+  <text x="668" y="115" text-anchor="end" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">primitiv tip</text>
+  <text x="300" y="133" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">oddiy son turi</text>
+
+  <rect x="280" y="158" width="400" height="48" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="300" y="181" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">"faol" | "nofaol" | "ochirilgan"</text>
+  <text x="668" y="181" text-anchor="end" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">union tip</text>
+  <text x="300" y="199" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">uchta variantdan biri</text>
+
+  <rect x="280" y="224" width="400" height="48" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="300" y="247" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">[number, number]</text>
+  <text x="668" y="247" text-anchor="end" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">tuple tip</text>
+  <text x="300" y="265" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">aniq uzunlikdagi massiv</text>
+
+  <rect x="280" y="290" width="400" height="48" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="300" y="313" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">{ id: number; ism: string }</text>
+  <text x="668" y="313" text-anchor="end" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">object tip</text>
+  <text x="300" y="331" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">xossali obyekt shakli</text>
+
+  <rect x="280" y="356" width="400" height="48" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="300" y="379" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">(n: number) =&gt; number</text>
+  <text x="668" y="379" text-anchor="end" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">funksiya tip</text>
+  <text x="300" y="397" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">son olib, son qaytaradi</text>
+
+  <text x="360" y="438" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">interface esa FAQAT object shakliga nom bera oladi — type undan kengroq</text>
+</svg>

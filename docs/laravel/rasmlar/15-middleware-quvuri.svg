@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 420" width="740" height="420">
+  <title>Middleware quvuri: so'rov controllergacha M1 va M2 qatlamlaridan o'tadi (before mantiq), controller javob yasaydi, javob esa teskari yo'nalishda M2 va M1 dan qaytadi (after mantiq)</title>
+
+  <rect x="0" y="0" width="740" height="420" fill="#f8fafc"/>
+
+  <text x="370" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Middleware quvuri: so'rov qatlamlardan o'tadi</text>
+
+  <defs>
+    <marker id="kok" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 z" fill="#2563eb"/>
+    </marker>
+    <marker id="yashil" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <!-- Brauzer -->
+  <rect x="30" y="150" width="110" height="80" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="85" y="183" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">Brauzer</text>
+  <text x="85" y="205" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">so'rov yuboradi</text>
+
+  <!-- M1 -->
+  <rect x="200" y="120" width="120" height="140" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="260" y="148" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b45309">M1: auth</text>
+  <line x1="200" y1="190" x2="320" y2="190" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="260" y="174" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">before:</text>
+  <text x="260" y="216" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">after:</text>
+  <text x="260" y="234" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">javobni o'rab</text>
+
+  <!-- M2 -->
+  <rect x="380" y="120" width="120" height="140" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="440" y="148" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b45309">M2: log</text>
+  <line x1="380" y1="190" x2="500" y2="190" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="440" y="174" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">before:</text>
+  <text x="440" y="216" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">after:</text>
+  <text x="440" y="234" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">vaqtni yozadi</text>
+
+  <!-- Controller -->
+  <rect x="560" y="150" width="150" height="80" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="635" y="183" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Controller</text>
+  <text x="635" y="205" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">javob yasaydi</text>
+
+  <!-- Request yo'li (yuqorida, ko'k) -->
+  <path d="M140 170 L196 160" fill="none" stroke="#2563eb" stroke-width="2.5" marker-end="url(#kok)"/>
+  <path d="M320 160 L376 160" fill="none" stroke="#2563eb" stroke-width="2.5" marker-end="url(#kok)"/>
+  <path d="M500 160 L556 175" fill="none" stroke="#2563eb" stroke-width="2.5" marker-end="url(#kok)"/>
+  <text x="370" y="98" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">So'rov o'tadi (before mantiq)  &#8594;</text>
+
+  <!-- Response yo'li (pastda, yashil) -->
+  <path d="M556 220 L500 250" fill="none" stroke="#16a34a" stroke-width="2.5" marker-end="url(#yashil)"/>
+  <path d="M376 250 L322 250" fill="none" stroke="#16a34a" stroke-width="2.5" marker-end="url(#yashil)"/>
+  <path d="M196 250 L142 215" fill="none" stroke="#16a34a" stroke-width="2.5" marker-end="url(#yashil)"/>
+  <text x="370" y="300" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">&#8592;  Javob qaytadi (after mantiq)</text>
+
+  <text x="370" y="350" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">$next($request) — so'rovni keyingi qatlamga uzatadi</text>
+  <text x="370" y="382" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">before: $next dan oldin · after: $next dan keyin (javob qo'lda)</text>
+</svg>

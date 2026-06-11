@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" width="720" height="420">
+  <title>ts-expect-error vaqtinchalik ko'prik: xatoli qatorni bostiradi, lekin xato yo'qolsa direktivaning o'zi xato berib eslatadi</title>
+
+  <rect x="0" y="0" width="720" height="420" fill="#f8fafc"/>
+
+  <text x="360" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">@ts-expect-error — vaqtinchalik ko'prik</text>
+
+  <!-- Holat A: xato bor -> bostiriladi -->
+  <text x="190" y="76" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">A holat: qator hali xatoli</text>
+  <rect x="40" y="90" width="300" height="130" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="56" y="106" width="268" height="30" rx="5" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="68" y="126" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309">// @ts-expect-error</text>
+  <rect x="56" y="144" width="268" height="30" rx="5" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="68" y="164" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">const x: number = eski();  // xato</text>
+  <text x="190" y="200" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">Xato bostirildi -&gt; kompilyatsiya o'tadi</text>
+
+  <!-- Holat B: xato tuzatildi -> direktiva o'zi xato beradi -->
+  <text x="530" y="76" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">B holat: qator tuzatildi</text>
+  <rect x="380" y="90" width="300" height="130" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="396" y="106" width="268" height="30" rx="5" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="408" y="126" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">// @ts-expect-error  &lt;- endi keraksiz!</text>
+  <rect x="396" y="144" width="268" height="30" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="408" y="164" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">const x: number = eski();  // toza</text>
+  <text x="530" y="200" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#dc2626">TS2578: Unused directive — eslatadi!</text>
+
+  <!-- strelka A->B -->
+  <path d="M 345 155 L 375 155" stroke="#475569" stroke-width="2.5" fill="none" marker-end="url(#ok2)"/>
+  <text x="360" y="148" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">vaqt</text>
+
+  <defs>
+    <marker id="ok2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- pastki taqqoslash -->
+  <rect x="40" y="250" width="640" height="140" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="360" y="278" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">@ts-ignore va @ts-expect-error farqi</text>
+
+  <text x="60" y="308" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#dc2626">@ts-ignore</text>
+  <text x="60" y="330" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Xatoni jimgina bostiradi. Xato yo'qolsa ham</text>
+  <text x="60" y="350" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">indamaydi -&gt; eskirgan, unutilgan bo'lib qoladi.</text>
+  <text x="60" y="372" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">Tavsiya: deyarli ishlatmang.</text>
+
+  <text x="400" y="308" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#16a34a">@ts-expect-error</text>
+  <text x="400" y="330" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Xatoni bostiradi, LEKIN xato yo'qolsa</text>
+  <text x="400" y="350" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">o'zi xato beradi -&gt; sizni tozalashga undaydi.</text>
+  <text x="400" y="372" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">Tavsiya: shuni ishlating.</text>
+</svg>

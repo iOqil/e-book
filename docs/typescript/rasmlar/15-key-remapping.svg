@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>Key remapping: as orqali mapped type maydon nomlarini o'zgartiradi. id kaliti getId ga aylanadi; agar yangi nom never bo'lsa, maydon natijadan butunlay tushib qoladi (parol yashiriladi)</title>
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Key remapping: as bilan kalitni o'zgartirish</text>
+
+  <!-- formula -->
+  <rect x="120" y="52" width="480" height="40" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="360" y="78" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#7c3aed">[K in keyof T as YangiNom]: T[K]</text>
+
+  <!-- 1-blok: qayta nomlash -->
+  <text x="180" y="124" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">1) Qayta nomlash</text>
+  <rect x="40" y="138" width="120" height="40" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="100" y="163" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">id: number</text>
+  <line x1="160" y1="158" x2="225" y2="158" stroke="#16a34a" stroke-width="2.5"/>
+  <polygon points="225,152 237,158 225,164" fill="#16a34a"/>
+  <text x="200" y="148" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">as `get...`</text>
+  <rect x="240" y="138" width="190" height="40" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="335" y="163" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">getId: () =&gt; number</text>
+
+  <!-- 2-blok: never bilan o'chirish -->
+  <text x="180" y="232" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">2) never bilan o'chirish</text>
+  <rect x="40" y="246" width="130" height="40" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="105" y="271" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">parol: string</text>
+  <line x1="170" y1="266" x2="235" y2="266" stroke="#dc2626" stroke-width="2.5"/>
+  <polygon points="235,260 247,266 235,272" fill="#dc2626"/>
+  <text x="205" y="256" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">as never</text>
+  <rect x="250" y="246" width="200" height="40" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2" stroke-dasharray="5 4"/>
+  <text x="350" y="271" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">maydon tushib qoladi</text>
+
+  <!-- o'ng panel: natija tip -->
+  <text x="582" y="124" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">Natija tip</text>
+  <rect x="470" y="138" width="220" height="148" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="490" y="170" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">getId: () =&gt; number</text>
+  <line x1="470" y1="184" x2="690" y2="184" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="490" y="208" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">getIsm: () =&gt; string</text>
+  <line x1="470" y1="222" x2="690" y2="222" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="490" y="248" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#94a3b8" text-decoration="line-through">parol yo'q</text>
+  <text x="490" y="272" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">faqat kerakli maydonlar</text>
+
+  <!-- pastki izoh -->
+  <rect x="40" y="330" width="650" height="70" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="60" y="358" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">as dan keyingi qism — yangi kalit nomi. Odatda template literal (`get${...}`) bilan yoziladi.</text>
+  <text x="60" y="382" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Yangi nom never bo'lsa — o'sha maydon natijaga umuman kirmaydi (filtrlash usuli).</text>
+</svg>

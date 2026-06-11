@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>Modul export/import: turlar.ts faylidan interface va funksiya export qilinadi, app.ts ularni import qiladi; tiplar ham, qiymatlar ham fayllar orasida ko'chadi</title>
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Modul: export bilan ulashiladi, import bilan olinadi</text>
+
+  <!-- chap fayl: turlar.ts -->
+  <rect x="36" y="70" width="280" height="300" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="176" y="96" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">turlar.ts</text>
+  <line x1="36" y1="108" x2="316" y2="108" stroke="#2563eb" stroke-width="1.5"/>
+
+  <rect x="56" y="124" width="240" height="58" rx="6" fill="#fff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="68" y="146" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" font-weight="bold">export interface</text>
+  <text x="68" y="168" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Foydalanuvchi (TIP)</text>
+
+  <rect x="56" y="194" width="240" height="58" rx="6" fill="#fff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="68" y="216" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" font-weight="bold">export type</text>
+  <text x="68" y="238" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Holat (TIP)</text>
+
+  <rect x="56" y="264" width="240" height="58" rx="6" fill="#fff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="68" y="286" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#7c3aed" font-weight="bold">export const</text>
+  <text x="68" y="308" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">yarat() (QIYMAT)</text>
+
+  <text x="176" y="350" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">export = "tashqariga ochiq"</text>
+
+  <!-- o'q -->
+  <line x1="320" y1="220" x2="400" y2="220" stroke="#1e293b" stroke-width="2.5"/>
+  <polygon points="400,220 388,214 388,226" fill="#1e293b"/>
+  <text x="360" y="206" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" font-weight="bold">import</text>
+
+  <!-- o'ng fayl: app.ts -->
+  <rect x="404" y="70" width="280" height="300" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="544" y="96" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">app.ts</text>
+  <line x1="404" y1="108" x2="684" y2="108" stroke="#16a34a" stroke-width="1.5"/>
+
+  <rect x="424" y="124" width="240" height="44" rx="6" fill="#fff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="436" y="151" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">import { yarat }</text>
+
+  <rect x="424" y="180" width="240" height="44" rx="6" fill="#fff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="436" y="207" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">import type { Foydalanuvchi }</text>
+
+  <rect x="424" y="236" width="240" height="86" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="436" y="260" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309" font-weight="bold">Endi shu yerda ishlatamiz:</text>
+  <text x="436" y="284" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">const u: Foydalanuvchi</text>
+  <text x="436" y="306" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">= yarat("Olim", ...);</text>
+
+  <text x="544" y="350" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">faqat export qilingani import bo'ladi</text>
+
+  <!-- pastki izoh -->
+  <text x="360" y="402" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Tiplar (Foydalanuvchi, Holat) HAM, qiymatlar (yarat) HAM fayllar orasida ko'chadi</text>
+</svg>

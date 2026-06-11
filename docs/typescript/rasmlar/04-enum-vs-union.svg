@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460">
+  <title>Enum va union literal solishtirish: enum kompilyatsiyada qo'shimcha JavaScript kod qoldiradi, union literal esa faqat tip bo'lib JavaScript chiqishida hech qanday iz qoldirmaydi</title>
+  <rect x="0" y="0" width="720" height="460" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">enum vs union literal — 2026-da qaysi biri?</text>
+
+  <!-- chap: enum -->
+  <text x="190" y="72" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#2563eb">enum</text>
+  <rect x="40" y="86" width="300" height="86" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="60" y="114" font-family="Consolas, monospace" font-size="14" fill="#1e293b">enum Yonalish {</text>
+  <text x="80" y="136" font-family="Consolas, monospace" font-size="14" fill="#1e293b">Yuqori, Past, Chap, Ong</text>
+  <text x="60" y="158" font-family="Consolas, monospace" font-size="14" fill="#1e293b">}</text>
+
+  <text x="190" y="196" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">JS chiqishi:</text>
+  <rect x="40" y="206" width="300" height="46" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="190" y="226" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#b45309">var Yonalish; (function...) {...}</text>
+  <text x="190" y="244" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">qo'shimcha kod qoladi</text>
+
+  <!-- o'ng: union literal -->
+  <text x="530" y="72" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#16a34a">union literal</text>
+  <rect x="380" y="86" width="300" height="86" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="400" y="122" font-family="Consolas, monospace" font-size="14" fill="#1e293b">type Yonalish =</text>
+  <text x="420" y="146" font-family="Consolas, monospace" font-size="13" fill="#1e293b">"yuqori" | "past" |</text>
+  <text x="420" y="166" font-family="Consolas, monospace" font-size="13" fill="#1e293b">"chap" | "ong"</text>
+
+  <text x="530" y="196" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">JS chiqishi:</text>
+  <rect x="380" y="206" width="300" height="46" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="530" y="226" text-anchor="middle" font-family="Consolas, monospace" font-size="14" fill="#94a3b8">(bo'sh)</text>
+  <text x="530" y="244" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">iz qolmaydi — faqat tip</text>
+
+  <line x1="360" y1="80" x2="360" y2="256" stroke="#e2e8f0" stroke-width="2"/>
+
+  <!-- taqqoslash jadvali -->
+  <rect x="40" y="276" width="640" height="166" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+  <line x1="360" y1="276" x2="360" y2="442" stroke="#e2e8f0" stroke-width="1.5"/>
+  <line x1="40" y1="306" x2="680" y2="306" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <text x="200" y="297" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">enum</text>
+  <text x="520" y="297" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">union literal</text>
+
+  <text x="60" y="332" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">JS kod qoldiradi</text>
+  <text x="380" y="332" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">iz qolmaydi (yengil)</text>
+  <text x="60" y="362" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Holat.Faol deb yozasiz</text>
+  <text x="380" y="362" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">to'g'ridan-to'g'ri "faol"</text>
+  <text x="60" y="392" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">import qilish kerak</text>
+  <text x="380" y="392" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">hech narsa kerak emas</text>
+  <text x="60" y="422" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">API/JSON: moslash kerak</text>
+  <text x="380" y="422" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">matn aynan mos keladi</text>
+</svg>

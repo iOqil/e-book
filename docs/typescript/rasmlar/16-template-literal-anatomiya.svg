@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="720" height="400">
+  <title>Template literal type anatomiyasi: backtick ichidagi qattiq matn qismlari va ${tip} joylari birlashib aniq string shaklini hosil qiladi</title>
+
+  <rect x="0" y="0" width="720" height="400" fill="#f8fafc"/>
+
+  <text x="360" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Template literal type — string "shabloni"</text>
+
+  <!-- tip e'loni -->
+  <text x="360" y="74" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#475569">type Salom = `Salom, ${string}!`</text>
+
+  <!-- shablonning ramkasi -->
+  <rect x="90" y="100" width="540" height="74" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+
+  <!-- qattiq matn 1 -->
+  <rect x="110" y="118" width="150" height="38" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="185" y="143" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">Salom, </text>
+
+  <!-- tip joyi -->
+  <rect x="270" y="118" width="180" height="38" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="360" y="143" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">${string}</text>
+
+  <!-- qattiq matn 2 -->
+  <rect x="460" y="118" width="60" height="38" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="490" y="143" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">!</text>
+
+  <!-- yorliqlar -->
+  <text x="185" y="194" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">qattiq matn (o'zgarmas)</text>
+  <text x="360" y="194" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">tip joyi (o'zgaruvchi qism)</text>
+  <text x="490" y="194" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">qattiq matn</text>
+
+  <!-- strelka -->
+  <line x1="360" y1="210" x2="360" y2="240" stroke="#475569" stroke-width="2"/>
+  <polygon points="360,250 354,238 366,238" fill="#475569"/>
+  <text x="395" y="232" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">hosil bo'ladigan shakl</text>
+
+  <!-- natija: mos misollar -->
+  <rect x="120" y="262" width="480" height="100" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="360" y="288" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309">"Salom, " + har qanday string + "!" shaklidagi qiymatlar</text>
+
+  <text x="150" y="316" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#16a34a">OK  "Salom, Aziz!"</text>
+  <text x="150" y="340" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#16a34a">OK  "Salom, dunyo!"</text>
+  <text x="400" y="316" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#dc2626">XATO  "Salom, Aziz"  (! yo'q)</text>
+  <text x="400" y="340" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#dc2626">XATO  "Hayr, Aziz!"  (Salom emas)</text>
+</svg>

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460">
+  <title>useState generic tiplash: useState(0) boshlang'ich qiymatdan tipni o'zi aniqlaydi, useState&lt;Foydalanuvchi | null&gt;(null) esa boshlanishi null bo'lsa kelajakdagi tipni aniq belgilaydi</title>
+  <rect x="0" y="0" width="720" height="460" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">useState&lt;T&gt; — holatni tiplash</text>
+
+  <!-- LEFT: inference -->
+  <text x="190" y="72" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">1. Tip o'zi aniqlanadi (inference)</text>
+  <rect x="40" y="86" width="300" height="60" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="190" y="122" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">useState(<tspan fill="#2563eb" font-weight="bold">0</tspan>)</text>
+
+  <line x1="190" y1="146" x2="190" y2="178" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arr2)"/>
+  <text x="305" y="166" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">qiymat: 0</text>
+
+  <rect x="40" y="184" width="300" height="80" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="190" y="214" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14.5" fill="#1e293b">[son, setSon]</text>
+  <text x="190" y="240" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14.5" font-weight="bold" fill="#16a34a">son: number</text>
+  <text x="190" y="285" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Boshlang'ich qiymat tipni ko'rsatadi</text>
+  <text x="190" y="305" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">&#8594; generic argument yozish shart emas</text>
+
+  <!-- RIGHT: explicit generic -->
+  <text x="530" y="72" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">2. Aniq generic argument</text>
+  <rect x="380" y="86" width="300" height="60" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="530" y="113" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">useState&lt;<tspan fill="#7c3aed" font-weight="bold">Foydalanuvchi | null</tspan>&gt;</text>
+  <text x="530" y="134" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">(<tspan fill="#dc2626" font-weight="bold">null</tspan>)</text>
+
+  <line x1="530" y1="146" x2="530" y2="178" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arr2b)"/>
+  <text x="648" y="166" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">boshi: null</text>
+
+  <rect x="380" y="184" width="300" height="80" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="530" y="214" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14.5" fill="#1e293b">[user, setUser]</text>
+  <text x="530" y="240" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">user: Foydalanuvchi | null</text>
+  <text x="530" y="285" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">null boshlanish kelajak tipini bermaydi</text>
+  <text x="530" y="305" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">&#8594; tipni o'zimiz aniq beramiz</text>
+
+  <!-- bottom note -->
+  <rect x="40" y="334" width="640" height="100" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="360" y="362" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b45309">Tuzoq: useState(null)  &#8212;  generic'siz</text>
+  <text x="360" y="388" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">TypeScript tipni "null" deb qotirib qo'yadi.</text>
+  <text x="360" y="412" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">Keyin setUser({...}) qilolmaysiz &#8212; obyekt null emas.</text>
+
+  <defs>
+    <marker id="arr2" markerWidth="10" markerHeight="10" refX="5" refY="8" orient="auto">
+      <path d="M0,0 L10,0 L5,8 z" fill="#16a34a"/>
+    </marker>
+    <marker id="arr2b" markerWidth="10" markerHeight="10" refX="5" refY="8" orient="auto">
+      <path d="M0,0 L10,0 L5,8 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+</svg>

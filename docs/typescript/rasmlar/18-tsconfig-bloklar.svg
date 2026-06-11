@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 470" width="720" height="470">
+  <title>tsconfig.json asosiy bloklari: compilerOptions (kompilyator qoidalari), include (qaysi fayllar) va exclude (qaysilari chetda) — har biri nimani boshqarishi tushuntirilgan</title>
+  <rect x="0" y="0" width="720" height="470" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">tsconfig.json — uch asosiy blok</text>
+  <text x="360" y="58" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tsc bu fayldan "qanday va nimani compile qilishni" o'qiydi</text>
+
+  <!-- compilerOptions blok -->
+  <rect x="40" y="80" width="640" height="196" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="60" y="106" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">"compilerOptions"  —  KOMPILYATOR QOIDALARI (eng katta blok)</text>
+  <text x="60" y="128" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Kod qanday tekshiriladi va qanday JavaScript chiqariladi</text>
+
+  <rect x="60" y="142" width="190" height="116" rx="6" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="155" y="162" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">Tekshiruv</text>
+  <text x="155" y="184" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">strict</text>
+  <text x="155" y="204" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">strictNullChecks</text>
+  <text x="155" y="224" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">noImplicitAny</text>
+  <text x="155" y="244" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">noUnusedLocals</text>
+
+  <rect x="265" y="142" width="190" height="116" rx="6" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="360" y="162" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">Chiqarish (emit)</text>
+  <text x="360" y="184" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">target</text>
+  <text x="360" y="204" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">module</text>
+  <text x="360" y="224" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">outDir / rootDir</text>
+  <text x="360" y="244" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">declaration / sourceMap</text>
+
+  <rect x="470" y="142" width="190" height="116" rx="6" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="565" y="162" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">Muhit / yo'l</text>
+  <text x="565" y="184" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">lib</text>
+  <text x="565" y="204" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">paths (alias)</text>
+  <text x="565" y="224" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">esModuleInterop</text>
+  <text x="565" y="244" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">skipLibCheck</text>
+
+  <!-- include blok -->
+  <rect x="40" y="296" width="310" height="120" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="60" y="322" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">"include"</text>
+  <text x="60" y="346" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">QAYSI fayllar compile qilinadi</text>
+  <text x="60" y="370" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">["src/**/*"]  — src ichidagi hamma .ts</text>
+  <text x="60" y="394" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">** = papkalar ichkarisigacha</text>
+
+  <!-- exclude blok -->
+  <rect x="370" y="296" width="310" height="120" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="390" y="322" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#b45309">"exclude"</text>
+  <text x="390" y="346" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">QAYSILARI chetda qoladi</text>
+  <text x="390" y="370" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">["node_modules", "dist"]</text>
+  <text x="390" y="394" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">include'dan keyin "ayirib tashlaydi"</text>
+
+  <text x="360" y="448" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">include yozilmasa, tsconfig yonidagi hamma .ts olinadi; exclude esa undan ortiqchasini olib tashlaydi</text>
+</svg>

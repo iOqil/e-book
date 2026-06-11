@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" width="720" height="360">
+  <title>Issue hayot sikli: ochiq holatdan muhokama va Pull Request orqali yopiq holatga o'tishi</title>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="720" height="360" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Issue hayot sikli: ochiqdan yopiqgacha</text>
+
+  <!-- bosqich 1: Ochildi -->
+  <rect x="30" y="80" width="140" height="84" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="100" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">1. Ochildi</text>
+  <text x="100" y="130" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Xato / vazifa</text>
+  <text x="100" y="150" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">kartochkasi (Open)</text>
+
+  <!-- bosqich 2: Muhokama -->
+  <rect x="210" y="80" width="140" height="84" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="280" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">2. Muhokama</text>
+  <text x="280" y="130" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Izohlar, label,</text>
+  <text x="280" y="150" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">assignee, @mention</text>
+
+  <!-- bosqich 3: PR ishlash -->
+  <rect x="390" y="80" width="140" height="84" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="460" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#b45309">3. Yechim</text>
+  <text x="460" y="130" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Branch + commit,</text>
+  <text x="460" y="150" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Pull Request</text>
+
+  <!-- bosqich 4: Yopildi -->
+  <rect x="570" y="80" width="140" height="84" rx="10" fill="#f3e8ff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="640" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#7c3aed">4. Yopildi</text>
+  <text x="640" y="130" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">PR merge bo'ldi</text>
+  <text x="640" y="150" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(Closed)</text>
+
+  <!-- strelkalar -->
+  <defs>
+    <marker id="ax" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+  <line x1="170" y1="122" x2="208" y2="122" stroke="#475569" stroke-width="2.5" marker-end="url(#ax)"/>
+  <line x1="350" y1="122" x2="388" y2="122" stroke="#475569" stroke-width="2.5" marker-end="url(#ax)"/>
+  <line x1="530" y1="122" x2="568" y2="122" stroke="#475569" stroke-width="2.5" marker-end="url(#ax)"/>
+
+  <!-- Closes #N belgisi -->
+  <rect x="395" y="198" width="250" height="40" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="520" y="223" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309">PR'da "Closes #12" -&gt; avtomatik yopadi</text>
+  <line x1="520" y1="198" x2="600" y2="166" stroke="#f59e0b" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#ax)"/>
+
+  <!-- qayta ochilishi mumkin (reopen) -->
+  <path d="M 640 164 C 640 280, 100 280, 100 166" fill="none" stroke="#dc2626" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#ax)"/>
+  <text x="370" y="300" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">Muammo qaytsa: Reopen bilan issue qayta ochiladi</text>
+
+  <!-- pastki izoh -->
+  <text x="360" y="340" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Issue = bitta xato yoki vazifaning butun hayoti: ochildi, muhokama qilindi, hal etildi va yopildi</text>
+</svg>

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 470" width="720" height="470">
+  <title>Schema builder ustun turlari xaritasi: Laravel metodlari (id, string, text, integer, boolean, timestamp, foreignId, enum) va ular hosil qiladigan baza ustun turlari</title>
+
+  <rect x="0" y="0" width="720" height="470" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Schema builder: metod -&gt; baza ustun turi</text>
+
+  <!-- ustun sarlavhalari -->
+  <text x="190" y="68" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">Laravel metodi (PHP)</text>
+  <text x="470" y="68" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Baza ustun turi (SQL)</text>
+  <text x="650" y="68" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#475569">Nima saqlaydi</text>
+
+  <!-- qatorlar -->
+  <!-- row template: y boshi 84, balandlik 44 -->
+
+  <!-- 1 id -->
+  <rect x="36" y="80" width="648" height="44" rx="6" fill="#dbeafe" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="50" y="108" font-family="Consolas, monospace" font-size="14" fill="#1e293b">$table-&gt;id()</text>
+  <text x="470" y="108" text-anchor="middle" font-family="Consolas, monospace" font-size="14" fill="#16a34a">BIGINT UNSIGNED AI</text>
+  <text x="650" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">birlamchi kalit</text>
+
+  <!-- 2 string -->
+  <rect x="36" y="128" width="648" height="44" rx="6" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="50" y="156" font-family="Consolas, monospace" font-size="14" fill="#1e293b">$table-&gt;string('nom', 100)</text>
+  <text x="470" y="156" text-anchor="middle" font-family="Consolas, monospace" font-size="14" fill="#16a34a">VARCHAR(100)</text>
+  <text x="650" y="156" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">qisqa matn</text>
+
+  <!-- 3 text -->
+  <rect x="36" y="176" width="648" height="44" rx="6" fill="#dbeafe" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="50" y="204" font-family="Consolas, monospace" font-size="14" fill="#1e293b">$table-&gt;text('tavsif')</text>
+  <text x="470" y="204" text-anchor="middle" font-family="Consolas, monospace" font-size="14" fill="#16a34a">TEXT</text>
+  <text x="650" y="204" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">uzun matn</text>
+
+  <!-- 4 integer -->
+  <rect x="36" y="224" width="648" height="44" rx="6" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="50" y="252" font-family="Consolas, monospace" font-size="14" fill="#1e293b">$table-&gt;integer('soni')</text>
+  <text x="470" y="252" text-anchor="middle" font-family="Consolas, monospace" font-size="14" fill="#16a34a">INT</text>
+  <text x="650" y="252" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">butun son</text>
+
+  <!-- 5 boolean -->
+  <rect x="36" y="272" width="648" height="44" rx="6" fill="#dbeafe" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="50" y="300" font-family="Consolas, monospace" font-size="14" fill="#1e293b">$table-&gt;boolean('faol')</text>
+  <text x="470" y="300" text-anchor="middle" font-family="Consolas, monospace" font-size="14" fill="#16a34a">TINYINT(1)</text>
+  <text x="650" y="300" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">true / false</text>
+
+  <!-- 6 timestamps -->
+  <rect x="36" y="320" width="648" height="44" rx="6" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="50" y="348" font-family="Consolas, monospace" font-size="14" fill="#1e293b">$table-&gt;timestamps()</text>
+  <text x="470" y="348" text-anchor="middle" font-family="Consolas, monospace" font-size="14" fill="#16a34a">created_at, updated_at</text>
+  <text x="650" y="348" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">2 ta TIMESTAMP</text>
+
+  <!-- 7 foreignId -->
+  <rect x="36" y="368" width="648" height="44" rx="6" fill="#dbeafe" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="50" y="396" font-family="Consolas, monospace" font-size="14" fill="#1e293b">$table-&gt;foreignId('user_id')</text>
+  <text x="470" y="396" text-anchor="middle" font-family="Consolas, monospace" font-size="14" fill="#16a34a">BIGINT UNSIGNED</text>
+  <text x="650" y="396" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tashqi kalit (FK)</text>
+
+  <!-- 8 enum -->
+  <rect x="36" y="416" width="648" height="44" rx="6" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="50" y="444" font-family="Consolas, monospace" font-size="14" fill="#1e293b">$table-&gt;enum('holat', [...])</text>
+  <text x="470" y="444" text-anchor="middle" font-family="Consolas, monospace" font-size="14" fill="#16a34a">ENUM('...','...')</text>
+  <text x="650" y="444" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">cheklangan ro'yxat</text>
+</svg>

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460">
+  <title>Interaktiv rebase bilan squash: tort mayda commit (oldin, pick va squash belgilari bilan) bitta toza commitga (keyin) birlashtiriladi</title>
+
+  <rect x="0" y="0" width="720" height="460" fill="#f8fafc"/>
+
+  <text x="360" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Interaktiv rebase: squash bilan tarixni tozalash</text>
+
+  <!-- CHAP: OLDIN -->
+  <text x="170" y="78" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#dc2626">OLDIN — 4 mayda commit</text>
+
+  <!-- rebase -i ro'yxati ko'rinishi -->
+  <rect x="40" y="96" width="260" height="170" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+
+  <text x="58" y="124" font-family="Consolas, monospace" font-size="14" fill="#16a34a" font-weight="bold">pick</text>
+  <text x="108" y="124" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">savatcha tugmasi</text>
+
+  <text x="58" y="158" font-family="Consolas, monospace" font-size="14" fill="#f59e0b" font-weight="bold">squash</text>
+  <text x="128" y="158" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">tuzatish</text>
+
+  <text x="58" y="192" font-family="Consolas, monospace" font-size="14" fill="#f59e0b" font-weight="bold">squash</text>
+  <text x="128" y="192" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">yana tuzatish</text>
+
+  <text x="58" y="226" font-family="Consolas, monospace" font-size="14" fill="#f59e0b" font-weight="bold">squash</text>
+  <text x="128" y="226" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">typo</text>
+
+  <text x="58" y="254" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">birinchisi pick, qolgani squash</text>
+
+  <!-- commit doiralari oldin -->
+  <circle cx="80" cy="320" r="20" fill="#2563eb"/>
+  <text x="80" y="325" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">W1</text>
+  <line x1="100" y1="320" x2="124" y2="320" stroke="#94a3b8" stroke-width="2.5"/>
+  <circle cx="144" cy="320" r="20" fill="#f59e0b"/>
+  <text x="144" y="325" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">W2</text>
+  <line x1="164" y1="320" x2="188" y2="320" stroke="#94a3b8" stroke-width="2.5"/>
+  <circle cx="208" cy="320" r="20" fill="#f59e0b"/>
+  <text x="208" y="325" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">W3</text>
+  <line x1="228" y1="320" x2="252" y2="320" stroke="#94a3b8" stroke-width="2.5"/>
+  <circle cx="272" cy="320" r="20" fill="#f59e0b"/>
+  <text x="272" y="325" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">W4</text>
+
+  <!-- O'RTA: katta strelka -->
+  <line x1="330" y1="320" x2="390" y2="320" stroke="#16a34a" stroke-width="4"/>
+  <polygon points="394,320 380,312 380,328" fill="#16a34a"/>
+  <text x="362" y="306" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" font-weight="bold">squash</text>
+
+  <!-- O'NG: KEYIN -->
+  <text x="540" y="78" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">KEYIN — 1 toza commit</text>
+
+  <rect x="420" y="96" width="260" height="170" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="438" y="140" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b" font-weight="bold">Yangi xabar yoziladi:</text>
+  <rect x="438" y="156" width="224" height="36" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="550" y="180" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#166534" font-weight="bold">savatcha tugmasi qoshildi</text>
+  <text x="438" y="220" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">4 ta o'zgarish bittada birlashdi,</text>
+  <text x="438" y="240" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tarix endi uyat emas</text>
+
+  <!-- commit doirasi keyin -->
+  <circle cx="540" cy="320" r="24" fill="#16a34a"/>
+  <text x="540" y="325" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">W1+</text>
+
+  <!-- izoh -->
+  <text x="360" y="400" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">squash = "meni oldingi commitga qo'sh". Birinchisi pick bo'lib qoladi, qolganlari unga yopishadi.</text>
+  <text x="360" y="428" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">git rebase -i HEAD~4   (faqat lokal, push qilinmagan tarixda!)</text>
+</svg>

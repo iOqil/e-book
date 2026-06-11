@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 430" width="700" height="430">
+  <title>Indexed access T[K]: obyekt tipidan ma'lum bir kalitning qiymat tipini olish. Kitob["nomi"] string, Kitob["yil"] number, Kitob["id" | "nomi"] esa number | string union'ini beradi</title>
+  <rect x="0" y="0" width="700" height="430" fill="#f8fafc"/>
+
+  <text x="350" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Indexed access T[K] — kalitdan qiymat tipini olish</text>
+
+  <!-- manba tip -->
+  <text x="120" y="76" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">Kitob</text>
+  <rect x="40" y="88" width="160" height="172" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="60" y="118" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">id: <tspan fill="#475569">number</tspan></text>
+  <text x="60" y="152" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">nomi: <tspan fill="#475569">string</tspan></text>
+  <text x="60" y="186" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">yil: <tspan fill="#475569">number</tspan></text>
+  <text x="60" y="220" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">bepulmi:</text>
+  <text x="60" y="244" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">boolean</text>
+
+  <!-- 3 ta so'rov qatori -->
+  <!-- qator 1 -->
+  <rect x="270" y="92" width="180" height="44" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="360" y="120" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#92400e">Kitob["nomi"]</text>
+  <line x1="450" y1="114" x2="520" y2="114" stroke="#16a34a" stroke-width="3"/>
+  <polygon points="520,108 532,114 520,120" fill="#16a34a"/>
+  <rect x="540" y="92" width="120" height="44" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="600" y="120" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#166534">string</text>
+
+  <!-- qator 2 -->
+  <rect x="270" y="156" width="180" height="44" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="360" y="184" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#92400e">Kitob["yil"]</text>
+  <line x1="450" y1="178" x2="520" y2="178" stroke="#16a34a" stroke-width="3"/>
+  <polygon points="520,172 532,178 520,184" fill="#16a34a"/>
+  <rect x="540" y="156" width="120" height="44" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="600" y="184" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#166534">number</text>
+
+  <!-- qator 3 -->
+  <rect x="240" y="220" width="240" height="46" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="360" y="249" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14.5" font-weight="bold" fill="#92400e">Kitob["id" | "nomi"]</text>
+  <line x1="480" y1="243" x2="520" y2="243" stroke="#7c3aed" stroke-width="3"/>
+  <polygon points="520,237 532,243 520,249" fill="#7c3aed"/>
+  <rect x="540" y="220" width="150" height="46" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="615" y="249" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#5b21b6">number | string</text>
+
+  <!-- bog'lovchi chiziq manba -> so'rovlar -->
+  <line x1="200" y1="174" x2="240" y2="174" stroke="#94a3b8" stroke-width="2"/>
+
+  <!-- pastki izohlar -->
+  <text x="350" y="312" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">T[K] — massivdan element olishga o'xshaydi, lekin TIP darajasida ishlaydi</text>
+  <text x="350" y="340" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">Bir nechta kalit bersangiz (union), natija ham qiymat tiplarining union'i bo'ladi</text>
+  <text x="350" y="368" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">Kitob.nomi (nuqta) — bu QIYMAT, Kitob["nomi"] (qavs) — bu TIP. Adashtirmang!</text>
+  <text x="350" y="400" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#dc2626">Tipni faqat kvadrat qavs bilan olamiz: Kitob.nomi tip yozuvida ishlamaydi</text>
+</svg>

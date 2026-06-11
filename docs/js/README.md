@@ -1,7 +1,5 @@
 # JavaScript — 0 dan Expertgacha (O'zbek tilida)
 
-> 📄 **[Butun kitobni PDF formatda yuklab olish →](/pdf/js.pdf)**
-
 Bu — JavaScript'ni **mutlaqo noldan professional darajagacha** o'rgatadigan to'liq qo'llanma. Hech qanday oldingi dasturlash tajribasi talab qilinmaydi: birinchi `console.log`dan tortib closure, `this`, async, prototiplar, design pattern va TypeScript ko'prigigacha.
 
 Har bir modul: **nazariya + `Why` (nega shunday) + 20 ta masala (yechimi bilan)**.

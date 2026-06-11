@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="720" height="400">
+  <title>Bitta Notification klassi via() metodida bir nechta kanalni qaytaradi va shu sabab bitta xabar bir vaqtning ozida email pochtaga, database jadvaliga (notifications) va broadcast orqali realtime kanalga tarqaladi</title>
+  <rect x="0" y="0" width="720" height="400" fill="#f8fafc"/>
+
+  <text x="360" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Bitta xabar -&gt; bir nechta kanal</text>
+  <text x="360" y="56" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">via() metodi qaysi kanallarni qaytarsa, xabar shularning hammasiga ketadi</text>
+
+  <!-- markaz: Notification -->
+  <rect x="270" y="84" width="180" height="92" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="360" y="116" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">Notification</text>
+  <text x="360" y="138" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">InvoicePaid</text>
+  <text x="360" y="160" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">$user-&gt;notify(...)</text>
+
+  <!-- via() label -->
+  <text x="360" y="208" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#7c3aed">via() = ['mail', 'database', 'broadcast']</text>
+
+  <!-- strelkalar markazdan 3 kanalga -->
+  <line x1="320" y1="176" x2="150" y2="252" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#a19c)"/>
+  <line x1="360" y1="220" x2="360" y2="252" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#a19c)"/>
+  <line x1="400" y1="176" x2="570" y2="252" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#a19c)"/>
+
+  <!-- kanal 1: mail -->
+  <rect x="50" y="256" width="190" height="104" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="145" y="284" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">mail</text>
+  <text x="145" y="308" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">email pochtaga</text>
+  <text x="145" y="330" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">toMail() metodi</text>
+  <text x="145" y="350" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">orqali xat</text>
+
+  <!-- kanal 2: database -->
+  <rect x="265" y="256" width="190" height="104" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="360" y="284" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b45309">database</text>
+  <text x="360" y="308" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">notifications jadvali</text>
+  <text x="360" y="330" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">toArray() metodi</text>
+  <text x="360" y="350" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">qongiroq belgisi uchun</text>
+
+  <!-- kanal 3: broadcast -->
+  <rect x="480" y="256" width="190" height="104" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="575" y="284" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#7c3aed">broadcast</text>
+  <text x="575" y="308" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">realtime (WebSocket)</text>
+  <text x="575" y="330" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">sahifani yangilamay</text>
+  <text x="575" y="350" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">jonli ko'rsatish</text>
+
+  <defs>
+    <marker id="a19c" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#94a3b8"/></marker>
+  </defs>
+</svg>

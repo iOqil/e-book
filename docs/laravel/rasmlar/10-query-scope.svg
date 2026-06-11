@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 450" width="720" height="450">
+  <title>Query scope: bir marta modelda yozilgan nomli filtr (masalan published) takror-takror yozilgan where shartining o'rnini bosadi va hamma joyda qayta ishlatiladi</title>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="720" height="450" fill="#f8fafc"/>
+
+  <text x="360" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Scope: bir marta yoz, hamma joyda ishlat</text>
+
+  <!-- ===== chap: scope'siz (takror) ===== -->
+  <text x="185" y="66" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#dc2626">Scope'siz — har joyda takror</text>
+
+  <rect x="36" y="80" width="298" height="44" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="185" y="100" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Post::where('holat','chop')</text>
+  <text x="185" y="118" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">->where('sana','&lt;=',now())->get()</text>
+
+  <rect x="36" y="134" width="298" height="44" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="185" y="154" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Post::where('holat','chop')</text>
+  <text x="185" y="172" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">->where('sana','&lt;=',now())->count()</text>
+
+  <rect x="36" y="188" width="298" height="44" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="185" y="208" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Post::where('holat','chop')</text>
+  <text x="185" y="226" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">->where('sana','&lt;=',now())->paginate()</text>
+
+  <text x="185" y="260" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">Shart o'zgarsa — hamma joyni tuzatish kerak</text>
+
+  <!-- ===== o'ng: scope bilan ===== -->
+  <text x="535" y="66" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">Scope bilan — bir marta</text>
+
+  <!-- ta'rif qutisi -->
+  <rect x="386" y="80" width="298" height="76" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="535" y="102" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">Post modelida (1 marta):</text>
+  <text x="535" y="124" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">#[Scope] published($q) =></text>
+  <text x="535" y="144" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">$q->where('holat','chop')...</text>
+
+  <!-- chaqiruvlar -->
+  <rect x="386" y="170" width="298" height="32" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="535" y="191" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Post::published()->get()</text>
+
+  <rect x="386" y="208" width="298" height="32" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="535" y="229" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Post::published()->count()</text>
+
+  <rect x="386" y="246" width="298" height="32" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="535" y="267" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Post::published()->paginate()</text>
+
+  <text x="535" y="300" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">Shart o'zgarsa — faqat bitta joyni tuzatasan</text>
+
+  <!-- pastki xulosa -->
+  <line x1="36" y1="330" x2="684" y2="330" stroke="#e2e8f0" stroke-width="2"/>
+  <rect x="36" y="348" width="648" height="82" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="360" y="376" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b45309">Local scope — modelga biriktirilgan, nomi bor, qayta ishlatiladigan filtr</text>
+  <text x="360" y="402" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Murakkab where shartini "ot" bilan ataysan, keyin shu otni chaqirasan.</text>
+  <text x="360" y="424" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Global scope esa avtomatik — har bir so'rovga o'zi qo'shiladi (mas. soft delete).</text>
+</svg>

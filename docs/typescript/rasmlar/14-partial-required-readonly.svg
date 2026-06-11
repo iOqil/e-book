@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="720" height="440">
+  <title>Partial, Required va Readonly utility tiplari bir xil Foydalanuvchi tipiga qanday ta'sir qilishini ko'rsatadi: Partial hamma maydonni optional qiladi, Required hammasini majburiy qiladi, Readonly esa o'zgartirishni taqiqlaydi</title>
+  <rect x="0" y="0" width="720" height="440" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Partial, Required, Readonly — maydonlarga ta'sir</text>
+
+  <!-- Asl tip -->
+  <text x="120" y="78" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#475569">Asl tip</text>
+  <rect x="20" y="90" width="200" height="120" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="40" y="116" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Foydalanuvchi</text>
+  <line x1="20" y1="126" x2="220" y2="126" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="40" y="150" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">id: number</text>
+  <text x="40" y="174" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">ism: string</text>
+  <text x="40" y="198" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">email: string</text>
+
+  <!-- strelka -->
+  <text x="120" y="240" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#64748b">utility tip qo'llanadi</text>
+  <line x1="120" y1="210" x2="120" y2="250" stroke="#64748b" stroke-width="2"/>
+  <polygon points="120,258 115,248 125,248" fill="#64748b"/>
+
+  <!-- Partial -->
+  <text x="120" y="284" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">Partial&lt;T&gt;</text>
+  <rect x="20" y="296" width="200" height="124" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="40" y="322" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">id<tspan fill="#2563eb" font-weight="bold">?</tspan>: number</text>
+  <text x="40" y="348" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">ism<tspan fill="#2563eb" font-weight="bold">?</tspan>: string</text>
+  <text x="40" y="374" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">email<tspan fill="#2563eb" font-weight="bold">?</tspan>: string</text>
+  <text x="120" y="404" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">hammasi ixtiyoriy (?)</text>
+
+  <!-- Required -->
+  <text x="360" y="284" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Required&lt;T&gt;</text>
+  <rect x="260" y="296" width="200" height="124" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="280" y="322" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">id: number</text>
+  <text x="280" y="348" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">ism: string</text>
+  <text x="280" y="374" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">email: string</text>
+  <text x="360" y="404" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">hammasi majburiy (? olib tashlanadi)</text>
+
+  <!-- Readonly -->
+  <text x="600" y="284" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#7c3aed">Readonly&lt;T&gt;</text>
+  <rect x="500" y="296" width="200" height="124" rx="8" fill="#f3e8ff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="520" y="322" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b"><tspan fill="#7c3aed" font-weight="bold">readonly</tspan> id: number</text>
+  <text x="520" y="348" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b"><tspan fill="#7c3aed" font-weight="bold">readonly</tspan> ism: string</text>
+  <text x="520" y="374" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b"><tspan fill="#7c3aed" font-weight="bold">readonly</tspan> email: string</text>
+  <text x="600" y="404" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#7c3aed">o'zgartirib bo'lmaydi</text>
+
+  <!-- strelkalar pastga -->
+  <line x1="220" y1="150" x2="290" y2="290" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <line x1="220" y1="150" x2="540" y2="290" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 3"/>
+</svg>

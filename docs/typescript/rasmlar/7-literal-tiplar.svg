@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 430" width="700" height="430">
+  <title>Literal union tipi: barcha mumkin bo'lgan string qiymatlar to'plamidan faqat uchta aniq qiymat (kichik, orta, katta) ruxsat etiladi, qolgani rad etiladi</title>
+  <rect x="0" y="0" width="700" height="430" fill="#f8fafc"/>
+
+  <text x="350" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Literal tiplar: aniq qiymatlar to'plami</text>
+  <text x="350" y="60" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">type Olcham = "kichik" | "orta" | "katta"</text>
+
+  <!-- katta to'plam: barcha string -->
+  <rect x="50" y="84" width="600" height="250" rx="14" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2" stroke-dasharray="7 5"/>
+  <text x="70" y="110" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#475569">string — barcha mumkin satrlar (cheksiz)</text>
+
+  <!-- chetga tarqalgan rad etilganlar -->
+  <text x="150" y="150" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#94a3b8">"qizil"</text>
+  <text x="560" y="150" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#94a3b8">"juda-katta"</text>
+  <text x="150" y="300" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#94a3b8">"ortacha"</text>
+  <text x="560" y="300" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#94a3b8">"o'rta"</text>
+  <text x="350" y="318" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">^ bularning hammasi RAD etiladi</text>
+
+  <!-- ichki ruxsat etilgan to'plam -->
+  <rect x="225" y="170" width="250" height="105" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="350" y="196" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">Olcham — faqat shular</text>
+  <text x="290" y="232" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">"kichik"</text>
+  <text x="290" y="258" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">"orta"</text>
+  <text x="410" y="246" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">"katta"</text>
+
+  <!-- pastki izoh -->
+  <rect x="110" y="362" width="480" height="46" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="350" y="383" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Literal union — string to'plamidan aniq qiymatlarni "kesib oladi";</text>
+  <text x="350" y="402" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">adashib yozilgan qiymat yozish paytidayoq tutiladi</text>
+</svg>

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" width="720" height="360">
+  <title>CI/CD pipeline: ishlab chiquvchi push qilganda GitHub Actions avtomatik test, build va deploy bosqichlarini ketma-ket ishga tushiradi; biror bosqich qulasa zanjir to'xtaydi</title>
+
+  <rect x="0" y="0" width="720" height="360" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">CI/CD pipeline: push'dan keyin hammasi avtomatik</text>
+
+  <!-- developer -->
+  <rect x="24" y="120" width="120" height="80" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="84" y="152" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Dasturchi</text>
+  <text x="84" y="174" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">git push</text>
+
+  <!-- arrow to GitHub -->
+  <line x1="144" y1="160" x2="186" y2="160" stroke="#1e293b" stroke-width="2"/>
+  <polygon points="196,160 184,154 184,166" fill="#1e293b"/>
+
+  <!-- GitHub trigger -->
+  <rect x="198" y="118" width="118" height="84" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="257" y="148" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">GitHub</text>
+  <text x="257" y="170" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">push'ni sezadi</text>
+  <text x="257" y="188" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(trigger)</text>
+
+  <!-- arrow to pipeline -->
+  <line x1="316" y1="160" x2="356" y2="160" stroke="#1e293b" stroke-width="2"/>
+  <polygon points="366,160 354,154 354,166" fill="#1e293b"/>
+
+  <!-- pipeline label -->
+  <text x="540" y="74" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#7c3aed">GitHub Actions ishga tushadi</text>
+
+  <!-- stage 1: test -->
+  <rect x="372" y="120" width="92" height="80" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="418" y="150" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">1. Test</text>
+  <text x="418" y="172" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">testlar</text>
+  <text x="418" y="188" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">o'tdimi?</text>
+
+  <line x1="464" y1="160" x2="490" y2="160" stroke="#1e293b" stroke-width="2"/>
+  <polygon points="500,160 488,154 488,166" fill="#1e293b"/>
+
+  <!-- stage 2: build -->
+  <rect x="502" y="120" width="92" height="80" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="548" y="150" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">2. Build</text>
+  <text x="548" y="172" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">yig'ish</text>
+  <text x="548" y="188" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(build)</text>
+
+  <line x1="594" y1="160" x2="620" y2="160" stroke="#1e293b" stroke-width="2"/>
+  <polygon points="630,160 618,154 618,166" fill="#1e293b"/>
+
+  <!-- stage 3: deploy -->
+  <rect x="632" y="120" width="80" height="80" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="672" y="150" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#7c3aed">3. Deploy</text>
+  <text x="672" y="172" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">serverga</text>
+  <text x="672" y="188" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">yuborish</text>
+
+  <!-- failure path -->
+  <line x1="418" y1="200" x2="418" y2="248" stroke="#dc2626" stroke-width="2" stroke-dasharray="5 4"/>
+  <polygon points="418,258 412,246 424,246" fill="#dc2626"/>
+  <text x="418" y="282" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626">Test qulasa</text>
+  <text x="418" y="300" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">zanjir to'xtaydi</text>
+
+  <!-- bottom note -->
+  <rect x="40" y="316" width="640" height="32" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="360" y="337" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">CI = test+build avtomatik · CD = deploy avtomatik · hammasi push'dan keyin qo'lsiz</text>
+</svg>

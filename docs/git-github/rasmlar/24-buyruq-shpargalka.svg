@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 500" width="760" height="500">
+  <title>Git buyruq shpargalka vizual: uch zona (Ish papkasi, Staging, Repozitoriy) va remote orasidagi asosiy buyruqlar (add, commit, push, pull, restore, reset) hamda sozlash, branch va tarix buyruqlari guruhlari</title>
+
+  <rect x="0" y="0" width="760" height="500" fill="#f8fafc"/>
+
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Git shpargalka: zona va buyruqlar</text>
+
+  <!-- Ish papkasi zonasi -->
+  <rect x="30" y="64" width="150" height="120" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="105" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Ish papkasi</text>
+  <text x="105" y="112" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Working Dir</text>
+  <text x="105" y="146" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tahrirlanayotgan</text>
+  <text x="105" y="164" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">fayllar</text>
+
+  <!-- Staging zonasi -->
+  <rect x="305" y="64" width="150" height="120" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="380" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b45309">Staging</text>
+  <text x="380" y="112" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(sahna)</text>
+  <text x="380" y="146" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">commit'ga</text>
+  <text x="380" y="164" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tayyorlangan</text>
+
+  <!-- Repozitoriy zonasi -->
+  <rect x="580" y="64" width="150" height="120" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="655" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">Repozitoriy</text>
+  <text x="655" y="112" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">.git (lokal)</text>
+  <text x="655" y="146" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">saqlangan</text>
+  <text x="655" y="164" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">commitlar</text>
+
+  <!-- add strelkasi: ish papkasidan stagingga -->
+  <line x1="182" y1="104" x2="303" y2="104" stroke="#16a34a" stroke-width="2.5" marker-end="url(#c24)"/>
+  <text x="242" y="98" text-anchor="middle" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#16a34a">git add</text>
+
+  <!-- restore staged strelkasi: stagingdan ish papkasiga -->
+  <line x1="303" y1="150" x2="182" y2="150" stroke="#dc2626" stroke-width="2.5" marker-end="url(#cr24)"/>
+  <text x="242" y="170" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#dc2626">restore --staged</text>
+
+  <!-- commit strelkasi: stagingdan repozitoriyga -->
+  <line x1="457" y1="104" x2="578" y2="104" stroke="#16a34a" stroke-width="2.5" marker-end="url(#c24)"/>
+  <text x="517" y="98" text-anchor="middle" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#16a34a">git commit</text>
+
+  <!-- reset strelkasi: repozitoriydan stagingga -->
+  <line x1="578" y1="150" x2="457" y2="150" stroke="#dc2626" stroke-width="2.5" marker-end="url(#cr24)"/>
+  <text x="517" y="170" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#dc2626">git reset</text>
+
+  <!-- Remote zonasi -->
+  <rect x="580" y="234" width="150" height="74" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="655" y="262" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Remote</text>
+  <text x="655" y="284" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">GitHub (origin)</text>
+
+  <!-- push strelkasi: repozitoriydan remotega -->
+  <line x1="675" y1="184" x2="675" y2="232" stroke="#16a34a" stroke-width="2.5" marker-end="url(#c24)"/>
+  <text x="715" y="212" text-anchor="middle" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#16a34a">push</text>
+
+  <!-- pull strelkasi: remotedan repozitoriyga -->
+  <line x1="635" y1="232" x2="635" y2="186" stroke="#2563eb" stroke-width="2.5" marker-end="url(#cb24)"/>
+  <text x="600" y="212" text-anchor="middle" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#2563eb">pull</text>
+
+  <!-- pastki buyruq guruhlari -->
+  <rect x="30" y="334" width="225" height="150" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="48" y="360" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">Sozlash va boshlash</text>
+  <text x="48" y="384" font-family="Consolas, monospace" font-size="13" fill="#1e293b">git config --global ...</text>
+  <text x="48" y="406" font-family="Consolas, monospace" font-size="13" fill="#1e293b">git init -b main</text>
+  <text x="48" y="428" font-family="Consolas, monospace" font-size="13" fill="#1e293b">git clone URL</text>
+  <text x="48" y="450" font-family="Consolas, monospace" font-size="13" fill="#1e293b">git status</text>
+  <text x="48" y="472" font-family="Consolas, monospace" font-size="13" fill="#1e293b">git remote add origin</text>
+
+  <rect x="267" y="334" width="225" height="150" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="285" y="360" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309">Branch va birlashtirish</text>
+  <text x="285" y="384" font-family="Consolas, monospace" font-size="13" fill="#1e293b">git switch -c feature</text>
+  <text x="285" y="406" font-family="Consolas, monospace" font-size="13" fill="#1e293b">git switch main</text>
+  <text x="285" y="428" font-family="Consolas, monospace" font-size="13" fill="#1e293b">git merge feature</text>
+  <text x="285" y="450" font-family="Consolas, monospace" font-size="13" fill="#1e293b">git rebase main</text>
+  <text x="285" y="472" font-family="Consolas, monospace" font-size="13" fill="#1e293b">git branch -m yangi</text>
+
+  <rect x="504" y="334" width="226" height="150" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="522" y="360" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">Tarix va reliz</text>
+  <text x="522" y="384" font-family="Consolas, monospace" font-size="13" fill="#1e293b">git log --oneline --graph</text>
+  <text x="522" y="406" font-family="Consolas, monospace" font-size="13" fill="#1e293b">git diff / git show</text>
+  <text x="522" y="428" font-family="Consolas, monospace" font-size="13" fill="#1e293b">git revert HASH</text>
+  <text x="522" y="450" font-family="Consolas, monospace" font-size="13" fill="#1e293b">git tag -a v1.0.0</text>
+  <text x="522" y="472" font-family="Consolas, monospace" font-size="13" fill="#1e293b">git stash / git reflog</text>
+
+  <defs>
+    <marker id="c24" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto">
+      <path d="M0,0 L8,3.5 L0,7 Z" fill="#16a34a"/>
+    </marker>
+    <marker id="cr24" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto">
+      <path d="M0,0 L8,3.5 L0,7 Z" fill="#dc2626"/>
+    </marker>
+    <marker id="cb24" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto">
+      <path d="M0,0 L8,3.5 L0,7 Z" fill="#2563eb"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>Deploy bosqichlari: lokal kod git push orqali serverga boradi, server composer install, migrate, optimize va storage:link buyruqlarini bajaradi, natijada jonli sayt brauzerda ochiladi</title>
+
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Deploy oqimi: lokaldan jonli saytgacha</text>
+
+  <!-- 1. Lokal kompyuter -->
+  <rect x="30" y="70" width="150" height="90" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="105" y="100" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Lokal kompyuter</text>
+  <text x="105" y="124" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">kod tayyor,</text>
+  <text x="105" y="142" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">test o'tdi</text>
+
+  <!-- arrow git push -->
+  <line x1="180" y1="115" x2="270" y2="115" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="225" y="105" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#2563eb">git push</text>
+
+  <!-- 2. Server -->
+  <rect x="270" y="70" width="420" height="90" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="480" y="100" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">Server (Ubuntu + PHP 8.4 + Nginx)</text>
+  <text x="480" y="124" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">git pull bilan yangi kodni qabul qiladi,</text>
+  <text x="480" y="142" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">keyin deploy buyruqlarini ketma-ket bajaradi</text>
+
+  <!-- arrow down -->
+  <line x1="480" y1="160" x2="480" y2="190" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- deploy buyruqlari -->
+  <rect x="60" y="190" width="600" height="150" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="360" y="214" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b45309">Deploy qadamlari (tartib bilan)</text>
+
+  <rect x="80" y="228" width="270" height="44" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="215" y="247" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">1. composer install --no-dev</text>
+  <text x="215" y="265" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">paketlar (test paketlarisiz)</text>
+
+  <rect x="370" y="228" width="270" height="44" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="505" y="247" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">2. migrate --force</text>
+  <text x="505" y="265" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">baza jadvallari</text>
+
+  <rect x="80" y="282" width="270" height="44" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="215" y="301" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">3. php artisan optimize</text>
+  <text x="215" y="319" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">config + route cache</text>
+
+  <rect x="370" y="282" width="270" height="44" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="505" y="301" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">4. storage:link</text>
+  <text x="505" y="319" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">yuklangan fayllar havolasi</text>
+
+  <!-- arrow down to jonli sayt -->
+  <line x1="360" y1="340" x2="360" y2="368" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- jonli sayt -->
+  <rect x="240" y="368" width="240" height="48" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="360" y="397" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">Jonli sayt (https://) tayyor</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+</svg>

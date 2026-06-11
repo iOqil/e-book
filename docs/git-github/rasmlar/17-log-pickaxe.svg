@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="720" height="440">
+  <title>git log -S pickaxe: commit zanjiri bo'ylab qaysi commit izlanayotgan matnni birinchi qo'shgan yoki olib tashlaganini topadi</title>
+
+  <rect x="0" y="0" width="720" height="440" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">git log -S "matn" — matn qachon paydo bo'ldi?</text>
+  <text x="360" y="58" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">"pickaxe" (kushka) qidiruv: matn SONI o'zgargan commitni topadi</text>
+
+  <!-- Misol: git log -S "return a-b" -->
+  <rect x="180" y="74" width="360" height="32" rx="6" fill="#1e293b"/>
+  <text x="360" y="96" text-anchor="middle" font-family="Consolas, monospace" font-size="14" fill="#dcfce7">git log -S "return a-b"</text>
+
+  <!-- Commit zanjiri (chapdan o'ngga: eski -> yangi) -->
+  <!-- chiziq -->
+  <line x1="90" y1="180" x2="630" y2="180" stroke="#94a3b8" stroke-width="2"/>
+
+  <!-- c1 -->
+  <circle cx="120" cy="180" r="22" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="120" y="185" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">c1</text>
+  <text x="120" y="222" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#16a34a">a+b</text>
+
+  <!-- c2 -->
+  <circle cx="240" cy="180" r="22" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="240" y="185" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">c2</text>
+  <text x="240" y="222" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#16a34a">a+b</text>
+
+  <!-- c3 = aybdor: a+b -> a-b -->
+  <circle cx="360" cy="180" r="26" fill="#fee2e2" stroke="#dc2626" stroke-width="3"/>
+  <text x="360" y="185" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626">c3</text>
+  <text x="360" y="225" text-anchor="middle" font-family="Consolas, monospace" font-size="14" font-weight="bold" fill="#dc2626">a-b</text>
+  <text x="360" y="246" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">"a-b" shu yerda kirdi</text>
+
+  <!-- c4 -->
+  <circle cx="480" cy="180" r="22" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="480" y="185" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">c4</text>
+  <text x="480" y="222" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#dc2626">a-b</text>
+
+  <!-- c5 (HEAD) -->
+  <circle cx="600" cy="180" r="22" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="600" y="185" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">c5</text>
+  <text x="600" y="222" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#dc2626">a-b</text>
+  <text x="600" y="150" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#2563eb">HEAD</text>
+
+  <!-- eski/yangi yorliqlar -->
+  <text x="120" y="280" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">eski</text>
+  <text x="600" y="280" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">yangi (HEAD)</text>
+
+  <!-- strelka aybdorga -->
+  <line x1="360" y1="120" x2="360" y2="150" stroke="#dc2626" stroke-width="2" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#dc2626"/>
+    </marker>
+  </defs>
+  <text x="360" y="135" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626">-S topadi</text>
+
+  <!-- -S vs -G qutisi -->
+  <rect x="60" y="300" width="600" height="120" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="360" y="326" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">-S va -G farqi</text>
+  <text x="80" y="354" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b"><tspan font-weight="bold" fill="#2563eb">-S "matn"</tspan> : matn nechta marta uchrashi O'ZGARGAN commitlar (qo'shildi/olindi)</text>
+  <text x="80" y="380" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b"><tspan font-weight="bold" fill="#7c3aed">-G regex</tspan> : shu naqsh bor satr har qanday tegilgan commitlar (kengroq to'r)</text>
+  <text x="80" y="406" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">"qachon yozildi?" -&gt; -S ;  "qaysi commitlar shu satrga tegdi?" -&gt; -G</text>
+</svg>

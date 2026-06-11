@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" width="720" height="380">
+  <title>Request-Response oqimi: brauzer formani yuboradi (Request), route uni controllerga olib boradi, controller javob (Response) qaytaradi va brauzer uni ko'rsatadi</title>
+
+  <rect x="0" y="0" width="720" height="380" fill="#f8fafc"/>
+
+  <text x="360" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">So'rov (Request) va Javob (Response) oqimi</text>
+
+  <!-- Brauzer -->
+  <rect x="40" y="150" width="140" height="90" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="110" y="185" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">Brauzer</text>
+  <text x="110" y="208" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">forma to'ldiradi,</text>
+  <text x="110" y="225" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">"Yuborish" bosadi</text>
+
+  <!-- Route -->
+  <rect x="290" y="80" width="140" height="80" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="360" y="115" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">Route</text>
+  <text x="360" y="137" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">routes/web.php</text>
+
+  <!-- Controller -->
+  <rect x="540" y="150" width="140" height="90" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="610" y="185" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">Controller</text>
+  <text x="610" y="208" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Request o'qiydi,</text>
+  <text x="610" y="225" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Response yasaydi</text>
+
+  <!-- arrow defs -->
+  <defs>
+    <marker id="ya" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 z" fill="#2563eb"/>
+    </marker>
+    <marker id="yashil" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <!-- Request: brauzer -> route -> controller (yuqori yo'l) -->
+  <path d="M150 152 Q230 95 290 110" fill="none" stroke="#2563eb" stroke-width="2.5" marker-end="url(#ya)"/>
+  <path d="M430 115 Q490 130 540 165" fill="none" stroke="#2563eb" stroke-width="2.5" marker-end="url(#ya)"/>
+  <text x="222" y="100" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">Request (so'rov)</text>
+  <text x="222" y="118" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">POST /aloqa + @csrf</text>
+
+  <!-- Response: controller -> brauzer (pastki yo'l) -->
+  <path d="M540 230 Q330 320 180 235" fill="none" stroke="#16a34a" stroke-width="2.5" marker-end="url(#yashil)"/>
+  <text x="360" y="305" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">Response (javob): view / redirect / JSON</text>
+
+  <text x="360" y="358" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Har sahifa = bitta Request kiradi, bitta Response qaytadi</text>
+</svg>

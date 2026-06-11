@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" width="720" height="420">
+  <title>git commit --amend oxirgi commitni yangi hashga ega yangi commit bilan almashtiradi: eski commit branchdan uziladi va osilib qoladi, main korsatkichi yangi commitga otadi</title>
+
+  <rect x="0" y="0" width="720" height="420" fill="#f8fafc"/>
+
+  <text x="360" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">git commit --amend: oxirgi commit ALMASHTIRILADI</text>
+
+  <!-- yuqori panel: OLDIN -->
+  <text x="60" y="86" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#475569">OLDIN</text>
+
+  <!-- C1 -->
+  <circle cx="150" cy="120" r="26" fill="#2563eb"/>
+  <text x="150" y="125" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">C1</text>
+  <!-- strelka -->
+  <line x1="176" y1="120" x2="304" y2="120" stroke="#94a3b8" stroke-width="3"/>
+  <polygon points="304,120 292,114 292,126" fill="#94a3b8"/>
+  <!-- C2 eski -->
+  <circle cx="330" cy="120" r="26" fill="#2563eb"/>
+  <text x="330" y="116" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">C2</text>
+  <text x="330" y="132" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dbeafe">dac0889</text>
+  <text x="330" y="166" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">"feacher" (xato)</text>
+
+  <!-- main korsatkichi -->
+  <rect x="296" y="58" width="68" height="26" rx="6" fill="#16a34a"/>
+  <text x="330" y="76" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">main</text>
+  <line x1="330" y1="84" x2="330" y2="92" stroke="#16a34a" stroke-width="2.5"/>
+  <polygon points="330,94 325,86 335,86" fill="#16a34a"/>
+
+  <!-- ajratuvchi chiziq -->
+  <line x1="40" y1="210" x2="680" y2="210" stroke="#e2e8f0" stroke-width="2"/>
+
+  <!-- pastki panel: KEYIN -->
+  <text x="60" y="248" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#475569">KEYIN (amend)</text>
+
+  <!-- C1 -->
+  <circle cx="150" cy="300" r="26" fill="#2563eb"/>
+  <text x="150" y="305" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">C1</text>
+  <!-- strelka C1 -> C2' -->
+  <line x1="176" y1="300" x2="304" y2="300" stroke="#94a3b8" stroke-width="3"/>
+  <polygon points="304,300 292,294 292,306" fill="#94a3b8"/>
+  <!-- C2 yangi -->
+  <circle cx="330" cy="300" r="26" fill="#16a34a"/>
+  <text x="330" y="296" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">C2'</text>
+  <text x="330" y="312" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dcfce7">147c102</text>
+  <text x="330" y="346" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">"feature" (toza)</text>
+
+  <!-- main yangi commitga otdi -->
+  <rect x="296" y="238" width="68" height="26" rx="6" fill="#16a34a"/>
+  <text x="330" y="256" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">main</text>
+  <line x1="330" y1="264" x2="330" y2="272" stroke="#16a34a" stroke-width="2.5"/>
+  <polygon points="330,274 325,266 335,266" fill="#16a34a"/>
+
+  <!-- eski C2 osilib qoldi -->
+  <circle cx="500" cy="300" r="26" fill="#e2e8f0" stroke="#dc2626" stroke-width="2" stroke-dasharray="5 3"/>
+  <text x="500" y="296" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">C2</text>
+  <text x="500" y="312" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">dac0889</text>
+  <text x="500" y="346" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">osilib qoldi</text>
+  <text x="500" y="364" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">(reflogda saqlanadi)</text>
+
+  <!-- izoh -->
+  <text x="360" y="404" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Hash o'zgardi (dac0889 -&gt; 147c102): amend eski commitni almashtiradi, tarixni qayta yozadi</text>
+</svg>

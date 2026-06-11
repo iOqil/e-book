@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" width="720" height="420">
+  <title>Seeder oqimi: db:seed buyrugi DatabaseSeeder ni ishga tushiradi, u boshqa seederlarni chaqiradi, ular factory orqali jadvallarni namuna ma'lumot bilan to'ldiradi</title>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="720" height="420" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Seeder oqimi: bitta buyruq bilan bazani to'ldirish</text>
+
+  <!-- 1: buyruq -->
+  <rect x="40" y="64" width="200" height="56" rx="10" fill="#1e293b"/>
+  <text x="140" y="88" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#f8fafc">terminalda:</text>
+  <text x="140" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">php artisan db:seed</text>
+
+  <!-- strelka pastga -->
+  <line x1="140" y1="120" x2="140" y2="156" stroke="#1e293b" stroke-width="2"/>
+  <polygon points="135,156 140,166 145,156" fill="#1e293b"/>
+
+  <!-- 2: DatabaseSeeder -->
+  <rect x="30" y="168" width="220" height="80" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="140" y="194" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">DatabaseSeeder</text>
+  <text x="140" y="216" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">run() metodi — bosh seeder</text>
+  <text x="140" y="236" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">$this-&gt;call([...])</text>
+
+  <!-- strelkalar o'ngga uchta seederga -->
+  <line x1="250" y1="208" x2="320" y2="135" stroke="#2563eb" stroke-width="2"/>
+  <polygon points="316,132 326,128 320,140" fill="#2563eb"/>
+  <line x1="250" y1="208" x2="320" y2="208" stroke="#2563eb" stroke-width="2"/>
+  <polygon points="320,203 330,208 320,213" fill="#2563eb"/>
+  <line x1="250" y1="208" x2="320" y2="281" stroke="#2563eb" stroke-width="2"/>
+  <polygon points="316,284 326,288 320,276" fill="#2563eb"/>
+
+  <!-- 3: alohida seederlar -->
+  <rect x="332" y="108" width="180" height="50" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="422" y="130" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309">UserSeeder</text>
+  <text x="422" y="149" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">User::factory(10)</text>
+
+  <rect x="332" y="183" width="180" height="50" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="422" y="205" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309">PostSeeder</text>
+  <text x="422" y="224" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Post::factory(30)</text>
+
+  <rect x="332" y="258" width="180" height="50" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="422" y="280" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309">TagSeeder</text>
+  <text x="422" y="299" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Tag::factory(8)</text>
+
+  <!-- strelkalar bazaga -->
+  <line x1="512" y1="133" x2="572" y2="180" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="572,175 578,184 566,184" fill="#16a34a"/>
+  <line x1="512" y1="208" x2="572" y2="208" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="572,203 582,208 572,213" fill="#16a34a"/>
+  <line x1="512" y1="283" x2="572" y2="236" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="572,241 578,232 566,232" fill="#16a34a"/>
+
+  <!-- 4: baza -->
+  <rect x="580" y="168" width="110" height="90" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="635" y="196" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Baza</text>
+  <text x="635" y="220" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">to'ldirildi</text>
+  <text x="635" y="242" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">48 qator</text>
+
+  <!-- pastki izoh -->
+  <text x="360" y="350" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">DatabaseSeeder — bosh dirijyor: u qaysi seederlar, qanday tartibda ishlashini belgilaydi.</text>
+  <text x="360" y="376" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Tartib muhim: avval User, keyin uning Post'lari (FK bog'lanishi uchun).</text>
+  <text x="360" y="402" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">migrate:fresh --seed = bazani tozalab, migratsiya qilib, darrov seed qiladi.</text>
+</svg>

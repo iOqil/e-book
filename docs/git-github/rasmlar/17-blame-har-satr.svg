@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>git blame: faylning har bir satri qaysi commit, qaysi muallif va qaysi sanada yozilganini yonida ko'rsatadi</title>
+
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">git blame — har satrni kim, qachon yozdi?</text>
+  <text x="360" y="58" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Chap ustun — javobgar commit; o'ng ustun — faylning o'sha satri</text>
+
+  <!-- Ustun sarlavhalari -->
+  <text x="60" y="92" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#2563eb">hash</text>
+  <text x="150" y="92" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#2563eb">muallif</text>
+  <text x="290" y="92" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#2563eb">sana</text>
+  <text x="400" y="92" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#2563eb">faylning satri (hisob.js)</text>
+
+  <line x1="40" y1="100" x2="680" y2="100" stroke="#94a3b8" stroke-width="1.5"/>
+
+  <!-- 1-satr: aybdor satr (qizil fon) -->
+  <rect x="40" y="106" width="640" height="38" fill="#fee2e2"/>
+  <text x="60" y="130" font-family="Consolas, monospace" font-size="13" fill="#dc2626" font-weight="bold">fa66221</text>
+  <text x="150" y="130" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Aziz Karimov</text>
+  <text x="290" y="130" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">2026-06-11</text>
+  <text x="400" y="130" font-family="Consolas, monospace" font-size="13" fill="#1e293b">function summa(a,b){ return a-b; }</text>
+
+  <!-- 2-satr -->
+  <text x="60" y="168" font-family="Consolas, monospace" font-size="13" fill="#2563eb">353bb28</text>
+  <text x="150" y="168" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Aziz Karimov</text>
+  <text x="290" y="168" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">2026-06-11</text>
+  <text x="400" y="168" font-family="Consolas, monospace" font-size="13" fill="#475569">// kichik ozgarish 1</text>
+
+  <!-- 3-satr -->
+  <text x="60" y="200" font-family="Consolas, monospace" font-size="13" fill="#2563eb">8105101</text>
+  <text x="150" y="200" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Malika Tosheva</text>
+  <text x="290" y="200" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">2026-06-10</text>
+  <text x="400" y="200" font-family="Consolas, monospace" font-size="13" fill="#475569">// kichik ozgarish 3</text>
+
+  <!-- 4-satr -->
+  <text x="60" y="232" font-family="Consolas, monospace" font-size="13" fill="#2563eb">f7c926f</text>
+  <text x="150" y="232" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Aziz Karimov</text>
+  <text x="290" y="232" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">2026-06-11</text>
+  <text x="400" y="232" font-family="Consolas, monospace" font-size="13" fill="#475569">// kichik ozgarish 6</text>
+
+  <line x1="40" y1="248" x2="680" y2="248" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- ko'rsatkich strelka aybdor satrga -->
+  <text x="400" y="278" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626" font-weight="bold">^ Bu satr buzilgan — kim yozgan? fa66221, Aziz, 11-iyun</text>
+
+  <!-- Pastki tushuntirish qutisi -->
+  <rect x="60" y="298" width="600" height="112" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="360" y="324" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">blame = "ayblash" emas, "izlash"</text>
+  <text x="80" y="350" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">Har satr yonida: qaysi commit uni oxirgi marta o'zgartirgan.</text>
+  <text x="80" y="374" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">Hash'ni olib -&gt; git show &lt;hash&gt; bilan o'sha o'zgarishning sababini o'qiysiz.</text>
+  <text x="80" y="398" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">git blame -L 1,1 hisob.js -&gt; faqat 1-satrni ko'rsatadi.</text>
+</svg>

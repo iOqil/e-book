@@ -1,7 +1,5 @@
 # Vue 3 + Nuxt — Zero to Hero (o'zbek tilida)
 
-> 📄 **[Butun kitobni PDF formatda yuklab olish →](/pdf/vue.pdf)**
-
 Bu qo'llanma **Vue 3 (Composition API)** va **Nuxt 3/4** ni noldan professional darajagacha o'rgatish uchun yozilgan. Har bir modul nazariya + `why` (nega shunday) + **kamida 20 ta masala** dan iborat.
 
 > Sen backend (Laravel/DDD) tajribasi bor odamsan, shuning uchun ba'zi joylarda **Laravel/PHP analogiyalari** beriladi — yangi tushunchani eski bilim ustiga "ulash" eng tez o'rganish usuli.

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 470" width="720" height="470">
+  <title>Validatsiya oqimi: forma yuboriladi, validate() qoidalarni tekshiradi; o'tsa controller davom etadi, o'tmasa avtomatik orqaga ($errors va old() bilan) qaytariladi</title>
+
+  <rect x="0" y="0" width="720" height="470" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">validate() oqimi: ikkita yo'l</text>
+
+  <!-- 1. Forma -->
+  <rect x="40" y="60" width="200" height="58" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="140" y="84" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">1. Foydalanuvchi</text>
+  <text x="140" y="104" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">formani yuboradi (POST)</text>
+
+  <!-- arrow down -->
+  <line x1="140" y1="118" x2="140" y2="146" stroke="#475569" stroke-width="2"/>
+  <polygon points="140,152 135,142 145,142" fill="#475569"/>
+
+  <!-- 2. validate -->
+  <rect x="40" y="152" width="200" height="76" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="140" y="178" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">2. $request->validate()</text>
+  <text x="140" y="200" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">qoidalarni tekshiradi</text>
+  <text x="140" y="218" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">required, email, max...</text>
+
+  <!-- decision diamond -->
+  <polygon points="140,250 210,300 140,350 70,300" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="140" y="296" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309">Qoida</text>
+  <text x="140" y="314" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309">o'tdimi?</text>
+
+  <line x1="140" y1="228" x2="140" y2="250" stroke="#475569" stroke-width="2"/>
+
+  <!-- HA branch -> right -->
+  <line x1="210" y1="300" x2="300" y2="300" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="306,300 296,295 296,305" fill="#16a34a"/>
+  <text x="255" y="290" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">HA (o'tdi)</text>
+
+  <rect x="310" y="262" width="370" height="76" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="495" y="288" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">3a. Controller davom etadi</text>
+  <text x="495" y="310" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">$data = validated() -> bazaga saqlash</text>
+  <text x="495" y="328" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">-> redirect (muvaffaqiyat)</text>
+
+  <!-- YO'Q branch -> down -->
+  <line x1="140" y1="350" x2="140" y2="380" stroke="#dc2626" stroke-width="2"/>
+  <polygon points="140,386 135,376 145,376" fill="#dc2626"/>
+  <text x="220" y="368" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626">YO'Q (xato bor)</text>
+
+  <rect x="40" y="386" width="370" height="64" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="225" y="410" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">3b. Avtomatik orqaga qaytadi (back)</text>
+  <text x="225" y="432" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">$errors to'ladi + old() inputlarni saqlaydi</text>
+
+  <!-- note -->
+  <text x="495" y="404" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Muhim: xato bo'lsa Laravel kodning</text>
+  <text x="495" y="424" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">qolgan qismini umuman ishlatmaydi</text>
+</svg>

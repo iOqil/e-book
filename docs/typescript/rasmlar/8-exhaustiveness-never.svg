@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="720" height="440">
+  <title>Exhaustiveness tekshiruvi never bilan: hamma case qoplanganda default shoxida tip never bo'ladi va toza kompilyatsiya bo'ladi, biror variant qoldirilsa qoldiq tip neverga sig'maydi va kompilyatsiya xatosi chiqadi</title>
+  <rect x="0" y="0" width="720" height="440" fill="#f8fafc"/>
+
+  <text x="360" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Exhaustiveness: never bilan "hammasi qoplanganmi?"</text>
+
+  <!-- CHAP: hammasi qoplangan -->
+  <text x="185" y="74" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">Hamma case qoplangan</text>
+  <rect x="40" y="86" width="290" height="150" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="60" y="112" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">case "doira": ...</text>
+  <text x="60" y="136" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">case "tortburchak": ...</text>
+  <text x="60" y="160" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">case "uchburchak": ...</text>
+  <text x="60" y="190" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">default:</text>
+  <text x="74" y="214" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">const q: never = shakl;</text>
+
+  <line x1="185" y1="236" x2="185" y2="262" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="185,270 179,260 191,260" fill="#16a34a"/>
+  <rect x="55" y="272" width="260" height="60" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="185" y="297" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">default'ga hech narsa qolmadi</text>
+  <text x="185" y="320" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">shakl tipi = never, toza o'tadi</text>
+
+  <!-- ajratuvchi chiziq -->
+  <line x1="360" y1="86" x2="360" y2="332" stroke="#e2e8f0" stroke-width="2"/>
+
+  <!-- O'NG: variant unutilgan -->
+  <text x="535" y="74" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#dc2626">Yangi variant qo'shildi, case yo'q</text>
+  <rect x="390" y="86" width="290" height="150" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="410" y="112" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">case "doira": ...</text>
+  <text x="410" y="136" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">case "tortburchak": ...</text>
+  <text x="410" y="160" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">case "uchburchak": ...</text>
+  <text x="410" y="186" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626">("trapetsiya" uchun case yo'q!)</text>
+  <text x="410" y="210" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">default:</text>
+  <text x="424" y="230" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">const q: never = shakl;</text>
+
+  <line x1="535" y1="236" x2="535" y2="262" stroke="#dc2626" stroke-width="2"/>
+  <polygon points="535,270 529,260 541,260" fill="#dc2626"/>
+  <rect x="405" y="272" width="260" height="60" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="535" y="296" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">default'ga Trapetsiya yetib keldi</text>
+  <text x="535" y="319" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">Xato: Trapetsiya -> never bo'lmaydi</text>
+
+  <!-- pastki izoh -->
+  <text x="360" y="372" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">never — "hech qachon bo'lmaydigan" tip. default'ga qoldiq qolsa, u neverga sig'maydi</text>
+  <text x="360" y="400" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Natija: yangi variant qo'shilganda kompilyator unutilgan case'ni darrov ko'rsatadi</text>
+  <text x="360" y="426" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">Bu — yirik loyihalarda holatni xavfsiz kengaytirishning kaliti</text>
+</svg>

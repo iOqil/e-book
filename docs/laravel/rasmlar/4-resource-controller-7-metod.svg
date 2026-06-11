@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" width="720" height="520">
+  <title>Resource controllerning 7 ta CRUD metodi: har bir metod o'ziga xos HTTP fe'li va URL manziliga bog'langan</title>
+  <rect x="0" y="0" width="720" height="520" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Route::resource — bitta qator, 7 ta marshrut</text>
+  <text x="360" y="58" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Route::resource('postlar', PostController::class);</text>
+
+  <!-- ustun sarlavhalari -->
+  <text x="95" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#475569">HTTP fe'l</text>
+  <text x="300" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#475569">URL</text>
+  <text x="520" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#475569">Metod</text>
+  <text x="650" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#475569">Vazifa</text>
+
+  <!-- 1 index -->
+  <rect x="40" y="104" width="110" height="40" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="95" y="129" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">GET</text>
+  <text x="300" y="129" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">/postlar</text>
+  <text x="520" y="129" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">index()</text>
+  <text x="650" y="129" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">ro'yxat</text>
+
+  <!-- 2 create -->
+  <rect x="40" y="152" width="110" height="40" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="95" y="177" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">GET</text>
+  <text x="300" y="177" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">/postlar/create</text>
+  <text x="520" y="177" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">create()</text>
+  <text x="650" y="177" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">forma</text>
+
+  <!-- 3 store -->
+  <rect x="40" y="200" width="110" height="40" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="95" y="225" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">POST</text>
+  <text x="300" y="225" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">/postlar</text>
+  <text x="520" y="225" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">store()</text>
+  <text x="650" y="225" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">saqlash</text>
+
+  <!-- 4 show -->
+  <rect x="40" y="248" width="110" height="40" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="95" y="273" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">GET</text>
+  <text x="300" y="273" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">/postlar/{post}</text>
+  <text x="520" y="273" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">show()</text>
+  <text x="650" y="273" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">bittasi</text>
+
+  <!-- 5 edit -->
+  <rect x="40" y="296" width="110" height="40" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="95" y="321" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">GET</text>
+  <text x="300" y="321" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">/postlar/{post}/edit</text>
+  <text x="520" y="321" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">edit()</text>
+  <text x="650" y="321" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tahrir forma</text>
+
+  <!-- 6 update -->
+  <rect x="40" y="344" width="110" height="40" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="95" y="369" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#b45309">PUT/PATCH</text>
+  <text x="300" y="369" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">/postlar/{post}</text>
+  <text x="520" y="369" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">update()</text>
+  <text x="650" y="369" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">yangilash</text>
+
+  <!-- 7 destroy -->
+  <rect x="40" y="392" width="110" height="40" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="95" y="417" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">DELETE</text>
+  <text x="300" y="417" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">/postlar/{post}</text>
+  <text x="520" y="417" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">destroy()</text>
+  <text x="650" y="417" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">o'chirish</text>
+
+  <!-- pastki izoh -->
+  <text x="360" y="466" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">URL bir xil bo'lsa ham, HTTP fe'l boshqa metodga olib boradi (mas. /postlar/{post}: GET, PUT, DELETE).</text>
+  <text x="360" y="494" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">--api bilan create va edit (forma sahifalari) tushib qoladi — API'da forma kerak emas, 5 ta metod qoladi.</text>
+</svg>

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460">
+  <title>abstract class va implements: abstract metod shartnoma beradi, har avlod uni o'zicha amalga oshiradi; interface esa klass bajarishi shart bo'lgan shartnomani belgilaydi</title>
+
+  <rect x="0" y="0" width="720" height="460" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Shartnoma -&gt; amalga oshirish</text>
+
+  <!-- abstract class quti -->
+  <rect x="250" y="56" width="220" height="118" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="360" y="80" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">abstract class Shakl</text>
+  <line x1="250" y1="90" x2="470" y2="90" stroke="#2563eb" stroke-width="1.2"/>
+  <text x="266" y="112" font-family="Consolas, monospace" font-size="13" fill="#dc2626">abstract yuza(): number</text>
+  <text x="266" y="132" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(tana yo'q — shartnoma)</text>
+  <text x="266" y="156" font-family="Consolas, monospace" font-size="13" fill="#16a34a">tavsif() { ... }</text>
+  <text x="266" y="170" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(tayyor metod — meros)</text>
+
+  <!-- "obyekt yaratib bo'lmaydi" yorlig'i -->
+  <rect x="490" y="92" width="200" height="46" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="590" y="112" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309">new Shakl() — MUMKIN EMAS</text>
+  <text x="590" y="130" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309">faqat avlodlari yaratiladi</text>
+
+  <!-- O'qlar pastga -->
+  <line x1="300" y1="174" x2="200" y2="230" stroke="#475569" stroke-width="2"/>
+  <polygon points="196,222 192,238 208,232" fill="#475569"/>
+  <line x1="420" y1="174" x2="520" y2="230" stroke="#475569" stroke-width="2"/>
+  <polygon points="512,232 528,238 524,222" fill="#475569"/>
+
+  <!-- Doira avlodi -->
+  <rect x="90" y="238" width="220" height="96" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="200" y="262" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">class Doira extends Shakl</text>
+  <line x1="90" y1="272" x2="310" y2="272" stroke="#16a34a" stroke-width="1.2"/>
+  <text x="106" y="294" font-family="Consolas, monospace" font-size="13" fill="#1e293b">yuza() {</text>
+  <text x="106" y="312" font-family="Consolas, monospace" font-size="13" fill="#1e293b">  return PI*r*r;</text>
+  <text x="106" y="328" font-family="Consolas, monospace" font-size="13" fill="#1e293b">}</text>
+
+  <!-- Kvadrat avlodi -->
+  <rect x="410" y="238" width="220" height="96" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="520" y="262" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">class Kvadrat extends Shakl</text>
+  <line x1="410" y1="272" x2="630" y2="272" stroke="#16a34a" stroke-width="1.2"/>
+  <text x="426" y="294" font-family="Consolas, monospace" font-size="13" fill="#1e293b">yuza() {</text>
+  <text x="426" y="312" font-family="Consolas, monospace" font-size="13" fill="#1e293b">  return a*a;</text>
+  <text x="426" y="328" font-family="Consolas, monospace" font-size="13" fill="#1e293b">}</text>
+
+  <!-- implements bo'limi -->
+  <line x1="40" y1="360" x2="680" y2="360" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="360" y="386" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b"><tspan font-weight="bold" fill="#7c3aed">implements</tspan>: interface shartnoma beradi, klass uni bajarishga MAJBUR</text>
+  <text x="360" y="412" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#475569">interface Chop { chopEt(): void }  ->  class Hujjat implements Chop { chopEt() {...} }</text>
+  <text x="360" y="438" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">Metod yetishmasa: error TS2420 — interface "qarz"ini to'lamadingiz</text>
+</svg>

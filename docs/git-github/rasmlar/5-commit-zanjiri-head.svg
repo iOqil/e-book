@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" width="720" height="380">
+  <title>Commit zanjiri: har commit oldingisiga parent orqali bog'lanadi, branch ko'rsatkichi oxirgi commitga, HEAD esa branchga ishora qiladi</title>
+
+  <rect x="0" y="0" width="720" height="380" fill="#f8fafc"/>
+
+  <text x="360" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Commit zanjiri va HEAD ko'rsatkichi</text>
+
+  <!-- bog'lovchi strelka markeri -->
+  <defs>
+    <marker id="arr" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- parent strelkalar (yangidan eskiga ishora qiladi) -->
+  <line x1="200" y1="170" x2="150" y2="170" stroke="#475569" stroke-width="2.5" marker-end="url(#arr)"/>
+  <line x1="380" y1="170" x2="330" y2="170" stroke="#475569" stroke-width="2.5" marker-end="url(#arr)"/>
+  <line x1="560" y1="170" x2="510" y2="170" stroke="#475569" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <!-- commit C1 -->
+  <rect x="40" y="140" width="110" height="60" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="95" y="166" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="15" font-weight="bold" fill="#2563eb">cc11b03</text>
+  <text x="95" y="187" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">birinchi</text>
+
+  <!-- commit C2 -->
+  <rect x="220" y="140" width="110" height="60" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="275" y="166" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="15" font-weight="bold" fill="#2563eb">5256709</text>
+  <text x="275" y="187" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">app.js</text>
+
+  <!-- commit C3 -->
+  <rect x="400" y="140" width="110" height="60" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="455" y="166" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="15" font-weight="bold" fill="#2563eb">09ccd34</text>
+  <text x="455" y="187" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">yangilash</text>
+
+  <!-- commit C4 (oxirgi) -->
+  <rect x="580" y="140" width="110" height="60" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="635" y="166" text-anchor="middle" font-family="Consolas, Courier New, monospace" font-size="15" font-weight="bold" fill="#16a34a">19e61d4</text>
+  <text x="635" y="187" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">docs.txt</text>
+
+  <!-- parent izoh -->
+  <text x="360" y="118" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">strelka = parent: har commit o'zidan oldingisini "biladi"</text>
+
+  <!-- branch ko'rsatkichi -->
+  <rect x="575" y="240" width="120" height="36" rx="6" fill="#f59e0b"/>
+  <text x="635" y="263" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">main (branch)</text>
+  <line x1="635" y1="240" x2="635" y2="202" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <!-- HEAD -->
+  <rect x="575" y="300" width="120" height="36" rx="6" fill="#7c3aed"/>
+  <text x="635" y="323" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">HEAD</text>
+  <line x1="635" y1="300" x2="635" y2="278" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <!-- HEAD izoh -->
+  <text x="300" y="262" text-anchor="end" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">HEAD = "siz hozir turgan joy"</text>
+  <text x="300" y="284" text-anchor="end" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">u branch'ga, branch esa</text>
+  <text x="300" y="306" text-anchor="end" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">oxirgi commit'ga ishora qiladi</text>
+</svg>

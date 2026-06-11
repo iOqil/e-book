@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>Callback funksiyaning imzosi (signature) kutilgan funksiya tipiga mos kelishi: parametr tiplari va return tipi tekshiriladi</title>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Callback imzosi funksiya tipiga mos kelishi kerak</text>
+
+  <!-- kutilgan tip (yuqorida) -->
+  <rect x="160" y="62" width="400" height="64" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="360" y="88" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">Kutilgan funksiya tipi (shartnoma)</text>
+  <text x="360" y="113" text-anchor="middle" font-family="Consolas, Segoe UI, monospace" font-size="17" fill="#1e293b">(x: number) =&gt; boolean</text>
+
+  <!-- chap: mos -->
+  <line x1="280" y1="126" x2="220" y2="180" stroke="#16a34a" stroke-width="2"/>
+  <rect x="40" y="184" width="300" height="120" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="190" y="210" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Mos keladi  ✓</text>
+  <text x="190" y="240" text-anchor="middle" font-family="Consolas, Segoe UI, monospace" font-size="15" fill="#1e293b">(x) =&gt; x &gt; 0</text>
+  <text x="190" y="268" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">x — number deb taxmin qilinadi</text>
+  <text x="190" y="288" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">natija — boolean, kutilgan bilan bir xil</text>
+
+  <!-- ong: mos emas -->
+  <line x1="440" y1="126" x2="500" y2="180" stroke="#dc2626" stroke-width="2"/>
+  <rect x="380" y="184" width="300" height="120" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="530" y="210" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">Mos kelmaydi  ✗</text>
+  <text x="530" y="240" text-anchor="middle" font-family="Consolas, Segoe UI, monospace" font-size="15" fill="#1e293b">(x) =&gt; x + 1</text>
+  <text x="530" y="268" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">natija — number, lekin boolean</text>
+  <text x="530" y="288" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">kutilgan edi — compiler xato beradi</text>
+
+  <!-- pastki izoh -->
+  <rect x="60" y="330" width="600" height="80" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="360" y="358" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14.5" font-weight="bold" fill="#b45309">TS ikki narsani tekshiradi:</text>
+  <text x="360" y="382" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">1) parametr tiplari mosmi   2) return tipi mosmi</text>
+  <text x="360" y="402" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">Shu sabab callback parametriga tip yozish shart emas — TS uni ozi biladi</text>
+</svg>

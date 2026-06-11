@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>Route group: bir nechta route uchun umumiy prefix, middleware va name takrorini bitta guruhga chiqarish; har bir ichki route umumiy sozlamalarni meros qilib oladi</title>
+
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Route group: takrorni bitta joyga yig'ish</text>
+
+  <!-- Guruh konteyneri -->
+  <rect x="40" y="56" width="640" height="300" rx="12" fill="#eef2ff" stroke="#7c3aed" stroke-width="2.5" stroke-dasharray="7 5"/>
+
+  <!-- Umumiy sozlamalar paneli -->
+  <rect x="60" y="76" width="600" height="86" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="80" y="102" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Route::prefix('admin')-&gt;middleware('auth')-&gt;name('admin.')-&gt;group(...)</text>
+  <text x="80" y="128" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">prefix: /admin/...</text>
+  <text x="290" y="128" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">middleware: auth (kirgan bo'lsin)</text>
+  <text x="80" y="150" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#7c3aed">name: admin.</text>
+  <text x="290" y="150" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">— bularning hammasi ichki route'larga meros</text>
+
+  <!-- strelka pastga -->
+  <line x1="360" y1="162" x2="360" y2="188" stroke="#7c3aed" stroke-width="2"/>
+  <polygon points="360,188 354,178 366,178" fill="#7c3aed"/>
+
+  <!-- Ichki route 1 -->
+  <rect x="70" y="196" width="580" height="44" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="86" y="223" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">get('/users')-&gt;name('users')   →   URL: /admin/users   ·   nomi: admin.users</text>
+
+  <!-- Ichki route 2 -->
+  <rect x="70" y="248" width="580" height="44" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="86" y="275" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">get('/posts')-&gt;name('posts')   →   URL: /admin/posts   ·   nomi: admin.posts</text>
+
+  <!-- Ichki route 3 -->
+  <rect x="70" y="300" width="580" height="44" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="86" y="327" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">get('/sozlama')-&gt;name('sozlama')   →   URL: /admin/sozlama   ·   nomi: admin.sozlama</text>
+
+  <text x="360" y="384" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#16a34a">✅ prefix, middleware va name'ni har route'da takrorlamaysiz — bir marta yozasiz</text>
+  <text x="360" y="410" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Sozlama o'zgarsa (mas. prefix 'panel' bo'lsa) — faqat bitta qatorni tahrirlash kifoya</text>
+</svg>

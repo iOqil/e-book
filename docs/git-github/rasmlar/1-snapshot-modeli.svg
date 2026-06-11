@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="720" height="440">
+  <title>Git snapshot modeli: har commit loyihaning to'liq holatini surat qiladi, o'zgarmagan fayllar uchun yangi nusxa olmasdan oldingi versiyaga ko'rsatkich saqlaydi</title>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="720" height="440" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Snapshot modeli: har commit — to'liq surat</text>
+  <text x="360" y="58" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">O'zgarmagan fayl uchun Git nusxa olmaydi — eski versiyaga ko'rsatkich qo'yadi (strelka)</text>
+
+  <!-- vaqt o'qi -->
+  <text x="130" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">vaqt →</text>
+
+  <!-- Commit 1 -->
+  <text x="130" y="120" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">Commit 1</text>
+  <rect x="60" y="132" width="140" height="220" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="78" y="152" width="104" height="56" rx="5" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="130" y="178" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">index.html</text>
+  <text x="130" y="196" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">A</text>
+  <rect x="78" y="218" width="104" height="56" rx="5" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="130" y="244" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">style.css</text>
+  <text x="130" y="262" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">A</text>
+  <rect x="78" y="284" width="104" height="56" rx="5" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="130" y="310" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">app.js</text>
+  <text x="130" y="328" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">A</text>
+
+  <!-- Commit 2 -->
+  <text x="360" y="120" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">Commit 2</text>
+  <rect x="290" y="132" width="140" height="220" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <!-- index.html ozgardi -->
+  <rect x="308" y="152" width="104" height="56" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="360" y="178" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">index.html</text>
+  <text x="360" y="196" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">B (yangi)</text>
+  <!-- style.css ozgarmadi -> korsatkich -->
+  <rect x="308" y="218" width="104" height="56" rx="5" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5 3"/>
+  <text x="360" y="244" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">style.css</text>
+  <text x="360" y="262" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">→ A</text>
+  <!-- app.js ozgarmadi -->
+  <rect x="308" y="284" width="104" height="56" rx="5" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5 3"/>
+  <text x="360" y="310" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">app.js</text>
+  <text x="360" y="328" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">→ A</text>
+
+  <!-- Commit 3 -->
+  <text x="590" y="120" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">Commit 3</text>
+  <rect x="520" y="132" width="140" height="220" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="538" y="152" width="104" height="56" rx="5" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5 3"/>
+  <text x="590" y="178" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">index.html</text>
+  <text x="590" y="196" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">→ B</text>
+  <rect x="538" y="218" width="104" height="56" rx="5" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5 3"/>
+  <text x="590" y="244" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">style.css</text>
+  <text x="590" y="262" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">→ A</text>
+  <rect x="538" y="284" width="104" height="56" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="590" y="310" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">app.js</text>
+  <text x="590" y="328" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">C (yangi)</text>
+
+  <!-- strelkalar (commitlar orasidagi korsatkichlar) -->
+  <path d="M 308 246 L 200 180" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <path d="M 308 312 L 200 180" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <path d="M 538 180 L 430 180" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <path d="M 538 246 L 430 246" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 3"/>
+
+  <!-- legenda -->
+  <rect x="60" y="376" width="22" height="18" rx="3" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="92" y="390" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">o'zgargan fayl — yangi versiya saqlanadi</text>
+  <rect x="380" y="376" width="22" height="18" rx="3" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5 3"/>
+  <text x="412" y="390" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">o'zgarmagan — eskiga ko'rsatkich (→)</text>
+
+  <text x="360" y="422" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Shu tufayli Git tez va joy tejaydi, lekin har commit butun loyiha holatini ifodalaydi</text>
+</svg>

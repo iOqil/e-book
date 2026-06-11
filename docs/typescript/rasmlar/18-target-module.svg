@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" width="720" height="520">
+  <title>target va module sozlamalari bitta TypeScript koddan qanday JavaScript chiqishini belgilaydi: target eski (ES5) bo'lsa zamonaviy sintaksis "pasaytiriladi", yangi (ES2020) bo'lsa saqlanadi; module commonjs require, esnext esa import beradi</title>
+  <rect x="0" y="0" width="720" height="520" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">target va module — bir koddan turli JavaScript</text>
+
+  <!-- manba TS -->
+  <rect x="240" y="52" width="240" height="86" rx="8" fill="#e2e8f0" stroke="#475569" stroke-width="2"/>
+  <text x="360" y="74" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Bitta manba: kod.ts</text>
+  <text x="360" y="98" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">const f = async () =&gt; 42;</text>
+  <text x="360" y="118" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">import { x } from "./m";</text>
+
+  <!-- ikki strelka pastga -->
+  <line x1="200" y1="138" x2="200" y2="170" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="360" y1="138" x2="200" y2="170" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="200,176 195,166 205,166" fill="#94a3b8"/>
+  <line x1="520" y1="138" x2="520" y2="170" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="360" y1="138" x2="520" y2="170" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="520,176 515,166 525,166" fill="#94a3b8"/>
+
+  <!-- chap: eski target -->
+  <text x="200" y="196" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">target: "es5" (eski)</text>
+  <rect x="36" y="208" width="328" height="150" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="1.8"/>
+  <text x="52" y="232" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#991b1b">var __awaiter = function () { ... }</text>
+  <text x="52" y="256" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#991b1b">var f = function () {</text>
+  <text x="52" y="278" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#991b1b">  return __awaiter(...);</text>
+  <text x="52" y="300" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#991b1b">};</text>
+  <text x="52" y="328" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#7f1d1d">Zamonaviy sintaksis "pasaytiriladi":</text>
+  <text x="52" y="348" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#7f1d1d">ko'p yordamchi kod, hajm kattalashadi</text>
+
+  <!-- o'ng: yangi target -->
+  <text x="520" y="196" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">target: "es2020" (yangi)</text>
+  <rect x="356" y="208" width="328" height="150" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.8"/>
+  <text x="372" y="232" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#15803d">const f = async () =&gt; 42;</text>
+  <text x="372" y="262" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#15803d">// async/arrow shundayligicha</text>
+  <text x="372" y="284" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#15803d">// qoladi</text>
+  <text x="372" y="328" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#166534">Zamonaviy muhit tushunadi:</text>
+  <text x="372" y="348" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#166534">toza, qisqa, tezroq kod</text>
+
+  <!-- module qatori -->
+  <text x="360" y="394" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#7c3aed">module — import/export qanday yoziladi</text>
+
+  <rect x="36" y="408" width="328" height="86" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.8"/>
+  <text x="200" y="430" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#475569">module: "commonjs"</text>
+  <text x="52" y="456" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">const m = require("./m");</text>
+  <text x="52" y="480" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">exports.x = ...;  // eski Node uslubi</text>
+
+  <rect x="356" y="408" width="328" height="86" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.8"/>
+  <text x="520" y="430" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#475569">module: "esnext"</text>
+  <text x="372" y="456" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">import { x } from "./m";</text>
+  <text x="372" y="480" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">export ...;  // zamonaviy ESM</text>
+
+  <text x="360" y="512" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Manba o'zgarmaydi — faqat sozlama; "kimga compile qilyapman?" degan savolga javob beradi</text>
+</svg>

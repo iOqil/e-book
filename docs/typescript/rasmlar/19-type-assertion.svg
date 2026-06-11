@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 450" width="720" height="450">
+  <title>Type assertion as operatori: yaqin turlar orasida o'rinli, bog'liq bo'lmagan turlarda TypeScript xato beradi; as null xavfini ham yashiradi, shuning uchun narrowing'dan kam ishonchli</title>
+  <rect x="0" y="0" width="720" height="450" fill="#f8fafc"/>
+
+  <text x="360" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Type assertion (as) qachon to'g'ri?</text>
+
+  <!-- chap panel: TO'G'RI -->
+  <rect x="36" y="58" width="320" height="160" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="196" y="84" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">✅ TO'G'RI: yaqin turlar</text>
+  <rect x="56" y="98" width="280" height="44" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="196" y="125" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">querySelector("#email") as HTMLInputElement</text>
+  <text x="196" y="166" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Element -&gt; HTMLInputElement</text>
+  <text x="196" y="186" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(bir-biriga bog'liq, kichik turga aniqlash)</text>
+  <text x="196" y="206" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">TS bilmagan, siz bilgan haqiqat</text>
+
+  <!-- o'ng panel: XATO -->
+  <rect x="364" y="58" width="320" height="160" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="524" y="84" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#dc2626">❌ XATO: bog'liqsiz turlar</text>
+  <rect x="384" y="98" width="280" height="44" rx="6" fill="#ffffff" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="524" y="125" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">"salom" as HTMLInputElement</text>
+  <text x="524" y="166" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">string -&gt; HTMLInputElement</text>
+  <text x="524" y="186" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(umuman boshqa narsalar)</text>
+  <text x="524" y="206" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">TS2352: "may be a mistake"</text>
+
+  <!-- ogohlantirish: as null'ni yashiradi -->
+  <rect x="80" y="246" width="560" height="64" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="360" y="272" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309">Diqqat: as null'ni ham yashiradi</text>
+  <text x="360" y="295" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#b45309">"as HTMLInputElement" -&gt; endi null emas deb hisoblanadi; element yo'q bo'lsa runtime'da qulaydi</text>
+
+  <!-- ishonch zinapoyasi -->
+  <text x="360" y="342" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Ishonchlilik tartibi (yuqoridan pastga)</text>
+
+  <rect x="120" y="356" width="480" height="26" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="360" y="374" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#16a34a">✅ narrowing (if · instanceof · ?.) — runtime'da tekshiriladi</text>
+
+  <rect x="120" y="388" width="480" height="26" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="360" y="406" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#b45309">⚠️ as / ! — tekshiruvni o'chiradi, faqat 100% amin bo'lganda</text>
+
+  <rect x="120" y="420" width="480" height="26" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="360" y="438" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#dc2626">❌ as unknown as ... — deyarli har doim noto'g'ri yondashuv belgisi</text>
+</svg>

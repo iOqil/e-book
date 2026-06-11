@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 470" width="720" height="470">
+  <title>Mass assignment xavfi: formadan kelgan is_admin maydoni fillable royxatida bolmagani uchun Eloquent uni qabul qilmaydi va xavfsizlik buzilmaydi</title>
+  <defs>
+    <marker id="ma-red" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/>
+    </marker>
+    <marker id="ma-green" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="720" height="470" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Mass assignment: $fillable seni qanday himoya qiladi</text>
+
+  <!-- formadan kelgan ma'lumot -->
+  <text x="150" y="72" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">Foydalanuvchi formasi (request)</text>
+  <rect x="40" y="84" width="220" height="150" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="58" y="112" font-family="Consolas, monospace" font-size="13" fill="#1e293b">name = "Ali"</text>
+  <text x="58" y="138" font-family="Consolas, monospace" font-size="13" fill="#1e293b">email = "ali@..."</text>
+  <text x="58" y="170" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#dc2626">is_admin = 1</text>
+  <text x="58" y="190" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">(buzg'unchi qo'shib yubordi!)</text>
+  <text x="58" y="216" font-family="Consolas, monospace" font-size="13" fill="#475569">User::create($request-&gt;all())</text>
+
+  <!-- filtr: $fillable -->
+  <rect x="295" y="120" width="130" height="120" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="360" y="150" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">$fillable</text>
+  <text x="360" y="172" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">filtri (oq ro'yxat)</text>
+  <text x="360" y="200" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#475569">['name',</text>
+  <text x="360" y="221" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#475569">'email']</text>
+
+  <!-- o'qlar filtrga -->
+  <line x1="262" y1="106" x2="293" y2="150" stroke="#16a34a" stroke-width="2" marker-end="url(#ma-green)"/>
+  <line x1="262" y1="132" x2="293" y2="170" stroke="#16a34a" stroke-width="2" marker-end="url(#ma-green)"/>
+  <line x1="262" y1="164" x2="293" y2="200" stroke="#dc2626" stroke-width="2" marker-end="url(#ma-red)"/>
+
+  <!-- bazaga yoziladigan -->
+  <text x="575" y="72" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Bazaga yoziladi</text>
+  <rect x="460" y="120" width="220" height="120" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="478" y="152" font-family="Consolas, monospace" font-size="14" fill="#1e293b">name  = "Ali"</text>
+  <text x="478" y="180" font-family="Consolas, monospace" font-size="14" fill="#1e293b">email = "ali@..."</text>
+  <text x="478" y="212" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">is_admin tashlab yuborildi</text>
+
+  <line x1="427" y1="170" x2="458" y2="170" stroke="#16a34a" stroke-width="2" marker-end="url(#ma-green)"/>
+
+  <!-- pastki: ikki holat -->
+  <line x1="40" y1="280" x2="680" y2="280" stroke="#e2e8f0" stroke-width="2"/>
+
+  <rect x="40" y="300" width="310" height="120" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="195" y="326" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b45309">$fillable belgilanmagan bo'lsa</text>
+  <text x="60" y="354" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">create() / update() to'sib qo'yiladi:</text>
+  <text x="60" y="378" font-family="Consolas, monospace" font-size="13" fill="#1e293b">MassAssignmentException</text>
+  <text x="60" y="402" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Laravel ataylab xato beradi — xavfsiz</text>
+
+  <rect x="370" y="300" width="310" height="120" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="525" y="326" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">$fillable belgilangan bo'lsa</text>
+  <text x="390" y="354" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Faqat ro'yxatdagi ustunlar yoziladi,</text>
+  <text x="390" y="378" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">qolganlari jimgina tashlab yuboriladi.</text>
+  <text x="390" y="402" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">Tavsiya etilgan yo'l.</text>
+
+  <text x="360" y="450" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Qoida: faqat foydalanuvchi to'ldira oladigan ustunlarni $fillable ga yoz</text>
+</svg>

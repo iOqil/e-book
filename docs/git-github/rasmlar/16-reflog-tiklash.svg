@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 470" width="720" height="470">
+  <title>reflog vaqt chizigi: reset --hard bilan ochirilgan C2 va C3 commitlar reflogda HEAD@{1} va HEAD@{2} sifatida saqlanadi va git reset --hard HEAD@{1} bilan tiklanadi</title>
+
+  <rect x="0" y="0" width="720" height="470" fill="#f8fafc"/>
+
+  <text x="360" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">reflog: "yo'qolgan" commitni tiklash</text>
+
+  <!-- 1-bosqich: oldin -->
+  <text x="60" y="80" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#475569">1. Oldin: 3 commit</text>
+  <circle cx="120" cy="118" r="22" fill="#2563eb"/>
+  <text x="120" y="123" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">C1</text>
+  <line x1="142" y1="118" x2="178" y2="118" stroke="#94a3b8" stroke-width="2.5"/>
+  <circle cx="200" cy="118" r="22" fill="#2563eb"/>
+  <text x="200" y="123" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">C2</text>
+  <line x1="222" y1="118" x2="258" y2="118" stroke="#94a3b8" stroke-width="2.5"/>
+  <circle cx="280" cy="118" r="22" fill="#2563eb"/>
+  <text x="280" y="123" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">C3</text>
+  <text x="280" y="160" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">main, HEAD</text>
+
+  <!-- reset hard buyrug'i -->
+  <rect x="360" y="98" width="318" height="40" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="519" y="123" text-anchor="middle" font-family="Consolas, monospace" font-size="14" fill="#dc2626" font-weight="bold">git reset --hard HEAD~2</text>
+
+  <!-- 2-bosqich: keyin (vahima) -->
+  <text x="60" y="200" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">2. Keyin: "hammasini yo'qotdim!"</text>
+  <circle cx="120" cy="238" r="22" fill="#2563eb"/>
+  <text x="120" y="243" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">C1</text>
+  <text x="120" y="280" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">main, HEAD</text>
+  <!-- C2 C3 osilib qoldi -->
+  <circle cx="200" cy="238" r="22" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4 3"/>
+  <text x="200" y="243" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#94a3b8">C2</text>
+  <circle cx="280" cy="238" r="22" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4 3"/>
+  <text x="280" y="243" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#94a3b8">C3</text>
+  <text x="240" y="280" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">log'da yo'q, lekin o'chmagan</text>
+
+  <!-- reflog quti -->
+  <text x="408" y="200" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">git reflog daftari:</text>
+  <rect x="408" y="210" width="280" height="92" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="424" y="234" font-family="Consolas, monospace" font-size="13" fill="#475569">HEAD@{0}: reset: HEAD~2</text>
+  <text x="424" y="262" font-family="Consolas, monospace" font-size="13" fill="#16a34a" font-weight="bold">HEAD@{1}: commit: C3</text>
+  <text x="424" y="290" font-family="Consolas, monospace" font-size="13" fill="#1e293b">HEAD@{2}: commit: C2</text>
+  <!-- ko'rsatkich -->
+  <text x="600" y="262" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" font-weight="bold">&lt;- bu yerda!</text>
+
+  <!-- 3-bosqich: tiklash -->
+  <text x="60" y="346" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">3. Tiklash</text>
+  <rect x="150" y="328" width="320" height="36" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="310" y="352" text-anchor="middle" font-family="Consolas, monospace" font-size="14" fill="#166534" font-weight="bold">git reset --hard HEAD@{1}</text>
+
+  <!-- tiklangan tarix -->
+  <circle cx="120" cy="406" r="22" fill="#2563eb"/>
+  <text x="120" y="411" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">C1</text>
+  <line x1="142" y1="406" x2="178" y2="406" stroke="#94a3b8" stroke-width="2.5"/>
+  <circle cx="200" cy="406" r="22" fill="#16a34a"/>
+  <text x="200" y="411" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">C2</text>
+  <line x1="222" y1="406" x2="258" y2="406" stroke="#94a3b8" stroke-width="2.5"/>
+  <circle cx="280" cy="406" r="22" fill="#16a34a"/>
+  <text x="280" y="411" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">C3</text>
+  <text x="280" y="448" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">main, HEAD</text>
+  <text x="430" y="412" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#16a34a" font-weight="bold">Tarix tiklandi!</text>
+</svg>

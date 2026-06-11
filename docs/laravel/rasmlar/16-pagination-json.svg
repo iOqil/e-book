@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460">
+  <title>Paginatsiya qilingan Resource Collection JSON tuzilishi: data massivi, links (birinchi/oxirgi/oldingi/keyingi) va meta (joriy sahifa, jami soni) bloklari</title>
+  <rect x="0" y="0" width="720" height="460" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">paginate() — JSON ga avtomatik data + links + meta qo'shadi</text>
+
+  <!-- tashqi quti -->
+  <rect x="40" y="56" width="640" height="376" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="60" y="84" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">{</text>
+
+  <!-- data bloki -->
+  <rect x="70" y="96" width="580" height="120" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="86" y="120" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">"data": [   — sahifadagi yozuvlar (Resource orqali shakllangan)</text>
+  <text x="104" y="146" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">{ "id": 1, "sarlavha": "Birinchi post" },</text>
+  <text x="104" y="170" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">{ "id": 2, "sarlavha": "Ikkinchi post" },</text>
+  <text x="104" y="194" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">... (sahifaga 15 ta)</text>
+
+  <!-- links bloki -->
+  <rect x="70" y="228" width="580" height="92" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="86" y="252" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">"links": {   — sahifalar orasidagi havolalar</text>
+  <text x="104" y="278" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">"first": ".../posts?page=1",   "last": ".../posts?page=8",</text>
+  <text x="104" y="302" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">"prev": null,   "next": ".../posts?page=2"</text>
+
+  <!-- meta bloki -->
+  <rect x="70" y="332" width="580" height="88" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="86" y="356" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309">"meta": {   — sahifalash haqida ma'lumot</text>
+  <text x="104" y="382" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">"current_page": 1,  "per_page": 15,  "total": 117,</text>
+  <text x="104" y="406" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">"last_page": 8,  "from": 1,  "to": 15</text>
+</svg>

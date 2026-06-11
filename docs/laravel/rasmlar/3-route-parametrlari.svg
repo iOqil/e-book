@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" width="720" height="420">
+  <title>Route parametrlari: majburiy {id}, ixtiyoriy {id?} va where() bilan cheklangan parametr (faqat raqam) qanday ishlashi</title>
+
+  <rect x="0" y="0" width="720" height="420" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Route parametrlari: URL ichidan qiymat olish</text>
+
+  <!-- 1. Majburiy {id} -->
+  <rect x="30" y="58" width="660" height="96" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="50" y="84" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">1) Majburiy parametr</text>
+  <text x="50" y="110" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Route::get('/kitob/{id}', ...)</text>
+  <text x="50" y="134" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">/kitob/5 → $id = 5 ✅      /kitob → 404 (id shart!) ❌</text>
+  <rect x="430" y="92" width="50" height="26" rx="5" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="455" y="110" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#b45309">{id}</text>
+
+  <!-- 2. Ixtiyoriy {id?} -->
+  <rect x="30" y="166" width="660" height="96" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="50" y="192" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">2) Ixtiyoriy parametr (default qiymat bilan)</text>
+  <text x="50" y="218" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Route::get('/salom/{ism?}', fn($ism = 'Mehmon') => ...)</text>
+  <text x="50" y="242" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">/salom/Ali → 'Ali' ✅      /salom → 'Mehmon' ✅ (404 emas!)</text>
+  <rect x="430" y="200" width="56" height="26" rx="5" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="458" y="218" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#b45309">{ism?}</text>
+
+  <!-- 3. where() cheklov -->
+  <rect x="30" y="274" width="660" height="104" rx="10" fill="#e2e8f0" stroke="#7c3aed" stroke-width="2"/>
+  <text x="50" y="300" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#7c3aed">3) Cheklov: where() — parametr shaklini belgilaydi</text>
+  <text x="50" y="326" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Route::get('/kitob/{id}', ...)-&gt;where('id', '[0-9]+')</text>
+  <text x="50" y="350" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">/kitob/5 → mos keladi ✅</text>
+  <text x="360" y="350" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">/kitob/abc → mos kelmaydi, 404 ❌</text>
+  <text x="50" y="370" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">qisqasi: -&gt;whereNumber('id')</text>
+
+  <text x="360" y="404" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Parametr nomi {id} closure/metoddagi $id argumenti bilan AYNAN bir xil bo'lishi kerak</text>
+</svg>

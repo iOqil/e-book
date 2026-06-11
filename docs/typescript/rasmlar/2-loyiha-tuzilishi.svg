@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 420" width="700" height="420">
+  <title>Tartibli TypeScript loyiha tuzilishi: ildizda package.json va tsconfig.json, src papkada .ts manba fayllar, dist papkada tsc compile qilgan .js fayllar</title>
+
+  <rect x="0" y="0" width="700" height="420" fill="#f8fafc"/>
+
+  <text x="350" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Tartibli loyiha tuzilishi</text>
+
+  <!-- ildiz papka -->
+  <rect x="40" y="62" width="620" height="316" rx="12" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="62" y="90" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">birinchi-ts/</text>
+
+  <!-- package.json -->
+  <rect x="72" y="104" width="556" height="38" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="90" y="129" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">package.json</text>
+  <text x="270" y="129" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">loyiha pasporti, paketlar ro'yxati</text>
+
+  <!-- tsconfig.json -->
+  <rect x="72" y="150" width="556" height="38" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="90" y="175" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">tsconfig.json</text>
+  <text x="270" y="175" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tsc sozlamalari (strict, target, ...)</text>
+
+  <!-- src papka -->
+  <rect x="72" y="198" width="270" height="100" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="90" y="222" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">src/  — manba kod</text>
+  <rect x="92" y="234" width="230" height="30" rx="6" fill="#ffffff" stroke="#2563eb" stroke-width="1.2"/>
+  <text x="106" y="254" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">index.ts</text>
+  <rect x="92" y="268" width="230" height="22" rx="6" fill="#ffffff" stroke="#2563eb" stroke-width="1.2"/>
+  <text x="106" y="284" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">salom.ts   (siz yozasiz)</text>
+
+  <!-- strelka tsc -->
+  <line x1="346" y1="248" x2="406" y2="248" stroke="#16a34a" stroke-width="2.5"/>
+  <polygon points="406,242 418,248 406,254" fill="#16a34a"/>
+  <text x="382" y="238" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">tsc</text>
+
+  <!-- dist papka -->
+  <rect x="422" y="198" width="206" height="100" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="440" y="222" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b45309">dist/  — natija</text>
+  <rect x="442" y="234" width="166" height="30" rx="6" fill="#ffffff" stroke="#f59e0b" stroke-width="1.2"/>
+  <text x="456" y="254" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">index.js</text>
+  <rect x="442" y="268" width="166" height="22" rx="6" fill="#ffffff" stroke="#f59e0b" stroke-width="1.2"/>
+  <text x="456" y="284" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">salom.js   (avtomatik)</text>
+
+  <!-- pastki izoh -->
+  <text x="350" y="332" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Siz faqat src/ ichida yozasiz; dist/ ni tsc o'zi to'ldiradi</text>
+  <text x="350" y="360" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">rootDir = src/   |   outDir = dist/   (tsconfig.json da belgilanadi)</text>
+</svg>

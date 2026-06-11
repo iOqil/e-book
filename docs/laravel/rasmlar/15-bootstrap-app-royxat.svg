@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 470" width="720" height="470">
+  <title>Laravel 11 plyus da middleware bootstrap/app.php faylida ro'yxatga olinadi: global ($middleware->append), guruh ($middleware->web), va alias ($middleware->alias) uchun uchta usul ko'rsatilgan; eski app/Http/Kernel.php endi yo'q</title>
+
+  <rect x="0" y="0" width="720" height="470" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">bootstrap/app.php — middleware'ning yangi uyi (11+)</text>
+
+  <!-- Eski uy: o'chirilgan -->
+  <rect x="40" y="56" width="300" height="50" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="190" y="78" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">app/Http/Kernel.php</text>
+  <text x="190" y="97" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">ESKI usul — endi YO'Q</text>
+  <line x1="50" y1="100" x2="330" y2="62" stroke="#dc2626" stroke-width="2"/>
+
+  <!-- Yangi uy -->
+  <rect x="380" y="56" width="300" height="50" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="530" y="78" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">bootstrap/app.php</text>
+  <text x="530" y="97" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">YANGI usul — hammasi shu yerda</text>
+
+  <!-- withMiddleware quti -->
+  <rect x="60" y="130" width="600" height="300" rx="12" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="80" y="158" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">-&gt;withMiddleware(function (Middleware $middleware) {</text>
+
+  <!-- 1. global -->
+  <rect x="90" y="180" width="540" height="62" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="106" y="204" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">1. Global — HAR so'rovga</text>
+  <text x="106" y="226" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">$middleware-&gt;append(LogSorov::class);</text>
+
+  <!-- 2. guruh -->
+  <rect x="90" y="252" width="540" height="62" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="106" y="276" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">2. Guruh — web yoki api guruhiga</text>
+  <text x="106" y="298" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">$middleware-&gt;web(append: [Til::class]);</text>
+
+  <!-- 3. alias -->
+  <rect x="90" y="324" width="540" height="62" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="106" y="348" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309">3. Alias — route'da nom bilan chaqirish uchun</text>
+  <text x="106" y="370" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">$middleware-&gt;alias(['role' =&gt; Role::class]);</text>
+
+  <text x="80" y="412" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">})</text>
+
+  <text x="360" y="454" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Global = doim ishlaydi · Guruh = web/api ga · Alias = route -&gt;middleware('role') bilan</text>
+</svg>

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" width="720" height="420">
+  <title>Lokal repozitoriy va GitHub'dagi remote (origin) bog'lanishi: push o'zgarishlarni yuqoriga, pull/fetch pastga ko'chiradi; origin — remote'ning qisqa nomi</title>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="720" height="420" fill="#f8fafc"/>
+
+  <text x="360" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Lokal repo va GitHub remote (origin)</text>
+
+  <!-- chap: lokal kompyuter -->
+  <rect x="48" y="86" width="250" height="240" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="173" y="116" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">Sizning kompyuteringiz</text>
+  <text x="173" y="140" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(lokal — faqat sizda)</text>
+
+  <rect x="78" y="160" width="190" height="138" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="173" y="184" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Lokal repozitoriy</text>
+  <text x="173" y="208" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">.git katalogi</text>
+  <text x="173" y="232" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">commitlar, branchlar,</text>
+  <text x="173" y="252" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">butun tarix</text>
+  <text x="173" y="282" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">internet kerak emas</text>
+
+  <!-- o'ng: GitHub -->
+  <rect x="422" y="86" width="250" height="240" rx="12" fill="#e2e8f0" stroke="#1e293b" stroke-width="2.5"/>
+  <text x="547" y="116" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">GitHub (internet)</text>
+  <text x="547" y="140" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(remote — zaxira + jamoa)</text>
+
+  <rect x="452" y="160" width="190" height="138" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="547" y="184" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#7c3aed">origin</text>
+  <text x="547" y="208" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">reponing internetdagi</text>
+  <text x="547" y="228" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">nusxasi</text>
+  <text x="547" y="258" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">URL: github.com/...</text>
+  <text x="547" y="282" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">hamma ko'ra oladi</text>
+
+  <!-- push o'q (chapdan o'ngga, yuqori) -->
+  <line x1="298" y1="195" x2="452" y2="195" stroke="#16a34a" stroke-width="3" marker-end="url(#arrG)"/>
+  <text x="375" y="186" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">git push</text>
+
+  <!-- pull o'q (o'ngdan chapga, past) -->
+  <line x1="452" y1="255" x2="298" y2="255" stroke="#2563eb" stroke-width="3" marker-end="url(#arrB)"/>
+  <text x="375" y="276" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">git pull / fetch</text>
+
+  <!-- markerlar -->
+  <defs>
+    <marker id="arrG" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+    <marker id="arrB" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <!-- pastki izoh -->
+  <text x="360" y="360" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">push — lokal o'zgarishni yuqoriga yuborish, pull — internetdagini pastga olish</text>
+  <text x="360" y="388" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">"origin" — remote manzilning qisqa laqabi (har safar uzun URL yozmaslik uchun)</text>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" width="720" height="420">
+  <title>Redirect va flash xabar sikli: controller back()->with() bilan sessiyaga bir martalik xabar qo'yadi, brauzer yangi sahifani so'raydi, Blade flash xabarni bir marta ko'rsatadi, F5 da xabar o'chadi</title>
+
+  <rect x="0" y="0" width="720" height="420" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Redirect + flash xabar: bir martalik hayot</text>
+
+  <defs>
+    <marker id="r1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- 1-qadam -->
+  <rect x="40" y="70" width="280" height="78" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="60" y="96" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">1. Controller</text>
+  <text x="60" y="118" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">return back()-&gt;with('xabar', 'Saqlandi!');</text>
+  <text x="60" y="138" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">xabarni sessiyaga FLASH qiladi</text>
+
+  <!-- session quticha -->
+  <rect x="400" y="70" width="280" height="78" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="420" y="96" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309">Sessiya (flash)</text>
+  <text x="420" y="118" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">xabar = "Saqlandi!"</text>
+  <text x="420" y="138" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">faqat keyingi 1 so'rovda yashaydi</text>
+
+  <path d="M320 109 L400 109" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#r1)"/>
+
+  <!-- 2-qadam -->
+  <rect x="40" y="190" width="280" height="78" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="60" y="216" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">2. Brauzer (302 redirect)</text>
+  <text x="60" y="238" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">yangi sahifani so'raydi:</text>
+  <text x="60" y="258" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">GET /aloqa</text>
+
+  <path d="M180 148 L180 190" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#r1)"/>
+
+  <!-- 3-qadam -->
+  <rect x="400" y="190" width="280" height="78" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="420" y="216" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">3. Blade ko'rsatadi</text>
+  <text x="420" y="238" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">@if (session('xabar'))</text>
+  <text x="420" y="258" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">-&gt; "Saqlandi!" ko'rinadi</text>
+
+  <path d="M320 229 L400 229" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#r1)"/>
+
+  <!-- 4-qadam: F5 -->
+  <rect x="180" y="310" width="360" height="76" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="360" y="336" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">4. F5 (sahifani yangilash)</text>
+  <text x="360" y="360" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">sessiyada xabar yo'q -&gt; endi ko'rinmaydi</text>
+  <text x="360" y="378" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">flash bir marta ishlaydi va o'chadi (kerakli xatti-harakat)</text>
+
+  <path d="M440 268 L390 308" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#r1)"/>
+</svg>

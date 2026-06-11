@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>Ikki autentifikatsiya yo'li: HTTPS manzil token bilan, SSH manzil kalit jufti bilan GitHubga ulanadi</title>
+
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">GitHubga ulanishning ikki yo'li</text>
+
+  <!-- chap yo'l: HTTPS + token -->
+  <rect x="36" y="64" width="300" height="300" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="186" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#b45309">1-yo'l: HTTPS + token</text>
+
+  <rect x="62" y="108" width="248" height="50" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="186" y="129" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Manzil:</text>
+  <text x="186" y="148" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">https://github.com/...</text>
+
+  <text x="186" y="186" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Parol o'rniga -> Token (PAT)</text>
+  <rect x="86" y="200" width="200" height="40" rx="8" fill="#ffffff" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="186" y="225" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#dc2626">github_pat_11ABC...</text>
+
+  <text x="186" y="270" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">credential helper eslab qoladi</text>
+  <text x="186" y="296" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">+ portlar bloklansa ham ishlaydi</text>
+  <text x="186" y="318" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309">- tokenning muddati tugaydi</text>
+  <text x="186" y="344" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Yaxshi: vaqtinchalik muhit</text>
+
+  <!-- o'ng yo'l: SSH -->
+  <rect x="384" y="64" width="300" height="300" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="534" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#2563eb">2-yo'l: SSH kalit</text>
+
+  <rect x="410" y="108" width="248" height="50" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="534" y="129" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Manzil:</text>
+  <text x="534" y="148" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">git@github.com:...</text>
+
+  <text x="534" y="186" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Kalit jufti -> handshake</text>
+  <rect x="434" y="200" width="200" height="40" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="534" y="225" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#16a34a">id_ed25519 (maxfiy)</text>
+
+  <text x="534" y="270" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">parol umuman so'ralmaydi</text>
+  <text x="534" y="296" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">+ bir marta sozlab, unutasiz</text>
+  <text x="534" y="318" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">+ muddati tugamaydi</text>
+  <text x="534" y="344" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Yaxshi: shaxsiy kompyuter</text>
+
+  <!-- GitHub markazda pastda -->
+  <text x="360" y="402" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Ikkala yo'l ham bitta GitHub repozitoriyangizga olib boradi</text>
+</svg>

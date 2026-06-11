@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 470" width="720" height="470">
+  <title>Policy metodlari: model ustidagi har bir amal (korish, yaratish, tahrirlash, ochirish) PostPolicy ichidagi mos metodga boglanadi va metod true/false qaytaradi</title>
+  <rect x="0" y="0" width="720" height="470" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">PostPolicy: har model amali -&gt; bitta metod</text>
+
+  <!-- chap: amal -->
+  <text x="150" y="74" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#475569">Model amali (controller)</text>
+  <!-- o'ng: metod -->
+  <text x="540" y="74" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#475569">PostPolicy metodi</text>
+
+  <!-- qatorlar -->
+  <!-- 1 viewAny -->
+  <rect x="30" y="90" width="240" height="44" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="150" y="118" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Royxatni ochish (index)</text>
+  <line x1="270" y1="112" x2="408" y2="112" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="408,107 420,112 408,117" fill="#94a3b8"/>
+  <rect x="420" y="90" width="270" height="44" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="555" y="118" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">viewAny(User $user)</text>
+
+  <!-- 2 view -->
+  <rect x="30" y="148" width="240" height="44" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="150" y="176" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Bitta postni korish (show)</text>
+  <line x1="270" y1="170" x2="408" y2="170" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="408,165 420,170 408,175" fill="#94a3b8"/>
+  <rect x="420" y="148" width="270" height="44" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="555" y="176" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">view($user, $post)</text>
+
+  <!-- 3 create -->
+  <rect x="30" y="206" width="240" height="44" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="150" y="234" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Yangi post yaratish (store)</text>
+  <line x1="270" y1="228" x2="408" y2="228" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="408,223 420,228 408,233" fill="#94a3b8"/>
+  <rect x="420" y="206" width="270" height="44" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="555" y="234" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">create(User $user)</text>
+
+  <!-- 4 update -->
+  <rect x="30" y="264" width="240" height="44" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="150" y="292" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Postni tahrirlash (update)</text>
+  <line x1="270" y1="286" x2="408" y2="286" stroke="#f59e0b" stroke-width="2"/>
+  <polygon points="408,281 420,286 408,291" fill="#f59e0b"/>
+  <rect x="420" y="264" width="270" height="44" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="555" y="292" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309">update($user, $post)</text>
+
+  <!-- 5 delete -->
+  <rect x="30" y="322" width="240" height="44" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="150" y="350" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Postni ochirish (destroy)</text>
+  <line x1="270" y1="344" x2="408" y2="344" stroke="#f59e0b" stroke-width="2"/>
+  <polygon points="408,339 420,344 408,349" fill="#f59e0b"/>
+  <rect x="420" y="322" width="270" height="44" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="555" y="350" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309">delete($user, $post)</text>
+
+  <!-- natija qutisi -->
+  <rect x="420" y="384" width="270" height="56" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="555" y="408" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">Har metod qaytaradi:</text>
+  <text x="555" y="430" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">true (ruxsat) yoki false (yoq)</text>
+
+  <text x="225" y="412" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Sariq metodlar odatda</text>
+  <text x="225" y="432" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">egasini tekshiradi</text>
+</svg>

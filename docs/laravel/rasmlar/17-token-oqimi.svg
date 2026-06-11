@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="720" height="440">
+  <title>Sanctum token hayot sikli: login qilib createToken bilan token olish, ilovada saqlash, har so'rovda Bearer sarlavhada yuborish, logout da tokenni o'chirish</title>
+  <defs>
+    <marker id="m2-strelka" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="720" height="440" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Token oqimi: olishdan o'chirishgacha</text>
+
+  <!-- Qadam 1: login -->
+  <rect x="36" y="64" width="290" height="86" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="58" y="90" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">1) Login</text>
+  <text x="58" y="113" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">POST /api/login</text>
+  <text x="58" y="135" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">email + parol yuboriladi</text>
+
+  <!-- Qadam 2: server token yaratadi -->
+  <rect x="394" y="64" width="290" height="86" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="416" y="90" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">2) Server token beradi</text>
+  <text x="416" y="113" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">$user-&gt;createToken(...)</text>
+  <text x="416" y="135" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">-&gt;plainTextToken (1 marta!)</text>
+
+  <line x1="326" y1="107" x2="392" y2="107" stroke="#475569" stroke-width="2.5" marker-end="url(#m2-strelka)"/>
+
+  <!-- Qadam 3: ilova saqlaydi -->
+  <rect x="394" y="180" width="290" height="76" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="416" y="206" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#475569">3) Ilova tokenni saqlaydi</text>
+  <text x="416" y="231" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">telefon xotirasi / secure storage</text>
+
+  <line x1="539" y1="150" x2="539" y2="178" stroke="#475569" stroke-width="2.5" marker-end="url(#m2-strelka)"/>
+
+  <!-- Qadam 4: har so'rovda Bearer -->
+  <rect x="394" y="286" width="290" height="86" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="416" y="312" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b45309">4) Har so'rovda yuboriladi</text>
+  <text x="416" y="335" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Authorization: Bearer &lt;token&gt;</text>
+  <text x="416" y="357" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">GET /api/products, POST /api/orders ...</text>
+
+  <line x1="539" y1="256" x2="539" y2="284" stroke="#475569" stroke-width="2.5" marker-end="url(#m2-strelka)"/>
+
+  <!-- Qadam 5: logout o'chiradi -->
+  <rect x="36" y="286" width="290" height="86" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="58" y="312" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">5) Logout</text>
+  <text x="58" y="335" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">currentAccessToken()-&gt;delete()</text>
+  <text x="58" y="357" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">token bekor bo'ladi</text>
+
+  <line x1="392" y1="329" x2="328" y2="329" stroke="#475569" stroke-width="2.5" marker-end="url(#m2-strelka)"/>
+
+  <!-- izoh -->
+  <text x="181" y="206" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Cookie/sessiyadan farqi:</text>
+  <text x="181" y="230" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">token stateless — server</text>
+  <text x="181" y="252" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">hech narsani eslab qolmaydi</text>
+
+  <text x="360" y="408" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Bazada faqat tokenning xeshi saqlanadi (parol kabi) — ochiq matn faqat yaratilganda bir marta ko'rinadi</text>
+  <text x="360" y="430" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Yo'qotsangiz tiklab bo'lmaydi — yangi token yaratish kerak</text>
+</svg>

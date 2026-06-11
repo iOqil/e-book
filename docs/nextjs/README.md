@@ -1,7 +1,5 @@
 # Next.js — 0 dan Expert darajagacha (o'zbek tilida)
 
-> 📄 **[Butun kitobni PDF formatda yuklab olish →](/pdf/nextjs.pdf)**
-
 Bu qo'llanma **Next.js 16** (App Router) va **React 19** ni **mutlaqo noldan** professional darajagacha o'rgatadi. Hech qanday oldingi tajriba — JavaScript ham, React ham — talab qilinmaydi: birinchi qism ularni ham noldan tushuntiradi.
 
 > **Versiya:** Next.js **16**, React **19**, Node.js **20.9+**. Kod misollari shu versiyalarga moslangan (async `params`, `"use cache"`, sukut bo'yicha keshlanmaydigan `fetch`/GET va h.k.).

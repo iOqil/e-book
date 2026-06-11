@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 470" width="720" height="470">
+  <title>git fetch va git pull farqi: fetch faqat origin/main remote-tracking branchni yangilaydi, lokal main joyida qoladi (xavfsiz, avval ko'rib chiqasiz); pull esa fetch qiladi va ustiga lokal mainni birlashtiradi (fetch + merge)</title>
+
+  <rect x="0" y="0" width="720" height="470" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">git fetch vs git pull</text>
+  <text x="360" y="58" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">pull = fetch + merge. Fetch faqat oladi, pull oladi va birlashtiradi.</text>
+
+  <!-- chap panel: FETCH -->
+  <rect x="28" y="78" width="320" height="358" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="188" y="106" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#2563eb">git fetch</text>
+  <text x="188" y="128" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">faqat oladi — xavfsiz</text>
+
+  <!-- fetch: lokal main -->
+  <rect x="52" y="148" width="120" height="58" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="112" y="172" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">lokal main</text>
+  <text x="112" y="192" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">joyida qoladi</text>
+
+  <!-- fetch: origin/main -->
+  <rect x="204" y="148" width="120" height="58" rx="8" fill="#e2e8f0" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="264" y="172" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#7c3aed">origin/main</text>
+  <text x="264" y="192" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">yangilandi</text>
+
+  <line x1="264" y1="206" x2="264" y2="242" stroke="#16a34a" stroke-width="2.5" marker-end="url(#aG)"/>
+  <text x="264" y="262" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">remotedan</text>
+
+  <rect x="52" y="288" width="272" height="124" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="188" y="312" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#b45309">Natija:</text>
+  <text x="188" y="336" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">origin/main yangilandi,</text>
+  <text x="188" y="358" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">lokal main teginilmadi.</text>
+  <text x="188" y="386" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Avval diff bilan ko'rib,</text>
+  <text x="188" y="404" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">keyin birlashtirasiz.</text>
+
+  <!-- o'ng panel: PULL -->
+  <rect x="372" y="78" width="320" height="358" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="532" y="106" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#16a34a">git pull</text>
+  <text x="532" y="128" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">oladi va birlashtiradi</text>
+
+  <!-- pull: lokal main -->
+  <rect x="396" y="148" width="120" height="58" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="456" y="172" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">lokal main</text>
+  <text x="456" y="192" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">ham yangilandi</text>
+
+  <!-- pull: origin/main -->
+  <rect x="548" y="148" width="120" height="58" rx="8" fill="#e2e8f0" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="608" y="172" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#7c3aed">origin/main</text>
+  <text x="608" y="192" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">yangilandi</text>
+
+  <!-- 1-qadam fetch -->
+  <line x1="608" y1="206" x2="608" y2="238" stroke="#16a34a" stroke-width="2.5" marker-end="url(#aG)"/>
+  <text x="640" y="226" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">1. fetch</text>
+  <!-- 2-qadam merge -->
+  <line x1="548" y1="232" x2="500" y2="208" stroke="#16a34a" stroke-width="2.5" marker-end="url(#aG)"/>
+  <text x="500" y="246" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">2. merge</text>
+
+  <rect x="396" y="288" width="272" height="124" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="532" y="312" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#15803d">Natija:</text>
+  <text x="532" y="336" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">lokal main ham, origin/main</text>
+  <text x="532" y="358" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">ham bir xil holatda.</text>
+  <text x="532" y="386" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Bir qadamda tayyor,</text>
+  <text x="532" y="404" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">lekin ko'rib chiqolmaysiz.</text>
+
+  <text x="360" y="456" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Ehtiyot bo'lsangiz fetch + diff + merge; ishonsangiz to'g'ridan-to'g'ri pull</text>
+
+  <defs>
+    <marker id="aG" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+</svg>

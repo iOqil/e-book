@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 440" width="700" height="440">
+  <title>Git konflikt markerlari anatomiyasi: yetti belgili boshlanish HEAD bilan, o'rtadagi tenglik belgisi ikki versiyani ajratadi, yetti belgili tugash branch nomi bilan</title>
+
+  <rect x="0" y="0" width="700" height="440" fill="#f8fafc"/>
+
+  <text x="350" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Konflikt markerlari: faylga Git nima yozib qo'yadi?</text>
+
+  <!-- kod oynasi (qora fon emas, och kulrang — boshqa SVG bilan moslik) -->
+  <rect x="120" y="64" width="460" height="250" rx="8" fill="#1e293b" stroke="#475569" stroke-width="2"/>
+
+  <!-- HEAD marker qatori -->
+  <rect x="130" y="78" width="440" height="30" rx="3" fill="#dc2626" opacity="0.22"/>
+  <text x="142" y="99" font-family="Consolas, Menlo, monospace" font-size="15" fill="#f87171">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</text>
+
+  <!-- HEAD tomon mazmuni -->
+  <rect x="130" y="112" width="440" height="56" rx="3" fill="#dc2626" opacity="0.12"/>
+  <text x="142" y="134" font-family="Consolas, Menlo, monospace" font-size="15" fill="#fca5a5">  &lt;h1&gt;Salom Samarqand&lt;/h1&gt;</text>
+  <text x="142" y="158" font-family="Consolas, Menlo, monospace" font-size="14" fill="#94a3b8">  (siz turgan branch — main)</text>
+
+  <!-- ajratuvchi -->
+  <text x="142" y="190" font-family="Consolas, Menlo, monospace" font-size="15" fill="#fbbf24">=======</text>
+
+  <!-- feature tomon mazmuni -->
+  <rect x="130" y="202" width="440" height="56" rx="3" fill="#16a34a" opacity="0.14"/>
+  <text x="142" y="224" font-family="Consolas, Menlo, monospace" font-size="15" fill="#86efac">  &lt;h1&gt;Salom Toshkent&lt;/h1&gt;</text>
+  <text x="142" y="248" font-family="Consolas, Menlo, monospace" font-size="14" fill="#94a3b8">  (kelayotgan branch — feature)</text>
+
+  <!-- tugash marker qatori -->
+  <rect x="130" y="262" width="440" height="30" rx="3" fill="#16a34a" opacity="0.22"/>
+  <text x="142" y="283" font-family="Consolas, Menlo, monospace" font-size="15" fill="#4ade80">&gt;&gt;&gt;&gt;&gt;&gt;&gt; feature</text>
+
+  <!-- chap tomondagi izoh strelkalari -->
+  <text x="112" y="99" text-anchor="end" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626">boshlanish</text>
+  <text x="112" y="190" text-anchor="end" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#f59e0b">o'rta</text>
+  <text x="112" y="283" text-anchor="end" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">tugash</text>
+
+  <!-- o'ng tomondagi izohlar -->
+  <text x="588" y="99" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">7 ta &lt; belgisi</text>
+  <text x="588" y="190" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#f59e0b">7 ta = belgisi</text>
+  <text x="588" y="283" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">7 ta &gt; belgisi</text>
+
+  <!-- pastki tushuntirish -->
+  <rect x="40" y="334" width="620" height="86" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="60" y="360" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Hal qilish = bu uchta marker qatorini O'CHIRISH va to'g'ri matnni qoldirish.</text>
+  <text x="60" y="384" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">HEAD qismi — hozir turgan branch'ingiz (ours). Pastki qism — kelayotgan branch (theirs).</text>
+  <text x="60" y="406" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">Markerlar fayl matniga qo'shiladi — ularni qoldirib qo'ymang, kod ishlamaydi.</text>
+</svg>

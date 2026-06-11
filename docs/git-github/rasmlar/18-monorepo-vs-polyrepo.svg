@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460">
+  <title>Monorepo va polyrepo solishtirish: monorepoda hamma loyiha bitta repoda, polyrepoda har loyiha alohida repoda</title>
+
+  <rect x="0" y="0" width="720" height="460" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Monorepo va polyrepo — qaysi biri?</text>
+
+  <!-- Monorepo (chap) -->
+  <text x="180" y="70" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#2563eb">Monorepo</text>
+  <text x="180" y="90" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">bitta repo, ko'p loyiha</text>
+
+  <rect x="40" y="102" width="280" height="200" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="180" y="128" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">kompaniya-repo (1 ta .git)</text>
+
+  <rect x="64" y="142" width="232" height="36" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="80" y="165" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">apps/web/</text>
+  <rect x="64" y="184" width="232" height="36" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="80" y="207" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">apps/mobil/</text>
+  <rect x="64" y="226" width="232" height="36" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="80" y="249" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">apps/api/</text>
+  <rect x="64" y="268" width="232" height="26" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="80" y="286" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309">libs/ulashilgan/ (umumiy kod)</text>
+
+  <!-- monorepo plus/minus -->
+  <text x="56" y="324" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">+ bitta commit hamma joyni o'zgartiradi</text>
+  <text x="56" y="346" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">+ umumiy kodni ulashish oson</text>
+  <text x="56" y="368" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">+ yagona versiya, atom o'zgarish</text>
+  <text x="56" y="390" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">- repo kattalashadi, CI sekinroq</text>
+  <text x="56" y="412" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">- vositalar (tooling) talab qiladi</text>
+
+  <!-- Polyrepo (o'ng) -->
+  <text x="540" y="70" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#16a34a">Polyrepo</text>
+  <text x="540" y="90" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">har loyiha alohida repo</text>
+
+  <rect x="400" y="108" width="135" height="64" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="467" y="135" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#15803d">web-repo</text>
+  <text x="467" y="156" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">.git</text>
+
+  <rect x="548" y="108" width="135" height="64" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="615" y="135" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#15803d">mobil-repo</text>
+  <text x="615" y="156" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">.git</text>
+
+  <rect x="400" y="182" width="135" height="64" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="467" y="209" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#15803d">api-repo</text>
+  <text x="467" y="230" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">.git</text>
+
+  <rect x="548" y="182" width="135" height="64" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="615" y="205" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#b45309">ulashilgan-lib</text>
+  <text x="615" y="226" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(package/submodule)</text>
+
+  <text x="416" y="282" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">+ har jamoa mustaqil, kichik repo</text>
+  <text x="416" y="304" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">+ ruxsatlarni alohida boshqarish</text>
+  <text x="416" y="326" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">+ CI faqat o'zgargan reponi quradi</text>
+  <text x="416" y="348" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">- umumiy kodni sinxronlash qiyin</text>
+  <text x="416" y="370" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">- ko'p reponi bir vaqtda o'zgartirish og'ir</text>
+  <text x="416" y="392" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">- versiyalarni moslash boshog'rig'i</text>
+
+  <text x="360" y="440" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Kichik jamoa / mustaqil loyihalar -> polyrepo. Zich bog'liq, umumiy kodli loyihalar -> monorepo.</text>
+</svg>

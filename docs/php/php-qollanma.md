@@ -1,7 +1,5 @@
 # PHP — Mutlaqo Noldan Boshlovchilar Uchun
 
-> 📄 **[Butun kitobni PDF formatda yuklab olish →](/pdf/php.pdf)**
-
 > **Kimga mo'ljallangan:** dasturlashni umuman bilmaydigan, hayotida birorta ham dastur yozmagan odamga. Sizdan hech qanday oldindan tayyorgarlik talab qilinmaydi.
 >
 > **Qanday o'qiladi:** har bir mavzuda — avval **oddiy tushuntirish** (bu nima va nega kerak), so'ng **kichik misol**, keyin **mashqlar**. Mashqlar uch darajaga bo'lingan: Oson, O'rta, Qiyin. Ko'p mashqning — **ayniqsa barcha "Qiyin" mashqlarning** — yechimi ham berilgan (yashirin "Yechim" bo'limida). Avval o'zingiz urinib ko'ring, keyin yechimga qarang. "Oson"/"O'rta" mashqlarning bir qismi ataylab yechimsiz qoldirilgan — mustaqil mashq uchun.

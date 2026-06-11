@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>Massiv tipi va tuple farqi: massiv istalgan uzunlikdagi bir xil tipli elementlardan iborat, tuple esa aniq uzunlik va har pozitsiyada aniq tipga ega</title>
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Massiv vs Tuple — farq nimada?</text>
+
+  <!-- chap: massiv -->
+  <text x="190" y="72" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#2563eb">number[]  (massiv)</text>
+  <text x="190" y="94" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">bir xil tip, istalgancha element</text>
+
+  <rect x="40" y="110" width="60" height="50" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="70" y="141" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" fill="#1e293b">10</text>
+  <rect x="105" y="110" width="60" height="50" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="135" y="141" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" fill="#1e293b">20</text>
+  <rect x="170" y="110" width="60" height="50" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="200" y="141" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" fill="#1e293b">30</text>
+  <rect x="235" y="110" width="60" height="50" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="2" stroke-dasharray="5 4"/>
+  <text x="265" y="141" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" fill="#94a3b8">...</text>
+
+  <text x="190" y="184" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">har element: number</text>
+  <text x="190" y="206" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">push(40) — mumkin (uzunlik o'zgaradi)</text>
+
+  <!-- o'ng: tuple -->
+  <text x="530" y="72" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#7c3aed">[string, number]  (tuple)</text>
+  <text x="530" y="94" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">aniq 2 element, har biri o'z tipida</text>
+
+  <rect x="420" y="110" width="100" height="50" rx="6" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="470" y="141" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" fill="#1e293b">"Aziz"</text>
+  <rect x="525" y="110" width="100" height="50" rx="6" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="575" y="141" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" fill="#1e293b">30</text>
+
+  <text x="470" y="180" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#7c3aed">[0]: string</text>
+  <text x="575" y="180" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#7c3aed">[1]: number</text>
+  <text x="530" y="206" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">3-element yoki teskari tartib — xato</text>
+
+  <!-- ajratuvchi chiziq -->
+  <line x1="360" y1="60" x2="360" y2="220" stroke="#e2e8f0" stroke-width="2"/>
+
+  <!-- pastki taqqoslash qutisi -->
+  <rect x="40" y="240" width="640" height="160" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="360" y="266" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Asosiy farqlar</text>
+
+  <text x="70" y="296" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">Massiv (number[])</text>
+  <text x="70" y="322" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">• uzunlik erkin (0, 1, 100 ...)</text>
+  <text x="70" y="346" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">• hamma element bir tipda</text>
+  <text x="70" y="370" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">• [2] indeks — chegara tekshirilmaydi</text>
+
+  <text x="390" y="296" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#7c3aed">Tuple ([string, number])</text>
+  <text x="390" y="322" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">• uzunlik qat'iy (aynan 2)</text>
+  <text x="390" y="346" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">• har pozitsiya — o'z tipi</text>
+  <text x="390" y="370" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">• chegaradan tashqari indeks — xato</text>
+</svg>

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="720" height="440">
+  <title>any va unknown farqi: any tip tekshiruvini o'chiradi (har qanday amalga ruxsat), unknown esa ishlatishdan oldin narrowing (tip tekshiruvi) majbur qiladi</title>
+
+  <rect x="0" y="0" width="720" height="440" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">any vs unknown — tekshiruv qayerda?</text>
+
+  <!-- chap panel: any -->
+  <rect x="36" y="56" width="312" height="344" rx="12" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="192" y="86" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="18" font-weight="bold" fill="#dc2626">any</text>
+  <text x="192" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">tekshiruv O'CHIQ (xavfli)</text>
+
+  <rect x="60" y="124" width="264" height="58" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="72" y="148" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">let x: any = ...</text>
+  <text x="72" y="170" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">x.toUpperCase()</text>
+
+  <!-- ochiq darvoza belgisi -->
+  <text x="192" y="212" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#475569">Compiler:</text>
+  <rect x="60" y="226" width="264" height="40" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="192" y="251" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#16a34a">"O'taver, tekshirmayman"</text>
+
+  <text x="192" y="300" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">Natija (runtime):</text>
+  <rect x="60" y="314" width="264" height="64" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="192" y="340" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#dc2626">x aslida son bo'lsa —</text>
+  <text x="192" y="362" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">portlaydi! (TS ushlamaydi)</text>
+
+  <!-- o'ng panel: unknown -->
+  <rect x="372" y="56" width="312" height="344" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="528" y="86" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="18" font-weight="bold" fill="#2563eb">unknown</text>
+  <text x="528" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">tekshiruv MAJBUR (xavfsiz)</text>
+
+  <rect x="396" y="124" width="264" height="58" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="408" y="148" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">let x: unknown = ...</text>
+  <text x="408" y="170" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">x.toUpperCase()</text>
+
+  <text x="528" y="212" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#475569">Compiler:</text>
+  <rect x="396" y="226" width="264" height="40" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="528" y="251" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#dc2626">"To'xta! Avval tekshir"</text>
+
+  <text x="528" y="300" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">Yechim (narrowing):</text>
+  <rect x="396" y="314" width="264" height="64" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="528" y="340" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#16a34a">if (typeof x === "string")</text>
+  <text x="528" y="362" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">keyin ishlatsa bo'ladi</text>
+
+  <text x="360" y="424" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">unknown — any'ning xavfsiz aksi: noma'lum, lekin ishlatishdan oldin tekshirish shart</text>
+</svg>

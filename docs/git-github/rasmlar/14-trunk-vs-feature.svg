@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 470" width="720" height="470">
+  <title>Trunk-based va feature-branch oqimlarining solishtiruvi: trunk-basedda kichik commitlar tez-tez bevosita main'ga tushadi, feature-branchda esa ish uzunroq yashaydigan branchlarda yig'ilib keyin merge qilinadi</title>
+
+  <rect x="0" y="0" width="720" height="470" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Trunk-based vs Feature-branch</text>
+
+  <!-- ============ YUQORI: TRUNK-BASED ============ -->
+  <text x="40" y="78" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#16a34a">Trunk-based: kichik commitlar tez-tez main'ga</text>
+
+  <!-- main chiziq -->
+  <line x1="60" y1="120" x2="670" y2="120" stroke="#2563eb" stroke-width="3"/>
+  <text x="30" y="125" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">main</text>
+
+  <!-- ko'p kichik commit -->
+  <circle cx="90" cy="120" r="10" fill="#16a34a"/>
+  <circle cx="170" cy="120" r="10" fill="#16a34a"/>
+  <circle cx="250" cy="120" r="10" fill="#16a34a"/>
+  <circle cx="330" cy="120" r="10" fill="#16a34a"/>
+  <circle cx="410" cy="120" r="10" fill="#16a34a"/>
+  <circle cx="490" cy="120" r="10" fill="#16a34a"/>
+  <circle cx="570" cy="120" r="10" fill="#16a34a"/>
+  <circle cx="650" cy="120" r="10" fill="#16a34a"/>
+
+  <!-- juda qisqa branch (1 kun) -->
+  <line x1="330" y1="120" x2="370" y2="160" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="370" y1="160" x2="410" y2="120" stroke="#94a3b8" stroke-width="2" stroke-dasharray="3 3"/>
+  <circle cx="370" cy="160" r="9" fill="#94a3b8"/>
+  <text x="370" y="186" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">juda qisqa branch (soat/kun)</text>
+
+  <text x="360" y="220" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">Tayyor bo'lmagan kod feature flag (kalit) bilan yashiriladi</text>
+
+  <!-- ajratuvchi -->
+  <line x1="40" y1="245" x2="680" y2="245" stroke="#e2e8f0" stroke-width="2"/>
+
+  <!-- ============ PAST: FEATURE-BRANCH ============ -->
+  <text x="40" y="285" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#7c3aed">Feature-branch: ish uzun branchda yig'iladi, keyin merge</text>
+
+  <!-- main chiziq -->
+  <line x1="60" y1="330" x2="670" y2="330" stroke="#2563eb" stroke-width="3"/>
+  <text x="30" y="335" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">main</text>
+  <circle cx="90" cy="330" r="11" fill="#2563eb"/>
+  <circle cx="560" cy="330" r="13" fill="#7c3aed"/>
+  <text x="560" y="312" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#7c3aed">merge</text>
+
+  <!-- uzun feature branch -->
+  <path d="M90 330 C 160 330, 170 400, 230 400" fill="none" stroke="#f59e0b" stroke-width="3"/>
+  <line x1="230" y1="400" x2="470" y2="400" stroke="#f59e0b" stroke-width="3"/>
+  <circle cx="230" cy="400" r="10" fill="#f59e0b"/>
+  <circle cx="310" cy="400" r="10" fill="#f59e0b"/>
+  <circle cx="390" cy="400" r="10" fill="#f59e0b"/>
+  <circle cx="470" cy="400" r="10" fill="#f59e0b"/>
+  <path d="M470 400 C 520 400, 510 330, 547 330" fill="none" stroke="#7c3aed" stroke-width="3" stroke-dasharray="5 4"/>
+  <text x="350" y="430" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309">feature branch — bir necha kun/hafta yashaydi</text>
+
+  <!-- o'ng izoh -->
+  <text x="600" y="396" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">katta merge,</text>
+  <text x="600" y="414" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">konflikt xavfi koproq</text>
+
+  <!-- pastki taqqoslash -->
+  <text x="360" y="458" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">Trunk-based: kichik, tez, kam konflikt — lekin intizom va testlar kuchli bolishi shart.</text>
+</svg>

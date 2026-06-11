@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460">
+  <title>N+1 va eager loading tezlik taqqoslashi: 100 ta buyurtmani muallifi bilan ko'rsatganda lazy loading 101 so'rov va sekin javob beradi, with() bilan eager loading atigi 2 so'rov va tez javob beradi</title>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="720" height="460" fill="#f8fafc"/>
+
+  <text x="360" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">100 buyurtma + mijozi: N+1 vs eager loading</text>
+  <text x="360" y="56" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">@foreach ($buyurtmalar as $b) ... {{ $b-&gt;mijoz-&gt;ism }} ... @endforeach</text>
+
+  <!-- ===== chap: lazy (N+1) ===== -->
+  <rect x="36" y="78" width="312" height="300" rx="10" fill="#fff" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="192" y="106" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#dc2626">Buyurtma::all()  — N+1</text>
+
+  <!-- so'rovlar grafigi (ko'p ustun) -->
+  <rect x="60" y="120" width="264" height="40" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="192" y="145" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">1) buyurtmalar (1 ta so'rov)</text>
+
+  <!-- ko'p qizil chiziqcha -->
+  <g fill="#dc2626">
+    <rect x="60" y="172" width="8" height="46"/><rect x="73" y="172" width="8" height="46"/>
+    <rect x="86" y="172" width="8" height="46"/><rect x="99" y="172" width="8" height="46"/>
+    <rect x="112" y="172" width="8" height="46"/><rect x="125" y="172" width="8" height="46"/>
+    <rect x="138" y="172" width="8" height="46"/><rect x="151" y="172" width="8" height="46"/>
+    <rect x="164" y="172" width="8" height="46"/><rect x="177" y="172" width="8" height="46"/>
+    <rect x="190" y="172" width="8" height="46"/><rect x="203" y="172" width="8" height="46"/>
+    <rect x="216" y="172" width="8" height="46"/><rect x="229" y="172" width="8" height="46"/>
+    <rect x="242" y="172" width="8" height="46"/><rect x="255" y="172" width="8" height="46"/>
+    <rect x="268" y="172" width="8" height="46"/><rect x="281" y="172" width="8" height="46"/>
+    <rect x="294" y="172" width="8" height="46"/><rect x="307" y="172" width="8" height="46"/>
+  </g>
+  <text x="192" y="238" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">2..101) har buyurtma uchun mijoz so'rovi</text>
+
+  <text x="192" y="288" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="26" font-weight="bold" fill="#dc2626">101 so'rov</text>
+  <rect x="60" y="308" width="264" height="22" rx="4" fill="#fee2e2"/>
+  <rect x="60" y="308" width="240" height="22" rx="4" fill="#dc2626"/>
+  <text x="192" y="354" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">~450 ms — sekin</text>
+
+  <!-- ===== o'ng: eager ===== -->
+  <rect x="372" y="78" width="312" height="300" rx="10" fill="#fff" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="528" y="106" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">Buyurtma::with('mijoz')</text>
+
+  <rect x="396" y="120" width="264" height="40" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="528" y="145" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">1) buyurtmalar (1 ta so'rov)</text>
+
+  <rect x="396" y="172" width="264" height="46" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="528" y="193" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">2) mijozlar WHERE id IN (...)</text>
+  <text x="528" y="211" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">hammasi bitta so'rovda</text>
+
+  <text x="528" y="238" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">100 emas, 1000 buyurtma bo'lsa ham — 2 ta</text>
+
+  <text x="528" y="288" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="26" font-weight="bold" fill="#16a34a">2 so'rov</text>
+  <rect x="396" y="308" width="264" height="22" rx="4" fill="#dcfce7"/>
+  <rect x="396" y="308" width="34" height="22" rx="4" fill="#16a34a"/>
+  <text x="528" y="354" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">~18 ms — tez</text>
+
+  <!-- pastki xulosa -->
+  <rect x="36" y="396" width="648" height="50" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="360" y="426" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b45309">Munosabatni siklda (Blade @foreach) ishlatsang — doim with() bilan oldindan yukla</text>
+</svg>

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>Pull Request review sikli: reviewer izoh qoldiradi va Request changes bosadi, muallif kodni tuzatib push qiladi, PR avtomatik yangilanadi, reviewer qayta ko'rib Approve beradi va PR merge qilinadi</title>
+
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">PR review sikli: izoh -> tuzat -> push -> approve</text>
+
+  <!-- markaziy sikl quvurlari -->
+  <!-- 1) Reviewer izoh -->
+  <rect x="60" y="70" width="240" height="78" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="180" y="98" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b45309">1. Reviewer ko'radi</text>
+  <text x="180" y="120" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">qatorga izoh qoldiradi</text>
+  <text x="180" y="139" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">"Request changes"</text>
+
+  <!-- 2) Muallif tuzatadi -->
+  <rect x="420" y="70" width="240" height="78" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="540" y="98" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">2. Muallif tuzatadi</text>
+  <text x="540" y="120" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">kodni o'zgartiradi</text>
+  <text x="540" y="139" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">commit + push</text>
+
+  <!-- 3) PR yangilanadi -->
+  <rect x="420" y="232" width="240" height="78" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="540" y="260" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">3. PR avtomatik yangilanadi</text>
+  <text x="540" y="282" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">yangi commit PR'da chiqadi</text>
+  <text x="540" y="301" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(yangi PR ochilmaydi!)</text>
+
+  <!-- 4) Qayta ko'rik -->
+  <rect x="60" y="232" width="240" height="78" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="180" y="260" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b45309">4. Reviewer qayta ko'radi</text>
+  <text x="180" y="282" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tuzatish yetarli bo'lsa</text>
+  <text x="180" y="301" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">"Approve" beradi</text>
+
+  <!-- siklik o'qlar -->
+  <line x1="300" y1="109" x2="416" y2="109" stroke="#475569" stroke-width="2.5" marker-end="url(#a)"/>
+  <line x1="540" y1="148" x2="540" y2="228" stroke="#475569" stroke-width="2.5" marker-end="url(#a)"/>
+  <line x1="420" y1="271" x2="304" y2="271" stroke="#475569" stroke-width="2.5" marker-end="url(#a)"/>
+  <!-- 4 -> 1 (agar yana muammo bo'lsa, sikl takrorlanadi) -->
+  <path d="M 180 232 L 180 152" fill="none" stroke="#94a3b8" stroke-width="2.5" stroke-dasharray="6 4" marker-end="url(#aGray)"/>
+  <text x="146" y="195" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">yana</text>
+  <text x="146" y="211" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">muammo?</text>
+
+  <!-- merge natijasi -->
+  <line x1="300" y1="271" x2="300" y2="360" stroke="#16a34a" stroke-width="0"/>
+  <rect x="240" y="350" width="240" height="50" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="360" y="380" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Approve olingach -> PR Merge qilinadi</text>
+  <path d="M 180 310 L 180 375 L 236 375" fill="none" stroke="#16a34a" stroke-width="2.5" marker-end="url(#aG)"/>
+
+  <defs>
+    <marker id="a" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#475569"/></marker>
+    <marker id="aGray" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#94a3b8"/></marker>
+    <marker id="aG" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#16a34a"/></marker>
+  </defs>
+</svg>

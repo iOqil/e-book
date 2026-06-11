@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400">
+  <title>Laravel disklari: local disk storage/app papkasida yashirin, public disk storage/app/public da va storage:link symlink orqali brauzerga ochiq, s3 disk esa bulutdagi server. Har biri config/filesystems.php da sozlanadi</title>
+  <rect x="0" y="0" width="760" height="400" fill="#f8fafc"/>
+
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Disklar: local, public va s3</text>
+  <text x="380" y="56" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Hammasi bitta joyda sozlanadi: config/filesystems.php</text>
+
+  <!-- local -->
+  <rect x="24" y="78" width="226" height="200" rx="12" fill="#e2e8f0" stroke="#475569" stroke-width="2.5"/>
+  <text x="137" y="106" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">local</text>
+  <text x="137" y="130" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">storage/app/private</text>
+  <rect x="48" y="146" width="178" height="60" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="137" y="172" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">YASHIRIN</text>
+  <text x="137" y="194" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">brauzer ko'rolmaydi</text>
+  <text x="137" y="232" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Maxfiy fayllar:</text>
+  <text x="137" y="252" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">shartnoma, hisobot,</text>
+  <text x="137" y="270" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">faqat ruxsat bilan</text>
+
+  <!-- public -->
+  <rect x="268" y="78" width="226" height="200" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="381" y="106" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">public</text>
+  <text x="381" y="130" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">storage/app/public</text>
+  <rect x="292" y="146" width="178" height="60" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="381" y="170" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#2563eb">storage:link</text>
+  <text x="381" y="190" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">public/storage symlink</text>
+  <text x="381" y="232" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Ochiq fayllar:</text>
+  <text x="381" y="252" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">avatar, mahsulot rasmi</text>
+  <text x="381" y="270" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">URL bilan ochiladi</text>
+
+  <!-- s3 -->
+  <rect x="512" y="78" width="226" height="200" rx="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="625" y="106" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#7c3aed">s3</text>
+  <text x="625" y="130" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">bulutdagi server (boshqa mashina)</text>
+  <rect x="536" y="146" width="178" height="60" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="625" y="170" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#b45309">AWS / Contabo</text>
+  <text x="625" y="190" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">disksiz, cheksiz</text>
+  <text x="625" y="232" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Katta loyiha:</text>
+  <text x="625" y="252" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">serverdan ajratilgan,</text>
+  <text x="625" y="270" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">bir necha server bo'lsa</text>
+
+  <!-- pastki: bir xil kod -->
+  <rect x="80" y="306" width="600" height="72" rx="10" fill="#1e293b"/>
+  <text x="380" y="332" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#f8fafc">Kod bir xil — faqat disk nomi o'zgaradi:</text>
+  <text x="380" y="358" text-anchor="middle" font-family="Consolas, monospace" font-size="14" fill="#86efac">Storage::disk('public')-&gt;put(...)   //  'local' yoki 's3' ham bo'lishi mumkin</text>
+</svg>

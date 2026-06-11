@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="720" height="440">
+  <title>Type inference va aniq annotation taqqoslandi: let baho = 5 yozilganda TypeScript qiymatga qarab turini number deb o'zi topadi, bu let baho: number = 5 deb qo'lda yozgan bilan bir xil natija beradi</title>
+
+  <rect x="0" y="0" width="720" height="440" fill="#f8fafc"/>
+
+  <text x="360" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Type inference: TypeScript turini O'ZI topadi</text>
+
+  <!-- Chap panel: inference -->
+  <text x="195" y="76" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">Inference (annotationsiz)</text>
+  <rect x="40" y="90" width="310" height="58" rx="8" fill="#1e293b"/>
+  <text x="60" y="126" font-family="Consolas, 'Courier New', monospace" font-size="22" fill="#e2e8f0">let baho = </text>
+  <text x="232" y="126" font-family="Consolas, 'Courier New', monospace" font-size="22" font-weight="bold" fill="#f59e0b">5</text>
+  <text x="248" y="126" font-family="Consolas, 'Courier New', monospace" font-size="22" fill="#e2e8f0">;</text>
+
+  <!-- strelka pastga -->
+  <line x1="195" y1="158" x2="195" y2="196" stroke="#16a34a" stroke-width="2.5"/>
+  <polygon points="195,206 189,194 201,194" fill="#16a34a"/>
+  <text x="195" y="184" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">qiymatga qaraydi</text>
+
+  <rect x="60" y="210" width="270" height="50" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="195" y="240" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#15803d">TS xulosasi: tur = <tspan font-weight="bold" fill="#2563eb">number</tspan></text>
+
+  <!-- O'ng panel: annotation -->
+  <text x="525" y="76" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">Aniq annotation (qo'lda)</text>
+  <rect x="370" y="90" width="310" height="58" rx="8" fill="#1e293b"/>
+  <text x="390" y="126" font-family="Consolas, 'Courier New', monospace" font-size="22" fill="#e2e8f0">let baho</text>
+  <text x="520" y="126" font-family="Consolas, 'Courier New', monospace" font-size="22" font-weight="bold" fill="#2563eb">: number</text>
+  <text x="640" y="126" font-family="Consolas, 'Courier New', monospace" font-size="22" fill="#e2e8f0">= 5;</text>
+
+  <line x1="525" y1="158" x2="525" y2="196" stroke="#2563eb" stroke-width="2.5"/>
+  <polygon points="525,206 519,194 531,194" fill="#2563eb"/>
+  <text x="525" y="184" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">tur qo'lda yozilgan</text>
+
+  <rect x="390" y="210" width="270" height="50" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="525" y="240" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e40af">tur = <tspan font-weight="bold" fill="#2563eb">number</tspan></text>
+
+  <!-- Tenglik belgisi o'rtada -->
+  <text x="360" y="244" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="28" font-weight="bold" fill="#475569">=</text>
+
+  <!-- Pastki natija qutisi -->
+  <rect x="60" y="300" width="600" height="48" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="360" y="330" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b45309">Ikki yo'l ham bir xil himoyani beradi: baho endi faqat number qabul qiladi</text>
+
+  <!-- Maslahat -->
+  <text x="360" y="380" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Qiymat darrov berilsa, annotation ortiqcha takror —</text>
+  <text x="360" y="404" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">sodda chap yo'lni tanlang: let baho = 5</text>
+</svg>

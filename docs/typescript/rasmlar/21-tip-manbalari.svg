@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>Kutubxona tiplari uchta manbadan keladi: kutubxona ichidagi built-in .d.ts, alohida @types paketi yoki o'zingiz yozgan deklaratsiya fayli</title>
+
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Kutubxona tiplari qayerdan keladi?</text>
+
+  <!-- 1: built-in -->
+  <rect x="30" y="64" width="210" height="290" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="135" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">1. Built-in</text>
+  <text x="135" y="114" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tip kutubxona ICHIDA</text>
+
+  <rect x="50" y="130" width="170" height="96" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="135" y="152" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">node_modules/zod/</text>
+  <text x="135" y="174" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">index.js</text>
+  <text x="135" y="196" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">index.d.ts ✓</text>
+  <text x="135" y="216" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(birga keladi)</text>
+
+  <text x="135" y="256" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Hech narsa</text>
+  <text x="135" y="276" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">qilish shart emas</text>
+  <text x="135" y="312" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Misol: zod, axios,</text>
+  <text x="135" y="332" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">vite, prisma</text>
+
+  <!-- 2: @types -->
+  <rect x="255" y="64" width="210" height="290" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="360" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">2. @types</text>
+  <text x="360" y="114" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tip ALOHIDA paketda</text>
+
+  <rect x="275" y="130" width="170" height="96" rx="6" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="360" y="152" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">lodash (faqat JS)</text>
+  <text x="360" y="174" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">+</text>
+  <text x="360" y="196" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#2563eb">@types/lodash ✓</text>
+  <text x="360" y="216" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(siz o'rnatasiz)</text>
+
+  <rect x="275" y="244" width="170" height="34" rx="6" fill="#1e293b"/>
+  <text x="360" y="266" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#ffffff">npm i -D @types/lodash</text>
+
+  <text x="360" y="312" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Misol: lodash, express,</text>
+  <text x="360" y="332" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">node, jest</text>
+
+  <!-- 3: o'zing yozasan -->
+  <rect x="480" y="64" width="210" height="290" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="585" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#b45309">3. O'zing yozasan</text>
+  <text x="585" y="114" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tip UMUMAN yo'q</text>
+
+  <rect x="500" y="130" width="170" height="96" rx="6" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="585" y="152" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">eski-paket (JS,</text>
+  <text x="585" y="172" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">@types ham yo'q)</text>
+  <text x="585" y="194" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#b45309">o'z .d.ts faylingiz</text>
+  <text x="585" y="214" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(qo'lda yozasiz)</text>
+
+  <rect x="500" y="244" width="170" height="34" rx="6" fill="#1e293b"/>
+  <text x="585" y="265" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#ffffff">declare module "..."</text>
+
+  <text x="585" y="312" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Misol: eski yoki kichik</text>
+  <text x="585" y="332" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">npm paketlari</text>
+
+  <text x="360" y="396" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Avval 1-ni umid qiling, bo'lmasa 2-ni o'rnating, oxirgi chora — 3</text>
+  <text x="360" y="418" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">.d.ts = faqat tiplar yashaydigan fayl, ishga tushadigan kod emas</text>
+</svg>
