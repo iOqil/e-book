@@ -1,6 +1,6 @@
 # 2.1 Class va obyekt — eng asosiy tushuncha
 
-[⬅️ Oldingi: 1.10 Anonim funksiyalar va massiv vositalari (map / filter / reduce)](./13-anonim-funksiyalar-va-massiv-vosital.md) · [🏠 README](./README.md) · [Keyingi: 2.2 Konstruktor ➡️](./15-konstruktor.md)
+[⬅️ Oldingi: 1.14 CLI — terminal skriptlari](./cli-skriptlar.md) · [🏠 README](./README.md) · [Keyingi: 2.2 Konstruktor ➡️](./15-konstruktor.md)
 
 ---
 

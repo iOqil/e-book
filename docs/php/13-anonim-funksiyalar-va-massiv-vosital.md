@@ -1,6 +1,6 @@
 # 1.10 Anonim funksiyalar va massiv vositalari (map / filter / reduce)
 
-[⬅️ Oldingi: 1.9 Funksiyalar](./12-funksiyalar.md) · [🏠 README](./README.md) · [Keyingi: 2.1 Class va obyekt — eng asosiy tushuncha ➡️](./14-class-va-obyekt-eng-asosiy-tushuncha.md)
+[⬅️ Oldingi: 1.9 Funksiyalar](./12-funksiyalar.md) · [🏠 README](./README.md) · [Keyingi: 1.11 Muntazam ifodalar (regex) ➡️](./regex.md)
 
 ---
 

@@ -1,6 +1,6 @@
 # 5.1 Toza kod prinsiplari
 
-[⬅️ Oldingi: 4.5 JSON bilan ishlash va oddiy API](./35-json-bilan-ishlash-va-oddiy-api.md) · [🏠 README](./README.md) · [Keyingi: 5.2 MVC — loyihani tartibga solish ➡️](./37-mvc-loyihani-tartibga-solish.md)
+[⬅️ Oldingi: 4.6 Fayl bilan ishlash va fayl yuklash](./fayl-yuklash.md) · [🏠 README](./README.md) · [Keyingi: 5.2 MVC — loyihani tartibga solish ➡️](./37-mvc-loyihani-tartibga-solish.md)
 
 ---
 

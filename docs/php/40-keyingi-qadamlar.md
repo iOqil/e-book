@@ -1,6 +1,6 @@
 # 6-QISM — Keyingi qadamlar
 
-[⬅️ Oldingi: 5.4 Composer — tashqi kutubxonalar](./39-composer-tashqi-kutubxonalar.md) · [🏠 README](./README.md)
+[⬅️ Oldingi: 5.5 Testing (PHPUnit)](./testing.md) · [🏠 README](./README.md)
 
 ---
 

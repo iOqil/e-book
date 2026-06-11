@@ -1,6 +1,6 @@
 # 5.4 Composer — tashqi kutubxonalar
 
-[⬅️ Oldingi: 5.3 Foydali dizayn andozalari](./38-foydali-dizayn-andozalari.md) · [🏠 README](./README.md) · [Keyingi: Keyingi qadamlar ➡️](./40-keyingi-qadamlar.md)
+[⬅️ Oldingi: 5.3 Foydali dizayn andozalari](./38-foydali-dizayn-andozalari.md) · [🏠 README](./README.md) · [Keyingi: 5.5 Testing (PHPUnit) ➡️](./testing.md)
 
 ---
 

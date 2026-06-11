@@ -1,6 +1,6 @@
 # 4.5 JSON bilan ishlash va oddiy API
 
-[⬅️ Oldingi: 4.4 Xavfsizlik asoslari](./34-xavfsizlik-asoslari.md) · [🏠 README](./README.md) · [Keyingi: 5.1 Toza kod prinsiplari ➡️](./36-toza-kod-prinsiplari.md)
+[⬅️ Oldingi: 4.4 Xavfsizlik asoslari](./34-xavfsizlik-asoslari.md) · [🏠 README](./README.md) · [Keyingi: 4.6 Fayl bilan ishlash va fayl yuklash ➡️](./fayl-yuklash.md)
 
 ---
 

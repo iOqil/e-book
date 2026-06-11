@@ -1,6 +1,6 @@
 # 3.1 Ma'lumotlar bazasi nima va nega kerak?
 
-[⬅️ Oldingi: 2.10 Xatolarni boshqarish (try / catch)](./23-xatolarni-boshqarish.md) · [🏠 README](./README.md) · [Keyingi: 3.2 phpMyAdmin va birinchi jadval ➡️](./25-phpmyadmin-va-birinchi-jadval.md)
+[⬅️ Oldingi: 2.12 Namespace va autoloading](./namespace-autoloading.md) · [🏠 README](./README.md) · [Keyingi: 3.2 phpMyAdmin va birinchi jadval ➡️](./25-phpmyadmin-va-birinchi-jadval.md)
 
 ---
 
