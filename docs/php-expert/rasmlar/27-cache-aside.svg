@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="720" height="440">
+  <title>Cache-aside naqsh: ilova avval keshdan so'raydi. HIT bo'lsa - to'g'ridan kesh qiymati qaytadi (DB'ga tegmaydi). MISS bo'lsa - DB'dan o'qiladi, kesh TTL bilan to'ldiriladi, keyin qiymat qaytadi. Keyingi so'rovlar HIT bo'ladi.</title>
+
+  <rect x="0" y="0" width="720" height="440" fill="#f8fafc"/>
+
+  <text x="360" y="30" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Cache-aside (lazy loading) naqsh</text>
+  <text x="360" y="52" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Ilova keshni boshqaradi: avval so'ra, bo'lmasa DB'dan to'ldir</text>
+
+  <!-- Ilova -->
+  <rect x="40" y="180" width="120" height="80" rx="10" fill="#2563eb"/>
+  <text x="100" y="214" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Ilova</text>
+  <text x="100" y="234" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="10.5" fill="#dbeafe">get(key)</text>
+
+  <!-- Kesh -->
+  <rect x="300" y="100" width="140" height="84" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="370" y="132" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="14" font-weight="bold" fill="#15803d">Kesh</text>
+  <text x="370" y="152" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="10.5" fill="#166534">Redis / APCu / file</text>
+  <text x="370" y="170" text-anchor="middle" font-family="Consolas, monospace" font-size="10" fill="#15803d">TTL bilan</text>
+
+  <!-- DB -->
+  <rect x="540" y="250" width="140" height="90" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2.5"/>
+  <path d="M540 268 a70 10 0 0 0 140 0" fill="none" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="610" y="290" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="14" font-weight="bold" fill="#6d28d9">Baza (DB)</text>
+  <text x="610" y="310" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="10.5" fill="#5b21b6">sekin, qimmat</text>
+  <text x="610" y="328" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="10" fill="#6d28d9">disk I/O</text>
+
+  <!-- 1: get -->
+  <path d="M160 200 L296 150" stroke="#2563eb" stroke-width="2.4" fill="none" marker-end="url(#cb)"/>
+  <text x="222" y="166" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="11" font-weight="bold" fill="#1d4ed8">1. get(key)</text>
+
+  <!-- HIT yo'li (yashil) -->
+  <path d="M300 142 L162 196" stroke="#16a34a" stroke-width="2.6" fill="none" marker-end="url(#cg)"/>
+  <rect x="186" y="100" width="92" height="34" rx="7" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="232" y="115" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="11" font-weight="bold" fill="#15803d">HIT &#8594;</text>
+  <text x="232" y="129" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="9.5" fill="#166534">darhol qaytar</text>
+
+  <!-- MISS -> DB -->
+  <path d="M395 184 L560 248" stroke="#dc2626" stroke-width="2.4" fill="none" marker-end="url(#cd)"/>
+  <text x="500" y="208" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="11" font-weight="bold" fill="#b91c1c">2. MISS &#8594; DB so'rov</text>
+
+  <!-- DB -> kesh to'ldirish -->
+  <path d="M548 250 L420 184" stroke="#f59e0b" stroke-width="2.4" fill="none" marker-end="url(#cf)"/>
+  <text x="455" y="245" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="11" font-weight="bold" fill="#b45309">3. set(key, TTL)</text>
+
+  <!-- DB -> ilova qaytar -->
+  <path d="M540 300 L162 240" stroke="#7c3aed" stroke-width="2.2" fill="none" stroke-dasharray="6 4" marker-end="url(#cv)"/>
+  <text x="350" y="288" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="10.5" fill="#6d28d9">4. qiymat ilovaga (keyingi so'rov HIT bo'ladi)</text>
+
+  <!-- pastki izoh paneli -->
+  <rect x="24" y="346" width="672" height="78" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <circle cx="52" cy="372" r="4" fill="#16a34a"/>
+  <text x="64" y="376" font-family="Segoe UI, sans-serif" font-size="12" fill="#334155">HIT (issiq kalit): DB'ga UMUMAN tegmaymiz &#8212; mikrosekundlar. Bu naqshning butun foydasi.</text>
+  <circle cx="52" cy="396" r="4" fill="#dc2626"/>
+  <text x="64" y="400" font-family="Segoe UI, sans-serif" font-size="12" fill="#334155">MISS: faqat birinchi marta DB. Stampede: ko'p MISS bir vaqtda &#8594; lock yoki probabilistik yangilash.</text>
+  <circle cx="52" cy="416" r="4" fill="#f59e0b"/>
+  <text x="64" y="420" font-family="Segoe UI, sans-serif" font-size="12" fill="#334155">Invalidatsiya: ma'lumot o'zgarsa delete(key) yoki tag bo'yicha o'chir &#8212; aks holda eski qiymat.</text>
+
+  <defs>
+    <marker id="cb" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#2563eb"/></marker>
+    <marker id="cg" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker>
+    <marker id="cd" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#dc2626"/></marker>
+    <marker id="cf" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#f59e0b"/></marker>
+    <marker id="cv" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#7c3aed"/></marker>
+  </defs>
+</svg>

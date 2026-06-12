@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="720" height="440">
+  <title>Clean architecture qatlamlari va Dependency Rule: tashqaridan ichkariga - Frameworks/Drivers (presentation), Interface Adapters (infrastructure), Application (use-case interactor), Entities (domain). Manba kodi bog'liqligi har doim tashqi qatlamdan ichki qatlamga yo'naladi; ichki qatlam tashqi qatlam haqida hech narsa bilmaydi. Bu Dependency Rule.</title>
+
+  <rect x="0" y="0" width="720" height="440" fill="#f8fafc"/>
+  <text x="360" y="28" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="18" font-weight="bold" fill="#1e293b">Clean architecture: Dependency Rule</text>
+
+  <defs>
+    <marker id="arr2" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+  <!-- konsentrik qatlamlar (eng tashqi -> eng ichki) -->
+  <!-- 1: Frameworks & Drivers (presentation) -->
+  <rect x="70" y="60" width="420" height="320" rx="14" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="280" y="80" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="12.5" font-weight="bold" fill="#b91c1c">Presentation / Frameworks &amp; Drivers</text>
+  <text x="280" y="96" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="10" fill="#ef4444">HTTP, CLI, Laravel/Symfony, view</text>
+
+  <!-- 2: Interface Adapters (infrastructure) -->
+  <rect x="100" y="108" width="360" height="244" rx="12" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="280" y="128" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="12.5" font-weight="bold" fill="#b45309">Infrastructure / Interface Adapters</text>
+  <text x="280" y="144" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="10" fill="#f59e0b">PdoRepository, Redis, controller, gateway</text>
+
+  <!-- 3: Application (use-case) -->
+  <rect x="135" y="156" width="290" height="148" rx="11" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="280" y="176" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="12.5" font-weight="bold" fill="#1e40af">Application — use-case interactor</text>
+  <text x="280" y="192" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="10" fill="#3b82f6">input/output port, orkestratsiya</text>
+
+  <!-- 4: Entities (domain) -->
+  <circle cx="280" cy="248" r="44" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="280" y="244" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="12.5" font-weight="bold" fill="#5b21b6">Entities</text>
+  <text x="280" y="260" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="10" fill="#7c3aed">domen</text>
+
+  <!-- DEPENDENCY o'qi: tashqaridan ichkariga (qizil, qalin) -->
+  <line x1="540" y1="100" x2="540" y2="300" stroke="#dc2626" stroke-width="3" marker-end="url(#arr2)"/>
+  <text x="640" y="150" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="12" font-weight="bold" fill="#b91c1c">Bog'liqlik</text>
+  <text x="640" y="168" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="12" font-weight="bold" fill="#b91c1c">o'qi</text>
+  <text x="640" y="200" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="11" fill="#dc2626">tashqi</text>
+  <text x="640" y="216" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="11" fill="#dc2626">&#8595;</text>
+  <text x="640" y="232" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="11" fill="#dc2626">ichki</text>
+
+  <!-- pastki izoh -->
+  <rect x="40" y="392" width="640" height="38" rx="9" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.3"/>
+  <text x="360" y="409" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="11" fill="#334155">Dependency Rule: manba bog'liqligi FAQAT ichkariga ishora qiladi. Ichki qatlam tashqi qatlam nomini ham bilmaydi.</text>
+  <text x="360" y="424" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="10.5" fill="#64748b">Ichkari kesib o'tilsa (domen PDO'ni import qilsa) — qoida buziladi. DIP buni interfeys (port) bilan to'g'rilaydi.</text>
+</svg>

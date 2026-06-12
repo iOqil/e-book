@@ -34,8 +34,14 @@
 - [22 — PHPUnit chuqur va test doubles](./22-phpunit-chuqur.md) — AAA, test piramidasi, atributlar (`#[Test]`/`#[DataProvider]`), test doubles taksonomiyasi (dummy/stub/spy/mock/fake), `assertSame` vs `assertEquals` va London vs Chicago maktablari.
 - [23 — Pest, integratsiya, coverage va mutation testing](./23-pest-mutation.md) — Pest ifodali sintaksis, sqlite transactional fixtures, coverage (line vs branch), mutation testing (Infection MSI) va TDD red-green-refactor.
 - [24 — Static analysis va avtomatik sifat](./24-static-analysis.md) — PHPStan (level max + baseline), Psalm, `@template` generics, Rector (avtomatik refaktoring), PHP-CS-Fixer va CI sifat-darvozasi.
+- [25 — Hexagonal va Clean arxitektura](./25-hexagonal.md) — ports & adapters, bog'liqlik o'qi ichkariga, domain/application/infrastructure qatlamlar, framework "detal" sifatida va domenni 0-infratuzilma bilan test qilish.
+- [26 — Domain-Driven Design va CQRS](./26-ddd-cqrs.md) — entity vs Value Object, aggregate + invariant + domain event, bounded context/ubiquitous language, CQRS (command/query) va message bus (Symfony Messenger).
+- [27 — Performance: OPcache, JIT, profiling va keshlash](./27-performance-keshlash.md) — "avval o'lchang", OPcache/JIT/preloading, profiling, PSR-6/16 kesh, cache-aside/stampede, Redis va N+1.
+- [28 — Async va parallel PHP](./28-async.md) — generator koroutina sifatida, Fibers (8.1), ReactPHP/Amp event-loop, Swoole/RoadRunner/FrankenPHP va qachon async kerak emas.
+- [29 — Navbatlar, observability va deploy](./29-production.md) — queues/workers (Symfony Messenger), idempotentlik/outbox/dead-letter, Monolog + korrelyatsiya ID + global handlerlar, Docker/12-factor va zero-downtime deploy.
+- [30 — Yakuniy senior kapston](./30-kapston.md) — butun trekni bog'laydigan production-grade hexagonal xizmat (REST + RBAC/JWT + navbat + Redis kesh + test + observability + Docker + ADR).
 
-> **Eslatma:** bu trek bosqichma-bosqich kengaymoqda. Hozircha tayyor: **birinchi** (01-04 — REST API, HTTP klient, avtorizatsiya, JWT), **ikkinchi** (05-10 — zamonaviy PHP 8.4 tip tizimi va meta-dasturlash), **uchinchi** (11-16 — framework internals: o'z mini-frameworkingizni noldan qurish), **amaliy I/O** (17-18 — fayllar, formatlar, bulutli saqlash) va **sifat-muhandislik** (19-24 — SOLID, GoF patterns, taktik dizayn, PHPUnit/Pest/mutation, static analysis). Keyingi to'plamda: arxitektura (hexagonal/DDD), performance (OPcache/JIT/Redis) va async (Fibers/queue). Boblar mustaqil o'qilishi mumkin, lekin tartib bilan o'qish tavsiya etiladi.
+> **Eslatma:** bu trek endi **TO'LIQ** — 30 bob, "0 dan PHP expertgacha". Olti to'plam: **birinchi** (01-04 — REST/auth), **ikkinchi** (05-10 — PHP 8.4 tip tizimi va meta-dasturlash), **uchinchi** (11-16 — framework internals), **amaliy I/O** (17-18 — fayllar/formatlar/bulut), **sifat-muhandislik** (19-24 — SOLID/patterns/testing/static analysis) va **senior/arxitektura** (25-30 — hexagonal/DDD/CQRS, performance, async, production va yakuniy kapston). Boblar mustaqil o'qilishi mumkin, lekin tartib bilan o'qish tavsiya etiladi.
 
 ---
 

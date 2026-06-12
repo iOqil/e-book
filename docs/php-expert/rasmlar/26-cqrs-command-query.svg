@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="720" height="440">
+  <title>CQRS: yozish yoli (Command) holatni ozgartiradi - Command Bus orqali Handler ga, u Aggregate va write-modelni yangilaydi va Domain Event chiqaradi. Oqish yoli (Query) holatni faqat oqiydi - Query Handler togridan-togri read-modeldan (denormallashtirilgan jadval/view) oladi, domen mantigisiz. Ikki yol ajratilgan.</title>
+
+  <rect x="0" y="0" width="720" height="440" fill="#f8fafc"/>
+  <text x="360" y="28" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="18" font-weight="bold" fill="#1e293b">CQRS: yozish yoli vs oqish yoli</text>
+
+  <defs>
+    <marker id="arW" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="arQ" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 Z" fill="#16a34a"/>
+    </marker>
+    <marker id="arE" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 Z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+
+  <!-- ===== WRITE (COMMAND) YOLI ===== -->
+  <text x="180" y="64" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="14" font-weight="bold" fill="#1e40af">COMMAND (yozish) - holatni OZGARTIRADI</text>
+
+  <rect x="40" y="78" width="280" height="40" rx="9" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="180" y="103" text-anchor="middle" font-family="Consolas, monospace" font-size="12.5" fill="#1e40af">PlaceOrderCommand  (void)</text>
+
+  <rect x="40" y="138" width="280" height="40" rx="9" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="180" y="163" text-anchor="middle" font-family="Consolas, monospace" font-size="12.5" font-weight="bold" fill="#1e3a8a">Command Bus</text>
+
+  <rect x="40" y="198" width="280" height="46" rx="9" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="180" y="219" text-anchor="middle" font-family="Consolas, monospace" font-size="12" font-weight="bold" fill="#1e40af">PlaceOrderHandler</text>
+  <text x="180" y="236" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="9.5" fill="#2563eb">invariant tekshiradi, save qiladi</text>
+
+  <rect x="40" y="264" width="280" height="46" rx="9" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="180" y="285" text-anchor="middle" font-family="Consolas, monospace" font-size="12" font-weight="bold" fill="#1e3a8a">Order (aggregate) + WRITE model</text>
+  <text x="180" y="302" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="9.5" fill="#2563eb">normallashtirilgan, invariant-himoyali</text>
+
+  <!-- write strelkalar -->
+  <line x1="180" y1="118" x2="180" y2="136" stroke="#2563eb" stroke-width="2" marker-end="url(#arW)"/>
+  <line x1="180" y1="178" x2="180" y2="196" stroke="#2563eb" stroke-width="2" marker-end="url(#arW)"/>
+  <line x1="180" y1="244" x2="180" y2="262" stroke="#2563eb" stroke-width="2" marker-end="url(#arW)"/>
+
+  <!-- ===== READ (QUERY) YOLI ===== -->
+  <text x="540" y="64" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="14" font-weight="bold" fill="#166534">QUERY (oqish) - side-effect YOQ</text>
+
+  <rect x="400" y="78" width="280" height="40" rx="9" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="540" y="103" text-anchor="middle" font-family="Consolas, monospace" font-size="12" fill="#166534">GetOrderSummaryQuery</text>
+
+  <rect x="400" y="138" width="280" height="40" rx="9" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="540" y="163" text-anchor="middle" font-family="Consolas, monospace" font-size="12.5" font-weight="bold" fill="#14532d">Query Handler</text>
+
+  <rect x="400" y="198" width="280" height="46" rx="9" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="540" y="219" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="11" fill="#166534">domen mantigi YOQ - togridan SQL</text>
+  <text x="540" y="236" text-anchor="middle" font-family="Consolas, monospace" font-size="10.5" fill="#16a34a">SELECT ... FROM order_summary</text>
+
+  <rect x="400" y="264" width="280" height="46" rx="9" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="540" y="285" text-anchor="middle" font-family="Consolas, monospace" font-size="12" font-weight="bold" fill="#14532d">READ model (view / projeksiya)</text>
+  <text x="540" y="302" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="9.5" fill="#16a34a">denormallashtirilgan, oqish uchun tez</text>
+
+  <!-- read strelkalar -->
+  <line x1="540" y1="118" x2="540" y2="136" stroke="#16a34a" stroke-width="2" marker-end="url(#arQ)"/>
+  <line x1="540" y1="178" x2="540" y2="196" stroke="#16a34a" stroke-width="2" marker-end="url(#arQ)"/>
+  <line x1="540" y1="244" x2="540" y2="262" stroke="#16a34a" stroke-width="2" marker-end="url(#arQ)"/>
+
+  <!-- ===== PROJEKSIYA: write -> read (event orqali) ===== -->
+  <line x1="320" y1="287" x2="398" y2="287" stroke="#f59e0b" stroke-width="2.5" stroke-dasharray="7 4" marker-end="url(#arE)"/>
+  <text x="360" y="278" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="9.5" font-weight="bold" fill="#b45309">Domain Event</text>
+  <text x="360" y="335" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="9" fill="#b45309">projeksiya read-modelni</text>
+  <text x="360" y="347" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="9" fill="#b45309">yangilaydi (eventual)</text>
+
+  <!-- pastki izoh -->
+  <rect x="40" y="360" width="640" height="64" rx="9" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.4"/>
+  <text x="360" y="380" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="11.5" font-weight="bold" fill="#92400e">Qachon foydali: oqish va yozish har xil masshtab/model talab qilsa (kop oqish, murakkab hisobot).</text>
+  <text x="360" y="399" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="11" fill="#b45309">Soddasi: bitta command/query nomlash konvensiyasi - alohida baza shart emas.</text>
+  <text x="360" y="416" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="11" fill="#b45309">Qachon ortiqcha: oddiy CRUD - read=write bir model bolsa, CQRS faqat murakkablik qoshadi.</text>
+</svg>

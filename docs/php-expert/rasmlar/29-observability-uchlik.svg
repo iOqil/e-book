@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="720" height="440">
+  <title>Observability uchligi: Loglar (nima sodir bo'ldi - strukturali JSON hodisalar, korrelyatsiya ID), Metrikalar (qancha/qanchalik tez - Prometheus sanagichlar, gistogrammalar), Tracing (qayerda sekin - so'rovni xizmatlar bo'ylab span larga ajratish, OpenTelemetry). Uchalasi birga tizimni ichkaridan ko'rinadigan qiladi.</title>
+
+  <rect x="0" y="0" width="720" height="440" fill="#f8fafc"/>
+
+  <text x="360" y="30" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Observability uchligi</text>
+  <text x="360" y="52" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">"tizim ichida nima bo'lyapti?" — uch xil ko'z bilan ko'rish</text>
+
+  <!-- Logs -->
+  <rect x="36" y="80" width="200" height="200" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <circle cx="76" cy="116" r="16" fill="#dbeafe"/>
+  <text x="76" y="122" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" fill="#2563eb">L</text>
+  <text x="146" y="114" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e40af">Loglar</text>
+  <text x="146" y="132" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#64748b">NIMA sodir bo'ldi?</text>
+  <rect x="52" y="146" width="168" height="118" rx="6" fill="#0f172a"/>
+  <text x="62" y="166" font-family="Consolas, monospace" font-size="9.5" fill="#93c5fd">{ "level":"error",</text>
+  <text x="62" y="181" font-family="Consolas, monospace" font-size="9.5" fill="#93c5fd">  "msg":"to'lov",</text>
+  <text x="62" y="196" font-family="Consolas, monospace" font-size="9.5" fill="#fca5a5">  "order":4821,</text>
+  <text x="62" y="211" font-family="Consolas, monospace" font-size="9.5" fill="#86efac">  "corr_id":</text>
+  <text x="62" y="226" font-family="Consolas, monospace" font-size="9.5" fill="#86efac">    "req-7f3a" }</text>
+  <text x="136" y="252" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="10" fill="#cbd5e1">strukturali JSON hodisa</text>
+
+  <!-- Metrics -->
+  <rect x="260" y="80" width="200" height="200" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <circle cx="300" cy="116" r="16" fill="#dcfce7"/>
+  <text x="300" y="122" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" fill="#16a34a">M</text>
+  <text x="372" y="114" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#15803d">Metrikalar</text>
+  <text x="372" y="132" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#64748b">QANCHA? QANCHALIK tez?</text>
+  <!-- mini bar chart -->
+  <rect x="284" y="230" width="22" height="30" fill="#86efac"/>
+  <rect x="314" y="210" width="22" height="50" fill="#4ade80"/>
+  <rect x="344" y="186" width="22" height="74" fill="#16a34a"/>
+  <rect x="374" y="200" width="22" height="60" fill="#22c55e"/>
+  <rect x="404" y="222" width="22" height="38" fill="#86efac"/>
+  <line x1="280" y1="260" x2="436" y2="260" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="360" y="172" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="10" fill="#475569">req/s, p95 latency, xato %</text>
+  <text x="360" y="276" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="10" fill="#64748b">Prometheus -&gt; Grafana</text>
+
+  <!-- Tracing -->
+  <rect x="484" y="80" width="200" height="200" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <circle cx="524" cy="116" r="16" fill="#ede9fe"/>
+  <text x="524" y="122" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" fill="#7c3aed">T</text>
+  <text x="596" y="114" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#6d28d9">Tracing</text>
+  <text x="596" y="132" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#64748b">QAYERDA sekin?</text>
+  <!-- span waterfall -->
+  <rect x="502" y="152" width="160" height="16" rx="3" fill="#c4b5fd"/>
+  <text x="508" y="164" font-family="Consolas, monospace" font-size="9" fill="#4c1d95">HTTP so'rov</text>
+  <rect x="514" y="174" width="90" height="14" rx="3" fill="#a78bfa"/>
+  <text x="520" y="185" font-family="Consolas, monospace" font-size="9" fill="#ffffff">DB query</text>
+  <rect x="520" y="194" width="120" height="14" rx="3" fill="#8b5cf6"/>
+  <text x="526" y="205" font-family="Consolas, monospace" font-size="9" fill="#ffffff">payme API (sekin!)</text>
+  <rect x="514" y="214" width="40" height="14" rx="3" fill="#a78bfa"/>
+  <text x="520" y="225" font-family="Consolas, monospace" font-size="9" fill="#ffffff">render</text>
+  <text x="584" y="252" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="10" fill="#64748b">OpenTelemetry span lar</text>
+  <text x="584" y="268" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="10" fill="#64748b">xizmatlar bo'ylab</text>
+
+  <!-- unifying bar -->
+  <rect x="36" y="304" width="648" height="104" rx="12" fill="#eef2ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="360" y="332" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#4338ca">Korrelyatsiya ID — uchalasini bog'laydigan ip</text>
+  <text x="360" y="356" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#475569">Bitta so'rov uchun yagona ID (req-7f3a1c) har bir logga, span ga va metrika yorlig'iga yoziladi.</text>
+  <text x="360" y="376" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#475569">Foydalanuvchi shikoyat qilganda: shu ID bo'yicha LOG -&gt; TRACE -&gt; METRIKA ni uchidan-uchiga kuzatasiz.</text>
+  <text x="360" y="396" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" font-style="italic" fill="#6366f1">Log "nima", metrika "qancha", trace "qayerda" — birgalikda tizim ichkaridan ko'rinadi.</text>
+</svg>

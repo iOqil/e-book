@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="720" height="440">
+  <title>Navbat oqimi: producer (web so'rovi) xabarni broker (Redis/RabbitMQ) ga yuboradi, javobni darhol qaytaradi. Worker jarayoni xabarni oladi, ishlaydi; muvaffaqiyatsizlikda eksponensial backoff bilan retry, retry tugasa dead-letter queue ga o'tadi. Idempotentlik dublikat xabarni bir marta ta'sir qildiradi.</title>
+
+  <rect x="0" y="0" width="720" height="440" fill="#f8fafc"/>
+
+  <text x="360" y="30" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Navbat oqimi: producer -&gt; broker -&gt; worker</text>
+  <text x="360" y="52" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Sekin ish (email/PDF/hisobot) javobdan ajratiladi -&gt; foydalanuvchi kutmaydi</text>
+
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+    <marker id="arrRed" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+  <!-- Producer -->
+  <rect x="24" y="92" width="150" height="92" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="99" y="118" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e40af">Producer</text>
+  <text x="99" y="138" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#64748b">web so'rovi</text>
+  <text x="99" y="156" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#64748b">dispatch(msg)</text>
+  <text x="99" y="173" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="10.5" fill="#16a34a">-&gt; 202 darhol</text>
+
+  <!-- Broker -->
+  <rect x="248" y="86" width="170" height="104" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="333" y="112" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#6d28d9">Broker (navbat)</text>
+  <text x="333" y="131" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#64748b">Redis / RabbitMQ / SQS</text>
+  <!-- queue cells -->
+  <rect x="266" y="146" width="30" height="26" rx="4" fill="#ede9fe" stroke="#7c3aed"/>
+  <rect x="300" y="146" width="30" height="26" rx="4" fill="#ede9fe" stroke="#7c3aed"/>
+  <rect x="334" y="146" width="30" height="26" rx="4" fill="#ede9fe" stroke="#7c3aed"/>
+  <rect x="368" y="146" width="30" height="26" rx="4" fill="#ddd6fe" stroke="#7c3aed" stroke-dasharray="3 2"/>
+  <text x="281" y="164" text-anchor="middle" font-family="Consolas, monospace" font-size="11" fill="#5b21b6">m1</text>
+  <text x="315" y="164" text-anchor="middle" font-family="Consolas, monospace" font-size="11" fill="#5b21b6">m2</text>
+  <text x="349" y="164" text-anchor="middle" font-family="Consolas, monospace" font-size="11" fill="#5b21b6">m3</text>
+
+  <!-- Worker -->
+  <rect x="492" y="92" width="150" height="92" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="567" y="118" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#15803d">Worker</text>
+  <text x="567" y="138" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#64748b">fon jarayoni</text>
+  <text x="567" y="156" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#64748b">supervisord boshqaradi</text>
+  <text x="567" y="173" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="10.5" fill="#475569">handle(msg) -&gt; ack</text>
+
+  <!-- arrows producer->broker, broker->worker -->
+  <line x1="174" y1="138" x2="244" y2="138" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="209" y="130" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="10" fill="#475569">push</text>
+  <line x1="418" y1="138" x2="488" y2="138" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="453" y="130" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="10" fill="#475569">pull</text>
+
+  <!-- Retry loop -->
+  <rect x="468" y="240" width="200" height="74" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="568" y="264" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#b45309">Retry + backoff</text>
+  <text x="568" y="284" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="10.5" fill="#92400e">yiqildi -&gt; 1s, 2s, 4s...</text>
+  <text x="568" y="301" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="10.5" fill="#92400e">(eksponensial + jitter)</text>
+  <line x1="567" y1="184" x2="567" y2="236" stroke="#f59e0b" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="600" y="214" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="10" fill="#b45309">xato</text>
+  <!-- retry back to broker -->
+  <path d="M 468 270 C 380 270 360 220 360 196" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arr)"/>
+  <text x="392" y="250" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="10" fill="#b45309">qayta navbatga</text>
+
+  <!-- Dead-letter -->
+  <rect x="468" y="344" width="200" height="68" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="568" y="368" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#b91c1c">Dead-letter queue</text>
+  <text x="568" y="388" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="10.5" fill="#991b1b">N retry tugadi -&gt; bu yerga</text>
+  <text x="568" y="404" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="10.5" fill="#991b1b">qo'lda tekshirish / qayta</text>
+  <line x1="568" y1="314" x2="568" y2="340" stroke="#dc2626" stroke-width="2" marker-end="url(#arrRed)"/>
+
+  <!-- Idempotency note -->
+  <rect x="24" y="240" width="380" height="172" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="44" y="266" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#15803d">Idempotentlik (at-least-once kafolat)</text>
+  <text x="44" y="288" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#475569">Broker xabarni KAMIDA bir marta yetkazadi —</text>
+  <text x="44" y="305" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#475569">tarmoq uzilishida DUBLIKAT bo'lishi mumkin.</text>
+  <text x="44" y="328" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#1e293b" font-weight="bold">Yechim: messageId bo'yicha "ko'rilgan"ni</text>
+  <text x="44" y="345" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#1e293b" font-weight="bold">eslab qol -&gt; takror kelsa SKIP.</text>
+  <rect x="44" y="358" width="340" height="44" rx="6" fill="#0f172a"/>
+  <text x="56" y="377" font-family="Consolas, monospace" font-size="10.5" fill="#86efac">if (seen[msgId]) return; // bir marta ta'sir</text>
+  <text x="56" y="393" font-family="Consolas, monospace" font-size="10.5" fill="#93c5fd">sendEmail(); markSeen(msgId);</text>
+</svg>

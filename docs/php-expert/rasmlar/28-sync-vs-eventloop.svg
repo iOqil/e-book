@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="720" height="440">
+  <title>Sinxron (bloklovchi) model uchta I/O so'rovni KETMA-KET kutadi (jami 3 birlik vaqt). Event loop bitta thread bo'lsa-da uchala I/O ni BIR VAQTDA kutadi (jami 1 birlik) - konkurent I/O.</title>
+
+  <rect x="0" y="0" width="720" height="440" fill="#f8fafc"/>
+
+  <text x="360" y="30" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Sinxron bloklash vs Event loop (konkurent I/O)</text>
+  <text x="360" y="52" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Uchta I/O so'rov (har biri 1 vaqt birligi kutadi) - ikki model</text>
+
+  <!-- chap: sinxron -->
+  <rect x="24" y="74" width="320" height="168" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="184" y="98" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b91c1c">Sinxron / bloklovchi</text>
+  <text x="184" y="116" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="11" fill="#991b1b">har so'rov tugagach keyingisi boshlanadi</text>
+
+  <!-- vaqt o'qi -->
+  <line x1="44" y1="210" x2="324" y2="210" stroke="#94a3b8" stroke-width="1.5"/>
+  <!-- 3 ketma-ket blok -->
+  <rect x="48" y="138" width="88" height="26" rx="4" fill="#fecaca" stroke="#dc2626"/>
+  <text x="92" y="156" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="11" fill="#991b1b">I/O #1 kutish</text>
+  <rect x="140" y="138" width="88" height="26" rx="4" fill="#fecaca" stroke="#dc2626"/>
+  <text x="184" y="156" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="11" fill="#991b1b">I/O #2 kutish</text>
+  <rect x="232" y="138" width="88" height="26" rx="4" fill="#fecaca" stroke="#dc2626"/>
+  <text x="276" y="156" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="11" fill="#991b1b">I/O #3 kutish</text>
+  <text x="48" y="226" font-family="Consolas, monospace" font-size="10" fill="#64748b">0</text>
+  <text x="316" y="226" font-family="Consolas, monospace" font-size="10" fill="#64748b">3</text>
+  <text x="184" y="236" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="12" font-weight="bold" fill="#b91c1c">jami: 3 birlik (CPU bo'sh turadi)</text>
+
+  <!-- ong: event loop -->
+  <rect x="376" y="74" width="320" height="168" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="536" y="98" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#15803d">Event loop (konkurent)</text>
+  <text x="536" y="116" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="11" fill="#166534">uchchalasi bir vaqtda kutiladi</text>
+
+  <line x1="396" y1="210" x2="676" y2="210" stroke="#94a3b8" stroke-width="1.5"/>
+  <!-- 3 ta ustma-ust blok (parallel kutish) -->
+  <rect x="400" y="132" width="120" height="20" rx="4" fill="#bbf7d0" stroke="#16a34a"/>
+  <text x="460" y="146" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="10" fill="#166534">I/O #1 kutish</text>
+  <rect x="400" y="156" width="120" height="20" rx="4" fill="#bbf7d0" stroke="#16a34a"/>
+  <text x="460" y="170" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="10" fill="#166534">I/O #2 kutish</text>
+  <rect x="400" y="180" width="120" height="20" rx="4" fill="#bbf7d0" stroke="#16a34a"/>
+  <text x="460" y="194" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="10" fill="#166534">I/O #3 kutish</text>
+  <text x="400" y="226" font-family="Consolas, monospace" font-size="10" fill="#64748b">0</text>
+  <text x="514" y="226" font-family="Consolas, monospace" font-size="10" fill="#64748b">1</text>
+  <text x="600" y="160" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="11" fill="#15803d">bitta thread,</text>
+  <text x="600" y="176" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="11" fill="#15803d">navbat bilan</text>
+  <text x="600" y="192" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="11" fill="#15803d">tayyorni chaqiradi</text>
+  <text x="536" y="236" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="12" font-weight="bold" fill="#15803d">jami: ~1 birlik (I/O kutishi ustma-ust)</text>
+
+  <!-- pastki panel -->
+  <rect x="24" y="262" width="672" height="156" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="44" y="288" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Asosiy farq: kim "kutadi"?</text>
+
+  <circle cx="52" cy="312" r="4" fill="#dc2626"/>
+  <text x="64" y="316" font-family="Segoe UI, sans-serif" font-size="12" fill="#334155">Sinxron: socket javobini kutganda butun jarayon QOTADI - CPU bo'sh, lekin keyingi ish boshlanmaydi.</text>
+
+  <circle cx="52" cy="336" r="4" fill="#16a34a"/>
+  <text x="64" y="340" font-family="Segoe UI, sans-serif" font-size="12" fill="#334155">Event loop: "kutish" - bu loop'ga qaytarish. Loop boshqa tayyor vazifani ishlatadi; javob kelganda qaytadi.</text>
+
+  <circle cx="52" cy="360" r="4" fill="#2563eb"/>
+  <text x="64" y="364" font-family="Segoe UI, sans-serif" font-size="12" fill="#334155">Konkurentlik = parallellik EMAS: bitta thread. Faqat I/O-bound ishni tezlashtiradi (tarmoq, disk, DB kutish).</text>
+
+  <circle cx="52" cy="384" r="4" fill="#f59e0b"/>
+  <text x="64" y="388" font-family="Segoe UI, sans-serif" font-size="12" fill="#334155">CPU-bound (og'ir hisob) loop'ni BLOKLAYDI - bu yerda event loop yordam bermaydi (28-bob: "qachon kerak emas").</text>
+
+  <circle cx="52" cy="408" r="4" fill="#7c3aed"/>
+  <text x="64" y="412" font-family="Segoe UI, sans-serif" font-size="12" fill="#334155">ReactPHP / Amp - PHP'da event loop kutubxonalari; async/await ularni Fiber ustida sinxron-ko'rinishli qiladi.</text>
+</svg>

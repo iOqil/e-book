@@ -1,6 +1,6 @@
 # 24 — Static analysis va avtomatik sifat
 
-[⬅️ Oldingi: 23 — Pest, integratsiya, coverage va mutation](./23-pest-mutation.md) · [🏠 README](./README.md) · [Keyingi: README ➡️](./README.md)
+[⬅️ Oldingi: 23 — Pest, integratsiya, coverage va mutation](./23-pest-mutation.md) · [🏠 README](./README.md) · [Keyingi: 25 — Hexagonal va Clean arxitektura ➡️](./25-hexagonal.md)
 
 > **Bu bobda:** test "kod ishlaydimi?" degan savolga javob beradi — lekin u faqat **siz yozgan stsenariy** bo'yicha kodni ishga tushiradi. Siz unutgan yo'l, `null` kelib qoladigan tarmoq, noto'g'ri tur uzatilgan chaqiriq — bularning hech biri test yozmasangiz tutilmaydi. **Static analysis** boshqacha ishlaydi: u kodni **umuman ishga tushirmasdan**, har bir o'zgaruvchining turini va har bir yo'lni tahlil qilib, runtime'gacha bug topadi. Bu bobda **PHPStan** ni 0..max darajalar bo'yicha o'rganamiz, **baseline** bilan eski loyihaga bosqichma-bosqich kiritamiz, `neon` config'ni tushunamiz; **Psalm** ni qisqa solishtiramiz; **generics** ni `@template`/`@param T`/`@return T` PHPDoc orqali yozib, PHPStan buni qanday tekshirishini **real run bilan** ko'rsatamiz (tip-xavfsiz `Collection`). So'ng **Rector** bilan avtomatik refaktoring va PHP versiya migratsiyasi (eski `private $x` + qo'l bilan tayinlash &#8594; constructor promotion), **PHP-CS-Fixer** bilan PSR-12 stilini avtomatik tuzatish, **Composer scripts** bilan lint+stan+test+cs-fix ni bitta `composer check` ga ulash va nihoyat **CI darvozasi** — bu vositalarni pull-request darvozasiga ulab, xato bo'lsa merge'ni bloklash. Hamma vosita bu mashinada `composer` bilan o'rnatilib **haqiqatan ishga tushirildi** — chiqishlar ko'chirib qo'yilgan, jumladan **ataylab kiritilgan xatolar** ham.
 
@@ -885,4 +885,4 @@ Bu bobda kodni **ishga tushirmasdan** sifatini ta'minlaydigan to'plamni qurib ch
 
 ---
 
-[⬅️ Oldingi: 23 — Pest, integratsiya, coverage va mutation](./23-pest-mutation.md) · [🏠 README](./README.md) · [Keyingi: README ➡️](./README.md)
+[⬅️ Oldingi: 23 — Pest, integratsiya, coverage va mutation](./23-pest-mutation.md) · [🏠 README](./README.md) · [Keyingi: 25 — Hexagonal va Clean arxitektura ➡️](./25-hexagonal.md)
