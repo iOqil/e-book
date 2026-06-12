@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="720" height="440">
+  <title>Static analysis: manba kod -> tahlilchi (PHPStan/Psalm tip grafini quradi) -> ishga TUSHIRMASDAN xatolar (null, noto'g'ri tur, yetib bo'lmaydigan kod) topiladi. Runtime'gacha bug tutiladi.</title>
+
+  <rect x="0" y="0" width="720" height="440" fill="#f8fafc"/>
+
+  <text x="360" y="30" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Static analysis: kodni ishga tushirmasdan bug tutish</text>
+  <text x="360" y="52" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Manba kod &#8594; tahlilchi tip grafini quradi &#8594; xatolar runtime'gacha topiladi</text>
+
+  <!-- 1. Manba kod -->
+  <rect x="24" y="86" width="172" height="170" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="110" y="110" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e40af">1. Manba kod</text>
+  <text x="110" y="127" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="10.5" fill="#64748b">ishga tushirilmaydi</text>
+  <rect x="38" y="138" width="144" height="104" rx="6" fill="#0f172a"/>
+  <text x="48" y="158" font-family="Consolas, monospace" font-size="10" fill="#93c5fd">function dom(</text>
+  <text x="48" y="173" font-family="Consolas, monospace" font-size="10" fill="#93c5fd">  ?string $e</text>
+  <text x="48" y="188" font-family="Consolas, monospace" font-size="10" fill="#93c5fd">): string {</text>
+  <text x="48" y="203" font-family="Consolas, monospace" font-size="10" fill="#fca5a5">  strpos($e,</text>
+  <text x="48" y="218" font-family="Consolas, monospace" font-size="10" fill="#fca5a5">    '@'); // null!</text>
+  <text x="48" y="233" font-family="Consolas, monospace" font-size="10" fill="#93c5fd">}</text>
+
+  <!-- strelka -->
+  <line x1="196" y1="171" x2="248" y2="171" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#sa)"/>
+
+  <!-- 2. Tahlilchi -->
+  <rect x="248" y="100" width="200" height="142" rx="10" fill="#7c3aed"/>
+  <text x="348" y="126" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">2. Tahlilchi</text>
+  <text x="348" y="143" text-anchor="middle" font-family="Consolas, monospace" font-size="11" fill="#ede9fe">PHPStan / Psalm</text>
+  <rect x="262" y="154" width="172" height="74" rx="6" fill="#ffffff" opacity="0.12"/>
+  <text x="348" y="173" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="10.5" fill="#ede9fe">AST &#8594; tip grafi</text>
+  <text x="348" y="190" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="10.5" fill="#ede9fe">oqim tahlili (flow)</text>
+  <text x="348" y="207" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="10.5" fill="#ede9fe">narrowing / inference</text>
+  <text x="348" y="222" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="9.5" fill="#c4b5fd">level 0 .. max</text>
+
+  <!-- strelka -->
+  <line x1="448" y1="171" x2="500" y2="171" stroke="#dc2626" stroke-width="2.5" marker-end="url(#sr)"/>
+
+  <!-- 3. Xatolar (ishga tushirmasdan) -->
+  <rect x="500" y="86" width="196" height="170" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="598" y="110" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b91c1c">3. Xatolar</text>
+  <text x="598" y="127" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="10" fill="#991b1b">runtime'GACHA topildi</text>
+  <rect x="514" y="138" width="168" height="32" rx="5" fill="#fef2f2"/>
+  <text x="524" y="158" font-family="Segoe UI, sans-serif" font-size="11" fill="#991b1b">null &#8594; string kutilgan</text>
+  <rect x="514" y="176" width="168" height="32" rx="5" fill="#fef2f2"/>
+  <text x="524" y="196" font-family="Segoe UI, sans-serif" font-size="11" fill="#991b1b">noto'g'ri argument turi</text>
+  <rect x="514" y="214" width="168" height="32" rx="5" fill="#fef2f2"/>
+  <text x="524" y="234" font-family="Segoe UI, sans-serif" font-size="11" fill="#991b1b">yetib bo'lmas kod (dead)</text>
+
+  <!-- pastki tushuntirish paneli -->
+  <rect x="24" y="280" width="672" height="138" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="44" y="306" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Test vs static analysis: bir-birini to'ldiradi</text>
+
+  <circle cx="52" cy="330" r="4" fill="#16a34a"/>
+  <text x="64" y="334" font-family="Segoe UI, sans-serif" font-size="12" fill="#334155">Test &#8212; kodni ISHGA TUSHIRIB xulq-atvorni tekshiradi (siz yozgan stsenariy bo'yicha).</text>
+
+  <circle cx="52" cy="354" r="4" fill="#7c3aed"/>
+  <text x="64" y="358" font-family="Segoe UI, sans-serif" font-size="12" fill="#334155">Static analysis &#8212; kodni ISHGA TUSHIRMASDAN HAR yo'lni tip jihatidan tekshiradi.</text>
+
+  <circle cx="52" cy="378" r="4" fill="#dc2626"/>
+  <text x="64" y="382" font-family="Segoe UI, sans-serif" font-size="12" fill="#334155">Test "siz o'ylagan" holatni; analiz "siz unutgan" null/tur holatini tutadi.</text>
+
+  <circle cx="52" cy="402" r="4" fill="#2563eb"/>
+  <text x="64" y="406" font-family="Segoe UI, sans-serif" font-size="12" fill="#334155">Level pog'onasi: 0 (sodda) &#8594; max (qat'iy). Baseline bilan eski loyiha bosqichma-bosqich.</text>
+
+  <defs>
+    <marker id="sa" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/></marker>
+    <marker id="sr" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker>
+  </defs>
+</svg>

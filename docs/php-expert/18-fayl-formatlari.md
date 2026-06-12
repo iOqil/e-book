@@ -1,6 +1,6 @@
 # 18 — Fayl formatlari, rasm va bulutli saqlash
 
-[⬅️ Oldingi: 17 — Fayllar, oqimlar va katta ma'lumot](./17-fayllar-oqimlar.md) · [🏠 README](./README.md) · [Keyingi: README ➡️](./README.md)
+[⬅️ Oldingi: 17 — Fayllar, oqimlar va katta ma'lumot](./17-fayllar-oqimlar.md) · [🏠 README](./README.md) · [Keyingi: 19 — SOLID prinsiplari ➡️](./19-solid.md)
 
 > **Bu bobda:** 17-bobda baytlar, deskriptorlar va oqimlarning asosini qo'ydik. Endi shu asosning ustida **real dunyo formatlari** bilan ishlaymiz — har kuni biznes ilovasida uchraydigan to'rt narsa: **CSV** (eksport/import), **Excel** (`.xlsx` hisobot), **PDF** (invoice/hujjat) va **rasm** (yuklangan surat, thumbnail). So'ng eng muhimi — bularning hammasini **qayerga** saqlaymiz: lokal diskmi yoki bulutmi? Buni **Flysystem** abstraksiyasi bilan hal qilamiz, shunda lokaldan bulutga ko'chish kodga tegmasdan bo'ladi. **CSV** ni chuqur ko'ramiz: `fgetcsv`/`fputcsv`, ajratgich/qochirish belgisi, Excel uchun **UTF-8 BOM**, va million qatorni **RAM'ga olmasdan** oqim bilan o'qish/yozish. **Excel** uchun `phpoffice/phpspreadsheet`: o'qish/yozish, stil, `fromArray`, formula — va katta fayl ogohlantirish. **PDF** uchun `dompdf/dompdf`: HTML → PDF, o'zbekcha shrift muammosi va yechimi. **Rasm** uchun **GD**: yuklangan suratni resize/thumbnail, format aylantirish (JPG/PNG/WEBP), EXIF metadata tozalash (maxfiylik). **Bulut** uchun `league/flysystem`: yagona interfeys orqali `local`/`S3` disklarga `write`/`read`/`delete`, `writeStream` bilan katta fayl. Hamma kod haqiqiy `php` 8.4 + composer paketlar bilan ishga tushirilib tasdiqlangan: `.xlsx`, `.pdf`, thumbnail va disk fayllari **chindan** yaratildi.
 
@@ -973,4 +973,4 @@ Bu — **amaliy I/O bo'limining oxiri.** Sizda endi HTTP (1-2), avtorizatsiya (3
 
 ---
 
-[⬅️ Oldingi: 17 — Fayllar, oqimlar va katta ma'lumot](./17-fayllar-oqimlar.md) · [🏠 README](./README.md) · [Keyingi: README ➡️](./README.md)
+[⬅️ Oldingi: 17 — Fayllar, oqimlar va katta ma'lumot](./17-fayllar-oqimlar.md) · [🏠 README](./README.md) · [Keyingi: 19 — SOLID prinsiplari ➡️](./19-solid.md)

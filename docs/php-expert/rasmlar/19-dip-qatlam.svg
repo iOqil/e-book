@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" font-family="Segoe UI, Arial, sans-serif" font-size="13">
+  <title>Dependency Inversion — yuqori va quyi qatlamlar abstraksiya orqali bog'lanadi</title>
+  <rect width="720" height="440" fill="#f8fafc"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+    <marker id="arrowOpen" markerWidth="14" markerHeight="14" refX="11" refY="5" orient="auto">
+      <path d="M1,1 L11,5 L1,9" fill="none" stroke="#16a34a" stroke-width="2"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="32" text-anchor="middle" font-size="20" font-weight="700" fill="#0f172a">Dependency Inversion prinsipi</text>
+  <text x="360" y="54" text-anchor="middle" font-size="13" fill="#475569">Ikkala qatlam ham ABSTRAKSIYAga bog'lanadi — detalga emas</text>
+
+  <!-- Yuqori qatlam -->
+  <rect x="60" y="80" width="280" height="90" rx="12" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+  <text x="200" y="108" text-anchor="middle" font-size="14" font-weight="700" fill="#2563eb">Yuqori qatlam (biznes)</text>
+  <text x="200" y="132" text-anchor="middle" font-size="13" fill="#0f172a">GreetingService</text>
+  <text x="200" y="152" text-anchor="middle" font-size="11" fill="#475569">qoidalar; konkret klasslarni bilmaydi</text>
+
+  <!-- Abstraksiya (markaz) -->
+  <rect x="240" y="220" width="240" height="80" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="360" y="248" text-anchor="middle" font-size="14" font-weight="700" fill="#16a34a">Abstraksiya (interfeys)</text>
+  <text x="360" y="270" text-anchor="middle" font-size="13" fill="#0f172a">interface Clock { now(): ... }</text>
+  <text x="360" y="288" text-anchor="middle" font-size="11" fill="#475569">kontrakt — yuqori qatlam EGAlik qiladi</text>
+
+  <!-- Quyi qatlam -->
+  <rect x="380" y="80" width="280" height="90" rx="12" fill="#fff" stroke="#dc2626" stroke-width="2"/>
+  <text x="520" y="108" text-anchor="middle" font-size="14" font-weight="700" fill="#dc2626">Quyi qatlam (detallar)</text>
+  <text x="520" y="132" text-anchor="middle" font-size="13" fill="#0f172a">SystemClock / FixedClock</text>
+  <text x="520" y="152" text-anchor="middle" font-size="11" fill="#475569">implementatsiya; almashtirsa bo'ladi</text>
+
+  <!-- Yuqori -> abstraksiya (bog'lanadi) -->
+  <line x1="200" y1="170" x2="290" y2="218" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="205" y="205" font-size="11" fill="#475569">bog'lanadi</text>
+
+  <!-- Quyi -> abstraksiya (implement = ochiq strelka, yuqoriga) -->
+  <line x1="520" y1="170" x2="430" y2="218" stroke="#16a34a" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arrowOpen)"/>
+  <text x="470" y="205" font-size="11" fill="#16a34a">implements</text>
+
+  <!-- Pastki izoh: oqim inversiyasi -->
+  <rect x="60" y="340" width="600" height="70" rx="10" fill="#fff" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="80" y="366" font-size="13" font-weight="700" fill="#0f172a">Inversiya nimada?</text>
+  <text x="80" y="388" font-size="12" fill="#475569">An'anaviy: biznes -&gt; konkret detalga bog'lanadi (chap-&gt;o'ng). DIP: ikkalasi ham markazdagi</text>
+  <text x="80" y="404" font-size="12" fill="#475569">interfeysga qaraydi -&gt; bog'liqlik yo'nalishi "teskari aylanadi", testda detalni soxtaga almashtirasiz.</text>
+</svg>

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460">
+  <title>Line coverage vs branch coverage: 100% line coverage yolg'on xavfsizlik berishi mumkin — bitta testdan o'tgan funksiyada hamma qator bajarilsa ham (line 100%), shartning FALSE tarmog'i sinalmay qolishi mumkin (branch 50%), shu sabab xato tutilmaydi</title>
+
+  <rect x="0" y="0" width="720" height="460" fill="#f8fafc"/>
+
+  <text x="360" y="30" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Line coverage vs Branch coverage</text>
+  <text x="360" y="52" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">100% line bo'lishi mumkin, lekin shart tarmog'i sinalmagan &#8594; yolg'on xavfsizlik</text>
+
+  <!-- Kod blok -->
+  <rect x="36" y="78" width="320" height="180" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="52" y="102" font-family="Consolas, monospace" font-size="12.5" fill="#334155">function chegirma(int $n): int {</text>
+  <text x="52" y="124" font-family="Consolas, monospace" font-size="12.5" fill="#16a34a">  if ($n &gt; 100) {        // TRUE tarmoq</text>
+  <text x="52" y="146" font-family="Consolas, monospace" font-size="12.5" fill="#16a34a">    return $n - 10;      // SINALDI</text>
+  <text x="52" y="168" font-family="Consolas, monospace" font-size="12.5" fill="#dc2626">  }                      // FALSE tarmoq</text>
+  <text x="52" y="190" font-family="Consolas, monospace" font-size="12.5" fill="#dc2626">  return $n;             // SINALMADI</text>
+  <text x="52" y="212" font-family="Consolas, monospace" font-size="12.5" fill="#334155">}</text>
+  <text x="52" y="240" font-family="Consolas, monospace" font-size="12" fill="#475569">// test: chegirma(150) === 140  (faqat bitta)</text>
+
+  <!-- Line coverage gauge -->
+  <text x="500" y="100" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Line coverage</text>
+  <rect x="396" y="112" width="288" height="30" rx="6" fill="#e2e8f0"/>
+  <rect x="396" y="112" width="288" height="30" rx="6" fill="#16a34a"/>
+  <text x="540" y="132" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">100% &#10003; (hamma qator bajarildi)</text>
+
+  <!-- Branch coverage gauge -->
+  <text x="500" y="178" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Branch coverage</text>
+  <rect x="396" y="190" width="288" height="30" rx="6" fill="#e2e8f0"/>
+  <rect x="396" y="190" width="144" height="30" rx="6" fill="#f59e0b"/>
+  <text x="468" y="210" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">50%</text>
+  <text x="612" y="210" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#92400e">FALSE tarmoq yo'q</text>
+
+  <!-- Ogohlantirish -->
+  <rect x="396" y="234" width="288" height="56" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="540" y="256" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" font-weight="bold" fill="#991b1b">$n &#8804; 100 holatida xato bo'lsa,</text>
+  <text x="540" y="276" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#991b1b">100% line coverage uni TUTMAYDI</text>
+
+  <!-- Pastki xulosa paneli -->
+  <rect x="36" y="312" width="648" height="120" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="54" y="338" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Xulosa</text>
+  <text x="54" y="362" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#334155">&#8226; Line coverage = qaysi QATORLAR bajarildi. Oson aldaydi: bitta yo'l hamma qatorni qamrashi mumkin.</text>
+  <text x="54" y="384" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#334155">&#8226; Branch coverage = har SHARTNING TRUE va FALSE tarmog'i alohida sinaldimi. Haqiqatga yaqinroq.</text>
+  <text x="54" y="406" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#334155">&#8226; Ammo branch 100% ham testlar ASSERT qilishini kafolatlamaydi &#8594; keyingi qadam: mutation testing.</text>
+  <text x="54" y="426" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" font-style="italic" fill="#64748b">Coverage = "qancha kod bosildi", sifat = "test natijani tekshiradimi". Bular boshqa narsa.</text>
+</svg>

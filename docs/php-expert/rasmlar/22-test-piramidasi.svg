@@ -1,0 +1,41 @@
+<svg viewBox="0 0 720 440" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, sans-serif">
+  <title>Test piramidasi: ko'p unit, o'rtacha integration, kam e2e</title>
+  <rect width="720" height="440" fill="#f8fafc"/>
+  <text x="360" y="34" text-anchor="middle" font-size="20" font-weight="700" fill="#1e293b">Test piramidasi</text>
+  <text x="360" y="56" text-anchor="middle" font-size="13" fill="#64748b">Sog'lom taqsimot: pastda ko'p, tepada kam</text>
+
+  <!-- E2E uchi -->
+  <polygon points="360,80 430,150 290,150" fill="#dc2626" opacity="0.9"/>
+  <text x="360" y="128" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">E2E</text>
+
+  <!-- Integration o'rta -->
+  <polygon points="290,150 430,150 500,250 220,250" fill="#f59e0b" opacity="0.9"/>
+  <text x="360" y="208" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">Integration</text>
+
+  <!-- Unit asos -->
+  <polygon points="220,250 500,250 590,380 130,380" fill="#16a34a" opacity="0.9"/>
+  <text x="360" y="325" text-anchor="middle" font-size="17" font-weight="700" fill="#ffffff">Unit</text>
+
+  <!-- Chap o'qlar: soni va tezligi -->
+  <line x1="95" y1="90" x2="95" y2="375" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="80" y="235" text-anchor="middle" font-size="13" fill="#475569" transform="rotate(-90 80 235)">Soni: ko'p → kam</text>
+
+  <!-- O'ng izohlar -->
+  <text x="610" y="120" font-size="13" font-weight="700" fill="#dc2626">Kam, sekin, mo'rt</text>
+  <text x="610" y="140" font-size="12" fill="#64748b">brauzer, butun tizim</text>
+
+  <text x="610" y="205" font-size="13" font-weight="700" fill="#b45309">O'rtacha</text>
+  <text x="610" y="225" font-size="12" fill="#64748b">DB, fayl, HTTP birga</text>
+
+  <text x="610" y="300" font-size="13" font-weight="700" fill="#15803d">Ko'p, tez, barqaror</text>
+  <text x="610" y="320" font-size="12" fill="#64748b">bitta sinf/funksiya</text>
+
+  <!-- Pastki izoh -->
+  <text x="360" y="412" text-anchor="middle" font-size="12.5" fill="#64748b">Anti-pattern "muzqaymoq konus": teskari piramida (ko'p e2e, kam unit) = sekin, mo'rt CI</text>
+
+  <defs>
+    <marker id="arr" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,51 @@
+<svg viewBox="0 0 720 440" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, sans-serif">
+  <title>Test doubles 5 turi: dummy, stub, spy, mock, fake</title>
+  <rect width="720" height="440" fill="#f8fafc"/>
+  <text x="360" y="32" text-anchor="middle" font-size="20" font-weight="700" fill="#1e293b">Test doubles: 5 tur</text>
+  <text x="360" y="54" text-anchor="middle" font-size="13" fill="#64748b">Soddadan murakkabga: javob bermaslikdan to'liq xulqqa</text>
+
+  <!-- Dummy -->
+  <rect x="30" y="80" width="200" height="150" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="30" y="80" width="200" height="34" rx="10" fill="#94a3b8"/>
+  <text x="130" y="103" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">Dummy</text>
+  <text x="130" y="138" text-anchor="middle" font-size="12.5" fill="#475569">To'ldiruvchi obyekt.</text>
+  <text x="130" y="158" text-anchor="middle" font-size="12.5" fill="#475569">Faqat imzoni to'ldiradi,</text>
+  <text x="130" y="178" text-anchor="middle" font-size="12.5" fill="#475569">hech qachon ishlatilmaydi.</text>
+  <text x="130" y="210" text-anchor="middle" font-size="12" fill="#7c3aed">argument sifatida o'tadi</text>
+
+  <!-- Stub -->
+  <rect x="260" y="80" width="200" height="150" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <rect x="260" y="80" width="200" height="34" rx="10" fill="#2563eb"/>
+  <text x="360" y="103" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">Stub</text>
+  <text x="360" y="138" text-anchor="middle" font-size="12.5" fill="#475569">Tayyor javob qaytaradi.</text>
+  <text x="360" y="158" text-anchor="middle" font-size="12.5" fill="#475569">"So'rasang shuni ber".</text>
+  <text x="360" y="178" text-anchor="middle" font-size="12.5" fill="#475569">Tekshirmaydi.</text>
+  <text x="360" y="210" text-anchor="middle" font-size="12" fill="#2563eb">method()-&gt;willReturn(x)</text>
+
+  <!-- Spy -->
+  <rect x="490" y="80" width="200" height="150" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <rect x="490" y="80" width="200" height="34" rx="10" fill="#16a34a"/>
+  <text x="590" y="103" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">Spy</text>
+  <text x="590" y="138" text-anchor="middle" font-size="12.5" fill="#475569">Chaqiruvni YOZIB boradi.</text>
+  <text x="590" y="158" text-anchor="middle" font-size="12.5" fill="#475569">Tekshirish KEYIN,</text>
+  <text x="590" y="178" text-anchor="middle" font-size="12.5" fill="#475569">test ichida (assert).</text>
+  <text x="590" y="210" text-anchor="middle" font-size="12" fill="#16a34a">$spy-&gt;records ni tekshir</text>
+
+  <!-- Mock -->
+  <rect x="120" y="255" width="220" height="150" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <rect x="120" y="255" width="220" height="34" rx="10" fill="#dc2626"/>
+  <text x="230" y="278" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">Mock</text>
+  <text x="230" y="313" text-anchor="middle" font-size="12.5" fill="#475569">Kutilgan o'zaro ta'sirni</text>
+  <text x="230" y="333" text-anchor="middle" font-size="12.5" fill="#475569">OLDINDAN belgilab TEKSHIRADI.</text>
+  <text x="230" y="353" text-anchor="middle" font-size="12.5" fill="#475569">Kutilmasa — test qulaydi.</text>
+  <text x="230" y="385" text-anchor="middle" font-size="12" fill="#dc2626">expects($this-&gt;once())</text>
+
+  <!-- Fake -->
+  <rect x="380" y="255" width="220" height="150" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <rect x="380" y="255" width="220" height="34" rx="10" fill="#7c3aed"/>
+  <text x="490" y="278" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">Fake</text>
+  <text x="490" y="313" text-anchor="middle" font-size="12.5" fill="#475569">Ishlaydigan, soddalashtirilgan</text>
+  <text x="490" y="333" text-anchor="middle" font-size="12.5" fill="#475569">implementatsiya. Haqiqiy xulq,</text>
+  <text x="490" y="353" text-anchor="middle" font-size="12.5" fill="#475569">lekin yengil (in-memory DB).</text>
+  <text x="490" y="385" text-anchor="middle" font-size="12" fill="#7c3aed">InMemoryUserRepository</text>
+</svg>
