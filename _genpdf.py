@@ -13,6 +13,7 @@ BOOKS = [
     ('php-expert', 'PHP Expert'),
     ('nodejs', 'Node.js'),
     ('django', 'Django'),
+    ('nativephp', 'NativePHP'),
 ]
 
 def natkey(s):

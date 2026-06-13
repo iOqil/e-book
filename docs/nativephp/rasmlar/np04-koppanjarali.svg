@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" font-family="Segoe UI, sans-serif">
+  <title>Bir nechta oyna ID orqali boshqariladi va ma'lumot almashadi</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="21" font-weight="bold" fill="#1e293b">Bir nechta oyna: har biri unikal ID bilan</text>
+
+  <!-- main window -->
+  <rect x="50" y="70" width="200" height="130" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <rect x="50" y="70" width="200" height="26" rx="8" fill="#2563eb"/>
+  <text x="150" y="88" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">id: "main"</text>
+  <text x="150" y="128" text-anchor="middle" font-size="13" fill="#334155">Asosiy oyna</text>
+  <text x="150" y="150" text-anchor="middle" font-size="13" fill="#334155">avtomatik ochiladi</text>
+  <text x="150" y="178" text-anchor="middle" font-size="13" fill="#16a34a">Window::open()</text>
+
+  <!-- settings window -->
+  <rect x="290" y="70" width="200" height="130" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="290" y="70" width="200" height="26" rx="8" fill="#f59e0b"/>
+  <text x="390" y="88" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">id: "settings"</text>
+  <text x="390" y="128" text-anchor="middle" font-size="13" fill="#334155">Sozlamalar</text>
+  <text x="390" y="150" text-anchor="middle" font-size="13" fill="#334155">resizable(false)</text>
+  <text x="390" y="178" text-anchor="middle" font-size="13" fill="#16a34a">open('settings')</text>
+
+  <!-- about window -->
+  <rect x="530" y="70" width="200" height="130" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <rect x="530" y="70" width="200" height="26" rx="8" fill="#16a34a"/>
+  <text x="630" y="88" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">id: "about"</text>
+  <text x="630" y="128" text-anchor="middle" font-size="13" fill="#334155">Dastur haqida</text>
+  <text x="630" y="150" text-anchor="middle" font-size="13" fill="#334155">maximizable(false)</text>
+  <text x="630" y="178" text-anchor="middle" font-size="13" fill="#16a34a">open('about')</text>
+
+  <!-- shared layer -->
+  <rect x="50" y="250" width="680" height="150" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="390" y="278" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e293b">Oynalar bir xil PHP jarayonini bo'lishadi — ma'lumot almashish yo'llari</text>
+
+  <rect x="74" y="296" width="200" height="86" rx="6" fill="#2563eb" opacity="0.10" stroke="#2563eb"/>
+  <text x="174" y="322" text-anchor="middle" font-size="14" font-weight="bold" fill="#2563eb">DB / cache</text>
+  <text x="174" y="344" text-anchor="middle" font-size="13" fill="#334155">SQLite, Cache::,</text>
+  <text x="174" y="364" text-anchor="middle" font-size="13" fill="#334155">Settings:: orqali</text>
+
+  <rect x="290" y="296" width="200" height="86" rx="6" fill="#f59e0b" opacity="0.12" stroke="#f59e0b"/>
+  <text x="390" y="322" text-anchor="middle" font-size="14" font-weight="bold" fill="#b45309">Route parametr</text>
+  <text x="390" y="344" text-anchor="middle" font-size="13" fill="#334155">route('settings',</text>
+  <text x="390" y="364" text-anchor="middle" font-size="13" fill="#334155">['id' =&gt; 5])</text>
+
+  <rect x="506" y="296" width="200" height="86" rx="6" fill="#16a34a" opacity="0.12" stroke="#16a34a"/>
+  <text x="606" y="322" text-anchor="middle" font-size="14" font-weight="bold" fill="#16a34a">Broadcast event</text>
+  <text x="606" y="344" text-anchor="middle" font-size="13" fill="#334155">'nativephp' kanali,</text>
+  <text x="606" y="364" text-anchor="middle" font-size="13" fill="#334155">Echo bilan tinglash</text>
+
+  <line x1="150" y1="200" x2="174" y2="296" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="390" y1="200" x2="390" y2="296" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="630" y1="200" x2="606" y2="296" stroke="#94a3b8" stroke-width="1.5"/>
+</svg>

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470">
+  <title>ChildProcess oqimi: PHP ilova tashqi fon jarayonini boshqaradi va hodisalar oladi</title>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b">ChildProcess: fon jarayonlari hayot sikli</text>
+
+  <!-- App side -->
+  <rect x="40" y="70" width="240" height="150" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="160" y="98" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">Laravel (PHP) ilova</text>
+  <text x="160" y="126" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">ChildProcess::artisan(...)</text>
+  <text x="160" y="148" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">ChildProcess::start(...)</text>
+  <text x="160" y="170" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">::message() / ::stop()</text>
+  <text x="160" y="196" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">alias bilan boshqariladi</text>
+
+  <!-- Electron / runtime in middle -->
+  <rect x="320" y="70" width="160" height="150" rx="10" fill="#fff7ed" stroke="#f59e0b" stroke-width="2"/>
+  <text x="400" y="98" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#b45309">Electron qobiq</text>
+  <text x="400" y="124" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">jarayon menejeri</text>
+  <text x="400" y="148" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">spawn / kill</text>
+  <text x="400" y="172" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">STDIN / STDOUT</text>
+  <text x="400" y="196" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">/ STDERR ulanish</text>
+
+  <!-- Child process -->
+  <rect x="520" y="70" width="210" height="150" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="625" y="98" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">Tashqi jarayon</text>
+  <text x="625" y="124" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">queue:work worker</text>
+  <text x="625" y="148" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">tashqi binar (.exe)</text>
+  <text x="625" y="172" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Node skripti</text>
+  <text x="625" y="196" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">bundled PHP skripti</text>
+
+  <!-- arrows commands -->
+  <line x1="280" y1="120" x2="318" y2="120" stroke="#2563eb" stroke-width="2" marker-end="url(#a07b)"/>
+  <line x1="480" y1="120" x2="518" y2="120" stroke="#16a34a" stroke-width="2" marker-end="url(#a07c)"/>
+  <text x="300" y="110" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#2563eb">buyruq</text>
+
+  <!-- events back -->
+  <line x1="518" y1="180" x2="482" y2="180" stroke="#dc2626" stroke-width="2" marker-end="url(#a07d)"/>
+  <line x1="318" y1="180" x2="282" y2="180" stroke="#dc2626" stroke-width="2" marker-end="url(#a07d)"/>
+  <text x="400" y="240" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">hodisalar qaytadi (broadcast 'nativephp' kanali)</text>
+
+  <!-- Events list -->
+  <text x="380" y="288" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#1e293b">Native\Desktop\Events\ChildProcess hodisalari</text>
+  <g font-family="Segoe UI" font-size="13" fill="#1e293b">
+    <rect x="40" y="306" width="220" height="44" rx="6" fill="#f0fdf4" stroke="#16a34a"/>
+    <text x="150" y="328" text-anchor="middle" font-weight="bold">ProcessSpawned</text>
+    <text x="150" y="344" text-anchor="middle" font-size="13" fill="#64748b">public string $alias</text>
+
+    <rect x="270" y="306" width="220" height="44" rx="6" fill="#eff6ff" stroke="#2563eb"/>
+    <text x="380" y="328" text-anchor="middle" font-weight="bold">MessageReceived</text>
+    <text x="380" y="344" text-anchor="middle" font-size="13" fill="#64748b">$alias, mixed $data (STDOUT)</text>
+
+    <rect x="500" y="306" width="230" height="44" rx="6" fill="#fef2f2" stroke="#dc2626"/>
+    <text x="615" y="328" text-anchor="middle" font-weight="bold">ErrorReceived</text>
+    <text x="615" y="344" text-anchor="middle" font-size="13" fill="#64748b">$alias, mixed $data (STDERR)</text>
+
+    <rect x="155" y="362" width="220" height="44" rx="6" fill="#fff7ed" stroke="#f59e0b"/>
+    <text x="265" y="384" text-anchor="middle" font-weight="bold">ProcessExited</text>
+    <text x="265" y="400" text-anchor="middle" font-size="13" fill="#64748b">$alias, int $code</text>
+
+    <rect x="385" y="362" width="220" height="44" rx="6" fill="#fef2f2" stroke="#dc2626"/>
+    <text x="495" y="384" text-anchor="middle" font-weight="bold">StartupError</text>
+    <text x="495" y="400" text-anchor="middle" font-size="13" fill="#64748b">ishga tushmadi</text>
+  </g>
+
+  <text x="380" y="442" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">persistent: true -&gt; jarayon yiqilsa avtomatik qayta ishga tushadi</text>
+
+  <defs>
+    <marker id="a07b" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/></marker>
+    <marker id="a07c" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/></marker>
+    <marker id="a07d" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#dc2626"/></marker>
+  </defs>
+</svg>

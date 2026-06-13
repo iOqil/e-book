@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 460">
+  <title>NativePHP umumiy arxitekturasi: native qobiq + webview UI + PHP runtime</title>
+  <rect x="0" y="0" width="760" height="460" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b">NativePHP arxitekturasi</text>
+
+  <!-- Outer native shell -->
+  <rect x="40" y="56" width="680" height="368" rx="14" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="60" y="84" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">Native QOBIQ (desktop = Electron, mobil = Swift/Kotlin)</text>
+
+  <!-- Webview UI box -->
+  <rect x="70" y="104" width="610" height="120" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="86" y="130" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#334155">Webview oynasi (UI qatlami)</text>
+  <text x="86" y="156" font-family="Segoe UI" font-size="13" fill="#334155">HTML / CSS / JavaScript</text>
+  <text x="86" y="180" font-family="Segoe UI" font-size="13" fill="#334155">Blade · Livewire · Inertia (Vue/React)</text>
+  <text x="86" y="204" font-family="Segoe UI" font-size="13" fill="#dc2626">Bu sof native widget EMAS — brauzer dvigatelida chiziladi</text>
+
+  <!-- Bridge -->
+  <rect x="70" y="240" width="610" height="44" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="380" y="267" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#92400e">Native bridge (PHP &lt;-&gt; OS API: oyna, menyu, kamera, fayl...)</text>
+
+  <!-- PHP runtime box -->
+  <rect x="70" y="300" width="610" height="104" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="86" y="326" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#15803d">PHP runtime + Laravel ilova (biznes-mantiq)</text>
+  <text x="86" y="350" font-family="Segoe UI" font-size="13" fill="#334155">Route · Controller · Model · Eloquent · SQLite</text>
+  <text x="86" y="374" font-family="Segoe UI" font-size="13" fill="#334155">Desktop: bundle qilingan PHP binar</text>
+  <text x="86" y="396" font-family="Segoe UI" font-size="13" fill="#334155">Mobil: QURILMADA ishlovchi on-device PHP 8.4 runtime</text>
+
+  <!-- vertical arrows -->
+  <line x1="380" y1="224" x2="380" y2="240" stroke="#94a3b8" stroke-width="2" marker-end="url(#a01)"/>
+  <line x1="380" y1="284" x2="380" y2="300" stroke="#94a3b8" stroke-width="2" marker-end="url(#a01)"/>
+  <defs>
+    <marker id="a01" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+</svg>

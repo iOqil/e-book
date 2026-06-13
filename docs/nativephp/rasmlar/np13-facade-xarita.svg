@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 440">
+  <title>13-bob facade xaritasi: qaysi facade qaysi vazifa uchun</title>
+  <rect x="0" y="0" width="780" height="440" fill="#f8fafc"/>
+  <text x="390" y="32" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Native\Mobile\Facades — qaysi facade nima uchun</text>
+
+  <!-- Biometrics -->
+  <rect x="30" y="60" width="230" height="100" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="50" y="86" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">Biometrics</text>
+  <text x="50" y="110" font-family="Segoe UI" font-size="13" fill="#334155">prompt()</text>
+  <text x="50" y="130" font-family="Segoe UI" font-size="13" fill="#64748b">barmoq izi / Face ID</text>
+  <text x="50" y="150" font-family="Segoe UI" font-size="13" fill="#64748b">event: Biometric\Completed</text>
+
+  <!-- SecureStorage -->
+  <rect x="275" y="60" width="230" height="100" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="295" y="86" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">SecureStorage</text>
+  <text x="295" y="110" font-family="Segoe UI" font-size="13" fill="#334155">set() / get() / delete()</text>
+  <text x="295" y="130" font-family="Segoe UI" font-size="13" fill="#64748b">shifrlangan token saqlash</text>
+  <text x="295" y="150" font-family="Segoe UI" font-size="13" fill="#64748b">Keychain / Keystore</text>
+
+  <!-- PushNotifications -->
+  <rect x="520" y="60" width="230" height="100" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="540" y="86" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#f59e0b">PushNotifications</text>
+  <text x="540" y="110" font-family="Segoe UI" font-size="13" fill="#334155">checkPermission() / enroll()</text>
+  <text x="540" y="130" font-family="Segoe UI" font-size="13" fill="#334155">getToken() / clearBadge()</text>
+  <text x="540" y="150" font-family="Segoe UI" font-size="13" fill="#64748b">Firebase / APNs</text>
+
+  <!-- Device -->
+  <rect x="30" y="190" width="230" height="100" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="50" y="216" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">Device</text>
+  <text x="50" y="240" font-family="Segoe UI" font-size="13" fill="#334155">vibrate() (haptics)</text>
+  <text x="50" y="260" font-family="Segoe UI" font-size="13" fill="#334155">getInfo() / getBatteryInfo()</text>
+  <text x="50" y="280" font-family="Segoe UI" font-size="13" fill="#64748b">getId() / toggleFlashlight()</text>
+
+  <!-- Network -->
+  <rect x="275" y="190" width="230" height="100" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="295" y="216" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">Network</text>
+  <text x="295" y="240" font-family="Segoe UI" font-size="13" fill="#334155">status()</text>
+  <text x="295" y="260" font-family="Segoe UI" font-size="13" fill="#64748b">connected / type</text>
+  <text x="295" y="280" font-family="Segoe UI" font-size="13" fill="#64748b">isExpensive / isConstrained</text>
+
+  <!-- System / Share -->
+  <rect x="520" y="190" width="230" height="100" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="540" y="216" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#f59e0b">System + Share</text>
+  <text x="540" y="240" font-family="Segoe UI" font-size="13" fill="#334155">System: isIos/isAndroid</text>
+  <text x="540" y="260" font-family="Segoe UI" font-size="13" fill="#334155">appSettings() / flashlight()</text>
+  <text x="540" y="280" font-family="Segoe UI" font-size="13" fill="#334155">Share: url() / file()</text>
+
+  <!-- common pattern footer -->
+  <rect x="30" y="320" width="720" height="96" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="1.2"/>
+  <text x="48" y="346" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb">Umumiy naqsh:</text>
+  <text x="48" y="370" font-family="Segoe UI" font-size="13" fill="#334155">1) Facade chaqir (sinxron natija array yoki object qaytaradi)</text>
+  <text x="48" y="392" font-family="Segoe UI" font-size="13" fill="#334155">2) Asinxron natija uchun #[OnNative(EventClass::class)] metodi event tinglaydi</text>
+  <text x="48" y="412" font-family="Segoe UI" font-size="13" fill="#64748b">Aniq imzolar uchun: nativephp.com/docs/mobile/3/plugins/core/...</text>
+</svg>

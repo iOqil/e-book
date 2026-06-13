@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440">
+  <title>NativePHP test piramidasi: unit, feature (fake facade), va qo'lda native tekshiruv</title>
+  <rect width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b">NativePHP ilovasini test piramidasi</text>
+
+  <!-- Piramida -->
+  <polygon points="380,70 470,150 290,150" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="380" y="118" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">Qo'lda</text>
+  <text x="380" y="138" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">native:dev</text>
+
+  <polygon points="290,150 470,150 540,240 220,240" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="190" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">Feature testlar</text>
+  <text x="380" y="212" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Window::fake(), $this-&gt;get(...)</text>
+  <text x="380" y="230" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">route + facade chaqiruvini tekshirish</text>
+
+  <polygon points="220,240 540,240 610,340 150,340" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="380" y="282" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">Unit testlar</text>
+  <text x="380" y="304" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">sof biznes-mantiq (service, model)</text>
+  <text x="380" y="322" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">NativePHP'ga bog'liq emas — eng tez</text>
+
+  <!-- Yon izohlar -->
+  <text x="640" y="115" font-family="Segoe UI" font-size="13" fill="#dc2626">Kam, sekin</text>
+  <text x="640" y="135" font-family="Segoe UI" font-size="13" fill="#334155">displey kerak</text>
+  <text x="640" y="295" font-family="Segoe UI" font-size="13" fill="#16a34a">Ko'p, tez</text>
+  <text x="640" y="315" font-family="Segoe UI" font-size="13" fill="#334155">CI'da ishlaydi</text>
+
+  <!-- pastki qator -->
+  <rect x="40" y="368" width="680" height="56" rx="8" fill="#fffbeb" stroke="#f59e0b"/>
+  <text x="380" y="392" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#1e293b">Asosini unit + feature (fake) tashkil etadi — bular php artisan test bilan CI'da chopadi.</text>
+  <text x="380" y="412" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#1e293b">Haqiqiy oyna/qurilma xulq-atvori esa faqat qo'lda (native:dev / native:run) tekshiriladi.</text>
+</svg>

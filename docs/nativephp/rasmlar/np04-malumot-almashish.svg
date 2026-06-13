@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" font-family="Segoe UI, sans-serif">
+  <title>Oynalararo ma'lumot almashishning uchta yo'li: cache/DB, route parametri, broadcast</title>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="32" text-anchor="middle" font-size="21" font-weight="bold" fill="#1e293b">Oynalararo ma'lumot almashish: 3 yo'l</text>
+  <text x="380" y="54" text-anchor="middle" font-size="13" fill="#334155">Barcha oyna bir xil PHP jarayoni va Laravel ilovasini bo'lishadi</text>
+
+  <!-- defs: arrow markers -->
+  <defs>
+    <marker id="ar-blue" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 z" fill="#2563eb"/>
+    </marker>
+    <marker id="ar-amber" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 z" fill="#f59e0b"/>
+    </marker>
+    <marker id="ar-green" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <!-- ROW 1: cache / DB -->
+  <rect x="40" y="76" width="160" height="60" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="120" y="102" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e293b">settings oynasi</text>
+  <text x="120" y="122" text-anchor="middle" font-size="13" fill="#334155">Cache::put('theme')</text>
+
+  <rect x="300" y="76" width="160" height="60" rx="8" fill="#2563eb" opacity="0.12" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="102" text-anchor="middle" font-size="14" font-weight="bold" fill="#2563eb">Cache / SQLite</text>
+  <text x="380" y="122" text-anchor="middle" font-size="13" fill="#334155">umumiy holat</text>
+
+  <rect x="560" y="76" width="160" height="60" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="640" y="102" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e293b">main oynasi</text>
+  <text x="640" y="122" text-anchor="middle" font-size="13" fill="#334155">Cache::get('theme')</text>
+
+  <line x1="200" y1="106" x2="296" y2="106" stroke="#2563eb" stroke-width="2" marker-end="url(#ar-blue)"/>
+  <line x1="460" y1="106" x2="556" y2="106" stroke="#2563eb" stroke-width="2" marker-end="url(#ar-blue)"/>
+  <text x="380" y="68" text-anchor="middle" font-size="13" font-weight="bold" fill="#2563eb">1. Cache / DB — sodda; lekin o'qish uchun qayta yuklash kerak</text>
+
+  <!-- ROW 2: route parametr -->
+  <rect x="40" y="206" width="160" height="60" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="120" y="232" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e293b">ochuvchi oyna</text>
+  <text x="120" y="252" text-anchor="middle" font-size="13" fill="#334155">Window::open(...)</text>
+
+  <rect x="300" y="206" width="160" height="60" rx="8" fill="#f59e0b" opacity="0.14" stroke="#f59e0b" stroke-width="2"/>
+  <text x="380" y="230" text-anchor="middle" font-size="14" font-weight="bold" fill="#b45309">route parametri</text>
+  <text x="380" y="250" text-anchor="middle" font-size="13" fill="#334155">['invoice' =&gt; 5]</text>
+
+  <rect x="560" y="206" width="160" height="60" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="640" y="232" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e293b">yangi oyna</text>
+  <text x="640" y="252" text-anchor="middle" font-size="13" fill="#334155">kontekst bilan ochiladi</text>
+
+  <line x1="200" y1="236" x2="296" y2="236" stroke="#f59e0b" stroke-width="2" marker-end="url(#ar-amber)"/>
+  <line x1="460" y1="236" x2="556" y2="236" stroke="#f59e0b" stroke-width="2" marker-end="url(#ar-amber)"/>
+  <text x="380" y="198" text-anchor="middle" font-size="13" font-weight="bold" fill="#b45309">2. Route parametri — ochishda aniq kontekst; faqat ochish payti</text>
+
+  <!-- ROW 3: broadcast -->
+  <rect x="40" y="336" width="160" height="60" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="120" y="362" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e293b">istalgan oyna</text>
+  <text x="120" y="382" text-anchor="middle" font-size="13" fill="#334155">event(new ...)</text>
+
+  <rect x="300" y="336" width="160" height="60" rx="8" fill="#16a34a" opacity="0.14" stroke="#16a34a" stroke-width="2"/>
+  <text x="380" y="360" text-anchor="middle" font-size="14" font-weight="bold" fill="#16a34a">'nativephp' kanali</text>
+  <text x="380" y="380" text-anchor="middle" font-size="13" fill="#334155">ShouldBroadcastNow</text>
+
+  <rect x="560" y="316" width="160" height="44" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="640" y="343" text-anchor="middle" font-size="13" fill="#334155">oyna A (Echo)</text>
+  <rect x="560" y="372" width="160" height="44" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="640" y="399" text-anchor="middle" font-size="13" fill="#334155">oyna B (Echo)</text>
+
+  <line x1="200" y1="366" x2="296" y2="366" stroke="#16a34a" stroke-width="2" marker-end="url(#ar-green)"/>
+  <line x1="460" y1="360" x2="556" y2="338" stroke="#16a34a" stroke-width="2" marker-end="url(#ar-green)"/>
+  <line x1="460" y1="372" x2="556" y2="394" stroke="#16a34a" stroke-width="2" marker-end="url(#ar-green)"/>
+  <text x="380" y="328" text-anchor="middle" font-size="13" font-weight="bold" fill="#16a34a">3. Broadcast — barcha oyna darhol yangilanadi; sozlash murakkabroq</text>
+
+  <text x="380" y="446" text-anchor="middle" font-size="13" fill="#334155">Echo.channel('nativephp').listen('ThemeChanged', e =&gt; apply(e.theme))</text>
+</svg>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 450">
+  <title>NativePHP debugging: ikki kod nusxasi va loglar qayerda joylashishi</title>
+  <rect width="760" height="450" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b">Debugging: "2 ta kod nusxasi" muammosi</text>
+
+  <!-- Dev rejim -->
+  <rect x="40" y="60" width="320" height="170" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="200" y="86" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb">native:dev (ishlab chiqish)</text>
+  <text x="200" y="112" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">Loyiha papkangizdagi kod ishlaydi</text>
+  <rect x="64" y="126" width="272" height="40" rx="6" fill="#fff" stroke="#94a3b8"/>
+  <text x="200" y="151" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">log: storage/logs/laravel.log</text>
+  <rect x="64" y="174" width="272" height="40" rx="6" fill="#fff" stroke="#94a3b8"/>
+  <text x="200" y="199" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">php artisan pail (jonli log)</text>
+
+  <!-- Build rejim -->
+  <rect x="400" y="60" width="320" height="170" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="560" y="86" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#f59e0b">native:build (bundle qilingan)</text>
+  <text x="560" y="112" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">AppData ichidagi nusxa ishlaydi</text>
+  <rect x="424" y="126" width="272" height="40" rx="6" fill="#fff" stroke="#94a3b8"/>
+  <text x="560" y="151" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">log: %APPDATA%/.../storage/logs</text>
+  <rect x="424" y="174" width="272" height="40" rx="6" fill="#fff" stroke="#94a3b8"/>
+  <text x="560" y="199" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">native:run -v / -vv / -vvv</text>
+
+  <!-- DevTools -->
+  <rect x="40" y="250" width="680" height="76" rx="10" fill="#fff" stroke="#94a3b8"/>
+  <text x="380" y="276" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#334155">Webview tomoni (HTML/JS)</text>
+  <text x="380" y="300" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#1e293b">Chromium DevTools: Window'da -&gt;showDevTools() yoki F12 (dev rejim).</text>
+  <text x="380" y="318" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Console = JS xatolari; Network = webview HTTP. PHP xatosi esa Laravel log'da.</text>
+
+  <!-- Qoida -->
+  <rect x="40" y="344" width="680" height="86" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="380" y="370" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#dc2626">Oltin qoida</text>
+  <text x="380" y="394" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#1e293b">"Build'da xato, dev'da yo'q" -&gt; build eski koddan ishlayotgan bo'lishi mumkin.</text>
+  <text x="380" y="414" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#1e293b">dist/ papkasini o'chir, AppData'ni tozala, qaytadan native:build qil.</text>
+</svg>

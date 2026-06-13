@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400">
+  <title>Global yorliq oqimi: klaviatura bosilishidan Laravel listenergacha</title>
+  <rect width="760" height="400" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b">Global yorliq oqimi (GlobalShortcut)</text>
+
+  <!-- step 1: keyboard -->
+  <rect x="24" y="120" width="150" height="120" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="99" y="150" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb">1. Klaviatura</text>
+  <rect x="44" y="166" width="110" height="34" rx="5" fill="#1e293b"/>
+  <text x="99" y="188" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#ffffff">Ctrl+Shift+Space</text>
+  <text x="99" y="222" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">ilova fonda ham</text>
+
+  <line x1="174" y1="180" x2="214" y2="180" stroke="#16a34a" stroke-width="3" marker-end="url(#d)"/>
+
+  <!-- step 2: electron -->
+  <rect x="214" y="120" width="160" height="120" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="294" y="150" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#f59e0b">2. Electron</text>
+  <text x="294" y="176" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">globalShortcut</text>
+  <text x="294" y="196" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">.register() ushlaydi</text>
+  <text x="294" y="222" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">PHP'ga signal</text>
+
+  <line x1="374" y1="180" x2="414" y2="180" stroke="#16a34a" stroke-width="3" marker-end="url(#d)"/>
+
+  <!-- step 3: event dispatched -->
+  <rect x="414" y="120" width="160" height="120" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="494" y="150" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb">3. Laravel event</text>
+  <text x="494" y="178" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">->event(Class)</text>
+  <text x="494" y="200" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">dispatch qilinadi</text>
+  <text x="494" y="224" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">QuickSearchPressed</text>
+
+  <line x1="574" y1="180" x2="614" y2="180" stroke="#16a34a" stroke-width="3" marker-end="url(#d)"/>
+
+  <!-- step 4: listener -->
+  <rect x="614" y="120" width="130" height="120" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="679" y="150" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">4. Listener</text>
+  <text x="679" y="178" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">oynani ochish</text>
+  <text x="679" y="200" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">yoki Livewire</text>
+  <text x="679" y="222" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">eshituvchisi</text>
+
+  <!-- registration note -->
+  <rect x="120" y="278" width="520" height="84" rx="10" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="380" y="304" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">Ro'yxatdan o'tkazish (boot metodida bir marta)</text>
+  <text x="380" y="332" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#2563eb">GlobalShortcut::key('CmdOrCtrl+Shift+Space')->event(...)->register();</text>
+  <text x="380" y="352" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">->unregister() bilan bekor qilinadi; tugaganda OS avtomatik tozalaydi.</text>
+
+  <defs>
+    <marker id="d" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker>
+  </defs>
+</svg>

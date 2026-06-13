@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 460" font-family="Segoe UI, sans-serif">
+  <title>NativePHP mobil: qurilmada ishlovchi PHP runtime arxitekturasi</title>
+  <rect width="760" height="460" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">Mobil qurilma ichidagi NativePHP arxitekturasi</text>
+  <text x="380" y="56" text-anchor="middle" font-size="14" fill="#334155">Server YO'Q — PHP telefonning o'zida ishlaydi</text>
+
+  <!-- Outer device shell -->
+  <rect x="40" y="78" width="680" height="352" rx="18" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="60" y="104" font-size="15" font-weight="bold" fill="#2563eb">Native qobiq (iOS: Swift / Android: Kotlin)</text>
+
+  <!-- WebView UI -->
+  <rect x="70" y="120" width="280" height="150" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="210" y="146" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e293b">WebView (UI qatlam)</text>
+  <text x="210" y="172" text-anchor="middle" font-size="13" fill="#334155">Blade / Livewire / Inertia</text>
+  <text x="210" y="194" text-anchor="middle" font-size="13" fill="#334155">HTML + CSS + JS</text>
+  <text x="210" y="222" text-anchor="middle" font-size="13" fill="#64748b">Foydalanuvchi shu ekranni</text>
+  <text x="210" y="242" text-anchor="middle" font-size="13" fill="#64748b">ko'radi va bosadi</text>
+
+  <!-- PHP runtime -->
+  <rect x="410" y="120" width="280" height="150" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="550" y="146" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e293b">Bundle qilingan PHP 8.4</text>
+  <text x="550" y="172" text-anchor="middle" font-size="13" fill="#334155">Laravel ilovangiz (biznes-mantiq)</text>
+  <text x="550" y="194" text-anchor="middle" font-size="13" fill="#334155">Eloquent + SQLite (lokal)</text>
+  <text x="550" y="222" text-anchor="middle" font-size="13" fill="#64748b">Statik kompilyatsiya qilingan</text>
+  <text x="550" y="242" text-anchor="middle" font-size="13" fill="#64748b">PHP binar qurilmada</text>
+
+  <!-- Bridge -->
+  <rect x="70" y="296" width="620" height="56" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="380" y="320" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e293b">Native bridge (Swift/Kotlin ko'prik + maxsus PHP kengaytma)</text>
+  <text x="380" y="340" text-anchor="middle" font-size="13" fill="#334155">PHP &lt;-&gt; native funksiya chaqiruvlari: Camera, Biometrics, Geolocation...</text>
+
+  <!-- Native APIs -->
+  <rect x="70" y="368" width="620" height="48" rx="10" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="380" y="397" text-anchor="middle" font-size="14" fill="#334155">Qurilma apparati: kamera, GPS, barmoq izi/Face ID, mikrofon, fleshlight</text>
+
+  <!-- arrows -->
+  <line x1="350" y1="195" x2="408" y2="195" stroke="#dc2626" stroke-width="2.5" marker-end="url(#a10)"/>
+  <line x1="408" y1="215" x2="352" y2="215" stroke="#16a34a" stroke-width="2.5" marker-end="url(#b10)"/>
+  <line x1="380" y1="270" x2="380" y2="294" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#c10)"/>
+  <line x1="380" y1="352" x2="380" y2="366" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#d10)"/>
+
+  <defs>
+    <marker id="a10" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#dc2626"/></marker>
+    <marker id="b10" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#16a34a"/></marker>
+    <marker id="c10" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#f59e0b"/></marker>
+    <marker id="d10" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#94a3b8"/></marker>
+  </defs>
+</svg>

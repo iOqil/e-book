@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420">
+  <title>NativePHP menyu modeli: PHP builder dan native menyugacha</title>
+  <rect width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b">Menyu qanday tug'iladi: PHP -> native menyu</text>
+
+  <!-- PHP builder block -->
+  <rect x="30" y="64" width="220" height="300" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="140" y="92" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb">PHP (Laravel)</text>
+  <text x="140" y="116" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">NativeAppServiceProvider</text>
+
+  <rect x="50" y="132" width="180" height="40" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="140" y="157" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">Menu::create(...)</text>
+
+  <rect x="50" y="182" width="180" height="36" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="140" y="205" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">Menu::label('Fayl')</text>
+
+  <rect x="50" y="226" width="180" height="36" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="140" y="249" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">Menu::link(...)</text>
+
+  <rect x="50" y="270" width="180" height="36" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="140" y="293" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">Menu::separator()</text>
+
+  <rect x="50" y="314" width="180" height="36" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="140" y="337" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">Menu::quit()</text>
+
+  <!-- arrow 1: toArray/JSON -->
+  <line x1="250" y1="214" x2="330" y2="214" stroke="#16a34a" stroke-width="3" marker-end="url(#a)"/>
+  <text x="290" y="200" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">toArray()</text>
+  <text x="290" y="232" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">JSON</text>
+
+  <!-- bridge -->
+  <rect x="330" y="120" width="180" height="190" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="420" y="148" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#f59e0b">Native bridge</text>
+  <text x="420" y="176" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Electron asosiy</text>
+  <text x="420" y="196" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">jarayon (Node)</text>
+  <text x="420" y="226" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">menyu strukturasi</text>
+  <text x="420" y="246" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">qabul qilinadi</text>
+  <text x="420" y="282" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Menu.buildFromTemplate</text>
+
+  <!-- arrow 2 -->
+  <line x1="510" y1="214" x2="590" y2="214" stroke="#16a34a" stroke-width="3" marker-end="url(#a)"/>
+
+  <!-- native menu result -->
+  <rect x="590" y="120" width="150" height="190" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="665" y="148" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">OS native menyu</text>
+  <rect x="608" y="166" width="114" height="26" rx="4" fill="#2563eb"/>
+  <text x="665" y="184" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#ffffff">Fayl  Tahrir  ...</text>
+  <rect x="608" y="200" width="114" height="22" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="665" y="216" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">Yangi</text>
+  <rect x="608" y="224" width="114" height="22" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="665" y="240" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">Ochish</text>
+  <line x1="612" y1="256" x2="718" y2="256" stroke="#94a3b8"/>
+  <rect x="608" y="262" width="114" height="22" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="665" y="278" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">Chiqish</text>
+
+  <text x="380" y="398" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Menyuning o'zi HAQIQIY native: uni OS chizadi, webview emas. Faqat tavsifi PHP'dan keladi.</text>
+
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+</svg>

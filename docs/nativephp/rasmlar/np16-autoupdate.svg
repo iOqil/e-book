@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430">
+  <title>Avto-yangilanish oqimi: AutoUpdater facade, provayder va event'lar</title>
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b">Avto-yangilanish (auto-update) oqimi</text>
+
+  <!-- App side -->
+  <rect x="30" y="64" width="200" height="300" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="130" y="92" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">Ilova (PHP)</text>
+
+  <rect x="50" y="108" width="160" height="44" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="130" y="135" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">checkForUpdates()</text>
+
+  <rect x="50" y="166" width="160" height="44" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="130" y="193" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">downloadUpdate()</text>
+
+  <rect x="50" y="224" width="160" height="44" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="130" y="251" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">quitAndInstall()</text>
+
+  <text x="130" y="296" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Event'lar (qaytadi):</text>
+  <text x="130" y="318" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">UpdateAvailable</text>
+  <text x="130" y="338" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">DownloadProgress</text>
+  <text x="130" y="358" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">UpdateDownloaded</text>
+
+  <!-- Electron bridge -->
+  <rect x="290" y="150" width="170" height="130" rx="12" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2"/>
+  <text x="375" y="180" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">Electron qobiq</text>
+  <text x="375" y="208" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">electron-updater</text>
+  <text x="375" y="232" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">versiyani solishtiradi,</text>
+  <text x="375" y="252" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">yuklaydi, almashtiradi</text>
+
+  <!-- Provider -->
+  <rect x="520" y="64" width="210" height="300" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="625" y="92" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">Yangilanish provayderi</text>
+
+  <rect x="540" y="112" width="170" height="44" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="625" y="139" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">github (Releases)</text>
+
+  <rect x="540" y="170" width="170" height="44" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="625" y="197" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">s3 (AWS / R2)</text>
+
+  <rect x="540" y="228" width="170" height="44" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="625" y="255" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">spaces (DigitalOcean)</text>
+
+  <text x="625" y="300" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">native:build --publish</text>
+  <text x="625" y="320" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">artefaktlarni shu yerga</text>
+  <text x="625" y="340" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">joylaydi</text>
+
+  <!-- arrows -->
+  <line x1="230" y1="188" x2="288" y2="188" stroke="#94a3b8" stroke-width="2" marker-end="url(#u16)"/>
+  <line x1="460" y1="200" x2="518" y2="200" stroke="#94a3b8" stroke-width="2" marker-end="url(#u16)"/>
+  <line x1="518" y1="240" x2="462" y2="240" stroke="#16a34a" stroke-width="2" marker-end="url(#u16g)"/>
+
+  <text x="380" y="404" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">Eslatma: avto-yangilanish faqat production build'da, imzolangan ilovada ishonchli ishlaydi (illustrativ).</text>
+
+  <defs>
+    <marker id="u16" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/>
+    </marker>
+    <marker id="u16g" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+</svg>

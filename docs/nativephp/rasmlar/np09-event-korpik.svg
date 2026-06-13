@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" font-family="Segoe UI, sans-serif">
+  <title>PHP va oyna o'rtasidagi hodisa ko'prigi: native event va broadcast oqimi</title>
+  <rect width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">PHP &lt;-&gt; Oyna hodisa ko'prigi</text>
+
+  <!-- PHP qutisi -->
+  <rect x="40" y="64" width="300" height="320" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="190" y="92" text-anchor="middle" font-size="15" font-weight="bold" fill="#2563eb">PHP tomoni</text>
+
+  <rect x="64" y="110" width="252" height="58" rx="8" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="80" y="134" font-size="13" font-weight="bold" fill="#1e293b">1. Native hodisa</text>
+  <text x="80" y="156" font-size="13" fill="#334155">WindowFocused / WindowResized</text>
+
+  <rect x="64" y="182" width="252" height="58" rx="8" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="80" y="206" font-size="13" font-weight="bold" fill="#1e293b">2. Sizning event'ingiz</text>
+  <text x="80" y="228" font-size="13" fill="#334155">ShouldBroadcastNow + 'nativephp'</text>
+
+  <rect x="64" y="254" width="252" height="58" rx="8" fill="#ffffff" stroke="#16a34a"/>
+  <text x="80" y="278" font-size="13" font-weight="bold" fill="#16a34a">3. event(new JobFinished(...))</text>
+  <text x="80" y="300" font-size="13" fill="#334155">broadcastOn() -&gt; Channel</text>
+
+  <text x="80" y="346" font-size="13" fill="#334155">Channel: 'nativephp'</text>
+
+  <!-- Strelka -->
+  <line x1="340" y1="224" x2="420" y2="224" stroke="#2563eb" stroke-width="3"/>
+  <polygon points="420,216 440,224 420,232" fill="#2563eb"/>
+  <text x="390" y="212" text-anchor="middle" font-size="13" fill="#2563eb">ko'prik</text>
+
+  <!-- Oyna qutisi -->
+  <rect x="440" y="64" width="280" height="320" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="580" y="92" text-anchor="middle" font-size="15" font-weight="bold" fill="#16a34a">Oyna tomoni (JS / Livewire)</text>
+
+  <rect x="460" y="110" width="240" height="74" rx="8" fill="#f1f5f9" stroke="#94a3b8"/>
+  <text x="476" y="134" font-size="13" font-weight="bold" fill="#1e293b">window.Native.on(...)</text>
+  <text x="476" y="156" font-size="13" fill="#334155">native:init ichida e'lon qil</text>
+  <text x="476" y="176" font-size="13" fill="#334155">payload qabul qilinadi</text>
+
+  <rect x="460" y="198" width="240" height="74" rx="8" fill="#f1f5f9" stroke="#94a3b8"/>
+  <text x="476" y="222" font-size="13" font-weight="bold" fill="#1e293b">Livewire: #[On('native:...')]</text>
+  <text x="476" y="244" font-size="13" fill="#334155">metod avtomatik chaqiriladi</text>
+  <text x="476" y="264" font-size="13" fill="#334155">UI yangilanadi</text>
+
+  <rect x="460" y="286" width="240" height="74" rx="8" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="476" y="310" font-size="13" font-weight="bold" fill="#16a34a">Real-time reaktiv UI</text>
+  <text x="476" y="332" font-size="13" fill="#334155">sahifa qayta yuklanmaydi</text>
+  <text x="476" y="352" font-size="13" fill="#334155">oyna darhol o'zgaradi</text>
+</svg>

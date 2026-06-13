@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440">
+  <title>PowerMonitor hodisalari va idle holatlari: ilova OS quvvat va faollik o'zgarishlarini eshitadi</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b">PowerMonitor: quvvat va faollik hodisalari</text>
+
+  <!-- OS source -->
+  <rect x="280" y="62" width="200" height="56" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="380" y="88" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#b45309">Operatsion tizim</text>
+  <text x="380" y="108" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">quvvat / ekran / foydalanuvchi</text>
+
+  <!-- arrow down -->
+  <line x1="380" y1="118" x2="380" y2="150" stroke="#94a3b8" stroke-width="2" marker-end="url(#a07p)"/>
+  <text x="470" y="140" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">native bridge -&gt; Laravel Event</text>
+
+  <!-- Events -->
+  <g font-family="Segoe UI" font-size="13" fill="#1e293b">
+    <rect x="30" y="160" width="220" height="50" rx="6" fill="#eff6ff" stroke="#2563eb"/>
+    <text x="140" y="182" text-anchor="middle" font-weight="bold">PowerStateChanged</text>
+    <text x="140" y="200" text-anchor="middle" font-size="13" fill="#64748b">PowerStatesEnum $state</text>
+
+    <rect x="270" y="160" width="220" height="50" rx="6" fill="#fff7ed" stroke="#f59e0b"/>
+    <text x="380" y="182" text-anchor="middle" font-weight="bold">ThermalStateChanged</text>
+    <text x="380" y="200" text-anchor="middle" font-size="13" fill="#64748b">ThermalStatesEnum $state</text>
+
+    <rect x="510" y="160" width="220" height="50" rx="6" fill="#fff7ed" stroke="#f59e0b"/>
+    <text x="620" y="182" text-anchor="middle" font-weight="bold">SpeedLimitChanged</text>
+    <text x="620" y="200" text-anchor="middle" font-size="13" fill="#64748b">int $limit (throttling)</text>
+
+    <rect x="30" y="222" width="220" height="50" rx="6" fill="#fef2f2" stroke="#dc2626"/>
+    <text x="140" y="244" text-anchor="middle" font-weight="bold">ScreenLocked</text>
+    <text x="140" y="262" text-anchor="middle" font-size="13" fill="#64748b">ekran qulflandi</text>
+
+    <rect x="270" y="222" width="220" height="50" rx="6" fill="#f0fdf4" stroke="#16a34a"/>
+    <text x="380" y="244" text-anchor="middle" font-weight="bold">ScreenUnlocked</text>
+    <text x="380" y="262" text-anchor="middle" font-size="13" fill="#64748b">ekran ochildi</text>
+
+    <rect x="510" y="222" width="220" height="50" rx="6" fill="#eff6ff" stroke="#2563eb"/>
+    <text x="620" y="244" text-anchor="middle" font-weight="bold">Shutdown</text>
+    <text x="620" y="262" text-anchor="middle" font-size="13" fill="#64748b">tizim o'chmoqda</text>
+
+    <rect x="150" y="284" width="220" height="50" rx="6" fill="#f0fdf4" stroke="#16a34a"/>
+    <text x="260" y="306" text-anchor="middle" font-weight="bold">UserDidBecomeActive</text>
+    <text x="260" y="324" text-anchor="middle" font-size="13" fill="#64748b">foydalanuvchi qaytdi</text>
+
+    <rect x="390" y="284" width="220" height="50" rx="6" fill="#fef2f2" stroke="#dc2626"/>
+    <text x="500" y="306" text-anchor="middle" font-weight="bold">UserDidResignActive</text>
+    <text x="500" y="324" text-anchor="middle" font-size="13" fill="#64748b">foydalanuvchi ketdi</text>
+  </g>
+
+  <!-- pull methods -->
+  <rect x="30" y="352" width="700" height="64" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="376" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb">So'rab olish (pull) metodlari — PowerMonitor facade</text>
+  <text x="380" y="400" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">getSystemIdleTime() : int  |  getSystemIdleState($threshold) : SystemIdleStatesEnum  |  isOnBatteryPower() : bool  |  getCurrentThermalState()</text>
+
+  <defs>
+    <marker id="a07p" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/></marker>
+  </defs>
+</svg>

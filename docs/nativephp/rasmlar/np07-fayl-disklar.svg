@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 460">
+  <title>NativePHP desktop fayl tizimi: Storage disklari va remap qilingan yo'llar</title>
+  <rect x="0" y="0" width="760" height="460" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b">Desktop fayl tizimi: Laravel Storage disklari</text>
+
+  <!-- App bubble -->
+  <rect x="40" y="70" width="220" height="120" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="150" y="98" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">Sizning Laravel kodingiz</text>
+  <text x="150" y="124" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">Storage::disk('documents')</text>
+  <text x="150" y="146" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">storage_path()</text>
+  <text x="150" y="168" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">DB::table(...) (SQLite)</text>
+
+  <!-- Arrow -->
+  <line x1="260" y1="130" x2="330" y2="130" stroke="#94a3b8" stroke-width="2" marker-end="url(#a07)"/>
+  <text x="295" y="120" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">remap</text>
+
+  <!-- Service provider -->
+  <rect x="330" y="78" width="180" height="104" rx="10" fill="#fff7ed" stroke="#f59e0b" stroke-width="2"/>
+  <text x="420" y="104" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#b45309">NativeServiceProvider</text>
+  <text x="420" y="128" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">configureDisks()</text>
+  <text x="420" y="148" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">rewriteStoragePath()</text>
+  <text x="420" y="168" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">rewriteDatabase()</text>
+
+  <line x1="510" y1="130" x2="580" y2="130" stroke="#94a3b8" stroke-width="2" marker-end="url(#a07)"/>
+
+  <!-- OS folders -->
+  <rect x="580" y="78" width="150" height="104" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="655" y="104" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">OS papkalari</text>
+  <text x="655" y="128" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Windows / macOS</text>
+  <text x="655" y="148" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">/ Linux haqiqiy</text>
+  <text x="655" y="168" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">yo'llari</text>
+
+  <!-- Disks grid -->
+  <text x="380" y="232" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#1e293b">Tayyor registratsiya qilingan disklar</text>
+
+  <g font-family="Segoe UI" font-size="14" fill="#1e293b">
+    <rect x="40" y="252" width="160" height="40" rx="6" fill="#eff6ff" stroke="#2563eb"/>
+    <text x="120" y="277" text-anchor="middle">user_home</text>
+    <rect x="210" y="252" width="160" height="40" rx="6" fill="#eff6ff" stroke="#2563eb"/>
+    <text x="290" y="277" text-anchor="middle">documents</text>
+    <rect x="380" y="252" width="160" height="40" rx="6" fill="#eff6ff" stroke="#2563eb"/>
+    <text x="460" y="277" text-anchor="middle">downloads</text>
+    <rect x="550" y="252" width="180" height="40" rx="6" fill="#eff6ff" stroke="#2563eb"/>
+    <text x="640" y="277" text-anchor="middle">desktop</text>
+
+    <rect x="40" y="302" width="160" height="40" rx="6" fill="#eff6ff" stroke="#2563eb"/>
+    <text x="120" y="327" text-anchor="middle">music</text>
+    <rect x="210" y="302" width="160" height="40" rx="6" fill="#eff6ff" stroke="#2563eb"/>
+    <text x="290" y="327" text-anchor="middle">pictures</text>
+    <rect x="380" y="302" width="160" height="40" rx="6" fill="#eff6ff" stroke="#2563eb"/>
+    <text x="460" y="327" text-anchor="middle">videos</text>
+    <rect x="550" y="302" width="180" height="40" rx="6" fill="#eff6ff" stroke="#2563eb"/>
+    <text x="640" y="327" text-anchor="middle">recent</text>
+
+    <rect x="40" y="352" width="160" height="40" rx="6" fill="#eff6ff" stroke="#2563eb"/>
+    <text x="120" y="377" text-anchor="middle">app_data</text>
+    <rect x="210" y="352" width="160" height="40" rx="6" fill="#eff6ff" stroke="#2563eb"/>
+    <text x="290" y="377" text-anchor="middle">user_data</text>
+    <rect x="380" y="352" width="350" height="40" rx="6" fill="#f0fdf4" stroke="#16a34a"/>
+    <text x="555" y="377" text-anchor="middle" fill="#16a34a">extras (faqat o'qish: bundle qilingan binarlar)</text>
+  </g>
+
+  <text x="380" y="428" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">Disk faqat .env da mos NATIVEPHP_*_PATH o'rnatilgan bo'lsa registratsiya bo'ladi</text>
+
+  <defs>
+    <marker id="a07" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+</svg>

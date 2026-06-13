@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 470">
+  <title>NativePHP desktop bundle tuzilishi - Electron qobiq, php-bin va Laravel ilova</title>
+  <rect width="820" height="470" fill="#f8fafc"/>
+  <text x="410" y="36" text-anchor="middle" font-family="Segoe UI" font-size="22" fill="#1e293b" font-weight="bold">Desktop ilova qanday bundle bo'ladi</text>
+
+  <!-- Outer: Electron shell -->
+  <rect x="40" y="64" width="740" height="378" rx="14" fill="#ffffff" stroke="#2563eb" stroke-width="3"/>
+  <text x="60" y="94" font-family="Segoe UI" font-size="17" fill="#2563eb" font-weight="bold">Electron qobiq (.exe / .app / .AppImage)</text>
+  <text x="60" y="116" font-family="Segoe UI" font-size="13" fill="#94a3b8">Chromium oynasi + Node.js asosiy jarayon</text>
+
+  <!-- Webview -->
+  <rect x="70" y="138" width="320" height="276" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
+  <text x="90" y="166" font-family="Segoe UI" font-size="16" fill="#1e293b" font-weight="bold">Webview (Chromium)</text>
+  <text x="90" y="190" font-family="Segoe UI" font-size="14" fill="#334155">UI = HTML / CSS / JS</text>
+  <text x="90" y="214" font-family="Segoe UI" font-size="14" fill="#334155">Blade / Livewire / Inertia</text>
+  <rect x="90" y="234" width="280" height="58" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="106" y="260" font-family="Segoe UI" font-size="14" fill="#16a34a" font-weight="bold">Salom oynasi (route: salom)</text>
+  <text x="106" y="282" font-family="Segoe UI" font-size="13" fill="#334155">Blade tomonidan render qilingan</text>
+  <text x="90" y="324" font-family="Segoe UI" font-size="13" fill="#94a3b8">localhost ga ulanadi</text>
+
+  <!-- PHP binary + Laravel -->
+  <rect x="410" y="138" width="350" height="276" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
+  <text x="430" y="166" font-family="Segoe UI" font-size="16" fill="#1e293b" font-weight="bold">Bundle qilingan PHP runtime</text>
+  <text x="430" y="190" font-family="Segoe UI" font-size="14" fill="#334155">nativephp/php-bin (mustaqil binar)</text>
+  <rect x="430" y="206" width="310" height="92" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="446" y="232" font-family="Segoe UI" font-size="14" fill="#2563eb" font-weight="bold">Laravel ilovangiz (biznes-mantiq)</text>
+  <text x="446" y="256" font-family="Segoe UI" font-size="13" fill="#334155">route / controller / model</text>
+  <text x="446" y="278" font-family="Segoe UI" font-size="13" fill="#334155">migratsiya / Eloquent / SQLite</text>
+  <text x="430" y="332" font-family="Segoe UI" font-size="13" fill="#334155">phpIni() direktivalari shu yerda qo'llanadi</text>
+
+  <!-- bridge arrow -->
+  <line x1="390" y1="276" x2="410" y2="276" stroke="#f59e0b" stroke-width="3" marker-end="url(#b)" marker-start="url(#bs)"/>
+  <text x="400" y="356" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#f59e0b" font-weight="bold">native bridge</text>
+
+  <defs>
+    <marker id="b" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#f59e0b"/></marker>
+    <marker id="bs" markerWidth="9" markerHeight="9" refX="2" refY="4.5" orient="auto"><path d="M9,0 L0,4.5 L9,9 z" fill="#f59e0b"/></marker>
+  </defs>
+</svg>

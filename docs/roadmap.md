@@ -85,6 +85,9 @@ Yo'nalishingizdan qat'i nazar, **birinchi kunlardanoq** kodingizni Git bilan saq
     - **Python** — agar AI, ma'lumot tahlili, avtomatlashtirish yoki zamonaviy startaplar qiziqtirsa. Sintaksisi sodda, FastAPI tez.
     - **PHP** — agar tez ishga joylashish kerak bo'lsa: dunyodagi saytlarning katta qismi PHP'da (WordPress, Laravel), O'zbekistonda ham vakansiya ko'p.
 
+!!! tip "Faqat web emas — desktop va mobil ham"
+    Laravel/PHP bilsangiz, [NativePHP](nativephp/README.md) orqali **bitta kod bazasidan** desktop (Windows/macOS/Linux) va mobil (iOS/Android) ilovalar ham qura olasiz. Bu ilg'or/maxsus yo'nalish — avval Laravel'ni puxta egallang.
+
     Ikkalasi ham backend uchun a'lo. Birini tanlab, **chuqur** o'rganing — keyin ikkinchisi oson o'tadi.
 
 **Nima qura olasiz:** login/ro'yxatdan o'tish tizimi, REST API, internet-do'kon backendi, telegram bot, ma'lumot boshqaruv panellari.

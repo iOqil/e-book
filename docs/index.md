@@ -15,10 +15,10 @@ hide:
 [GitHub](https://github.com/iOqil/e-book){ .md-button }
 
 <div class="hero-stats">
-  <div class="stat"><b>15</b><span>kitob</span></div>
-  <div class="stat"><b>800</b><span>diagramma</span></div>
-  <div class="stat"><b>355+</b><span>bob</span></div>
-  <div class="stat"><b>3400+</b><span>masala</span></div>
+  <div class="stat"><b>16</b><span>kitob</span></div>
+  <div class="stat"><b>855</b><span>diagramma</span></div>
+  <div class="stat"><b>373+</b><span>bob</span></div>
+  <div class="stat"><b>3600+</b><span>masala</span></div>
 </div>
 
 </section>
@@ -144,5 +144,13 @@ hide:
     Python bilan **full-stack veb-dasturlash**: MTV arxitektura, ORM va migratsiya, model munosabatlari, admin panel, formalar, class-based views, autentifikatsiya, **Django REST Framework** (serializers, ViewSets, JWT, filtrlash/paginatsiya), signallar, keshlash, async/Celery, testlash (pytest-django), xavfsizlik va deployment + yakuniy kapston loyiha. Kod real Django 6.0 da ishga tushirib tekshirilgan. 25 bob · 76 diagramma.
 
     [Boshlash →](django/README.md)
+
+-   🖥️ **16. NativePHP (Desktop va Mobil)**
+
+    ---
+
+    PHP/Laravel bilan **desktop (Windows/macOS/Linux) va mobil (iOS/Android)** ilovalar: NativePHP arxitekturasi (webview + bundled/on-device PHP), oyna boshqaruvi, menyu/tray, native bildirishnoma/dialog, lokal SQLite, mobil qurilma imkoniyatlari (kamera, GPS, biometrika, push), testlash, build va app store deploy + cross-platform kapston. Laravel bilimini nazarda tutadi. Laravel/PHP kodi tekshirilgan; GUI/qurilma/build bloklari illustrativ (halol belgilangan). 18 bob · 55 diagramma.
+
+    [Boshlash →](nativephp/README.md)
 
 </div>

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" font-family="Segoe UI, sans-serif">
+  <title>Bu bobdagi to'rt facade va ularning asosiy metod hamda eventlari xaritasi</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">To'rt facade: metod va event xaritasi</text>
+  <text x="380" y="56" text-anchor="middle" font-size="13" fill="#64748b">namespace: Native\Mobile\Facades\*  —  eventlar: Native\Mobile\Events\*</text>
+
+  <!-- Camera -->
+  <rect x="30" y="78" width="340" height="150" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="50" y="104" font-size="16" font-weight="bold" fill="#2563eb">Camera</text>
+  <text x="50" y="128" font-size="13" fill="#334155">getPhoto() | pickImages($type,$multi)</text>
+  <text x="50" y="148" font-size="13" fill="#334155">recordVideo(['maxDuration'=>30])</text>
+  <text x="50" y="174" font-size="13" fill="#64748b">event: PhotoTaken($path)</text>
+  <text x="50" y="194" font-size="13" fill="#64748b">MediaSelected($success,$files,$count)</text>
+  <text x="50" y="214" font-size="13" fill="#64748b">VideoRecorded / VideoCancelled</text>
+
+  <!-- Geolocation -->
+  <rect x="390" y="78" width="340" height="150" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="410" y="104" font-size="16" font-weight="bold" fill="#16a34a">Geolocation</text>
+  <text x="410" y="128" font-size="13" fill="#334155">getCurrentPosition(bool $fine = false)</text>
+  <text x="410" y="148" font-size="13" fill="#334155">checkPermissions() | requestPermissions()</text>
+  <text x="410" y="174" font-size="13" fill="#64748b">event: LocationReceived(...)</text>
+  <text x="410" y="194" font-size="13" fill="#64748b">PermissionStatusReceived</text>
+  <text x="410" y="214" font-size="13" fill="#64748b">PermissionRequestResult</text>
+
+  <!-- Microphone -->
+  <rect x="30" y="248" width="340" height="150" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="50" y="274" font-size="16" font-weight="bold" fill="#f59e0b">Microphone</text>
+  <text x="50" y="298" font-size="13" fill="#334155">record() | stop() | pause() | resume()</text>
+  <text x="50" y="318" font-size="13" fill="#334155">getStatus() | getRecording()</text>
+  <text x="50" y="344" font-size="13" fill="#64748b">event: MicrophoneRecorded(</text>
+  <text x="50" y="364" font-size="13" fill="#64748b">$path, $mimeType, $id)</text>
+  <text x="50" y="386" font-size="13" fill="#64748b">status: idle | recording | paused</text>
+
+  <!-- Scanner -->
+  <rect x="390" y="248" width="340" height="150" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="410" y="274" font-size="16" font-weight="bold" fill="#dc2626">Scanner</text>
+  <text x="410" y="298" font-size="13" fill="#334155">scan()->prompt()->continuous()</text>
+  <text x="410" y="318" font-size="13" fill="#334155">->formats([...])->id(...)</text>
+  <text x="410" y="344" font-size="13" fill="#64748b">event: CodeScanned(</text>
+  <text x="410" y="364" font-size="13" fill="#64748b">$data, $format, ?$id)</text>
+  <text x="410" y="386" font-size="13" fill="#64748b">qr, ean13, code128, all ...</text>
+
+  <text x="380" y="424" text-anchor="middle" font-size="13" fill="#64748b">Hammasi #[OnNative(EventClass::class)] handler bilan eshitiladi</text>
+</svg>

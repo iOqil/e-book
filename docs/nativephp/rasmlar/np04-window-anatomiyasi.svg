@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 460" font-family="Segoe UI, sans-serif">
+  <title>NativePHP oyna anatomiyasi: BrowserWindow ichida webview va PHP bridge</title>
+  <rect x="0" y="0" width="760" height="460" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="21" font-weight="bold" fill="#1e293b">Bitta NativePHP oyna nimadan iborat</text>
+
+  <!-- Electron BrowserWindow ramka -->
+  <rect x="40" y="60" width="680" height="300" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="56" y="86" font-size="14" font-weight="bold" fill="#2563eb">Electron BrowserWindow (native oyna ramkasi)</text>
+
+  <!-- Title bar -->
+  <rect x="56" y="98" width="648" height="34" rx="5" fill="#e2e8f0" stroke="#94a3b8"/>
+  <circle cx="78" cy="115" r="6" fill="#dc2626"/>
+  <circle cx="98" cy="115" r="6" fill="#f59e0b"/>
+  <circle cx="118" cy="115" r="6" fill="#16a34a"/>
+  <text x="380" y="120" text-anchor="middle" font-size="14" fill="#334155">title(), frameless(), titleBarHidden() shu yerni boshqaradi</text>
+
+  <!-- Webview content -->
+  <rect x="56" y="142" width="648" height="200" rx="5" fill="#f1f5f9" stroke="#94a3b8" stroke-dasharray="5 4"/>
+  <text x="380" y="170" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e293b">Webview (Chromium)</text>
+  <text x="380" y="196" text-anchor="middle" font-size="14" fill="#334155">Bu yerda sizning Blade / Livewire / Inertia UI'ngiz</text>
+  <text x="380" y="218" text-anchor="middle" font-size="14" fill="#334155">render bo'ladi — oddiy HTML/CSS/JS sahifa</text>
+  <rect x="240" y="240" width="280" height="80" rx="6" fill="#ffffff" stroke="#2563eb"/>
+  <text x="380" y="268" text-anchor="middle" font-size="14" fill="#2563eb">route('settings.index')</text>
+  <text x="380" y="292" text-anchor="middle" font-size="13" fill="#334155">width(640) height(480)</text>
+  <text x="380" y="312" text-anchor="middle" font-size="13" fill="#334155">minWidth(400) resizable(true)</text>
+
+  <!-- PHP bridge -->
+  <rect x="40" y="382" width="680" height="58" rx="10" fill="#16a34a" opacity="0.12" stroke="#16a34a" stroke-width="2"/>
+  <text x="380" y="408" text-anchor="middle" font-size="15" font-weight="bold" fill="#16a34a">PHP runtime (bundle qilingan binar) + Window facade</text>
+  <text x="380" y="430" text-anchor="middle" font-size="13" fill="#334155">Window::open() -> ichki HTTP API -> Electron oynani yaratadi</text>
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440">
+  <title>NativePHP da SQLite faylining dev va prod joylashuvi</title>
+  <rect width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b">SQLite fayli qayerda yashaydi?</text>
+
+  <!-- DEV -->
+  <rect x="30" y="64" width="330" height="320" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="195" y="94" text-anchor="middle" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#2563eb">Development (native:dev)</text>
+
+  <rect x="56" y="112" width="278" height="60" rx="8" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="195" y="138" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">app.debug = true</text>
+  <text x="195" y="158" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">database_path('nativephp.sqlite')</text>
+
+  <rect x="56" y="186" width="278" height="50" rx="8" fill="#eff6ff" stroke="#2563eb"/>
+  <text x="195" y="208" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#1e293b">loyiha/database/nativephp.sqlite</text>
+  <text x="195" y="226" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">(yoq bolsa avtomatik yaratiladi)</text>
+
+  <rect x="56" y="250" width="278" height="118" rx="8" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="195" y="274" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#334155">Avtomatik amallar</text>
+  <text x="195" y="298" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">database.default = 'nativephp'</text>
+  <text x="195" y="320" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">native:migrate ishga tushadi</text>
+  <text x="195" y="342" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">PRAGMA journal_mode = WAL</text>
+  <text x="195" y="362" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">PRAGMA busy_timeout = 5000</text>
+
+  <!-- PROD -->
+  <rect x="400" y="64" width="330" height="320" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="565" y="94" text-anchor="middle" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#16a34a">Production (native:build)</text>
+
+  <rect x="426" y="112" width="278" height="60" rx="8" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="565" y="138" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">app.debug = false</text>
+  <text x="565" y="158" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">appdata papkasida</text>
+
+  <rect x="426" y="186" width="278" height="74" rx="8" fill="#f0fdf4" stroke="#16a34a"/>
+  <text x="565" y="208" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">Win: %APPDATA%/Ilova/</text>
+  <text x="565" y="228" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">macOS: ~/Library/Application Support/</text>
+  <text x="565" y="248" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">Mobil: ilova konteyneri ichida</text>
+
+  <rect x="426" y="274" width="278" height="94" rx="8" fill="#fffbeb" stroke="#f59e0b"/>
+  <text x="565" y="298" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">Diqqat</text>
+  <text x="565" y="320" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Yangilanishda versiya tekshiriladi</text>
+  <text x="565" y="340" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">va migratsiyalar avtomatik ishlaydi</text>
+  <text x="565" y="360" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">Foydalanuvchi malumotini ochirib qoyma!</text>
+
+  <text x="380" y="416" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Bitta connection nomi: 'nativephp' (driver = sqlite)</text>
+</svg>

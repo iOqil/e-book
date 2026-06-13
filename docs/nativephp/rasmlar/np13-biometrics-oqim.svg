@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430">
+  <title>Biometrics va SecureStorage autentifikatsiya oqimi</title>
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="32" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Biometrics + SecureStorage oqimi</text>
+
+  <!-- Webview (PHP/Livewire) -->
+  <rect x="30" y="60" width="220" height="320" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="140" y="86" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb" text-anchor="middle">Webview (PHP/Livewire)</text>
+
+  <rect x="55" y="104" width="170" height="46" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.2"/>
+  <text x="140" y="125" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">1. Foydalanuvchi</text>
+  <text x="140" y="142" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">"Ochish" tugmasi</text>
+
+  <rect x="55" y="166" width="170" height="46" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.2"/>
+  <text x="140" y="187" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">2. Biometrics::prompt()</text>
+  <text x="140" y="204" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">chaqiriladi</text>
+
+  <rect x="55" y="288" width="170" height="46" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.2"/>
+  <text x="140" y="309" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">5. OnNative(Completed)</text>
+  <text x="140" y="326" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">bool $success</text>
+
+  <!-- Native bridge -->
+  <rect x="290" y="60" width="180" height="320" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="380" y="86" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#f59e0b" text-anchor="middle">Native ko'prik</text>
+  <text x="380" y="104" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">(Swift / Kotlin)</text>
+
+  <rect x="308" y="166" width="144" height="60" rx="6" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.2"/>
+  <text x="380" y="190" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">3. Face ID /</text>
+  <text x="380" y="208" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">barmoq izi oynasi</text>
+
+  <rect x="308" y="288" width="144" height="46" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.2"/>
+  <text x="380" y="316" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">4. Natija qaytadi</text>
+
+  <!-- Secure store (Keychain/Keystore) -->
+  <rect x="510" y="60" width="220" height="320" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="620" y="86" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="middle">Shifrlangan saqlash</text>
+  <text x="620" y="104" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">Keychain / Keystore</text>
+
+  <rect x="535" y="166" width="170" height="60" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.2"/>
+  <text x="620" y="190" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">SecureStorage::get</text>
+  <text x="620" y="208" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">('auth_token')</text>
+
+  <rect x="535" y="288" width="170" height="60" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1.2"/>
+  <text x="620" y="312" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">OS himoyalaydi:</text>
+  <text x="620" y="330" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">app sandbox + shifr</text>
+
+  <!-- arrows -->
+  <defs>
+    <marker id="a13" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#475569"/>
+    </marker>
+  </defs>
+  <line x1="140" y1="150" x2="140" y2="164" stroke="#475569" stroke-width="1.6" marker-end="url(#a13)"/>
+  <line x1="225" y1="189" x2="306" y2="189" stroke="#475569" stroke-width="1.6" marker-end="url(#a13)"/>
+  <line x1="380" y1="226" x2="380" y2="286" stroke="#475569" stroke-width="1.6" marker-end="url(#a13)"/>
+  <line x1="308" y1="311" x2="227" y2="311" stroke="#16a34a" stroke-width="1.6" marker-end="url(#a13)"/>
+  <line x1="225" y1="300" x2="160" y2="300" stroke="#475569" stroke-width="0" />
+  <line x1="227" y1="196" x2="533" y2="196" stroke="#16a34a" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#a13)"/>
+  <text x="380" y="378" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">$success=true bo'lsa, token o'qiladi</text>
+</svg>

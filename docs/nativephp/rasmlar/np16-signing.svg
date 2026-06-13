@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430">
+  <title>Kod imzolash oqimi: imzosiz vs imzolangan ilova foydalanuvchi tomonida</title>
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b">Kod imzolash nima uchun kerak</text>
+
+  <!-- Unsigned path -->
+  <rect x="30" y="58" width="330" height="160" rx="12" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="195" y="86" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#dc2626">Imzosiz .exe / .dmg</text>
+  <text x="195" y="116" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Windows SmartScreen:</text>
+  <text x="195" y="136" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">"Noma'lum nashriyot"</text>
+  <text x="195" y="162" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">macOS Gatekeeper:</text>
+  <text x="195" y="182" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">"Ochib bo'lmaydi"</text>
+  <text x="195" y="206" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">Foydalanuvchi qo'rqadi / o'rnatmaydi</text>
+
+  <!-- Signed path -->
+  <rect x="400" y="58" width="330" height="160" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="565" y="86" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a">Imzolangan + notarized</text>
+  <text x="565" y="116" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Windows: sertifikat</text>
+  <text x="565" y="136" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">nashriyot nomi ko'rinadi</text>
+  <text x="565" y="162" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">macOS: Apple tasdiq</text>
+  <text x="565" y="182" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">to'siqsiz ochiladi</text>
+  <text x="565" y="206" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">Foydalanuvchi ishonadi</text>
+
+  <!-- bottom: how signing is wired -->
+  <text x="380" y="262" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#1e293b">NativePHP imzolashni qanday sozlaydi (.env)</text>
+
+  <rect x="40" y="282" width="340" height="120" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="210" y="308" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">Windows — Azure Trusted Signing</text>
+  <text x="210" y="332" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">AZURE_TENANT_ID</text>
+  <text x="210" y="352" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">AZURE_CLIENT_ID / SECRET</text>
+  <text x="210" y="372" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">NATIVEPHP_AZURE_ENDPOINT</text>
+  <text x="210" y="392" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">+ certificate_profile_name</text>
+
+  <rect x="400" y="282" width="320" height="120" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="560" y="308" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">macOS — Apple notarization</text>
+  <text x="560" y="332" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">NATIVEPHP_APPLE_ID</text>
+  <text x="560" y="352" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">NATIVEPHP_APPLE_ID_PASS</text>
+  <text x="560" y="372" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">NATIVEPHP_APPLE_TEAM_ID</text>
+  <text x="560" y="392" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">afterSign: notarize.js</text>
+</svg>

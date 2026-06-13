@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440">
+  <title>Qaysi native UI elementini qachon ishlatish: Notification, Alert, Dialog</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI" font-size="20" fill="#1e293b" font-weight="bold">Qaysisini qachon ishlataman?</text>
+
+  <!-- Notification -->
+  <rect x="30" y="64" width="700" height="108" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="50" y="92" font-family="Segoe UI" font-size="17" fill="#2563eb" font-weight="bold">Notification (bildirishnoma)</text>
+  <text x="50" y="118" font-family="Segoe UI" font-size="14" fill="#334155">Bloklamaydi. Foydalanuvchi e'tiborini so'ramaydi — burchakda paydo bo'lib o'zi yo'qoladi.</text>
+  <text x="50" y="140" font-family="Segoe UI" font-size="14" fill="#334155">Javob KUTMAYsiz. Misol: "Eksport tugadi", "Yangi xabar keldi", "Saqlandi".</text>
+  <text x="50" y="162" font-family="Segoe UI" font-size="13" fill="#16a34a">-> show() void qaytaradi; bosilsa event orqali bilasiz.</text>
+
+  <!-- Alert -->
+  <rect x="30" y="184" width="700" height="108" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="50" y="212" font-family="Segoe UI" font-size="17" fill="#f59e0b" font-weight="bold">Alert / Message box (modal)</text>
+  <text x="50" y="238" font-family="Segoe UI" font-size="14" fill="#334155">BLOKLAYDI. Foydalanuvchi tugma bosmaguncha kutadi. Tasdiq/ogohlantirish uchun.</text>
+  <text x="50" y="260" font-family="Segoe UI" font-size="14" fill="#334155">Misol: "O'chirishni tasdiqlang?", "Xatolik yuz berdi".</text>
+  <text x="50" y="282" font-family="Segoe UI" font-size="13" fill="#16a34a">-> show() bosilgan tugma INDEKSini (int) qaytaradi.</text>
+
+  <!-- Dialog -->
+  <rect x="30" y="304" width="700" height="108" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="50" y="332" font-family="Segoe UI" font-size="17" fill="#16a34a" font-weight="bold">Dialog (fayl / papka tanlash)</text>
+  <text x="50" y="358" font-family="Segoe UI" font-size="14" fill="#334155">BLOKLAYDI. Operatsion tizimning fayl tanlash/saqlash oynasi.</text>
+  <text x="50" y="380" font-family="Segoe UI" font-size="14" fill="#334155">Misol: hujjat ochish, CSV saqlash, papka tanlash.</text>
+  <text x="50" y="402" font-family="Segoe UI" font-size="13" fill="#dc2626">-> open()/save() fayl yo'li (string), massiv yoki null (bekor) qaytaradi.</text>
+</svg>

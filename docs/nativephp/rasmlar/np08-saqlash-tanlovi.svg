@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470">
+  <title>Qaysi malumotni qayerga saqlash kerak: tanlov xaritasi</title>
+  <rect width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b">Nimani qayerga saqlash kerak?</text>
+
+  <!-- SQLite -->
+  <rect x="24" y="62" width="230" height="190" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="139" y="90" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb">SQLite (Eloquent)</text>
+  <text x="139" y="116" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">Tarkibiy, kop yozuvli</text>
+  <text x="139" y="140" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">eslatmalar, vazifalar</text>
+  <text x="139" y="162" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">tranzaksiyalar, jurnal</text>
+  <text x="139" y="184" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">qidiruv/filtr kerak bolsa</text>
+  <rect x="44" y="200" width="190" height="38" rx="6" fill="#eff6ff" stroke="#2563eb"/>
+  <text x="139" y="224" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">migratsiya + model</text>
+
+  <!-- Settings -->
+  <rect x="265" y="62" width="230" height="190" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="380" y="90" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a">Settings (config.json)</text>
+  <text x="380" y="116" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">Kichik kalit-qiymat</text>
+  <text x="380" y="140" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">tema, til, oyna olchami</text>
+  <text x="380" y="162" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">"oxirgi ochilgan fayl"</text>
+  <text x="380" y="184" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">foydalanuvchi afzalligi</text>
+  <rect x="285" y="200" width="190" height="38" rx="6" fill="#f0fdf4" stroke="#16a34a"/>
+  <text x="380" y="224" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">get / set / forget</text>
+
+  <!-- Secure -->
+  <rect x="506" y="62" width="230" height="190" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="621" y="90" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#dc2626">Xavfsiz ombor</text>
+  <text x="621" y="116" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">Maxfiy, kichik matn</text>
+  <text x="621" y="140" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">API token, parol</text>
+  <text x="621" y="162" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">sessiya kaliti</text>
+  <text x="621" y="184" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Keychain / Keystore</text>
+  <rect x="526" y="200" width="190" height="38" rx="6" fill="#fef2f2" stroke="#dc2626"/>
+  <text x="621" y="224" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">SecureStorage / encrypt</text>
+
+  <!-- bottom rules -->
+  <rect x="24" y="272" width="712" height="174" rx="12" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="380" y="300" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#1e293b">Oltin qoidalar</text>
+  <text x="48" y="328" font-family="Segoe UI" font-size="14" fill="#334155">1. Maxfiy malumotni (token/parol) hech qachon oddiy SQLite ustun yoki config.json ga ochiq yozma.</text>
+  <text x="48" y="354" font-family="Segoe UI" font-size="14" fill="#334155">2. Desktop: kichik sirlar uchun System::encrypt() (native safeStorage), katta uchun Laravel Crypt (APP_KEY).</text>
+  <text x="48" y="380" font-family="Segoe UI" font-size="14" fill="#334155">3. Mobil: SecureStorage qurilma Keychain/Keystore ga shifrlab saqlaydi -- API token uchun ideal.</text>
+  <text x="48" y="406" font-family="Segoe UI" font-size="14" fill="#334155">4. Qurilmaga bevosita masofaviy DB ulanma -- xavfsiz API backend orqali sinxronla.</text>
+  <text x="48" y="432" font-family="Segoe UI" font-size="14" fill="#dc2626">5. Ilova ochirilsa, lokal SQLite ham ochib ketadi -- muhim malumotni serverda zaxirala.</text>
+</svg>

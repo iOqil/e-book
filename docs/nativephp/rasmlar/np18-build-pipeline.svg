@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430">
+  <title>Desktop va mobil build/deploy pipeline</title>
+  <rect width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b">Bitta kod-bazadan ikki build pipeline</text>
+
+  <!-- Umumiy boshlanish -->
+  <rect x="280" y="62" width="200" height="56" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="3"/>
+  <text x="380" y="86" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">Tayyor kod-baza</text>
+  <text x="380" y="106" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">testlar yashil, npm run build</text>
+
+  <line x1="340" y1="118" x2="200" y2="150" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#b1)"/>
+  <line x1="420" y1="118" x2="560" y2="150" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#b1)"/>
+
+  <!-- DESKTOP ustun -->
+  <text x="180" y="170" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a">DESKTOP</text>
+  <rect x="50" y="182" width="260" height="40" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="180" y="207" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">config/nativephp.php versiyani oshir</text>
+  <rect x="50" y="232" width="260" height="40" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="180" y="257" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">php artisan native:build win|mac|linux</text>
+  <rect x="50" y="282" width="260" height="40" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="180" y="307" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">code signing (.env sertifikat)</text>
+  <rect x="50" y="332" width="260" height="44" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="180" y="359" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">.exe / .dmg / .AppImage artefakt</text>
+  <line x1="180" y1="222" x2="180" y2="231" stroke="#94a3b8" stroke-width="2" marker-end="url(#b1)"/>
+  <line x1="180" y1="272" x2="180" y2="281" stroke="#94a3b8" stroke-width="2" marker-end="url(#b1)"/>
+  <line x1="180" y1="322" x2="180" y2="331" stroke="#94a3b8" stroke-width="2" marker-end="url(#b1)"/>
+
+  <!-- MOBIL ustun -->
+  <text x="580" y="170" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#f59e0b">MOBIL</text>
+  <rect x="450" y="182" width="260" height="40" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="580" y="207" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">npm run build -- --mode=ios|android</text>
+  <rect x="450" y="232" width="260" height="40" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="580" y="257" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">php artisan native:build</text>
+  <rect x="450" y="282" width="260" height="40" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="580" y="307" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">imzo: iOS sertifikat / Android keystore</text>
+  <rect x="450" y="332" width="260" height="44" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="580" y="359" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#f59e0b">App Store / Play Store / .apk</text>
+  <line x1="580" y1="222" x2="580" y2="231" stroke="#94a3b8" stroke-width="2" marker-end="url(#b1)"/>
+  <line x1="580" y1="272" x2="580" y2="281" stroke="#94a3b8" stroke-width="2" marker-end="url(#b1)"/>
+  <line x1="580" y1="322" x2="580" y2="331" stroke="#94a3b8" stroke-width="2" marker-end="url(#b1)"/>
+
+  <text x="380" y="408" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">build/packaging bu muhitda ishga tushirilmadi — buyruqlar illustrativ, lekin to'g'ri</text>
+
+  <defs>
+    <marker id="b1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/></marker>
+  </defs>
+</svg>

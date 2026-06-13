@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420">
+  <title>Native UI oqimi: PHP kod -> bridge -> operatsion tizim widgeti</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI" font-size="20" fill="#1e293b" font-weight="bold">Native UI qanday ishlaydi (desktop)</text>
+
+  <!-- PHP layer -->
+  <rect x="30" y="70" width="200" height="120" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="130" y="98" text-anchor="middle" font-family="Segoe UI" font-size="16" fill="#2563eb" font-weight="bold">Sizning PHP kodingiz</text>
+  <text x="130" y="124" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">Notification::title()</text>
+  <text x="130" y="146" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">Dialog::new()->save()</text>
+  <text x="130" y="168" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">Alert::new()->show()</text>
+
+  <!-- arrow -->
+  <line x1="230" y1="130" x2="300" y2="130" stroke="#94a3b8" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="265" y="120" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">so'rov</text>
+
+  <!-- Bridge -->
+  <rect x="300" y="70" width="160" height="120" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="380" y="104" text-anchor="middle" font-family="Segoe UI" font-size="16" fill="#f59e0b" font-weight="bold">NativePHP</text>
+  <text x="380" y="128" text-anchor="middle" font-family="Segoe UI" font-size="16" fill="#f59e0b" font-weight="bold">bridge</text>
+  <text x="380" y="156" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">(Electron / Node)</text>
+
+  <!-- arrow -->
+  <line x1="460" y1="130" x2="530" y2="130" stroke="#94a3b8" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="495" y="120" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">chaqiruv</text>
+
+  <!-- OS -->
+  <rect x="530" y="70" width="200" height="120" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="630" y="104" text-anchor="middle" font-family="Segoe UI" font-size="16" fill="#16a34a" font-weight="bold">Operatsion tizim</text>
+  <text x="630" y="130" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">HAQIQIY native</text>
+  <text x="630" y="152" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">bildirishnoma /</text>
+  <text x="630" y="172" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">dialog oynasi</text>
+
+  <!-- return arrow -->
+  <line x1="630" y1="200" x2="130" y2="260" stroke="#dc2626" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arr2)"/>
+  <text x="380" y="240" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">javob qaytadi: tanlangan fayl yo'li / bosilgan tugma indeksi / null</text>
+
+  <!-- note box -->
+  <rect x="30" y="290" width="700" height="100" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="50" y="318" font-family="Segoe UI" font-size="15" fill="#1e293b" font-weight="bold">Muhim:</text>
+  <text x="50" y="342" font-family="Segoe UI" font-size="14" fill="#334155">Dialog va bildirishnoma SOF native (OT chizadi). Lekin ilova oynasidagi tugmalar,</text>
+  <text x="50" y="364" font-family="Segoe UI" font-size="14" fill="#334155">ro'yxatlar, formalar — ularni webview ichidagi HTML/CSS (Blade) chizadi, native emas.</text>
+  <text x="50" y="384" font-family="Segoe UI" font-size="13" fill="#dc2626">Demak "native UI" deganda faqat OT darajasidagi widgetlar tushuniladi.</text>
+
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/>
+    </marker>
+    <marker id="arr2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#dc2626"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" font-family="Segoe UI, sans-serif">
+  <title>Sinxronizatsiya oqimi: push, pull va konflikt hal qilish (last-write-wins)</title>
+  <rect width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">Sinxronizatsiya oqimi va konflikt hal qilish</text>
+
+  <!-- 1 Tarmoq tekshiruvi -->
+  <rect x="40" y="62" width="200" height="56" rx="9" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="140" y="86" text-anchor="middle" font-size="14" font-weight="bold" fill="#334155">Network::status()</text>
+  <text x="140" y="106" text-anchor="middle" font-size="13" fill="#334155">connected? type? expensive?</text>
+
+  <!-- shart -->
+  <path d="M140 118 V 150" stroke="#94a3b8" stroke-width="2" marker-end="url(#b)"/>
+  <text x="150" y="140" font-size="13" fill="#dc2626">offline -> to'xta, navbatda qoladi</text>
+
+  <!-- 2 push -->
+  <rect x="40" y="158" width="200" height="60" rx="9" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="140" y="182" text-anchor="middle" font-size="14" font-weight="bold" fill="#2563eb">PUSH</text>
+  <text x="140" y="202" text-anchor="middle" font-size="13" fill="#334155">pending yozuvlarni yuborish</text>
+
+  <path d="M240 188 H 300" stroke="#94a3b8" stroke-width="2" marker-end="url(#b)"/>
+
+  <!-- server -->
+  <rect x="300" y="148" width="160" height="80" rx="9" fill="#ffffff" stroke="#334155" stroke-width="2"/>
+  <text x="380" y="180" text-anchor="middle" font-size="14" font-weight="bold" fill="#334155">Server</text>
+  <text x="380" y="202" text-anchor="middle" font-size="13" fill="#334155">qabul + o'z</text>
+  <text x="380" y="218" text-anchor="middle" font-size="13" fill="#334155">o'zgarishlarini qaytaradi</text>
+
+  <path d="M380 228 V 268" stroke="#94a3b8" stroke-width="2" marker-end="url(#b)"/>
+
+  <!-- 3 pull -->
+  <rect x="300" y="276" width="160" height="60" rx="9" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="300" text-anchor="middle" font-size="14" font-weight="bold" fill="#2563eb">PULL</text>
+  <text x="380" y="320" text-anchor="middle" font-size="13" fill="#334155">applyServerChanges()</text>
+
+  <!-- konflikt qarori -->
+  <path d="M380 336 V 366" stroke="#94a3b8" stroke-width="2" marker-end="url(#b)"/>
+  <polygon points="380,366 470,406 380,446 290,406" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="380" y="402" text-anchor="middle" font-size="13" font-weight="bold" fill="#dc2626">UUID mos,</text>
+  <text x="380" y="420" text-anchor="middle" font-size="13" fill="#334155">ikkisi ham o'zgargan?</text>
+
+  <!-- last write wins -->
+  <path d="M470 406 H 560" stroke="#94a3b8" stroke-width="2" marker-end="url(#b)"/>
+  <rect x="560" y="370" width="180" height="72" rx="9" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="650" y="398" text-anchor="middle" font-size="14" font-weight="bold" fill="#16a34a">Last-write-wins</text>
+  <text x="650" y="418" text-anchor="middle" font-size="13" fill="#334155">eng so'nggi updated_at</text>
+  <text x="650" y="434" text-anchor="middle" font-size="13" fill="#334155">g'olib; aks holda conflict</text>
+
+  <!-- yo'q tarmoqi -->
+  <path d="M290 406 H 240 V 188 H 240" stroke="#94a3b8" stroke-width="2" fill="none" marker-end="url(#b)"/>
+  <text x="120" y="406" font-size="13" fill="#16a34a">yo'q -> oddiy yangilash</text>
+
+  <!-- legend -->
+  <rect x="540" y="62" width="200" height="86" rx="9" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="640" y="84" text-anchor="middle" font-size="13" font-weight="bold" fill="#334155">Kalit g'oyalar</text>
+  <text x="552" y="104" font-size="13" fill="#334155">UUID = global ID</text>
+  <text x="552" y="122" font-size="13" fill="#334155">sync_status: pending/</text>
+  <text x="552" y="138" font-size="13" fill="#334155">synced/conflict</text>
+
+  <defs>
+    <marker id="b" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+</svg>

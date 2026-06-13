@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 440">
+  <title>Push notification: FCM/APNs orqali xabar yetkazish oqimi</title>
+  <rect x="0" y="0" width="780" height="440" fill="#f8fafc"/>
+  <text x="390" y="32" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Push notification oqimi (Firebase / APNs)</text>
+
+  <defs>
+    <marker id="ap13" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- Box: device app -->
+  <rect x="30" y="70" width="200" height="120" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="130" y="96" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb" text-anchor="middle">Mobil ilova</text>
+  <text x="130" y="120" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">enroll() -&gt; ruxsat</text>
+  <text x="130" y="142" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">TokenGenerated event</text>
+  <text x="130" y="164" font-family="Segoe UI" font-size="13" fill="#16a34a" text-anchor="middle">getToken() -&gt; FCM token</text>
+
+  <!-- Box: your Laravel server -->
+  <rect x="290" y="70" width="200" height="120" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="390" y="96" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb" text-anchor="middle">Sizning Laravel</text>
+  <text x="390" y="118" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">tokenni saqlaydi</text>
+  <text x="390" y="140" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">(device_tokens jadval)</text>
+  <text x="390" y="164" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">push jo'natadi</text>
+
+  <!-- Box: FCM/APNs -->
+  <rect x="550" y="70" width="200" height="120" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="650" y="96" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#f59e0b" text-anchor="middle">FCM / APNs</text>
+  <text x="650" y="120" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">Google / Apple</text>
+  <text x="650" y="142" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">push xizmati</text>
+  <text x="650" y="164" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">marshrutlaydi</text>
+
+  <!-- top arrows -->
+  <line x1="232" y1="130" x2="288" y2="130" stroke="#475569" stroke-width="1.6" marker-end="url(#ap13)"/>
+  <text x="260" y="122" font-family="Segoe UI" font-size="13" fill="#16a34a" text-anchor="middle">token</text>
+  <line x1="492" y1="130" x2="548" y2="130" stroke="#475569" stroke-width="1.6" marker-end="url(#ap13)"/>
+  <text x="520" y="122" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">v1 API</text>
+
+  <!-- delivery arrow back to device -->
+  <line x1="650" y1="192" x2="650" y2="300" stroke="#475569" stroke-width="1.6"/>
+  <line x1="650" y1="300" x2="130" y2="300" stroke="#475569" stroke-width="1.6"/>
+  <line x1="130" y1="300" x2="130" y2="234" stroke="#475569" stroke-width="1.6" marker-end="url(#ap13)"/>
+  <text x="390" y="293" font-family="Segoe UI" font-size="13" fill="#dc2626" text-anchor="middle">push qurilmaga yetkaziladi -&gt; PushNotificationReceived</text>
+
+  <!-- received box -->
+  <rect x="30" y="216" width="200" height="60" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="130" y="240" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">OnNative(Received)</text>
+  <text x="130" y="260" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">clearBadge()</text>
+
+  <!-- setup files note -->
+  <rect x="30" y="340" width="720" height="76" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="1.2"/>
+  <text x="48" y="366" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb">Sozlash fayllari:</text>
+  <text x="48" y="388" font-family="Segoe UI" font-size="13" fill="#334155">Android: google-services.json   |   iOS: GoogleService-Info.plist + APNs kalit</text>
+  <text x="48" y="408" font-family="Segoe UI" font-size="13" fill="#334155">Server: FIREBASE_CREDENTIALS=/path/to/service-account.json (.env)</text>
+</svg>

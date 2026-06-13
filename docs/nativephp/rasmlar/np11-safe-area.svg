@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" font-family="Segoe UI, sans-serif">
+  <title>Safe-area: ekran kesilgan zonalari va CSS env() inset orqali to'g'ri joylashuv</title>
+  <rect width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">Safe-area: kontentni xavfsiz zonaga joylash</text>
+  <text x="380" y="56" text-anchor="middle" font-size="14" fill="#334155">Notch, kamera teshigi va pastki indikator UI'ni to'sib qo'ymasligi uchun</text>
+
+  <!-- BAD phone -->
+  <text x="200" y="92" text-anchor="middle" font-size="15" font-weight="bold" fill="#dc2626">Inset YO'Q (xato)</text>
+  <rect x="120" y="104" width="160" height="320" rx="24" fill="#ffffff" stroke="#dc2626" stroke-width="2.5"/>
+  <!-- notch -->
+  <rect x="170" y="104" width="60" height="20" rx="10" fill="#1e293b"/>
+  <!-- content overlapping notch -->
+  <rect x="132" y="110" width="136" height="40" rx="6" fill="#fecaca" stroke="#dc2626" stroke-width="1"/>
+  <text x="200" y="135" text-anchor="middle" font-size="13" fill="#7f1d1d">Sarlavha notch ostida</text>
+  <rect x="132" y="396" width="136" height="22" rx="6" fill="#fecaca" stroke="#dc2626" stroke-width="1"/>
+  <text x="200" y="412" text-anchor="middle" font-size="13" fill="#7f1d1d">tugma kesilgan</text>
+  <!-- home indicator -->
+  <rect x="160" y="414" width="80" height="5" rx="3" fill="#1e293b"/>
+
+  <!-- GOOD phone -->
+  <text x="560" y="92" text-anchor="middle" font-size="15" font-weight="bold" fill="#16a34a">Inset BOR (to'g'ri)</text>
+  <rect x="480" y="104" width="160" height="320" rx="24" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <rect x="530" y="104" width="60" height="20" rx="10" fill="#1e293b"/>
+  <!-- safe inset zone -->
+  <rect x="492" y="138" width="136" height="262" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="560" y="160" text-anchor="middle" font-size="13" fill="#166534">Sarlavha</text>
+  <text x="560" y="270" text-anchor="middle" font-size="13" fill="#166534">kontent</text>
+  <text x="560" y="388" text-anchor="middle" font-size="13" fill="#166534">tugma to'liq</text>
+  <rect x="520" y="414" width="80" height="5" rx="3" fill="#1e293b"/>
+
+  <!-- CSS box -->
+  <rect x="120" y="436" width="520" height="0" fill="none"/>
+
+  <!-- middle CSS snippet -->
+  <rect x="300" y="150" width="160" height="170" rx="10" fill="#1e293b"/>
+  <text x="380" y="176" text-anchor="middle" font-size="13" font-weight="bold" fill="#f8fafc">CSS yechim</text>
+  <text x="380" y="204" text-anchor="middle" font-size="13" fill="#93c5fd">padding-top:</text>
+  <text x="380" y="224" text-anchor="middle" font-size="13" fill="#bbf7d0">env(safe-area-</text>
+  <text x="380" y="242" text-anchor="middle" font-size="13" fill="#bbf7d0">inset-top)</text>
+  <text x="380" y="270" text-anchor="middle" font-size="13" fill="#93c5fd">padding-bottom:</text>
+  <text x="380" y="290" text-anchor="middle" font-size="13" fill="#bbf7d0">env(safe-area-</text>
+  <text x="380" y="308" text-anchor="middle" font-size="13" fill="#bbf7d0">inset-bottom)</text>
+
+  <text x="380" y="356" text-anchor="middle" font-size="13" fill="#334155">viewport-fit=cover meta teg + env() inset</text>
+  <text x="380" y="378" text-anchor="middle" font-size="13" fill="#64748b">brauzer qiymatlarni avtomatik beradi</text>
+</svg>

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" font-family="Segoe UI, sans-serif">
+  <title>Window::open() oqimi va oyna hayot-tsikli hodisalari</title>
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="21" font-weight="bold" fill="#1e293b">open() dan hodisagacha: oyna hayot-tsikli</text>
+
+  <!-- step 1 -->
+  <rect x="40" y="64" width="200" height="70" rx="8" fill="#2563eb" opacity="0.12" stroke="#2563eb" stroke-width="2"/>
+  <text x="140" y="94" text-anchor="middle" font-size="14" font-weight="bold" fill="#2563eb">1. PHP kodi</text>
+  <text x="140" y="116" text-anchor="middle" font-size="13" fill="#334155">Window::open('settings')</text>
+
+  <!-- arrow -->
+  <line x1="240" y1="99" x2="296" y2="99" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="296,99 286,94 286,104" fill="#94a3b8"/>
+
+  <!-- step 2 -->
+  <rect x="300" y="64" width="200" height="70" rx="8" fill="#f59e0b" opacity="0.14" stroke="#f59e0b" stroke-width="2"/>
+  <text x="400" y="90" text-anchor="middle" font-size="14" font-weight="bold" fill="#b45309">2. Ichki HTTP API</text>
+  <text x="400" y="110" text-anchor="middle" font-size="13" fill="#334155">/api/window/open ga</text>
+  <text x="400" y="128" text-anchor="middle" font-size="13" fill="#334155">toArray() konfiguratsiya</text>
+
+  <line x1="500" y1="99" x2="556" y2="99" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="556,99 546,94 546,104" fill="#94a3b8"/>
+
+  <!-- step 3 -->
+  <rect x="560" y="64" width="160" height="70" rx="8" fill="#16a34a" opacity="0.14" stroke="#16a34a" stroke-width="2"/>
+  <text x="640" y="90" text-anchor="middle" font-size="14" font-weight="bold" fill="#16a34a">3. Electron</text>
+  <text x="640" y="110" text-anchor="middle" font-size="13" fill="#334155">BrowserWindow</text>
+  <text x="640" y="128" text-anchor="middle" font-size="13" fill="#334155">yaratiladi</text>
+
+  <!-- down arrow -->
+  <line x1="640" y1="134" x2="640" y2="180" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="640,180 635,170 645,170" fill="#94a3b8"/>
+
+  <!-- events -->
+  <rect x="40" y="186" width="680" height="116" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="380" y="212" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e293b">4. Hodisalar 'nativephp' kanaliga broadcast bo'ladi (ShouldBroadcastNow)</text>
+
+  <rect x="60" y="226" width="150" height="58" rx="6" fill="#16a34a" opacity="0.10" stroke="#16a34a"/>
+  <text x="135" y="252" text-anchor="middle" font-size="13" font-weight="bold" fill="#16a34a">WindowShown</text>
+  <text x="135" y="272" text-anchor="middle" font-size="13" fill="#334155">ko'rindi</text>
+
+  <rect x="222" y="226" width="150" height="58" rx="6" fill="#2563eb" opacity="0.10" stroke="#2563eb"/>
+  <text x="297" y="252" text-anchor="middle" font-size="13" font-weight="bold" fill="#2563eb">WindowFocused</text>
+  <text x="297" y="272" text-anchor="middle" font-size="13" fill="#334155">fokus oldi</text>
+
+  <rect x="384" y="226" width="166" height="58" rx="6" fill="#f59e0b" opacity="0.12" stroke="#f59e0b"/>
+  <text x="467" y="252" text-anchor="middle" font-size="13" font-weight="bold" fill="#b45309">WindowResized</text>
+  <text x="467" y="272" text-anchor="middle" font-size="13" fill="#334155">o'lcham o'zgardi</text>
+
+  <rect x="562" y="226" width="138" height="58" rx="6" fill="#dc2626" opacity="0.10" stroke="#dc2626"/>
+  <text x="631" y="252" text-anchor="middle" font-size="13" font-weight="bold" fill="#dc2626">WindowClosed</text>
+  <text x="631" y="272" text-anchor="middle" font-size="13" fill="#334155">yopildi</text>
+
+  <!-- listen -->
+  <rect x="40" y="320" width="680" height="80" rx="10" fill="#f1f5f9" stroke="#94a3b8" stroke-dasharray="6 4"/>
+  <text x="380" y="348" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e293b">5. Laravel tarafda Event::listen(...) yoki frontda Echo.channel('nativephp')</text>
+  <text x="380" y="376" text-anchor="middle" font-size="13" fill="#334155">Shu hodisalarni tinglab oynalararo holatni sinxron ushlash mumkin</text>
+</svg>

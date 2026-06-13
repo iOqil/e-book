@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" font-family="Segoe UI, sans-serif">
+  <title>Mobil navigatsiya modeli: top-bar, bottom-nav, side-nav va ularning URL/event oqimi</title>
+  <rect width="760" height="480" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">Mobil navigatsiya modeli</text>
+  <text x="380" y="56" text-anchor="middle" font-size="14" fill="#334155">Uchta asosiy element + URL yoki OnNative event orqali harakat</text>
+
+  <!-- Phone frame -->
+  <rect x="250" y="76" width="260" height="320" rx="22" fill="#ffffff" stroke="#1e293b" stroke-width="2.5"/>
+
+  <!-- Top bar -->
+  <rect x="250" y="76" width="260" height="46" rx="22" fill="#2563eb"/>
+  <rect x="250" y="100" width="260" height="22" fill="#2563eb"/>
+  <text x="380" y="105" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">native:top-bar</text>
+
+  <!-- content -->
+  <rect x="262" y="134" width="236" height="200" rx="8" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1"/>
+  <text x="380" y="170" text-anchor="middle" font-size="14" fill="#334155">webview kontenti</text>
+  <text x="380" y="194" text-anchor="middle" font-size="13" fill="#64748b">(Blade / Livewire sahifa)</text>
+  <text x="380" y="232" text-anchor="middle" font-size="13" fill="#64748b">side-nav -&gt; chetdan</text>
+  <text x="380" y="252" text-anchor="middle" font-size="13" fill="#64748b">surilib chiqadi</text>
+
+  <!-- bottom nav -->
+  <rect x="250" y="350" width="260" height="46" rx="0" fill="#16a34a"/>
+  <rect x="250" y="374" width="260" height="22" rx="22" fill="#16a34a"/>
+  <text x="380" y="378" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">native:bottom-nav</text>
+
+  <!-- left: side-nav -->
+  <rect x="40" y="150" width="170" height="100" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="125" y="176" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e293b">native:side-nav</text>
+  <text x="125" y="200" text-anchor="middle" font-size="13" fill="#334155">gestures-enabled</text>
+  <text x="125" y="222" text-anchor="middle" font-size="13" fill="#334155">header + item</text>
+  <text x="125" y="242" text-anchor="middle" font-size="13" fill="#334155">+ group</text>
+  <line x1="210" y1="200" x2="248" y2="220" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#n1)"/>
+
+  <!-- right: action -->
+  <rect x="550" y="150" width="180" height="100" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="640" y="176" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e293b">Bosish (tap)</text>
+  <text x="640" y="200" text-anchor="middle" font-size="13" fill="#334155">url="/profile"</text>
+  <text x="640" y="220" text-anchor="middle" font-size="13" fill="#334155">-&gt; sahifa o'tishi</text>
+  <text x="640" y="242" text-anchor="middle" font-size="13" fill="#334155">yoki OnNative event</text>
+  <line x1="548" y1="200" x2="512" y2="200" stroke="#2563eb" stroke-width="2.5" marker-end="url(#n2)"/>
+
+  <!-- bottom flow -->
+  <rect x="40" y="416" width="680" height="48" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="380" y="445" text-anchor="middle" font-size="14" fill="#334155">url -&gt; Laravel route (Route::get('/profile')) ; id-only tap -&gt; #[OnNative] PHP metod</text>
+
+  <defs>
+    <marker id="n1" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#f59e0b"/></marker>
+    <marker id="n2" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#2563eb"/></marker>
+  </defs>
+</svg>

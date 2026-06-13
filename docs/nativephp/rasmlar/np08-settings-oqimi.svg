@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430">
+  <title>Settings facade kalit-qiymat oqimi va config.json</title>
+  <rect width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b">Settings facade: kalit-qiymat sozlama</text>
+
+  <!-- PHP code box -->
+  <rect x="30" y="60" width="300" height="220" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="180" y="88" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb">PHP (Blade/Livewire/Controller)</text>
+  <text x="50" y="120" font-family="Segoe UI" font-size="14" fill="#334155">use Native\Desktop\Facades\Settings;</text>
+  <line x1="50" y1="132" x2="310" y2="132" stroke="#94a3b8" stroke-dasharray="3 3"/>
+  <text x="50" y="158" font-family="Segoe UI" font-size="14" fill="#16a34a">Settings::set('theme', 'dark');</text>
+  <text x="50" y="186" font-family="Segoe UI" font-size="14" fill="#2563eb">Settings::get('theme', 'light');</text>
+  <text x="50" y="214" font-family="Segoe UI" font-size="14" fill="#f59e0b">Settings::forget('theme');</text>
+  <text x="50" y="242" font-family="Segoe UI" font-size="14" fill="#dc2626">Settings::clear();</text>
+  <text x="50" y="268" font-family="Segoe UI" font-size="13" fill="#334155">get(): yoq bolsa default qaytadi</text>
+
+  <!-- arrow -->
+  <line x1="330" y1="170" x2="430" y2="170" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="380" y="160" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">native bridge</text>
+
+  <!-- config.json box -->
+  <rect x="430" y="60" width="300" height="220" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="580" y="88" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a">appdata/config.json</text>
+  <rect x="452" y="106" width="256" height="150" rx="8" fill="#f0fdf4" stroke="#94a3b8"/>
+  <text x="468" y="134" font-family="Segoe UI" font-size="14" fill="#1e293b">{</text>
+  <text x="486" y="160" font-family="Segoe UI" font-size="14" fill="#1e293b">"theme": "dark",</text>
+  <text x="486" y="186" font-family="Segoe UI" font-size="14" fill="#1e293b">"font_size": 14,</text>
+  <text x="486" y="212" font-family="Segoe UI" font-size="14" fill="#1e293b">"autosave": true</text>
+  <text x="468" y="238" font-family="Segoe UI" font-size="14" fill="#1e293b">}</text>
+
+  <!-- event row -->
+  <rect x="30" y="306" width="700" height="96" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="334" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb">set() chaqirilganda hodisa uchadi</text>
+  <text x="380" y="362" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">Native\Desktop\Events\Settings\SettingChanged (public string $key, public mixed $value)</text>
+  <text x="380" y="386" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">'nativephp' kanaliga broadcast -- Livewire 'native:'.SettingChanged::class bilan tinglashi mumkin</text>
+
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+  </defs>
+</svg>
