@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480">
+  <title>builder.adjust() tugmalarni qatorlarga qanday joylashtiradi</title>
+  <rect width="760" height="480" fill="#f8fafc"/>
+  <text x="380" y="34" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b" text-anchor="middle">builder.adjust() tugmalarni qatorlarga bo'ladi</text>
+
+  <!-- input row: 6 buttons added sequentially -->
+  <text x="380" y="68" font-family="Segoe UI" font-size="14" fill="#334155" text-anchor="middle">6 ta tugma ketma-ket qo'shildi: button(1) ... button(6)</text>
+  <g>
+    <rect x="120" y="80" width="86" height="36" rx="7" fill="#e0e7ff" stroke="#2563eb" stroke-width="1.3"/>
+    <text x="163" y="103" font-family="Segoe UI" font-size="14" fill="#1e293b" text-anchor="middle">1</text>
+    <rect x="212" y="80" width="86" height="36" rx="7" fill="#e0e7ff" stroke="#2563eb" stroke-width="1.3"/>
+    <text x="255" y="103" font-family="Segoe UI" font-size="14" fill="#1e293b" text-anchor="middle">2</text>
+    <rect x="304" y="80" width="86" height="36" rx="7" fill="#e0e7ff" stroke="#2563eb" stroke-width="1.3"/>
+    <text x="347" y="103" font-family="Segoe UI" font-size="14" fill="#1e293b" text-anchor="middle">3</text>
+    <rect x="396" y="80" width="86" height="36" rx="7" fill="#e0e7ff" stroke="#2563eb" stroke-width="1.3"/>
+    <text x="439" y="103" font-family="Segoe UI" font-size="14" fill="#1e293b" text-anchor="middle">4</text>
+    <rect x="488" y="80" width="86" height="36" rx="7" fill="#e0e7ff" stroke="#2563eb" stroke-width="1.3"/>
+    <text x="531" y="103" font-family="Segoe UI" font-size="14" fill="#1e293b" text-anchor="middle">5</text>
+    <rect x="580" y="80" width="86" height="36" rx="7" fill="#e0e7ff" stroke="#2563eb" stroke-width="1.3"/>
+    <text x="623" y="103" font-family="Segoe UI" font-size="14" fill="#1e293b" text-anchor="middle">6</text>
+  </g>
+
+  <!-- arrow -->
+  <line x1="380" y1="124" x2="380" y2="152" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="380,160 374,148 386,148" fill="#94a3b8"/>
+
+  <!-- adjust(2) result -->
+  <text x="200" y="186" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a" text-anchor="middle">adjust(2)  -&gt;  [2, 2, 2]</text>
+  <g>
+    <rect x="78" y="200" width="100" height="34" rx="7" fill="#dcfce7" stroke="#16a34a" stroke-width="1.3"/>
+    <text x="128" y="222" font-family="Segoe UI" font-size="14" fill="#1e293b" text-anchor="middle">1</text>
+    <rect x="186" y="200" width="100" height="34" rx="7" fill="#dcfce7" stroke="#16a34a" stroke-width="1.3"/>
+    <text x="236" y="222" font-family="Segoe UI" font-size="14" fill="#1e293b" text-anchor="middle">2</text>
+    <rect x="78" y="240" width="100" height="34" rx="7" fill="#dcfce7" stroke="#16a34a" stroke-width="1.3"/>
+    <text x="128" y="262" font-family="Segoe UI" font-size="14" fill="#1e293b" text-anchor="middle">3</text>
+    <rect x="186" y="240" width="100" height="34" rx="7" fill="#dcfce7" stroke="#16a34a" stroke-width="1.3"/>
+    <text x="236" y="262" font-family="Segoe UI" font-size="14" fill="#1e293b" text-anchor="middle">4</text>
+    <rect x="78" y="280" width="100" height="34" rx="7" fill="#dcfce7" stroke="#16a34a" stroke-width="1.3"/>
+    <text x="128" y="302" font-family="Segoe UI" font-size="14" fill="#1e293b" text-anchor="middle">5</text>
+    <rect x="186" y="280" width="100" height="34" rx="7" fill="#dcfce7" stroke="#16a34a" stroke-width="1.3"/>
+    <text x="236" y="302" font-family="Segoe UI" font-size="14" fill="#1e293b" text-anchor="middle">6</text>
+  </g>
+  <text x="200" y="338" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">har qatorda 2 tadan</text>
+
+  <!-- adjust(1,2) result -->
+  <text x="555" y="186" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#f59e0b" text-anchor="middle">adjust(1, 2)  -&gt;  [1, 2, 2, 1]</text>
+  <g>
+    <rect x="476" y="200" width="160" height="34" rx="7" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.3"/>
+    <text x="556" y="222" font-family="Segoe UI" font-size="14" fill="#1e293b" text-anchor="middle">1</text>
+    <rect x="476" y="240" width="76" height="34" rx="7" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.3"/>
+    <text x="514" y="262" font-family="Segoe UI" font-size="14" fill="#1e293b" text-anchor="middle">2</text>
+    <rect x="560" y="240" width="76" height="34" rx="7" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.3"/>
+    <text x="598" y="262" font-family="Segoe UI" font-size="14" fill="#1e293b" text-anchor="middle">3</text>
+    <rect x="476" y="280" width="76" height="34" rx="7" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.3"/>
+    <text x="514" y="302" font-family="Segoe UI" font-size="14" fill="#1e293b" text-anchor="middle">4</text>
+    <rect x="560" y="280" width="76" height="34" rx="7" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.3"/>
+    <text x="598" y="302" font-family="Segoe UI" font-size="14" fill="#1e293b" text-anchor="middle">5</text>
+    <rect x="476" y="320" width="160" height="34" rx="7" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.3"/>
+    <text x="556" y="342" font-family="Segoe UI" font-size="14" fill="#1e293b" text-anchor="middle">6</text>
+  </g>
+  <text x="556" y="378" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">1 ta, keyin oxirgi o'lcham (2) takror</text>
+
+  <!-- note -->
+  <rect x="78" y="408" width="604" height="52" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.3"/>
+  <text x="380" y="430" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">Qoida: ko'rsatilgan o'lchamlar tugagach, OXIRGI son qolgan tugmalarga takrorlanadi.</text>
+  <text x="380" y="450" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">Butun naqshni takrorlash uchun: adjust(1, 2, repeat=True) -&gt; [1, 2, 1, 2, ...]</text>
+</svg>

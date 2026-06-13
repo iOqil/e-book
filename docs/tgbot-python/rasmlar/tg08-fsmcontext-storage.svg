@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" font-family="Segoe UI, sans-serif">
+  <title>FSMContext va Storage: holat va data qayerda saqlanadi</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="32" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">FSMContext -> Storage: holat va data qayerda yashaydi</text>
+
+  <defs>
+    <marker id="a2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <!-- handler box -->
+  <rect x="40" y="80" width="220" height="150" rx="10" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+  <text x="150" y="106" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Handler ichida</text>
+  <text x="60" y="132" font-size="13" fill="#334155">state: FSMContext</text>
+  <text x="60" y="156" font-size="13" fill="#334155">await state.set_state(...)</text>
+  <text x="60" y="178" font-size="13" fill="#334155">await state.update_data(...)</text>
+  <text x="60" y="200" font-size="13" fill="#334155">await state.get_data()</text>
+  <text x="60" y="222" font-size="13" fill="#334155">await state.clear()</text>
+
+  <!-- key builder -->
+  <rect x="300" y="100" width="160" height="110" rx="10" fill="#fff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="380" y="124" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Kalit (key)</text>
+  <text x="380" y="150" font-size="13" fill="#334155" text-anchor="middle">bot_id +</text>
+  <text x="380" y="170" font-size="13" fill="#334155" text-anchor="middle">chat_id +</text>
+  <text x="380" y="190" font-size="13" fill="#334155" text-anchor="middle">user_id</text>
+
+  <line x1="260" y1="155" x2="298" y2="155" stroke="#2563eb" stroke-width="2" marker-end="url(#a2)"/>
+
+  <!-- storage -->
+  <rect x="500" y="80" width="220" height="280" rx="10" fill="#fff" stroke="#16a34a" stroke-width="2"/>
+  <text x="610" y="106" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Storage</text>
+
+  <line x1="460" y1="155" x2="498" y2="155" stroke="#2563eb" stroke-width="2" marker-end="url(#a2)"/>
+
+  <!-- memory -->
+  <rect x="518" y="124" width="184" height="100" rx="8" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="610" y="146" font-size="13" font-weight="bold" fill="#2563eb" text-anchor="middle">MemoryStorage</text>
+  <text x="610" y="166" font-size="13" fill="#334155" text-anchor="middle">RAM (dict)</text>
+  <text x="610" y="186" font-size="13" fill="#dc2626" text-anchor="middle">restart -> hammasi</text>
+  <text x="610" y="204" font-size="13" fill="#dc2626" text-anchor="middle">o'chadi</text>
+
+  <!-- redis -->
+  <rect x="518" y="236" width="184" height="108" rx="8" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="610" y="258" font-size="13" font-weight="bold" fill="#16a34a" text-anchor="middle">RedisStorage</text>
+  <text x="610" y="278" font-size="13" fill="#334155" text-anchor="middle">Redis serverda</text>
+  <text x="610" y="298" font-size="13" fill="#16a34a" text-anchor="middle">restart -> saqlanadi</text>
+  <text x="610" y="318" font-size="13" fill="#334155" text-anchor="middle">ko'p protsess uchun</text>
+  <text x="610" y="336" font-size="13" fill="#334155" text-anchor="middle">(production)</text>
+
+  <!-- bottom note: data shape -->
+  <rect x="40" y="270" width="420" height="120" rx="10" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+  <text x="60" y="295" font-size="14" font-weight="bold" fill="#1e293b">Kalit -> qiymat:</text>
+  <text x="60" y="320" font-size="13" fill="#334155">state: "Survey:age"</text>
+  <text x="60" y="344" font-size="13" fill="#334155">data: { "name": "Oqil", "age": 30 }</text>
+  <text x="60" y="372" font-size="13" fill="#334155">clear() -> state=None, data={} (ikkalasi tozalanadi)</text>
+
+  <text x="380" y="420" font-size="13" fill="#334155" text-anchor="middle">Dispatcher(storage=...) bilan beriladi. Berilmasa default — MemoryStorage.</text>
+</svg>

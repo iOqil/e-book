@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420">
+  <title>Handlerda xato yuz berganda errors handler'ga yo'naltirilishi</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b">Xatoni boshqarish oqimi (@router.errors)</text>
+
+  <!-- update -->
+  <rect x="300" y="58" width="160" height="50" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="88" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">Update keldi</text>
+
+  <line x1="380" y1="108" x2="380" y2="138" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- handler -->
+  <rect x="280" y="140" width="200" height="62" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="166" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">handler ishga tushdi</text>
+  <text x="380" y="188" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">raise Exception!</text>
+
+  <line x1="380" y1="202" x2="380" y2="232" stroke="#dc2626" stroke-width="2" marker-end="url(#r)"/>
+
+  <!-- error event -->
+  <rect x="260" y="234" width="240" height="66" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="380" y="260" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#991b1b">ErrorEvent yaratiladi</text>
+  <text x="380" y="282" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#7f1d1d">.update  va  .exception</text>
+
+  <!-- branch to filtered and global -->
+  <line x1="300" y1="300" x2="180" y2="334" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="460" y1="300" x2="580" y2="334" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- filtered errors -->
+  <rect x="40" y="336" width="280" height="66" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="180" y="362" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#b45309">@router.errors(</text>
+  <text x="180" y="382" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">ExceptionTypeFilter(PaymentError))</text>
+
+  <!-- global errors -->
+  <rect x="440" y="336" width="280" height="66" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="580" y="362" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#166534">@router.errors()</text>
+  <text x="580" y="382" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">umumiy zaxira (fallback)</text>
+
+  <text x="180" y="324" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#b45309">turi mos kelsa</text>
+  <text x="580" y="324" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#166534">aks holda</text>
+
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/></marker>
+    <marker id="r" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#dc2626"/></marker>
+  </defs>
+</svg>

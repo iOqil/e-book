@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" font-family="Segoe UI, sans-serif">
+  <title>Polling va Webhook usullarining solishtiruvi</title>
+  <rect width="760" height="400" fill="#f8fafc"/>
+  <text x="380" y="32" font-size="19" font-weight="bold" fill="#1e293b" text-anchor="middle">Polling va Webhook</text>
+
+  <!-- Polling blok -->
+  <rect x="24" y="56" width="340" height="312" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="194" y="86" font-size="17" font-weight="bold" fill="#2563eb" text-anchor="middle">Polling (so'rab-tortish)</text>
+
+  <rect x="56" y="110" width="120" height="56" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="116" y="135" font-size="14" fill="#1e293b" text-anchor="middle">Bot</text>
+  <text x="116" y="155" font-size="13" fill="#64748b" text-anchor="middle">aiogram</text>
+
+  <rect x="216" y="110" width="120" height="56" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="276" y="135" font-size="14" fill="#1e293b" text-anchor="middle">Telegram</text>
+  <text x="276" y="155" font-size="13" fill="#64748b" text-anchor="middle">serveri</text>
+
+  <line x1="176" y1="126" x2="214" y2="126" stroke="#2563eb" stroke-width="2" marker-end="url(#a1)"/>
+  <text x="195" y="118" font-size="13" fill="#2563eb" text-anchor="middle">getUpdates?</text>
+  <line x1="214" y1="150" x2="178" y2="150" stroke="#16a34a" stroke-width="2" marker-end="url(#a2)"/>
+  <text x="195" y="168" font-size="13" fill="#16a34a" text-anchor="middle">yangiliklar</text>
+
+  <text x="194" y="208" font-size="13" fill="#334155" text-anchor="middle">Bot doimiy ravishda Telegram'dan</text>
+  <text x="194" y="228" font-size="13" fill="#334155" text-anchor="middle">"yangi xabar bormi?" deb so'raydi.</text>
+  <text x="56" y="264" font-size="13" fill="#16a34a">+ public URL kerakmas</text>
+  <text x="56" y="288" font-size="13" fill="#16a34a">+ localhost'da ishlaydi</text>
+  <text x="56" y="312" font-size="13" fill="#16a34a">+ rivojlash uchun ideal</text>
+  <text x="56" y="338" font-size="13" fill="#dc2626">- biroz kechikish/yuk</text>
+
+  <!-- Webhook blok -->
+  <rect x="396" y="56" width="340" height="312" rx="12" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="566" y="86" font-size="17" font-weight="bold" fill="#f59e0b" text-anchor="middle">Webhook (itarish)</text>
+
+  <rect x="428" y="110" width="120" height="56" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="488" y="135" font-size="14" fill="#1e293b" text-anchor="middle">Telegram</text>
+  <text x="488" y="155" font-size="13" fill="#64748b" text-anchor="middle">serveri</text>
+
+  <rect x="588" y="110" width="120" height="56" rx="8" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="648" y="135" font-size="14" fill="#1e293b" text-anchor="middle">Bot</text>
+  <text x="648" y="155" font-size="13" fill="#64748b" text-anchor="middle">HTTPS URL</text>
+
+  <line x1="548" y1="138" x2="586" y2="138" stroke="#f59e0b" stroke-width="2" marker-end="url(#a3)"/>
+  <text x="567" y="128" font-size="13" fill="#f59e0b" text-anchor="middle">POST update</text>
+
+  <text x="566" y="208" font-size="13" fill="#334155" text-anchor="middle">Telegram yangi xabar kelishi bilan</text>
+  <text x="566" y="228" font-size="13" fill="#334155" text-anchor="middle">o'zi botning URL'iga yuboradi.</text>
+  <text x="428" y="264" font-size="13" fill="#16a34a">+ tezkor, kam yuk</text>
+  <text x="428" y="288" font-size="13" fill="#16a34a">+ ko'p foydalanuvchiga mos</text>
+  <text x="428" y="312" font-size="13" fill="#dc2626">- public HTTPS URL kerak</text>
+  <text x="428" y="338" font-size="13" fill="#dc2626">- sozlash murakkabroq</text>
+
+  <defs>
+    <marker id="a1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/></marker>
+    <marker id="a2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/></marker>
+    <marker id="a3" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#f59e0b"/></marker>
+  </defs>
+</svg>

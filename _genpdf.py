@@ -14,6 +14,7 @@ BOOKS = [
     ('nodejs', 'Node.js'),
     ('django', 'Django'),
     ('nativephp', 'NativePHP'),
+    ('tgbot-python', 'Telegram bot (Python)'),
 ]
 
 def natkey(s):

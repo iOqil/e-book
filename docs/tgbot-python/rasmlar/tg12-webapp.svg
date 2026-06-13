@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380">
+  <title>WebApp (Telegram Mini App) ma'lumot almashish oqimi</title>
+  <rect width="760" height="380" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b">WebApp (Mini App) oqimi</text>
+
+  <!-- Bot side -->
+  <rect x="40" y="70" width="190" height="100" rx="12" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+  <text x="135" y="100" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">Bot</text>
+  <text x="135" y="124" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">WebAppInfo(url=...)</text>
+  <text x="135" y="146" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">tugmali xabar</text>
+
+  <!-- arrow 1 -->
+  <line x1="230" y1="120" x2="300" y2="120" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="300,114 312,120 300,126" fill="#94a3b8"/>
+  <text x="266" y="110" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">tugma</text>
+
+  <!-- Telegram client -->
+  <rect x="312" y="70" width="200" height="100" rx="12" fill="#fff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="412" y="100" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#f59e0b">Telegram klient</text>
+  <text x="412" y="124" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">HTTPS sahifani</text>
+  <text x="412" y="146" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">ichida ochadi</text>
+
+  <!-- arrow 2 -->
+  <line x1="512" y1="120" x2="582" y2="120" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="582,114 594,120 582,126" fill="#94a3b8"/>
+
+  <!-- Web App -->
+  <rect x="594" y="70" width="140" height="100" rx="12" fill="#fff" stroke="#16a34a" stroke-width="2"/>
+  <text x="664" y="100" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">Web App</text>
+  <text x="664" y="124" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">HTML+JS</text>
+  <text x="664" y="146" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">sahifa</text>
+
+  <!-- return arrow -->
+  <path d="M 664 170 L 664 240 L 135 240 L 135 172" fill="none" stroke="#16a34a" stroke-width="2.5"/>
+  <polygon points="129,176 135,164 141,176" fill="#16a34a"/>
+  <text x="400" y="262" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#16a34a">sendData() -> message.web_app_data.data (botga qaytadi)</text>
+
+  <!-- note box -->
+  <rect x="60" y="290" width="640" height="74" rx="10" fill="#fff" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="80" y="316" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">Muhim:</text>
+  <text x="155" y="316" font-family="Segoe UI" font-size="13" fill="#334155">WebApp URL faqat HTTPS bo'lishi shart (HTTP ishlamaydi).</text>
+  <text x="80" y="342" font-family="Segoe UI" font-size="13" fill="#334155">Reply-tugma WebApp faqat shaxsiy chatda; inline-tugma WebApp har joyda.</text>
+</svg>

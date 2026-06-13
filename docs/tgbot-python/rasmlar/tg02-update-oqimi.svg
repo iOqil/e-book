@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380">
+  <title>Update oqimi: Telegram serveridan handler funksiyasigacha</title>
+  <rect x="0" y="0" width="760" height="380" fill="#f8fafc"/>
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI" font-size="19" font-weight="bold" fill="#1e293b">Update oqimi: foydalanuvchidan handler'gacha</text>
+
+  <!-- User -->
+  <rect x="30" y="70" width="130" height="70" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="95" y="100" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">Foydalanuvchi</text>
+  <text x="95" y="122" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">"/start" yozadi</text>
+
+  <!-- Telegram server -->
+  <rect x="220" y="70" width="150" height="70" rx="10" fill="#2563eb"/>
+  <text x="295" y="100" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#ffffff">Telegram serveri</text>
+  <text x="295" y="122" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#e0e7ff">Update saqlaydi</text>
+
+  <!-- Bot (your program) -->
+  <rect x="430" y="70" width="150" height="70" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="505" y="98" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">Bot dasturingiz</text>
+  <text x="505" y="120" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">getUpdates (polling)</text>
+
+  <!-- arrows top row -->
+  <line x1="160" y1="105" x2="216" y2="105" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="430" y1="120" x2="374" y2="120" stroke="#16a34a" stroke-width="2" marker-end="url(#arg)"/>
+  <text x="402" y="138" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">so'rov</text>
+
+  <!-- Dispatcher -->
+  <rect x="430" y="190" width="290" height="60" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="575" y="216" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">Dispatcher</text>
+  <text x="575" y="237" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Update'ni qabul qilib, mos handlerni izlaydi</text>
+
+  <line x1="505" y1="140" x2="505" y2="186" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Router -->
+  <rect x="430" y="285" width="290" height="55" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="575" y="309" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">Router</text>
+  <text x="575" y="328" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">filtrlar bo'yicha handlerlarni saralaydi</text>
+  <line x1="575" y1="250" x2="575" y2="281" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Handlers -->
+  <rect x="40" y="190" width="170" height="55" rx="10" fill="#16a34a"/>
+  <text x="125" y="214" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#ffffff">start_handler</text>
+  <text x="125" y="233" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dcfce7">CommandStart()</text>
+
+  <rect x="40" y="285" width="170" height="55" rx="10" fill="#16a34a"/>
+  <text x="125" y="309" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#ffffff">echo_handler</text>
+  <text x="125" y="328" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dcfce7">F.text</text>
+
+  <line x1="430" y1="300" x2="214" y2="300" stroke="#2563eb" stroke-width="2" marker-end="url(#ab)"/>
+  <text x="320" y="293" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#2563eb">mos filtr topildi</text>
+
+  <defs>
+    <marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#94a3b8"/></marker>
+    <marker id="arg" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#16a34a"/></marker>
+    <marker id="ab" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#2563eb"/></marker>
+  </defs>
+</svg>

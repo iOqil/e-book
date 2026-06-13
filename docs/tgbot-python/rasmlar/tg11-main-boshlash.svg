@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" font-family="Segoe UI, sans-serif">
+  <title>main.py da bot va dispatcher ni boshlash naqshi: yaratish, routerlar, DI, polling</title>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">main.py: bot va dp ni boshlash naqshi</text>
+
+  <!-- qadamlar ketma-ketligi -->
+  <g>
+    <rect x="60" y="60" width="640" height="52" rx="8" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+    <circle cx="92" cy="86" r="16" fill="#2563eb"/><text x="92" y="91" font-size="15" fill="#fff" text-anchor="middle">1</text>
+    <text x="124" y="82" font-size="14" font-weight="bold" fill="#1e293b">Config yuklash</text>
+    <text x="124" y="102" font-size="13" fill="#64748b">settings = Settings()  — .env dan BOT_TOKEN va boshqalar</text>
+  </g>
+
+  <g>
+    <rect x="60" y="128" width="640" height="52" rx="8" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+    <circle cx="92" cy="154" r="16" fill="#2563eb"/><text x="92" y="159" font-size="15" fill="#fff" text-anchor="middle">2</text>
+    <text x="124" y="150" font-size="14" font-weight="bold" fill="#1e293b">Bot va Dispatcher yaratish</text>
+    <text x="124" y="170" font-size="13" fill="#64748b">bot = Bot(token, default=DefaultBotProperties(parse_mode=...));  dp = Dispatcher(storage=...)</text>
+  </g>
+
+  <g>
+    <rect x="60" y="196" width="640" height="52" rx="8" fill="#fff" stroke="#f59e0b" stroke-width="2"/>
+    <circle cx="92" cy="222" r="16" fill="#f59e0b"/><text x="92" y="227" font-size="15" fill="#fff" text-anchor="middle">3</text>
+    <text x="124" y="218" font-size="14" font-weight="bold" fill="#1e293b">DI: bog'liqliklarni qo'shish</text>
+    <text x="124" y="238" font-size="13" fill="#64748b">dp["repo"] = repo   (handler nomli kwarg sifatida oladi)</text>
+  </g>
+
+  <g>
+    <rect x="60" y="264" width="640" height="52" rx="8" fill="#fff" stroke="#f59e0b" stroke-width="2"/>
+    <circle cx="92" cy="290" r="16" fill="#f59e0b"/><text x="92" y="295" font-size="15" fill="#fff" text-anchor="middle">4</text>
+    <text x="124" y="286" font-size="14" font-weight="bold" fill="#1e293b">Routerlarni biriktirish</text>
+    <text x="124" y="306" font-size="13" fill="#64748b">dp.include_routers(start_router, common_router, admin_router)</text>
+  </g>
+
+  <g>
+    <rect x="60" y="332" width="640" height="52" rx="8" fill="#fff" stroke="#16a34a" stroke-width="2"/>
+    <circle cx="92" cy="358" r="16" fill="#16a34a"/><text x="92" y="363" font-size="15" fill="#fff" text-anchor="middle">5</text>
+    <text x="124" y="354" font-size="14" font-weight="bold" fill="#1e293b">Polling boshlash</text>
+    <text x="124" y="374" font-size="13" fill="#64748b">await dp.start_polling(bot)   — jonli Telegram talab qiladi</text>
+  </g>
+
+  <text x="380" y="420" font-size="13" fill="#334155" text-anchor="middle">asyncio.run(main())  — barchasi async def main() ichida</text>
+  <text x="380" y="446" font-size="13" fill="#dc2626" text-anchor="middle">finally: await bot.session.close()  — sessiyani yoping</text>
+</svg>

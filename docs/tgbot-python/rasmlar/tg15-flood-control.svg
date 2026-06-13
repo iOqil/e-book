@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 460" font-family="Segoe UI, sans-serif">
+  <title>Flood-control va xatolarni boshqarish: send_message natijasiga qarab qaror</title>
+  <rect width="760" height="460" fill="#f8fafc"/>
+  <text x="380" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Bitta xabar yuborish: qaror daraxti</text>
+
+  <!-- try -->
+  <rect x="290" y="58" width="180" height="48" rx="10" fill="#2563eb"/>
+  <text x="380" y="80" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">try:</text>
+  <text x="380" y="98" font-size="13" fill="#dbeafe" text-anchor="middle">bot.send_message(...)</text>
+
+  <line x1="380" y1="106" x2="380" y2="132" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- decision -->
+  <polygon points="380,132 470,172 380,212 290,172" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="380" y="170" font-size="14" font-weight="bold" fill="#92400e" text-anchor="middle">Natija?</text>
+  <text x="380" y="188" font-size="13" fill="#92400e" text-anchor="middle">except ...</text>
+
+  <!-- branches -->
+  <!-- OK (down) -->
+  <line x1="380" y1="212" x2="380" y2="248" stroke="#16a34a" stroke-width="2" marker-end="url(#ag)"/>
+  <rect x="300" y="250" width="160" height="64" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="380" y="274" font-size="13" font-weight="bold" fill="#166534" text-anchor="middle">Xato yoq = OK</text>
+  <text x="380" y="294" font-size="13" fill="#166534" text-anchor="middle">success += 1</text>
+  <text x="380" y="310" font-size="13" fill="#166534" text-anchor="middle">keyingi user</text>
+
+  <!-- RetryAfter (left) -->
+  <line x1="290" y1="172" x2="190" y2="172" stroke="#f59e0b" stroke-width="2" marker-end="url(#ao)"/>
+  <rect x="20" y="140" width="168" height="86" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="104" y="162" font-size="13" font-weight="bold" fill="#92400e" text-anchor="middle">TelegramRetryAfter</text>
+  <text x="104" y="182" font-size="13" fill="#92400e" text-anchor="middle">flood-control!</text>
+  <text x="104" y="200" font-size="13" fill="#92400e" text-anchor="middle">sleep(e.retry_after)</text>
+  <text x="104" y="218" font-size="13" fill="#92400e" text-anchor="middle">keyin QAYTA urin</text>
+  <!-- loop back -->
+  <path d="M104,140 Q104,70 286,72" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#ao)"/>
+  <text x="150" y="112" font-size="13" fill="#92400e">qayta urinish</text>
+
+  <!-- Forbidden (right) -->
+  <line x1="470" y1="172" x2="570" y2="172" stroke="#dc2626" stroke-width="2" marker-end="url(#ar)"/>
+  <rect x="572" y="140" width="170" height="86" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="657" y="162" font-size="13" font-weight="bold" fill="#991b1b" text-anchor="middle">TelegramForbidden</text>
+  <text x="657" y="180" font-size="13" fill="#991b1b" text-anchor="middle">Error</text>
+  <text x="657" y="198" font-size="13" fill="#991b1b" text-anchor="middle">bloklagan / ochgan</text>
+  <text x="657" y="216" font-size="13" fill="#991b1b" text-anchor="middle">DB: active = 0</text>
+
+  <!-- BadRequest / boshqa (down-right) -->
+  <line x1="445" y1="195" x2="540" y2="262" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+  <rect x="500" y="270" width="222" height="70" rx="10" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2"/>
+  <text x="611" y="294" font-size="13" font-weight="bold" fill="#334155" text-anchor="middle">TelegramBadRequest /</text>
+  <text x="611" y="312" font-size="13" fill="#334155" text-anchor="middle">boshqa: failed += 1</text>
+  <text x="611" y="330" font-size="13" fill="#334155" text-anchor="middle">log ga yoz, davom et</text>
+
+  <!-- bottom rule -->
+  <rect x="40" y="372" width="680" height="64" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="380" y="396" font-size="14" font-weight="bold" fill="#1e3a8a" text-anchor="middle">Oltin qoida</text>
+  <text x="380" y="416" font-size="13" fill="#1e3a8a" text-anchor="middle">RetryAfter = kut va qayta urin. Forbidden = userni faolsizlantir.</text>
+  <text x="380" y="432" font-size="13" fill="#1e3a8a" text-anchor="middle">Boshqa xato = log qil, lekin BUTUN broadcast tuxtamasin.</text>
+
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/></marker>
+    <marker id="ag" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/></marker>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#dc2626"/></marker>
+    <marker id="ao" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#f59e0b"/></marker>
+  </defs>
+</svg>

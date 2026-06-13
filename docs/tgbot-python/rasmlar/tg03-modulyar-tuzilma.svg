@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" font-family="Segoe UI, sans-serif">
+  <title>Modulyar loyiha: handlerlar fayllarga bo'linadi, har birida o'z Router'i</title>
+  <rect width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="34" font-size="19" font-weight="bold" fill="#1e293b" text-anchor="middle">Modulyar tuzilma: har fayl o'z Router'iga ega</text>
+
+  <!-- bot.py / Dispatcher -->
+  <rect x="280" y="64" width="200" height="64" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="380" y="90" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">bot.py</text>
+  <text x="380" y="112" font-size="13" fill="#64748b" text-anchor="middle">Dispatcher()</text>
+
+  <!-- handlers/__init__.py -->
+  <rect x="270" y="164" width="220" height="70" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="190" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">handlers/__init__.py</text>
+  <text x="380" y="212" font-size="13" fill="#64748b" text-anchor="middle">setup_routers()</text>
+  <text x="380" y="228" font-size="13" fill="#64748b" text-anchor="middle">include_routers(...)</text>
+
+  <line x1="380" y1="128" x2="380" y2="162" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+  <text x="396" y="150" font-size="13" fill="#16a34a">dp.include_router()</text>
+
+  <!-- three module files -->
+  <rect x="60" y="290" width="190" height="86" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="155" y="316" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">handlers/common.py</text>
+  <text x="155" y="338" font-size="13" fill="#64748b" text-anchor="middle">router = Router()</text>
+  <text x="155" y="358" font-size="13" fill="#334155" text-anchor="middle">@router.message(...)</text>
+
+  <rect x="285" y="290" width="190" height="86" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="380" y="316" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">handlers/admin.py</text>
+  <text x="380" y="338" font-size="13" fill="#64748b" text-anchor="middle">router = Router()</text>
+  <text x="380" y="358" font-size="13" fill="#334155" text-anchor="middle">@router.message(...)</text>
+
+  <rect x="510" y="290" width="190" height="86" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="605" y="316" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">handlers/echo.py</text>
+  <text x="605" y="338" font-size="13" fill="#64748b" text-anchor="middle">router = Router()</text>
+  <text x="605" y="358" font-size="13" fill="#334155" text-anchor="middle">@router.callback_query</text>
+
+  <line x1="320" y1="234" x2="180" y2="288" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="380" y1="234" x2="380" y2="288" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="440" y1="234" x2="580" y2="288" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+
+  <text x="380" y="412" font-size="14" fill="#334155" text-anchor="middle">Har modul mustaqil sinaladi, alohida o'qiladi va qayta ishlatiladi.</text>
+  <text x="380" y="432" font-size="13" fill="#64748b" text-anchor="middle">Yagona include_router() bot.py'da: minglab handler ham tartibli qoladi.</text>
+
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/></marker>
+  </defs>
+</svg>

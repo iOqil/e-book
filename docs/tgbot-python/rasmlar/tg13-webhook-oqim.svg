@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470">
+  <title>Webhook so'rovining to'liq oqimi: foydalanuvchidan handlergacha</title>
+  <rect x="0" y="0" width="780" height="470" fill="#f8fafc"/>
+  <text x="390" y="32" text-anchor="middle" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b">Webhook so'rovining yo'li</text>
+
+  <!-- 1 user -->
+  <rect x="30" y="64" width="150" height="56" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="105" y="88" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">1. Foydalanuvchi</text>
+  <text x="105" y="108" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">/start yozadi</text>
+
+  <!-- 2 telegram -->
+  <rect x="315" y="64" width="150" height="56" rx="8" fill="#e0e7ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="390" y="88" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">2. Telegram serveri</text>
+  <text x="390" y="108" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Update tayyorlaydi</text>
+
+  <!-- 3 nginx -->
+  <rect x="600" y="64" width="150" height="56" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="675" y="88" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">3. nginx (HTTPS)</text>
+  <text x="675" y="108" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">SSL tugatadi</text>
+
+  <!-- arrows top row -->
+  <line x1="180" y1="92" x2="313" y2="92" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="465" y1="92" x2="598" y2="92" stroke="#2563eb" stroke-width="2.5" marker-end="url(#a)"/>
+  <text x="531" y="84" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#2563eb">POST + secret token</text>
+
+  <!-- down arrow nginx->aiohttp -->
+  <line x1="675" y1="120" x2="675" y2="168" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+  <text x="700" y="148" font-family="Segoe UI" font-size="13" fill="#64748b">http://127.0.0.1:8080</text>
+
+  <!-- 4 aiohttp -->
+  <rect x="560" y="172" width="190" height="60" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="655" y="196" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">4. aiohttp server</text>
+  <text x="655" y="216" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">SimpleRequestHandler</text>
+
+  <!-- secret check -->
+  <rect x="320" y="172" width="200" height="60" rx="8" fill="#ffffff" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="420" y="196" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">5. Sekret tekshiruv</text>
+  <text x="420" y="216" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">noto'g'ri -&gt; 401</text>
+
+  <line x1="558" y1="202" x2="522" y2="202" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- 6 dispatcher -->
+  <rect x="320" y="270" width="200" height="60" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="420" y="294" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">6. Dispatcher</text>
+  <text x="420" y="314" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">feed_webhook_update</text>
+
+  <line x1="420" y1="232" x2="420" y2="268" stroke="#16a34a" stroke-width="2" marker-end="url(#ag)"/>
+  <text x="500" y="254" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">OK</text>
+
+  <!-- 7 router/handler -->
+  <rect x="320" y="368" width="200" height="60" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="420" y="392" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">7. Router -&gt; Handler</text>
+  <text x="420" y="412" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">@router.message(...)</text>
+
+  <line x1="420" y1="330" x2="420" y2="366" stroke="#2563eb" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- back to user note -->
+  <rect x="30" y="368" width="230" height="60" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="145" y="392" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#334155">8. Javob xuddi pollingdek</text>
+  <text x="145" y="412" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">message.answer() ishlaydi</text>
+  <line x1="318" y1="398" x2="262" y2="398" stroke="#94a3b8" stroke-width="2" marker-end="url(#ag)"/>
+
+  <text x="390" y="456" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Telegram update'ni POST orqali yetkazadi; handler kodi pollingdagi bilan AYNAN bir xil qoladi.</text>
+
+  <defs>
+    <marker id="a" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="ag" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+</svg>

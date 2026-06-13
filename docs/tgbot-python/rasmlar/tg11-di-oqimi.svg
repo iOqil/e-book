@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" font-family="Segoe UI, sans-serif">
+  <title>workflow_data orqali dependency injection oqimi: dp[key] dan handler kwarg gacha</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">workflow_data orqali DI oqimi</text>
+
+  <!-- 1. main.py da yozish -->
+  <rect x="40" y="64" width="300" height="120" rx="10" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+  <text x="190" y="90" font-size="14" font-weight="bold" fill="#2563eb" text-anchor="middle">1. main.py — yozish</text>
+  <rect x="60" y="104" width="260" height="64" rx="6" fill="#eff6ff"/>
+  <text x="75" y="128" font-size="13" fill="#1e293b" font-family="Consolas, monospace">dp["repo"] = Repo(db)</text>
+  <text x="75" y="152" font-size="13" fill="#1e293b" font-family="Consolas, monospace">dp["settings"] = settings</text>
+
+  <!-- 2. dispatcher saqlash -->
+  <rect x="420" y="64" width="300" height="120" rx="10" fill="#fff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="570" y="90" font-size="14" font-weight="bold" fill="#f59e0b" text-anchor="middle">2. Dispatcher.workflow_data</text>
+  <rect x="440" y="104" width="260" height="64" rx="6" fill="#fffbeb"/>
+  <text x="455" y="128" font-size="13" fill="#334155">{ "repo": ..., </text>
+  <text x="455" y="152" font-size="13" fill="#334155">  "settings": ... }</text>
+
+  <!-- 3. update keladi -->
+  <rect x="40" y="244" width="300" height="120" rx="10" fill="#fff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="190" y="270" font-size="14" font-weight="bold" fill="#334155" text-anchor="middle">3. Update keladi</text>
+  <text x="190" y="300" font-size="13" fill="#64748b" text-anchor="middle">dispatcher handler parametrlarini</text>
+  <text x="190" y="322" font-size="13" fill="#64748b" text-anchor="middle">nomiga qarab moslab beradi</text>
+  <text x="190" y="346" font-size="13" fill="#64748b" text-anchor="middle">(nom == kalit)</text>
+
+  <!-- 4. handler oladi -->
+  <rect x="420" y="244" width="300" height="120" rx="10" fill="#fff" stroke="#16a34a" stroke-width="2"/>
+  <text x="570" y="270" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">4. Handler kwarg oladi</text>
+  <rect x="436" y="284" width="268" height="64" rx="6" fill="#f0fdf4"/>
+  <text x="450" y="308" font-size="13" fill="#1e293b" font-family="Consolas, monospace">async def start(message,</text>
+  <text x="450" y="330" font-size="13" fill="#16a34a" font-family="Consolas, monospace">      repo, settings):</text>
+
+  <defs><marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/></marker></defs>
+  <line x1="340" y1="124" x2="416" y2="124" stroke="#2563eb" stroke-width="3" marker-end="url(#ar)"/>
+  <line x1="570" y1="184" x2="570" y2="240" stroke="#2563eb" stroke-width="3" marker-end="url(#ar)"/>
+  <line x1="340" y1="304" x2="416" y2="304" stroke="#2563eb" stroke-width="3" marker-end="url(#ar)"/>
+  <text x="372" y="118" font-size="13" fill="#64748b">saqla</text>
+</svg>

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430">
+  <title>Update dan handler gacha: filtrlar tartibi va birinchi mos handler</title>
+  <rect width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="34" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Update -&gt; Router -&gt; filtrlar -&gt; birinchi mos handler</text>
+
+  <!-- update -->
+  <rect x="30" y="70" width="150" height="56" rx="10" fill="#2563eb"/>
+  <text x="105" y="95" font-family="Segoe UI" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Update</text>
+  <text x="105" y="114" font-family="Segoe UI" font-size="13" fill="#dbeafe" text-anchor="middle">message: "/start"</text>
+
+  <!-- arrow -->
+  <line x1="180" y1="98" x2="225" y2="98" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="225,93 235,98 225,103" fill="#94a3b8"/>
+
+  <!-- router -->
+  <rect x="235" y="70" width="120" height="56" rx="10" fill="#334155"/>
+  <text x="295" y="103" font-family="Segoe UI" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Router</text>
+
+  <!-- decision chain -->
+  <text x="60" y="172" font-family="Segoe UI" font-size="14" fill="#334155" font-weight="bold">Handlerlar yuqoridan pastga tekshiriladi:</text>
+
+  <!-- h1 fail -->
+  <rect x="60" y="190" width="430" height="44" rx="8" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="78" y="217" font-family="Segoe UI" font-size="14" fill="#1e293b">1) F.text == "salom"</text>
+  <text x="470" y="217" font-family="Segoe UI" font-size="14" fill="#dc2626" text-anchor="end" font-weight="bold">mos emas</text>
+  <line x1="505" y1="212" x2="540" y2="212" stroke="#dc2626" stroke-width="2"/>
+  <polygon points="540,207 550,212 540,217" fill="#dc2626"/>
+  <text x="640" y="217" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">keyingisiga o'tadi</text>
+
+  <!-- h2 fail -->
+  <rect x="60" y="244" width="430" height="44" rx="8" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="78" y="271" font-family="Segoe UI" font-size="14" fill="#1e293b">2) Command("help")</text>
+  <text x="470" y="271" font-family="Segoe UI" font-size="14" fill="#dc2626" text-anchor="end" font-weight="bold">mos emas</text>
+  <line x1="505" y1="266" x2="540" y2="266" stroke="#dc2626" stroke-width="2"/>
+  <polygon points="540,261 550,266 540,271" fill="#dc2626"/>
+  <text x="640" y="271" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">keyingisiga o'tadi</text>
+
+  <!-- h3 match -->
+  <rect x="60" y="298" width="430" height="48" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="78" y="327" font-family="Segoe UI" font-size="14" fill="#1e293b" font-weight="bold">3) CommandStart()</text>
+  <text x="470" y="327" font-family="Segoe UI" font-size="14" fill="#16a34a" text-anchor="end" font-weight="bold">MOS!</text>
+  <line x1="505" y1="322" x2="540" y2="322" stroke="#16a34a" stroke-width="2.5"/>
+  <polygon points="540,316 552,322 540,328" fill="#16a34a"/>
+
+  <!-- handler runs -->
+  <rect x="565" y="298" width="160" height="48" rx="10" fill="#16a34a"/>
+  <text x="645" y="320" font-family="Segoe UI" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">handler ishlaydi</text>
+  <text x="645" y="338" font-family="Segoe UI" font-size="13" fill="#dcfce7" text-anchor="middle">va to'xtaydi</text>
+
+  <!-- note -->
+  <rect x="60" y="368" width="665" height="44" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="78" y="386" font-family="Segoe UI" font-size="13" fill="#92400e" font-weight="bold">Diqqat: faqat BIRINCHI mos handler ishlaydi.</text>
+  <text x="78" y="404" font-family="Segoe UI" font-size="13" fill="#92400e">Shuning uchun aniqroq filtrlar tepada, "tutuvchi" handler (filtrsiz) eng pastda turishi kerak.</text>
+</svg>

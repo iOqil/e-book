@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360">
+  <title>Throttling middleware: vaqt oynasi ichidagi takror xabarlar tashlanadi</title>
+  <rect width="760" height="360" fill="#f8fafc"/>
+  <text x="380" y="34" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Anti-flood (throttling) — 2 soniya oynasi</text>
+
+  <!-- time axis -->
+  <line x1="60" y1="120" x2="700" y2="120" stroke="#94a3b8" stroke-width="2"/>
+  <text x="700" y="112" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="end">vaqt</text>
+
+  <!-- t=0 ok -->
+  <line x1="120" y1="110" x2="120" y2="130" stroke="#1e293b" stroke-width="2"/>
+  <circle cx="120" cy="80" r="22" fill="#16a34a"/>
+  <text x="120" y="86" font-family="Segoe UI" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">OK</text>
+  <text x="120" y="150" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">t=0.0s</text>
+
+  <!-- t=0.5 blocked -->
+  <line x1="240" y1="110" x2="240" y2="130" stroke="#1e293b" stroke-width="2"/>
+  <circle cx="240" cy="80" r="22" fill="#dc2626"/>
+  <text x="240" y="86" font-family="Segoe UI" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">X</text>
+  <text x="240" y="150" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">t=0.5s</text>
+
+  <!-- t=1.2 blocked -->
+  <line x1="360" y1="110" x2="360" y2="130" stroke="#1e293b" stroke-width="2"/>
+  <circle cx="360" cy="80" r="22" fill="#dc2626"/>
+  <text x="360" y="86" font-family="Segoe UI" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">X</text>
+  <text x="360" y="150" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">t=1.2s</text>
+
+  <!-- window highlight -->
+  <rect x="120" y="64" width="240" height="32" fill="#f59e0b" opacity="0.18"/>
+  <text x="240" y="46" font-family="Segoe UI" font-size="13" fill="#b45309" text-anchor="middle">2s oyna: takrorlar bloklanadi</text>
+
+  <!-- t=2.3 ok again -->
+  <line x1="540" y1="110" x2="540" y2="130" stroke="#1e293b" stroke-width="2"/>
+  <circle cx="540" cy="80" r="22" fill="#16a34a"/>
+  <text x="540" y="86" font-family="Segoe UI" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">OK</text>
+  <text x="540" y="150" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">t=2.3s</text>
+
+  <!-- logic box -->
+  <rect x="60" y="200" width="640" height="130" rx="10" fill="#0f172a"/>
+  <text x="80" y="230" font-family="Consolas, monospace" font-size="14" fill="#cbd5e1">now = time.monotonic()</text>
+  <text x="80" y="256" font-family="Consolas, monospace" font-size="14" fill="#fca5a5">if now - last[uid] &lt; LIMIT:</text>
+  <text x="100" y="282" font-family="Consolas, monospace" font-size="14" fill="#fca5a5">return            # tashla</text>
+  <text x="80" y="308" font-family="Consolas, monospace" font-size="14" fill="#86efac">last[uid] = now; return await handler(event, data)</text>
+
+  <defs></defs>
+</svg>

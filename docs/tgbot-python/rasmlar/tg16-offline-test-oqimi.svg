@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380">
+  <title>Offline test oqimi: soxta Update dan handler tekshiruvigacha</title>
+  <rect x="0" y="0" width="760" height="380" fill="#f8fafc"/>
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b">Handlerni internetsiz (offline) testlash oqimi</text>
+
+  <!-- Step 1 -->
+  <rect x="30" y="70" width="200" height="80" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="130" y="100" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">1. Soxta obyektlar</text>
+  <text x="130" y="122" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Message, User, Chat,</text>
+  <text x="130" y="140" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Update qo'lda quriladi</text>
+
+  <!-- Step 2 -->
+  <rect x="280" y="70" width="200" height="80" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="100" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">2. Soxta Bot</text>
+  <text x="380" y="122" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">bot.session = AsyncMock</text>
+  <text x="380" y="140" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">internetga chiqmaydi</text>
+
+  <!-- Step 3 -->
+  <rect x="530" y="70" width="200" height="80" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="630" y="100" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">3. feed_update</text>
+  <text x="630" y="122" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">dp.feed_update(</text>
+  <text x="630" y="140" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">bot, update)</text>
+
+  <!-- arrows row1 -->
+  <line x1="230" y1="110" x2="278" y2="110" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="480" y1="110" x2="528" y2="110" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- down arrow -->
+  <line x1="630" y1="150" x2="630" y2="195" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- Dispatcher -->
+  <rect x="280" y="200" width="450" height="60" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="505" y="226" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">Dispatcher -&gt; Router -&gt; filtrlar -&gt; handler</text>
+  <text x="505" y="247" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">haqiqiy routing kodi ishlaydi (faqat tarmoq mock)</text>
+
+  <line x1="280" y1="230" x2="232" y2="230" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- Step 4 assert -->
+  <rect x="30" y="200" width="200" height="60" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="130" y="226" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">4. Tekshirish</text>
+  <text x="130" y="247" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">qaysi metod yuborildi?</text>
+
+  <!-- result box -->
+  <rect x="180" y="300" width="400" height="56" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="380" y="324" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#166534">assert isinstance(method, SendMessage)</text>
+  <text x="380" y="344" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#166534">assert method.text == "Salom!"</text>
+  <line x1="380" y1="260" x2="380" y2="298" stroke="#16a34a" stroke-width="2" marker-end="url(#g)"/>
+
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/></marker>
+    <marker id="g" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/></marker>
+  </defs>
+</svg>

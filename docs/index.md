@@ -15,10 +15,10 @@ hide:
 [GitHub](https://github.com/iOqil/e-book){ .md-button }
 
 <div class="hero-stats">
-  <div class="stat"><b>16</b><span>kitob</span></div>
-  <div class="stat"><b>855</b><span>diagramma</span></div>
-  <div class="stat"><b>373+</b><span>bob</span></div>
-  <div class="stat"><b>3600+</b><span>masala</span></div>
+  <div class="stat"><b>17</b><span>kitob</span></div>
+  <div class="stat"><b>911</b><span>diagramma</span></div>
+  <div class="stat"><b>391+</b><span>bob</span></div>
+  <div class="stat"><b>3800+</b><span>masala</span></div>
 </div>
 
 </section>
@@ -152,5 +152,13 @@ hide:
     PHP/Laravel bilan **desktop (Windows/macOS/Linux) va mobil (iOS/Android)** ilovalar: NativePHP arxitekturasi (webview + bundled/on-device PHP), oyna boshqaruvi, menyu/tray, native bildirishnoma/dialog, lokal SQLite, mobil qurilma imkoniyatlari (kamera, GPS, biometrika, push), testlash, build va app store deploy + cross-platform kapston. Laravel bilimini nazarda tutadi. Laravel/PHP kodi tekshirilgan; GUI/qurilma/build bloklari illustrativ (halol belgilangan). 18 bob · 55 diagramma.
 
     [Boshlash →](nativephp/README.md)
+
+-   🤖 **17. Telegram bot (Python aiogram)**
+
+    ---
+
+    Python va **aiogram 3.x** bilan Telegram bot: echo botdan boshlab handler/Router, filtrlar, klaviaturalar (reply/inline), callback, **FSM (holatlar mashinasi)**, middleware, ma'lumotlar bazasi, to'lovlar/Telegram Stars, webhook, rejali xabar/broadcast, testlash va deploy + to'liq kapston bot. Python bilimini nazarda tutadi. Bot mantig'i (handler/FSM/klaviatura/DB) offline tekshirilgan; jonli yuborish/polling/webhook BotFather token + internet talab qiladi (illustrativ). 18 bob · 56 diagramma.
+
+    [Boshlash →](tgbot-python/README.md)
 
 </div>

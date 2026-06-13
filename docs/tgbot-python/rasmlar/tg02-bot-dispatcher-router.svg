@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400">
+  <title>Bot, Dispatcher va Router: uchta asosiy qism va vazifalari</title>
+  <rect x="0" y="0" width="760" height="400" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI" font-size="19" font-weight="bold" fill="#1e293b">Uchta asosiy qism</text>
+
+  <!-- Bot -->
+  <rect x="40" y="70" width="210" height="290" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <rect x="40" y="70" width="210" height="44" rx="12" fill="#2563eb"/>
+  <rect x="40" y="92" width="210" height="22" fill="#2563eb"/>
+  <text x="145" y="99" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#ffffff">Bot</text>
+  <text x="145" y="140" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">Telegram bilan aloqa</text>
+  <text x="60" y="172" font-family="Segoe UI" font-size="13" fill="#334155">- token saqlaydi</text>
+  <text x="60" y="196" font-family="Segoe UI" font-size="13" fill="#334155">- send_message()</text>
+  <text x="60" y="220" font-family="Segoe UI" font-size="13" fill="#334155">- answer_photo()</text>
+  <text x="60" y="244" font-family="Segoe UI" font-size="13" fill="#334155">- getMe(), va h.k.</text>
+  <text x="60" y="284" font-family="Segoe UI" font-size="13" fill="#64748b">"telefon liniyasi":</text>
+  <text x="60" y="306" font-family="Segoe UI" font-size="13" fill="#64748b">xabar yuborish/olish</text>
+  <text x="60" y="338" font-family="Segoe UI" font-size="13" font-style="italic" fill="#2563eb">Bot(token=...)</text>
+
+  <!-- Dispatcher -->
+  <rect x="275" y="70" width="210" height="290" rx="12" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="275" y="70" width="210" height="44" rx="12" fill="#f59e0b"/>
+  <rect x="275" y="92" width="210" height="22" fill="#f59e0b"/>
+  <text x="380" y="99" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#ffffff">Dispatcher</text>
+  <text x="380" y="140" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">Boshqaruvchi miya</text>
+  <text x="295" y="172" font-family="Segoe UI" font-size="13" fill="#334155">- update'larni oladi</text>
+  <text x="295" y="196" font-family="Segoe UI" font-size="13" fill="#334155">- start_polling()</text>
+  <text x="295" y="220" font-family="Segoe UI" font-size="13" fill="#334155">- router'larni ulaydi</text>
+  <text x="295" y="244" font-family="Segoe UI" font-size="13" fill="#334155">- handlerni topadi</text>
+  <text x="295" y="284" font-family="Segoe UI" font-size="13" fill="#64748b">"dispetcher":</text>
+  <text x="295" y="306" font-family="Segoe UI" font-size="13" fill="#64748b">qaysi ish kimga</text>
+  <text x="295" y="338" font-family="Segoe UI" font-size="13" font-style="italic" fill="#f59e0b">Dispatcher()</text>
+
+  <!-- Router -->
+  <rect x="510" y="70" width="210" height="290" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <rect x="510" y="70" width="210" height="44" rx="12" fill="#16a34a"/>
+  <rect x="510" y="92" width="210" height="22" fill="#16a34a"/>
+  <text x="615" y="99" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#ffffff">Router</text>
+  <text x="615" y="140" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">Handlerlar uyi</text>
+  <text x="530" y="172" font-family="Segoe UI" font-size="13" fill="#334155">- @router.message(...)</text>
+  <text x="530" y="196" font-family="Segoe UI" font-size="13" fill="#334155">- filtrlar saqlaydi</text>
+  <text x="530" y="220" font-family="Segoe UI" font-size="13" fill="#334155">- handlerga yuboradi</text>
+  <text x="530" y="244" font-family="Segoe UI" font-size="13" fill="#334155">- bo'limlarga ajratish</text>
+  <text x="530" y="284" font-family="Segoe UI" font-size="13" fill="#64748b">"yo'l ko'rsatuvchi":</text>
+  <text x="530" y="306" font-family="Segoe UI" font-size="13" fill="#64748b">filtr -> funksiya</text>
+  <text x="530" y="338" font-family="Segoe UI" font-size="13" font-style="italic" fill="#16a34a">Router()</text>
+
+  <!-- connectors -->
+  <line x1="485" y1="200" x2="510" y2="200" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+  <text x="497" y="192" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">ulaydi</text>
+
+  <defs>
+    <marker id="a" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#94a3b8"/></marker>
+  </defs>
+</svg>

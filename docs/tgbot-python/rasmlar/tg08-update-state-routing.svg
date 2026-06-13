@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" font-family="Segoe UI, sans-serif">
+  <title>Update kelganda holat bo'yicha handler tanlash oqimi</title>
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="32" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Update -> holat bo'yicha qaysi handler ishlaydi?</text>
+
+  <defs>
+    <marker id="b1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#334155"/>
+    </marker>
+    <marker id="b2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <!-- incoming -->
+  <rect x="40" y="70" width="180" height="56" rx="10" fill="#2563eb"/>
+  <text x="130" y="94" font-size="14" font-weight="bold" fill="#f8fafc" text-anchor="middle">Yangi xabar</text>
+  <text x="130" y="114" font-size="13" fill="#f8fafc" text-anchor="middle">text = "30"</text>
+
+  <!-- read state -->
+  <rect x="280" y="60" width="200" height="76" rx="10" fill="#fff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="380" y="86" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Joriy holat o'qiladi</text>
+  <text x="380" y="108" font-size="13" fill="#334155" text-anchor="middle">storage'dan kalit bo'yicha</text>
+  <text x="380" y="126" font-size="13" fill="#f59e0b" text-anchor="middle">holat = Survey:age</text>
+
+  <line x1="220" y1="98" x2="278" y2="98" stroke="#334155" stroke-width="2" marker-end="url(#b1)"/>
+
+  <!-- candidate handlers -->
+  <text x="130" y="185" font-size="14" font-weight="bold" fill="#1e293b">Handlerlar tartib bo'yicha tekshiriladi:</text>
+
+  <rect x="60" y="205" width="640" height="40" rx="8" fill="#fff" stroke="#94a3b8"/>
+  <text x="80" y="230" font-size="13" fill="#334155">@router.message(Survey.name, ...)   filtr: holat == name?  ->  YO'Q (skip)</text>
+
+  <rect x="60" y="255" width="640" height="40" rx="8" fill="#fff" stroke="#16a34a" stroke-width="2"/>
+  <text x="80" y="280" font-size="13" fill="#1e293b">@router.message(Survey.age, F.text.regexp("^\\d+$"))  ->  HOLAT MOS + matn raqam  ->  ISHLAYDI</text>
+
+  <rect x="60" y="305" width="640" height="40" rx="8" fill="#fff" stroke="#94a3b8"/>
+  <text x="80" y="330" font-size="13" fill="#334155">@router.message(Survey.city, ...)   holat == city?  ->  YO'Q (bu yergacha yetmaydi)</text>
+
+  <line x1="380" y1="245" x2="380" y2="253" stroke="#16a34a" stroke-width="2" marker-end="url(#b2)"/>
+
+  <!-- result -->
+  <text x="380" y="380" font-size="13" fill="#334155" text-anchor="middle">Birinchi mos kelgan handler ishlaydi -> u set_state(Survey.city) qiladi -> keyingi xabar boshqa handlerga tushadi.</text>
+  <text x="380" y="404" font-size="13" fill="#dc2626" text-anchor="middle">Muhim: state handler buyruqdan (/cancel) oldin kelsa, buyruqni "yutib" yuborishi mumkin — tartibga e'tibor bering.</text>
+</svg>

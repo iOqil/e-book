@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 460">
+  <title>Modulli loyiha tuzilishi: bot/ paketidagi papkalar va ularning vazifasi</title>
+  <rect width="760" height="460" fill="#f8fafc"/>
+  <text x="380" y="34" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Modulli loyiha tuzilishi (mybot/ paketi)</text>
+
+  <!-- Root box -->
+  <rect x="30" y="60" width="200" height="370" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="130" y="86" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb" text-anchor="middle">mybot/</text>
+
+  <!-- folders list -->
+  <g font-family="Segoe UI" font-size="14" fill="#334155">
+    <rect x="46" y="100" width="168" height="30" rx="5" fill="#eff6ff" stroke="#2563eb" stroke-width="1"/>
+    <text x="56" y="120">config.py</text>
+    <rect x="46" y="138" width="168" height="30" rx="5" fill="#eff6ff" stroke="#2563eb" stroke-width="1"/>
+    <text x="56" y="158">main.py</text>
+    <rect x="46" y="176" width="168" height="30" rx="5" fill="#f0fdf4" stroke="#16a34a" stroke-width="1"/>
+    <text x="56" y="196">handlers/</text>
+    <rect x="46" y="214" width="168" height="30" rx="5" fill="#f0fdf4" stroke="#16a34a" stroke-width="1"/>
+    <text x="56" y="234">keyboards/</text>
+    <rect x="46" y="252" width="168" height="30" rx="5" fill="#f0fdf4" stroke="#16a34a" stroke-width="1"/>
+    <text x="56" y="272">states/</text>
+    <rect x="46" y="290" width="168" height="30" rx="5" fill="#f0fdf4" stroke="#16a34a" stroke-width="1"/>
+    <text x="56" y="310">services/</text>
+    <rect x="46" y="328" width="168" height="30" rx="5" fill="#f0fdf4" stroke="#16a34a" stroke-width="1"/>
+    <text x="56" y="348">middlewares/</text>
+    <rect x="46" y="366" width="168" height="30" rx="5" fill="#fef9ee" stroke="#f59e0b" stroke-width="1"/>
+    <text x="56" y="386">.env</text>
+    <rect x="46" y="404" width="168" height="20" rx="5" fill="#fef9ee" stroke="#f59e0b" stroke-width="1"/>
+    <text x="56" y="419" font-size="13">.gitignore</text>
+  </g>
+
+  <!-- arrows to descriptions -->
+  <g stroke="#94a3b8" stroke-width="1.4" fill="none">
+    <path d="M214 115 L300 115" marker-end="url(#a)"/>
+    <path d="M214 153 L300 153" marker-end="url(#a)"/>
+    <path d="M214 191 L300 191" marker-end="url(#a)"/>
+    <path d="M214 229 L300 229" marker-end="url(#a)"/>
+    <path d="M214 267 L300 267" marker-end="url(#a)"/>
+    <path d="M214 305 L300 305" marker-end="url(#a)"/>
+    <path d="M214 343 L300 343" marker-end="url(#a)"/>
+    <path d="M214 386 L300 386" marker-end="url(#a)"/>
+  </g>
+  <defs>
+    <marker id="a" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+      <path d="M0 0 L8 4 L0 8 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <!-- descriptions -->
+  <g font-family="Segoe UI" font-size="14" fill="#334155">
+    <text x="306" y="120">Sozlamalar: token, ID lar (.env dan o'qiydi)</text>
+    <text x="306" y="158">Botni yig'ish va polling — kirish nuqtasi</text>
+    <text x="306" y="196">Handlerlar — har modul = bitta Router</text>
+    <text x="306" y="234">Klaviatura quruvchilari (qayta ishlatiladi)</text>
+    <text x="306" y="272">FSM holatlari (StatesGroup)</text>
+    <text x="306" y="310">Biznes-logika (DB, API) — handlerdan ajratilgan</text>
+    <text x="306" y="348">Middleware lar (DI, throttling, log)</text>
+    <text x="306" y="390">Maxfiy qiymatlar — Git ga TUSHMAYDI</text>
+  </g>
+
+  <text x="380" y="448" font-family="Segoe UI" font-size="13" fill="#dc2626" text-anchor="middle">Qoida: handler faqat "dirijyor" — og'ir ish services/ ichida</text>
+</svg>

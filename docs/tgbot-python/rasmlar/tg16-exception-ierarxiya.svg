@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440">
+  <title>aiogram TelegramAPIError istisnolar ierarxiyasi</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b">aiogram istisnolar (exceptions) ierarxiyasi</text>
+
+  <!-- AiogramError -->
+  <rect x="290" y="56" width="180" height="46" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="84" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">AiogramError</text>
+
+  <line x1="380" y1="102" x2="380" y2="128" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- TelegramAPIError -->
+  <rect x="270" y="130" width="220" height="46" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="380" y="158" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#92400e">TelegramAPIError</text>
+
+  <!-- connectors -->
+  <line x1="380" y1="176" x2="380" y2="196" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="120" y1="196" x2="640" y2="196" stroke="#94a3b8" stroke-width="2"/>
+
+  <!-- children row 1 -->
+  <g font-family="Segoe UI" font-size="13" fill="#1e293b">
+    <line x1="120" y1="196" x2="120" y2="212" stroke="#94a3b8" stroke-width="2"/>
+    <rect x="40" y="212" width="160" height="44" rx="8" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+    <text x="120" y="232" text-anchor="middle" font-weight="bold" fill="#dc2626">TelegramBadRequest</text>
+    <text x="120" y="248" text-anchor="middle" fill="#64748b">noto'g'ri so'rov (400)</text>
+
+    <line x1="290" y1="196" x2="290" y2="212" stroke="#94a3b8" stroke-width="2"/>
+    <rect x="210" y="212" width="160" height="44" rx="8" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+    <text x="290" y="232" text-anchor="middle" font-weight="bold" fill="#dc2626">TelegramForbidden</text>
+    <text x="290" y="248" text-anchor="middle" fill="#64748b">bloklangan (403)</text>
+
+    <line x1="470" y1="196" x2="470" y2="212" stroke="#94a3b8" stroke-width="2"/>
+    <rect x="390" y="212" width="160" height="44" rx="8" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+    <text x="470" y="232" text-anchor="middle" font-weight="bold" fill="#dc2626">TelegramNotFound</text>
+    <text x="470" y="248" text-anchor="middle" fill="#64748b">topilmadi (404)</text>
+
+    <line x1="640" y1="196" x2="640" y2="212" stroke="#94a3b8" stroke-width="2"/>
+    <rect x="560" y="212" width="170" height="44" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+    <text x="645" y="232" text-anchor="middle" font-weight="bold" fill="#b45309">TelegramRetryAfter</text>
+    <text x="645" y="248" text-anchor="middle" fill="#64748b">.retry_after (429)</text>
+  </g>
+
+  <!-- children row 2 -->
+  <g font-family="Segoe UI" font-size="13" fill="#1e293b">
+    <rect x="40" y="290" width="160" height="44" rx="8" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+    <text x="120" y="310" text-anchor="middle" font-weight="bold" fill="#dc2626">TelegramServerError</text>
+    <text x="120" y="326" text-anchor="middle" fill="#64748b">server xatosi (5xx)</text>
+
+    <rect x="210" y="290" width="180" height="44" rx="8" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+    <text x="300" y="310" text-anchor="middle" font-weight="bold" fill="#dc2626">TelegramUnauthorized</text>
+    <text x="300" y="326" text-anchor="middle" fill="#64748b">token noto'g'ri (401)</text>
+
+    <rect x="400" y="290" width="150" height="44" rx="8" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+    <text x="475" y="310" text-anchor="middle" font-weight="bold" fill="#dc2626">TelegramConflict</text>
+    <text x="475" y="326" text-anchor="middle" fill="#64748b">ikkita polling (409)</text>
+
+    <rect x="560" y="290" width="170" height="44" rx="8" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+    <text x="645" y="310" text-anchor="middle" font-weight="bold" fill="#dc2626">TelegramNetworkError</text>
+    <text x="645" y="326" text-anchor="middle" fill="#64748b">tarmoq uzildi</text>
+  </g>
+
+  <rect x="100" y="368" width="560" height="48" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="380" y="390" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#166534">Maslahat: except TelegramAPIError barcha API xatolarini ushlaydi.</text>
+  <text x="380" y="408" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#166534">Aniq turlarni alohida ushlab, mos javob bering.</text>
+
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/></marker>
+  </defs>
+</svg>

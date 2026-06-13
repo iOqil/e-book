@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420">
+  <title>To'lovga oid uchta handler va ularning vazifasi</title>
+  <rect width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b">Uchta handler — har biri o'z update'ini ushlaydi</text>
+
+  <!-- Handler 1 -->
+  <rect x="40" y="64" width="680" height="92" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <rect x="40" y="64" width="14" height="92" rx="4" fill="#2563eb"/>
+  <text x="72" y="92" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">1. @router.message(Command("buy"))</text>
+  <text x="72" y="116" font-family="Segoe UI" font-size="13" fill="#334155">Vazifa: bot.send_invoice(...) chaqirib hisob-faktura yuborish.</text>
+  <text x="72" y="138" font-family="Segoe UI" font-size="13" fill="#64748b">Bu oddiy message handler — foydalanuvchi /buy yozganda ishlaydi.</text>
+
+  <!-- arrow -->
+  <line x1="380" y1="156" x2="380" y2="174" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="380,174 375,164 385,164" fill="#94a3b8"/>
+
+  <!-- Handler 2 -->
+  <rect x="40" y="178" width="680" height="92" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="40" y="178" width="14" height="92" rx="4" fill="#f59e0b"/>
+  <text x="72" y="206" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#d97706">2. @router.pre_checkout_query()</text>
+  <text x="72" y="230" font-family="Segoe UI" font-size="13" fill="#334155">Vazifa: query.answer(ok=True) — to'lovni tasdiqlash (yoki rad etish).</text>
+  <text x="72" y="252" font-family="Segoe UI" font-size="13" fill="#dc2626">MAJBURIY: 10 soniya ichida javob bering, aks holda to'lov bekor.</text>
+
+  <!-- arrow -->
+  <line x1="380" y1="270" x2="380" y2="288" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="380,288 375,278 385,278" fill="#94a3b8"/>
+
+  <!-- Handler 3 -->
+  <rect x="40" y="292" width="680" height="92" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <rect x="40" y="292" width="14" height="92" rx="4" fill="#16a34a"/>
+  <text x="72" y="320" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">3. @router.message(F.successful_payment)</text>
+  <text x="72" y="344" font-family="Segoe UI" font-size="13" fill="#334155">Vazifa: pul tushdi -> mahsulotni bering, charge_id'ni saqlang.</text>
+  <text x="72" y="366" font-family="Segoe UI" font-size="13" fill="#64748b">message.successful_payment ichida currency, total_amount, charge_id bor.</text>
+
+  <text x="380" y="406" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">Tartib qat'iy: 1 -> 2 -> 3. 2-qadam o'tmasa, 3-qadam HECH QACHON kelmaydi.</text>
+</svg>

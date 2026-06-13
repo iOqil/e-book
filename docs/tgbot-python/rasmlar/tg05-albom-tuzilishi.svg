@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420">
+  <title>Media-group (albom) tuzilishi: MediaGroupBuilder va caption qoidasi</title>
+  <rect width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b">Albom (media-group) qanday tuziladi</text>
+
+  <!-- builder box -->
+  <rect x="40" y="64" width="290" height="300" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="185" y="90" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e40af">MediaGroupBuilder</text>
+
+  <rect x="60" y="104" width="250" height="40" rx="7" fill="#dbeafe"/>
+  <text x="72" y="129" font-family="Segoe UI" font-size="13" fill="#1e293b">MediaGroupBuilder(caption="Albom")</text>
+
+  <rect x="60" y="152" width="250" height="36" rx="7" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="72" y="175" font-family="Segoe UI" font-size="13" fill="#334155">add_photo(media=rasm1)</text>
+
+  <rect x="60" y="194" width="250" height="36" rx="7" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="72" y="217" font-family="Segoe UI" font-size="13" fill="#334155">add_photo(media=rasm2)</text>
+
+  <rect x="60" y="236" width="250" height="36" rx="7" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="72" y="259" font-family="Segoe UI" font-size="13" fill="#334155">add_video(media=video1)</text>
+
+  <rect x="60" y="286" width="250" height="40" rx="7" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="72" y="311" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#166534">.build()  ->  list[InputMedia]</text>
+  <text x="185" y="348" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">2..10 ta element bo'lishi shart</text>
+
+  <!-- arrow -->
+  <line x1="332" y1="214" x2="402" y2="214" stroke="#2563eb" stroke-width="3" marker-end="url(#b)"/>
+  <text x="367" y="204" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e40af">yuborish</text>
+
+  <!-- chat preview: one card with grid -->
+  <rect x="410" y="64" width="310" height="300" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="565" y="90" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">Chatda bitta to'plam bo'lib chiqadi</text>
+
+  <rect x="432" y="106" width="128" height="92" rx="6" fill="#bfdbfe"/>
+  <text x="496" y="158" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#1e40af">rasm 1</text>
+  <rect x="572" y="106" width="128" height="92" rx="6" fill="#bfdbfe"/>
+  <text x="636" y="158" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#1e40af">rasm 2</text>
+  <rect x="432" y="206" width="268" height="70" rx="6" fill="#c7d2fe"/>
+  <text x="566" y="246" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#3730a3">video 1</text>
+
+  <rect x="432" y="288" width="268" height="56" rx="7" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="566" y="310" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#92400e">"Albom"</text>
+  <text x="566" y="331" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#92400e">caption faqat 1-elementga biriktiriladi</text>
+
+  <!-- bottom note -->
+  <rect x="40" y="378" width="680" height="32" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="380" y="399" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#991b1b">Albomda reply_markup (tugma) bo'lmaydi; bitta-bitta elementni o'chirib/tahrirlab ham bo'lmaydi</text>
+
+  <defs>
+    <marker id="b" markerWidth="10" markerHeight="10" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0 L8,3.5 L0,7 Z" fill="#2563eb"/>
+    </marker>
+  </defs>
+</svg>

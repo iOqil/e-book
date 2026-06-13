@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" font-family="Segoe UI, sans-serif">
+  <title>Modul -> Router -> Dispatcher zanjiri: har modul o'z Router'ini eksport qiladi, ular get_handlers_router() da yig'iladi va Dispatcher'ga biriktiriladi</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Modul -&gt; Router -&gt; Dispatcher zanjiri</text>
+
+  <defs>
+    <marker id="arr" markerWidth="11" markerHeight="11" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L9,4 L0,8 Z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <!-- 1-ustun: modul fayllar (har biri o'z Router'i) -->
+  <text x="125" y="72" font-size="14" font-weight="bold" fill="#334155" text-anchor="middle">1. Har modul = bitta Router</text>
+
+  <rect x="40" y="88" width="170" height="46" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="125" y="110" font-size="14" fill="#1e293b" text-anchor="middle">handlers/start.py</text>
+  <text x="125" y="127" font-size="13" fill="#64748b" text-anchor="middle">Router(name="start")</text>
+
+  <rect x="40" y="148" width="170" height="46" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="125" y="170" font-size="14" fill="#1e293b" text-anchor="middle">handlers/admin.py</text>
+  <text x="125" y="187" font-size="13" fill="#64748b" text-anchor="middle">Router(name="admin")</text>
+
+  <rect x="40" y="208" width="170" height="46" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="125" y="230" font-size="14" fill="#1e293b" text-anchor="middle">handlers/common.py</text>
+  <text x="125" y="247" font-size="13" fill="#64748b" text-anchor="middle">Router(name="common")</text>
+
+  <!-- strelkalar 1 -> 2 -->
+  <g stroke="#2563eb" stroke-width="1.8" fill="none">
+    <path d="M210 111 C 260 111, 270 200, 318 208" marker-end="url(#arr)"/>
+    <path d="M210 171 C 260 171, 275 205, 318 213" marker-end="url(#arr)"/>
+    <path d="M210 231 C 260 231, 275 222, 318 220" marker-end="url(#arr)"/>
+  </g>
+
+  <!-- 2-ustun: get_handlers_router() -->
+  <text x="430" y="72" font-size="14" font-weight="bold" fill="#334155" text-anchor="middle">2. include_routers bilan yig'ish</text>
+
+  <rect x="320" y="160" width="220" height="110" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="430" y="186" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">get_handlers_router()</text>
+  <text x="430" y="208" font-size="13" fill="#334155" text-anchor="middle">Router(name="handlers")</text>
+  <text x="430" y="230" font-size="13" fill="#334155" text-anchor="middle">.include_routers(</text>
+  <text x="430" y="248" font-size="13" fill="#334155" text-anchor="middle">admin, start, common)</text>
+  <text x="430" y="266" font-size="13" fill="#dc2626" text-anchor="middle">tartib muhim: echo oxirida</text>
+
+  <!-- strelka 2 -> 3 -->
+  <line x1="540" y1="215" x2="598" y2="215" stroke="#2563eb" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <!-- 3-ustun: Dispatcher -->
+  <text x="675" y="72" font-size="14" font-weight="bold" fill="#334155" text-anchor="middle">3. main.py: dispatcher</text>
+
+  <rect x="600" y="170" width="150" height="90" rx="10" fill="#fff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="675" y="196" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Dispatcher</text>
+  <text x="675" y="218" font-size="13" fill="#64748b" text-anchor="middle">dp.include_router(</text>
+  <text x="675" y="236" font-size="13" fill="#64748b" text-anchor="middle">get_handlers_router())</text>
+  <text x="675" y="254" font-size="13" fill="#16a34a" text-anchor="middle">update'ni yo'naltiradi</text>
+
+  <text x="380" y="312" font-size="13" fill="#334155" text-anchor="middle">Update kelganda dispatcher router'larni biriktirilgan TARTIBDA tekshiradi —</text>
+  <text x="380" y="332" font-size="13" fill="#334155" text-anchor="middle">birinchi mos kelgan handler ishlaydi, qolganlari tekshirilmaydi.</text>
+  <text x="380" y="364" font-size="13" fill="#2563eb" text-anchor="middle" font-weight="bold">main.py faqat bitta narsani import qiladi: get_handlers_router()</text>
+</svg>

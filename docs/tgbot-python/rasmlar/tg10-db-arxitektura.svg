@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380">
+  <title>Bot va ma'lumotlar bazasi arxitekturasi</title>
+  <rect x="0" y="0" width="760" height="380" fill="#f8fafc"/>
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b">Bot ma'lumotni qayerda saqlaydi?</text>
+
+  <!-- Telegram -->
+  <rect x="30" y="80" width="150" height="90" rx="10" fill="#2563eb"/>
+  <text x="105" y="120" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#ffffff">Telegram</text>
+  <text x="105" y="142" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#e0e7ff">Update yuboradi</text>
+
+  <!-- Bot (handlers) -->
+  <rect x="250" y="70" width="200" height="240" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="350" y="98" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#1e293b">Bizning bot</text>
+
+  <rect x="270" y="115" width="160" height="50" rx="8" fill="#f59e0b"/>
+  <text x="350" y="138" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">Middleware</text>
+  <text x="350" y="156" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">session ochadi</text>
+
+  <rect x="270" y="180" width="160" height="50" rx="8" fill="#16a34a"/>
+  <text x="350" y="203" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#ffffff">Handler</text>
+  <text x="350" y="221" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dcfce7">repo'ni oladi</text>
+
+  <rect x="270" y="245" width="160" height="50" rx="8" fill="#e0e7ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="350" y="268" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">UserRepo</text>
+  <text x="350" y="286" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">SQL so'rovlar</text>
+
+  <!-- DB -->
+  <ellipse cx="640" cy="100" rx="70" ry="22" fill="#334155"/>
+  <path d="M570 100 V250 A70 22 0 0 0 710 250 V100" fill="#334155"/>
+  <ellipse cx="640" cy="100" rx="70" ry="22" fill="#475569"/>
+  <text x="640" y="180" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#ffffff">SQLite</text>
+  <text x="640" y="205" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#cbd5e1">users.db</text>
+  <text x="640" y="295" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Diskdagi fayl</text>
+
+  <!-- Arrows -->
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <line x1="180" y1="125" x2="248" y2="140" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#ar)"/>
+  <line x1="450" y1="270" x2="568" y2="200" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#ar)"/>
+  <text x="505" y="225" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">SELECT / INSERT</text>
+</svg>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420">
+  <title>Deep-link oqimi: havola yaratish, foydalanuvchi bosadi, bot payload ni oladi</title>
+  <rect width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="34" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Deep-link: t.me/Bot?start=PAYLOAD oqimi</text>
+
+  <!-- step 1 -->
+  <rect x="30" y="70" width="210" height="120" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="135" y="98" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb" text-anchor="middle">1. Havola yaratish</text>
+  <text x="48" y="124" font-family="Segoe UI" font-size="13" fill="#334155">create_start_link(</text>
+  <text x="48" y="143" font-family="Segoe UI" font-size="13" fill="#334155">  bot, "ref_oqil",</text>
+  <text x="48" y="162" font-family="Segoe UI" font-size="13" fill="#334155">  encode=True)</text>
+  <text x="48" y="182" font-family="Segoe UI" font-size="13" fill="#64748b">payload xohlagan ma'lumot</text>
+
+  <!-- arrow -->
+  <line x1="240" y1="130" x2="280" y2="130" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="280,125 290,130 280,135" fill="#94a3b8"/>
+
+  <!-- step 2 -->
+  <rect x="290" y="70" width="210" height="120" rx="12" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="395" y="98" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#b45309" text-anchor="middle">2. Foydalanuvchi bosadi</text>
+  <text x="308" y="126" font-family="Segoe UI" font-size="13" fill="#334155">t.me/MyBot?start=</text>
+  <text x="308" y="145" font-family="Segoe UI" font-size="13" fill="#334155">cmVmX29raWw</text>
+  <text x="308" y="170" font-family="Segoe UI" font-size="13" fill="#64748b">Telegram /start ni</text>
+  <text x="308" y="186" font-family="Segoe UI" font-size="13" fill="#64748b">payload bilan yuboradi</text>
+
+  <!-- arrow -->
+  <line x1="500" y1="130" x2="540" y2="130" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="540,125 550,130 540,135" fill="#94a3b8"/>
+
+  <!-- step 3 -->
+  <rect x="550" y="70" width="190" height="120" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="645" y="98" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="middle">3. Bot oladi</text>
+  <text x="566" y="124" font-family="Segoe UI" font-size="13" fill="#334155">CommandStart(</text>
+  <text x="566" y="142" font-family="Segoe UI" font-size="13" fill="#334155">  deep_link=True)</text>
+  <text x="566" y="166" font-family="Segoe UI" font-size="13" fill="#334155">command.args =</text>
+  <text x="566" y="183" font-family="Segoe UI" font-size="13" fill="#16a34a" font-weight="bold">  "cmVmX29raWw"</text>
+
+  <!-- decode box -->
+  <rect x="290" y="230" width="450" height="80" rx="10" fill="#ffffff" stroke="#334155" stroke-width="2"/>
+  <text x="310" y="258" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#334155">decode_payload(command.args) -&gt; "ref_oqil"</text>
+  <text x="310" y="282" font-family="Segoe UI" font-size="13" fill="#475569">encode=True ishlatilgan bo'lsa, qabulda decode qilinadi.</text>
+  <text x="310" y="300" font-family="Segoe UI" font-size="13" fill="#475569">Endi payload bilan: kim taklif qilgani, qaysi mahsulot va h.k.</text>
+
+  <!-- arrow down -->
+  <line x1="645" y1="190" x2="645" y2="228" stroke="#16a34a" stroke-width="2.5"/>
+  <polygon points="640,228 645,238 650,228" fill="#16a34a"/>
+
+  <!-- use cases -->
+  <rect x="30" y="230" width="240" height="160" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="50" y="258" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb">Qayerda ishlatiladi?</text>
+  <text x="50" y="284" font-family="Segoe UI" font-size="13" fill="#334155">- Referal tizim (kim taklif qildi)</text>
+  <text x="50" y="306" font-family="Segoe UI" font-size="13" fill="#334155">- Mahsulot/kanal havolasi</text>
+  <text x="50" y="328" font-family="Segoe UI" font-size="13" fill="#334155">- Saytdan botga login</text>
+  <text x="50" y="350" font-family="Segoe UI" font-size="13" fill="#334155">- Aksiya / kampaniya kodi</text>
+  <text x="50" y="372" font-family="Segoe UI" font-size="13" fill="#334155">- QR kod orqali kirish</text>
+
+  <!-- note -->
+  <rect x="290" y="330" width="450" height="58" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="310" y="354" font-family="Segoe UI" font-size="13" fill="#92400e" font-weight="bold">Eslatma: create_start_link bot username ni Telegram'dan oladi,</text>
+  <text x="310" y="374" font-family="Segoe UI" font-size="13" fill="#92400e">shuning uchun u jonli token talab qiladi. Encode/decode esa offline.</text>
+</svg>

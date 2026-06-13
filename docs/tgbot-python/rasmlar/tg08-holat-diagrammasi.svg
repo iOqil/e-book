@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" font-family="Segoe UI, sans-serif">
+  <title>FSM holatlar diagrammasi: so'rovnoma oqimi va /cancel</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="32" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">So'rovnoma FSM holatlar diagrammasi</text>
+
+  <!-- arrowheads -->
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="arR" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#dc2626"/>
+    </marker>
+    <marker id="arG" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <!-- start node -->
+  <circle cx="70" cy="120" r="22" fill="#334155"/>
+  <text x="70" y="125" font-size="13" fill="#f8fafc" text-anchor="middle">start</text>
+  <text x="70" y="168" font-size="13" fill="#334155" text-anchor="middle">/start</text>
+
+  <!-- name -->
+  <rect x="150" y="92" width="130" height="56" rx="10" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+  <text x="215" y="116" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Survey.name</text>
+  <text x="215" y="136" font-size="13" fill="#334155" text-anchor="middle">ismni so'raydi</text>
+
+  <!-- age -->
+  <rect x="330" y="92" width="130" height="56" rx="10" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+  <text x="395" y="116" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Survey.age</text>
+  <text x="395" y="136" font-size="13" fill="#334155" text-anchor="middle">yoshni so'raydi</text>
+
+  <!-- city -->
+  <rect x="510" y="92" width="130" height="56" rx="10" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+  <text x="575" y="116" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Survey.city</text>
+  <text x="575" y="136" font-size="13" fill="#334155" text-anchor="middle">shaharni so'raydi</text>
+
+  <!-- end -->
+  <circle cx="700" cy="120" r="22" fill="#16a34a"/>
+  <text x="700" y="125" font-size="13" fill="#f8fafc" text-anchor="middle">tugadi</text>
+
+  <!-- transitions -->
+  <line x1="92" y1="120" x2="148" y2="120" stroke="#2563eb" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="280" y1="120" x2="328" y2="120" stroke="#2563eb" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="304" y="112" font-size="13" fill="#2563eb" text-anchor="middle">ism</text>
+  <line x1="460" y1="120" x2="508" y2="120" stroke="#2563eb" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="484" y="112" font-size="13" fill="#2563eb" text-anchor="middle">yosh</text>
+  <line x1="640" y1="120" x2="676" y2="120" stroke="#16a34a" stroke-width="2" marker-end="url(#arG)"/>
+  <text x="660" y="112" font-size="13" fill="#16a34a" text-anchor="middle">clear()</text>
+
+  <!-- self-loop on age (bad input stays) -->
+  <path d="M370 92 C 360 60, 430 60, 420 92" fill="none" stroke="#f59e0b" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="395" y="58" font-size="13" fill="#f59e0b" text-anchor="middle">noto'g'ri yosh -> shu holatda qoladi</text>
+
+  <!-- cancel: any state -> end -->
+  <rect x="220" y="250" width="320" height="50" rx="10" fill="#fff" stroke="#dc2626" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="380" y="272" font-size="14" font-weight="bold" fill="#dc2626" text-anchor="middle">/cancel  (StateFilter("*"))</text>
+  <text x="380" y="292" font-size="13" fill="#334155" text-anchor="middle">istalgan holatdan -> state.clear() -> boshlanish</text>
+
+  <line x1="215" y1="148" x2="280" y2="250" stroke="#dc2626" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arR)"/>
+  <line x1="395" y1="148" x2="380" y2="250" stroke="#dc2626" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arR)"/>
+  <line x1="575" y1="148" x2="490" y2="250" stroke="#dc2626" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arR)"/>
+
+  <!-- legend -->
+  <text x="40" y="345" font-size="13" fill="#334155">Izoh:</text>
+  <line x1="90" y1="341" x2="120" y2="341" stroke="#2563eb" stroke-width="2"/>
+  <text x="126" y="345" font-size="13" fill="#334155">to'g'ri javob -> keyingi holat</text>
+  <line x1="340" y1="341" x2="370" y2="341" stroke="#f59e0b" stroke-width="2"/>
+  <text x="376" y="345" font-size="13" fill="#334155">noto'g'ri -> shu holatda</text>
+  <line x1="560" y1="341" x2="590" y2="341" stroke="#dc2626" stroke-width="2" stroke-dasharray="5 4"/>
+  <text x="596" y="345" font-size="13" fill="#334155">/cancel -> chiqish</text>
+
+  <text x="380" y="392" font-size="13" fill="#334155" text-anchor="middle">Har bir foydalanuvchi (chat) uchun holat ALOHIDA saqlanadi — biri name'da, biri age'da bo'lishi mumkin.</text>
+</svg>

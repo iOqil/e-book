@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 420" font-family="Segoe UI, sans-serif">
+  <title>Production'da polling va webhookni tanlash mezonlari</title>
+  <rect width="780" height="420" fill="#f8fafc"/>
+  <text x="390" y="34" font-size="19" font-weight="bold" fill="#1e293b" text-anchor="middle">Production: polling yoki webhook?</text>
+
+  <!-- Polling -->
+  <rect x="28" y="58" width="350" height="330" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="203" y="88" font-size="16" font-weight="bold" fill="#2563eb" text-anchor="middle">Polling (start_polling)</text>
+  <text x="203" y="112" font-size="13" fill="#64748b" text-anchor="middle">Bot Telegram'dan o'zi so'rab oladi</text>
+
+  <text x="52" y="146" font-size="13" fill="#16a34a">+ public HTTPS URL kerakmas</text>
+  <text x="52" y="172" font-size="13" fill="#16a34a">+ sozlash juda oddiy</text>
+  <text x="52" y="198" font-size="13" fill="#16a34a">+ NAT/portsiz VPS'da ham yuradi</text>
+  <text x="52" y="224" font-size="13" fill="#16a34a">+ kichik-o'rta bot uchun yetarli</text>
+  <text x="52" y="256" font-size="13" fill="#dc2626">- bir vaqtda faqat 1 instans</text>
+  <text x="52" y="282" font-size="13" fill="#dc2626">- gorizontal scaling qiyin</text>
+
+  <rect x="52" y="306" width="302" height="62" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="203" y="330" font-size="13" font-weight="bold" fill="#2563eb" text-anchor="middle">Tavsiya:</text>
+  <text x="203" y="352" font-size="13" fill="#334155" text-anchor="middle">aksariyat botlar uchun boshlang'ich tanlov</text>
+
+  <!-- Webhook -->
+  <rect x="402" y="58" width="350" height="330" rx="12" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="577" y="88" font-size="16" font-weight="bold" fill="#f59e0b" text-anchor="middle">Webhook (aiohttp server)</text>
+  <text x="577" y="112" font-size="13" fill="#64748b" text-anchor="middle">Telegram o'zi botning URL'iga POST qiladi</text>
+
+  <text x="426" y="146" font-size="13" fill="#16a34a">+ tezkor, kam tarmoq yuki</text>
+  <text x="426" y="172" font-size="13" fill="#16a34a">+ ko'p instansli scalingga mos</text>
+  <text x="426" y="198" font-size="13" fill="#16a34a">+ katta yuklamali botga ideal</text>
+  <text x="426" y="230" font-size="13" fill="#dc2626">- public HTTPS URL/domen kerak</text>
+  <text x="426" y="256" font-size="13" fill="#dc2626">- reverse proxy (nginx) + sertifikat</text>
+  <text x="426" y="282" font-size="13" fill="#dc2626">- secret_token bilan himoya shart</text>
+
+  <rect x="426" y="306" width="302" height="62" rx="8" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="577" y="330" font-size="13" font-weight="bold" fill="#f59e0b" text-anchor="middle">Tavsiya:</text>
+  <text x="577" y="352" font-size="13" fill="#334155" text-anchor="middle">yuqori yuk / mikroservis arxitekturasi</text>
+
+  <text x="390" y="408" font-size="13" fill="#64748b" text-anchor="middle">Bitta token uchun bir vaqtda yo polling, yo webhook — ikkisi birga emas.</text>
+</svg>

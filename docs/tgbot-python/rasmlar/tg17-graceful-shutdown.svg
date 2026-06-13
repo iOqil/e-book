@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" font-family="Segoe UI, sans-serif">
+  <title>Graceful shutdown: SIGTERM dan keyin tartibli to'xtash bosqichlari</title>
+  <rect width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="34" font-size="19" font-weight="bold" fill="#1e293b" text-anchor="middle">Graceful shutdown (tartibli to'xtash)</text>
+
+  <!-- signal -->
+  <rect x="280" y="56" width="200" height="50" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="380" y="78" font-size="14" font-weight="bold" fill="#f59e0b" text-anchor="middle">SIGTERM / SIGINT</text>
+  <text x="380" y="96" font-size="13" fill="#64748b" text-anchor="middle">systemctl stop / Ctrl+C</text>
+
+  <line x1="380" y1="106" x2="380" y2="134" stroke="#94a3b8" stroke-width="2" marker-end="url(#aa)"/>
+
+  <!-- bosqich 1 -->
+  <rect x="180" y="134" width="400" height="46" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="380" y="162" font-size="14" fill="#1e293b" text-anchor="middle">1. Yangi update qabul qilish to'xtaydi (polling/webhook)</text>
+  <line x1="380" y1="180" x2="380" y2="200" stroke="#94a3b8" stroke-width="2" marker-end="url(#aa)"/>
+
+  <!-- bosqich 2 -->
+  <rect x="180" y="200" width="400" height="46" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="380" y="228" font-size="14" fill="#1e293b" text-anchor="middle">2. Ishlayotgan handler'lar tugashini kutadi</text>
+  <line x1="380" y1="246" x2="380" y2="266" stroke="#94a3b8" stroke-width="2" marker-end="url(#aa)"/>
+
+  <!-- bosqich 3 -->
+  <rect x="180" y="266" width="400" height="46" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="380" y="294" font-size="14" fill="#1e293b" text-anchor="middle">3. on_shutdown: DB/Redis ulanishini yopadi</text>
+  <line x1="380" y1="312" x2="380" y2="332" stroke="#94a3b8" stroke-width="2" marker-end="url(#aa)"/>
+
+  <!-- bosqich 4 -->
+  <rect x="180" y="332" width="400" height="46" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="380" y="360" font-size="14" fill="#1e293b" text-anchor="middle">4. bot.session.close() -&gt; toza chiqish</text>
+
+  <!-- yon izoh: yomon yo'l -->
+  <rect x="600" y="200" width="140" height="112" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="670" y="224" font-size="13" font-weight="bold" fill="#dc2626" text-anchor="middle">SIGKILL (-9)</text>
+  <text x="670" y="248" font-size="13" fill="#334155" text-anchor="middle">darhol o'ladi</text>
+  <text x="670" y="268" font-size="13" fill="#334155" text-anchor="middle">handler uzilib</text>
+  <text x="670" y="286" font-size="13" fill="#334155" text-anchor="middle">qoladi, ulanish</text>
+  <text x="670" y="304" font-size="13" fill="#dc2626" text-anchor="middle">yopilmaydi</text>
+
+  <defs>
+    <marker id="aa" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/></marker>
+  </defs>
+</svg>

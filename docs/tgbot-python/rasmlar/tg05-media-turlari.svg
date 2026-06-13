@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470">
+  <title>Media yuborish metodlari va InputFile manbalari</title>
+  <rect width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b">Media yuborish: manba va metod</text>
+
+  <!-- Left: InputFile manbalar -->
+  <text x="190" y="72" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#1e40af">Fayl manbasi (InputFile)</text>
+
+  <rect x="40" y="86" width="300" height="58" rx="9" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="60" y="110" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">FSInputFile("rasm.jpg")</text>
+  <text x="60" y="132" font-family="Segoe UI" font-size="13" fill="#334155">diskdagi lokal fayl</text>
+
+  <rect x="40" y="152" width="300" height="58" rx="9" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="60" y="176" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">URLInputFile("https://...")</text>
+  <text x="60" y="198" font-family="Segoe UI" font-size="13" fill="#334155">internetdagi havola</text>
+
+  <rect x="40" y="218" width="300" height="58" rx="9" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="60" y="242" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">BufferedInputFile(bytes)</text>
+  <text x="60" y="264" font-family="Segoe UI" font-size="13" fill="#334155">xotiradagi baytlar</text>
+
+  <rect x="40" y="284" width="300" height="58" rx="9" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="60" y="308" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#166534">"file_id" (str)</text>
+  <text x="60" y="330" font-family="Segoe UI" font-size="13" fill="#334155">Telegram saqlagan, eng tez</text>
+
+  <!-- arrow to methods -->
+  <line x1="345" y1="214" x2="415" y2="214" stroke="#2563eb" stroke-width="3" marker-end="url(#m)"/>
+
+  <!-- Right: metodlar -->
+  <text x="575" y="72" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#1e40af">Yuborish metodi</text>
+
+  <rect x="420" y="86" width="300" height="40" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="436" y="111" font-family="Segoe UI" font-size="14" fill="#1e293b">answer_photo(...)  — rasm</text>
+
+  <rect x="420" y="132" width="300" height="40" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="436" y="157" font-family="Segoe UI" font-size="14" fill="#1e293b">answer_document(...) — fayl</text>
+
+  <rect x="420" y="178" width="300" height="40" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="436" y="203" font-family="Segoe UI" font-size="14" fill="#1e293b">answer_video(...) — video</text>
+
+  <rect x="420" y="224" width="300" height="40" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="436" y="249" font-family="Segoe UI" font-size="14" fill="#1e293b">answer_audio(...) — audio</text>
+
+  <rect x="420" y="270" width="300" height="40" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="436" y="295" font-family="Segoe UI" font-size="14" fill="#92400e">answer_media_group(...) — albom</text>
+
+  <!-- caption note -->
+  <rect x="420" y="324" width="300" height="56" rx="9" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="570" y="346" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#1e40af">caption = izoh matni</text>
+  <text x="570" y="367" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">parse_mode bilan formatlanadi</text>
+
+  <!-- bottom strip -->
+  <rect x="40" y="400" width="680" height="50" rx="9" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="380" y="422" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#166534">Maslahat: bir marta yuborgan faylning file_id sini saqlang</text>
+  <text x="380" y="442" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">keyingi safar qayta yuklamasdan, faqat file_id bilan tezda jo'nating</text>
+
+  <defs>
+    <marker id="m" markerWidth="10" markerHeight="10" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0 L8,3.5 L0,7 Z" fill="#2563eb"/>
+    </marker>
+  </defs>
+</svg>

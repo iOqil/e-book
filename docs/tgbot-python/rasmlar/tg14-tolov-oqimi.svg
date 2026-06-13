@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420">
+  <title>Telegram to'lov oqimi: invoice dan successful_payment gacha</title>
+  <rect width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b">Telegram to'lov oqimi (4 qadam)</text>
+
+  <!-- Bot -->
+  <rect x="30" y="70" width="150" height="60" rx="10" fill="#2563eb"/>
+  <text x="105" y="98" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#ffffff">Bot</text>
+  <text x="105" y="118" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dbeafe">(sizning kodingiz)</text>
+
+  <!-- Telegram -->
+  <rect x="305" y="70" width="150" height="60" rx="10" fill="#334155"/>
+  <text x="380" y="98" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#ffffff">Telegram</text>
+  <text x="380" y="118" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#cbd5e1">(to'lov tizimi)</text>
+
+  <!-- Foydalanuvchi -->
+  <rect x="580" y="70" width="150" height="60" rx="10" fill="#16a34a"/>
+  <text x="655" y="98" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#ffffff">Foydalanuvchi</text>
+  <text x="655" y="118" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dcfce7">(chat)</text>
+
+  <!-- 1: send_invoice -->
+  <text x="105" y="172" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#2563eb">1</text>
+  <line x1="180" y1="178" x2="730" y2="178" stroke="#2563eb" stroke-width="2"/>
+  <polygon points="730,178 720,173 720,183" fill="#2563eb"/>
+  <text x="455" y="170" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">send_invoice() -> hisob-faktura xabari paydo bo'ladi</text>
+
+  <!-- 2: To'lov tugmasi -->
+  <text x="655" y="216" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#16a34a">2</text>
+  <line x1="580" y1="222" x2="455" y2="222" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="455,222 465,217 465,227" fill="#16a34a"/>
+  <text x="517" y="214" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">"To'lash" bosadi</text>
+
+  <!-- 3: pre_checkout_query -->
+  <text x="380" y="262" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#f59e0b">3</text>
+  <line x1="305" y1="268" x2="180" y2="268" stroke="#f59e0b" stroke-width="2"/>
+  <polygon points="180,268 190,263 190,273" fill="#f59e0b"/>
+  <text x="242" y="260" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">pre_checkout_query</text>
+  <line x1="180" y1="298" x2="305" y2="298" stroke="#f59e0b" stroke-width="2" stroke-dasharray="5 4"/>
+  <polygon points="305,298 295,293 295,303" fill="#f59e0b"/>
+  <text x="242" y="318" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">answer(ok=True) — 10 soniya ichida!</text>
+
+  <!-- 4: successful_payment -->
+  <text x="380" y="362" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#16a34a">4</text>
+  <line x1="730" y1="368" x2="180" y2="368" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="180,368 190,363 190,373" fill="#16a34a"/>
+  <text x="455" y="360" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">message.successful_payment -> mahsulotni bering</text>
+
+  <rect x="30" y="388" width="700" height="24" rx="6" fill="#dbeafe"/>
+  <text x="380" y="404" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">3-qadamga 10 soniyada ok=True javob bermasangiz, to'lov BEKOR bo'ladi.</text>
+</svg>

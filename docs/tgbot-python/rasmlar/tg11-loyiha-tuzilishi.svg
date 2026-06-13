@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 460" font-family="Segoe UI, sans-serif">
+  <title>Modullashtirilgan bot loyihasi tuzilishi: bot/ paketi va ichki modullar</title>
+  <rect x="0" y="0" width="760" height="460" fill="#f8fafc"/>
+  <text x="380" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Katta bot loyihasining tuzilishi</text>
+
+  <!-- chap: bitta fayl (yomon) -->
+  <rect x="30" y="64" width="210" height="360" rx="10" fill="#fff" stroke="#dc2626" stroke-width="2"/>
+  <text x="135" y="92" font-size="15" font-weight="bold" fill="#dc2626" text-anchor="middle">Bitta fayl (yomon)</text>
+  <rect x="55" y="110" width="160" height="290" rx="6" fill="#fef2f2" stroke="#94a3b8"/>
+  <text x="135" y="135" font-size="14" fill="#334155" text-anchor="middle">main.py</text>
+  <text x="135" y="165" font-size="13" fill="#64748b" text-anchor="middle">handler 1</text>
+  <text x="135" y="190" font-size="13" fill="#64748b" text-anchor="middle">handler 2</text>
+  <text x="135" y="215" font-size="13" fill="#64748b" text-anchor="middle">handler ...</text>
+  <text x="135" y="240" font-size="13" fill="#64748b" text-anchor="middle">klaviaturalar</text>
+  <text x="135" y="265" font-size="13" fill="#64748b" text-anchor="middle">FSM holatlar</text>
+  <text x="135" y="290" font-size="13" fill="#64748b" text-anchor="middle">DB kodi</text>
+  <text x="135" y="315" font-size="13" fill="#64748b" text-anchor="middle">config</text>
+  <text x="135" y="340" font-size="13" fill="#64748b" text-anchor="middle">2000+ qator</text>
+  <text x="135" y="380" font-size="13" fill="#dc2626" text-anchor="middle">o'qib bo'lmaydi</text>
+
+  <!-- o'ng: paket (yaxshi) -->
+  <rect x="300" y="64" width="430" height="360" rx="10" fill="#fff" stroke="#16a34a" stroke-width="2"/>
+  <text x="515" y="92" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="middle">Modullar (yaxshi)</text>
+
+  <text x="320" y="125" font-size="14" fill="#2563eb" font-weight="bold">bot/</text>
+  <text x="345" y="150" font-size="13" fill="#334155">config.py        — sozlamalar (.env)</text>
+  <text x="345" y="175" font-size="13" fill="#334155">handlers/        — buyruq/xabar handlerlari</text>
+  <text x="365" y="198" font-size="13" fill="#64748b">start.py, common.py, admin.py</text>
+  <text x="345" y="223" font-size="13" fill="#334155">keyboards/      — klaviatura quruvchilar</text>
+  <text x="345" y="248" font-size="13" fill="#334155">states/            — FSM StatesGroup lar</text>
+  <text x="345" y="273" font-size="13" fill="#334155">services/         — biznes-logika, DB</text>
+  <text x="345" y="298" font-size="13" fill="#334155">middlewares/  — middleware zanjiri</text>
+  <text x="320" y="325" font-size="14" fill="#2563eb" font-weight="bold">main.py</text>
+  <text x="345" y="348" font-size="13" fill="#64748b">bot + dp ni boshlaydi</text>
+  <text x="320" y="375" font-size="14" fill="#2563eb" font-weight="bold">.env</text>
+  <text x="345" y="398" font-size="13" fill="#64748b">BOT_TOKEN (git ga kirmaydi)</text>
+
+  <!-- strelka -->
+  <line x1="245" y1="244" x2="295" y2="244" stroke="#f59e0b" stroke-width="3" marker-end="url(#a)"/>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#f59e0b"/></marker></defs>
+</svg>

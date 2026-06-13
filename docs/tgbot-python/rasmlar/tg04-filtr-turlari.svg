@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470">
+  <title>aiogram 3.x filtr turlari: Command, CommandStart, F magic, custom BaseFilter</title>
+  <rect width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="36" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">aiogram 3.x — filtr turlari</text>
+
+  <!-- Command -->
+  <rect x="30" y="64" width="345" height="180" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="50" y="92" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb">Command(...)</text>
+  <text x="50" y="118" font-family="Segoe UI" font-size="13.5" fill="#334155">Buyruqlar uchun: /help, /ban</text>
+  <text x="50" y="140" font-family="Segoe UI" font-size="13" fill="#475569">- bir nechta nom: Command("a","b")</text>
+  <text x="50" y="160" font-family="Segoe UI" font-size="13" fill="#475569">- prefix="/!", ignore_case=True</text>
+  <text x="50" y="180" font-family="Segoe UI" font-size="13" fill="#475569">- regex: Command(re.compile(...))</text>
+  <text x="50" y="200" font-family="Segoe UI" font-size="13" fill="#475569">- CommandObject: command, args</text>
+  <text x="50" y="228" font-family="Segoe UI" font-size="13" fill="#16a34a">from aiogram.filters import Command</text>
+
+  <!-- CommandStart -->
+  <rect x="385" y="64" width="345" height="180" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="405" y="92" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a">CommandStart(...)</text>
+  <text x="405" y="118" font-family="Segoe UI" font-size="13.5" fill="#334155">Faqat /start uchun maxsus</text>
+  <text x="405" y="140" font-family="Segoe UI" font-size="13" fill="#475569">- deep_link=True -&gt; havola payload</text>
+  <text x="405" y="160" font-family="Segoe UI" font-size="13" fill="#475569">- command.args = "ref_oqil"</text>
+  <text x="405" y="180" font-family="Segoe UI" font-size="13" fill="#475569">- t.me/Bot?start=ref_oqil</text>
+  <text x="405" y="200" font-family="Segoe UI" font-size="13" fill="#475569">- referal, login, deeplink</text>
+  <text x="405" y="228" font-family="Segoe UI" font-size="13" fill="#16a34a">from aiogram.filters import CommandStart</text>
+
+  <!-- F magic -->
+  <rect x="30" y="256" width="345" height="190" rx="12" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="50" y="284" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#b45309">F — magic filter</text>
+  <text x="50" y="310" font-family="Segoe UI" font-size="13.5" fill="#334155">Maydonlar bo'yicha "sehrli" shart</text>
+  <text x="50" y="332" font-family="Segoe UI" font-size="13" fill="#475569">- F.text == "salom"</text>
+  <text x="50" y="352" font-family="Segoe UI" font-size="13" fill="#475569">- F.text.startswith("narx_")</text>
+  <text x="50" y="372" font-family="Segoe UI" font-size="13" fill="#475569">- F.photo, F.content_type == ...</text>
+  <text x="50" y="392" font-family="Segoe UI" font-size="13" fill="#475569">- F &amp; F, F | F, ~F (mantiq)</text>
+  <text x="50" y="412" font-family="Segoe UI" font-size="13" fill="#475569">- .in_(...), .regexp(...).as_("m")</text>
+  <text x="50" y="436" font-family="Segoe UI" font-size="13" fill="#16a34a">from aiogram import F</text>
+
+  <!-- custom -->
+  <rect x="385" y="256" width="345" height="190" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="405" y="284" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#dc2626">Custom: BaseFilter</text>
+  <text x="405" y="310" font-family="Segoe UI" font-size="13.5" fill="#334155">O'z mantiqingiz (admin, til, DB)</text>
+  <text x="405" y="332" font-family="Segoe UI" font-size="13" fill="#475569">- class F(BaseFilter)</text>
+  <text x="405" y="352" font-family="Segoe UI" font-size="13" fill="#475569">- async def __call__(self, msg)</text>
+  <text x="405" y="372" font-family="Segoe UI" font-size="13" fill="#475569">- True/False qaytaradi</text>
+  <text x="405" y="392" font-family="Segoe UI" font-size="13" fill="#475569">- yoki dict -&gt; handlerga uzatiladi</text>
+  <text x="405" y="412" font-family="Segoe UI" font-size="13" fill="#475569">- __init__ orqali parametr</text>
+  <text x="405" y="436" font-family="Segoe UI" font-size="13" fill="#16a34a">from aiogram.filters import BaseFilter</text>
+</svg>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 440" font-family="Segoe UI, sans-serif">
+  <title>Production deploy arxitekturasi: VPS, Docker, systemd, Telegram</title>
+  <rect width="780" height="440" fill="#f8fafc"/>
+  <text x="390" y="34" font-size="19" font-weight="bold" fill="#1e293b" text-anchor="middle">Production deploy arxitekturasi</text>
+
+  <!-- Telegram bulut -->
+  <rect x="300" y="60" width="180" height="56" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="390" y="84" font-size="15" font-weight="bold" fill="#2563eb" text-anchor="middle">Telegram Bot API</text>
+  <text x="390" y="104" font-size="13" fill="#64748b" text-anchor="middle">api.telegram.org</text>
+
+  <!-- VPS quti -->
+  <rect x="40" y="150" width="700" height="256" rx="14" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="64" y="178" font-size="15" font-weight="bold" fill="#334155">VPS (Linux server, masalan Ubuntu)</text>
+
+  <!-- systemd -->
+  <rect x="64" y="196" width="296" height="190" rx="10" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"/>
+  <text x="212" y="220" font-size="14" font-weight="bold" fill="#f59e0b" text-anchor="middle">systemd (yoki supervisor)</text>
+  <text x="212" y="240" font-size="13" fill="#334155" text-anchor="middle">Restart=always — yiqilsa qayta yoqadi</text>
+
+  <!-- Docker konteyner -->
+  <rect x="88" y="252" width="248" height="120" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="212" y="274" font-size="14" font-weight="bold" fill="#2563eb" text-anchor="middle">Docker konteyner</text>
+  <rect x="112" y="288" width="200" height="68" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="212" y="312" font-size="14" fill="#1e293b" text-anchor="middle">aiogram bot</text>
+  <text x="212" y="332" font-size="13" fill="#64748b" text-anchor="middle">python -m bot</text>
+  <text x="212" y="349" font-size="13" fill="#64748b" text-anchor="middle">.env -&gt; BOT_TOKEN</text>
+
+  <!-- yon servislar -->
+  <rect x="392" y="196" width="320" height="86" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="552" y="220" font-size="14" font-weight="bold" fill="#334155" text-anchor="middle">Yon servislar (xizmatlar)</text>
+  <rect x="412" y="232" width="130" height="38" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="477" y="256" font-size="13" fill="#1e293b" text-anchor="middle">Redis (FSM)</text>
+  <rect x="562" y="232" width="130" height="38" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="627" y="256" font-size="13" fill="#1e293b" text-anchor="middle">PostgreSQL/DB</text>
+
+  <!-- log/monitoring -->
+  <rect x="392" y="296" width="320" height="90" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="552" y="320" font-size="14" font-weight="bold" fill="#334155" text-anchor="middle">Log va monitoring</text>
+  <text x="552" y="342" font-size="13" fill="#334155" text-anchor="middle">journalctl / fayl loglari</text>
+  <text x="552" y="362" font-size="13" fill="#334155" text-anchor="middle">xatolik -&gt; Sentry / admin xabari</text>
+
+  <!-- strelkalar Telegram <-> bot -->
+  <line x1="360" y1="116" x2="220" y2="250" stroke="#2563eb" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="232" y="180" font-size="13" fill="#2563eb">getUpdates (polling)</text>
+  <line x1="240" y1="288" x2="360" y2="118" stroke="#16a34a" stroke-width="2" marker-end="url(#ag)"/>
+  <text x="300" y="232" font-size="13" fill="#16a34a">sendMessage</text>
+
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/></marker>
+    <marker id="ag" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/></marker>
+  </defs>
+</svg>
