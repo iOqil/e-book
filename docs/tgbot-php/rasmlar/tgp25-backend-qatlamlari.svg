@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 450" font-family="Segoe UI, sans-serif">
+  <title>Mini App backend qatlamlari: static, router, guard, API va DB</title>
+  <rect x="0" y="0" width="760" height="450" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">Backend ichidagi qatlamlar</text>
+
+  <defs>
+    <marker id="al" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#334155"/>
+    </marker>
+  </defs>
+
+  <!-- front controller -->
+  <rect x="270" y="62" width="220" height="56" rx="8" fill="#2563eb"/>
+  <text x="380" y="86" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">public/index.php</text>
+  <text x="380" y="106" text-anchor="middle" font-size="13" fill="#dbeafe">router (front controller)</text>
+
+  <!-- static branch -->
+  <line x1="300" y1="118" x2="170" y2="168" stroke="#334155" stroke-width="2" marker-end="url(#al)"/>
+  <rect x="40" y="170" width="240" height="60" rx="8" fill="#fff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="160" y="194" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e293b">GET /  ->  app.html</text>
+  <text x="160" y="214" text-anchor="middle" font-size="13" fill="#334155">static fayllarni serve qiladi</text>
+
+  <!-- api branch -->
+  <line x1="430" y1="118" x2="540" y2="168" stroke="#334155" stroke-width="2" marker-end="url(#al)"/>
+  <rect x="430" y="170" width="290" height="60" rx="8" fill="#fff7ed" stroke="#f59e0b" stroke-width="2"/>
+  <text x="575" y="194" text-anchor="middle" font-size="14" font-weight="bold" fill="#92400e">/api/* -> auth guard</text>
+  <text x="575" y="214" text-anchor="middle" font-size="13" fill="#334155">requireUser(): initData tekshir</text>
+
+  <!-- guard -> service -->
+  <line x1="575" y1="230" x2="575" y2="268" stroke="#334155" stroke-width="2" marker-end="url(#al)"/>
+  <rect x="430" y="270" width="290" height="60" rx="8" fill="#16a34a"/>
+  <text x="575" y="294" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">API handler / xizmat</text>
+  <text x="575" y="314" text-anchor="middle" font-size="13" fill="#dcfce7">getScore / addCoins (mantiq)</text>
+
+  <!-- service -> db -->
+  <line x1="575" y1="330" x2="575" y2="368" stroke="#334155" stroke-width="2" marker-end="url(#al)"/>
+  <rect x="430" y="370" width="290" height="56" rx="8" fill="#fff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="575" y="394" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e293b">PDO + SQLite (storage/)</text>
+  <text x="575" y="414" text-anchor="middle" font-size="13" fill="#334155">holatni doimiy saqlaydi</text>
+
+  <!-- token note -->
+  <rect x="40" y="270" width="240" height="156" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="160" y="298" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e3a8a">.env</text>
+  <text x="160" y="324" text-anchor="middle" font-size="13" fill="#334155">BOT_TOKEN — guard'ga</text>
+  <text x="160" y="344" text-anchor="middle" font-size="13" fill="#334155">kerak (HMAC kaliti)</text>
+  <text x="160" y="372" text-anchor="middle" font-size="13" fill="#334155">CORS sarlavhalari ham</text>
+  <text x="160" y="392" text-anchor="middle" font-size="13" fill="#334155">shu yerda qo'shiladi</text>
+  <text x="160" y="412" text-anchor="middle" font-size="13" fill="#334155">(boshqa domen uchun)</text>
+</svg>

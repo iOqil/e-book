@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 430" font-family="Segoe UI, sans-serif">
+  <title>Docker konteyner, xato boshqaruvi va monitoring oqimi</title>
+  <rect x="0" y="0" width="780" height="430" fill="#f8fafc"/>
+  <text x="390" y="32" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Docker + xato boshqaruvi + monitoring</text>
+
+  <!-- docker-compose tashqi quti -->
+  <rect x="28" y="56" width="430" height="330" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="243" y="80" font-size="15" fill="#2563eb" text-anchor="middle" font-weight="bold">docker-compose.yml</text>
+
+  <!-- bot servis -->
+  <rect x="52" y="96" width="382" height="92" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="243" y="118" font-size="14" fill="#1e3a8a" text-anchor="middle" font-weight="bold">servis: bot (Dockerfile, php-cli 8.4)</text>
+  <text x="243" y="140" font-size="13" fill="#334155" text-anchor="middle">php bot.php — $bot-&gt;run() (polling)</text>
+  <text x="243" y="160" font-size="13" fill="#334155" text-anchor="middle">restart: unless-stopped</text>
+  <text x="243" y="178" font-size="13" fill="#64748b" text-anchor="middle">.env -&gt; environment (sirlar)</text>
+
+  <!-- redis -->
+  <rect x="52" y="200" width="184" height="74" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="144" y="224" font-size="14" fill="#b91c1c" text-anchor="middle" font-weight="bold">servis: redis</text>
+  <text x="144" y="246" font-size="13" fill="#334155" text-anchor="middle">holat / cache /</text>
+  <text x="144" y="264" font-size="13" fill="#334155" text-anchor="middle">RateLimit saqlash</text>
+
+  <!-- db -->
+  <rect x="250" y="200" width="184" height="74" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="342" y="224" font-size="14" fill="#166534" text-anchor="middle" font-weight="bold">servis: db</text>
+  <text x="342" y="246" font-size="13" fill="#334155" text-anchor="middle">MySQL / Postgres</text>
+  <text x="342" y="264" font-size="13" fill="#334155" text-anchor="middle">named volume</text>
+
+  <!-- logging -->
+  <rect x="52" y="288" width="382" height="78" rx="10" fill="#fff7ed" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="243" y="310" font-size="14" fill="#92400e" text-anchor="middle" font-weight="bold">Monolog -&gt; stdout (JSON)</text>
+  <text x="243" y="332" font-size="13" fill="#334155" text-anchor="middle">onException / onApiError -&gt; log + foydalanuvchiga uzr</text>
+  <text x="243" y="352" font-size="13" fill="#64748b" text-anchor="middle">docker logs orqali yig'iladi</text>
+
+  <!-- monitoring tashqarida -->
+  <rect x="492" y="96" width="262" height="92" rx="10" fill="#dc2626"/>
+  <text x="623" y="128" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Xato kuzatuvi</text>
+  <text x="623" y="150" font-size="13" fill="#ffffff" text-anchor="middle">Sentry / log yig'gich</text>
+  <text x="623" y="170" font-size="13" fill="#ffffff" text-anchor="middle">ogohlantirish (alert)</text>
+
+  <rect x="492" y="208" width="262" height="80" rx="10" fill="#16a34a"/>
+  <text x="623" y="238" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Uptime / healthcheck</text>
+  <text x="623" y="260" font-size="13" fill="#ffffff" text-anchor="middle">getMe pingi, jarayon tirikmi</text>
+  <text x="623" y="280" font-size="13" fill="#ffffff" text-anchor="middle">qulasa — alert</text>
+
+  <rect x="492" y="308" width="262" height="58" rx="10" fill="#2563eb"/>
+  <text x="623" y="334" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">CI/CD</text>
+  <text x="623" y="354" font-size="13" fill="#ffffff" text-anchor="middle">git push -&gt; build -&gt; deploy</text>
+
+  <!-- oqlar -->
+  <line x1="434" y1="327" x2="490" y2="150" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="434" y1="240" x2="490" y2="245" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+
+  <text x="390" y="408" font-size="13" fill="#334155" text-anchor="middle">Sirlar koddan tashqarida (.env), log markazlashgan, qulash -&gt; avtomatik qayta ishga tushish + alert</text>
+
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/></marker>
+  </defs>
+</svg>

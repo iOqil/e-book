@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" font-family="Segoe UI, sans-serif">
+  <title>Broadcast oqimi: DB foydalanuvchilari -> partiyalab yuborish</title>
+  <rect width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">Broadcast oqimi (ommaviy tarqatish)</text>
+
+  <!-- DB -->
+  <rect x="30" y="80" width="150" height="110" rx="10" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+  <text x="105" y="110" text-anchor="middle" font-size="15" font-weight="bold" fill="#2563eb">users jadvali</text>
+  <text x="105" y="135" text-anchor="middle" font-size="13" fill="#334155">id (chat_id)</text>
+  <text x="105" y="155" text-anchor="middle" font-size="13" fill="#334155">is_active = 1</text>
+  <text x="105" y="178" text-anchor="middle" font-size="13" fill="#94a3b8">SELECT ... WHERE</text>
+
+  <!-- arrow -->
+  <line x1="180" y1="135" x2="240" y2="135" stroke="#94a3b8" stroke-width="2" marker-end="url(#a15)"/>
+
+  <!-- chunk -->
+  <rect x="245" y="80" width="180" height="110" rx="10" fill="#fff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="335" y="108" text-anchor="middle" font-size="15" font-weight="bold" fill="#f59e0b">array_chunk(30)</text>
+  <text x="335" y="132" text-anchor="middle" font-size="13" fill="#334155">partiya 1: 30 ta</text>
+  <text x="335" y="152" text-anchor="middle" font-size="13" fill="#334155">partiya 2: 30 ta</text>
+  <text x="335" y="172" text-anchor="middle" font-size="13" fill="#334155">... + sleep(1s)</text>
+
+  <line x1="425" y1="135" x2="485" y2="135" stroke="#94a3b8" stroke-width="2" marker-end="url(#a15)"/>
+
+  <!-- send loop -->
+  <rect x="490" y="80" width="240" height="110" rx="10" fill="#fff" stroke="#16a34a" stroke-width="2"/>
+  <text x="610" y="108" text-anchor="middle" font-size="15" font-weight="bold" fill="#16a34a">foreach: sendMessage</text>
+  <text x="610" y="132" text-anchor="middle" font-size="13" fill="#334155">har chat_id ga</text>
+  <text x="610" y="152" text-anchor="middle" font-size="13" fill="#334155">try / catch bilan</text>
+  <text x="610" y="172" text-anchor="middle" font-size="13" fill="#334155">flood-control</text>
+
+  <!-- outcomes -->
+  <line x1="610" y1="190" x2="610" y2="240" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="180" y1="240" x2="730" y2="240" stroke="#94a3b8" stroke-width="2"/>
+
+  <rect x="60" y="260" width="200" height="110" rx="10" fill="#fff" stroke="#16a34a" stroke-width="2"/>
+  <line x1="180" y1="240" x2="160" y2="260" stroke="#94a3b8" stroke-width="2" marker-end="url(#a15)"/>
+  <text x="160" y="288" text-anchor="middle" font-size="15" font-weight="bold" fill="#16a34a">200 OK</text>
+  <text x="160" y="312" text-anchor="middle" font-size="13" fill="#334155">yetdi -> sanoq++</text>
+  <text x="160" y="334" text-anchor="middle" font-size="13" fill="#334155">delivered++</text>
+
+  <rect x="290" y="260" width="200" height="110" rx="10" fill="#fff" stroke="#f59e0b" stroke-width="2"/>
+  <line x1="390" y1="240" x2="390" y2="260" stroke="#94a3b8" stroke-width="2" marker-end="url(#a15)"/>
+  <text x="390" y="288" text-anchor="middle" font-size="15" font-weight="bold" fill="#f59e0b">429</text>
+  <text x="390" y="312" text-anchor="middle" font-size="13" fill="#334155">retry_after kut</text>
+  <text x="390" y="334" text-anchor="middle" font-size="13" fill="#334155">-> qayta yubor</text>
+
+  <rect x="520" y="260" width="200" height="110" rx="10" fill="#fff" stroke="#dc2626" stroke-width="2"/>
+  <line x1="620" y1="240" x2="620" y2="260" stroke="#94a3b8" stroke-width="2" marker-end="url(#a15)"/>
+  <text x="620" y="288" text-anchor="middle" font-size="15" font-weight="bold" fill="#dc2626">403</text>
+  <text x="620" y="312" text-anchor="middle" font-size="13" fill="#334155">bot bloklangan</text>
+  <text x="620" y="334" text-anchor="middle" font-size="13" fill="#334155">is_active = 0</text>
+
+  <defs>
+    <marker id="a15" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+</svg>

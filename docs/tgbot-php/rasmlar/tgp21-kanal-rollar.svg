@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" font-family="Segoe UI, sans-serif">
+  <title>Kanal arxitekturasi: bot admin, post yuborish va onChannelPost</title>
+  <rect width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">Kanal: bot admin sifatida</text>
+
+  <!-- Bot -->
+  <rect x="40" y="160" width="170" height="110" rx="10" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+  <text x="125" y="200" text-anchor="middle" font-size="16" font-weight="bold" fill="#2563eb">Bot (admin)</text>
+  <text x="125" y="226" text-anchor="middle" font-size="13" fill="#334155">post huquqi bilan</text>
+  <text x="125" y="248" text-anchor="middle" font-size="13" fill="#334155">promoteChatMember</text>
+
+  <!-- arrow send -->
+  <line x1="210" y1="195" x2="300" y2="195" stroke="#16a34a" stroke-width="2.5" marker-end="url(#a21)"/>
+  <text x="255" y="185" text-anchor="middle" font-size="13" fill="#16a34a" font-weight="bold">sendMessage</text>
+  <text x="255" y="215" text-anchor="middle" font-size="13" fill="#16a34a">chat_id=@kanal</text>
+
+  <!-- Channel -->
+  <rect x="305" y="150" width="180" height="130" rx="10" fill="#fff" stroke="#1e293b" stroke-width="2"/>
+  <text x="395" y="190" text-anchor="middle" font-size="16" font-weight="bold" fill="#1e293b">Kanal</text>
+  <text x="395" y="216" text-anchor="middle" font-size="13" fill="#334155">@mychannel</text>
+  <text x="395" y="238" text-anchor="middle" font-size="13" fill="#334155">id: -100...</text>
+  <text x="395" y="262" text-anchor="middle" font-size="13" fill="#94a3b8">faqat adminlar yozadi</text>
+
+  <!-- arrow update -->
+  <line x1="485" y1="195" x2="575" y2="195" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#a21)"/>
+  <text x="530" y="185" text-anchor="middle" font-size="13" fill="#f59e0b" font-weight="bold">update</text>
+  <text x="530" y="215" text-anchor="middle" font-size="13" fill="#f59e0b">channel_post</text>
+
+  <!-- Handler -->
+  <rect x="580" y="160" width="160" height="110" rx="10" fill="#fff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="660" y="196" text-anchor="middle" font-size="14" font-weight="bold" fill="#f59e0b">onChannelPost</text>
+  <text x="660" y="222" text-anchor="middle" font-size="13" fill="#334155">from = null</text>
+  <text x="660" y="244" text-anchor="middle" font-size="13" fill="#334155">sender_chat = kanal</text>
+
+  <!-- bottom note: subscribers -->
+  <rect x="305" y="320" width="180" height="80" rx="10" fill="#fff" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="395" y1="280" x2="395" y2="320" stroke="#94a3b8" stroke-width="2" marker-end="url(#a21)"/>
+  <text x="395" y="352" text-anchor="middle" font-size="14" font-weight="bold" fill="#334155">Obunachilar</text>
+  <text x="395" y="376" text-anchor="middle" font-size="13" fill="#94a3b8">postni o'qiydi</text>
+
+  <defs>
+    <marker id="a21" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+</svg>

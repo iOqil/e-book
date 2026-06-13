@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" font-family="Segoe UI, sans-serif">
+  <title>Bot guruhda admin sifatida: huquqlar va moderatsiya metodlari</title>
+  <rect x="0" y="0" width="760" height="380" fill="#f8fafc"/>
+  <text x="380" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Bot = guruh administratori</text>
+  <text x="380" y="56" font-size="14" fill="#64748b" text-anchor="middle">Har metod botning admin huquqini talab qiladi (aks holda: 400 not enough rights)</text>
+
+  <!-- markaz: bot -->
+  <rect x="300" y="80" width="160" height="56" rx="10" fill="#2563eb"/>
+  <text x="380" y="106" font-size="16" fill="#ffffff" text-anchor="middle" font-weight="bold">Bot (admin)</text>
+  <text x="380" y="126" font-size="13" fill="#dbeafe" text-anchor="middle">getChatMember -> status</text>
+
+  <!-- BAN -->
+  <rect x="40" y="180" width="160" height="86" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="120" y="206" font-size="15" fill="#dc2626" text-anchor="middle" font-weight="bold">Ban / Kick</text>
+  <text x="120" y="228" font-size="13" fill="#334155" text-anchor="middle">banChatMember</text>
+  <text x="120" y="247" font-size="13" fill="#334155" text-anchor="middle">unbanChatMember</text>
+  <text x="120" y="262" font-size="13" fill="#64748b" text-anchor="middle">guruhdan chiqaradi</text>
+
+  <!-- MUTE -->
+  <rect x="220" y="180" width="160" height="86" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="300" y="206" font-size="15" fill="#b45309" text-anchor="middle" font-weight="bold">Mute / Restrict</text>
+  <text x="300" y="228" font-size="13" fill="#334155" text-anchor="middle">restrictChatMember</text>
+  <text x="300" y="247" font-size="13" fill="#334155" text-anchor="middle">+ ChatPermissions</text>
+  <text x="300" y="262" font-size="13" fill="#64748b" text-anchor="middle">yozishni cheklaydi</text>
+
+  <!-- PROMOTE -->
+  <rect x="400" y="180" width="160" height="86" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="480" y="206" font-size="15" fill="#16a34a" text-anchor="middle" font-weight="bold">Promote</text>
+  <text x="480" y="228" font-size="13" fill="#334155" text-anchor="middle">promoteChatMember</text>
+  <text x="480" y="247" font-size="13" fill="#334155" text-anchor="middle">huquq beradi</text>
+  <text x="480" y="262" font-size="13" fill="#64748b" text-anchor="middle">moderator qiladi</text>
+
+  <!-- DELETE -->
+  <rect x="580" y="180" width="140" height="86" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="650" y="206" font-size="15" fill="#334155" text-anchor="middle" font-weight="bold">Tozalash</text>
+  <text x="650" y="228" font-size="13" fill="#334155" text-anchor="middle">deleteMessage</text>
+  <text x="650" y="247" font-size="13" fill="#64748b" text-anchor="middle">spam o'chirish</text>
+
+  <!-- chiziqlar -->
+  <line x1="340" y1="136" x2="140" y2="178" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="360" y1="136" x2="310" y2="178" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="400" y1="136" x2="470" y2="178" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="420" y1="136" x2="630" y2="178" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+
+  <text x="380" y="312" font-size="14" fill="#334155" text-anchor="middle">Admin-only buyruqlar: getChatMember -> status (creator/administrator) -> gate (09-bob middleware)</text>
+  <text x="380" y="340" font-size="13" fill="#64748b" text-anchor="middle">Mantiq offline (FakeNutgram) tekshirilgan; jonli ta'sir illustrativ (bot admin kerak)</text>
+
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/></marker>
+  </defs>
+</svg>

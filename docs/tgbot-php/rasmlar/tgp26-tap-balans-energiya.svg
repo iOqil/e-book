@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 470" font-family="Segoe UI, sans-serif">
+  <title>Tap mexanikasi: tap -> balans oshadi va energiya kamayadi; energiya vaqt bo'yicha tiklanadi</title>
+  <rect width="800" height="470" fill="#f8fafc"/>
+  <text x="400" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Tap -> balans + energiya (serverda hisob)</text>
+
+  <defs>
+    <marker id="ar2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <!-- TAP -->
+  <circle cx="130" cy="160" r="62" fill="#2563eb"/>
+  <text x="130" y="155" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">TAP</text>
+  <text x="130" y="178" font-size="13" fill="#dbeafe" text-anchor="middle">tugma bosildi</text>
+
+  <!-- Energiya tekshiruv -->
+  <rect x="280" y="110" width="220" height="100" rx="12" fill="#ffffff" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="390" y="140" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">Energiya yetadimi?</text>
+  <text x="390" y="166" font-size="13" fill="#334155" text-anchor="middle">har tap = 1 energiya</text>
+  <text x="390" y="190" font-size="13" fill="#dc2626" text-anchor="middle">yetmasa -> tap RAD</text>
+
+  <!-- Balans -->
+  <rect x="580" y="80" width="180" height="80" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="670" y="110" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">Balans +1</text>
+  <text x="670" y="134" font-size="13" fill="#334155" text-anchor="middle">(boost bilan ko'proq)</text>
+
+  <!-- Energiya bar -->
+  <rect x="580" y="180" width="180" height="80" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="670" y="210" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">Energiya -1</text>
+  <text x="670" y="234" font-size="13" fill="#334155" text-anchor="middle">bak: max 1000</text>
+
+  <!-- arrows tap -> check -->
+  <line x1="192" y1="160" x2="276" y2="160" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#ar2)"/>
+  <line x1="500" y1="140" x2="576" y2="120" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#ar2)"/>
+  <line x1="500" y1="180" x2="576" y2="210" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#ar2)"/>
+
+  <!-- Regen -->
+  <rect x="280" y="290" width="480" height="100" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="520" y="320" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">Energiya vaqt bo'yicha tiklanadi (regen)</text>
+  <text x="520" y="346" font-size="13" fill="#334155" text-anchor="middle">o'tgan sekund x REGEN_PER_SEC -> energiya qo'shiladi (max'gacha)</text>
+  <text x="520" y="370" font-size="13" fill="#64748b" text-anchor="middle">formula: regenEnergy(stored, lastTs, nowTs) — last_ts DB'da saqlanadi</text>
+
+  <line x1="670" y1="260" x2="670" y2="286" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#ar2)"/>
+  <line x1="280" y1="340" x2="130" y2="340" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#ar2)"/>
+  <line x1="130" y1="340" x2="130" y2="226" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#ar2)"/>
+  <text x="205" y="332" font-size="13" fill="#64748b" text-anchor="middle">vaqt o'tdi -> qayta tap</text>
+
+  <text x="400" y="430" font-size="14" fill="#64748b" text-anchor="middle">Energiya = tabiiy "rate limit": cheksiz tap mumkin emas, kutish kerak</text>
+  <text x="400" y="452" font-size="13" fill="#94a3b8" text-anchor="middle">applyTaps + regenEnergy phpunit bilan tekshirilgan (energiya tugaganda rad)</text>
+</svg>

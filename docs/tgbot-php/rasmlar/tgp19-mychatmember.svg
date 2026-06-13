@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" font-family="Segoe UI, sans-serif">
+  <title>onMyChatMember: botning guruhdagi maqomi o'zgarish oqimi</title>
+  <rect x="0" y="0" width="760" height="400" fill="#f8fafc"/>
+  <text x="380" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">onMyChatMember — botning maqomi o'zgardi</text>
+
+  <text x="380" y="62" font-size="14" fill="#64748b" text-anchor="middle">Telegram bot maqomi o'zgarganda my_chat_member update yuboradi</text>
+
+  <!-- holatlar zanjiri -->
+  <rect x="40" y="84" width="150" height="64" rx="10" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2"/>
+  <text x="115" y="112" font-size="14" fill="#334155" text-anchor="middle" font-weight="bold">LEFT</text>
+  <text x="115" y="134" font-size="13" fill="#64748b" text-anchor="middle">guruhda yo'q</text>
+
+  <line x1="190" y1="116" x2="232" y2="116" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="240,116 228,110 228,122" fill="#16a34a"/>
+  <text x="215" y="106" font-size="13" fill="#16a34a" text-anchor="middle">qo'shildi</text>
+
+  <rect x="242" y="84" width="160" height="64" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="322" y="112" font-size="14" fill="#2563eb" text-anchor="middle" font-weight="bold">MEMBER</text>
+  <text x="322" y="134" font-size="13" fill="#64748b" text-anchor="middle">oddiy a'zo bot</text>
+
+  <line x1="402" y1="116" x2="444" y2="116" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="452,116 440,110 440,122" fill="#16a34a"/>
+  <text x="427" y="106" font-size="13" fill="#16a34a" text-anchor="middle">admin qilindi</text>
+
+  <rect x="454" y="84" width="180" height="64" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="544" y="112" font-size="14" fill="#16a34a" text-anchor="middle" font-weight="bold">ADMINISTRATOR</text>
+  <text x="544" y="134" font-size="13" fill="#64748b" text-anchor="middle">moderatsiya mumkin</text>
+
+  <!-- chiqarish -->
+  <line x1="322" y1="148" x2="322" y2="188" stroke="#dc2626" stroke-width="2"/>
+  <polygon points="322,196 316,184 328,184" fill="#dc2626"/>
+  <text x="372" y="174" font-size="13" fill="#dc2626" text-anchor="middle">chiqarildi -&gt; KICKED / LEFT</text>
+
+  <!-- handler kodi -->
+  <rect x="40" y="208" width="680" height="150" rx="12" fill="#1e293b"/>
+  <text x="60" y="234" font-size="13" fill="#93c5fd" font-family="Consolas, monospace">$bot-&gt;onMyChatMember(function (Nutgram $bot) {</text>
+  <text x="76" y="256" font-size="13" fill="#e2e8f0" font-family="Consolas, monospace">$upd = $bot-&gt;chatMember();   // ChatMemberUpdated</text>
+  <text x="76" y="278" font-size="13" fill="#e2e8f0" font-family="Consolas, monospace">$old = $upd-&gt;old_chat_member-&gt;status;</text>
+  <text x="76" y="300" font-size="13" fill="#e2e8f0" font-family="Consolas, monospace">$new = $upd-&gt;new_chat_member-&gt;status;</text>
+  <text x="76" y="322" font-size="13" fill="#86efac" font-family="Consolas, monospace">// new == MEMBER -&gt; salomlash; ADMINISTRATOR -&gt; "tayyor"</text>
+  <text x="76" y="344" font-size="13" fill="#fca5a5" font-family="Consolas, monospace">// new == KICKED/LEFT -&gt; tozalash / log</text>
+
+  <text x="60" y="380" font-size="13" fill="#64748b" font-family="Consolas, monospace">});</text>
+</svg>

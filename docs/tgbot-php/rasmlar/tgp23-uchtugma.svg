@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" font-family="Segoe UI, sans-serif">
+  <title>Web App tugmasini ulashning 3 yo'li: inline, reply, menyu tugma</title>
+  <rect width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="36" font-size="22" font-weight="bold" fill="#1e293b" text-anchor="middle">Web App tugmasini ulashning 3 yo'li</text>
+
+  <!-- Card 1: inline -->
+  <rect x="30" y="64" width="226" height="300" rx="14" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="143" y="92" font-size="16" font-weight="bold" fill="#2563eb" text-anchor="middle">1. Inline tugma</text>
+  <text x="143" y="114" font-size="13" fill="#334155" text-anchor="middle">xabar tagida turadi</text>
+  <rect x="52" y="130" width="182" height="44" rx="8" fill="#eff6ff" stroke="#2563eb"/>
+  <text x="143" y="158" font-size="13" fill="#1e293b" text-anchor="middle">[ Ilovani ochish ]</text>
+  <text x="48" y="200" font-size="13" fill="#475569">InlineKeyboardButton</text>
+  <text x="48" y="220" font-size="13" fill="#475569">  ::make(</text>
+  <text x="48" y="240" font-size="13" fill="#475569">    'Ilovani ochish',</text>
+  <text x="48" y="260" font-size="13" fill="#475569">    web_app:</text>
+  <text x="48" y="280" font-size="13" fill="#475569">    WebAppInfo::make(...)</text>
+  <text x="48" y="300" font-size="13" fill="#475569">  )</text>
+  <text x="143" y="338" font-size="13" fill="#16a34a" text-anchor="middle">to'g'ridan ochadi</text>
+
+  <!-- Card 2: reply -->
+  <rect x="267" y="64" width="226" height="300" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="380" y="92" font-size="16" font-weight="bold" fill="#16a34a" text-anchor="middle">2. Reply tugma</text>
+  <text x="380" y="114" font-size="13" fill="#334155" text-anchor="middle">input maydon ostida</text>
+  <rect x="289" y="130" width="182" height="44" rx="8" fill="#f0fdf4" stroke="#16a34a"/>
+  <text x="380" y="158" font-size="13" fill="#1e293b" text-anchor="middle">Ilova</text>
+  <text x="285" y="200" font-size="13" fill="#475569">KeyboardButton</text>
+  <text x="285" y="220" font-size="13" fill="#475569">  ::make(</text>
+  <text x="285" y="240" font-size="13" fill="#475569">    'Ilova',</text>
+  <text x="285" y="260" font-size="13" fill="#475569">    web_app:</text>
+  <text x="285" y="280" font-size="13" fill="#475569">    WebAppInfo::make(...)</text>
+  <text x="285" y="300" font-size="13" fill="#475569">  )</text>
+  <text x="380" y="338" font-size="13" fill="#16a34a" text-anchor="middle">sendData qaytaradi</text>
+
+  <!-- Card 3: menu button -->
+  <rect x="504" y="64" width="226" height="300" rx="14" fill="#ffffff" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="617" y="92" font-size="16" font-weight="bold" fill="#f59e0b" text-anchor="middle">3. Menyu tugma</text>
+  <text x="617" y="114" font-size="13" fill="#334155" text-anchor="middle">chat pastida (= belgisi)</text>
+  <rect x="526" y="130" width="44" height="44" rx="8" fill="#fffbeb" stroke="#f59e0b"/>
+  <text x="548" y="159" font-size="18" fill="#1e293b" text-anchor="middle">=</text>
+  <text x="500" y="200" font-size="13" fill="#475569">setChatMenuButton(</text>
+  <text x="500" y="220" font-size="13" fill="#475569"> menu_button:</text>
+  <text x="500" y="240" font-size="13" fill="#dc2626"> new MenuButtonWebApp(</text>
+  <text x="500" y="260" font-size="13" fill="#475569">   'Ilova',</text>
+  <text x="500" y="280" font-size="13" fill="#475569">   WebAppInfo::make(...)</text>
+  <text x="500" y="300" font-size="13" fill="#475569"> ))</text>
+  <text x="617" y="338" font-size="13" fill="#dc2626" text-anchor="middle">new bilan (static EMAS)</text>
+
+  <text x="380" y="402" font-size="14" fill="#334155" text-anchor="middle">Hammasi WebAppInfo::make('https://...') ni talab qiladi — URL doim HTTPS</text>
+  <text x="380" y="426" font-size="13" fill="#64748b" text-anchor="middle">Reply web_app -> sendData -> onWebAppData; inline/menyu -> initData orqali (24-bob)</text>
+</svg>

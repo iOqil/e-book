@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 420" font-family="Segoe UI, sans-serif">
+  <title>Lokatsiya va kontakt qabul qilish: request tugmasi -> onMessageType -> message turlari</title>
+  <rect width="780" height="420" fill="#f8fafc"/>
+  <text x="390" y="34" text-anchor="middle" font-size="22" font-weight="bold" fill="#1e293b">Lokatsiya va kontakt qabul qilish</text>
+  <text x="390" y="58" text-anchor="middle" font-size="14" fill="#334155">Reply-tugma so'raydi, onMessageType ushlaydi</text>
+
+  <!-- bot side: keyboard -->
+  <rect x="34" y="86" width="300" height="200" rx="12" fill="#fff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="184" y="112" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e293b">Bot: so'rov tugmalari</text>
+  <rect x="58" y="130" width="252" height="44" rx="8" fill="#eff6ff" stroke="#2563eb"/>
+  <text x="184" y="158" text-anchor="middle" font-size="13" fill="#2563eb">request_location: true</text>
+  <rect x="58" y="184" width="252" height="44" rx="8" fill="#eff6ff" stroke="#2563eb"/>
+  <text x="184" y="212" text-anchor="middle" font-size="13" fill="#2563eb">request_contact: true</text>
+  <text x="184" y="256" text-anchor="middle" font-size="13" fill="#334155">ReplyKeyboardMarkup ichida</text>
+  <text x="184" y="276" text-anchor="middle" font-size="13" fill="#94a3b8">(inline tugma BUNI qila olmaydi)</text>
+
+  <!-- arrow -->
+  <line x1="334" y1="186" x2="446" y2="186" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="446,186 434,180 434,192" fill="#94a3b8"/>
+  <text x="390" y="176" text-anchor="middle" font-size="13" fill="#334155">user bosadi</text>
+
+  <!-- user side: incoming message -->
+  <rect x="446" y="86" width="300" height="200" rx="12" fill="#fff" stroke="#16a34a" stroke-width="2"/>
+  <text x="596" y="112" text-anchor="middle" font-size="15" font-weight="bold" fill="#16a34a">Kelgan message</text>
+
+  <rect x="470" y="128" width="252" height="62" rx="8" fill="#f0fdf4" stroke="#16a34a"/>
+  <text x="486" y="150" font-size="13" font-weight="bold" fill="#16a34a">MessageType::LOCATION</text>
+  <text x="486" y="170" font-size="13" fill="#334155">message-&gt;location-&gt;latitude</text>
+  <text x="486" y="186" font-size="13" fill="#334155">message-&gt;location-&gt;longitude</text>
+
+  <rect x="470" y="198" width="252" height="62" rx="8" fill="#f0fdf4" stroke="#16a34a"/>
+  <text x="486" y="220" font-size="13" font-weight="bold" fill="#16a34a">MessageType::CONTACT</text>
+  <text x="486" y="240" font-size="13" fill="#334155">message-&gt;contact-&gt;phone_number</text>
+  <text x="486" y="256" font-size="13" fill="#334155">message-&gt;contact-&gt;first_name</text>
+
+  <!-- live location -->
+  <rect x="34" y="306" width="712" height="94" rx="12" fill="#fff7ed" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="390" y="332" text-anchor="middle" font-size="15" font-weight="bold" fill="#f59e0b">Jonli lokatsiya (live location)</text>
+  <text x="390" y="356" text-anchor="middle" font-size="13" fill="#334155">live_period bilan yuborilgan lokatsiya yangilanganda — bu EDITED_MESSAGE</text>
+  <text x="390" y="378" text-anchor="middle" font-size="13" fill="#334155">onEditedMessage handler bilan ushlanadi (yangi koordinata har safar keladi)</text>
+</svg>

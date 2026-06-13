@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 440" font-family="Segoe UI, sans-serif">
+  <title>Production deploy arxitekturasi: polling va webhook variantlari</title>
+  <rect x="0" y="0" width="780" height="440" fill="#f8fafc"/>
+  <text x="390" y="32" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Botni serverga chiqarish: ikki arxitektura</text>
+
+  <!-- Telegram -->
+  <rect x="300" y="56" width="180" height="50" rx="10" fill="#2563eb"/>
+  <text x="390" y="80" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Telegram Bot API</text>
+  <text x="390" y="98" font-size="13" fill="#ffffff" text-anchor="middle">api.telegram.org</text>
+
+  <!-- ====== POLLING (chap) ====== -->
+  <rect x="24" y="140" width="340" height="270" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="194" y="166" font-size="16" fill="#16a34a" text-anchor="middle" font-weight="bold">A) Polling (long-polling)</text>
+
+  <rect x="56" y="186" width="276" height="60" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="194" y="210" font-size="14" fill="#166534" text-anchor="middle" font-weight="bold">supervisor / systemd</text>
+  <text x="194" y="230" font-size="13" fill="#334155" text-anchor="middle">jarayonni doimiy ushlab turadi</text>
+
+  <rect x="96" y="262" width="196" height="52" rx="8" fill="#16a34a"/>
+  <text x="194" y="284" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">php bot.php (php-cli)</text>
+  <text x="194" y="302" font-size="13" fill="#ffffff" text-anchor="middle">$bot-&gt;run() — getUpdates sikli</text>
+
+  <text x="194" y="344" font-size="13" fill="#334155" text-anchor="middle">Bot SO'RAYDI: getUpdates (oqim)</text>
+  <text x="194" y="366" font-size="13" fill="#64748b" text-anchor="middle">HTTPS, public domen, sertifikat — KERAK EMAS</text>
+  <text x="194" y="388" font-size="13" fill="#64748b" text-anchor="middle">Crash bo'lsa supervisor qayta ishga tushiradi</text>
+
+  <!-- ====== WEBHOOK (o'ng) ====== -->
+  <rect x="416" y="140" width="340" height="270" rx="12" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="586" y="166" font-size="16" fill="#b45309" text-anchor="middle" font-weight="bold">B) Webhook</text>
+
+  <rect x="448" y="186" width="276" height="48" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="586" y="206" font-size="14" fill="#92400e" text-anchor="middle" font-weight="bold">nginx (HTTPS, 443)</text>
+  <text x="586" y="224" font-size="13" fill="#334155" text-anchor="middle">reverse proxy + TLS sertifikat</text>
+
+  <rect x="448" y="246" width="276" height="44" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="586" y="273" font-size="14" fill="#92400e" text-anchor="middle" font-weight="bold">php-fpm (webhook.php)</text>
+
+  <text x="586" y="318" font-size="13" fill="#334155" text-anchor="middle">Telegram YUBORADI: POST /webhook</text>
+  <text x="586" y="340" font-size="13" fill="#64748b" text-anchor="middle">Public HTTPS domen SHART</text>
+  <text x="586" y="362" font-size="13" fill="#64748b" text-anchor="middle">Har update — yangi qisqa so'rov (fpm)</text>
+  <text x="586" y="388" font-size="13" fill="#64748b" text-anchor="middle">Yuqori yuk uchun samaraliroq</text>
+
+  <!-- oqlar -->
+  <line x1="330" y1="106" x2="200" y2="184" stroke="#16a34a" stroke-width="2" marker-end="url(#ag)"/>
+  <text x="232" y="138" font-size="13" fill="#16a34a" text-anchor="middle">pull</text>
+  <line x1="450" y1="106" x2="580" y2="184" stroke="#f59e0b" stroke-width="2" marker-end="url(#ao)"/>
+  <text x="548" y="138" font-size="13" fill="#b45309" text-anchor="middle">push</text>
+
+  <defs>
+    <marker id="ag" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/></marker>
+    <marker id="ao" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#f59e0b"/></marker>
+  </defs>
+</svg>

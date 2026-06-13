@@ -15,10 +15,10 @@ hide:
 [GitHub](https://github.com/iOqil/e-book){ .md-button }
 
 <div class="hero-stats">
-  <div class="stat"><b>17</b><span>kitob</span></div>
-  <div class="stat"><b>935</b><span>diagramma</span></div>
-  <div class="stat"><b>399+</b><span>bob</span></div>
-  <div class="stat"><b>3900+</b><span>masala</span></div>
+  <div class="stat"><b>18</b><span>kitob</span></div>
+  <div class="stat"><b>1013</b><span>diagramma</span></div>
+  <div class="stat"><b>425+</b><span>bob</span></div>
+  <div class="stat"><b>4300+</b><span>masala</span></div>
 </div>
 
 </section>
@@ -160,5 +160,13 @@ hide:
     Python va **aiogram 3.x** bilan Telegram bot: echo botdan boshlab handler/Router, filtrlar, klaviaturalar, callback, **FSM**, middleware, DB, to'lovlar/Stars, webhook, testlash, deploy + kapston bot; so'ng **real amaliyot** — guruh/kanal boshqaruvi, moderatsiya, **majburiy obuna**, Telegram **Mini App** (Web App + initData xavfsizligi + backend) va **Hamster uslubidagi clicker o'yin** kapstoni. Python bilimini nazarda tutadi. Bot mantig'i (handler/FSM/middleware/initData/anti-cheat) offline tekshirilgan; jonli yuborish/polling/webhook BotFather token + internet talab qiladi (illustrativ). 26 bob · 80 diagramma.
 
     [Boshlash →](tgbot-python/README.md)
+
+-   🐘 **18. Telegram bot (PHP / Nutgram)**
+
+    ---
+
+    PHP va **Nutgram** bilan Telegram bot: echo botdan handler/routing, filtrlar, klaviaturalar, callback, **conversations (FSM)**, middleware, DB (PDO), to'lovlar/Stars, webhook, testlash (FakeNutgram), deploy + kapston bot; so'ng **real amaliyot** — guruh/kanal, moderatsiya, **majburiy obuna**, Telegram **Mini App** (Web App + initData + backend) va **Hamster uslubidagi clicker o'yin** kapstoni. PHP bilimini nazarda tutadi. Bot mantig'i (handler/conversation/middleware/initData/anti-cheat) `FakeNutgram` bilan offline tekshirilgan; jonli polling/yuborish/webhook BotFather token + internet talab qiladi (illustrativ). 26 bob · 78 diagramma.
+
+    [Boshlash →](tgbot-php/README.md)
 
 </div>

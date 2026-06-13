@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" font-family="Segoe UI, sans-serif">
+  <title>FakeNutgram assertion turlari va ular nimani tekshiradi</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Assertionlar: nimani tekshirasiz?</text>
+  <text x="380" y="56" font-size="13" fill="#64748b" text-anchor="middle">Yuqori daraja (qulay) -> past daraja (xom, kuchli)</text>
+
+  <!-- high level -->
+  <rect x="40" y="84" width="340" height="150" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="210" y="110" font-size="15" fill="#16a34a" text-anchor="middle" font-weight="bold">Yuqori daraja — qulay</text>
+  <text x="56" y="138" font-size="13" fill="#334155">assertReplyText('...') — javob matni</text>
+  <text x="56" y="162" font-size="13" fill="#334155">assertReplyMessage([...]) — maydonlar</text>
+  <text x="56" y="186" font-size="13" fill="#334155">assertActiveConversation() — aktiv suhbat</text>
+  <text x="56" y="210" font-size="13" fill="#334155">assertNoConversation() — suhbat tugadi</text>
+
+  <!-- mid level -->
+  <rect x="40" y="246" width="340" height="128" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="210" y="272" font-size="15" fill="#b45309" text-anchor="middle" font-weight="bold">O'rta daraja</text>
+  <text x="56" y="300" font-size="13" fill="#334155">assertCalled('sendMessage', 2) — necha marta</text>
+  <text x="56" y="324" font-size="13" fill="#334155">assertNoReply() — hech narsa yuborilmadi</text>
+  <text x="56" y="348" font-size="13" fill="#334155">assertSequence(...) — ketma-ketlikni tekshirish</text>
+
+  <!-- low level -->
+  <rect x="396" y="84" width="324" height="150" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="558" y="110" font-size="15" fill="#2563eb" text-anchor="middle" font-weight="bold">Past daraja — kuchli</text>
+  <text x="412" y="138" font-size="13" fill="#334155">assertRaw(fn($req) => ...) — xom so'rov</text>
+  <text x="412" y="162" font-size="13" fill="#334155">istalgan maydonni callback bilan tekshirish</text>
+  <text x="412" y="190" font-size="13" fill="#64748b">eng moslashuvchan, lekin batafsil yoziladi</text>
+
+  <!-- mock -->
+  <rect x="396" y="246" width="324" height="128" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="558" y="272" font-size="15" fill="#dc2626" text-anchor="middle" font-weight="bold">Soxta javob berish</text>
+  <text x="412" y="300" font-size="13" fill="#334155">willReceive([...]) — keyingi javob</text>
+  <text x="412" y="324" font-size="13" fill="#334155">willReceivePartial([...]) — qisman to'ldirib</text>
+  <text x="412" y="348" font-size="13" fill="#334155">getChatMember kabi chaqiruvlar uchun</text>
+
+  <text x="380" y="402" font-size="14" fill="#334155" text-anchor="middle">Qoida: imkon qadar yuqori darajani ishlat; faqat kerak bo'lsa assertRaw'ga tush</text>
+</svg>

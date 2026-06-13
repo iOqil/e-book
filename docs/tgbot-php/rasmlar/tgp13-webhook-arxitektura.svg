@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 430" font-family="Segoe UI, sans-serif">
+  <title>Webhook arxitekturasi: Telegram dan nginx, php-fpm va Nutgram gacha</title>
+  <rect width="800" height="430" fill="#f8fafc"/>
+  <text x="400" y="34" font-size="19" font-weight="bold" fill="#1e293b" text-anchor="middle">Webhook so'rovining yo'li</text>
+
+  <!-- Telegram -->
+  <rect x="30" y="80" width="140" height="90" rx="11" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="100" y="116" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">Telegram</text>
+  <text x="100" y="138" font-size="13" fill="#334155" text-anchor="middle">POST /webhook</text>
+  <text x="100" y="158" font-size="13" fill="#334155" text-anchor="middle">+ secret header</text>
+
+  <!-- nginx -->
+  <rect x="230" y="80" width="150" height="90" rx="11" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="305" y="112" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">nginx</text>
+  <text x="305" y="134" font-size="13" fill="#334155" text-anchor="middle">HTTPS / SSL</text>
+  <text x="305" y="154" font-size="13" fill="#334155" text-anchor="middle">443-port</text>
+
+  <!-- php-fpm -->
+  <rect x="440" y="80" width="150" height="90" rx="11" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="515" y="112" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">php-fpm</text>
+  <text x="515" y="134" font-size="13" fill="#334155" text-anchor="middle">index.php</text>
+  <text x="515" y="154" font-size="13" fill="#334155" text-anchor="middle">php://input</text>
+
+  <!-- Nutgram -->
+  <rect x="650" y="80" width="120" height="90" rx="11" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="710" y="112" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">Nutgram</text>
+  <text x="710" y="134" font-size="13" fill="#334155" text-anchor="middle">$bot->run()</text>
+  <text x="710" y="154" font-size="13" fill="#334155" text-anchor="middle">handler</text>
+
+  <line x1="170" y1="125" x2="228" y2="125" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="380" y1="125" x2="438" y2="125" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="590" y1="125" x2="648" y2="125" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- secret token check -->
+  <rect x="230" y="210" width="360" height="86" rx="11" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="410" y="238" font-size="15" font-weight="bold" fill="#dc2626" text-anchor="middle">Xavfsizlik darvozasi (safeMode)</text>
+  <text x="410" y="262" font-size="13" fill="#334155" text-anchor="middle">X-Telegram-Bot-Api-Secret-Token sarlavhasi</text>
+  <text x="410" y="282" font-size="13" fill="#334155" text-anchor="middle">secret_token bilan mos kelmasa -> update tashlanadi</text>
+
+  <line x1="515" y1="170" x2="470" y2="208" stroke="#dc2626" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#ar)"/>
+  <text x="560" y="196" font-size="13" fill="#dc2626" text-anchor="middle">tekshiruv</text>
+
+  <!-- response -->
+  <rect x="30" y="330" width="740" height="76" rx="11" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="400" y="358" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="middle">Javob: HTTP 200 OK (tez, soniyalar ichida)</text>
+  <text x="400" y="382" font-size="13" fill="#334155" text-anchor="middle">Telegram 200 ni kutadi. Sekin ish (broadcast, DB-yozuv) — navbatga (15-bob); webhook tez yopilsin.</text>
+
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/></marker>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#dc2626"/></marker>
+  </defs>
+</svg>

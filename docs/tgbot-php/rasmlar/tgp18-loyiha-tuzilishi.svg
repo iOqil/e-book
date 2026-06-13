@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 460" font-family="Segoe UI, sans-serif">
+  <title>Loyiha tuzilishi va deploy: papkalar, bootstrap, webhook</title>
+  <rect width="780" height="460" fill="#f8fafc"/>
+  <text x="390" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Loyiha tuzilishi va deploy yo'li</text>
+
+  <defs>
+    <marker id="ad" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <!-- Project tree -->
+  <rect x="40" y="64" width="320" height="330" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="200" y="90" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">vazifa-bot/ tuzilishi</text>
+  <text x="60" y="122" font-size="14" fill="#334155">src/</text>
+  <text x="80" y="146" font-size="13" fill="#64748b">Bot.php — bootstrap (build)</text>
+  <text x="80" y="168" font-size="13" fill="#64748b">Database.php, *Repository.php</text>
+  <text x="80" y="190" font-size="13" fill="#64748b">Keyboards.php</text>
+  <text x="80" y="212" font-size="13" fill="#64748b">Conversations/AddTask.php</text>
+  <text x="80" y="234" font-size="13" fill="#64748b">Middleware/*.php</text>
+  <text x="60" y="262" font-size="14" fill="#334155">tests/ — FakeNutgram testlar</text>
+  <text x="60" y="288" font-size="14" fill="#334155">bot.php — kirish (polling)</text>
+  <text x="60" y="314" font-size="14" fill="#334155">webhook.php — kirish (HTTPS)</text>
+  <text x="60" y="340" font-size="14" fill="#334155">.env — TOKEN (kodda emas!)</text>
+  <text x="60" y="366" font-size="14" fill="#334155">composer.json</text>
+
+  <!-- Deploy choices -->
+  <rect x="420" y="64" width="320" height="130" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="580" y="90" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">Long-polling (oddiy)</text>
+  <text x="580" y="118" font-size="13" fill="#334155" text-anchor="middle">$bot->run();</text>
+  <text x="580" y="140" font-size="13" fill="#334155" text-anchor="middle">VPS + supervisor/systemd</text>
+  <text x="580" y="162" font-size="13" fill="#334155" text-anchor="middle">HTTPS shart emas</text>
+  <text x="580" y="184" font-size="13" fill="#64748b" text-anchor="middle">o'rganish / kichik bot uchun</text>
+
+  <rect x="420" y="214" width="320" height="130" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="580" y="240" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">Webhook (production)</text>
+  <text x="580" y="268" font-size="13" fill="#334155" text-anchor="middle">setWebhook + webhook.php</text>
+  <text x="580" y="290" font-size="13" fill="#334155" text-anchor="middle">HTTPS domen kerak</text>
+  <text x="580" y="312" font-size="13" fill="#334155" text-anchor="middle">Redis cache (conversation)</text>
+  <text x="580" y="334" font-size="13" fill="#64748b" text-anchor="middle">tezkor, masshtablanadi (-&gt;17-bob)</text>
+
+  <line x1="360" y1="300" x2="416" y2="129" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#ad)"/>
+  <line x1="360" y1="314" x2="416" y2="279" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#ad)"/>
+
+  <text x="390" y="424" font-size="14" fill="#64748b" text-anchor="middle">Bitta bootstrap (Bot::build) ham polling, ham webhook bilan ishlaydi — faqat kirish fayli farq qiladi</text>
+  <text x="390" y="446" font-size="13" fill="#94a3b8" text-anchor="middle">Deploy va running-mode tafsiloti: 13-bob va 17-bob</text>
+</svg>

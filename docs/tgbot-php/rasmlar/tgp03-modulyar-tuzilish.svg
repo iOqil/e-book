@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" font-family="Segoe UI, sans-serif">
+  <title>Modulyar handler tashkili: bootstrap har bir handler faylini yuklaydi</title>
+  <rect width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Modulyar tashkil</text>
+  <text x="380" y="58" font-size="13" fill="#334155" text-anchor="middle">Har bir mavzu — alohida fayl; bootstrap ularni bitta botga ulaydi</text>
+
+  <!-- bootstrap -->
+  <rect x="280" y="84" width="200" height="64" rx="10" fill="#2563eb"/>
+  <text x="380" y="112" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">bot.php</text>
+  <text x="380" y="134" font-size="13" fill="#dbeafe" text-anchor="middle">bootstrap: handlerlarni yuklaydi</text>
+
+  <!-- handler files -->
+  <g>
+    <rect x="40" y="220" width="200" height="76" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+    <text x="140" y="248" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">handlers/start.php</text>
+    <text x="140" y="270" font-size="13" fill="#334155" text-anchor="middle">onCommand('start')</text>
+    <text x="140" y="288" font-size="13" fill="#334155" text-anchor="middle">onCommand('help')</text>
+  </g>
+  <g>
+    <rect x="280" y="220" width="200" height="76" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+    <text x="380" y="248" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">handlers/echo.php</text>
+    <text x="380" y="270" font-size="13" fill="#334155" text-anchor="middle">onText(...)</text>
+    <text x="380" y="288" font-size="13" fill="#334155" text-anchor="middle">onMessage(...)</text>
+  </g>
+  <g>
+    <rect x="520" y="220" width="200" height="76" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+    <text x="620" y="248" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">handlers/fallback.php</text>
+    <text x="620" y="270" font-size="13" fill="#334155" text-anchor="middle">fallback(...)</text>
+    <text x="620" y="288" font-size="13" fill="#334155" text-anchor="middle">fallbackOn(...)</text>
+  </g>
+
+  <!-- connecting lines -->
+  <line x1="340" y1="148" x2="140" y2="218" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar3)"/>
+  <line x1="380" y1="148" x2="380" y2="218" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar3)"/>
+  <line x1="420" y1="148" x2="620" y2="218" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar3)"/>
+
+  <!-- benefit note -->
+  <rect x="80" y="340" width="600" height="64" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="100" y="366" font-size="13" fill="#1e293b">Foyda: ro'yxatga olish tartibini bitta joyda boshqarasiz (aniqdan umumiyga).</text>
+  <text x="100" y="388" font-size="13" fill="#1e293b">Keyingi boblar (filtrlar, conversations, DB) shu tuzilish ustiga quriladi.</text>
+
+  <defs>
+    <marker id="ar3" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+</svg>

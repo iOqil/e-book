@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 400" font-family="Segoe UI, sans-serif">
+  <title>Fayl yuklab olish oqimi: getFile -> file_path -> downloadUrl/downloadFile</title>
+  <rect width="780" height="400" fill="#f8fafc"/>
+  <text x="390" y="34" text-anchor="middle" font-size="22" font-weight="bold" fill="#1e293b">Foydalanuvchidan fayl olish</text>
+  <text x="390" y="58" text-anchor="middle" font-size="14" fill="#334155">Telegram faqat file_id beradi — to'liq URL'ni biz quramiz</text>
+
+  <!-- 1 -->
+  <rect x="30" y="92" width="170" height="100" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="115" y="120" text-anchor="middle" font-size="15" font-weight="bold" fill="#2563eb">1. Update keladi</text>
+  <text x="115" y="146" text-anchor="middle" font-size="13" fill="#334155">message-&gt;document</text>
+  <text x="115" y="166" text-anchor="middle" font-size="13" fill="#334155">-&gt;file_id (qisqa)</text>
+  <text x="115" y="184" text-anchor="middle" font-size="13" fill="#94a3b8">"DOC123..."</text>
+
+  <!-- 2 -->
+  <rect x="222" y="92" width="170" height="100" rx="12" fill="#fff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="307" y="120" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e293b">2. getFile(file_id)</text>
+  <text x="307" y="146" text-anchor="middle" font-size="13" fill="#334155">API -&gt; File obyekti</text>
+  <text x="307" y="166" text-anchor="middle" font-size="13" fill="#334155">-&gt;file_path</text>
+  <text x="307" y="184" text-anchor="middle" font-size="13" fill="#94a3b8">"documents/x.pdf"</text>
+
+  <!-- 3 -->
+  <rect x="414" y="92" width="170" height="100" rx="12" fill="#fff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="499" y="120" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e293b">3. URL qurish</text>
+  <text x="499" y="144" text-anchor="middle" font-size="13" fill="#334155">file-&gt;url() yoki</text>
+  <text x="499" y="162" text-anchor="middle" font-size="13" fill="#334155">downloadUrl(file)</text>
+  <text x="499" y="184" text-anchor="middle" font-size="13" fill="#dc2626">tokenli — maxfiy!</text>
+
+  <!-- 4 -->
+  <rect x="606" y="92" width="148" height="100" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="680" y="120" text-anchor="middle" font-size="15" font-weight="bold" fill="#16a34a">4. Saqlash</text>
+  <text x="680" y="146" text-anchor="middle" font-size="13" fill="#334155">file-&gt;save($yol)</text>
+  <text x="680" y="166" text-anchor="middle" font-size="13" fill="#334155">yoki</text>
+  <text x="680" y="184" text-anchor="middle" font-size="13" fill="#334155">downloadFile(...)</text>
+
+  <!-- arrows -->
+  <line x1="200" y1="142" x2="222" y2="142" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="222,142 210,136 210,148" fill="#94a3b8"/>
+  <line x1="392" y1="142" x2="414" y2="142" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="414,142 402,136 402,148" fill="#94a3b8"/>
+  <line x1="584" y1="142" x2="606" y2="142" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="606,142 594,136 594,148" fill="#94a3b8"/>
+
+  <!-- limit box -->
+  <rect x="30" y="226" width="724" height="64" rx="10" fill="#fff7ed" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="392" y="252" text-anchor="middle" font-size="14" font-weight="bold" fill="#f59e0b">Cheklov: getFile bilan olinadigan fayl &lt;= 20 MB</text>
+  <text x="392" y="276" text-anchor="middle" font-size="13" fill="#334155">Kattaroq fayllar uchun mahalliy Bot API server kerak (isLocal rejimi)</text>
+
+  <!-- security note -->
+  <rect x="30" y="312" width="724" height="62" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="392" y="338" text-anchor="middle" font-size="14" font-weight="bold" fill="#dc2626">Xavfsizlik: downloadUrl ichida bot tokeni bor</text>
+  <text x="392" y="362" text-anchor="middle" font-size="13" fill="#334155">Bu URL'ni foydalanuvchiga YUBORMA — faqat serverda ishlat</text>
+</svg>

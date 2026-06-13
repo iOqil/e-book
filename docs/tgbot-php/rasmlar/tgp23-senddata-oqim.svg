@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 450" font-family="Segoe UI, sans-serif">
+  <title>sendData oqimi: Mini App JS SDK dan onWebAppData handlergacha</title>
+  <rect width="760" height="450" fill="#f8fafc"/>
+  <text x="380" y="34" font-size="21" font-weight="bold" fill="#1e293b" text-anchor="middle">Web App.sendData() -&gt; onWebAppData oqimi</text>
+
+  <!-- lanes -->
+  <rect x="30" y="56" width="220" height="372" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="140" y="80" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="middle">Frontend (JS SDK)</text>
+
+  <rect x="270" y="56" width="200" height="372" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="370" y="80" font-size="15" font-weight="bold" fill="#2563eb" text-anchor="middle">Telegram</text>
+
+  <rect x="490" y="56" width="240" height="372" rx="12" fill="#ffffff" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="610" y="80" font-size="15" font-weight="bold" fill="#f59e0b" text-anchor="middle">Bot (Nutgram)</text>
+
+  <!-- frontend steps -->
+  <rect x="48" y="100" width="184" height="40" rx="7" fill="#f0fdf4" stroke="#16a34a"/>
+  <text x="140" y="125" font-size="13" fill="#1e293b" text-anchor="middle">Telegram.WebApp.ready()</text>
+  <rect x="48" y="150" width="184" height="40" rx="7" fill="#f0fdf4" stroke="#16a34a"/>
+  <text x="140" y="175" font-size="13" fill="#1e293b" text-anchor="middle">.expand() + themeParams</text>
+  <rect x="48" y="200" width="184" height="56" rx="7" fill="#f0fdf4" stroke="#16a34a"/>
+  <text x="140" y="222" font-size="13" fill="#1e293b" text-anchor="middle">MainButton bosildi:</text>
+  <text x="140" y="244" font-size="13" font-weight="bold" fill="#16a34a" text-anchor="middle">.sendData('order:42')</text>
+
+  <!-- telegram step -->
+  <rect x="288" y="200" width="164" height="56" rx="7" fill="#eff6ff" stroke="#2563eb"/>
+  <text x="370" y="222" font-size="13" fill="#1e293b" text-anchor="middle">Web App yopiladi,</text>
+  <text x="370" y="244" font-size="13" fill="#1e293b" text-anchor="middle">message yuboriladi</text>
+
+  <!-- bot steps -->
+  <rect x="508" y="200" width="204" height="56" rx="7" fill="#fffbeb" stroke="#f59e0b"/>
+  <text x="610" y="222" font-size="13" fill="#1e293b" text-anchor="middle">message.web_app_data</text>
+  <text x="610" y="244" font-size="13" fill="#475569" text-anchor="middle">{ data, button_text }</text>
+  <rect x="508" y="270" width="204" height="44" rx="7" fill="#fffbeb" stroke="#f59e0b"/>
+  <text x="610" y="297" font-size="13" font-weight="bold" fill="#f59e0b" text-anchor="middle">$bot-&gt;onWebAppData(...)</text>
+  <rect x="508" y="324" width="204" height="56" rx="7" fill="#fffbeb" stroke="#f59e0b"/>
+  <text x="610" y="346" font-size="13" fill="#1e293b" text-anchor="middle">$bot-&gt;message()</text>
+  <text x="610" y="366" font-size="13" fill="#1e293b" text-anchor="middle">  -&gt;web_app_data-&gt;data</text>
+
+  <!-- arrows -->
+  <line x1="232" y1="228" x2="286" y2="228" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="286,228 274,223 274,233" fill="#94a3b8"/>
+  <line x1="452" y1="228" x2="506" y2="228" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="506,228 494,223 494,233" fill="#94a3b8"/>
+  <line x1="610" y1="256" x2="610" y2="268" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="610,268 605,256 615,256" fill="#94a3b8"/>
+  <line x1="610" y1="314" x2="610" y2="322" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="610,322 605,310 615,310" fill="#94a3b8"/>
+
+  <!-- note -->
+  <rect x="48" y="300" width="184" height="80" rx="8" fill="#fef2f2" stroke="#dc2626"/>
+  <text x="140" y="322" font-size="13" font-weight="bold" fill="#dc2626" text-anchor="middle">Diqqat</text>
+  <text x="140" y="344" font-size="13" fill="#334155" text-anchor="middle">sendData FAQAT</text>
+  <text x="140" y="362" font-size="13" fill="#334155" text-anchor="middle">reply-web_app tugmada</text>
+  <text x="140" y="378" font-size="13" fill="#64748b" text-anchor="middle">(inline/menyuda yo'q)</text>
+
+  <text x="380" y="442" font-size="13" fill="#64748b" text-anchor="middle">web_app_data ishonchsiz — muhim amal uchun initData serverda tekshiriladi (24-bob)</text>
+</svg>

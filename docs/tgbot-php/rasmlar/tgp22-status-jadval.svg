@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" font-family="Segoe UI, sans-serif">
+  <title>ChatMember status qiymatlari va obuna deb hisoblanishi (creator/administrator/member = obuna; left/kicked = obuna emas)</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">getChatMember -&gt; status -&gt; obuna?</text>
+  <text x="380" y="58" font-size="14" fill="#334155" text-anchor="middle">ChatMemberStatus enum qiymatlarini ikki guruhga ajratamiz</text>
+
+  <!-- left column: obuna BOR -->
+  <rect x="40" y="84" width="330" height="320" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="205" y="114" font-size="17" font-weight="bold" fill="#16a34a" text-anchor="middle">Obuna BOR -&gt; $next($bot)</text>
+
+  <rect x="64" y="134" width="282" height="46" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="80" y="156" font-size="15" font-weight="bold" fill="#1e293b">creator</text>
+  <text x="80" y="174" font-size="13" fill="#334155">kanal egasi</text>
+
+  <rect x="64" y="188" width="282" height="46" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="80" y="210" font-size="15" font-weight="bold" fill="#1e293b">administrator</text>
+  <text x="80" y="228" font-size="13" fill="#334155">kanal admini</text>
+
+  <rect x="64" y="242" width="282" height="46" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="80" y="264" font-size="15" font-weight="bold" fill="#1e293b">member</text>
+  <text x="80" y="282" font-size="13" fill="#334155">oddiy obunachi</text>
+
+  <rect x="64" y="296" width="282" height="56" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="80" y="318" font-size="15" font-weight="bold" fill="#1e293b">restricted</text>
+  <text x="80" y="336" font-size="13" fill="#334155">cheklangan, lekin hali a'zo</text>
+  <text x="80" y="349" font-size="13" fill="#f59e0b">(odatda obuna deb sanaladi)</text>
+
+  <text x="205" y="382" font-size="13" fill="#16a34a" text-anchor="middle">is_member kabi maydonlar restricted'da</text>
+  <text x="205" y="398" font-size="13" fill="#16a34a" text-anchor="middle">qo'shimcha aniqlik beradi</text>
+
+  <!-- right column: obuna YO'Q -->
+  <rect x="390" y="84" width="330" height="320" rx="12" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="555" y="114" font-size="17" font-weight="bold" fill="#dc2626" text-anchor="middle">Obuna YO'Q -&gt; gate</text>
+
+  <rect x="414" y="134" width="282" height="56" rx="8" fill="#ffffff" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="430" y="158" font-size="15" font-weight="bold" fill="#1e293b">left</text>
+  <text x="430" y="178" font-size="13" fill="#334155">kanalni tark etgan / hech qachon a'zo bo'lmagan</text>
+
+  <rect x="414" y="198" width="282" height="56" rx="8" fill="#ffffff" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="430" y="222" font-size="15" font-weight="bold" fill="#1e293b">kicked</text>
+  <text x="430" y="242" font-size="13" fill="#334155">kanaldan banlangan</text>
+
+  <rect x="414" y="270" width="282" height="120" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="555" y="294" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">DIQQAT</text>
+  <text x="430" y="318" font-size="13" fill="#334155">getChatMember XATO ham qaytishi</text>
+  <text x="430" y="336" font-size="13" fill="#334155">mumkin (bot kanalda admin emas,</text>
+  <text x="430" y="354" font-size="13" fill="#334155">kanal topilmadi). Bunda onApiError</text>
+  <text x="430" y="372" font-size="13" fill="#334155">bilan ushlab, "obuna emas" deb hisobla.</text>
+</svg>

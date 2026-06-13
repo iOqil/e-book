@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" font-family="Segoe UI, sans-serif">
+  <title>Conversation qadam oqimi: xabar keladi, joriy qadam ishlaydi, holat saqlanadi</title>
+  <rect width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Har xabar: joriy qadam ishlaydi, holat saqlanadi</text>
+
+  <defs>
+    <marker id="a2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <!-- user -->
+  <rect x="40" y="90" width="140" height="74" rx="10" fill="#2563eb"/>
+  <text x="110" y="122" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">Foydalanuvchi</text>
+  <text x="110" y="143" font-size="13" fill="#dbeafe" text-anchor="middle">xabar yuboradi</text>
+
+  <!-- nutgram -->
+  <rect x="280" y="78" width="200" height="98" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="380" y="108" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">Nutgram</text>
+  <text x="380" y="130" font-size="13" fill="#334155" text-anchor="middle">currentConversation()</text>
+  <text x="380" y="150" font-size="13" fill="#334155" text-anchor="middle">aktiv bo'lsa -&gt; joriy</text>
+  <text x="380" y="168" font-size="13" fill="#334155" text-anchor="middle">qadamni chaqiradi</text>
+
+  <!-- step -->
+  <rect x="570" y="78" width="160" height="98" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="650" y="106" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">Qadam metodi</text>
+  <text x="650" y="128" font-size="13" fill="#334155" text-anchor="middle">$this-&gt;ism = ...</text>
+  <text x="650" y="148" font-size="13" fill="#334155" text-anchor="middle">sendMessage()</text>
+  <text x="650" y="168" font-size="13" fill="#16a34a" text-anchor="middle">$this-&gt;next('...')</text>
+
+  <line x1="180" y1="127" x2="276" y2="127" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#a2)"/>
+  <line x1="480" y1="127" x2="566" y2="127" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#a2)"/>
+
+  <!-- cache -->
+  <rect x="280" y="280" width="200" height="110" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="380" y="310" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">Conversation cache</text>
+  <text x="380" y="332" font-size="13" fill="#334155" text-anchor="middle">kalit: user + chat</text>
+  <text x="380" y="352" font-size="13" fill="#334155" text-anchor="middle">qiymat: serializatsiya</text>
+  <text x="380" y="372" font-size="13" fill="#334155" text-anchor="middle">qilingan obyekt (xossalar)</text>
+
+  <!-- next saves -->
+  <path d="M 650 176 C 650 240 500 250 470 280" fill="none" stroke="#16a34a" stroke-width="2.5" marker-end="url(#a2)"/>
+  <text x="600" y="245" font-size="13" fill="#16a34a" text-anchor="middle">next() -&gt; saqlaydi</text>
+
+  <!-- load on next msg -->
+  <path d="M 300 280 C 270 240 320 200 360 176" fill="none" stroke="#2563eb" stroke-width="2.5" marker-end="url(#a2)"/>
+  <text x="240" y="232" font-size="13" fill="#2563eb" text-anchor="middle">keyingi xabar:</text>
+  <text x="240" y="250" font-size="13" fill="#2563eb" text-anchor="middle">yuklab oladi</text>
+
+  <text x="380" y="424" font-size="14" fill="#64748b" text-anchor="middle">Har foydalanuvchi alohida holatda: kalit user+chat bo'yicha ajraladi</text>
+</svg>

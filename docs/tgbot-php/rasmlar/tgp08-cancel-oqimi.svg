@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" font-family="Segoe UI, sans-serif">
+  <title>Bekor qilish: aktiv conversation paytida buyruq conversation'ni avtomatik to'xtatadi</title>
+  <rect width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Aktiv conversation + buyruq = avto-to'xtash</text>
+
+  <defs>
+    <marker id="c1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <!-- incoming -->
+  <rect x="40" y="80" width="170" height="76" rx="10" fill="#2563eb"/>
+  <text x="125" y="112" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">Xabar keldi</text>
+  <text x="125" y="134" font-size="13" fill="#dbeafe" text-anchor="middle">aktiv conversation bor</text>
+
+  <!-- decision -->
+  <path d="M 380 70 L 470 130 L 380 190 L 290 130 Z" fill="#ffffff" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="380" y="124" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">pattern'li</text>
+  <text x="380" y="144" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">handler mosmi?</text>
+
+  <line x1="210" y1="118" x2="286" y2="125" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#c1)"/>
+
+  <!-- YES: command -->
+  <rect x="540" y="58" width="190" height="120" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="635" y="86" font-size="15" font-weight="bold" fill="#dc2626" text-anchor="middle">HA (masalan /cancel)</text>
+  <text x="635" y="110" font-size="13" fill="#334155" text-anchor="middle">conversation</text>
+  <text x="635" y="130" font-size="13" fill="#334155" text-anchor="middle">AVTO-terminate</text>
+  <text x="635" y="154" font-size="13" fill="#334155" text-anchor="middle">global handler ishlaydi</text>
+
+  <line x1="470" y1="130" x2="536" y2="120" stroke="#dc2626" stroke-width="2.5" marker-end="url(#c1)"/>
+  <text x="505" y="100" font-size="13" font-weight="bold" fill="#dc2626" text-anchor="middle">HA</text>
+
+  <!-- NO: continue -->
+  <rect x="285" y="280" width="190" height="110" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="380" y="308" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="middle">YO'Q (oddiy matn)</text>
+  <text x="380" y="332" font-size="13" fill="#334155" text-anchor="middle">joriy qadamga</text>
+  <text x="380" y="352" font-size="13" fill="#334155" text-anchor="middle">uzatiladi:</text>
+  <text x="380" y="372" font-size="13" fill="#334155" text-anchor="middle">forma davom etadi</text>
+
+  <line x1="380" y1="190" x2="380" y2="276" stroke="#16a34a" stroke-width="2.5" marker-end="url(#c1)"/>
+  <text x="412" y="238" font-size="13" font-weight="bold" fill="#16a34a" text-anchor="middle">YO'Q</text>
+
+  <text x="380" y="416" font-size="14" fill="#64748b" text-anchor="middle">Shuning uchun /cancel'ni qo'lda terminate qilish shart emas — Nutgram o'zi to'xtatadi</text>
+</svg>

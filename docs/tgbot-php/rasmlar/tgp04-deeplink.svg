@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" font-family="Segoe UI, sans-serif">
+  <title>Deep-link va /start payload oqimi</title>
+  <rect x="0" y="0" width="720" height="360" fill="#f8fafc"/>
+  <text x="360" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">Deep-link: /start &lt;payload&gt; oqimi</text>
+
+  <!-- step 1: link -->
+  <rect x="30" y="70" width="200" height="80" rx="10" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+  <text x="130" y="100" text-anchor="middle" font-size="15" font-weight="bold" fill="#2563eb">1. Havola</text>
+  <text x="130" y="124" text-anchor="middle" font-size="13" fill="#334155">t.me/MyBot?</text>
+  <text x="130" y="142" text-anchor="middle" font-size="13" fill="#334155">start=INVITE42</text>
+
+  <!-- arrow -->
+  <line x1="230" y1="110" x2="290" y2="110" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- step 2: telegram sends -->
+  <rect x="290" y="70" width="200" height="80" rx="10" fill="#fff" stroke="#16a34a" stroke-width="2"/>
+  <text x="390" y="100" text-anchor="middle" font-size="15" font-weight="bold" fill="#16a34a">2. Telegram</text>
+  <text x="390" y="124" text-anchor="middle" font-size="13" fill="#334155">botga yuboradi:</text>
+  <text x="390" y="142" text-anchor="middle" font-size="13" fill="#334155">/start INVITE42</text>
+
+  <!-- arrow -->
+  <line x1="490" y1="110" x2="550" y2="110" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- step 3: handler -->
+  <rect x="550" y="70" width="140" height="80" rx="10" fill="#fff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="620" y="100" text-anchor="middle" font-size="15" font-weight="bold" fill="#f59e0b">3. Handler</text>
+  <text x="620" y="124" text-anchor="middle" font-size="13" fill="#334155">onCommand</text>
+  <text x="620" y="142" text-anchor="middle" font-size="13" fill="#334155">('start {ref}')</text>
+
+  <!-- bottom: two handlers note -->
+  <rect x="30" y="200" width="660" height="130" rx="10" fill="#fff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="360" y="228" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e293b">Ikki handler kerak (regex sababli)</text>
+  <text x="55" y="258" font-size="13" fill="#334155">onCommand('start {ref}', ...) -&gt; faqat /start &lt;payload&gt; ni tutadi</text>
+  <text x="55" y="284" font-size="13" fill="#334155">onCommand('start', ...) -&gt; bo'sh /start ni tutadi</text>
+  <text x="55" y="312" font-size="13" fill="#dc2626">Eslatma: 'start {ref}' regexi /start (bo'sh) ga mos kelmaydi</text>
+
+  <defs>
+    <marker id="a" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+</svg>

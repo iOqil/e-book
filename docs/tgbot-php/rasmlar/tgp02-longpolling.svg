@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" font-family="Segoe UI, sans-serif">
+  <title>Long-polling: bot Telegram serveridan yangilanishlarni so'rab oladi</title>
+  <rect width="720" height="420" fill="#f8fafc"/>
+  <text x="360" y="36" text-anchor="middle" font-size="22" font-weight="bold" fill="#1e293b">Long-polling: $bot-&gt;run()</text>
+
+  <!-- Bot box -->
+  <rect x="50" y="110" width="220" height="180" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="160" y="142" text-anchor="middle" font-size="18" font-weight="bold" fill="#2563eb">Sizning botingiz</text>
+  <text x="160" y="170" text-anchor="middle" font-size="14" fill="#334155">index.php</text>
+  <text x="160" y="194" text-anchor="middle" font-size="14" fill="#334155">$bot-&gt;run()</text>
+  <rect x="78" y="214" width="164" height="58" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="160" y="238" text-anchor="middle" font-size="13" fill="#334155">cheksiz tsikl:</text>
+  <text x="160" y="258" text-anchor="middle" font-size="13" fill="#16a34a">so'ra → ishlat → so'ra</text>
+
+  <!-- Telegram box -->
+  <rect x="450" y="110" width="220" height="180" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="560" y="142" text-anchor="middle" font-size="18" font-weight="bold" fill="#16a34a">Telegram serveri</text>
+  <text x="560" y="172" text-anchor="middle" font-size="14" fill="#334155">api.telegram.org</text>
+  <text x="560" y="200" text-anchor="middle" font-size="14" fill="#334155">yangilanishlar</text>
+  <text x="560" y="220" text-anchor="middle" font-size="14" fill="#334155">navbati</text>
+
+  <!-- Arrow 1: getUpdates request -->
+  <line x1="270" y1="170" x2="448" y2="170" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrB)"/>
+  <text x="360" y="160" text-anchor="middle" font-size="14" fill="#2563eb" font-weight="bold">getUpdates?</text>
+  <text x="360" y="190" text-anchor="middle" font-size="13" fill="#64748b">"yangi xabar bormi?"</text>
+
+  <!-- Arrow 2: updates response -->
+  <line x1="448" y1="240" x2="270" y2="240" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arrG)"/>
+  <text x="360" y="232" text-anchor="middle" font-size="14" fill="#16a34a" font-weight="bold">[ Update, Update ]</text>
+  <text x="360" y="262" text-anchor="middle" font-size="13" fill="#64748b">javob (yoki bo'sh)</text>
+
+  <!-- bottom note -->
+  <rect x="90" y="330" width="540" height="60" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.8"/>
+  <text x="360" y="356" text-anchor="middle" font-size="14" fill="#92400e" font-weight="bold">Webhook EMAS: bot o'zi so'rab oladi. Internet + token kerak.</text>
+  <text x="360" y="378" text-anchor="middle" font-size="13" fill="#92400e">Rivojlanish (dev) uchun eng oson usul — server/HTTPS shart emas.</text>
+
+  <defs>
+    <marker id="arrB" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/></marker>
+    <marker id="arrG" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/></marker>
+  </defs>
+</svg>

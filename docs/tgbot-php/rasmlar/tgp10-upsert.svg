@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" font-family="Segoe UI, sans-serif">
+  <title>Middleware orqali foydalanuvchini ro'yxatga olish (upsert) oqimi</title>
+  <rect x="0" y="0" width="760" height="360" fill="#f8fafc"/>
+  <text x="380" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Foydalanuvchini ro'yxatga olish: upsert middleware</text>
+
+  <!-- Update -->
+  <rect x="30" y="120" width="120" height="70" rx="10" fill="#2563eb"/>
+  <text x="90" y="150" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Update</text>
+  <text x="90" y="172" font-size="13" fill="#ffffff" text-anchor="middle">keladi (har xil)</text>
+
+  <!-- Middleware box -->
+  <rect x="200" y="80" width="260" height="190" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="330" y="108" font-size="15" fill="#16a34a" text-anchor="middle" font-weight="bold">Global middleware</text>
+  <text x="330" y="132" font-size="13" fill="#334155" text-anchor="middle">$bot-&gt;userId() bormi?</text>
+
+  <!-- upsert sql -->
+  <rect x="222" y="148" width="216" height="100" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="330" y="170" font-size="13" fill="#16a34a" text-anchor="middle" font-weight="bold">INSERT ... ON CONFLICT</text>
+  <text x="330" y="190" font-size="13" fill="#334155" text-anchor="middle">yo'q -> qo'shadi (INSERT)</text>
+  <text x="330" y="210" font-size="13" fill="#334155" text-anchor="middle">bor -> yangilaydi (UPDATE)</text>
+  <text x="330" y="232" font-size="13" fill="#64748b" text-anchor="middle">dublikat yaratmaydi</text>
+
+  <!-- next -->
+  <text x="330" y="290" font-size="13" fill="#b45309" text-anchor="middle" font-weight="bold">so'ng $next($bot)</text>
+
+  <!-- Handler -->
+  <rect x="510" y="120" width="120" height="70" rx="10" fill="#16a34a"/>
+  <text x="570" y="150" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Handler</text>
+  <text x="570" y="172" font-size="13" fill="#ffffff" text-anchor="middle">user DB da bor</text>
+
+  <!-- DB cylinder -->
+  <ellipse cx="690" cy="248" rx="42" ry="12" fill="#f59e0b"/>
+  <rect x="648" y="248" width="84" height="56" fill="#f59e0b"/>
+  <ellipse cx="690" cy="304" rx="42" ry="12" fill="#d97706"/>
+  <text x="690" y="282" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">users</text>
+
+  <!-- arrows -->
+  <line x1="150" y1="155" x2="198" y2="155" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="460" y1="155" x2="508" y2="155" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="438" y1="220" x2="650" y2="256" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="540" y="250" font-size="13" fill="#64748b" text-anchor="middle">yozadi</text>
+
+  <text x="380" y="344" font-size="14" fill="#334155" text-anchor="middle">Bitta joyda: har bir foydalanuvchi avtomatik ro'yxatdan o'tadi — handlerlar buni takrorlamaydi</text>
+
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/></marker>
+  </defs>
+</svg>

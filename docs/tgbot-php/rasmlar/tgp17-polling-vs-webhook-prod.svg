@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" font-family="Segoe UI, sans-serif">
+  <title>Production'da polling va webhook'ni qiyoslash</title>
+  <rect x="0" y="0" width="780" height="470" fill="#f8fafc"/>
+  <text x="390" y="32" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Prod'da tanlov: polling yoki webhook?</text>
+
+  <!-- ustun sarlavhalari -->
+  <rect x="40" y="56" width="350" height="40" rx="8" fill="#16a34a"/>
+  <text x="215" y="82" font-size="16" fill="#ffffff" text-anchor="middle" font-weight="bold">Polling</text>
+  <rect x="404" y="56" width="350" height="40" rx="8" fill="#f59e0b"/>
+  <text x="579" y="82" font-size="16" fill="#ffffff" text-anchor="middle" font-weight="bold">Webhook</text>
+
+  <!-- qatorlar: chap (polling) -->
+  <g font-size="13" fill="#334155">
+    <rect x="40" y="104" width="350" height="58" rx="6" fill="#dcfce7"/>
+    <text x="56" y="126" font-weight="bold" fill="#166534">+ Sozlash oson</text>
+    <text x="56" y="148">Domen/TLS shart emas, NAT ortida ham ishlaydi</text>
+
+    <rect x="40" y="170" width="350" height="58" rx="6" fill="#dcfce7"/>
+    <text x="56" y="192" font-weight="bold" fill="#166534">+ Lokal/dev uchun ideal</text>
+    <text x="56" y="214">Mashinangizda darhol ishga tushadi</text>
+
+    <rect x="40" y="236" width="350" height="58" rx="6" fill="#fef2f2"/>
+    <text x="56" y="258" font-weight="bold" fill="#b91c1c">- Doimiy jarayon kerak</text>
+    <text x="56" y="280">supervisor/systemd ushlab tursin (cli)</text>
+
+    <rect x="40" y="302" width="350" height="58" rx="6" fill="#fef2f2"/>
+    <text x="56" y="324" font-weight="bold" fill="#b91c1c">- Bir vaqtda bitta nusxa</text>
+    <text x="56" y="346">Ikkita run() = Conflict (409) xatosi</text>
+
+    <rect x="40" y="368" width="350" height="58" rx="6" fill="#fff7ed"/>
+    <text x="56" y="390" font-weight="bold" fill="#92400e">~ Kechikish: kichik so'rov oynasi</text>
+    <text x="56" y="412">Yuqori yukda bir nechta vorker kerak</text>
+  </g>
+
+  <!-- qatorlar: o'ng (webhook) -->
+  <g font-size="13" fill="#334155">
+    <rect x="404" y="104" width="350" height="58" rx="6" fill="#dcfce7"/>
+    <text x="420" y="126" font-weight="bold" fill="#166534">+ Yuqori yukda samarali</text>
+    <text x="420" y="148">Telegram push qiladi, bo'sh sikl yo'q</text>
+
+    <rect x="404" y="170" width="350" height="58" rx="6" fill="#dcfce7"/>
+    <text x="420" y="192" font-weight="bold" fill="#166534">+ php-fpm bilan miqyoslanadi</text>
+    <text x="420" y="214">Har update — qisqa, mustaqil so'rov</text>
+
+    <rect x="404" y="236" width="350" height="58" rx="6" fill="#fef2f2"/>
+    <text x="420" y="258" font-weight="bold" fill="#b91c1c">- Public HTTPS domen SHART</text>
+    <text x="420" y="280">nginx + amaldagi TLS sertifikat</text>
+
+    <rect x="404" y="302" width="350" height="58" rx="6" fill="#fef2f2"/>
+    <text x="420" y="324" font-weight="bold" fill="#b91c1c">- Sozlash murakkabroq</text>
+    <text x="420" y="346">setWebhook, secret_token, marshrut</text>
+
+    <rect x="404" y="368" width="350" height="58" rx="6" fill="#fff7ed"/>
+    <text x="420" y="390" font-weight="bold" fill="#92400e">~ Holat keshda bo'lsin</text>
+    <text x="420" y="412">Har so'rov yangi jarayon: Redis/DB ulang</text>
+  </g>
+
+  <text x="390" y="450" font-size="14" fill="#1e293b" text-anchor="middle" font-weight="bold">Tavsiya: kichik/o'rta bot — polling+supervisor; katta yuk — webhook+nginx+fpm</text>
+</svg>

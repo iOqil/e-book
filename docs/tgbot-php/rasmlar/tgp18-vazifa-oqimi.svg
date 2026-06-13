@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 430" font-family="Segoe UI, sans-serif">
+  <title>Vazifa qo'shish oqimi: conversation qadamlari va DB'ga yozish</title>
+  <rect width="780" height="430" fill="#f8fafc"/>
+  <text x="390" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Vazifa qo'shish: conversation oqimi</text>
+
+  <defs>
+    <marker id="af" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <!-- start -->
+  <rect x="40" y="90" width="160" height="80" rx="10" fill="#2563eb"/>
+  <text x="120" y="120" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">/add yoki tugma</text>
+  <text x="120" y="142" font-size="13" fill="#dbeafe" text-anchor="middle">AddTask::begin()</text>
+  <text x="120" y="160" font-size="13" fill="#dbeafe" text-anchor="middle">start() qadami</text>
+
+  <!-- ask -->
+  <rect x="260" y="90" width="170" height="80" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="345" y="120" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">Nom so'raydi</text>
+  <text x="345" y="142" font-size="13" fill="#334155" text-anchor="middle">"nomini yozing"</text>
+  <text x="345" y="160" font-size="13" fill="#16a34a" text-anchor="middle">next('saqlash')</text>
+
+  <!-- validate -->
+  <rect x="490" y="90" width="250" height="80" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="615" y="118" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">saqlash() — validatsiya</text>
+  <text x="615" y="140" font-size="13" fill="#334155" text-anchor="middle">bo'sh / &gt;100 belgi?</text>
+  <text x="615" y="160" font-size="13" fill="#dc2626" text-anchor="middle">ha -&gt; next()siz return (qoladi)</text>
+
+  <line x1="200" y1="130" x2="256" y2="130" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#af)"/>
+  <line x1="430" y1="130" x2="486" y2="130" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#af)"/>
+
+  <!-- loop back -->
+  <path d="M 615 170 C 615 215 540 215 540 175" fill="none" stroke="#dc2626" stroke-width="2.5" marker-end="url(#af)"/>
+  <text x="615" y="205" font-size="13" fill="#dc2626" text-anchor="middle">qayta urinish</text>
+
+  <!-- save to db -->
+  <rect x="300" y="260" width="200" height="80" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="400" y="288" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">TaskRepository::add()</text>
+  <text x="400" y="310" font-size="13" fill="#334155" text-anchor="middle">INSERT INTO tasks</text>
+  <text x="400" y="330" font-size="13" fill="#16a34a" text-anchor="middle">end() -&gt; conversation tugaydi</text>
+
+  <path d="M 615 170 C 615 230 520 250 500 285" fill="none" stroke="#16a34a" stroke-width="2.5" marker-end="url(#af)"/>
+  <text x="610" y="262" font-size="13" fill="#16a34a" text-anchor="middle">to'g'ri -&gt; saqlaymiz</text>
+
+  <text x="400" y="385" font-size="14" fill="#64748b" text-anchor="middle">Holat (vazifa nomi) qadamlar oralig'ida $this-&gt;title xossasida avtomatik saqlanadi</text>
+  <text x="400" y="408" font-size="13" fill="#94a3b8" text-anchor="middle">Bu oqim FakeNutgram + sqlite bilan haqiqatan tekshirilgan</text>
+</svg>

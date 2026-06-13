@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" font-family="Segoe UI, sans-serif">
+  <title>Captcha oqimi: yangi a'zo -> mute -> tugma -> tasdiq -> ochish</title>
+  <rect x="0" y="0" width="760" height="400" fill="#f8fafc"/>
+  <text x="380" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Captcha: yangi a'zoni tekshirish oqimi</text>
+
+  <!-- 1 -->
+  <rect x="30" y="80" width="160" height="92" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="110" y="106" font-size="15" fill="#2563eb" text-anchor="middle" font-weight="bold">1. Qo'shildi</text>
+  <text x="110" y="130" font-size="13" fill="#334155" text-anchor="middle">onChatMember</text>
+  <text x="110" y="150" font-size="13" fill="#334155" text-anchor="middle">justJoined()</text>
+  <text x="110" y="168" font-size="13" fill="#64748b" text-anchor="middle">left -> member</text>
+
+  <!-- 2 -->
+  <rect x="220" y="80" width="160" height="92" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="300" y="106" font-size="15" fill="#b45309" text-anchor="middle" font-weight="bold">2. Mute</text>
+  <text x="300" y="130" font-size="13" fill="#334155" text-anchor="middle">restrictChatMember</text>
+  <text x="300" y="150" font-size="13" fill="#334155" text-anchor="middle">can_send_*: false</text>
+  <text x="300" y="168" font-size="13" fill="#64748b" text-anchor="middle">yoza olmaydi</text>
+
+  <!-- 3 -->
+  <rect x="410" y="80" width="170" height="92" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="495" y="106" font-size="15" fill="#2563eb" text-anchor="middle" font-weight="bold">3. Tugma</text>
+  <text x="495" y="130" font-size="13" fill="#334155" text-anchor="middle">"Men robot emasman"</text>
+  <text x="495" y="150" font-size="13" fill="#334155" text-anchor="middle">callback: captcha:&#123;id&#125;</text>
+  <text x="495" y="168" font-size="13" fill="#64748b" text-anchor="middle">ID yopishtirilgan</text>
+
+  <!-- 4 -->
+  <rect x="600" y="80" width="140" height="92" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="670" y="106" font-size="15" fill="#16a34a" text-anchor="middle" font-weight="bold">4. Ochish</text>
+  <text x="670" y="130" font-size="13" fill="#334155" text-anchor="middle">restrictChatMember</text>
+  <text x="670" y="150" font-size="13" fill="#334155" text-anchor="middle">can_send_*: true</text>
+  <text x="670" y="168" font-size="13" fill="#64748b" text-anchor="middle">endi yoza oladi</text>
+
+  <line x1="190" y1="126" x2="218" y2="126" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="380" y1="126" x2="408" y2="126" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="580" y1="126" x2="598" y2="126" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- gate tekshiruv -->
+  <rect x="180" y="220" width="400" height="74" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="246" font-size="15" fill="#2563eb" text-anchor="middle" font-weight="bold">Callback ichida tekshiruv</text>
+  <text x="380" y="270" font-size="13" fill="#334155" text-anchor="middle">$bot->userId() === $userId ?  ha -> ochish  |  yo'q -> "Bu tugma siz uchun emas" (alert)</text>
+  <text x="380" y="288" font-size="13" fill="#64748b" text-anchor="middle">faqat o'sha yangi a'zo o'z captchasini yecha oladi (bot/begona yo'q)</text>
+
+  <line x1="495" y1="172" x2="430" y2="218" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+
+  <text x="380" y="340" font-size="14" fill="#334155" text-anchor="middle">Real qo'shimcha: taymer (N daqiqada bosmasa -> banChatMember), tugma xabarini deleteMessage</text>
+  <text x="380" y="368" font-size="13" fill="#64748b" text-anchor="middle">Oqim mantig'i FakeNutgram bilan tekshirilgan; jonli mute/ban illustrativ (bot admin kerak)</text>
+
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/></marker>
+  </defs>
+</svg>

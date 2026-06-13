@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" font-family="Segoe UI, sans-serif">
+  <title>Telegram update botga qanday yetib keladi va handlerga yo'naltiriladi</title>
+  <rect width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Update'dan handlergacha bo'lgan yo'l</text>
+
+  <!-- Telegram -->
+  <rect x="40" y="80" width="150" height="70" rx="10" fill="#2563eb"/>
+  <text x="115" y="112" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Telegram</text>
+  <text x="115" y="134" font-size="13" fill="#dbeafe" text-anchor="middle">serveri</text>
+
+  <!-- Update object -->
+  <rect x="250" y="75" width="180" height="80" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="340" y="103" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">Update obyekti</text>
+  <text x="340" y="124" font-size="13" fill="#334155" text-anchor="middle">message / callback_query</text>
+  <text x="340" y="142" font-size="13" fill="#334155" text-anchor="middle">edited_message ...</text>
+
+  <!-- Bot dispatcher -->
+  <rect x="490" y="75" width="230" height="80" rx="10" fill="#16a34a"/>
+  <text x="605" y="105" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Nutgram dispatcher</text>
+  <text x="605" y="128" font-size="13" fill="#dcfce7" text-anchor="middle">update turini aniqlaydi</text>
+  <text x="605" y="146" font-size="13" fill="#dcfce7" text-anchor="middle">mos handlerni qidiradi</text>
+
+  <!-- arrows top row -->
+  <line x1="190" y1="115" x2="246" y2="115" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="430" y1="115" x2="486" y2="115" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- vertical to handlers -->
+  <line x1="605" y1="155" x2="605" y2="195" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Handlers row -->
+  <rect x="60" y="210" width="150" height="60" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="135" y="237" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">onCommand</text>
+  <text x="135" y="257" font-size="13" fill="#334155" text-anchor="middle">/start, /help</text>
+
+  <rect x="230" y="210" width="150" height="60" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="305" y="237" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">onText</text>
+  <text x="305" y="257" font-size="13" fill="#334155" text-anchor="middle">regex naqsh</text>
+
+  <rect x="400" y="210" width="160" height="60" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="480" y="237" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">onCallbackQuery</text>
+  <text x="480" y="257" font-size="13" fill="#334155" text-anchor="middle">tugma bosildi</text>
+
+  <rect x="580" y="210" width="140" height="60" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="650" y="237" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">onMessage</text>
+  <text x="650" y="257" font-size="13" fill="#334155" text-anchor="middle">har qanday xabar</text>
+
+  <!-- fan-out lines -->
+  <line x1="560" y1="180" x2="135" y2="208" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="580" y1="180" x2="305" y2="208" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="620" y1="180" x2="480" y2="208" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="650" y1="180" x2="650" y2="208" stroke="#94a3b8" stroke-width="1.5"/>
+
+  <!-- fallback -->
+  <rect x="230" y="320" width="300" height="64" rx="8" fill="#f59e0b"/>
+  <text x="380" y="348" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">fallback / fallbackOn</text>
+  <text x="380" y="370" font-size="13" fill="#1e293b" text-anchor="middle">hech bir handler mos kelmasa</text>
+
+  <line x1="380" y1="270" x2="380" y2="318" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#ar)"/>
+  <text x="470" y="298" font-size="13" fill="#dc2626" text-anchor="middle">mos yo'q</text>
+
+  <defs>
+    <marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+</svg>

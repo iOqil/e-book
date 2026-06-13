@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" font-family="Segoe UI, sans-serif">
+  <title>DI-konteyner: bog'lash va handlerga avtomatik in'ektsiya</title>
+  <rect x="0" y="0" width="760" height="400" fill="#f8fafc"/>
+  <text x="380" y="32" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">DI-konteyner va handlerga in'ektsiya</text>
+
+  <!-- bind/singleton step -->
+  <rect x="30" y="64" width="300" height="120" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="180" y="90" font-size="15" fill="#2563eb" text-anchor="middle" font-weight="bold">1) Bir marta bog'lash</text>
+  <text x="180" y="116" font-size="13" fill="#334155" text-anchor="middle">$bot->getContainer()</text>
+  <text x="180" y="138" font-size="13" fill="#334155" text-anchor="middle">->singleton(UserRepository::class,</text>
+  <text x="180" y="158" font-size="13" fill="#334155" text-anchor="middle">fn () => new UserRepository())</text>
+  <text x="180" y="178" font-size="13" fill="#16a34a" text-anchor="middle">singleton = bitta nusxa, qayta ishlatiladi</text>
+
+  <!-- container box -->
+  <rect x="280" y="210" width="200" height="90" rx="10" fill="#16a34a"/>
+  <text x="380" y="240" font-size="16" fill="#ffffff" text-anchor="middle" font-weight="bold">Konteyner</text>
+  <text x="380" y="264" font-size="13" fill="#ffffff" text-anchor="middle">PSR-11</text>
+  <text x="380" y="286" font-size="13" fill="#ffffff" text-anchor="middle">UserRepository (1 nusxa)</text>
+
+  <line x1="180" y1="184" x2="300" y2="208" stroke="#94a3b8" stroke-width="2" marker-end="url(#a11b)"/>
+
+  <!-- handler step -->
+  <rect x="430" y="64" width="300" height="120" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="580" y="90" font-size="15" fill="#b45309" text-anchor="middle" font-weight="bold">2) Handler so'raydi (type-hint)</text>
+  <text x="580" y="116" font-size="13" fill="#334155" text-anchor="middle">function (Nutgram $bot,</text>
+  <text x="580" y="138" font-size="13" fill="#334155" text-anchor="middle">UserRepository $users) { ... }</text>
+  <text x="580" y="164" font-size="13" fill="#dc2626" text-anchor="middle">new ... YOZILMAYDI</text>
+
+  <!-- resolver arrow -->
+  <line x1="580" y1="184" x2="460" y2="208" stroke="#94a3b8" stroke-width="2" marker-end="url(#a11b)"/>
+  <text x="540" y="204" font-size="13" fill="#334155" text-anchor="middle">resolver topadi</text>
+
+  <!-- result -->
+  <rect x="230" y="330" width="300" height="50" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="352" font-size="14" fill="#1e293b" text-anchor="middle" font-weight="bold">Nutgram $users ni avtomatik in'ektsiya qiladi</text>
+  <text x="380" y="372" font-size="13" fill="#334155" text-anchor="middle">handler tayyor xizmatni oladi</text>
+  <line x1="380" y1="300" x2="380" y2="328" stroke="#94a3b8" stroke-width="2" marker-end="url(#a11b)"/>
+
+  <defs>
+    <marker id="a11b" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/></marker>
+  </defs>
+</svg>

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" font-family="Segoe UI, sans-serif">
+  <title>Rejalashtirilgan vazifalar arxitekturasi: system cron -> PHP skript -> bot</title>
+  <rect width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">Rejalashtirilgan vazifalar: cron arxitekturasi</text>
+
+  <!-- cron -->
+  <rect x="40" y="150" width="170" height="100" rx="10" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+  <text x="125" y="182" text-anchor="middle" font-size="15" font-weight="bold" fill="#2563eb">System cron</text>
+  <text x="125" y="206" text-anchor="middle" font-size="13" fill="#334155">* * * * *</text>
+  <text x="125" y="228" text-anchor="middle" font-size="13" fill="#94a3b8">(har daqiqa)</text>
+
+  <line x1="210" y1="200" x2="280" y2="200" stroke="#94a3b8" stroke-width="2" marker-end="url(#c15)"/>
+  <text x="245" y="190" text-anchor="middle" font-size="13" fill="#334155">ishga</text>
+
+  <!-- php script -->
+  <rect x="285" y="130" width="200" height="140" rx="10" fill="#fff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="385" y="160" text-anchor="middle" font-size="15" font-weight="bold" fill="#f59e0b">php schedule.php</text>
+  <text x="385" y="186" text-anchor="middle" font-size="13" fill="#334155">1. DB'dan 'due'</text>
+  <text x="385" y="206" text-anchor="middle" font-size="13" fill="#334155">    vazifalarni o'qi</text>
+  <text x="385" y="226" text-anchor="middle" font-size="13" fill="#334155">2. yangi Nutgram</text>
+  <text x="385" y="246" text-anchor="middle" font-size="13" fill="#334155">3. yubor + belgila</text>
+
+  <!-- db -->
+  <rect x="285" y="310" width="200" height="80" rx="10" fill="#fff" stroke="#16a34a" stroke-width="2"/>
+  <text x="385" y="340" text-anchor="middle" font-size="14" font-weight="bold" fill="#16a34a">scheduled_messages</text>
+  <text x="385" y="362" text-anchor="middle" font-size="13" fill="#334155">scheduled_at, sent</text>
+  <line x1="385" y1="270" x2="385" y2="310" stroke="#94a3b8" stroke-width="2" marker-end="url(#c15)"/>
+  <line x1="360" y1="310" x2="360" y2="270" stroke="#94a3b8" stroke-width="2" marker-end="url(#c15)"/>
+
+  <line x1="485" y1="190" x2="555" y2="190" stroke="#94a3b8" stroke-width="2" marker-end="url(#c15)"/>
+
+  <!-- telegram -->
+  <rect x="560" y="150" width="160" height="100" rx="10" fill="#fff" stroke="#16a34a" stroke-width="2"/>
+  <text x="640" y="186" text-anchor="middle" font-size="15" font-weight="bold" fill="#16a34a">Telegram API</text>
+  <text x="640" y="210" text-anchor="middle" font-size="13" fill="#334155">sendMessage</text>
+  <text x="640" y="230" text-anchor="middle" font-size="13" fill="#334155">foydalanuvchilarga</text>
+
+  <!-- note -->
+  <text x="380" y="404" text-anchor="middle" font-size="13" fill="#94a3b8">Eslatma: bu skript bot long-polling jarayonidan ALOHIDA ishlaydi (mustaqil process).</text>
+
+  <defs>
+    <marker id="c15" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#94a3b8"/></marker>
+  </defs>
+</svg>

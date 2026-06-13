@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" font-family="Segoe UI, sans-serif">
+  <title>FakeNutgram test oqimi: soxta update -> handler -> javob tarixi -> assertion</title>
+  <rect x="0" y="0" width="760" height="380" fill="#f8fafc"/>
+  <text x="380" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">FakeNutgram bilan test oqimi (tarmoqsiz)</text>
+  <text x="380" y="56" font-size="13" fill="#64748b" text-anchor="middle">Hech qanday token, hech qanday Telegram serveri — hammasi xotirada</text>
+
+  <!-- 1: soxta update -->
+  <rect x="24" y="100" width="160" height="92" rx="10" fill="#2563eb"/>
+  <text x="104" y="130" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">1. Soxta update</text>
+  <text x="104" y="154" font-size="13" fill="#ffffff" text-anchor="middle">hearText('/start')</text>
+  <text x="104" y="174" font-size="13" fill="#ffffff" text-anchor="middle">hearCallbackQueryData</text>
+
+  <!-- 2: handler -->
+  <rect x="216" y="100" width="160" height="92" rx="10" fill="#16a34a"/>
+  <text x="296" y="130" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">2. Bot handleri</text>
+  <text x="296" y="154" font-size="13" fill="#ffffff" text-anchor="middle">reply() ishga tushiradi</text>
+  <text x="296" y="174" font-size="13" fill="#ffffff" text-anchor="middle">sizning kodingiz</text>
+
+  <!-- 3: history -->
+  <rect x="408" y="100" width="160" height="92" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="488" y="130" font-size="15" fill="#b45309" text-anchor="middle" font-weight="bold">3. So'rov tarixi</text>
+  <text x="488" y="154" font-size="13" fill="#334155" text-anchor="middle">sendMessage(...) yozib</text>
+  <text x="488" y="174" font-size="13" fill="#334155" text-anchor="middle">qolinadi (yuborilmaydi)</text>
+
+  <!-- 4: assert -->
+  <rect x="600" y="100" width="136" height="92" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="668" y="130" font-size="15" fill="#2563eb" text-anchor="middle" font-weight="bold">4. Assertion</text>
+  <text x="668" y="154" font-size="13" fill="#334155" text-anchor="middle">assertReplyText</text>
+  <text x="668" y="174" font-size="13" fill="#334155" text-anchor="middle">assertCalled</text>
+
+  <!-- arrows -->
+  <line x1="184" y1="146" x2="214" y2="146" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="376" y1="146" x2="406" y2="146" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="568" y1="146" x2="598" y2="146" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- mock response -->
+  <rect x="216" y="236" width="352" height="100" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="392" y="264" font-size="15" fill="#dc2626" text-anchor="middle" font-weight="bold">Soxta javob (mock)</text>
+  <text x="392" y="290" font-size="13" fill="#334155" text-anchor="middle">willReceive(...) / willReceivePartial(...) bilan</text>
+  <text x="392" y="312" font-size="13" fill="#334155" text-anchor="middle">getChatMember kabi chaqiruvga tayyor natija beriladi</text>
+  <line x1="296" y1="192" x2="340" y2="234" stroke="#dc2626" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#arr)"/>
+
+  <text x="380" y="362" font-size="14" fill="#334155" text-anchor="middle">Bir xil handler kodi — jonli va testda; faqat tashqi I/O soxtalashtiriladi</text>
+
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/></marker>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#dc2626"/></marker>
+  </defs>
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" font-family="Segoe UI, sans-serif">
+  <title>sendMediaGroup: albom (media-group) tuzilishi</title>
+  <rect width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="22" font-weight="bold" fill="#1e293b">Media-group (albom)</text>
+  <text x="380" y="58" text-anchor="middle" font-size="14" fill="#334155">2-10 ta media — bitta xabar sifatida</text>
+
+  <!-- massiv -->
+  <rect x="40" y="84" width="320" height="266" rx="12" fill="#fff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="200" y="110" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e293b">$media massivi (PHP)</text>
+
+  <rect x="64" y="124" width="272" height="58" rx="8" fill="#eff6ff" stroke="#2563eb"/>
+  <text x="80" y="146" font-size="13" font-weight="bold" fill="#2563eb">InputMediaPhoto::make(</text>
+  <text x="92" y="164" font-size="13" fill="#334155">'1.jpg', caption: 'Birinchi')</text>
+
+  <rect x="64" y="190" width="272" height="50" rx="8" fill="#eff6ff" stroke="#2563eb"/>
+  <text x="80" y="220" font-size="13" font-weight="bold" fill="#2563eb">InputMediaPhoto::make('2.jpg')</text>
+
+  <rect x="64" y="248" width="272" height="50" rx="8" fill="#f0fdf4" stroke="#16a34a"/>
+  <text x="80" y="278" font-size="13" font-weight="bold" fill="#16a34a">InputMediaVideo::make('3.mp4')</text>
+
+  <text x="200" y="324" text-anchor="middle" font-size="13" fill="#dc2626" font-weight="bold">caption faqat birinchi elementda</text>
+  <text x="200" y="342" text-anchor="middle" font-size="13" fill="#334155">tur aralashmasligi kerak (foto/video alohida)</text>
+
+  <!-- arrow -->
+  <line x1="362" y1="216" x2="430" y2="216" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="430,216 418,210 418,222" fill="#94a3b8"/>
+  <text x="396" y="206" text-anchor="middle" font-size="13" fill="#334155">sendMediaGroup</text>
+
+  <!-- telegram albom -->
+  <rect x="440" y="84" width="280" height="266" rx="12" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+  <text x="580" y="110" text-anchor="middle" font-size="15" font-weight="bold" fill="#2563eb">Telegram'da ko'rinishi</text>
+
+  <rect x="464" y="124" width="116" height="86" rx="6" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="522" y="172" text-anchor="middle" font-size="14" fill="#2563eb">foto 1</text>
+  <rect x="588" y="124" width="116" height="86" rx="6" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="646" y="172" text-anchor="middle" font-size="14" fill="#2563eb">foto 2</text>
+  <rect x="464" y="216" width="240" height="60" rx="6" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="584" y="252" text-anchor="middle" font-size="14" fill="#16a34a">video 3 (3:1 grid)</text>
+
+  <text x="580" y="300" text-anchor="middle" font-size="13" fill="#334155">"Birinchi" — albom tagida</text>
+  <text x="580" y="322" text-anchor="middle" font-size="13" fill="#334155">hammasi bitta guruh bo'lib keladi</text>
+
+  <text x="380" y="382" text-anchor="middle" font-size="14" font-weight="bold" fill="#16a34a">Limit: 2-10 element, jami &lt;= 50 MB</text>
+  <text x="380" y="404" text-anchor="middle" font-size="13" fill="#334155">reply_markup (tugma) media-group bilan ishlamaydi</text>
+</svg>

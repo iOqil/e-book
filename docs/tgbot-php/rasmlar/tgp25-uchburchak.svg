@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" font-family="Segoe UI, sans-serif">
+  <title>Mini App uchburchak arxitekturasi: bot, web app va backend</title>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">Uchburchak arxitektura</text>
+  <text x="380" y="56" text-anchor="middle" font-size="13" fill="#64748b">bitta bot token uch tomonni bog'laydi</text>
+
+  <defs>
+    <marker id="a25" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#334155"/>
+    </marker>
+    <marker id="a25g" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <!-- Bot (top) -->
+  <rect x="280" y="90" width="200" height="64" rx="10" fill="#2563eb"/>
+  <text x="380" y="118" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">Bot (Nutgram)</text>
+  <text x="380" y="140" text-anchor="middle" font-size="13" fill="#dbeafe">web_app tugmasi beradi</text>
+
+  <!-- Web App (bottom left) -->
+  <rect x="60" y="320" width="220" height="84" rx="10" fill="#16a34a"/>
+  <text x="170" y="350" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">Web App (frontend)</text>
+  <text x="170" y="372" text-anchor="middle" font-size="13" fill="#dcfce7">HTML/JS, Telegram ichida</text>
+  <text x="170" y="392" text-anchor="middle" font-size="13" fill="#dcfce7">initData'ni biladi</text>
+
+  <!-- Backend (bottom right) -->
+  <rect x="480" y="320" width="220" height="84" rx="10" fill="#f59e0b"/>
+  <text x="590" y="350" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">Backend (PHP)</text>
+  <text x="590" y="372" text-anchor="middle" font-size="13" fill="#fef3c7">API + initData tekshiradi</text>
+  <text x="590" y="392" text-anchor="middle" font-size="13" fill="#fef3c7">holatni DB'da saqlaydi</text>
+
+  <!-- Bot -> WebApp: opens -->
+  <line x1="300" y1="158" x2="185" y2="315" stroke="#334155" stroke-width="2" marker-end="url(#a25)"/>
+  <text x="195" y="240" text-anchor="middle" font-size="13" fill="#1e293b">1. tugma App'ni</text>
+  <text x="195" y="258" text-anchor="middle" font-size="13" fill="#1e293b">ochadi + initData</text>
+
+  <!-- WebApp -> Backend: request with initData -->
+  <line x1="285" y1="362" x2="475" y2="362" stroke="#334155" stroke-width="2" marker-end="url(#a25)"/>
+  <text x="380" y="352" text-anchor="middle" font-size="13" fill="#1e293b">2. so'rov + initData</text>
+  <!-- Backend -> WebApp: JSON -->
+  <line x1="475" y1="388" x2="285" y2="388" stroke="#16a34a" stroke-width="2" marker-end="url(#a25g)"/>
+  <text x="380" y="412" text-anchor="middle" font-size="13" fill="#16a34a">3. JSON holat (200) / 401</text>
+
+  <!-- Backend -> Bot: same token -->
+  <line x1="570" y1="315" x2="460" y2="158" stroke="#334155" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#a25)"/>
+  <text x="565" y="240" text-anchor="middle" font-size="13" fill="#92400e">4. AYNAN shu</text>
+  <text x="565" y="258" text-anchor="middle" font-size="13" fill="#92400e">bot token bilan</text>
+  <text x="565" y="276" text-anchor="middle" font-size="13" fill="#92400e">HMAC tekshiradi</text>
+
+  <text x="380" y="452" text-anchor="middle" font-size="13" fill="#64748b">Token uch tomonda ham bir xil — ishonchning ildizi</text>
+</svg>

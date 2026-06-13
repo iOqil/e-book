@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" font-family="Segoe UI, sans-serif">
+  <title>Test piramidasi: ko'p birlik testi, kamroq integratsiya, eng kam E2E</title>
+  <rect x="0" y="0" width="760" height="400" fill="#f8fafc"/>
+  <text x="380" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Bot uchun test piramidasi</text>
+
+  <!-- top: E2E -->
+  <polygon points="380,64 470,134 290,134" fill="#dc2626"/>
+  <text x="380" y="108" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">E2E</text>
+  <text x="380" y="125" font-size="13" fill="#ffffff" text-anchor="middle">jonli</text>
+
+  <!-- middle: integration -->
+  <polygon points="290,138 470,138 540,228 220,228" fill="#f59e0b"/>
+  <text x="380" y="178" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Integratsiya (FakeNutgram)</text>
+  <text x="380" y="202" font-size="13" fill="#ffffff" text-anchor="middle">handler + conversation + middleware</text>
+
+  <!-- bottom: unit -->
+  <polygon points="220,232 540,232 620,340 140,340" fill="#16a34a"/>
+  <text x="380" y="276" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Birlik (unit) testlari</text>
+  <text x="380" y="300" font-size="13" fill="#ffffff" text-anchor="middle">sof PHP mantiq: Clicker, hisoblash, validatsiya</text>
+  <text x="380" y="322" font-size="13" fill="#ffffff" text-anchor="middle">eng ko'p, eng tez, Telegram'siz</text>
+
+  <!-- side labels -->
+  <text x="640" y="100" font-size="13" fill="#dc2626" text-anchor="start">kam, sekin, mo'rt</text>
+  <text x="640" y="186" font-size="13" fill="#b45309" text-anchor="start">o'rtacha</text>
+  <text x="640" y="290" font-size="13" fill="#16a34a" text-anchor="start">ko'p, tez, barqaror</text>
+
+  <!-- arrow up = slower/fewer -->
+  <line x1="96" y1="340" x2="96" y2="80" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="82" y="210" font-size="13" fill="#64748b" text-anchor="middle" transform="rotate(-90 82 210)">tezroq -> sekinroq</text>
+
+  <text x="380" y="372" font-size="14" fill="#334155" text-anchor="middle">Asos keng bo'lsin: ko'p arzon unit test, ozroq FakeNutgram testi, juda kam jonli tekshiruv</text>
+
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/></marker>
+  </defs>
+</svg>

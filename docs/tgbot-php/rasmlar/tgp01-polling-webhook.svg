@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" font-family="Segoe UI, sans-serif">
+  <title>Polling va webhook usullarining solishtiruvi (Nutgram running mode)</title>
+  <rect width="760" height="400" fill="#f8fafc"/>
+  <text x="380" y="34" font-size="19" font-weight="bold" fill="#1e293b" text-anchor="middle">Polling va webhook: ikki yetkazib berish usuli</text>
+
+  <!-- POLLING blok -->
+  <rect x="30" y="60" width="340" height="300" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="200" y="90" font-size="17" font-weight="bold" fill="#2563eb" text-anchor="middle">Polling (so'rab-tortish)</text>
+  <text x="200" y="114" font-size="13" fill="#64748b" text-anchor="middle">$bot-&gt;run() — rivojlash uchun</text>
+
+  <rect x="60" y="138" width="120" height="64" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="120" y="166" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Bot (PHP)</text>
+  <text x="120" y="188" font-size="13" fill="#334155" text-anchor="middle">Nutgram</text>
+
+  <rect x="220" y="138" width="120" height="64" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="280" y="166" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Telegram</text>
+  <text x="280" y="188" font-size="13" fill="#334155" text-anchor="middle">getUpdates</text>
+
+  <line x1="180" y1="158" x2="218" y2="158" stroke="#94a3b8" stroke-width="2" marker-end="url(#a1)"/>
+  <text x="199" y="150" font-size="13" fill="#334155" text-anchor="middle">"bormi?"</text>
+  <line x1="218" y1="184" x2="180" y2="184" stroke="#94a3b8" stroke-width="2" marker-end="url(#a1)"/>
+  <text x="199" y="200" font-size="13" fill="#334155" text-anchor="middle">update'lar</text>
+
+  <text x="200" y="244" font-size="13" fill="#16a34a" text-anchor="middle">+ Public URL kerak emas</text>
+  <text x="200" y="266" font-size="13" fill="#16a34a" text-anchor="middle">+ localhost'da ishlaydi</text>
+  <text x="200" y="288" font-size="13" fill="#16a34a" text-anchor="middle">+ O'rganish uchun ideal</text>
+  <text x="200" y="316" font-size="13" fill="#dc2626" text-anchor="middle">- Bot doim so'rab turadi</text>
+  <text x="200" y="338" font-size="13" fill="#dc2626" text-anchor="middle">- Katta yukda samarasizroq</text>
+
+  <!-- WEBHOOK blok -->
+  <rect x="390" y="60" width="340" height="300" rx="12" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="560" y="90" font-size="17" font-weight="bold" fill="#f59e0b" text-anchor="middle">Webhook (itarish)</text>
+  <text x="560" y="114" font-size="13" fill="#64748b" text-anchor="middle">setWebhook — production uchun</text>
+
+  <rect x="420" y="138" width="120" height="64" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="480" y="166" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Telegram</text>
+  <text x="480" y="188" font-size="13" fill="#334155" text-anchor="middle">POST</text>
+
+  <rect x="580" y="138" width="120" height="64" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="640" y="160" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Bot (PHP)</text>
+  <text x="640" y="182" font-size="13" fill="#334155" text-anchor="middle">HTTPS URL</text>
+  <text x="640" y="200" font-size="13" fill="#334155" text-anchor="middle">/webhook</text>
+
+  <line x1="540" y1="170" x2="578" y2="170" stroke="#f59e0b" stroke-width="2" marker-end="url(#a2)"/>
+  <text x="559" y="160" font-size="13" fill="#f59e0b" text-anchor="middle">update</text>
+
+  <text x="560" y="244" font-size="13" fill="#16a34a" text-anchor="middle">+ Tezkor, kam yuk</text>
+  <text x="560" y="266" font-size="13" fill="#16a34a" text-anchor="middle">+ Minglab foydalanuvchi</text>
+  <text x="560" y="288" font-size="13" fill="#dc2626" text-anchor="middle">- Public HTTPS URL kerak</text>
+  <text x="560" y="310" font-size="13" fill="#dc2626" text-anchor="middle">- Domen + SSL sertifikat</text>
+  <text x="560" y="338" font-size="13" fill="#dc2626" text-anchor="middle">- Sozlash murakkabroq</text>
+
+  <text x="380" y="384" font-size="14" font-weight="bold" fill="#334155" text-anchor="middle">Qoida: o'rganishda — polling; productionda — webhook (13-bob).</text>
+
+  <defs>
+    <marker id="a1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/></marker>
+    <marker id="a2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#f59e0b"/></marker>
+  </defs>
+</svg>

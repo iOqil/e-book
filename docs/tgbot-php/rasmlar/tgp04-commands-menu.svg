@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" font-family="Segoe UI, sans-serif">
+  <title>Buyruqlar menyusi: setMyCommands va scope</title>
+  <rect x="0" y="0" width="720" height="400" fill="#f8fafc"/>
+  <text x="360" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">Buyruqlar menyusi: setMyCommands</text>
+
+  <!-- code side -->
+  <rect x="30" y="60" width="300" height="300" rx="12" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+  <text x="180" y="88" text-anchor="middle" font-size="15" font-weight="bold" fill="#2563eb">Kod (bir marta)</text>
+  <text x="50" y="120" font-size="13" fill="#334155">setMyCommands([</text>
+  <text x="66" y="146" font-size="13" fill="#334155">new BotCommand(</text>
+  <text x="82" y="168" font-size="13" fill="#16a34a">'start','Boshlash'),</text>
+  <text x="66" y="194" font-size="13" fill="#334155">new BotCommand(</text>
+  <text x="82" y="216" font-size="13" fill="#16a34a">'help','Yordam'),</text>
+  <text x="50" y="242" font-size="13" fill="#334155">], scope: ...)</text>
+  <line x1="50" y1="262" x2="310" y2="262" stroke="#94a3b8" stroke-width="1"/>
+  <text x="50" y="288" font-size="13" fill="#334155">yoki avtomatik:</text>
+  <text x="50" y="312" font-size="13" fill="#f59e0b">->description('...')</text>
+  <text x="50" y="336" font-size="13" fill="#334155">+ registerMyCommands()</text>
+
+  <!-- arrow -->
+  <line x1="330" y1="210" x2="400" y2="210" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- telegram menu side -->
+  <rect x="400" y="60" width="290" height="300" rx="12" fill="#fff" stroke="#16a34a" stroke-width="2"/>
+  <text x="545" y="88" text-anchor="middle" font-size="15" font-weight="bold" fill="#16a34a">Telegram menyusi</text>
+  <rect x="420" y="108" width="250" height="44" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+  <text x="436" y="135" font-size="14" fill="#2563eb">/start</text>
+  <text x="540" y="135" font-size="13" fill="#334155">Boshlash</text>
+  <rect x="420" y="160" width="250" height="44" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+  <text x="436" y="187" font-size="14" fill="#2563eb">/help</text>
+  <text x="540" y="187" font-size="13" fill="#334155">Yordam</text>
+  <text x="545" y="240" text-anchor="middle" font-size="13" fill="#334155">Foydalanuvchi [/] tugmasini</text>
+  <text x="545" y="262" text-anchor="middle" font-size="13" fill="#334155">bosganda ko'rinadi</text>
+  <line x1="420" y1="282" x2="670" y2="282" stroke="#94a3b8" stroke-width="1"/>
+  <text x="545" y="308" text-anchor="middle" font-size="13" font-weight="bold" fill="#f59e0b">Scope = kim ko'radi</text>
+  <text x="545" y="332" text-anchor="middle" font-size="13" fill="#334155">private / guruh / admin</text>
+
+  <defs>
+    <marker id="a" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+</svg>

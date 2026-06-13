@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 420" font-family="Segoe UI, sans-serif">
+  <title>Nutgram running mode turlari va setRunningMode dispetcheri</title>
+  <rect width="780" height="420" fill="#f8fafc"/>
+  <text x="390" y="34" font-size="19" font-weight="bold" fill="#1e293b" text-anchor="middle">Nutgram running mode'lari</text>
+
+  <!-- central run() -->
+  <rect x="300" y="64" width="180" height="64" rx="11" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="390" y="92" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">$bot->run()</text>
+  <text x="390" y="114" font-size="13" fill="#334155" text-anchor="middle">processUpdates() chaqiradi</text>
+
+  <text x="390" y="150" font-size="13" fill="#64748b" text-anchor="middle">setRunningMode(...) qaysi rejimni tanlashni belgilaydi</text>
+
+  <!-- 4 modes -->
+  <rect x="24" y="178" width="170" height="146" rx="11" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="109" y="206" font-size="15" font-weight="bold" fill="#2563eb" text-anchor="middle">Polling</text>
+  <text x="109" y="230" font-size="13" fill="#334155" text-anchor="middle">CLI, doimiy halqa</text>
+  <text x="109" y="250" font-size="13" fill="#334155" text-anchor="middle">getUpdates loop</text>
+  <text x="109" y="276" font-size="13" fill="#16a34a" text-anchor="middle">Default (CLI)</text>
+  <text x="109" y="300" font-size="13" fill="#475569" text-anchor="middle">Rivojlash uchun</text>
+
+  <rect x="208" y="178" width="170" height="146" rx="11" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="293" y="206" font-size="15" font-weight="bold" fill="#f59e0b" text-anchor="middle">Webhook</text>
+  <text x="293" y="230" font-size="13" fill="#334155" text-anchor="middle">HTTP so'rov</text>
+  <text x="293" y="250" font-size="13" fill="#334155" text-anchor="middle">php://input</text>
+  <text x="293" y="276" font-size="13" fill="#334155" text-anchor="middle">secret_token</text>
+  <text x="293" y="300" font-size="13" fill="#475569" text-anchor="middle">Production uchun</text>
+
+  <rect x="392" y="178" width="170" height="146" rx="11" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="477" y="206" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="middle">SingleUpdate</text>
+  <text x="477" y="230" font-size="13" fill="#334155" text-anchor="middle">Bir update'ni</text>
+  <text x="477" y="250" font-size="13" fill="#334155" text-anchor="middle">o'qib chiqadi</text>
+  <text x="477" y="276" font-size="13" fill="#334155" text-anchor="middle">halqasiz</text>
+  <text x="477" y="300" font-size="13" fill="#475569" text-anchor="middle">cron / test</text>
+
+  <rect x="576" y="178" width="180" height="146" rx="11" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="666" y="206" font-size="15" font-weight="bold" fill="#334155" text-anchor="middle">Fake</text>
+  <text x="666" y="230" font-size="13" fill="#334155" text-anchor="middle">Nutgram::fake()</text>
+  <text x="666" y="250" font-size="13" fill="#334155" text-anchor="middle">tarmoqsiz</text>
+  <text x="666" y="276" font-size="13" fill="#334155" text-anchor="middle">assertReplyText</text>
+  <text x="666" y="300" font-size="13" fill="#475569" text-anchor="middle">Test uchun (16-bob)</text>
+
+  <line x1="360" y1="128" x2="120" y2="176" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="378" y1="128" x2="300" y2="176" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="402" y1="128" x2="470" y2="176" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="420" y1="128" x2="650" y2="176" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+
+  <rect x="24" y="350" width="732" height="50" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="390" y="380" font-size="14" fill="#334155" text-anchor="middle">Hammasi bir xil handlerlar bilan ishlaydi — faqat update'ni qabul qilish usuli farq qiladi.</text>
+
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/></marker>
+  </defs>
+</svg>

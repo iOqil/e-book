@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 410" font-family="Segoe UI, sans-serif">
+  <title>Scaling: long-polling bitta nusxa vs webhook bir nechta nusxa</title>
+  <rect x="0" y="0" width="760" height="410" fill="#f8fafc"/>
+  <text x="380" y="32" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Scaling: long-polling vs webhook</text>
+
+  <!-- LEFT: long-polling -->
+  <text x="190" y="68" font-size="16" font-weight="bold" fill="#dc2626" text-anchor="middle">Long-polling — BITTA nusxa</text>
+
+  <rect x="40" y="86" width="120" height="50" rx="8" fill="#2563eb"/>
+  <text x="100" y="110" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Telegram</text>
+  <text x="100" y="128" font-size="13" fill="#ffffff" text-anchor="middle">getUpdates</text>
+
+  <rect x="220" y="86" width="130" height="50" rx="8" fill="#16a34a"/>
+  <text x="285" y="110" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">php bot.php</text>
+  <text x="285" y="128" font-size="13" fill="#ffffff" text-anchor="middle">1 jarayon</text>
+  <line x1="160" y1="111" x2="218" y2="111" stroke="#94a3b8" stroke-width="2" marker-end="url(#a11c)"/>
+
+  <rect x="120" y="160" width="200" height="44" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="220" y="180" font-size="13" fill="#dc2626" text-anchor="middle" font-weight="bold">2-nusxa = getUpdates konflikt</text>
+  <text x="220" y="198" font-size="13" fill="#334155" text-anchor="middle">gorizontal scaling YO'Q</text>
+
+  <!-- divider -->
+  <line x1="380" y1="58" x2="380" y2="230" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- RIGHT: webhook -->
+  <text x="575" y="68" font-size="16" font-weight="bold" fill="#16a34a" text-anchor="middle">Webhook — KO'P nusxa</text>
+
+  <rect x="410" y="86" width="110" height="50" rx="8" fill="#2563eb"/>
+  <text x="465" y="110" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Telegram</text>
+  <text x="465" y="128" font-size="13" fill="#ffffff" text-anchor="middle">POST</text>
+
+  <rect x="555" y="86" width="80" height="50" rx="8" fill="#f59e0b"/>
+  <text x="595" y="110" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="bold">nginx</text>
+  <text x="595" y="128" font-size="13" fill="#ffffff" text-anchor="middle">balancer</text>
+  <line x1="520" y1="111" x2="553" y2="111" stroke="#94a3b8" stroke-width="2" marker-end="url(#a11c)"/>
+
+  <rect x="660" y="78" width="80" height="30" rx="6" fill="#16a34a"/>
+  <text x="700" y="98" font-size="13" fill="#ffffff" text-anchor="middle">nusxa 1</text>
+  <rect x="660" y="114" width="80" height="30" rx="6" fill="#16a34a"/>
+  <text x="700" y="134" font-size="13" fill="#ffffff" text-anchor="middle">nusxa 2</text>
+  <rect x="660" y="150" width="80" height="30" rx="6" fill="#16a34a"/>
+  <text x="700" y="170" font-size="13" fill="#ffffff" text-anchor="middle">nusxa 3</text>
+  <line x1="635" y1="105" x2="658" y2="93" stroke="#94a3b8" stroke-width="2" marker-end="url(#a11c)"/>
+  <line x1="635" y1="115" x2="658" y2="129" stroke="#94a3b8" stroke-width="2" marker-end="url(#a11c)"/>
+  <line x1="635" y1="125" x2="658" y2="165" stroke="#94a3b8" stroke-width="2" marker-end="url(#a11c)"/>
+
+  <!-- shared state bottom -->
+  <rect x="120" y="270" width="520" height="100" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="298" font-size="16" fill="#2563eb" text-anchor="middle" font-weight="bold">Markaziy holat — KRITIK</text>
+  <text x="380" y="324" font-size="14" fill="#334155" text-anchor="middle">Configuration(cache: Redis) -> setUserData / conversation hamma nusxada bir xil</text>
+  <text x="380" y="348" font-size="14" fill="#334155" text-anchor="middle">Markaziy DB (MySQL/PostgreSQL) -> doimiy ma'lumot bitta manbada</text>
+
+  <text x="380" y="392" font-size="13" fill="#dc2626" text-anchor="middle">Xotiradagi holat ko'p nusxada buziladi: 1-nusxa yozganini 2-nusxa ko'rmaydi</text>
+
+  <defs>
+    <marker id="a11c" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/></marker>
+  </defs>
+</svg>

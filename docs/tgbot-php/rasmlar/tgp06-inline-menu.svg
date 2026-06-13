@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" font-family="Segoe UI, sans-serif">
+  <title>InlineMenu klassi: bir xabarni tahrirlab navigatsiya qilish</title>
+  <rect width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">InlineMenu: bitta xabar — ko'p ekran</text>
+
+  <!-- Screen 1: main -->
+  <rect x="30" y="70" width="200" height="180" rx="12" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <rect x="30" y="70" width="200" height="34" rx="12" fill="#2563eb"/>
+  <text x="130" y="93" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">Asosiy menyu</text>
+  <text x="48" y="130" font-size="13" fill="#1e293b">Sozlamalar:</text>
+  <rect x="48" y="146" width="164" height="32" rx="7" fill="#e0e7ff" stroke="#2563eb"/>
+  <text x="130" y="167" text-anchor="middle" font-size="13" fill="#2563eb">Til</text>
+  <rect x="48" y="184" width="164" height="32" rx="7" fill="#fee2e2" stroke="#dc2626"/>
+  <text x="130" y="205" text-anchor="middle" font-size="13" fill="#dc2626">Yopish</text>
+
+  <!-- arrow til -->
+  <line x1="232" y1="162" x2="290" y2="162" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="290,156 302,162 290,168" fill="#16a34a"/>
+  <text x="266" y="152" text-anchor="middle" font-size="13" fill="#16a34a">'til'</text>
+
+  <!-- Screen 2: language (same message, edited) -->
+  <rect x="305" y="70" width="200" height="180" rx="12" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <rect x="305" y="70" width="200" height="34" rx="12" fill="#2563eb"/>
+  <text x="405" y="93" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">Til menyusi</text>
+  <text x="323" y="130" font-size="13" fill="#1e293b">Tilni tanlang:</text>
+  <rect x="323" y="146" width="164" height="32" rx="7" fill="#e0e7ff" stroke="#2563eb"/>
+  <text x="405" y="167" text-anchor="middle" font-size="13" fill="#2563eb">O'zbek</text>
+  <rect x="323" y="184" width="164" height="32" rx="7" fill="#f1f5f9" stroke="#94a3b8"/>
+  <text x="405" y="205" text-anchor="middle" font-size="13" fill="#334155">Orqaga</text>
+
+  <!-- arrow back -->
+  <line x1="405" y1="252" x2="405" y2="285" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="399,285 405,297 411,285" fill="#94a3b8"/>
+  <text x="470" y="275" text-anchor="middle" font-size="13" fill="#64748b">'start' ga qaytadi</text>
+
+  <!-- arrow close -->
+  <line x1="232" y1="200" x2="290" y2="330" stroke="#dc2626" stroke-width="2"/>
+  <polygon points="285,322 292,335 296,322" fill="#dc2626"/>
+
+  <!-- close box -->
+  <rect x="305" y="305" width="200" height="60" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="405" y="332" text-anchor="middle" font-size="13" font-weight="bold" fill="#dc2626">closeMenu('Yopildi.')</text>
+  <text x="405" y="352" text-anchor="middle" font-size="13" fill="#334155">xabarni tahrirlaydi/o'chiradi</text>
+
+  <!-- key idea -->
+  <rect x="530" y="70" width="200" height="295" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="630" y="98" text-anchor="middle" font-size="14" font-weight="bold" fill="#16a34a">Qanday ishlaydi</text>
+  <text x="548" y="128" font-size="13" fill="#334155">callback_data shakli:</text>
+  <text x="548" y="150" font-size="13" fill="#2563eb" font-weight="bold">'data@metod'</text>
+  <text x="548" y="178" font-size="13" fill="#334155">@ dan keyingi qism —</text>
+  <text x="548" y="196" font-size="13" fill="#334155">chaqiriladigan metod nomi.</text>
+  <text x="548" y="226" font-size="13" fill="#334155">menuText() — matn</text>
+  <text x="548" y="248" font-size="13" fill="#334155">addButtonRow() — tugma</text>
+  <text x="548" y="270" font-size="13" fill="#334155">showMenu() — chizadi</text>
+  <text x="548" y="298" font-size="13" fill="#334155">Yangi xabar EMAS —</text>
+  <text x="548" y="316" font-size="13" fill="#334155">eski xabar editMessageText</text>
+  <text x="548" y="334" font-size="13" fill="#334155">bilan yangilanadi.</text>
+</svg>

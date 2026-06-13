@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" font-family="Segoe UI, sans-serif">
+  <title>Bot ma'lumotlar bazasi arxitekturasi: handler -> repository -> PDO -> SQLite/MySQL</title>
+  <rect x="0" y="0" width="760" height="380" fill="#f8fafc"/>
+  <text x="380" y="36" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Bot va ma'lumotlar bazasi qatlamlari</text>
+
+  <!-- Handler -->
+  <rect x="40" y="78" width="170" height="90" rx="10" fill="#2563eb"/>
+  <text x="125" y="110" font-size="16" fill="#ffffff" text-anchor="middle" font-weight="bold">Handler</text>
+  <text x="125" y="134" font-size="13" fill="#ffffff" text-anchor="middle">onCommand('add', ...)</text>
+  <text x="125" y="154" font-size="13" fill="#ffffff" text-anchor="middle">Telegram mantig'i</text>
+
+  <!-- Repository -->
+  <rect x="295" y="78" width="170" height="90" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="380" y="110" font-size="16" fill="#16a34a" text-anchor="middle" font-weight="bold">Repository</text>
+  <text x="380" y="134" font-size="13" fill="#334155" text-anchor="middle">add() / find() / all()</text>
+  <text x="380" y="154" font-size="13" fill="#334155" text-anchor="middle">SQL bu yerda yashaydi</text>
+
+  <!-- PDO -->
+  <rect x="550" y="78" width="170" height="90" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="635" y="110" font-size="16" fill="#b45309" text-anchor="middle" font-weight="bold">PDO</text>
+  <text x="635" y="134" font-size="13" fill="#334155" text-anchor="middle">prepare / execute</text>
+  <text x="635" y="154" font-size="13" fill="#334155" text-anchor="middle">bitta API, ko'p DB</text>
+
+  <!-- arrows top row -->
+  <line x1="210" y1="123" x2="293" y2="123" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="465" y1="123" x2="548" y2="123" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="252" y="113" font-size="13" fill="#334155" text-anchor="middle">chaqiradi</text>
+  <text x="507" y="113" font-size="13" fill="#334155" text-anchor="middle">ishlatadi</text>
+
+  <!-- DB engines -->
+  <rect x="500" y="230" width="120" height="74" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="560" y="262" font-size="15" fill="#16a34a" text-anchor="middle" font-weight="bold">SQLite</text>
+  <text x="560" y="284" font-size="13" fill="#334155" text-anchor="middle">bitta fayl (default)</text>
+
+  <rect x="650" y="230" width="80" height="74" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="690" y="262" font-size="15" fill="#2563eb" text-anchor="middle" font-weight="bold">MySQL</text>
+  <text x="690" y="284" font-size="13" fill="#334155" text-anchor="middle">server</text>
+
+  <line x1="620" y1="170" x2="575" y2="228" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="655" y1="170" x2="688" y2="228" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="635" y="206" font-size="13" fill="#64748b" text-anchor="middle">DSN tanlaydi</text>
+
+  <!-- DI note -->
+  <rect x="40" y="230" width="380" height="74" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="230" y="258" font-size="14" fill="#dc2626" text-anchor="middle" font-weight="bold">DB ulanishi handlerga qanday yetadi?</text>
+  <text x="230" y="282" font-size="13" fill="#334155" text-anchor="middle">DI resolver: $bot-&gt;getContainer()-&gt;set(...) -> parametrga in'ektsiya</text>
+
+  <text x="380" y="348" font-size="14" fill="#334155" text-anchor="middle">Handler DB tafsilotini bilmaydi — u faqat Repository metodlarini chaqiradi (toza ajratish)</text>
+
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/></marker>
+  </defs>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" font-family="Segoe UI, sans-serif">
+  <title>chat_member: ChatMemberUpdated status o'tishi va welcome/leave aniqlash</title>
+  <rect x="0" y="0" width="760" height="380" fill="#f8fafc"/>
+  <text x="380" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">onChatMember: status o'tishini aniqlash</text>
+  <text x="380" y="56" font-size="14" fill="#64748b" text-anchor="middle">ChatMemberUpdated: old_chat_member.status  ->  new_chat_member.status</text>
+
+  <!-- statuslar guruhi -->
+  <rect x="60" y="100" width="220" height="180" rx="12" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="170" y="126" font-size="15" fill="#dc2626" text-anchor="middle" font-weight="bold">Guruhda EMAS</text>
+  <text x="170" y="156" font-size="14" fill="#334155" text-anchor="middle">left</text>
+  <text x="170" y="180" font-size="14" fill="#334155" text-anchor="middle">kicked</text>
+  <text x="170" y="210" font-size="13" fill="#64748b" text-anchor="middle">isInGroup() = false</text>
+
+  <rect x="480" y="100" width="220" height="180" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="590" y="126" font-size="15" fill="#16a34a" text-anchor="middle" font-weight="bold">Guruhda BOR</text>
+  <text x="590" y="152" font-size="14" fill="#334155" text-anchor="middle">member</text>
+  <text x="590" y="174" font-size="14" fill="#334155" text-anchor="middle">administrator / creator</text>
+  <text x="590" y="196" font-size="14" fill="#334155" text-anchor="middle">restricted</text>
+  <text x="590" y="224" font-size="13" fill="#64748b" text-anchor="middle">isInGroup() = true</text>
+
+  <!-- justJoined o'q -->
+  <line x1="285" y1="155" x2="475" y2="155" stroke="#16a34a" stroke-width="3" marker-end="url(#g)"/>
+  <text x="380" y="146" font-size="14" fill="#16a34a" text-anchor="middle" font-weight="bold">justJoined() -> WELCOME</text>
+
+  <!-- justLeft o'q -->
+  <line x1="475" y1="225" x2="285" y2="225" stroke="#dc2626" stroke-width="3" marker-end="url(#r)"/>
+  <text x="380" y="245" font-size="14" fill="#dc2626" text-anchor="middle" font-weight="bold">justLeft() -> XAYR</text>
+
+  <text x="380" y="318" font-size="14" fill="#334155" text-anchor="middle">justJoined = !isInGroup(old) &amp;&amp; isInGroup(new);  justLeft = isInGroup(old) &amp;&amp; !isInGroup(new)</text>
+  <text x="380" y="346" font-size="13" fill="#64748b" text-anchor="middle">DIQQAT: allowed_updates ga 'chat_member' qo'shilmasa, bu update kelmaydi (+ bot admin kerak)</text>
+
+  <defs>
+    <marker id="g" markerWidth="11" markerHeight="11" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/></marker>
+    <marker id="r" markerWidth="11" markerHeight="11" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#dc2626"/></marker>
+  </defs>
+</svg>

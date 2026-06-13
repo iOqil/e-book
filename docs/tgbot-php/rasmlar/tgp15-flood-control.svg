@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" font-family="Segoe UI, sans-serif">
+  <title>Flood-control: 429 retry_after bilan qayta urinish sikli</title>
+  <rect width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">Flood-control: 429 retry_after sikli</text>
+
+  <!-- send -->
+  <rect x="290" y="62" width="180" height="60" rx="10" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="90" text-anchor="middle" font-size="15" font-weight="bold" fill="#2563eb">sendMessage()</text>
+  <text x="380" y="110" text-anchor="middle" font-size="13" fill="#334155">try { ... }</text>
+
+  <line x1="380" y1="122" x2="380" y2="162" stroke="#94a3b8" stroke-width="2" marker-end="url(#f15)"/>
+
+  <!-- decision -->
+  <polygon points="380,162 480,212 380,262 280,212" fill="#fff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="380" y="206" text-anchor="middle" font-size="14" font-weight="bold" fill="#f59e0b">Telegram</text>
+  <text x="380" y="226" text-anchor="middle" font-size="14" fill="#334155">javobi?</text>
+
+  <!-- OK branch -->
+  <line x1="480" y1="212" x2="600" y2="212" stroke="#16a34a" stroke-width="2" marker-end="url(#f15g)"/>
+  <text x="540" y="202" text-anchor="middle" font-size="13" fill="#16a34a">200 OK</text>
+  <rect x="600" y="182" width="140" height="60" rx="10" fill="#fff" stroke="#16a34a" stroke-width="2"/>
+  <text x="670" y="210" text-anchor="middle" font-size="14" font-weight="bold" fill="#16a34a">Yetkazildi</text>
+  <text x="670" y="230" text-anchor="middle" font-size="13" fill="#334155">return ok</text>
+
+  <!-- 429 branch -->
+  <line x1="380" y1="262" x2="380" y2="312" stroke="#dc2626" stroke-width="2" marker-end="url(#f15r)"/>
+  <text x="430" y="290" text-anchor="middle" font-size="13" fill="#dc2626">429 TelegramException</text>
+  <rect x="250" y="312" width="260" height="80" rx="10" fill="#fff" stroke="#dc2626" stroke-width="2"/>
+  <text x="380" y="340" text-anchor="middle" font-size="14" font-weight="bold" fill="#dc2626">catch (TelegramException)</text>
+  <text x="380" y="362" text-anchor="middle" font-size="13" fill="#334155">$w = getParameter('retry_after')</text>
+  <text x="380" y="382" text-anchor="middle" font-size="13" fill="#334155">sleep($w)</text>
+
+  <!-- loop back -->
+  <path d="M250,352 C120,352 120,92 290,92" fill="none" stroke="#dc2626" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#f15r)"/>
+  <text x="120" y="222" text-anchor="middle" font-size="13" fill="#dc2626" transform="rotate(-90 120 222)">qayta urinish</text>
+
+  <defs>
+    <marker id="f15" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#94a3b8"/></marker>
+    <marker id="f15g" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#16a34a"/></marker>
+    <marker id="f15r" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#dc2626"/></marker>
+  </defs>
+</svg>

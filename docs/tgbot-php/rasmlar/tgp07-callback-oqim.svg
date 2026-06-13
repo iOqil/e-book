@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" font-family="Segoe UI, sans-serif">
+  <title>Callback query oqimi: tugma bosilishidan answerCallbackQuery gacha</title>
+  <rect x="0" y="0" width="760" height="380" fill="#f8fafc"/>
+  <text x="380" y="34" font-size="20" font-weight="bold" text-anchor="middle" fill="#1e293b">Callback query oqimi</text>
+
+  <!-- 1: user presses inline button -->
+  <rect x="30" y="70" width="200" height="90" rx="10" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+  <text x="130" y="98" font-size="15" font-weight="bold" text-anchor="middle" fill="#2563eb">1. Foydalanuvchi</text>
+  <text x="130" y="122" font-size="14" text-anchor="middle" fill="#334155">inline tugmani bosadi</text>
+  <text x="130" y="144" font-size="14" text-anchor="middle" fill="#64748b">callback_data: "page:1"</text>
+
+  <!-- arrow -->
+  <line x1="230" y1="115" x2="300" y2="115" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="300,115 290,110 290,120" fill="#94a3b8"/>
+
+  <!-- 2: telegram sends callback_query update -->
+  <rect x="300" y="70" width="200" height="90" rx="10" fill="#fff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="400" y="98" font-size="15" font-weight="bold" text-anchor="middle" fill="#f59e0b">2. Telegram</text>
+  <text x="400" y="122" font-size="14" text-anchor="middle" fill="#334155">callback_query</text>
+  <text x="400" y="144" font-size="14" text-anchor="middle" fill="#334155">update yuboradi</text>
+
+  <!-- arrow -->
+  <line x1="500" y1="115" x2="570" y2="115" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="570,115 560,110 560,120" fill="#94a3b8"/>
+
+  <!-- 3: handler matches -->
+  <rect x="570" y="70" width="200" height="90" rx="10" fill="#fff" stroke="#16a34a" stroke-width="2"/>
+  <text x="670" y="98" font-size="15" font-weight="bold" text-anchor="middle" fill="#16a34a">3. Bot (Nutgram)</text>
+  <text x="670" y="122" font-size="13" text-anchor="middle" fill="#334155">onCallbackQueryData</text>
+  <text x="670" y="144" font-size="13" text-anchor="middle" fill="#334155">('page:{n}', ...)</text>
+
+  <!-- down arrow -->
+  <line x1="670" y1="160" x2="670" y2="225" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="670,225 665,215 675,215" fill="#94a3b8"/>
+
+  <!-- 4: two actions -->
+  <rect x="430" y="225" width="320" height="120" rx="10" fill="#fff" stroke="#16a34a" stroke-width="2"/>
+  <text x="590" y="252" font-size="15" font-weight="bold" text-anchor="middle" fill="#16a34a">4. Ikki ish</text>
+  <rect x="450" y="266" width="280" height="32" rx="6" fill="#eff6ff" stroke="#2563eb"/>
+  <text x="590" y="287" font-size="13" text-anchor="middle" fill="#1e293b">editMessageText(...) — xabarni yangilash</text>
+  <rect x="450" y="304" width="280" height="32" rx="6" fill="#fef2f2" stroke="#dc2626"/>
+  <text x="590" y="325" font-size="13" text-anchor="middle" fill="#1e293b">answerCallbackQuery() — soatchani to'xtatish</text>
+
+  <!-- warning note -->
+  <rect x="30" y="225" width="370" height="120" rx="10" fill="#fff7ed" stroke="#f59e0b" stroke-width="2"/>
+  <text x="50" y="252" font-size="15" font-weight="bold" fill="#f59e0b">Muhim</text>
+  <text x="50" y="278" font-size="14" fill="#334155">answerCallbackQuery chaqirilmasa,</text>
+  <text x="50" y="300" font-size="14" fill="#334155">tugmadagi aylanma soat ~ bir necha</text>
+  <text x="50" y="322" font-size="14" fill="#334155">soniya "muzlab" qoladi.</text>
+</svg>

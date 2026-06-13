@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" font-family="Segoe UI, sans-serif">
+  <title>initData autentifikatsiya oqimi: Telegram, Mini App va backend o'rtasida</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="32" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">initData autentifikatsiya oqimi</text>
+
+  <!-- Three columns -->
+  <rect x="30" y="60" width="200" height="44" rx="8" fill="#2563eb"/>
+  <text x="130" y="88" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">Telegram</text>
+
+  <rect x="280" y="60" width="200" height="44" rx="8" fill="#16a34a"/>
+  <text x="380" y="88" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">Mini App (brauzer)</text>
+
+  <rect x="530" y="60" width="200" height="44" rx="8" fill="#f59e0b"/>
+  <text x="630" y="88" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">Sizning backend</text>
+
+  <!-- lifelines -->
+  <line x1="130" y1="104" x2="130" y2="420" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5 4"/>
+  <line x1="380" y1="104" x2="380" y2="420" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5 4"/>
+  <line x1="630" y1="104" x2="630" y2="420" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5 4"/>
+
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#334155"/>
+    </marker>
+  </defs>
+
+  <!-- step 1 -->
+  <line x1="130" y1="140" x2="375" y2="140" stroke="#334155" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="252" y="132" text-anchor="middle" font-size="13" fill="#1e293b">1. App'ni ochadi + initData beradi</text>
+
+  <!-- step 2 (self loop on mini app) -->
+  <text x="380" y="178" text-anchor="middle" font-size="13" fill="#16a34a">2. window.Telegram.WebApp.initData</text>
+
+  <!-- step 3 -->
+  <line x1="385" y1="210" x2="625" y2="210" stroke="#334155" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="505" y="202" text-anchor="middle" font-size="13" fill="#1e293b">3. So'rovda initData yuboradi</text>
+
+  <!-- step 4 self loop on backend -->
+  <rect x="500" y="232" width="250" height="74" rx="8" fill="#fff7ed" stroke="#f59e0b" stroke-width="2"/>
+  <text x="625" y="256" text-anchor="middle" font-size="14" font-weight="bold" fill="#92400e">4. SERVERDA tekshiradi</text>
+  <text x="625" y="278" text-anchor="middle" font-size="13" fill="#334155">HMAC hash + auth_date</text>
+  <text x="625" y="296" text-anchor="middle" font-size="13" fill="#334155">(bot token bilan)</text>
+
+  <!-- step 5 OK -->
+  <line x1="625" y1="340" x2="385" y2="340" stroke="#16a34a" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="505" y="332" text-anchor="middle" font-size="13" fill="#16a34a">5a. To'g'ri -> ma'lumot/sessiya</text>
+
+  <!-- step 5 reject -->
+  <line x1="625" y1="392" x2="385" y2="392" stroke="#dc2626" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="505" y="384" text-anchor="middle" font-size="13" fill="#dc2626">5b. Soxta -> 401 rad etish</text>
+
+  <text x="130" y="420" text-anchor="middle" font-size="13" fill="#64748b">faqat Telegram</text>
+</svg>

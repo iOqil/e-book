@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 410" font-family="Segoe UI, sans-serif">
+  <title>forwardMessage va copyMessage farqi hamda setMessageReaction</title>
+  <rect width="760" height="410" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">forward vs copy vs reaksiya</text>
+
+  <!-- forwardMessage -->
+  <rect x="30" y="70" width="220" height="150" rx="10" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+  <text x="140" y="102" text-anchor="middle" font-size="15" font-weight="bold" fill="#2563eb">forwardMessage</text>
+  <line x1="50" y1="116" x2="230" y2="116" stroke="#94a3b8" stroke-width="1"/>
+  <text x="140" y="140" text-anchor="middle" font-size="13" fill="#dc2626">"Forwarded from..." bor</text>
+  <text x="140" y="164" text-anchor="middle" font-size="13" fill="#334155">manba ko'rinadi</text>
+  <text x="140" y="188" text-anchor="middle" font-size="13" fill="#334155">asl havola saqlanadi</text>
+  <text x="140" y="210" text-anchor="middle" font-size="13" fill="#94a3b8">tahrir ergashmaydi</text>
+
+  <!-- copyMessage -->
+  <rect x="270" y="70" width="220" height="150" rx="10" fill="#fff" stroke="#16a34a" stroke-width="2"/>
+  <text x="380" y="102" text-anchor="middle" font-size="15" font-weight="bold" fill="#16a34a">copyMessage</text>
+  <line x1="290" y1="116" x2="470" y2="116" stroke="#94a3b8" stroke-width="1"/>
+  <text x="380" y="140" text-anchor="middle" font-size="13" fill="#16a34a">header YO'Q</text>
+  <text x="380" y="164" text-anchor="middle" font-size="13" fill="#334155">yangidek ko'rinadi</text>
+  <text x="380" y="188" text-anchor="middle" font-size="13" fill="#334155">caption qayta yoziladi</text>
+  <text x="380" y="210" text-anchor="middle" font-size="13" fill="#94a3b8">MessageId qaytadi</text>
+
+  <!-- setMessageReaction -->
+  <rect x="510" y="70" width="220" height="150" rx="10" fill="#fff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="620" y="102" text-anchor="middle" font-size="15" font-weight="bold" fill="#f59e0b">setMessageReaction</text>
+  <line x1="530" y1="116" x2="710" y2="116" stroke="#94a3b8" stroke-width="1"/>
+  <text x="620" y="142" text-anchor="middle" font-size="13" fill="#334155">ReactionTypeEmoji</text>
+  <text x="620" y="166" text-anchor="middle" font-size="18" fill="#1e293b">👍 🔥 ❤️ 🎉</text>
+  <text x="620" y="190" text-anchor="middle" font-size="13" fill="#334155">bo'sh [] = olib tashlash</text>
+  <text x="620" y="210" text-anchor="middle" font-size="13" fill="#94a3b8">is_big: katta animatsiya</text>
+
+  <!-- bottom rule -->
+  <rect x="120" y="270" width="520" height="100" rx="10" fill="#fff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="380" y="302" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e293b">Qachon nima ishlatish</text>
+  <text x="380" y="328" text-anchor="middle" font-size="13" fill="#334155">Manbani ko'rsatish kerak -> forward.  Anonim qayta-nashr -> copy.</text>
+  <text x="380" y="350" text-anchor="middle" font-size="13" fill="#334155">Postga his-tuyg'u bildirish (yozmasdan) -> setMessageReaction.</text>
+</svg>
