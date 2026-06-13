@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430">
+  <title>Storage adapterlar taqqoslash: MemorySessionStorage (xotira, qayta ishga tushganda yo'qoladi), FileAdapter (faylga), DB adapter (better-sqlite3 ustida) — qaysi qachon ishlatiladi</title>
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI" font-size="19" font-weight="bold" fill="#1e293b">Sessiya storage adapterlari: bir interfeys, uch joy</text>
+  <text x="380" y="56" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">read(kalit) / write(kalit, qiymat) / delete(kalit)</text>
+
+  <!-- Memory -->
+  <rect x="28" y="80" width="220" height="252" rx="12" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="138" y="110" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#b45309">MemorySessionStorage</text>
+  <text x="138" y="132" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">(sukut bo'yicha)</text>
+  <text x="48" y="162" font-family="Segoe UI" font-size="13" fill="#334155">Qayerda: RAM (Map)</text>
+  <text x="48" y="186" font-family="Segoe UI" font-size="13" fill="#16a34a">+ Tez, sozlash shart emas</text>
+  <text x="48" y="210" font-family="Segoe UI" font-size="13" fill="#16a34a">+ Test/prototip uchun zo'r</text>
+  <text x="48" y="240" font-family="Segoe UI" font-size="13" fill="#dc2626">- Qayta ishga tushsa yo'qoladi</text>
+  <text x="48" y="264" font-family="Segoe UI" font-size="13" fill="#dc2626">- Bir nechta instansda baham</text>
+  <text x="62" y="282" font-family="Segoe UI" font-size="13" fill="#dc2626">ko'rilmaydi</text>
+  <text x="138" y="316" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#b45309">Qachon: dev / vaqtinchalik</text>
+
+  <!-- File -->
+  <rect x="270" y="80" width="220" height="252" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="110" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">FileAdapter</text>
+  <text x="380" y="132" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">@grammyjs/storage-file</text>
+  <text x="290" y="162" font-family="Segoe UI" font-size="13" fill="#334155">Qayerda: disk (JSON fayl)</text>
+  <text x="290" y="186" font-family="Segoe UI" font-size="13" fill="#16a34a">+ Qayta ishga tushsa saqlanadi</text>
+  <text x="290" y="210" font-family="Segoe UI" font-size="13" fill="#16a34a">+ Sozlash juda oddiy</text>
+  <text x="290" y="240" font-family="Segoe UI" font-size="13" fill="#dc2626">- Ko'p server / ulkan hajmda</text>
+  <text x="304" y="258" font-family="Segoe UI" font-size="13" fill="#dc2626">noqulay</text>
+  <text x="380" y="316" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#2563eb">Qachon: kichik bir serverli bot</text>
+
+  <!-- DB -->
+  <rect x="512" y="80" width="220" height="252" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="622" y="110" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#15803d">DB adapter</text>
+  <text x="622" y="132" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">SQLite / Postgres / Redis</text>
+  <text x="532" y="162" font-family="Segoe UI" font-size="13" fill="#334155">Qayerda: ma'lumotlar bazasi</text>
+  <text x="532" y="186" font-family="Segoe UI" font-size="13" fill="#16a34a">+ Ishonchli, miqyoslanadi</text>
+  <text x="532" y="210" font-family="Segoe UI" font-size="13" fill="#16a34a">+ Bir nechta instans baham</text>
+  <text x="546" y="228" font-family="Segoe UI" font-size="13" fill="#16a34a">ko'radi</text>
+  <text x="532" y="258" font-family="Segoe UI" font-size="13" fill="#dc2626">- Qo'shimcha sozlash kerak</text>
+  <text x="622" y="316" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#15803d">Qachon: jiddiy / prod bot</text>
+
+  <text x="380" y="372" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">Adapterni almashtirish = bitta qator: session({ initial, storage })</text>
+  <text x="380" y="398" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Handler kodi o'zgarmaydi — faqat qayerda saqlanishi o'zgaradi</text>
+  <text x="380" y="420" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">Productionda MemorySessionStorage ishlatmang (qayta ishga tushsa hammasi yo'qoladi)</text>
+</svg>

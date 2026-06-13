@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 560">
+  <title>Kapston bot papka daraxti: tadbir-bot/ ostida .env, package.json va src/ (config.js, bot.js, handlers, keyboards, conversations, middlewares, services) hamda data/ ma'lumotlar bazasi</title>
+  <rect x="0" y="0" width="760" height="560" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI" font-size="19" font-weight="bold" fill="#1e293b">Kapston loyiha tuzilishi</text>
+
+  <text x="40" y="72" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">tadbir-bot/</text>
+
+  <text x="72" y="98" font-family="Segoe UI" font-size="14" fill="#64748b">.env</text>
+  <text x="160" y="98" font-family="Segoe UI" font-size="13" fill="#94a3b8">BOT_TOKEN, ADMIN_IDS — git'ga EMAS</text>
+  <text x="72" y="120" font-family="Segoe UI" font-size="14" fill="#64748b">.env.example</text>
+  <text x="200" y="120" font-family="Segoe UI" font-size="13" fill="#94a3b8">namuna (git'ga ha)</text>
+  <text x="72" y="142" font-family="Segoe UI" font-size="14" fill="#64748b">package.json</text>
+  <text x="220" y="142" font-family="Segoe UI" font-size="13" fill="#94a3b8">"type": "module"</text>
+
+  <!-- src container -->
+  <rect x="60" y="158" width="650" height="316" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="80" y="184" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">src/</text>
+
+  <text x="108" y="210" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">bot.js</text>
+  <text x="220" y="210" font-family="Segoe UI" font-size="13" fill="#334155">modullarni bot.use(...) bilan ulaydi, runner ishga tushiradi</text>
+  <text x="108" y="234" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">config.js</text>
+  <text x="220" y="234" font-family="Segoe UI" font-size="13" fill="#334155">.env validatsiya: BOT_TOKEN, ADMIN_IDS, EVENTS</text>
+
+  <g font-family="Segoe UI">
+    <rect x="96" y="252" width="290" height="46" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+    <text x="112" y="273" font-size="14" font-weight="bold" fill="#1e40af">handlers/</text>
+    <text x="112" y="291" font-size="13" fill="#334155">user.js, admin.js (Composer)</text>
+
+    <rect x="398" y="252" width="290" height="46" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+    <text x="414" y="273" font-size="14" font-weight="bold" fill="#1e40af">keyboards/</text>
+    <text x="414" y="291" font-size="13" fill="#334155">tadbir inline menyusi, kontakt tugma</text>
+
+    <rect x="96" y="306" width="290" height="46" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+    <text x="112" y="327" font-size="14" font-weight="bold" fill="#1e40af">conversations/</text>
+    <text x="112" y="345" font-size="13" fill="#334155">register.js (ro'yxatdan o'tish)</text>
+
+    <rect x="398" y="306" width="290" height="46" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+    <text x="414" y="327" font-size="14" font-weight="bold" fill="#1e40af">middlewares/</text>
+    <text x="414" y="345" font-size="13" fill="#334155">logging.js, inject.js (ctx.repo), auth.js</text>
+
+    <rect x="96" y="360" width="592" height="46" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+    <text x="112" y="381" font-size="14" font-weight="bold" fill="#15803d">services/</text>
+    <text x="112" y="399" font-size="13" fill="#334155">db.js (better-sqlite3 ulanish) + registrations.js (repository)</text>
+
+    <rect x="96" y="414" width="592" height="46" rx="8" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.5"/>
+    <text x="112" y="435" font-size="14" font-weight="bold" fill="#b45309">utils/</text>
+    <text x="112" y="453" font-size="13" fill="#334155">kichik yordamchilar (formatlash, eventTitle)</text>
+  </g>
+
+  <text x="72" y="498" font-family="Segoe UI" font-size="14" fill="#64748b">data/</text>
+  <text x="160" y="498" font-family="Segoe UI" font-size="13" fill="#94a3b8">bot.db (SQLite fayli — git'ga EMAS, .gitignore'ga qo'shing)</text>
+
+  <text x="380" y="532" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Mantiq offline tekshiriladi (16-bob); deploy: pm2/Docker/webhook (17-bob)</text>
+</svg>

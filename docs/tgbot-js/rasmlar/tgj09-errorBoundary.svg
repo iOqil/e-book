@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430">
+  <title>errorBoundary: chegara ichidagi handler xatosini ushlaydi, chegaradan tashqaridagi xato uni chetlab yuqoriga otiladi</title>
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI" font-size="19" font-weight="bold" fill="#1e293b">bot.errorBoundary: xato chegarasi</text>
+
+  <!-- Boundary box (the protected region) -->
+  <rect x="40" y="70" width="380" height="290" rx="14" fill="#ffffff" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="8 5"/>
+  <text x="230" y="98" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#dc2626">errorBoundary doirasi (himoyalangan)</text>
+
+  <!-- handler that throws inside -->
+  <rect x="80" y="124" width="300" height="62" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="230" y="150" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#15803d">himoyalangan.on("message")</text>
+  <text x="230" y="172" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">throw new Error("portladi")</text>
+
+  <!-- error caught by boundary -->
+  <rect x="80" y="216" width="300" height="64" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="230" y="242" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">(err, next) => { ... }</text>
+  <text x="230" y="264" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">xato shu yerda USHLANADI</text>
+
+  <line x1="230" y1="186" x2="230" y2="212" stroke="#dc2626" stroke-width="2.5" marker-end="url(#ard)"/>
+  <text x="320" y="204" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">xato</text>
+
+  <!-- next() optionally re-raises -->
+  <text x="230" y="312" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">next() chaqirmasak -> yutiladi</text>
+  <text x="230" y="334" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">next() chaqirsak -> yuqoriga uzatiladi</text>
+
+  <!-- Outside handler -->
+  <rect x="470" y="124" width="250" height="62" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="595" y="150" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">bot.on("message")</text>
+  <text x="595" y="172" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">throw (chegaradan tashqarida)</text>
+
+  <!-- escapes to global -->
+  <rect x="470" y="266" width="250" height="64" rx="10" fill="#1e293b"/>
+  <text x="595" y="292" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#ffffff">bot.catch (global)</text>
+  <text x="595" y="314" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#cbd5e1">yoki handleUpdate yuqoriga otadi</text>
+
+  <line x1="595" y1="186" x2="595" y2="262" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#aro)"/>
+  <text x="660" y="228" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#b45309">chetlab o'tadi</text>
+
+  <text x="380" y="400" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">errorBoundary FAQAT o'z doirasidagi xatoni ushlaydi (offline tasdiqlangan)</text>
+
+  <defs>
+    <marker id="ard" markerWidth="10" markerHeight="10" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#dc2626"/></marker>
+    <marker id="aro" markerWidth="10" markerHeight="10" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#f59e0b"/></marker>
+  </defs>
+</svg>

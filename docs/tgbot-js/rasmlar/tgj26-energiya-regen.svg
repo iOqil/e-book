@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 440">
+  <title>Energiya regeneratsiyasi: server last_update timestamp'dan beri o'tgan vaqtni regen tezligiga ko'paytirib energiyani tiklaydi, lekin max_energy bilan cheklaydi — vaqtni server hisoblaydi, klient emas</title>
+  <defs>
+    <marker id="er-ar" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L8,5 L0,10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="860" height="440" fill="#f8fafc"/>
+  <text x="430" y="34" text-anchor="middle" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b">Energiya regeneratsiyasi (server vaqti bo'yicha)</text>
+
+  <!-- formula -->
+  <rect x="150" y="58" width="560" height="56" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="430" y="82" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e40af">o'tgan = (now &#8722; last_update) sekund</text>
+  <text x="430" y="104" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">energiya = min(max_energy, energiya + o'tgan &#215; regenPerSec)</text>
+
+  <!-- vaqt o'qi -->
+  <line x1="80" y1="300" x2="800" y2="300" stroke="#94a3b8" stroke-width="2" marker-end="url(#er-ar)"/>
+  <text x="800" y="330" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">vaqt</text>
+
+  <!-- max chizig'i -->
+  <line x1="80" y1="150" x2="780" y2="150" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="120" y="144" font-family="Segoe UI" font-size="13" fill="#dc2626">max_energy = 1000 (limit)</text>
+
+  <!-- T0: energiya tugadi -->
+  <line x1="170" y1="300" x2="170" y2="290" stroke="#64748b" stroke-width="1.5"/>
+  <circle cx="170" cy="300" r="6" fill="#dc2626"/>
+  <text x="170" y="324" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">T0: bosib tugatdi</text>
+  <text x="170" y="342" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#dc2626">energiya 0</text>
+
+  <!-- regen chizig'i: 0 dan max gacha ko'tariladi -->
+  <line x1="170" y1="300" x2="500" y2="150" stroke="#16a34a" stroke-width="3"/>
+  <!-- T1 -->
+  <line x1="335" y1="300" x2="335" y2="225" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3 3"/>
+  <circle cx="335" cy="225" r="6" fill="#16a34a"/>
+  <text x="335" y="324" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">+300s</text>
+  <text x="335" y="216" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#15803d">energiya 300</text>
+
+  <!-- max ga yetdi -->
+  <circle cx="500" cy="150" r="6" fill="#16a34a"/>
+  <text x="500" y="324" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">+1000s</text>
+  <text x="520" y="140" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#15803d">energiya 1000 (to'la)</text>
+
+  <!-- maksimumda tekis qoladi -->
+  <line x1="500" y1="150" x2="760" y2="150" stroke="#16a34a" stroke-width="3"/>
+  <line x1="680" y1="300" x2="680" y2="160" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3 3"/>
+  <text x="680" y="324" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">+2.7 soat</text>
+  <text x="680" y="178" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#15803d">hamon 1000</text>
+
+  <text x="430" y="395" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Energiya DB'da SAQLANMAYDI — har so'rovda last_update'dan QAYTA hisoblanadi.</text>
+  <text x="430" y="416" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Klient soatini o'zgartirsa ham foyda yo'q: server o'z timestamp'ini ishlatadi.</text>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470">
+  <title>Middleware piyoz (onion) modeli: next() dan oldingi kod kirishda, keyingi kod chiqishda ishlaydi</title>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI" font-size="19" font-weight="bold" fill="#1e293b">Piyoz (onion) modeli: next() oldin = kirish, keyin = chiqish</text>
+
+  <!-- Onion layers (concentric rounded rects) -->
+  <rect x="120" y="64" width="520" height="320" rx="16" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <rect x="180" y="116" width="400" height="216" rx="14" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="240" y="168" width="280" height="112" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+
+  <!-- Layer labels: kirish (top) -->
+  <text x="140" y="92" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb">A: log.push("A-kirish")</text>
+  <text x="200" y="142" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#b45309">B: log.push("B-kirish")</text>
+
+  <!-- Center: handler -->
+  <text x="380" y="218" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#15803d">HANDLER</text>
+  <text x="380" y="240" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">ctx.reply(...)</text>
+  <text x="380" y="262" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">(eng ichki qatlam)</text>
+
+  <!-- Layer labels: chiqish (bottom) -->
+  <text x="200" y="320" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#b45309">B: log.push("B-chiqish")</text>
+  <text x="140" y="370" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb">A: log.push("A-chiqish")</text>
+
+  <!-- await next() markers -->
+  <text x="500" y="92" font-family="Segoe UI" font-size="13" fill="#64748b">await next()</text>
+  <text x="500" y="142" font-family="Segoe UI" font-size="13" fill="#64748b">await next()</text>
+
+  <!-- Arrows: in (down, blue) and out (up, blue dashed) on the sides -->
+  <line x1="660" y1="80" x2="660" y2="220" stroke="#2563eb" stroke-width="2.5" marker-end="url(#ad)"/>
+  <text x="690" y="150" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#2563eb">kirish</text>
+  <line x1="700" y1="368" x2="700" y2="228" stroke="#16a34a" stroke-width="2.5" stroke-dasharray="6 4" marker-end="url(#au)"/>
+  <text x="730" y="300" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#16a34a">chiqish</text>
+
+  <!-- Order sequence at bottom -->
+  <text x="380" y="418" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">Ketma-ketlik (offline tasdiqlangan):</text>
+  <text x="380" y="442" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">A-kirish &#8594; B-kirish &#8594; HANDLER &#8594; B-chiqish &#8594; A-chiqish</text>
+  <text x="380" y="462" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">next() chaqirilmasa -> ichkariga o'tmaydi (zanjir to'xtaydi)</text>
+
+  <defs>
+    <marker id="ad" markerWidth="10" markerHeight="10" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#2563eb"/></marker>
+    <marker id="au" markerWidth="10" markerHeight="10" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#16a34a"/></marker>
+  </defs>
+</svg>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420">
+  <title>Buyruq parslanishi: /echo salom dunyo -> ctx.match argumentga aylanadi</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI" font-size="19" font-weight="bold" fill="#1e293b">Buyruq parslanishi: /echo salom dunyo</text>
+
+  <!-- raw message -->
+  <rect x="180" y="58" width="400" height="50" rx="8" fill="#2563eb"/>
+  <text x="380" y="89" text-anchor="middle" font-family="Consolas, Segoe UI" font-size="16" font-weight="bold" fill="#ffffff">"/echo salom dunyo"</text>
+
+  <!-- split markers -->
+  <line x1="265" y1="108" x2="220" y2="150" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="430" y1="108" x2="500" y2="150" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- command chunk -->
+  <rect x="130" y="152" width="180" height="64" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="220" y="178" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#166534">Buyruq nomi</text>
+  <text x="220" y="200" text-anchor="middle" font-family="Consolas, Segoe UI" font-size="14" fill="#334155">echo</text>
+
+  <!-- args chunk -->
+  <rect x="410" y="152" width="220" height="64" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="520" y="178" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#b45309">Qolgan matn -&gt; ctx.match</text>
+  <text x="520" y="200" text-anchor="middle" font-family="Consolas, Segoe UI" font-size="14" fill="#334155">"salom dunyo"</text>
+
+  <!-- bot_command entity note -->
+  <rect x="130" y="234" width="500" height="48" rx="10" fill="#fef9c3" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="380" y="254" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#b45309">grammY entity orqali aniqlaydi:</text>
+  <text x="380" y="272" text-anchor="middle" font-family="Consolas, Segoe UI" font-size="13" fill="#334155">entities: [{ type: "bot_command", offset: 0, length: 5 }]</text>
+  <line x1="220" y1="216" x2="280" y2="232" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- handler -->
+  <rect x="130" y="304" width="500" height="62" rx="10" fill="#16a34a"/>
+  <text x="380" y="330" text-anchor="middle" font-family="Consolas, Segoe UI" font-size="14" font-weight="bold" fill="#ffffff">bot.command("echo", (ctx) =&gt; ctx.reply(ctx.match))</text>
+  <text x="380" y="352" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dcfce7">javob: "salom dunyo"  (argumentsiz bo'lsa ctx.match = "")</text>
+  <line x1="520" y1="216" x2="480" y2="300" stroke="#f59e0b" stroke-width="2" marker-end="url(#ay)"/>
+
+  <text x="380" y="396" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Diqqat: ctx.match bu yerda STRING (hears regex'da esa massiv bo'ladi)</text>
+
+  <defs>
+    <marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#94a3b8"/></marker>
+    <marker id="ay" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#f59e0b"/></marker>
+  </defs>
+</svg>

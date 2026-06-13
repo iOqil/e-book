@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 480">
+  <title>Broadcast va flood-control: foydalanuvchilar bo'ylab yurish, 403 bloklaganni tashlash, 429 retry_after qayta urinish</title>
+  <rect x="0" y="0" width="780" height="480" fill="#f8fafc"/>
+  <text x="390" y="32" text-anchor="middle" font-family="Segoe UI" font-size="19" font-weight="bold" fill="#1e293b">Broadcast oqimi va flood-control</text>
+
+  <!-- Bot box -->
+  <rect x="40" y="70" width="150" height="84" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="115" y="104" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">Bot</text>
+  <text x="115" y="126" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">userlar ro'yxati</text>
+  <text x="115" y="144" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">(DB'dan, 10-bob)</text>
+
+  <!-- Chunk + delay -->
+  <rect x="230" y="64" width="160" height="96" rx="12" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="310" y="92" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#b45309">Bo'laklab (chunk)</text>
+  <text x="310" y="114" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">~25 ta / bo'lak</text>
+  <text x="310" y="134" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">+ delay (~1 sek)</text>
+  <text x="310" y="152" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">limit: ~30/sek</text>
+
+  <line x1="190" y1="112" x2="228" y2="112" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#ba)"/>
+  <line x1="390" y1="112" x2="428" y2="112" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#ba)"/>
+
+  <!-- Three send results -->
+  <rect x="430" y="64" width="310" height="96" rx="12" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="585" y="88" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">sendMessage(userId, matn)</text>
+  <text x="585" y="112" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#15803d">ok -&gt; success++</text>
+  <text x="585" y="132" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">403 -&gt; bloklagan, DB'da nofaol belgila</text>
+  <text x="585" y="152" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#b45309">429 -&gt; retry_after kut, qayta ur</text>
+
+  <!-- 429 retry flow -->
+  <text x="390" y="206" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#1e293b">429 TooManyRequests: @grammyjs/auto-retry avtomatik qayta uradi</text>
+
+  <rect x="60" y="226" width="170" height="70" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="145" y="254" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#b91c1c">1-urinish</text>
+  <text x="145" y="278" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">429 retry_after: 5</text>
+
+  <rect x="305" y="226" width="170" height="70" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="390" y="254" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#b45309">5 sekund kutadi</text>
+  <text x="390" y="278" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">(plugin avtomatik)</text>
+
+  <rect x="550" y="226" width="170" height="70" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="635" y="254" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#15803d">2-urinish</text>
+  <text x="635" y="278" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">ok: yetkazildi</text>
+
+  <line x1="230" y1="261" x2="303" y2="261" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#ba)"/>
+  <line x1="475" y1="261" x2="548" y2="261" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#ba)"/>
+
+  <text x="390" y="324" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">bot.api.config.use(autoRetry()) -&gt; retry_after ni o'qib, o'zi kutadi va qayta yuboradi</text>
+
+  <!-- Result tally -->
+  <rect x="120" y="350" width="540" height="106" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="390" y="378" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">Broadcast hisoboti (offline tasdiqlangan)</text>
+  <text x="200" y="410" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#15803d">success</text>
+  <text x="390" y="410" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">blocked (403)</text>
+  <text x="580" y="410" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#b45309">failed</text>
+  <text x="390" y="438" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">403'ni ushlamasangiz -> butun broadcast yiqiladi; ushlang va davom eting</text>
+
+  <defs>
+    <marker id="ba" markerWidth="10" markerHeight="10" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#94a3b8"/></marker>
+  </defs>
+</svg>

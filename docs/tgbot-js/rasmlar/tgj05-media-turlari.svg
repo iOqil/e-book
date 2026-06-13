@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440">
+  <title>Media turlari va grammY metodlari: rasm, hujjat, video, audio, ovoz, sticker uchun qaysi replyWithX metodi</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="34" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Media turi -&gt; qaysi metod</text>
+
+  <!-- Rasm -->
+  <rect x="30" y="60" width="220" height="104" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="56" y="90" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#1e293b">Rasm (photo)</text>
+  <text x="56" y="116" font-family="Segoe UI" font-size="14" fill="#2563eb">ctx.replyWithPhoto(...)</text>
+  <text x="56" y="138" font-family="Segoe UI" font-size="13" fill="#64748b">.jpg .png — siqiladi,</text>
+  <text x="56" y="155" font-family="Segoe UI" font-size="13" fill="#64748b">caption qo'shsa bo'ladi</text>
+
+  <!-- Hujjat -->
+  <rect x="270" y="60" width="220" height="104" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="296" y="90" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#1e293b">Hujjat (document)</text>
+  <text x="296" y="116" font-family="Segoe UI" font-size="14" fill="#2563eb">ctx.replyWithDocument(...)</text>
+  <text x="296" y="138" font-family="Segoe UI" font-size="13" fill="#64748b">.pdf .zip — siqilmaydi,</text>
+  <text x="296" y="155" font-family="Segoe UI" font-size="13" fill="#64748b">asl sifatda yetkaziladi</text>
+
+  <!-- Video -->
+  <rect x="510" y="60" width="220" height="104" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="536" y="90" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#1e293b">Video</text>
+  <text x="536" y="116" font-family="Segoe UI" font-size="14" fill="#2563eb">ctx.replyWithVideo(...)</text>
+  <text x="536" y="138" font-family="Segoe UI" font-size="13" fill="#64748b">.mp4 — pleyerda</text>
+  <text x="536" y="155" font-family="Segoe UI" font-size="13" fill="#64748b">o'ynaydi, caption bor</text>
+
+  <!-- Audio -->
+  <rect x="30" y="184" width="220" height="104" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="56" y="214" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#1e293b">Audio (musiqa)</text>
+  <text x="56" y="240" font-family="Segoe UI" font-size="14" fill="#16a34a">ctx.replyWithAudio(...)</text>
+  <text x="56" y="262" font-family="Segoe UI" font-size="13" fill="#64748b">.mp3 — pleyer,</text>
+  <text x="56" y="279" font-family="Segoe UI" font-size="13" fill="#64748b">title/performer bor</text>
+
+  <!-- Ovoz -->
+  <rect x="270" y="184" width="220" height="104" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="296" y="214" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#1e293b">Ovozli xabar (voice)</text>
+  <text x="296" y="240" font-family="Segoe UI" font-size="14" fill="#16a34a">ctx.replyWithVoice(...)</text>
+  <text x="296" y="262" font-family="Segoe UI" font-size="13" fill="#64748b">.ogg (OPUS) — "voice"</text>
+  <text x="296" y="279" font-family="Segoe UI" font-size="13" fill="#64748b">to'lqin ko'rinishi</text>
+
+  <!-- Sticker -->
+  <rect x="510" y="184" width="220" height="104" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="536" y="214" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#1e293b">Sticker</text>
+  <text x="536" y="240" font-family="Segoe UI" font-size="14" fill="#16a34a">ctx.replyWithSticker(...)</text>
+  <text x="536" y="262" font-family="Segoe UI" font-size="13" fill="#64748b">.webp / file_id —</text>
+  <text x="536" y="279" font-family="Segoe UI" font-size="13" fill="#64748b">caption YO'Q</text>
+
+  <!-- Albom -->
+  <rect x="30" y="308" width="700" height="64" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="50" y="334" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb">Albom (bir nechta rasm/video birga)</text>
+  <text x="50" y="358" font-family="Segoe UI" font-size="14" fill="#334155">ctx.replyWithMediaGroup([ {type:"photo", media:...}, ... ]) &#160;— 2..10 element, bitta "albom" bo'lib chiqadi</text>
+
+  <text x="380" y="400" font-family="Segoe UI" font-size="14" fill="#334155" text-anchor="middle">Har metod: ctx.replyWithX(manba, options). Manba = InputFile, URL string yoki file_id string.</text>
+  <text x="380" y="424" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">Sticker'dan tashqari hammasida caption + parse_mode ishlaydi.</text>
+</svg>

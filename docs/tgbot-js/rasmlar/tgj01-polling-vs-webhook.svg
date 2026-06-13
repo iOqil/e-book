@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420">
+  <title>Polling va webhook: update olishning ikki usuli yonma-yon solishtirilgan</title>
+  <defs>
+    <marker id="b" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="g" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="32" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Update olishning ikki yo'li</text>
+
+  <!-- POLLING panel -->
+  <rect x="25" y="55" width="340" height="320" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="195" y="86" font-family="Segoe UI" font-size="18" font-weight="bold" fill="#2563eb" text-anchor="middle">Polling (so'rab-tortish)</text>
+  <text x="195" y="110" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">bot.start() — dev uchun</text>
+
+  <rect x="55" y="135" width="120" height="60" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="115" y="162" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Telegram</text>
+  <text x="115" y="182" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">serveri</text>
+
+  <rect x="215" y="135" width="120" height="60" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="275" y="162" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Bot</text>
+  <text x="275" y="182" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">(siz)</text>
+
+  <!-- bot so'raydi -->
+  <line x1="215" y1="152" x2="177" y2="152" stroke="#16a34a" stroke-width="2" marker-end="url(#g)"/>
+  <text x="195" y="145" font-family="Segoe UI" font-size="13" fill="#16a34a" text-anchor="middle">getUpdates?</text>
+  <!-- server javob -->
+  <line x1="177" y1="182" x2="215" y2="182" stroke="#2563eb" stroke-width="2" marker-end="url(#b)"/>
+  <text x="196" y="198" font-family="Segoe UI" font-size="13" fill="#2563eb" text-anchor="middle">yangiliklar</text>
+
+  <text x="195" y="232" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">Bot doimiy so'rab turadi</text>
+
+  <text x="55" y="268" font-family="Segoe UI" font-size="13" fill="#16a34a">+ public URL kerakmas</text>
+  <text x="55" y="290" font-family="Segoe UI" font-size="13" fill="#16a34a">+ localhost da ishlaydi</text>
+  <text x="55" y="312" font-family="Segoe UI" font-size="13" fill="#16a34a">+ sozlash juda sodda</text>
+  <text x="55" y="340" font-family="Segoe UI" font-size="13" fill="#dc2626">- katta yukda samarasizroq</text>
+
+  <!-- WEBHOOK panel -->
+  <rect x="395" y="55" width="340" height="320" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="565" y="86" font-family="Segoe UI" font-size="18" font-weight="bold" fill="#16a34a" text-anchor="middle">Webhook (itarish)</text>
+  <text x="565" y="110" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">webhookCallback — prod uchun</text>
+
+  <rect x="425" y="135" width="120" height="60" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="485" y="162" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Telegram</text>
+  <text x="485" y="182" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">serveri</text>
+
+  <rect x="585" y="135" width="120" height="60" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="645" y="158" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Bot serveri</text>
+  <text x="645" y="180" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">HTTPS URL</text>
+
+  <!-- server itaradi -->
+  <line x1="545" y1="165" x2="583" y2="165" stroke="#2563eb" stroke-width="2.5" marker-end="url(#b)"/>
+  <text x="565" y="217" font-family="Segoe UI" font-size="13" fill="#2563eb" text-anchor="middle">POST (yangi Update)</text>
+
+  <text x="565" y="240" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">Telegram o'zi yuboradi</text>
+
+  <text x="425" y="276" font-family="Segoe UI" font-size="13" fill="#16a34a">+ tezkor, kam yuk</text>
+  <text x="425" y="298" font-family="Segoe UI" font-size="13" fill="#16a34a">+ minglab foydalanuvchi uchun</text>
+  <text x="425" y="320" font-family="Segoe UI" font-size="13" fill="#dc2626">- HTTPS domen + SSL shart</text>
+  <text x="425" y="342" font-family="Segoe UI" font-size="13" fill="#dc2626">- sozlash murakkabroq</text>
+
+  <text x="380" y="402" font-family="Segoe UI" font-size="14" fill="#334155" text-anchor="middle">Qoida: o'rganishda polling · productionda webhook (chuqur taqqos — 13-bob)</text>
+</svg>

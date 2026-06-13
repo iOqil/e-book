@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430">
+  <title>Keyboard quruvchi: .text() va .row() chaqiruvlari keyboard massiviga qanday qator va ustun beradi</title>
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+
+  <text x="380" y="34" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Keyboard quruvchi: .text() va .row()</text>
+
+  <!-- code chain on the left -->
+  <rect x="28" y="60" width="320" height="300" rx="12" fill="#0f172a"/>
+  <text x="48" y="92" font-family="Segoe UI" font-size="14" fill="#7dd3fc">new Keyboard()</text>
+  <text x="62" y="122" font-family="Segoe UI" font-size="14" fill="#fbbf24">.text("Profil")</text>
+  <text x="62" y="150" font-family="Segoe UI" font-size="14" fill="#fbbf24">.text("Sozlama")</text>
+  <text x="62" y="178" font-family="Segoe UI" font-size="14" fill="#a78bfa">.row()</text>
+  <text x="62" y="206" font-family="Segoe UI" font-size="14" fill="#fbbf24">.text("Yordam")</text>
+  <text x="62" y="234" font-family="Segoe UI" font-size="14" fill="#86efac">.resized()</text>
+  <text x="48" y="288" font-family="Segoe UI" font-size="13" fill="#94a3b8">.text() = ustunga qo'shadi</text>
+  <text x="48" y="312" font-family="Segoe UI" font-size="13" fill="#94a3b8">.row()  = yangi qator boshlaydi</text>
+  <text x="48" y="336" font-family="Segoe UI" font-size="13" fill="#94a3b8">.resized() = kichik klaviatura</text>
+
+  <!-- arrow -->
+  <line x1="358" y1="200" x2="408" y2="200" stroke="#2563eb" stroke-width="3" marker-end="url(#ab)"/>
+
+  <!-- resulting structure on the right -->
+  <rect x="420" y="60" width="312" height="300" rx="12" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="576" y="90" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb" text-anchor="middle">keyboard massivi</text>
+
+  <!-- row 0 -->
+  <text x="440" y="128" font-family="Segoe UI" font-size="13" fill="#64748b">[0]</text>
+  <rect x="468" y="110" width="120" height="34" rx="6" fill="#2563eb"/>
+  <text x="528" y="132" font-family="Segoe UI" font-size="14" fill="#ffffff" text-anchor="middle">Profil</text>
+  <rect x="596" y="110" width="120" height="34" rx="6" fill="#2563eb"/>
+  <text x="656" y="132" font-family="Segoe UI" font-size="14" fill="#ffffff" text-anchor="middle">Sozlama</text>
+
+  <!-- row 1 -->
+  <text x="440" y="186" font-family="Segoe UI" font-size="13" fill="#64748b">[1]</text>
+  <rect x="468" y="168" width="248" height="34" rx="6" fill="#2563eb"/>
+  <text x="592" y="190" font-family="Segoe UI" font-size="14" fill="#ffffff" text-anchor="middle">Yordam</text>
+
+  <!-- JSON form -->
+  <rect x="440" y="222" width="276" height="118" rx="8" fill="#f1f5f9" stroke="#cbd5e1"/>
+  <text x="456" y="246" font-family="Segoe UI" font-size="13" fill="#334155">keyboard: [</text>
+  <text x="470" y="268" font-family="Segoe UI" font-size="13" fill="#16a34a">[ "Profil", "Sozlama" ],</text>
+  <text x="470" y="290" font-family="Segoe UI" font-size="13" fill="#16a34a">[ "Yordam" ]</text>
+  <text x="456" y="312" font-family="Segoe UI" font-size="13" fill="#334155">],</text>
+  <text x="456" y="332" font-family="Segoe UI" font-size="13" fill="#dc2626">resize_keyboard: true</text>
+
+  <text x="380" y="400" font-family="Segoe UI" font-size="14" fill="#334155" text-anchor="middle">ctx.reply("Menyu:", { reply_markup: kb })  — kb to'g'ridan-to'g'ri uzatiladi</text>
+
+  <defs>
+    <marker id="ab" markerWidth="10" markerHeight="10" refX="6" refY="5" orient="auto">
+      <path d="M0,0 L8,5 L0,10 Z" fill="#2563eb"/>
+    </marker>
+  </defs>
+</svg>

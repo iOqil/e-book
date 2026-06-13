@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400">
+  <title>Repository naqshi: handler to'g'ridan-to'g'ri SQL yozmaydi, balki repository (users.js) metodlarini chaqiradi, repository esa prepared statement orqali DB bilan ishlaydi</title>
+  <rect x="0" y="0" width="760" height="400" fill="#f8fafc"/>
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI" font-size="19" font-weight="bold" fill="#1e293b">Repository naqshi: handler &#8594; repository &#8594; DB</text>
+
+  <!-- Handler -->
+  <rect x="40" y="80" width="190" height="180" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="135" y="108" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">HANDLER</text>
+  <text x="135" y="130" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">bot.command(...)</text>
+  <text x="56" y="160" font-family="Segoe UI" font-size="13" fill="#334155">ctx.users.saveUser(u)</text>
+  <text x="56" y="184" font-family="Segoe UI" font-size="13" fill="#334155">ctx.users.getUser(id)</text>
+  <text x="56" y="222" font-family="Segoe UI" font-size="13" fill="#16a34a">SQL'ni BILMAYDI</text>
+  <text x="56" y="244" font-family="Segoe UI" font-size="13" fill="#64748b">faqat mantiqqa qaraydi</text>
+
+  <!-- Repository -->
+  <rect x="285" y="80" width="190" height="180" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="380" y="108" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#15803d">REPOSITORY</text>
+  <text x="380" y="130" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">users.js</text>
+  <text x="301" y="160" font-family="Segoe UI" font-size="13" fill="#334155">saveUser(user)</text>
+  <text x="301" y="184" font-family="Segoe UI" font-size="13" fill="#334155">getUser(id)</text>
+  <text x="301" y="208" font-family="Segoe UI" font-size="13" fill="#334155">updateBalance(id, n)</text>
+  <text x="301" y="240" font-family="Segoe UI" font-size="13" fill="#16a34a">SQL shu yerda yashiringan</text>
+
+  <!-- DB -->
+  <rect x="530" y="80" width="190" height="180" rx="12" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="625" y="108" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#b45309">DB (SQLite)</text>
+  <text x="625" y="130" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">bot.db</text>
+  <text x="546" y="160" font-family="Segoe UI" font-size="13" fill="#334155">db.prepare(...).run()</text>
+  <text x="546" y="184" font-family="Segoe UI" font-size="13" fill="#334155">db.prepare(...).get()</text>
+  <text x="546" y="208" font-family="Segoe UI" font-size="13" fill="#334155">db.prepare(...).all()</text>
+  <text x="546" y="240" font-family="Segoe UI" font-size="13" fill="#dc2626">jadval: users</text>
+
+  <!-- arrows -->
+  <line x1="230" y1="150" x2="283" y2="150" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#a)"/>
+  <text x="256" y="140" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">chaqiradi</text>
+  <line x1="475" y1="150" x2="528" y2="150" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#a)"/>
+  <text x="501" y="140" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">SQL</text>
+
+  <text x="380" y="306" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">Nega? DB mantig'ini bitta joyda saqlash &#8594; handler toza, test oson</text>
+  <text x="380" y="332" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">DB'ni Postgres'ga almashtirsangiz — faqat repository o'zgaradi, handlerlar emas</text>
+  <text x="380" y="362" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">Repository ctx'ga middleware orqali ulanadi: ctx.users = repo (09-bobdagi naqsh)</text>
+
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#94a3b8"/></marker>
+  </defs>
+</svg>

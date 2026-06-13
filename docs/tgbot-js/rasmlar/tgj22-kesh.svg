@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470">
+  <title>Obuna keshi: kesh-siz har xabarda getChatMember chaqiriladi (sekin, flood xavfi); kesh bilan TTL ichida natija qayta ishlatiladi va Telegram'ga so'rov yuborilmaydi</title>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI" font-size="19" font-weight="bold" fill="#1e293b">Kesh: har xabarda getChatMember chaqirmaslik</text>
+
+  <!-- KESH-SIZ (top, red) -->
+  <text x="40" y="70" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#dc2626">Kesh-siz (yomon): har xabar = bitta API so'rov</text>
+  <rect x="40" y="82" width="100" height="40" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="90" y="107" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">xabar 1</text>
+  <line x1="140" y1="102" x2="178" y2="102" stroke="#dc2626" stroke-width="2" marker-end="url(#ad3)"/>
+  <rect x="180" y="82" width="150" height="40" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="255" y="107" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">getChatMember</text>
+
+  <rect x="40" y="132" width="100" height="40" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="90" y="157" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">xabar 2</text>
+  <line x1="140" y1="152" x2="178" y2="152" stroke="#dc2626" stroke-width="2" marker-end="url(#ad3)"/>
+  <rect x="180" y="132" width="150" height="40" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="255" y="157" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">getChatMember</text>
+
+  <rect x="40" y="182" width="100" height="40" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="90" y="207" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">xabar 3</text>
+  <line x1="140" y1="202" x2="178" y2="202" stroke="#dc2626" stroke-width="2" marker-end="url(#ad3)"/>
+  <rect x="180" y="182" width="150" height="40" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="255" y="207" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">getChatMember</text>
+  <text x="430" y="157" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">3 xabar = 3 API so'rov</text>
+  <text x="430" y="179" font-family="Segoe UI" font-size="13" fill="#334155">sekin + flood limitga tushasiz</text>
+
+  <line x1="40" y1="244" x2="720" y2="244" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- KESH BILAN (bottom, green) -->
+  <text x="40" y="278" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">Kesh bilan (yaxshi): TTL ichida 1 marta so'rov</text>
+  <rect x="40" y="290" width="100" height="40" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="90" y="315" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">xabar 1</text>
+  <line x1="140" y1="310" x2="178" y2="310" stroke="#16a34a" stroke-width="2" marker-end="url(#ag3)"/>
+  <rect x="180" y="290" width="150" height="40" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="255" y="315" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#15803d">getChatMember</text>
+  <line x1="330" y1="310" x2="378" y2="310" stroke="#16a34a" stroke-width="2" marker-end="url(#ag3)"/>
+  <rect x="380" y="284" width="170" height="100" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="465" y="306" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb">KESH (Map yoki</text>
+  <text x="465" y="324" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb">ctx.session)</text>
+  <text x="465" y="346" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">{ azo, vaqt }</text>
+  <text x="465" y="366" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">TTL = 10 daqiqa</text>
+
+  <rect x="40" y="340" width="100" height="34" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="90" y="362" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">xabar 2, 3</text>
+  <line x1="140" y1="357" x2="320" y2="357" stroke="#16a34a" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#ag3)"/>
+  <path d="M250 357 Q300 380 380 360" fill="none" stroke="#16a34a" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#ag3)"/>
+  <text x="220" y="350" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#15803d">keshdan (API'siz)</text>
+
+  <text x="590" y="320" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#16a34a">TTL ichida:</text>
+  <text x="590" y="340" font-family="Segoe UI" font-size="13" fill="#334155">faqat 1 API so'rov</text>
+  <text x="590" y="360" font-family="Segoe UI" font-size="13" fill="#334155">qolgani keshdan</text>
+
+  <text x="380" y="430" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">TTL tugagach kesh "eskiradi" va keyingi xabarda getChatMember qayta chaqiriladi (obuna bekor bo'lishi mumkin)</text>
+  <text x="380" y="452" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">offline tasdiqlangan: TTL ichida 1 marta, TTL tugagach 2 marta</text>
+
+  <defs>
+    <marker id="ad3" markerWidth="10" markerHeight="10" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#dc2626"/></marker>
+    <marker id="ag3" markerWidth="10" markerHeight="10" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#16a34a"/></marker>
+  </defs>
+</svg>

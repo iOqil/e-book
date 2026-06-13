@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 470">
+  <title>Mini App uchburchagi: bot Mini App'ni ochadi, WebApp frontend backend API'ga so'rov yuboradi (har so'rovda initData), backend validatsiya qilib DB bilan ishlaydi</title>
+  <rect x="0" y="0" width="860" height="470" fill="#f8fafc"/>
+  <defs>
+    <marker id="ab" markerWidth="11" markerHeight="11" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="ag" markerWidth="11" markerHeight="11" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+    <marker id="aa" markerWidth="11" markerHeight="11" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+
+  <text x="430" y="38" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b" text-anchor="middle">Mini App uchburchagi</text>
+  <text x="430" y="62" font-family="Segoe UI" font-size="14" fill="#64748b" text-anchor="middle">UI alohida, holat (balans, ma'lumot) serverda — har so'rovda initData bilan himoyalanadi</text>
+
+  <!-- Bot (top) -->
+  <rect x="320" y="95" width="220" height="78" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="430" y="124" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#1e293b" text-anchor="middle">1. Bot (grammY)</text>
+  <text x="430" y="146" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">webApp tugma -> Mini App'ni</text>
+  <text x="430" y="163" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">Telegram ichida ochadi (23-bob)</text>
+
+  <!-- Frontend (bottom left) -->
+  <rect x="70" y="320" width="250" height="92" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="195" y="349" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#1e293b" text-anchor="middle">2. WebApp frontend</text>
+  <text x="195" y="371" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">HTML / JS — faqat UI</text>
+  <text x="195" y="389" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">tugmalar, ko'rinish, fetch</text>
+  <text x="195" y="406" font-family="Segoe UI" font-size="13" fill="#dc2626" text-anchor="middle">ISHONILMAYDI (foydalanuvchida)</text>
+
+  <!-- Backend (bottom right) -->
+  <rect x="540" y="320" width="250" height="92" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="665" y="349" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#1e293b" text-anchor="middle">3. Backend API</text>
+  <text x="665" y="371" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">Express / Hono</text>
+  <text x="665" y="389" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">initData validatsiya + DB</text>
+  <text x="665" y="406" font-family="Segoe UI" font-size="13" fill="#16a34a" text-anchor="middle">YAGONA ishonchli manba</text>
+
+  <!-- bot -> frontend (opens) -->
+  <line x1="350" y1="173" x2="215" y2="318" stroke="#2563eb" stroke-width="2.5" marker-end="url(#ab)"/>
+  <text x="232" y="240" font-family="Segoe UI" font-size="13" fill="#2563eb" text-anchor="middle">ochadi</text>
+  <text x="232" y="258" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">(URL)</text>
+
+  <!-- frontend -> backend (fetch + initData) -->
+  <line x1="322" y1="360" x2="538" y2="360" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#aa)"/>
+  <text x="430" y="350" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#1e293b" text-anchor="middle">fetch + initData (Authorization)</text>
+
+  <!-- backend -> frontend (JSON) -->
+  <line x1="538" y1="390" x2="322" y2="390" stroke="#16a34a" stroke-width="2.5" marker-end="url(#ag)"/>
+  <text x="430" y="408" font-family="Segoe UI" font-size="13" fill="#16a34a" text-anchor="middle">JSON (200) yoki 401</text>
+
+  <!-- backend -> bot (optional notify) -->
+  <line x1="650" y1="318" x2="510" y2="173" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#ab)"/>
+  <text x="628" y="248" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">ixtiyoriy:</text>
+  <text x="628" y="266" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">bot xabar yuboradi</text>
+
+  <text x="430" y="448" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">Frontend faqat ko'rsatadi; backend tekshiradi va saqlaydi. user.id'ga frontend so'ziga ishonmang!</text>
+</svg>

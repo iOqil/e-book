@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 450">
+  <title>setMyCommands oqimi: bot.api.setMyCommands buyruqlar ro'yxatini Telegramga yuboradi, scope (default, chat admin, til) bilan kimga ko'rinishini boshqaradi, foydalanuvchi slash bosganda menyu chiqadi; natija keshlanadi</title>
+  <rect x="0" y="0" width="820" height="450" fill="#f8fafc"/>
+  <text x="410" y="34" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">setMyCommands — "/" tugmasidagi menyu</text>
+
+  <!-- Kod -->
+  <rect x="40" y="58" width="360" height="120" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+  <text x="58" y="84" font-family="Segoe UI" font-size="13" fill="#7dd3fc">bot.api.setMyCommands([</text>
+  <text x="78" y="104" font-family="Segoe UI" font-size="13" fill="#e2e8f0">{ command: "start",</text>
+  <text x="98" y="122" font-family="Segoe UI" font-size="13" fill="#86efac">  description: "Boshlash" },</text>
+  <text x="78" y="142" font-family="Segoe UI" font-size="13" fill="#e2e8f0">{ command: "yordam",</text>
+  <text x="98" y="160" font-family="Segoe UI" font-size="13" fill="#86efac">  description: "Yordam" } ])</text>
+
+  <line x1="400" y1="118" x2="448" y2="118" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- Telegram menyu -->
+  <rect x="460" y="58" width="300" height="160" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="478" y="82" font-family="Segoe UI" font-size="13" fill="#64748b">Foydalanuvchi "/" bosganda:</text>
+  <rect x="478" y="94" width="264" height="34" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1"/>
+  <text x="490" y="116" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#2563eb">/start</text>
+  <text x="560" y="116" font-family="Segoe UI" font-size="13" fill="#334155">Boshlash</text>
+  <rect x="478" y="134" width="264" height="34" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1"/>
+  <text x="490" y="156" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#2563eb">/yordam</text>
+  <text x="560" y="156" font-family="Segoe UI" font-size="13" fill="#334155">Yordam</text>
+  <text x="478" y="194" font-family="Segoe UI" font-size="13" fill="#64748b">Telegram bu ro'yxatni keshlaydi</text>
+  <text x="478" y="210" font-family="Segoe UI" font-size="13" fill="#64748b">(darhol yangilanmasligi mumkin).</text>
+
+  <!-- Scope blocklari -->
+  <text x="410" y="252" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">scope — buyruqlar kimga ko'rinadi</text>
+
+  <rect x="40" y="270" width="230" height="92" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="56" y="294" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">default</text>
+  <text x="56" y="316" font-family="Segoe UI" font-size="13" fill="#334155">scope berilmasa — hamma</text>
+  <text x="56" y="334" font-family="Segoe UI" font-size="13" fill="#334155">private/guruh uchun asosiy</text>
+  <text x="56" y="352" font-family="Segoe UI" font-size="13" fill="#334155">ro'yxat.</text>
+
+  <rect x="295" y="270" width="230" height="92" rx="8" fill="#fef9c3" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="311" y="294" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#b45309">admin scope</text>
+  <text x="311" y="316" font-family="Segoe UI" font-size="13" fill="#334155">all_chat_administrators</text>
+  <text x="311" y="334" font-family="Segoe UI" font-size="13" fill="#334155">faqat adminlarga ko'rinadi</text>
+  <text x="311" y="352" font-family="Segoe UI" font-size="13" fill="#334155">(masalan /ban).</text>
+
+  <rect x="550" y="270" width="230" height="92" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="566" y="294" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb">language_code</text>
+  <text x="566" y="316" font-family="Segoe UI" font-size="13" fill="#334155">"en", "ru" ... har til uchun</text>
+  <text x="566" y="334" font-family="Segoe UI" font-size="13" fill="#334155">alohida tarjima qilingan</text>
+  <text x="566" y="352" font-family="Segoe UI" font-size="13" fill="#334155">ro'yxat.</text>
+
+  <text x="410" y="396" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">Aniqroq scope (admin/til) umumiy (default) ustidan ustun keladi.</text>
+  <text x="410" y="418" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">setMyCommands odatda bir marta — bot ishga tushganda chaqiriladi.</text>
+
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+</svg>

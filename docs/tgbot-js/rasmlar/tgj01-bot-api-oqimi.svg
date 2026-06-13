@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380">
+  <title>Bot API oqimi: foydalanuvchi, Telegram serveri va sizning botingiz orasidagi HTTP aloqa</title>
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="arg" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="760" height="380" fill="#f8fafc"/>
+  <text x="380" y="34" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Bot API: hamma narsa Telegram serveri orqali</text>
+
+  <!-- Foydalanuvchi -->
+  <rect x="30" y="120" width="170" height="120" rx="12" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="115" y="155" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#1e293b" text-anchor="middle">Foydalanuvchi</text>
+  <text x="115" y="182" font-family="Segoe UI" font-size="14" fill="#334155" text-anchor="middle">Telegram klienti</text>
+  <text x="115" y="204" font-family="Segoe UI" font-size="14" fill="#64748b" text-anchor="middle">(telefon / desktop)</text>
+
+  <!-- Telegram serveri -->
+  <rect x="295" y="100" width="170" height="160" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="135" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#1e293b" text-anchor="middle">Telegram</text>
+  <text x="380" y="158" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#1e293b" text-anchor="middle">serveri</text>
+  <text x="380" y="186" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">api.telegram.org</text>
+  <text x="380" y="212" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">xabarlarni saqlaydi,</text>
+  <text x="380" y="230" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">Update yetkazadi</text>
+
+  <!-- Bot -->
+  <rect x="560" y="120" width="170" height="120" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="645" y="155" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#1e293b" text-anchor="middle">Sizning botingiz</text>
+  <text x="645" y="182" font-family="Segoe UI" font-size="14" fill="#334155" text-anchor="middle">Node.js + grammY</text>
+  <text x="645" y="204" font-family="Segoe UI" font-size="14" fill="#64748b" text-anchor="middle">(siz yozgan kod)</text>
+
+  <!-- Foydalanuvchi -> server (xabar) -->
+  <line x1="200" y1="150" x2="293" y2="150" stroke="#2563eb" stroke-width="2.5" marker-end="url(#ar)"/>
+  <text x="246" y="140" font-family="Segoe UI" font-size="13" fill="#2563eb" text-anchor="middle">"Salom"</text>
+
+  <!-- server -> bot (Update) -->
+  <line x1="467" y1="150" x2="558" y2="150" stroke="#2563eb" stroke-width="2.5" marker-end="url(#ar)"/>
+  <text x="512" y="140" font-family="Segoe UI" font-size="13" fill="#2563eb" text-anchor="middle">Update</text>
+
+  <!-- bot -> server (sendMessage) -->
+  <line x1="558" y1="210" x2="467" y2="210" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arg)"/>
+  <text x="512" y="230" font-family="Segoe UI" font-size="13" fill="#16a34a" text-anchor="middle">sendMessage</text>
+
+  <!-- server -> foydalanuvchi (javob) -->
+  <line x1="293" y1="210" x2="200" y2="210" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arg)"/>
+  <text x="246" y="230" font-family="Segoe UI" font-size="13" fill="#16a34a" text-anchor="middle">javob</text>
+
+  <!-- HTTP belgisi -->
+  <text x="512" y="285" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">HTTP: api.telegram.org/bot&lt;TOKEN&gt;/METHOD</text>
+
+  <text x="380" y="340" font-family="Segoe UI" font-size="14" fill="#334155" text-anchor="middle">Ko'k = foydalanuvchidan botga (so'rov) · Yashil = botdan foydalanuvchiga (javob)</text>
+  <text x="380" y="362" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">Bot va foydalanuvchi hech qachon to'g'ridan-to'g'ri bog'lanmaydi</text>
+</svg>

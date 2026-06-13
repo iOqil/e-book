@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 470">
+  <title>Anti-cheat: klient "men 999999 marta bosdim" deb yuboradi, lekin server energiya limiti (1000) bo'yicha cheklab haqiqiy balansni hisoblaydi — klientga ishonmaydi</title>
+  <defs>
+    <marker id="ac-ar" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L8,5 L0,10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="860" height="470" fill="#f8fafc"/>
+  <text x="430" y="34" text-anchor="middle" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b">Anti-cheat: server klientga ISHONMAYDI</text>
+
+  <!-- KLIENT tomoni -->
+  <rect x="30" y="70" width="320" height="200" rx="12" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="190" y="98" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#dc2626">KLIENT (brauzer — ishonchsiz)</text>
+  <rect x="54" y="116" width="272" height="60" rx="8" fill="#ffffff" stroke="#fca5a5" stroke-width="1.5"/>
+  <text x="190" y="140" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">POST /api/tap</text>
+  <text x="190" y="162" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#dc2626">{ "taps": 999999 }</text>
+  <text x="190" y="206" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Firibgar DevTools'da sonni</text>
+  <text x="190" y="226" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">istalgancha o'zgartirishi mumkin.</text>
+  <text x="190" y="250" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#dc2626">Bu son — faqat DA'VO.</text>
+
+  <!-- strelka -->
+  <line x1="350" y1="170" x2="508" y2="170" stroke="#64748b" stroke-width="2" marker-end="url(#ac-ar)"/>
+  <text x="429" y="158" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">initData + da'vo</text>
+
+  <!-- SERVER tomoni -->
+  <rect x="510" y="70" width="320" height="200" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="670" y="98" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#15803d">SERVER (ishonchli manba)</text>
+  <text x="528" y="124" font-family="Segoe UI" font-size="13" fill="#334155">1) initData HMAC tekshir (24-bob)</text>
+  <text x="528" y="146" font-family="Segoe UI" font-size="13" fill="#334155">2) energiyani regen qil (server vaqti)</text>
+  <text x="528" y="168" font-family="Segoe UI" font-size="13" fill="#334155">3) ruxsat = min(da'vo, energiya)</text>
+  <text x="528" y="190" font-family="Segoe UI" font-size="13" fill="#334155">4) balans += ruxsat &#215; multiplier</text>
+  <rect x="528" y="204" width="284" height="50" rx="8" fill="#ffffff" stroke="#86efac" stroke-width="1.5"/>
+  <text x="670" y="226" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">min(999999, energiya=1000)</text>
+  <text x="670" y="246" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#15803d">= 1000 tap qabul qilinadi</text>
+
+  <!-- Natija paneli -->
+  <rect x="30" y="300" width="800" height="130" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="430" y="328" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">Natija (offline test bilan tasdiqlangan)</text>
+
+  <rect x="56" y="346" width="350" height="66" rx="8" fill="#fef2f2" stroke="#fca5a5" stroke-width="1.5"/>
+  <text x="231" y="370" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">Klient da'vosi: <tspan font-weight="bold" fill="#dc2626">999999</tspan></text>
+  <text x="231" y="394" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">balansga TO'G'RIDAN qo'shilmaydi</text>
+
+  <rect x="454" y="346" width="350" height="66" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+  <text x="629" y="370" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">Serverdagi balans: <tspan font-weight="bold" fill="#15803d">+1000</tspan></text>
+  <text x="629" y="394" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">energiya 0; qolgani rad etiladi</text>
+
+  <line x1="406" y1="379" x2="450" y2="379" stroke="#64748b" stroke-width="2" marker-end="url(#ac-ar)"/>
+</svg>

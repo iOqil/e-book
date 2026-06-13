@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470">
+  <title>node-cron ifoda sintaksisi: besh maydon (daqiqa soat kun oy hafta) rejali ishni boshqaradi</title>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI" font-size="19" font-weight="bold" fill="#1e293b">cron ifoda: 5 maydon -&gt; rejali ish</text>
+
+  <!-- Five field boxes -->
+  <g font-family="Segoe UI">
+    <rect x="60" y="70" width="120" height="56" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+    <rect x="200" y="70" width="120" height="56" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+    <rect x="340" y="70" width="120" height="56" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+    <rect x="480" y="70" width="120" height="56" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+    <rect x="620" y="70" width="120" height="56" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+
+    <text x="120" y="94" text-anchor="middle" font-size="22" font-weight="bold" fill="#2563eb">0</text>
+    <text x="260" y="94" text-anchor="middle" font-size="22" font-weight="bold" fill="#2563eb">9</text>
+    <text x="400" y="94" text-anchor="middle" font-size="22" font-weight="bold" fill="#2563eb">*</text>
+    <text x="540" y="94" text-anchor="middle" font-size="22" font-weight="bold" fill="#2563eb">*</text>
+    <text x="680" y="94" text-anchor="middle" font-size="22" font-weight="bold" fill="#2563eb">*</text>
+
+    <text x="120" y="116" text-anchor="middle" font-size="13" fill="#64748b">daqiqa 0-59</text>
+    <text x="260" y="116" text-anchor="middle" font-size="13" fill="#64748b">soat 0-23</text>
+    <text x="400" y="116" text-anchor="middle" font-size="13" fill="#64748b">oy-kuni 1-31</text>
+    <text x="540" y="116" text-anchor="middle" font-size="13" fill="#64748b">oy 1-12</text>
+    <text x="680" y="116" text-anchor="middle" font-size="13" fill="#64748b">hafta-kuni 0-6</text>
+  </g>
+
+  <text x="380" y="158" text-anchor="middle" font-family="Segoe UI" font-size="15" fill="#334155">"0 9 * * *" = har kuni soat 9:00 da (timezone: Asia/Tashkent)</text>
+
+  <!-- Arrow down -->
+  <line x1="380" y1="170" x2="380" y2="206" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#cd)"/>
+
+  <!-- schedule call -->
+  <rect x="170" y="210" width="420" height="56" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="234" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">cron.schedule("0 9 * * *", fn, { timezone })</text>
+  <text x="380" y="256" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">-&gt; ScheduledTask (start / stop / execute / getNextRun)</text>
+
+  <!-- Arrow down -->
+  <line x1="380" y1="270" x2="380" y2="306" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#cd)"/>
+
+  <!-- Timeline of runs -->
+  <text x="60" y="296" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">Har kuni avtomatik ishga tushadi:</text>
+  <line x1="80" y1="340" x2="700" y2="340" stroke="#94a3b8" stroke-width="2"/>
+  <g font-family="Segoe UI">
+    <circle cx="160" cy="340" r="8" fill="#16a34a"/>
+    <circle cx="340" cy="340" r="8" fill="#16a34a"/>
+    <circle cx="520" cy="340" r="8" fill="#16a34a"/>
+    <circle cx="680" cy="340" r="8" fill="#16a34a"/>
+    <text x="160" y="370" text-anchor="middle" font-size="13" fill="#334155">Dush 9:00</text>
+    <text x="340" y="370" text-anchor="middle" font-size="13" fill="#334155">Sesh 9:00</text>
+    <text x="520" y="370" text-anchor="middle" font-size="13" fill="#334155">Chor 9:00</text>
+    <text x="680" y="370" text-anchor="middle" font-size="13" fill="#334155">...</text>
+  </g>
+
+  <!-- Callout boxes -->
+  <rect x="80" y="396" width="290" height="54" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="96" y="418" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#15803d">Foydasi: kunlik eslatma, hisobot,</text>
+  <text x="96" y="438" font-family="Segoe UI" font-size="13" fill="#334155">keshni tozalash, statistikani yuborish</text>
+
+  <rect x="390" y="396" width="290" height="54" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="406" y="418" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#b91c1c">Diqqat: timezone bermasangiz</text>
+  <text x="406" y="438" font-family="Segoe UI" font-size="13" fill="#334155">server vaqti (UTC) ishlatiladi</text>
+
+  <defs>
+    <marker id="cd" markerWidth="10" markerHeight="10" refX="4" refY="7" orient="auto"><path d="M0,0 L8,0 L4,8 Z" fill="#94a3b8"/></marker>
+  </defs>
+</svg>

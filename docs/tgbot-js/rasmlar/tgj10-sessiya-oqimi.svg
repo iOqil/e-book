@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420">
+  <title>Sessiya oqimi: update kelganda sessiya kaliti hisoblanadi, storage'dan o'qiladi, ctx.session ga biriktiriladi, handler o'zgartiradi, storage'ga qaytib yoziladi</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI" font-size="19" font-weight="bold" fill="#1e293b">session() middleware: kalit &#8594; storage &#8594; ctx.session</text>
+
+  <!-- Update -->
+  <rect x="24" y="70" width="150" height="64" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="99" y="98" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb">Update keldi</text>
+  <text x="99" y="120" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">ctx.chat / ctx.from</text>
+
+  <!-- Session key -->
+  <rect x="210" y="70" width="160" height="64" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="290" y="96" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#b45309">Sessiya kaliti</text>
+  <text x="290" y="118" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">getSessionKey(ctx)</text>
+
+  <!-- Storage -->
+  <rect x="406" y="70" width="160" height="64" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="486" y="96" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#15803d">storage.read(kalit)</text>
+  <text x="486" y="118" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">memory / fayl / DB</text>
+
+  <!-- ctx.session -->
+  <rect x="602" y="70" width="134" height="64" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="669" y="96" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb">ctx.session</text>
+  <text x="669" y="118" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">{ count: 0 }</text>
+
+  <!-- top arrows -->
+  <line x1="174" y1="102" x2="208" y2="102" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#a)"/>
+  <line x1="370" y1="102" x2="404" y2="102" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#a)"/>
+  <line x1="566" y1="102" x2="600" y2="102" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#a)"/>
+
+  <!-- handler -->
+  <rect x="210" y="208" width="356" height="70" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="388" y="236" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#dc2626">HANDLER: ctx.session.count++</text>
+  <text x="388" y="260" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">holatni o'qiydi va o'zgartiradi</text>
+
+  <!-- arrow down: ctx.session -> handler -->
+  <line x1="669" y1="134" x2="669" y2="243" stroke="#2563eb" stroke-width="2.5"/>
+  <line x1="669" y1="243" x2="570" y2="243" stroke="#2563eb" stroke-width="2.5" marker-end="url(#a)"/>
+  <text x="700" y="190" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#2563eb">ctx ga</text>
+  <text x="700" y="207" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#2563eb">biriktiriladi</text>
+
+  <!-- write back -->
+  <line x1="290" y1="208" x2="290" y2="150" stroke="#16a34a" stroke-width="2.5" stroke-dasharray="6 4"/>
+  <line x1="290" y1="150" x2="486" y2="150" stroke="#16a34a" stroke-width="2.5" stroke-dasharray="6 4"/>
+  <line x1="486" y1="150" x2="486" y2="136" stroke="#16a34a" stroke-width="2.5" stroke-dasharray="6 4" marker-end="url(#g)"/>
+  <text x="388" y="172" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#16a34a">handler tugagach: storage.write(kalit, ctx.session)</text>
+
+  <!-- bottom note -->
+  <text x="380" y="328" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">Bir xil kalit &#8594; bir xil sessiya (saqlanib qoladi)</text>
+  <text x="380" y="352" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Sukut bo'yicha kalit = chat.id. getSessionKey bilan har foydalanuvchiga o'zgartirsa bo'ladi.</text>
+  <text x="380" y="380" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">MemorySessionStorage'da bot qayta ishga tushsa &#8594; sessiya yo'qoladi</text>
+
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#94a3b8"/></marker>
+    <marker id="g" markerWidth="10" markerHeight="10" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#16a34a"/></marker>
+  </defs>
+</svg>

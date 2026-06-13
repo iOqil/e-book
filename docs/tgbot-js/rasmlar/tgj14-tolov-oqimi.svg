@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 360">
+  <title>Telegram to'lov oqimi: invoice -> foydalanuvchi to'laydi -> pre_checkout_query (10s) -> successful_payment</title>
+  <rect x="0" y="0" width="780" height="360" fill="#f8fafc"/>
+  <text x="390" y="34" text-anchor="middle" font-family="Segoe UI" font-size="19" font-weight="bold" fill="#1e293b">To'lovning to'rt bosqichi</text>
+
+  <defs>
+    <marker id="aoq" markerWidth="11" markerHeight="11" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 Z" fill="#2563eb"/></marker>
+  </defs>
+
+  <!-- Bosqich 1: Invoice -->
+  <rect x="24" y="80" width="160" height="120" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="104" y="108" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">1. Invoice</text>
+  <text x="104" y="134" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Bot yuboradi:</text>
+  <text x="104" y="154" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">replyWithInvoice</text>
+  <text x="104" y="178" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">(narx + tovar)</text>
+
+  <!-- Bosqich 2: Foydalanuvchi to'laydi -->
+  <rect x="216" y="80" width="160" height="120" rx="12" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="296" y="108" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#b45309">2. To'lov</text>
+  <text x="296" y="134" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Foydalanuvchi</text>
+  <text x="296" y="154" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Telegram ichida</text>
+  <text x="296" y="178" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">to'lovni tasdiqlaydi</text>
+
+  <!-- Bosqich 3: pre_checkout_query -->
+  <rect x="408" y="80" width="160" height="120" rx="12" fill="#fff7ed" stroke="#dc2626" stroke-width="2"/>
+  <text x="488" y="106" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">3. pre_checkout</text>
+  <text x="488" y="128" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Bot 10s ichida</text>
+  <text x="488" y="148" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">answerPreCheckout</text>
+  <text x="488" y="168" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Query(true)</text>
+  <text x="488" y="190" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#dc2626">SHART!</text>
+
+  <!-- Bosqich 4: successful_payment -->
+  <rect x="600" y="80" width="160" height="120" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="680" y="104" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#15803d">4. successful</text>
+  <text x="680" y="124" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#15803d">_payment</text>
+  <text x="680" y="148" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Bot tovarni</text>
+  <text x="680" y="168" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">beradi</text>
+  <text x="680" y="190" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">(fulfillment)</text>
+
+  <!-- Arrows between -->
+  <line x1="184" y1="140" x2="214" y2="140" stroke="#2563eb" stroke-width="2.5" marker-end="url(#aoq)"/>
+  <line x1="376" y1="140" x2="406" y2="140" stroke="#2563eb" stroke-width="2.5" marker-end="url(#aoq)"/>
+  <line x1="568" y1="140" x2="598" y2="140" stroke="#2563eb" stroke-width="2.5" marker-end="url(#aoq)"/>
+
+  <!-- 10s deadline note -->
+  <rect x="380" y="232" width="216" height="44" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="488" y="258" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#dc2626">10 soniya kechiksa = to'lov bekor</text>
+
+  <!-- Bottom note -->
+  <text x="390" y="312" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">3-bosqich javobsiz qolsa, 4-bosqich umuman kelmaydi</text>
+  <text x="390" y="338" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">pre_checkout_query = "tovar hali bormi?" deb so'rash; true bersangizgina pul yechiladi</text>
+</svg>

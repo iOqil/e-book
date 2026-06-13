@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420">
+  <title>InputFile manbalari: lokal yo'l, Buffer, URL va file_id — qaysi holatda qaysi biri ishlatiladi</title>
+  <defs>
+    <marker id="ar2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="34" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Media manbalari: InputFile va string</text>
+
+  <!-- 1. Lokal yo'l -->
+  <rect x="30" y="64" width="220" height="100" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="140" y="92" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a" text-anchor="middle">1. Lokal fayl yo'li</text>
+  <text x="140" y="118" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">new InputFile("rasm.jpg")</text>
+  <text x="140" y="140" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">diskdan o'qiladi va</text>
+  <text x="140" y="156" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">yuklab beriladi</text>
+
+  <!-- 2. Buffer/Stream -->
+  <rect x="270" y="64" width="220" height="100" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="380" y="92" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a" text-anchor="middle">2. Buffer / Stream</text>
+  <text x="380" y="118" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">new InputFile(buf)</text>
+  <text x="380" y="140" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">xotirada yaratilgan</text>
+  <text x="380" y="156" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">ma'lumot (QR, grafik)</text>
+
+  <!-- 3. URL -->
+  <rect x="510" y="64" width="220" height="100" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="620" y="92" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb" text-anchor="middle">3. URL (string)</text>
+  <text x="620" y="118" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">"https://.../x.jpg"</text>
+  <text x="620" y="140" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">Telegram o'zi yuklab</text>
+  <text x="620" y="156" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">oladi (string, InputFile EMAS)</text>
+
+  <!-- 4. file_id -->
+  <rect x="180" y="200" width="400" height="96" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="230" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb" text-anchor="middle">4. file_id (string) — eng tejamkor</text>
+  <text x="380" y="256" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">"AgACAgIAAxk..." — oldin yuborilgan faylning ID si</text>
+  <text x="380" y="278" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">qayta yuklash YO'Q — Telegram serverida allaqachon bor</text>
+
+  <!-- Strelka file_id ga -->
+  <line x1="380" y1="166" x2="380" y2="198" stroke="#2563eb" stroke-width="2" marker-end="url(#ar2)"/>
+  <text x="470" y="186" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">yuborilgach javobda file_id qaytadi</text>
+
+  <!-- Pastki maslahat qatori -->
+  <rect x="30" y="324" width="700" height="72" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="50" y="350" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">Qachon qaysi biri?</text>
+  <text x="50" y="372" font-family="Segoe UI" font-size="13" fill="#334155">Diskdagi fayl -&gt; InputFile(yo'l) &#160;·&#160; Xotiradagi -&gt; InputFile(buf) &#160;·&#160; Tashqi rasm -&gt; URL string</text>
+  <text x="50" y="390" font-family="Segoe UI" font-size="13" fill="#16a34a">Bir xil faylni qayta-qayta -&gt; file_id (string) bilan: tez va tejamkor</text>
+</svg>

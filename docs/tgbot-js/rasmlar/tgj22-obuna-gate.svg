@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470">
+  <title>Obuna gate middleware oqimi: getChatMember bilan a'zolik tekshiriladi; a'zo bo'lsa next() chaqiriladi va handler ishlaydi, a'zo bo'lmasa gate klaviatura ko'rsatiladi va next() chaqirilmaydi</title>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI" font-size="19" font-weight="bold" fill="#1e293b">Obuna gate middleware: a'zomi tekshir, keyin qaror</text>
+
+  <!-- Update kiradi -->
+  <rect x="300" y="52" width="160" height="40" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="77" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb">Update keladi</text>
+  <line x1="380" y1="92" x2="380" y2="118" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- getChatMember -->
+  <rect x="270" y="120" width="220" height="48" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="380" y="142" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#b45309">ctx.api.getChatMember(</text>
+  <text x="380" y="160" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">KANAL, ctx.from.id)</text>
+
+  <!-- Decision diamond -->
+  <polygon points="380,182 470,222 380,262 290,222" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="218" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#1e293b">status a'zomi?</text>
+  <text x="380" y="236" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">member/admin/creator</text>
+  <line x1="380" y1="168" x2="380" y2="182" stroke="#94a3b8" stroke-width="2"/>
+
+  <!-- HA branch (left, green) -->
+  <line x1="290" y1="222" x2="160" y2="222" stroke="#16a34a" stroke-width="2.5" marker-end="url(#ag)"/>
+  <text x="225" y="214" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">HA</text>
+  <rect x="40" y="200" width="120" height="44" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="100" y="220" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#15803d">await next()</text>
+  <text x="100" y="238" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">handler ishlaydi</text>
+
+  <!-- YO'Q branch (right, red) -->
+  <line x1="470" y1="222" x2="600" y2="222" stroke="#dc2626" stroke-width="2.5" marker-end="url(#ad2)"/>
+  <text x="535" y="214" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">YO'Q</text>
+  <rect x="600" y="190" width="150" height="64" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="675" y="212" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#dc2626">gate klaviatura</text>
+  <text x="675" y="230" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">ko'rsat,</text>
+  <text x="675" y="248" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">next() YO'Q</text>
+
+  <!-- Gate keyboard detail -->
+  <rect x="560" y="290" width="180" height="92" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="650" y="312" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#1e293b">Gate klaviatura</text>
+  <rect x="576" y="322" width="148" height="24" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="650" y="339" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#2563eb">Obuna bo'lish (url)</text>
+  <rect x="576" y="350" width="148" height="24" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="650" y="367" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#15803d">Tekshirish (callback)</text>
+  <line x1="675" y1="254" x2="650" y2="290" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#ar)"/>
+
+  <!-- handler box -->
+  <rect x="40" y="290" width="120" height="44" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="100" y="312" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#15803d">bot.on(...)</text>
+  <text x="100" y="328" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">javob beradi</text>
+  <line x1="100" y1="244" x2="100" y2="290" stroke="#16a34a" stroke-width="2" marker-end="url(#ag)"/>
+
+  <text x="380" y="430" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">Asosiy qoida (offline tasdiqlangan):</text>
+  <text x="380" y="452" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">a'zo &#8594; next() &#8594; handler;  a'zo emas &#8594; gate ko'rsat, next() chaqirma</text>
+
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#94a3b8"/></marker>
+    <marker id="ag" markerWidth="10" markerHeight="10" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#16a34a"/></marker>
+    <marker id="ad2" markerWidth="10" markerHeight="10" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#dc2626"/></marker>
+  </defs>
+</svg>

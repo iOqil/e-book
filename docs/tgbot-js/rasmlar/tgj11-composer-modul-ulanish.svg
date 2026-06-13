@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470">
+  <title>Har modul Composer eksport qiladi; bot.js ularni import qilib bot.use(...) bilan ildizga ulaydi va update yuqoridan pastga marshrutlanadi</title>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI" font-size="19" font-weight="bold" fill="#1e293b">Modullar -> bot: har modul Composer eksport qiladi</text>
+
+  <!-- module boxes (left) -->
+  <g font-family="Segoe UI">
+    <rect x="36" y="70" width="240" height="66" rx="9" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+    <text x="50" y="94" font-size="13.5" font-weight="bold" fill="#1e40af">handlers/start.js</text>
+    <text x="50" y="114" font-size="13" fill="#334155">export const startComposer</text>
+    <text x="50" y="130" font-size="13" fill="#64748b">.command("start", ...)</text>
+
+    <rect x="36" y="156" width="240" height="66" rx="9" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+    <text x="50" y="180" font-size="13.5" font-weight="bold" fill="#1e40af">handlers/help.js</text>
+    <text x="50" y="200" font-size="13" fill="#334155">export const helpComposer</text>
+    <text x="50" y="216" font-size="13" fill="#64748b">.command("help", ...)</text>
+
+    <rect x="36" y="242" width="240" height="66" rx="9" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+    <text x="50" y="266" font-size="13.5" font-weight="bold" fill="#1e40af">handlers/echo.js</text>
+    <text x="50" y="286" font-size="13" fill="#334155">export const echoComposer</text>
+    <text x="50" y="302" font-size="13" fill="#64748b">.on("message:text", ...)</text>
+  </g>
+
+  <!-- bot.js (center) -->
+  <rect x="330" y="118" width="180" height="142" rx="12" fill="#2563eb"/>
+  <text x="420" y="150" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#ffffff">bot.js (ildiz)</text>
+  <text x="420" y="178" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dbeafe">bot.use(startComposer)</text>
+  <text x="420" y="200" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dbeafe">bot.use(helpComposer)</text>
+  <text x="420" y="222" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dbeafe">bot.use(echoComposer)</text>
+  <text x="420" y="246" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#bfdbfe">echo OXIRIDA (catch-all)</text>
+
+  <!-- arrows module -> bot -->
+  <line x1="276" y1="103" x2="326" y2="150" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="276" y1="189" x2="326" y2="189" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="276" y1="275" x2="326" y2="228" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="300" y="86" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">import + bot.use(...)</text>
+
+  <!-- update flow (right) -->
+  <rect x="560" y="92" width="168" height="48" rx="9" fill="#f59e0b"/>
+  <text x="644" y="121" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#ffffff">Update keldi</text>
+
+  <line x1="510" y1="160" x2="644" y2="146" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+
+  <text x="644" y="168" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#1e293b">Marshrutlash:</text>
+  <text x="644" y="190" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">/start  -> startComposer</text>
+  <text x="644" y="212" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">/help   -> helpComposer</text>
+  <text x="644" y="234" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">matn    -> echoComposer</text>
+
+  <!-- bottom note -->
+  <line x1="36" y1="350" x2="724" y2="350" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="380" y="378" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">bot.js — yagona "yig'uvchi" fayl; mantiq modullarda</text>
+  <text x="380" y="400" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">Gotcha: bir modulni bot.use qilishni unutsangiz — u butunlay ishlamaydi</text>
+  <text x="380" y="422" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Tartib: catch-all (echo) eng oxirida, aks holda /start, /help'ni yutib yuboradi</text>
+
+  <defs>
+    <marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#94a3b8"/></marker>
+  </defs>
+</svg>

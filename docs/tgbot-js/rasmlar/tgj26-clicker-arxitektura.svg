@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 540">
+  <title>Clicker Mini App arxitekturasi: Telegram bot WebApp tugma bilan Mini App'ni ochadi, frontend (HTML/JS) initData bilan backend (Hono/Express) ga so'rov yuboradi, backend initData auth'dan keyin better-sqlite3 DB'da balans/energiyani hisoblaydi</title>
+  <defs>
+    <marker id="cx-ar" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L8,5 L0,10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="860" height="540" fill="#f8fafc"/>
+  <text x="430" y="34" text-anchor="middle" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b">Clicker Mini App arxitekturasi</text>
+
+  <!-- Telegram bot -->
+  <rect x="40" y="70" width="200" height="90" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="140" y="100" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">Telegram bot (grammY)</text>
+  <text x="140" y="124" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">/start -> webApp tugma</text>
+  <text x="140" y="146" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Mini App'ni OCHADI</text>
+
+  <!-- Frontend -->
+  <rect x="330" y="70" width="200" height="90" rx="12" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="430" y="100" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#b45309">Frontend (HTML/JS)</text>
+  <text x="430" y="124" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">tap tugma, balans, energiya</text>
+  <text x="430" y="146" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">WebApp.initData</text>
+
+  <!-- Backend -->
+  <rect x="620" y="70" width="200" height="90" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="720" y="100" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#15803d">Backend (Hono/Express)</text>
+  <text x="720" y="124" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">/api/state, /api/tap</text>
+  <text x="720" y="146" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">/api/upgrade</text>
+
+  <!-- bot -> frontend -->
+  <line x1="240" y1="115" x2="326" y2="115" stroke="#64748b" stroke-width="2" marker-end="url(#cx-ar)"/>
+  <text x="283" y="108" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">ochadi</text>
+
+  <!-- frontend <-> backend -->
+  <line x1="530" y1="106" x2="616" y2="106" stroke="#64748b" stroke-width="2" marker-end="url(#cx-ar)"/>
+  <text x="573" y="98" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">so'rov</text>
+  <line x1="616" y1="132" x2="530" y2="132" stroke="#64748b" stroke-width="2" marker-end="url(#cx-ar)"/>
+  <text x="573" y="150" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">JSON holat</text>
+
+  <!-- Auth gate -->
+  <rect x="600" y="210" width="240" height="70" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="720" y="238" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">HAR so'rovda: initData auth</text>
+  <text x="720" y="260" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">HMAC tekshir (24-bob) -> user.id</text>
+  <line x1="720" y1="160" x2="720" y2="206" stroke="#64748b" stroke-width="2" marker-end="url(#cx-ar)"/>
+
+  <!-- Anti-cheat box -->
+  <rect x="600" y="310" width="240" height="86" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="720" y="336" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">ANTI-CHEAT (yadro)</text>
+  <text x="720" y="358" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">energiya regen (server vaqti)</text>
+  <text x="720" y="378" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">ruxsat = min(da'vo, energiya)</text>
+  <line x1="720" y1="280" x2="720" y2="306" stroke="#64748b" stroke-width="2" marker-end="url(#cx-ar)"/>
+
+  <!-- DB -->
+  <rect x="280" y="440" width="300" height="74" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="430" y="468" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">better-sqlite3 (10-bob)</text>
+  <text x="430" y="490" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">players: balance, energy, max_energy,</text>
+  <text x="430" y="508" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">multiplier, last_update</text>
+  <line x1="650" y1="396" x2="540" y2="436" stroke="#64748b" stroke-width="2" marker-end="url(#cx-ar)"/>
+  <text x="618" y="424" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">o'qi/yoz</text>
+
+  <text x="430" y="538" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">VI qism yakuni: bot (19-22) + Mini App (23-25) + DB (10) bir loyihada birlashadi.</text>
+</svg>

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 540">
+  <title>Kapston bot arxitekturasi: Telegram, bot.js kirish nuqtasi, middleware zanjiri (logging/repo/admin), conversations va handlers (user/admin) modullari hamda SQLite DB o'rtasidagi bog'lanish</title>
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L8,5 L0,10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="820" height="540" fill="#f8fafc"/>
+  <text x="410" y="32" text-anchor="middle" font-family="Segoe UI" font-size="19" font-weight="bold" fill="#1e293b">Kapston bot arxitekturasi</text>
+
+  <!-- Telegram -->
+  <rect x="40" y="70" width="150" height="70" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="115" y="100" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">Telegram</text>
+  <text x="115" y="122" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">update / API</text>
+
+  <!-- bot.js entry -->
+  <rect x="250" y="70" width="180" height="70" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="340" y="100" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">src/bot.js</text>
+  <text x="340" y="122" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">kirish nuqtasi</text>
+
+  <line x1="190" y1="98" x2="246" y2="98" stroke="#64748b" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="246" y1="120" x2="190" y2="120" stroke="#64748b" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="218" y="92" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">update</text>
+  <text x="218" y="138" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">javob</text>
+
+  <!-- middleware chain -->
+  <rect x="250" y="170" width="520" height="84" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="266" y="192" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#b45309">middlewares/ (09-bob) — zanjir</text>
+  <rect x="266" y="204" width="150" height="36" rx="6" fill="#ffffff" stroke="#fcd34d" stroke-width="1.5"/>
+  <text x="341" y="227" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">logging</text>
+  <rect x="430" y="204" width="160" height="36" rx="6" fill="#ffffff" stroke="#fcd34d" stroke-width="1.5"/>
+  <text x="510" y="227" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">ctx.repo (DI)</text>
+  <rect x="604" y="204" width="150" height="36" rx="6" fill="#ffffff" stroke="#fcd34d" stroke-width="1.5"/>
+  <text x="679" y="227" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">ctx.isAdmin</text>
+  <line x1="340" y1="140" x2="340" y2="166" stroke="#64748b" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- conversations -->
+  <rect x="250" y="284" width="240" height="84" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="370" y="306" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e40af">conversations/register.js</text>
+  <text x="370" y="328" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">ism -> tel -> tadbir -> tasdiq</text>
+  <text x="370" y="348" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">(08-bob, external bilan saqlash)</text>
+
+  <!-- handlers -->
+  <rect x="530" y="284" width="240" height="84" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="650" y="306" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#15803d">handlers/ (Composer)</text>
+  <text x="650" y="328" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">user: /start /royxat /mening</text>
+  <text x="650" y="348" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">admin: /admin /broadcast</text>
+
+  <line x1="370" y1="254" x2="370" y2="280" stroke="#64748b" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="650" y1="254" x2="650" y2="280" stroke="#64748b" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- DB -->
+  <rect x="320" y="412" width="380" height="78" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="510" y="438" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#dc2626">services/ — better-sqlite3 (10-bob)</text>
+  <text x="510" y="460" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">registrations jadvali + repository (add/listByUser/total)</text>
+  <text x="510" y="480" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">sinxron: .get()/.all()/.run() — await kerak emas</text>
+
+  <line x1="370" y1="368" x2="430" y2="408" stroke="#64748b" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="650" y1="368" x2="590" y2="408" stroke="#64748b" stroke-width="2" marker-end="url(#ar)"/>
+
+  <text x="410" y="522" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Har modul bitta vazifaga javob beradi -> bob 11 tuzilishi; xato -> bot.catch (16-bob)</text>
+</svg>

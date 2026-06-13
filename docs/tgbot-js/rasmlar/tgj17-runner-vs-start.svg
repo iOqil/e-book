@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470">
+  <title>bot.start() ketma-ket update qayta ishlaydi; @grammyjs/runner run(bot) konkurent (parallel) qayta ishlaydi</title>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI" font-size="19" font-weight="bold" fill="#1e293b">bot.start() vs @grammyjs/runner</text>
+
+  <!-- LEFT: bot.start() ketma-ket -->
+  <rect x="40" y="64" width="320" height="356" rx="14" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="200" y="92" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">bot.start() — ketma-ket</text>
+  <text x="200" y="114" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">sodda, kichik bot uchun</text>
+
+  <rect x="70" y="134" width="260" height="44" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="200" y="161" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">Update 1 (3s) ishlanmoqda...</text>
+
+  <rect x="70" y="190" width="260" height="44" rx="8" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="200" y="217" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Update 2 — NAVBATDA kutadi</text>
+
+  <rect x="70" y="246" width="260" height="44" rx="8" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="200" y="273" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Update 3 — NAVBATDA kutadi</text>
+
+  <text x="200" y="324" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">Sekin handler hammani bloklaydi</text>
+  <text x="200" y="346" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">~5K xabar/soatgacha yetarli</text>
+  <text x="200" y="368" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">import yo'q (grammy ichida)</text>
+  <text x="200" y="398" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#1e293b">bot.start();</text>
+
+  <!-- RIGHT: runner konkurent -->
+  <rect x="400" y="64" width="320" height="356" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="560" y="92" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">run(bot) — konkurent</text>
+  <text x="560" y="114" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">yuqori yuk, parallel (max ~500)</text>
+
+  <rect x="430" y="134" width="260" height="44" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="560" y="161" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">Update 1 (3s) ishlanmoqda...</text>
+
+  <rect x="430" y="190" width="260" height="44" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="560" y="217" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">Update 2 — AYNI VAQTDA</text>
+
+  <rect x="430" y="246" width="260" height="44" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="560" y="273" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">Update 3 — AYNI VAQTDA</text>
+
+  <text x="560" y="324" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">Sekin handler boshqalarni bloklamaydi</text>
+  <text x="560" y="346" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">handle: stop()/isRunning()/size()</text>
+  <text x="560" y="368" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">alohida paket: @grammyjs/runner</text>
+  <text x="560" y="392" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">import { run } from "@grammyjs/runner";</text>
+  <text x="560" y="410" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#1e293b">const runner = run(bot);</text>
+
+  <!-- VS divider -->
+  <circle cx="380" cy="242" r="22" fill="#f59e0b"/>
+  <text x="380" y="248" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#ffffff">VS</text>
+
+  <text x="380" y="448" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Qoida: oddiy bot -> bot.start(); ko'p/sekin update -> run(bot)</text>
+</svg>

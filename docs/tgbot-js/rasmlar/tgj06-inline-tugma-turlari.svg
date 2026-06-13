@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440">
+  <title>InlineKeyboard tugma turlari: text callback_query yuboradi, url havola ochadi, webApp Mini App ochadi, switchInline ulashadi</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+
+  <text x="380" y="34" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Inline tugma turlari va natijasi</text>
+
+  <!-- column headers -->
+  <text x="190" y="66" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#334155" text-anchor="middle">Quruvchi metodi</text>
+  <text x="570" y="66" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#334155" text-anchor="middle">Bosilganda nima bo'ladi</text>
+
+  <!-- row 1: .text -->
+  <rect x="30" y="82" width="320" height="62" rx="10" fill="#16a34a"/>
+  <text x="50" y="108" font-family="Segoe UI" font-size="14" fill="#ffffff">.text("Ha", "v:ha")</text>
+  <text x="50" y="130" font-family="Segoe UI" font-size="13" fill="#dcfce7">callback tugma</text>
+  <line x1="354" y1="113" x2="406" y2="113" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#a1)"/>
+  <rect x="412" y="82" width="318" height="62" rx="10" fill="#ffffff" stroke="#16a34a"/>
+  <text x="430" y="108" font-family="Segoe UI" font-size="14" fill="#166534">callback_query yuboradi</text>
+  <text x="430" y="130" font-family="Segoe UI" font-size="13" fill="#64748b">bot.callbackQuery("v:ha") ushlaydi</text>
+
+  <!-- row 2: .url -->
+  <rect x="30" y="156" width="320" height="62" rx="10" fill="#2563eb"/>
+  <text x="50" y="182" font-family="Segoe UI" font-size="14" fill="#ffffff">.url("Sayt", "https://...")</text>
+  <text x="50" y="204" font-family="Segoe UI" font-size="13" fill="#dbeafe">havola tugma</text>
+  <line x1="354" y1="187" x2="406" y2="187" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#a2)"/>
+  <rect x="412" y="156" width="318" height="62" rx="10" fill="#ffffff" stroke="#2563eb"/>
+  <text x="430" y="182" font-family="Segoe UI" font-size="14" fill="#1e40af">brauzerda havolani ochadi</text>
+  <text x="430" y="204" font-family="Segoe UI" font-size="13" fill="#64748b">bot hech narsa olmaydi</text>
+
+  <!-- row 3: .webApp -->
+  <rect x="30" y="230" width="320" height="62" rx="10" fill="#f59e0b"/>
+  <text x="50" y="256" font-family="Segoe UI" font-size="14" fill="#ffffff">.webApp("Ochish", "https://...")</text>
+  <text x="50" y="278" font-family="Segoe UI" font-size="13" fill="#fef3c7">Mini App tugma</text>
+  <line x1="354" y1="261" x2="406" y2="261" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#a3)"/>
+  <rect x="412" y="230" width="318" height="62" rx="10" fill="#ffffff" stroke="#f59e0b"/>
+  <text x="430" y="256" font-family="Segoe UI" font-size="14" fill="#92400e">Telegram ichida Mini App ochadi</text>
+  <text x="430" y="278" font-family="Segoe UI" font-size="13" fill="#64748b">23-26 boblarda batafsil</text>
+
+  <!-- row 4: .switchInline -->
+  <rect x="30" y="304" width="320" height="62" rx="10" fill="#7c3aed"/>
+  <text x="50" y="330" font-family="Segoe UI" font-size="14" fill="#ffffff">.switchInline("Ulashish")</text>
+  <text x="50" y="352" font-family="Segoe UI" font-size="13" fill="#ede9fe">inline rejim tugma</text>
+  <line x1="354" y1="335" x2="406" y2="335" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#a4)"/>
+  <rect x="412" y="304" width="318" height="62" rx="10" fill="#ffffff" stroke="#7c3aed"/>
+  <text x="430" y="330" font-family="Segoe UI" font-size="14" fill="#5b21b6">chat tanlash + inline so'rov</text>
+  <text x="430" y="352" font-family="Segoe UI" font-size="13" fill="#64748b">bot.inlineQuery — 07-bob</text>
+
+  <rect x="30" y="384" width="700" height="38" rx="8" fill="#fef2f2" stroke="#dc2626"/>
+  <text x="380" y="408" font-family="Segoe UI" font-size="14" fill="#991b1b" text-anchor="middle">Faqat .text() callback yuboradi — qolganlari bot'ga update yubormaydi</text>
+
+  <defs>
+    <marker id="a1" markerWidth="10" markerHeight="10" refX="6" refY="5" orient="auto"><path d="M0,0 L8,5 L0,10 Z" fill="#16a34a"/></marker>
+    <marker id="a2" markerWidth="10" markerHeight="10" refX="6" refY="5" orient="auto"><path d="M0,0 L8,5 L0,10 Z" fill="#2563eb"/></marker>
+    <marker id="a3" markerWidth="10" markerHeight="10" refX="6" refY="5" orient="auto"><path d="M0,0 L8,5 L0,10 Z" fill="#f59e0b"/></marker>
+    <marker id="a4" markerWidth="10" markerHeight="10" refX="6" refY="5" orient="auto"><path d="M0,0 L8,5 L0,10 Z" fill="#7c3aed"/></marker>
+  </defs>
+</svg>

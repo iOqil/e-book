@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 470">
+  <title>Ro'yxatdan o'tish foydalanuvchi oqimi: /royxat dan boshlab ism, telefon, tadbir tanlash, tasdiq qadamlari va shoxlar (bekor yoki external orqali DB'ga saqlash)</title>
+  <defs>
+    <marker id="ar2" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L8,5 L0,10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="820" height="470" fill="#f8fafc"/>
+  <text x="410" y="32" text-anchor="middle" font-family="Segoe UI" font-size="19" font-weight="bold" fill="#1e293b">Ro'yxatdan o'tish oqimi (conversation)</text>
+
+  <!-- start -->
+  <rect x="40" y="64" width="150" height="50" rx="25" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="115" y="94" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb">/royxat</text>
+
+  <!-- step 1 ism -->
+  <rect x="250" y="60" width="170" height="58" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="335" y="84" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#15803d">1. Ism</text>
+  <text x="335" y="104" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">form.text()</text>
+
+  <!-- step 2 tel -->
+  <rect x="480" y="60" width="270" height="58" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="615" y="84" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#15803d">2. Telefon</text>
+  <text x="615" y="104" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">requestContact YOKI matn — waitUntil</text>
+
+  <line x1="190" y1="89" x2="246" y2="89" stroke="#64748b" stroke-width="2" marker-end="url(#ar2)"/>
+  <line x1="420" y1="89" x2="476" y2="89" stroke="#64748b" stroke-width="2" marker-end="url(#ar2)"/>
+
+  <!-- step 3 tadbir -->
+  <rect x="480" y="158" width="270" height="62" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="615" y="182" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#15803d">3. Tadbir tanlash</text>
+  <text x="615" y="202" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">inline tugma -> waitForCallbackQuery</text>
+  <line x1="615" y1="118" x2="615" y2="154" stroke="#64748b" stroke-width="2" marker-end="url(#ar2)"/>
+
+  <!-- step 4 tasdiq -->
+  <rect x="480" y="258" width="270" height="62" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="615" y="282" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#b45309">4. Tasdiq?</text>
+  <text x="615" y="302" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">[Tasdiqlash] / [Bekor]</text>
+  <line x1="615" y1="220" x2="615" y2="254" stroke="#64748b" stroke-width="2" marker-end="url(#ar2)"/>
+
+  <!-- branch: cancel -->
+  <rect x="120" y="258" width="240" height="62" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="240" y="282" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">Bekor -> return</text>
+  <text x="240" y="302" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">DB'ga yozilmaydi</text>
+  <line x1="480" y1="289" x2="364" y2="289" stroke="#dc2626" stroke-width="2" marker-end="url(#ar2)"/>
+  <text x="422" y="282" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">Bekor</text>
+
+  <!-- branch: confirm -> save -->
+  <rect x="430" y="370" width="370" height="64" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="615" y="394" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#15803d">Tasdiqlash -> external(() =&gt; repo.add())</text>
+  <text x="615" y="414" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">SQLite'ga aynan 1 marta saqlanadi (#id qaytadi)</text>
+  <line x1="615" y1="320" x2="615" y2="366" stroke="#16a34a" stroke-width="2" marker-end="url(#ar2)"/>
+  <text x="650" y="346" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#15803d">Tasdiqlash</text>
+
+  <text x="240" y="360" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Istalgan qadamda /bekor -&gt; ctx.conversation.exit("royxat")</text>
+  <text x="240" y="380" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">side-effect faqat external ichida (replay xavfsiz)</text>
+</svg>

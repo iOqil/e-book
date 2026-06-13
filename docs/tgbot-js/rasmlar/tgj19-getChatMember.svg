@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 460">
+  <title>getChatMember status oqimi: a'zolik tekshiruvi — creator/administrator/member/restricted = a'zo, left/kicked = a'zo emas</title>
+  <rect x="0" y="0" width="760" height="460" fill="#f8fafc"/>
+  <text x="380" y="34" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">getChatMember(userId).status</text>
+
+  <!-- call box -->
+  <rect x="220" y="54" width="320" height="56" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="78" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb" text-anchor="middle">const m = await ctx.getChatMember(id)</text>
+  <text x="380" y="98" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">Telegram ChatMember obyektini qaytaradi -&gt; m.status</text>
+
+  <defs>
+    <marker id="ag" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#16a34a"/></marker>
+    <marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#dc2626"/></marker>
+  </defs>
+
+  <!-- A'zo (yashil) column -->
+  <rect x="40" y="150" width="340" height="270" rx="12" fill="#ecfdf5" stroke="#16a34a" stroke-width="2"/>
+  <text x="210" y="178" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#16a34a" text-anchor="middle">GURUHDA (a'zo)</text>
+
+  <rect x="60" y="194" width="300" height="34" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="1"/>
+  <text x="74" y="216" font-family="Segoe UI" font-size="14" fill="#1e293b">"creator"        — guruh egasi</text>
+  <rect x="60" y="234" width="300" height="34" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="1"/>
+  <text x="74" y="256" font-family="Segoe UI" font-size="14" fill="#1e293b">"administrator"  — admin</text>
+  <rect x="60" y="274" width="300" height="34" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="1"/>
+  <text x="74" y="296" font-family="Segoe UI" font-size="14" fill="#1e293b">"member"         — oddiy a'zo</text>
+  <rect x="60" y="314" width="300" height="34" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="1"/>
+  <text x="74" y="336" font-family="Segoe UI" font-size="14" fill="#1e293b">"restricted"     — cheklangan</text>
+
+  <text x="210" y="372" font-family="Segoe UI" font-size="13" fill="#15803d" text-anchor="middle">Admin = creator yoki administrator</text>
+  <text x="210" y="398" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">A'zo = yuqoridagi 4 statusdan biri</text>
+
+  <!-- A'zo emas (qizil) column -->
+  <rect x="400" y="150" width="320" height="270" rx="12" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="560" y="178" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#dc2626" text-anchor="middle">GURUHDA EMAS</text>
+
+  <rect x="420" y="194" width="280" height="34" rx="6" fill="#ffffff" stroke="#dc2626" stroke-width="1"/>
+  <text x="434" y="216" font-family="Segoe UI" font-size="14" fill="#1e293b">"left"   — chiqib ketgan</text>
+  <rect x="420" y="234" width="280" height="34" rx="6" fill="#ffffff" stroke="#dc2626" stroke-width="1"/>
+  <text x="434" y="256" font-family="Segoe UI" font-size="14" fill="#1e293b">"kicked" — ban qilingan</text>
+
+  <text x="560" y="296" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">Majburiy obuna (22-bob):</text>
+  <text x="560" y="318" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">kanalda left/kicked -&gt; obuna YO'Q,</text>
+  <text x="560" y="338" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">qolgan 4 status -&gt; obuna BOR.</text>
+  <text x="560" y="372" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">bot.api.getChatMember(chatId, userId)</text>
+  <text x="560" y="392" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">bilan BOSHQA chatda ham tekshiriladi.</text>
+
+  <line x1="320" y1="110" x2="210" y2="148" stroke="#16a34a" stroke-width="2" marker-end="url(#ag)"/>
+  <line x1="440" y1="110" x2="560" y2="148" stroke="#dc2626" stroke-width="2" marker-end="url(#ar)"/>
+
+  <text x="380" y="444" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">["creator","administrator","member","restricted"].includes(m.status)  ->  a'zo</text>
+</svg>

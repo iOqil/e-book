@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430">
+  <title>Offline test naqshi: mock update -> handleUpdate -> middleware/handler -> transformer ushlaydi -> calls massivida assert</title>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrowG" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="34" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Offline test naqshi (tokensiz, tarmoqsiz)</text>
+
+  <!-- 1: mock update -->
+  <rect x="30" y="70" width="180" height="78" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="120" y="96" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">1. Soxta Update</text>
+  <text x="120" y="118" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">mkText("/start")</text>
+  <text x="120" y="137" font-family="Segoe UI" font-size="13" fill="#dc2626" text-anchor="middle">+ bot_command entity</text>
+
+  <!-- 2: handleUpdate -->
+  <rect x="280" y="70" width="200" height="78" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="96" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb" text-anchor="middle">2. bot.handleUpdate</text>
+  <text x="380" y="118" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">middleware + handler</text>
+  <text x="380" y="137" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">ishga tushadi</text>
+
+  <!-- 3: transformer -->
+  <rect x="550" y="70" width="180" height="78" rx="10" fill="#fef9c3" stroke="#f59e0b" stroke-width="2"/>
+  <text x="640" y="92" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">3. Transformer</text>
+  <text x="640" y="112" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">bot.api.config.use</text>
+  <text x="640" y="131" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">ushlab soxta javob</text>
+
+  <line x1="210" y1="109" x2="278" y2="109" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="480" y1="109" x2="548" y2="109" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ctx.reply note -->
+  <text x="380" y="186" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">handler ichida ctx.reply("Salom!") chaqiriladi -></text>
+
+  <!-- 4: calls -->
+  <rect x="280" y="208" width="200" height="92" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="380" y="232" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#166534" text-anchor="middle">4. calls[ ]</text>
+  <text x="380" y="254" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">{ method: "sendMessage",</text>
+  <text x="380" y="273" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">payload: { text: "Salom!" } }</text>
+  <text x="380" y="291" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">tarmoqqa CHIQMAYDI</text>
+
+  <line x1="640" y1="148" x2="640" y2="254" stroke="#16a34a" stroke-width="2"/>
+  <line x1="640" y1="254" x2="482" y2="254" stroke="#16a34a" stroke-width="2" marker-end="url(#arrowG)"/>
+
+  <!-- 5: assert -->
+  <rect x="280" y="340" width="200" height="62" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="380" y="366" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#166534" text-anchor="middle">5. expect(...)</text>
+  <text x="380" y="388" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">calls[0].payload.text === "Salom!"</text>
+  <line x1="380" y1="300" x2="380" y2="338" stroke="#16a34a" stroke-width="2" marker-end="url(#arrowG)"/>
+
+  <!-- botInfo note -->
+  <rect x="30" y="208" width="200" height="92" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="130" y="232" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb" text-anchor="middle">bot.botInfo qo'lda</text>
+  <text x="130" y="255" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">init() tarmoqqa</text>
+  <text x="130" y="273" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">CHIQMAYDI</text>
+  <text x="130" y="291" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">(getMe so'rovi yo'q)</text>
+</svg>

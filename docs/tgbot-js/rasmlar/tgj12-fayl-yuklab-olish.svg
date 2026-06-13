@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 420">
+  <title>Fayl yuklab olish oqimi: foydalanuvchi rasm yuboradi, ctx.getFile() File obyektini beradi, undan file_path olinadi, URL quriladi va fetch bilan diskka yuklab olinadi; 20MB limiti eslatiladi</title>
+  <rect x="0" y="0" width="820" height="420" fill="#f8fafc"/>
+  <text x="410" y="34" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Fayl yuklab olish: getFile &#8594; file_path &#8594; URL &#8594; yuklash</text>
+
+  <!-- 1 user rasm -->
+  <rect x="30" y="70" width="150" height="80" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="105" y="98" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb" text-anchor="middle">1. Foydalanuvchi</text>
+  <text x="105" y="120" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">rasm/hujjat</text>
+  <text x="105" y="138" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">yuboradi</text>
+
+  <!-- 2 getFile -->
+  <rect x="220" y="70" width="170" height="80" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="305" y="98" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">2. ctx.getFile()</text>
+  <text x="305" y="120" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">File obyekti:</text>
+  <text x="305" y="138" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">file_id, file_path</text>
+  <line x1="180" y1="110" x2="216" y2="110" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- 3 URL qurish -->
+  <rect x="430" y="70" width="200" height="80" rx="8" fill="#fef9c3" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="530" y="98" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#b45309" text-anchor="middle">3. URL qurish</text>
+  <text x="530" y="120" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">.../file/bot&lt;TOKEN&gt;/</text>
+  <text x="530" y="138" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">&lt;file_path&gt;</text>
+  <line x1="390" y1="110" x2="426" y2="110" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- 4 fetch -->
+  <rect x="660" y="70" width="130" height="80" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="725" y="98" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb" text-anchor="middle">4. fetch</text>
+  <text x="725" y="120" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">yuklab olib</text>
+  <text x="725" y="138" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">diskka saqlash</text>
+  <line x1="630" y1="110" x2="656" y2="110" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- Kod namunasi -->
+  <rect x="60" y="190" width="700" height="150" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+  <text x="80" y="218" font-family="Segoe UI" font-size="14" fill="#7dd3fc">bot.on("message:photo", async (ctx) =&gt; {</text>
+  <text x="100" y="240" font-family="Segoe UI" font-size="14" fill="#e2e8f0">const file = await ctx.getFile();           // File</text>
+  <text x="100" y="262" font-family="Segoe UI" font-size="14" fill="#e2e8f0">const url =</text>
+  <text x="120" y="284" font-family="Segoe UI" font-size="14" fill="#86efac">`https://api.telegram.org/file/bot${TOKEN}/${file.file_path}`;</text>
+  <text x="100" y="306" font-family="Segoe UI" font-size="14" fill="#e2e8f0">const res = await fetch(url);                // Node fetch</text>
+  <text x="100" y="328" font-family="Segoe UI" font-size="14" fill="#e2e8f0">// res.body -&gt; faylga yozish (illustrativ)</text>
+
+  <text x="410" y="372" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#dc2626" text-anchor="middle">Diqqat: bot orqali yuklash limiti — 20 MB. TOKEN'ni hech kimga ko'rsatmang (URL ichida bor!).</text>
+  <text x="410" y="396" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">photo massivining oxirgi elementi — eng katta o'lcham. Havola kamida 1 soat amal qiladi.</text>
+
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+</svg>

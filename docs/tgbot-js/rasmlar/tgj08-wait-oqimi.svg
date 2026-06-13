@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 440">
+  <title>enter -> wait -> resume oqimi: ctx.conversation.enter suhbatga kiradi, har wait'da to'xtaydi va keyingi update kelganda davom etadi</title>
+  <rect x="0" y="0" width="820" height="440" fill="#f8fafc"/>
+  <text x="410" y="34" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">enter &#8594; wait &#8594; resume oqimi</text>
+
+  <!-- Foydalanuvchi va Bot lentalari -->
+  <text x="60" y="78" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">Foydalanuvchi</text>
+  <line x1="60" y1="90" x2="60" y2="400" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4 4"/>
+  <text x="430" y="78" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">Suhbat funksiyasi (bot)</text>
+  <line x1="430" y1="90" x2="430" y2="400" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4 4"/>
+
+  <!-- 1) /royxat -->
+  <rect x="80" y="100" width="170" height="34" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="95" y="122" font-family="Segoe UI" font-size="13" fill="#334155">/royxat &#8594; enter("royxat")</text>
+  <line x1="250" y1="117" x2="425" y2="117" stroke="#2563eb" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- bot reply ism -->
+  <rect x="300" y="142" width="260" height="34" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="314" y="164" font-family="Segoe UI" font-size="13" fill="#334155">reply("Ismingiz?")  &#8594; wait() ⏸</text>
+  <line x1="430" y1="159" x2="65" y2="159" stroke="#16a34a" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- user javob -->
+  <rect x="80" y="184" width="150" height="34" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="95" y="206" font-family="Segoe UI" font-size="13" fill="#334155">"Oqil" (javob)</text>
+  <line x1="230" y1="201" x2="425" y2="201" stroke="#2563eb" stroke-width="2" marker-end="url(#a)"/>
+  <text x="630" y="205" font-family="Segoe UI" font-size="13" fill="#64748b">replay: funksiya boshidan</text>
+  <text x="630" y="221" font-family="Segoe UI" font-size="13" fill="#64748b">ishlab wait'da javob oladi</text>
+
+  <!-- bot reply yosh -->
+  <rect x="300" y="232" width="260" height="34" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="314" y="254" font-family="Segoe UI" font-size="13" fill="#334155">reply("Yoshingiz?") &#8594; wait() ⏸</text>
+  <line x1="430" y1="249" x2="65" y2="249" stroke="#16a34a" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- user 27 -->
+  <rect x="80" y="274" width="120" height="34" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="95" y="296" font-family="Segoe UI" font-size="13" fill="#334155">"27"</text>
+  <line x1="200" y1="291" x2="425" y2="291" stroke="#2563eb" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- bot finish -->
+  <rect x="300" y="322" width="270" height="34" rx="6" fill="#fef9c3" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="314" y="344" font-family="Segoe UI" font-size="13" fill="#334155">external(saveToDb) &#8594; reply("OK")</text>
+  <line x1="430" y1="339" x2="65" y2="339" stroke="#16a34a" stroke-width="2" marker-end="url(#a)"/>
+  <text x="300" y="378" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#16a34a">funksiya return &#8594; suhbat tugadi</text>
+
+  <text x="410" y="416" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">Har "&#8594;" — bitta update. wait orasida bot boshqa update'larni ham qabul qiladi.</text>
+
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+</svg>

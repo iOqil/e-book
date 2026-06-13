@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430">
+  <title>Inline tugma bosilganda callback_query oqimi: answer va edit</title>
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI" font-size="19" font-weight="bold" fill="#1e293b">Inline tugma bosilganda nima bo'ladi?</text>
+
+  <!-- 1. Foydalanuvchi tugmani bosadi -->
+  <rect x="30" y="62" width="200" height="76" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="130" y="90" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">1. Foydalanuvchi</text>
+  <text x="130" y="112" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">inline tugmani bosadi</text>
+  <text x="130" y="130" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">(chatga matn yubormaydi)</text>
+
+  <!-- 2. Telegram callback_query yuboradi -->
+  <rect x="280" y="62" width="200" height="76" rx="10" fill="#2563eb"/>
+  <text x="380" y="90" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#ffffff">2. Telegram serveri</text>
+  <text x="380" y="112" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#e0e7ff">callback_query update</text>
+  <text x="380" y="130" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#e0e7ff">data: "vote:5"</text>
+
+  <!-- 3. Bot handler -->
+  <rect x="530" y="62" width="200" height="76" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="630" y="90" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">3. bot.callbackQuery</text>
+  <text x="630" y="112" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">handler ishlaydi</text>
+  <text x="630" y="130" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">ctx.callbackQuery.data</text>
+
+  <line x1="230" y1="100" x2="276" y2="100" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="480" y1="100" x2="526" y2="100" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- vniz: handler ikki ish qiladi -->
+  <line x1="630" y1="138" x2="630" y2="178" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- 4a. answerCallbackQuery (MAJBURIY) -->
+  <rect x="430" y="182" width="300" height="86" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="580" y="208" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#15803d">ctx.answerCallbackQuery()</text>
+  <text x="580" y="230" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">MAJBURIY — "qabul qildim" deydi,</text>
+  <text x="580" y="248" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">tugmadagi soat aylanishini to'xtatadi</text>
+  <text x="580" y="264" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">{ text, show_alert } -&gt; toast / alert</text>
+
+  <!-- 4b. editMessageText / editMessageReplyMarkup -->
+  <rect x="430" y="290" width="300" height="86" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="580" y="316" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#b45309">ctx.editMessageText(...)</text>
+  <text x="580" y="338" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Xabarni O'RNIDA yangilaydi</text>
+  <text x="580" y="356" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">(yangi xabar yubormaydi)</text>
+  <text x="580" y="372" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">yoki editMessageReplyMarkup</text>
+
+  <line x1="580" y1="268" x2="580" y2="286" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- telefon ekrani: oldin/keyin -->
+  <rect x="30" y="182" width="170" height="194" rx="14" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="115" y="206" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">Telefon ekrani</text>
+  <rect x="48" y="222" width="134" height="40" rx="8" fill="#eff6ff"/>
+  <text x="115" y="240" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Ovoz bering:</text>
+  <text x="115" y="256" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">"👍 5"</text>
+  <text x="115" y="284" text-anchor="middle" font-family="Segoe UI" font-size="20" fill="#16a34a">&#8595;</text>
+  <rect x="48" y="294" width="134" height="40" rx="8" fill="#dcfce7"/>
+  <text x="115" y="312" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Ovoz bering:</text>
+  <text x="115" y="328" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#15803d">"👍 6"</text>
+  <text x="115" y="358" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">edit -&gt; o'rnida o'zgardi</text>
+
+  <line x1="428" y1="225" x2="204" y2="240" stroke="#16a34a" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#arg)"/>
+  <line x1="428" y1="333" x2="204" y2="320" stroke="#f59e0b" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#arf)"/>
+
+  <text x="380" y="412" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">Qoida: HAR callback'ga answerCallbackQuery — aks holda tugmada soat aylanaveradi</text>
+
+  <defs>
+    <marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#94a3b8"/></marker>
+    <marker id="arg" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#16a34a"/></marker>
+    <marker id="arf" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#f59e0b"/></marker>
+  </defs>
+</svg>

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 480">
+  <title>Backend API tuzilishi: frontend fetch -> auth middleware barcha /api yo'llarini himoyalaydi -> REST endpoint'lar (GET /api/me, POST /api/click) -> repozitoriy -> better-sqlite3 players jadvali</title>
+  <rect x="0" y="0" width="860" height="480" fill="#f8fafc"/>
+  <defs>
+    <marker id="b1" markerWidth="11" markerHeight="11" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="b2" markerWidth="11" markerHeight="11" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#334155"/>
+    </marker>
+  </defs>
+
+  <text x="430" y="36" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b" text-anchor="middle">Backend API tuzilishi (REST + DB)</text>
+
+  <!-- Frontend -->
+  <rect x="30" y="200" width="140" height="80" rx="10" fill="#f0fdf4" stroke="#16a34a"/>
+  <text x="100" y="232" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">Frontend</text>
+  <text x="100" y="254" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">fetch + initData</text>
+  <text x="100" y="271" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">(Authorization)</text>
+
+  <line x1="170" y1="240" x2="225" y2="240" stroke="#2563eb" stroke-width="2.5" marker-end="url(#b1)"/>
+
+  <!-- Server box -->
+  <rect x="230" y="80" width="600" height="380" rx="12" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="530" y="108" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#334155" text-anchor="middle">Backend server (Express / Hono)</text>
+
+  <!-- CORS + auth middleware -->
+  <rect x="260" y="125" width="540" height="56" rx="8" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="530" y="150" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">CORS + initData auth middleware</text>
+  <text x="530" y="170" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">/api/* — har so'rovni tekshiradi, to'g'ri bo'lsa req.user qo'yadi (aks holda 401)</text>
+
+  <line x1="530" y1="181" x2="530" y2="205" stroke="#334155" stroke-width="2" marker-end="url(#b2)"/>
+
+  <!-- endpoints -->
+  <rect x="280" y="210" width="230" height="70" rx="8" fill="#eff6ff" stroke="#2563eb"/>
+  <text x="395" y="236" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">GET /api/me</text>
+  <text x="395" y="258" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">o'z balansini o'qiydi</text>
+  <text x="395" y="274" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">(read)</text>
+
+  <rect x="550" y="210" width="230" height="70" rx="8" fill="#eff6ff" stroke="#2563eb"/>
+  <text x="665" y="236" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">POST /api/click</text>
+  <text x="665" y="258" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">balansni +1 oshiradi</text>
+  <text x="665" y="274" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">(write)</text>
+
+  <line x1="395" y1="280" x2="460" y2="320" stroke="#334155" stroke-width="2" marker-end="url(#b2)"/>
+  <line x1="665" y1="280" x2="600" y2="320" stroke="#334155" stroke-width="2" marker-end="url(#b2)"/>
+
+  <!-- repository -->
+  <rect x="370" y="325" width="320" height="48" rx="8" fill="#f0fdf4" stroke="#16a34a"/>
+  <text x="530" y="354" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">repo (getOrCreate / addBalance)</text>
+
+  <line x1="530" y1="373" x2="530" y2="395" stroke="#334155" stroke-width="2" marker-end="url(#b2)"/>
+
+  <!-- DB cylinder -->
+  <g>
+    <ellipse cx="530" cy="405" rx="95" ry="13" fill="#e0e7ff" stroke="#2563eb"/>
+    <rect x="435" y="405" width="190" height="40" fill="#e0e7ff" stroke="#2563eb"/>
+    <line x1="435" y1="405" x2="435" y2="445" stroke="#2563eb"/>
+    <line x1="625" y1="405" x2="625" y2="445" stroke="#2563eb"/>
+    <ellipse cx="530" cy="445" rx="95" ry="13" fill="#e0e7ff" stroke="#2563eb"/>
+    <text x="530" y="432" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">better-sqlite3: players</text>
+  </g>
+
+  <text x="100" y="320" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">JSON javob</text>
+  <text x="100" y="338" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">qaytadi</text>
+</svg>

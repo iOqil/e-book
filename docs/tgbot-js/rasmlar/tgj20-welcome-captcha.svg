@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 460">
+  <title>Welcome captcha oqimi: yangi a'zo kelganda restrict bilan jimlatish, inline tugma berish, to'g'ri bossa ruxsatlarni qaytarish, vaqtida yechmasa kick qilish</title>
+  <rect x="0" y="0" width="760" height="460" fill="#f8fafc"/>
+  <text x="380" y="34" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Captcha bilan kutib olish (welcome)</text>
+
+  <defs>
+    <marker id="arr2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <!-- 1 yangi a'zo -->
+  <rect x="40" y="64" width="200" height="56" rx="10" fill="#2563eb"/>
+  <text x="140" y="88" font-family="Segoe UI" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Yangi a'zo qo'shildi</text>
+  <text x="140" y="108" font-family="Segoe UI" font-size="13" fill="#dbeafe" text-anchor="middle">message:new_chat_members</text>
+  <line x1="240" y1="92" x2="290" y2="92" stroke="#64748b" stroke-width="2" marker-end="url(#arr2)"/>
+
+  <!-- 2 restrict -->
+  <rect x="292" y="64" width="220" height="56" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="402" y="88" font-family="Segoe UI" font-size="14" fill="#dc2626" text-anchor="middle" font-weight="bold">restrictChatMember</text>
+  <text x="402" y="108" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">can_send_messages: false (jim)</text>
+  <line x1="512" y1="92" x2="562" y2="92" stroke="#64748b" stroke-width="2" marker-end="url(#arr2)"/>
+
+  <!-- 3 captcha tugma -->
+  <rect x="564" y="64" width="170" height="56" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="649" y="86" font-family="Segoe UI" font-size="14" fill="#334155" text-anchor="middle" font-weight="bold">Inline tugma:</text>
+  <text x="649" y="106" font-family="Segoe UI" font-size="13" fill="#2563eb" text-anchor="middle">"Men robot emasman"</text>
+  <line x1="649" y1="120" x2="649" y2="158" stroke="#64748b" stroke-width="2" marker-end="url(#arr2)"/>
+
+  <!-- 4 kim bosdi? -->
+  <rect x="540" y="160" width="218" height="56" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="649" y="184" font-family="Segoe UI" font-size="14" fill="#334155" text-anchor="middle" font-weight="bold">Kim bosdi?</text>
+  <text x="649" y="204" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">callbackQuery captcha:&lt;id&gt;</text>
+
+  <!-- begona bosdi -->
+  <line x1="540" y1="188" x2="470" y2="188" stroke="#64748b" stroke-width="2" marker-end="url(#arr2)"/>
+  <rect x="300" y="160" width="168" height="56" rx="10" fill="#fffbeb" stroke="#f59e0b"/>
+  <text x="384" y="182" font-family="Segoe UI" font-size="13" fill="#b45309" text-anchor="middle">Begona -> alert</text>
+  <text x="384" y="200" font-family="Segoe UI" font-size="13" fill="#b45309" text-anchor="middle">"siz uchun emas"</text>
+
+  <!-- o'zi bosdi -->
+  <line x1="649" y1="216" x2="649" y2="252" stroke="#16a34a" stroke-width="2" marker-end="url(#arr2)"/>
+  <text x="700" y="240" font-family="Segoe UI" font-size="13" fill="#16a34a" font-weight="bold">o'zi bosdi</text>
+
+  <!-- 5 ruxsat qaytarish -->
+  <rect x="520" y="254" width="238" height="64" rx="10" fill="#16a34a"/>
+  <text x="639" y="278" font-family="Segoe UI" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">restrictChatMember</text>
+  <text x="639" y="298" font-family="Segoe UI" font-size="13" fill="#dcfce7" text-anchor="middle">hammasi: true (ruxsat qaytdi)</text>
+  <text x="639" y="313" font-family="Segoe UI" font-size="13" fill="#dcfce7" text-anchor="middle">+ answerCallbackQuery: "Tasdiqlandi!"</text>
+
+  <!-- vaqt o'lchovi -->
+  <rect x="40" y="260" width="240" height="56" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="160" y="284" font-family="Segoe UI" font-size="14" fill="#b45309" text-anchor="middle" font-weight="bold">Taymer (masalan 60 soniya)</text>
+  <text x="160" y="304" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">setTimeout — hali pending'mi?</text>
+  <line x1="160" y1="316" x2="160" y2="358" stroke="#64748b" stroke-width="2" marker-end="url(#arr2)"/>
+  <text x="216" y="342" font-family="Segoe UI" font-size="13" fill="#dc2626" font-weight="bold">yechilmadi</text>
+
+  <!-- 6 kick -->
+  <rect x="40" y="360" width="240" height="56" rx="10" fill="#dc2626"/>
+  <text x="160" y="384" font-family="Segoe UI" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Kick: ban() + unban()</text>
+  <text x="160" y="404" font-family="Segoe UI" font-size="13" fill="#fee2e2" text-anchor="middle">qayta urinishi mumkin</text>
+
+  <text x="500" y="384" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">Diqqat: pending holatini Map yoki sessiyada saqlang;</text>
+  <text x="500" y="404" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">tasdiqlangach taymerni bekor qiling (clearTimeout).</text>
+
+  <text x="380" y="444" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">Bot avval admin + can_restrict_members bo'lishi shart, aks holda restrict/kick ishlamaydi.</text>
+</svg>

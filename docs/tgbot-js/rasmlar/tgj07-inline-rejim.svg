@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420">
+  <title>Inline rejim oqimi: foydalanuvchi @bot so'rov yozadi, natijalar chiqadi, tanlaydi</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI" font-size="19" font-weight="bold" fill="#1e293b">Inline rejim: istalgan chatda @bot bilan qidirish</text>
+
+  <!-- 1. istalgan chat: @bot pizza -->
+  <rect x="30" y="60" width="210" height="300" rx="14" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="135" y="84" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">Istalgan chat</text>
+  <text x="135" y="102" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">(do'st, guruh — bot a'zo emas)</text>
+  <rect x="48" y="116" width="174" height="34" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="60" y="138" font-family="Segoe UI" font-size="13" fill="#1e293b">@mybot pizza</text>
+
+  <!-- natijalar ro'yxati -->
+  <rect x="48" y="166" width="174" height="34" rx="6" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="60" y="184" font-family="Segoe UI" font-size="13" fill="#334155">Pepperoni pizza</text>
+  <text x="60" y="197" font-family="Segoe UI" font-size="13" fill="#64748b">buyurtma qilish</text>
+  <rect x="48" y="206" width="174" height="34" rx="6" fill="#e0e7ff" stroke="#2563eb"/>
+  <text x="60" y="224" font-family="Segoe UI" font-size="13" fill="#334155">Margarita pizza</text>
+  <text x="60" y="237" font-family="Segoe UI" font-size="13" fill="#64748b">buyurtma qilish</text>
+  <rect x="48" y="246" width="174" height="34" rx="6" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="60" y="264" font-family="Segoe UI" font-size="13" fill="#334155">Tort pizza</text>
+  <text x="135" y="312" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">foydalanuvchi birini</text>
+  <text x="135" y="330" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">tanlaydi -&gt; chatga yuboriladi</text>
+  <rect x="48" y="338" width="174" height="14" rx="4" fill="#dcfce7"/>
+
+  <!-- 2. Telegram serveri -->
+  <rect x="280" y="130" width="200" height="76" rx="10" fill="#2563eb"/>
+  <text x="380" y="158" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#ffffff">Telegram serveri</text>
+  <text x="380" y="180" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#e0e7ff">inline_query update</text>
+  <text x="380" y="198" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#e0e7ff">query: "pizza"</text>
+
+  <!-- 3. Bot handler -->
+  <rect x="520" y="130" width="210" height="76" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="625" y="158" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#1e293b">bot.inlineQuery(/.../)</text>
+  <text x="625" y="180" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">natijalarni filtrlaydi</text>
+  <text x="625" y="198" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">ctx.inlineQuery.query</text>
+
+  <line x1="240" y1="133" x2="276" y2="155" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="480" y1="168" x2="516" y2="168" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- answerInlineQuery -->
+  <rect x="280" y="240" width="450" height="80" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="505" y="266" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#15803d">ctx.answerInlineQuery([ ... ])</text>
+  <text x="505" y="288" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">{ type:"article", id, title, input_message_content }</text>
+  <text x="505" y="306" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">tanlanganda input_message_content chatga yuboriladi</text>
+
+  <line x1="625" y1="206" x2="625" y2="236" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="280" y1="280" x2="226" y2="225" stroke="#16a34a" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#arg)"/>
+
+  <!-- pastki izoh -->
+  <rect x="30" y="372" width="700" height="34" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="380" y="394" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">Avval @BotFather'da /setinline bilan yoqing — busiz @bot ga inline_query kelmaydi</text>
+
+  <defs>
+    <marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#94a3b8"/></marker>
+    <marker id="arg" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#16a34a"/></marker>
+  </defs>
+</svg>

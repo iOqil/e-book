@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 460">
+  <title>Mini App ochishning 4 usuli: inline tugma, reply tugma, menyu tugmasi, inline rejim</title>
+  <rect x="0" y="0" width="760" height="460" fill="#f8fafc"/>
+
+  <text x="380" y="34" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Mini App'ni ochishning 4 usuli</text>
+  <text x="380" y="56" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">Hammasi bir xil HTTPS sahifani Telegram ichida ochadi</text>
+
+  <!-- Usul 1: inline tugma -->
+  <rect x="30" y="80" width="340" height="150" rx="10" fill="#ffffff" stroke="#94a3b8"/>
+  <rect x="30" y="80" width="340" height="34" rx="10" fill="#2563eb"/>
+  <rect x="30" y="98" width="340" height="16" fill="#2563eb"/>
+  <text x="48" y="103" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#ffffff">1 — Inline tugma (xabar ostida)</text>
+  <text x="48" y="138" font-family="Segoe UI" font-size="13" fill="#334155">InlineKeyboard().webApp("Ochish", url)</text>
+  <rect x="48" y="152" width="180" height="30" rx="6" fill="#e0e7ff" stroke="#2563eb"/>
+  <text x="138" y="172" font-family="Segoe UI" font-size="13" fill="#1e293b" text-anchor="middle">🚀 Ochish</text>
+  <text x="48" y="206" font-family="Segoe UI" font-size="13" fill="#64748b">Ixtiyoriy chatda. sendData YO'Q —</text>
+  <text x="48" y="222" font-family="Segoe UI" font-size="13" fill="#64748b">answerWebAppQuery bilan ishlaydi.</text>
+
+  <!-- Usul 2: reply tugma -->
+  <rect x="390" y="80" width="340" height="150" rx="10" fill="#ffffff" stroke="#94a3b8"/>
+  <rect x="390" y="80" width="340" height="34" rx="10" fill="#16a34a"/>
+  <rect x="390" y="98" width="340" height="16" fill="#16a34a"/>
+  <text x="408" y="103" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#ffffff">2 — Reply tugma (yozish maydonida)</text>
+  <text x="408" y="138" font-family="Segoe UI" font-size="13" fill="#334155">Keyboard().webApp("Ochish", url)</text>
+  <rect x="408" y="152" width="180" height="30" rx="6" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="498" y="172" font-family="Segoe UI" font-size="13" fill="#1e293b" text-anchor="middle">📱 Ochish</text>
+  <text x="408" y="206" font-family="Segoe UI" font-size="13" fill="#16a34a" font-weight="bold">FAQAT shaxsiy chatda. sendData</text>
+  <text x="408" y="222" font-family="Segoe UI" font-size="13" fill="#16a34a" font-weight="bold">-&gt; web_app_data xizmat xabari.</text>
+
+  <!-- Usul 3: menyu tugmasi -->
+  <rect x="30" y="250" width="340" height="150" rx="10" fill="#ffffff" stroke="#94a3b8"/>
+  <rect x="30" y="250" width="340" height="34" rx="10" fill="#f59e0b"/>
+  <rect x="30" y="268" width="340" height="16" fill="#f59e0b"/>
+  <text x="48" y="273" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">3 — Menyu tugmasi (chat yonida)</text>
+  <text x="48" y="308" font-family="Segoe UI" font-size="13" fill="#334155">setChatMenuButton({ menu_button:</text>
+  <text x="48" y="326" font-family="Segoe UI" font-size="13" fill="#334155">  { type:"web_app", text, web_app } })</text>
+  <text x="48" y="360" font-family="Segoe UI" font-size="13" fill="#64748b">Yozish maydoni yonidagi doimiy</text>
+  <text x="48" y="376" font-family="Segoe UI" font-size="13" fill="#64748b">tugma. "≡" o'rnini egallaydi.</text>
+
+  <!-- Usul 4: inline rejim -->
+  <rect x="390" y="250" width="340" height="150" rx="10" fill="#ffffff" stroke="#94a3b8"/>
+  <rect x="390" y="250" width="340" height="34" rx="10" fill="#dc2626"/>
+  <rect x="390" y="268" width="340" height="16" fill="#dc2626"/>
+  <text x="408" y="273" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#ffffff">4 — Inline rejim (kengaytirilgan)</text>
+  <text x="408" y="308" font-family="Segoe UI" font-size="13" fill="#334155">Botning sozlamalarida Web App</text>
+  <text x="408" y="326" font-family="Segoe UI" font-size="13" fill="#334155">tugmasi (BotFather orqali).</text>
+  <text x="408" y="360" font-family="Segoe UI" font-size="13" fill="#64748b">Kamroq ishlatiladi. Asosiy 3 ta</text>
+  <text x="408" y="376" font-family="Segoe UI" font-size="13" fill="#64748b">usulga e'tibor qarating.</text>
+
+  <text x="380" y="436" font-family="Segoe UI" font-size="13" fill="#dc2626" text-anchor="middle">Diqqat: URL doim HTTPS bo'lishi SHART (http:// ishlamaydi)</text>
+</svg>

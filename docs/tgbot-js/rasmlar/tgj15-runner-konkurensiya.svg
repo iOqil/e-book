@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470">
+  <title>bot.start() ketma-ket update qayta ishlaydi; @grammyjs/runner run(bot) konkurent (parallel) qayta ishlaydi</title>
+  <rect x="0" y="0" width="780" height="470" fill="#f8fafc"/>
+  <text x="390" y="32" text-anchor="middle" font-family="Segoe UI" font-size="19" font-weight="bold" fill="#1e293b">bot.start() vs run(bot): ketma-ket va konkurent</text>
+
+  <!-- Left: sequential -->
+  <rect x="30" y="58" width="350" height="372" rx="14" fill="#fff7ed" stroke="#f59e0b" stroke-width="2"/>
+  <text x="205" y="86" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#b45309">bot.start() — ketma-ket</text>
+  <text x="205" y="108" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">bitta update tugagach keyingisi</text>
+
+  <!-- sequential timeline -->
+  <line x1="70" y1="140" x2="70" y2="400" stroke="#94a3b8" stroke-width="2"/>
+  <text x="56" y="138" text-anchor="end" font-family="Segoe UI" font-size="13" fill="#64748b">vaqt</text>
+  <g font-family="Segoe UI">
+    <rect x="85" y="150" width="220" height="40" rx="8" fill="#fde68a" stroke="#f59e0b" stroke-width="1.5"/>
+    <text x="195" y="175" text-anchor="middle" font-size="13" fill="#1e293b">update 1 (2 sek)</text>
+    <rect x="85" y="200" width="220" height="40" rx="8" fill="#fde68a" stroke="#f59e0b" stroke-width="1.5"/>
+    <text x="195" y="225" text-anchor="middle" font-size="13" fill="#1e293b">update 2 (2 sek)</text>
+    <rect x="85" y="250" width="220" height="40" rx="8" fill="#fde68a" stroke="#f59e0b" stroke-width="1.5"/>
+    <text x="195" y="275" text-anchor="middle" font-size="13" fill="#1e293b">update 3 (2 sek)</text>
+  </g>
+  <text x="205" y="324" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#b45309">jami ~6 sek</text>
+  <text x="205" y="360" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Sodda, oz yuk uchun yetarli.</text>
+  <text x="205" y="382" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Sekin handler hammani kutdiradi.</text>
+
+  <!-- Right: concurrent -->
+  <rect x="400" y="58" width="350" height="372" rx="14" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="575" y="86" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#15803d">run(bot) — konkurent</text>
+  <text x="575" y="108" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">update'lar parallel ishlanadi</text>
+
+  <line x1="440" y1="140" x2="440" y2="400" stroke="#94a3b8" stroke-width="2"/>
+  <text x="426" y="138" text-anchor="end" font-family="Segoe UI" font-size="13" fill="#64748b">vaqt</text>
+  <g font-family="Segoe UI">
+    <rect x="455" y="150" width="220" height="40" rx="8" fill="#bbf7d0" stroke="#16a34a" stroke-width="1.5"/>
+    <text x="565" y="175" text-anchor="middle" font-size="13" fill="#1e293b">update 1 (2 sek)</text>
+    <rect x="455" y="196" width="220" height="40" rx="8" fill="#bbf7d0" stroke="#16a34a" stroke-width="1.5"/>
+    <text x="565" y="221" text-anchor="middle" font-size="13" fill="#1e293b">update 2 (2 sek)</text>
+    <rect x="455" y="242" width="220" height="40" rx="8" fill="#bbf7d0" stroke="#16a34a" stroke-width="1.5"/>
+    <text x="565" y="267" text-anchor="middle" font-size="13" fill="#1e293b">update 3 (2 sek)</text>
+  </g>
+  <text x="575" y="324" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#15803d">jami ~2 sek</text>
+  <text x="575" y="360" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Yuqori yuk uchun (17-bob).</text>
+  <text x="575" y="382" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Tartib kafolatlanmaydi -&gt; sessiya ehtiyot.</text>
+
+  <!-- bottom note -->
+  <text x="390" y="424" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">Diqqat: run(bot) va bot.start() ni BIRGA chaqirmang — bittasini tanlang.</text>
+</svg>

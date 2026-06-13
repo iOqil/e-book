@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480">
+  <title>Birinchi-mos qoidasi: Update yuqoridan pastga tekshiriladi, birinchi mos handler ishlaydi va zanjirni to'xtatadi</title>
+  <rect x="0" y="0" width="720" height="480" fill="#f8fafc"/>
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+    <marker id="arG" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b">Birinchi-mos qoidasi (first-match)</text>
+
+  <!-- Update source -->
+  <rect x="270" y="54" width="180" height="44" rx="10" fill="#2563eb"/>
+  <text x="360" y="82" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#ffffff">Update: "/help"</text>
+  <line x1="360" y1="98" x2="360" y2="124" stroke="#64748b" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Handler 1: command help -->
+  <rect x="180" y="126" width="360" height="56" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="200" y="150" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">1. bot.command("help")</text>
+  <text x="200" y="170" font-family="Segoe UI" font-size="13" fill="#16a34a">mos keldi -> ishlaydi, next() yo'q -> TO'XTAYDI</text>
+
+  <!-- green check on right -->
+  <circle cx="568" cy="154" r="16" fill="#16a34a"/>
+  <path d="M560,154 l5,6 l11,-13" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- "stop" branch arrow to result -->
+  <line x1="360" y1="182" x2="360" y2="206" stroke="#16a34a" stroke-width="2.5" stroke-dasharray="6 4" marker-end="url(#arG)"/>
+  <rect x="220" y="208" width="280" height="40" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+  <text x="360" y="233" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">"help" javobi yuboriladi — tugadi</text>
+
+  <!-- Handlers below never reached -->
+  <rect x="180" y="276" width="360" height="50" rx="10" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="200" y="299" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#64748b">2. bot.command("start")</text>
+  <text x="200" y="317" font-family="Segoe UI" font-size="13" fill="#64748b">tekshirilmaydi (yetib bormaydi)</text>
+
+  <rect x="180" y="334" width="360" height="50" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="1.6" stroke-dasharray="5 4"/>
+  <text x="200" y="357" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">3. bot.on("message:text")  catch-all</text>
+  <text x="200" y="375" font-family="Segoe UI" font-size="13" fill="#dc2626">/help ham matn — agar TEPADA bo'lsa "help"ni yutadi!</text>
+
+  <!-- gray X markers -->
+  <circle cx="568" cy="301" r="14" fill="#94a3b8"/>
+  <path d="M562,295 l12,12 M574,295 l-12,12" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round"/>
+  <circle cx="568" cy="359" r="14" fill="#94a3b8"/>
+  <path d="M562,353 l12,12 M574,353 l-12,12" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round"/>
+
+  <!-- rule box -->
+  <rect x="60" y="406" width="600" height="56" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.8"/>
+  <text x="360" y="430" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#b45309">Qoida: aniq handlerlar TEPADA, catch-all (message:text) ENG OXIRDA.</text>
+  <text x="360" y="450" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">handler next() chaqirmasa zanjir to'xtaydi -> faqat BITTA (birinchi mos) handler ishlaydi.</text>
+</svg>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420">
+  <title>parse_mode taqqoslash: HTML (kam escaping) va MarkdownV2 (maxsus belgilarni qochirish shart)</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="34" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">parse_mode: HTML va MarkdownV2</text>
+
+  <!-- HTML ustun -->
+  <rect x="30" y="60" width="340" height="320" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="200" y="90" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#16a34a" text-anchor="middle">HTML (tavsiya)</text>
+
+  <rect x="50" y="108" width="300" height="58" rx="6" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+  <text x="64" y="132" font-family="Segoe UI" font-size="14" fill="#334155">&lt;b&gt;Narx&lt;/b&gt;: 3.50 (chegirma!)</text>
+  <text x="64" y="155" font-family="Segoe UI" font-size="13" fill="#64748b">teglar kam, matn deyarli toza</text>
+
+  <text x="50" y="192" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">Teglar:</text>
+  <text x="64" y="216" font-family="Segoe UI" font-size="14" fill="#334155">&lt;b&gt; qalin &#160; &lt;i&gt; qiya</text>
+  <text x="64" y="240" font-family="Segoe UI" font-size="14" fill="#334155">&lt;code&gt; kod &#160; &lt;pre&gt; blok</text>
+  <text x="64" y="264" font-family="Segoe UI" font-size="14" fill="#334155">&lt;a href="..."&gt; havola &lt;/a&gt;</text>
+  <text x="64" y="288" font-family="Segoe UI" font-size="14" fill="#334155">&lt;s&gt; chizilgan &#160; &lt;u&gt; tagchiziq</text>
+
+  <text x="50" y="324" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">+ Faqat 3 belgi qochiriladi:</text>
+  <text x="64" y="348" font-family="Segoe UI" font-size="14" fill="#334155">&amp;lt; &#160; &amp;gt; &#160; &amp;amp;</text>
+  <text x="64" y="370" font-family="Segoe UI" font-size="13" fill="#64748b">Kamroq xato. Yangi boshlovchiga.</text>
+
+  <!-- MarkdownV2 ustun -->
+  <rect x="390" y="60" width="340" height="320" rx="12" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="560" y="90" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#d97706" text-anchor="middle">MarkdownV2 (ehtiyot)</text>
+
+  <rect x="410" y="108" width="300" height="58" rx="6" fill="#fffbeb" stroke="#fcd34d" stroke-width="1"/>
+  <text x="424" y="132" font-family="Segoe UI" font-size="14" fill="#334155">*Narx*: 3\.50 \(chegirma\!\)</text>
+  <text x="424" y="155" font-family="Segoe UI" font-size="13" fill="#64748b">har bir . ( ) ! \ bilan qochirilgan</text>
+
+  <text x="410" y="192" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">Belgilar:</text>
+  <text x="424" y="216" font-family="Segoe UI" font-size="14" fill="#334155">*qalin* &#160; _qiya_</text>
+  <text x="424" y="240" font-family="Segoe UI" font-size="14" fill="#334155">`kod` &#160; [matn](url)</text>
+
+  <text x="410" y="278" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">- Qochirish SHART:</text>
+  <text x="424" y="302" font-family="Segoe UI" font-size="13" fill="#334155">_ * [ ] ( ) ~ ` &gt; # + - = | { } . !</text>
+  <text x="424" y="326" font-family="Segoe UI" font-size="13" fill="#64748b">Unutilsa: "can't parse entities" xato.</text>
+  <text x="424" y="358" font-family="Segoe UI" font-size="13" fill="#64748b">Dinamik matn (narx, nuqta) xavfli.</text>
+
+  <text x="380" y="408" font-family="Segoe UI" font-size="14" fill="#334155" text-anchor="middle">Ikkalasi bir xil ko'rinadi — HTML kamroq escaping talab qiladi, shuning uchun tavsiya etamiz.</text>
+</svg>

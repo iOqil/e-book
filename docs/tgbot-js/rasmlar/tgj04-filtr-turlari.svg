@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440">
+  <title>grammY ning to'rt filtr turi: command, hears, on, filter qiyoslash</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI" font-size="19" font-weight="bold" fill="#1e293b">grammY filtr turlari: qachon qaysi biri?</text>
+
+  <!-- command -->
+  <rect x="30" y="58" width="345" height="156" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <rect x="30" y="58" width="345" height="34" rx="10" fill="#2563eb"/>
+  <text x="48" y="81" font-family="Consolas, Segoe UI" font-size="15" font-weight="bold" fill="#ffffff">bot.command(...)</text>
+  <text x="48" y="116" font-family="Segoe UI" font-size="13" fill="#334155">Nima: /buyruq larni ushlaydi (bot_command)</text>
+  <text x="48" y="138" font-family="Segoe UI" font-size="13" fill="#334155">Match: ctx.match = argument STRING</text>
+  <text x="48" y="160" font-family="Consolas, Segoe UI" font-size="13" fill="#2563eb">bot.command("start", ...)</text>
+  <text x="48" y="180" font-family="Consolas, Segoe UI" font-size="13" fill="#2563eb">bot.command(["help","yordam"], ...)</text>
+  <text x="48" y="202" font-family="Segoe UI" font-size="13" fill="#16a34a">Ishlatish: /start, /help, /ban</text>
+
+  <!-- hears -->
+  <rect x="385" y="58" width="345" height="156" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <rect x="385" y="58" width="345" height="34" rx="10" fill="#16a34a"/>
+  <text x="403" y="81" font-family="Consolas, Segoe UI" font-size="15" font-weight="bold" fill="#ffffff">bot.hears(regex)</text>
+  <text x="403" y="116" font-family="Segoe UI" font-size="13" fill="#334155">Nima: matn/caption regex'ga mos kelsa</text>
+  <text x="403" y="138" font-family="Segoe UI" font-size="13" fill="#334155">Match: ctx.match = MASSIV (guruhlar)</text>
+  <text x="403" y="160" font-family="Consolas, Segoe UI" font-size="13" fill="#16a34a">bot.hears(/sana (\d+)/, ...)</text>
+  <text x="403" y="180" font-family="Consolas, Segoe UI" font-size="13" fill="#16a34a">ctx.match[1] -&gt; guruh</text>
+  <text x="403" y="202" font-family="Segoe UI" font-size="13" fill="#16a34a">Ishlatish: tugma matni, kalit so'z</text>
+
+  <!-- on -->
+  <rect x="30" y="232" width="345" height="156" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="30" y="232" width="345" height="34" rx="10" fill="#f59e0b"/>
+  <text x="48" y="255" font-family="Consolas, Segoe UI" font-size="15" font-weight="bold" fill="#ffffff">bot.on(query)</text>
+  <text x="48" y="290" font-family="Segoe UI" font-size="13" fill="#334155">Nima: filter query bilan update turi</text>
+  <text x="48" y="312" font-family="Segoe UI" font-size="13" fill="#334155">Match: yo'q (ctx maydonlari bilan ishlaysiz)</text>
+  <text x="48" y="334" font-family="Consolas, Segoe UI" font-size="13" fill="#b45309">bot.on("message:text", ...)</text>
+  <text x="48" y="354" font-family="Consolas, Segoe UI" font-size="13" fill="#b45309">bot.on([":photo", ":video"], ...)</text>
+  <text x="48" y="376" font-family="Segoe UI" font-size="13" fill="#16a34a">Ishlatish: media, entity, har xil turlar</text>
+
+  <!-- filter -->
+  <rect x="385" y="232" width="345" height="156" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <rect x="385" y="232" width="345" height="34" rx="10" fill="#dc2626"/>
+  <text x="403" y="255" font-family="Consolas, Segoe UI" font-size="15" font-weight="bold" fill="#ffffff">bot.filter(predicate)</text>
+  <text x="403" y="290" font-family="Segoe UI" font-size="13" fill="#334155">Nima: o'z shartingiz (true/false)</text>
+  <text x="403" y="312" font-family="Segoe UI" font-size="13" fill="#334155">Match: yo'q — sof bool qaror</text>
+  <text x="403" y="334" font-family="Consolas, Segoe UI" font-size="13" fill="#dc2626">bot.filter(ctx =&gt; admin(ctx), ...)</text>
+  <text x="403" y="354" font-family="Consolas, Segoe UI" font-size="13" fill="#dc2626">bot.on("message").filter(...)</text>
+  <text x="403" y="376" font-family="Segoe UI" font-size="13" fill="#16a34a">Ishlatish: admin, ro'yxat, vaqt sharti</text>
+
+  <text x="380" y="418" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Tartib muhim: aniqroq filtrlar (command/hears) tepada, keng on/filter pastda</text>
+</svg>

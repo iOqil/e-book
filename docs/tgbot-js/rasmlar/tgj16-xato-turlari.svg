@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420">
+  <title>GrammyError vs HttpError: Telegram xato qaytardi (error_code/description) yoki tarmoq uzildi (error)</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="34" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">err.error qaysi turda?</text>
+
+  <!-- top: err.error -->
+  <rect x="290" y="56" width="180" height="50" rx="10" fill="#ffffff" stroke="#64748b" stroke-width="2"/>
+  <text x="380" y="80" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">err.error</text>
+  <text x="380" y="98" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">(bot.catch ichida)</text>
+
+  <!-- left branch: GrammyError -->
+  <rect x="40" y="160" width="320" height="220" rx="12" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="200" y="188" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#dc2626" text-anchor="middle">GrammyError</text>
+  <text x="200" y="210" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">Telegram so'rovni QABUL qildi,</text>
+  <text x="200" y="228" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">lekin XATO javob qaytardi</text>
+  <line x1="60" y1="244" x2="340" y2="244" stroke="#fca5a5" stroke-width="1"/>
+  <text x="60" y="268" font-family="Segoe UI" font-size="13" fill="#1e293b">e.error_code  -- masalan 403, 400, 429</text>
+  <text x="60" y="290" font-family="Segoe UI" font-size="13" fill="#1e293b">e.description -- inson o'qiy oladigan matn</text>
+  <text x="60" y="312" font-family="Segoe UI" font-size="13" fill="#1e293b">e.method      -- "sendMessage"</text>
+  <text x="60" y="334" font-family="Segoe UI" font-size="13" fill="#1e293b">e.payload     -- yuborilgan so'rov</text>
+  <text x="60" y="362" font-family="Segoe UI" font-size="13" fill="#64748b">403=bloklangan, 400=bad request, 429=flood</text>
+
+  <!-- right branch: HttpError -->
+  <rect x="400" y="160" width="320" height="220" rx="12" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="560" y="188" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#b45309" text-anchor="middle">HttpError</text>
+  <text x="560" y="210" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">So'rov Telegram'GA YETIB BORMADI</text>
+  <text x="560" y="228" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">(tarmoq uzildi, timeout, DNS)</text>
+  <line x1="420" y1="244" x2="700" y2="244" stroke="#fcd34d" stroke-width="1"/>
+  <text x="420" y="268" font-family="Segoe UI" font-size="13" fill="#1e293b">e.error -- asl tarmoq xatosi (cause)</text>
+  <text x="420" y="290" font-family="Segoe UI" font-size="13" fill="#1e293b">e.message -- tavsif</text>
+  <text x="420" y="324" font-family="Segoe UI" font-size="13" fill="#64748b">Telegram javob bermadi -- error_code YO'Q.</text>
+  <text x="420" y="346" font-family="Segoe UI" font-size="13" fill="#64748b">Odatda qayta urinish (auto-retry) yordam beradi.</text>
+
+  <line x1="320" y1="106" x2="210" y2="158" stroke="#dc2626" stroke-width="2"/>
+  <line x1="440" y1="106" x2="550" y2="158" stroke="#f59e0b" stroke-width="2"/>
+  <text x="240" y="138" font-family="Segoe UI" font-size="13" fill="#dc2626" text-anchor="middle">instanceof GrammyError</text>
+  <text x="525" y="138" font-family="Segoe UI" font-size="13" fill="#b45309" text-anchor="middle">instanceof HttpError</text>
+
+  <text x="380" y="404" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">Aks holda: noma'lum xato (kodingizdagi bug) -- log qiling va tuzating</text>
+</svg>

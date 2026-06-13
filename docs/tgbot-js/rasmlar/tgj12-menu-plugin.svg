@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 470">
+  <title>Menu plugini oqimi: bot.use(menu) bilan ulanadi, reply_markup: menu yuboriladi, tugma bosilganda callback_query menu middleware'iga tushadi va handler ishlaydi, ctx.menu.update() menyuni qayta render qiladi</title>
+  <rect x="0" y="0" width="820" height="470" fill="#f8fafc"/>
+  <text x="410" y="34" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">@grammyjs/menu — holatni o'zi boshqaradi</text>
+
+  <!-- 1) Ulash -->
+  <rect x="40" y="56" width="330" height="62" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="56" y="80" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb">1. Yaratish va ulash</text>
+  <text x="56" y="100" font-family="Segoe UI" font-size="13" fill="#334155">const menu = new Menu("id").text(...)</text>
+  <text x="56" y="116" font-family="Segoe UI" font-size="13" fill="#334155">bot.use(menu)  // MiddlewareObj — compose</text>
+
+  <!-- 2) Yuborish -->
+  <rect x="450" y="56" width="330" height="62" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="466" y="80" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">2. Yuborish</text>
+  <text x="466" y="100" font-family="Segoe UI" font-size="13" fill="#334155">ctx.reply("Menyu:", {</text>
+  <text x="466" y="116" font-family="Segoe UI" font-size="13" fill="#334155">  reply_markup: menu })</text>
+  <line x1="370" y1="87" x2="445" y2="87" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- Telegramdagi xabar + tugmalar -->
+  <rect x="290" y="150" width="240" height="120" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="306" y="174" font-family="Segoe UI" font-size="13" fill="#334155">Bot xabari: "Menyu:"</text>
+  <rect x="306" y="186" width="95" height="30" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="353" y="206" font-family="Segoe UI" font-size="13" fill="#2563eb" text-anchor="middle">Salom</text>
+  <rect x="419" y="186" width="95" height="30" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="466" y="206" font-family="Segoe UI" font-size="13" fill="#2563eb" text-anchor="middle">Soat</text>
+  <rect x="306" y="226" width="208" height="30" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="410" y="246" font-family="Segoe UI" font-size="13" fill="#2563eb" text-anchor="middle">Sozlamalar &#8250;</text>
+  <line x1="410" y1="118" x2="410" y2="146" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- 3) Tugma bosildi -->
+  <text x="410" y="294" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626" text-anchor="middle">3. Foydalanuvchi tugmani bosadi &#8594; callback_query</text>
+  <line x1="410" y1="270" x2="410" y2="280" stroke="#dc2626" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- 4) menu middleware -->
+  <rect x="120" y="310" width="280" height="90" rx="8" fill="#fef9c3" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="136" y="334" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#b45309">4. menu middleware</text>
+  <text x="136" y="354" font-family="Segoe UI" font-size="13" fill="#334155">callback_data'ni o'zi tahlil qiladi,</text>
+  <text x="136" y="372" font-family="Segoe UI" font-size="13" fill="#334155">mos tugma handlerini chaqiradi.</text>
+  <text x="136" y="390" font-family="Segoe UI" font-size="13" fill="#334155">answerCallbackQuery — avtomatik.</text>
+  <line x1="350" y1="304" x2="280" y2="306" stroke="#dc2626" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- 5) handler + update -->
+  <rect x="430" y="310" width="280" height="90" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="446" y="334" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">5. Tugma handleri</text>
+  <text x="446" y="354" font-family="Segoe UI" font-size="13" fill="#334155">(ctx) =&gt; { ... ctx.menu.update() }</text>
+  <text x="446" y="372" font-family="Segoe UI" font-size="13" fill="#334155">.update()/.nav()/.back()/.close()</text>
+  <text x="446" y="390" font-family="Segoe UI" font-size="13" fill="#334155">menyuni qayta render qiladi.</text>
+  <line x1="400" y1="355" x2="426" y2="355" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+
+  <text x="410" y="432" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">Farqi: oddiy InlineKeyboard'da callback_data'ni siz boshqarasiz; menu — holatni o'zi yuritadi.</text>
+  <text x="410" y="452" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">submenu("Sozlamalar", "id") + register(sub) — sahifalar orasida navigatsiya.</text>
+
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+</svg>

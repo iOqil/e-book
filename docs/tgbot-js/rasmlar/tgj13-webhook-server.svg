@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 430">
+  <title>Webhook server oqimi: Telegram POST -> framework (express.json) -> webhookCallback(bot) -> bot handler -> 200 OK</title>
+  <rect x="0" y="0" width="860" height="430" fill="#f8fafc"/>
+  <defs>
+    <marker id="a1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="a2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <text x="430" y="34" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b" text-anchor="middle">Webhook server oqimi (Express misoli)</text>
+
+  <!-- Telegram -->
+  <rect x="30" y="160" width="120" height="70" rx="10" fill="#eff6ff" stroke="#2563eb"/>
+  <text x="90" y="190" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">Telegram</text>
+  <text x="90" y="212" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">update bor</text>
+
+  <!-- POST arrow -->
+  <line x1="150" y1="195" x2="225" y2="195" stroke="#2563eb" stroke-width="2.5" marker-end="url(#a1)"/>
+  <text x="187" y="183" font-family="Segoe UI" font-size="13" fill="#2563eb" text-anchor="middle">HTTPS POST</text>
+  <text x="187" y="225" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">JSON body</text>
+
+  <!-- Server box -->
+  <rect x="230" y="80" width="430" height="270" rx="12" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="445" y="108" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#334155" text-anchor="middle">Node.js server (HTTPS endpoint)</text>
+
+  <!-- express.json -->
+  <rect x="260" y="130" width="370" height="50" rx="8" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="445" y="150" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">app.use(express.json())</text>
+  <text x="445" y="170" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">body'ni JSON sifatida o'qiydi (UNUTILSA xato!)</text>
+
+  <line x1="445" y1="180" x2="445" y2="200" stroke="#334155" stroke-width="2" marker-end="url(#a1)"/>
+
+  <!-- webhookCallback -->
+  <rect x="260" y="200" width="370" height="50" rx="8" fill="#eff6ff" stroke="#2563eb"/>
+  <text x="445" y="220" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">webhookCallback(bot, "express")</text>
+  <text x="445" y="240" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">JSON -> Update -> bot.handleUpdate</text>
+
+  <line x1="445" y1="250" x2="445" y2="270" stroke="#334155" stroke-width="2" marker-end="url(#a1)"/>
+
+  <!-- handler -->
+  <rect x="260" y="270" width="370" height="50" rx="8" fill="#f0fdf4" stroke="#16a34a"/>
+  <text x="445" y="290" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">bot handlerlari (command / on / hears)</text>
+  <text x="445" y="310" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">ctx.reply(...) -> Telegram API</text>
+
+  <!-- 200 response -->
+  <rect x="710" y="160" width="120" height="70" rx="10" fill="#f0fdf4" stroke="#16a34a"/>
+  <text x="770" y="190" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a" text-anchor="middle">200 OK</text>
+  <text x="770" y="212" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">javob</text>
+
+  <line x1="660" y1="195" x2="710" y2="195" stroke="#16a34a" stroke-width="2.5" marker-end="url(#a2)"/>
+
+  <text x="430" y="385" font-family="Segoe UI" font-size="14" fill="#334155" text-anchor="middle">Boshqa adapterlar: webhookCallback(bot, "http" | "hono" | "std/http")</text>
+  <text x="430" y="408" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">"http" native uchun express.json() KERAK EMAS — adapter body'ni o'zi o'qiydi</text>
+</svg>

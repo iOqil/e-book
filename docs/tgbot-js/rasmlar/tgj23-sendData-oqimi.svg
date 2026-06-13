@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470">
+  <title>sendData oqimi: reply-klaviatura webApp tugmasi WebApp.sendData orqali web_app_data xizmat xabarini botga yuboradi</title>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrR" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+  <text x="380" y="34" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Mini App ma'lumotni botga qanday qaytaradi</text>
+
+  <!-- YASHIL yo'l: reply-keyboard webApp -> sendData -> web_app_data -->
+  <rect x="20" y="58" width="720" height="180" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="40" y="82" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">Yo'l A — reply-klaviatura webApp tugmasi (sendData ISHLAYDI)</text>
+
+  <rect x="40" y="100" width="150" height="56" rx="8" fill="#ffffff" stroke="#16a34a"/>
+  <text x="115" y="124" font-family="Segoe UI" font-size="13" fill="#1e293b" text-anchor="middle">Mini App</text>
+  <text x="115" y="143" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">tg.sendData(x)</text>
+
+  <rect x="245" y="100" width="150" height="56" rx="8" fill="#ffffff" stroke="#16a34a"/>
+  <text x="320" y="124" font-family="Segoe UI" font-size="13" fill="#1e293b" text-anchor="middle">Telegram</text>
+  <text x="320" y="143" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">App'ni yopadi</text>
+
+  <rect x="450" y="100" width="170" height="56" rx="8" fill="#ffffff" stroke="#16a34a"/>
+  <text x="535" y="121" font-family="Segoe UI" font-size="13" fill="#1e293b" text-anchor="middle">message:</text>
+  <text x="535" y="139" font-family="Segoe UI" font-size="13" fill="#1e293b" text-anchor="middle">web_app_data</text>
+
+  <rect x="660" y="100" width="60" height="56" rx="8" fill="#16a34a"/>
+  <text x="690" y="125" font-family="Segoe UI" font-size="13" fill="#ffffff" text-anchor="middle">Bot</text>
+  <text x="690" y="143" font-family="Segoe UI" font-size="13" fill="#ffffff" text-anchor="middle">.on()</text>
+
+  <line x1="190" y1="128" x2="243" y2="128" stroke="#2563eb" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="395" y1="128" x2="448" y2="128" stroke="#2563eb" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="620" y1="128" x2="658" y2="128" stroke="#2563eb" stroke-width="2" marker-end="url(#arr)"/>
+
+  <text x="40" y="186" font-family="Segoe UI" font-size="13" fill="#334155">bot.on("message:web_app_data", (ctx) =&gt; { const x = ctx.message.web_app_data.data; });</text>
+  <text x="40" y="212" font-family="Segoe UI" font-size="13" fill="#16a34a" font-weight="bold">Faqat shaxsiy chat. data — xom matn (odatda JSON). Tasdiqlash: 24-bob.</text>
+  <text x="40" y="230" font-family="Segoe UI" font-size="13" fill="#dc2626">Diqqat: "bad client" ixtiyoriy data yuborishi mumkin — ishonib yopishtirmang.</text>
+
+  <!-- QIZIL yo'l: inline webApp -> answerWebAppQuery -->
+  <rect x="20" y="256" width="720" height="160" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="40" y="280" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#dc2626">Yo'l B — inline webApp tugmasi (sendData ISHLAMAYDI)</text>
+
+  <rect x="40" y="298" width="150" height="56" rx="8" fill="#ffffff" stroke="#dc2626"/>
+  <text x="115" y="322" font-family="Segoe UI" font-size="13" fill="#1e293b" text-anchor="middle">Mini App</text>
+  <text x="115" y="341" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">backend so'rov</text>
+
+  <rect x="245" y="298" width="180" height="56" rx="8" fill="#ffffff" stroke="#dc2626"/>
+  <text x="335" y="321" font-family="Segoe UI" font-size="13" fill="#1e293b" text-anchor="middle">Bot backend</text>
+  <text x="335" y="339" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">answerWebAppQuery</text>
+
+  <rect x="480" y="298" width="220" height="56" rx="8" fill="#ffffff" stroke="#dc2626"/>
+  <text x="590" y="321" font-family="Segoe UI" font-size="13" fill="#1e293b" text-anchor="middle">Chatga inline natija</text>
+  <text x="590" y="339" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">(InlineQueryResult)</text>
+
+  <line x1="190" y1="326" x2="243" y2="326" stroke="#dc2626" stroke-width="2" marker-end="url(#arrR)"/>
+  <line x1="425" y1="326" x2="478" y2="326" stroke="#dc2626" stroke-width="2" marker-end="url(#arrR)"/>
+
+  <text x="40" y="384" font-family="Segoe UI" font-size="13" fill="#334155">Inline webApp tugma callback ham, web_app_data ham YUBORMAYDI.</text>
+  <text x="40" y="404" font-family="Segoe UI" font-size="13" fill="#334155">Ma'lumot HTTP backend orqali yuriladi (25-bob). sendData faqat Yo'l A da.</text>
+
+  <text x="380" y="448" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">Asosiy farq: web_app_data faqat REPLY-klaviatura webApp tugmasidan keladi</text>
+</svg>

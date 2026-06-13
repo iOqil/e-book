@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480">
+  <title>Graceful shutdown: SIGINT/SIGTERM signalini ushlab, runner/bot ni to'g'ri to'xtatish va DB ni yopish; yarim ishlangan update'lar tugaydi</title>
+  <rect x="0" y="0" width="760" height="480" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI" font-size="19" font-weight="bold" fill="#1e293b">Graceful shutdown — toza to'xtatish</text>
+
+  <!-- Step 1: signal -->
+  <rect x="40" y="62" width="200" height="86" rx="12" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="140" y="90" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">1. Signal keladi</text>
+  <text x="140" y="113" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Ctrl+C -> SIGINT</text>
+  <text x="140" y="133" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">deploy -> SIGTERM</text>
+
+  <!-- Step 2: catch -->
+  <rect x="280" y="62" width="200" height="86" rx="12" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="380" y="90" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#b45309">2. Ushlaymiz</text>
+  <text x="380" y="112" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">process.once("SIGINT",</text>
+  <text x="380" y="130" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">gracefulShutdown)</text>
+
+  <!-- Step 3: stop runner -->
+  <rect x="520" y="62" width="200" height="86" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="620" y="90" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb">3. await runner.stop()</text>
+  <text x="620" y="112" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">yangi update OLMAYDI;</text>
+  <text x="620" y="130" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">joriylar TUGAYDI</text>
+
+  <!-- arrows row 1 -->
+  <line x1="240" y1="105" x2="276" y2="105" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#a17)"/>
+  <line x1="480" y1="105" x2="516" y2="105" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#a17)"/>
+
+  <!-- down arrow -->
+  <line x1="620" y1="150" x2="620" y2="186" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#a17)"/>
+
+  <!-- Step 4: close DB -->
+  <rect x="520" y="190" width="200" height="80" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="620" y="218" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">4. db.close()</text>
+  <text x="620" y="240" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">ulanishni yopamiz,</text>
+  <text x="620" y="258" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">fayllarni saqlaymiz</text>
+
+  <line x1="520" y1="230" x2="484" y2="230" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#a17)"/>
+
+  <!-- Step 5: exit -->
+  <rect x="280" y="190" width="200" height="80" rx="12" fill="#ffffff" stroke="#1e293b" stroke-width="2"/>
+  <text x="380" y="218" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">5. process.exit(0)</text>
+  <text x="380" y="240" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">toza chiqish;</text>
+  <text x="380" y="258" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">hech narsa yo'qolmaydi</text>
+
+  <!-- Comparison box: bad vs good -->
+  <rect x="40" y="300" width="680" height="146" rx="12" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="380" y="326" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">Graceful shutdown bo'lmasa nima bo'ladi?</text>
+
+  <text x="70" y="356" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#dc2626">Toza to'xtatishsiz (kill -9):</text>
+  <text x="70" y="378" font-family="Segoe UI" font-size="13" fill="#334155">- yarim ishlangan update O'RTADA uziladi</text>
+  <text x="70" y="398" font-family="Segoe UI" font-size="13" fill="#334155">- DB yozuvi yarim qoladi / buziladi</text>
+  <text x="70" y="418" font-family="Segoe UI" font-size="13" fill="#334155">- foydalanuvchi javob OLMAYDI</text>
+
+  <text x="410" y="356" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#16a34a">Graceful shutdown bilan:</text>
+  <text x="410" y="378" font-family="Segoe UI" font-size="13" fill="#334155">+ joriy update'lar oxirigacha bajariladi</text>
+  <text x="410" y="398" font-family="Segoe UI" font-size="13" fill="#334155">+ DB toza yopiladi (transaksiya yakunlanadi)</text>
+  <text x="410" y="418" font-family="Segoe UI" font-size="13" fill="#334155">+ keyingi update offset'dan davom etadi</text>
+
+  <text x="380" y="468" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">runner.stop() Promise qaytaradi -> joriy middleware tugashini await qilib kutamiz</text>
+
+  <defs>
+    <marker id="a17" markerWidth="10" markerHeight="10" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#94a3b8"/></marker>
+  </defs>
+</svg>

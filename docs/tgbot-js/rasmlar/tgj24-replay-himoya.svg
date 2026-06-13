@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 380">
+  <title>Replay himoyasi: auth_date eskirgan initData ni rad etish (imzo to'g'ri bo'lsa ham)</title>
+  <rect x="0" y="0" width="780" height="380" fill="#f8fafc"/>
+  <text x="390" y="32" text-anchor="middle" font-family="Segoe UI" font-size="19" font-weight="bold" fill="#1e293b">Replay himoyasi: auth_date ni tekshirish</text>
+
+  <defs>
+    <marker id="a3" markerWidth="11" markerHeight="11" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 Z" fill="#2563eb"/></marker>
+  </defs>
+
+  <!-- Muammo -->
+  <rect x="24" y="60" width="732" height="58" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="40" y="84" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">Muammo: imzo MANGU yaroqli</text>
+  <text x="40" y="106" font-family="Segoe UI" font-size="13" fill="#334155">Hujumchi eski (to'g'ri imzolangan) initData ni saqlab, oylar keyin qayta yuborsa — HMAC baribir true qaytaradi.</text>
+
+  <!-- Yechim qadamlari -->
+  <rect x="24" y="138" width="226" height="118" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="137" y="164" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb">1. auth_date ni o'qish</text>
+  <text x="137" y="190" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">params.get("auth_date")</text>
+  <text x="137" y="212" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Unix vaqt (soniya)</text>
+  <text x="137" y="234" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">imzolangan maydon</text>
+
+  <line x1="250" y1="197" x2="290" y2="197" stroke="#2563eb" stroke-width="2.5" marker-end="url(#a3)"/>
+
+  <rect x="292" y="138" width="226" height="118" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="405" y="164" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb">2. Yoshini hisoblash</text>
+  <text x="405" y="190" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">hozir - auth_date</text>
+  <text x="405" y="212" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">= ageSec</text>
+  <text x="405" y="234" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Date.now()/1000</text>
+
+  <line x1="518" y1="197" x2="558" y2="197" stroke="#2563eb" stroke-width="2.5" marker-end="url(#a3)"/>
+
+  <rect x="560" y="138" width="196" height="118" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="658" y="164" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#15803d">3. Eskini rad et</text>
+  <text x="658" y="190" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">ageSec &gt; 86400 ?</text>
+  <text x="658" y="214" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">ha -> RAD (false)</text>
+  <text x="658" y="236" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#15803d">yo'q -> qabul</text>
+
+  <!-- Pastki xulosa -->
+  <rect x="60" y="288" width="660" height="64" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="390" y="312" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#b45309">HMAC = "kim imzoladi" ni tekshiradi; auth_date = "qachon imzolandi" ni tekshiradi.</text>
+  <text x="390" y="336" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Ikkalasi ham kerak: faqat HMAC yetarli emas. 86400 s = 24 soat (siz tanlaysiz).</text>
+</svg>

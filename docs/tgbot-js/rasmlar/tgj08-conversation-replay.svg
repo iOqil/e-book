@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 480">
+  <title>Conversations replay modeli: funksiya har wait'da boshidan qayta ijro etiladi; external side-effect'ni bir martaga qoldiradi</title>
+  <rect x="0" y="0" width="820" height="480" fill="#f8fafc"/>
+  <text x="410" y="34" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Replay ijro modeli — eng muhim tushuncha</text>
+  <text x="410" y="58" font-family="Segoe UI" font-size="14" fill="#64748b" text-anchor="middle">Suhbat funksiyasi har yangi update kelganda BOSHIDAN qayta ijro etiladi</text>
+
+  <!-- 1-ijro -->
+  <rect x="30" y="80" width="240" height="360" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="150" y="106" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb" text-anchor="middle">1-update (enter)</text>
+  <rect x="48" y="122" width="204" height="34" rx="6" fill="#eff6ff" stroke="#93c5fd" stroke-width="1"/>
+  <text x="62" y="144" font-family="Segoe UI" font-size="13" fill="#334155">reply("Ismingiz?")  ✔ yuborildi</text>
+  <rect x="48" y="164" width="204" height="50" rx="6" fill="#fef9c3" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="62" y="184" font-family="Segoe UI" font-size="13" fill="#334155">external(saveLog) ✔</text>
+  <text x="62" y="203" font-family="Segoe UI" font-size="13" fill="#64748b">bir marta bajariladi</text>
+  <rect x="48" y="222" width="204" height="40" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="62" y="247" font-family="Segoe UI" font-size="13" fill="#dc2626">wait()  ⏸ TO'XTAYDI</text>
+  <text x="150" y="300" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">holat saqlanadi,</text>
+  <text x="150" y="320" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">funksiya kutib qoladi</text>
+
+  <!-- o'q -->
+  <line x1="270" y1="260" x2="320" y2="260" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <!-- 2-ijro (replay) -->
+  <rect x="320" y="80" width="240" height="360" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="440" y="106" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a" text-anchor="middle">2-update (javob keldi)</text>
+  <text x="440" y="124" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">funksiya BOSHIDAN ishlaydi</text>
+  <rect x="338" y="134" width="204" height="34" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="352" y="156" font-family="Segoe UI" font-size="13" fill="#94a3b8">reply("Ismingiz?")  ⤿ skip</text>
+  <rect x="338" y="176" width="204" height="50" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="352" y="196" font-family="Segoe UI" font-size="13" fill="#334155">external(saveLog)</text>
+  <text x="352" y="215" font-family="Segoe UI" font-size="13" fill="#16a34a">⤿ keshdan, QAYTA EMAS</text>
+  <rect x="338" y="234" width="204" height="34" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="352" y="256" font-family="Segoe UI" font-size="13" fill="#334155">wait()  ✔ javob tayyor</text>
+  <rect x="338" y="278" width="204" height="40" rx="6" fill="#eff6ff" stroke="#93c5fd" stroke-width="1"/>
+  <text x="352" y="303" font-family="Segoe UI" font-size="13" fill="#334155">reply("Xush kelibsiz!") ✔</text>
+  <text x="440" y="350" font-family="Segoe UI" font-size="13" fill="#16a34a" text-anchor="middle">davom etadi va tugaydi</text>
+
+  <!-- izoh ustun -->
+  <rect x="595" y="100" width="200" height="320" rx="12" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="695" y="128" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#d97706" text-anchor="middle">GOLDEN RULE</text>
+  <text x="612" y="158" font-family="Segoe UI" font-size="13" fill="#334155">Side effect (DB, random,</text>
+  <text x="612" y="178" font-family="Segoe UI" font-size="13" fill="#334155">Date.now, tashqi API)</text>
+  <text x="612" y="198" font-family="Segoe UI" font-size="13" fill="#334155">replay'da TAKRORLANADI.</text>
+  <text x="612" y="228" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#16a34a">Yechim:</text>
+  <text x="612" y="252" font-family="Segoe UI" font-size="13" fill="#334155">conversation.external(</text>
+  <text x="612" y="272" font-family="Segoe UI" font-size="13" fill="#334155">&#160;&#160;() =&gt; sideEffect())</text>
+  <text x="612" y="292" font-family="Segoe UI" font-size="13" fill="#334155">bilan O'RANG.</text>
+  <text x="612" y="324" font-family="Segoe UI" font-size="13" fill="#64748b">ctx.reply esa o'ralmaydi —</text>
+  <text x="612" y="344" font-family="Segoe UI" font-size="13" fill="#64748b">u replay'da avtomatik</text>
+  <text x="612" y="364" font-family="Segoe UI" font-size="13" fill="#64748b">o'tkazib yuboriladi.</text>
+  <text x="612" y="396" font-family="Segoe UI" font-size="13" fill="#dc2626">now()/random() ham</text>
+  <text x="612" y="414" font-family="Segoe UI" font-size="13" fill="#dc2626">conversation orqali.</text>
+
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+</svg>

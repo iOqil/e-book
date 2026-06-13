@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 470">
+  <title>Bir nechta Composer moduli bot.use orqali botning yagona middleware zanjiriga ulanadi</title>
+  <rect x="0" y="0" width="720" height="470" fill="#f8fafc"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b">Composer bilan modullash (grammY'da Router yo'q)</text>
+  <text x="360" y="56" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">har modul o'z Composer'ini eksport qiladi; bot.use(...) ularni ketma-ket ulaydi</text>
+
+  <!-- 3 modules -->
+  <g>
+    <rect x="40" y="86" width="180" height="92" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="1.8"/>
+    <text x="130" y="110" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb">handlers/start.js</text>
+    <text x="56" y="132" font-family="Segoe UI" font-size="13" fill="#334155">new Composer()</text>
+    <text x="56" y="151" font-family="Segoe UI" font-size="13" fill="#334155">.command("start")</text>
+    <text x="56" y="170" font-family="Segoe UI" font-size="13" fill="#334155">.command("help")</text>
+  </g>
+
+  <g>
+    <rect x="270" y="86" width="180" height="92" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="1.8"/>
+    <text x="360" y="110" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb">handlers/admin.js</text>
+    <text x="286" y="132" font-family="Segoe UI" font-size="13" fill="#334155">new Composer()</text>
+    <text x="286" y="151" font-family="Segoe UI" font-size="13" fill="#334155">.command("admin")</text>
+  </g>
+
+  <g>
+    <rect x="500" y="86" width="180" height="92" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="1.8"/>
+    <text x="590" y="110" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#b45309">handlers/echo.js</text>
+    <text x="516" y="132" font-family="Segoe UI" font-size="13" fill="#334155">new Composer()</text>
+    <text x="516" y="151" font-family="Segoe UI" font-size="13" fill="#334155">.on("message:text")</text>
+    <text x="516" y="170" font-family="Segoe UI" font-size="13" fill="#b45309">catch-all (oxirda!)</text>
+  </g>
+
+  <!-- arrows down to bot -->
+  <line x1="130" y1="178" x2="180" y2="232" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="360" y1="178" x2="360" y2="232" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="590" y1="178" x2="540" y2="232" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="200" y="208" font-family="Segoe UI" font-size="13" fill="#64748b">bot.use(start)</text>
+  <text x="370" y="208" font-family="Segoe UI" font-size="13" fill="#64748b">bot.use(admin)</text>
+  <text x="498" y="208" font-family="Segoe UI" font-size="13" fill="#64748b">bot.use(echo)</text>
+
+  <!-- bot box (bot.js) -->
+  <rect x="120" y="240" width="480" height="160" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2.2"/>
+  <text x="360" y="266" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">bot.js — Bot (o'zi ham Composer)</text>
+
+  <!-- chain inside bot -->
+  <rect x="150" y="286" width="120" height="44" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+  <text x="210" y="313" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#1e293b">start</text>
+  <rect x="300" y="286" width="120" height="44" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+  <text x="360" y="313" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#1e293b">admin</text>
+  <rect x="450" y="286" width="120" height="44" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.2"/>
+  <text x="510" y="313" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#b45309">echo</text>
+
+  <line x1="270" y1="308" x2="300" y2="308" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="420" y1="308" x2="450" y2="308" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="360" y="362" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">yagona middleware zanjiri — ulanish tartibi = sinash tartibi</text>
+  <text x="360" y="384" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">catch-all (echo) eng oxirda bo'lmasa buyruqlarni yutadi</text>
+
+  <text x="360" y="440" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">aiogram ekvivalenti: Router + dp.include_router(...) -> grammY: Composer + bot.use(...)</text>
+</svg>

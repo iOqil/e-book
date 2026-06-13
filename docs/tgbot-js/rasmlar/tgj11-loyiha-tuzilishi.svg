@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520">
+  <title>Tavsiya etilgan loyiha tuzilishi: src/ ostida bot.js, config.js va handlers/keyboards/conversations/middlewares/services/utils papkalari</title>
+  <rect x="0" y="0" width="760" height="520" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI" font-size="19" font-weight="bold" fill="#1e293b">Tavsiya etilgan papka daraxti</text>
+
+  <!-- root -->
+  <text x="40" y="74" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">mening-bot/</text>
+
+  <!-- top-level files -->
+  <text x="72" y="102" font-family="Segoe UI" font-size="14" fill="#64748b">.env</text>
+  <text x="180" y="102" font-family="Segoe UI" font-size="13" fill="#94a3b8">(maxfiy: BOT_TOKEN — git'ga EMAS)</text>
+  <text x="72" y="126" font-family="Segoe UI" font-size="14" fill="#64748b">.env.example</text>
+  <text x="220" y="126" font-family="Segoe UI" font-size="13" fill="#94a3b8">(namuna — git'ga ha)</text>
+  <text x="72" y="150" font-family="Segoe UI" font-size="14" fill="#64748b">package.json</text>
+
+  <!-- src/ container -->
+  <rect x="64" y="166" width="640" height="324" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="84" y="192" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">src/</text>
+
+  <!-- src files -->
+  <text x="112" y="220" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">bot.js</text>
+  <text x="220" y="220" font-family="Segoe UI" font-size="13" fill="#334155">kirish nuqtasi: modullarni bot.use(...) bilan ulaydi</text>
+
+  <text x="112" y="246" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">config.js</text>
+  <text x="220" y="246" font-family="Segoe UI" font-size="13" fill="#334155">.env o'qish + VALIDATSIYA + markaziy config obyekti</text>
+
+  <!-- folders grid -->
+  <g font-family="Segoe UI">
+    <rect x="100" y="266" width="288" height="48" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+    <text x="116" y="288" font-size="14" font-weight="bold" fill="#1e40af">handlers/</text>
+    <text x="116" y="306" font-size="13" fill="#334155">Composer eksport qiluvchi modullar</text>
+
+    <rect x="400" y="266" width="288" height="48" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+    <text x="416" y="288" font-size="14" font-weight="bold" fill="#1e40af">keyboards/</text>
+    <text x="416" y="306" font-size="13" fill="#334155">Inline/Reply klaviaturalar</text>
+
+    <rect x="100" y="324" width="288" height="48" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+    <text x="116" y="346" font-size="14" font-weight="bold" fill="#1e40af">conversations/</text>
+    <text x="116" y="364" font-size="13" fill="#334155">suhbat (FSM) modullari</text>
+
+    <rect x="400" y="324" width="288" height="48" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+    <text x="416" y="346" font-size="14" font-weight="bold" fill="#1e40af">middlewares/</text>
+    <text x="416" y="364" font-size="13" fill="#334155">auth, logging, inject (DI)</text>
+
+    <rect x="100" y="382" width="288" height="48" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+    <text x="116" y="404" font-size="14" font-weight="bold" fill="#15803d">services/</text>
+    <text x="116" y="422" font-size="13" fill="#334155">DB / repository qatlami</text>
+
+    <rect x="400" y="382" width="288" height="48" rx="8" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.5"/>
+    <text x="416" y="404" font-size="14" font-weight="bold" fill="#b45309">utils/</text>
+    <text x="416" y="422" font-size="13" fill="#334155">kichik yordamchi funksiyalar</text>
+  </g>
+
+  <text x="384" y="462" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Har papka bitta vazifaga javob beradi -> bot o'sganda topish va o'zgartirish oson</text>
+  <text x="384" y="482" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">handlers/ ichidagi har fayl bitta Composer eksport qiladi (keyingi rasmga qarang)</text>
+</svg>

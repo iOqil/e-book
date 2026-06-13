@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420">
+  <title>Reply klaviatura va inline klaviatura farqi: reply chatga matn yuboradi, inline callback_query yuboradi</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+
+  <text x="380" y="34" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Reply klaviatura va inline klaviatura</text>
+
+  <!-- LEFT: reply keyboard -->
+  <rect x="30" y="58" width="330" height="320" rx="12" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="195" y="86" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#2563eb" text-anchor="middle">Reply klaviatura</text>
+
+  <!-- bot message bubble -->
+  <rect x="52" y="102" width="180" height="34" rx="10" fill="#e2e8f0"/>
+  <text x="64" y="124" font-family="Segoe UI" font-size="14" fill="#334155">Menyuni tanlang:</text>
+
+  <!-- reply buttons (below text input, replace keyboard) -->
+  <rect x="52" y="150" width="130" height="32" rx="6" fill="#2563eb"/>
+  <text x="117" y="171" font-family="Segoe UI" font-size="14" fill="#ffffff" text-anchor="middle">Profil</text>
+  <rect x="200" y="150" width="130" height="32" rx="6" fill="#2563eb"/>
+  <text x="265" y="171" font-family="Segoe UI" font-size="14" fill="#ffffff" text-anchor="middle">Yordam</text>
+
+  <text x="195" y="210" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">tugma = klaviatura o'rnida</text>
+
+  <!-- arrow down to chat -->
+  <line x1="117" y1="222" x2="117" y2="262" stroke="#16a34a" stroke-width="2.5" marker-end="url(#ag)"/>
+  <text x="200" y="246" font-family="Segoe UI" font-size="13" fill="#16a34a" text-anchor="middle">chatga MATN yuboradi</text>
+
+  <!-- user message bubble -->
+  <rect x="150" y="272" width="180" height="34" rx="10" fill="#bbf7d0"/>
+  <text x="240" y="294" font-family="Segoe UI" font-size="14" fill="#166534" text-anchor="middle">Profil</text>
+
+  <rect x="52" y="324" width="278" height="40" rx="8" fill="#f1f5f9" stroke="#cbd5e1"/>
+  <text x="191" y="349" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">bot.hears("Profil") ushlaydi</text>
+
+  <!-- RIGHT: inline keyboard -->
+  <rect x="400" y="58" width="330" height="320" rx="12" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="565" y="86" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#16a34a" text-anchor="middle">Inline klaviatura</text>
+
+  <!-- bot message with inline buttons attached -->
+  <rect x="422" y="102" width="286" height="80" rx="10" fill="#e2e8f0"/>
+  <text x="434" y="124" font-family="Segoe UI" font-size="14" fill="#334155">Ovoz bering:</text>
+  <rect x="434" y="136" width="125" height="32" rx="6" fill="#16a34a"/>
+  <text x="496" y="157" font-family="Segoe UI" font-size="14" fill="#ffffff" text-anchor="middle">Ha</text>
+  <rect x="571" y="136" width="125" height="32" rx="6" fill="#dc2626"/>
+  <text x="633" y="157" font-family="Segoe UI" font-size="14" fill="#ffffff" text-anchor="middle">Yo'q</text>
+
+  <text x="565" y="208" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">tugma = xabar ostida</text>
+
+  <!-- arrow down -->
+  <line x1="496" y1="222" x2="496" y2="262" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#ay)"/>
+  <text x="600" y="246" font-family="Segoe UI" font-size="13" fill="#b45309" text-anchor="middle">callback_query yuboradi</text>
+
+  <!-- callback payload chip -->
+  <rect x="446" y="272" width="240" height="34" rx="10" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="566" y="294" font-family="Segoe UI" font-size="14" fill="#92400e" text-anchor="middle">data: "v:ha"  (matn ko'rinmaydi)</text>
+
+  <rect x="422" y="324" width="286" height="40" rx="8" fill="#f1f5f9" stroke="#cbd5e1"/>
+  <text x="565" y="349" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">bot.callbackQuery("v:ha") ushlaydi</text>
+
+  <defs>
+    <marker id="ag" markerWidth="10" markerHeight="10" refX="6" refY="5" orient="auto">
+      <path d="M0,0 L8,5 L0,10 Z" fill="#16a34a"/>
+    </marker>
+    <marker id="ay" markerWidth="10" markerHeight="10" refX="6" refY="5" orient="auto">
+      <path d="M0,0 L8,5 L0,10 Z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+</svg>

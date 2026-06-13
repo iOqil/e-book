@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 470">
+  <title>initData auth middleware oqimi: so'rov keladi -> Authorization header'dan initData olinadi -> validateInitData (HMAC + auth_date) -> to'g'ri bo'lsa req.user qo'yiladi va 200, aks holda 401</title>
+  <rect x="0" y="0" width="860" height="470" fill="#f8fafc"/>
+  <defs>
+    <marker id="m1" markerWidth="11" markerHeight="11" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#334155"/>
+    </marker>
+    <marker id="mg" markerWidth="11" markerHeight="11" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+    <marker id="mr" markerWidth="11" markerHeight="11" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+  <text x="430" y="36" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b" text-anchor="middle">initData auth middleware</text>
+  <text x="430" y="60" font-family="Segoe UI" font-size="14" fill="#64748b" text-anchor="middle">har so'rovda initData tekshiriladi — faqat undan keyin handler ishlaydi</text>
+
+  <!-- request -->
+  <rect x="30" y="200" width="150" height="80" rx="10" fill="#eff6ff" stroke="#2563eb"/>
+  <text x="105" y="232" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">So'rov keladi</text>
+  <text x="105" y="253" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">GET /api/me</text>
+  <text x="105" y="270" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">Authorization: tma ...</text>
+
+  <line x1="180" y1="240" x2="240" y2="240" stroke="#334155" stroke-width="2.5" marker-end="url(#m1)"/>
+
+  <!-- extract -->
+  <rect x="240" y="195" width="180" height="90" rx="10" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="330" y="222" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#334155" text-anchor="middle">middleware</text>
+  <text x="330" y="244" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">header'dan initData</text>
+  <text x="330" y="261" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">ajratiladi</text>
+
+  <line x1="420" y1="240" x2="475" y2="240" stroke="#334155" stroke-width="2.5" marker-end="url(#m1)"/>
+
+  <!-- validate (decision) -->
+  <polygon points="560,170 660,240 560,310 460,240" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="560" y="228" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">validateInitData</text>
+  <text x="560" y="248" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">HMAC + auth_date</text>
+  <text x="560" y="266" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">to'g'rimi?</text>
+
+  <!-- HA -> 200 -->
+  <line x1="610" y1="195" x2="680" y2="140" stroke="#16a34a" stroke-width="2.5" marker-end="url(#mg)"/>
+  <text x="638" y="160" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">HA</text>
+  <rect x="680" y="95" width="150" height="92" rx="10" fill="#f0fdf4" stroke="#16a34a"/>
+  <text x="755" y="124" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a" text-anchor="middle">200 OK</text>
+  <text x="755" y="148" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">req.user = user</text>
+  <text x="755" y="166" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">handler ishlaydi</text>
+
+  <!-- YO'Q -> 401 -->
+  <line x1="610" y1="285" x2="680" y2="340" stroke="#dc2626" stroke-width="2.5" marker-end="url(#mr)"/>
+  <text x="640" y="328" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626" text-anchor="middle">YO'Q</text>
+  <rect x="680" y="295" width="150" height="92" rx="10" fill="#fef2f2" stroke="#dc2626"/>
+  <text x="755" y="324" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#dc2626" text-anchor="middle">401</text>
+  <text x="755" y="348" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">Unauthorized</text>
+  <text x="755" y="366" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">handler ISHLAMAYDI</text>
+
+  <text x="430" y="425" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#334155" text-anchor="middle">"YO'Q" sabablari: initData yo'q · hash mos kelmadi (buzilgan) · auth_date eskirgan</text>
+  <text x="430" y="448" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">user.id'ni har doim validatsiyadan KEYINGI initData'dan oling — frontend so'ziga emas</text>
+</svg>

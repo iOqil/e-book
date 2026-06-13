@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480">
+  <title>getChatMember status tekshirish: member, administrator, creator a'zo deb sanaladi; restricted, left, kicked a'zo emas. Bir nechta kanal bo'lsa hammasiga a'zo bo'lishi shart</title>
+  <rect x="0" y="0" width="760" height="480" fill="#f8fafc"/>
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI" font-size="19" font-weight="bold" fill="#1e293b">getChatMember status: kim a'zo, kim emas</text>
+
+  <!-- left: a'zo statuslari -->
+  <rect x="40" y="60" width="320" height="200" rx="14" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="200" y="86" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#15803d">A'ZO deb sanaladi</text>
+  <rect x="64" y="100" width="272" height="32" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="80" y="121" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#15803d">"creator"</text>
+  <text x="320" y="121" text-anchor="end" font-family="Segoe UI" font-size="13" fill="#334155">kanal egasi</text>
+  <rect x="64" y="140" width="272" height="32" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="80" y="161" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#15803d">"administrator"</text>
+  <text x="320" y="161" text-anchor="end" font-family="Segoe UI" font-size="13" fill="#334155">admin</text>
+  <rect x="64" y="180" width="272" height="32" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="80" y="201" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#15803d">"member"</text>
+  <text x="320" y="201" text-anchor="end" font-family="Segoe UI" font-size="13" fill="#334155">oddiy a'zo</text>
+  <text x="200" y="240" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#15803d">AZO.has(status) === true</text>
+
+  <!-- right: a'zo emas statuslari -->
+  <rect x="400" y="60" width="320" height="200" rx="14" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="560" y="86" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#dc2626">A'ZO EMAS</text>
+  <rect x="424" y="100" width="272" height="32" rx="8" fill="#ffffff" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="440" y="121" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">"left"</text>
+  <text x="680" y="121" text-anchor="end" font-family="Segoe UI" font-size="13" fill="#334155">chiqib ketgan</text>
+  <rect x="424" y="140" width="272" height="32" rx="8" fill="#ffffff" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="440" y="161" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">"kicked"</text>
+  <text x="680" y="161" text-anchor="end" font-family="Segoe UI" font-size="13" fill="#334155">bloklangan</text>
+  <rect x="424" y="180" width="272" height="32" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="440" y="201" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#b45309">"restricted"</text>
+  <text x="680" y="201" text-anchor="end" font-family="Segoe UI" font-size="13" fill="#334155">cheklangan*</text>
+  <text x="560" y="240" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">AZO.has(status) === false</text>
+
+  <!-- multi-channel -->
+  <rect x="40" y="290" width="680" height="118" rx="14" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="316" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">Bir nechta kanal: HAMMASIGA a'zo bo'lishi SHART</text>
+  <rect x="70" y="332" width="120" height="40" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="130" y="357" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#15803d">@k1: member</text>
+  <rect x="210" y="332" width="120" height="40" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="270" y="357" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">@k2: left</text>
+  <text x="350" y="357" font-family="Segoe UI" font-size="20" fill="#64748b">&#8594;</text>
+  <rect x="384" y="332" width="316" height="40" rx="8" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="542" y="350" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#b45309">bittasi yetishmasa = gate ko'rsatiladi</text>
+  <text x="542" y="367" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Promise.all([...]) bilan parallel tekshir</text>
+
+  <text x="380" y="436" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">* "restricted" texnik jihatdan kanalda, lekin biz uni qat'iy a'zo deb sanamaymiz (xohlasangiz o'zgartiring)</text>
+  <text x="380" y="458" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">Diqqat: getChatMember ishlashi uchun bot kanalda ADMIN bo'lishi shart</text>
+</svg>

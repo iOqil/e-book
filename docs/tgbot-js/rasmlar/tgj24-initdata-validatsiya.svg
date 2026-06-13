@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <title>initData HMAC validatsiya oqimi: secret_key = HMAC(WebAppData, botToken), computed = HMAC(secret_key, data_check_string), computed === hash</title>
+  <rect x="0" y="0" width="800" height="400" fill="#f8fafc"/>
+  <text x="400" y="32" text-anchor="middle" font-family="Segoe UI" font-size="19" font-weight="bold" fill="#1e293b">HMAC validatsiya: KALIT qaysi, MA'LUMOT qaysi</text>
+
+  <defs>
+    <marker id="a2" markerWidth="11" markerHeight="11" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 Z" fill="#2563eb"/></marker>
+  </defs>
+
+  <!-- 1-qadam: secret_key -->
+  <rect x="24" y="64" width="240" height="150" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="144" y="90" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">1. secret_key</text>
+  <text x="144" y="116" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">HMAC-SHA256</text>
+  <text x="144" y="140" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#dc2626">KALIT = "WebAppData"</text>
+  <text x="144" y="162" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#16a34a">MA'LUMOT = botToken</text>
+  <text x="144" y="190" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">.digest() (xom baytlar,</text>
+  <text x="144" y="207" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">hex EMAS!)</text>
+
+  <line x1="264" y1="139" x2="304" y2="139" stroke="#2563eb" stroke-width="2.5" marker-end="url(#a2)"/>
+
+  <!-- 2-qadam: computed -->
+  <rect x="306" y="64" width="260" height="150" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="436" y="90" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">2. computed_hash</text>
+  <text x="436" y="116" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">HMAC-SHA256</text>
+  <text x="436" y="140" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#dc2626">KALIT = secret_key</text>
+  <text x="436" y="162" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#16a34a">MA'LUMOT = data_check_string</text>
+  <text x="436" y="190" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">.digest("hex")</text>
+  <text x="436" y="207" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">-> 64 belgilik hex satr</text>
+
+  <line x1="566" y1="139" x2="606" y2="139" stroke="#2563eb" stroke-width="2.5" marker-end="url(#a2)"/>
+
+  <!-- 3-qadam: solishtirish -->
+  <rect x="608" y="64" width="168" height="150" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="692" y="90" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#15803d">3. Solishtirish</text>
+  <text x="692" y="120" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">computed</text>
+  <text x="692" y="142" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">=== hash ?</text>
+  <text x="692" y="172" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#15803d">teng -> HAQIQIY</text>
+  <text x="692" y="194" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">teng emas -> SOXTA</text>
+
+  <!-- pastdagi izoh: kalitlarni almashtirmang -->
+  <rect x="60" y="248" width="680" height="56" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="400" y="272" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">Eng ko'p xato: 1-qadamda KALIT va MA'LUMOTni almashtirib qo'yish</text>
+  <text x="400" y="294" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">To'g'ri: createHmac("sha256", "WebAppData").update(botToken)  —  "WebAppData" KALIT, token MA'LUMOT</text>
+
+  <!-- pastdagi izoh: timingSafeEqual -->
+  <rect x="60" y="320" width="680" height="56" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="400" y="344" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb">Productionda === o'rniga crypto.timingSafeEqual ishlating</text>
+  <text x="400" y="366" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">=== erta to'xtaydi va vaqt sirini ochadi (timing attack); timingSafeEqual doim bir xil vaqt sarflaydi</text>
+</svg>
