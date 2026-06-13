@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" font-family="Segoe UI, sans-serif">
+  <title>is_valid() ichidagi validatsiya bosqichlari</title>
+  <rect width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">is_valid() ichida nima bo'ladi?</text>
+
+  <!-- raw data -->
+  <rect x="270" y="58" width="220" height="50" rx="8" fill="#fff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="380" y="80" font-size="14" fill="#1e293b" text-anchor="middle" font-weight="bold">request.POST (xom string)</text>
+  <text x="380" y="99" font-size="13" fill="#334155" text-anchor="middle">{'yosh': '25', 'email': 'a@b'}</text>
+
+  <!-- step 1: to_python / field clean -->
+  <rect x="220" y="138" width="320" height="58" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="162" font-size="14" fill="#1e293b" text-anchor="middle" font-weight="bold">1. Maydon turi tekshiradi</text>
+  <text x="380" y="182" font-size="13" fill="#334155" text-anchor="middle">'25' -> 25 (int), email -> @ bormi</text>
+  <line x1="380" y1="108" x2="380" y2="136" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- step 2: clean_field -->
+  <rect x="220" y="220" width="320" height="58" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="244" font-size="14" fill="#1e293b" text-anchor="middle" font-weight="bold">2. clean_&lt;maydon&gt;()</text>
+  <text x="380" y="264" font-size="13" fill="#334155" text-anchor="middle">sizning bitta maydon qoidangiz</text>
+  <line x1="380" y1="196" x2="380" y2="218" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- step 3: clean -->
+  <rect x="220" y="302" width="320" height="58" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="326" font-size="14" fill="#1e293b" text-anchor="middle" font-weight="bold">3. clean()</text>
+  <text x="380" y="346" font-size="13" fill="#334155" text-anchor="middle">maydonlararo (parol == parol2)</text>
+  <line x1="380" y1="278" x2="380" y2="300" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- result OK -->
+  <rect x="560" y="220" width="180" height="58" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="650" y="244" font-size="14" fill="#1e293b" text-anchor="middle" font-weight="bold">cleaned_data</text>
+  <text x="650" y="264" font-size="13" fill="#334155" text-anchor="middle">toza, tipli qiymatlar</text>
+  <line x1="540" y1="331" x2="640" y2="280" stroke="#16a34a" stroke-width="2" marker-end="url(#a)"/>
+  <text x="610" y="318" font-size="13" fill="#16a34a" text-anchor="middle" font-weight="bold">hammasi OK</text>
+
+  <!-- result error -->
+  <rect x="20" y="220" width="180" height="58" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="110" y="244" font-size="14" fill="#1e293b" text-anchor="middle" font-weight="bold">form.errors</text>
+  <text x="110" y="264" font-size="13" fill="#334155" text-anchor="middle">{'email': ['notogri']}</text>
+  <line x1="220" y1="180" x2="160" y2="218" stroke="#dc2626" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="220" y1="249" x2="202" y2="249" stroke="#dc2626" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="220" y1="331" x2="160" y2="280" stroke="#dc2626" stroke-width="2" marker-end="url(#a)"/>
+  <text x="150" y="200" font-size="13" fill="#dc2626" text-anchor="middle" font-weight="bold">ValidationError</text>
+
+  <text x="380" y="404" font-size="13" fill="#64748b" text-anchor="middle">Bironta bosqich xato bersa -> is_valid() False qaytaradi va xato form.errors ga tushadi</text>
+
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 460" font-family="Segoe UI, sans-serif">
+  <title>N+1 muammosi va select_related/prefetch_related yechimi: ko'p so'rovdan kam so'rovga</title>
+  <rect width="760" height="460" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">N+1 muammo va uning yechimi</text>
+
+  <!-- N+1 problem -->
+  <rect x="30" y="58" width="700" height="160" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="50" y="84" font-size="16" font-weight="bold" fill="#dc2626">Muammo: N+1 so'rov</text>
+  <text x="50" y="106" font-size="13" fill="#334155">for post in Post.objects.all(): print(post.author.username)</text>
+  <rect x="50" y="120" width="150" height="32" rx="6" fill="#fee2e2" stroke="#dc2626"/>
+  <text x="125" y="141" text-anchor="middle" font-size="13" fill="#1e293b">1: hamma postlar</text>
+  <rect x="220" y="120" width="90" height="32" rx="6" fill="#fee2e2" stroke="#dc2626"/>
+  <text x="265" y="141" text-anchor="middle" font-size="13" fill="#1e293b">+1 author</text>
+  <rect x="320" y="120" width="90" height="32" rx="6" fill="#fee2e2" stroke="#dc2626"/>
+  <text x="365" y="141" text-anchor="middle" font-size="13" fill="#1e293b">+1 author</text>
+  <rect x="420" y="120" width="90" height="32" rx="6" fill="#fee2e2" stroke="#dc2626"/>
+  <text x="465" y="141" text-anchor="middle" font-size="13" fill="#1e293b">+1 author</text>
+  <text x="540" y="141" font-size="20" fill="#dc2626">...</text>
+  <text x="50" y="186" font-size="14" fill="#dc2626" font-weight="bold">5 post &#8594; 6 ta SQL so'rov (1 + 5)</text>
+  <text x="50" y="206" font-size="13" fill="#334155">1000 post bo'lsa &#8594; 1001 so'rov! Baza tiqilib qoladi.</text>
+
+  <!-- select_related -->
+  <rect x="30" y="234" width="340" height="200" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="50" y="260" font-size="16" font-weight="bold" fill="#16a34a">select_related (FK, O2O)</text>
+  <text x="50" y="282" font-size="13" fill="#334155">SQL JOIN bilan bitta so'rov</text>
+  <rect x="50" y="296" width="290" height="40" rx="6" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="195" y="321" text-anchor="middle" font-size="13" fill="#1e293b">Post JOIN auth_user</text>
+  <text x="50" y="364" font-size="14" font-weight="bold" fill="#16a34a">1 ta SQL so'rov</text>
+  <text x="50" y="388" font-size="13" fill="#334155">Post.objects</text>
+  <text x="50" y="408" font-size="13" fill="#334155">  .select_related("author")</text>
+
+  <!-- prefetch_related -->
+  <rect x="390" y="234" width="340" height="200" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="410" y="260" font-size="16" font-weight="bold" fill="#2563eb">prefetch_related (M2M, teskari)</text>
+  <text x="410" y="282" font-size="13" fill="#334155">Ikki so'rov, Python da birlashtiradi</text>
+  <rect x="410" y="296" width="140" height="34" rx="6" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="480" y="318" text-anchor="middle" font-size="13" fill="#1e293b">1: postlar</text>
+  <rect x="560" y="296" width="150" height="34" rx="6" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="635" y="318" text-anchor="middle" font-size="13" fill="#1e293b">2: hamma teglar</text>
+  <text x="410" y="364" font-size="14" font-weight="bold" fill="#2563eb">2 ta SQL so'rov (doimiy)</text>
+  <text x="410" y="388" font-size="13" fill="#334155">Post.objects</text>
+  <text x="410" y="408" font-size="13" fill="#334155">  .prefetch_related("tags")</text>
+</svg>

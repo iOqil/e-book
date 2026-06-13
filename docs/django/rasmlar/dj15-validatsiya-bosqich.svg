@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 440" font-family="Segoe UI, sans-serif">
+  <title>is_valid() ichidagi DRF validatsiya bosqichlari</title>
+  <rect width="780" height="440" fill="#f8fafc"/>
+  <text x="390" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">serializer.is_valid() ichida nima bo'ladi?</text>
+
+  <!-- raw data -->
+  <rect x="280" y="56" width="220" height="52" rx="8" fill="#fff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="390" y="79" font-size="14" fill="#1e293b" text-anchor="middle" font-weight="bold">request.data (xom JSON)</text>
+  <text x="390" y="98" font-size="13" fill="#334155" text-anchor="middle">{"narx": "-5", "soni": 0}</text>
+
+  <!-- step 1: field validation -->
+  <rect x="230" y="138" width="320" height="56" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="390" y="161" font-size="14" fill="#1e293b" text-anchor="middle" font-weight="bold">1. Maydon turi tekshiradi</text>
+  <text x="390" y="181" font-size="13" fill="#334155" text-anchor="middle">"-5" -&gt; Decimal, max_length, required</text>
+  <line x1="390" y1="108" x2="390" y2="136" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- step 2: validate_field -->
+  <rect x="230" y="218" width="320" height="56" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="390" y="241" font-size="14" fill="#1e293b" text-anchor="middle" font-weight="bold">2. validate_&lt;maydon&gt;(self, value)</text>
+  <text x="390" y="261" font-size="13" fill="#334155" text-anchor="middle">bitta maydon: narx &gt; 0 mi?</text>
+  <line x1="390" y1="194" x2="390" y2="216" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- step 3: validate -->
+  <rect x="230" y="298" width="320" height="56" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="390" y="321" font-size="14" fill="#1e293b" text-anchor="middle" font-weight="bold">3. validate(self, data)</text>
+  <text x="390" y="341" font-size="13" fill="#334155" text-anchor="middle">maydonlararo: qimmat + soni=0?</text>
+  <line x1="390" y1="274" x2="390" y2="296" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- result OK -->
+  <rect x="580" y="218" width="180" height="56" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="670" y="241" font-size="14" fill="#1e293b" text-anchor="middle" font-weight="bold">validated_data</text>
+  <text x="670" y="261" font-size="13" fill="#334155" text-anchor="middle">toza, tipli qiymat</text>
+  <line x1="560" y1="326" x2="660" y2="276" stroke="#16a34a" stroke-width="2" marker-end="url(#a)"/>
+  <text x="640" y="306" font-size="13" fill="#16a34a" text-anchor="middle" font-weight="bold">True</text>
+
+  <!-- result error -->
+  <rect x="20" y="218" width="180" height="56" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="110" y="241" font-size="14" fill="#1e293b" text-anchor="middle" font-weight="bold">.errors</text>
+  <text x="110" y="261" font-size="13" fill="#334155" text-anchor="middle">{"narx": ["..."]}</text>
+  <line x1="230" y1="178" x2="170" y2="216" stroke="#dc2626" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="230" y1="246" x2="202" y2="246" stroke="#dc2626" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="230" y1="326" x2="170" y2="276" stroke="#dc2626" stroke-width="2" marker-end="url(#a)"/>
+  <text x="150" y="200" font-size="13" fill="#dc2626" text-anchor="middle" font-weight="bold">ValidationError</text>
+
+  <text x="390" y="404" font-size="13" fill="#64748b" text-anchor="middle">Bironta bosqich xato bersa -&gt; is_valid() False, xato .errors ga tushadi (HTTP 400)</text>
+
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+</svg>

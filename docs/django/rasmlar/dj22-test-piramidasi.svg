@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440">
+  <title>Test piramidasi: unit, integratsiya, E2E</title>
+  <rect x="0" y="0" width="720" height="440" fill="#f8fafc"/>
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Test piramidasi</text>
+
+  <!-- E2E top -->
+  <polygon points="360,60 430,135 290,135" fill="#dc2626" opacity="0.85"/>
+  <text x="360" y="108" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#ffffff">E2E</text>
+
+  <!-- Integration mid -->
+  <polygon points="290,140 430,140 500,255 220,255" fill="#f59e0b" opacity="0.9"/>
+  <text x="360" y="205" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#1e293b">Integratsiya (view, API)</text>
+
+  <!-- Unit base -->
+  <polygon points="220,260 500,260 570,375 150,375" fill="#16a34a" opacity="0.9"/>
+  <text x="360" y="325" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#ffffff">Unit (model, funksiya)</text>
+
+  <!-- arrows: speed and count -->
+  <line x1="610" y1="80" x2="610" y2="360" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+  <text x="630" y="100" font-family="Segoe UI" font-size="14" fill="#334155">kam,</text>
+  <text x="630" y="120" font-family="Segoe UI" font-size="14" fill="#334155">sekin,</text>
+  <text x="630" y="140" font-family="Segoe UI" font-size="14" fill="#334155">qimmat</text>
+  <text x="630" y="330" font-family="Segoe UI" font-size="14" fill="#334155">kop,</text>
+  <text x="630" y="350" font-family="Segoe UI" font-size="14" fill="#334155">tez, arzon</text>
+
+  <line x1="110" y1="360" x2="110" y2="80" stroke="#2563eb" stroke-width="2" marker-end="url(#b)"/>
+  <text x="40" y="220" font-family="Segoe UI" font-size="14" fill="#2563eb">soni</text>
+
+  <text x="150" y="410" font-family="Segoe UI" font-size="14" fill="#64748b">Asos kop unit-testdan iborat: ishonchli poydevor.</text>
+
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/>
+    </marker>
+    <marker id="b" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+</svg>

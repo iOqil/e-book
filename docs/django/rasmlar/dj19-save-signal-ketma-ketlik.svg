@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" font-family="Segoe UI, sans-serif">
+  <title>save() chaqirilganda signallarning ketma-ketligi: pre_save, INSERT/UPDATE, post_save</title>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="21" font-weight="bold" fill="#1e293b">post.save() ichida nima sodir bo'ladi</text>
+
+  <defs>
+    <marker id="b19" markerWidth="11" markerHeight="11" refX="5" refY="9" orient="auto">
+      <path d="M5,9 L0,0 L10,0 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <!-- vertical flow -->
+  <!-- step 1 -->
+  <rect x="230" y="64" width="300" height="52" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="88" text-anchor="middle" font-size="15" font-weight="bold" fill="#2563eb">1. post.save() chaqirildi</text>
+  <text x="380" y="107" text-anchor="middle" font-size="13" fill="#64748b">dasturchi yoki view tomonidan</text>
+
+  <line x1="380" y1="116" x2="380" y2="142" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#b19)"/>
+
+  <!-- step 2 pre_save -->
+  <rect x="200" y="142" width="360" height="56" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="380" y="166" text-anchor="middle" font-size="15" font-weight="bold" fill="#b45309">2. pre_save signali</text>
+  <text x="380" y="187" text-anchor="middle" font-size="13" fill="#334155">instance hali bazaga yozilmagan -- maydonni o'zgartirish mumkin</text>
+
+  <line x1="380" y1="198" x2="380" y2="224" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#b19)"/>
+
+  <!-- step 3 SQL -->
+  <rect x="230" y="224" width="300" height="56" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="380" y="248" text-anchor="middle" font-size="15" font-weight="bold" fill="#16a34a">3. SQL: INSERT yoki UPDATE</text>
+  <text x="380" y="269" text-anchor="middle" font-size="13" fill="#334155">ma'lumotlar bazasiga yoziladi</text>
+
+  <line x1="380" y1="280" x2="380" y2="306" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#b19)"/>
+
+  <!-- step 4 post_save -->
+  <rect x="200" y="306" width="360" height="68" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="380" y="330" text-anchor="middle" font-size="15" font-weight="bold" fill="#b45309">4. post_save signali</text>
+  <text x="380" y="350" text-anchor="middle" font-size="13" fill="#334155">created=True (yangi) yoki False (yangilash)</text>
+  <text x="380" y="368" text-anchor="middle" font-size="13" fill="#334155">instance.pk endi mavjud -- bog'liq obyekt yaratish mumkin</text>
+
+  <!-- side annotations -->
+  <rect x="40" y="142" width="140" height="56" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.2"/>
+  <text x="110" y="166" text-anchor="middle" font-size="13" fill="#2563eb">slug yasash</text>
+  <text x="110" y="185" text-anchor="middle" font-size="13" fill="#2563eb">sana belgilash</text>
+
+  <rect x="580" y="306" width="140" height="68" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.2"/>
+  <text x="650" y="330" text-anchor="middle" font-size="13" fill="#16a34a">log yozish</text>
+  <text x="650" y="349" text-anchor="middle" font-size="13" fill="#16a34a">xabar yuborish</text>
+  <text x="650" y="368" text-anchor="middle" font-size="13" fill="#16a34a">kesh tozalash</text>
+
+  <!-- bottom warning -->
+  <rect x="40" y="400" width="680" height="50" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="380" y="430" text-anchor="middle" font-size="14" fill="#991b1b">Diqqat: post_save ichida yana instance.save() chaqirsangiz -- cheksiz tsikl xavfi bor</text>
+</svg>

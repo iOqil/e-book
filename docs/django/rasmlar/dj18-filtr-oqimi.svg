@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 440" font-family="Segoe UI, sans-serif">
+  <title>DRF list view: so'rovdan javobgacha — filtr, paginatsiya, serializer oqimi</title>
+  <rect width="820" height="440" fill="#f8fafc"/>
+  <text x="410" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">List view oqimi: queryset -> filtr -> paginatsiya -> JSON</text>
+
+  <!-- request -->
+  <rect x="30" y="70" width="220" height="70" rx="10" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+  <text x="140" y="98" font-size="15" fill="#2563eb" text-anchor="middle" font-weight="bold">GET so'rov</text>
+  <text x="140" y="122" font-size="13" fill="#334155" text-anchor="middle">?kategoriya=telefon</text>
+
+  <!-- queryset -->
+  <rect x="300" y="70" width="220" height="70" rx="10" fill="#fff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="410" y="98" font-size="15" fill="#1e293b" text-anchor="middle" font-weight="bold">get_queryset()</text>
+  <text x="410" y="122" font-size="13" fill="#334155" text-anchor="middle">hamma mahsulot (12)</text>
+
+  <!-- filter backends -->
+  <rect x="570" y="70" width="220" height="120" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="680" y="96" font-size="15" fill="#2563eb" text-anchor="middle" font-weight="bold">filter_backends</text>
+  <line x1="580" y1="106" x2="780" y2="106" stroke="#94a3b8" stroke-width="1"/>
+  <text x="590" y="128" font-size="13" fill="#334155">1. DjangoFilterBackend</text>
+  <text x="590" y="150" font-size="13" fill="#334155">2. SearchFilter</text>
+  <text x="590" y="172" font-size="13" fill="#334155">3. OrderingFilter</text>
+
+  <!-- pagination -->
+  <rect x="570" y="230" width="220" height="80" rx="10" fill="#fef9c3" stroke="#f59e0b" stroke-width="2"/>
+  <text x="680" y="258" font-size="15" fill="#1e293b" text-anchor="middle" font-weight="bold">Pagination</text>
+  <text x="680" y="282" font-size="13" fill="#334155" text-anchor="middle">5 ta tanlandi (page=1)</text>
+  <text x="680" y="300" font-size="13" fill="#64748b" text-anchor="middle">count, next, previous</text>
+
+  <!-- serializer -->
+  <rect x="300" y="230" width="220" height="80" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="410" y="258" font-size="15" fill="#16a34a" text-anchor="middle" font-weight="bold">Serializer</text>
+  <text x="410" y="282" font-size="13" fill="#334155" text-anchor="middle">obyekt -> dict</text>
+  <text x="410" y="300" font-size="13" fill="#64748b" text-anchor="middle">nested, method-field</text>
+
+  <!-- response -->
+  <rect x="30" y="230" width="220" height="80" rx="10" fill="#fff" stroke="#16a34a" stroke-width="2"/>
+  <text x="140" y="258" font-size="15" fill="#16a34a" text-anchor="middle" font-weight="bold">JSON javob</text>
+  <text x="140" y="282" font-size="13" fill="#334155" text-anchor="middle">{ count, results: [...] }</text>
+  <text x="140" y="300" font-size="13" fill="#64748b" text-anchor="middle">200 OK</text>
+
+  <!-- arrows -->
+  <line x1="250" y1="105" x2="298" y2="105" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="520" y1="105" x2="568" y2="105" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="680" y1="190" x2="680" y2="228" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="568" y1="270" x2="522" y2="270" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="298" y1="270" x2="252" y2="270" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+
+  <text x="410" y="380" font-size="14" fill="#334155" text-anchor="middle" font-weight="bold">Filtrlar querysetni qisqartiradi, paginatsiya bo'laklaydi, serializer JSON qiladi</text>
+  <text x="410" y="406" font-size="13" fill="#64748b" text-anchor="middle">Har bosqich bir-biriga ulanadi: 12 qator -> filtr -> 5 qator sahifa -> JSON</text>
+
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+</svg>

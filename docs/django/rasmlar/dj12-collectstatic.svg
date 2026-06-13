@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 400" font-family="Segoe UI, sans-serif">
+  <title>collectstatic: tarqoq static fayllarni bitta joyga yig'ish</title>
+  <rect width="780" height="400" fill="#f8fafc"/>
+  <text x="390" y="36" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">collectstatic: tarqoq fayllarni bitta papkaga yig'adi</text>
+
+  <!-- sources -->
+  <text x="150" y="76" font-size="15" fill="#2563eb" text-anchor="middle" font-weight="bold">Manbalar (DEV)</text>
+
+  <rect x="40" y="92" width="220" height="58" rx="8" fill="#fff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="56" y="116" font-size="13" fill="#334155" font-weight="bold">blog/static/blog/</text>
+  <text x="56" y="138" font-size="13" fill="#334155">style.css, app.js</text>
+
+  <rect x="40" y="162" width="220" height="58" rx="8" fill="#fff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="56" y="186" font-size="13" fill="#334155" font-weight="bold">STATICFILES_DIRS</text>
+  <text x="56" y="208" font-size="13" fill="#334155">site/css/global.css</text>
+
+  <rect x="40" y="232" width="220" height="58" rx="8" fill="#fff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="56" y="256" font-size="13" fill="#334155" font-weight="bold">admin (Django ichki)</text>
+  <text x="56" y="278" font-size="13" fill="#334155">admin/css, admin/js</text>
+
+  <!-- command box -->
+  <rect x="300" y="150" width="180" height="80" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="390" y="182" font-size="14" fill="#1e293b" text-anchor="middle" font-weight="bold">manage.py</text>
+  <text x="390" y="204" font-size="14" fill="#b45309" text-anchor="middle" font-weight="bold">collectstatic</text>
+
+  <!-- arrows in -->
+  <line x1="262" y1="121" x2="298" y2="170" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="262" y1="191" x2="298" y2="190" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="262" y1="261" x2="298" y2="210" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- target -->
+  <rect x="520" y="150" width="230" height="100" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="635" y="182" font-size="15" fill="#16a34a" text-anchor="middle" font-weight="bold">STATIC_ROOT</text>
+  <text x="635" y="204" font-size="13" fill="#334155" text-anchor="middle">staticfiles/</text>
+  <text x="635" y="226" font-size="13" fill="#334155" text-anchor="middle">hammasi bitta joyda</text>
+  <text x="635" y="244" font-size="13" fill="#334155" text-anchor="middle">(nginx/CDN shu yerdan beradi)</text>
+  <line x1="482" y1="190" x2="518" y2="190" stroke="#16a34a" stroke-width="2.5" marker-end="url(#g)"/>
+
+  <text x="390" y="320" font-size="14" fill="#334155" text-anchor="middle">DEV (DEBUG=True): Django o'zi beradi, collectstatic shart emas.</text>
+  <text x="390" y="344" font-size="14" fill="#334155" text-anchor="middle">PROD: collectstatic bir marta ishlatiladi, fayllarni veb-server uzatadi.</text>
+  <text x="390" y="372" font-size="13" fill="#dc2626" text-anchor="middle" font-weight="bold">STATIC_ROOT != STATICFILES_DIRS papkalari (ular ustma-ust tushmasin)</text>
+
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+    <marker id="g" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+</svg>

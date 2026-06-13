@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 420" font-family="Segoe UI, sans-serif">
+  <title>Rasm yuklash oqimi: brauzerdan diskka va URL orqali ortga</title>
+  <rect width="780" height="420" fill="#f8fafc"/>
+  <text x="390" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Media yuklash oqimi: yuklash -> diskka -> URL bilan ko'rsatish</text>
+
+  <!-- step 1 browser form -->
+  <rect x="30" y="70" width="200" height="120" rx="10" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+  <text x="130" y="96" font-size="14" fill="#2563eb" text-anchor="middle" font-weight="bold">1. Brauzer formasi</text>
+  <text x="48" y="122" font-size="13" fill="#334155">&lt;form method="post"</text>
+  <text x="48" y="142" font-size="13" fill="#dc2626">enctype="multipart/</text>
+  <text x="48" y="160" font-size="13" fill="#dc2626">form-data"&gt;</text>
+  <text x="48" y="182" font-size="13" fill="#334155">&lt;input type="file"&gt;</text>
+
+  <!-- step 2 request.FILES -->
+  <rect x="290" y="70" width="200" height="120" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="390" y="96" font-size="14" fill="#b45309" text-anchor="middle" font-weight="bold">2. View</text>
+  <text x="308" y="122" font-size="13" fill="#334155">Form(request.POST,</text>
+  <text x="322" y="142" font-size="13" fill="#16a34a" font-weight="bold">request.FILES)</text>
+  <text x="308" y="166" font-size="13" fill="#334155">is_valid()</text>
+  <text x="308" y="184" font-size="13" fill="#334155">form.save()</text>
+
+  <!-- step 3 disk -->
+  <rect x="550" y="70" width="200" height="120" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="650" y="96" font-size="14" fill="#16a34a" text-anchor="middle" font-weight="bold">3. Diskka yoziladi</text>
+  <text x="568" y="122" font-size="13" fill="#334155">MEDIA_ROOT/</text>
+  <text x="582" y="142" font-size="13" fill="#334155">mahsulotlar/rasm.png</text>
+  <text x="568" y="168" font-size="13" fill="#334155">Bazada faqat YO'L</text>
+  <text x="568" y="186" font-size="13" fill="#334155">saqlanadi (matn)</text>
+
+  <line x1="230" y1="130" x2="288" y2="130" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="490" y1="130" x2="548" y2="130" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- bottom: show back -->
+  <rect x="30" y="240" width="200" height="110" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="130" y="266" font-size="14" fill="#16a34a" text-anchor="middle" font-weight="bold">4. Disk fayli</text>
+  <text x="48" y="292" font-size="13" fill="#334155">media/mahsulotlar/</text>
+  <text x="62" y="310" font-size="13" fill="#334155">rasm.png</text>
+  <text x="48" y="334" font-size="13" fill="#64748b">(haqiqiy bayt)</text>
+
+  <rect x="290" y="240" width="200" height="110" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="390" y="266" font-size="14" fill="#2563eb" text-anchor="middle" font-weight="bold">5. Shablon</text>
+  <text x="308" y="294" font-size="13" fill="#334155">&lt;img src=</text>
+  <text x="322" y="314" font-size="13" fill="#16a34a" font-weight="bold">"{{ m.rasm.url }}"&gt;</text>
+  <text x="308" y="338" font-size="13" fill="#64748b">-> /media/...png</text>
+
+  <rect x="550" y="240" width="200" height="110" rx="10" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+  <text x="650" y="266" font-size="14" fill="#2563eb" text-anchor="middle" font-weight="bold">6. Brauzerda rasm</text>
+  <text x="650" y="298" font-size="13" fill="#334155" text-anchor="middle">GET /media/.../rasm.png</text>
+  <text x="650" y="322" font-size="13" fill="#334155" text-anchor="middle">DEV: Django beradi</text>
+  <text x="650" y="340" font-size="13" fill="#334155" text-anchor="middle">PROD: nginx beradi</text>
+
+  <line x1="230" y1="295" x2="288" y2="295" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="490" y1="295" x2="548" y2="295" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="650" y1="190" x2="130" y2="240" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#s)"/>
+
+  <text x="390" y="392" font-size="13" fill="#dc2626" text-anchor="middle" font-weight="bold">enctype="multipart/form-data" bo'lmasa request.FILES bo'sh qoladi!</text>
+
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+    <marker id="s" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+</svg>

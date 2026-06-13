@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420">
+  <title>ORM ifodasidan SQL so'roviga: aggregate, annotate, F va Q</title>
+  <rect width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="34" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Python ORM ifodasi  →  SQL so'rovi</text>
+
+  <!-- Python side -->
+  <rect x="30" y="60" width="320" height="300" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="50" y="88" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb">Python (siz yozasiz)</text>
+
+  <rect x="48" y="104" width="284" height="50" rx="6" fill="#eff6ff"/>
+  <text x="60" y="126" font-family="Segoe UI" font-size="14" fill="#1e293b">Product.objects</text>
+  <text x="60" y="146" font-family="Segoe UI" font-size="14" fill="#16a34a">  .aggregate(Sum("narx"))</text>
+
+  <rect x="48" y="164" width="284" height="50" rx="6" fill="#eff6ff"/>
+  <text x="60" y="186" font-family="Segoe UI" font-size="14" fill="#1e293b">Category.objects</text>
+  <text x="60" y="206" font-family="Segoe UI" font-size="14" fill="#16a34a">  .annotate(n=Count("mahsulotlar"))</text>
+
+  <rect x="48" y="224" width="284" height="50" rx="6" fill="#eff6ff"/>
+  <text x="60" y="246" font-family="Segoe UI" font-size="14" fill="#1e293b">.update(</text>
+  <text x="60" y="266" font-family="Segoe UI" font-size="14" fill="#f59e0b">  korishlar=F("korishlar") + 1)</text>
+
+  <rect x="48" y="284" width="284" height="50" rx="6" fill="#eff6ff"/>
+  <text x="60" y="306" font-family="Segoe UI" font-size="14" fill="#1e293b">.filter(</text>
+  <text x="60" y="326" font-family="Segoe UI" font-size="14" fill="#dc2626">  Q(narx__lt=100000) | Q(zaxira__gt=20))</text>
+
+  <!-- arrow -->
+  <line x1="358" y1="210" x2="408" y2="210" stroke="#94a3b8" stroke-width="3"/>
+  <polygon points="408,210 396,203 396,217" fill="#94a3b8"/>
+  <text x="383" y="200" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">ORM</text>
+
+  <!-- SQL side -->
+  <rect x="414" y="60" width="316" height="300" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="434" y="88" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a">SQL (baza bajaradi)</text>
+
+  <rect x="432" y="104" width="280" height="50" rx="6" fill="#f0fdf4"/>
+  <text x="444" y="126" font-family="Segoe UI" font-size="13" fill="#1e293b">SELECT SUM("narx")</text>
+  <text x="444" y="146" font-family="Segoe UI" font-size="13" fill="#334155">FROM "shop_product"</text>
+
+  <rect x="432" y="164" width="280" height="50" rx="6" fill="#f0fdf4"/>
+  <text x="444" y="186" font-family="Segoe UI" font-size="13" fill="#1e293b">SELECT ..., COUNT(p.id) AS n</text>
+  <text x="444" y="206" font-family="Segoe UI" font-size="13" fill="#334155">... GROUP BY category.id</text>
+
+  <rect x="432" y="224" width="280" height="50" rx="6" fill="#f0fdf4"/>
+  <text x="444" y="246" font-family="Segoe UI" font-size="13" fill="#1e293b">UPDATE "shop_product" SET</text>
+  <text x="444" y="266" font-family="Segoe UI" font-size="13" fill="#334155">korishlar = korishlar + 1</text>
+
+  <rect x="432" y="284" width="280" height="50" rx="6" fill="#f0fdf4"/>
+  <text x="444" y="306" font-family="Segoe UI" font-size="13" fill="#1e293b">WHERE narx &lt; 100000</text>
+  <text x="444" y="326" font-family="Segoe UI" font-size="13" fill="#334155">   OR zaxira &gt; 20</text>
+
+  <text x="380" y="398" font-family="Segoe UI" font-size="14" fill="#334155" text-anchor="middle">Asosiy fikr: hisob-kitobni Python emas, BAZA bajarsa tezroq va xavfsizroq.</text>
+</svg>

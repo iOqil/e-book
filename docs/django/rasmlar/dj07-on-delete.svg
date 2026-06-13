@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" font-family="Segoe UI, sans-serif">
+  <title>on_delete strategiyalari: CASCADE, PROTECT, SET_NULL ota obyekt o'chganda nima bo'ladi</title>
+  <rect width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">on_delete: ota o'chsa, bola nima bo'ladi?</text>
+  <text x="380" y="58" text-anchor="middle" font-size="14" fill="#334155">Category (ota) o'chiriladi &#8594; uning Post'lari (bola) nima bo'ladi?</text>
+
+  <!-- CASCADE -->
+  <rect x="30" y="84" width="220" height="320" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="140" y="112" text-anchor="middle" font-size="16" font-weight="bold" fill="#dc2626">CASCADE</text>
+  <rect x="80" y="128" width="120" height="38" rx="8" fill="#fee2e2" stroke="#dc2626"/>
+  <text x="140" y="152" text-anchor="middle" font-size="13" fill="#1e293b">Category &#10006;</text>
+  <line x1="140" y1="166" x2="140" y2="196" stroke="#dc2626" stroke-width="2"/>
+  <rect x="80" y="196" width="120" height="34" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-dasharray="5 4"/>
+  <text x="140" y="218" text-anchor="middle" font-size="13" fill="#dc2626">Post &#10006;</text>
+  <rect x="80" y="240" width="120" height="34" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-dasharray="5 4"/>
+  <text x="140" y="262" text-anchor="middle" font-size="13" fill="#dc2626">Post &#10006;</text>
+  <text x="140" y="318" text-anchor="middle" font-size="13" fill="#334155">Bolalar ham</text>
+  <text x="140" y="338" text-anchor="middle" font-size="13" fill="#334155">birga o'chadi</text>
+  <text x="140" y="372" text-anchor="middle" font-size="13" font-weight="bold" fill="#dc2626">eng keng tarqalgan</text>
+
+  <!-- PROTECT -->
+  <rect x="270" y="84" width="220" height="320" rx="12" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="380" y="112" text-anchor="middle" font-size="16" font-weight="bold" fill="#f59e0b">PROTECT</text>
+  <rect x="320" y="128" width="120" height="38" rx="8" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="152" text-anchor="middle" font-size="13" fill="#1e293b">Category</text>
+  <line x1="380" y1="166" x2="380" y2="196" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="320" y="196" width="120" height="34" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="218" text-anchor="middle" font-size="13" fill="#1e293b">Post (bor)</text>
+  <circle cx="380" cy="262" r="17" fill="none" stroke="#dc2626" stroke-width="4"/>
+  <line x1="368" y1="250" x2="392" y2="274" stroke="#dc2626" stroke-width="4"/>
+  <text x="380" y="318" text-anchor="middle" font-size="13" fill="#334155">Bola bor ekan,</text>
+  <text x="380" y="338" text-anchor="middle" font-size="13" fill="#334155">o'chirishga yo'l yo'q</text>
+  <text x="380" y="372" text-anchor="middle" font-size="13" font-weight="bold" fill="#f59e0b">ProtectedError</text>
+
+  <!-- SET_NULL -->
+  <rect x="510" y="84" width="220" height="320" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="620" y="112" text-anchor="middle" font-size="16" font-weight="bold" fill="#16a34a">SET_NULL</text>
+  <rect x="560" y="128" width="120" height="38" rx="8" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="620" y="152" text-anchor="middle" font-size="13" fill="#1e293b">Category &#10006;</text>
+  <line x1="620" y1="166" x2="620" y2="196" stroke="#16a34a" stroke-width="2" stroke-dasharray="5 4"/>
+  <rect x="560" y="196" width="120" height="34" rx="6" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="620" y="218" text-anchor="middle" font-size="13" fill="#1e293b">Post (qoladi)</text>
+  <rect x="560" y="240" width="120" height="34" rx="6" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="620" y="262" text-anchor="middle" font-size="13" fill="#1e293b">category = NULL</text>
+  <text x="620" y="318" text-anchor="middle" font-size="13" fill="#334155">Bola yashaydi,</text>
+  <text x="620" y="338" text-anchor="middle" font-size="13" fill="#334155">bog'lanish uziladi</text>
+  <text x="620" y="372" text-anchor="middle" font-size="13" font-weight="bold" fill="#16a34a">null=True shart</text>
+</svg>

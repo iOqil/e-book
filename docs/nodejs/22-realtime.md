@@ -516,7 +516,7 @@ Bir necha muhim qoida:
 - **Mijoz ma'lumotiga hech qachon ishonmang.** `text`, `room` — bularning hammasi foydalanuvchidan keladi; uzunligini cheklang, tozalang (sanitize), kerak bo'lsa **zod** (21-bob) bilan validatsiya qiling.
 - `wss://` (TLS) — chunki token ochiq kanalda ketmasligi kerak.
 
-Ko'prik: autentifikatsiya, JWT, parol heshlash bo'yicha to'liq mantiq — **[20-bobda](./20-autentifikatsiya.md)**; kiruvchi ma'lumotni validatsiya va xavfsizlik sozlamalari — **[21-bobda](./21-xavfsizlik-config.md)**.
+Ko'prik: autentifikatsiya, JWT, parol heshlash bo'yicha to'liq mantiq — **[20-bobda](./20-auth.md)**; kiruvchi ma'lumotni validatsiya va xavfsizlik sozlamalari — **[21-bobda](./21-xavfsizlik-config.md)**.
 
 ---
 

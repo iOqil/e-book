@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360">
+  <title>render() oqimi: view + context + shablon -> HTTP javob</title>
+  <rect x="0" y="0" width="760" height="360" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b">render() qanday ishlaydi</text>
+
+  <!-- View -->
+  <rect x="30" y="80" width="180" height="90" rx="10" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+  <text x="120" y="112" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb">View funksiya</text>
+  <text x="120" y="136" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">request keladi</text>
+  <text x="120" y="156" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">ma'lumot tayyorlaydi</text>
+
+  <!-- Context -->
+  <rect x="290" y="55" width="180" height="60" rx="10" fill="#fff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="380" y="80" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#f59e0b">context (dict)</text>
+  <text x="380" y="100" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">{"ism": "Oqil"}</text>
+
+  <!-- Template -->
+  <rect x="290" y="135" width="180" height="60" rx="10" fill="#fff" stroke="#16a34a" stroke-width="2"/>
+  <text x="380" y="160" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">.html shablon</text>
+  <text x="380" y="180" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Salom, {{ ism }}!</text>
+
+  <!-- Engine -->
+  <rect x="540" y="80" width="190" height="90" rx="10" fill="#fff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="635" y="112" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">Template mexanizmi</text>
+  <text x="635" y="136" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">o'zgaruvchi + teg</text>
+  <text x="635" y="156" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">birlashtiradi (render)</text>
+
+  <!-- Arrows -->
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <line x1="210" y1="100" x2="285" y2="85" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="210" y1="150" x2="285" y2="165" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="470" y1="85" x2="535" y2="110" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="470" y1="165" x2="535" y2="140" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Result -->
+  <rect x="250" y="250" width="260" height="70" rx="10" fill="#16a34a"/>
+  <text x="380" y="280" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#ffffff">HttpResponse (tayyor HTML)</text>
+  <text x="380" y="304" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#ffffff">Salom, Oqil!</text>
+  <line x1="635" y1="170" x2="500" y2="250" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="630" y="220" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">brauzerga</text>
+</svg>

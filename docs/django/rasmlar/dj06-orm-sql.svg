@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" font-family="Segoe UI, sans-serif">
+  <title>ORM kodidan SQL so'rovgacha: Django QuerySet qanday SQL ga aylanadi</title>
+  <rect x="0" y="0" width="760" height="360" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">ORM dan SQL gacha: bitta yo'l</text>
+
+  <!-- Python ORM kod -->
+  <rect x="30" y="64" width="300" height="120" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="180" y="90" text-anchor="middle" font-size="15" font-weight="bold" fill="#2563eb">1. Python ORM kodi</text>
+  <text x="48" y="120" font-size="14" fill="#334155">Product.objects.filter(</text>
+  <text x="64" y="142" font-size="14" fill="#334155">price__gt=1000000</text>
+  <text x="48" y="164" font-size="14" fill="#334155">).order_by("name")</text>
+
+  <!-- arrow -->
+  <line x1="180" y1="184" x2="180" y2="216" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="180,224 174,212 186,212" fill="#94a3b8"/>
+  <text x="200" y="206" font-size="13" fill="#64748b">ORM tarjima qiladi</text>
+
+  <!-- SQL -->
+  <rect x="30" y="226" width="300" height="110" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="180" y="252" text-anchor="middle" font-size="15" font-weight="bold" fill="#16a34a">2. Hosil bo'lgan SQL</text>
+  <text x="48" y="280" font-size="13" fill="#334155">SELECT * FROM store_product</text>
+  <text x="48" y="302" font-size="13" fill="#334155">WHERE price &gt; 1000000</text>
+  <text x="48" y="324" font-size="13" fill="#334155">ORDER BY name ASC;</text>
+
+  <!-- arrow to DB -->
+  <line x1="330" y1="281" x2="430" y2="281" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="438,281 426,275 426,287" fill="#94a3b8"/>
+
+  <!-- Database -->
+  <rect x="450" y="226" width="280" height="110" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="590" y="252" text-anchor="middle" font-size="15" font-weight="bold" fill="#f59e0b">3. Ma'lumotlar bazasi</text>
+  <ellipse cx="590" cy="288" rx="50" ry="14" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="590" y="293" text-anchor="middle" font-size="13" fill="#334155">SQLite / PG</text>
+  <text x="590" y="324" text-anchor="middle" font-size="13" fill="#64748b">qatorlarni qaytaradi</text>
+
+  <!-- back arrow with objects -->
+  <line x1="450" y1="120" x2="350" y2="120" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="342,120 354,114 354,126" fill="#94a3b8"/>
+  <rect x="450" y="64" width="280" height="120" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="590" y="90" text-anchor="middle" font-size="15" font-weight="bold" fill="#2563eb">4. Python obyektlari</text>
+  <text x="470" y="120" font-size="13" fill="#334155">&lt;Product: Telefon&gt;</text>
+  <text x="470" y="144" font-size="13" fill="#334155">&lt;Product: Noutbuk&gt;</text>
+  <text x="470" y="168" font-size="13" fill="#16a34a">.name, .price ishlatasiz</text>
+
+  <text x="380" y="206" text-anchor="middle" font-size="13" fill="#dc2626" font-weight="bold">Siz SQL yozmaysiz — ORM yozadi</text>
+</svg>

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" font-family="Segoe UI, sans-serif">
+  <title>FBV va CBV: bir xil vazifa, ikki yondashuv</title>
+  <rect width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">FBV va CBV: ikkalasi ham bir xil HttpResponse qaytaradi</text>
+
+  <!-- FBV -->
+  <rect x="40" y="64" width="320" height="300" rx="12" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+  <text x="200" y="92" font-size="16" font-weight="bold" fill="#2563eb" text-anchor="middle">FBV — funksiya</text>
+  <line x1="40" y1="104" x2="360" y2="104" stroke="#94a3b8" stroke-width="1"/>
+  <text x="60" y="132" font-size="13" fill="#334155">def maqola(request, pk):</text>
+  <text x="78" y="156" font-size="13" fill="#334155">if request.method == "GET":</text>
+  <text x="96" y="180" font-size="13" fill="#334155">m = get_object_or_404(...)</text>
+  <text x="96" y="204" font-size="13" fill="#334155">return render(...)</text>
+  <text x="78" y="228" font-size="13" fill="#334155">elif request.method == "POST":</text>
+  <text x="96" y="252" font-size="13" fill="#334155">...</text>
+  <rect x="60" y="278" width="280" height="66" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1"/>
+  <text x="200" y="302" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="bold">Oddiy oqim uchun yaxshi</text>
+  <text x="200" y="324" font-size="13" fill="#334155" text-anchor="middle">o'qish oson, hamma narsa ko'rinadi</text>
+
+  <!-- CBV -->
+  <rect x="400" y="64" width="320" height="300" rx="12" fill="#fff" stroke="#16a34a" stroke-width="2"/>
+  <text x="560" y="92" font-size="16" font-weight="bold" fill="#16a34a" text-anchor="middle">CBV — klass</text>
+  <line x1="400" y1="104" x2="720" y2="104" stroke="#94a3b8" stroke-width="1"/>
+  <text x="420" y="132" font-size="13" fill="#334155">class MaqolaDetail(DetailView):</text>
+  <text x="438" y="156" font-size="13" fill="#334155">model = Maqola</text>
+  <text x="420" y="186" font-size="13" fill="#64748b">def get(self, request): ...</text>
+  <text x="420" y="210" font-size="13" fill="#64748b">def post(self, request): ...</text>
+  <text x="420" y="234" font-size="13" fill="#64748b">metod = HTTP fe'li</text>
+  <rect x="420" y="278" width="280" height="66" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1"/>
+  <text x="560" y="302" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="bold">Takroriy CRUD uchun yaxshi</text>
+  <text x="560" y="324" font-size="13" fill="#334155" text-anchor="middle">meros + mixin, kam kod</text>
+
+  <text x="380" y="396" font-size="14" fill="#334155" text-anchor="middle">URLconf da: views.maqola  yoki  MaqolaDetail.as_view() — ikkalasi ham "chaqirib bo'ladigan" obyekt</text>
+</svg>

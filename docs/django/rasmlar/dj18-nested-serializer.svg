@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 470" font-family="Segoe UI, sans-serif">
+  <title>Nested serializer: model munosabatlaridan ichma-ich JSON</title>
+  <rect width="820" height="470" fill="#f8fafc"/>
+  <text x="410" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Nested serializer: munosabatlardan ichma-ich JSON</text>
+
+  <!-- left: models -->
+  <text x="200" y="68" font-size="15" fill="#1e293b" text-anchor="middle" font-weight="bold">Modellar (munosabat)</text>
+
+  <rect x="120" y="84" width="160" height="56" rx="8" fill="#fff" stroke="#16a34a" stroke-width="2"/>
+  <text x="200" y="108" font-size="14" fill="#16a34a" text-anchor="middle" font-weight="bold">Kategoriya</text>
+  <text x="200" y="128" font-size="13" fill="#64748b" text-anchor="middle">nom, slug</text>
+
+  <rect x="120" y="190" width="160" height="56" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="200" y="214" font-size="14" fill="#2563eb" text-anchor="middle" font-weight="bold">Mahsulot</text>
+  <text x="200" y="234" font-size="13" fill="#64748b" text-anchor="middle">nom, narx, FK</text>
+
+  <rect x="120" y="296" width="160" height="56" rx="8" fill="#fff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="200" y="320" font-size="14" fill="#1e293b" text-anchor="middle" font-weight="bold">Sharh (ko'p)</text>
+  <text x="200" y="340" font-size="13" fill="#64748b" text-anchor="middle">matn, ball</text>
+
+  <line x1="200" y1="140" x2="200" y2="188" stroke="#475569" stroke-width="2" marker-end="url(#n)"/>
+  <text x="232" y="170" font-size="13" fill="#64748b">FK (1 ta)</text>
+  <line x1="200" y1="246" x2="200" y2="294" stroke="#475569" stroke-width="2" marker-end="url(#n)"/>
+  <text x="220" y="278" font-size="13" fill="#64748b">related_name (N ta)</text>
+
+  <!-- middle arrow -->
+  <line x1="290" y1="218" x2="370" y2="218" stroke="#475569" stroke-width="3" marker-end="url(#n)"/>
+  <text x="330" y="208" font-size="13" fill="#334155" text-anchor="middle" font-weight="bold">serializer</text>
+
+  <!-- right: JSON -->
+  <rect x="390" y="74" width="400" height="356" rx="10" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+  <text x="410" y="100" font-size="13" fill="#334155" font-family="monospace">{</text>
+  <text x="426" y="122" font-size="13" fill="#334155" font-family="monospace">"nom": "iPhone",</text>
+  <text x="426" y="144" font-size="13" fill="#16a34a" font-family="monospace">"kategoriya_nomi": "Telefon",</text>
+  <text x="426" y="166" font-size="13" fill="#dc2626" font-family="monospace">"ortacha_ball": 4.0,</text>
+  <text x="426" y="188" font-size="13" fill="#dc2626" font-family="monospace">"sharh_soni": 2,</text>
+  <text x="426" y="210" font-size="13" fill="#f59e0b" font-family="monospace">"sharhlar": [</text>
+  <text x="442" y="232" font-size="13" fill="#334155" font-family="monospace">{ "muallif": "ali",</text>
+  <text x="458" y="254" font-size="13" fill="#334155" font-family="monospace">"matn": "zo'r", "ball": 5 },</text>
+  <text x="442" y="276" font-size="13" fill="#334155" font-family="monospace">{ "muallif": "ali",</text>
+  <text x="458" y="298" font-size="13" fill="#334155" font-family="monospace">"matn": "yaxshi", "ball": 3 }</text>
+  <text x="426" y="320" font-size="13" fill="#f59e0b" font-family="monospace">]</text>
+  <text x="410" y="342" font-size="13" fill="#334155" font-family="monospace">}</text>
+
+  <!-- legend -->
+  <rect x="408" y="360" width="14" height="14" fill="#16a34a"/>
+  <text x="428" y="372" font-size="13" fill="#334155">related (source="kategoriya.nom")</text>
+  <rect x="408" y="382" width="14" height="14" fill="#dc2626"/>
+  <text x="428" y="394" font-size="13" fill="#334155">SerializerMethodField (hisoblangan)</text>
+  <rect x="408" y="404" width="14" height="14" fill="#f59e0b"/>
+  <text x="428" y="416" font-size="13" fill="#334155">nested serializer (many=True)</text>
+
+  <text x="410" y="456" font-size="13" fill="#64748b" text-anchor="middle">Bitta so'rov -> mahsulot + kategoriya + sharhlar, hammasi bir JSON ichida</text>
+
+  <defs>
+    <marker id="n" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+</svg>

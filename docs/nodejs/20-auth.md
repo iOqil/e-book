@@ -377,8 +377,8 @@ Endi hammasini birlashtirib, haqiqiy, ishlaydigan auth tizimini quramiz: registe
 ### O'rnatish va sxema
 
 ```bash
-npm install express bcrypt jsonwebtoken @prisma/client
-npm install -D prisma
+npm install express bcrypt jsonwebtoken @prisma/client@6
+npm install -D prisma@6              # 18-bobdagidek 6'ga qadaymiz: npm'dagi sukut Prisma 7 sozlashi boshqacha
 npx prisma migrate dev --name init
 ```
 

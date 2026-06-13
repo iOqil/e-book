@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" font-family="Segoe UI, sans-serif">
+  <title>QuerySet dangasa (lazy) baholash: SQL qachon uriladi</title>
+  <rect x="0" y="0" width="760" height="380" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">QuerySet dangasa (lazy) — SQL qachon uriladi?</text>
+
+  <!-- chain steps: no SQL -->
+  <rect x="30" y="62" width="700" height="118" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="50" y="86" font-size="15" font-weight="bold" fill="#dc2626">SQL URILMAYDI (faqat reja tuziladi)</text>
+
+  <rect x="50" y="100" width="180" height="60" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="140" y="126" text-anchor="middle" font-size="14" fill="#334155">qs = Product.objects</text>
+  <text x="140" y="146" text-anchor="middle" font-size="14" fill="#334155">.filter(...)</text>
+
+  <line x1="230" y1="130" x2="262" y2="130" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="270,130 258,124 258,136" fill="#94a3b8"/>
+
+  <rect x="270" y="100" width="180" height="60" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="360" y="134" text-anchor="middle" font-size="14" fill="#334155">.exclude(stock=0)</text>
+
+  <line x1="450" y1="130" x2="482" y2="130" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="490,130 478,124 478,136" fill="#94a3b8"/>
+
+  <rect x="490" y="100" width="220" height="60" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="600" y="134" text-anchor="middle" font-size="14" fill="#334155">.order_by("-price")</text>
+
+  <!-- arrow down -->
+  <line x1="380" y1="180" x2="380" y2="212" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="380,220 374,208 386,208" fill="#94a3b8"/>
+
+  <!-- trigger box: SQL fires -->
+  <rect x="30" y="222" width="700" height="130" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="50" y="246" font-size="15" font-weight="bold" fill="#16a34a">SHU YERDA SQL URILADI (baholash sodir bo'ladi)</text>
+
+  <rect x="50" y="262" width="150" height="44" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="125" y="290" text-anchor="middle" font-size="14" fill="#334155">for p in qs:</text>
+
+  <rect x="216" y="262" width="120" height="44" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="276" y="290" text-anchor="middle" font-size="14" fill="#334155">list(qs)</text>
+
+  <rect x="352" y="262" width="120" height="44" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="412" y="290" text-anchor="middle" font-size="14" fill="#334155">len(qs)</text>
+
+  <rect x="488" y="262" width="100" height="44" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="538" y="290" text-anchor="middle" font-size="14" fill="#334155">qs[0]</text>
+
+  <rect x="604" y="262" width="106" height="44" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="657" y="290" text-anchor="middle" font-size="14" fill="#334155">bool(qs)</text>
+
+  <text x="50" y="334" font-size="13" fill="#64748b">Foyda: zanjirni bo'lak-bo'lak qurib, faqat kerak bo'lganda bazaga boramiz.</text>
+</svg>

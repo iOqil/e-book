@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 440" font-family="Segoe UI, sans-serif">
+  <title>Autentifikatsiya oqimi: authenticate, login, request.user</title>
+  <rect width="780" height="440" fill="#f8fafc"/>
+  <text x="390" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Kirish oqimi: login va parol qanday tekshiriladi</text>
+
+  <!-- Browser -->
+  <rect x="30" y="80" width="160" height="74" rx="8" fill="#fff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="110" y="112" font-size="15" fill="#334155" text-anchor="middle" font-weight="bold">Brauzer</text>
+  <text x="110" y="136" font-size="13" fill="#334155" text-anchor="middle">login + parol POST</text>
+
+  <!-- authenticate -->
+  <rect x="270" y="74" width="220" height="86" rx="8" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="102" font-size="14" fill="#1e293b" text-anchor="middle" font-weight="bold">authenticate()</text>
+  <text x="380" y="124" font-size="13" fill="#334155" text-anchor="middle">DB'dagi hashni</text>
+  <text x="380" y="144" font-size="13" fill="#334155" text-anchor="middle">check_password bilan solishtiradi</text>
+  <line x1="190" y1="117" x2="268" y2="117" stroke="#2563eb" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- True branch: login -->
+  <rect x="560" y="60" width="190" height="64" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="655" y="86" font-size="14" fill="#1e293b" text-anchor="middle" font-weight="bold">login(request, user)</text>
+  <text x="655" y="108" font-size="13" fill="#334155" text-anchor="middle">sessiyaga user_id yoziladi</text>
+  <line x1="490" y1="104" x2="558" y2="96" stroke="#16a34a" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="525" y="84" font-size="13" fill="#16a34a" text-anchor="middle" font-weight="bold">User</text>
+
+  <!-- None branch -->
+  <rect x="560" y="156" width="190" height="56" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="655" y="180" font-size="14" fill="#1e293b" text-anchor="middle" font-weight="bold">None qaytadi</text>
+  <text x="655" y="200" font-size="13" fill="#334155" text-anchor="middle">"login/parol xato"</text>
+  <line x1="490" y1="135" x2="558" y2="172" stroke="#dc2626" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="525" y="168" font-size="13" fill="#dc2626" text-anchor="middle" font-weight="bold">None</text>
+
+  <!-- request.user on next requests -->
+  <rect x="270" y="270" width="220" height="92" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="298" font-size="14" fill="#1e293b" text-anchor="middle" font-weight="bold">Keyingi so'rovlar</text>
+  <text x="380" y="320" font-size="13" fill="#334155" text-anchor="middle">cookie -> sessiya -> user_id</text>
+  <text x="380" y="340" font-size="13" fill="#334155" text-anchor="middle">request.user = User</text>
+  <text x="380" y="358" font-size="13" fill="#334155" text-anchor="middle">is_authenticated == True</text>
+  <line x1="655" y1="124" x2="490" y2="280" stroke="#16a34a" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#ar)"/>
+  <text x="600" y="220" font-size="13" fill="#16a34a" text-anchor="middle">sessiya cookie</text>
+
+  <!-- anonymous -->
+  <rect x="30" y="282" width="200" height="68" rx="8" fill="#fff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="130" y="308" font-size="14" fill="#334155" text-anchor="middle" font-weight="bold">Kirmagan bo'lsa</text>
+  <text x="130" y="330" font-size="13" fill="#334155" text-anchor="middle">request.user =</text>
+  <text x="130" y="348" font-size="13" fill="#64748b" text-anchor="middle">AnonymousUser</text>
+  <line x1="268" y1="316" x2="232" y2="316" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#ar)"/>
+
+  <text x="390" y="410" font-size="13" fill="#64748b" text-anchor="middle">AuthenticationMiddleware har so'rovda request.user ni o'rnatadi</text>
+
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+</svg>

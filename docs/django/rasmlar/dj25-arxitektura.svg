@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440">
+  <title>Kapston loyiha arxitekturasi: web (MTV) va API (DRF) bitta modeldan</title>
+  <rect width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b">Blog kapston: bitta model, ikki interfeys</text>
+
+  <!-- Web client -->
+  <rect x="30" y="70" width="150" height="60" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="105" y="95" text-anchor="middle" font-family="Segoe UI" font-size="15" fill="#1e293b">Brauzer</text>
+  <text x="105" y="116" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">HTML sahifa</text>
+
+  <!-- API client -->
+  <rect x="30" y="310" width="150" height="60" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="105" y="335" text-anchor="middle" font-family="Segoe UI" font-size="15" fill="#1e293b">Mobil / SPA</text>
+  <text x="105" y="356" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">JSON + JWT</text>
+
+  <!-- Web layer (CBV) -->
+  <rect x="240" y="60" width="210" height="120" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="345" y="86" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">Web qatlami (MTV)</text>
+  <text x="345" y="110" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">ListView / DetailView</text>
+  <text x="345" y="130" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Create/Update/Delete</text>
+  <text x="345" y="150" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Templates + Forms</text>
+  <text x="345" y="170" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">LoginRequired + egalik</text>
+
+  <!-- API layer (DRF) -->
+  <rect x="240" y="260" width="210" height="120" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="345" y="286" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">API qatlami (DRF)</text>
+  <text x="345" y="310" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">ModelViewSet + Router</text>
+  <text x="345" y="330" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Serializer + JWT auth</text>
+  <text x="345" y="350" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Filter + Pagination</text>
+  <text x="345" y="370" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">IsAuthorOrReadOnly</text>
+
+  <!-- Shared models -->
+  <rect x="540" y="160" width="190" height="120" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="3"/>
+  <text x="635" y="190" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">Modellar (ORM)</text>
+  <text x="635" y="216" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Category</text>
+  <text x="635" y="238" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Post (author FK)</text>
+  <text x="635" y="260" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Comment</text>
+
+  <!-- DB -->
+  <ellipse cx="635" cy="345" rx="70" ry="22" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="635" y="351" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">SQLite / Postgres</text>
+
+  <!-- arrows web -->
+  <line x1="180" y1="100" x2="238" y2="100" stroke="#2563eb" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="180" y1="340" x2="238" y2="340" stroke="#16a34a" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="450" y1="120" x2="538" y2="200" stroke="#f59e0b" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="450" y1="320" x2="538" y2="240" stroke="#f59e0b" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="635" y1="280" x2="635" y2="322" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+</svg>

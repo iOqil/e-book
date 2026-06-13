@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 360" font-family="Segoe UI, sans-serif">
+  <title>Serializer: serialize va deserialize ikki yo'nalishi</title>
+  <rect width="780" height="360" fill="#f8fafc"/>
+  <text x="390" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Serializer ikki tomonga ishlaydi</text>
+
+  <!-- Python obyekt -->
+  <rect x="40" y="120" width="200" height="110" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="140" y="150" font-size="15" fill="#1e293b" text-anchor="middle" font-weight="bold">Python obyekt</text>
+  <text x="140" y="174" font-size="13" fill="#334155" text-anchor="middle">Mahsulot model</text>
+  <text x="140" y="194" font-size="13" fill="#334155" text-anchor="middle">QuerySet / dict</text>
+  <text x="140" y="216" font-size="13" fill="#64748b" text-anchor="middle">server tomon</text>
+
+  <!-- JSON -->
+  <rect x="540" y="120" width="200" height="110" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="640" y="150" font-size="15" fill="#1e293b" text-anchor="middle" font-weight="bold">JSON</text>
+  <text x="640" y="174" font-size="13" fill="#334155" text-anchor="middle">{"nom": "Telefon",</text>
+  <text x="640" y="194" font-size="13" fill="#334155" text-anchor="middle">"narx": "500.00"}</text>
+  <text x="640" y="216" font-size="13" fill="#64748b" text-anchor="middle">klient / brauzer</text>
+
+  <!-- serialize arrow (left -> right) -->
+  <line x1="244" y1="155" x2="536" y2="155" stroke="#2563eb" stroke-width="3" marker-end="url(#blue)"/>
+  <text x="390" y="146" font-size="14" fill="#2563eb" text-anchor="middle" font-weight="bold">serialize (chiqarish)</text>
+  <text x="390" y="178" font-size="13" fill="#475569" text-anchor="middle">obyekt -&gt; dict -&gt; JSON  (.data)</text>
+
+  <!-- deserialize arrow (right -> left) -->
+  <line x1="536" y1="205" x2="244" y2="205" stroke="#dc2626" stroke-width="3" marker-end="url(#red)"/>
+  <text x="390" y="232" font-size="14" fill="#dc2626" text-anchor="middle" font-weight="bold">deserialize (kirish)</text>
+  <text x="390" y="254" font-size="13" fill="#475569" text-anchor="middle">JSON -&gt; tekshir -&gt; .validated_data -&gt; .save()</text>
+
+  <text x="390" y="320" font-size="13" fill="#64748b" text-anchor="middle">GET so'rovda serialize, POST/PUT so'rovda deserialize ishlatiladi</text>
+
+  <defs>
+    <marker id="blue" markerWidth="12" markerHeight="12" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="red" markerWidth="12" markerHeight="12" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#dc2626"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 440">
+  <title>N+1 muammosi va select_related / prefetch_related yechimi</title>
+  <rect width="780" height="440" fill="#f8fafc"/>
+  <text x="390" y="34" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">N+1 muammosi va yechimi</text>
+
+  <!-- LEFT: N+1 problem -->
+  <rect x="24" y="58" width="350" height="356" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="44" y="86" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#dc2626">Yomon: N+1 so'rov</text>
+  <text x="44" y="108" font-family="Segoe UI" font-size="13" fill="#334155">for item in OrderItem.objects.all():</text>
+  <text x="44" y="128" font-family="Segoe UI" font-size="13" fill="#334155">    print(item.product.nom)</text>
+
+  <rect x="44" y="142" width="310" height="32" rx="6" fill="#fee2e2"/>
+  <text x="56" y="163" font-family="Segoe UI" font-size="13" fill="#1e293b">1) SELECT * FROM orderitem  (1 ta)</text>
+
+  <rect x="44" y="180" width="310" height="32" rx="6" fill="#fee2e2"/>
+  <text x="56" y="201" font-family="Segoe UI" font-size="13" fill="#1e293b">2) SELECT product WHERE id=1</text>
+  <rect x="44" y="218" width="310" height="32" rx="6" fill="#fee2e2"/>
+  <text x="56" y="239" font-family="Segoe UI" font-size="13" fill="#1e293b">3) SELECT product WHERE id=3</text>
+  <rect x="44" y="256" width="310" height="32" rx="6" fill="#fee2e2"/>
+  <text x="56" y="277" font-family="Segoe UI" font-size="13" fill="#1e293b">4) SELECT product WHERE id=3</text>
+  <text x="56" y="306" font-family="Segoe UI" font-size="13" fill="#dc2626">... har qator uchun yana 1 so'rov</text>
+
+  <rect x="44" y="324" width="310" height="64" rx="8" fill="#dc2626"/>
+  <text x="199" y="350" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Jami = 1 + N so'rov</text>
+  <text x="199" y="374" font-family="Segoe UI" font-size="14" fill="#ffffff" text-anchor="middle">100 qator = 101 so'rov!</text>
+
+  <!-- arrow -->
+  <line x1="382" y1="230" x2="412" y2="230" stroke="#94a3b8" stroke-width="3"/>
+  <polygon points="412,230 400,223 400,237" fill="#94a3b8"/>
+
+  <!-- RIGHT: solution -->
+  <rect x="418" y="58" width="338" height="356" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="438" y="86" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a">Yaxshi: oldindan yuklash</text>
+
+  <text x="438" y="112" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb">select_related (FK / O2O)</text>
+  <text x="438" y="132" font-family="Segoe UI" font-size="13" fill="#334155">.select_related("product")</text>
+  <rect x="438" y="142" width="300" height="48" rx="6" fill="#f0fdf4"/>
+  <text x="450" y="162" font-family="Segoe UI" font-size="13" fill="#1e293b">SQL JOIN bilan 1 ta so'rov</text>
+  <text x="450" y="182" font-family="Segoe UI" font-size="13" fill="#16a34a">Jami = 1 so'rov</text>
+
+  <text x="438" y="222" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb">prefetch_related (M2M / teskari)</text>
+  <text x="438" y="242" font-family="Segoe UI" font-size="13" fill="#334155">.prefetch_related("mahsulotlar")</text>
+  <rect x="438" y="252" width="300" height="68" rx="6" fill="#f0fdf4"/>
+  <text x="450" y="272" font-family="Segoe UI" font-size="13" fill="#1e293b">2 ta so'rov: ota + bola IN (...)</text>
+  <text x="450" y="292" font-family="Segoe UI" font-size="13" fill="#1e293b">Python da birlashtiradi</text>
+  <text x="450" y="312" font-family="Segoe UI" font-size="13" fill="#16a34a">Jami = 2 so'rov (doimiy)</text>
+
+  <rect x="438" y="334" width="300" height="56" rx="8" fill="#16a34a"/>
+  <text x="588" y="358" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">FK uchun: select_related</text>
+  <text x="588" y="378" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">ko'pchilik uchun: prefetch_related</text>
+</svg>

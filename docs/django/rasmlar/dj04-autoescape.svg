@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400">
+  <title>Avto-escaping XSS hujumini qanday to'xtatadi</title>
+  <rect x="0" y="0" width="760" height="400" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b">Avto-escaping va XSS himoyasi</text>
+
+  <!-- input -->
+  <rect x="40" y="70" width="240" height="80" rx="10" fill="#fff" stroke="#dc2626" stroke-width="2"/>
+  <text x="160" y="98" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#dc2626">Foydalanuvchi kiritdi</text>
+  <text x="160" y="124" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">&lt;script&gt;alert(1)&lt;/script&gt;</text>
+
+  <!-- template -->
+  <rect x="320" y="70" width="200" height="80" rx="10" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+  <text x="420" y="98" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">{{ matn }}</text>
+  <text x="420" y="124" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">avto-escape ON</text>
+
+  <defs>
+    <marker id="ar3" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <line x1="280" y1="110" x2="315" y2="110" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar3)"/>
+
+  <!-- safe path -->
+  <rect x="560" y="60" width="170" height="100" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="645" y="86" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">Xavfsiz natija</text>
+  <text x="645" y="110" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">&amp;lt;script&amp;gt;</text>
+  <text x="645" y="130" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">oddiy matn sifatida</text>
+  <text x="645" y="148" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">ko'rinadi, ishlamaydi</text>
+  <line x1="520" y1="110" x2="555" y2="110" stroke="#16a34a" stroke-width="2" marker-end="url(#ar3)"/>
+
+  <!-- danger path -->
+  <rect x="40" y="230" width="320" height="120" rx="10" fill="#fff" stroke="#dc2626" stroke-width="2"/>
+  <text x="200" y="258" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#dc2626">XATAR: {{ matn|safe }}</text>
+  <text x="200" y="284" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">yoki {% autoescape off %}</text>
+  <text x="200" y="312" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">xom HTML brauzerda bajariladi</text>
+  <text x="200" y="334" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">-&gt; alert(1) ishga tushadi!</text>
+
+  <!-- rule -->
+  <rect x="400" y="230" width="330" height="120" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="565" y="262" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">Qoida</text>
+  <text x="565" y="290" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Django avtomatik 5 belgini almashtiradi:</text>
+  <text x="565" y="312" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">&lt; &gt; &amp; ' "</text>
+  <text x="565" y="336" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">|safe ni faqat ishonchli HTML uchun ishlat.</text>
+</svg>

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440">
+  <title>TokenAuthentication va JWT: ikkala oqim solishtirilgan</title>
+  <rect width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Token vs JWT autentifikatsiya oqimi</text>
+
+  <!-- LEFT: Token -->
+  <rect x="24" y="58" width="352" height="350" rx="10" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="200" y="86" text-anchor="middle" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#2563eb">TokenAuthentication</text>
+
+  <rect x="48" y="104" width="120" height="40" rx="6" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="108" y="129" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#1e293b">Klient</text>
+  <rect x="232" y="104" width="120" height="40" rx="6" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="292" y="129" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#1e293b">Server + DB</text>
+
+  <line x1="168" y1="160" x2="232" y2="160" stroke="#334155" stroke-width="2" marker-end="url(#a1)"/>
+  <text x="200" y="155" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">login (parol)</text>
+
+  <line x1="232" y1="188" x2="168" y2="188" stroke="#16a34a" stroke-width="2" marker-end="url(#a2)"/>
+  <text x="200" y="183" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">token (DBga yoziladi)</text>
+
+  <line x1="168" y1="222" x2="232" y2="222" stroke="#334155" stroke-width="2" marker-end="url(#a1)"/>
+  <text x="200" y="217" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Token abc...</text>
+
+  <rect x="40" y="248" width="320" height="60" rx="6" fill="#fef9c3" stroke="#f59e0b"/>
+  <text x="200" y="272" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">Server har so'rovda DBdan</text>
+  <text x="200" y="292" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">tokenni QIDIRADI (1 SQL)</text>
+
+  <rect x="40" y="320" width="320" height="72" rx="6" fill="#f1f5f9" stroke="#94a3b8"/>
+  <text x="56" y="343" font-family="Segoe UI" font-size="13" fill="#16a34a">+ Bekor qilish oson (DBdan o'chir)</text>
+  <text x="56" y="363" font-family="Segoe UI" font-size="13" fill="#16a34a">+ Sodda</text>
+  <text x="56" y="383" font-family="Segoe UI" font-size="13" fill="#dc2626">- Har so'rovda DB so'rovi</text>
+
+  <!-- RIGHT: JWT -->
+  <rect x="384" y="58" width="352" height="350" rx="10" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="560" y="86" text-anchor="middle" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#2563eb">JWT (simplejwt)</text>
+
+  <rect x="408" y="104" width="120" height="40" rx="6" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="468" y="129" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#1e293b">Klient</text>
+  <rect x="592" y="104" width="120" height="40" rx="6" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="652" y="129" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#1e293b">Server</text>
+
+  <line x1="528" y1="160" x2="592" y2="160" stroke="#334155" stroke-width="2" marker-end="url(#a1)"/>
+  <text x="560" y="155" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">login (parol)</text>
+
+  <line x1="592" y1="188" x2="528" y2="188" stroke="#16a34a" stroke-width="2" marker-end="url(#a2)"/>
+  <text x="560" y="183" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">access + refresh</text>
+
+  <line x1="528" y1="222" x2="592" y2="222" stroke="#334155" stroke-width="2" marker-end="url(#a1)"/>
+  <text x="560" y="217" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Bearer eyJ...</text>
+
+  <rect x="400" y="248" width="320" height="60" rx="6" fill="#fef9c3" stroke="#f59e0b"/>
+  <text x="560" y="272" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">Server imzoni TEKSHIRADI</text>
+  <text x="560" y="292" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">(DB so'rovsiz, faqat kalit)</text>
+
+  <rect x="400" y="320" width="320" height="72" rx="6" fill="#f1f5f9" stroke="#94a3b8"/>
+  <text x="416" y="343" font-family="Segoe UI" font-size="13" fill="#16a34a">+ Stateless, DBsiz tekshiruv</text>
+  <text x="416" y="363" font-family="Segoe UI" font-size="13" fill="#16a34a">+ Mikroservislarga mos</text>
+  <text x="416" y="383" font-family="Segoe UI" font-size="13" fill="#dc2626">- Bekor qilish qiyin (qisqa umr)</text>
+
+  <defs>
+    <marker id="a1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#334155"/></marker>
+    <marker id="a2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/></marker>
+  </defs>
+</svg>

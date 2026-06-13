@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" font-family="Segoe UI, sans-serif">
+  <title>DRF view abstraksiya narvoni: APIView dan ViewSet gacha</title>
+  <rect width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">DRF view abstraksiya narvoni</text>
+  <text x="380" y="58" font-size="13" fill="#64748b" text-anchor="middle">pastdan yuqoriga: kamroq kod, ko'proq avtomatlashtirish</text>
+
+  <!-- 1 APIView -->
+  <rect x="60" y="340" width="640" height="56" rx="8" fill="#fff" stroke="#dc2626" stroke-width="2"/>
+  <text x="84" y="365" font-size="15" font-weight="bold" fill="#dc2626">1. APIView</text>
+  <text x="84" y="385" font-size="13" fill="#334155">get/post/put/delete metodlarini o'zingiz yozasiz — to'liq nazorat, ko'p kod</text>
+
+  <!-- 2 generic mixin -->
+  <rect x="100" y="268" width="560" height="56" rx="8" fill="#fff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="124" y="293" font-size="15" font-weight="bold" fill="#b45309">2. GenericAPIView + mixinlar</text>
+  <text x="124" y="313" font-size="13" fill="#334155">queryset + serializer_class beresiz, CRUD logikasi mixindan keladi</text>
+
+  <!-- 3 generic concrete -->
+  <rect x="140" y="196" width="480" height="56" rx="8" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+  <text x="164" y="221" font-size="15" font-weight="bold" fill="#2563eb">3. Tayyor generic view'lar</text>
+  <text x="164" y="241" font-size="13" fill="#334155">ListCreateAPIView, RetrieveUpdateDestroyAPIView — 2 satr</text>
+
+  <!-- 4 ViewSet -->
+  <rect x="180" y="124" width="400" height="56" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="204" y="149" font-size="15" font-weight="bold" fill="#2563eb">4. ModelViewSet + Router</text>
+  <text x="204" y="169" font-size="13" fill="#334155">bitta klass = to'liq CRUD, URL'lar avtomatik yasaladi</text>
+
+  <!-- big arrow up -->
+  <line x1="40" y1="396" x2="40" y2="120" stroke="#16a34a" stroke-width="3" marker-end="url(#up)"/>
+  <text x="26" y="260" font-size="13" fill="#16a34a" text-anchor="middle" transform="rotate(-90 26 260)">abstraksiya oshadi</text>
+
+  <text x="380" y="96" font-size="14" fill="#334155" text-anchor="middle" font-weight="bold">Hammasi bir asosga quriladi — yuqoriga chiqqan sari kod qisqaradi</text>
+
+  <defs>
+    <marker id="up" markerWidth="12" markerHeight="12" refX="4" refY="2" orient="auto">
+      <path d="M0,8 L4,0 L8,8 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420">
+  <title>Template meros: base.html bloklarini bola shablonlar to'ldiradi</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b">Template meros ({% extends %} / {% block %})</text>
+
+  <!-- base.html -->
+  <rect x="60" y="70" width="280" height="300" rx="10" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+  <text x="200" y="98" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb">base.html (ota)</text>
+
+  <rect x="80" y="115" width="240" height="40" rx="6" fill="#e2e8f0"/>
+  <text x="200" y="140" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">header (umumiy, o'zgarmas)</text>
+
+  <rect x="80" y="165" width="240" height="40" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="200" y="190" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">{% block title %}</text>
+
+  <rect x="80" y="215" width="240" height="80" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="200" y="250" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">{% block content %}</text>
+  <text x="200" y="272" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">(bo'sh, to'ldiriladi)</text>
+
+  <rect x="80" y="305" width="240" height="40" rx="6" fill="#e2e8f0"/>
+  <text x="200" y="330" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">footer (umumiy, o'zgarmas)</text>
+
+  <!-- child -->
+  <rect x="430" y="70" width="270" height="300" rx="10" fill="#fff" stroke="#16a34a" stroke-width="2"/>
+  <text x="565" y="98" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a">index.html (bola)</text>
+  <text x="565" y="122" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">{% extends "base.html" %}</text>
+
+  <rect x="450" y="140" width="230" height="50" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="565" y="162" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">{% block title %}</text>
+  <text x="565" y="180" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Maqolalar{% endblock %}</text>
+
+  <rect x="450" y="200" width="230" height="90" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="565" y="225" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">{% block content %}</text>
+  <text x="565" y="247" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">&lt;h1&gt;Salom&lt;/h1&gt;</text>
+  <text x="565" y="269" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">{% endblock %}</text>
+
+  <!-- arrows mapping blocks -->
+  <defs>
+    <marker id="ar2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+  <line x1="450" y1="165" x2="322" y2="185" stroke="#16a34a" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#ar2)"/>
+  <line x1="450" y1="245" x2="322" y2="255" stroke="#16a34a" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#ar2)"/>
+  <text x="385" y="398" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">Bola faqat bloklarni to'ldiradi; header/footer ota'dan meros bo'ladi.</text>
+</svg>

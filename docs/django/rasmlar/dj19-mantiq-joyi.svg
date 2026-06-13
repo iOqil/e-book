@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" font-family="Segoe UI, sans-serif">
+  <title>Biznes mantig'ini qayerga joylash: signal, model metodi, manager yoki servis</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="21" font-weight="bold" fill="#1e293b">Mantiqni qayerga qo'yish kerak?</text>
+
+  <!-- Model method / property -->
+  <rect x="40" y="70" width="220" height="150" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="150" y="96" text-anchor="middle" font-size="16" font-weight="bold" fill="#16a34a">Model metodi / @property</text>
+  <text x="150" y="124" text-anchor="middle" font-size="13" fill="#334155">Bitta obyektga oid</text>
+  <text x="150" y="146" text-anchor="middle" font-size="13" fill="#334155">hisoblash yoki holat</text>
+  <text x="150" y="174" text-anchor="middle" font-size="13" fill="#64748b">post.qisqa_matn</text>
+  <text x="150" y="195" text-anchor="middle" font-size="13" fill="#64748b">post.chop_etilganmi()</text>
+
+  <!-- Manager / QuerySet -->
+  <rect x="500" y="70" width="220" height="150" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="610" y="96" text-anchor="middle" font-size="16" font-weight="bold" fill="#2563eb">Manager / QuerySet</text>
+  <text x="610" y="124" text-anchor="middle" font-size="13" fill="#334155">Ko'p obyekt ustida</text>
+  <text x="610" y="146" text-anchor="middle" font-size="13" fill="#334155">filtr/so'rov mantig'i</text>
+  <text x="610" y="174" text-anchor="middle" font-size="13" fill="#64748b">Post.objects.chop_etilgan()</text>
+  <text x="610" y="195" text-anchor="middle" font-size="13" fill="#64748b">qs.muallif(user)</text>
+
+  <!-- Signal -->
+  <rect x="40" y="250" width="220" height="150" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="150" y="276" text-anchor="middle" font-size="16" font-weight="bold" fill="#b45309">Signal</text>
+  <text x="150" y="304" text-anchor="middle" font-size="13" fill="#334155">Boshqa ilova / app</text>
+  <text x="150" y="326" text-anchor="middle" font-size="13" fill="#334155">reaksiyasi (decoupled)</text>
+  <text x="150" y="354" text-anchor="middle" font-size="13" fill="#64748b">User yaratilsa profil</text>
+  <text x="150" y="375" text-anchor="middle" font-size="13" fill="#64748b">o'zgarishni log qilish</text>
+
+  <!-- Explicit method / service -->
+  <rect x="500" y="250" width="220" height="150" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="610" y="276" text-anchor="middle" font-size="16" font-weight="bold" fill="#16a34a">Aniq metod / servis</text>
+  <text x="610" y="304" text-anchor="middle" font-size="13" fill="#334155">Asosiy biznes amali</text>
+  <text x="610" y="326" text-anchor="middle" font-size="13" fill="#334155">ko'rinib tursin</text>
+  <text x="610" y="354" text-anchor="middle" font-size="13" fill="#64748b">post.chop_et()</text>
+  <text x="610" y="375" text-anchor="middle" font-size="13" fill="#64748b">buyurtmani_yakunla()</text>
+
+  <!-- center rule -->
+  <rect x="290" y="180" width="180" height="110" rx="12" fill="#1e293b"/>
+  <text x="380" y="212" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">Qoida</text>
+  <text x="380" y="238" text-anchor="middle" font-size="13" fill="#e2e8f0">Asosiy oqim --</text>
+  <text x="380" y="257" text-anchor="middle" font-size="13" fill="#e2e8f0">aniq chaqir.</text>
+  <text x="380" y="276" text-anchor="middle" font-size="13" fill="#fbbf24">Yon ta'sir -- signal.</text>
+</svg>

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" font-family="Segoe UI, sans-serif">
+  <title>Forma view oqimi: GET va POST</title>
+  <rect width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Bitta view, ikki yo'l: GET va POST</text>
+
+  <!-- Browser -->
+  <rect x="30" y="80" width="150" height="70" rx="8" fill="#fff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="105" y="112" font-size="15" fill="#334155" text-anchor="middle" font-weight="bold">Brauzer</text>
+  <text x="105" y="134" font-size="13" fill="#334155" text-anchor="middle">foydalanuvchi</text>
+
+  <!-- request.method check -->
+  <rect x="280" y="80" width="200" height="70" rx="8" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="110" font-size="14" fill="#1e293b" text-anchor="middle" font-weight="bold">view(request)</text>
+  <text x="380" y="132" font-size="13" fill="#334155" text-anchor="middle">request.method ?</text>
+
+  <!-- GET arrow -->
+  <line x1="180" y1="105" x2="278" y2="105" stroke="#2563eb" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="228" y="98" font-size="13" fill="#2563eb" text-anchor="middle" font-weight="bold">GET</text>
+
+  <!-- GET branch -->
+  <rect x="560" y="60" width="180" height="58" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="650" y="84" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="bold">Bo'sh forma</text>
+  <text x="650" y="104" font-size="13" fill="#334155" text-anchor="middle">form = Form()</text>
+  <line x1="480" y1="98" x2="558" y2="90" stroke="#2563eb" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="520" y="78" font-size="13" fill="#2563eb" text-anchor="middle">GET</text>
+
+  <!-- POST branch -->
+  <rect x="280" y="200" width="200" height="64" rx="8" fill="#fff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="380" y="226" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="bold">form = Form(request.POST)</text>
+  <text x="380" y="248" font-size="13" fill="#334155" text-anchor="middle">form.is_valid() ?</text>
+  <line x1="380" y1="150" x2="380" y2="198" stroke="#f59e0b" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="408" y="178" font-size="13" fill="#f59e0b" text-anchor="middle" font-weight="bold">POST</text>
+
+  <!-- valid -->
+  <rect x="540" y="190" width="200" height="58" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="640" y="214" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="bold">To'g'ri -> saqla</text>
+  <text x="640" y="234" font-size="13" fill="#334155" text-anchor="middle">cleaned_data, redirect</text>
+  <line x1="480" y1="224" x2="538" y2="219" stroke="#16a34a" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="512" y="208" font-size="13" fill="#16a34a" text-anchor="middle">True</text>
+
+  <!-- invalid -->
+  <rect x="280" y="320" width="200" height="58" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="380" y="344" font-size="13" fill="#1e293b" text-anchor="middle" font-weight="bold">Xato -> qayta chiz</text>
+  <text x="380" y="364" font-size="13" fill="#334155" text-anchor="middle">form.errors bilan</text>
+  <line x1="380" y1="264" x2="380" y2="318" stroke="#dc2626" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="408" y="294" font-size="13" fill="#dc2626" text-anchor="middle">False</text>
+
+  <!-- response back to browser -->
+  <line x1="560" y1="100" x2="120" y2="155" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#ar)"/>
+  <line x1="280" y1="349" x2="120" y2="155" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#ar)"/>
+  <text x="105" y="178" font-size="13" fill="#64748b" text-anchor="middle">HTML javob</text>
+
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+</svg>

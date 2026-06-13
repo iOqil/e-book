@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" font-family="Segoe UI, sans-serif">
+  <title>Session mexanizmi: cookie faqat kalitni, ma'lumot serverda</title>
+  <rect width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">Session: cookie kalitni, ma'lumotni server saqlaydi</text>
+
+  <!-- Browser -->
+  <rect x="40" y="80" width="250" height="300" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="165" y="108" text-anchor="middle" font-size="16" fill="#2563eb" font-weight="bold">Brauzer (mijoz)</text>
+  <rect x="65" y="130" width="200" height="70" rx="8" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="80" y="155" font-size="13" fill="#334155" font-weight="bold">Cookie:</text>
+  <text x="80" y="178" font-size="13" fill="#dc2626">sessionid=hoz4kx...</text>
+  <text x="80" y="194" font-size="13" fill="#64748b">(faqat tasodifiy kalit)</text>
+  <text x="80" y="240" font-size="13" fill="#334155">Brauzer ma'lumotni</text>
+  <text x="80" y="260" font-size="13" fill="#334155">KO'RMAYDI, faqat</text>
+  <text x="80" y="280" font-size="13" fill="#334155">kalitni har so'rovda</text>
+  <text x="80" y="300" font-size="13" fill="#334155">avtomatik yuboradi.</text>
+
+  <!-- Server -->
+  <rect x="470" y="80" width="250" height="300" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="595" y="108" text-anchor="middle" font-size="16" fill="#16a34a" font-weight="bold">Server (Django)</text>
+  <rect x="495" y="130" width="200" height="170" rx="8" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="510" y="155" font-size="13" fill="#334155" font-weight="bold">django_session jadvali</text>
+  <text x="510" y="182" font-size="13" fill="#2563eb">key: hoz4kx...</text>
+  <text x="510" y="206" font-size="13" fill="#16a34a">data: {soni: 3,</text>
+  <text x="540" y="226" font-size="13" fill="#16a34a">savat: [olma, anor]}</text>
+  <text x="510" y="252" font-size="13" fill="#64748b">expire: 2026-06-27</text>
+  <text x="510" y="288" font-size="13" fill="#334155">request.session[...]</text>
+
+  <!-- Arrows -->
+  <line x1="290" y1="165" x2="470" y2="165" stroke="#2563eb" stroke-width="3" marker-end="url(#a1)"/>
+  <text x="380" y="155" text-anchor="middle" font-size="13" fill="#2563eb">1. kalit yuboriladi</text>
+
+  <line x1="470" y1="330" x2="290" y2="330" stroke="#16a34a" stroke-width="3" marker-end="url(#a2)"/>
+  <text x="380" y="350" text-anchor="middle" font-size="13" fill="#16a34a">2. ma'lumot topiladi</text>
+
+  <text x="380" y="415" text-anchor="middle" font-size="14" fill="#1e293b" font-weight="bold">Foydalanuvchi sessiondagi ma'lumotni o'zgartira olmaydi (server tarafda)</text>
+
+  <defs>
+    <marker id="a1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/></marker>
+    <marker id="a2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/></marker>
+  </defs>
+</svg>

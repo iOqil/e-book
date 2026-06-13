@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" font-family="Segoe UI, sans-serif">
+  <title>Django batareyalar ichida hammasi tayyor keladi, Flask va FastAPI mikrokarkas bo'lib qismlarni o'zingiz yig'asiz</title>
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="32" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Django vs Flask / FastAPI</text>
+
+  <!-- Django side -->
+  <rect x="30" y="60" width="340" height="340" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="200" y="90" font-size="17" font-weight="bold" fill="#16a34a" text-anchor="middle">Django — batareyalar ichida</text>
+  <text x="200" y="112" font-size="13" fill="#334155" text-anchor="middle">hammasi qutidan chiqadi</text>
+
+  <g font-size="14" fill="#1e293b">
+    <rect x="55" y="130" width="135" height="34" rx="6" fill="#dcfce7"/>
+    <text x="122" y="152" text-anchor="middle">ORM (baza)</text>
+    <rect x="210" y="130" width="135" height="34" rx="6" fill="#dcfce7"/>
+    <text x="277" y="152" text-anchor="middle">Admin panel</text>
+
+    <rect x="55" y="175" width="135" height="34" rx="6" fill="#dcfce7"/>
+    <text x="122" y="197" text-anchor="middle">Auth tizimi</text>
+    <rect x="210" y="175" width="135" height="34" rx="6" fill="#dcfce7"/>
+    <text x="277" y="197" text-anchor="middle">Formalar</text>
+
+    <rect x="55" y="220" width="135" height="34" rx="6" fill="#dcfce7"/>
+    <text x="122" y="242" text-anchor="middle">Templatelar</text>
+    <rect x="210" y="220" width="135" height="34" rx="6" fill="#dcfce7"/>
+    <text x="277" y="242" text-anchor="middle">Migratsiyalar</text>
+
+    <rect x="55" y="265" width="135" height="34" rx="6" fill="#dcfce7"/>
+    <text x="122" y="287" text-anchor="middle">Xavfsizlik</text>
+    <rect x="210" y="265" width="135" height="34" rx="6" fill="#dcfce7"/>
+    <text x="277" y="287" text-anchor="middle">Kesh / sessiya</text>
+  </g>
+  <text x="200" y="345" font-size="14" fill="#16a34a" text-anchor="middle" font-weight="bold">+ konvensiya = tez boshlaysiz</text>
+  <text x="200" y="372" font-size="13" fill="#334155" text-anchor="middle">katta loyiha, admin, CRUD, jamoa</text>
+
+  <!-- Flask side -->
+  <rect x="390" y="60" width="340" height="340" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="560" y="90" font-size="17" font-weight="bold" fill="#2563eb" text-anchor="middle">Flask / FastAPI — mikro</text>
+  <text x="560" y="112" font-size="13" fill="#334155" text-anchor="middle">o'zak kichik, qolganini yig'asiz</text>
+
+  <g font-size="14" fill="#1e293b">
+    <rect x="475" y="135" width="170" height="36" rx="6" fill="#dbeafe"/>
+    <text x="560" y="159" text-anchor="middle">Routing + so'rov</text>
+  </g>
+  <text x="560" y="200" font-size="13" fill="#334155" text-anchor="middle">qolganini kutubxonalardan tanlaysiz:</text>
+  <g font-size="13" fill="#334155">
+    <text x="560" y="226" text-anchor="middle">ORM -&gt; SQLAlchemy (alohida)</text>
+    <text x="560" y="248" text-anchor="middle">auth -&gt; o'zingiz / paket</text>
+    <text x="560" y="270" text-anchor="middle">admin -&gt; yo'q (qo'lda)</text>
+    <text x="560" y="292" text-anchor="middle">migratsiya -&gt; Alembic</text>
+  </g>
+  <text x="560" y="345" font-size="14" fill="#2563eb" text-anchor="middle" font-weight="bold">+ moslashuvchan, yengil</text>
+  <text x="560" y="372" font-size="13" fill="#334155" text-anchor="middle">kichik API, mikroservis, tezkor</text>
+</svg>

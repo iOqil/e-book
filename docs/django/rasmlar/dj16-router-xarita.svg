@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 460" font-family="Segoe UI, sans-serif">
+  <title>DefaultRouter ViewSet metodlarini URL va HTTP metodga bog'laydi</title>
+  <rect width="780" height="460" fill="#f8fafc"/>
+  <text x="390" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">DefaultRouter: bitta register() — to'liq URL xaritasi</text>
+
+  <!-- left: register -->
+  <rect x="30" y="70" width="230" height="120" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="145" y="98" font-size="15" font-weight="bold" fill="#2563eb" text-anchor="middle">router.register(</text>
+  <text x="145" y="122" font-size="14" fill="#334155" text-anchor="middle">"maqolalar",</text>
+  <text x="145" y="146" font-size="14" fill="#334155" text-anchor="middle">MaqolaViewSet)</text>
+  <text x="145" y="174" font-size="13" fill="#64748b" text-anchor="middle">1 qator</text>
+
+  <line x1="260" y1="130" x2="310" y2="130" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- table header -->
+  <rect x="310" y="70" width="440" height="34" fill="#1e293b"/>
+  <text x="326" y="92" font-size="13" font-weight="bold" fill="#fff">HTTP + URL</text>
+  <text x="540" y="92" font-size="13" font-weight="bold" fill="#fff">ViewSet metodi</text>
+
+  <!-- rows -->
+  <g font-size="13">
+    <rect x="310" y="104" width="440" height="34" fill="#fff" stroke="#94a3b8"/>
+    <text x="326" y="125" fill="#16a34a" font-weight="bold">GET  /maqolalar/</text>
+    <text x="540" y="125" fill="#334155">list()</text>
+
+    <rect x="310" y="138" width="440" height="34" fill="#f1f5f9" stroke="#94a3b8"/>
+    <text x="326" y="159" fill="#2563eb" font-weight="bold">POST /maqolalar/</text>
+    <text x="540" y="159" fill="#334155">create()</text>
+
+    <rect x="310" y="172" width="440" height="34" fill="#fff" stroke="#94a3b8"/>
+    <text x="326" y="193" fill="#16a34a" font-weight="bold">GET  /maqolalar/{id}/</text>
+    <text x="540" y="193" fill="#334155">retrieve()</text>
+
+    <rect x="310" y="206" width="440" height="34" fill="#f1f5f9" stroke="#94a3b8"/>
+    <text x="326" y="227" fill="#f59e0b" font-weight="bold">PUT  /maqolalar/{id}/</text>
+    <text x="540" y="227" fill="#334155">update()</text>
+
+    <rect x="310" y="240" width="440" height="34" fill="#fff" stroke="#94a3b8"/>
+    <text x="326" y="261" fill="#f59e0b" font-weight="bold">PATCH /maqolalar/{id}/</text>
+    <text x="540" y="261" fill="#334155">partial_update()</text>
+
+    <rect x="310" y="274" width="440" height="34" fill="#f1f5f9" stroke="#94a3b8"/>
+    <text x="326" y="295" fill="#dc2626" font-weight="bold">DELETE /maqolalar/{id}/</text>
+    <text x="540" y="295" fill="#334155">destroy()</text>
+
+    <rect x="310" y="308" width="440" height="34" fill="#fef3c7" stroke="#f59e0b"/>
+    <text x="326" y="329" fill="#b45309" font-weight="bold">POST /maqolalar/{id}/chop_et/</text>
+    <text x="540" y="329" fill="#334155">@action chop_et()</text>
+  </g>
+
+  <text x="390" y="378" font-size="14" fill="#334155" text-anchor="middle" font-weight="bold">6 ta standart yo'l + har @action uchun qo'shimcha yo'l — qo'lda path() yozilmaydi</text>
+  <text x="390" y="404" font-size="13" fill="#64748b" text-anchor="middle">DefaultRouter ustiga /api/ root sahifasi (api-root) va .json formati ham qo'shadi</text>
+  <text x="390" y="430" font-size="13" fill="#64748b" text-anchor="middle">SimpleRouter xuddi shu, lekin api-root sahifasiz</text>
+
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+</svg>

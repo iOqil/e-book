@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 440">
+  <title>12-faktor konfiguratsiya: muhit o'zgaruvchilari settings.py ga oqadi</title>
+  <rect width="820" height="440" fill="#f8fafc"/>
+  <text x="410" y="34" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Konfiguratsiya muhitdan keladi, koddan emas</text>
+
+  <!-- env source -->
+  <rect x="30" y="70" width="250" height="250" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="155" y="98" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#b45309" text-anchor="middle">Muhit o'zgaruvchilari</text>
+  <text x="50" y="128" font-family="Segoe UI" font-size="13" fill="#1e293b">DJANGO_SECRET_KEY=...</text>
+  <text x="50" y="154" font-family="Segoe UI" font-size="13" fill="#1e293b">DJANGO_DEBUG=False</text>
+  <text x="50" y="180" font-family="Segoe UI" font-size="13" fill="#1e293b">DJANGO_ALLOWED_HOSTS=</text>
+  <text x="50" y="204" font-family="Segoe UI" font-size="13" fill="#1e293b">POSTGRES_DB=mydb</text>
+  <text x="50" y="228" font-family="Segoe UI" font-size="13" fill="#1e293b">POSTGRES_USER=appuser</text>
+  <text x="50" y="252" font-family="Segoe UI" font-size="13" fill="#1e293b">POSTGRES_PASSWORD=***</text>
+  <text x="50" y="276" font-family="Segoe UI" font-size="13" fill="#334155">.env fayl / Docker / CI</text>
+  <text x="50" y="300" font-family="Segoe UI" font-size="13" fill="#dc2626">git'ga YOZILMAYDI</text>
+
+  <!-- arrow -->
+  <line x1="280" y1="195" x2="336" y2="195" stroke="#16a34a" stroke-width="3"/>
+  <polygon points="340,195 328,189 328,201" fill="#16a34a"/>
+  <text x="310" y="182" font-family="Segoe UI" font-size="13" fill="#16a34a" text-anchor="middle">o'qiladi</text>
+
+  <!-- settings -->
+  <rect x="344" y="70" width="270" height="250" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="479" y="98" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb" text-anchor="middle">settings.py</text>
+  <text x="362" y="128" font-family="Segoe UI" font-size="13" fill="#1e293b">os.environ.get("...")</text>
+  <text x="362" y="158" font-family="Segoe UI" font-size="13" fill="#334155">SECRET_KEY = env(...)</text>
+  <text x="362" y="182" font-family="Segoe UI" font-size="13" fill="#334155">DEBUG = env_bool(...)</text>
+  <text x="362" y="206" font-family="Segoe UI" font-size="13" fill="#334155">ALLOWED_HOSTS = ...</text>
+  <text x="362" y="230" font-family="Segoe UI" font-size="13" fill="#334155">DATABASES = {...}</text>
+  <text x="362" y="262" font-family="Segoe UI" font-size="13" fill="#16a34a">bir xil kod, har muhitda</text>
+  <text x="362" y="286" font-family="Segoe UI" font-size="13" fill="#16a34a">boshqa qiymat</text>
+
+  <!-- arrows to environments -->
+  <line x1="614" y1="150" x2="690" y2="120" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="694,118 681,118 686,129" fill="#94a3b8"/>
+  <line x1="614" y1="240" x2="690" y2="280" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="694,282 681,277 685,288" fill="#94a3b8"/>
+
+  <rect x="680" y="92" width="120" height="60" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="740" y="120" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">Local dev</text>
+  <text x="740" y="140" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">DEBUG=True</text>
+
+  <rect x="680" y="252" width="120" height="60" rx="8" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="740" y="280" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626" text-anchor="middle">Production</text>
+  <text x="740" y="300" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">DEBUG=False</text>
+
+  <text x="410" y="360" font-family="Segoe UI" font-size="14" fill="#334155" text-anchor="middle">Maxfiy kalit va parollar kodda emas — shuning uchun git tarixiga tushmaydi.</text>
+  <text x="410" y="392" font-family="Segoe UI" font-size="14" fill="#334155" text-anchor="middle">Bitta image / bitta kod bazasi — qiymatni faqat muhit hal qiladi (12-faktor).</text>
+  <text x="410" y="420" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb" text-anchor="middle">python manage.py check --deploy bilan har deploy oldidan tekshiring.</text>
+</svg>

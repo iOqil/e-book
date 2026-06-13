@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 360" font-family="Segoe UI, sans-serif">
+  <title>So'rov oqimi: brauzer -> runserver -> urls.py -> view -> javob</title>
+  <rect x="0" y="0" width="820" height="360" fill="#f8fafc"/>
+  <text x="30" y="40" font-size="22" font-weight="bold" fill="#1e293b">Bitta so'rov Django ichida qanday yuradi</text>
+
+  <defs>
+    <marker id="ok" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="back" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <!-- 1 brauzer -->
+  <rect x="30" y="90" width="150" height="90" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="105" y="125" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">Brauzer</text>
+  <text x="105" y="148" font-size="13" fill="#334155" text-anchor="middle">GET /</text>
+  <text x="105" y="167" font-size="13" fill="#334155" text-anchor="middle">127.0.0.1:8000</text>
+
+  <!-- 2 runserver -->
+  <rect x="230" y="90" width="160" height="90" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="310" y="120" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">runserver</text>
+  <text x="310" y="142" font-size="13" fill="#334155" text-anchor="middle">ichki dev server</text>
+  <text x="310" y="161" font-size="13" fill="#334155" text-anchor="middle">so'rovni qabul qiladi</text>
+
+  <!-- 3 urls.py -->
+  <rect x="440" y="90" width="160" height="90" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="520" y="120" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">urls.py</text>
+  <text x="520" y="142" font-size="13" fill="#334155" text-anchor="middle">manzilni</text>
+  <text x="520" y="161" font-size="13" fill="#334155" text-anchor="middle">view'ga moslaydi</text>
+
+  <!-- 4 view -->
+  <rect x="650" y="90" width="150" height="90" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="725" y="120" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">view (funksiya)</text>
+  <text x="725" y="142" font-size="13" fill="#334155" text-anchor="middle">HttpResponse</text>
+  <text x="725" y="161" font-size="13" fill="#334155" text-anchor="middle">qaytaradi</text>
+
+  <!-- forward arrows -->
+  <line x1="180" y1="125" x2="228" y2="125" stroke="#2563eb" stroke-width="2.5" marker-end="url(#ok)"/>
+  <line x1="390" y1="125" x2="438" y2="125" stroke="#2563eb" stroke-width="2.5" marker-end="url(#ok)"/>
+  <line x1="600" y1="125" x2="648" y2="125" stroke="#2563eb" stroke-width="2.5" marker-end="url(#ok)"/>
+
+  <!-- return path -->
+  <path d="M725,180 L725,250 L105,250 L105,182" fill="none" stroke="#16a34a" stroke-width="2.5" marker-end="url(#back)"/>
+  <text x="415" y="275" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">javob (HTML / matn) brauzerga qaytadi</text>
+
+  <text x="30" y="320" font-size="13" fill="#64748b">Ko'k o'q — so'rov ichkariga; yashil o'q — javob tashqariga. Bu sodda oqim; keyingi boblarda middleware va template qo'shiladi.</text>
+</svg>

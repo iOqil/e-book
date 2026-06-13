@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 460">
+  <title>DRF so'rov quvuri: authentication, permission, throttle bosqichlari</title>
+  <rect width="760" height="460" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">DRF so'rov quvuri (kim? nima qila oladi? qancha tez?)</text>
+
+  <!-- Request -->
+  <rect x="40" y="64" width="160" height="56" rx="8" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="120" y="89" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">So'rov keladi</text>
+  <text x="120" y="108" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Authorization: ...</text>
+
+  <line x1="200" y1="92" x2="248" y2="92" stroke="#334155" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Step 1 authentication -->
+  <rect x="248" y="64" width="220" height="56" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="358" y="86" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">1. Authentication</text>
+  <text x="358" y="106" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Kim bu? request.user ni o'rnatadi</text>
+
+  <line x1="468" y1="92" x2="516" y2="92" stroke="#334155" stroke-width="2" marker-end="url(#ar)"/>
+  <rect x="516" y="64" width="204" height="56" rx="8" fill="#f1f5f9" stroke="#94a3b8"/>
+  <text x="618" y="86" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Token / JWT / Session</text>
+  <text x="618" y="106" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">topilmasa: AnonymousUser</text>
+
+  <line x1="358" y1="120" x2="358" y2="156" stroke="#334155" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Step 2 permission -->
+  <rect x="248" y="156" width="220" height="56" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="358" y="178" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">2. Permission</text>
+  <text x="358" y="198" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">has_permission() - view darajasi</text>
+
+  <rect x="516" y="156" width="204" height="56" rx="8" fill="#fee2e2" stroke="#dc2626"/>
+  <text x="618" y="180" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">Ruxsat yo'q?</text>
+  <text x="618" y="200" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">401 (kim emas) / 403 (mumkin emas)</text>
+  <line x1="468" y1="184" x2="516" y2="184" stroke="#dc2626" stroke-width="2" marker-end="url(#arr)"/>
+
+  <line x1="358" y1="212" x2="358" y2="248" stroke="#334155" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Step 3 throttle -->
+  <rect x="248" y="248" width="220" height="56" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="358" y="270" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#f59e0b">3. Throttle</text>
+  <text x="358" y="290" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Limitdan oshdimi?</text>
+
+  <rect x="516" y="248" width="204" height="56" rx="8" fill="#fef9c3" stroke="#f59e0b"/>
+  <text x="618" y="280" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#1e293b">Oshgan bo'lsa: 429</text>
+  <line x1="468" y1="276" x2="516" y2="276" stroke="#f59e0b" stroke-width="2" marker-end="url(#ary)"/>
+
+  <line x1="358" y1="304" x2="358" y2="340" stroke="#334155" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Step 4 object permission -->
+  <rect x="248" y="340" width="220" height="56" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="358" y="362" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">4. Object permission</text>
+  <text x="358" y="382" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">has_object_permission()</text>
+
+  <rect x="516" y="340" width="204" height="56" rx="8" fill="#f1f5f9" stroke="#94a3b8"/>
+  <text x="618" y="364" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">faqat get_object()</text>
+  <text x="618" y="384" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">chaqirilganda (detail)</text>
+  <line x1="468" y1="368" x2="516" y2="368" stroke="#94a3b8" stroke-width="2" marker-end="url(#arg)"/>
+
+  <line x1="120" y1="120" x2="120" y2="424" stroke="#16a34a" stroke-width="2"/>
+  <line x1="120" y1="424" x2="246" y2="424" stroke="#16a34a" stroke-width="2" marker-end="url(#arg2)"/>
+  <rect x="248" y="404" width="220" height="40" rx="8" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="358" y="429" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">view bajariladi (200/201)</text>
+
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#334155"/></marker>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#dc2626"/></marker>
+    <marker id="ary" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#f59e0b"/></marker>
+    <marker id="arg" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/></marker>
+    <marker id="arg2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/></marker>
+  </defs>
+</svg>

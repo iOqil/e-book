@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" font-family="Segoe UI, sans-serif">
+  <title>Python Model klassi va unga mos baza jadvali</title>
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">Model klassi = baza jadvali</text>
+
+  <!-- Chap: Python model -->
+  <rect x="30" y="64" width="320" height="300" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <rect x="30" y="64" width="320" height="36" rx="10" fill="#2563eb"/>
+  <text x="190" y="88" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">Python: models.py</text>
+  <text x="48" y="128" font-size="14" fill="#334155" font-family="Consolas, monospace">class Post(models.Model):</text>
+  <text x="66" y="156" font-size="14" fill="#334155" font-family="Consolas, monospace">title = CharField(...)</text>
+  <text x="66" y="184" font-size="14" fill="#334155" font-family="Consolas, monospace">body  = TextField()</text>
+  <text x="66" y="212" font-size="14" fill="#334155" font-family="Consolas, monospace">views = IntegerField(...)</text>
+  <text x="66" y="240" font-size="14" fill="#334155" font-family="Consolas, monospace">price = DecimalField(...)</text>
+  <text x="66" y="268" font-size="14" fill="#334155" font-family="Consolas, monospace">is_featured = BooleanField</text>
+  <text x="48" y="312" font-size="13" fill="#64748b" font-family="Consolas, monospace"># id avtomatik qo'shiladi</text>
+  <text x="48" y="340" font-size="13" fill="#64748b" font-family="Consolas, monospace"># (BigAutoField)</text>
+
+  <!-- Strelka -->
+  <line x1="356" y1="214" x2="424" y2="214" stroke="#16a34a" stroke-width="3"/>
+  <polygon points="424,214 410,206 410,222" fill="#16a34a"/>
+  <text x="390" y="200" text-anchor="middle" font-size="13" fill="#16a34a" font-weight="bold">migrate</text>
+
+  <!-- O'ng: jadval -->
+  <rect x="430" y="64" width="300" height="300" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <rect x="430" y="64" width="300" height="36" rx="10" fill="#16a34a"/>
+  <text x="580" y="88" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">SQL: blog_post jadvali</text>
+  <!-- ustun sarlavhalari -->
+  <rect x="446" y="116" width="268" height="32" fill="#e2e8f0"/>
+  <text x="462" y="137" font-size="13" font-weight="bold" fill="#1e293b">id</text>
+  <text x="520" y="137" font-size="13" font-weight="bold" fill="#1e293b">title</text>
+  <text x="640" y="137" font-size="13" font-weight="bold" fill="#1e293b">views</text>
+  <!-- qatorlar -->
+  <line x1="446" y1="148" x2="714" y2="148" stroke="#94a3b8"/>
+  <text x="462" y="172" font-size="13" fill="#334155">1</text>
+  <text x="520" y="172" font-size="13" fill="#334155">Salom</text>
+  <text x="640" y="172" font-size="13" fill="#334155">12</text>
+  <line x1="446" y1="184" x2="714" y2="184" stroke="#e2e8f0"/>
+  <text x="462" y="208" font-size="13" fill="#334155">2</text>
+  <text x="520" y="208" font-size="13" fill="#334155">Django</text>
+  <text x="640" y="208" font-size="13" fill="#334155">47</text>
+  <line x1="446" y1="220" x2="714" y2="220" stroke="#e2e8f0"/>
+  <text x="462" y="244" font-size="13" fill="#334155">3</text>
+  <text x="520" y="244" font-size="13" fill="#334155">ORM</text>
+  <text x="640" y="244" font-size="13" fill="#334155">8</text>
+  <text x="446" y="296" font-size="13" fill="#64748b">Har klass maydoni -> jadval ustuni</text>
+  <text x="446" y="320" font-size="13" fill="#64748b">Har obyekt (qator) -> bitta yozuv</text>
+  <text x="446" y="344" font-size="13" fill="#64748b">SQL yozmaysiz — ORM yozadi</text>
+
+  <text x="380" y="400" text-anchor="middle" font-size="14" fill="#334155">Siz Python klassi yozasiz, Django esa uni SQL jadvalga aylantiradi.</text>
+</svg>

@@ -82,15 +82,15 @@ mkdir vazifa-api && cd vazifa-api
 npm init -y
 npm pkg set type=module                 # ESM (import/export)
 
-# Asosiy bog'liqliklar (productionda kerak)
-npm install express @prisma/client bcryptjs jsonwebtoken zod \
+# Asosiy bog'liqliklar (productionda kerak) — Prisma'ni 6'ga qadaymiz (pastdagi eslatma)
+npm install express @prisma/client@6 bcryptjs jsonwebtoken zod \
   helmet cors express-rate-limit pino pino-http dotenv
 
 # Faqat ishlab chiqishda kerak
-npm install -D prisma vitest supertest
+npm install -D prisma@6 vitest supertest
 ```
 
-> **Prisma versiyasi:** bu bob (18-bob kabi) keng tarqalgan **Prisma 6** oqimidan foydalanadi — `datasource` ichida `url`, oddiy `migrate dev`. Prisma 7+ da sozlash boshqacha (`prisma.config.ts` + driver adapter); asoslar bir xil. Versiyani aniq qadash uchun: `npm install -D prisma@6 && npm install @prisma/client@6`.
+> **Prisma versiyasi — nega `@6`?** Bu bob (18-bob kabi) keng tarqalgan **Prisma 6** oqimidan foydalanadi: `datasource` ichida `url`, oddiy `migrate dev`, `generator client { provider = "prisma-client-js" }` va `import { PrismaClient } from "@prisma/client"`. Hozir `npm install prisma` (versiyasiz) sukut bo'yicha **Prisma 7** ni o'rnatadi — unda sozlash boshqacha (`prisma.config.ts` + driver adapter, klient alohida papkaga generatsiya bo'ladi) va bu bobdagi kod o'zgartirishsiz ishlamaydi. Shuning uchun yuqorida aniq `@6` qadadik. Modellar va so'rovlar ikkala versiyada bir xil — faqat dastlabki sozlash farq qiladi.
 
 ---
 

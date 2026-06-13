@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" font-family="Segoe UI, sans-serif">
+  <title>Django loyiha tuzilishi: manage.py va paket ichidagi sozlama fayllari</title>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+  <text x="30" y="40" font-size="22" font-weight="bold" fill="#1e293b">Django loyiha tuzilishi (startproject mysite)</text>
+
+  <!-- tashqi konteyner: loyiha ildizi -->
+  <rect x="30" y="60" width="700" height="380" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="50" y="88" font-size="16" font-weight="bold" fill="#334155">mysite/  (loyiha ildizi — istalgan nom)</text>
+
+  <!-- manage.py -->
+  <rect x="55" y="105" width="640" height="46" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="72" y="127" font-size="15" font-weight="bold" fill="#1e293b">manage.py</text>
+  <text x="72" y="145" font-size="13" fill="#334155">buyruqlar kaliti: runserver, migrate, startapp, test ...</text>
+
+  <!-- ichki paket konteyneri -->
+  <rect x="55" y="165" width="640" height="255" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="72" y="190" font-size="15" font-weight="bold" fill="#334155">mysite/  (sozlama paketi — loyiha bilan bir nomda)</text>
+
+  <!-- __init__.py -->
+  <rect x="75" y="205" width="600" height="38" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+  <text x="90" y="229" font-size="14" font-weight="bold" fill="#1e293b">__init__.py</text>
+  <text x="240" y="229" font-size="13" fill="#334155">bu papkani Python paketi qiladi (bo'sh)</text>
+
+  <!-- settings.py -->
+  <rect x="75" y="250" width="600" height="38" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.2"/>
+  <text x="90" y="274" font-size="14" font-weight="bold" fill="#1e293b">settings.py</text>
+  <text x="240" y="274" font-size="13" fill="#334155">barcha sozlamalar: INSTALLED_APPS, DEBUG, DATABASES ...</text>
+
+  <!-- urls.py -->
+  <rect x="75" y="295" width="600" height="38" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.2"/>
+  <text x="90" y="319" font-size="14" font-weight="bold" fill="#1e293b">urls.py</text>
+  <text x="240" y="319" font-size="13" fill="#334155">URL manzillarni view'larga bog'laydi (marshrutlash)</text>
+
+  <!-- wsgi.py -->
+  <rect x="75" y="340" width="290" height="38" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+  <text x="90" y="364" font-size="14" font-weight="bold" fill="#1e293b">wsgi.py</text>
+  <text x="170" y="364" font-size="13" fill="#334155">sinxron deploy kirishi</text>
+
+  <!-- asgi.py -->
+  <rect x="385" y="340" width="290" height="38" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+  <text x="400" y="364" font-size="14" font-weight="bold" fill="#1e293b">asgi.py</text>
+  <text x="478" y="364" font-size="13" fill="#334155">async deploy kirishi</text>
+
+  <!-- db.sqlite3 (migrate dan keyin) -->
+  <rect x="75" y="385" width="600" height="28" rx="6" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="90" y="404" font-size="13" fill="#64748b">db.sqlite3 — migrate buyrug'idan keyin avtomatik paydo bo'ladi</text>
+</svg>

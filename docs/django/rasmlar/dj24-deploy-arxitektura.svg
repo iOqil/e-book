@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 440">
+  <title>Production deploy arxitekturasi: brauzer -> nginx -> gunicorn -> Django -> PostgreSQL</title>
+  <rect width="820" height="440" fill="#f8fafc"/>
+  <text x="410" y="34" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Production so'rov yo'li</text>
+
+  <!-- Browser -->
+  <rect x="24" y="120" width="130" height="90" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="89" y="158" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb" text-anchor="middle">Brauzer</text>
+  <text x="89" y="182" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">HTTPS so'rov</text>
+
+  <!-- nginx -->
+  <rect x="200" y="100" width="160" height="130" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="280" y="130" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb" text-anchor="middle">nginx</text>
+  <text x="280" y="154" font-family="Segoe UI" font-size="13" fill="#1e293b" text-anchor="middle">reverse proxy</text>
+  <text x="280" y="176" font-family="Segoe UI" font-size="13" fill="#16a34a" text-anchor="middle">/static/ -> fayl</text>
+  <text x="280" y="198" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">qolgani -> app'ga</text>
+  <text x="280" y="218" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">TLS to'xtatish</text>
+
+  <!-- gunicorn -->
+  <rect x="406" y="100" width="170" height="130" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="491" y="130" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#b45309" text-anchor="middle">gunicorn</text>
+  <text x="491" y="152" font-family="Segoe UI" font-size="13" fill="#1e293b" text-anchor="middle">WSGI server</text>
+  <text x="491" y="174" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">worker 1</text>
+  <text x="491" y="194" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">worker 2 ...</text>
+  <text x="491" y="216" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">unix soket</text>
+
+  <!-- Django -->
+  <rect x="622" y="100" width="170" height="130" rx="10" fill="#eff6ff" stroke="#16a34a" stroke-width="2"/>
+  <text x="707" y="130" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="middle">Django ilova</text>
+  <text x="707" y="152" font-family="Segoe UI" font-size="13" fill="#1e293b" text-anchor="middle">URL -> view</text>
+  <text x="707" y="174" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">ORM -> baza</text>
+  <text x="707" y="196" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">template render</text>
+  <text x="707" y="216" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">HTTP javob</text>
+
+  <!-- PostgreSQL -->
+  <rect x="622" y="300" width="170" height="90" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="707" y="336" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#dc2626" text-anchor="middle">PostgreSQL</text>
+  <text x="707" y="360" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">doimiy ma'lumotlar</text>
+
+  <!-- arrows -->
+  <line x1="154" y1="165" x2="196" y2="165" stroke="#94a3b8" stroke-width="3"/>
+  <polygon points="200,165 188,159 188,171" fill="#94a3b8"/>
+  <line x1="360" y1="165" x2="402" y2="165" stroke="#94a3b8" stroke-width="3"/>
+  <polygon points="406,165 394,159 394,171" fill="#94a3b8"/>
+  <line x1="576" y1="165" x2="618" y2="165" stroke="#94a3b8" stroke-width="3"/>
+  <polygon points="622,165 610,159 610,171" fill="#94a3b8"/>
+  <line x1="707" y1="230" x2="707" y2="296" stroke="#94a3b8" stroke-width="3"/>
+  <polygon points="707,300 701,288 713,288" fill="#94a3b8"/>
+
+  <text x="410" y="425" font-family="Segoe UI" font-size="14" fill="#334155" text-anchor="middle">nginx eshikboni: statik faylni o'zi beradi, dinamik so'rovni gunicorn'ga uzatadi.</text>
+</svg>

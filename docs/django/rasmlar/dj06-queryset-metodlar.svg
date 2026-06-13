@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" font-family="Segoe UI, sans-serif">
+  <title>QuerySet metodlari: QuerySet qaytaruvchilar va aniq qiymat qaytaruvchilar</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">QuerySet metodlari ikki turga bo'linadi</text>
+
+  <!-- Left column: returns QuerySet (chainable) -->
+  <rect x="30" y="60" width="340" height="330" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <rect x="30" y="60" width="340" height="46" rx="12" fill="#2563eb"/>
+  <text x="200" y="90" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">QuerySet qaytaradi</text>
+  <text x="200" y="126" text-anchor="middle" font-size="14" fill="#64748b">zanjirlash mumkin (chaining), dangasa</text>
+
+  <text x="56" y="160" font-size="15" fill="#334155">all()</text>
+  <text x="56" y="186" font-size="15" fill="#334155">filter(...)</text>
+  <text x="56" y="212" font-size="15" fill="#334155">exclude(...)</text>
+  <text x="56" y="238" font-size="15" fill="#334155">order_by(...)</text>
+  <text x="56" y="264" font-size="15" fill="#334155">values(...)</text>
+  <text x="56" y="290" font-size="15" fill="#334155">values_list(...)</text>
+  <text x="56" y="316" font-size="15" fill="#334155">distinct()</text>
+  <text x="56" y="342" font-size="15" fill="#334155">annotate(...)</text>
+  <text x="56" y="374" font-size="14" fill="#16a34a">.filter().exclude().order_by()  ✓</text>
+
+  <!-- Right column: returns concrete value -->
+  <rect x="390" y="60" width="340" height="330" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <rect x="390" y="60" width="340" height="46" rx="12" fill="#16a34a"/>
+  <text x="560" y="90" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">Aniq qiymat qaytaradi</text>
+  <text x="560" y="126" text-anchor="middle" font-size="14" fill="#64748b">SQL darhol uriladi, zanjir tugaydi</text>
+
+  <text x="416" y="160" font-size="15" fill="#334155">get(...)        -&gt; obyekt</text>
+  <text x="416" y="186" font-size="15" fill="#334155">first() / last() -&gt; obyekt / None</text>
+  <text x="416" y="212" font-size="15" fill="#334155">count()         -&gt; int</text>
+  <text x="416" y="238" font-size="15" fill="#334155">exists()        -&gt; bool</text>
+  <text x="416" y="264" font-size="15" fill="#334155">aggregate(...)  -&gt; dict</text>
+  <text x="416" y="290" font-size="15" fill="#334155">create(...)     -&gt; obyekt</text>
+  <text x="416" y="316" font-size="15" fill="#334155">update(...)     -&gt; int (qatorlar)</text>
+  <text x="416" y="342" font-size="15" fill="#334155">delete()        -&gt; tuple</text>
+  <text x="416" y="374" font-size="14" fill="#dc2626">bulardan keyin .filter() qila olmaysiz  ✗</text>
+</svg>

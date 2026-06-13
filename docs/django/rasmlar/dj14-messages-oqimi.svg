@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 450" font-family="Segoe UI, sans-serif">
+  <title>Messages framework oqimi: POST -> redirect -> GET da bir marta ko'rsatish</title>
+  <rect width="760" height="450" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">Messages: qo'shilgan xabar keyingi sahifada BIR MARTA chiqadi</text>
+
+  <!-- Step 1: POST view -->
+  <rect x="40" y="70" width="200" height="120" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="140" y="98" text-anchor="middle" font-size="15" fill="#2563eb" font-weight="bold">1. POST view</text>
+  <text x="55" y="126" font-size="13" fill="#334155">messages.success(</text>
+  <text x="65" y="146" font-size="13" fill="#334155">request, "Saqlandi")</text>
+  <text x="55" y="172" font-size="13" fill="#16a34a">return redirect(...)</text>
+
+  <!-- Step 2: storage -->
+  <rect x="290" y="70" width="200" height="120" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="390" y="98" text-anchor="middle" font-size="15" fill="#b45309" font-weight="bold">2. Saqlash</text>
+  <text x="305" y="126" font-size="13" fill="#334155">Xabar sessionga</text>
+  <text x="305" y="146" font-size="13" fill="#334155">(yoki cookie'ga)</text>
+  <text x="305" y="166" font-size="13" fill="#334155">vaqtincha yoziladi.</text>
+
+  <!-- Step 3: GET render -->
+  <rect x="520" y="70" width="200" height="120" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="620" y="98" text-anchor="middle" font-size="15" fill="#16a34a" font-weight="bold">3. GET render</text>
+  <text x="535" y="126" font-size="13" fill="#334155">{% for m in</text>
+  <text x="545" y="146" font-size="13" fill="#334155">messages %}</text>
+  <text x="535" y="172" font-size="13" fill="#dc2626">o'qilgach o'chadi</text>
+
+  <line x1="240" y1="130" x2="290" y2="130" stroke="#94a3b8" stroke-width="3" marker-end="url(#a1)"/>
+  <line x1="490" y1="130" x2="520" y2="130" stroke="#94a3b8" stroke-width="3" marker-end="url(#a1)"/>
+
+  <!-- Levels box -->
+  <rect x="40" y="230" width="680" height="120" rx="10" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="60" y="258" font-size="15" fill="#1e293b" font-weight="bold">Darajalar (level) va teglar (tags):</text>
+  <rect x="60" y="275" width="120" height="34" rx="6" fill="#16a34a"/>
+  <text x="120" y="298" text-anchor="middle" font-size="13" fill="#ffffff">success (25)</text>
+  <rect x="195" y="275" width="120" height="34" rx="6" fill="#2563eb"/>
+  <text x="255" y="298" text-anchor="middle" font-size="13" fill="#ffffff">info (20)</text>
+  <rect x="330" y="275" width="120" height="34" rx="6" fill="#f59e0b"/>
+  <text x="390" y="298" text-anchor="middle" font-size="13" fill="#ffffff">warning (30)</text>
+  <rect x="465" y="275" width="120" height="34" rx="6" fill="#dc2626"/>
+  <text x="525" y="298" text-anchor="middle" font-size="13" fill="#ffffff">error (40)</text>
+  <rect x="600" y="275" width="100" height="34" rx="6" fill="#64748b"/>
+  <text x="650" y="298" text-anchor="middle" font-size="13" fill="#ffffff">debug (10)</text>
+  <text x="60" y="335" font-size="13" fill="#64748b">m.tags shablonda CSS klass sifatida ishlatiladi (masalan, class="alert success")</text>
+
+  <text x="380" y="400" text-anchor="middle" font-size="14" fill="#1e293b" font-weight="bold">PRG naqshi: POST -> Redirect -> GET. Sahifa yangilansa xabar takrorlanmaydi.</text>
+  <text x="380" y="428" text-anchor="middle" font-size="13" fill="#64748b">MessageMiddleware SessionMiddleware'dan KEYIN turishi shart</text>
+
+  <defs>
+    <marker id="a1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/></marker>
+  </defs>
+</svg>

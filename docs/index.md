@@ -15,10 +15,10 @@ hide:
 [GitHub](https://github.com/iOqil/e-book){ .md-button }
 
 <div class="hero-stats">
-  <div class="stat"><b>14</b><span>kitob</span></div>
-  <div class="stat"><b>724</b><span>diagramma</span></div>
-  <div class="stat"><b>330+</b><span>bob</span></div>
-  <div class="stat"><b>3100+</b><span>masala</span></div>
+  <div class="stat"><b>15</b><span>kitob</span></div>
+  <div class="stat"><b>800</b><span>diagramma</span></div>
+  <div class="stat"><b>355+</b><span>bob</span></div>
+  <div class="stat"><b>3400+</b><span>masala</span></div>
 </div>
 
 </section>
@@ -136,5 +136,13 @@ hide:
     JavaScript bilan **0 dan backend dasturchigacha**: event loop, asinxronlik, streamlar, native HTTP, Express, **4 xil DB** (SQLite, MySQL, Prisma, MongoDB), JWT auth/RBAC, real-time (Socket.io), testlash (Vitest/supertest), production (Docker/cluster/pino), TypeScript va to'liq REST API kapston. Kod real Node 24 + jonli MySQL da ishga tushirib tekshirilgan. 26 bob · 52 diagramma.
 
     [Boshlash →](nodejs/README.md)
+
+-   🟩 **15. Django**
+
+    ---
+
+    Python bilan **full-stack veb-dasturlash**: MTV arxitektura, ORM va migratsiya, model munosabatlari, admin panel, formalar, class-based views, autentifikatsiya, **Django REST Framework** (serializers, ViewSets, JWT, filtrlash/paginatsiya), signallar, keshlash, async/Celery, testlash (pytest-django), xavfsizlik va deployment + yakuniy kapston loyiha. Kod real Django 6.0 da ishga tushirib tekshirilgan. 25 bob · 76 diagramma.
+
+    [Boshlash →](django/README.md)
 
 </div>

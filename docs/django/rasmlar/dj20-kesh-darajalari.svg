@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470">
+  <title>Django keshlash darajalari: per-site, per-view, fragment, low-level</title>
+  <rect width="780" height="470" fill="#f8fafc"/>
+  <text x="390" y="34" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Keshlashning 4 darajasi — qancha pastga tushsa, shuncha aniq nazorat</text>
+
+  <!-- 1 per-site -->
+  <rect x="40" y="60" width="700" height="80" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="58" y="88" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb">1. Per-site (butun sayt)</text>
+  <text x="58" y="112" font-family="Segoe UI" font-size="14" fill="#1e293b">Middleware butun HTTP javobni keshlaydi. Eng keng qamrov, eng kam kod.</text>
+  <text x="58" y="132" font-family="Segoe UI" font-size="13" fill="#334155">UpdateCacheMiddleware + FetchFromCacheMiddleware</text>
+
+  <!-- 2 per-view -->
+  <rect x="80" y="156" width="620" height="80" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="98" y="184" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a">2. Per-view (bitta view)</text>
+  <text x="98" y="208" font-family="Segoe UI" font-size="14" fill="#1e293b">@cache_page(60) dekoratori bitta view javobini keshlaydi.</text>
+  <text x="98" y="228" font-family="Segoe UI" font-size="13" fill="#334155">URL (query string bilan) kalit bo'ladi.</text>
+
+  <!-- 3 fragment -->
+  <rect x="120" y="252" width="540" height="80" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="138" y="280" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#b45309">3. Template fragment</text>
+  <text x="138" y="304" font-family="Segoe UI" font-size="14" fill="#1e293b">{% cache 300 panel %} ... {% endcache %} sahifaning bir qismini keshlaydi.</text>
+  <text x="138" y="324" font-family="Segoe UI" font-size="13" fill="#334155">Qolgan sahifa har safar yangi render bo'ladi.</text>
+
+  <!-- 4 low-level -->
+  <rect x="160" y="348" width="460" height="80" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="178" y="376" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#dc2626">4. Low-level API (eng aniq)</text>
+  <text x="178" y="400" font-family="Segoe UI" font-size="14" fill="#1e293b">cache.get / cache.set — istalgan Python obyektini keshlash.</text>
+  <text x="178" y="420" font-family="Segoe UI" font-size="13" fill="#334155">Og'ir hisob, ORM natijasi, API javobi uchun.</text>
+
+  <text x="390" y="456" font-family="Segoe UI" font-size="14" fill="#334155" text-anchor="middle">Hammasi bir xil backend (locmem/Redis/Memcached) ustida ishlaydi.</text>
+</svg>

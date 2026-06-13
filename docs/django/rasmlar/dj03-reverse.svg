@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" font-family="Segoe UI, sans-serif">
+  <title>Nomli URL: path() ga name beriladi, reverse va url tagi nom orqali manzil quradi</title>
+  <rect x="0" y="0" width="760" height="380" fill="#f8fafc"/>
+  <text x="380" y="32" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">Nomli URL: bir manba, ikki yo'nalish</text>
+
+  <!-- markaz: path nomi -->
+  <rect x="250" y="160" width="260" height="80" rx="10" fill="#2563eb"/>
+  <text x="380" y="190" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">path("maqola/&lt;int:id&gt;/",</text>
+  <text x="380" y="210" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">  ..., name="maqola-detali")</text>
+  <text x="380" y="230" text-anchor="middle" font-size="13" fill="#dbeafe">app_name="blog" -&gt; "blog:maqola-detali"</text>
+
+  <!-- chap: python reverse -->
+  <rect x="40" y="70" width="280" height="70" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="180" y="96" text-anchor="middle" font-size="14" font-weight="bold" fill="#16a34a">Python (view) ichida</text>
+  <text x="60" y="120" font-size="13" fill="#334155" font-family="Consolas, monospace">reverse("blog:maqola-detali",</text>
+  <text x="60" y="135" font-size="13" fill="#334155" font-family="Consolas, monospace">        kwargs={"id": 42})</text>
+
+  <!-- ong: template url tag -->
+  <rect x="440" y="70" width="280" height="70" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="580" y="96" text-anchor="middle" font-size="14" font-weight="bold" fill="#16a34a">Template (HTML) ichida</text>
+  <text x="460" y="125" font-size="13" fill="#334155" font-family="Consolas, monospace">{% url "blog:maqola-detali"</text>
+  <text x="540" y="140" font-size="13" fill="#334155" font-family="Consolas, monospace">id=42 %}</text>
+
+  <!-- past: natija -->
+  <rect x="270" y="300" width="220" height="50" rx="8" fill="#16a34a"/>
+  <text x="380" y="330" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">/maqola/42/</text>
+
+  <defs>
+    <marker id="a3" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <line x1="180" y1="140" x2="270" y2="175" stroke="#64748b" stroke-width="2" marker-end="url(#a3)"/>
+  <line x1="580" y1="140" x2="490" y2="175" stroke="#64748b" stroke-width="2" marker-end="url(#a3)"/>
+  <line x1="380" y1="240" x2="380" y2="296" stroke="#64748b" stroke-width="2" marker-end="url(#a3)"/>
+
+  <text x="380" y="272" text-anchor="middle" font-size="13" fill="#dc2626" font-weight="bold">Manzilni hech qachon qo'lda yozmang — nomdan quring</text>
+</svg>

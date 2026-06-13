@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 450" font-family="Segoe UI, sans-serif">
+  <title>Generic CBV oilasi: View dan to'liq CRUD gacha</title>
+  <rect width="760" height="450" fill="#f8fafc"/>
+  <text x="380" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Generic CBV oilasi va ularning vazifasi</text>
+
+  <!-- View root -->
+  <rect x="300" y="58" width="160" height="48" rx="9" fill="#1e293b"/>
+  <text x="380" y="88" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">View (ildiz)</text>
+
+  <line x1="380" y1="106" x2="380" y2="132" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="160" y1="132" x2="620" y2="132" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="160" y1="132" x2="160" y2="150" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="380" y1="132" x2="380" y2="150" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="620" y1="132" x2="620" y2="150" stroke="#94a3b8" stroke-width="2"/>
+
+  <!-- TemplateView -->
+  <rect x="60" y="150" width="200" height="78" rx="9" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+  <text x="160" y="176" font-size="14" font-weight="bold" fill="#2563eb" text-anchor="middle">TemplateView</text>
+  <text x="160" y="198" font-size="13" fill="#334155" text-anchor="middle">faqat shablon ko'rsatadi</text>
+  <text x="160" y="218" font-size="13" fill="#64748b" text-anchor="middle">bosh sahifa, "haqida"</text>
+
+  <!-- ListView -->
+  <rect x="280" y="150" width="200" height="78" rx="9" fill="#fff" stroke="#16a34a" stroke-width="2"/>
+  <text x="380" y="176" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">ListView</text>
+  <text x="380" y="198" font-size="13" fill="#334155" text-anchor="middle">obyektlar ro'yxati</text>
+  <text x="380" y="218" font-size="13" fill="#64748b" text-anchor="middle">+ paginatsiya bepul</text>
+
+  <!-- DetailView -->
+  <rect x="500" y="150" width="200" height="78" rx="9" fill="#fff" stroke="#16a34a" stroke-width="2"/>
+  <text x="600" y="176" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">DetailView</text>
+  <text x="600" y="198" font-size="13" fill="#334155" text-anchor="middle">bitta obyekt (pk/slug)</text>
+  <text x="600" y="218" font-size="13" fill="#64748b" text-anchor="middle">topilmasa 404</text>
+
+  <!-- editing group -->
+  <rect x="80" y="262" width="600" height="120" rx="12" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="380" y="288" font-size="15" font-weight="bold" fill="#b45309" text-anchor="middle">Generic editing — forma + saqlash bitta klassda</text>
+
+  <rect x="110" y="302" width="170" height="64" rx="9" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+  <text x="195" y="328" font-size="14" font-weight="bold" fill="#2563eb" text-anchor="middle">CreateView</text>
+  <text x="195" y="350" font-size="13" fill="#334155" text-anchor="middle">yangi obyekt (INSERT)</text>
+
+  <rect x="295" y="302" width="170" height="64" rx="9" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="328" font-size="14" font-weight="bold" fill="#2563eb" text-anchor="middle">UpdateView</text>
+  <text x="380" y="350" font-size="13" fill="#334155" text-anchor="middle">tahrirlash (UPDATE)</text>
+
+  <rect x="480" y="302" width="170" height="64" rx="9" fill="#fff" stroke="#dc2626" stroke-width="2"/>
+  <text x="565" y="328" font-size="14" font-weight="bold" fill="#dc2626" text-anchor="middle">DeleteView</text>
+  <text x="565" y="350" font-size="13" fill="#334155" text-anchor="middle">o'chirish (DELETE)</text>
+
+  <text x="380" y="416" font-size="14" fill="#334155" text-anchor="middle">Hammasi model + fields/template ni e'lon qilsangiz bo'ldi — ORM, forma, render avtomatik</text>
+  <text x="380" y="438" font-size="13" fill="#64748b" text-anchor="middle">get_queryset, get_context_data, success_url bilan moslashtirasiz</text>
+</svg>

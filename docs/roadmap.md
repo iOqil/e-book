@@ -79,7 +79,7 @@ Yo'nalishingizdan qat'i nazar, **birinchi kunlardanoq** kodingizni Git bilan saq
 1. **Web asoslari** — [HTML & CSS](html-css/README.md) va [JavaScript](js/javascript-qollanma-1-qism.md) ni yengil darajada (chuqur dizayn shart emas, lekin "web nima?" ni biling).
 2. **Bitta server tili** — [PHP](php/README.md) yoki [Python](python/README.md) (pastdagi maslahatga qarang).
 3. **[SQL & MySQL](sql/README.md)** — ma'lumotlar bazasi. Backend'ning poydevori: har bir login, buyurtma, post shu yerda saqlanadi.
-4. **Framework / API** — tilning web qismi: PHP'da [Laravel](laravel/README.md), Python'da FastAPI/Django. Real server ilova quring.
+4. **Framework / API** — tilning web qismi: PHP'da [Laravel](laravel/README.md), Python'da [Django](django/README.md) (yoki FastAPI), JavaScript'da [Node.js](nodejs/README.md). Real server ilova quring.
 
 !!! question "PHP yoki Python — qaysi biri?"
     - **Python** — agar AI, ma'lumot tahlili, avtomatlashtirish yoki zamonaviy startaplar qiziqtirsa. Sintaksisi sodda, FastAPI tez.
@@ -127,7 +127,7 @@ Yo'nalishingizdan qat'i nazar, **birinchi kunlardanoq** kodingizni Git bilan saq
 | Yo'nalish | Kitoblar (tartib bilan) | Taxminiy vaqt\* |
 |---|---|---|
 | 🎨 **Frontend** | HTML & CSS → JavaScript → TypeScript → React → Next.js | ~6–9 oy |
-| ⚙️ **Backend** | (Web asoslari) → PHP yoki Python → SQL & MySQL → Laravel / FastAPI | ~5–8 oy |
+| ⚙️ **Backend** | (Web asoslari) → PHP yoki Python → SQL & MySQL → Laravel / Django / Node.js | ~5–8 oy |
 | 🚀 **Full Stack** | HTML & CSS → JavaScript → TypeScript → React/Next → SQL → PHP/Python | ~9–14 oy |
 | 🧩 **Algoritmlar** | 1000 masala (barcha yo'nalishlar uchun, parallel) | uzluksiz |
 | 🐙 **Git & GitHub** | Barcha yo'nalishlar uchun (parallel, birinchi kundan) | uzluksiz |

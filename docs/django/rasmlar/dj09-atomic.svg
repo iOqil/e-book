@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430">
+  <title>transaction.atomic: commit va rollback jarayoni</title>
+  <rect width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="34" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">transaction.atomic — hammasi yoki hech narsa</text>
+
+  <!-- atomic block container -->
+  <rect x="250" y="58" width="260" height="150" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="380" y="82" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb" text-anchor="middle">with transaction.atomic():</text>
+  <rect x="270" y="96" width="220" height="36" rx="6" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="380" y="119" font-family="Segoe UI" font-size="13" fill="#1e293b" text-anchor="middle">Ali.balans -= 200000</text>
+  <rect x="270" y="140" width="220" height="36" rx="6" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="380" y="163" font-family="Segoe UI" font-size="13" fill="#1e293b" text-anchor="middle">Vali.balans += 200000</text>
+  <text x="380" y="196" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">ikki o'zgarish bitta bog'lamda</text>
+
+  <!-- branch arrows -->
+  <line x1="310" y1="208" x2="200" y2="262" stroke="#16a34a" stroke-width="3"/>
+  <polygon points="200,262 206,249 213,260" fill="#16a34a"/>
+  <line x1="450" y1="208" x2="560" y2="262" stroke="#dc2626" stroke-width="3"/>
+  <polygon points="560,262 547,260 554,249" fill="#dc2626"/>
+
+  <!-- success path -->
+  <rect x="40" y="268" width="300" height="130" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="60" y="294" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a">Xato yo'q  →  COMMIT</text>
+  <text x="60" y="320" font-family="Segoe UI" font-size="14" fill="#1e293b">Blok oxirigacha yetdi.</text>
+  <text x="60" y="344" font-family="Segoe UI" font-size="14" fill="#1e293b">Ikkala o'zgarish ham</text>
+  <text x="60" y="368" font-family="Segoe UI" font-size="14" fill="#16a34a">bazaga doimiy yoziladi.</text>
+
+  <!-- failure path -->
+  <rect x="420" y="268" width="300" height="130" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="440" y="294" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#dc2626">Exception  →  ROLLBACK</text>
+  <text x="440" y="320" font-family="Segoe UI" font-size="14" fill="#1e293b">Blok ichida xato chiqdi.</text>
+  <text x="440" y="344" font-family="Segoe UI" font-size="14" fill="#1e293b">Barcha o'zgarishlar bekor.</text>
+  <text x="440" y="368" font-family="Segoe UI" font-size="14" fill="#dc2626">Baza eski holatga qaytadi.</text>
+
+  <text x="380" y="420" font-family="Segoe UI" font-size="14" fill="#334155" text-anchor="middle">Pul yarmida "yo'qolib qolmaydi" — yoki to'liq bajariladi, yoki umuman bajarilmaydi.</text>
+</svg>

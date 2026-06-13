@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" font-family="Segoe UI, sans-serif">
+  <title>Fon vazifa naqshi: foydalanuvchi javobni tez oladi, og'ir ish keyin bajariladi</title>
+  <rect width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Fon vazifa naqshi</text>
+  <text x="380" y="58" font-size="13" fill="#64748b" text-anchor="middle">og'ir ishni kutmasdan, foydalanuvchiga tez javob</text>
+
+  <!-- WITHOUT background -->
+  <text x="200" y="92" font-size="15" font-weight="bold" fill="#dc2626" text-anchor="middle">Fonsiz (sekin)</text>
+  <rect x="40" y="105" width="320" height="120" rx="10" fill="#fff" stroke="#dc2626" stroke-width="2"/>
+  <rect x="60" y="125" width="90" height="34" rx="5" fill="#eff6ff" stroke="#2563eb"/>
+  <text x="105" y="147" font-size="13" fill="#1e293b" text-anchor="middle">so'rov</text>
+  <rect x="160" y="125" width="180" height="34" rx="5" fill="#fef2f2" stroke="#dc2626"/>
+  <text x="250" y="147" font-size="13" fill="#dc2626" text-anchor="middle">email yuborish (3s)</text>
+  <rect x="160" y="170" width="90" height="34" rx="5" fill="#f0fdf4" stroke="#16a34a"/>
+  <text x="205" y="192" font-size="13" fill="#1e293b" text-anchor="middle">javob</text>
+  <text x="200" y="218" font-size="13" fill="#dc2626" text-anchor="middle">foydalanuvchi 3 soniya kutadi</text>
+
+  <!-- WITH background -->
+  <text x="560" y="92" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="middle">Fon bilan (tez)</text>
+  <rect x="400" y="105" width="320" height="120" rx="10" fill="#fff" stroke="#16a34a" stroke-width="2"/>
+  <rect x="420" y="125" width="90" height="34" rx="5" fill="#eff6ff" stroke="#2563eb"/>
+  <text x="465" y="147" font-size="13" fill="#1e293b" text-anchor="middle">so'rov</text>
+  <rect x="520" y="125" width="110" height="34" rx="5" fill="#fffbeb" stroke="#f59e0b"/>
+  <text x="575" y="147" font-size="13" fill="#b45309" text-anchor="middle">.delay() (0.01s)</text>
+  <rect x="640" y="125" width="62" height="34" rx="5" fill="#f0fdf4" stroke="#16a34a"/>
+  <text x="671" y="147" font-size="13" fill="#1e293b" text-anchor="middle">javob</text>
+  <text x="560" y="192" font-size="13" fill="#16a34a" text-anchor="middle">javob darhol qaytadi</text>
+  <text x="560" y="214" font-size="13" fill="#64748b" text-anchor="middle">email worker'da fonda yuboriladi</text>
+
+  <!-- bottom flow -->
+  <rect x="40" y="260" width="680" height="120" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="380" y="285" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Naqsh: og'ir ishni task'ga topshir, ID bilan kuzat</text>
+
+  <rect x="70" y="305" width="150" height="50" rx="6" fill="#eff6ff" stroke="#2563eb"/>
+  <text x="145" y="328" font-size="13" fill="#1e293b" text-anchor="middle">view ob'ekt yaratadi</text>
+  <text x="145" y="346" font-size="13" fill="#64748b" text-anchor="middle">holat: kutilmoqda</text>
+
+  <rect x="305" y="305" width="150" height="50" rx="6" fill="#fffbeb" stroke="#f59e0b"/>
+  <text x="380" y="328" font-size="13" fill="#1e293b" text-anchor="middle">task.delay(obj.id)</text>
+  <text x="380" y="346" font-size="13" fill="#64748b" text-anchor="middle">navbatga qo'yiladi</text>
+
+  <rect x="540" y="305" width="150" height="50" rx="6" fill="#f0fdf4" stroke="#16a34a"/>
+  <text x="615" y="328" font-size="13" fill="#1e293b" text-anchor="middle">worker bajaradi</text>
+  <text x="615" y="346" font-size="13" fill="#64748b" text-anchor="middle">holat: bajarildi</text>
+
+  <line x1="220" y1="330" x2="303" y2="330" stroke="#94a3b8" stroke-width="2" marker-end="url(#a3)"/>
+  <line x1="455" y1="330" x2="538" y2="330" stroke="#94a3b8" stroke-width="2" marker-end="url(#a3)"/>
+
+  <text x="380" y="405" font-size="13" fill="#1e293b" text-anchor="middle">Qoida: task'ga butun ob'ektni emas, ID'ni uzating — worker bazadan yangi o'qiydi</text>
+
+  <defs>
+    <marker id="a3" markerWidth="11" markerHeight="11" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L9,4 L0,8 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+</svg>

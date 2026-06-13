@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420">
+  <title>JWT access va refresh tokenlar hayot sikli</title>
+  <rect width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">JWT: access (qisqa) va refresh (uzun) tokenlar</text>
+
+  <!-- JWT structure -->
+  <text x="380" y="66" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#334155">Token tuzilishi: header.payload.signature</text>
+  <rect x="120" y="78" width="170" height="40" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="205" y="103" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">header (algoritm)</text>
+  <rect x="295" y="78" width="170" height="40" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="380" y="103" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">payload (user_id, exp)</text>
+  <rect x="470" y="78" width="170" height="40" fill="#fef9c3" stroke="#f59e0b"/>
+  <text x="555" y="103" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">signature (imzo)</text>
+
+  <!-- timeline -->
+  <text x="40" y="166" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">jwt/create/</text>
+  <rect x="160" y="148" width="200" height="40" rx="6" fill="#ffffff" stroke="#2563eb"/>
+  <text x="260" y="173" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">access (5 daq) + refresh (1 kun)</text>
+
+  <line x1="360" y1="168" x2="420" y2="168" stroke="#334155" stroke-width="2" marker-end="url(#a)"/>
+  <rect x="420" y="148" width="280" height="40" rx="6" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="560" y="173" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">access bilan API ishlaydi (Bearer)</text>
+
+  <!-- access expires -->
+  <line x1="560" y1="188" x2="560" y2="224" stroke="#dc2626" stroke-width="2" marker-end="url(#ar)"/>
+  <rect x="420" y="224" width="280" height="40" rx="6" fill="#fee2e2" stroke="#dc2626"/>
+  <text x="560" y="249" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">5 daqiqadan keyin access muddati tugaydi (401)</text>
+
+  <!-- refresh -->
+  <line x1="420" y1="244" x2="360" y2="244" stroke="#334155" stroke-width="2" marker-end="url(#a)"/>
+  <text x="40" y="248" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">jwt/refresh/</text>
+  <rect x="160" y="224" width="200" height="40" rx="6" fill="#ffffff" stroke="#2563eb"/>
+  <text x="260" y="249" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">refresh -> yangi access</text>
+
+  <!-- loop back -->
+  <path d="M160,244 C90,244 90,168 158,168" fill="none" stroke="#16a34a" stroke-width="2" marker-end="url(#ag)"/>
+  <text x="64" y="210" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">qaytadan</text>
+
+  <!-- bottom note -->
+  <rect x="120" y="300" width="520" height="92" rx="8" fill="#f1f5f9" stroke="#94a3b8"/>
+  <text x="140" y="326" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">Nega ikkita token?</text>
+  <text x="140" y="350" font-family="Segoe UI" font-size="13" fill="#334155">access qisqa umrli - o'g'irlansa ham tez yaroqsiz bo'ladi.</text>
+  <text x="140" y="372" font-family="Segoe UI" font-size="13" fill="#334155">refresh uzun umrli - faqat yangi access olishga ishlatiladi, kamroq uzatiladi.</text>
+
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#334155"/></marker>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#dc2626"/></marker>
+    <marker id="ag" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/></marker>
+  </defs>
+</svg>

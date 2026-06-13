@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" font-family="Segoe UI, sans-serif">
+  <title>Django admin panel arxitekturasi: model, ModelAdmin va avtomatik UI</title>
+  <rect width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="34" font-size="22" font-weight="bold" fill="#1e293b" text-anchor="middle">Admin panel qanday quriladi</text>
+
+  <!-- Model -->
+  <rect x="40" y="80" width="200" height="150" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="140" y="108" font-size="16" font-weight="bold" fill="#2563eb" text-anchor="middle">1. Model</text>
+  <text x="140" y="132" font-size="13" fill="#334155" text-anchor="middle">models.py</text>
+  <line x1="60" y1="146" x2="220" y2="146" stroke="#94a3b8" stroke-width="1"/>
+  <text x="60" y="170" font-size="13" fill="#1e293b">sarlavha</text>
+  <text x="60" y="192" font-size="13" fill="#1e293b">muallif (FK)</text>
+  <text x="60" y="214" font-size="13" fill="#1e293b">holat, korishlar</text>
+
+  <!-- ModelAdmin -->
+  <rect x="290" y="80" width="200" height="150" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="390" y="108" font-size="16" font-weight="bold" fill="#16a34a" text-anchor="middle">2. ModelAdmin</text>
+  <text x="390" y="132" font-size="13" fill="#334155" text-anchor="middle">admin.py</text>
+  <line x1="310" y1="146" x2="470" y2="146" stroke="#94a3b8" stroke-width="1"/>
+  <text x="310" y="170" font-size="13" fill="#1e293b">list_display</text>
+  <text x="310" y="192" font-size="13" fill="#1e293b">list_filter</text>
+  <text x="310" y="214" font-size="13" fill="#1e293b">search_fields ...</text>
+
+  <!-- UI -->
+  <rect x="540" y="80" width="200" height="150" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="640" y="108" font-size="16" font-weight="bold" fill="#f59e0b" text-anchor="middle">3. Tayyor UI</text>
+  <text x="640" y="132" font-size="13" fill="#334155" text-anchor="middle">/admin/ sahifa</text>
+  <line x1="560" y1="146" x2="720" y2="146" stroke="#94a3b8" stroke-width="1"/>
+  <text x="560" y="170" font-size="13" fill="#1e293b">Jadval, qidiruv</text>
+  <text x="560" y="192" font-size="13" fill="#1e293b">Forma, filtrlar</text>
+  <text x="560" y="214" font-size="13" fill="#1e293b">Qo'shish/o'chirish</text>
+
+  <!-- arrows -->
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#334155"/>
+    </marker>
+  </defs>
+  <line x1="240" y1="155" x2="286" y2="155" stroke="#334155" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="490" y1="155" x2="536" y2="155" stroke="#334155" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="263" y="148" font-size="13" fill="#64748b" text-anchor="middle">register</text>
+  <text x="513" y="148" font-size="13" fill="#64748b" text-anchor="middle">avtomatik</text>
+
+  <!-- bottom note -->
+  <rect x="40" y="290" width="700" height="110" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="60" y="320" font-size="15" font-weight="bold" fill="#2563eb">Asosiy g'oya</text>
+  <text x="60" y="348" font-size="14" fill="#1e293b">Siz bironta HTML, CSS yoki JS yozmaysiz. Modelni admin.site.register bilan</text>
+  <text x="60" y="372" font-size="14" fill="#1e293b">ro'yxatdan o'tkazasiz, ModelAdmin orqali xulq-atvorni sozlaysiz —</text>
+  <text x="60" y="396" font-size="14" fill="#1e293b">Django to'liq boshqaruv panelini o'zi yaratadi.</text>
+</svg>

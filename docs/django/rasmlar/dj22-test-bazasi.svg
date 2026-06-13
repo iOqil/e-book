@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420">
+  <title>Test bazasi va izolyatsiya sikli</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Test bazasi: yarat, har test, tozalash</text>
+
+  <!-- Real DB -->
+  <rect x="30" y="80" width="170" height="90" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="115" y="120" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">Haqiqiy baza</text>
+  <text x="115" y="145" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">tegilmaydi</text>
+
+  <line x1="200" y1="125" x2="270" y2="125" stroke="#dc2626" stroke-width="3" marker-end="url(#x)"/>
+  <text x="235" y="112" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">nusxa</text>
+
+  <!-- Test DB -->
+  <rect x="275" y="70" width="450" height="280" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="500" y="98" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">test_... bazasi (alohida, vaqtinchalik)</text>
+
+  <!-- transaction loop -->
+  <rect x="300" y="120" width="400" height="70" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="320" y="150" font-family="Segoe UI" font-size="14" fill="#16a34a" font-weight="bold">setUpTestData</text>
+  <text x="320" y="172" font-family="Segoe UI" font-size="13" fill="#334155">bir marta: umumiy ma'lumot (tez)</text>
+
+  <rect x="300" y="205" width="400" height="60" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="320" y="232" font-family="Segoe UI" font-size="14" fill="#f59e0b" font-weight="bold">setUp</text>
+  <text x="430" y="232" font-family="Segoe UI" font-size="13" fill="#334155">har test: yangi obyekt</text>
+  <text x="320" y="252" font-family="Segoe UI" font-size="13" fill="#334155">har testdan keyin: rollback (qaytarish)</text>
+
+  <rect x="300" y="280" width="400" height="50" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="320" y="310" font-family="Segoe UI" font-size="14" fill="#2563eb">test_xxx() -> assert -> baza toza holatga qaytadi</text>
+
+  <text x="380" y="395" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Test tugagach test bazasi butunlay o'chiriladi (--keepdb bilan saqlash mumkin).</text>
+
+  <defs>
+    <marker id="x" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/>
+    </marker>
+  </defs>
+</svg>

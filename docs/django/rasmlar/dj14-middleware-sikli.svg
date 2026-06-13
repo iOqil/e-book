@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" font-family="Segoe UI, sans-serif">
+  <title>Middleware so'rov-javob sikli (piyoz modeli)</title>
+  <rect width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">Middleware sikli: so'rov ichkariga, javob tashqariga</text>
+
+  <!-- Onion layers -->
+  <rect x="120" y="70" width="520" height="320" rx="14" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="135" y="92" font-size="14" fill="#2563eb" font-weight="bold">SecurityMiddleware</text>
+
+  <rect x="180" y="110" width="400" height="240" rx="12" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/>
+  <text x="195" y="132" font-size="14" fill="#1e3a8a" font-weight="bold">SessionMiddleware</text>
+
+  <rect x="240" y="150" width="280" height="160" rx="10" fill="#93c5fd" stroke="#2563eb" stroke-width="2"/>
+  <text x="255" y="172" font-size="14" fill="#1e3a8a" font-weight="bold">AuthenticationMiddleware</text>
+
+  <rect x="300" y="190" width="160" height="80" rx="8" fill="#16a34a"/>
+  <text x="380" y="226" text-anchor="middle" font-size="16" fill="#ffffff" font-weight="bold">VIEW</text>
+  <text x="380" y="248" text-anchor="middle" font-size="13" fill="#dcfce7">get_response()</text>
+
+  <!-- Request arrow (into center) -->
+  <line x1="40" y1="180" x2="295" y2="215" stroke="#2563eb" stroke-width="3" marker-end="url(#a1)"/>
+  <text x="48" y="170" font-size="14" fill="#2563eb" font-weight="bold">So'rov (request)</text>
+  <text x="55" y="200" font-size="13" fill="#334155">__call__ ustki yarimi</text>
+
+  <!-- Response arrow (out from center) -->
+  <line x1="465" y1="245" x2="720" y2="300" stroke="#16a34a" stroke-width="3" marker-end="url(#a2)"/>
+  <text x="560" y="300" font-size="14" fill="#16a34a" font-weight="bold">Javob (response)</text>
+  <text x="555" y="320" font-size="13" fill="#334155">__call__ ostki yarimi</text>
+
+  <text x="380" y="375" text-anchor="middle" font-size="13" fill="#334155">Har qatlam: so'rovni ichkariga uzatadi, javobni tashqariga qaytaradi</text>
+
+  <text x="380" y="425" text-anchor="middle" font-size="14" fill="#1e293b" font-weight="bold">Tartib MUHIM: ustdagi middleware so'rovni BIRINCHI, javobni OXIRGI ko'radi</text>
+  <text x="380" y="450" text-anchor="middle" font-size="13" fill="#64748b">MIDDLEWARE ro'yxati ustidan-pastiga = piyozning tashqi-ichki qatlamlari</text>
+
+  <defs>
+    <marker id="a1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/></marker>
+    <marker id="a2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/></marker>
+  </defs>
+</svg>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 420" font-family="Segoe UI, sans-serif">
+  <title>ORM metodlari va ular yaratadigan SQL so'rovlari</title>
+  <rect x="0" y="0" width="780" height="420" fill="#f8fafc"/>
+  <text x="390" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">ORM -&gt; SQL: siz Python yozasiz, Django SQL yozadi</text>
+
+  <!-- header columns -->
+  <text x="200" y="74" text-anchor="middle" font-size="15" font-weight="bold" fill="#2563eb">Python (ORM)</text>
+  <text x="580" y="74" text-anchor="middle" font-size="15" font-weight="bold" fill="#16a34a">SQL (baza bajaradi)</text>
+
+  <!-- row create -->
+  <rect x="40" y="88" width="320" height="68" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="56" y="116" font-size="13" fill="#334155" font-family="Consolas, monospace">Post.objects.create(</text>
+  <text x="74" y="136" font-size="13" fill="#334155" font-family="Consolas, monospace">title="Salom", views=0)</text>
+  <line x1="362" y1="122" x2="418" y2="122" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="418,122 404,115 404,129" fill="#94a3b8"/>
+  <rect x="420" y="88" width="320" height="68" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="436" y="116" font-size="13" fill="#334155" font-family="Consolas, monospace">INSERT INTO blog_post</text>
+  <text x="436" y="136" font-size="13" fill="#334155" font-family="Consolas, monospace">(title, views) VALUES (...);</text>
+
+  <!-- row all -->
+  <rect x="40" y="170" width="320" height="58" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="56" y="205" font-size="13" fill="#334155" font-family="Consolas, monospace">Post.objects.all()</text>
+  <line x1="362" y1="199" x2="418" y2="199" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="418,199 404,192 404,206" fill="#94a3b8"/>
+  <rect x="420" y="170" width="320" height="58" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="436" y="205" font-size="13" fill="#334155" font-family="Consolas, monospace">SELECT * FROM blog_post;</text>
+
+  <!-- row get -->
+  <rect x="40" y="242" width="320" height="58" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="56" y="277" font-size="13" fill="#334155" font-family="Consolas, monospace">Post.objects.get(id=2)</text>
+  <line x1="362" y1="271" x2="418" y2="271" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="418,271 404,264 404,278" fill="#94a3b8"/>
+  <rect x="420" y="242" width="320" height="58" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="436" y="269" font-size="13" fill="#334155" font-family="Consolas, monospace">SELECT * FROM blog_post</text>
+  <text x="436" y="289" font-size="13" fill="#334155" font-family="Consolas, monospace">WHERE id = 2;</text>
+
+  <!-- note -->
+  <rect x="40" y="320" width="700" height="76" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="60" y="346" font-size="14" font-weight="bold" fill="#2563eb">ORM (Object-Relational Mapping):</text>
+  <text x="60" y="370" font-size="13" fill="#334155">obyektlar (Python) bilan jadvallar (SQL) o'rtasidagi avtomatik tarjimon.</text>
+  <text x="60" y="390" font-size="13" fill="#334155">SQL injection, qo'lda satr yopishtirish — yo'q. Xavfsiz va Pythonik.</text>
+</svg>

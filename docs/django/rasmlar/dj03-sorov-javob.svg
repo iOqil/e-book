@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" font-family="Segoe UI, sans-serif">
+  <title>Django so'rov-javob sikli: brauzer dan URLconf, view orqali javobgacha</title>
+  <rect x="0" y="0" width="760" height="360" fill="#f8fafc"/>
+  <text x="380" y="32" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">Django so'rov-javob sikli</text>
+
+  <!-- Brauzer -->
+  <rect x="30" y="70" width="140" height="70" rx="8" fill="#2563eb"/>
+  <text x="100" y="100" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">Brauzer</text>
+  <text x="100" y="122" text-anchor="middle" font-size="13" fill="#dbeafe">GET /maqola/42/</text>
+
+  <!-- urls.py -->
+  <rect x="230" y="70" width="150" height="70" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="305" y="98" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e293b">URLconf</text>
+  <text x="305" y="120" text-anchor="middle" font-size="13" fill="#334155">urls.py mos</text>
+  <text x="305" y="135" text-anchor="middle" font-size="13" fill="#334155">path() ni topadi</text>
+
+  <!-- view -->
+  <rect x="440" y="70" width="150" height="70" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="515" y="98" text-anchor="middle" font-size="15" font-weight="bold" fill="#16a34a">View funksiya</text>
+  <text x="515" y="120" text-anchor="middle" font-size="13" fill="#334155">maqola_detali(</text>
+  <text x="515" y="135" text-anchor="middle" font-size="13" fill="#334155">request, id=42)</text>
+
+  <!-- response -->
+  <rect x="620" y="70" width="120" height="70" rx="8" fill="#16a34a"/>
+  <text x="680" y="100" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">HttpResponse</text>
+  <text x="680" y="122" text-anchor="middle" font-size="13" fill="#dcfce7">status 200</text>
+
+  <!-- strelkalar oldinga -->
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#334155"/>
+    </marker>
+  </defs>
+  <line x1="170" y1="105" x2="226" y2="105" stroke="#334155" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="380" y1="105" x2="436" y2="105" stroke="#334155" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="590" y1="105" x2="616" y2="105" stroke="#334155" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- qaytish strelka -->
+  <path d="M680 140 L680 300 L100 300 L100 145" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#aro)"/>
+  <marker id="aro" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+    <path d="M0,0 L8,3 L0,6 Z" fill="#f59e0b"/>
+  </marker>
+  <rect x="300" y="278" width="180" height="44" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="390" y="298" text-anchor="middle" font-size="13" fill="#92400e">Javob brauzerga</text>
+  <text x="390" y="314" text-anchor="middle" font-size="13" fill="#92400e">qaytariladi (HTML/JSON)</text>
+
+  <!-- izoh -->
+  <text x="305" y="185" text-anchor="middle" font-size="13" fill="#64748b">&lt;int:id&gt; segmenti 42 ni ajratadi</text>
+  <text x="515" y="185" text-anchor="middle" font-size="13" fill="#64748b">id integer turida keladi</text>
+</svg>

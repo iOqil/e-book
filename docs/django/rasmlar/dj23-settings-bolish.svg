@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 470" font-family="Segoe UI, sans-serif">
+  <title>Settings bo'lish: base.py umumiy, dev.py va prod.py undan meros oladi va DJANGO_SETTINGS_MODULE qaysi birini tanlaydi</title>
+  <rect x="0" y="0" width="820" height="470" fill="#f8fafc"/>
+  <text x="30" y="42" font-size="22" font-weight="bold" fill="#1e293b">Settings paketini bo'lish (base / dev / prod)</text>
+
+  <!-- base.py -->
+  <rect x="290" y="70" width="240" height="100" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="410" y="100" font-size="17" font-weight="bold" fill="#2563eb" text-anchor="middle">config/settings/base.py</text>
+  <text x="410" y="126" font-size="14" fill="#334155" text-anchor="middle">Umumiy sozlamalar:</text>
+  <text x="410" y="148" font-size="14" fill="#334155" text-anchor="middle">INSTALLED_APPS, TEMPLATES,</text>
+  <text x="410" y="166" font-size="14" fill="#334155" text-anchor="middle">MIDDLEWARE, AUTH_PASSWORD_*</text>
+
+  <!-- arrows down -->
+  <line x1="350" y1="170" x2="200" y2="240" stroke="#94a3b8" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="470" y1="170" x2="620" y2="240" stroke="#94a3b8" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="250" y="212" font-size="13" fill="#64748b">from .base import *</text>
+  <text x="560" y="212" font-size="13" fill="#64748b">from .base import *</text>
+
+  <!-- dev.py -->
+  <rect x="60" y="245" width="290" height="130" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="205" y="273" font-size="17" font-weight="bold" fill="#16a34a" text-anchor="middle">dev.py</text>
+  <text x="205" y="300" font-size="14" fill="#334155" text-anchor="middle">DEBUG = True</text>
+  <text x="205" y="322" font-size="14" fill="#334155" text-anchor="middle">ALLOWED_HOSTS = localhost</text>
+  <text x="205" y="344" font-size="14" fill="#334155" text-anchor="middle">console email backend</text>
+  <text x="205" y="366" font-size="13" fill="#64748b" text-anchor="middle">qulay, batafsil xato sahifasi</text>
+
+  <!-- prod.py -->
+  <rect x="470" y="245" width="290" height="130" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="615" y="273" font-size="17" font-weight="bold" fill="#dc2626" text-anchor="middle">prod.py</text>
+  <text x="615" y="300" font-size="14" fill="#334155" text-anchor="middle">DEBUG = False</text>
+  <text x="615" y="322" font-size="14" fill="#334155" text-anchor="middle">SECURE_*, HSTS, SSL_REDIRECT</text>
+  <text x="615" y="344" font-size="14" fill="#334155" text-anchor="middle">SECRET_KEY env'dan</text>
+  <text x="615" y="366" font-size="13" fill="#64748b" text-anchor="middle">xavfsizlik yoqilgan</text>
+
+  <!-- selector -->
+  <rect x="220" y="410" width="380" height="44" rx="8" fill="#f59e0b" opacity="0.18" stroke="#f59e0b" stroke-width="2"/>
+  <text x="410" y="438" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">DJANGO_SETTINGS_MODULE qaysi faylni yuklashni tanlaydi</text>
+
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+</svg>

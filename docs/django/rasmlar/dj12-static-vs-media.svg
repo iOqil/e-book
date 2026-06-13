@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" font-family="Segoe UI, sans-serif">
+  <title>Static va media fayllar farqi</title>
+  <rect width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="36" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Static va media: ikki xil fayl, ikki xil yo'l</text>
+
+  <!-- STATIC -->
+  <rect x="40" y="66" width="320" height="300" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="200" y="96" font-size="17" fill="#2563eb" text-anchor="middle" font-weight="bold">STATIC fayllar</text>
+  <text x="200" y="120" font-size="13" fill="#334155" text-anchor="middle">CSS, JS, logotip, ikonka</text>
+  <line x1="60" y1="134" x2="340" y2="134" stroke="#94a3b8" stroke-width="1"/>
+  <text x="62" y="160" font-size="13" fill="#334155">Kim qo'yadi:  dasturchi</text>
+  <text x="62" y="186" font-size="13" fill="#334155">Qachon:  kod bilan birga</text>
+  <text x="62" y="212" font-size="13" fill="#334155">Manba:  app/static/, STATICFILES_DIRS</text>
+  <text x="62" y="238" font-size="13" fill="#334155">URL:  STATIC_URL (/static/)</text>
+  <text x="62" y="264" font-size="13" fill="#334155">Shablon:  {% static '...' %}</text>
+  <text x="62" y="290" font-size="13" fill="#334155">Deploy:  collectstatic -> STATIC_ROOT</text>
+  <rect x="62" y="306" width="276" height="48" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1"/>
+  <text x="200" y="328" font-size="13" fill="#1e293b" text-anchor="middle">O'zgarmaydi (versiya bilan keladi),</text>
+  <text x="200" y="346" font-size="13" fill="#1e293b" text-anchor="middle">git ichida saqlanadi</text>
+
+  <!-- MEDIA -->
+  <rect x="400" y="66" width="320" height="300" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="560" y="96" font-size="17" fill="#16a34a" text-anchor="middle" font-weight="bold">MEDIA fayllar</text>
+  <text x="560" y="120" font-size="13" fill="#334155" text-anchor="middle">avatar, rasm, yuklangan hujjat</text>
+  <line x1="420" y1="134" x2="700" y2="134" stroke="#94a3b8" stroke-width="1"/>
+  <text x="422" y="160" font-size="13" fill="#334155">Kim qo'yadi:  foydalanuvchi</text>
+  <text x="422" y="186" font-size="13" fill="#334155">Qachon:  ish vaqtida (runtime)</text>
+  <text x="422" y="212" font-size="13" fill="#334155">Manba:  MEDIA_ROOT papkasi</text>
+  <text x="422" y="238" font-size="13" fill="#334155">URL:  MEDIA_URL (/media/)</text>
+  <text x="422" y="264" font-size="13" fill="#334155">Model:  ImageField / FileField</text>
+  <text x="422" y="290" font-size="13" fill="#334155">Deploy:  collectstatic TEGMAYDI</text>
+  <rect x="422" y="306" width="276" height="48" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1"/>
+  <text x="560" y="328" font-size="13" fill="#1e293b" text-anchor="middle">O'sib boradi (yangi yuklamalar),</text>
+  <text x="560" y="346" font-size="13" fill="#1e293b" text-anchor="middle">git ichida SAQLANMAYDI</text>
+
+  <text x="380" y="398" font-size="14" fill="#dc2626" text-anchor="middle" font-weight="bold">Asosiy qoida: static = sizning fayllaringiz, media = foydalanuvchi fayllari</text>
+</svg>
