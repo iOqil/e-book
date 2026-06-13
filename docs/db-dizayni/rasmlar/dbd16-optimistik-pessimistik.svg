@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 540" width="820" height="540">
+  <title>Optimistik qulflash (version ustun, WHERE version=N) va pessimistik qulflash (SELECT FOR UPDATE) dizayn taqqoslash</title>
+  <rect x="0" y="0" width="820" height="540" fill="#f8fafc"/>
+  <text x="410" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Optimistik vs Pessimistik qulflash</text>
+  <text x="410" y="54" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Bir xil muammo (lost update), ikki xil dizayn yechimi</text>
+
+  <!-- LEFT: optimistic -->
+  <rect x="20" y="74" width="385" height="370" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="212" y="100" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">OPTIMISTIK (version ustun)</text>
+  <text x="212" y="122" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">"Konflikt kam bo'ladi" deb hisoblaymiz</text>
+
+  <rect x="36" y="136" width="353" height="26" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="46" y="154" font-family="Consolas, monospace" font-size="13" fill="#1e293b">1. SELECT balans, version  -- version=5</text>
+  <rect x="36" y="166" width="353" height="26" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="46" y="184" font-family="Consolas, monospace" font-size="13" fill="#1e293b">2. (ilovada hisobla, qulf YO'Q)</text>
+  <rect x="36" y="196" width="353" height="44" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="46" y="214" font-family="Consolas, monospace" font-size="13" fill="#1e293b">3. UPDATE ... SET version=6</text>
+  <text x="46" y="232" font-family="Consolas, monospace" font-size="13" fill="#2563eb">   WHERE id=1 AND version=5;</text>
+  <rect x="36" y="244" width="353" height="44" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="46" y="262" font-family="Consolas, monospace" font-size="13" fill="#1e293b">4. ta'sirlangan = 1 -> OK</text>
+  <text x="46" y="280" font-family="Consolas, monospace" font-size="13" fill="#dc2626">   ta'sirlangan = 0 -> konflikt!</text>
+
+  <rect x="36" y="298" width="353" height="62" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="46" y="318" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#166534">Konfliktda: qayta o'qi + qayta urin (retry)</text>
+  <text x="46" y="338" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Baza qulf ushlamaydi -> yuqori parallellik,</text>
+  <text x="46" y="356" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">lekin ilovada retry mantig'i kerak.</text>
+
+  <text x="36" y="386" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">+ Qulf yo'q, scale yaxshi (web/REST API)</text>
+  <text x="36" y="406" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">+ Uzoq "o'ylash vaqti" (foydalanuvchi forma)</text>
+  <text x="36" y="426" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626">- Konflikt ko'p bo'lsa retry isrofgar</text>
+
+  <!-- RIGHT: pessimistic -->
+  <rect x="415" y="74" width="385" height="370" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="2.5"/>
+  <text x="607" y="100" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#d97706">PESSIMISTIK (FOR UPDATE)</text>
+  <text x="607" y="122" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">"Konflikt bo'ladi" deb oldindan qulflaymiz</text>
+
+  <rect x="431" y="136" width="353" height="26" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="441" y="154" font-family="Consolas, monospace" font-size="13" fill="#1e293b">1. BEGIN;</text>
+  <rect x="431" y="166" width="353" height="44" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="441" y="184" font-family="Consolas, monospace" font-size="13" fill="#1e293b">2. SELECT ... FOR UPDATE;</text>
+  <text x="441" y="202" font-family="Consolas, monospace" font-size="13" fill="#d97706">   -- qator QULFLANADI</text>
+  <rect x="431" y="214" width="353" height="44" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="441" y="232" font-family="Consolas, monospace" font-size="13" fill="#1e293b">3. boshqa sessiya shu qatorni</text>
+  <text x="441" y="250" font-family="Consolas, monospace" font-size="13" fill="#dc2626">   so'rasa -> KUTADI (block)</text>
+  <rect x="431" y="262" width="353" height="26" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="441" y="280" font-family="Consolas, monospace" font-size="13" fill="#1e293b">4. UPDATE ...; COMMIT;</text>
+
+  <rect x="431" y="298" width="353" height="62" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="441" y="318" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#166534">Commit/rollback'gacha boshqalar kutadi</text>
+  <text x="441" y="338" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Retry kerak emas — qulf seriyalashtiradi,</text>
+  <text x="441" y="356" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">lekin tranzaksiya QISQA bo'lishi shart.</text>
+
+  <text x="431" y="386" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">+ Lost update yo'q, retry yo'q</text>
+  <text x="431" y="406" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">+ Issiq nuqta (ombor, balans) uchun ideal</text>
+  <text x="431" y="426" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626">- Qulf kutish, deadlock xavfi, scale past</text>
+
+  <!-- decision bar -->
+  <rect x="20" y="458" width="780" height="68" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="34" y="480" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Dizayn qarori:</text>
+  <text x="34" y="502" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Konflikt KAM + uzoq o'ylash vaqti (web forma, REST) -> OPTIMISTIK.</text>
+  <text x="34" y="520" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Konflikt KO'P + qisqa kritik bo'lim (ombor kamaytirish, pul) -> PESSIMISTIK (FOR UPDATE).</text>
+</svg>

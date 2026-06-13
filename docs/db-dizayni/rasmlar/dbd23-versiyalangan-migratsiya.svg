@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 470" width="840" height="470">
+  <title>Versiyalangan migratsiya: ketma-ket raqamlangan fayllar (up/down) va schema_migrations versiya jadvali bazada qaysi migratsiyalar qollanilganini saqlaydi</title>
+  <rect x="0" y="0" width="840" height="470" fill="#f8fafc"/>
+  <text x="420" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Versiyalangan migratsiya</text>
+  <text x="420" y="54" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Ketma-ket fayllar (kod) + schema_migrations jadvali (baza holati)</text>
+
+  <!-- LEFT: migration files -->
+  <text x="40" y="90" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">Migratsiya fayllari (git'da)</text>
+
+  <!-- file 1 -->
+  <rect x="40" y="104" width="330" height="62" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="54" y="126" font-family="Consolas, monospace" font-size="14" font-weight="bold" fill="#1e293b">001_create_foydalanuvchi.sql</text>
+  <text x="54" y="146" font-family="Consolas, monospace" font-size="13" fill="#16a34a">up:  CREATE TABLE foydalanuvchi ...</text>
+  <text x="54" y="162" font-family="Consolas, monospace" font-size="13" fill="#dc2626">down: DROP TABLE foydalanuvchi</text>
+
+  <!-- file 2 -->
+  <rect x="40" y="178" width="330" height="62" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="54" y="200" font-family="Consolas, monospace" font-size="14" font-weight="bold" fill="#1e293b">002_add_ism.sql</text>
+  <text x="54" y="220" font-family="Consolas, monospace" font-size="13" fill="#16a34a">up:  ALTER TABLE ... ADD ism text</text>
+  <text x="54" y="236" font-family="Consolas, monospace" font-size="13" fill="#dc2626">down: ALTER TABLE ... DROP ism</text>
+
+  <!-- file 3 -->
+  <rect x="40" y="252" width="330" height="62" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="54" y="274" font-family="Consolas, monospace" font-size="14" font-weight="bold" fill="#1e293b">003_add_telefon.sql</text>
+  <text x="54" y="294" font-family="Consolas, monospace" font-size="13" fill="#16a34a">up:  ALTER TABLE ... ADD telefon</text>
+  <text x="54" y="310" font-family="Consolas, monospace" font-size="13" fill="#dc2626">down: ALTER TABLE ... DROP telefon</text>
+
+  <!-- next (pending) -->
+  <rect x="40" y="326" width="330" height="40" rx="8" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="54" y="351" font-family="Consolas, monospace" font-size="13" fill="#475569">004_... (hali qollanilmagan)</text>
+
+  <!-- order arrow -->
+  <line x1="28" y1="104" x2="28" y2="366" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="28,372 23,360 33,360" fill="#94a3b8"/>
+  <text x="20" y="240" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" transform="rotate(-90 20 240)" text-anchor="middle">tartib (vaqt bo'yicha)</text>
+
+  <!-- migrate arrow -->
+  <line x1="375" y1="220" x2="455" y2="220" stroke="#16a34a" stroke-width="3"/>
+  <polygon points="461,220 449,214 449,226" fill="#16a34a"/>
+  <text x="418" y="210" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">migrate</text>
+
+  <!-- RIGHT: schema_migrations table -->
+  <text x="470" y="90" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#d97706">schema_migrations (bazada)</text>
+  <rect x="470" y="104" width="340" height="180" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <!-- header -->
+  <rect x="470" y="104" width="340" height="30" rx="8" fill="#fde68a"/>
+  <text x="486" y="124" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#1e293b">version</text>
+  <text x="566" y="124" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#1e293b">nomi</text>
+  <line x1="556" y1="104" x2="556" y2="284" stroke="#d97706" stroke-width="1"/>
+  <!-- rows -->
+  <text x="486" y="156" font-family="Consolas, monospace" font-size="13" fill="#1e293b">1</text>
+  <text x="566" y="156" font-family="Consolas, monospace" font-size="13" fill="#1e293b">001_create_foydalanuvchi</text>
+  <line x1="470" y1="166" x2="810" y2="166" stroke="#fbbf24" stroke-width="1"/>
+  <text x="486" y="188" font-family="Consolas, monospace" font-size="13" fill="#1e293b">2</text>
+  <text x="566" y="188" font-family="Consolas, monospace" font-size="13" fill="#1e293b">002_add_ism</text>
+  <line x1="470" y1="198" x2="810" y2="198" stroke="#fbbf24" stroke-width="1"/>
+  <text x="486" y="220" font-family="Consolas, monospace" font-size="13" fill="#1e293b">3</text>
+  <text x="566" y="220" font-family="Consolas, monospace" font-size="13" fill="#1e293b">003_add_telefon</text>
+  <line x1="470" y1="230" x2="810" y2="230" stroke="#fbbf24" stroke-width="1"/>
+  <text x="486" y="258" font-family="Consolas, monospace" font-size="13" fill="#94a3b8">(004 yo'q)</text>
+
+  <text x="470" y="312" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Vosita ishga tushganda: fayllardagi versiyalarni</text>
+  <text x="470" y="330" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">jadval bilan solishtiradi -> faqat YETISHMAGANINI</text>
+  <text x="470" y="348" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tartib bilan ishga tushiradi (idempotent).</text>
+
+  <!-- bottom rule -->
+  <rect x="40" y="392" width="770" height="60" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="54" y="414" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Asosiy qoida:</text>
+  <text x="54" y="436" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Migratsiya fayllari O'ZGARMAYDI (immutable). Xato bo'lsa — eskisini tahrirlama, YANGI migratsiya yoz.</text>
+</svg>

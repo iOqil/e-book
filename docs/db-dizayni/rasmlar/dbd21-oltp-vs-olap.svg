@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 540" width="860" height="540">
+  <title>OLTP (tranzaksion, normallashtirilgan, ko'p kichik yozuv) va OLAP (analitik, denormallashtirilgan, katta o'qish/agregat) dizayn maqsadini taqqoslash</title>
+  <rect x="0" y="0" width="860" height="540" fill="#f8fafc"/>
+  <text x="430" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">OLTP va OLAP — ikki xil dizayn maqsadi</text>
+  <text x="430" y="56" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Bir xil ma'lumot, lekin butunlay boshqacha sxema qarori</text>
+
+  <!-- LEFT: OLTP -->
+  <rect x="20" y="76" width="400" height="392" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="220" y="104" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#2563eb">OLTP — tranzaksion tizim</text>
+  <text x="220" y="126" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">"Buyurtma qabul qil, balansni yangila"</text>
+
+  <rect x="38" y="142" width="364" height="26" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="50" y="160" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Maqsad: kundalik biznes amallari</text>
+  <rect x="38" y="172" width="364" height="26" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="50" y="190" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Yuk: KO'P kichik INSERT/UPDATE</text>
+  <rect x="38" y="202" width="364" height="26" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="50" y="220" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Sxema: NORMALLASHTIRILGAN (3NF)</text>
+  <rect x="38" y="232" width="364" height="26" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="50" y="250" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">So'rov: bitta yoki bir nechta qator</text>
+  <rect x="38" y="262" width="364" height="26" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="50" y="280" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Optimallashtirish: yozish + nuqta-qidiruv</text>
+  <rect x="38" y="292" width="364" height="26" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="50" y="310" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Indeks: B-tree, ko'p tor indeks</text>
+  <rect x="38" y="322" width="364" height="26" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="50" y="340" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Saqlash: qator bo'yicha (row-store)</text>
+
+  <rect x="38" y="356" width="364" height="96" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="50" y="378" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e40af">Mezon: tranzaksiya tezligi (TPS),</text>
+  <text x="50" y="398" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e40af">yangilanish izchilligi (ACID)</text>
+  <text x="50" y="420" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Misol: do'kon ilovasi, bank operatsiyasi,</text>
+  <text x="50" y="438" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">SaaS CRUD — kitobning 1-20 boblari</text>
+
+  <!-- RIGHT: OLAP -->
+  <rect x="440" y="76" width="400" height="392" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="640" y="104" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#16a34a">OLAP — analitik ombor</text>
+  <text x="640" y="126" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">"Choraklik tushumni viloyat bo'yicha ko'rsat"</text>
+
+  <rect x="458" y="142" width="364" height="26" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="470" y="160" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Maqsad: tahlil, hisobot, qaror</text>
+  <rect x="458" y="172" width="364" height="26" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="470" y="190" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Yuk: KATTA o'qish + agregat (SUM/AVG)</text>
+  <rect x="458" y="202" width="364" height="26" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="470" y="220" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Sxema: DENORMALLASHTIRILGAN (star)</text>
+  <rect x="458" y="232" width="364" height="26" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="470" y="250" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">So'rov: millionlab qator -> bir necha son</text>
+  <rect x="458" y="262" width="364" height="26" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="470" y="280" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Optimallashtirish: o'qish + skanlash</text>
+  <rect x="458" y="292" width="364" height="26" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="470" y="310" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Indeks: kam, ko'pincha to'liq skan</text>
+  <rect x="458" y="322" width="364" height="26" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="470" y="340" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Saqlash: ustun bo'yicha (columnar)</text>
+
+  <rect x="458" y="356" width="364" height="96" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="470" y="378" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#166534">Mezon: so'rov vaqti (sekundlarda),</text>
+  <text x="470" y="398" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#166534">tarixiy ma'lumot hajmi</text>
+  <text x="470" y="420" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Misol: ma'lumot ombori, BI dashboard,</text>
+  <text x="470" y="438" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">choraklik hisobot — bu bobning mavzusi</text>
+
+  <!-- bottom note -->
+  <rect x="20" y="482" width="820" height="44" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text x="34" y="504" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#92400e">NEGA alohida dizayn: bitta sxema ikkala maqsadga ham yaxshi xizmat qila olmaydi.</text>
+  <text x="34" y="521" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Og'ir analitik so'rov tranzaksion bazani sekinlashtiradi -> ma'lumotni alohida omborga ETL/ELT bilan ko'chiramiz.</text>
+</svg>

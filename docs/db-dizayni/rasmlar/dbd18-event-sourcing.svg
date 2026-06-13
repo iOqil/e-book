@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 500" width="860" height="500">
+  <title>Holatni saqlash vs hodisalar oqimini saqlash (event sourcing): joriy balans hodisalardan qayta tiklanadi</title>
+  <rect x="0" y="0" width="860" height="500" fill="#f8fafc"/>
+  <text x="430" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Holatni saqlash  vs  hodisalarni saqlash</text>
+  <text x="430" y="56" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Klassik: faqat joriy qiymat · Event sourcing: o'zgarishlar ketma-ketligi</text>
+
+  <!-- LEFT: state storage -->
+  <text x="40" y="98" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">1. Holatni saqlash (klassik)</text>
+  <rect x="40" y="112" width="350" height="92" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="60" y="140" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">hisob</text>
+  <text x="60" y="166" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">id = 1</text>
+  <text x="60" y="190" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#16a34a">balans = 630</text>
+  <text x="40" y="234" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">UPDATE balansni QAYTA YOZADI.</text>
+  <text x="40" y="254" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">Eski qiymatlar yo'qoladi.</text>
+  <text x="40" y="274" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">"Nega 630 bo'ldi?" — javob yo'q.</text>
+
+  <!-- divider -->
+  <line x1="430" y1="92" x2="430" y2="430" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="6 5"/>
+
+  <!-- RIGHT: event stream -->
+  <text x="470" y="98" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">2. Hodisalarni saqlash (event sourcing)</text>
+  <rect x="470" y="112" width="350" height="210" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="490" y="138" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">hisob_hodisa (append-only)</text>
+  <line x1="486" y1="148" x2="804" y2="148" stroke="#16a34a" stroke-width="1"/>
+  <text x="490" y="172" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">1 · OCHILDI · 0</text>
+  <text x="490" y="196" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">2 · KIRIM · +500</text>
+  <text x="490" y="220" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">3 · CHIQIM · -120</text>
+  <text x="490" y="244" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">4 · KIRIM · +300</text>
+  <text x="490" y="268" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">5 · CHIQIM · -50</text>
+  <text x="490" y="300" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">Hech narsa o'chirilmaydi/o'zgartirilmaydi</text>
+
+  <!-- replay arrow -->
+  <line x1="645" y1="322" x2="645" y2="362" stroke="#16a34a" stroke-width="2.5"/>
+  <polygon points="645,362 638,350 652,350" fill="#16a34a"/>
+  <text x="660" y="350" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">qayta tiklash (replay): 500-120+300-50</text>
+
+  <!-- reconstructed state -->
+  <rect x="540" y="368" width="210" height="56" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="645" y="392" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">joriy balans = 630</text>
+  <text x="645" y="412" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(hodisalardan hisoblangan)</text>
+
+  <!-- bottom benefit bar -->
+  <rect x="40" y="446" width="780" height="42" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="430" y="472" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Foyda: to'liq tarix, vaqt sayohati (har lahzaga balans), audit, "nega" savoliga javob · Narx: qayta tiklash hisobi, snapshot kerak</text>
+</svg>

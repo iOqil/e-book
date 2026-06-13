@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 560" width="820" height="560">
+  <title>Anti-naqshlar galereyasi: god-table, naive-tree, float'da pul, magic raqam, telefon1/2/3</title>
+  <rect x="0" y="0" width="820" height="560" fill="#f8fafc"/>
+  <text x="410" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Anti-naqshlar galereyasi</text>
+  <text x="410" y="54" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Har biri: alomat -&gt; nega yomon -&gt; tuzatish</text>
+
+  <!-- Card 1: god table -->
+  <rect x="20" y="74" width="250" height="220" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="145" y="98" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">God table</text>
+  <text x="36" y="120" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Alomat: 40+ ustun, hamma</text>
+  <text x="36" y="138" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">narsa bitta jadvalda.</text>
+  <g font-family="Segoe UI, system-ui, sans-serif" font-size="13">
+    <rect x="36" y="150" width="218" height="20" fill="#ffffff" stroke="#fca5a5"/>
+    <text x="44" y="165" fill="#1e293b">foydalanuvchi: ism, email,</text>
+    <rect x="36" y="170" width="218" height="20" fill="#ffffff" stroke="#fca5a5"/>
+    <text x="44" y="185" fill="#1e293b">kocha, shahar, karta_raqam,</text>
+    <rect x="36" y="190" width="218" height="20" fill="#ffffff" stroke="#fca5a5"/>
+    <text x="44" y="205" fill="#475569">til, tema, qoshimcha1, ...</text>
+  </g>
+  <text x="36" y="228" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">Yomon: ko'p NULL, aralash</text>
+  <text x="36" y="244" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">mas'uliyat, har UPDATE qaltis.</text>
+  <text x="36" y="268" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" font-weight="bold">Tuzatish: bo'l —</text>
+  <text x="36" y="284" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">manzil / tolov / sozlama jadval.</text>
+
+  <!-- Card 2: naive tree -->
+  <rect x="285" y="74" width="250" height="220" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="410" y="98" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">Naive tree (faqat parent_id)</text>
+  <text x="301" y="120" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Alomat: ierarxiya faqat</text>
+  <text x="301" y="138" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">parent_id bilan.</text>
+  <!-- mini tree -->
+  <circle cx="330" cy="168" r="9" fill="#dc2626"/>
+  <line x1="330" y1="177" x2="330" y2="195" stroke="#94a3b8" stroke-width="1.5"/>
+  <circle cx="330" cy="204" r="9" fill="#f59e0b"/>
+  <line x1="330" y1="213" x2="330" y2="231" stroke="#94a3b8" stroke-width="1.5"/>
+  <circle cx="330" cy="240" r="9" fill="#f59e0b"/>
+  <text x="350" y="172" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Elektronika</text>
+  <text x="350" y="208" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Kompyuter</text>
+  <text x="350" y="244" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Noutbuk ...</text>
+  <text x="301" y="268" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">Yomon: butun shox = RECURSIVE</text>
+  <text x="301" y="284" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">Tuzatish: closure table (17-bob).</text>
+
+  <!-- Card 3: float pul -->
+  <rect x="550" y="74" width="250" height="220" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="675" y="98" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">Float'da pul</text>
+  <text x="566" y="120" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Alomat: narx double precision.</text>
+  <rect x="566" y="132" width="218" height="58" rx="4" fill="#0f172a"/>
+  <text x="578" y="152" font-family="Consolas, monospace" font-size="13" fill="#fca5a5">0.1 + 0.2 =</text>
+  <text x="578" y="172" font-family="Consolas, monospace" font-size="13" fill="#fca5a5">0.30000000000000004</text>
+  <text x="566" y="212" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">1000 x 0.10 = 99.9999...986</text>
+  <text x="566" y="232" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">Yomon: yaxlitlash xatosi to'planadi.</text>
+  <text x="566" y="262" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" font-weight="bold">Tuzatish:</text>
+  <text x="638" y="262" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">numeric(12,2)</text>
+  <text x="566" y="282" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">(yoki butun son: tiyin/sent).</text>
+
+  <!-- Card 4: magic number -->
+  <rect x="20" y="306" width="380" height="220" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="210" y="330" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">Magic raqam / string</text>
+  <text x="36" y="352" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Alomat: status = 3. Lekin 3 NIMA?</text>
+  <g font-family="Segoe UI, system-ui, sans-serif" font-size="13">
+    <rect x="36" y="364" width="160" height="22" fill="#ffffff" stroke="#fca5a5"/>
+    <text x="44" y="380" fill="#1e293b">buyurtma: status</text>
+    <rect x="36" y="386" width="160" height="22" fill="#ffffff" stroke="#fca5a5"/>
+    <text x="44" y="402" fill="#dc2626" font-weight="bold">3  (?? yetkazildimi?)</text>
+  </g>
+  <line x1="206" y1="385" x2="244" y2="385" stroke="#16a34a" stroke-width="2.5" marker-end="url(#ar13g)"/>
+  <defs>
+    <marker id="ar13g" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+  <g font-family="Segoe UI, system-ui, sans-serif" font-size="13">
+    <rect x="252" y="364" width="132" height="22" fill="#dcfce7" stroke="#16a34a"/>
+    <text x="260" y="380" fill="#1e293b">holat: kod (FK)</text>
+    <rect x="252" y="386" width="132" height="22" fill="#dcfce7" stroke="#16a34a"/>
+    <text x="260" y="402" fill="#16a34a" font-weight="bold">'yetkazildi'</text>
+  </g>
+  <text x="36" y="436" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">Yomon: kod o'qilmaydi, xato qiymat (99) kiradi.</text>
+  <text x="36" y="460" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" font-weight="bold">Tuzatish:</text>
+  <text x="108" y="460" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">lookup jadval + FK, yoki ENUM.</text>
+  <text x="36" y="484" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Endi status o'zini tushuntiradi va FK noto'g'rini tutadi.</text>
+
+  <!-- Card 5: telefon1/2/3 -->
+  <rect x="415" y="306" width="385" height="220" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="607" y="330" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">Ustun nomida ma'lumot</text>
+  <text x="431" y="352" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Alomat: telefon1, telefon2, telefon3 ...</text>
+  <g font-family="Segoe UI, system-ui, sans-serif" font-size="13">
+    <rect x="431" y="364" width="80" height="42" fill="#ffffff" stroke="#fca5a5"/>
+    <text x="471" y="380" text-anchor="middle" fill="#1e293b">telefon1</text>
+    <text x="471" y="398" text-anchor="middle" fill="#1e293b">telefon2</text>
+    <rect x="511" y="364" width="80" height="42" fill="#ffffff" stroke="#fca5a5"/>
+    <text x="551" y="380" text-anchor="middle" fill="#1e293b">telefon3</text>
+    <text x="551" y="398" text-anchor="middle" fill="#dc2626">telefon4?</text>
+  </g>
+  <line x1="595" y1="385" x2="633" y2="385" stroke="#16a34a" stroke-width="2.5" marker-end="url(#ar13g)"/>
+  <g font-family="Segoe UI, system-ui, sans-serif" font-size="13">
+    <rect x="641" y="364" width="142" height="42" fill="#dcfce7" stroke="#16a34a"/>
+    <text x="712" y="380" text-anchor="middle" fill="#16a34a" font-weight="bold">telefon (1:N)</text>
+    <text x="712" y="398" text-anchor="middle" fill="#1e293b">kontakt_id, raqam</text>
+  </g>
+  <text x="431" y="436" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">Yomon: chegaralangan son, 3 ta OR bilan qidiruv.</text>
+  <text x="431" y="460" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" font-weight="bold">Tuzatish:</text>
+  <text x="503" y="460" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">alohida bog'liq jadval (1:N).</text>
+  <text x="431" y="484" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Cheksiz raqam, bitta WHERE, indekslanadi.</text>
+
+  <!-- footer -->
+  <text x="410" y="546" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#2563eb">Umumiy sabab: baza yaxlitlikni majburlay olmaydigan tarzda modellashtirish.</text>
+</svg>

@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 600" width="820" height="600">
+  <title>Polimorfik bog'lanish xavfi (FK yo'qoladi) va xavfsiz muqobillar: alohida FK exclusive arc va super-jadval</title>
+  <rect x="0" y="0" width="820" height="600" fill="#f8fafc"/>
+  <text x="410" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Polimorfik bog'lanish: nega xavfli</text>
+  <text x="410" y="56" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Bitta (parent_turi, parent_id) ko'p jadvalga ishora qiladi — lekin FK qo'yib bo'lmaydi</text>
+
+  <!-- ===== DANGEROUS ===== -->
+  <rect x="30" y="76" width="760" height="206" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="48" y="100" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">&#10006; XAVFLI: polimorfik FK</text>
+
+  <!-- izoh table -->
+  <rect x="320" y="116" width="200" height="120" rx="6" fill="#ffffff" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="420" y="138" text-anchor="middle" font-family="monospace, Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">izoh</text>
+  <line x1="332" y1="146" x2="508" y2="146" stroke="#94a3b8"/>
+  <text x="332" y="168" font-family="monospace, Segoe UI" font-size="13" fill="#1e293b">id</text>
+  <text x="332" y="190" font-family="monospace, Segoe UI" font-size="13" fill="#dc2626">parent_turi</text>
+  <text x="332" y="212" font-family="monospace, Segoe UI" font-size="13" fill="#dc2626">parent_id</text>
+  <text x="332" y="230" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626" font-style="italic">FK YO'Q!</text>
+
+  <!-- maqola / video -->
+  <rect x="60" y="120" width="150" height="44" rx="6" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="135" y="147" text-anchor="middle" font-family="monospace, Segoe UI" font-size="14" fill="#1e293b">maqola</text>
+  <rect x="60" y="184" width="150" height="44" rx="6" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="135" y="211" text-anchor="middle" font-family="monospace, Segoe UI" font-size="14" fill="#1e293b">video</text>
+  <!-- dashed (no real FK) arrows -->
+  <line x1="320" y1="170" x2="212" y2="142" stroke="#dc2626" stroke-width="2" stroke-dasharray="6 4"/>
+  <line x1="320" y1="200" x2="212" y2="206" stroke="#dc2626" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="250" y="158" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626" font-style="italic">"ishonch"</text>
+
+  <!-- consequences -->
+  <text x="540" y="138" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">&#10006; yetim (orphan) qator: parent_id=999</text>
+  <text x="540" y="160" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">   bazaga kirib ketadi (tekshirildi)</text>
+  <text x="540" y="186" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">&#10006; ON DELETE CASCADE yo'q</text>
+  <text x="540" y="212" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">&#10006; JOIN da parent_turi CASE kerak</text>
+  <text x="540" y="238" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">&#10006; turli xil id turlari to'qnashadi</text>
+  <text x="48" y="266" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" font-style="italic">Baza yaxlitlikni KAFOLATLAY OLMAYDI — bu ilovaning "umidi" ga aylanadi.</text>
+
+  <!-- ===== SAFE A ===== -->
+  <rect x="30" y="296" width="375" height="280" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="48" y="320" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">&#10004; Muqobil A: alohida nullable FK (exclusive arc)</text>
+
+  <rect x="120" y="338" width="200" height="118" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="220" y="360" text-anchor="middle" font-family="monospace, Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">izoh</text>
+  <line x1="132" y1="368" x2="308" y2="368" stroke="#94a3b8"/>
+  <text x="132" y="390" font-family="monospace, Segoe UI" font-size="13" fill="#16a34a">maqola_id &#8594; maqola</text>
+  <text x="132" y="412" font-family="monospace, Segoe UI" font-size="13" fill="#16a34a">video_id  &#8594; video</text>
+  <text x="132" y="434" font-family="monospace, Segoe UI" font-size="13" fill="#1e293b">matn</text>
+  <text x="132" y="452" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" font-style="italic">ikkisi ham haqiqiy FK</text>
+
+  <rect x="48" y="468" width="340" height="48" rx="4" fill="#bbf7d0" stroke="#16a34a"/>
+  <text x="58" y="488" font-family="monospace, Segoe UI" font-size="13" fill="#1e293b">CHECK ( (maqola_id IS NOT NULL)::int</text>
+  <text x="58" y="506" font-family="monospace, Segoe UI" font-size="13" fill="#1e293b">   + (video_id IS NOT NULL)::int = 1 )</text>
+  <text x="48" y="538" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">&#10004; yetim bloklanadi, CASCADE ishlaydi</text>
+  <text x="48" y="558" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Mos: tur soni KAM va barqaror (2-4)</text>
+
+  <!-- ===== SAFE B ===== -->
+  <rect x="415" y="296" width="375" height="280" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="433" y="320" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">&#10004; Muqobil B: super-jadval (ota entity)</text>
+
+  <rect x="540" y="338" width="160" height="40" rx="6" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="620" y="363" text-anchor="middle" font-family="monospace, Segoe UI" font-size="13" font-weight="bold" fill="#1e293b">kontent (PK)</text>
+  <line x1="620" y1="378" x2="500" y2="430" stroke="#2563eb" stroke-width="1.5"/>
+  <line x1="620" y1="378" x2="740" y2="430" stroke="#2563eb" stroke-width="1.5"/>
+  <rect x="440" y="430" width="120" height="38" rx="6" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="500" y="454" text-anchor="middle" font-family="monospace, Segoe UI" font-size="13" fill="#1e293b">maqola</text>
+  <rect x="680" y="430" width="100" height="38" rx="6" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="730" y="454" text-anchor="middle" font-family="monospace, Segoe UI" font-size="13" fill="#1e293b">video</text>
+  <text x="600" y="404" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">maqola.id, video.id &#8594; kontent.id</text>
+
+  <rect x="540" y="486" width="160" height="38" rx="6" fill="#bfdbfe" stroke="#2563eb"/>
+  <text x="620" y="510" text-anchor="middle" font-family="monospace, Segoe UI" font-size="13" fill="#1e293b">izoh.kontent_id</text>
+  <line x1="620" y1="486" x2="620" y2="378" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="433" y="548" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">&#10004; izoh BITTA haqiqiy FK bilan ulanadi</text>
+  <text x="433" y="568" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Mos: tur soni KO'P yoki o'sib boradi</text>
+
+  <text x="410" y="592" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" font-style="italic">Qoida: agar bog'lanishga FK qo'yib bo'lmasa — dizaynni qayta ko'rib chiq.</text>
+</svg>

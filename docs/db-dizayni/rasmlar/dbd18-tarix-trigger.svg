@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 480" width="860" height="480">
+  <title>Tarix jadvali naqshi: joriy jadval + tarix jadval, trigger har UPDATE/DELETE da eski qiymatni yozadi</title>
+  <rect x="0" y="0" width="860" height="480" fill="#f8fafc"/>
+  <text x="430" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Tarix jadvali naqshi (history table + trigger)</text>
+  <text x="430" y="56" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Joriy jadval tezkor o'qish uchun · Tarix jadvali har o'zgarishni saqlaydi</text>
+
+  <!-- App / write -->
+  <rect x="40" y="92" width="180" height="64" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="130" y="120" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Ilova</text>
+  <text x="130" y="142" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">UPDATE / DELETE</text>
+
+  <!-- arrow to current -->
+  <line x1="220" y1="124" x2="320" y2="124" stroke="#475569" stroke-width="2"/>
+  <polygon points="320,124 308,118 308,130" fill="#475569"/>
+
+  <!-- current table -->
+  <rect x="320" y="84" width="240" height="80" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="440" y="110" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">mijoz (joriy)</text>
+  <text x="440" y="132" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">id=1 · tarif = premium</text>
+  <text x="440" y="151" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">faqat ENG SO'NGGI holat</text>
+
+  <!-- trigger badge -->
+  <rect x="356" y="196" width="168" height="44" rx="22" fill="#475569"/>
+  <text x="440" y="223" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">BEFORE trigger</text>
+
+  <!-- arrow current -> trigger -->
+  <line x1="440" y1="164" x2="440" y2="196" stroke="#475569" stroke-width="2"/>
+  <polygon points="440,196 434,184 446,184" fill="#475569"/>
+  <text x="452" y="184" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">OLD qatorni ushlaydi</text>
+
+  <!-- arrow trigger -> history -->
+  <line x1="440" y1="240" x2="440" y2="280" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="440,280 434,268 446,268" fill="#16a34a"/>
+  <text x="452" y="266" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">eski qiymatni INSERT</text>
+
+  <!-- history table -->
+  <rect x="280" y="284" width="320" height="156" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="440" y="310" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">mijoz_history (tarix, append-only)</text>
+  <line x1="296" y1="322" x2="584" y2="322" stroke="#16a34a" stroke-width="1"/>
+  <text x="300" y="344" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">amal=UPDATE · tarif=bepul · 10:01</text>
+  <text x="300" y="368" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">amal=UPDATE · tarif=standart · 10:05</text>
+  <text x="300" y="392" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">+ kim (current_user) · qachon (now())</text>
+  <text x="300" y="420" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">Hech qachon UPDATE/DELETE qilinmaydi — faqat qo'shiladi</text>
+
+  <!-- read path -->
+  <rect x="650" y="92" width="180" height="64" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="740" y="120" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Tezkor o'qish</text>
+  <text x="740" y="142" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">joriy jadvaldan</text>
+  <line x1="650" y1="124" x2="562" y2="124" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="562,124 574,118 574,130" fill="#94a3b8"/>
+
+  <rect x="650" y="320" width="180" height="84" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="740" y="346" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">"Audit / tarix"</text>
+  <text x="740" y="368" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tarix jadvaldan</text>
+  <text x="740" y="388" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">kim/qachon/nima</text>
+  <line x1="650" y1="362" x2="604" y2="362" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="604,362 616,356 616,368" fill="#94a3b8"/>
+</svg>

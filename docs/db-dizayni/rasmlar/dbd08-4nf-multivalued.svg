@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 540" width="780" height="540">
+  <title>Ko'p qiymatli bog'liqlik (MVD) va 4NF parchalash: dekart ko'paytma portlashidan qutulish</title>
+  <rect x="0" y="0" width="780" height="540" fill="#f8fafc"/>
+  <text x="390" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">4NF: ikki mustaqil ro'yxat bitta jadvalda</text>
+  <text x="390" y="54" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Anvar 2 tilni biladi VA 2 loyihada ishlagan (til va loyiha o'zaro bog'liq emas)</text>
+
+  <!-- LEFT: bad cartesian table -->
+  <rect x="24" y="78" width="320" height="252" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="184" y="102" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">xodim_kompetensiya (4NF emas)</text>
+  <text x="184" y="122" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">2 til x 2 loyiha = 4 qator (dekart ko'paytma)</text>
+
+  <rect x="40" y="132" width="90" height="26" fill="#fecaca" stroke="#dc2626" stroke-width="1"/>
+  <rect x="130" y="132" width="100" height="26" fill="#fecaca" stroke="#dc2626" stroke-width="1"/>
+  <rect x="230" y="132" width="98" height="26" fill="#fecaca" stroke="#dc2626" stroke-width="1"/>
+  <text x="85" y="150" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">xodim</text>
+  <text x="180" y="150" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">til</text>
+  <text x="279" y="150" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">loyiha</text>
+
+  <g font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">
+    <rect x="40" y="158" width="288" height="24" fill="#ffffff" stroke="#fca5a5" stroke-width="1"/>
+    <text x="85" y="175" text-anchor="middle">Anvar</text><text x="180" y="175" text-anchor="middle">Python</text><text x="279" y="175" text-anchor="middle">Billing</text>
+    <rect x="40" y="182" width="288" height="24" fill="#ffffff" stroke="#fca5a5" stroke-width="1"/>
+    <text x="85" y="199" text-anchor="middle">Anvar</text><text x="180" y="199" text-anchor="middle">Python</text><text x="279" y="199" text-anchor="middle">Analytics</text>
+    <rect x="40" y="206" width="288" height="24" fill="#ffffff" stroke="#fca5a5" stroke-width="1"/>
+    <text x="85" y="223" text-anchor="middle">Anvar</text><text x="180" y="223" text-anchor="middle">Go</text><text x="279" y="223" text-anchor="middle">Billing</text>
+    <rect x="40" y="230" width="288" height="24" fill="#ffffff" stroke="#fca5a5" stroke-width="1"/>
+    <text x="85" y="247" text-anchor="middle">Anvar</text><text x="180" y="247" text-anchor="middle">Go</text><text x="279" y="247" text-anchor="middle">Analytics</text>
+  </g>
+  <text x="40" y="278" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626" font-weight="bold">Insert anomaliyasi:</text>
+  <text x="40" y="298" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">yangi til (Java) qo'shsa — har loyiha</text>
+  <text x="40" y="316" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">uchun bittadan, ya'ni 2 ta qator!</text>
+
+  <!-- arrow -->
+  <line x1="352" y1="200" x2="404" y2="200" stroke="#16a34a" stroke-width="3" marker-end="url(#ar2)"/>
+  <defs>
+    <marker id="ar2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+  <text x="378" y="190" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">4NF</text>
+
+  <!-- RIGHT: two tables -->
+  <rect x="416" y="78" width="172" height="180" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="502" y="100" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">xodim_til</text>
+  <rect x="432" y="112" width="70" height="24" fill="#bfdbfe" stroke="#2563eb" stroke-width="1"/>
+  <rect x="502" y="112" width="70" height="24" fill="#bfdbfe" stroke="#2563eb" stroke-width="1"/>
+  <text x="467" y="129" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">xodim</text>
+  <text x="537" y="129" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">til</text>
+  <g font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">
+    <rect x="432" y="136" width="140" height="24" fill="#ffffff" stroke="#93c5fd" stroke-width="1"/>
+    <text x="467" y="153" text-anchor="middle">Anvar</text><text x="537" y="153" text-anchor="middle">Python</text>
+    <rect x="432" y="160" width="140" height="24" fill="#ffffff" stroke="#93c5fd" stroke-width="1"/>
+    <text x="467" y="177" text-anchor="middle">Anvar</text><text x="537" y="177" text-anchor="middle">Go</text>
+  </g>
+  <text x="502" y="208" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb" font-weight="bold">2 qator</text>
+
+  <rect x="604" y="78" width="152" height="180" rx="8" fill="#fef9c3" stroke="#d97706" stroke-width="2.5"/>
+  <text x="680" y="100" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#d97706">xodim_loyiha</text>
+  <rect x="620" y="112" width="60" height="24" fill="#fde68a" stroke="#d97706" stroke-width="1"/>
+  <rect x="680" y="112" width="60" height="24" fill="#fde68a" stroke="#d97706" stroke-width="1"/>
+  <text x="650" y="129" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">xodim</text>
+  <text x="710" y="129" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">loyiha</text>
+  <g font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">
+    <rect x="620" y="136" width="120" height="24" fill="#ffffff" stroke="#fcd34d" stroke-width="1"/>
+    <text x="650" y="153" text-anchor="middle">Anvar</text><text x="710" y="153" text-anchor="middle">Billing</text>
+    <rect x="620" y="160" width="120" height="24" fill="#ffffff" stroke="#fcd34d" stroke-width="1"/>
+    <text x="650" y="177" text-anchor="middle">Anvar</text><text x="710" y="177" text-anchor="middle">Analytics</text>
+  </g>
+  <text x="680" y="208" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#d97706" font-weight="bold">2 qator</text>
+
+  <text x="586" y="240" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" font-weight="bold">2 + 2 mustaqil; Java qo'shsa — +1 qator</text>
+
+  <!-- bottom: growth comparison -->
+  <rect x="24" y="352" width="732" height="168" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="40" y="376" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">O'sish: R til x O loyiha</text>
+  <text x="40" y="400" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">MVD belgisi: xodim -&gt;&gt; til  va  xodim -&gt;&gt; loyiha  (ikki "ko'p" munosabat o'zaro bog'liq emas).</text>
+
+  <!-- bar: not normalized -->
+  <text x="40" y="430" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626" font-weight="bold">4NF emas (R x O):</text>
+  <rect x="200" y="416" width="500" height="22" rx="3" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="450" y="431" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626" font-weight="bold">5 til x 4 loyiha = 20 qator</text>
+
+  <!-- bar: 4NF -->
+  <text x="40" y="466" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" font-weight="bold">4NF (R + O):</text>
+  <rect x="200" y="452" width="180" height="22" rx="3" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="290" y="467" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" font-weight="bold">5 + 4 = 9 qator</text>
+
+  <text x="40" y="500" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Davo: har mustaqil ko'p qiymatli faktni o'z bog'lovchi (junction) jadvaliga ajrating.</text>
+</svg>

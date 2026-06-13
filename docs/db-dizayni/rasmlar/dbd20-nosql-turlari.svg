@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 560" width="860" height="560">
+  <title>To'rt NoSQL turi: document, key-value, wide-column, graph va har biri qachon</title>
+  <rect x="0" y="0" width="860" height="560" fill="#f8fafc"/>
+  <text x="430" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="21" font-weight="bold" fill="#1e293b">To'rt NoSQL turi va har biri QACHON</text>
+  <text x="430" y="56" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Har bir tur ma'lum bir kirish naqshi (access pattern) uchun optimallashgan</text>
+
+  <!-- Document (MongoDB) -->
+  <rect x="30" y="80" width="390" height="200" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="50" y="108" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">Document &#8212; MongoDB</text>
+  <text x="50" y="132" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Birlik: JSON-ga o'xshash hujjat (document)</text>
+  <text x="50" y="152" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Butun agregat bitta hujjatda (embed)</text>
+  <text x="50" y="178" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">Qachon:</text>
+  <text x="50" y="198" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">&#8226; bitta hujjatni butun o'qish/yozish</text>
+  <text x="50" y="216" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">&#8226; moslashuvchan/o'zgaruvchan sxema</text>
+  <text x="50" y="234" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">&#8226; katalog, profil, CMS, buyurtma</text>
+  <text x="50" y="262" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">Ehtiyot: ko'p JOIN/agregat &#8212; qiyin</text>
+
+  <!-- Key-Value (Redis) -->
+  <rect x="440" y="80" width="390" height="200" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="460" y="108" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">Key-Value &#8212; Redis</text>
+  <text x="460" y="132" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Birlik: kalit &#8594; qiymat (lug'at)</text>
+  <text x="460" y="152" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">user:123:profile &#8594; hash</text>
+  <text x="460" y="178" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">Qachon:</text>
+  <text x="460" y="198" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">&#8226; kalit bo'yicha O(1) tezkor kirish</text>
+  <text x="460" y="216" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">&#8226; kesh, sessiya, navbat, reyting</text>
+  <text x="460" y="234" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">&#8226; TTL (avto-eskirish), hisoblagich</text>
+  <text x="460" y="262" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">Ehtiyot: kalitsiz qidiruv yo'q</text>
+
+  <!-- Wide-column (Cassandra) -->
+  <rect x="30" y="296" width="390" height="200" rx="10" fill="#fef9c3" stroke="#d97706" stroke-width="2"/>
+  <text x="50" y="324" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#d97706">Wide-column &#8212; Cassandra</text>
+  <text x="50" y="348" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Birlik: partition key + clustering key</text>
+  <text x="50" y="368" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Jadval so'rov atrofida loyihalanadi</text>
+  <text x="50" y="394" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">Qachon:</text>
+  <text x="50" y="414" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">&#8226; ulkan yozish hajmi (write-heavy)</text>
+  <text x="50" y="432" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">&#8226; vaqt qatorlari, IoT, loglar, metrikalar</text>
+  <text x="50" y="450" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">&#8226; gorizontal masshtab, yuqori mavjudlik</text>
+  <text x="50" y="478" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">Ehtiyot: ad-hoc so'rov/JOIN yo'q</text>
+
+  <!-- Graph (Neo4j) -->
+  <rect x="440" y="296" width="390" height="200" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="460" y="324" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#dc2626">Graph &#8212; Neo4j</text>
+  <text x="460" y="348" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Birlik: tugun (node) + qirra (edge)</text>
+  <text x="460" y="368" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Bog'lanishning o'zi birinchi darajali</text>
+  <text x="460" y="394" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">Qachon:</text>
+  <text x="460" y="414" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">&#8226; chuqur bog'lanish izlash (do'st-do'sti)</text>
+  <text x="460" y="432" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">&#8226; tavsiya, firibgarlik, marshrut</text>
+  <text x="460" y="450" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">&#8226; ko'p bosqichli JOIN relyatsiyada og'ir</text>
+  <text x="460" y="478" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">Ehtiyot: oddiy CRUD uchun ortiqcha</text>
+
+  <!-- footer -->
+  <text x="430" y="528" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Qoida: avval kirish naqshini (qanday so'raysiz) bil &#8212; keyin turni tanla.</text>
+  <text x="430" y="548" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" font-style="italic">Ko'p tizim relyatsion (PostgreSQL) ni asos qiladi va kerakli joyda NoSQL ni qo'shadi (polyglot).</text>
+</svg>

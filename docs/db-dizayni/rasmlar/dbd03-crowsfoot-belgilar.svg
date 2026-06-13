@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 560" width="760" height="560">
+  <title>Crow's foot kardinallik belgilari lug'ati: bir, ko'p, nol-yoki-bir, nol-yoki-ko'p, bir-yoki-ko'p</title>
+  <rect x="0" y="0" width="760" height="560" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Crow's foot belgilari lug'ati</text>
+  <text x="380" y="62" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Chiziqning oxiridagi belgi entity tomondagi MIQDORni bildiradi</text>
+
+  <!-- column headers -->
+  <text x="200" y="100" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#475569">Belgi</text>
+  <text x="470" y="100" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#475569">Ma'nosi</text>
+  <line x1="40" y1="110" x2="720" y2="110" stroke="#94a3b8" stroke-width="1.5"/>
+
+  <!-- row 1: aniq bir (||) -->
+  <line x1="100" y1="150" x2="290" y2="150" stroke="#475569" stroke-width="2.5"/>
+  <line x1="250" y1="134" x2="250" y2="166" stroke="#2563eb" stroke-width="2.5"/>
+  <line x1="262" y1="134" x2="262" y2="166" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="380" y="148" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Aniq bir (1)</text>
+  <text x="380" y="168" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">majburiy, faqat bitta — ikki ko'ndalang chiziq</text>
+  <line x1="40" y1="190" x2="720" y2="190" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- row 2: nol yoki bir (O|) -->
+  <line x1="100" y1="230" x2="290" y2="230" stroke="#475569" stroke-width="2.5"/>
+  <line x1="262" y1="214" x2="262" y2="246" stroke="#2563eb" stroke-width="2.5"/>
+  <circle cx="240" cy="230" r="11" fill="#f8fafc" stroke="#d97706" stroke-width="2.5"/>
+  <text x="380" y="228" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Nol yoki bir (0..1)</text>
+  <text x="380" y="248" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">ixtiyoriy, ko'pi bilan bitta — aylana + chiziq</text>
+  <line x1="40" y1="270" x2="720" y2="270" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- row 3: bir yoki ko'p (|<) -->
+  <line x1="100" y1="310" x2="250" y2="310" stroke="#475569" stroke-width="2.5"/>
+  <line x1="238" y1="294" x2="238" y2="326" stroke="#2563eb" stroke-width="2.5"/>
+  <line x1="250" y1="310" x2="290" y2="290" stroke="#16a34a" stroke-width="2.5"/>
+  <line x1="250" y1="310" x2="290" y2="310" stroke="#16a34a" stroke-width="2.5"/>
+  <line x1="250" y1="310" x2="290" y2="330" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="380" y="308" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Bir yoki ko'p (1..N)</text>
+  <text x="380" y="328" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">majburiy, kamida bitta — chiziq + qarg'a panjasi</text>
+  <line x1="40" y1="350" x2="720" y2="350" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- row 4: nol yoki ko'p (O<) -->
+  <line x1="100" y1="390" x2="250" y2="390" stroke="#475569" stroke-width="2.5"/>
+  <circle cx="228" cy="390" r="11" fill="#f8fafc" stroke="#d97706" stroke-width="2.5"/>
+  <line x1="250" y1="390" x2="290" y2="370" stroke="#16a34a" stroke-width="2.5"/>
+  <line x1="250" y1="390" x2="290" y2="390" stroke="#16a34a" stroke-width="2.5"/>
+  <line x1="250" y1="390" x2="290" y2="410" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="380" y="388" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Nol yoki ko'p (0..N)</text>
+  <text x="380" y="408" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">ixtiyoriy, ko'pi cheksiz — aylana + qarg'a panjasi</text>
+  <line x1="40" y1="430" x2="720" y2="430" stroke="#94a3b8" stroke-width="1.5"/>
+
+  <!-- example assembly -->
+  <text x="380" y="466" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#475569">Misol: "Bir mijoz nol yoki ko'p buyurtma beradi"</text>
+
+  <rect x="120" y="492" width="150" height="48" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="195" y="521" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">MIJOZ</text>
+
+  <line x1="270" y1="516" x2="490" y2="516" stroke="#475569" stroke-width="2.5"/>
+  <!-- one mandatory near mijoz -->
+  <line x1="300" y1="500" x2="300" y2="532" stroke="#2563eb" stroke-width="2.5"/>
+  <line x1="312" y1="500" x2="312" y2="532" stroke="#2563eb" stroke-width="2.5"/>
+  <!-- zero or many near buyurtma -->
+  <circle cx="458" cy="516" r="11" fill="#f8fafc" stroke="#d97706" stroke-width="2.5"/>
+  <line x1="490" y1="516" x2="478" y2="500" stroke="#16a34a" stroke-width="2.5"/>
+  <line x1="490" y1="516" x2="478" y2="516" stroke="#16a34a" stroke-width="2.5"/>
+  <line x1="490" y1="516" x2="478" y2="532" stroke="#16a34a" stroke-width="2.5"/>
+
+  <rect x="490" y="492" width="150" height="48" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="565" y="521" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">BUYURTMA</text>
+</svg>

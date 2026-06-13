@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 560" width="820" height="560">
+  <title>Insert, update va delete anomaliyalari yagona yomon jadvalda</title>
+  <rect x="0" y="0" width="820" height="560" fill="#f8fafc"/>
+  <text x="410" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Uch anomaliya: bitta yomon jadval</text>
+  <text x="410" y="58" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">talabalar_kurslar (talaba_id, ism, kurs, oqituvchi, oqituvchi_telefoni)</text>
+
+  <!-- TABLE -->
+  <g font-family="Segoe UI, system-ui, sans-serif" font-size="13">
+    <rect x="60" y="78" width="700" height="28" fill="#475569"/>
+    <text x="92" y="97" fill="#ffffff">talaba_id</text>
+    <text x="200" y="97" fill="#ffffff">ism</text>
+    <text x="320" y="97" fill="#ffffff">kurs</text>
+    <text x="470" y="97" fill="#ffffff">oqituvchi</text>
+    <text x="620" y="97" fill="#ffffff">oqituvchi_telefoni</text>
+
+    <rect x="60" y="106" width="700" height="26" fill="#ffffff" stroke="#94a3b8"/>
+    <text x="92" y="124" fill="#1e293b">1</text>
+    <text x="200" y="124" fill="#1e293b">Aziz</text>
+    <text x="320" y="124" fill="#1e293b">SQL asoslari</text>
+    <text x="470" y="124" fill="#1e293b">Olimov</text>
+    <text x="620" y="124" fill="#dc2626">+99890111</text>
+
+    <rect x="60" y="132" width="700" height="26" fill="#f1f5f9" stroke="#94a3b8"/>
+    <text x="92" y="150" fill="#1e293b">1</text>
+    <text x="200" y="150" fill="#1e293b">Aziz</text>
+    <text x="320" y="150" fill="#1e293b">Python</text>
+    <text x="470" y="150" fill="#1e293b">Karimov</text>
+    <text x="620" y="150" fill="#1e293b">+99890222</text>
+
+    <rect x="60" y="158" width="700" height="26" fill="#ffffff" stroke="#94a3b8"/>
+    <text x="92" y="176" fill="#1e293b">2</text>
+    <text x="200" y="176" fill="#1e293b">Bobur</text>
+    <text x="320" y="176" fill="#1e293b">SQL asoslari</text>
+    <text x="470" y="176" fill="#1e293b">Olimov</text>
+    <text x="620" y="176" fill="#dc2626">+99890111</text>
+
+    <rect x="60" y="184" width="700" height="26" fill="#f1f5f9" stroke="#94a3b8"/>
+    <text x="92" y="202" fill="#1e293b">3</text>
+    <text x="200" y="202" fill="#1e293b">Dilnoza</text>
+    <text x="320" y="202" fill="#1e293b">Python</text>
+    <text x="470" y="202" fill="#1e293b">Karimov</text>
+    <text x="620" y="202" fill="#1e293b">+99890222</text>
+  </g>
+
+  <!-- redundancy note -->
+  <text x="620" y="232" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">qizil = takroriy fakt (Olimov telefoni 2 marta)</text>
+
+  <!-- INSERT anomaly -->
+  <rect x="40" y="262" width="240" height="270" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="160" y="290" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#dc2626">INSERT anomaliyasi</text>
+  <text x="160" y="316" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Yangi o'qituvchini</text>
+  <text x="160" y="334" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">qo'sha olmaysiz, agar</text>
+  <text x="160" y="352" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">unda hali talaba yo'q.</text>
+  <rect x="62" y="372" width="196" height="56" rx="4" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="160" y="396" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">(NULL, NULL, NULL,</text>
+  <text x="160" y="414" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">'Saidov', '+99890333')</text>
+  <text x="160" y="456" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">PK NULL bo'la olmaydi!</text>
+  <text x="160" y="486" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">O'qituvchi fakti</text>
+  <text x="160" y="504" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">talabaga garovga olingan.</text>
+
+  <!-- UPDATE anomaly -->
+  <rect x="290" y="262" width="240" height="270" rx="8" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+  <text x="410" y="290" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#d97706">UPDATE anomaliyasi</text>
+  <text x="410" y="316" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Olimov raqamini</text>
+  <text x="410" y="334" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">o'zgartirsangiz, U</text>
+  <text x="410" y="352" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">YOZILGAN HAR qatorni</text>
+  <text x="410" y="370" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">yangilashingiz kerak.</text>
+  <rect x="312" y="388" width="196" height="40" rx="4" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="410" y="413" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">2 qator (1- va 3-)</text>
+  <text x="410" y="456" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#d97706">Bittasi qolib ketsa —</text>
+  <text x="410" y="478" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#d97706">ikki xil "haqiqat".</text>
+  <text x="410" y="504" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Qaysi raqam to'g'ri?</text>
+
+  <!-- DELETE anomaly -->
+  <rect x="540" y="262" width="240" height="270" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="660" y="290" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">DELETE anomaliyasi</text>
+  <text x="660" y="316" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Dilnoza o'qishni</text>
+  <text x="660" y="334" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tashlab, qatori</text>
+  <text x="660" y="352" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">o'chirilsa...</text>
+  <rect x="562" y="372" width="196" height="40" rx="4" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="660" y="397" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">DELETE ... id=3</text>
+  <text x="660" y="442" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">Agar u Python'dagi</text>
+  <text x="660" y="464" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">oxirgi bo'lsa, Python va</text>
+  <text x="660" y="486" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">Karimov ham yo'qoladi.</text>
+  <text x="660" y="512" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Kerakli fakt nobud bo'ldi.</text>
+
+  <text x="410" y="550" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#16a34a">Sabab: bir nechta mustaqil fakt bitta jadvalga tiqishtirilgan.</text>
+</svg>

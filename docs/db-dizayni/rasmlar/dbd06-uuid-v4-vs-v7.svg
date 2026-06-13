@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 500" width="760" height="500">
+  <title>UUID v4 tasodifiy va UUID v7 vaqt-tartibli tuzilishi hamda B-tree indeksga ta'siri</title>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="760" height="500" fill="#f8fafc"/>
+
+  <!-- sarlavha -->
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">UUID v4 (tasodifiy) vs UUID v7 (vaqt-tartibli)</text>
+  <text x="380" y="54" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Bir xil 128 bit, lekin tuzilish indeks tezligini hal qiladi (PostgreSQL 18+)</text>
+
+  <!-- v4 tuzilishi -->
+  <text x="30" y="92" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">UUID v4 — butunlay tasodifiy</text>
+  <rect x="30" y="102" width="700" height="40" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="380" y="127" text-anchor="middle" font-family="Consolas, Segoe UI, monospace" font-size="14" fill="#1e293b">a5881245-8dcc-402e-8cd8-e99e84ac55f2  (122 bit tasodif + 4 bit versiya)</text>
+
+  <!-- v7 tuzilishi -->
+  <text x="30" y="178" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">UUID v7 — vaqt tamg'asi + tasodif</text>
+  <rect x="30" y="188" width="300" height="40" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="180" y="213" text-anchor="middle" font-family="Consolas, Segoe UI, monospace" font-size="14" fill="#16a34a">019ec1ea-03be</text>
+  <rect x="330" y="188" width="400" height="40" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="530" y="213" text-anchor="middle" font-family="Consolas, Segoe UI, monospace" font-size="14" fill="#1e293b">-73de-8bcf-bf5722cdcb8a</text>
+  <text x="180" y="248" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">48 bit Unix-ms vaqt (o'sib boradi)</text>
+  <text x="530" y="248" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">74 bit tasodif (takrorlanmaslik uchun)</text>
+
+  <!-- indeks ta'siri sarlavha -->
+  <line x1="30" y1="272" x2="730" y2="272" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="380" y="296" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">B-tree indeksga yangi qator qo'shilganda</text>
+
+  <!-- v4 indeks: tarqoq -->
+  <rect x="30" y="312" width="340" height="150" rx="10" fill="#fff" stroke="#dc2626" stroke-width="2"/>
+  <text x="200" y="334" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">v4: tasodifiy joyga tushadi</text>
+  <!-- indeks bloklari -->
+  <rect x="50" y="350" width="58" height="34" rx="4" fill="#e2e8f0" stroke="#94a3b8"/>
+  <rect x="118" y="350" width="58" height="34" rx="4" fill="#fecaca" stroke="#dc2626" stroke-width="2"/>
+  <rect x="186" y="350" width="58" height="34" rx="4" fill="#e2e8f0" stroke="#94a3b8"/>
+  <rect x="254" y="350" width="58" height="34" rx="4" fill="#fecaca" stroke="#dc2626" stroke-width="2"/>
+  <text x="200" y="406" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Har yozuv boshqa blokni "iflos qiladi"</text>
+  <text x="200" y="426" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">-> ko'p page split, kesh samarasiz</text>
+  <text x="200" y="448" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626">Sekinroq yozish, shishgan indeks</text>
+
+  <!-- v7 indeks: ketma-ket -->
+  <rect x="390" y="312" width="340" height="150" rx="10" fill="#fff" stroke="#16a34a" stroke-width="2"/>
+  <text x="560" y="334" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">v7: doim oxiriga qo'shiladi</text>
+  <rect x="410" y="350" width="58" height="34" rx="4" fill="#e2e8f0" stroke="#94a3b8"/>
+  <rect x="478" y="350" width="58" height="34" rx="4" fill="#e2e8f0" stroke="#94a3b8"/>
+  <rect x="546" y="350" width="58" height="34" rx="4" fill="#e2e8f0" stroke="#94a3b8"/>
+  <rect x="614" y="350" width="58" height="34" rx="4" fill="#bbf7d0" stroke="#16a34a" stroke-width="2"/>
+  <text x="560" y="406" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Faqat oxirgi blok "issiq" qoladi</text>
+  <text x="560" y="426" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">-> kam page split, kesh do'st</text>
+  <text x="560" y="448" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">Tezroq yozish, zich indeks</text>
+
+  <!-- pastki xulosa -->
+  <text x="380" y="488" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#d97706">PG18 da kalit UUID kerak bo'lsa: uuidv7() ni tanlang, gen_random_uuid() (v4) ni emas.</text>
+</svg>

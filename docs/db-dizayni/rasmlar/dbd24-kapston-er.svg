@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 640" width="900" height="640">
+  <title>EduCore kapston ER-diagrammasi: TENANT, FOYDALANUVCHI, KURS, KATEGORIYA, ROYXAT, BUYURTMA, QATOR, TOLOV, SHARH (Crow's foot)</title>
+  <rect x="0" y="0" width="900" height="640" fill="#f8fafc"/>
+  <text x="450" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">EduCore — ko'p-ijarachi ta'lim SaaS: kapston ER-diagrammasi</text>
+
+  <!-- TENANT -->
+  <g>
+    <rect x="360" y="60" width="180" height="86" rx="6" fill="#ffffff" stroke="#d97706" stroke-width="2.5"/>
+    <rect x="360" y="60" width="180" height="28" rx="6" fill="#d97706"/>
+    <text x="450" y="80" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">TENANT (ijarachi)</text>
+    <text x="372" y="108" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">PK</text>
+    <text x="406" y="108" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-decoration="underline">tenant_id</text>
+    <text x="372" y="130" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">subdomain (UQ)</text>
+  </g>
+
+  <!-- FOYDALANUVCHI -->
+  <g>
+    <rect x="40" y="210" width="190" height="120" rx="6" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+    <rect x="40" y="210" width="190" height="28" rx="6" fill="#2563eb"/>
+    <text x="135" y="230" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">FOYDALANUVCHI</text>
+    <text x="52" y="258" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">PK</text>
+    <text x="86" y="258" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-decoration="underline">foydalanuvchi_id</text>
+    <text x="52" y="280" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">FK</text>
+    <text x="86" y="280" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tenant_id</text>
+    <text x="52" y="302" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">email (tenant UQ)</text>
+    <text x="52" y="322" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">rol (enum)</text>
+  </g>
+
+  <!-- KATEGORIYA -->
+  <g>
+    <rect x="670" y="210" width="190" height="118" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+    <rect x="670" y="210" width="190" height="28" rx="6" fill="#16a34a"/>
+    <text x="765" y="230" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">KATEGORIYA</text>
+    <text x="682" y="258" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">PK</text>
+    <text x="716" y="258" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-decoration="underline">kategoriya_id</text>
+    <text x="682" y="280" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">FK</text>
+    <text x="716" y="280" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">parent_id (self)</text>
+    <text x="682" y="302" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">yol (mat. path)</text>
+  </g>
+
+  <!-- KURS -->
+  <g>
+    <rect x="360" y="225" width="190" height="120" rx="6" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+    <rect x="360" y="225" width="190" height="28" rx="6" fill="#2563eb"/>
+    <text x="455" y="245" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">KURS</text>
+    <text x="372" y="273" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">PK</text>
+    <text x="406" y="273" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-decoration="underline">kurs_id</text>
+    <text x="372" y="295" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">FK</text>
+    <text x="406" y="295" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">instructor_id, kategoriya_id</text>
+    <text x="372" y="317" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">slug (tenant UQ)</text>
+    <text x="372" y="337" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">narx_tiyin</text>
+  </g>
+
+  <!-- ROYXAT (junction N:M) -->
+  <g>
+    <rect x="40" y="420" width="190" height="96" rx="6" fill="#ffffff" stroke="#d97706" stroke-width="2.5"/>
+    <rect x="40" y="420" width="190" height="28" rx="6" fill="#d97706"/>
+    <text x="135" y="440" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">ROYXAT (enroll)</text>
+    <text x="52" y="468" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">PK,FK</text>
+    <text x="98" y="468" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-decoration="underline">foydalanuvchi_id</text>
+    <text x="52" y="490" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">PK,FK</text>
+    <text x="98" y="490" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-decoration="underline">kurs_id</text>
+    <text x="52" y="510" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">progress_foiz</text>
+  </g>
+
+  <!-- SHARH -->
+  <g>
+    <rect x="670" y="420" width="190" height="96" rx="6" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+    <rect x="670" y="420" width="190" height="28" rx="6" fill="#2563eb"/>
+    <text x="765" y="440" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">SHARH</text>
+    <text x="682" y="468" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">FK</text>
+    <text x="716" y="468" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">kurs_id, foydalanuvchi_id</text>
+    <text x="682" y="490" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">baho (1..5)</text>
+    <text x="682" y="510" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">UQ — 1 marta</text>
+  </g>
+
+  <!-- BUYURTMA (partitioned) -->
+  <g>
+    <rect x="360" y="440" width="190" height="120" rx="6" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+    <rect x="360" y="440" width="190" height="28" rx="6" fill="#dc2626"/>
+    <text x="455" y="460" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">BUYURTMA</text>
+    <text x="372" y="488" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">PK</text>
+    <text x="406" y="488" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-decoration="underline">buyurtma_id, created_at</text>
+    <text x="372" y="510" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">FK</text>
+    <text x="406" y="510" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">foydalanuvchi_id</text>
+    <text x="372" y="532" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">holat, jami_tiyin</text>
+    <text x="372" y="552" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">RANGE partition</text>
+  </g>
+
+  <!-- relationships -->
+  <!-- TENANT 1 -> N FOYDALANUVCHI -->
+  <line x1="360" y1="120" x2="135" y2="210" stroke="#475569" stroke-width="2"/>
+  <text x="200" y="158" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">1:N</text>
+  <!-- TENANT 1 -> N KURS -->
+  <line x1="455" y1="146" x2="455" y2="225" stroke="#475569" stroke-width="2"/>
+  <text x="465" y="190" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">1:N</text>
+  <!-- TENANT 1 -> N KATEGORIYA -->
+  <line x1="540" y1="120" x2="765" y2="210" stroke="#475569" stroke-width="2"/>
+  <text x="640" y="158" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">1:N</text>
+  <!-- FOYDALANUVCHI (instructor) 1 -> N KURS -->
+  <line x1="230" y1="290" x2="360" y2="290" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5,4"/>
+  <text x="262" y="282" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">o'qitadi 1:N</text>
+  <!-- KATEGORIYA 1 -> N KURS -->
+  <line x1="670" y1="290" x2="550" y2="290" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5,4"/>
+  <text x="565" y="282" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tasniflaydi 1:N</text>
+  <!-- FOYDALANUVCHI -> ROYXAT -->
+  <line x1="135" y1="330" x2="135" y2="420" stroke="#475569" stroke-width="2"/>
+  <text x="143" y="378" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">1:N</text>
+  <!-- KURS -> ROYXAT -->
+  <line x1="360" y1="320" x2="230" y2="460" stroke="#475569" stroke-width="2"/>
+  <text x="262" y="400" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">1:N</text>
+  <!-- FOYDALANUVCHI -> BUYURTMA -->
+  <line x1="230" y1="300" x2="360" y2="490" stroke="#475569" stroke-width="2"/>
+  <text x="278" y="420" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">1:N</text>
+  <!-- KURS -> SHARH -->
+  <line x1="550" y1="320" x2="670" y2="460" stroke="#475569" stroke-width="2"/>
+  <text x="600" y="400" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">1:N</text>
+
+  <!-- legend -->
+  <rect x="40" y="556" width="500" height="64" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="54" y="578" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#d97706" font-weight="bold">Sariq</text>
+  <text x="100" y="578" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">= junction/ildiz · </text>
+  <text x="240" y="578" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626" font-weight="bold">Qizil</text>
+  <text x="285" y="578" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">= partition qilingan jadval</text>
+  <text x="54" y="602" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">N:M bog'lanishlar ROYXAT (student-kurs) va BUYURTMA_QATORI orqali ajraladi.</text>
+</svg>

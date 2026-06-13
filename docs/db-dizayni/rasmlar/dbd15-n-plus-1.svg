@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 540" width="820" height="540">
+  <title>N+1 muammosi: ORM tomonidan yuborilgan 1 + N alohida so'rov, va uni bitta JOIN so'rov bilan yechish</title>
+  <rect x="0" y="0" width="820" height="540" fill="#f8fafc"/>
+  <text x="410" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">N+1 muammosi: 1 + N so'rov vs 1 JOIN so'rov</text>
+  <text x="410" y="54" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Vazifa: 100 mijozni va har birining buyurtmalar sonini ko'rsatish</text>
+
+  <!-- LEFT: N+1 (bad) -->
+  <rect x="30" y="74" width="370" height="430" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="215" y="100" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#dc2626">YOMON: N+1 (ORM tuzog'i)</text>
+
+  <!-- app box -->
+  <rect x="54" y="116" width="130" height="40" rx="6" fill="#ffffff" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="119" y="141" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">Ilova (ORM)</text>
+  <!-- db box -->
+  <rect x="246" y="116" width="130" height="40" rx="6" fill="#ffffff" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="311" y="141" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">Baza</text>
+
+  <!-- query 1 -->
+  <line x1="184" y1="176" x2="246" y2="176" stroke="#475569" stroke-width="1.5" marker-end="url(#arrR)"/>
+  <text x="215" y="172" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">1-so'rov</text>
+  <text x="54" y="180" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">SELECT * FROM mijoz LIMIT 100;</text>
+
+  <!-- N queries -->
+  <line x1="184" y1="214" x2="246" y2="214" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arrRR)"/>
+  <line x1="184" y1="232" x2="246" y2="232" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arrRR)"/>
+  <line x1="184" y1="250" x2="246" y2="250" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arrRR)"/>
+  <line x1="184" y1="268" x2="246" y2="268" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arrRR)"/>
+  <text x="54" y="296" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">har mijoz uchun ALOHIDA:</text>
+  <text x="54" y="316" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">SELECT count(*) FROM buyurtma</text>
+  <text x="54" y="332" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">  WHERE mijoz_id = ?;  -- 100 marta!</text>
+
+  <rect x="54" y="350" width="322" height="60" rx="6" fill="#dc2626"/>
+  <text x="215" y="376" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff">Jami: 1 + 100 = 101 so'rov</text>
+  <text x="215" y="398" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#fecaca">har biri tarmoq round-trip</text>
+
+  <text x="54" y="436" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">O'lchov (5434, lokal, tarmoqsiz):</text>
+  <text x="54" y="456" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626">~6.6 ms</text>
+  <text x="54" y="480" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" font-style="italic">Real tarmoqda har so'rov 1-5 ms</text>
+  <text x="54" y="496" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" font-style="italic">latency -&gt; 101 &#215; latency = falokat</text>
+
+  <!-- RIGHT: JOIN (good) -->
+  <rect x="420" y="74" width="370" height="430" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="605" y="100" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">YAXSHI: bitta JOIN so'rov</text>
+
+  <rect x="444" y="116" width="130" height="40" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="509" y="141" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">Ilova</text>
+  <rect x="636" y="116" width="130" height="40" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="701" y="141" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">Baza</text>
+
+  <line x1="574" y1="176" x2="636" y2="176" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arrG)"/>
+  <text x="605" y="172" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">1-so'rov</text>
+  <line x1="636" y1="196" x2="574" y2="196" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arrGL)"/>
+  <text x="605" y="192" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">natija</text>
+
+  <rect x="444" y="216" width="322" height="116" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="456" y="238" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">SELECT m.id, m.ism,</text>
+  <text x="456" y="258" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">       count(b.id) AS soni</text>
+  <text x="456" y="278" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">FROM mijoz m</text>
+  <text x="456" y="298" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">LEFT JOIN buyurtma b</text>
+  <text x="456" y="318" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">  ON b.mijoz_id = m.id</text>
+
+  <rect x="444" y="350" width="322" height="60" rx="6" fill="#16a34a"/>
+  <text x="605" y="376" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff">Jami: 1 so'rov</text>
+  <text x="605" y="398" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#bbf7d0">baza JOIN ni o'zi optimallashtiradi</text>
+
+  <text x="444" y="436" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">O'lchov (5434, lokal):</text>
+  <text x="444" y="456" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">~0.7 ms (~9&#215; tezroq)</text>
+  <text x="444" y="480" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" font-style="italic">Tarmoq bilan farq YANADA katta:</text>
+  <text x="444" y="496" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" font-style="italic">1 round-trip vs 101 round-trip</text>
+
+  <text x="410" y="526" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" font-style="italic">N+1 — dizayn/ORM tuzog'i: bitta so'rovga aylantirilsa, tarmoq round-trip 101 dan 1 ga tushadi</text>
+
+  <defs>
+    <marker id="arrR" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#475569"/></marker>
+    <marker id="arrRR" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#dc2626"/></marker>
+    <marker id="arrG" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#16a34a"/></marker>
+    <marker id="arrGL" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto"><path d="M8,0 L0,4 L8,8 Z" fill="#16a34a"/></marker>
+  </defs>
+</svg>

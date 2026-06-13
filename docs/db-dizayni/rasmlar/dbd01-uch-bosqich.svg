@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400">
+  <title>Dizayn uch bosqichi: konseptual model, logik model va fizik sxema ketma-ketligi</title>
+  <defs>
+    <marker id="ub-ok" markerWidth="14" markerHeight="14" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="760" height="400" fill="#f8fafc"/>
+
+  <!-- sarlavha -->
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Dizaynning uch bosqichi</text>
+  <text x="380" y="56" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">G'oyadan haqiqiy jadvalgacha — abstraktdan aniqqa</text>
+
+  <!-- 1: konseptual -->
+  <rect x="30" y="90" width="210" height="210" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="135" y="120" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">1. Konseptual</text>
+  <text x="135" y="142" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">NIMA saqlanadi?</text>
+  <text x="135" y="170" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Entity va bog'lanishlar.</text>
+  <text x="135" y="188" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">ER-diagramma. Biznes</text>
+  <text x="135" y="206" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tilida, texnologiyasiz.</text>
+  <text x="135" y="240" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">"Mijoz buyurtma</text>
+  <text x="135" y="258" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">beradi"</text>
+  <text x="135" y="288" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-style="italic" fill="#2563eb">Boblar: 02-04</text>
+
+  <!-- strelka 1->2 -->
+  <line x1="244" y1="195" x2="280" y2="195" stroke="#475569" stroke-width="2.5" marker-end="url(#ub-ok)"/>
+
+  <!-- 2: logik -->
+  <rect x="285" y="90" width="210" height="210" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="390" y="120" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">2. Logik</text>
+  <text x="390" y="142" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">QANDAY tuziladi?</text>
+  <text x="390" y="170" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Jadval, ustun, kalit.</text>
+  <text x="390" y="188" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Normalizatsiya. Hali</text>
+  <text x="390" y="206" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">muayyan baza emas.</text>
+  <text x="390" y="240" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">mijozlar(id, ism),</text>
+  <text x="390" y="258" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">buyurtmalar(id, mijoz_id)</text>
+  <text x="390" y="288" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-style="italic" fill="#16a34a">Boblar: 05-09</text>
+
+  <!-- strelka 2->3 -->
+  <line x1="499" y1="195" x2="535" y2="195" stroke="#475569" stroke-width="2.5" marker-end="url(#ub-ok)"/>
+
+  <!-- 3: fizik -->
+  <rect x="540" y="90" width="210" height="210" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="2.5"/>
+  <text x="645" y="120" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#d97706">3. Fizik</text>
+  <text x="645" y="142" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">QAYERDA ishlaydi?</text>
+  <text x="645" y="170" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Aniq turlar, indeks,</text>
+  <text x="645" y="188" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">partition. Muayyan</text>
+  <text x="645" y="206" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">baza: PostgreSQL 18.</text>
+  <text x="645" y="240" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">id BIGINT, ism TEXT,</text>
+  <text x="645" y="258" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">CREATE INDEX ...</text>
+  <text x="645" y="288" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-style="italic" fill="#d97706">Boblar: 10-23</text>
+
+  <!-- pastki o'q chizig'i -->
+  <text x="135" y="340" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">abstrakt g'oya</text>
+  <text x="645" y="340" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">ishlaydigan baza</text>
+  <line x1="200" y1="336" x2="560" y2="336" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#ub-ok)"/>
+
+  <!-- pastki izoh -->
+  <text x="380" y="378" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Har bosqich oldingisiga tayanadi. Bosqichni o'tkazib yuborsang — keyin qaytib tuzatish qimmat.</text>
+</svg>

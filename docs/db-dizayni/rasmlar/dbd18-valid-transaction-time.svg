@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 470" width="860" height="470">
+  <title>Valid-time va transaction-time: ikki mustaqil vaqt oqi (bitemporal model)</title>
+  <rect x="0" y="0" width="860" height="470" fill="#f8fafc"/>
+  <text x="430" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Bitemporal: ikki mustaqil vaqt oqi</text>
+  <text x="430" y="56" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Valid-time = haqiqiy dunyoda qachon amal qildi · Transaction-time = bazaga qachon yozildi</text>
+
+  <!-- Valid-time axis -->
+  <text x="40" y="108" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">Valid-time (haqiqiy dunyo)</text>
+  <line x1="40" y1="130" x2="820" y2="130" stroke="#2563eb" stroke-width="2.5"/>
+  <polygon points="820,130 808,124 808,136" fill="#2563eb"/>
+  <!-- segments -->
+  <rect x="60" y="116" width="230" height="28" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="175" y="135" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">narx = 100 (yan-mar)</text>
+  <rect x="290" y="116" width="230" height="28" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="405" y="135" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">narx = 120 (apr-iyn)</text>
+  <rect x="520" y="116" width="280" height="28" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="660" y="135" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">narx = 150 (iyl-...)</text>
+  <text x="60" y="166" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">"Bu narx mijoz uchun shu sanalarda kuchda edi"</text>
+
+  <!-- Transaction-time axis -->
+  <text x="40" y="232" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Transaction-time (baza)</text>
+  <line x1="40" y1="254" x2="820" y2="254" stroke="#16a34a" stroke-width="2.5"/>
+  <polygon points="820,254 808,248 808,260" fill="#16a34a"/>
+  <rect x="60" y="240" width="300" height="28" rx="4" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="210" y="259" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">15-yan: yozuv kiritildi</text>
+  <rect x="360" y="240" width="300" height="28" rx="4" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="510" y="259" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">2-mar: xato tuzatildi</text>
+  <rect x="660" y="240" width="140" height="28" rx="4" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="730" y="259" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">hozir</text>
+  <text x="60" y="290" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">"Bu fakt bazada shu paytda mavjud/haqiqat deb hisoblandi"</text>
+
+  <!-- key insight box -->
+  <rect x="60" y="318" width="740" height="118" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="80" y="344" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Nega ikkalasi kerak?</text>
+  <text x="80" y="368" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Bitta narx 1-fevralda kuchga kirgan bolishi mumkin (valid-time), lekin bazaga faqat 15-fevralda</text>
+  <text x="80" y="388" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">kiritilgan (transaction-time). Keyin operator xato qilganini bilib, 2-martda tuzatadi.</text>
+  <text x="80" y="412" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#d97706">Valid-time = "qachon haqiqat edi" · Transaction-time = "bazada qachon shunday deb bilingan"</text>
+  <text x="80" y="430" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">Audit/buxgalteriya: "31-yanvar holatiga bazada nima yozilgan edi?" — faqat bitemporal javob beradi.</text>
+</svg>

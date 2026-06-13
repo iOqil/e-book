@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 460" width="760" height="460">
+  <title>N:M bog'lanish junction (bog'lovchi) jadvalga aylanishi: talaba va kurs orasidagi N:M ikkita 1:N ga ajraladi, royxat jadvali baho va sana atributlarini saqlaydi</title>
+  <defs>
+    <marker id="j-arr" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="760" height="460" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="21" font-weight="bold" fill="#1e293b">N:M -&gt; bog'lovchi (junction) jadval</text>
+
+  <!-- YUQORI: muammo -->
+  <text x="200" y="72" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">Muammo: to'g'ridan-to'g'ri N:M</text>
+  <rect x="60" y="86" width="120" height="40" rx="6" fill="#2563eb"/>
+  <text x="120" y="111" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#f8fafc">talabalar</text>
+  <rect x="280" y="86" width="120" height="40" rx="6" fill="#16a34a"/>
+  <text x="340" y="111" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#f8fafc">kurslar</text>
+  <line x1="180" y1="106" x2="280" y2="106" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="230" y="98" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">N : M</text>
+  <text x="200" y="150" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">FK qaysi tomonga? Hech qaysisi</text>
+  <text x="200" y="168" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">"ko'p"ni bitta ustunda sig'dira olmaydi</text>
+
+  <!-- o'q: aylanadi -->
+  <line x1="460" y1="125" x2="540" y2="125" stroke="#475569" stroke-width="3" marker-end="url(#j-arr)"/>
+  <text x="500" y="116" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#475569">ajratamiz</text>
+
+  <text x="640" y="98" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Yechim:</text>
+  <text x="640" y="118" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">N:M = ikki 1:N</text>
+  <text x="640" y="138" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">+ o'rtada jadval</text>
+
+  <!-- PAST: yechim sxemasi -->
+  <line x1="40" y1="196" x2="720" y2="196" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- talabalar -->
+  <rect x="50" y="230" width="170" height="120" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <rect x="50" y="230" width="170" height="30" rx="8" fill="#2563eb"/>
+  <text x="135" y="251" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#f8fafc">talabalar</text>
+  <text x="64" y="282" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">PK id</text>
+  <text x="64" y="306" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">ism</text>
+
+  <!-- kurslar -->
+  <rect x="540" y="230" width="170" height="120" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <rect x="540" y="230" width="170" height="30" rx="8" fill="#16a34a"/>
+  <text x="625" y="251" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#f8fafc">kurslar</text>
+  <text x="554" y="282" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">PK id</text>
+  <text x="554" y="306" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">nom</text>
+
+  <!-- royxat junction -->
+  <rect x="280" y="218" width="200" height="170" rx="8" fill="#fffbeb" stroke="#d97706" stroke-width="2.5"/>
+  <rect x="280" y="218" width="200" height="30" rx="8" fill="#f59e0b"/>
+  <text x="380" y="239" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">royxat (junction)</text>
+  <text x="294" y="270" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#2563eb">FK talaba_id</text>
+  <text x="294" y="293" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">FK kurs_id</text>
+  <line x1="294" y1="302" x2="466" y2="302" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3 3"/>
+  <text x="294" y="322" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">royxat_sana</text>
+  <text x="294" y="345" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">baho</text>
+  <text x="294" y="372" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-style="italic" fill="#d97706">PK (talaba_id, kurs_id)</text>
+
+  <!-- bog'lanishlar 1:N -->
+  <line x1="220" y1="290" x2="280" y2="276" stroke="#475569" stroke-width="2.5"/>
+  <text x="236" y="276" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">1</text>
+  <text x="258" y="294" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">N</text>
+  <line x1="480" y1="298" x2="540" y2="290" stroke="#475569" stroke-width="2.5"/>
+  <text x="496" y="294" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">N</text>
+  <text x="520" y="280" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">1</text>
+
+  <!-- xulosa -->
+  <text x="380" y="424" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Bonus: junction jadval QO'SHIMCHA atribut saqlay oladi (baho, sana)</text>
+  <text x="380" y="446" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Kompozit PK bir talaba bir kursga ikki marta yozilishini bloklaydi</text>
+</svg>

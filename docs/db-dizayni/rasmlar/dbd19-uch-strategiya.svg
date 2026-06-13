@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 540" width="880" height="540">
+  <title>Multi-tenancy uchta strategiyasi: shared-table, schema-per-tenant, database-per-tenant trade-off</title>
+  <rect x="0" y="0" width="880" height="540" fill="#f8fafc"/>
+  <text x="440" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Multi-tenancy: uchta izolyatsiya strategiyasi</text>
+  <text x="440" y="56" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Chapdan o'ngga: izolyatsiya o'sadi, narx o'sadi, ijarachi soni masshtabi pasayadi</text>
+
+  <!-- spectrum arrows -->
+  <line x1="60" y1="84" x2="820" y2="84" stroke="#94a3b8" stroke-width="2"/>
+  <text x="60" y="78" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">arzon, ko'p ijarachi</text>
+  <text x="820" y="78" text-anchor="end" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">qattiq izolyatsiya, qimmat</text>
+
+  <!-- Strategy A: shared table -->
+  <rect x="40" y="100" width="252" height="300" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="166" y="128" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">A. Shared table</text>
+  <text x="166" y="148" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">bitta jadval + tenant_id ustun</text>
+  <!-- single db box -->
+  <rect x="64" y="164" width="204" height="150" rx="6" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="166" y="184" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">kurs (bitta jadval)</text>
+  <rect x="78" y="196" width="176" height="22" fill="#dcfce7" stroke="#16a34a" stroke-width="1"/>
+  <text x="86" y="211" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#166534">tenant_id=1  Python</text>
+  <rect x="78" y="220" width="176" height="22" fill="#dcfce7" stroke="#16a34a" stroke-width="1"/>
+  <text x="86" y="235" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#166534">tenant_id=1  SQL</text>
+  <rect x="78" y="244" width="176" height="22" fill="#fef3c7" stroke="#d97706" stroke-width="1"/>
+  <text x="86" y="259" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#92400e">tenant_id=2  IELTS</text>
+  <rect x="78" y="268" width="176" height="22" fill="#fef3c7" stroke="#d97706" stroke-width="1"/>
+  <text x="86" y="283" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#92400e">tenant_id=2  Ingliz</text>
+  <text x="166" y="338" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">+ eng arzon, oson migratsiya</text>
+  <text x="166" y="358" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">- zaif izolyatsiya (RLS shart!)</text>
+  <text x="166" y="378" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">10k+ ijarachi: SaaS startap</text>
+
+  <!-- Strategy B: schema per tenant -->
+  <rect x="314" y="100" width="252" height="300" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="440" y="128" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">B. Schema-per-tenant</text>
+  <text x="440" y="148" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#d97706">bir baza, har tenant alohida schema</text>
+  <rect x="338" y="164" width="204" height="150" rx="6" fill="#ffffff" stroke="#d97706" stroke-width="1.5"/>
+  <text x="440" y="183" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">edu_db (bitta baza)</text>
+  <rect x="352" y="194" width="176" height="52" rx="4" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="360" y="212" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#166534">schema tenant_acme</text>
+  <text x="360" y="232" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#166534">kurs, talaba, ...</text>
+  <rect x="352" y="252" width="176" height="52" rx="4" fill="#e0e7ff" stroke="#4338ca" stroke-width="1.5"/>
+  <text x="360" y="270" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#3730a3">schema tenant_globex</text>
+  <text x="360" y="290" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#3730a3">kurs, talaba, ...</text>
+  <text x="440" y="338" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">+ kuchli izolyatsiya, per-tenant DDL</text>
+  <text x="440" y="358" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">- migratsiya har schemada, katalog shishadi</text>
+  <text x="440" y="378" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">~100-1000 ijarachi: B2B SaaS</text>
+
+  <!-- Strategy C: database per tenant -->
+  <rect x="588" y="100" width="252" height="300" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="714" y="128" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">C. Database-per-tenant</text>
+  <text x="714" y="148" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">har tenant alohida baza (yoki server)</text>
+  <rect x="612" y="166" width="100" height="68" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="662" y="190" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#166534">db_acme</text>
+  <text x="662" y="210" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#166534">kurs</text>
+  <text x="662" y="226" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#166534">talaba</text>
+  <rect x="720" y="166" width="100" height="68" rx="6" fill="#e0e7ff" stroke="#4338ca" stroke-width="1.5"/>
+  <text x="770" y="190" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#3730a3">db_globex</text>
+  <text x="770" y="210" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#3730a3">kurs</text>
+  <text x="770" y="226" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#3730a3">talaba</text>
+  <rect x="612" y="244" width="208" height="60" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="716" y="268" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">alohida zaxira, alohida tune,</text>
+  <text x="716" y="288" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">alohida ulanish poyezdi</text>
+  <text x="714" y="338" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">+ to'liq izolyatsiya, oson per-tenant zaxira</text>
+  <text x="714" y="358" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">- eng qimmat, ko'p baza boshqaruvi</text>
+  <text x="714" y="378" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">o'nlab enterprise ijarachi, bank/sog'liq</text>
+
+  <!-- bottom takeaway -->
+  <rect x="40" y="418" width="800" height="92" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="56" y="442" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Asosiy qoida:</text>
+  <text x="56" y="464" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">A -> ko'p arzon ijarachi, lekin izolyatsiyani DASTUR emas, BAZA (RLS) ta'minlasin.</text>
+  <text x="56" y="484" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">B -> o'rtacha; har ijarachi alohida sxema/versiya talab qilsa.</text>
+  <text x="56" y="504" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">C -> kam, lekin og'ir/qonuniy izolyatsiya talab qiladigan enterprise ijarachi uchun.</text>
+</svg>

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 600" width="860" height="600">
+  <title>CAP teoremasi va polyglot persistence: har ish uchun to'g'ri baza</title>
+  <rect x="0" y="0" width="860" height="600" fill="#f8fafc"/>
+  <text x="430" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="21" font-weight="bold" fill="#1e293b">CAP teoremasi va Polyglot persistence</text>
+  <text x="430" y="56" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Taqsimlangan bazada uchchovini birga olib bo'lmaydi &#8212; ikkitasini tanlaysiz</text>
+
+  <!-- CAP triangle -->
+  <text x="240" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">CAP &#8212; uchburchak</text>
+  <!-- triangle edges -->
+  <polygon points="240,110 110,330 370,330" fill="none" stroke="#94a3b8" stroke-width="2"/>
+  <!-- C node -->
+  <circle cx="240" cy="110" r="30" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="240" y="116" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="18" font-weight="bold" fill="#2563eb">C</text>
+  <text x="240" y="160" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Izchillik</text>
+  <text x="240" y="178" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(Consistency)</text>
+  <!-- A node -->
+  <circle cx="110" cy="330" r="30" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="110" y="336" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="18" font-weight="bold" fill="#16a34a">A</text>
+  <text x="110" y="382" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Mavjudlik</text>
+  <text x="110" y="400" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(Availability)</text>
+  <!-- P node -->
+  <circle cx="370" cy="330" r="30" fill="#fef9c3" stroke="#d97706" stroke-width="2"/>
+  <text x="370" y="336" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="18" font-weight="bold" fill="#d97706">P</text>
+  <text x="370" y="382" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Bo'linishga chidamlilik</text>
+  <text x="370" y="400" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(Partition tolerance)</text>
+
+  <!-- CAP explanation -->
+  <rect x="40" y="425" width="380" height="130" rx="8" fill="#e2e8f0" stroke="#475569" stroke-width="1.5"/>
+  <text x="56" y="450" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Tarmoq bo'linsa (P), tanlaysiz:</text>
+  <text x="56" y="472" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">&#8226; CP: izchil, lekin javob bermaslik mumkin</text>
+  <text x="70" y="490" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(MongoDB, HBase) &#8212; bank, inventar</text>
+  <text x="56" y="512" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">&#8226; AP: doim javob, lekin eski ma'lumot mumkin</text>
+  <text x="70" y="530" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(Cassandra, DynamoDB) &#8212; savat, oqim</text>
+  <text x="56" y="550" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" font-style="italic">Bitta tugun (klassik PG): P yo'q &#8594; CA da ishlaydi.</text>
+
+  <!-- BASE vs ACID -->
+  <rect x="450" y="90" width="380" height="120" rx="8" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="640" y="114" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">ACID  vs  BASE</text>
+  <text x="466" y="138" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">ACID (relyatsion): qat'iy izchillik,</text>
+  <text x="466" y="156" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tranzaksiya &#8212; "doim to'g'ri"</text>
+  <text x="466" y="180" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">BASE (ko'p NoSQL): Basically Available,</text>
+  <text x="466" y="198" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Soft state, Eventual consistency &#8212; "oxir-oqibat to'g'ri"</text>
+
+  <!-- Polyglot -->
+  <text x="640" y="240" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">Polyglot persistence</text>
+  <text x="640" y="260" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Bitta tizim, har vazifaga to'g'ri baza</text>
+
+  <rect x="450" y="276" width="180" height="56" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="540" y="300" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#2563eb">PostgreSQL</text>
+  <text x="540" y="320" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">buyurtma, hisob (ACID)</text>
+
+  <rect x="650" y="276" width="180" height="56" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="740" y="300" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">Redis</text>
+  <text x="740" y="320" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">kesh, sessiya, reyting</text>
+
+  <rect x="450" y="344" width="180" height="56" rx="8" fill="#fef9c3" stroke="#d97706" stroke-width="2"/>
+  <text x="540" y="368" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#d97706">Elasticsearch</text>
+  <text x="540" y="388" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">to'liq-matn qidiruv</text>
+
+  <rect x="650" y="344" width="180" height="56" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="740" y="368" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626">Neo4j</text>
+  <text x="740" y="388" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tavsiya, bog'lanish grafi</text>
+
+  <rect x="450" y="425" width="380" height="130" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text x="640" y="449" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Ehtiyot: polyglot narxi bor</text>
+  <text x="466" y="472" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">&#8722; ko'p baza = ko'p operatsion yuk</text>
+  <text x="466" y="492" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">&#8722; bazalar orasi izchillik qiyin</text>
+  <text x="466" y="512" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">+ avval PostgreSQL bilan boshla (JSONB,</text>
+  <text x="480" y="530" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">to'liq-matn, GIN ko'p ehtiyojni qoplaydi)</text>
+  <text x="466" y="550" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" font-style="italic">Faqat real og'riq paydo bo'lganda yangi baza qo'sh.</text>
+</svg>

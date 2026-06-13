@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 580" width="820" height="580">
+  <title>Qisman (partial) indeks va covering (INCLUDE) indeks: index-only scan qanday ishlaydi</title>
+  <rect x="0" y="0" width="820" height="580" fill="#f8fafc"/>
+  <text x="410" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="21" font-weight="bold" fill="#1e293b">Qisman indeks va Covering (INCLUDE) indeks</text>
+
+  <!-- LEFT: partial index -->
+  <text x="210" y="68" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">Qisman indeks (WHERE bilan)</text>
+  <text x="210" y="90" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">faqat KERAKLI qatorlarni indekslaydi</text>
+
+  <!-- full table -->
+  <rect x="40" y="104" width="340" height="200" rx="8" fill="#fff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="210" y="126" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">buyurtma (100 000 qator)</text>
+  <!-- active rows (green) -->
+  <g font-family="Segoe UI, system-ui, sans-serif" font-size="13">
+    <rect x="60" y="138" width="300" height="24" fill="#dcfce7" stroke="#16a34a"/><text x="70" y="155" fill="#1e293b">faol (ochirilgan IS NULL) — 95k</text>
+    <rect x="60" y="166" width="300" height="24" fill="#dcfce7" stroke="#16a34a"/><text x="70" y="183" fill="#1e293b">faol (ochirilgan IS NULL)</text>
+    <rect x="60" y="194" width="300" height="24" fill="#fee2e2" stroke="#dc2626"/><text x="70" y="211" fill="#475569">ochirilgan (5k) — indekslanmaydi</text>
+    <rect x="60" y="222" width="300" height="24" fill="#dcfce7" stroke="#16a34a"/><text x="70" y="239" fill="#1e293b">faol (ochirilgan IS NULL)</text>
+    <rect x="60" y="250" width="300" height="24" fill="#fee2e2" stroke="#dc2626"/><text x="70" y="267" fill="#475569">ochirilgan (5k) — indekslanmaydi</text>
+    <rect x="60" y="278" width="300" height="24" fill="#dcfce7" stroke="#16a34a"/><text x="70" y="295" fill="#1e293b">faol (ochirilgan IS NULL)</text>
+  </g>
+
+  <!-- partial index box -->
+  <rect x="40" y="320" width="340" height="92" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="210" y="342" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">CREATE INDEX ... ON buyurtma(holat)</text>
+  <text x="210" y="362" text-anchor="middle" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#16a34a">WHERE ochirilgan IS NULL;</text>
+  <text x="210" y="388" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Faqat faol qatorlar -> indeks KICHIKROQ</text>
+  <text x="210" y="406" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">664 kB (to'liq B-tree 1168 kB o'rniga)</text>
+
+  <!-- divider -->
+  <line x1="410" y1="104" x2="410" y2="540" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="5 5"/>
+
+  <!-- RIGHT: covering index / index-only scan -->
+  <text x="610" y="68" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">Covering (INCLUDE) indeks</text>
+  <text x="610" y="90" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">jadvalga umuman bormaydi: Index Only Scan</text>
+
+  <!-- index box -->
+  <rect x="440" y="104" width="340" height="96" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="610" y="128" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">CREATE INDEX ... (mijoz_id)</text>
+  <text x="610" y="148" text-anchor="middle" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#2563eb">INCLUDE (summa, holat);</text>
+  <text x="610" y="172" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">kalit: mijoz_id  |  yuk (payload): summa, holat</text>
+  <text x="610" y="190" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">INCLUDE ustunlari faqat barg sahifada</text>
+
+  <!-- query -->
+  <rect x="440" y="216" width="340" height="46" rx="6" fill="#fff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="610" y="236" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">SELECT mijoz_id, summa, holat</text>
+  <text x="610" y="254" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">WHERE mijoz_id = 777;</text>
+
+  <!-- arrow down -->
+  <line x1="610" y1="262" x2="610" y2="296" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arr)"/>
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <!-- index only scan result -->
+  <rect x="440" y="300" width="340" height="110" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="610" y="324" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">Index Only Scan</text>
+  <text x="610" y="348" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Hamma kerakli ustun indeksning ICHIDA bor</text>
+  <text x="610" y="368" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">-> jadval (heap) ga BORMAYDI</text>
+  <text x="610" y="392" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">2x kamroq disk o'qish, juda tez</text>
+
+  <!-- footer comparison -->
+  <rect x="40" y="436" width="740" height="104" rx="8" fill="#e2e8f0" stroke="#475569" stroke-width="2"/>
+  <text x="410" y="460" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Oddiy indeks: 2 qadam   vs   Covering indeks: 1 qadam</text>
+  <text x="60" y="486" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">Oddiy: indeksdan qator joyini top -> keyin JADVALdan qolgan ustunlarni o'qi (2 marta disk).</text>
+  <text x="60" y="510" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">Covering: kerakli ustunlar indeksda bo'lgani uchun jadvalga bormaydi -> bitta o'qish bilan bitadi.</text>
+  <text x="60" y="532" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">Narxi: indeks kattaroq (INCLUDE ustunlari joy egallaydi) — faqat issiq so'rov uchun.</text>
+</svg>

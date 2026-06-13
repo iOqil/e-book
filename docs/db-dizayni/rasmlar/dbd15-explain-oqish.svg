@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 560" width="820" height="560">
+  <title>EXPLAIN rejasini o'qish: Seq Scan, Index Scan va Bitmap Heap Scan node turlarini taqqoslash, cost va actual time bilan</title>
+  <rect x="0" y="0" width="820" height="560" fill="#f8fafc"/>
+  <text x="410" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">EXPLAIN rejasini qanday o'qish kerak</text>
+  <text x="410" y="54" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Bir xil jadval, bir xil so'rov — qancha qator qaytadi, planner shuncha xil yo'l tanlaydi</text>
+
+  <!-- cost line legend -->
+  <rect x="40" y="74" width="740" height="40" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="56" y="92" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">Node satrini o'qish:</text>
+  <text x="56" y="108" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">cost=boshlanish..tugash (planner taxmini) &#8226; rows=kutilgan qator &#8226; actual time=haqiqiy ms &#8226; loops=takror</text>
+
+  <!-- COLUMN 1: Seq Scan -->
+  <rect x="40" y="134" width="240" height="270" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="160" y="160" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#dc2626">Seq Scan</text>
+  <text x="160" y="180" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">butun jadvalni o'qiydi</text>
+  <!-- pages icon -->
+  <rect x="64" y="196" width="192" height="92" rx="4" fill="#ffffff" stroke="#dc2626" stroke-width="1.5"/>
+  <line x1="64" y1="220" x2="256" y2="220" stroke="#fecaca" stroke-width="1"/>
+  <line x1="64" y1="244" x2="256" y2="244" stroke="#fecaca" stroke-width="1"/>
+  <line x1="64" y1="268" x2="256" y2="268" stroke="#fecaca" stroke-width="1"/>
+  <text x="74" y="214" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">qator 1 ... tekshir</text>
+  <text x="74" y="238" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">qator 2 ... tekshir</text>
+  <text x="74" y="262" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">... 1 000 000 qator</text>
+  <text x="74" y="284" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">Rows Removed by Filter</text>
+  <text x="64" y="316" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">Qachon: ko'p qator (&gt;~10%),</text>
+  <text x="64" y="334" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">indeks yo'q, yoki kichik jadval</text>
+  <text x="64" y="360" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626" font-weight="bold">~140 ms (1 mln dan filtr)</text>
+  <text x="64" y="384" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">9002 buffer o'qildi</text>
+
+  <!-- COLUMN 2: Index Scan -->
+  <rect x="290" y="134" width="240" height="270" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="410" y="160" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">Index Scan</text>
+  <text x="410" y="180" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">indeksdan to'g'ri qatorga</text>
+  <!-- tree icon -->
+  <rect x="380" y="196" width="60" height="22" rx="4" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="410" y="211" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">indeks</text>
+  <line x1="410" y1="218" x2="360" y2="244" stroke="#16a34a" stroke-width="1.5"/>
+  <line x1="410" y1="218" x2="460" y2="244" stroke="#16a34a" stroke-width="1.5"/>
+  <rect x="336" y="244" width="48" height="22" rx="4" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <rect x="436" y="244" width="48" height="22" rx="4" fill="#bbf7d0" stroke="#16a34a" stroke-width="2"/>
+  <line x1="460" y1="266" x2="460" y2="288" stroke="#16a34a" stroke-width="1.5"/>
+  <rect x="420" y="288" width="80" height="24" rx="4" fill="#16a34a"/>
+  <text x="460" y="305" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#ffffff" font-weight="bold">topildi</text>
+  <text x="314" y="338" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">Qachon: oz qator (yuqori</text>
+  <text x="314" y="356" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">selektivlik), tartiblangan o'qish</text>
+  <text x="314" y="382" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" font-weight="bold">~0.05 ms (PK orqali 1 qator)</text>
+
+  <!-- COLUMN 3: Bitmap Heap Scan -->
+  <rect x="540" y="134" width="240" height="270" rx="8" fill="#fef9c3" stroke="#d97706" stroke-width="2"/>
+  <text x="660" y="160" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#d97706">Bitmap Heap Scan</text>
+  <text x="660" y="180" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">indeks -&gt; bitmap -&gt; bloklar</text>
+  <rect x="572" y="196" width="176" height="22" rx="4" fill="#ffffff" stroke="#d97706" stroke-width="1.5"/>
+  <text x="660" y="211" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#d97706">1. Bitmap Index Scan</text>
+  <line x1="660" y1="218" x2="660" y2="232" stroke="#d97706" stroke-width="1.5"/>
+  <!-- bitmap grid -->
+  <rect x="600" y="232" width="120" height="34" rx="2" fill="#ffffff" stroke="#d97706" stroke-width="1.5"/>
+  <rect x="606" y="238" width="14" height="10" fill="#d97706"/>
+  <rect x="624" y="238" width="14" height="10" fill="#fde68a"/>
+  <rect x="642" y="238" width="14" height="10" fill="#d97706"/>
+  <rect x="660" y="238" width="14" height="10" fill="#fde68a"/>
+  <rect x="678" y="238" width="14" height="10" fill="#d97706"/>
+  <rect x="696" y="238" width="14" height="10" fill="#fde68a"/>
+  <text x="660" y="261" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#d97706">2. kerakli bloklar xaritasi</text>
+  <line x1="660" y1="266" x2="660" y2="280" stroke="#d97706" stroke-width="1.5"/>
+  <rect x="572" y="280" width="176" height="22" rx="4" fill="#fde68a" stroke="#d97706" stroke-width="1.5"/>
+  <text x="660" y="295" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">3. Heap Scan: bloklarni o'qi</text>
+  <text x="556" y="332" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">Qachon: o'rtacha qator soni</text>
+  <text x="556" y="350" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(Index ko'p, Seq oz uchun)</text>
+  <text x="556" y="376" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#d97706" font-weight="bold">~0.1 ms (11 qator, indeks bilan)</text>
+
+  <!-- bottom takeaway -->
+  <rect x="40" y="420" width="740" height="116" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="56" y="446" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">Eng muhim qoida: estimate (rows=...) va actual (rows=...) ni SOLISHTIR</text>
+  <text x="56" y="470" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Agar planner taxmini (rows) haqiqatdan (actual rows) keskin farq qilsa &#8594; statistika eski (ANALYZE kerak)</text>
+  <text x="56" y="492" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">yoki planner yomon plan tanlamoqda. Bu — sekin so'rovning eng tez-tez uchraydigan sababi.</text>
+  <text x="56" y="516" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" font-style="italic">EXPLAIN = taxmin (tez, arzon) &#8226; EXPLAIN (ANALYZE) = haqiqatan ishga tushiradi (real vaqt, BUFFERS bilan disk o'qishi)</text>
+</svg>

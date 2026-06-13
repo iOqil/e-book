@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 600" width="820" height="600">
+  <title>Lost update ssenariysi (ikki sessiya bir xil qiymatni o'qib qayta yozadi) va deadlock (teskari qulflash tartibi)</title>
+  <rect x="0" y="0" width="820" height="600" fill="#f8fafc"/>
+  <text x="410" y="30" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Lost update va Deadlock</text>
+
+  <!-- ===== TOP: LOST UPDATE ===== -->
+  <text x="410" y="58" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">1) Lost update: ikki sessiya o'qib-hisoblab-yozadi (himoyasiz)</text>
+
+  <!-- timeline axis -->
+  <line x1="70" y1="84" x2="70" y2="276" stroke="#94a3b8" stroke-width="2"/>
+  <text x="44" y="180" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" transform="rotate(-90 44 180)">vaqt</text>
+
+  <!-- Session A column -->
+  <rect x="92" y="78" width="330" height="24" fill="#2563eb"/>
+  <text x="257" y="95" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">Sessiya A (+200000)</text>
+  <!-- Session B column -->
+  <rect x="438" y="78" width="330" height="24" fill="#d97706"/>
+  <text x="603" y="95" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">Sessiya B (-50000)</text>
+
+  <!-- steps A -->
+  <rect x="92" y="108" width="330" height="28" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="1"/>
+  <text x="102" y="127" font-family="Consolas, monospace" font-size="13" fill="#1e293b">A1: SELECT balans -> 500000</text>
+  <rect x="438" y="142" width="330" height="28" rx="4" fill="#fef3c7" stroke="#d97706" stroke-width="1"/>
+  <text x="448" y="161" font-family="Consolas, monospace" font-size="13" fill="#1e293b">B1: SELECT balans -> 500000</text>
+  <rect x="438" y="176" width="330" height="28" rx="4" fill="#fef3c7" stroke="#d97706" stroke-width="1"/>
+  <text x="448" y="195" font-family="Consolas, monospace" font-size="13" fill="#1e293b">B2: UPDATE = 450000; COMMIT</text>
+  <rect x="92" y="210" width="330" height="28" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="1"/>
+  <text x="102" y="229" font-family="Consolas, monospace" font-size="13" fill="#1e293b">A2: UPDATE = 700000; COMMIT</text>
+
+  <!-- result -->
+  <rect x="92" y="244" width="676" height="30" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="104" y="263" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#991b1b">Natija = 700000 (A B'ni o'chirib yozdi). To'g'risi: 500000+200000-50000 = <tspan font-weight="bold">650000</tspan>. B yo'qoldi!</text>
+
+  <!-- divider -->
+  <line x1="20" y1="294" x2="800" y2="294" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="6 4"/>
+
+  <!-- ===== BOTTOM: DEADLOCK ===== -->
+  <text x="410" y="320" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">2) Deadlock: teskari qulflash tartibi -> halqa</text>
+
+  <!-- BAD: reversed order -->
+  <rect x="40" y="338" width="350" height="220" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="215" y="362" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">YOMON: har xil tartib</text>
+
+  <!-- A box -->
+  <rect x="58" y="376" width="150" height="40" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="133" y="392" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#2563eb">A: qulf 1 -> 2</text>
+  <text x="133" y="409" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">id=1 olindi</text>
+  <!-- B box -->
+  <rect x="222" y="376" width="150" height="40" rx="6" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text x="297" y="392" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#d97706">B: qulf 2 -> 1</text>
+  <text x="297" y="409" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">id=2 olindi</text>
+
+  <!-- wait arrows forming a cycle -->
+  <defs>
+    <marker id="rd" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 z" fill="#dc2626"/>
+    </marker>
+    <marker id="gr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+  <line x1="208" y1="438" x2="290" y2="438" stroke="#dc2626" stroke-width="2.5" marker-end="url(#rd)"/>
+  <text x="249" y="432" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">A id=2 ni kutadi</text>
+  <line x1="290" y1="460" x2="208" y2="460" stroke="#dc2626" stroke-width="2.5" marker-end="url(#rd)"/>
+  <text x="249" y="478" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">B id=1 ni kutadi</text>
+
+  <rect x="58" y="492" width="314" height="52" rx="6" fill="#ffffff" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="68" y="512" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#991b1b">Halqa! PG deadlock'ni aniqlaydi va birini</text>
+  <text x="68" y="531" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#991b1b">ABORT qiladi: ERROR: deadlock detected</text>
+
+  <!-- GOOD: same order -->
+  <rect x="430" y="338" width="350" height="220" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="605" y="362" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">YAXSHI: bir xil tartib</text>
+
+  <rect x="448" y="376" width="150" height="40" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="523" y="392" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#2563eb">A: qulf 1 -> 2</text>
+  <text x="523" y="409" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">id=1, id=2</text>
+  <rect x="612" y="376" width="150" height="40" rx="6" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text x="687" y="392" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#d97706">B: qulf 1 -> 2</text>
+  <text x="687" y="409" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">id=1 ni kutadi</text>
+
+  <line x1="598" y1="449" x2="680" y2="449" stroke="#16a34a" stroke-width="2.5" marker-end="url(#gr)"/>
+  <text x="639" y="443" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">B navbatda kutadi</text>
+  <text x="639" y="467" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(halqa YO'Q)</text>
+
+  <rect x="448" y="492" width="314" height="52" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="458" y="512" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#166534">A commit qiladi -> B qulfni oladi -> commit.</text>
+  <text x="458" y="531" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#166534">Qoida: doim id (yoki nom) tartibida qulfla.</text>
+
+  <!-- footer -->
+  <text x="410" y="578" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Deadlock'ning oldini olishning eng oddiy dizayn qoidasi: barcha tranzaksiyalar resurslarni BIR XIL tartibda qulflasin.</text>
+</svg>

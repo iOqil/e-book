@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 560" width="820" height="560">
+  <title>Funksional bog'liqlik X -&gt; Y va undan kalit (candidate key) aniqlash</title>
+  <rect x="0" y="0" width="820" height="560" fill="#f8fafc"/>
+  <text x="410" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Funksional bog'liqlik (FD) va kalit aniqlash</text>
+
+  <!-- Concept block -->
+  <text x="40" y="74" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#475569">Ta'rif: X determinant, Y bog'liq</text>
+  <rect x="40" y="86" width="350" height="76" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="70" y="132" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#2563eb">X</text>
+  <line x1="100" y1="124" x2="200" y2="124" stroke="#16a34a" stroke-width="2.5" marker-end="url(#fda)"/>
+  <text x="150" y="114" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#16a34a">aniqlaydi</text>
+  <text x="230" y="132" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#d97706">Y</text>
+  <text x="300" y="124" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">X qiymati bitta</text>
+  <text x="300" y="144" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">bo'lsa, Y ham bitta</text>
+
+  <!-- example table -->
+  <text x="430" y="74" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#475569">Misol jadval: xodimlar</text>
+  <g font-family="Segoe UI, system-ui, sans-serif" font-size="13">
+    <rect x="430" y="86" width="350" height="26" fill="#475569"/>
+    <text x="445" y="104" fill="#ffffff">xodim_id</text>
+    <text x="540" y="104" fill="#ffffff">email</text>
+    <text x="635" y="104" fill="#ffffff">bolim_id</text>
+    <text x="720" y="104" fill="#ffffff">bolim</text>
+
+    <rect x="430" y="112" width="350" height="24" fill="#ffffff" stroke="#94a3b8"/>
+    <text x="445" y="129" fill="#1e293b">101</text>
+    <text x="540" y="129" fill="#1e293b">a@x.uz</text>
+    <text x="635" y="129" fill="#1e293b">D1</text>
+    <text x="720" y="129" fill="#1e293b">Sotuv</text>
+
+    <rect x="430" y="136" width="350" height="24" fill="#f1f5f9" stroke="#94a3b8"/>
+    <text x="445" y="153" fill="#1e293b">102</text>
+    <text x="540" y="153" fill="#1e293b">b@x.uz</text>
+    <text x="635" y="153" fill="#1e293b">D1</text>
+    <text x="720" y="153" fill="#1e293b">Sotuv</text>
+
+    <rect x="430" y="160" width="350" height="24" fill="#ffffff" stroke="#94a3b8"/>
+    <text x="445" y="177" fill="#1e293b">103</text>
+    <text x="540" y="177" fill="#1e293b">c@x.uz</text>
+    <text x="635" y="177" fill="#1e293b">D2</text>
+    <text x="720" y="177" fill="#1e293b">Ombor</text>
+  </g>
+
+  <!-- FD list -->
+  <text x="40" y="226" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#475569">Jadvaldagi funksional bog'liqliklar</text>
+  <rect x="40" y="240" width="740" height="170" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+
+  <text x="64" y="272" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">FD1:  xodim_id  -&gt;  email, bolim_id, bolim</text>
+  <text x="540" y="272" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">(to'liq kalit)</text>
+
+  <text x="64" y="302" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">FD2:  email  -&gt;  xodim_id</text>
+  <text x="540" y="302" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">(email — alternativ kalit)</text>
+
+  <text x="64" y="332" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">FD3:  bolim_id  -&gt;  bolim</text>
+  <text x="540" y="332" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">(tranzitiv: 3NF buzadi!)</text>
+
+  <text x="64" y="372" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Candidate key topish: o'ng tomonda hamma narsani aniqlaydigan eng kichik atribut(lar) to'plami.</text>
+  <text x="64" y="394" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Bu yerda: {xodim_id} va {email} — ikkita candidate key. Bittasi PK bo'ladi.</text>
+
+  <!-- key determination diagram -->
+  <text x="40" y="446" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#475569">Atribut yopilishi (closure): {xodim_id}+ = barcha atributlar  =&gt;  superkey</text>
+
+  <rect x="40" y="460" width="120" height="40" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="100" y="485" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">xodim_id</text>
+  <line x1="160" y1="480" x2="220" y2="480" stroke="#16a34a" stroke-width="2" marker-end="url(#fda)"/>
+  <rect x="225" y="460" width="120" height="40" rx="6" fill="#fef9c3" stroke="#d97706" stroke-width="2"/>
+  <text x="285" y="485" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">email</text>
+  <line x1="345" y1="480" x2="405" y2="480" stroke="#16a34a" stroke-width="2" marker-end="url(#fda)"/>
+  <rect x="410" y="460" width="120" height="40" rx="6" fill="#fef9c3" stroke="#d97706" stroke-width="2"/>
+  <text x="470" y="485" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">bolim_id</text>
+  <line x1="530" y1="480" x2="590" y2="480" stroke="#16a34a" stroke-width="2" marker-end="url(#fda)"/>
+  <rect x="595" y="460" width="120" height="40" rx="6" fill="#fef9c3" stroke="#d97706" stroke-width="2"/>
+  <text x="655" y="485" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">bolim</text>
+
+  <text x="410" y="534" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#dc2626">FD3 (bolim_id -&gt; bolim) zanjirning oxiri — aynan tranzitiv bog'liqlik 3NF da ajratiladi.</text>
+
+  <defs>
+    <marker id="fda" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+</svg>

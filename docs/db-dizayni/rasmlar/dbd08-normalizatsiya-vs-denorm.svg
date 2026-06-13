@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 540" width="800" height="540">
+  <title>Normalizatsiyadan denormalizatsiyagacha spektr: yozish izchilligi va o'qish tezligi o'rtasidagi trade-off</title>
+  <rect x="0" y="0" width="800" height="540" fill="#f8fafc"/>
+  <text x="400" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Normalizatsiya &#8644; Denormalizatsiya spektri</text>
+  <text x="400" y="54" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Bu "yaxshi/yomon" emas — bu trade-off qarori</text>
+
+  <!-- spectrum bar -->
+  <defs>
+    <linearGradient id="spec" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#16a34a"/>
+      <stop offset="50%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#dc2626"/>
+    </linearGradient>
+  </defs>
+  <rect x="60" y="92" width="680" height="34" rx="17" fill="url(#spec)"/>
+  <text x="80" y="115" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">To'liq normalizatsiya</text>
+  <text x="400" y="115" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">aralash (kerakli joyda)</text>
+  <text x="720" y="115" text-anchor="end" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Denormalizatsiya</text>
+
+  <!-- markers -->
+  <line x1="160" y1="126" x2="160" y2="146" stroke="#475569" stroke-width="2"/>
+  <text x="160" y="164" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">3NF / BCNF / 4NF</text>
+  <line x1="640" y1="126" x2="640" y2="146" stroke="#475569" stroke-width="2"/>
+  <text x="640" y="164" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">kesh, snapshot, JSONB</text>
+
+  <!-- LEFT panel: normalization -->
+  <rect x="40" y="186" width="350" height="150" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="215" y="210" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Normalizatsiya yutadi</text>
+  <text x="58" y="236" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">+ Yozish ishonchli (anomaliya yo'q)</text>
+  <text x="58" y="258" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">+ Takror yo'q, joy tejaladi</text>
+  <text x="58" y="280" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">+ Izchillik bazada (FK / UNIQUE)</text>
+  <text x="58" y="302" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">&#8722; O'qish ko'p JOIN talab qiladi</text>
+  <text x="58" y="324" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" font-style="italic">Mos: OLTP (buyurtma, to'lov, foydalanuvchi)</text>
+
+  <!-- RIGHT panel: denormalization -->
+  <rect x="410" y="186" width="350" height="150" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="585" y="210" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">Denormalizatsiya yutadi</text>
+  <text x="428" y="236" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">+ O'qish tez (JOIN kam yoki yo'q)</text>
+  <text x="428" y="258" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">+ Agregat tayyor (count / sum kesh)</text>
+  <text x="428" y="280" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">&#8722; Yozish murakkab (ko'p joy yangilanadi)</text>
+  <text x="428" y="302" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">&#8722; Izchillik SIZNING mas'uliyatingiz (drift)</text>
+  <text x="428" y="324" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" font-style="italic">Mos: o'qish-og'ir, hisobot, analitik (OLAP)</text>
+
+  <!-- bottom: safety ladder -->
+  <text x="40" y="372" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Denormalizatsiya — xavfsizlik darajasi bo'yicha tanlang (xavfsizdan xavfligacha):</text>
+
+  <rect x="40" y="386" width="172" height="120" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="126" y="408" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">1. Generated col</text>
+  <text x="56" y="430" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Baza kafolatlaydi,</text>
+  <text x="56" y="448" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">drift YO'Q.</text>
+  <text x="56" y="470" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" font-weight="bold">Eng xavfsiz</text>
+  <text x="56" y="492" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">faqat o'sha qatordan</text>
+
+  <rect x="222" y="386" width="172" height="120" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="308" y="408" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">2. Trigger</text>
+  <text x="238" y="430" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Har yozuvda kesh</text>
+  <text x="238" y="448" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">mos qoladi.</text>
+  <text x="238" y="470" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" font-weight="bold">Ishonchli</text>
+  <text x="238" y="492" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">boshqa jadval agregati</text>
+
+  <rect x="404" y="386" width="172" height="120" rx="6" fill="#fef9c3" stroke="#d97706" stroke-width="1.5"/>
+  <text x="490" y="408" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#d97706">3. Materialized view</text>
+  <text x="420" y="430" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">REFRESH bilan,</text>
+  <text x="420" y="448" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">"biroz eski".</text>
+  <text x="420" y="470" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#d97706" font-weight="bold">Hisobot uchun</text>
+  <text x="420" y="492" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">og'ir agregat</text>
+
+  <rect x="586" y="386" width="174" height="120" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="673" y="408" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">4. Ilova kodida</text>
+  <text x="602" y="430" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Qo'lda yangilash —</text>
+  <text x="602" y="448" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">bir joyni unutsa drift.</text>
+  <text x="602" y="470" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626" font-weight="bold">Eng xavfli</text>
+  <text x="602" y="492" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">faqat oxirgi chora</text>
+
+  <text x="400" y="528" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" font-style="italic">Strategiya: avval 3NF/BCNF &#8594; o'lcha (EXPLAIN) &#8594; aniq sekin nuqtaga denormalizatsiya &#8594; izchillikni avtomatlashtir</text>
+</svg>

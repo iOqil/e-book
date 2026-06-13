@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 560" width="820" height="560">
+  <title>ER/logik model elementlarini PostgreSQL fizik jadvallariga o'tkazish qoidalari xaritasi</title>
+  <rect x="0" y="0" width="820" height="560" fill="#f8fafc"/>
+  <text x="410" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="21" font-weight="bold" fill="#1e293b">ER element &#8594; PostgreSQL jadval: o'tkazish qoidalari</text>
+  <text x="410" y="58" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Logik modeldagi har bir element fizik sxemada aniq konstruksiyaga aylanadi</text>
+
+  <defs>
+    <marker id="arr09a" markerWidth="11" markerHeight="11" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <!-- Row 1: Entity -> table -->
+  <rect x="28" y="80" width="300" height="64" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="178" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Entity (mijoz, mahsulot)</text>
+  <text x="178" y="130" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">mustaqil obyekt turi</text>
+  <line x1="332" y1="112" x2="386" y2="112" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arr09a)"/>
+  <rect x="392" y="80" width="400" height="64" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="592" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">CREATE TABLE</text>
+  <text x="592" y="130" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">surrogate PK: id bigint GENERATED ALWAYS AS IDENTITY</text>
+
+  <!-- Row 2: Attribute -> column -->
+  <rect x="28" y="156" width="300" height="64" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="178" y="184" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Atribut (ismi, narx)</text>
+  <text x="178" y="206" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">entity xususiyati</text>
+  <line x1="332" y1="188" x2="386" y2="188" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arr09a)"/>
+  <rect x="392" y="156" width="400" height="64" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="592" y="184" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Ustun (column) + tur + NOT NULL</text>
+  <text x="592" y="206" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">majburiy atribut &#8594; NOT NULL</text>
+
+  <!-- Row 3: 1:N -> FK -->
+  <rect x="28" y="232" width="300" height="64" rx="8" fill="#fef9c3" stroke="#d97706" stroke-width="2"/>
+  <text x="178" y="260" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">1 : N  bog'lanish</text>
+  <text x="178" y="282" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">kategoriya 1 &#8212; N mahsulot</text>
+  <line x1="332" y1="264" x2="386" y2="264" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arr09a)"/>
+  <rect x="392" y="232" width="400" height="64" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="592" y="260" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">FK BOLA tomonda (N tomonda)</text>
+  <text x="592" y="282" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">mahsulot.kategoriya_id REFERENCES kategoriya(id)</text>
+
+  <!-- Row 4: N:M -> junction -->
+  <rect x="28" y="308" width="300" height="64" rx="8" fill="#fef9c3" stroke="#d97706" stroke-width="2"/>
+  <text x="178" y="336" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">N : M  bog'lanish</text>
+  <text x="178" y="358" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">buyurtma N &#8212; M mahsulot</text>
+  <line x1="332" y1="340" x2="386" y2="340" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arr09a)"/>
+  <rect x="392" y="308" width="400" height="64" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="592" y="336" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">BOG'LOVCHI (junction) jadval</text>
+  <text x="592" y="358" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">buyurtma_satri: PRIMARY KEY (buyurtma_id, mahsulot_id)</text>
+
+  <!-- Row 5: 1:1 -> FK side -->
+  <rect x="28" y="384" width="300" height="64" rx="8" fill="#fef9c3" stroke="#d97706" stroke-width="2"/>
+  <text x="178" y="412" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">1 : 1  bog'lanish</text>
+  <text x="178" y="434" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">mijoz 1 &#8212; 1 mijoz_profil</text>
+  <line x1="332" y1="416" x2="386" y2="416" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arr09a)"/>
+  <rect x="392" y="384" width="400" height="64" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="592" y="412" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">FK + UNIQUE (yoki FK = PK)</text>
+  <text x="592" y="434" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">ixtiyoriy tomonga qo'y: mijoz_profil.mijoz_id PK</text>
+
+  <!-- Row 6: weak entity -->
+  <rect x="28" y="460" width="300" height="64" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="178" y="488" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Kuchsiz entity</text>
+  <text x="178" y="510" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">mijoz_telefon (egasiz mavjud emas)</text>
+  <line x1="332" y1="492" x2="386" y2="492" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arr09a)"/>
+  <rect x="392" y="460" width="400" height="64" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="592" y="488" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">KOMPOZIT PK (ega_id + qisman kalit)</text>
+  <text x="592" y="510" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">PRIMARY KEY (mijoz_id, raqam) + ON DELETE CASCADE</text>
+</svg>

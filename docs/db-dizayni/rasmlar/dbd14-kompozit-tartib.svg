@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 600" width="820" height="600">
+  <title>Kompozit indeks ustun tartibi va chap prefiks qoidasi: (mijoz_id, sana) indeksi qaysi so'rovga ishlaydi</title>
+  <rect x="0" y="0" width="820" height="600" fill="#f8fafc"/>
+  <text x="410" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="21" font-weight="bold" fill="#1e293b">Kompozit indeks: ustun TARTIBI muhim</text>
+  <text x="410" y="56" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">INDEX (mijoz_id, sana) — telefon kitobi kabi: avval familiya, keyin ism</text>
+
+  <!-- index structure: sorted pairs -->
+  <rect x="24" y="78" width="772" height="120" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="40" y="102" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">Indeks ichida saralash tartibi (avval mijoz_id, keyin sana):</text>
+  <!-- sorted tokens -->
+  <g font-family="Segoe UI, system-ui, sans-serif" font-size="13">
+    <rect x="44" y="118" width="118" height="30" rx="5" fill="#dbeafe" stroke="#2563eb"/><text x="103" y="138" text-anchor="middle" fill="#1e293b">(7, 01-yan)</text>
+    <rect x="170" y="118" width="118" height="30" rx="5" fill="#dbeafe" stroke="#2563eb"/><text x="229" y="138" text-anchor="middle" fill="#1e293b">(7, 05-mar)</text>
+    <rect x="296" y="118" width="118" height="30" rx="5" fill="#dbeafe" stroke="#2563eb"/><text x="355" y="138" text-anchor="middle" fill="#1e293b">(7, 20-iyl)</text>
+    <rect x="422" y="118" width="118" height="30" rx="5" fill="#bfdbfe" stroke="#2563eb"/><text x="481" y="138" text-anchor="middle" fill="#1e293b">(12, 02-fev)</text>
+    <rect x="548" y="118" width="118" height="30" rx="5" fill="#bfdbfe" stroke="#2563eb"/><text x="607" y="138" text-anchor="middle" fill="#1e293b">(12, 09-okt)</text>
+    <rect x="674" y="118" width="108" height="30" rx="5" fill="#93c5fd" stroke="#2563eb"/><text x="728" y="138" text-anchor="middle" fill="#1e293b">(31, 03-yan)</text>
+  </g>
+  <text x="40" y="184" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">mijoz_id bo'yicha guruhlangan -> har guruh ichida sana saralangan. Sana yagona tartibda EMAS.</text>
+
+  <!-- queries -->
+  <text x="40" y="232" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">So'rov shartiga qarab indeks ishlaydimi?</text>
+
+  <!-- row 1 -->
+  <rect x="40" y="248" width="500" height="40" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="56" y="273" font-family="Consolas, monospace" font-size="14" fill="#1e293b">WHERE mijoz_id = 12</text>
+  <text x="560" y="273" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">ISHLAYDI (chap ustun)</text>
+
+  <!-- row 2 -->
+  <rect x="40" y="296" width="500" height="40" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="56" y="321" font-family="Consolas, monospace" font-size="14" fill="#1e293b">WHERE mijoz_id = 12 AND sana &gt; '...'</text>
+  <text x="560" y="321" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">ENG ZO'R (ikkalasi)</text>
+
+  <!-- row 3 -->
+  <rect x="40" y="344" width="500" height="40" rx="6" fill="#fef9c3" stroke="#d97706" stroke-width="2"/>
+  <text x="56" y="369" font-family="Consolas, monospace" font-size="14" fill="#1e293b">WHERE mijoz_id = 12  (sanasiz)</text>
+  <text x="560" y="369" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#d97706">ISHLAYDI (qisman)</text>
+
+  <!-- row 4 -->
+  <rect x="40" y="392" width="500" height="40" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="56" y="417" font-family="Consolas, monospace" font-size="14" fill="#1e293b">WHERE sana = '05-mar'  (mijozsiz)</text>
+  <text x="560" y="417" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">ISHLAMAYDI (chap yo'q)</text>
+
+  <!-- left prefix box -->
+  <rect x="40" y="452" width="742" height="60" rx="8" fill="#e2e8f0" stroke="#475569" stroke-width="2"/>
+  <text x="56" y="478" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">CHAP PREFIKS QOIDASI:</text>
+  <text x="56" y="500" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Indeks faqat chapdan boshlab uzluksiz ustunlardan foydalanadi: (a), (a,b), (a,b,c). (b) yoki (b,c) yolg'iz — yo'q.</text>
+
+  <!-- ordering rule -->
+  <rect x="40" y="524" width="742" height="56" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="56" y="548" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">TARTIB QOIDASI:</text>
+  <text x="56" y="570" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Tenglik (=) shartidagi ustun OLDIN, oraliq (&lt; &gt;) ustun KEYIN. Yolg'iz tez ishlatilgan ustunni chapga qo'y.</text>
+</svg>

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 560" width="820" height="560">
+  <title>PostgreSQL indeks turlari: B-tree, Hash, GiST, GIN, BRIN — qaysi birini qachon ishlatish xaritasi</title>
+  <rect x="0" y="0" width="820" height="560" fill="#f8fafc"/>
+  <text x="410" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="21" font-weight="bold" fill="#1e293b">PG indeks turlari: qaysi birini qachon?</text>
+  <text x="410" y="56" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Har bir tur — alohida ehtiyoj uchun. Standart tanlov: B-tree.</text>
+
+  <!-- B-tree -->
+  <rect x="24" y="78" width="376" height="128" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="44" y="106" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#2563eb">B-tree</text>
+  <text x="44" y="108" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b"></text>
+  <text x="44" y="132" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">STANDART tanlov (90% holat)</text>
+  <text x="44" y="154" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Tenglik: =  |  Oraliq: &lt; &gt; BETWEEN</text>
+  <text x="44" y="174" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">ORDER BY, chap prefiks, IS NULL</text>
+  <text x="44" y="194" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">PK, FK, UNIQUE, sana, narx, ism</text>
+
+  <!-- Hash -->
+  <rect x="420" y="78" width="376" height="128" rx="10" fill="#e2e8f0" stroke="#475569" stroke-width="2.5"/>
+  <text x="440" y="106" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#475569">Hash</text>
+  <text x="440" y="132" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">FAQAT tenglik (=)</text>
+  <text x="440" y="154" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Oraliq YO'Q, ORDER BY YO'Q</text>
+  <text x="440" y="174" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Juda uzun matn/UUID tengligi</text>
+  <text x="440" y="194" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">Amalda kam: B-tree odatda yetadi</text>
+
+  <!-- GiST -->
+  <rect x="24" y="222" width="376" height="128" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="44" y="250" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#16a34a">GiST</text>
+  <text x="44" y="276" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Geometrik / oraliq / yaqinlik</text>
+  <text x="44" y="298" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">range turlari, &amp;&amp; (kesishish)</text>
+  <text x="44" y="318" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">geo (PostGIS), "eng yaqin" qidiruv</text>
+  <text x="44" y="338" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">EXCLUDE constraint, full-text</text>
+
+  <!-- GIN -->
+  <rect x="420" y="222" width="376" height="128" rx="10" fill="#fef9c3" stroke="#d97706" stroke-width="2.5"/>
+  <text x="440" y="250" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#d97706">GIN</text>
+  <text x="440" y="276" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Ko'p qiymatli ustun</text>
+  <text x="440" y="298" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">JSONB (@&gt;), array (@&gt;, &amp;&amp;)</text>
+  <text x="440" y="318" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">full-text (to_tsvector), trgm</text>
+  <text x="440" y="338" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">"bitta katakda ko'p element"</text>
+
+  <!-- BRIN -->
+  <rect x="24" y="366" width="376" height="128" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="44" y="394" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#dc2626">BRIN</text>
+  <text x="44" y="420" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Ulkan + tabiiy tartiblangan</text>
+  <text x="44" y="442" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Vaqt ustuni, append-only log</text>
+  <text x="44" y="462" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Hajmi JUDA kichik (kB)</text>
+  <text x="44" y="482" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">Tartibsiz ustunda foydasiz</text>
+
+  <!-- SP-GiST -->
+  <rect x="420" y="366" width="376" height="128" rx="10" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2.5" stroke-dasharray="6 4"/>
+  <text x="440" y="394" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#475569">SP-GiST</text>
+  <text x="440" y="420" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Maxsus: notekis taqsimot</text>
+  <text x="440" y="442" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">IP prefiks, fazoviy (quadtree)</text>
+  <text x="440" y="462" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">telefon prefiks, daraxtsimon kalit</text>
+  <text x="440" y="482" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Kam uchraydi — kerakda eslang</text>
+
+  <!-- footer rule -->
+  <text x="410" y="528" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Qoida: shubha bo'lsa B-tree. Maxsus ehtiyoj paydo bo'lsagina boshqasiga o't.</text>
+  <text x="410" y="548" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">USING gin / brin / gist — turi CREATE INDEX da aniq yoziladi; standart = btree.</text>
+</svg>

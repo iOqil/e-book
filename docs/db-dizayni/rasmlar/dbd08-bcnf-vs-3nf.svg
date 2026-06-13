@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 540" width="780" height="540">
+  <title>3NF o'tadi-yu BCNF buziladigan dars jadvali misoli va uni BCNF ga parchalash</title>
+  <rect x="0" y="0" width="780" height="540" fill="#f8fafc"/>
+  <text x="390" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">BCNF: 3NF o'tadi, lekin anomaliya qoladi</text>
+  <text x="390" y="54" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Qoida: har o'qituvchi faqat bitta kursni o'qitadi (oqituvchi -&gt; kurs)</text>
+
+  <!-- LEFT: bad table -->
+  <rect x="24" y="78" width="332" height="232" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="190" y="102" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">dars_jadvali (3NF da, BCNF emas)</text>
+
+  <!-- header row -->
+  <rect x="40" y="114" width="84" height="26" fill="#fecaca" stroke="#dc2626" stroke-width="1"/>
+  <rect x="124" y="114" width="78" height="26" fill="#fecaca" stroke="#dc2626" stroke-width="1"/>
+  <rect x="202" y="114" width="84" height="26" fill="#fecaca" stroke="#dc2626" stroke-width="1"/>
+  <rect x="286" y="114" width="54" height="26" fill="#fecaca" stroke="#dc2626" stroke-width="1"/>
+  <text x="82" y="132" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">kurs</text>
+  <text x="163" y="132" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">vaqt</text>
+  <text x="244" y="132" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">oqituvchi</text>
+  <text x="313" y="132" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">xona</text>
+
+  <!-- rows -->
+  <g font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">
+    <rect x="40" y="140" width="300" height="26" fill="#ffffff" stroke="#fca5a5" stroke-width="1"/>
+    <text x="82" y="158" text-anchor="middle">Algebra</text>
+    <text x="163" y="158" text-anchor="middle">Du 09:00</text>
+    <text x="244" y="158" text-anchor="middle" font-weight="bold" fill="#dc2626">Karimov</text>
+    <text x="313" y="158" text-anchor="middle">A-101</text>
+
+    <rect x="40" y="166" width="300" height="26" fill="#ffffff" stroke="#fca5a5" stroke-width="1"/>
+    <text x="82" y="184" text-anchor="middle">Algebra</text>
+    <text x="163" y="184" text-anchor="middle">Se 09:00</text>
+    <text x="244" y="184" text-anchor="middle" font-weight="bold" fill="#dc2626">Karimov</text>
+    <text x="313" y="184" text-anchor="middle">A-101</text>
+
+    <rect x="40" y="192" width="300" height="26" fill="#ffffff" stroke="#fca5a5" stroke-width="1"/>
+    <text x="82" y="210" text-anchor="middle">Geometriya</text>
+    <text x="163" y="210" text-anchor="middle">Du 09:00</text>
+    <text x="244" y="210" text-anchor="middle">Soliyev</text>
+    <text x="313" y="210" text-anchor="middle">B-202</text>
+  </g>
+
+  <text x="40" y="240" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626" font-weight="bold">Anomaliya: "Karimov" takror.</text>
+  <text x="40" y="260" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Kursini o'zgartirsa — ikki qatorni</text>
+  <text x="40" y="278" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">ham yangilash kerak (drift xavfi).</text>
+  <text x="40" y="298" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Sabab: oqituvchi -&gt; kurs, lekin</text>
+
+  <!-- arrow -->
+  <line x1="364" y1="194" x2="412" y2="194" stroke="#16a34a" stroke-width="3" marker-end="url(#ar)"/>
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+  <text x="388" y="184" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">BCNF</text>
+
+  <!-- RIGHT: two tables -->
+  <rect x="424" y="78" width="332" height="120" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="590" y="100" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">oqituvchi_kurs</text>
+  <rect x="440" y="112" width="150" height="24" fill="#bbf7d0" stroke="#16a34a" stroke-width="1"/>
+  <rect x="590" y="112" width="150" height="24" fill="#bbf7d0" stroke="#16a34a" stroke-width="1"/>
+  <text x="515" y="129" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">oqituvchi (PK)</text>
+  <text x="665" y="129" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">kurs</text>
+  <g font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">
+    <rect x="440" y="136" width="300" height="24" fill="#ffffff" stroke="#86efac" stroke-width="1"/>
+    <text x="515" y="153" text-anchor="middle">Karimov</text>
+    <text x="665" y="153" text-anchor="middle">Algebra</text>
+    <rect x="440" y="160" width="300" height="24" fill="#ffffff" stroke="#86efac" stroke-width="1"/>
+    <text x="515" y="177" text-anchor="middle">Soliyev</text>
+    <text x="665" y="177" text-anchor="middle">Geometriya</text>
+  </g>
+
+  <rect x="424" y="214" width="332" height="146" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="590" y="236" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">jadval</text>
+  <rect x="440" y="248" width="120" height="24" fill="#bbf7d0" stroke="#16a34a" stroke-width="1"/>
+  <rect x="560" y="248" width="100" height="24" fill="#bbf7d0" stroke="#16a34a" stroke-width="1"/>
+  <rect x="660" y="248" width="80" height="24" fill="#bbf7d0" stroke="#16a34a" stroke-width="1"/>
+  <text x="500" y="265" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">oqituvchi(PK)</text>
+  <text x="610" y="265" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">vaqt (PK)</text>
+  <text x="700" y="265" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">xona</text>
+  <g font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">
+    <rect x="440" y="272" width="300" height="24" fill="#ffffff" stroke="#86efac" stroke-width="1"/>
+    <text x="500" y="289" text-anchor="middle">Karimov</text><text x="610" y="289" text-anchor="middle">Du 09:00</text><text x="700" y="289" text-anchor="middle">A-101</text>
+    <rect x="440" y="296" width="300" height="24" fill="#ffffff" stroke="#86efac" stroke-width="1"/>
+    <text x="500" y="313" text-anchor="middle">Karimov</text><text x="610" y="313" text-anchor="middle">Se 09:00</text><text x="700" y="313" text-anchor="middle">A-101</text>
+    <rect x="440" y="320" width="300" height="24" fill="#ffffff" stroke="#86efac" stroke-width="1"/>
+    <text x="500" y="337" text-anchor="middle">Soliyev</text><text x="610" y="337" text-anchor="middle">Du 09:00</text><text x="700" y="337" text-anchor="middle">B-202</text>
+  </g>
+
+  <!-- bottom explanation box -->
+  <rect x="24" y="382" width="732" height="138" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="40" y="406" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Nega 3NF o'tadi-yu BCNF buziladi?</text>
+  <text x="40" y="430" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Kandidat kalitlar: (kurs, vaqt) va (oqituvchi, vaqt). Demak kurs, vaqt, oqituvchi — prime atribut.</text>
+  <text x="40" y="452" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" font-weight="bold">3NF:</text>
+  <text x="82" y="452" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">oqituvchi -&gt; kurs da o'ng tomon (kurs) prime atribut -&gt; 3NF KECHIRADI -&gt; o'tadi.</text>
+  <text x="40" y="474" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626" font-weight="bold">BCNF:</text>
+  <text x="88" y="474" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">oqituvchi -&gt; kurs da chap tomon (oqituvchi) superkalit EMAS -&gt; BCNF BUZILADI.</text>
+  <text x="40" y="500" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb" font-weight="bold">Davo:</text>
+  <text x="84" y="500" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">oqituvchi -&gt; kurs FD ni alohida jadvalga ajratish (lossless join: oqituvchi orqali qaytadi).</text>
+</svg>

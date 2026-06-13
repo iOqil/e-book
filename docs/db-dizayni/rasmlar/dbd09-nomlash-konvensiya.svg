@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 560" width="820" height="560">
+  <title>Jadval, ustun, kalit, FK, indeks va constraint uchun snake_case nomlash naqshi</title>
+  <rect x="0" y="0" width="820" height="560" fill="#f8fafc"/>
+  <text x="410" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="21" font-weight="bold" fill="#1e293b">Nomlash konvensiyasi: snake_case naqshi</text>
+  <text x="410" y="58" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Izchil nom = o'qiladigan, bashorat qilinadigan, qidiriladigan sxema</text>
+
+  <!-- Object type | pattern | example -->
+  <!-- header -->
+  <rect x="28" y="80" width="200" height="40" fill="#1e293b"/>
+  <rect x="228" y="80" width="280" height="40" fill="#1e293b"/>
+  <rect x="508" y="80" width="284" height="40" fill="#1e293b"/>
+  <text x="128" y="105" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Obyekt</text>
+  <text x="368" y="105" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Naqsh</text>
+  <text x="650" y="105" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Misol</text>
+
+  <!-- row 1 jadval -->
+  <rect x="28" y="120" width="200" height="58" fill="#dbeafe" stroke="#94a3b8" stroke-width="1"/>
+  <rect x="228" y="120" width="280" height="58" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <rect x="508" y="120" width="284" height="58" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="128" y="146" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">Jadval</text>
+  <text x="128" y="166" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">birlik, kichik harf</text>
+  <text x="368" y="153" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">ot_soz (birlik)</text>
+  <text x="650" y="153" text-anchor="middle" font-family="Consolas, monospace" font-size="14" fill="#16a34a">mijoz, buyurtma_satri</text>
+
+  <!-- row 2 ustun -->
+  <rect x="28" y="178" width="200" height="58" fill="#dbeafe" stroke="#94a3b8" stroke-width="1"/>
+  <rect x="228" y="178" width="280" height="58" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <rect x="508" y="178" width="284" height="58" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="128" y="204" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">Ustun</text>
+  <text x="128" y="224" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">snake_case</text>
+  <text x="368" y="211" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">ot / ot_ot</text>
+  <text x="650" y="211" text-anchor="middle" font-family="Consolas, monospace" font-size="14" fill="#16a34a">narx, yaratilgan</text>
+
+  <!-- row 3 FK ustun -->
+  <rect x="28" y="236" width="200" height="58" fill="#dbeafe" stroke="#94a3b8" stroke-width="1"/>
+  <rect x="228" y="236" width="280" height="58" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <rect x="508" y="236" width="284" height="58" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="128" y="262" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">FK ustun</text>
+  <text x="128" y="282" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">jadval + _id</text>
+  <text x="368" y="269" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">&lt;ota_jadval&gt;_id</text>
+  <text x="650" y="269" text-anchor="middle" font-family="Consolas, monospace" font-size="14" fill="#16a34a">kategoriya_id, mijoz_id</text>
+
+  <!-- row 4 PK constraint -->
+  <rect x="28" y="294" width="200" height="58" fill="#fef9c3" stroke="#94a3b8" stroke-width="1"/>
+  <rect x="228" y="294" width="280" height="58" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <rect x="508" y="294" width="284" height="58" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="128" y="320" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#d97706">PK / UNIQUE</text>
+  <text x="128" y="340" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">prefiks: pk_/uq_</text>
+  <text x="368" y="327" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">uq_&lt;jadval&gt;_&lt;ustun&gt;</text>
+  <text x="650" y="327" text-anchor="middle" font-family="Consolas, monospace" font-size="14" fill="#16a34a">uq_mijoz_email</text>
+
+  <!-- row 5 FK constraint -->
+  <rect x="28" y="352" width="200" height="58" fill="#fef9c3" stroke="#94a3b8" stroke-width="1"/>
+  <rect x="228" y="352" width="280" height="58" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <rect x="508" y="352" width="284" height="58" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="128" y="378" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#d97706">FK constraint</text>
+  <text x="128" y="398" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">prefiks: fk_</text>
+  <text x="368" y="385" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">fk_&lt;jadval&gt;_&lt;ota&gt;</text>
+  <text x="650" y="385" text-anchor="middle" font-family="Consolas, monospace" font-size="14" fill="#16a34a">fk_mahsulot_kategoriya</text>
+
+  <!-- row 6 CHECK constraint -->
+  <rect x="28" y="410" width="200" height="58" fill="#fef9c3" stroke="#94a3b8" stroke-width="1"/>
+  <rect x="228" y="410" width="280" height="58" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <rect x="508" y="410" width="284" height="58" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="128" y="436" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#d97706">CHECK</text>
+  <text x="128" y="456" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">prefiks: ck_</text>
+  <text x="368" y="443" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">ck_&lt;jadval&gt;_&lt;qoida&gt;</text>
+  <text x="650" y="443" text-anchor="middle" font-family="Consolas, monospace" font-size="14" fill="#16a34a">ck_mahsulot_narx_musbat</text>
+
+  <!-- row 7 index -->
+  <rect x="28" y="468" width="200" height="58" fill="#dcfce7" stroke="#94a3b8" stroke-width="1"/>
+  <rect x="228" y="468" width="280" height="58" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <rect x="508" y="468" width="284" height="58" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="128" y="494" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">Indeks</text>
+  <text x="128" y="514" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">prefiks: ix_</text>
+  <text x="368" y="501" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">ix_&lt;jadval&gt;_&lt;ustun&gt;</text>
+  <text x="650" y="501" text-anchor="middle" font-family="Consolas, monospace" font-size="14" fill="#16a34a">ix_buyurtma_mijoz_id</text>
+</svg>

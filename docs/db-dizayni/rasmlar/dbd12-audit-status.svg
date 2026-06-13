@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 580" width="820" height="580">
+  <title>Audit ustunlari (created_at/updated_at trigger bilan) va status modellashtirish: enum vs lookup jadval</title>
+  <rect x="0" y="0" width="820" height="580" fill="#f8fafc"/>
+  <text x="410" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Audit ustunlari va status modellashtirish</text>
+
+  <!-- ============ AUDIT block ============ -->
+  <text x="40" y="74" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">1. Audit ustunlari — qachon va kim</text>
+
+  <rect x="40" y="86" width="360" height="160" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="58" y="110" font-family="monospace, Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">maqola</text>
+  <line x1="58" y1="118" x2="382" y2="118" stroke="#94a3b8" stroke-width="1"/>
+  <text x="58" y="140" font-family="monospace, Segoe UI" font-size="13" fill="#1e293b">created_at  timestamptz DEFAULT now()</text>
+  <text x="58" y="162" font-family="monospace, Segoe UI" font-size="13" fill="#1e293b">updated_at  timestamptz DEFAULT now()</text>
+  <text x="58" y="184" font-family="monospace, Segoe UI" font-size="13" fill="#1e293b">created_by  bigint &#8594; app_user(id)</text>
+  <text x="58" y="206" font-family="monospace, Segoe UI" font-size="13" fill="#1e293b">updated_by  bigint &#8594; app_user(id)</text>
+  <text x="58" y="232" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" font-style="italic">"qachon" + "kim" = audit izi</text>
+
+  <!-- trigger flow -->
+  <rect x="430" y="86" width="350" height="160" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="605" y="110" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">updated_at TRIGGER bilan avtomatik</text>
+  <rect x="448" y="124" width="150" height="34" rx="4" fill="#ffffff" stroke="#16a34a"/>
+  <text x="523" y="146" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">UPDATE maqola</text>
+  <text x="618" y="146" font-family="Segoe UI, system-ui, sans-serif" font-size="18" fill="#475569">&#8594;</text>
+  <rect x="640" y="124" width="124" height="34" rx="4" fill="#16a34a"/>
+  <text x="702" y="146" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">BEFORE UPDATE</text>
+  <text x="448" y="186" font-family="monospace, Segoe UI" font-size="13" fill="#1e293b">NEW.updated_at := now();</text>
+  <text x="448" y="212" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">&#10004; ilova unutsa ham baza yangilaydi</text>
+  <text x="448" y="232" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" font-style="italic">tekshirildi: updated_at &gt; created_at (1.01s)</text>
+
+  <!-- ============ STATUS block ============ -->
+  <text x="40" y="288" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#d97706">2. Status modellashtirish — enum vs lookup jadval</text>
+
+  <!-- ENUM -->
+  <rect x="40" y="302" width="360" height="146" rx="8" fill="#fef9c3" stroke="#d97706" stroke-width="2"/>
+  <text x="220" y="326" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#d97706">ENUM tip</text>
+  <text x="58" y="350" font-family="monospace, Segoe UI" font-size="13" fill="#1e293b">CREATE TYPE status AS ENUM</text>
+  <text x="58" y="370" font-family="monospace, Segoe UI" font-size="13" fill="#1e293b">  ('yangi','tolangan','bekor');</text>
+  <text x="58" y="396" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">&#10004; ixcham, tez, joyda saqlanadi</text>
+  <text x="58" y="416" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">&#10006; nom/tartib/meta saqlay olmaydi</text>
+  <text x="58" y="436" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">&#10006; o'chirish qiyin (faqat ADD VALUE)</text>
+
+  <!-- LOOKUP -->
+  <rect x="430" y="302" width="350" height="146" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="605" y="326" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">Lookup jadval + FK</text>
+  <text x="448" y="350" font-family="monospace, Segoe UI" font-size="13" fill="#1e293b">buyurtma_holati(kod PK, nom, tartib)</text>
+  <text x="448" y="370" font-family="monospace, Segoe UI" font-size="13" fill="#1e293b">buyurtma.holat_kod &#8594; holati(kod)</text>
+  <text x="448" y="396" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">&#10004; nom/tartib/meta qo'shsa bo'ladi</text>
+  <text x="448" y="416" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">&#10004; INSERT/UPDATE bilan boshqariladi</text>
+  <text x="448" y="436" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">&#10006; JOIN kerak, biroz og'irroq</text>
+
+  <!-- state machine hint -->
+  <rect x="40" y="466" width="740" height="96" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="56" y="490" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">3. Holat mashinasi (state machine) — ruxsat etilgan o'tishlar:</text>
+  <!-- states -->
+  <rect x="60"  y="506" width="110" height="34" rx="17" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="115" y="528" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">yangi</text>
+  <text x="178" y="528" font-family="Segoe UI, system-ui, sans-serif" font-size="18" fill="#475569">&#8594;</text>
+  <rect x="200" y="506" width="110" height="34" rx="17" fill="#fef9c3" stroke="#d97706"/>
+  <text x="255" y="528" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">tolangan</text>
+  <text x="318" y="528" font-family="Segoe UI, system-ui, sans-serif" font-size="18" fill="#475569">&#8594;</text>
+  <rect x="340" y="506" width="120" height="34" rx="17" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="400" y="528" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">yetkazildi</text>
+  <text x="540" y="528" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">"yangi" &#8594; "yetkazildi" sakrash MUMKIN EMAS</text>
+  <text x="540" y="546" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" font-style="italic">o'tishni trigger/CHECK bilan majburla</text>
+</svg>

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 560" width="820" height="560">
+  <title>PostgreSQL ma'lumot turlari oilalari: son, matn, vaqt, mantiq va maxsus turlar xaritasi</title>
+  <rect x="0" y="0" width="820" height="560" fill="#f8fafc"/>
+  <text x="410" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="21" font-weight="bold" fill="#1e293b">PostgreSQL tur oilalari xaritasi</text>
+  <text x="410" y="56" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Tur tanlash dizayn qarori: ma'noni, aniqlikni va indekslanishni belgilaydi</text>
+
+  <!-- SON oilasi -->
+  <rect x="30" y="80" width="240" height="220" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="150" y="106" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">Son turlari</text>
+  <text x="48" y="132" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" font-weight="bold">Butun:</text>
+  <text x="48" y="152" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">smallint (2B), integer (4B),</text>
+  <text x="48" y="170" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">bigint (8B)</text>
+  <text x="48" y="194" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#16a34a" font-weight="bold">Aniq o'nlik (PUL!):</text>
+  <text x="48" y="214" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">numeric / decimal(p,s)</text>
+  <text x="48" y="238" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#dc2626" font-weight="bold">Suzuvchi (PUL UCHUN EMAS):</text>
+  <text x="48" y="258" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">real (4B), double precision (8B)</text>
+  <text x="48" y="282" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" font-style="italic">auto-id: serial / IDENTITY</text>
+
+  <!-- MATN oilasi -->
+  <rect x="290" y="80" width="240" height="220" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="410" y="106" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">Matn turlari</text>
+  <text x="308" y="134" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" font-weight="bold">text</text>
+  <text x="308" y="152" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">uzunlik chegarasi yo'q (odatiy tanlov)</text>
+  <text x="308" y="176" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" font-weight="bold">varchar(n)</text>
+  <text x="308" y="194" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">text + uzunlik CHECK (saqlash bir xil)</text>
+  <text x="308" y="218" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#dc2626" font-weight="bold">char(n) &#8212; tuzoq</text>
+  <text x="308" y="236" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">probel bilan to'ldiradi, kamdan-kam</text>
+  <text x="308" y="262" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" font-weight="bold">enum</text>
+  <text x="308" y="280" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">cheklangan ro'yxat (holat, daraja)</text>
+
+  <!-- VAQT oilasi -->
+  <rect x="550" y="80" width="240" height="220" rx="10" fill="#fef9c3" stroke="#d97706" stroke-width="2"/>
+  <text x="670" y="106" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#d97706">Vaqt turlari</text>
+  <text x="568" y="134" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#16a34a" font-weight="bold">timestamptz</text>
+  <text x="568" y="152" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">zona-xabardor &#8212; HAR DOIM shu</text>
+  <text x="568" y="176" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#dc2626" font-weight="bold">timestamp</text>
+  <text x="568" y="194" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">zonasiz &#8212; xavfli, ehtiyot bo'l</text>
+  <text x="568" y="218" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" font-weight="bold">date</text>
+  <text x="568" y="236" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">faqat sana (tug'ilgan kun)</text>
+  <text x="568" y="262" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" font-weight="bold">interval, time</text>
+  <text x="568" y="280" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">davomiylik, kun ichidagi vaqt</text>
+
+  <!-- MANTIQ oilasi -->
+  <rect x="30" y="320" width="240" height="120" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="150" y="346" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#7c3aed">Mantiqiy</text>
+  <text x="48" y="374" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" font-weight="bold">boolean</text>
+  <text x="48" y="394" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">TRUE / FALSE / NULL (3 qiymat)</text>
+  <text x="48" y="420" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" font-style="italic">MySQL: BOOLEAN = tinyint(1)</text>
+
+  <!-- MAXSUS oilasi -->
+  <rect x="290" y="320" width="500" height="120" rx="10" fill="#ffe4e6" stroke="#dc2626" stroke-width="2"/>
+  <text x="540" y="346" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#dc2626">Maxsus / boy turlar (PostgreSQL kuchi)</text>
+  <text x="308" y="372" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b"><tspan font-weight="bold">jsonb</tspan> &#8212; yarim-strukturali, dinamik atribut (+GIN indeks)</text>
+  <text x="308" y="392" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b"><tspan font-weight="bold">array (text[])</tspan> &#8212; kichik teg ro'yxati (ehtiyotkorlik bilan)</text>
+  <text x="308" y="412" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b"><tspan font-weight="bold">uuid</tspan> &#8212; taqsimlangan kalit (uuidv7() PG18+, vaqt-tartibli)</text>
+  <text x="308" y="432" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b"><tspan font-weight="bold">range / tsrange</tspan> &#8212; davr, narx oralig'i (+EXCLUDE)</text>
+
+  <!-- pastki qator: ustquruvchi turlar -->
+  <rect x="30" y="460" width="760" height="76" rx="10" fill="#e2e8f0" stroke="#475569" stroke-width="1.5"/>
+  <text x="48" y="486" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Tur ustiga quriladigan vositalar (har oilada ishlaydi):</text>
+  <text x="48" y="510" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569"><tspan font-weight="bold" fill="#2563eb">domain</tspan> &#8212; qayta ishlatiluvchi CHECK (masalan email, musbat narx)</text>
+  <text x="430" y="510" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569"><tspan font-weight="bold" fill="#16a34a">generated column</tspan> &#8212; STORED yoki VIRTUAL (PG18+)</text>
+  <text x="48" y="530" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" font-style="italic">Qoida: avval ma'noga eng yaqin, eng tor turni tanla &#8212; "shubhada text/numeric" emas, balki "ma'noni aniq ifodala".</text>
+</svg>

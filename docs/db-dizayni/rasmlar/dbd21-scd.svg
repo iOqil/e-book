@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 600" width="880" height="600">
+  <title>Slowly Changing Dimensions: Type 1 (ustiga yozish), Type 2 (yangi qator va amal davri/joriy bayroq), Type 3 (oldingi qiymat ustuni) bitta mijoz manzili o'zgarishi misolida</title>
+  <rect x="0" y="0" width="880" height="600" fill="#f8fafc"/>
+  <text x="440" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Slowly Changing Dimensions (SCD)</text>
+  <text x="440" y="54" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Misol: Olim 2026-03-01 da Toshkentdan Samarqandga ko'chdi. O'lchamni qanday yangilaymiz?</text>
+
+  <!-- ===== TYPE 1 ===== -->
+  <rect x="20" y="74" width="840" height="148" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="36" y="100" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#dc2626">Type 1 — ustiga yozish (overwrite)</text>
+  <text x="36" y="120" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Eski qiymat o'chadi, faqat oxirgi holat qoladi. Tarix YO'Q.</text>
+
+  <!-- before -->
+  <text x="36" y="146" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#475569">Oldin:</text>
+  <rect x="90" y="132" width="300" height="22" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="100" y="148" font-family="Consolas, monospace" font-size="13" fill="#1e293b">key=10 | Olim | shahar=Toshkent</text>
+  <!-- arrow -->
+  <text x="410" y="148" font-family="Segoe UI, system-ui, sans-serif" font-size="16" fill="#dc2626">UPDATE -></text>
+  <!-- after -->
+  <text x="500" y="146" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#475569">Keyin:</text>
+  <rect x="550" y="132" width="300" height="22" fill="#ffffff" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="560" y="148" font-family="Consolas, monospace" font-size="13" fill="#1e293b">key=10 | Olim | shahar=Samarqand</text>
+
+  <text x="36" y="184" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Eski sotuvlar endi YANGI shaharga bog'lanadi (xato hisobot!).</text>
+  <text x="36" y="206" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">Qachon: tarix muhim emas, faqat tuzatish kerak (xato yozuvni to'g'rilash).</text>
+
+  <!-- ===== TYPE 2 ===== -->
+  <rect x="20" y="234" width="840" height="200" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="36" y="260" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">Type 2 — yangi qator + amal davri / joriy bayroq</text>
+  <text x="36" y="280" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Eski qator YOPILADI, yangi qator qo'shiladi. To'liq tarix saqlanadi (eng keng tarqalgan).</text>
+
+  <!-- table header -->
+  <rect x="36" y="294" width="808" height="24" fill="#bbf7d0" stroke="#16a34a" stroke-width="1"/>
+  <text x="46" y="311" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#166534">key | mijoz_id | shahar    | amal_boshi  | amal_oxiri  | joriy</text>
+  <!-- old row -->
+  <rect x="36" y="318" width="808" height="24" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="46" y="335" font-family="Consolas, monospace" font-size="13" fill="#475569">10  | 1001     | Toshkent  | 2026-01-01  | 2026-02-28  | false</text>
+  <!-- new row -->
+  <rect x="36" y="342" width="808" height="24" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="46" y="359" font-family="Consolas, monospace" font-size="13" fill="#1e293b">11  | 1001     | Samarqand | 2026-03-01  | NULL        | true</text>
+
+  <text x="36" y="392" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Fakt jadval surrogate kalitga (key) bog'lanadi -> eski sotuv key=10 (Toshkent), yangi sotuv key=11 (Samarqand).</text>
+  <text x="36" y="414" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">Qachon: "o'sha paytda qaysi holat edi" muhim (18-bob temporal mantig'i bilan bir xil).</text>
+
+  <!-- ===== TYPE 3 ===== -->
+  <rect x="20" y="446" width="840" height="138" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="36" y="472" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#d97706">Type 3 — oldingi qiymat ustuni</text>
+  <text x="36" y="492" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Faqat BITTA oldingi qiymat qo'shimcha ustunda saqlanadi. Cheklangan tarix (1 qadam).</text>
+
+  <rect x="36" y="506" width="808" height="24" fill="#fde68a" stroke="#d97706" stroke-width="1"/>
+  <text x="46" y="523" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#92400e">key | Olim | joriy_shahar = Samarqand | oldingi_shahar = Toshkent</text>
+  <text x="36" y="552" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Faqat oxirgi va undan oldingi qiymat bor — undan oldingilari yo'qoladi.</text>
+  <text x="36" y="574" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">Qachon: "avval/keyin" taqqoslash kerak (masalan region o'zgarishi tahlili), to'liq tarix shart emas.</text>
+</svg>

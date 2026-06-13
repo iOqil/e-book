@@ -6,7 +6,9 @@ BASE = 'http://127.0.0.1:8013'
 BOOKS = [
     ('html-css', 'HTML & CSS'), ('js', 'JavaScript'), ('python', 'Python'),
     ('vue', 'Vue & Nuxt'), ('react', 'React'), ('nextjs', 'Next.js'),
-    ('php', 'PHP'), ('sql', 'SQL & MySQL'), ('1000-masala', '1000 masala'),
+    ('php', 'PHP'), ('sql', 'SQL & MySQL'),
+    ("db-dizayni", "Ma'lumotlar bazasi dizayni"),
+    ('1000-masala', '1000 masala'),
     ('git-github', 'Git & GitHub'),
     ('typescript', 'TypeScript'),
     ('laravel', 'Laravel'),

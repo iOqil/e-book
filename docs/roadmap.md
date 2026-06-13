@@ -81,6 +81,9 @@ Yo'nalishingizdan qat'i nazar, **birinchi kunlardanoq** kodingizni Git bilan saq
 3. **[SQL & MySQL](sql/README.md)** — ma'lumotlar bazasi. Backend'ning poydevori: har bir login, buyurtma, post shu yerda saqlanadi.
 4. **Framework / API** — tilning web qismi: PHP'da [Laravel](laravel/README.md), Python'da [Django](django/README.md) (yoki FastAPI), JavaScript'da [Node.js](nodejs/README.md). Real server ilova quring.
 
+!!! tip "Ma'lumotlar bazasini chuqur loyihalash"
+    SQL so'rovlarini bilgach, keyingi bosqich — **[Ma'lumotlar bazasi dizayni](db-dizayni/README.md)** (PostgreSQL 18): qanday *to'g'ri sxema* qurish — ER-modellashtirish, normalizatsiya, kalit/indeks strategiyasi, NoSQL, analitik ombor va masshtablash. Sintaksis emas — **dizayn qarori**. Har bir backend dasturchi uchun muhim ko'nikma.
+
 !!! question "PHP yoki Python — qaysi biri?"
     - **Python** — agar AI, ma'lumot tahlili, avtomatlashtirish yoki zamonaviy startaplar qiziqtirsa. Sintaksisi sodda, FastAPI tez.
     - **PHP** — agar tez ishga joylashish kerak bo'lsa: dunyodagi saytlarning katta qismi PHP'da (WordPress, Laravel), O'zbekistonda ham vakansiya ko'p.

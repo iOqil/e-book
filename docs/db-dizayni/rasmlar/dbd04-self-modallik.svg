@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" width="760" height="470">
+  <title>O'z-o'ziga bog'lanish (xodim-boshliq) va ishtirok modalligi: ixtiyoriy (NULL ruxsat) vs majburiy (NOT NULL) ishtirok</title>
+  <defs>
+    <marker id="m-arr" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="21" font-weight="bold" fill="#1e293b">O'z-o'ziga bog'lanish va ishtirok modalligi</text>
+
+  <!-- CHAP: o'z-o'ziga bog'lanish (xodim-boshliq) -->
+  <text x="200" y="68" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">O'z-o'ziga: xodim - boshliq</text>
+
+  <!-- daraxt -->
+  <rect x="140" y="86" width="120" height="36" rx="6" fill="#2563eb"/>
+  <text x="200" y="110" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#f8fafc">Direktor</text>
+  <text x="270" y="106" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">boshliq_id = NULL</text>
+
+  <line x1="200" y1="122" x2="120" y2="160" stroke="#475569" stroke-width="2" marker-end="url(#m-arr)"/>
+  <line x1="200" y1="122" x2="280" y2="160" stroke="#475569" stroke-width="2" marker-end="url(#m-arr)"/>
+  <rect x="60" y="162" width="120" height="36" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="120" y="186" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Menejer A</text>
+  <rect x="240" y="162" width="120" height="36" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="300" y="186" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Menejer B</text>
+
+  <line x1="120" y1="198" x2="100" y2="236" stroke="#475569" stroke-width="2" marker-end="url(#m-arr)"/>
+  <line x1="120" y1="198" x2="160" y2="236" stroke="#475569" stroke-width="2" marker-end="url(#m-arr)"/>
+  <rect x="40" y="238" width="120" height="36" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="100" y="262" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Dasturchi</text>
+  <rect x="170" y="238" width="120" height="36" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="230" y="262" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Tester</text>
+
+  <text x="200" y="306" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Bitta jadval o'ziga FK qiladi:</text>
+  <rect x="70" y="318" width="260" height="30" rx="5" fill="#1e293b"/>
+  <text x="200" y="338" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#f8fafc">boshliq_id REFERENCES xodimlar(id)</text>
+
+  <!-- ajratuvchi chiziq -->
+  <line x1="400" y1="56" x2="400" y2="360" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- O'NG: modallik -->
+  <text x="580" y="68" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">Ishtirok modalligi</text>
+
+  <!-- ixtiyoriy -->
+  <rect x="440" y="86" width="280" height="92" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="456" y="110" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">Ixtiyoriy (optional)</text>
+  <text x="456" y="134" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">FK ustun NULL'ga ruxsat beradi</text>
+  <text x="456" y="156" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">"Direktorning boshlig'i YO'Q" -&gt; NULL</text>
+  <rect x="640" y="142" width="70" height="24" rx="4" fill="#dbeafe"/>
+  <text x="675" y="159" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">0..1</text>
+
+  <!-- majburiy -->
+  <rect x="440" y="194" width="280" height="92" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="456" y="218" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">Majburiy (mandatory)</text>
+  <text x="456" y="242" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">FK ustun NOT NULL</text>
+  <text x="456" y="264" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">"Kitobning muallifi BO'LISHI shart"</text>
+  <rect x="640" y="250" width="70" height="24" rx="4" fill="#dcfce7"/>
+  <text x="675" y="267" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">1..*</text>
+
+  <!-- Crow's foot eslatma -->
+  <rect x="440" y="302" width="280" height="58" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="456" y="326" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Crow's foot: halqa (o) = ixtiyoriy,</text>
+  <text x="456" y="348" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">chiziq (|) = majburiy ishtirok</text>
+
+  <!-- pastki banner -->
+  <rect x="40" y="386" width="680" height="64" rx="10" fill="#fffbeb" stroke="#d97706" stroke-width="1.5"/>
+  <text x="380" y="412" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#d97706">Kardinallik = NECHTA; Modallik = SHARTMI (NULL ruxsatmi)</text>
+  <text x="380" y="436" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Dizayn qarori: FK ustunini NULL yoki NOT NULL qilish modallikni belgilaydi</text>
+</svg>

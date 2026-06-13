@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" width="760" height="470">
+  <title>Kalit iyerarxiyasi: super key dan candidate key, undan primary key va alternate key gacha</title>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+
+  <!-- sarlavha -->
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Kalit turlari iyerarxiyasi</text>
+  <text x="380" y="56" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">foydalanuvchi(id, login, email, ism) jadvali misolida</text>
+
+  <!-- super key (eng keng) -->
+  <rect x="60" y="76" width="640" height="118" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="80" y="100" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">Super key</text>
+  <text x="80" y="122" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Qatorni noyob aniqlovchi HAR QANDAY ustun(lar) to'plami — ortiqcha ustunlar bilan ham bo'ladi.</text>
+  <text x="80" y="142" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">{id}, {login}, {email}, {id, ism}, {login, email, ism}, {id, login, email, ism} ...</text>
+  <text x="80" y="166" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-style="italic" fill="#475569">{id, ism} ham super key: id yetarli, ism ortiqcha qo'shimcha.</text>
+
+  <!-- candidate key (ichida) -->
+  <rect x="120" y="206" width="520" height="98" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="140" y="230" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">Candidate key</text>
+  <text x="140" y="252" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Minimal super key — birorta ustunni olib tashlasang, noyoblik buziladi.</text>
+  <text x="140" y="276" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">{id}, {login}, {email} — har biri o'zicha qatorni noyob aniqlaydi.</text>
+
+  <!-- primary key + alternate key -->
+  <rect x="180" y="324" width="200" height="92" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="2.5"/>
+  <text x="280" y="350" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#d97706">Primary key</text>
+  <text x="280" y="372" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Tanlangan candidate:</text>
+  <text x="280" y="392" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">{id}</text>
+  <text x="280" y="410" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">NOT NULL + bitta</text>
+
+  <rect x="400" y="324" width="220" height="92" rx="10" fill="#ffffff" stroke="#475569" stroke-width="2"/>
+  <text x="510" y="350" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#475569">Alternate key</text>
+  <text x="510" y="372" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Qolgan candidate'lar:</text>
+  <text x="510" y="392" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">{login}, {email}</text>
+  <text x="510" y="410" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">UNIQUE bilan himoya</text>
+
+  <!-- foreign key izohi -->
+  <rect x="40" y="432" width="680" height="30" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="380" y="452" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">Foreign key — boshqa jadval primary key'iga ishora qiluvchi ustun (jadvallar orasidagi bog'lanish kaliti).</text>
+</svg>

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 560" width="820" height="560">
+  <title>Soft delete naqshi: deleted_at ustuni, qisman UNIQUE indeks va trade-off</title>
+  <rect x="0" y="0" width="820" height="560" fill="#f8fafc"/>
+  <text x="410" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Soft delete: o'chirma — belgila</text>
+  <text x="410" y="56" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">DELETE o'rniga deleted_at ustuniga vaqt qo'yiladi (qator joyida qoladi)</text>
+
+  <!-- HARD delete -->
+  <rect x="40" y="84" width="350" height="118" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="215" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">Hard delete (DELETE)</text>
+  <text x="58" y="132" font-family="monospace, Segoe UI" font-size="14" fill="#1e293b">DELETE FROM foydalanuvchi</text>
+  <text x="58" y="152" font-family="monospace, Segoe UI" font-size="14" fill="#1e293b">WHERE id = 1;</text>
+  <text x="58" y="178" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">&#10006; qator butunlay yo'qoladi</text>
+  <text x="58" y="196" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">&#10006; tarix / qayta tiklash yo'q</text>
+
+  <!-- SOFT delete -->
+  <rect x="430" y="84" width="350" height="118" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="605" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Soft delete (UPDATE)</text>
+  <text x="448" y="132" font-family="monospace, Segoe UI" font-size="14" fill="#1e293b">UPDATE foydalanuvchi</text>
+  <text x="448" y="152" font-family="monospace, Segoe UI" font-size="14" fill="#1e293b">SET deleted_at = now()</text>
+  <text x="448" y="172" font-family="monospace, Segoe UI" font-size="14" fill="#1e293b">WHERE id = 1;</text>
+  <text x="448" y="194" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">&#10004; qator qoladi, qayta tiklasa bo'ladi</text>
+
+  <!-- TABLE state -->
+  <text x="40" y="238" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">foydalanuvchi jadvali (soft delete dan keyin):</text>
+
+  <!-- header -->
+  <rect x="40" y="250" width="80"  height="30" fill="#475569"/>
+  <rect x="120" y="250" width="220" height="30" fill="#475569"/>
+  <rect x="340" y="250" width="220" height="30" fill="#475569"/>
+  <text x="80"  y="270" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">id</text>
+  <text x="230" y="270" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">email</text>
+  <text x="450" y="270" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">deleted_at</text>
+
+  <!-- row 1: deleted -->
+  <rect x="40" y="280" width="80"  height="30" fill="#e2e8f0" stroke="#94a3b8"/>
+  <rect x="120" y="280" width="220" height="30" fill="#e2e8f0" stroke="#94a3b8"/>
+  <rect x="340" y="280" width="220" height="30" fill="#fde68a" stroke="#94a3b8"/>
+  <text x="80"  y="300" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#64748b">1</text>
+  <text x="230" y="300" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#64748b">ali@example.com</text>
+  <text x="450" y="300" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#d97706">2026-06-13 (o'chirilgan)</text>
+
+  <!-- row 2: live -->
+  <rect x="40" y="310" width="80"  height="30" fill="#dcfce7" stroke="#94a3b8"/>
+  <rect x="120" y="310" width="220" height="30" fill="#dcfce7" stroke="#94a3b8"/>
+  <rect x="340" y="310" width="220" height="30" fill="#dcfce7" stroke="#94a3b8"/>
+  <text x="80"  y="330" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">2</text>
+  <text x="230" y="330" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">ali@example.com</text>
+  <text x="450" y="330" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">NULL (tirik)</text>
+
+  <text x="575" y="298" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#d97706" font-style="italic">&#8592; eski</text>
+  <text x="575" y="328" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" font-style="italic">&#8592; yangi (bir xil email!)</text>
+
+  <!-- partial unique index callout -->
+  <rect x="40" y="356" width="740" height="58" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="56" y="378" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">Qisman UNIQUE indeks — email faqat TIRIK qatorlar uchun yagona:</text>
+  <text x="56" y="402" font-family="monospace, Segoe UI" font-size="14" fill="#1e293b">CREATE UNIQUE INDEX ... ON foydalanuvchi (email) WHERE deleted_at IS NULL;</text>
+
+  <!-- trade-off -->
+  <text x="40" y="448" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Trade-off:</text>
+  <text x="56" y="472" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">&#10004; qayta tiklash mumkin, tarix saqlanadi, "tasodifan o'chirdim" dan himoya</text>
+  <text x="56" y="492" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">&#10006; HAR so'rovda "WHERE deleted_at IS NULL" yozish kerak — unutsang, o'lik qator ko'rinadi</text>
+  <text x="56" y="512" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">&#10006; oddiy UNIQUE buziladi (qisman indeks shart), FK CASCADE ishlamaydi, jadval shishadi</text>
+  <text x="56" y="532" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" font-style="italic">Maslahat: tirik qatorlarni VIEW orqali bering; GDPR uchun haqiqiy o'chirish ham kerak bo'lishi mumkin</text>
+</svg>

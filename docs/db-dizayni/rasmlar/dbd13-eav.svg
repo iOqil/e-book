@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 540" width="800" height="540">
+  <title>EAV (entity-attribute-value) anti-naqshi: tuzilishi va nega so'rov hamda yaxlitlik buziladi</title>
+  <rect x="0" y="0" width="800" height="540" fill="#f8fafc"/>
+  <text x="400" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">EAV: "hamma narsa kalit-qiymat jadvalda"</text>
+  <text x="400" y="54" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">entity_id + atribut + qiymat — har qiymat text bo'lib qoladi</text>
+
+  <!-- LEFT: EAV table (vertical) -->
+  <rect x="24" y="74" width="320" height="248" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="184" y="98" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">eav (yomon)</text>
+  <rect x="44" y="112" width="86" height="26" fill="#fecaca" stroke="#dc2626" stroke-width="1"/>
+  <rect x="130" y="112" width="100" height="26" fill="#fecaca" stroke="#dc2626" stroke-width="1"/>
+  <rect x="230" y="112" width="94" height="26" fill="#fecaca" stroke="#dc2626" stroke-width="1"/>
+  <text x="87" y="130" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">entity</text>
+  <text x="180" y="130" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">atribut</text>
+  <text x="277" y="130" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">qiymat (text)</text>
+  <g font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">
+    <rect x="44" y="138" width="280" height="22" fill="#ffffff" stroke="#fca5a5" stroke-width="1"/>
+    <text x="87" y="154" text-anchor="middle">1</text><text x="180" y="154" text-anchor="middle">nomi</text><text x="277" y="154" text-anchor="middle">Klaviatura</text>
+    <rect x="44" y="160" width="280" height="22" fill="#ffffff" stroke="#fca5a5" stroke-width="1"/>
+    <text x="87" y="176" text-anchor="middle">1</text><text x="180" y="176" text-anchor="middle">narx</text><text x="277" y="176" text-anchor="middle">250000</text>
+    <rect x="44" y="182" width="280" height="22" fill="#ffffff" stroke="#fca5a5" stroke-width="1"/>
+    <text x="87" y="198" text-anchor="middle">1</text><text x="180" y="198" text-anchor="middle">ogirlik</text><text x="277" y="198" text-anchor="middle">0.9</text>
+    <rect x="44" y="204" width="280" height="22" fill="#ffffff" stroke="#fca5a5" stroke-width="1"/>
+    <text x="87" y="220" text-anchor="middle">1</text><text x="180" y="220" text-anchor="middle">faol</text><text x="277" y="220" text-anchor="middle">true</text>
+    <rect x="44" y="226" width="280" height="22" fill="#fef9c3" stroke="#d97706" stroke-width="1.5"/>
+    <text x="87" y="242" text-anchor="middle">3</text><text x="180" y="242" text-anchor="middle">narx</text><text x="277" y="242" text-anchor="middle" fill="#dc2626" font-weight="bold">noma'lum</text>
+  </g>
+  <text x="44" y="270" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626" font-weight="bold">Bitta mahsulot = ko'p qator.</text>
+  <text x="44" y="290" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">narx ustuniga "noma'lum" matn kiradi —</text>
+  <text x="44" y="308" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">baza tur/CHECK majburlay olmaydi.</text>
+
+  <!-- RIGHT: proper relational -->
+  <rect x="380" y="74" width="396" height="120" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="578" y="98" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">mahsulot (yaxshi — gorizontal)</text>
+  <g font-family="Segoe UI, system-ui, sans-serif" font-size="13">
+    <rect x="396" y="112" width="86" height="26" fill="#bbf7d0" stroke="#16a34a" stroke-width="1"/>
+    <rect x="482" y="112" width="96" height="26" fill="#bbf7d0" stroke="#16a34a" stroke-width="1"/>
+    <rect x="578" y="112" width="92" height="26" fill="#bbf7d0" stroke="#16a34a" stroke-width="1"/>
+    <rect x="670" y="112" width="90" height="26" fill="#bbf7d0" stroke="#16a34a" stroke-width="1"/>
+    <text x="439" y="130" text-anchor="middle" font-weight="bold" fill="#1e293b">nomi</text>
+    <text x="530" y="130" text-anchor="middle" font-weight="bold" fill="#1e293b">narx</text>
+    <text x="624" y="130" text-anchor="middle" font-weight="bold" fill="#1e293b">ogirlik</text>
+    <text x="715" y="130" text-anchor="middle" font-weight="bold" fill="#1e293b">faol</text>
+    <rect x="396" y="138" width="364" height="26" fill="#ffffff" stroke="#86efac" stroke-width="1"/>
+    <text x="439" y="156" text-anchor="middle" fill="#1e293b">Klaviatura</text>
+    <text x="530" y="156" text-anchor="middle" fill="#1e293b">250000.00</text>
+    <text x="624" y="156" text-anchor="middle" fill="#1e293b">0.900</text>
+    <text x="715" y="156" text-anchor="middle" fill="#1e293b">true</text>
+  </g>
+  <text x="396" y="184" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" font-weight="bold">text · numeric · numeric · boolean — har tur o'zini majburlaydi</text>
+
+  <!-- query comparison -->
+  <rect x="380" y="206" width="396" height="116" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="396" y="228" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">"narxi 200000 dan oshgan?"</text>
+  <text x="396" y="252" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626" font-weight="bold">EAV:</text>
+  <text x="440" y="252" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">GROUP BY + FILTER pivot + ::numeric cast</text>
+  <text x="440" y="270" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">-&gt; "noma'lum" da YIQILADI (cast xato)</text>
+  <text x="396" y="296" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" font-weight="bold">Yaxshi:</text>
+  <text x="456" y="296" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">WHERE narx &gt; 200000</text>
+  <text x="456" y="314" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">-&gt; tabiiy, indekslanadi, cast yo'q</text>
+
+  <!-- bottom: why EAV breaks -->
+  <rect x="24" y="334" width="752" height="172" rx="8" fill="#fff7ed" stroke="#d97706" stroke-width="1.5"/>
+  <text x="40" y="358" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#92400e">EAV nimani buzadi?</text>
+  <text x="40" y="384" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#92400e" font-weight="bold">1. Tur xavfsizligi:</text>
+  <text x="170" y="384" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">hamma qiymat text — sana, son, boolean farqlanmaydi.</text>
+  <text x="40" y="408" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#92400e" font-weight="bold">2. Yaxlitlik:</text>
+  <text x="135" y="408" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">NOT NULL / CHECK / FK ni atributga qo'yib bo'lmaydi.</text>
+  <text x="40" y="432" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#92400e" font-weight="bold">3. So'rov:</text>
+  <text x="120" y="432" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">har ustun uchun bitta JOIN/pivot — oddiy filtr ham murakkab.</text>
+  <text x="40" y="456" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#92400e" font-weight="bold">4. Performans:</text>
+  <text x="155" y="456" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">jadval ulkan o'sadi, indekslar samarasiz.</text>
+  <text x="40" y="486" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb" font-weight="bold">Alternativa: oddiy ustunlar; chindan dinamik atribut kerak bo'lsa — JSONB (10-bob), EAV emas.</text>
+</svg>

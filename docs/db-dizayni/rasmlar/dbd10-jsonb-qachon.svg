@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 600" width="820" height="600">
+  <title>JSONB ustun yoki normallashtirilgan ustun: qaror daraxti</title>
+  <rect x="0" y="0" width="820" height="600" fill="#f8fafc"/>
+  <text x="410" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="21" font-weight="bold" fill="#1e293b">JSONB qachon? &#8212; Qaror daraxti</text>
+  <text x="410" y="56" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">JSONB qulay, lekin u normalizatsiyaga zid &#8212; sukut bo'yicha tanlov EMAS</text>
+
+  <!-- Start -->
+  <rect x="310" y="78" width="200" height="48" rx="24" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="410" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">Yangi maydon kerak</text>
+
+  <!-- Q1 -->
+  <line x1="410" y1="126" x2="410" y2="150" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="240" y="150" width="340" height="56" rx="8" fill="#fef9c3" stroke="#d97706" stroke-width="2"/>
+  <text x="410" y="174" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Maydon oldindan ma'lummi va barqarormi?</text>
+  <text x="410" y="194" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(har qatorda bor, tez-tez so'raladi/filtrlanadi)</text>
+
+  <!-- Yes branch -> normal column -->
+  <line x1="240" y1="178" x2="120" y2="178" stroke="#16a34a" stroke-width="2"/>
+  <line x1="120" y1="178" x2="120" y2="240" stroke="#16a34a" stroke-width="2"/>
+  <text x="175" y="170" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">HA</text>
+  <rect x="30" y="240" width="200" height="120" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="130" y="266" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Oddiy ustun</text>
+  <text x="46" y="290" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">narx numeric(12,2)</text>
+  <text x="46" y="310" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">holati enum</text>
+  <text x="46" y="332" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">+ tur tekshiruvi</text>
+  <text x="46" y="350" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">+ tez indeks, FK, CHECK</text>
+
+  <!-- No branch -> Q2 -->
+  <line x1="580" y1="178" x2="700" y2="178" stroke="#475569" stroke-width="2"/>
+  <line x1="700" y1="178" x2="700" y2="240" stroke="#475569" stroke-width="2"/>
+  <text x="645" y="170" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#475569">YO'Q</text>
+  <rect x="560" y="240" width="240" height="76" rx="8" fill="#fef9c3" stroke="#d97706" stroke-width="2"/>
+  <text x="680" y="266" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Atributlar har xil/dinamik,</text>
+  <text x="680" y="286" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">qatordan qatorga farq qiladi?</text>
+  <text x="680" y="306" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(har mahsulot turi boshqa atribut)</text>
+
+  <!-- Q2 yes -> JSONB -->
+  <line x1="680" y1="316" x2="680" y2="360" stroke="#d97706" stroke-width="2"/>
+  <text x="730" y="342" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#d97706">HA</text>
+  <rect x="560" y="360" width="240" height="150" rx="8" fill="#fed7aa" stroke="#d97706" stroke-width="2"/>
+  <text x="680" y="386" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#d97706">JSONB ustun</text>
+  <text x="576" y="410" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">atribut jsonb</text>
+  <text x="576" y="430" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">+ GIN indeks (@>, ?)</text>
+  <text x="576" y="452" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">&#8722; tur tekshiruvi YO'Q</text>
+  <text x="576" y="472" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">&#8722; FK / UNIQUE qiyin</text>
+  <text x="576" y="494" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">muhim kalitlar &#8594; generated</text>
+
+  <!-- Q2 no -> lookup/junction -->
+  <line x1="560" y1="278" x2="410" y2="278" stroke="#16a34a" stroke-width="2"/>
+  <line x1="410" y1="278" x2="410" y2="360" stroke="#16a34a" stroke-width="2"/>
+  <text x="470" y="270" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">YO'Q</text>
+  <rect x="280" y="360" width="250" height="150" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="405" y="386" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Normallashtirilgan jadval</text>
+  <text x="296" y="410" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">EAV o'rniga: lookup yoki</text>
+  <text x="296" y="430" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">atribut jadvali / junction</text>
+  <text x="296" y="452" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">+ to'liq yaxlitlik</text>
+  <text x="296" y="472" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">+ tabiiy so'rov/agregat</text>
+  <text x="296" y="494" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tur "kataloglanadigan" bo'lsa eng yaxshi</text>
+
+  <!-- bottom rule -->
+  <rect x="30" y="530" width="760" height="56" rx="8" fill="#e2e8f0" stroke="#475569" stroke-width="1.5"/>
+  <text x="410" y="556" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Qoida: JSONB &#8212; haqiqatan dinamik/sxemasiz qism uchun. Doimiy, so'raladigan maydonni ustun qil.</text>
+  <text x="410" y="576" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" font-style="italic">Anti-naqsh: butun qatorni bitta JSONB ga "tashlash" &#8212; bu sxemasiz, tekshiruvsiz baza demak.</text>
+</svg>

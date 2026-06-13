@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520" width="760" height="520">
+  <title>ER-model elementlari: entity, atribut turlari, kalit va bog'lanish belgilari</title>
+  <rect x="0" y="0" width="760" height="520" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">ER-model elementlari (Chen notatsiyasi)</text>
+
+  <!-- ENTITY -->
+  <text x="40" y="78" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#475569">Entity (mavjudlik)</text>
+  <rect x="40" y="92" width="180" height="56" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="130" y="126" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" fill="#1e293b">MIJOZ</text>
+
+  <text x="270" y="78" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#475569">Kuchsiz entity</text>
+  <rect x="270" y="92" width="180" height="56" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <rect x="278" y="100" width="164" height="40" rx="2" fill="none" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="360" y="126" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" fill="#1e293b">QATOR</text>
+
+  <text x="500" y="78" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#475569">Bog'lanish</text>
+  <polygon points="590,92 690,120 590,148 490,120" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="590" y="126" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">beradi</text>
+
+  <!-- ATTRIBUTES -->
+  <text x="40" y="200" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#475569">Atribut turlari (ellips)</text>
+
+  <!-- oddiy -->
+  <ellipse cx="120" cy="260" rx="78" ry="32" fill="#fef9c3" stroke="#d97706" stroke-width="2"/>
+  <text x="120" y="256" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">ism</text>
+  <text x="120" y="276" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(oddiy)</text>
+
+  <!-- kalit (tagi chizilgan) -->
+  <ellipse cx="300" cy="260" rx="78" ry="32" fill="#fef9c3" stroke="#d97706" stroke-width="2"/>
+  <text x="300" y="256" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" text-decoration="underline">mijoz_id</text>
+  <text x="300" y="276" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(kalit - tagi chizilgan)</text>
+
+  <!-- ko'p qiymatli (qo'sh chiziq) -->
+  <ellipse cx="480" cy="260" rx="80" ry="34" fill="#fef9c3" stroke="#d97706" stroke-width="2"/>
+  <ellipse cx="480" cy="260" rx="72" ry="27" fill="none" stroke="#d97706" stroke-width="1.5"/>
+  <text x="480" y="256" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">telefon</text>
+  <text x="480" y="276" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(ko'p qiymatli)</text>
+
+  <!-- hosil (uzuq chiziq) -->
+  <ellipse cx="660" cy="260" rx="78" ry="32" fill="#fef9c3" stroke="#d97706" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="660" y="256" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">yosh</text>
+  <text x="660" y="276" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(hosil - uzuq)</text>
+
+  <!-- kompozit -->
+  <text x="40" y="346" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#475569">Kompozit atribut (ichki qismlarga bo'linadi)</text>
+  <ellipse cx="170" cy="410" rx="86" ry="34" fill="#fef9c3" stroke="#d97706" stroke-width="2"/>
+  <text x="170" y="416" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#1e293b">manzil</text>
+  <line x1="170" y1="444" x2="350" y2="396" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="170" y1="444" x2="350" y2="444" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="170" y1="444" x2="350" y2="492" stroke="#94a3b8" stroke-width="1.5"/>
+  <ellipse cx="420" cy="392" rx="70" ry="26" fill="#fff7ed" stroke="#d97706" stroke-width="1.5"/>
+  <text x="420" y="397" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">shahar</text>
+  <ellipse cx="420" cy="444" rx="70" ry="26" fill="#fff7ed" stroke="#d97706" stroke-width="1.5"/>
+  <text x="420" y="449" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">ko'cha</text>
+  <ellipse cx="420" cy="496" rx="70" ry="26" fill="#fff7ed" stroke="#d97706" stroke-width="1.5"/>
+  <text x="420" y="501" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">indeks</text>
+
+  <!-- legend -->
+  <rect x="520" y="356" width="218" height="150" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="629" y="380" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Belgilar</text>
+  <rect x="534" y="392" width="22" height="16" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="566" y="405" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">to'rtburchak = entity</text>
+  <ellipse cx="545" cy="432" rx="11" ry="8" fill="#fef9c3" stroke="#d97706" stroke-width="2"/>
+  <text x="566" y="437" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">ellips = atribut</text>
+  <polygon points="545,452 556,462 545,472 534,462" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="566" y="467" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">romb = bog'lanish</text>
+  <text x="534" y="496" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">_____ tagi = kalit-atribut</text>
+</svg>

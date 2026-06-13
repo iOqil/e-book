@@ -15,10 +15,10 @@ hide:
 [GitHub](https://github.com/iOqil/e-book){ .md-button }
 
 <div class="hero-stats">
-  <div class="stat"><b>19</b><span>kitob</span></div>
-  <div class="stat"><b>1091</b><span>diagramma</span></div>
-  <div class="stat"><b>451+</b><span>bob</span></div>
-  <div class="stat"><b>4600+</b><span>masala</span></div>
+  <div class="stat"><b>20</b><span>kitob</span></div>
+  <div class="stat"><b>1163</b><span>diagramma</span></div>
+  <div class="stat"><b>475+</b><span>bob</span></div>
+  <div class="stat"><b>4900+</b><span>masala</span></div>
 </div>
 
 </section>
@@ -176,5 +176,13 @@ hide:
     JavaScript (Node.js, ESM) va **grammY** bilan Telegram bot: echo botdan boshlab handler/Composer, **filter query**'lar, klaviaturalar, callback, **conversations (suhbat)**, middleware, sessiya/DB (better-sqlite3), to'lovlar/Stars, webhook, testlash (Vitest), deploy + kapston bot; so'ng **real amaliyot** — guruh/kanal boshqaruvi, moderatsiya, **majburiy obuna**, Telegram **Mini App** (Web App + initData xavfsizligi + backend) va **Hamster uslubidagi clicker o'yin** kapstoni. JS/Node bilimini nazarda tutadi. Bot mantig'i (handler/conversation/middleware/sessiya/initData/anti-cheat) `bot.handleUpdate` + transformer bilan offline tekshirilgan; jonli polling/yuborish/webhook BotFather token + internet talab qiladi (illustrativ). 26 bob · 78 diagramma.
 
     [Boshlash →](tgbot-js/README.md)
+
+-   📐 **20. Ma'lumotlar bazasi dizayni**
+
+    ---
+
+    PostgreSQL 18 bilan ma'lumotlar bazasini **to'g'ri loyihalash**: talab tahlili, ER-modellashtirish, normalizatsiya (1NF–BCNF/4NF), kalit/constraint dizayni, PostgreSQL boy turlari (JSONB/range/generated), indeks strategiyasi, EXPLAIN performans, tranzaksiya/izolyatsiya, daraxt/graf, temporal/RLS, **NoSQL** modellashtirish, **analitik ombor** (star/SCD), **partitioning/sharding** va migratsiya + yakuniy loyiha. SQL kitobiga tayanadi; sintaksis emas — **dizayn qarori**. Hamma DDL real PostgreSQL 18.4 da ishga tushirib tekshirilgan. 24 bob · 72 diagramma · 330+ masala.
+
+    [Boshlash →](db-dizayni/README.md)
 
 </div>

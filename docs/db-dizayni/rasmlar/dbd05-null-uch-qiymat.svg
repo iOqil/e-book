@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480">
+  <title>NULL va uch qiymatli mantiq: TRUE FALSE UNKNOWN va NULL bilan taqqoslash xavfi</title>
+
+  <!-- fon -->
+  <rect x="0" y="0" width="760" height="480" fill="#f8fafc"/>
+
+  <!-- sarlavha -->
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">NULL va uch qiymatli mantiq</text>
+  <text x="380" y="56" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">NULL = "noma'lum/yo'q". U bilan har taqqoslash UNKNOWN beradi.</text>
+
+  <!-- uch qiymat doirasi -->
+  <rect x="60" y="80" width="200" height="56" rx="28" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="160" y="115" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">TRUE</text>
+
+  <rect x="280" y="80" width="200" height="56" rx="28" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="380" y="115" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#dc2626">FALSE</text>
+
+  <rect x="500" y="80" width="200" height="56" rx="28" fill="#fef3c7" stroke="#d97706" stroke-width="2.5"/>
+  <text x="600" y="115" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#d97706">UNKNOWN</text>
+  <text x="600" y="156" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(NULL ishtirokida)</text>
+
+  <!-- taqqoslash jadvali -->
+  <text x="60" y="194" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">PostgreSQL'da haqiqiy natija (5434'da tekshirilgan):</text>
+
+  <rect x="60" y="206" width="640" height="166" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <rect x="60" y="206" width="640" height="32" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="240" y="228" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">ifoda</text>
+  <text x="560" y="228" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">natija</text>
+  <line x1="460" y1="206" x2="460" y2="372" stroke="#94a3b8" stroke-width="1.5"/>
+
+  <line x1="60" y1="272" x2="700" y2="272" stroke="#cbd5e1" stroke-width="1"/>
+  <line x1="60" y1="306" x2="700" y2="306" stroke="#cbd5e1" stroke-width="1"/>
+  <line x1="60" y1="340" x2="700" y2="340" stroke="#cbd5e1" stroke-width="1"/>
+
+  <text x="80" y="260" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">NULL = NULL</text>
+  <text x="560" y="260" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#d97706">UNKNOWN</text>
+
+  <text x="80" y="294" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">NULL &lt;&gt; 5</text>
+  <text x="560" y="294" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#d97706">UNKNOWN</text>
+
+  <text x="80" y="328" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">NULL &gt; 0</text>
+  <text x="560" y="328" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#d97706">UNKNOWN</text>
+
+  <text x="80" y="362" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">bahosi IS NULL</text>
+  <text x="560" y="362" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">TRUE / FALSE</text>
+
+  <!-- xavf paneli -->
+  <rect x="60" y="388" width="640" height="76" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="80" y="412" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">Xavf: WHERE faqat TRUE qatorni qaytaradi</text>
+  <text x="80" y="434" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">WHERE bahosi &lt;&gt; 85 — bahosi NULL bo'lgan qatorlarni JIMGINA tushirib qoldiradi.</text>
+  <text x="80" y="454" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Yechim: IS NULL / IS NOT NULL, COALESCE(...) yoki IS DISTINCT FROM ishlat.</text>
+</svg>

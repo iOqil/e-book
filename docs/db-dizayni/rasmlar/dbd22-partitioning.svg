@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 500" width="780" height="500">
+  <title>PostgreSQL declarative partitioning: RANGE/LIST/HASH va partition pruning</title>
+  <rect x="0" y="0" width="780" height="500" fill="#f8fafc"/>
+  <text x="390" y="30" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Declarative partitioning: bitta jadval, ko'p bo'lak</text>
+
+  <!-- Uchta strategiya -->
+  <text x="390" y="60" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Bitta mantiqiy jadval partition kaliti bo'yicha fizik bo'laklarga bo'linadi</text>
+
+  <!-- RANGE -->
+  <rect x="24" y="80" width="240" height="148" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="144" y="104" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">RANGE</text>
+  <text x="144" y="124" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">oraliq (sana, raqam)</text>
+  <rect x="40" y="136" width="100" height="34" rx="4" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="90" y="158" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">2024 Q1</text>
+  <rect x="148" y="136" width="100" height="34" rx="4" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="198" y="158" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">2024 Q2</text>
+  <rect x="40" y="176" width="100" height="34" rx="4" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="90" y="198" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">2024 Q3</text>
+  <rect x="148" y="176" width="100" height="34" rx="4" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="198" y="198" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">2024 Q4</text>
+
+  <!-- LIST -->
+  <rect x="276" y="80" width="228" height="148" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="390" y="104" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">LIST</text>
+  <text x="390" y="124" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">aniq qiymatlar (mintaqa)</text>
+  <rect x="292" y="136" width="96" height="34" rx="4" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="340" y="158" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Toshkent</text>
+  <rect x="396" y="136" width="96" height="34" rx="4" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="444" y="158" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Samarqand</text>
+  <rect x="292" y="176" width="96" height="34" rx="4" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="340" y="198" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Buxoro</text>
+  <rect x="396" y="176" width="96" height="34" rx="4" fill="#f1f5f9" stroke="#94a3b8" stroke-dasharray="4 2"/>
+  <text x="444" y="198" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">DEFAULT</text>
+
+  <!-- HASH -->
+  <rect x="516" y="80" width="240" height="148" rx="8" fill="#ffffff" stroke="#d97706" stroke-width="2"/>
+  <text x="636" y="104" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#d97706">HASH</text>
+  <text x="636" y="124" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">teng taqsimlash (id)</text>
+  <rect x="532" y="136" width="100" height="34" rx="4" fill="#fef3c7" stroke="#d97706"/>
+  <text x="582" y="158" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">p0 (rem 0)</text>
+  <rect x="640" y="136" width="100" height="34" rx="4" fill="#fef3c7" stroke="#d97706"/>
+  <text x="690" y="158" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">p1 (rem 1)</text>
+  <rect x="532" y="176" width="100" height="34" rx="4" fill="#fef3c7" stroke="#d97706"/>
+  <text x="582" y="198" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">p2 (rem 2)</text>
+  <rect x="640" y="176" width="100" height="34" rx="4" fill="#fef3c7" stroke="#d97706"/>
+  <text x="690" y="198" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">p3 (rem 3)</text>
+
+  <!-- PRUNING qismi -->
+  <text x="390" y="264" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#1e293b">Partition pruning: planner faqat kerakli bo'lakka boradi</text>
+
+  <!-- so'rov -->
+  <rect x="160" y="288" width="460" height="40" rx="6" fill="#1e293b"/>
+  <text x="390" y="313" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#f8fafc">SELECT * FROM sotuv WHERE sotuv_sana = '2024-08-01';</text>
+
+  <!-- arrows to partitions -->
+  <line x1="390" y1="328" x2="160" y2="372" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <line x1="390" y1="328" x2="313" y2="372" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <line x1="390" y1="328" x2="467" y2="372" stroke="#16a34a" stroke-width="3" marker-end="url(#g)"/>
+  <line x1="390" y1="328" x2="620" y2="372" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5 4"/>
+
+  <rect x="96" y="376" width="128" height="48" rx="6" fill="#f1f5f9" stroke="#94a3b8"/>
+  <text x="160" y="398" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">Q1</text>
+  <text x="160" y="416" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">o'tkazib yuborildi</text>
+
+  <rect x="249" y="376" width="128" height="48" rx="6" fill="#f1f5f9" stroke="#94a3b8"/>
+  <text x="313" y="398" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">Q2</text>
+  <text x="313" y="416" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">o'tkazib yuborildi</text>
+
+  <rect x="403" y="372" width="128" height="56" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="467" y="396" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">Q3</text>
+  <text x="467" y="416" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#166534">FAQAT shu skanlanadi</text>
+
+  <rect x="556" y="376" width="128" height="48" rx="6" fill="#f1f5f9" stroke="#94a3b8"/>
+  <text x="620" y="398" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">Q4</text>
+  <text x="620" y="416" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">o'tkazib yuborildi</text>
+
+  <text x="390" y="464" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">EXPLAIN: "Seq Scan on sotuv_2024q3" — 4 bo'lakdan faqat 1 tasi o'qiladi</text>
+  <text x="390" y="486" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">Eslatma: WHERE da partition kaliti bo'lmasa — pruning yo'q, hammasi skanlanadi</text>
+
+  <defs>
+    <marker id="g" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+</svg>

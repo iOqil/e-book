@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 560" width="860" height="560">
+  <title>Closure table tuzilishi: daraxtdagi har bir ajdod-avlod juftligi (o'z-o'ziga ham) alohida qator sifatida saqlanadi</title>
+  <rect x="0" y="0" width="860" height="560" fill="#f8fafc"/>
+  <text x="430" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="21" font-weight="bold" fill="#1e293b">Closure table: barcha ajdod-avlod juftliklari</text>
+  <text x="430" y="56" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Daraxtdagi HAR bir yo'l (ajdoddan avlodga) bitta qatorga aylanadi — masofa bilan</text>
+
+  <!-- LEFT: the tree -->
+  <text x="200" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Daraxt (ierarxiya)</text>
+
+  <!-- edges -->
+  <line x1="200" y1="128" x2="120" y2="198" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="200" y1="128" x2="280" y2="198" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="120" y1="228" x2="120" y2="298" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="120" y1="328" x2="120" y2="398" stroke="#94a3b8" stroke-width="2"/>
+
+  <!-- node 1 Elektronika -->
+  <rect x="150" y="104" width="100" height="34" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="200" y="126" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">1 Elektronika</text>
+  <!-- node 2 Kompyuter -->
+  <rect x="74" y="198" width="92" height="34" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="120" y="220" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">2 Kompyuter</text>
+  <!-- node 3 Telefon -->
+  <rect x="234" y="198" width="92" height="34" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="280" y="220" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">3 Telefon</text>
+  <!-- node 4 Noutbuk -->
+  <rect x="74" y="298" width="92" height="34" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="120" y="320" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">4 Noutbuk</text>
+  <!-- node 6 Gaming -->
+  <rect x="74" y="398" width="92" height="34" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="120" y="420" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">6 Gaming</text>
+
+  <!-- highlight the path 1->2->4->6 -->
+  <text x="200" y="470" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626" font-weight="bold">Qizil yo'l: 1 -&gt; 2 -&gt; 4 -&gt; 6</text>
+  <text x="200" y="492" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Bu bitta shoxda 1+2+3+4 = 10 juftlik</text>
+
+  <!-- arrow to table -->
+  <line x1="340" y1="280" x2="410" y2="280" stroke="#475569" stroke-width="2.5" marker-end="url(#arr)"/>
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+  <text x="375" y="270" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">saqlash</text>
+
+  <!-- RIGHT: closure table -->
+  <text x="615" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">kt_closure jadvali</text>
+
+  <!-- table header -->
+  <rect x="430" y="104" width="120" height="32" fill="#475569"/>
+  <rect x="550" y="104" width="120" height="32" fill="#475569"/>
+  <rect x="670" y="104" width="120" height="32" fill="#475569"/>
+  <text x="490" y="125" text-anchor="middle" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#ffffff">ajdod</text>
+  <text x="610" y="125" text-anchor="middle" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#ffffff">avlod</text>
+  <text x="730" y="125" text-anchor="middle" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#ffffff">masofa</text>
+
+  <g font-family="Consolas, monospace" font-size="13" fill="#1e293b">
+    <!-- self rows (masofa 0) -->
+    <rect x="430" y="136" width="360" height="26" fill="#dcfce7" stroke="#e2e8f0"/>
+    <text x="490" y="154" text-anchor="middle">1</text><text x="610" y="154" text-anchor="middle">1</text><text x="730" y="154" text-anchor="middle">0</text>
+    <rect x="430" y="162" width="360" height="26" fill="#dcfce7" stroke="#e2e8f0"/>
+    <text x="490" y="180" text-anchor="middle">2</text><text x="610" y="180" text-anchor="middle">2</text><text x="730" y="180" text-anchor="middle">0</text>
+    <text x="800" y="172" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">o'z-o'ziga</text>
+
+    <!-- 1->2 distance 1 -->
+    <rect x="430" y="188" width="360" height="26" fill="#ffffff" stroke="#e2e8f0"/>
+    <text x="490" y="206" text-anchor="middle">1</text><text x="610" y="206" text-anchor="middle">2</text><text x="730" y="206" text-anchor="middle">1</text>
+    <rect x="430" y="214" width="360" height="26" fill="#ffffff" stroke="#e2e8f0"/>
+    <text x="490" y="232" text-anchor="middle">2</text><text x="610" y="232" text-anchor="middle">4</text><text x="730" y="232" text-anchor="middle">1</text>
+    <rect x="430" y="240" width="360" height="26" fill="#ffffff" stroke="#e2e8f0"/>
+    <text x="490" y="258" text-anchor="middle">4</text><text x="610" y="258" text-anchor="middle">6</text><text x="730" y="258" text-anchor="middle">1</text>
+
+    <!-- distance 2 (highlighted) -->
+    <rect x="430" y="266" width="360" height="26" fill="#fee2e2" stroke="#e2e8f0"/>
+    <text x="490" y="284" text-anchor="middle" fill="#dc2626" font-weight="bold">1</text><text x="610" y="284" text-anchor="middle" fill="#dc2626" font-weight="bold">4</text><text x="730" y="284" text-anchor="middle" fill="#dc2626" font-weight="bold">2</text>
+    <rect x="430" y="292" width="360" height="26" fill="#fee2e2" stroke="#e2e8f0"/>
+    <text x="490" y="310" text-anchor="middle" fill="#dc2626" font-weight="bold">2</text><text x="610" y="310" text-anchor="middle" fill="#dc2626" font-weight="bold">6</text><text x="730" y="310" text-anchor="middle" fill="#dc2626" font-weight="bold">2</text>
+
+    <!-- distance 3 (highlighted) -->
+    <rect x="430" y="318" width="360" height="26" fill="#fee2e2" stroke="#e2e8f0"/>
+    <text x="490" y="336" text-anchor="middle" fill="#dc2626" font-weight="bold">1</text><text x="610" y="336" text-anchor="middle" fill="#dc2626" font-weight="bold">6</text><text x="730" y="336" text-anchor="middle" fill="#dc2626" font-weight="bold">3</text>
+
+    <text x="500" y="368" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">... (3 Telefon shoxi ham xuddi shunday)</text>
+  </g>
+
+  <!-- query boxes -->
+  <rect x="430" y="392" width="412" height="62" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="442" y="412" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#2563eb">Kompyuter(2) ostidagi HAMMA avlod:</text>
+  <text x="442" y="434" font-family="Consolas, monospace" font-size="13" fill="#1e293b">SELECT avlod FROM kt_closure</text>
+  <text x="442" y="450" font-family="Consolas, monospace" font-size="13" fill="#1e293b">WHERE ajdod = 2 AND masofa &gt; 0;   -- JOINsiz, CTEsiz</text>
+
+  <rect x="430" y="462" width="412" height="62" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="442" y="482" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">Gaming(6) ning HAMMA ajdodi:</text>
+  <text x="442" y="504" font-family="Consolas, monospace" font-size="13" fill="#1e293b">SELECT ajdod FROM kt_closure</text>
+  <text x="442" y="520" font-family="Consolas, monospace" font-size="13" fill="#1e293b">WHERE avlod = 6 AND masofa &gt; 0;</text>
+
+  <text x="20" y="546" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Narx: 7 tugunli daraxt -> 18 juftlik qator. O'qish tezligi uchun joy bilan to'laysiz.</text>
+</svg>

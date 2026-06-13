@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 560" width="820" height="560">
+  <title>Materialized view (REFRESH bilan) va keshlangan agregat ustun (trigger bilan) oqimi: hisoblash o'rniga o'qish</title>
+  <rect x="0" y="0" width="820" height="560" fill="#f8fafc"/>
+  <text x="410" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Hisoblash o'rniga o'qish: ikki denormalizatsiya usuli</text>
+  <text x="410" y="54" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Agregatni har so'rovda qayta hisoblamay, oldindan saqlab qo'yamiz</text>
+
+  <!-- TOP: Materialized View -->
+  <rect x="30" y="74" width="760" height="210" rx="8" fill="#fef9c3" stroke="#d97706" stroke-width="2"/>
+  <text x="50" y="100" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#d97706">A) Materialized View — og'ir hisobot uchun (vaqti-vaqti bilan REFRESH)</text>
+
+  <!-- base tables -->
+  <rect x="54" y="118" width="120" height="56" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="114" y="142" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">buyurtma</text>
+  <text x="114" y="162" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">1 mln qator</text>
+  <rect x="54" y="186" width="120" height="56" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="114" y="210" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">mijoz</text>
+  <text x="114" y="230" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">100k qator</text>
+
+  <!-- refresh arrow -->
+  <line x1="174" y1="180" x2="262" y2="180" stroke="#d97706" stroke-width="2" marker-end="url(#arrY)"/>
+  <text x="218" y="170" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#d97706">REFRESH</text>
+  <text x="218" y="198" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">og'ir JOIN+GROUP BY</text>
+  <text x="218" y="214" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(~0.3 s, kechasi 1 marta)</text>
+
+  <!-- MV box -->
+  <rect x="262" y="130" width="180" height="100" rx="6" fill="#fde68a" stroke="#d97706" stroke-width="2"/>
+  <text x="352" y="152" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">mv_shahar_hisobot</text>
+  <text x="276" y="174" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">shahar | soni | summa</text>
+  <text x="276" y="194" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">4 qator (oldindan</text>
+  <text x="276" y="210" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">hisoblangan snapshot)</text>
+
+  <!-- read arrow -->
+  <line x1="442" y1="180" x2="530" y2="180" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arrG2)"/>
+  <text x="486" y="170" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">SELECT</text>
+  <text x="486" y="198" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">tez o'qish</text>
+
+  <rect x="530" y="130" width="236" height="100" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="648" y="160" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">~0.01 ms</text>
+  <text x="648" y="184" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">jonli JOIN: ~320 ms</text>
+  <text x="648" y="208" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">Trade-off: ma'lumot "biroz eski"</text>
+
+  <text x="50" y="266" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" font-style="italic">Qachon: og'ir analitik agregat, biroz eskirgan ma'lumot maqbul (dashboard, kunlik hisobot). REFRESH CONCURRENTLY o'qishni bloklamaydi.</text>
+
+  <!-- BOTTOM: cached column + trigger -->
+  <rect x="30" y="300" width="760" height="220" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="50" y="326" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">B) Keshlangan agregat ustun — har doim aniq (trigger har yozuvda yangilaydi)</text>
+
+  <!-- write event -->
+  <rect x="54" y="344" width="150" height="50" rx="6" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="129" y="366" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">INSERT / DELETE</text>
+  <text x="129" y="384" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">buyurtma ga</text>
+
+  <line x1="204" y1="369" x2="280" y2="369" stroke="#2563eb" stroke-width="2" marker-end="url(#arrB)"/>
+  <text x="242" y="360" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#2563eb">trigger</text>
+
+  <!-- trigger box -->
+  <rect x="280" y="338" width="220" height="64" rx="6" fill="#bfdbfe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="390" y="360" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">AFTER INSERT/DELETE</text>
+  <text x="294" y="382" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">UPDATE mijoz SET</text>
+  <text x="294" y="398" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">  buyurtma_soni = ... &#177; 1</text>
+
+  <line x1="500" y1="369" x2="576" y2="369" stroke="#2563eb" stroke-width="2" marker-end="url(#arrB)"/>
+
+  <!-- mijoz with cached col -->
+  <rect x="576" y="338" width="190" height="64" rx="6" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="671" y="360" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">mijoz</text>
+  <text x="590" y="382" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">id | ism |</text>
+  <text x="590" y="398" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb" font-weight="bold">buyurtma_soni (kesh)</text>
+
+  <!-- read path -->
+  <rect x="54" y="424" width="712" height="42" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="70" y="450" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">O'qish: <tspan fill="#16a34a" font-weight="bold">SELECT buyurtma_soni FROM mijoz WHERE id=42</tspan>  (~0.04 ms) &#8212; COUNT(*) hisoblash o'rniga tayyor qiymat</text>
+
+  <text x="50" y="498" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" font-style="italic">Qachon: agregat HAR DOIM aniq bo'lishi shart (reyting, savatcha soni, obunachi soni). Narxi: har yozuvda qo'shimcha UPDATE + drift xavfi.</text>
+  <text x="50" y="516" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" font-style="italic">avg ni saqlama &#8212; sum + count ni saqla (inkremental yangilash uchun). Audit so'rovi bilan drift ni tekshir.</text>
+
+  <text x="410" y="544" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" font-weight="bold">MV = eskirsa maqbul, og'ir hisobot &#8226; Keshlangan ustun = har doim aniq, jonli ko'rsatkich</text>
+
+  <defs>
+    <marker id="arrY" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#d97706"/></marker>
+    <marker id="arrG2" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#16a34a"/></marker>
+    <marker id="arrB" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#2563eb"/></marker>
+  </defs>
+</svg>

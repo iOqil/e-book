@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 520" width="820" height="520">
+  <title>Pulni numeric bilan saqlash aniq, float bilan saqlash xatoga olib keladi: 0.1+0.2 misoli</title>
+  <rect x="0" y="0" width="820" height="520" fill="#f8fafc"/>
+  <text x="410" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="21" font-weight="bold" fill="#1e293b">Pul: numeric (aniq) &#8800; float (taxminiy)</text>
+  <text x="410" y="56" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">float ikkilik kasr &#8212; o'nlik 0.1 ni ANIQ ifodalay olmaydi</text>
+
+  <!-- FLOAT panel (xato) -->
+  <rect x="30" y="82" width="370" height="380" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="215" y="110" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#dc2626">float8 (double precision)</text>
+  <text x="215" y="132" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#dc2626" font-weight="bold">PUL UCHUN ISHLATMA</text>
+
+  <rect x="50" y="150" width="330" height="92" rx="6" fill="#ffffff" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="64" y="174" font-family="monospace, Consolas" font-size="14" fill="#1e293b">SELECT 0.1::float8 + 0.2::float8;</text>
+  <text x="64" y="200" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Natija (PG18 da haqiqiy):</text>
+  <text x="64" y="226" font-family="monospace, Consolas" font-size="15" fill="#dc2626" font-weight="bold">0.30000000000000004</text>
+
+  <rect x="50" y="256" width="330" height="92" rx="6" fill="#ffffff" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="64" y="280" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">0.10 ni 10 marta qo'shsak:</text>
+  <text x="64" y="306" font-family="monospace, Consolas" font-size="14" fill="#1e293b">sum(0.10::float8) x10</text>
+  <text x="64" y="332" font-family="monospace, Consolas" font-size="15" fill="#dc2626" font-weight="bold">0.9999999999999999</text>
+
+  <text x="50" y="378" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">&#8226; (0.1 + 0.2) = 0.3  &#8594;  FALSE</text>
+  <text x="50" y="400" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">&#8226; Hisoblar mos kelmaydi (1 tiyin yo'qoladi)</text>
+  <text x="50" y="422" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">&#8226; Buxgalter sizni topadi</text>
+  <text x="50" y="446" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" font-style="italic">Mos: o'lchovlar, ilm-fan, koordinata</text>
+
+  <!-- NUMERIC panel (to'g'ri) -->
+  <rect x="420" y="82" width="370" height="380" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="605" y="110" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#16a34a">numeric(12,2)</text>
+  <text x="605" y="132" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#16a34a" font-weight="bold">PUL UCHUN TO'G'RI TANLOV</text>
+
+  <rect x="440" y="150" width="330" height="92" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="454" y="174" font-family="monospace, Consolas" font-size="13" fill="#1e293b">SELECT 0.1::numeric + 0.2::numeric;</text>
+  <text x="454" y="200" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Natija (PG18 da haqiqiy):</text>
+  <text x="454" y="226" font-family="monospace, Consolas" font-size="15" fill="#16a34a" font-weight="bold">0.3</text>
+
+  <rect x="440" y="256" width="330" height="92" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="454" y="280" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">0.10 ni 10 marta qo'shsak:</text>
+  <text x="454" y="306" font-family="monospace, Consolas" font-size="14" fill="#1e293b">sum(0.10::numeric) x10</text>
+  <text x="454" y="332" font-family="monospace, Consolas" font-size="15" fill="#16a34a" font-weight="bold">1.00</text>
+
+  <text x="440" y="378" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">&#8226; (0.1 + 0.2) = 0.3  &#8594;  TRUE</text>
+  <text x="440" y="400" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">&#8226; Aniq o'nlik &#8212; tiyin yo'qolmaydi</text>
+  <text x="440" y="422" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">&#8226; (p,s): p=jami raqam, s=kasr xona</text>
+  <text x="440" y="446" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" font-style="italic">Mos: narx, hisob, soliq, balans</text>
+
+  <text x="410" y="494" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" font-weight="bold">Qoida: pul, hisob, foiz &#8594; HAR DOIM numeric/decimal. float &#8212; faqat taxminiy o'lchov uchun.</text>
+</svg>

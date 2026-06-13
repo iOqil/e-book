@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560" width="880" height="560">
+  <title>Ma'lumotlar bazasi dizayni jarayoni: talab -> ER -> normalizatsiya -> fizik sxema -> indeks -> partition -> migratsiya</title>
+  <rect x="0" y="0" width="880" height="560" fill="#f8fafc"/>
+  <text x="440" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Dizayn jarayoni: talabdan ishlaydigan sxemagacha</text>
+
+  <defs>
+    <marker id="ok" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- 1 Talab -->
+  <rect x="40" y="70" width="200" height="64" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="140" y="96" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">1. Talab tahlili</text>
+  <text x="140" y="118" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">02-bob · ot/sifat/fe'l</text>
+
+  <!-- 2 Konseptual ER -->
+  <rect x="340" y="70" width="200" height="64" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="440" y="96" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">2. Konseptual ER</text>
+  <text x="440" y="118" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">03-04 · Crow's foot</text>
+
+  <!-- 3 Normalizatsiya -->
+  <rect x="640" y="70" width="200" height="64" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="740" y="96" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">3. Normalizatsiya</text>
+  <text x="740" y="118" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">05-09 · 3NF/BCNF</text>
+
+  <!-- 4 Fizik sxema -->
+  <rect x="640" y="200" width="200" height="64" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="740" y="226" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">4. Fizik PG sxema</text>
+  <text x="740" y="248" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">09-11 · DDL, tur, FK</text>
+
+  <!-- 5 Indeks -->
+  <rect x="340" y="200" width="200" height="64" rx="8" fill="#ffffff" stroke="#d97706" stroke-width="2"/>
+  <text x="440" y="226" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#d97706">5. Indeks rejasi</text>
+  <text x="440" y="248" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">14-15 · EXPLAIN</text>
+
+  <!-- 6 Partition / masshtab -->
+  <rect x="40" y="200" width="200" height="64" rx="8" fill="#ffffff" stroke="#d97706" stroke-width="2"/>
+  <text x="140" y="226" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#d97706">6. Partition/masshtab</text>
+  <text x="140" y="248" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">19-22 · tenancy, RANGE</text>
+
+  <!-- 7 Migratsiya -->
+  <rect x="40" y="330" width="200" height="64" rx="8" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="140" y="356" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">7. Migratsiya</text>
+  <text x="140" y="378" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">23 · expand-contract</text>
+
+  <!-- 8 ADR -->
+  <rect x="340" y="330" width="200" height="64" rx="8" fill="#ffffff" stroke="#475569" stroke-width="2"/>
+  <text x="440" y="356" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#475569">8. ADR hujjati</text>
+  <text x="440" y="378" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">kontekst/qaror/oqibat</text>
+
+  <!-- arrows -->
+  <line x1="240" y1="102" x2="338" y2="102" stroke="#475569" stroke-width="2" marker-end="url(#ok)"/>
+  <line x1="540" y1="102" x2="638" y2="102" stroke="#475569" stroke-width="2" marker-end="url(#ok)"/>
+  <line x1="740" y1="134" x2="740" y2="198" stroke="#475569" stroke-width="2" marker-end="url(#ok)"/>
+  <line x1="640" y1="232" x2="542" y2="232" stroke="#475569" stroke-width="2" marker-end="url(#ok)"/>
+  <line x1="340" y1="232" x2="242" y2="232" stroke="#475569" stroke-width="2" marker-end="url(#ok)"/>
+  <line x1="140" y1="264" x2="140" y2="328" stroke="#475569" stroke-width="2" marker-end="url(#ok)"/>
+  <line x1="240" y1="362" x2="338" y2="362" stroke="#475569" stroke-width="2" marker-end="url(#ok)"/>
+
+  <!-- iterative loop back -->
+  <path d="M440 394 C 440 470, 140 470, 140 410" fill="none" stroke="#dc2626" stroke-width="2" stroke-dasharray="6,5" marker-end="url(#ok)"/>
+  <text x="290" y="492" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626" font-style="italic">Iterativ: o'lchov yangi qaror tug'dirsa — qaytib takomillashtir</text>
+
+  <!-- principle box -->
+  <rect x="600" y="330" width="240" height="120" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="720" y="354" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Oltin qoida</text>
+  <text x="616" y="380" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Konseptualdan fizikga:</text>
+  <text x="616" y="402" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">avval to'g'ri modellashtir,</text>
+  <text x="616" y="424" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">keyin o'lchab optimallash.</text>
+</svg>
