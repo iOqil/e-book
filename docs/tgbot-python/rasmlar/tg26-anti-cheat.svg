@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 450">
+  <title>Anti-cheat: clientga ishonmaslik, serverda hisoblash</title>
+  <rect width="780" height="450" fill="#f8fafc"/>
+  <text x="390" y="36" text-anchor="middle" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b">Anti-cheat: nega clientga ishonmaymiz</text>
+
+  <!-- Bad approach -->
+  <rect x="36" y="70" width="340" height="330" rx="12" fill="#fff" stroke="#dc2626" stroke-width="2"/>
+  <text x="206" y="100" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#dc2626">YOMON: clientga ishonish</text>
+
+  <rect x="60" y="120" width="292" height="60" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+  <text x="76" y="144" font-family="Segoe UI" font-size="13" fill="#334155">Client: POST /api/save</text>
+  <text x="76" y="166" font-family="Segoe UI" font-size="13" fill="#dc2626">{ "balance": 999999999 }</text>
+
+  <line x1="206" y1="180" x2="206" y2="206" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="200,206 206,218 212,206" fill="#94a3b8"/>
+
+  <rect x="60" y="222" width="292" height="56" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+  <text x="76" y="246" font-family="Segoe UI" font-size="13" fill="#334155">Server: balansni shundoq saqlaydi</text>
+  <text x="76" y="268" font-family="Segoe UI" font-size="13" fill="#334155">(raqamni tekshirmaydi)</text>
+
+  <text x="206" y="312" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">Natija: cheat oson</text>
+  <text x="206" y="338" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">DevTools'da fetch chaqirib,</text>
+  <text x="206" y="358" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">istalgan balansni yozish mumkin.</text>
+  <text x="206" y="382" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">Leaderboard buziladi.</text>
+
+  <!-- Good approach -->
+  <rect x="404" y="70" width="340" height="330" rx="12" fill="#fff" stroke="#16a34a" stroke-width="2"/>
+  <text x="574" y="100" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a">YAXSHI: serverda hisoblash</text>
+
+  <rect x="428" y="120" width="292" height="60" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+  <text x="444" y="144" font-family="Segoe UI" font-size="13" fill="#334155">Client: POST /api/tap</text>
+  <text x="444" y="166" font-family="Segoe UI" font-size="13" fill="#16a34a">{ "count": 5 }  (faqat niyat)</text>
+
+  <line x1="574" y1="180" x2="574" y2="206" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="568,206 574,218 580,206" fill="#94a3b8"/>
+
+  <rect x="428" y="222" width="292" height="78" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+  <text x="444" y="246" font-family="Segoe UI" font-size="13" fill="#334155">Server: initData imzo OK?</text>
+  <text x="444" y="268" font-family="Segoe UI" font-size="13" fill="#334155">count'ni chegaralaydi (max 50)</text>
+  <text x="444" y="290" font-family="Segoe UI" font-size="13" fill="#334155">energiya yetsa balansni o'zi oshiradi</text>
+
+  <text x="574" y="332" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">Natija: cheat ishlamaydi</text>
+  <text x="574" y="358" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Energiya server soatiga bog'liq;</text>
+  <text x="574" y="380" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">balans = faqat haqiqiy tap natijasi.</text>
+</svg>

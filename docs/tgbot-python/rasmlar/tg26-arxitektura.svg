@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470">
+  <title>Clicker Mini App arxitekturasi: bot, frontend, backend, DB</title>
+  <rect width="780" height="470" fill="#f8fafc"/>
+  <text x="390" y="36" text-anchor="middle" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b">Clicker Mini App arxitekturasi</text>
+
+  <!-- Bot -->
+  <rect x="40" y="80" width="200" height="110" rx="12" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+  <text x="140" y="110" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb">Bot (aiogram)</text>
+  <text x="140" y="136" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">/start -&gt; "O'ynash" tugma</text>
+  <text x="140" y="158" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">WebAppInfo(url=...)</text>
+  <text x="140" y="180" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Mini App'ni ochadi</text>
+
+  <!-- Frontend -->
+  <rect x="290" y="80" width="220" height="110" rx="12" fill="#fff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="400" y="110" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#f59e0b">Frontend (Mini App)</text>
+  <text x="400" y="136" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">HTML + JS, tap tugma</text>
+  <text x="400" y="158" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">balans / energiya UI</text>
+  <text x="400" y="180" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">telegram-web-app.js</text>
+
+  <!-- Backend -->
+  <rect x="540" y="80" width="200" height="110" rx="12" fill="#fff" stroke="#16a34a" stroke-width="2"/>
+  <text x="640" y="110" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a">Backend (aiohttp)</text>
+  <text x="640" y="136" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">/api/state /api/tap</text>
+  <text x="640" y="158" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">/api/upgrade</text>
+  <text x="640" y="180" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">initData validate</text>
+
+  <!-- Bot -> Frontend arrow -->
+  <line x1="240" y1="135" x2="288" y2="135" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="288,129 300,135 288,141" fill="#94a3b8"/>
+
+  <!-- Frontend <-> Backend arrows -->
+  <line x1="510" y1="125" x2="538" y2="125" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="538,119 550,125 538,131" fill="#94a3b8"/>
+  <text x="525" y="115" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">fetch + initData</text>
+  <line x1="538" y1="158" x2="512" y2="158" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="512,152 500,158 512,164" fill="#94a3b8"/>
+  <text x="525" y="178" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">JSON holat</text>
+
+  <!-- DB -->
+  <ellipse cx="640" cy="290" rx="95" ry="26" fill="#fff" stroke="#16a34a" stroke-width="2"/>
+  <text x="640" y="296" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">SQLite (o'yin holati)</text>
+  <line x1="640" y1="190" x2="640" y2="262" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="634,262 640,274 646,262" fill="#94a3b8"/>
+  <text x="700" y="232" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">saqlash</text>
+
+  <!-- Anti-cheat box -->
+  <rect x="40" y="350" width="700" height="96" rx="10" fill="#fff" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="62" y="378" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#dc2626">Oltin qoida — anti-cheat:</text>
+  <text x="62" y="404" font-family="Segoe UI" font-size="13" fill="#334155">Balans va energiya HAR DOIM serverda (backend'da) hisoblanadi. Client faqat "tap bo'ldi"</text>
+  <text x="62" y="426" font-family="Segoe UI" font-size="13" fill="#334155">deb so'raydi — raqam yubormaydi. Imzosi tekshirilmagan initData -&gt; 401. Clientga ISHONMA.</text>
+</svg>

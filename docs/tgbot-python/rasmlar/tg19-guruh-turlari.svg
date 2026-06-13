@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420">
+  <title>Telegram suhbat turlari: private, group, supergroup, channel va bot ko'rinishi</title>
+  <rect width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b">Suhbat turlari (message.chat.type)</text>
+
+  <!-- private -->
+  <rect x="40" y="70" width="160" height="120" rx="12" fill="#fff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="120" y="98" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">private</text>
+  <text x="120" y="122" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">1 ta odam</text>
+  <text x="120" y="142" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">bilan suhbat</text>
+  <text x="120" y="170" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">id &gt; 0</text>
+
+  <!-- group -->
+  <rect x="220" y="70" width="160" height="120" rx="12" fill="#fff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="300" y="98" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">group</text>
+  <text x="300" y="122" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">oddiy guruh</text>
+  <text x="300" y="142" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">(eski, kichik)</text>
+  <text x="300" y="170" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">id &lt; 0</text>
+
+  <!-- supergroup -->
+  <rect x="400" y="70" width="160" height="120" rx="12" fill="#fff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="480" y="98" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">supergroup</text>
+  <text x="480" y="122" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">katta guruh</text>
+  <text x="480" y="142" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">admin, mavzular</text>
+  <text x="480" y="170" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">id: -100...</text>
+
+  <!-- channel -->
+  <rect x="580" y="70" width="160" height="120" rx="12" fill="#fff" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="660" y="98" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#f59e0b">channel</text>
+  <text x="660" y="122" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">kanal (e'lon)</text>
+  <text x="660" y="142" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">22-bobda</text>
+  <text x="660" y="170" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">id: -100...</text>
+
+  <!-- arrow group -> supergroup -->
+  <line x1="380" y1="130" x2="398" y2="130" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="398,124 410,130 398,136" fill="#94a3b8"/>
+  <text x="390" y="60" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">o'sib</text>
+
+  <!-- note box -->
+  <rect x="40" y="230" width="700" height="150" rx="10" fill="#fff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="60" y="258" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">Bu bob: group + supergroup</text>
+  <text x="60" y="285" font-family="Segoe UI" font-size="13" fill="#334155">Guruh kattalashganda yoki admin yoqsa, group avtomatik supergroup ga aylanadi.</text>
+  <text x="60" y="308" font-family="Segoe UI" font-size="13" fill="#334155">Shuning uchun guruh handler filtri DOIM ikkalasini qamrab oladi:</text>
+  <text x="60" y="335" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#2563eb">F.chat.type.in_({ChatType.GROUP, ChatType.SUPERGROUP})</text>
+  <text x="60" y="362" font-family="Segoe UI" font-size="13" fill="#334155">private uchun esa: F.chat.type == ChatType.PRIVATE</text>
+</svg>

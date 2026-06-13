@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" font-family="Segoe UI, sans-serif">
+  <title>Mini App backend tuzilmasi: static, API, middleware, DB</title>
+  <rect width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">Bitta aiohttp backend ikki vazifani bajaradi</text>
+
+  <!-- big container -->
+  <rect x="40" y="60" width="680" height="370" rx="14" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="380" y="90" text-anchor="middle" font-size="16" font-weight="bold" fill="#334155">web.Application (middlewares=[auth])</text>
+
+  <!-- route 1: static -->
+  <rect x="70" y="120" width="290" height="120" rx="10" fill="#eff6ff" stroke="#2563eb"/>
+  <text x="215" y="148" text-anchor="middle" font-size="15" font-weight="bold" fill="#1d4ed8">1. Static serve</text>
+  <text x="215" y="174" text-anchor="middle" font-size="13" fill="#334155">GET /  -> index.html</text>
+  <text x="215" y="196" text-anchor="middle" font-size="13" fill="#334155">add_static('/static', ...)</text>
+  <text x="215" y="222" text-anchor="middle" font-size="13" fill="#64748b">auth shart EMAS (ochiq sahifa)</text>
+
+  <!-- route 2: api -->
+  <rect x="400" y="120" width="290" height="120" rx="10" fill="#fff7ed" stroke="#f59e0b"/>
+  <text x="545" y="148" text-anchor="middle" font-size="15" font-weight="bold" fill="#b45309">2. JSON API</text>
+  <text x="545" y="174" text-anchor="middle" font-size="13" fill="#334155">GET  /api/state</text>
+  <text x="545" y="196" text-anchor="middle" font-size="13" fill="#334155">POST /api/add</text>
+  <text x="545" y="222" text-anchor="middle" font-size="13" fill="#dc2626">auth middleware SHART</text>
+
+  <!-- middleware bar -->
+  <rect x="70" y="262" width="620" height="46" rx="10" fill="#fef2f2" stroke="#dc2626"/>
+  <text x="380" y="290" text-anchor="middle" font-size="14" font-weight="bold" fill="#dc2626">auth_middleware — /api/* yo'liga initData imzosini tekshiradi</text>
+
+  <!-- DB -->
+  <rect x="240" y="334" width="280" height="72" rx="10" fill="#f0fdf4" stroke="#16a34a"/>
+  <text x="380" y="362" text-anchor="middle" font-size="15" font-weight="bold" fill="#15803d">SQLite / SQLAlchemy (10-bob)</text>
+  <text x="380" y="386" text-anchor="middle" font-size="13" fill="#334155">user_id -> holat (score, level...)</text>
+
+  <!-- arrows api -> middleware -> db -->
+  <line x1="545" y1="240" x2="500" y2="262" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="380" y1="308" x2="380" y2="334" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/></marker>
+  </defs>
+</svg>

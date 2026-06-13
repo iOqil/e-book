@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 440">
+  <title>Majburiy obuna oqimi: foydalanuvchi -> middleware -> get_chat_member -> gate yoki handler</title>
+  <rect width="820" height="440" fill="#f8fafc"/>
+  <text x="410" y="34" text-anchor="middle" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b">Majburiy obuna oqimi</text>
+
+  <!-- user -->
+  <rect x="40" y="180" width="150" height="70" rx="12" fill="#fff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="115" y="212" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">Foydalanuvchi</text>
+  <text x="115" y="234" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">/start yuboradi</text>
+
+  <!-- middleware -->
+  <rect x="240" y="170" width="160" height="90" rx="12" fill="#fff" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="320" y="200" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">Obuna</text>
+  <text x="320" y="222" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">middleware</text>
+  <text x="320" y="244" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">handlerdan oldin</text>
+
+  <!-- get_chat_member -->
+  <rect x="450" y="170" width="170" height="90" rx="12" fill="#fff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="535" y="200" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#334155">get_chat_member</text>
+  <text x="535" y="222" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">(kanal, user_id)</text>
+  <text x="535" y="244" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">-> .status</text>
+
+  <!-- decision -->
+  <polygon points="535,290 595,330 535,370 475,330" fill="#fff" stroke="#1e293b" stroke-width="2"/>
+  <text x="535" y="326" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#1e293b">obuna</text>
+  <text x="535" y="344" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#1e293b">bormi?</text>
+
+  <!-- handler (yes) -->
+  <rect x="650" y="60" width="150" height="70" rx="12" fill="#fff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="725" y="92" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">Handler</text>
+  <text x="725" y="114" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">davom etadi</text>
+
+  <!-- gate (no) -->
+  <rect x="650" y="320" width="150" height="80" rx="12" fill="#fff" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="725" y="350" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#dc2626">Gate</text>
+  <text x="725" y="372" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">"Obuna bo'ling"</text>
+  <text x="725" y="390" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">+ Tekshirish tugma</text>
+
+  <!-- arrows -->
+  <line x1="190" y1="215" x2="238" y2="215" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="238,209 250,215 238,221" fill="#94a3b8"/>
+
+  <line x1="400" y1="215" x2="448" y2="215" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="448,209 460,215 448,221" fill="#94a3b8"/>
+
+  <line x1="535" y1="260" x2="535" y2="288" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="529,288 535,300 541,288" fill="#94a3b8"/>
+
+  <!-- yes -> handler -->
+  <path d="M 580 310 Q 660 240 680 132" fill="none" stroke="#16a34a" stroke-width="2.5"/>
+  <polygon points="675,140 682,128 686,142" fill="#16a34a"/>
+  <text x="640" y="220" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#16a34a">HA</text>
+
+  <!-- no -> gate -->
+  <line x1="595" y1="340" x2="648" y2="350" stroke="#dc2626" stroke-width="2.5"/>
+  <polygon points="646,344 658,353 644,356" fill="#dc2626"/>
+  <text x="618" y="332" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#dc2626">YO'Q</text>
+
+  <!-- status legend -->
+  <rect x="40" y="300" width="400" height="110" rx="10" fill="#fff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="60" y="326" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">status -> obuna?</text>
+  <text x="60" y="350" font-family="Segoe UI" font-size="13" fill="#16a34a">member / administrator / creator = OBUNA BOR</text>
+  <text x="60" y="372" font-family="Segoe UI" font-size="13" fill="#dc2626">left / kicked = OBUNA EMAS</text>
+  <text x="60" y="394" font-family="Segoe UI" font-size="13" fill="#334155">restricted = faqat is_member=True bo'lsa a'zo</text>
+</svg>

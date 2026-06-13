@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 430">
+  <title>Gate klaviatura va "Tekshirish" callback aylanasi</title>
+  <rect width="800" height="430" fill="#f8fafc"/>
+  <text x="400" y="34" text-anchor="middle" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b">"Obuna bo'ling" gate va Tekshirish aylanasi</text>
+
+  <!-- gate card (telegram-like) -->
+  <rect x="50" y="70" width="300" height="300" rx="14" fill="#fff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="200" y="104" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">Botdan foydalanish uchun</text>
+  <text x="200" y="124" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">kanal(lar)ga obuna bo'ling:</text>
+
+  <!-- url button 1 -->
+  <rect x="80" y="150" width="240" height="46" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="200" y="178" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb">📢 Kanal 1  (url)</text>
+
+  <!-- url button 2 -->
+  <rect x="80" y="206" width="240" height="46" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="200" y="234" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb">📢 Kanal 2  (url)</text>
+
+  <!-- check button -->
+  <rect x="80" y="280" width="240" height="50" rx="10" fill="#16a34a"/>
+  <text x="200" y="311" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#ffffff">✅ Tekshirish</text>
+  <text x="200" y="352" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">callback_data="check_sub"</text>
+
+  <!-- flow on click -->
+  <line x1="350" y1="305" x2="430" y2="305" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="430,299 442,305 430,311" fill="#94a3b8"/>
+  <text x="392" y="296" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">bosildi</text>
+
+  <!-- callback handler -->
+  <rect x="450" y="100" width="300" height="100" rx="12" fill="#fff" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="600" y="130" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">@callback_query(F.data=="check_sub")</text>
+  <text x="600" y="156" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">qaytadan get_chat_member</text>
+  <text x="600" y="176" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">bilan tekshiradi</text>
+
+  <!-- decision -->
+  <polygon points="600,250 660,290 600,330 540,290" fill="#fff" stroke="#1e293b" stroke-width="2"/>
+  <text x="600" y="286" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#1e293b">endi</text>
+  <text x="600" y="302" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#1e293b">obuna?</text>
+
+  <line x1="600" y1="200" x2="600" y2="248" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="594,248 600,260 606,248" fill="#94a3b8"/>
+
+  <!-- yes -> welcome -->
+  <rect x="470" y="360" width="120" height="56" rx="10" fill="#fff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="530" y="384" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#16a34a">Xush kelibsiz!</text>
+  <text x="530" y="404" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">edit_text + kirish</text>
+  <line x1="575" y1="318" x2="540" y2="356" stroke="#16a34a" stroke-width="2.5"/>
+  <polygon points="544,350 535,360 552,358" fill="#16a34a"/>
+  <text x="520" y="338" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#16a34a">HA</text>
+
+  <!-- no -> alert (loop back) -->
+  <rect x="630" y="360" width="140" height="56" rx="10" fill="#fff" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="700" y="384" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#dc2626">answer(alert)</text>
+  <text x="700" y="404" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">"hali obuna emas"</text>
+  <line x1="630" y1="318" x2="668" y2="356" stroke="#dc2626" stroke-width="2.5"/>
+  <polygon points="656,354 672,357 662,344" fill="#dc2626"/>
+  <text x="680" y="338" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#dc2626">YO'Q</text>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 410">
+  <title>Guruhda admin tekshiruvi oqimi: get_chat_member va status bo'yicha qaror</title>
+  <rect width="760" height="410" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b">Admin tekshiruvi: get_chat_member oqimi</text>
+
+  <!-- step 1 -->
+  <rect x="40" y="64" width="220" height="70" rx="10" fill="#fff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="150" y="92" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb">Guruhda /admin</text>
+  <text x="150" y="114" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">message keldi</text>
+
+  <line x1="260" y1="99" x2="318" y2="99" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="318,93 330,99 318,105" fill="#94a3b8"/>
+
+  <!-- step 2 -->
+  <rect x="330" y="64" width="390" height="70" rx="10" fill="#fff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="525" y="90" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#1e293b">member = await bot.get_chat_member(</text>
+  <text x="525" y="112" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">message.chat.id, message.from_user.id)</text>
+
+  <!-- arrow down -->
+  <line x1="525" y1="134" x2="525" y2="172" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="519,172 525,184 531,172" fill="#94a3b8"/>
+
+  <!-- status diamond -->
+  <rect x="380" y="190" width="290" height="56" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="525" y="216" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#92400e">member.status nima?</text>
+  <text x="525" y="236" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">aiogram.enums.ChatMemberStatus</text>
+
+  <!-- admin branch -->
+  <line x1="450" y1="246" x2="330" y2="300" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="334,290 326,304 344,302" fill="#16a34a"/>
+  <rect x="120" y="300" width="290" height="80" rx="10" fill="#fff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="265" y="326" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#16a34a">creator / administrator</text>
+  <text x="265" y="348" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">-&gt; ADMIN: amalni bajar</text>
+  <text x="265" y="368" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">(masalan, sozlamani o'zgartir)</text>
+
+  <!-- not admin branch -->
+  <line x1="600" y1="246" x2="660" y2="300" stroke="#dc2626" stroke-width="2"/>
+  <polygon points="656,290 664,304 646,300" fill="#dc2626"/>
+  <rect x="450" y="300" width="290" height="80" rx="10" fill="#fff" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="595" y="326" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#dc2626">member / restricted / left</text>
+  <text x="595" y="348" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">-&gt; ODDIY: rad et</text>
+  <text x="595" y="368" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">("Bu faqat adminlar uchun")</text>
+</svg>

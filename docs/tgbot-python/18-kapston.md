@@ -1,6 +1,6 @@
 # 18 — Yakuniy kapston: to'liq bot
 
-[⬅️ Oldingi: 17 — Production va deploy](./17-production-deploy.md) · [🏠 README](./README.md) · [Keyingi: README ➡️](./README.md)
+[⬅️ Oldingi: 17 — Production va deploy](./17-production-deploy.md) · [🏠 README](./README.md) · [Keyingi: 19 — Guruhlarda ishlash ➡️](./19-guruhlar.md)
 
 ---
 
@@ -1237,4 +1237,4 @@ URL: `"sqlite+aiosqlite:///tasks.db"`. Handler kodi (`db.add_task(...)` chaqiruv
 
 ---
 
-[⬅️ Oldingi: 17 — Production va deploy](./17-production-deploy.md) · [🏠 README](./README.md) · [Keyingi: README ➡️](./README.md)
+[⬅️ Oldingi: 17 — Production va deploy](./17-production-deploy.md) · [🏠 README](./README.md) · [Keyingi: 19 — Guruhlarda ishlash ➡️](./19-guruhlar.md)

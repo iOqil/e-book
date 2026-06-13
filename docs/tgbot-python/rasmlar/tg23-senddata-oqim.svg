@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 410" font-family="Segoe UI, sans-serif">
+  <title>sendData oqimi: reply-tugma Web App'dan botga ma'lumot qaytarish</title>
+  <rect width="760" height="410" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">sendData oqimi (reply-tugma Web App)</text>
+
+  <defs>
+    <marker id="a3" markerWidth="11" markerHeight="11" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <!-- step 1 -->
+  <rect x="40" y="76" width="200" height="92" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="140" y="104" text-anchor="middle" font-size="14" font-weight="bold" fill="#16a34a">1. Web App (brauzer)</text>
+  <text x="140" y="128" text-anchor="middle" font-size="13" fill="#334155">Foydalanuvchi formani</text>
+  <text x="140" y="146" text-anchor="middle" font-size="13" fill="#334155">to'ldiradi</text>
+
+  <!-- step 2 -->
+  <rect x="280" y="76" width="200" height="92" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="380" y="104" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e293b">2. JS chaqiruvi</text>
+  <text x="380" y="128" text-anchor="middle" font-size="13" fill="#334155">Telegram.WebApp</text>
+  <text x="380" y="146" text-anchor="middle" font-size="13" fill="#dc2626">.sendData(json)</text>
+
+  <!-- step 3 -->
+  <rect x="520" y="76" width="200" height="92" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="620" y="100" text-anchor="middle" font-size="14" font-weight="bold" fill="#2563eb">3. Telegram</text>
+  <text x="620" y="122" text-anchor="middle" font-size="13" fill="#334155">ilovani yopadi va</text>
+  <text x="620" y="140" text-anchor="middle" font-size="13" fill="#334155">Update yuboradi:</text>
+  <text x="620" y="158" text-anchor="middle" font-size="13" fill="#dc2626">message.web_app_data</text>
+
+  <line x1="240" y1="122" x2="276" y2="122" stroke="#2563eb" stroke-width="2.5" marker-end="url(#a3)"/>
+  <line x1="480" y1="122" x2="516" y2="122" stroke="#2563eb" stroke-width="2.5" marker-end="url(#a3)"/>
+
+  <!-- down arrow -->
+  <line x1="620" y1="168" x2="620" y2="214" stroke="#2563eb" stroke-width="2.5" marker-end="url(#a3)"/>
+
+  <!-- step 4 bot handler -->
+  <rect x="200" y="216" width="520" height="96" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="460" y="244" text-anchor="middle" font-size="14" font-weight="bold" fill="#dc2626">4. Bot tomoni (aiogram)</text>
+  <text x="460" y="270" text-anchor="middle" font-size="13.5" fill="#1e293b">@router.message(F.web_app_data)</text>
+  <text x="460" y="292" text-anchor="middle" font-size="13.5" fill="#334155">raw = message.web_app_data.data  # JS yuborgan satr</text>
+
+  <line x1="460" y1="312" x2="460" y2="350" stroke="#16a34a" stroke-width="2.5" marker-end="url(#a3)"/>
+
+  <!-- step 5 -->
+  <rect x="280" y="352" width="360" height="44" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="460" y="380" text-anchor="middle" font-size="13.5" fill="#16a34a">5. JSON parse + validatsiya -&gt; bazaga / javob</text>
+
+  <!-- note -->
+  <rect x="40" y="216" width="142" height="96" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="111" y="242" text-anchor="middle" font-size="13" font-weight="bold" fill="#dc2626">Diqqat</text>
+  <text x="111" y="264" text-anchor="middle" font-size="13" fill="#334155">sendData faqat</text>
+  <text x="111" y="282" text-anchor="middle" font-size="13" fill="#334155">REPLY-tugmada</text>
+  <text x="111" y="300" text-anchor="middle" font-size="13" fill="#334155">ishlaydi</text>
+</svg>

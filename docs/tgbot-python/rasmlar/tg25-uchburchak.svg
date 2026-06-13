@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" font-family="Segoe UI, sans-serif">
+  <title>Bot, Web App va Backend uchburchak arxitekturasi</title>
+  <rect width="760" height="480" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">Uchburchak arxitektura: Bot · Web App · Backend</text>
+
+  <!-- Telegram client / Web App (top) -->
+  <rect x="270" y="70" width="220" height="92" rx="12" fill="#2563eb"/>
+  <text x="380" y="100" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">Web App (frontend)</text>
+  <text x="380" y="124" text-anchor="middle" font-size="13" fill="#dbeafe">Telegram WebView ichida</text>
+  <text x="380" y="144" text-anchor="middle" font-size="13" fill="#dbeafe">HTML/JS + initData</text>
+
+  <!-- Bot (bottom-left) -->
+  <rect x="60" y="330" width="220" height="92" rx="12" fill="#16a34a"/>
+  <text x="170" y="360" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">Bot (aiogram)</text>
+  <text x="170" y="384" text-anchor="middle" font-size="13" fill="#dcfce7">WebAppInfo tugma beradi</text>
+  <text x="170" y="404" text-anchor="middle" font-size="13" fill="#dcfce7">token egasi</text>
+
+  <!-- Backend (bottom-right) -->
+  <rect x="480" y="330" width="220" height="92" rx="12" fill="#f59e0b"/>
+  <text x="590" y="360" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">Backend (aiohttp)</text>
+  <text x="590" y="384" text-anchor="middle" font-size="13" fill="#fef3c7">JSON API + static serve</text>
+  <text x="590" y="404" text-anchor="middle" font-size="13" fill="#fef3c7">initData tekshiradi · DB</text>
+
+  <!-- Edge: Bot -> Web App (1) -->
+  <line x1="220" y1="330" x2="305" y2="162" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#ar)"/>
+  <rect x="150" y="232" width="170" height="46" rx="8" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="235" y="252" text-anchor="middle" font-size="13" font-weight="bold" fill="#16a34a">1. tugma ochadi</text>
+  <text x="235" y="270" text-anchor="middle" font-size="13" fill="#334155">WebAppInfo(url=...)</text>
+
+  <!-- Edge: Web App -> Backend (2) -->
+  <line x1="455" y1="162" x2="560" y2="330" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#ar)"/>
+  <rect x="440" y="232" width="190" height="46" rx="8" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="535" y="252" text-anchor="middle" font-size="13" font-weight="bold" fill="#2563eb">2. fetch + initData</text>
+  <text x="535" y="270" text-anchor="middle" font-size="13" fill="#334155">Authorization header</text>
+
+  <!-- Edge: Backend <-> Bot share token (3) -->
+  <line x1="480" y1="392" x2="280" y2="392" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="6 5" marker-end="url(#ard)"/>
+  <rect x="305" y="430" width="150" height="40" rx="8" fill="#fef2f2" stroke="#dc2626"/>
+  <text x="380" y="448" text-anchor="middle" font-size="13" font-weight="bold" fill="#dc2626">3. bir xil TOKEN</text>
+  <text x="380" y="464" text-anchor="middle" font-size="13" fill="#334155">imzo tekshirish kaliti</text>
+
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/></marker>
+    <marker id="ard" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker>
+  </defs>
+</svg>

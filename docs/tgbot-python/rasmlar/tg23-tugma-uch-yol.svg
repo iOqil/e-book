@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" font-family="Segoe UI, sans-serif">
+  <title>Web App tugmasini ulashning uch yo'li</title>
+  <rect width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">Web App tugmasini ulashning 3 yo'li</text>
+
+  <defs>
+    <marker id="a2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <!-- Column 1: inline -->
+  <rect x="30" y="62" width="222" height="328" rx="14" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
+  <rect x="30" y="62" width="222" height="40" rx="14" fill="#2563eb"/>
+  <rect x="30" y="86" width="222" height="16" fill="#2563eb"/>
+  <text x="141" y="89" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">1) Inline tugma</text>
+  <text x="141" y="126" text-anchor="middle" font-size="13" fill="#334155">Xabar tagidagi tugma</text>
+  <text x="141" y="146" text-anchor="middle" font-size="13" fill="#16a34a">Har joyda (shaxsiy/guruh)</text>
+  <rect x="52" y="162" width="178" height="52" rx="8" fill="#eff6ff" stroke="#2563eb"/>
+  <text x="141" y="184" text-anchor="middle" font-size="13" fill="#1e293b">InlineKeyboardButton(</text>
+  <text x="141" y="202" text-anchor="middle" font-size="13" fill="#1e293b">web_app=WebAppInfo(...))</text>
+  <text x="141" y="244" text-anchor="middle" font-size="13" fill="#334155">Qaytarish:</text>
+  <text x="141" y="264" text-anchor="middle" font-size="13" fill="#dc2626">answerWebAppQuery</text>
+  <text x="141" y="282" text-anchor="middle" font-size="13" fill="#64748b">(inline rejim, ch24)</text>
+  <text x="141" y="320" text-anchor="middle" font-size="13" fill="#334155">Eng moslashuvchan,</text>
+  <text x="141" y="338" text-anchor="middle" font-size="13" fill="#334155">istalgan xabarga</text>
+  <text x="141" y="356" text-anchor="middle" font-size="13" fill="#334155">qo'shiladi</text>
+
+  <!-- Column 2: reply -->
+  <rect x="269" y="62" width="222" height="328" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <rect x="269" y="62" width="222" height="40" rx="14" fill="#16a34a"/>
+  <rect x="269" y="86" width="222" height="16" fill="#16a34a"/>
+  <text x="380" y="89" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">2) Reply tugma</text>
+  <text x="380" y="126" text-anchor="middle" font-size="13" fill="#334155">Klaviatura tugmasi</text>
+  <text x="380" y="146" text-anchor="middle" font-size="13" fill="#dc2626">Faqat shaxsiy chat</text>
+  <rect x="291" y="162" width="178" height="52" rx="8" fill="#f0fdf4" stroke="#16a34a"/>
+  <text x="380" y="184" text-anchor="middle" font-size="13" fill="#1e293b">KeyboardButton(</text>
+  <text x="380" y="202" text-anchor="middle" font-size="13" fill="#1e293b">web_app=WebAppInfo(...))</text>
+  <text x="380" y="244" text-anchor="middle" font-size="13" fill="#334155">Qaytarish:</text>
+  <text x="380" y="264" text-anchor="middle" font-size="13" fill="#dc2626">sendData(...)</text>
+  <text x="380" y="282" text-anchor="middle" font-size="13" fill="#64748b">-&gt; F.web_app_data</text>
+  <text x="380" y="320" text-anchor="middle" font-size="13" fill="#334155">Eng oddiy yo'l:</text>
+  <text x="380" y="338" text-anchor="middle" font-size="13" fill="#334155">backend kerakmas,</text>
+  <text x="380" y="356" text-anchor="middle" font-size="13" fill="#334155">to'g'ri botga keladi</text>
+
+  <!-- Column 3: menu -->
+  <rect x="508" y="62" width="222" height="328" rx="14" fill="#ffffff" stroke="#f59e0b" stroke-width="2.5"/>
+  <rect x="508" y="62" width="222" height="40" rx="14" fill="#f59e0b"/>
+  <rect x="508" y="86" width="222" height="16" fill="#f59e0b"/>
+  <text x="619" y="89" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">3) Menyu tugma</text>
+  <text x="619" y="126" text-anchor="middle" font-size="13" fill="#334155">Kiritish maydoni yonida</text>
+  <text x="619" y="146" text-anchor="middle" font-size="13" fill="#16a34a">Doimiy, "/" o'rnida</text>
+  <rect x="530" y="162" width="178" height="70" rx="8" fill="#fffbeb" stroke="#f59e0b"/>
+  <text x="619" y="184" text-anchor="middle" font-size="13" fill="#1e293b">bot.set_chat_menu_button(</text>
+  <text x="619" y="202" text-anchor="middle" font-size="13" fill="#1e293b">MenuButtonWebApp(</text>
+  <text x="619" y="220" text-anchor="middle" font-size="13" fill="#1e293b">text=..., web_app=...))</text>
+  <text x="619" y="262" text-anchor="middle" font-size="13" fill="#334155">Qaytarish:</text>
+  <text x="619" y="282" text-anchor="middle" font-size="13" fill="#dc2626">answerWebAppQuery</text>
+  <text x="619" y="320" text-anchor="middle" font-size="13" fill="#334155">Doimiy "ilova"</text>
+  <text x="619" y="338" text-anchor="middle" font-size="13" fill="#334155">tugmasi sifatida,</text>
+  <text x="619" y="356" text-anchor="middle" font-size="13" fill="#334155">brendlash uchun yaxshi</text>
+
+  <text x="380" y="422" text-anchor="middle" font-size="13" fill="#64748b">Uchchovi ham WebAppInfo(url=...) ishlatadi · faqat reply-tugma to'g'ridan-to'g'ri botga sendData qiladi</text>
+</svg>

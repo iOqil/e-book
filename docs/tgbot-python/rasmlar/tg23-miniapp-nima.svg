@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" font-family="Segoe UI, sans-serif">
+  <title>Mini App nima: Telegram ichidagi HTML/JS ilova</title>
+  <rect width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">Mini App = Telegram ICHIDA ochiladigan veb-ilova</text>
+
+  <!-- Telegram client frame -->
+  <rect x="40" y="60" width="300" height="330" rx="18" fill="#ffffff" stroke="#2563eb" stroke-width="3"/>
+  <rect x="40" y="60" width="300" height="46" rx="18" fill="#2563eb"/>
+  <rect x="40" y="88" width="300" height="18" fill="#2563eb"/>
+  <text x="190" y="90" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">Telegram klient</text>
+
+  <!-- webview inside -->
+  <rect x="62" y="124" width="256" height="210" rx="10" fill="#f8fafc" stroke="#16a34a" stroke-width="2.5" stroke-dasharray="7 5"/>
+  <text x="190" y="148" text-anchor="middle" font-size="14" font-weight="bold" fill="#16a34a">Webview (HTML / CSS / JS)</text>
+  <rect x="84" y="162" width="212" height="30" rx="6" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="190" y="182" text-anchor="middle" font-size="13" fill="#334155">Mahsulotlar ro'yxati</text>
+  <rect x="84" y="200" width="100" height="56" rx="6" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="134" y="232" text-anchor="middle" font-size="13" fill="#334155">Savat</text>
+  <rect x="196" y="200" width="100" height="56" rx="6" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="246" y="232" text-anchor="middle" font-size="13" fill="#334155">Forma</text>
+  <rect x="84" y="266" width="212" height="40" rx="8" fill="#16a34a"/>
+  <text x="190" y="291" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">MainButton: Buyurtma</text>
+
+  <!-- bot send button -->
+  <rect x="62" y="346" width="256" height="32" rx="16" fill="#eff6ff" stroke="#2563eb"/>
+  <text x="190" y="367" text-anchor="middle" font-size="13" fill="#2563eb">[ Tugma: ilovani ochish ]</text>
+
+  <!-- right side: bridge -->
+  <text x="560" y="92" text-anchor="middle" font-size="16" font-weight="bold" fill="#1e293b">Ko'prik: telegram-web-app.js</text>
+  <rect x="400" y="112" width="320" height="62" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="560" y="138" text-anchor="middle" font-size="13" fill="#334155">window.Telegram.WebApp</text>
+  <text x="560" y="160" text-anchor="middle" font-size="13" fill="#334155">ready() · expand() · theme · initData</text>
+
+  <rect x="400" y="190" width="320" height="58" rx="10" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="560" y="215" text-anchor="middle" font-size="13" fill="#334155">UI: MainButton · BackButton</text>
+  <text x="560" y="234" text-anchor="middle" font-size="13" fill="#334155">HapticFeedback · close()</text>
+
+  <rect x="400" y="264" width="320" height="70" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="560" y="289" text-anchor="middle" font-size="13" font-weight="bold" fill="#dc2626">Botga qaytarish</text>
+  <text x="560" y="310" text-anchor="middle" font-size="13" fill="#334155">JS: sendData(...)  ->  bot:</text>
+  <text x="560" y="328" text-anchor="middle" font-size="13" fill="#334155">F.web_app_data (reply-tugmada)</text>
+
+  <!-- arrows -->
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <line x1="318" y1="155" x2="396" y2="143" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="396" y1="299" x2="320" y2="290" stroke="#dc2626" stroke-width="2" marker-end="url(#ar)"/>
+
+  <text x="380" y="410" text-anchor="middle" font-size="13" fill="#64748b">URL faqat HTTPS · ilova mustaqil veb-sayt, lekin Telegram konteksti bilan</text>
+</svg>

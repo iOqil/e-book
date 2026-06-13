@@ -1,6 +1,6 @@
 # Telegram bot (Python aiogram) — 0 dan Expertgacha
 
-Bu kitob **Python asoslarini biladigan** o'quvchini Telegram bot yozish bo'yicha noldan ishonchli darajaga olib chiqadi. Oddiy echo botdan boshlab — handler va Router, filtrlar, klaviaturalar, callback, **FSM (holatlar mashinasi)**, middleware, ma'lumotlar bazasi, to'lovlar, webhook va deploy orqali — yakuniy to'liq botgacha. Hamma kod **aiogram 3.x** (zamonaviy, async) bilan yoziladi.
+Bu kitob **Python asoslarini biladigan** o'quvchini Telegram bot yozish bo'yicha noldan ishonchli darajaga olib chiqadi. Oddiy echo botdan boshlab — handler va Router, filtrlar, klaviaturalar, callback, **FSM (holatlar mashinasi)**, middleware, ma'lumotlar bazasi, to'lovlar, webhook va deploy orqali — yakuniy to'liq botgacha; so'ng **real amaliyot**: guruh/kanal boshqaruvi, **majburiy obuna**, Telegram **Mini App** integratsiyasi va **Hamster uslubidagi clicker o'yin** kapstoni. Hamma kod **aiogram 3.x** (zamonaviy, async) bilan yoziladi.
 
 > 🤖 **aiogram 3.x.** Bu kitob faqat **aiogram 3.x** idiomidan foydalanadi (`Router`, `@router.message`, `Dispatcher`, `F` magic-filtr, `DefaultBotProperties`). Internetdagi eski 2.x misollar (`@dp.message_handler`, `executor.start_polling`) bu yerda **ishlamaydi** — ehtiyot bo'ling.
 
@@ -73,6 +73,19 @@ Bu kitob **Python asoslarini biladigan** o'quvchini Telegram bot yozish bo'yicha
 | 16 | [Testlash va xatolarni boshqarish](./16-testlash-xatolar.md) | Handlerlarni offline test (pytest-asyncio + `feed_update`), error handler, logging, debug. |
 | 17 | [Production va deploy](./17-production-deploy.md) | VPS, Docker, systemd/supervisor, `.env`/sirlar, polling vs webhook prod, graceful shutdown. |
 | 18 | [Yakuniy kapston: to'liq bot](./18-kapston.md) | Boshidan oxirigacha to'liq bot: FSM forma, DB, klaviatura, middleware, admin, deploy. Yo'l yakuni. |
+
+### VI qism — Guruh, kanal va Mini App (real amaliyot)
+
+| # | Bob | Mavzu |
+|---|---|---|
+| 19 | [Guruhlarda ishlash](./19-guruhlar.md) | Guruh turlari, privacy mode, `get_chat_member` bilan a'zo/admin tekshirish, `my_chat_member`. |
+| 20 | [Guruh moderatsiyasi](./20-guruh-moderatsiya.md) | Welcome (`chat_member` JOIN), ban/kick/mute (`restrict_chat_member` + `ChatPermissions`), admin-filtr, captcha. |
+| 21 | [Kanallar bilan ishlash](./21-kanallar.md) | Kanalga post, `channel_post`, linked discussion group, `forward`/`copy`, reaksiyalar. |
+| 22 | [Majburiy obuna](./22-majburiy-obuna.md) | Obuna middleware, gate klaviatura, bir nechta kanal, private kanal (`chat_join_request`), kesh. |
+| 23 | [Telegram Web App (Mini App) asoslari](./23-webapp-asoslari.md) | `WebAppInfo`, 3 tugma turi, `telegram-web-app.js` SDK, `sendData` → `F.web_app_data`. |
+| 24 | [Web App xavfsizligi: initData](./24-webapp-xavfsizlik.md) | initData HMAC validatsiya, `check_webapp_signature`, replay himoyasi, serverda tekshirish. |
+| 25 | [Mini App backend](./25-miniapp-backend.md) | aiohttp backend, har so'rovda initData auth, DB holat, bot↔WebApp↔backend uchburchagi. |
+| 26 | [Kapston: Hamster uslubidagi clicker Mini App](./26-kapston-clicker.md) | Tap-to-earn: balans/energiya/upgrade, anti-cheat (serverda hisoblanadi), to'liq loyiha. |
 
 ---
 

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 520" font-family="Segoe UI, sans-serif">
+  <title>Web App so'rovi va backend auth oqimi</title>
+  <rect width="780" height="520" fill="#f8fafc"/>
+  <text x="390" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">Har API so'rovida initData tekshiriladi</text>
+
+  <!-- lanes -->
+  <rect x="40" y="60" width="200" height="40" rx="8" fill="#2563eb"/>
+  <text x="140" y="86" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">Web App (JS)</text>
+  <rect x="290" y="60" width="200" height="40" rx="8" fill="#f59e0b"/>
+  <text x="390" y="86" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">Auth middleware</text>
+  <rect x="540" y="60" width="200" height="40" rx="8" fill="#16a34a"/>
+  <text x="640" y="86" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">Handler + DB</text>
+
+  <line x1="140" y1="100" x2="140" y2="500" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <line x1="390" y1="100" x2="390" y2="500" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <line x1="640" y1="100" x2="640" y2="500" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 4"/>
+
+  <!-- step 1 -->
+  <line x1="140" y1="140" x2="390" y2="140" stroke="#2563eb" stroke-width="2.5" marker-end="url(#a1)"/>
+  <text x="265" y="132" text-anchor="middle" font-size="13" fill="#1e293b">fetch('/api/state',</text>
+  <text x="265" y="158" text-anchor="middle" font-size="13" fill="#334155">Authorization: tg.initData)</text>
+
+  <!-- step 2 check -->
+  <rect x="300" y="180" width="180" height="64" rx="8" fill="#fff7ed" stroke="#f59e0b"/>
+  <text x="390" y="204" text-anchor="middle" font-size="13" font-weight="bold" fill="#b45309">check_webapp_signature</text>
+  <text x="390" y="224" text-anchor="middle" font-size="13" fill="#334155">(token, init_data)</text>
+  <text x="390" y="240" text-anchor="middle" font-size="13" fill="#334155">HMAC-SHA256 solishtir</text>
+
+  <!-- branch invalid -->
+  <line x1="390" y1="244" x2="390" y2="290" stroke="#dc2626" stroke-width="2.5"/>
+  <line x1="390" y1="290" x2="200" y2="290" stroke="#dc2626" stroke-width="2.5"/>
+  <line x1="200" y1="290" x2="140" y2="290" stroke="#dc2626" stroke-width="2.5" marker-end="url(#ad)"/>
+  <rect x="210" y="270" width="170" height="40" rx="8" fill="#fef2f2" stroke="#dc2626"/>
+  <text x="295" y="289" text-anchor="middle" font-size="13" font-weight="bold" fill="#dc2626">False -> 401</text>
+  <text x="295" y="305" text-anchor="middle" font-size="13" fill="#334155">Unauthorized</text>
+
+  <!-- branch valid -->
+  <line x1="390" y1="320" x2="390" y2="360" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="478" y="344" text-anchor="middle" font-size="13" font-weight="bold" fill="#16a34a">True (imzo to'g'ri)</text>
+  <line x1="390" y1="360" x2="640" y2="360" stroke="#16a34a" stroke-width="2.5" marker-end="url(#ag)"/>
+  <text x="515" y="352" text-anchor="middle" font-size="13" fill="#334155">request['user'] = data.user</text>
+
+  <!-- handler work -->
+  <rect x="550" y="390" width="180" height="58" rx="8" fill="#f0fdf4" stroke="#16a34a"/>
+  <text x="640" y="414" text-anchor="middle" font-size="13" font-weight="bold" fill="#15803d">holatni DB'dan o'qi/yoz</text>
+  <text x="640" y="434" text-anchor="middle" font-size="13" fill="#334155">user.id bo'yicha</text>
+
+  <!-- response -->
+  <line x1="640" y1="448" x2="640" y2="478" stroke="#16a34a" stroke-width="2.5"/>
+  <line x1="640" y1="478" x2="140" y2="478" stroke="#16a34a" stroke-width="2.5" marker-end="url(#ag2)"/>
+  <text x="390" y="498" text-anchor="middle" font-size="13" font-weight="bold" fill="#15803d">200 OK + JSON holat</text>
+
+  <defs>
+    <marker id="a1" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker>
+    <marker id="ad" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker>
+    <marker id="ag" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker>
+    <marker id="ag2" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker>
+  </defs>
+</svg>

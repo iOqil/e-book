@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" font-family="Segoe UI, sans-serif">
+  <title>Ishonch modeli: clientga ishonmaslik va server-tomon tekshiruv</title>
+  <rect width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">Nega clientga ishonmaymiz?</text>
+
+  <defs>
+    <marker id="c" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#dc2626"/>
+    </marker>
+    <marker id="d" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <!-- Attacker -->
+  <rect x="40" y="80" width="200" height="120" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="140" y="110" text-anchor="middle" font-size="16" font-weight="bold" fill="#dc2626">Soxta client</text>
+  <text x="140" y="136" text-anchor="middle" font-size="13" fill="#334155">curl bilan istalgan</text>
+  <text x="140" y="156" text-anchor="middle" font-size="13" fill="#334155">user_id yuboradi:</text>
+  <text x="140" y="180" text-anchor="middle" font-size="13" font-weight="bold" fill="#dc2626">{"id": 1, "admin": 1}</text>
+
+  <!-- naive backend -->
+  <rect x="520" y="60" width="200" height="80" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="620" y="90" text-anchor="middle" font-size="15" font-weight="bold" fill="#dc2626">❌ Sodda backend</text>
+  <text x="620" y="114" text-anchor="middle" font-size="13" fill="#334155">user_id'ga shunchaki</text>
+  <text x="620" y="132" text-anchor="middle" font-size="13" fill="#334155">ishonadi -> buzildi</text>
+  <line x1="240" y1="120" x2="518" y2="100" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="6 4" marker-end="url(#c)"/>
+  <text x="380" y="100" text-anchor="middle" font-size="13" fill="#dc2626">imzosiz ham qabul qiladi</text>
+
+  <!-- safe backend -->
+  <rect x="520" y="240" width="200" height="110" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="620" y="270" text-anchor="middle" font-size="15" font-weight="bold" fill="#16a34a">✓ To'g'ri backend</text>
+  <text x="620" y="294" text-anchor="middle" font-size="13" fill="#334155">initData hash'ini</text>
+  <text x="620" y="312" text-anchor="middle" font-size="13" fill="#334155">token bilan tekshiradi</text>
+  <text x="620" y="334" text-anchor="middle" font-size="13" font-weight="bold" fill="#16a34a">soxta -> 403</text>
+  <line x1="240" y1="160" x2="518" y2="290" stroke="#16a34a" stroke-width="2.5" marker-end="url(#d)"/>
+  <text x="365" y="250" text-anchor="middle" font-size="13" fill="#16a34a">imzoni talab qiladi</text>
+
+  <!-- principle box -->
+  <rect x="120" y="300" width="360" height="80" rx="10" fill="#2563eb"/>
+  <text x="300" y="330" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">Qoida: id'ni body'dan OLMA</text>
+  <text x="300" y="356" text-anchor="middle" font-size="13" fill="#e0e7ff">tekshirilgan initData.user.id dan ol</text>
+</svg>
