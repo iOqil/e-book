@@ -1,0 +1,68 @@
+<svg viewBox="0 0 720 430" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, sans-serif" font-size="13">
+  <title>Kitob yo'l xaritasi: asoslar -> async -> modullar -> Express -> DB -> auth -> prod -> kapston</title>
+  <rect width="720" height="430" fill="#f8fafc"/>
+  <text x="360" y="30" text-anchor="middle" font-size="17" font-weight="bold" fill="#0f172a">Node.js kitobi yo'l xaritasi — 0 dan expertgacha</text>
+
+  <defs>
+    <marker id="r2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <!-- Qator 1 -->
+  <g>
+    <rect x="30" y="70" width="135" height="58" rx="10" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+    <text x="97" y="95" text-anchor="middle" font-weight="bold" fill="#2563eb">Asoslar</text>
+    <text x="97" y="114" text-anchor="middle" font-size="11" fill="#475569">01-04 · Node, npm</text>
+
+    <rect x="205" y="70" width="135" height="58" rx="10" fill="#fff" stroke="#7c3aed" stroke-width="2"/>
+    <text x="272" y="95" text-anchor="middle" font-weight="bold" fill="#7c3aed">Async</text>
+    <text x="272" y="114" text-anchor="middle" font-size="11" fill="#475569">05-07 · loop, Promise</text>
+
+    <rect x="380" y="70" width="135" height="58" rx="10" fill="#fff" stroke="#16a34a" stroke-width="2"/>
+    <text x="447" y="95" text-anchor="middle" font-weight="bold" fill="#15803d">Tizim</text>
+    <text x="447" y="114" text-anchor="middle" font-size="11" fill="#475569">08-11 · fs, stream</text>
+
+    <rect x="555" y="70" width="135" height="58" rx="10" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+    <text x="622" y="95" text-anchor="middle" font-weight="bold" fill="#2563eb">Express</text>
+    <text x="622" y="114" text-anchor="middle" font-size="11" fill="#475569">12-15 · API, Zod</text>
+
+    <line x1="165" y1="99" x2="203" y2="99" stroke="#94a3b8" stroke-width="2" marker-end="url(#r2)"/>
+    <line x1="340" y1="99" x2="378" y2="99" stroke="#94a3b8" stroke-width="2" marker-end="url(#r2)"/>
+    <line x1="515" y1="99" x2="553" y2="99" stroke="#94a3b8" stroke-width="2" marker-end="url(#r2)"/>
+  </g>
+
+  <!-- pastga -->
+  <line x1="622" y1="128" x2="622" y2="168" stroke="#94a3b8" stroke-width="2" marker-end="url(#r2)"/>
+
+  <!-- Qator 2 (teskari oqim) -->
+  <g>
+    <rect x="555" y="170" width="135" height="58" rx="10" fill="#fff" stroke="#7c3aed" stroke-width="2"/>
+    <text x="622" y="195" text-anchor="middle" font-weight="bold" fill="#7c3aed">DB</text>
+    <text x="622" y="214" text-anchor="middle" font-size="11" fill="#475569">16-19 · SQL, Prisma</text>
+
+    <rect x="380" y="170" width="135" height="58" rx="10" fill="#fff" stroke="#dc2626" stroke-width="2"/>
+    <text x="447" y="195" text-anchor="middle" font-weight="bold" fill="#dc2626">Auth</text>
+    <text x="447" y="214" text-anchor="middle" font-size="11" fill="#475569">20-21 · JWT, xavfsizlik</text>
+
+    <rect x="205" y="170" width="135" height="58" rx="10" fill="#fff" stroke="#f59e0b" stroke-width="2"/>
+    <text x="272" y="195" text-anchor="middle" font-weight="bold" fill="#b45309">Prod</text>
+    <text x="272" y="214" text-anchor="middle" font-size="11" fill="#475569">22-25 · test, log, TS</text>
+
+    <rect x="30" y="166" width="135" height="66" rx="10" fill="#16a34a" stroke="#15803d" stroke-width="2"/>
+    <text x="97" y="194" text-anchor="middle" font-weight="bold" fill="#fff">KAPSTON</text>
+    <text x="97" y="213" text-anchor="middle" font-size="11" fill="#dcfce7">26 · to'liq loyiha</text>
+
+    <line x1="553" y1="199" x2="517" y2="199" stroke="#94a3b8" stroke-width="2" marker-end="url(#r2)"/>
+    <line x1="378" y1="199" x2="342" y2="199" stroke="#94a3b8" stroke-width="2" marker-end="url(#r2)"/>
+    <line x1="203" y1="199" x2="167" y2="199" stroke="#94a3b8" stroke-width="2" marker-end="url(#r2)"/>
+  </g>
+
+  <!-- Kapston hamma narsani birlashtiradi -->
+  <rect x="60" y="270" width="600" height="92" rx="12" fill="#ecfdf5" stroke="#16a34a" stroke-width="2"/>
+  <text x="360" y="296" text-anchor="middle" font-weight="bold" fill="#15803d">Kapston barcha qatlamni birlashtiradi</text>
+  <text x="360" y="320" text-anchor="middle" font-size="12" fill="#475569">qatlamli struktura · Express + Prisma · JWT + RBAC + egalik · Zod + markaziy xato</text>
+  <text x="360" y="342" text-anchor="middle" font-size="12" fill="#475569">pino log · graceful shutdown · supertest · helmet/cors/rate-limit · Docker</text>
+
+  <text x="360" y="395" text-anchor="middle" font-size="13" font-weight="bold" fill="#2563eb">Node.js 0 -&gt; expert yo'li tugadi</text>
+</svg>

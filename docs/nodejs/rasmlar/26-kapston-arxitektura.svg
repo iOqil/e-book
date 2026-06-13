@@ -1,0 +1,62 @@
+<svg viewBox="0 0 720 430" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, sans-serif" font-size="13">
+  <title>Kapston arxitekturasi: mijoz -> Express middleware/auth/validatsiya -> service -> DB + log</title>
+  <rect width="720" height="430" fill="#f8fafc"/>
+  <text x="360" y="30" text-anchor="middle" font-size="17" font-weight="bold" fill="#0f172a">Kapston arxitekturasi — so'rovning yo'li</text>
+
+  <!-- Mijoz -->
+  <rect x="24" y="70" width="120" height="70" rx="10" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+  <text x="84" y="100" text-anchor="middle" font-weight="bold" fill="#2563eb">Mijoz</text>
+  <text x="84" y="120" text-anchor="middle" font-size="11" fill="#475569">HTTP + JWT</text>
+
+  <!-- Express middleware ustuni -->
+  <rect x="184" y="60" width="200" height="300" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="284" y="84" text-anchor="middle" font-weight="bold" fill="#1e3a8a">Express qatlami</text>
+
+  <rect x="200" y="98" width="168" height="34" rx="7" fill="#fff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="284" y="120" text-anchor="middle" font-size="12" fill="#7c3aed">helmet · cors · rate-limit</text>
+
+  <rect x="200" y="140" width="168" height="34" rx="7" fill="#fff" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="284" y="162" text-anchor="middle" font-size="12" fill="#b45309">pino-http (log)</text>
+
+  <rect x="200" y="182" width="168" height="34" rx="7" fill="#fff" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="284" y="204" text-anchor="middle" font-size="12" fill="#dc2626">himoya (JWT + RBAC)</text>
+
+  <rect x="200" y="224" width="168" height="34" rx="7" fill="#fff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="284" y="246" text-anchor="middle" font-size="12" fill="#15803d">tekshir (Zod)</text>
+
+  <rect x="200" y="266" width="168" height="34" rx="7" fill="#fff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="284" y="288" text-anchor="middle" font-size="12" fill="#2563eb">routes -> controller</text>
+
+  <rect x="200" y="312" width="168" height="34" rx="7" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="284" y="334" text-anchor="middle" font-size="11.5" fill="#dc2626">markaziy xatoHandler</text>
+
+  <!-- Service -->
+  <rect x="424" y="120" width="130" height="80" rx="10" fill="#fff" stroke="#16a34a" stroke-width="2"/>
+  <text x="489" y="152" text-anchor="middle" font-weight="bold" fill="#15803d">Service</text>
+  <text x="489" y="172" text-anchor="middle" font-size="11" fill="#475569">biznes mantiq</text>
+  <text x="489" y="188" text-anchor="middle" font-size="11" fill="#475569">+ egalik tekshir</text>
+
+  <!-- DB -->
+  <rect x="588" y="120" width="108" height="80" rx="10" fill="#fff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="642" y="148" text-anchor="middle" font-weight="bold" fill="#7c3aed">Prisma</text>
+  <text x="642" y="168" text-anchor="middle" font-size="11" fill="#475569">SQLite / MySQL</text>
+  <ellipse cx="642" cy="186" rx="34" ry="7" fill="none" stroke="#7c3aed" stroke-width="1.2"/>
+
+  <!-- Log -->
+  <rect x="588" y="250" width="108" height="64" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="642" y="278" text-anchor="middle" font-weight="bold" fill="#b45309">pino log</text>
+  <text x="642" y="298" text-anchor="middle" font-size="11" fill="#475569">JSON oqimi</text>
+
+  <!-- Arrows -->
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+  <line x1="144" y1="105" x2="182" y2="105" stroke="#475569" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="386" y1="160" x2="422" y2="160" stroke="#475569" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="554" y1="160" x2="586" y2="160" stroke="#475569" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="489" y1="200" x2="615" y2="250" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#ar)"/>
+
+  <text x="360" y="400" text-anchor="middle" font-size="12" fill="#64748b">So'rov yuqoridan pastga middleware zanjiridan o'tadi; xato bo'lsa darhol xatoHandler ga sakraydi</text>
+</svg>

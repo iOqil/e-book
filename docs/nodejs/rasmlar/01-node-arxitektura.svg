@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>Node.js arxitekturasi: sizning JavaScript kodingiz V8 dvigeli orqali bajariladi, libuv esa asinxron I/O va hodisa siklini boshqaradi, eng pastda operatsion tizim resurslari (fayl, tarmoq) joylashgan</title>
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Node.js ichida nima sodir bo'ladi?</text>
+
+  <!-- 1: JS kod -->
+  <rect x="170" y="60" width="380" height="64" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="360" y="86" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">Sizning JavaScript kodingiz</text>
+  <text x="360" y="108" text-anchor="middle" font-family="Consolas, monospace" font-size="14" fill="#2563eb">salom.js — console.log, fetch, fs.readFile</text>
+
+  <line x1="360" y1="124" x2="360" y2="152" stroke="#475569" stroke-width="2.5"/>
+  <polygon points="360,152 354,142 366,142" fill="#475569"/>
+
+  <!-- 2: V8 -->
+  <rect x="120" y="154" width="290" height="70" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="265" y="180" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#15803d">V8 dvigeli</text>
+  <text x="265" y="201" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#166534">JS ni mashina kodiga o'giradi</text>
+  <text x="265" y="218" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#166534">(Google Chrome ham shuni ishlatadi)</text>
+
+  <!-- 3: libuv -->
+  <rect x="430" y="154" width="170" height="70" rx="10" fill="#f3e8ff" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="515" y="180" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#6d28d9">libuv</text>
+  <text x="515" y="201" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#6d28d9">hodisa sikli (event loop)</text>
+  <text x="515" y="218" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#6d28d9">asinxron I/O</text>
+
+  <!-- V8 va libuv birga "Node" -->
+  <rect x="100" y="142" width="520" height="96" rx="14" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <text x="110" y="158" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" font-weight="bold" fill="#64748b">Node.js runtime</text>
+
+  <line x1="265" y1="238" x2="265" y2="270" stroke="#475569" stroke-width="2.5"/>
+  <polygon points="265,270 259,260 271,260" fill="#475569"/>
+  <line x1="515" y1="238" x2="515" y2="270" stroke="#7c3aed" stroke-width="2.5"/>
+  <polygon points="515,270 509,260 521,260" fill="#7c3aed"/>
+
+  <!-- 4: OS -->
+  <rect x="120" y="272" width="480" height="74" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="360" y="298" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#b45309">Operatsion tizim (Windows / Linux / macOS)</text>
+  <text x="360" y="320" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#92400e">Fayllar &#8226; Tarmoq (soketlar) &#8226; Disk &#8226; Jarayonlar</text>
+  <text x="360" y="337" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#92400e">haqiqiy resurslar shu yerda</text>
+
+  <!-- xulosa -->
+  <rect x="60" y="368" width="600" height="44" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="360" y="389" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#1e293b">Siz JS yozasiz &#8594; V8 uni bajaradi &#8594; libuv tizim bilan gaplashadi</text>
+  <text x="360" y="406" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#475569">Brauzer o'rniga operatsion tizim — mana shu Node.js</text>
+</svg>

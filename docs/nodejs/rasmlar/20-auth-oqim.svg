@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" font-family="Segoe UI, Arial, sans-serif" font-size="13">
+  <title>Autentifikatsiya oqimi: login -> JWT -> Bearer -> middleware -> req.user</title>
+  <rect width="720" height="430" fill="#f8fafc"/>
+  <text x="360" y="30" text-anchor="middle" font-size="17" font-weight="700" fill="#0f172a">Auth oqimi: login - JWT - Bearer - middleware - req.user</text>
+
+  <!-- Defs: arrow -->
+  <defs>
+    <marker id="arr" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- 1. Client login -->
+  <rect x="30" y="70" width="180" height="70" rx="10" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+  <text x="120" y="98" text-anchor="middle" font-weight="700" fill="#2563eb">1) Klient: LOGIN</text>
+  <text x="120" y="120" text-anchor="middle" fill="#334155">email + parol</text>
+
+  <!-- 2. Server verify -->
+  <rect x="270" y="70" width="180" height="70" rx="10" fill="#fff" stroke="#16a34a" stroke-width="2"/>
+  <text x="360" y="98" text-anchor="middle" font-weight="700" fill="#16a34a">2) Server tekshiradi</text>
+  <text x="360" y="120" text-anchor="middle" fill="#334155">bcrypt.compare</text>
+
+  <!-- 3. JWT issue -->
+  <rect x="510" y="70" width="180" height="70" rx="10" fill="#fff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="600" y="98" text-anchor="middle" font-weight="700" fill="#7c3aed">3) JWT beriladi</text>
+  <text x="600" y="120" text-anchor="middle" fill="#334155">jwt.sign(payload)</text>
+
+  <line x1="210" y1="105" x2="265" y2="105" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="450" y1="105" x2="505" y2="105" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- down arrow to client storing token -->
+  <line x1="600" y1="140" x2="600" y2="175" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- token structure box -->
+  <rect x="430" y="180" width="260" height="58" rx="8" fill="#faf5ff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="560" y="202" text-anchor="middle" font-weight="700" fill="#7c3aed" font-size="12">Token = header.payload.signature</text>
+  <text x="560" y="222" text-anchor="middle" fill="#64748b" font-size="11" font-family="Consolas, monospace">eyJ...aGc . eyJzdWI . mHWF...</text>
+
+  <!-- 4. Client sends Bearer -->
+  <rect x="30" y="270" width="200" height="72" rx="10" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+  <text x="130" y="296" text-anchor="middle" font-weight="700" fill="#2563eb" font-size="12">4) Keyingi so'rov</text>
+  <text x="130" y="316" text-anchor="middle" fill="#334155" font-size="11">Authorization:</text>
+  <text x="130" y="332" text-anchor="middle" fill="#334155" font-size="11" font-family="Consolas, monospace">Bearer &lt;token&gt;</text>
+
+  <!-- 5. Auth middleware -->
+  <rect x="280" y="270" width="190" height="72" rx="10" fill="#fff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="375" y="296" text-anchor="middle" font-weight="700" fill="#b45309" font-size="12">5) requireAuth MW</text>
+  <text x="375" y="316" text-anchor="middle" fill="#334155" font-size="11">jwt.verify(token)</text>
+  <text x="375" y="332" text-anchor="middle" fill="#334155" font-size="11">req.user = {id, role}</text>
+
+  <!-- 6. route handler -->
+  <rect x="520" y="270" width="170" height="72" rx="10" fill="#fff" stroke="#16a34a" stroke-width="2"/>
+  <text x="605" y="296" text-anchor="middle" font-weight="700" fill="#16a34a" font-size="12">6) Route handler</text>
+  <text x="605" y="316" text-anchor="middle" fill="#334155" font-size="11">req.user mavjud</text>
+  <text x="605" y="332" text-anchor="middle" fill="#334155" font-size="11">javob 200</text>
+
+  <line x1="230" y1="306" x2="275" y2="306" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="470" y1="306" x2="515" y2="306" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- token down to client (between row1 token and client row2) -->
+  <path d="M430,222 C300,250 200,245 130,266" fill="none" stroke="#7c3aed" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arr)"/>
+
+  <!-- fail path -->
+  <rect x="280" y="365" width="190" height="44" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="375" y="384" text-anchor="middle" fill="#dc2626" font-weight="700" font-size="12">Token yo'q/yaroqsiz</text>
+  <text x="375" y="401" text-anchor="middle" fill="#dc2626" font-size="11">401 Unauthorized</text>
+  <line x1="375" y1="342" x2="375" y2="362" stroke="#dc2626" stroke-width="2" marker-end="url(#arr)"/>
+</svg>

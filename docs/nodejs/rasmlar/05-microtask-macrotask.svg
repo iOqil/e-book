@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>Microtask navbati macrotask navbatidan ustun: bitta macrotask bajarilgach butun microtask navbati bo'shaydi; navbat ichida process.nextTick Promise.then dan ham ustun</title>
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Navbat ustunligi: kim avval ishlaydi?</text>
+
+  <!-- MICROTASK ustun -->
+  <rect x="40" y="56" width="320" height="300" rx="12" fill="#fff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="200" y="84" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#16a34a">MICROTASK  (ustun)</text>
+  <text x="200" y="104" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#475569">har macrotask'dan keyin TO'LIQ bo'shaydi</text>
+
+  <rect x="64" y="120" width="272" height="50" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="200" y="140" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">1) process.nextTick</text>
+  <text x="200" y="159" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#334155">eng yuqori ustunlik (Node maxsus)</text>
+
+  <line x1="200" y1="170" x2="200" y2="186" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="200,188 195,179 205,179" fill="#16a34a"/>
+
+  <rect x="64" y="190" width="272" height="50" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="200" y="210" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">2) Promise.then / queueMicrotask</text>
+  <text x="200" y="229" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#334155">async/await ham shu navbatda</text>
+
+  <text x="200" y="270" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#475569">Navbat bo'shaguncha event loop</text>
+  <text x="200" y="288" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#475569">keyingi fazaga O'TMAYDI.</text>
+  <rect x="64" y="304" width="272" height="38" rx="8" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="200" y="328" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#dc2626" font-weight="bold">Xavf: cheksiz nextTick -&gt; starvation</text>
+
+  <!-- katta strelka -->
+  <line x1="368" y1="206" x2="404" y2="206" stroke="#94a3b8" stroke-width="3"/>
+  <polygon points="406,206 396,200 396,212" fill="#94a3b8"/>
+  <text x="386" y="196" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#64748b">bo'shagach</text>
+
+  <!-- MACROTASK ustun -->
+  <rect x="414" y="56" width="266" height="300" rx="12" fill="#fff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="547" y="84" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#2563eb">MACROTASK</text>
+  <text x="547" y="104" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#475569">har aylanada BITTA olinadi</text>
+
+  <rect x="438" y="120" width="218" height="46" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="547" y="148" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#2563eb">setTimeout / setInterval</text>
+
+  <rect x="438" y="176" width="218" height="46" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="547" y="204" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#16a34a">I/O callback (poll fazasi)</text>
+
+  <rect x="438" y="232" width="218" height="46" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="547" y="260" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#b45309">setImmediate (check)</text>
+
+  <text x="547" y="306" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#475569">Bittasi bajarilgach, yana</text>
+  <text x="547" y="324" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#475569">microtask navbatiga qaytiladi.</text>
+
+  <!-- pastki qoida -->
+  <rect x="40" y="378" width="640" height="38" rx="9" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="360" y="402" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Qoida: nextTick &gt; Promise &gt; (yangi macrotask) &gt; timer / I/O / immediate</text>
+</svg>

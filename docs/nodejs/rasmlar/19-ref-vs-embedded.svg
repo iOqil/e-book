@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>Mongoose'da ref+populate (alohida collection, ObjectId havola, populate to'ldiradi) va embedded hujjat (izohlar post ichida saqlanadi) yondashuvlarining farqi</title>
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">ref + populate  va  embedded hujjat</text>
+
+  <defs>
+    <marker id="rarr" markerWidth="11" markerHeight="11" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L9,4 L0,8 Z" fill="#7c3aed"/>
+    </marker>
+  </defs>
+
+  <!-- LEFT: ref + populate -->
+  <text x="185" y="62" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#7c3aed">REF (havola) — alohida collection</text>
+
+  <!-- users collection -->
+  <rect x="40" y="78" width="135" height="74" rx="9" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.8"/>
+  <text x="107" y="98" text-anchor="middle" font-family="monospace" font-size="11.5" font-weight="bold" fill="#5b21b6">users</text>
+  <text x="52" y="118" font-family="monospace" font-size="11" fill="#334155">_id: <tspan fill="#dc2626">a1</tspan></text>
+  <text x="52" y="136" font-family="monospace" font-size="11" fill="#334155">ism: "Ali"</text>
+
+  <!-- posts collection -->
+  <rect x="230" y="78" width="160" height="92" rx="9" fill="#ffffff" stroke="#2563eb" stroke-width="1.8"/>
+  <text x="310" y="98" text-anchor="middle" font-family="monospace" font-size="11.5" font-weight="bold" fill="#1e40af">posts</text>
+  <text x="242" y="118" font-family="monospace" font-size="11" fill="#334155">sarlavha: "..."</text>
+  <text x="242" y="136" font-family="monospace" font-size="11" fill="#334155">muallif: <tspan fill="#dc2626">a1</tspan></text>
+  <text x="242" y="154" font-family="monospace" font-size="10.5" fill="#94a3b8">(faqat ObjectId)</text>
+
+  <!-- arrow ref -->
+  <line x1="230" y1="129" x2="178" y2="118" stroke="#7c3aed" stroke-width="2" marker-end="url(#rarr)"/>
+  <text x="205" y="180" text-anchor="middle" font-family="monospace" font-size="10.5" fill="#7c3aed">ref: "User"</text>
+
+  <!-- populate result -->
+  <rect x="40" y="196" width="350" height="74" rx="9" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+  <text x="56" y="216" font-family="monospace" font-size="11" fill="#15803d">.populate("muallif") natijasi:</text>
+  <text x="56" y="236" font-family="monospace" font-size="11" fill="#334155">muallif: { _id: a1, ism: "Ali" }</text>
+  <text x="56" y="256" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#64748b">populate ID o'rniga to'liq hujjatni qo'yadi</text>
+
+  <text x="215" y="298" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" font-weight="bold" fill="#5b21b6">Qachon REF?</text>
+  <text x="55" y="320" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#334155">- ma'lumot mustaqil, ko'p joyda ishlatiladi</text>
+  <text x="55" y="340" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#334155">- 1:N / N:M (user -> ko'p post)</text>
+  <text x="55" y="360" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#334155">- alohida so'rov/yangilash kerak</text>
+  <text x="55" y="380" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#334155">- cheksiz o'sishi mumkin</text>
+
+  <!-- divider -->
+  <line x1="408" y1="74" x2="408" y2="392" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="5 4"/>
+
+  <!-- RIGHT: embedded -->
+  <text x="565" y="62" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#f59e0b">EMBEDDED — ichiga joylash</text>
+
+  <rect x="432" y="78" width="256" height="192" rx="9" fill="#ffffff" stroke="#f59e0b" stroke-width="1.8"/>
+  <text x="560" y="98" text-anchor="middle" font-family="monospace" font-size="11.5" font-weight="bold" fill="#b45309">posts (bitta hujjat)</text>
+  <text x="446" y="118" font-family="monospace" font-size="11" fill="#334155">sarlavha: "MongoDB"</text>
+  <text x="446" y="138" font-family="monospace" font-size="11" fill="#334155">izohlar: [</text>
+  <rect x="460" y="146" width="214" height="44" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.2"/>
+  <text x="470" y="164" font-family="monospace" font-size="10.5" fill="#92400e">{ kim: "Vali", matn: "Zo'r!" },</text>
+  <text x="470" y="182" font-family="monospace" font-size="10.5" fill="#92400e">{ kim: "Ali", matn: "Rahmat" }</text>
+  <text x="446" y="206" font-family="monospace" font-size="11" fill="#334155">]</text>
+  <text x="560" y="232" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#64748b">izohlar post ICHIDA — populate kerak emas,</text>
+  <text x="560" y="250" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#64748b">bitta o'qishda hammasi keladi</text>
+
+  <text x="560" y="298" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" font-weight="bold" fill="#b45309">Qachon EMBED?</text>
+  <text x="448" y="320" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#334155">- ma'lumot egasiz yashamaydi (izoh)</text>
+  <text x="448" y="340" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#334155">- doim birga o'qiladi</text>
+  <text x="448" y="360" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#334155">- soni cheklangan (o'nlab, mln emas)</text>
+  <text x="448" y="380" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#334155">- bitta o'qish = tezroq</text>
+</svg>

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>Node.js fs modulining uch API'si: sinxron (readFileSync, bloklaydi), callback (readFile, eski), va promise (fs/promises, async/await — asosiy zamonaviy uslub). Qaysi biri qachon ishlatiladi.</title>
+
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="30" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">fs ning uchta API'si</text>
+  <text x="360" y="52" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Bitta ish — fayl o'qish — uch xil uslubda. Qaysisini qachon tanlash kerak?</text>
+
+  <!-- 1. Sinxron -->
+  <rect x="24" y="76" width="216" height="250" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="132" y="102" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="15" font-weight="bold" fill="#b91c1c">1. Sinxron</text>
+  <text x="132" y="120" text-anchor="middle" font-family="Consolas, monospace" font-size="11.5" fill="#b91c1c">readFileSync()</text>
+  <rect x="40" y="132" width="184" height="62" rx="6" fill="#fef2f2"/>
+  <text x="52" y="152" font-family="Consolas, monospace" font-size="11" fill="#7f1d1d">const s =</text>
+  <text x="52" y="168" font-family="Consolas, monospace" font-size="11" fill="#7f1d1d">  readFileSync(f,</text>
+  <text x="52" y="184" font-family="Consolas, monospace" font-size="11" fill="#7f1d1d">    'utf8');</text>
+  <text x="132" y="216" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="11.5" font-weight="bold" fill="#b91c1c">Event loop'ni BLOKLAYDI</text>
+  <circle cx="44" cy="238" r="3.5" fill="#16a34a"/>
+  <text x="54" y="242" font-family="Segoe UI, sans-serif" font-size="11" fill="#334155">Skript ishga tushishi (CLI)</text>
+  <circle cx="44" cy="260" r="3.5" fill="#16a34a"/>
+  <text x="54" y="264" font-family="Segoe UI, sans-serif" font-size="11" fill="#334155">Konfig o'qish (bir marta)</text>
+  <circle cx="44" cy="284" r="3.5" fill="#dc2626"/>
+  <text x="54" y="288" font-family="Segoe UI, sans-serif" font-size="11" fill="#334155">Server ichida ASLO emas</text>
+  <circle cx="44" cy="306" r="3.5" fill="#dc2626"/>
+  <text x="54" y="310" font-family="Segoe UI, sans-serif" font-size="11" fill="#334155">So'rov ishlovida emas</text>
+
+  <!-- 2. Callback -->
+  <rect x="252" y="76" width="216" height="250" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="360" y="102" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="15" font-weight="bold" fill="#b45309">2. Callback</text>
+  <text x="360" y="120" text-anchor="middle" font-family="Consolas, monospace" font-size="11.5" fill="#b45309">readFile(f, cb)</text>
+  <rect x="268" y="132" width="184" height="62" rx="6" fill="#fffbeb"/>
+  <text x="280" y="152" font-family="Consolas, monospace" font-size="11" fill="#92400e">readFile(f, 'utf8',</text>
+  <text x="280" y="168" font-family="Consolas, monospace" font-size="11" fill="#92400e">  (err, data) =&#62; {</text>
+  <text x="280" y="184" font-family="Consolas, monospace" font-size="11" fill="#92400e">    ...</text>
+  <text x="360" y="216" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="11.5" font-weight="bold" fill="#b45309">Bloklamaydi, lekin eski</text>
+  <circle cx="272" cy="238" r="3.5" fill="#16a34a"/>
+  <text x="282" y="242" font-family="Segoe UI, sans-serif" font-size="11" fill="#334155">Asinxron (bloklamaydi)</text>
+  <circle cx="272" cy="260" r="3.5" fill="#f59e0b"/>
+  <text x="282" y="264" font-family="Segoe UI, sans-serif" font-size="11" fill="#334155">err DOIM birinchi argument</text>
+  <circle cx="272" cy="284" r="3.5" fill="#dc2626"/>
+  <text x="282" y="288" font-family="Segoe UI, sans-serif" font-size="11" fill="#334155">Ichma-ich =&#62; callback do'zaxi</text>
+  <circle cx="272" cy="306" r="3.5" fill="#64748b"/>
+  <text x="282" y="310" font-family="Segoe UI, sans-serif" font-size="11" fill="#334155">Eski kod / kutubxonalarda</text>
+
+  <!-- 3. Promise -->
+  <rect x="480" y="76" width="216" height="250" rx="10" fill="#16a34a"/>
+  <text x="588" y="102" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">3. Promise</text>
+  <text x="588" y="120" text-anchor="middle" font-family="Consolas, monospace" font-size="11" fill="#dcfce7">node:fs/promises</text>
+  <rect x="496" y="132" width="184" height="62" rx="6" fill="#15803d"/>
+  <text x="508" y="152" font-family="Consolas, monospace" font-size="11" fill="#f0fdf4">const s = await</text>
+  <text x="508" y="168" font-family="Consolas, monospace" font-size="11" fill="#f0fdf4">  readFile(f,</text>
+  <text x="508" y="184" font-family="Consolas, monospace" font-size="11" fill="#f0fdf4">    'utf8');</text>
+  <text x="588" y="216" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="11.5" font-weight="bold" fill="#ffffff">ASOSIY ZAMONAVIY USLUB</text>
+  <circle cx="500" cy="238" r="3.5" fill="#bbf7d0"/>
+  <text x="510" y="242" font-family="Segoe UI, sans-serif" font-size="11" fill="#ffffff">async/await bilan tekis</text>
+  <circle cx="500" cy="260" r="3.5" fill="#bbf7d0"/>
+  <text x="510" y="264" font-family="Segoe UI, sans-serif" font-size="11" fill="#ffffff">try/catch bilan xato</text>
+  <circle cx="500" cy="284" r="3.5" fill="#bbf7d0"/>
+  <text x="510" y="288" font-family="Segoe UI, sans-serif" font-size="11" fill="#ffffff">Promise.all bilan parallel</text>
+  <circle cx="500" cy="306" r="3.5" fill="#bbf7d0"/>
+  <text x="510" y="310" font-family="Segoe UI, sans-serif" font-size="11" fill="#ffffff">Bloklamaydi — server uchun</text>
+
+  <!-- pastki xulosa -->
+  <rect x="24" y="346" width="672" height="64" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="44" y="372" font-family="Segoe UI, sans-serif" font-size="13" font-weight="bold" fill="#1e40af">Qoida:</text>
+  <text x="100" y="372" font-family="Segoe UI, sans-serif" font-size="12.5" fill="#334155">shubha bo'lsa — <tspan font-family="Consolas, monospace" fill="#16a34a">fs/promises</tspan> + async/await. Sync faqat dastur ishga tushishida.</text>
+  <text x="44" y="394" font-family="Segoe UI, sans-serif" font-size="12" fill="#475569">Sinxron chaqiruv event loop'ni to'xtatadi — bitta sekin disk o'qish butun serverni muzlatadi.</text>
+</svg>

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>Express va native http solishtirish: bir xil JSON endpoint native http'da uzun va qo'lda, Express'da qisqa va deklarativ</title>
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="30" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Bir xil endpoint: native http vs Express</text>
+  <text x="360" y="52" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">GET /vazifalar → JSON ro'yxat qaytarish</text>
+
+  <!-- CHAP: native http -->
+  <rect x="22" y="74" width="332" height="300" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2.5"/>
+  <rect x="22" y="74" width="332" height="34" rx="12" fill="#fee2e2"/>
+  <text x="188" y="97" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14.5" font-weight="bold" fill="#991b1b">native http (11-bob)</text>
+
+  <text x="40" y="132" font-family="monospace" font-size="11.5" fill="#1e293b">createServer((req, res) =&gt; {</text>
+  <text x="52" y="150" font-family="monospace" font-size="11.5" fill="#475569">if (req.method === "GET" &amp;&amp;</text>
+  <text x="64" y="166" font-family="monospace" font-size="11.5" fill="#475569">    req.url === "/vazifalar") {</text>
+  <text x="64" y="184" font-family="monospace" font-size="11.5" fill="#475569">res.writeHead(200, {</text>
+  <text x="76" y="200" font-family="monospace" font-size="11.5" fill="#475569">"Content-Type":</text>
+  <text x="88" y="216" font-family="monospace" font-size="11.5" fill="#475569">"application/json" });</text>
+  <text x="64" y="234" font-family="monospace" font-size="11.5" fill="#475569">res.end(JSON.stringify(data));</text>
+  <text x="64" y="250" font-family="monospace" font-size="11.5" fill="#475569">return;</text>
+  <text x="52" y="266" font-family="monospace" font-size="11.5" fill="#475569">}</text>
+  <text x="52" y="282" font-family="monospace" font-size="11.5" fill="#475569">res.writeHead(404, ...);</text>
+  <text x="52" y="298" font-family="monospace" font-size="11.5" fill="#475569">res.end("Topilmadi");</text>
+  <text x="40" y="314" font-family="monospace" font-size="11.5" fill="#1e293b">})</text>
+
+  <rect x="40" y="330" width="296" height="32" rx="7" fill="#fef2f2" stroke="#dc2626" stroke-width="1.4"/>
+  <text x="188" y="350" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#991b1b">~12 qator: metod/url/header/404 qo'lda</text>
+
+  <!-- O'NG: Express -->
+  <rect x="366" y="74" width="332" height="300" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <rect x="366" y="74" width="332" height="34" rx="12" fill="#dcfce7"/>
+  <text x="532" y="97" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14.5" font-weight="bold" fill="#15803d">Express (12-bob)</text>
+
+  <text x="384" y="150" font-family="monospace" font-size="12.5" fill="#1e293b">app.get("/vazifalar",</text>
+  <text x="408" y="172" font-family="monospace" font-size="12.5" fill="#475569">(req, res) =&gt; {</text>
+  <text x="432" y="194" font-family="monospace" font-size="12.5" fill="#475569">res.json(data);</text>
+  <text x="408" y="216" font-family="monospace" font-size="12.5" fill="#1e293b">});</text>
+
+  <text x="384" y="256" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#475569">Express o'zi hal qiladi:</text>
+  <text x="396" y="278" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#15803d">• metod + yo'lni moslaydi</text>
+  <text x="396" y="298" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#15803d">• Content-Type: json qo'yadi</text>
+  <text x="396" y="318" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#15803d">• mos kelmasa 404 beradi</text>
+
+  <rect x="384" y="330" width="296" height="32" rx="7" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.4"/>
+  <text x="532" y="350" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#15803d">~3 qator: niyatni aytasiz, mexanizm yashirin</text>
+
+  <!-- pastki izoh -->
+  <text x="360" y="398" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#334155">Express takrorlanuvchi "boshqaruv kodi"ni yashiradi — siz faqat biznes mantiqqa e'tibor berasiz.</text>
+  <text x="360" y="418" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#64748b">Yo'l ko'paygan sari bu farq tobora kattalashadi.</text>
+</svg>

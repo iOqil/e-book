@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>Stream pipe oqimi: Readable manbadan bo'laklab o'qib, Transform orqali o'zgartirib, Writable manbaga yoziladi</title>
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Stream quvuri: ma'lumot bo'laklab oqadi</text>
+  <text x="360" y="58" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">readable.pipe(transform).pipe(writable) — butun fayl RAM ga olinmaydi</text>
+
+  <!-- READABLE -->
+  <rect x="24" y="150" width="170" height="120" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="109" y="180" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">Readable</text>
+  <text x="109" y="202" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#475569">manba (source)</text>
+  <text x="109" y="226" text-anchor="middle" font-family="monospace" font-size="12.5" fill="#1e293b">createReadStream</text>
+  <text x="109" y="248" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#64748b">10 GB fayl, disk</text>
+
+  <!-- TRANSFORM -->
+  <rect x="275" y="150" width="170" height="120" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="360" y="180" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#7c3aed">Transform</text>
+  <text x="360" y="202" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#475569">o'zgartiruvchi</text>
+  <text x="360" y="226" text-anchor="middle" font-family="monospace" font-size="12.5" fill="#1e293b">createGzip()</text>
+  <text x="360" y="248" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#64748b">siqish / filtr</text>
+
+  <!-- WRITABLE -->
+  <rect x="526" y="150" width="170" height="120" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="611" y="180" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">Writable</text>
+  <text x="611" y="202" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#475569">qabul qiluvchi (sink)</text>
+  <text x="611" y="226" text-anchor="middle" font-family="monospace" font-size="12.5" fill="#1e293b">createWriteStream</text>
+  <text x="611" y="248" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#64748b">disk, tarmoq</text>
+
+  <!-- ARROWS with chunks -->
+  <defs>
+    <marker id="arr" markerWidth="11" markerHeight="11" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L9,4 L0,8 Z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+  <line x1="194" y1="210" x2="271" y2="210" stroke="#f59e0b" stroke-width="3" marker-end="url(#arr)"/>
+  <line x1="445" y1="210" x2="522" y2="210" stroke="#f59e0b" stroke-width="3" marker-end="url(#arr)"/>
+
+  <!-- chunk labels on arrows -->
+  <rect x="200" y="120" width="60" height="22" rx="5" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.3"/>
+  <text x="230" y="135" text-anchor="middle" font-family="monospace" font-size="12" fill="#92400e">chunk</text>
+  <rect x="451" y="120" width="60" height="22" rx="5" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.3"/>
+  <text x="481" y="135" text-anchor="middle" font-family="monospace" font-size="12" fill="#92400e">chunk</text>
+
+  <!-- chunk stream visual at bottom -->
+  <text x="360" y="312" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#475569">Ma'lumot 64 KB lik bo'laklar (chunk) bo'lib oqadi, hammasi birvarakay emas:</text>
+  <g>
+    <rect x="120" y="328" width="48" height="30" rx="5" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+    <rect x="178" y="328" width="48" height="30" rx="5" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+    <rect x="236" y="328" width="48" height="30" rx="5" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+    <rect x="294" y="328" width="48" height="30" rx="5" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+    <rect x="352" y="328" width="48" height="30" rx="5" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+    <rect x="410" y="328" width="48" height="30" rx="5" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+    <rect x="468" y="328" width="48" height="30" rx="5" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="552" y="349" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#64748b">... va h.k.</text>
+  </g>
+
+  <rect x="120" y="378" width="480" height="34" rx="7" fill="#dcfce7" stroke="#16a34a" stroke-width="1.6"/>
+  <text x="360" y="400" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#166534">pipeline() bo'laklar oqimini ulaydi va backpressure ni avtomatik boshqaradi</text>
+</svg>

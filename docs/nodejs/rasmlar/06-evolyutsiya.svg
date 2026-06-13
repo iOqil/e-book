@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>Asinxron uslublar evolyutsiyasi: callback hell -> Promise zanjir -> async/await</title>
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L8,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+  <text x="360" y="28" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">Bir xil vazifa, uchta uslub: o'qiluvchanlik o'sib boradi</text>
+
+  <!-- 1) Callback hell -->
+  <rect x="20" y="50" width="216" height="350" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <rect x="20" y="50" width="216" height="34" rx="10" fill="#dc2626"/>
+  <text x="128" y="73" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">1. Callback hell</text>
+  <!-- piramida ko'rinishi: o'ngga siljiydi -->
+  <rect x="36" y="98"  width="160" height="22" rx="4" fill="#fee2e2"/>
+  <text x="44" y="113" font-family="monospace" font-size="12" fill="#7f1d1d">a((e,r)=&gt;{</text>
+  <rect x="56" y="126" width="150" height="22" rx="4" fill="#fecaca"/>
+  <text x="64" y="141" font-family="monospace" font-size="12" fill="#7f1d1d">b((e,r)=&gt;{</text>
+  <rect x="76" y="154" width="140" height="22" rx="4" fill="#fca5a5"/>
+  <text x="84" y="169" font-family="monospace" font-size="12" fill="#7f1d1d">c((e,r)=&gt;{</text>
+  <rect x="96" y="182" width="120" height="22" rx="4" fill="#f87171"/>
+  <text x="104" y="197" font-family="monospace" font-size="12" fill="#450a0a">d((e,r)=&gt;{...</text>
+  <text x="104" y="222" font-family="monospace" font-size="12" fill="#7f1d1d">  })</text>
+  <text x="84"  y="240" font-family="monospace" font-size="12" fill="#7f1d1d"> })</text>
+  <text x="64"  y="258" font-family="monospace" font-size="12" fill="#7f1d1d">})</text>
+  <text x="128" y="300" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#dc2626">"Piramida" — chuqurlashadi,</text>
+  <text x="128" y="318" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#dc2626">xato boshqaruvi takrorlanadi.</text>
+  <text x="128" y="344" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#64748b">err har bosqichda</text>
+  <text x="128" y="362" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#64748b">qo'lda tekshiriladi.</text>
+  <text x="128" y="386" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626">O'qish qiyin</text>
+
+  <line x1="240" y1="225" x2="260" y2="225" stroke="#475569" stroke-width="2.5" marker-end="url(#ar)"/>
+
+  <!-- 2) Promise zanjir -->
+  <rect x="264" y="50" width="180" height="350" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <rect x="264" y="50" width="180" height="34" rx="10" fill="#2563eb"/>
+  <text x="354" y="73" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">2. Promise zanjir</text>
+  <rect x="280" y="100" width="148" height="24" rx="5" fill="#dbeafe"/>
+  <text x="290" y="116" font-family="monospace" font-size="12.5" fill="#1e3a8a">a()</text>
+  <text x="345" y="116" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#64748b">boshlanish</text>
+  <line x1="354" y1="124" x2="354" y2="140" stroke="#2563eb" stroke-width="2" marker-end="url(#ar)"/>
+  <rect x="280" y="142" width="148" height="24" rx="5" fill="#dbeafe"/>
+  <text x="290" y="158" font-family="monospace" font-size="12.5" fill="#1e3a8a">.then(b)</text>
+  <line x1="354" y1="166" x2="354" y2="182" stroke="#2563eb" stroke-width="2" marker-end="url(#ar)"/>
+  <rect x="280" y="184" width="148" height="24" rx="5" fill="#dbeafe"/>
+  <text x="290" y="200" font-family="monospace" font-size="12.5" fill="#1e3a8a">.then(c)</text>
+  <line x1="354" y1="208" x2="354" y2="224" stroke="#2563eb" stroke-width="2" marker-end="url(#ar)"/>
+  <rect x="280" y="226" width="148" height="24" rx="5" fill="#dbeafe"/>
+  <text x="290" y="242" font-family="monospace" font-size="12.5" fill="#1e3a8a">.then(d)</text>
+  <line x1="354" y1="250" x2="354" y2="266" stroke="#2563eb" stroke-width="2" marker-end="url(#ar)"/>
+  <rect x="280" y="268" width="148" height="24" rx="5" fill="#bfdbfe"/>
+  <text x="290" y="284" font-family="monospace" font-size="12.5" fill="#1e3a8a">.catch(...)</text>
+  <text x="354" y="320" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#2563eb">Tekis zanjir — chuqurlashmaydi.</text>
+  <text x="354" y="340" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#2563eb">Bitta .catch hammasini tutadi.</text>
+  <text x="354" y="386" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#2563eb">Ancha yaxshi</text>
+
+  <line x1="448" y1="225" x2="468" y2="225" stroke="#475569" stroke-width="2.5" marker-end="url(#ar)"/>
+
+  <!-- 3) async/await -->
+  <rect x="472" y="50" width="228" height="350" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <rect x="472" y="50" width="228" height="34" rx="10" fill="#16a34a"/>
+  <text x="586" y="73" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">3. async / await</text>
+  <rect x="488" y="100" width="196" height="170" rx="6" fill="#f0fdf4" stroke="#86efac"/>
+  <text x="500" y="122" font-family="monospace" font-size="12.5" fill="#14532d">try {</text>
+  <text x="512" y="144" font-family="monospace" font-size="12.5" fill="#14532d">const r1 = await a();</text>
+  <text x="512" y="166" font-family="monospace" font-size="12.5" fill="#14532d">const r2 = await b();</text>
+  <text x="512" y="188" font-family="monospace" font-size="12.5" fill="#14532d">const r3 = await c();</text>
+  <text x="512" y="210" font-family="monospace" font-size="12.5" fill="#14532d">return await d();</text>
+  <text x="500" y="232" font-family="monospace" font-size="12.5" fill="#14532d">} catch (err) {</text>
+  <text x="512" y="254" font-family="monospace" font-size="12.5" fill="#b91c1c">  // xatoni boshqar</text>
+  <text x="500" y="270" font-family="monospace" font-size="12.5" fill="#14532d">}</text>
+  <text x="586" y="304" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#16a34a">Oddiy ketma-ket kod kabi o'qiladi.</text>
+  <text x="586" y="324" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#16a34a">Oddiy try/catch bilan xato boshqaruvi.</text>
+  <text x="586" y="386" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">Eng o'qiladigan</text>
+</svg>

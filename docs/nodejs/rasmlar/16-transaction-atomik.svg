@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>Transaction atomikligi: bir nechta SQL amali bitta blokga o'raladi; hammasi muvaffaqiyatli bo'lsa COMMIT, biror xato bo'lsa hammasi ROLLBACK bilan bekor qilinadi</title>
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Transaction: yo hammasi, yo hech narsa (atomik)</text>
+  <text x="360" y="56" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">db.transaction(fn) bir nechta amalni bitta bo'linmas blokga o'raydi</text>
+
+  <defs>
+    <marker id="tok" markerWidth="11" markerHeight="11" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 Z" fill="#16a34a"/></marker>
+    <marker id="terr" markerWidth="11" markerHeight="11" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 Z" fill="#dc2626"/></marker>
+  </defs>
+
+  <!-- BEGIN -->
+  <rect x="300" y="80" width="120" height="38" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2.2"/>
+  <text x="360" y="104" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="#2563eb">BEGIN</text>
+
+  <!-- uchta amal -->
+  <rect x="285" y="138" width="150" height="34" rx="7" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="360" y="160" text-anchor="middle" font-family="monospace" font-size="12.5" fill="#1e293b">INSERT A</text>
+  <rect x="285" y="180" width="150" height="34" rx="7" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="360" y="202" text-anchor="middle" font-family="monospace" font-size="12.5" fill="#1e293b">UPDATE B</text>
+  <rect x="285" y="222" width="150" height="34" rx="7" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="360" y="244" text-anchor="middle" font-family="monospace" font-size="12.5" fill="#1e293b">DELETE C</text>
+
+  <line x1="360" y1="118" x2="360" y2="136" stroke="#475569" stroke-width="2"/>
+  <line x1="360" y1="172" x2="360" y2="178" stroke="#475569" stroke-width="2"/>
+  <line x1="360" y1="214" x2="360" y2="220" stroke="#475569" stroke-width="2"/>
+
+  <!-- chap: COMMIT yo'li -->
+  <line x1="285" y1="239" x2="150" y2="290" stroke="#16a34a" stroke-width="2.6" marker-end="url(#tok)"/>
+  <rect x="40" y="296" width="220" height="92" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="150" y="322" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">Hammasi muvaffaqiyatli</text>
+  <text x="150" y="346" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#15803d">COMMIT</text>
+  <text x="150" y="368" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#475569">o'zgarishlar saqlanadi</text>
+
+  <!-- o'ng: ROLLBACK yo'li -->
+  <line x1="435" y1="239" x2="570" y2="290" stroke="#dc2626" stroke-width="2.6" marker-end="url(#terr)"/>
+  <rect x="460" y="296" width="220" height="92" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="570" y="322" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">Biror amalda XATO</text>
+  <text x="570" y="346" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#b91c1c">ROLLBACK</text>
+  <text x="570" y="368" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#475569">HAMMASI bekor (A ham!)</text>
+
+  <text x="195" y="280" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#16a34a">xatosiz</text>
+  <text x="525" y="280" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#dc2626">throw / exception</text>
+
+  <text x="360" y="416" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#64748b">Yarim bajarilgan holat bo'lmaydi: ma'lumotlar yaxlitligi (consistency) saqlanadi</text>
+</svg>

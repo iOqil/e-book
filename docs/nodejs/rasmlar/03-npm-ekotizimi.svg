@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>npm ekotizimi: package.json loyihangizning ro'yxati, npm install buyrug'i npm reestridan paketlarni yuklab node_modules papkasiga joylaydi, va aniq versiyalarni package-lock.json ga yozadi</title>
+
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="38" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">npm ekotizimi: e'lon qil -&gt; o'rnat -&gt; muhrlа</text>
+
+  <!-- 1. package.json -->
+  <rect x="36" y="86" width="184" height="138" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="128" y="116" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">1. package.json</text>
+  <text x="128" y="142" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">loyiha pasporti</text>
+  <text x="128" y="166" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">"express": "^4.21.0"</text>
+  <text x="128" y="188" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">"chalk": "^5.3.0"</text>
+  <text x="128" y="210" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#64748b">(qaysi paket kerakligi)</text>
+
+  <!-- strelka 1: npm install -->
+  <line x1="224" y1="155" x2="296" y2="155" stroke="#475569" stroke-width="2.5"/>
+  <polygon points="296,149 308,155 296,161" fill="#475569"/>
+  <text x="266" y="142" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">npm install</text>
+
+  <!-- 2. npm reestri (bulut) -->
+  <rect x="312" y="86" width="184" height="138" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="404" y="116" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">2. npm reestri</text>
+  <text x="404" y="142" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">registry.npmjs.org</text>
+  <text x="404" y="168" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">3+ million paket</text>
+  <text x="404" y="194" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#64748b">internetdagi ombor</text>
+  <text x="404" y="212" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#64748b">(paketlarni yuklaydi)</text>
+
+  <!-- strelka 2: yuklab keladi -->
+  <line x1="404" y1="228" x2="404" y2="284" stroke="#475569" stroke-width="2.5"/>
+  <polygon points="398,284 404,296 410,284" fill="#475569"/>
+  <text x="486" y="262" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#475569">yuklab keladi</text>
+
+  <!-- 3. node_modules -->
+  <rect x="252" y="300" width="304" height="96" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="404" y="328" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#b45309">3. node_modules/</text>
+  <text x="404" y="352" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">paketlarning haqiqiy fayllari</text>
+  <text x="404" y="376" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#64748b">(git'ga qo'shilmaydi — .gitignore)</text>
+
+  <!-- 4. package-lock.json -->
+  <rect x="500" y="86" width="184" height="138" rx="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="592" y="116" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#7c3aed">4. package-lock</text>
+  <text x="592" y="138" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">.json</text>
+  <text x="592" y="164" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">muhrlangan ANIQ</text>
+  <text x="592" y="184" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">versiyalar</text>
+  <text x="592" y="208" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#64748b">4.21.2 (reproduksiya)</text>
+
+  <!-- strelka reestrdan lock'ga -->
+  <line x1="496" y1="142" x2="496" y2="142" stroke="#7c3aed" stroke-width="0"/>
+  <line x1="498" y1="120" x2="498" y2="120" stroke="#7c3aed" stroke-width="0"/>
+
+  <!-- pastki izoh -->
+  <text x="360" y="420" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#dc2626">package.json = "nima kerak" (diapazon)   •   package-lock.json = "aynan nima o'rnatildi" (qotirilgan)</text>
+</svg>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>'error' hodisasi maxsus: tinglovchisi bo'lmasa emit qilingan xato dasturni butunlay yiqitadi; tinglovchi bo'lsa xato xavfsiz ushlanadi</title>
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">'error' hodisasi — eng xavfli maxsus hodisa</text>
+
+  <!-- CHAP: tinglovchisiz -->
+  <text x="185" y="78" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">'error' tinglovchisi YO'Q</text>
+
+  <rect x="60" y="96" width="250" height="60" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="185" y="123" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">emit("error", err)</text>
+  <text x="185" y="143" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#dc2626">tinglovchi topilmadi</text>
+
+  <line x1="185" y1="156" x2="185" y2="196" stroke="#dc2626" stroke-width="2.5" marker-end="url(#rstrelka)"/>
+
+  <rect x="40" y="206" width="290" height="86" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="185" y="238" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#dc2626">DASTUR YIQILADI</text>
+  <text x="185" y="262" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Node xatoni "throw" qiladi,</text>
+  <text x="185" y="280" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">jarayon to'xtaydi (exit 1)</text>
+
+  <text x="185" y="324" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="24">💥</text>
+
+  <!-- O'NG: tinglovchili -->
+  <text x="535" y="78" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">'error' tinglovchisi BOR</text>
+
+  <rect x="410" y="96" width="250" height="60" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="535" y="123" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">emit("error", err)</text>
+  <text x="535" y="143" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#b45309">on("error", fn) bor</text>
+
+  <line x1="535" y1="156" x2="535" y2="196" stroke="#16a34a" stroke-width="2.5" marker-end="url(#gstrelka2)"/>
+
+  <rect x="395" y="206" width="280" height="86" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="535" y="238" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">XATO USHLANADI</text>
+  <text x="535" y="262" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tinglovchi xatoni qabul qiladi,</text>
+  <text x="535" y="280" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">dastur davom etadi</text>
+
+  <text x="535" y="324" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="24">✅</text>
+
+  <!-- pastki qoida -->
+  <rect x="60" y="356" width="600" height="50" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="360" y="378" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#7c3aed">QOIDA: har bir EventEmitter uchun on("error", ...) tinglovchisini ALBATTA qo'ying.</text>
+  <text x="360" y="396" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#475569">Bu — Node'da xavfsizlik kamari. Unutilsa, bitta kutilmagan xato butun serverni o'chirib qo'yadi.</text>
+
+  <defs>
+    <marker id="rstrelka" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#dc2626"/>
+    </marker>
+    <marker id="gstrelka2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+</svg>

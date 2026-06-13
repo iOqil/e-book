@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>Brauzerdagi JavaScript va Node.js dagi JavaScript farqi: ikkalasi ham bir xil til va bir xil V8 dvigelidan foydalanadi, lekin brauzerda DOM, window, alert va fetch bor, Node.js da esa DOM yo'q, o'rniga fs (fayllar), net (tarmoq), process va modullar bor</title>
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Bir til, ikki dunyo</text>
+  <text x="360" y="58" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Til bir xil (JavaScript), atrof-muhit boshqacha</text>
+
+  <!-- Brauzer paneli -->
+  <rect x="40" y="78" width="300" height="280" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="190" y="106" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#1d4ed8">Brauzerda JS</text>
+  <text x="190" y="126" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#1e40af">(Chrome, Firefox, Edge...)</text>
+
+  <text x="62" y="156" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#16a34a">Bor:</text>
+  <text x="62" y="178" font-family="Consolas, monospace" font-size="13.5" fill="#1e293b">document, DOM</text>
+  <text x="62" y="200" font-family="Consolas, monospace" font-size="13.5" fill="#1e293b">window, alert()</text>
+  <text x="62" y="222" font-family="Consolas, monospace" font-size="13.5" fill="#1e293b">localStorage</text>
+  <text x="62" y="244" font-family="Consolas, monospace" font-size="13.5" fill="#1e293b">fetch (so'rov)</text>
+
+  <text x="62" y="276" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#dc2626">Yo'q:</text>
+  <text x="62" y="298" font-family="Consolas, monospace" font-size="13.5" fill="#64748b">fayllarni o'qish (fs)</text>
+  <text x="62" y="320" font-family="Consolas, monospace" font-size="13.5" fill="#64748b">server ochish (net)</text>
+  <text x="62" y="342" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#64748b">maqsad: sahifa va foydalanuvchi</text>
+
+  <!-- Markaziy V8 ko'prigi -->
+  <rect x="300" y="190" width="120" height="56" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="360" y="214" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#15803d">Bir xil V8</text>
+  <text x="360" y="232" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#166534">dvigeli</text>
+
+  <!-- Node paneli -->
+  <rect x="380" y="78" width="300" height="280" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="530" y="106" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#15803d">Node.js da JS</text>
+  <text x="530" y="126" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#166534">(server, terminal, kompyuter)</text>
+
+  <text x="402" y="156" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#16a34a">Bor:</text>
+  <text x="402" y="178" font-family="Consolas, monospace" font-size="13.5" fill="#1e293b">fs (fayllar)</text>
+  <text x="402" y="200" font-family="Consolas, monospace" font-size="13.5" fill="#1e293b">net, http (server)</text>
+  <text x="402" y="222" font-family="Consolas, monospace" font-size="13.5" fill="#1e293b">process, os</text>
+  <text x="402" y="244" font-family="Consolas, monospace" font-size="13.5" fill="#1e293b">fetch (Node 18+)</text>
+
+  <text x="402" y="276" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#dc2626">Yo'q:</text>
+  <text x="402" y="298" font-family="Consolas, monospace" font-size="13.5" fill="#64748b">document, DOM</text>
+  <text x="402" y="320" font-family="Consolas, monospace" font-size="13.5" fill="#64748b">window, alert()</text>
+  <text x="402" y="342" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#64748b">maqsad: tizim va ma'lumot</text>
+
+  <!-- xulosa -->
+  <rect x="60" y="376" width="600" height="40" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="360" y="401" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#1e293b">Bir tilni bilib, ham sahifa, ham server yoza olasiz — full-stack</text>
+</svg>

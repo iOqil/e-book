@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>Test piramidasi: pastda ko'p va tez unit testlar, o'rtada integratsiya testlar, tepada kam va sekin e2e testlar</title>
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Test piramidasi</text>
+  <text x="360" y="57" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">Pastga tomon: ko'proq, tezroq, arzonroq. Yuqoriga: kamroq, sekinroq, qimmatroq.</text>
+
+  <defs>
+    <marker id="dn" markerWidth="11" markerHeight="11" refX="5" refY="9" orient="auto">
+      <path d="M0,0 L10,0 L5,9 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <!-- E2E (top) -->
+  <polygon points="360,78 430,150 290,150" fill="#fee2e2" stroke="#dc2626" stroke-width="2.3"/>
+  <text x="360" y="124" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#991b1b">E2E</text>
+  <text x="360" y="142" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="10.5" fill="#991b1b">kam, sekin</text>
+
+  <!-- Integration (middle) -->
+  <polygon points="290,152 430,152 500,250 220,250" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.3"/>
+  <text x="360" y="200" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#92400e">Integratsiya</text>
+  <text x="360" y="222" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#92400e">supertest: app + DB birga</text>
+
+  <!-- Unit (base) -->
+  <polygon points="220,252 500,252 575,370 145,370" fill="#dcfce7" stroke="#16a34a" stroke-width="2.3"/>
+  <text x="360" y="305" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="18" font-weight="bold" fill="#166534">Unit</text>
+  <text x="360" y="330" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#166534">ko'p, juda tez — sof mantiq (servis, validatsiya)</text>
+  <text x="360" y="350" text-anchor="middle" font-family="monospace" font-size="11.5" fill="#15803d">vazifaTekshir(), vazifaOmbori()</text>
+
+  <!-- side axis arrow -->
+  <line x1="95" y1="100" x2="95" y2="360" stroke="#64748b" stroke-width="2.4" marker-end="url(#dn)"/>
+  <text x="74" y="230" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#475569" transform="rotate(-90 74 230)">soni ortadi, narxi kamayadi</text>
+
+  <!-- right labels -->
+  <text x="620" y="118" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#dc2626">brauzer/Playwright</text>
+  <text x="620" y="205" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#b45309">endpoint -> javob</text>
+  <text x="620" y="312" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#16a34a">funksiya darajasi</text>
+
+  <rect x="120" y="388" width="480" height="30" rx="7" fill="#dbeafe" stroke="#2563eb" stroke-width="1.6"/>
+  <text x="360" y="408" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#1e40af">Qoida: ko'p unit, o'rtacha integratsiya, oz e2e — qimmat testlarni kam yozing</text>
+</svg>

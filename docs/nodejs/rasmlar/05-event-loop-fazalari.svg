@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>Event loop fazalari aylanasi: timers (setTimeout/setInterval), pending callbacks, poll (I/O), check (setImmediate), close — har faza orasida microtask navbati (nextTick va Promise) to'liq bo'shaydi</title>
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Event loop bir aylanishi (tick): fazalar tartibi</text>
+
+  <!-- markaziy aylana strelkasi -->
+  <circle cx="360" cy="225" r="118" fill="none" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="6 6"/>
+  <polygon points="360,107 352,123 368,123" fill="#7c3aed"/>
+  <text x="360" y="210" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#7c3aed">EVENT LOOP</text>
+  <text x="360" y="232" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#64748b">aylana bo'ylab</text>
+  <text x="360" y="250" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#64748b">yuradi</text>
+
+  <!-- 1 timers (yuqori) -->
+  <rect x="285" y="58" width="150" height="50" rx="9" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="360" y="80" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">1. timers</text>
+  <text x="360" y="98" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#334155">setTimeout / setInterval</text>
+
+  <!-- 2 pending (o'ng yuqori) -->
+  <rect x="500" y="120" width="170" height="50" rx="9" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="585" y="142" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#7c3aed">2. pending callbacks</text>
+  <text x="585" y="160" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#334155">kechiktirilgan TCP/I/O xatolari</text>
+
+  <!-- 3 poll (o'ng past) -->
+  <rect x="500" y="280" width="170" height="58" rx="9" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="585" y="302" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">3. poll  (asosiy)</text>
+  <text x="585" y="319" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#334155">I/O ni kutadi, callback'larni</text>
+  <text x="585" y="334" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#334155">bajaradi (fayl o'qish, socket)</text>
+
+  <!-- 4 check (past) -->
+  <rect x="285" y="350" width="150" height="50" rx="9" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="360" y="372" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309">4. check</text>
+  <text x="360" y="390" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#334155">setImmediate</text>
+
+  <!-- 5 close (chap past) -->
+  <rect x="50" y="280" width="170" height="58" rx="9" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="135" y="302" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">5. close callbacks</text>
+  <text x="135" y="319" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#334155">socket.on('close'),</text>
+  <text x="135" y="334" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#334155">resurslarni yopish</text>
+
+  <!-- microtask eslatma (chap yuqori) -->
+  <rect x="50" y="120" width="170" height="62" rx="9" fill="#fff" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="135" y="140" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" font-weight="bold" fill="#334155">HAR faza orasida:</text>
+  <text x="135" y="158" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#dc2626">nextTick -&gt; Promise</text>
+  <text x="135" y="174" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#334155">microtask navbati bo'shaydi</text>
+
+  <!-- pastki xulosa -->
+  <rect x="40" y="408" width="640" height="0" />
+  <text x="360" y="424" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Aylana to'xtaydi: hech qayerda kutadigan ish qolmasa (timer yo'q, I/O yo'q, immediate yo'q) — dastur tugaydi.</text>
+</svg>

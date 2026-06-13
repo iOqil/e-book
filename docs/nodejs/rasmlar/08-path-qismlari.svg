@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>node:path moduli funksiyalari: bitta yo'l /uy/oqil/loyiha/hisobot.pdf ustida dirname, basename, extname, parse qaysi qismni ajratadi; va join/resolve nima qiladi. Nega qo'lda string birlashtirmaslik kerak.</title>
+
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="30" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">path moduli: yo'lni qismlarga ajratish</text>
+  <text x="360" y="52" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Qo'lda + bilan emas — path platformaning to'g'ri ajratuvchisini biladi (/ yoki \)</text>
+
+  <!-- yo'l namunasi, qismlarga bo'lingan -->
+  <rect x="60" y="80" width="600" height="48" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <!-- dir qismi -->
+  <text x="84" y="111" font-family="Consolas, monospace" font-size="18" fill="#2563eb">/uy/oqil/loyiha</text>
+  <text x="318" y="111" font-family="Consolas, monospace" font-size="18" fill="#94a3b8">/</text>
+  <!-- name qismi -->
+  <text x="332" y="111" font-family="Consolas, monospace" font-size="18" fill="#16a34a">hisobot</text>
+  <!-- ext qismi -->
+  <text x="424" y="111" font-family="Consolas, monospace" font-size="18" fill="#dc2626">.pdf</text>
+
+  <!-- annotatsiya chiziqlari -->
+  <line x1="195" y1="128" x2="195" y2="158" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="195" y="174" text-anchor="middle" font-family="Consolas, monospace" font-size="12" fill="#2563eb">dirname()</text>
+
+  <line x1="370" y1="128" x2="370" y2="190" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="370" y="206" text-anchor="middle" font-family="Consolas, monospace" font-size="12" fill="#16a34a">parse().name</text>
+
+  <line x1="444" y1="128" x2="444" y2="158" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="444" y="174" text-anchor="middle" font-family="Consolas, monospace" font-size="12" fill="#dc2626">extname()</text>
+
+  <!-- basename qamrovi -->
+  <line x1="330" y1="68" x2="448" y2="68" stroke="#7c3aed" stroke-width="1.5"/>
+  <line x1="330" y1="63" x2="330" y2="73" stroke="#7c3aed" stroke-width="1.5"/>
+  <line x1="448" y1="63" x2="448" y2="73" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="389" y="58" text-anchor="middle" font-family="Consolas, monospace" font-size="12" fill="#7c3aed">basename() = "hisobot.pdf"</text>
+
+  <!-- chap: join -->
+  <rect x="40" y="224" width="316" height="100" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="60" y="248" font-family="Segoe UI, sans-serif" font-size="14" font-weight="bold" fill="#1e40af">join() — qismlarni ulaydi</text>
+  <rect x="56" y="258" width="284" height="24" rx="5" fill="#eff6ff"/>
+  <text x="66" y="275" font-family="Consolas, monospace" font-size="11.5" fill="#1e40af">join('papka', 'ichki', 'a.txt')</text>
+  <text x="60" y="300" font-family="Segoe UI, sans-serif" font-size="11.5" fill="#334155">&#8594; "papka/ichki/a.txt" (yoki \ Windows'da)</text>
+  <text x="60" y="318" font-family="Segoe UI, sans-serif" font-size="11" fill="#64748b">Ortiqcha slesh va .. larni tozalaydi.</text>
+
+  <!-- o'ng: resolve -->
+  <rect x="364" y="224" width="316" height="100" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="384" y="248" font-family="Segoe UI, sans-serif" font-size="14" font-weight="bold" fill="#6d28d9">resolve() — absolyut yo'l beradi</text>
+  <rect x="380" y="258" width="284" height="24" rx="5" fill="#f5f3ff"/>
+  <text x="390" y="275" font-family="Consolas, monospace" font-size="11.5" fill="#6d28d9">resolve('rasm.png')</text>
+  <text x="384" y="300" font-family="Segoe UI, sans-serif" font-size="11.5" fill="#334155">&#8594; "/joriy/ish/papka/rasm.png"</text>
+  <text x="384" y="318" font-family="Segoe UI, sans-serif" font-size="11" fill="#64748b">Joriy katalogdan boshlab to'liq yo'l yasaydi.</text>
+
+  <!-- pastki ogohlantirish -->
+  <rect x="40" y="340" width="640" height="70" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="60" y="364" font-family="Segoe UI, sans-serif" font-size="13" font-weight="bold" fill="#b91c1c">Nega qo'lda 'a' + '/' + 'b' qilmaslik kerak?</text>
+  <circle cx="64" cy="384" r="3.5" fill="#dc2626"/>
+  <text x="74" y="388" font-family="Segoe UI, sans-serif" font-size="11.5" fill="#334155">Windows'da ajratuvchi \ , Linux/macOS'da / — path buni o'zi to'g'ri tanlaydi.</text>
+  <circle cx="64" cy="402" r="3.5" fill="#dc2626"/>
+  <text x="74" y="406" font-family="Segoe UI, sans-serif" font-size="11.5" fill="#334155">Qo'lda ulashda ikki slesh (a//b) yoki yetishmagan slesh xatolari kelib chiqadi.</text>
+</svg>

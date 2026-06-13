@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>Relation 1:N: bitta User ko'p Task ga ega; Task da userId tashqi kalit User ga ishora qiladi; include: tasks bilan so'rovda foydalanuvchi va uning vazifalari birga keladi</title>
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Relation 1:N — User va Task</text>
+  <text x="360" y="55" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Bitta foydalanuvchi — ko'p vazifa. Task.userId tashqi kalit orqali bog'lanadi.</text>
+
+  <defs>
+    <marker id="rarr" markerWidth="11" markerHeight="11" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L9,4 L0,8 Z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <!-- User jadvali -->
+  <rect x="55" y="120" width="220" height="150" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
+  <rect x="55" y="120" width="220" height="34" rx="12" fill="#dbeafe"/>
+  <text x="165" y="143" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#2563eb">User (1)</text>
+  <text x="72" y="178" font-family="monospace" font-size="13" fill="#1e293b">id        Int  @id</text>
+  <text x="72" y="202" font-family="monospace" font-size="13" fill="#1e293b">email     String</text>
+  <text x="72" y="226" font-family="monospace" font-size="13" fill="#1e293b">name      String</text>
+  <text x="72" y="250" font-family="monospace" font-size="13" fill="#16a34a">tasks     Task[]</text>
+
+  <!-- Task jadvali -->
+  <rect x="445" y="120" width="220" height="174" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <rect x="445" y="120" width="220" height="34" rx="12" fill="#dcfce7"/>
+  <text x="555" y="143" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#16a34a">Task (N)</text>
+  <text x="462" y="178" font-family="monospace" font-size="13" fill="#1e293b">id      Int  @id</text>
+  <text x="462" y="202" font-family="monospace" font-size="13" fill="#1e293b">title   String</text>
+  <text x="462" y="226" font-family="monospace" font-size="13" fill="#1e293b">done    Boolean</text>
+  <text x="462" y="250" font-family="monospace" font-size="13" fill="#dc2626">userId  Int</text>
+  <text x="462" y="274" font-family="monospace" font-size="12" fill="#7c3aed">user  @relation(...)</text>
+
+  <!-- 1:N bog'lanish chizig'i: Task.userId -> User.id -->
+  <line x1="445" y1="250" x2="280" y2="172" stroke="#2563eb" stroke-width="2.5" marker-end="url(#rarr)"/>
+  <text x="362" y="200" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#2563eb">userId -&gt; User.id</text>
+  <text x="300" y="100" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#f59e0b">1</text>
+  <text x="425" y="100" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#f59e0b">N</text>
+
+  <!-- include namunasi -->
+  <rect x="80" y="312" width="560" height="98" rx="12" fill="#1e293b"/>
+  <text x="100" y="338" font-family="monospace" font-size="13" fill="#93c5fd">prisma.user.findUnique({</text>
+  <text x="120" y="358" font-family="monospace" font-size="13" fill="#e2e8f0">where: { id: 1 },</text>
+  <text x="120" y="378" font-family="monospace" font-size="13" fill="#86efac">include: { tasks: true }   // vazifalar birga keladi</text>
+  <text x="100" y="398" font-family="monospace" font-size="13" fill="#93c5fd">})  -&gt; { id, name, tasks: [ {...}, {...} ] }</text>
+</svg>

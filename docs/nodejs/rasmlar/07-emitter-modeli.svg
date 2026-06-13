@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>EventEmitter modeli: bitta emit() chaqiruvi shu hodisaga yozilgan bir nechta tinglovchini (listener) tartib bilan ishga tushiradi</title>
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">EventEmitter: bir emit -&gt; bir nechta tinglovchi</text>
+
+  <!-- Chiqaruvchi (emitter) -->
+  <rect x="40" y="150" width="170" height="120" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="125" y="186" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">Chiqaruvchi</text>
+  <text x="125" y="208" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">buyurtma tizimi</text>
+  <text x="125" y="240" text-anchor="middle" font-family="Consolas, monospace" font-size="14" font-weight="bold" fill="#1e293b">emit("orderPaid")</text>
+  <text x="125" y="258" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#64748b">"hodisa sodir bo'ldi!"</text>
+
+  <!-- Dispetcher tugun -->
+  <circle cx="320" cy="210" r="40" fill="#ede9fe" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="320" y="205" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#7c3aed">hodisa</text>
+  <text x="320" y="222" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#7c3aed">ro'yxati</text>
+
+  <!-- emit -> dispetcher strelka -->
+  <line x1="210" y1="210" x2="276" y2="210" stroke="#2563eb" stroke-width="2.5" marker-end="url(#bstrelka)"/>
+
+  <!-- Tinglovchilar -->
+  <rect x="500" y="60" width="180" height="74" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="590" y="90" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">Tinglovchi 1</text>
+  <text x="590" y="113" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">email yubor</text>
+
+  <rect x="500" y="173" width="180" height="74" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="590" y="203" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">Tinglovchi 2</text>
+  <text x="590" y="226" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">log yoz</text>
+
+  <rect x="500" y="286" width="180" height="74" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="590" y="316" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">Tinglovchi 3</text>
+  <text x="590" y="339" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">ombor xabari</text>
+
+  <!-- dispetcher -> tinglovchilar -->
+  <line x1="358" y1="190" x2="500" y2="97" stroke="#16a34a" stroke-width="2.5" marker-end="url(#gstrelka)"/>
+  <line x1="360" y1="210" x2="500" y2="210" stroke="#16a34a" stroke-width="2.5" marker-end="url(#gstrelka)"/>
+  <line x1="358" y1="230" x2="500" y2="323" stroke="#16a34a" stroke-width="2.5" marker-end="url(#gstrelka)"/>
+
+  <text x="430" y="135" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#64748b">on(...)</text>
+
+  <text x="360" y="400" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Chiqaruvchi tinglovchilarni bilmaydi — shunchaki "e'lon qiladi". Bog'liqlik kam: yangi reaksiyani on() bilan qo'shasiz.</text>
+
+  <defs>
+    <marker id="bstrelka" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="gstrelka" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>Prisma oqimi: schema.prisma dan migrate orqali DB jadvallari yaratiladi va generate orqali type-safe Prisma Client hosil bo'ladi; ilova kod shu client orqali bazaga ishlaydi</title>
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Prisma oqimi: bitta schema, ikki yo'nalish</text>
+  <text x="360" y="55" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">schema.prisma — yagona haqiqat manbai (single source of truth)</text>
+
+  <defs>
+    <marker id="parr" markerWidth="11" markerHeight="11" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L9,4 L0,8 Z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+
+  <!-- schema.prisma markazda chap -->
+  <rect x="40" y="170" width="150" height="100" rx="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="115" y="205" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#7c3aed">schema.prisma</text>
+  <text x="115" y="228" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#475569">model User</text>
+  <text x="115" y="246" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#475569">model Task</text>
+
+  <!-- yuqori yo'nalish: migrate -> DB -->
+  <rect x="290" y="80" width="150" height="84" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="365" y="112" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="#2563eb">prisma migrate</text>
+  <text x="365" y="133" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#64748b">SQL yozadi va</text>
+  <text x="365" y="150" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#64748b">bazaga qo'llaydi</text>
+
+  <rect x="540" y="80" width="150" height="84" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="615" y="112" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">Ma'lumotlar bazasi</text>
+  <text x="615" y="133" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#475569">User, Task</text>
+  <text x="615" y="150" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#475569">jadvallari</text>
+
+  <!-- past yo'nalish: generate -> client -->
+  <rect x="290" y="276" width="150" height="84" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="365" y="308" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="#16a34a">prisma generate</text>
+  <text x="365" y="329" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#64748b">turlardan client</text>
+  <text x="365" y="346" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#64748b">kodini yaratadi</text>
+
+  <rect x="540" y="276" width="150" height="84" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="615" y="304" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#16a34a">Prisma Client</text>
+  <text x="615" y="325" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#475569">type-safe,</text>
+  <text x="615" y="343" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#475569">avtoto'ldirish</text>
+
+  <!-- arrows: schema -> migrate -->
+  <line x1="190" y1="195" x2="286" y2="135" stroke="#f59e0b" stroke-width="3" marker-end="url(#parr)"/>
+  <!-- migrate -> DB -->
+  <line x1="440" y1="122" x2="536" y2="122" stroke="#f59e0b" stroke-width="3" marker-end="url(#parr)"/>
+  <!-- schema -> generate -->
+  <line x1="190" y1="245" x2="286" y2="305" stroke="#f59e0b" stroke-width="3" marker-end="url(#parr)"/>
+  <!-- generate -> client -->
+  <line x1="440" y1="318" x2="536" y2="318" stroke="#f59e0b" stroke-width="3" marker-end="url(#parr)"/>
+
+  <!-- client -> ilova kod -->
+  <rect x="540" y="372" width="150" height="40" rx="9" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.6"/>
+  <text x="615" y="397" text-anchor="middle" font-family="monospace" font-size="12.5" fill="#92400e">prisma.user.findMany()</text>
+  <line x1="615" y1="360" x2="615" y2="370" stroke="#16a34a" stroke-width="2.5" marker-end="url(#parr)"/>
+
+  <text x="240" y="400" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#64748b">migrate = baza tuzilmasi · generate = kod uchun turlar</text>
+</svg>

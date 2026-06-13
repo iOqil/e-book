@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>SQL jadval (qatorlar va ustunlar, qat'iy sxema) bilan MongoDB hujjat (JSON-ga o'xshash, ichma-ich, moslashuvchan sxema) strukturasining farqi</title>
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">SQL jadval va MongoDB hujjat: struktura farqi</text>
+
+  <!-- LEFT: SQL table -->
+  <text x="185" y="70" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">SQL (relyatsion) — jadval</text>
+  <text x="185" y="90" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#475569">qat'iy ustunlar, qatorlar; aloqalar — FK</text>
+
+  <!-- table header -->
+  <rect x="40" y="104" width="290" height="30" fill="#dbeafe" stroke="#2563eb" stroke-width="1.6"/>
+  <line x1="120" y1="104" x2="120" y2="254" stroke="#93c5fd" stroke-width="1"/>
+  <line x1="225" y1="104" x2="225" y2="254" stroke="#93c5fd" stroke-width="1"/>
+  <text x="80" y="124" text-anchor="middle" font-family="monospace" font-size="12" font-weight="bold" fill="#1e40af">id</text>
+  <text x="172" y="124" text-anchor="middle" font-family="monospace" font-size="12" font-weight="bold" fill="#1e40af">ism</text>
+  <text x="277" y="124" text-anchor="middle" font-family="monospace" font-size="12" font-weight="bold" fill="#1e40af">yosh</text>
+
+  <!-- rows -->
+  <rect x="40" y="134" width="290" height="30" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="80" y="154" text-anchor="middle" font-family="monospace" font-size="12" fill="#334155">1</text>
+  <text x="172" y="154" text-anchor="middle" font-family="monospace" font-size="12" fill="#334155">Ali</text>
+  <text x="277" y="154" text-anchor="middle" font-family="monospace" font-size="12" fill="#334155">30</text>
+
+  <rect x="40" y="164" width="290" height="30" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="80" y="184" text-anchor="middle" font-family="monospace" font-size="12" fill="#334155">2</text>
+  <text x="172" y="184" text-anchor="middle" font-family="monospace" font-size="12" fill="#334155">Vali</text>
+  <text x="277" y="184" text-anchor="middle" font-family="monospace" font-size="12" fill="#334155">25</text>
+
+  <rect x="40" y="194" width="290" height="30" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="80" y="214" text-anchor="middle" font-family="monospace" font-size="12" fill="#334155">3</text>
+  <text x="172" y="214" text-anchor="middle" font-family="monospace" font-size="12" fill="#334155">Hasan</text>
+  <text x="277" y="214" text-anchor="middle" font-family="monospace" font-size="12" fill="#94a3b8">NULL</text>
+
+  <text x="185" y="246" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#64748b">har qator bir xil ustunlarga ega bo'lishi shart</text>
+
+  <!-- RIGHT: Mongo document -->
+  <text x="535" y="70" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">MongoDB (hujjat) — collection</text>
+  <text x="535" y="90" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#475569">JSON-ga o'xshash, ichma-ich, moslashuvchan</text>
+
+  <rect x="390" y="104" width="290" height="150" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="1.8"/>
+  <text x="408" y="128" font-family="monospace" font-size="12.5" fill="#334155">{</text>
+  <text x="424" y="146" font-family="monospace" font-size="12.5" fill="#7c3aed">  _id: <tspan fill="#dc2626">ObjectId("6a2b...")</tspan>,</text>
+  <text x="424" y="164" font-family="monospace" font-size="12.5" fill="#334155">  ism: <tspan fill="#16a34a">"Ali"</tspan>, yosh: <tspan fill="#2563eb">30</tspan>,</text>
+  <text x="424" y="182" font-family="monospace" font-size="12.5" fill="#334155">  manzil: { <tspan fill="#64748b">shahar:</tspan> <tspan fill="#16a34a">"Toshkent"</tspan> },</text>
+  <text x="424" y="200" font-family="monospace" font-size="12.5" fill="#334155">  teglar: [<tspan fill="#16a34a">"node"</tspan>, <tspan fill="#16a34a">"mongo"</tspan>]</text>
+  <text x="408" y="218" font-family="monospace" font-size="12.5" fill="#334155">}</text>
+  <text x="535" y="246" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#64748b">har hujjat boshqacha maydonlarga ega bo'lishi mumkin</text>
+
+  <!-- bottom comparison band -->
+  <rect x="40" y="282" width="290" height="118" rx="9" fill="#eff6ff" stroke="#2563eb" stroke-width="1.4"/>
+  <text x="185" y="304" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e40af">SQL qachon?</text>
+  <text x="60" y="326" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#334155">- qat'iy, aniq aloqali ma'lumot</text>
+  <text x="60" y="346" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#334155">- kuchli tranzaksiya (bank, hisob)</text>
+  <text x="60" y="366" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#334155">- murakkab JOIN va hisobotlar</text>
+  <text x="60" y="386" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#334155">- sxema kamdan-kam o'zgaradi</text>
+
+  <rect x="390" y="282" width="290" height="118" rx="9" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.4"/>
+  <text x="535" y="304" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#15803d">NoSQL (MongoDB) qachon?</text>
+  <text x="410" y="326" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#334155">- moslashuvchan, o'zgaruvchan sxema</text>
+  <text x="410" y="346" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#334155">- tez prototip, MVP</text>
+  <text x="410" y="366" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#334155">- iyerarxik / ichma-ich ma'lumot</text>
+  <text x="410" y="386" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#334155">- katta hajm, gorizontal scaling</text>
+</svg>

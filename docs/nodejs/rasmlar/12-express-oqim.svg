@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>Express so'rov oqimi: kiruvchi so'rov middleware (express.json) dan o'tib, router yo'lni topadi, handler javob qaytaradi</title>
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="30" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Express so'rov oqimi</text>
+  <text x="360" y="52" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">request → middleware → router → handler → response</text>
+
+  <defs>
+    <marker id="ar" markerWidth="11" markerHeight="11" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L9,4 L0,8 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <!-- 1. REQUEST -->
+  <rect x="24" y="170" width="118" height="74" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="83" y="200" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">So'rov</text>
+  <text x="83" y="220" text-anchor="middle" font-family="monospace" font-size="11.5" fill="#1e293b">POST</text>
+  <text x="83" y="236" text-anchor="middle" font-family="monospace" font-size="11.5" fill="#1e293b">/vazifalar</text>
+
+  <line x1="142" y1="207" x2="178" y2="207" stroke="#64748b" stroke-width="2.5" marker-end="url(#ar)"/>
+
+  <!-- 2. MIDDLEWARE -->
+  <rect x="180" y="160" width="138" height="94" rx="10" fill="#f3e8ff" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="249" y="186" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#7c3aed">Middleware</text>
+  <text x="249" y="208" text-anchor="middle" font-family="monospace" font-size="11" fill="#1e293b">express.json()</text>
+  <text x="249" y="226" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#475569">tanani o'qiydi →</text>
+  <text x="249" y="242" text-anchor="middle" font-family="monospace" font-size="11" fill="#475569">req.body</text>
+
+  <line x1="318" y1="207" x2="354" y2="207" stroke="#64748b" stroke-width="2.5" marker-end="url(#ar)"/>
+
+  <!-- 3. ROUTER -->
+  <rect x="356" y="160" width="138" height="94" rx="10" fill="#fef9c3" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="425" y="186" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309">Router</text>
+  <text x="425" y="208" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#475569">metod + yo'lni</text>
+  <text x="425" y="224" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#475569">moslaydi</text>
+  <text x="425" y="242" text-anchor="middle" font-family="monospace" font-size="10.5" fill="#1e293b">.post("/")</text>
+
+  <line x1="494" y1="207" x2="530" y2="207" stroke="#64748b" stroke-width="2.5" marker-end="url(#ar)"/>
+
+  <!-- 4. HANDLER -->
+  <rect x="532" y="160" width="160" height="94" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="612" y="186" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#15803d">Handler</text>
+  <text x="612" y="208" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#475569">(req, res) =&gt; ...</text>
+  <text x="612" y="226" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#475569">mantiq bajaradi</text>
+  <text x="612" y="242" text-anchor="middle" font-family="monospace" font-size="10.5" fill="#1e293b">res.json(...)</text>
+
+  <!-- RESPONSE qaytish -->
+  <path d="M612 254 L612 320 L83 320 L83 248" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-dasharray="6 5" marker-end="url(#ar)"/>
+  <rect x="300" y="302" width="190" height="36" rx="9" fill="#ecfdf5" stroke="#16a34a" stroke-width="1.6"/>
+  <text x="395" y="325" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#15803d">Javob (201 + JSON) qaytadi</text>
+
+  <!-- pastki izoh -->
+  <rect x="24" y="372" width="668" height="40" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.4"/>
+  <text x="360" y="389" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#1e40af">Har bir bosqich req/res obyektini keyingisiga uzatadi. Middleware next() chaqirmasa, oqim shu yerda to'xtaydi.</text>
+  <text x="360" y="406" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#1e40af">Native http'da bu zanjirni o'zingiz qo'lda qurardingiz — Express uni tayyor beradi.</text>
+</svg>

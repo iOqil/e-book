@@ -15,10 +15,10 @@ hide:
 [GitHub](https://github.com/iOqil/e-book){ .md-button }
 
 <div class="hero-stats">
-  <div class="stat"><b>13</b><span>kitob</span></div>
-  <div class="stat"><b>672</b><span>diagramma</span></div>
-  <div class="stat"><b>300+</b><span>bob</span></div>
-  <div class="stat"><b>2900+</b><span>masala</span></div>
+  <div class="stat"><b>14</b><span>kitob</span></div>
+  <div class="stat"><b>724</b><span>diagramma</span></div>
+  <div class="stat"><b>330+</b><span>bob</span></div>
+  <div class="stat"><b>3100+</b><span>masala</span></div>
 </div>
 
 </section>
@@ -128,5 +128,13 @@ hide:
     Junior PHP'dan **0 dan senior gacha** to'liq trek: ekspert REST API, RBAC/JWT, PHP 8.4 tip tizimi (property hooks, readonly VO, Reflection/FFI), **o'z mini-frameworkingizni** qurish (PSR-7/15/11, router, Twig), fayllar/formatlar (Excel/PDF/bulut), sifat-muhandislik (SOLID, GoF patterns, PHPUnit/Pest, PHPStan), arxitektura (hexagonal/DDD/CQRS), performance (OPcache/JIT/Redis), async (Fibers/ReactPHP) va production (queue/observability/Docker) + yakuniy kapston. Kod real PHP 8.4 da ishga tushirib tekshirilgan. To'liq **30 bob · 60 diagramma**.
 
     [Boshlash →](php-expert/README.md)
+
+-   🟢 **14. Node.js**
+
+    ---
+
+    JavaScript bilan **0 dan backend dasturchigacha**: event loop, asinxronlik, streamlar, native HTTP, Express, **4 xil DB** (SQLite, MySQL, Prisma, MongoDB), JWT auth/RBAC, real-time (Socket.io), testlash (Vitest/supertest), production (Docker/cluster/pino), TypeScript va to'liq REST API kapston. Kod real Node 24 + jonli MySQL da ishga tushirib tekshirilgan. 26 bob · 52 diagramma.
+
+    [Boshlash →](nodejs/README.md)
 
 </div>

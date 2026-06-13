@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>Veb xavfsizlik qatlamlari: kelgan so'rov ketma-ket helmet, cors, rate limit va validatsiya qatlamlaridan o'tib route handlerga yetadi; har qatlam ma'lum hujum turidan himoya qiladi</title>
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Veb xavfsizlik qatlamlari</text>
+  <text x="360" y="55" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">So'rov route handlerga yetguncha to'rt mudofaa qatlamidan o'tadi</text>
+
+  <defs>
+    <marker id="sar21" markerWidth="11" markerHeight="11" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L9,4 L0,8 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- request -->
+  <rect x="20" y="178" width="92" height="64" rx="10" fill="#e2e8f0" stroke="#64748b" stroke-width="2"/>
+  <text x="66" y="206" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#334155">so'rov</text>
+  <text x="66" y="225" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#64748b">tashqaridan</text>
+
+  <!-- L1 helmet -->
+  <rect x="132" y="160" width="118" height="100" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="191" y="185" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">helmet</text>
+  <text x="191" y="207" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#1e293b">xavfsiz HTTP</text>
+  <text x="191" y="222" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#1e293b">sarlavhalar</text>
+  <text x="191" y="244" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="10.5" fill="#64748b">CSP / HSTS</text>
+
+  <!-- L2 cors -->
+  <rect x="268" y="160" width="118" height="100" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="327" y="185" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">cors</text>
+  <text x="327" y="207" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#1e293b">origin oq</text>
+  <text x="327" y="222" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#1e293b">ro'yxati</text>
+  <text x="327" y="244" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="10.5" fill="#64748b">kim chaqira oladi</text>
+
+  <!-- L3 rate limit -->
+  <rect x="404" y="160" width="118" height="100" rx="12" fill="#ffffff" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="463" y="185" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#b45309">rate limit</text>
+  <text x="463" y="207" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#1e293b">so'rov soni</text>
+  <text x="463" y="222" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#1e293b">cheklash</text>
+  <text x="463" y="244" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="10.5" fill="#64748b">brute-force -&gt; 429</text>
+
+  <!-- L4 validatsiya -->
+  <rect x="540" y="160" width="118" height="100" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="599" y="185" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#7c3aed">validatsiya</text>
+  <text x="599" y="207" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#1e293b">zod / sanitatsiya</text>
+  <text x="599" y="222" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#1e293b">tana tekshirish</text>
+  <text x="599" y="244" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="10.5" fill="#64748b">XSS / injection</text>
+
+  <!-- handler -->
+  <rect x="540" y="300" width="118" height="62" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="599" y="328" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#16a34a">handler</text>
+  <text x="599" y="348" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#64748b">ishonchli so'rov</text>
+
+  <!-- arrows between layers -->
+  <line x1="112" y1="210" x2="129" y2="210" stroke="#475569" stroke-width="2.5" marker-end="url(#sar21)"/>
+  <line x1="250" y1="210" x2="265" y2="210" stroke="#475569" stroke-width="2.5" marker-end="url(#sar21)"/>
+  <line x1="386" y1="210" x2="401" y2="210" stroke="#475569" stroke-width="2.5" marker-end="url(#sar21)"/>
+  <line x1="522" y1="210" x2="537" y2="210" stroke="#475569" stroke-width="2.5" marker-end="url(#sar21)"/>
+  <line x1="599" y1="260" x2="599" y2="297" stroke="#475569" stroke-width="2.5" marker-end="url(#sar21)"/>
+
+  <!-- bottom note -->
+  <rect x="60" y="312" width="430" height="58" rx="9" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="275" y="336" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#991b1b">Mudofaa qatlamlab quriladi (defense in depth): bitta qatlam</text>
+  <text x="275" y="356" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#991b1b">teshilsa, keyingisi himoya qiladi. Tartib: app.use yuqorida.</text>
+</svg>

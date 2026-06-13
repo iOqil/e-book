@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 450" width="720" height="450">
+  <title>child_process modulining 4 metodi: exec (qisqa chiqish, shell), execFile (shell'siz, xavfsiz), spawn (katta chiqish, stream), fork (Node-Node IPC)</title>
+
+  <rect x="0" y="0" width="720" height="450" fill="#f8fafc"/>
+
+  <text x="360" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">child_process — qaysi metodni qachon?</text>
+  <text x="360" y="54" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tashqi buyruq/dasturni Node ichidan ishga tushirishning 4 yo'li</text>
+
+  <!-- exec -->
+  <rect x="30" y="80" width="320" height="160" rx="12" fill="#fff" stroke="#16a34a" stroke-width="2"/>
+  <rect x="30" y="80" width="320" height="34" rx="12" fill="#dcfce7"/>
+  <rect x="30" y="100" width="320" height="14" fill="#dcfce7"/>
+  <text x="46" y="103" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#15803d">exec(buyruq, cb)</text>
+  <text x="46" y="138" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#1e293b">• Buyruqni SHELL orqali bajaradi</text>
+  <text x="46" y="158" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#1e293b">• Butun chiqishni bir stringda beradi</text>
+  <text x="46" y="178" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#1e293b">• Qisqa natija uchun qulay</text>
+  <text x="46" y="200" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" font-weight="bold" fill="#dc2626">! shell injection xavfi</text>
+  <text x="46" y="224" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#15803d">Misol: ls, node -v, git log --oneline</text>
+
+  <!-- execFile -->
+  <rect x="370" y="80" width="320" height="160" rx="12" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+  <rect x="370" y="80" width="320" height="34" rx="12" fill="#dbeafe"/>
+  <rect x="370" y="100" width="320" height="14" fill="#dbeafe"/>
+  <text x="386" y="103" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1d4ed8">execFile(fayl, args, cb)</text>
+  <text x="386" y="138" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#1e293b">• Shell YO'Q — to'g'ridan dastur</text>
+  <text x="386" y="158" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#1e293b">• Argumentlar alohida massiv</text>
+  <text x="386" y="178" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#1e293b">• Butun chiqishni stringda beradi</text>
+  <text x="386" y="200" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" font-weight="bold" fill="#16a34a">+ injectiondan himoyalangan</text>
+  <text x="386" y="224" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#1d4ed8">Misol: node ['-v'], ffmpeg [...]</text>
+
+  <!-- spawn -->
+  <rect x="30" y="256" width="320" height="160" rx="12" fill="#fff" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="30" y="256" width="320" height="34" rx="12" fill="#fef3c7"/>
+  <rect x="30" y="276" width="320" height="14" fill="#fef3c7"/>
+  <text x="46" y="279" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#b45309">spawn(fayl, args)</text>
+  <text x="46" y="314" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#1e293b">• Chiqishni STREAM sifatida beradi</text>
+  <text x="46" y="334" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#1e293b">• Katta/uzluksiz chiqish uchun</text>
+  <text x="46" y="354" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#1e293b">• Xotira to'lib ketmaydi</text>
+  <text x="46" y="376" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" font-weight="bold" fill="#16a34a">+ shell'siz (default xavfsiz)</text>
+  <text x="46" y="400" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#b45309">Misol: katta log, video kodlash</text>
+
+  <!-- fork -->
+  <rect x="370" y="256" width="320" height="160" rx="12" fill="#fff" stroke="#7c3aed" stroke-width="2"/>
+  <rect x="370" y="256" width="320" height="34" rx="12" fill="#ede9fe"/>
+  <rect x="370" y="276" width="320" height="14" fill="#ede9fe"/>
+  <text x="386" y="279" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#6d28d9">fork(modul.mjs)</text>
+  <text x="386" y="314" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#1e293b">• Faqat Node skriptini ishga tushiradi</text>
+  <text x="386" y="334" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#1e293b">• IPC kanali: .send() / 'message'</text>
+  <text x="386" y="354" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#1e293b">• Og'ir hisobni alohida jarayonga</text>
+  <text x="386" y="376" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" font-weight="bold" fill="#6d28d9">= spawn + Node + xabar almashinuv</text>
+  <text x="386" y="400" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#6d28d9">Misol: og'ir hisob worker jarayoni</text>
+
+  <text x="360" y="438" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#475569">Qoida: ishonchsiz kiritma bo'lsa — exec emas, execFile/spawn ishlat</text>
+</svg>

@@ -11,6 +11,7 @@ BOOKS = [
     ('typescript', 'TypeScript'),
     ('laravel', 'Laravel'),
     ('php-expert', 'PHP Expert'),
+    ('nodejs', 'Node.js'),
 ]
 
 def natkey(s):

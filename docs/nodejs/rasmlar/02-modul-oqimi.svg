@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>Modul oqimi: matematika.js fayli funksiyalarni eksport qiladi, app.js fayli ularni import qilib ishlatadi. Node modulni bir marta yuklab keshlaydi.</title>
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Modul oqimi: eksport &#8594; import</text>
+
+  <!-- Fayl A: matematika.js -->
+  <rect x="40" y="70" width="250" height="180" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="165" y="98" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">matematika.js</text>
+  <text x="165" y="118" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#64748b">(modul / fayl A)</text>
+
+  <rect x="62" y="132" width="206" height="30" rx="6" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="74" y="152" font-family="Consolas, monospace" font-size="12.5" fill="#1e293b">function qosh(a, b) { ... }</text>
+
+  <rect x="62" y="168" width="206" height="30" rx="6" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="74" y="188" font-family="Consolas, monospace" font-size="12.5" fill="#1e293b">function bol(a, b) { ... }</text>
+
+  <rect x="62" y="206" width="206" height="32" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="165" y="227" text-anchor="middle" font-family="Consolas, monospace" font-size="12.5" font-weight="bold" fill="#16a34a">export { qosh, bol }</text>
+
+  <!-- Strelka A -> Node -->
+  <line x1="290" y1="222" x2="345" y2="222" stroke="#16a34a" stroke-width="2.5"/>
+  <polygon points="345,222 335,217 335,227" fill="#16a34a"/>
+  <text x="318" y="212" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#16a34a">beradi</text>
+
+  <!-- Node yadrosi / kesh -->
+  <rect x="348" y="150" width="120" height="150" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="408" y="178" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309">Node</text>
+  <text x="408" y="198" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#92400e">modul kesh</text>
+  <text x="408" y="232" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#92400e">bir marta</text>
+  <text x="408" y="248" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#92400e">yuklaydi,</text>
+  <text x="408" y="264" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#92400e">saqlaydi</text>
+
+  <!-- Strelka Node -> B -->
+  <line x1="468" y1="222" x2="523" y2="222" stroke="#2563eb" stroke-width="2.5"/>
+  <polygon points="523,222 513,217 513,227" fill="#2563eb"/>
+  <text x="495" y="212" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#2563eb">import</text>
+
+  <!-- Fayl B: app.js -->
+  <rect x="526" y="70" width="160" height="180" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="606" y="98" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#7c3aed">app.js</text>
+  <text x="606" y="118" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#64748b">(fayl B)</text>
+
+  <rect x="540" y="134" width="132" height="44" rx="6" fill="#ffffff" stroke="#c4b5fd" stroke-width="1.5"/>
+  <text x="606" y="153" text-anchor="middle" font-family="Consolas, monospace" font-size="11.5" fill="#1e293b">import { qosh }</text>
+  <text x="606" y="170" text-anchor="middle" font-family="Consolas, monospace" font-size="11.5" fill="#1e293b">from "./matematika"</text>
+
+  <rect x="540" y="186" width="132" height="52" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="606" y="206" text-anchor="middle" font-family="Consolas, monospace" font-size="11.5" fill="#1e293b">qosh(2, 3)</text>
+  <text x="606" y="226" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" font-weight="bold" fill="#16a34a">&#8594; 5</text>
+
+  <!-- Izolyatsiya izoh -->
+  <line x1="40" y1="326" x2="686" y2="326" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="40" y="356" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Har fayl o'z scope'ida:</text>
+  <text x="40" y="378" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">matematika.js ichidagi o'zgaruvchilar app.js ga FAQAT eksport orqali ko'rinadi.</text>
+  <text x="40" y="398" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Eksport qilinmagan narsa (masalan ichki const) tashqaridan yashirin qoladi.</text>
+
+  <rect x="40" y="408" width="646" height="0" fill="none"/>
+</svg>

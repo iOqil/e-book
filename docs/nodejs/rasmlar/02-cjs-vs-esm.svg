@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>CommonJS va ESM solishtiruvi: sintaksis, yuklash usuli (sinxron require va asinxron import), fayl kengaytmasi va qachon qaysisini ishlatish bo'yicha jadval.</title>
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">CommonJS va ESM</text>
+
+  <!-- Ustun sarlavhalari -->
+  <rect x="40" y="48" width="180" height="40" rx="8" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="130" y="73" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#475569">Xususiyat</text>
+
+  <rect x="226" y="48" width="230" height="40" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="341" y="68" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14.5" font-weight="bold" fill="#b45309">CommonJS</text>
+  <text x="341" y="83" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#92400e">Node an'anaviy</text>
+
+  <rect x="462" y="48" width="224" height="40" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="574" y="68" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14.5" font-weight="bold" fill="#2563eb">ESM (zamonaviy)</text>
+  <text x="574" y="83" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#1e40af">standart &#8212; biz shuni ishlatamiz</text>
+
+  <!-- Qatorlar -->
+  <!-- 1 Eksport -->
+  <rect x="40" y="94" width="180" height="48" rx="6" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="52" y="123" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">Eksport</text>
+  <rect x="226" y="94" width="230" height="48" rx="6" fill="#fffbeb" stroke="#fde68a" stroke-width="1.5"/>
+  <text x="341" y="123" text-anchor="middle" font-family="Consolas, monospace" font-size="12" fill="#1e293b">module.exports = ...</text>
+  <rect x="462" y="94" width="224" height="48" rx="6" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="574" y="116" text-anchor="middle" font-family="Consolas, monospace" font-size="12" fill="#1e293b">export / </text>
+  <text x="574" y="133" text-anchor="middle" font-family="Consolas, monospace" font-size="12" fill="#1e293b">export default</text>
+
+  <!-- 2 Import -->
+  <rect x="40" y="146" width="180" height="48" rx="6" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="52" y="175" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">Import</text>
+  <rect x="226" y="146" width="230" height="48" rx="6" fill="#fffbeb" stroke="#fde68a" stroke-width="1.5"/>
+  <text x="341" y="175" text-anchor="middle" font-family="Consolas, monospace" font-size="12" fill="#1e293b">const x = require("...")</text>
+  <rect x="462" y="146" width="224" height="48" rx="6" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="574" y="175" text-anchor="middle" font-family="Consolas, monospace" font-size="12" fill="#1e293b">import x from "..."</text>
+
+  <!-- 3 Yuklash -->
+  <rect x="40" y="198" width="180" height="48" rx="6" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="52" y="227" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">Yuklash usuli</text>
+  <rect x="226" y="198" width="230" height="48" rx="6" fill="#fffbeb" stroke="#fde68a" stroke-width="1.5"/>
+  <text x="341" y="220" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#1e293b">sinxron (darrov)</text>
+  <text x="341" y="237" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#64748b">kod ishlashida yuklanadi</text>
+  <rect x="462" y="198" width="224" height="48" rx="6" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="574" y="220" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#1e293b">asinxron (oldindan)</text>
+  <text x="574" y="237" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#64748b">static tahlil, top-level await</text>
+
+  <!-- 4 Fayl -->
+  <rect x="40" y="250" width="180" height="48" rx="6" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="52" y="279" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">Faylda yoqish</text>
+  <rect x="226" y="250" width="230" height="48" rx="6" fill="#fffbeb" stroke="#fde68a" stroke-width="1.5"/>
+  <text x="341" y="272" text-anchor="middle" font-family="Consolas, monospace" font-size="11.5" fill="#1e293b">.cjs  yoki  default</text>
+  <text x="341" y="289" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#64748b">(type yo'q bo'lsa)</text>
+  <rect x="462" y="250" width="224" height="48" rx="6" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="574" y="272" text-anchor="middle" font-family="Consolas, monospace" font-size="11.5" fill="#1e293b">.mjs  yoki</text>
+  <text x="574" y="289" text-anchor="middle" font-family="Consolas, monospace" font-size="11.5" fill="#1e293b">"type": "module"</text>
+
+  <!-- 5 dirname -->
+  <rect x="40" y="302" width="180" height="48" rx="6" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="52" y="331" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">Yo'l (dirname)</text>
+  <rect x="226" y="302" width="230" height="48" rx="6" fill="#fffbeb" stroke="#fde68a" stroke-width="1.5"/>
+  <text x="341" y="330" text-anchor="middle" font-family="Consolas, monospace" font-size="12" fill="#16a34a">__dirname tayyor</text>
+  <rect x="462" y="302" width="224" height="48" rx="6" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="574" y="330" text-anchor="middle" font-family="Consolas, monospace" font-size="12" fill="#1e293b">import.meta.dirname</text>
+
+  <!-- Xulosa -->
+  <rect x="40" y="364" width="646" height="48" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="360" y="385" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#166534">Qoida: yangi loyihada ESM (import/export) ni tanlang.</text>
+  <text x="360" y="403" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#15803d">CommonJS ni eski kod va paketlarni tushunish uchun bilib qo'ying.</text>
+</svg>

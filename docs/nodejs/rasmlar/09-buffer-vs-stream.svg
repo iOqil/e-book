@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>Buffer vs Stream xotira solishtiruvi: butun faylni RAM ga olish (xavfli) yoki bo'laklab oqitish (xavfsiz)</title>
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Xotira: butun fayl RAM da vs bo'laklab oqim</text>
+  <text x="360" y="55" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">10 GB faylni ikki xil o'qish — xotira sarfi yer bilan osmoncha</text>
+
+  <!-- LEFT: readFile (whole buffer) -->
+  <rect x="28" y="76" width="316" height="324" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="186" y="104" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#dc2626">fs.readFile() — Buffer</text>
+  <text x="186" y="125" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#475569">butun fayl bir vaqtda xotiraga</text>
+
+  <!-- big RAM block filling -->
+  <rect x="62" y="142" width="248" height="180" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="1.6"/>
+  <text x="186" y="200" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#991b1b">10 GB</text>
+  <text x="186" y="224" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#991b1b">RAM da to'liq nusxa</text>
+  <text x="186" y="262" text-anchor="middle" font-family="monospace" font-size="12" fill="#7f1d1d">const buf =</text>
+  <text x="186" y="282" text-anchor="middle" font-family="monospace" font-size="12" fill="#7f1d1d">await readFile(f)</text>
+
+  <rect x="62" y="338" width="248" height="46" rx="7" fill="#f8fafc" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="186" y="357" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">RAM yetmaydi → dastur</text>
+  <text x="186" y="375" text-anchor="middle" font-family="monospace" font-size="13" fill="#dc2626">ERR_OUT_OF_MEMORY</text>
+
+  <!-- RIGHT: createReadStream (chunks) -->
+  <rect x="376" y="76" width="316" height="324" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="534" y="104" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">createReadStream() — Stream</text>
+  <text x="534" y="125" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#475569">bir vaqtda faqat bitta kichik bo'lak</text>
+
+  <!-- small chunk block + flowing chunks -->
+  <rect x="410" y="142" width="248" height="180" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.6"/>
+  <text x="534" y="166" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#166534">bir vaqtda xotirada:</text>
+  <rect x="468" y="180" width="132" height="40" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.6"/>
+  <text x="534" y="205" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#166534">64 KB</text>
+  <text x="534" y="244" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#166534">bo'laklar ketma-ket oqadi:</text>
+  <g>
+    <rect x="438" y="258" width="30" height="22" rx="4" fill="#bbf7d0" stroke="#16a34a" stroke-width="1.2"/>
+    <rect x="474" y="258" width="30" height="22" rx="4" fill="#bbf7d0" stroke="#16a34a" stroke-width="1.2"/>
+    <rect x="510" y="258" width="30" height="22" rx="4" fill="#bbf7d0" stroke="#16a34a" stroke-width="1.2"/>
+    <rect x="546" y="258" width="30" height="22" rx="4" fill="#bbf7d0" stroke="#16a34a" stroke-width="1.2"/>
+    <rect x="582" y="258" width="30" height="22" rx="4" fill="#bbf7d0" stroke="#16a34a" stroke-width="1.2"/>
+    <text x="534" y="300" text-anchor="middle" font-family="monospace" font-size="11.5" fill="#166534">for await (chunk of stream)</text>
+  </g>
+
+  <rect x="410" y="338" width="248" height="46" rx="7" fill="#f8fafc" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="534" y="357" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">50 MB RAM bilan ham</text>
+  <text x="534" y="375" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">ishlayveradi — xotira shishmaydi</text>
+
+  <text x="360" y="420" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Qoida: fayl kichik va ma'lum bo'lsa readFile; katta yoki noma'lum bo'lsa — stream.</text>
+</svg>

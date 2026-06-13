@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>Socket.io xonalar va broadcast: io.to(room).emit faqat shu xona a'zolariga yetadi, boshqa xonaga tegmaydi</title>
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Socket.io: xonalar (rooms) va broadcast</text>
+  <text x="360" y="55" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">io.to("dev").emit(...) faqat "dev" a'zolariga, boshqa xonaga tegmaydi</text>
+
+  <defs>
+    <marker id="arr2" markerWidth="11" markerHeight="11" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L9,4 L0,8 Z" fill="#16a34a"/>
+    </marker>
+    <marker id="arrx" markerWidth="11" markerHeight="11" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L9,4 L0,8 Z" fill="#cbd5e1"/>
+    </marker>
+  </defs>
+
+  <!-- SERVER -->
+  <rect x="285" y="78" width="150" height="74" rx="12" fill="#fff" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="360" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#7c3aed">Socket.io server</text>
+  <text x="360" y="132" text-anchor="middle" font-family="monospace" font-size="12.5" fill="#1e293b">io.to("dev").emit()</text>
+
+  <!-- ROOM dev (left) -->
+  <rect x="40" y="200" width="300" height="200" rx="14" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="190" y="226" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">Xona: "dev"</text>
+
+  <!-- members dev -->
+  <circle cx="100" cy="295" r="34" fill="#fff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="100" y="290" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#166534">Olma</text>
+  <text x="100" y="308" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#64748b">socket A</text>
+
+  <circle cx="200" cy="295" r="34" fill="#fff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="200" y="290" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#166534">Bodom</text>
+  <text x="200" y="308" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#64748b">socket B</text>
+
+  <circle cx="290" cy="295" r="34" fill="#fff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="290" y="290" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#166534">Anor</text>
+  <text x="290" y="308" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#64748b">socket C</text>
+
+  <text x="190" y="372" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#1d4ed8">socket.join("dev") qilgan a'zolar</text>
+  <text x="190" y="390" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" font-weight="bold" fill="#166534">xabarni HAMMASI oladi</text>
+
+  <!-- ROOM sport (right) -->
+  <rect x="400" y="200" width="280" height="200" rx="14" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="540" y="226" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">Xona: "sport"</text>
+
+  <circle cx="480" cy="295" r="34" fill="#fff" stroke="#94a3b8" stroke-width="2.5"/>
+  <text x="480" y="290" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Nok</text>
+  <text x="480" y="308" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#94a3b8">socket D</text>
+
+  <circle cx="595" cy="295" r="34" fill="#fff" stroke="#94a3b8" stroke-width="2.5"/>
+  <text x="595" y="290" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Uzum</text>
+  <text x="595" y="308" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#94a3b8">socket E</text>
+
+  <text x="540" y="372" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#b91c1c">boshqa xona a'zolari</text>
+  <text x="540" y="390" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" font-weight="bold" fill="#94a3b8">xabarni OLMAYDI</text>
+
+  <!-- arrows server -> dev members (green) -->
+  <line x1="320" y1="150" x2="110" y2="258" stroke="#16a34a" stroke-width="2.2" marker-end="url(#arr2)"/>
+  <line x1="345" y1="152" x2="205" y2="258" stroke="#16a34a" stroke-width="2.2" marker-end="url(#arr2)"/>
+  <line x1="375" y1="152" x2="290" y2="258" stroke="#16a34a" stroke-width="2.2" marker-end="url(#arr2)"/>
+
+  <!-- arrows server -> sport members (grey, crossed) -->
+  <line x1="400" y1="150" x2="478" y2="258" stroke="#cbd5e1" stroke-width="2" marker-end="url(#arrx)" stroke-dasharray="5 4"/>
+  <line x1="420" y1="148" x2="593" y2="258" stroke="#cbd5e1" stroke-width="2" marker-end="url(#arrx)" stroke-dasharray="5 4"/>
+
+  <!-- legend -->
+  <line x1="455" y1="168" x2="485" y2="168" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="492" y="172" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#166534">yetkaziladi</text>
+  <line x1="575" y1="168" x2="605" y2="168" stroke="#cbd5e1" stroke-width="2.5" stroke-dasharray="5 4"/>
+  <text x="612" y="172" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#94a3b8">yetmaydi</text>
+</svg>

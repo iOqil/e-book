@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>REST resurs va verb jadvali: CRUD amali, SQL buyrugi, HTTP metod, namuna yo'l, status kodi va idempotentlik bir-biriga moslashtirilgan</title>
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">REST: CRUD = SQL = HTTP verb</text>
+  <text x="360" y="55" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">Bitta resurs (/api/vazifalar) ustida to'rt amal, mos status kodi bilan</text>
+
+  <!-- ustun sarlavhalari -->
+  <rect x="20" y="70" width="680" height="34" rx="6" fill="#1e293b"/>
+  <text x="72"  y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">CRUD</text>
+  <text x="155" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">SQL</text>
+  <text x="248" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">HTTP</text>
+  <text x="400" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">Yo'l</text>
+  <text x="560" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">Status</text>
+  <text x="662" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">Idempot.</text>
+
+  <!-- READ -->
+  <rect x="20" y="108" width="680" height="50" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="72"  y="130" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e40af">Read</text>
+  <text x="155" y="130" text-anchor="middle" font-family="monospace" font-size="12.5" fill="#1e293b">SELECT</text>
+  <text x="248" y="130" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="#2563eb">GET</text>
+  <text x="400" y="126" text-anchor="middle" font-family="monospace" font-size="12" fill="#1e293b">/vazifalar</text>
+  <text x="400" y="144" text-anchor="middle" font-family="monospace" font-size="12" fill="#1e293b">/vazifalar/:id</text>
+  <text x="560" y="130" text-anchor="middle" font-family="monospace" font-size="12.5" fill="#16a34a">200</text>
+  <text x="662" y="130" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#16a34a">ha</text>
+
+  <!-- CREATE -->
+  <rect x="20" y="162" width="680" height="50" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="72"  y="184" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#15803d">Create</text>
+  <text x="155" y="184" text-anchor="middle" font-family="monospace" font-size="12.5" fill="#1e293b">INSERT</text>
+  <text x="248" y="184" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="#16a34a">POST</text>
+  <text x="400" y="187" text-anchor="middle" font-family="monospace" font-size="12" fill="#1e293b">/vazifalar</text>
+  <text x="560" y="180" text-anchor="middle" font-family="monospace" font-size="12.5" fill="#16a34a">201</text>
+  <text x="560" y="196" text-anchor="middle" font-family="monospace" font-size="11" fill="#475569">+Location</text>
+  <text x="662" y="184" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#dc2626">yo'q</text>
+
+  <!-- UPDATE (PUT) -->
+  <rect x="20" y="216" width="680" height="50" rx="6" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="72"  y="238" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#6d28d9">Update</text>
+  <text x="155" y="238" text-anchor="middle" font-family="monospace" font-size="12.5" fill="#1e293b">UPDATE</text>
+  <text x="248" y="234" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="#7c3aed">PUT</text>
+  <text x="248" y="252" text-anchor="middle" font-family="monospace" font-size="11.5" fill="#7c3aed">PATCH</text>
+  <text x="400" y="244" text-anchor="middle" font-family="monospace" font-size="12" fill="#1e293b">/vazifalar/:id</text>
+  <text x="560" y="244" text-anchor="middle" font-family="monospace" font-size="12.5" fill="#16a34a">200</text>
+  <text x="662" y="234" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#16a34a">PUT: ha</text>
+  <text x="662" y="251" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#f59e0b">PATCH: yo'q</text>
+
+  <!-- DELETE -->
+  <rect x="20" y="270" width="680" height="50" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="72"  y="292" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#b91c1c">Delete</text>
+  <text x="155" y="292" text-anchor="middle" font-family="monospace" font-size="12.5" fill="#1e293b">DELETE</text>
+  <text x="248" y="292" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="#dc2626">DELETE</text>
+  <text x="400" y="295" text-anchor="middle" font-family="monospace" font-size="12" fill="#1e293b">/vazifalar/:id</text>
+  <text x="560" y="288" text-anchor="middle" font-family="monospace" font-size="12.5" fill="#16a34a">204</text>
+  <text x="560" y="304" text-anchor="middle" font-family="monospace" font-size="11" fill="#475569">tana yo'q</text>
+  <text x="662" y="292" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#16a34a">ha</text>
+
+  <!-- xato kodlar pasti -->
+  <rect x="20" y="334" width="680" height="40" rx="6" fill="#fff7ed" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="36" y="352" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" font-weight="bold" fill="#92400e">Xato kodlar:</text>
+  <text x="36" y="368" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#78350f">400 noto'g'ri so'rov  ·  404 topilmadi  ·  409 konflikt  ·  422 validatsiya  ·  500 server xatosi</text>
+
+  <text x="360" y="400" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#64748b">Bir xil interfeys: client metod va URL dan amalni biladi — hujjatga ehtiyoj kam</text>
+  <text x="360" y="420" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#64748b">Idempotent = bir necha marta yuborsa ham natija o'zgarmaydi (qayta urinish xavfsiz)</text>
+</svg>

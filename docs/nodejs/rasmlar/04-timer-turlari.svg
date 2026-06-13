@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>Timer turlari va navbat tartibi: sinxron koddan keyin process.nextTick, so'ng microtask (Promise/queueMicrotask), so'ng macrotask (setTimeout, setImmediate) ishlaydi</title>
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Kechiktirish funksiyalari: kim avval ishlaydi?</text>
+  <text x="360" y="56" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#64748b">Bir tickda rejalashtirilganda, callback'lar shu tartibda chaqiriladi</text>
+
+  <!-- 1: SINXRON -->
+  <rect x="40" y="78" width="640" height="50" rx="10" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2"/>
+  <circle cx="72" cy="103" r="15" fill="#64748b"/>
+  <text x="72" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#fff">1</text>
+  <text x="104" y="98" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#334155">Sinxron kod  (console.log ...)</text>
+  <text x="104" y="118" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#64748b">darrov, qatorma-qator — hech qanday kechikishsiz</text>
+
+  <text x="360" y="146" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">↓ sinxron tugagach</text>
+
+  <!-- 2: nextTick (qizil) -->
+  <rect x="40" y="156" width="640" height="50" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5"/>
+  <circle cx="72" cy="181" r="15" fill="#dc2626"/>
+  <text x="72" y="186" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#fff">2</text>
+  <text x="104" y="176" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">process.nextTick(fn)</text>
+  <text x="104" y="196" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#475569">eng ustun navbat (Node maxsus). Xavf: cheksiz ishlatish -&gt; starvation</text>
+
+  <text x="360" y="224" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">↓</text>
+
+  <!-- 3: microtask (yashil) -->
+  <rect x="40" y="234" width="640" height="50" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <circle cx="72" cy="259" r="15" fill="#16a34a"/>
+  <text x="72" y="264" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#fff">3</text>
+  <text x="104" y="254" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Promise.then / queueMicrotask  (microtask)</text>
+  <text x="104" y="274" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#475569">async/await ham shu navbatda. nextTick bo'shagach ishlaydi</text>
+
+  <text x="360" y="302" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">↓ navbatlar bo'shagach — keyingi event loop aylanasi</text>
+
+  <!-- 4: macrotask qator -->
+  <rect x="40" y="314" width="312" height="74" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <circle cx="72" cy="351" r="15" fill="#2563eb"/>
+  <text x="72" y="356" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#fff">4</text>
+  <text x="196" y="342" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">setTimeout(fn, 0)</text>
+  <text x="196" y="363" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#475569">timers fazasi · "kamida 0ms"</text>
+  <text x="196" y="379" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#475569">macrotask</text>
+
+  <rect x="368" y="314" width="312" height="74" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <circle cx="400" cy="351" r="15" fill="#f59e0b"/>
+  <text x="400" y="356" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#fff">4</text>
+  <text x="524" y="342" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b45309">setImmediate(fn)</text>
+  <text x="524" y="363" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#475569">check fazasi</text>
+  <text x="524" y="379" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" fill="#475569">I/O ichida: immediate &gt; timeout</text>
+
+  <text x="360" y="406" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#7c3aed">To'liq mexanika -&gt; 05-bob (event loop fazalari)</text>
+</svg>

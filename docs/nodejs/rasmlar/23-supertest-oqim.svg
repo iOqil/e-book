@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430">
+  <title>Supertest oqimi: test request(app) bilan Express ilovasini portsiz chaqiradi, ilova javob qaytaradi, test esa status va body ni assert qiladi</title>
+  <rect x="0" y="0" width="720" height="430" fill="#f8fafc"/>
+
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Supertest oqimi: test -&gt; app -&gt; javob assert</text>
+  <text x="360" y="57" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">request(app) ilovani PORT'siz, xotirada ko'taradi — tarmoq kerak emas</text>
+
+  <defs>
+    <marker id="b" markerWidth="11" markerHeight="11" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 Z" fill="#2563eb"/></marker>
+    <marker id="g" markerWidth="11" markerHeight="11" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 Z" fill="#16a34a"/></marker>
+    <marker id="v" markerWidth="11" markerHeight="11" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 Z" fill="#7c3aed"/></marker>
+  </defs>
+
+  <!-- TEST box -->
+  <rect x="36" y="120" width="190" height="170" rx="13" fill="#ede9fe" stroke="#7c3aed" stroke-width="2.4"/>
+  <text x="131" y="148" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#6d28d9">Test (Vitest)</text>
+  <text x="131" y="176" text-anchor="middle" font-family="monospace" font-size="11.5" fill="#5b21b6">request(app)</text>
+  <text x="131" y="196" text-anchor="middle" font-family="monospace" font-size="11.5" fill="#5b21b6">  .post("/vazifalar")</text>
+  <text x="131" y="216" text-anchor="middle" font-family="monospace" font-size="11.5" fill="#5b21b6">  .send({ ... })</text>
+  <text x="131" y="236" text-anchor="middle" font-family="monospace" font-size="11.5" fill="#5b21b6">  .expect(201)</text>
+  <text x="131" y="266" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#7c3aed">listen YO'Q — soxta so'rov</text>
+
+  <!-- APP box -->
+  <rect x="290" y="110" width="200" height="190" rx="13" fill="#dbeafe" stroke="#2563eb" stroke-width="2.4"/>
+  <text x="390" y="138" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1d4ed8">Express app</text>
+  <text x="390" y="166" text-anchor="middle" font-family="monospace" font-size="11" fill="#1e40af">express.json()</text>
+  <text x="390" y="188" text-anchor="middle" font-family="monospace" font-size="11" fill="#1e40af">router</text>
+  <text x="390" y="210" text-anchor="middle" font-family="monospace" font-size="11" fill="#1e40af">servis / ombor</text>
+  <text x="390" y="232" text-anchor="middle" font-family="monospace" font-size="11" fill="#1e40af">error handler</text>
+  <line x1="310" y1="246" x2="470" y2="246" stroke="#93c5fd" stroke-width="1.4"/>
+  <text x="390" y="268" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#2563eb">haqiqiy kod — mock emas</text>
+
+  <!-- RESPONSE box -->
+  <rect x="552" y="120" width="150" height="170" rx="13" fill="#dcfce7" stroke="#16a34a" stroke-width="2.4"/>
+  <text x="627" y="148" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#166534">Javob</text>
+  <text x="627" y="178" text-anchor="middle" font-family="monospace" font-size="12" fill="#15803d">status 201</text>
+  <text x="627" y="202" text-anchor="middle" font-family="monospace" font-size="11" fill="#15803d">res.body</text>
+  <text x="627" y="222" text-anchor="middle" font-family="monospace" font-size="10.5" fill="#15803d">{ id, sarlavha }</text>
+  <text x="627" y="258" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#16a34a">expect(...) bilan</text>
+  <text x="627" y="274" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#16a34a">tekshiriladi</text>
+
+  <!-- arrows -->
+  <line x1="226" y1="180" x2="286" y2="180" stroke="#2563eb" stroke-width="2.8" marker-end="url(#b)"/>
+  <text x="256" y="170" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#2563eb">so'rov</text>
+  <line x1="490" y1="195" x2="548" y2="195" stroke="#16a34a" stroke-width="2.8" marker-end="url(#g)"/>
+  <text x="519" y="185" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#16a34a">javob</text>
+
+  <!-- assert loop back -->
+  <path d="M552,250 L131,250 L131,294" fill="none" stroke="#7c3aed" stroke-width="2.4" stroke-dasharray="6 4" marker-end="url(#v)"/>
+  <text x="340" y="244" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11.5" font-weight="bold" fill="#7c3aed">status &amp; body ni assert qil</text>
+
+  <rect x="120" y="338" width="480" height="30" rx="7" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.6"/>
+  <text x="360" y="358" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#92400e">.expect(kod) ham assert: status mos kelmasa, test darhol yiqiladi</text>
+  <text x="360" y="392" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#475569">Bitta o'zgaruvchida butun so'rov-javob sikli: 201 / 422 / 404 ni sinaymiz</text>
+</svg>
