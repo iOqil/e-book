@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="800" height="480" font-family="Segoe UI, system-ui, sans-serif">
+  <title>StatefulShellRoute: pastdagi NavigationBar (qobiq) doimo turadi, tab almashganda faqat ichki ekran o'zgaradi, va har bir tab o'z navigatsiya stekini saqlab qoladi</title>
+  <defs>
+    <marker id="fl20s" markerWidth="12" markerHeight="12" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#027dfd"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="800" height="480" fill="#f8fafc"/>
+  <text x="400" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">StatefulShellRoute — doimiy qobiq, almashadigan ichki ekran</text>
+  <text x="400" y="58" text-anchor="middle" font-size="14" fill="#475569">Pastdagi NavigationBar turadi; tab bossangiz faqat o'rtadagi ekran almashadi</text>
+
+  <!-- Phone 1: Home tab -->
+  <rect x="60" y="92" width="200" height="330" rx="20" fill="#ffffff" stroke="#1e293b" stroke-width="2.5"/>
+  <text x="160" y="120" text-anchor="middle" font-size="14" font-weight="700" fill="#64748b">/home</text>
+  <rect x="78" y="134" width="164" height="200" rx="10" fill="#dbeafe" stroke="#027dfd" stroke-width="2"/>
+  <text x="160" y="228" text-anchor="middle" font-size="15" font-weight="700" fill="#0553b1">HomePage</text>
+  <text x="160" y="250" text-anchor="middle" font-size="13" fill="#475569">(ichki ekran)</text>
+  <!-- nav bar (shell) -->
+  <rect x="78" y="346" width="164" height="58" rx="10" fill="#027dfd"/>
+  <rect x="84" y="352" width="48" height="46" rx="8" fill="#ffffff"/>
+  <text x="108" y="372" text-anchor="middle" font-size="13" font-weight="700" fill="#027dfd">Uy</text>
+  <text x="108" y="390" text-anchor="middle" font-size="13" fill="#027dfd">●</text>
+  <text x="160" y="378" text-anchor="middle" font-size="13" fill="#ffffff">Ro'yxat</text>
+  <text x="216" y="378" text-anchor="middle" font-size="13" fill="#ffffff">Profil</text>
+
+  <!-- arrow tab tap -->
+  <path d="M270 257 L330 257" stroke="#027dfd" stroke-width="2.5" fill="none" marker-end="url(#fl20s)"/>
+  <text x="300" y="244" text-anchor="middle" font-size="13" fill="#027dfd">"Profil"</text>
+  <text x="300" y="278" text-anchor="middle" font-size="13" fill="#027dfd">bosildi</text>
+
+  <!-- Phone 2: Profile tab -->
+  <rect x="340" y="92" width="200" height="330" rx="20" fill="#ffffff" stroke="#1e293b" stroke-width="2.5"/>
+  <text x="440" y="120" text-anchor="middle" font-size="14" font-weight="700" fill="#64748b">/profile</text>
+  <rect x="358" y="134" width="164" height="200" rx="10" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="440" y="228" text-anchor="middle" font-size="15" font-weight="700" fill="#6366f1">ProfilePage</text>
+  <text x="440" y="250" text-anchor="middle" font-size="13" fill="#475569">(ichki ekran almashdi)</text>
+  <!-- nav bar (shell stays) -->
+  <rect x="358" y="346" width="164" height="58" rx="10" fill="#027dfd"/>
+  <rect x="468" y="352" width="48" height="46" rx="8" fill="#ffffff"/>
+  <text x="388" y="378" text-anchor="middle" font-size="13" fill="#ffffff">Uy</text>
+  <text x="440" y="378" text-anchor="middle" font-size="13" fill="#ffffff">Ro'yxat</text>
+  <text x="492" y="372" text-anchor="middle" font-size="13" font-weight="700" fill="#027dfd">Profil</text>
+  <text x="492" y="390" text-anchor="middle" font-size="13" fill="#027dfd">●</text>
+
+  <!-- annotation: shell persists -->
+  <text x="300" y="430" text-anchor="middle" font-size="13" fill="#16a34a">↑ qobiq (NavigationBar) o'zgarmadi — bir xil bo'lib qoldi</text>
+
+  <!-- right note box -->
+  <rect x="560" y="120" width="220" height="290" rx="12" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="670" y="148" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">Nega "Stateful"?</text>
+  <text x="576" y="180" font-size="13" fill="#475569">Har bir tab O'Z navigatsiya</text>
+  <text x="576" y="200" font-size="13" fill="#475569">stekini saqlaydi:</text>
+  <text x="576" y="228" font-size="13" fill="#16a34a">• Ro'yxat tabida 3-sahifaga</text>
+  <text x="576" y="248" font-size="13" fill="#16a34a">  kirdingiz</text>
+  <text x="576" y="272" font-size="13" fill="#16a34a">• Profil tabiga o'tdingiz</text>
+  <text x="576" y="300" font-size="13" fill="#16a34a">• Ro'yxatga qaytsangiz —</text>
+  <text x="576" y="320" font-size="13" fill="#16a34a">  yana o'sha 3-sahifada!</text>
+  <text x="576" y="356" font-size="13" fill="#64748b">indexedStack har tab</text>
+  <text x="576" y="376" font-size="13" fill="#64748b">holatini xotirada tutadi.</text>
+
+  <text x="400" y="464" text-anchor="middle" font-size="13" fill="#94a3b8">StatefulShellRoute.indexedStack — tabli ilovalar uchun zamonaviy usul.</text>
+</svg>

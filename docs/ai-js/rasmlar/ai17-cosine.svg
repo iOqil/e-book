@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 440" width="780" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Kosinus o'xshashlik: ikki vektor koordinata boshidan o'q sifatida chiziladi; kichik burchak yuqori o'xshashlik (taxminan 1, bog'liq), katta burchak past o'xshashlik (taxminan 0, bog'liqsiz). Formula: dot(a,b) / (norm(a) * norm(b))</title>
+  <defs>
+    <marker id="cs" markerWidth="11" markerHeight="11" refX="9" refY="3.2" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L9,3.2 L0,6.4 Z" fill="#1e293b"/>
+    </marker>
+    <marker id="csb" markerWidth="11" markerHeight="11" refX="9" refY="3.2" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L9,3.2 L0,6.4 Z" fill="#0ea5e9"/>
+    </marker>
+    <marker id="csd" markerWidth="11" markerHeight="11" refX="9" refY="3.2" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L9,3.2 L0,6.4 Z" fill="#d97757"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="780" height="440" fill="#f8fafc"/>
+  <text x="390" y="32" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Kosinus o'xshashlik — vektorlar orasidagi burchak</text>
+  <text x="390" y="56" font-size="14" fill="#64748b" text-anchor="middle">Kichik burchak = ma'no yaqin (~1). Katta burchak = ma'no uzoq (~0).</text>
+
+  <!-- LEFT panel: similar (small angle) -->
+  <rect x="36" y="80" width="330" height="262" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="201" y="106" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="middle">Bog'liq ma'no — kichik burchak</text>
+
+  <!-- origin left -->
+  <circle cx="110" cy="300" r="4.5" fill="#1e293b"/>
+  <text x="98" y="320" font-size="13" fill="#475569" text-anchor="middle">0</text>
+  <!-- vector A -->
+  <line x1="110" y1="300" x2="300" y2="150" stroke="#0ea5e9" stroke-width="3" marker-end="url(#csb)"/>
+  <text x="312" y="148" font-size="14" fill="#0ea5e9" text-anchor="start">"mashina"</text>
+  <!-- vector B (close) -->
+  <line x1="110" y1="300" x2="318" y2="186" stroke="#1e293b" stroke-width="3" marker-end="url(#cs)"/>
+  <text x="312" y="206" font-size="14" fill="#1e293b" text-anchor="start">"avtomobil"</text>
+  <!-- small angle arc -->
+  <path d="M 190 250 A 95 95 0 0 1 200 240" fill="none" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="214" y="262" font-size="13.5" font-weight="bold" fill="#16a34a" text-anchor="middle">kichik</text>
+  <text x="201" y="332" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="middle">cos ~ 0.9 (yuqori)</text>
+
+  <!-- RIGHT panel: unrelated (large angle) -->
+  <rect x="414" y="80" width="330" height="262" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="579" y="106" font-size="15" font-weight="bold" fill="#d97757" text-anchor="middle">Bog'liqsiz ma'no — katta burchak</text>
+
+  <circle cx="488" cy="300" r="4.5" fill="#1e293b"/>
+  <text x="476" y="320" font-size="13" fill="#475569" text-anchor="middle">0</text>
+  <!-- vector A up -->
+  <line x1="488" y1="300" x2="540" y2="142" stroke="#0ea5e9" stroke-width="3" marker-end="url(#csb)"/>
+  <text x="548" y="148" font-size="14" fill="#0ea5e9" text-anchor="start">"mashina"</text>
+  <!-- vector B far right -->
+  <line x1="488" y1="300" x2="700" y2="288" stroke="#d97757" stroke-width="3" marker-end="url(#csd)"/>
+  <text x="610" y="312" font-size="14" fill="#d97757" text-anchor="start">"olma"</text>
+  <!-- large angle arc -->
+  <path d="M 520 205 A 90 90 0 0 1 576 254" fill="none" stroke="#ef4444" stroke-width="2.5"/>
+  <text x="566" y="218" font-size="13.5" font-weight="bold" fill="#ef4444" text-anchor="middle">katta</text>
+  <text x="579" y="332" font-size="15" font-weight="bold" fill="#ef4444" text-anchor="middle">cos ~ 0.1 (past)</text>
+
+  <!-- formula footer -->
+  <rect x="120" y="360" width="540" height="62" rx="10" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="390" y="386" font-size="15" fill="#1e293b" text-anchor="middle" font-family="Consolas, monospace">cosineSimilarity(a, b) = dot(a, b) / ( norm(a) * norm(b) )</text>
+  <text x="390" y="410" font-size="13" fill="#475569" text-anchor="middle">Natija -1 dan 1 gacha; yuqori = o'xshashroq. Yo'nalishni o'lchaydi, uzunlikni emas.</text>
+</svg>

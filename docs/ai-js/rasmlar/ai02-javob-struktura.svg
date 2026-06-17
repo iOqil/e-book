@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" width="780" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Javob obyektining tuzilishi: content massiv (ichida text bloki bor), stop_reason, va usage.input_tokens/output_tokens maydonlari belgilangan</title>
+  <defs>
+    <marker id="arrP" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#9333ea"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="780" height="470" fill="#f8fafc"/>
+  <text x="390" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Javob obyekti (msg) ning anatomiyasi</text>
+  <text x="390" y="58" font-size="14" fill="#64748b" text-anchor="middle">Eng muhim qoida: content — bu MASSIV (bloklar ro'yxati), satr emas</text>
+
+  <!-- main object box -->
+  <rect x="40" y="80" width="340" height="356" rx="12" fill="#e0e7ff" stroke="#6366f1" stroke-width="2.5"/>
+  <text x="60" y="108" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="start" font-family="Consolas, monospace">const msg = {</text>
+
+  <!-- content field -->
+  <rect x="62" y="124" width="296" height="118" rx="9" fill="#ffffff" stroke="#9333ea" stroke-width="2"/>
+  <text x="78" y="148" font-size="13.5" font-weight="bold" fill="#9333ea" text-anchor="start" font-family="Consolas, monospace">content: [</text>
+  <text x="92" y="172" font-size="13" fill="#475569" text-anchor="start" font-family="Consolas, monospace">{</text>
+  <text x="108" y="194" font-size="13" fill="#1e293b" text-anchor="start" font-family="Consolas, monospace">type: "text",</text>
+  <text x="108" y="216" font-size="13" fill="#1e293b" text-anchor="start" font-family="Consolas, monospace">text: "Salom! ..."</text>
+  <text x="92" y="234" font-size="13" fill="#475569" text-anchor="start" font-family="Consolas, monospace">}  ]</text>
+
+  <!-- stop_reason -->
+  <rect x="62" y="252" width="296" height="44" rx="9" fill="#ffffff" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="78" y="270" font-size="13" font-weight="bold" fill="#0ea5e9" text-anchor="start" font-family="Consolas, monospace">stop_reason:</text>
+  <text x="78" y="289" font-size="13" fill="#1e293b" text-anchor="start" font-family="Consolas, monospace">"end_turn"</text>
+
+  <!-- usage -->
+  <rect x="62" y="306" width="296" height="82" rx="9" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="78" y="328" font-size="13" font-weight="bold" fill="#16a34a" text-anchor="start" font-family="Consolas, monospace">usage: {</text>
+  <text x="92" y="350" font-size="13" fill="#1e293b" text-anchor="start" font-family="Consolas, monospace">input_tokens: 14,</text>
+  <text x="92" y="372" font-size="13" fill="#1e293b" text-anchor="start" font-family="Consolas, monospace">output_tokens: 31</text>
+  <text x="78" y="386" font-size="13" fill="#475569" text-anchor="start" font-family="Consolas, monospace">}</text>
+
+  <text x="60" y="416" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="start" font-family="Consolas, monospace">}</text>
+
+  <!-- explanations -->
+  <line x1="360" y1="183" x2="430" y2="160" stroke="#9333ea" stroke-width="2" marker-end="url(#arrP)"/>
+  <rect x="436" y="124" width="306" height="92" rx="10" fill="#ffffff" stroke="#9333ea" stroke-width="2"/>
+  <text x="452" y="148" font-size="14" font-weight="bold" fill="#9333ea" text-anchor="start">content[0].text</text>
+  <text x="452" y="170" font-size="13" fill="#475569" text-anchor="start">Birinchi blokning matni.</text>
+  <text x="452" y="190" font-size="13" fill="#475569" text-anchor="start">Avval block.type === "text"</text>
+  <text x="452" y="208" font-size="13" fill="#475569" text-anchor="start">ekanini tekshirgan ma'qul.</text>
+
+  <line x1="360" y1="274" x2="430" y2="262" stroke="#0ea5e9" stroke-width="2"/>
+  <rect x="436" y="232" width="306" height="64" rx="10" fill="#ffffff" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="452" y="256" font-size="14" font-weight="bold" fill="#0ea5e9" text-anchor="start">stop_reason</text>
+  <text x="452" y="278" font-size="13" fill="#475569" text-anchor="start">Nega to'xtadi: "end_turn" yoki "max_tokens"</text>
+
+  <line x1="360" y1="345" x2="430" y2="345" stroke="#16a34a" stroke-width="2"/>
+  <rect x="436" y="312" width="306" height="100" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="452" y="336" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="start">usage</text>
+  <text x="452" y="358" font-size="13" fill="#475569" text-anchor="start">Nechta token sarflandi —</text>
+  <text x="452" y="378" font-size="13" fill="#475569" text-anchor="start">bu sizning narxingiz.</text>
+  <text x="452" y="398" font-size="13" fill="#475569" text-anchor="start">Kirish + chiqish alohida.</text>
+</svg>

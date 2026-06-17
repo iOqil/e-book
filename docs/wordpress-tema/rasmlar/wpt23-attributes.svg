@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 500" width="780" height="500">
+  <title>attributes block.json'da type/source/selector bilan belgilanadi, edit setAttributes bilan yozadi, save markupga joylaydi, save'dagi selector orqali qayta o'qiladi</title>
+  <rect width="780" height="500" fill="#f8fafc"/>
+  <text x="390" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">attributes: type / source / selector</text>
+
+  <!-- block.json definition -->
+  <rect x="220" y="54" width="340" height="138" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="390" y="78" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#7c3aed">block.json: "attributes"</text>
+  <text x="238" y="102" font-family="Consolas, monospace" font-size="13" fill="#475569">"sarlavha": {</text>
+  <text x="254" y="121" font-family="Consolas, monospace" font-size="13" fill="#2563eb">"type": "string",</text>
+  <text x="254" y="140" font-family="Consolas, monospace" font-size="13" fill="#16a34a">"source": "html",</text>
+  <text x="254" y="159" font-family="Consolas, monospace" font-size="13" fill="#d97706">"selector": "h4",</text>
+  <text x="254" y="178" font-family="Consolas, monospace" font-size="13" fill="#dc2626">"default": "Diqqat"</text>
+
+  <!-- legend for fields -->
+  <rect x="588" y="54" width="172" height="138" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="600" y="74" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#2563eb">type</text>
+  <text x="600" y="90" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">string/number/</text>
+  <text x="600" y="104" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">boolean/array/object</text>
+  <text x="600" y="124" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">source</text>
+  <text x="600" y="140" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">qayerdan o'qiladi:</text>
+  <text x="600" y="154" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">html/text/attribute</text>
+  <text x="600" y="174" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#d97706">selector</text>
+  <text x="600" y="189" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">qaysi HTML element</text>
+
+  <!-- arrows split -->
+  <g stroke="#94a3b8" stroke-width="2.5" fill="none">
+    <path d="M320 192 L180 240"/>
+    <path d="M460 192 L600 240"/>
+  </g>
+  <polygon points="184,232 174,244 190,246" fill="#94a3b8"/>
+  <polygon points="596,246 606,244 590,232" fill="#94a3b8"/>
+
+  <!-- EDIT side -->
+  <rect x="28" y="248" width="316" height="150" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="186" y="272" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">edit(): o'qish + yozish</text>
+  <text x="46" y="298" font-family="Consolas, monospace" font-size="13" fill="#475569">const { sarlavha }</text>
+  <text x="46" y="316" font-family="Consolas, monospace" font-size="13" fill="#475569">  = attributes;  // o'qish</text>
+  <text x="46" y="340" font-family="Consolas, monospace" font-size="13" fill="#16a34a">setAttributes({</text>
+  <text x="46" y="358" font-family="Consolas, monospace" font-size="13" fill="#16a34a">  sarlavha: yangi  // yozish</text>
+  <text x="46" y="376" font-family="Consolas, monospace" font-size="13" fill="#16a34a">})</text>
+
+  <!-- SAVE side -->
+  <rect x="436" y="248" width="316" height="150" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="594" y="272" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">save(): markupga joylash</text>
+  <text x="454" y="298" font-family="Consolas, monospace" font-size="13" fill="#475569">&lt;RichText.Content</text>
+  <text x="454" y="316" font-family="Consolas, monospace" font-size="13" fill="#d97706">  tagName="h4"   // selector</text>
+  <text x="454" y="334" font-family="Consolas, monospace" font-size="13" fill="#475569">  value={ sarlavha } /&gt;</text>
+  <text x="454" y="360" font-family="Consolas, monospace" font-size="13" fill="#475569">-&gt; &lt;h4&gt;Diqqat&lt;/h4&gt;</text>
+  <text x="454" y="382" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">qayta yuklashda h4 dan o'qiladi</text>
+
+  <!-- bottom note -->
+  <rect x="60" y="416" width="660" height="68" rx="10" fill="#e2e8f0" stroke="#475569" stroke-width="1.5"/>
+  <text x="390" y="440" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">source + selector = "joyni belgilash"</text>
+  <text x="390" y="463" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">source/selector bo'lsa, qiymat saqlangan HTML ichidan (h4 ning matnidan) qayta o'qiladi —</text>
+  <text x="390" y="480" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">bo'lmasa (masalan radius), qiymat block kommentariga (HTML izoh) JSON sifatida yoziladi.</text>
+</svg>

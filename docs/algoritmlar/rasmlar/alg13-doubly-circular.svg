@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 470">
+  <title>Ikki tomonlama bog'langan ro'yxat (oldingi va keyingi ko'rsatkichlar) va doiraviy ro'yxat yonma-yon ko'rsatilgan</title>
+  <rect x="0" y="0" width="880" height="470" fill="#f8fafc"/>
+  <text x="440" y="34" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Ikki tomonlama va doiraviy ro'yxatlar</text>
+
+  <!-- ===== DOUBLY ===== -->
+  <text x="240" y="70" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a">Ikki tomonlama (doubly): prev &lt;-&gt; next</text>
+
+  <!-- doubly node 1 -->
+  <rect x="60" y="100" width="120" height="60" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="120" y="136" text-anchor="middle" font-family="monospace" font-size="17" fill="#1e293b">A</text>
+  <!-- doubly node 2 -->
+  <rect x="250" y="100" width="120" height="60" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="310" y="136" text-anchor="middle" font-family="monospace" font-size="17" fill="#1e293b">B</text>
+  <!-- doubly node 3 -->
+  <rect x="440" y="100" width="120" height="60" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="500" y="136" text-anchor="middle" font-family="monospace" font-size="17" fill="#1e293b">C</text>
+
+  <!-- next arrows (top) -->
+  <line x1="182" y1="118" x2="248" y2="118" stroke="#2563eb" stroke-width="2" marker-end="url(#an)"/>
+  <line x1="372" y1="118" x2="438" y2="118" stroke="#2563eb" stroke-width="2" marker-end="url(#an)"/>
+  <text x="215" y="110" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#2563eb">next</text>
+  <text x="405" y="110" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#2563eb">next</text>
+
+  <!-- prev arrows (bottom) -->
+  <line x1="248" y1="144" x2="182" y2="144" stroke="#dc2626" stroke-width="2" marker-end="url(#ap)"/>
+  <line x1="438" y1="144" x2="372" y2="144" stroke="#dc2626" stroke-width="2" marker-end="url(#ap)"/>
+  <text x="215" y="160" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">prev</text>
+  <text x="405" y="160" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">prev</text>
+
+  <!-- None ends -->
+  <text x="40" y="124" text-anchor="middle" font-family="monospace" font-size="14" fill="#94a3b8">None</text>
+  <text x="600" y="124" text-anchor="middle" font-family="monospace" font-size="14" fill="#94a3b8">None</text>
+
+  <text x="440" y="200" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Har tugun ikkala qo'shnisini biladi -&gt; orqaga ham yurish mumkin, tugun o'chirish O(1)</text>
+
+  <!-- ===== CIRCULAR ===== -->
+  <text x="440" y="252" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#7c3aed">Doiraviy (circular): oxir -&gt; boshga qaytadi</text>
+
+  <!-- circular nodes positioned in a ring -->
+  <rect x="380" y="290" width="120" height="52" rx="8" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="440" y="323" text-anchor="middle" font-family="monospace" font-size="16" fill="#1e293b">P</text>
+
+  <rect x="610" y="350" width="120" height="52" rx="8" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="670" y="383" text-anchor="middle" font-family="monospace" font-size="16" fill="#1e293b">Q</text>
+
+  <rect x="380" y="410" width="120" height="52" rx="8" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="440" y="443" text-anchor="middle" font-family="monospace" font-size="16" fill="#1e293b">R</text>
+
+  <rect x="150" y="350" width="120" height="52" rx="8" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="210" y="383" text-anchor="middle" font-family="monospace" font-size="16" fill="#1e293b">S</text>
+
+  <!-- ring arrows P->Q->R->S->P -->
+  <line x1="500" y1="322" x2="616" y2="356" stroke="#334155" stroke-width="2" marker-end="url(#ac)"/>
+  <line x1="668" y1="402" x2="505" y2="430" stroke="#334155" stroke-width="2" marker-end="url(#ac)"/>
+  <line x1="380" y1="436" x2="272" y2="392" stroke="#334155" stroke-width="2" marker-end="url(#ac)"/>
+  <line x1="215" y1="350" x2="380" y2="320" stroke="#334155" stroke-width="2" marker-end="url(#ac)"/>
+
+  <text x="440" y="380" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#7c3aed">None yo'q -&gt; doimiy aylanish</text>
+
+  <defs>
+    <marker id="an" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/></marker>
+    <marker id="ap" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#dc2626"/></marker>
+    <marker id="ac" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#334155"/></marker>
+  </defs>
+</svg>

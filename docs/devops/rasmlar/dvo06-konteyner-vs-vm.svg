@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440">
+  <title>Chapda har virtual mashina o'z to'liq mehmon OS'ini gipervizor ustida olib yuradi, o'ngda konteynerlar bitta host yadrosini bo'lishib yengilroq turadi degan taqqoslash diagrammasi</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="700" fill="#1e293b">Virtual mashina  vs  Konteyner</text>
+
+  <!-- LEFT: Virtual Machines -->
+  <text x="195" y="64" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="700" fill="#dc2626">Virtual mashina (og'ir)</text>
+
+  <!-- 3 VM blocks: App + Guest OS -->
+  <g font-family="Segoe UI, system-ui, sans-serif">
+    <!-- VM1 -->
+    <rect x="30" y="78" width="100" height="86" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+    <rect x="40" y="86" width="80" height="30" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="1.2"/>
+    <text x="80" y="106" text-anchor="middle" font-size="13" fill="#1e293b">App A</text>
+    <rect x="40" y="122" width="80" height="34" rx="4" fill="#fff" stroke="#94a3b8" stroke-width="1.2"/>
+    <text x="80" y="138" text-anchor="middle" font-size="13" fill="#475569">Mehmon</text>
+    <text x="80" y="152" text-anchor="middle" font-size="13" fill="#475569">OS + yadro</text>
+    <!-- VM2 -->
+    <rect x="145" y="78" width="100" height="86" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+    <rect x="155" y="86" width="80" height="30" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="1.2"/>
+    <text x="195" y="106" text-anchor="middle" font-size="13" fill="#1e293b">App B</text>
+    <rect x="155" y="122" width="80" height="34" rx="4" fill="#fff" stroke="#94a3b8" stroke-width="1.2"/>
+    <text x="195" y="138" text-anchor="middle" font-size="13" fill="#475569">Mehmon</text>
+    <text x="195" y="152" text-anchor="middle" font-size="13" fill="#475569">OS + yadro</text>
+    <!-- VM3 -->
+    <rect x="260" y="78" width="100" height="86" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+    <rect x="270" y="86" width="80" height="30" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="1.2"/>
+    <text x="310" y="106" text-anchor="middle" font-size="13" fill="#1e293b">App C</text>
+    <rect x="270" y="122" width="80" height="34" rx="4" fill="#fff" stroke="#94a3b8" stroke-width="1.2"/>
+    <text x="310" y="138" text-anchor="middle" font-size="13" fill="#475569">Mehmon</text>
+    <text x="310" y="152" text-anchor="middle" font-size="13" fill="#475569">OS + yadro</text>
+
+    <!-- Hypervisor -->
+    <rect x="30" y="174" width="330" height="40" rx="6" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+    <text x="195" y="199" text-anchor="middle" font-size="14" font-weight="600" fill="#1e293b">Gipervizor (hypervisor)</text>
+    <!-- Host OS -->
+    <rect x="30" y="222" width="330" height="40" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="195" y="247" text-anchor="middle" font-size="14" font-weight="600" fill="#1e293b">Host OS</text>
+    <!-- Hardware -->
+    <rect x="30" y="270" width="330" height="40" rx="6" fill="#94a3b8" stroke="#475569" stroke-width="1.5"/>
+    <text x="195" y="295" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Hardware (server)</text>
+
+    <text x="195" y="340" text-anchor="middle" font-size="13.5" fill="#dc2626">Har ilova = to'liq OS + yadro = GB, daqiqalar</text>
+  </g>
+
+  <!-- divider -->
+  <line x1="392" y1="58" x2="392" y2="350" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="5 5"/>
+
+  <!-- RIGHT: Containers -->
+  <g font-family="Segoe UI, system-ui, sans-serif">
+    <text x="565" y="64" text-anchor="middle" font-size="15" font-weight="700" fill="#16a34a">Konteyner (yengil)</text>
+
+    <!-- 3 containers: App only -->
+    <rect x="425" y="78" width="86" height="50" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+    <rect x="433" y="86" width="70" height="34" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="1.2"/>
+    <text x="468" y="108" text-anchor="middle" font-size="13" fill="#1e293b">App A</text>
+
+    <rect x="522" y="78" width="86" height="50" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+    <rect x="530" y="86" width="70" height="34" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="1.2"/>
+    <text x="565" y="108" text-anchor="middle" font-size="13" fill="#1e293b">App B</text>
+
+    <rect x="619" y="78" width="86" height="50" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+    <rect x="627" y="86" width="70" height="34" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="1.2"/>
+    <text x="662" y="108" text-anchor="middle" font-size="13" fill="#1e293b">App C</text>
+
+    <text x="565" y="148" text-anchor="middle" font-size="13" fill="#16a34a">(mehmon OS yo'q — faqat ilova)</text>
+
+    <!-- Docker Engine -->
+    <rect x="425" y="160" width="280" height="40" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="565" y="185" text-anchor="middle" font-size="14" font-weight="600" fill="#1e40af">Docker Engine (namespace + cgroups)</text>
+    <!-- Host OS (1 kernel) -->
+    <rect x="425" y="208" width="280" height="40" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="565" y="233" text-anchor="middle" font-size="14" font-weight="600" fill="#1e293b">Host OS — bitta bo'lishilgan yadro</text>
+    <!-- Hardware -->
+    <rect x="425" y="256" width="280" height="40" rx="6" fill="#94a3b8" stroke="#475569" stroke-width="1.5"/>
+    <text x="565" y="281" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Hardware (server)</text>
+
+    <text x="565" y="326" text-anchor="middle" font-size="13.5" fill="#16a34a">Yadro bo'lishiladi = MB, soniyalar</text>
+  </g>
+
+  <!-- bottom takeaway -->
+  <rect x="30" y="368" width="700" height="50" rx="8" fill="#fff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="380" y="390" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="600" fill="#1e293b">Asosiy farq: VM har biri yadroni takrorlaydi; konteyner bitta host yadrosini bo'lishadi.</text>
+  <text x="380" y="409" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">Shu sababli konteyner yengilroq, tezroq va zichroq joylashadi.</text>
+</svg>

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" width="780" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Test piramidasi: asosida ko'p sonli tez va arzon unit testlar, o'rtasida o'rtacha sonli widget testlar, cho'qqisida kamsonli sekin va qimmat integratsion testlar</title>
+  <rect x="0" y="0" width="780" height="470" fill="#f8fafc"/>
+  <text x="390" y="36" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Test piramidasi</text>
+  <text x="390" y="60" text-anchor="middle" font-size="14" fill="#475569">Pastda ko'p tez test, yuqorida kam sekin test — sog'lom muvozanat</text>
+
+  <!-- Pyramid: top (integration) -->
+  <polygon points="390,82 470,168 310,168" fill="#9333ea"/>
+  <text x="390" y="138" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">Integratsion</text>
+  <text x="390" y="158" text-anchor="middle" font-size="13" fill="#e0e7ff">butun ilova</text>
+
+  <!-- middle (widget) -->
+  <polygon points="310,172 470,172 540,278 240,278" fill="#027dfd"/>
+  <text x="390" y="216" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">Widget testlar</text>
+  <text x="390" y="238" text-anchor="middle" font-size="13" fill="#dbeafe">bitta widget yakka holda</text>
+  <text x="390" y="258" text-anchor="middle" font-size="13" fill="#dbeafe">testWidgets, find, tap</text>
+
+  <!-- base (unit) -->
+  <polygon points="240,282 540,282 610,398 170,398" fill="#16a34a"/>
+  <text x="390" y="322" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">Unit testlar</text>
+  <text x="390" y="344" text-anchor="middle" font-size="13" fill="#dcfce7">sof mantiq: funksiya, Cubit, model</text>
+  <text x="390" y="364" text-anchor="middle" font-size="13" fill="#dcfce7">test(), expect(), mocktail, bloc_test</text>
+  <text x="390" y="386" text-anchor="middle" font-size="13" fill="#dcfce7">ENG KO'P — asos</text>
+
+  <!-- Left axis: speed/cost (slow at top) -->
+  <line x1="120" y1="92" x2="120" y2="394" stroke="#64748b" stroke-width="2.5"/>
+  <polygon points="114,92 120,80 126,92" fill="#64748b"/>
+  <text x="100" y="120" text-anchor="middle" font-size="13" font-weight="700" fill="#9333ea" transform="rotate(-90 100 120)">sekin · qimmat · kam</text>
+  <text x="100" y="350" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a" transform="rotate(-90 100 350)">tez · arzon · ko'p</text>
+
+  <!-- Right side: count badges -->
+  <rect x="608" y="100" width="138" height="36" rx="8" fill="#e0e7ff" stroke="#9333ea" stroke-width="1.5"/>
+  <text x="677" y="123" text-anchor="middle" font-size="13" fill="#9333ea">bir nechta (cho'qqi)</text>
+  <rect x="608" y="207" width="138" height="36" rx="8" fill="#dbeafe" stroke="#027dfd" stroke-width="1.5"/>
+  <text x="677" y="230" text-anchor="middle" font-size="13" fill="#0553b1">o'rtacha son</text>
+  <rect x="608" y="322" width="138" height="36" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="677" y="345" text-anchor="middle" font-size="13" fill="#16a34a">juda ko'p (asos)</text>
+
+  <text x="390" y="436" text-anchor="middle" font-size="13" fill="#64748b">flutter test — barchasini ishga tushiradi; --coverage qancha qism o'ralganini o'lchaydi</text>
+  <text x="390" y="458" text-anchor="middle" font-size="13" fill="#94a3b8">Qoida: xulq-atvorni test qiling, ichki tuzilmani emas</text>
+</svg>

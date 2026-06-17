@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 420">
+  <title>Round-trip xossasi: asl ma'lumotni kodlab keyin dekodlasangiz natija aynan aslga teng bo'lishi kerak, aks holda kodlash yoki dekodlashda xato bor</title>
+  <rect x="0" y="0" width="820" height="420" fill="#f8fafc"/>
+  <text x="410" y="38" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Round-trip xossasi</text>
+  <text x="410" y="64" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Teskari amal asl holatni qaytarishi kerak: dekod(kod(x)) == x</text>
+
+  <!-- original -->
+  <rect x="60" y="130" width="170" height="90" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="145" y="168" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e40af">Asl ma'lumot</text>
+  <text x="145" y="196" text-anchor="middle" font-family="Segoe UI" font-size="15" fill="#1e293b">x</text>
+
+  <!-- arrow 1 -->
+  <line x1="230" y1="175" x2="320" y2="175" stroke="#7c3aed" stroke-width="2" marker-end="url(#a)"/>
+  <text x="275" y="162" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#7c3aed">kodla()</text>
+
+  <!-- encoded -->
+  <rect x="325" y="130" width="170" height="90" rx="12" fill="#f3e8ff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="410" y="168" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#6b21a8">Kodlangan</text>
+  <text x="410" y="196" text-anchor="middle" font-family="Segoe UI" font-size="15" fill="#1e293b">kod(x)</text>
+
+  <!-- arrow 2 -->
+  <line x1="495" y1="175" x2="585" y2="175" stroke="#7c3aed" stroke-width="2" marker-end="url(#a)"/>
+  <text x="540" y="162" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#7c3aed">dekodla()</text>
+
+  <!-- decoded -->
+  <rect x="590" y="130" width="170" height="90" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="675" y="168" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#166534">Dekodlangan</text>
+  <text x="675" y="196" text-anchor="middle" font-family="Segoe UI" font-size="15" fill="#1e293b">dekod(kod(x))</text>
+
+  <!-- equality check -->
+  <line x1="145" y1="220" x2="145" y2="290" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5 4"/>
+  <line x1="675" y1="220" x2="675" y2="290" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5 4"/>
+  <line x1="145" y1="290" x2="675" y2="290" stroke="#16a34a" stroke-width="2"/>
+  <rect x="350" y="272" width="120" height="36" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="410" y="296" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#166534">x == ?</text>
+
+  <text x="410" y="350" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#1e293b">Agar teng bo'lmasa - kodlash yoki dekodlashda xato bor</text>
+  <text x="410" y="378" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Misollar: JSON saqla/yukla, base64, teskari(teskari(s)), serializatsiya</text>
+
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#7c3aed"/>
+    </marker>
+  </defs>
+</svg>

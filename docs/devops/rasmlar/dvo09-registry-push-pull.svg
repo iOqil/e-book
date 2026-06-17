@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="760" height="380">
+  <title>Registry push va pull oqimi: lokal mashinada image build qilinadi, tag qo'yiladi va registry'ga push qilinadi, boshqa joydagi server registry'dan pull qilib run qiladi</title>
+  <rect x="0" y="0" width="760" height="380" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Registry: push va pull</text>
+
+  <!-- local machine -->
+  <rect x="30" y="80" width="220" height="240" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="140" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e40af">Lokal mashina / CI</text>
+
+  <rect x="54" y="124" width="172" height="38" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="140" y="148" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">docker build</text>
+
+  <rect x="54" y="172" width="172" height="38" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="140" y="196" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">docker tag</text>
+
+  <rect x="54" y="220" width="172" height="38" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="140" y="244" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">docker login</text>
+
+  <rect x="54" y="268" width="172" height="38" rx="6" fill="#2563eb"/>
+  <text x="140" y="292" text-anchor="middle" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#ffffff">docker push</text>
+
+  <!-- registry -->
+  <rect x="300" y="120" width="160" height="160" rx="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="380" y="150" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#6d28d9">Registry</text>
+  <text x="380" y="176" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">ghcr.io</text>
+  <text x="380" y="196" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">/ioqil/app</text>
+  <rect x="324" y="212" width="112" height="50" rx="6" fill="#ffffff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="380" y="233" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">saqlangan</text>
+  <text x="380" y="251" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">image :1.2.3</text>
+
+  <!-- server -->
+  <rect x="510" y="80" width="220" height="240" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="620" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#166534">Server / boshqa joy</text>
+
+  <rect x="534" y="172" width="172" height="38" rx="6" fill="#16a34a"/>
+  <text x="620" y="196" text-anchor="middle" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#ffffff">docker pull</text>
+
+  <rect x="534" y="220" width="172" height="38" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="620" y="244" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">docker run</text>
+
+  <!-- push arrow -->
+  <line x1="250" y1="200" x2="298" y2="200" stroke="#2563eb" stroke-width="3.5" marker-end="url(#arrB)"/>
+  <text x="274" y="190" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e40af">push</text>
+
+  <!-- pull arrow -->
+  <line x1="462" y1="200" x2="532" y2="191" stroke="#16a34a" stroke-width="3.5" marker-end="url(#arrG)"/>
+  <text x="496" y="184" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#166534">pull</text>
+
+  <text x="380" y="352" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">Registry &#8212; image'lar uchun "GitHub": bir joyda push, istalgan joyda pull qilib ishga tushiriladi</text>
+
+  <defs>
+    <marker id="arrB" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrG" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+</svg>

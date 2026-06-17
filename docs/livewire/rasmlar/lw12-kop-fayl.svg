@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Ko'p fayl yuklash: input multiple bilan foydalanuvchi bir nechta fayl tanlaydi, ular massiv ko'rinishida photos xususiyatiga tushadi, har biri alohida vaqtinchalik yuklanadi va foreach bilan preview qilinadi</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Ko'p fayl: property massiv bo'ladi</text>
+  <text x="380" y="58" text-anchor="middle" font-size="14" fill="#475569">multiple atributi + public $photos = [] + photos.* validatsiya</text>
+
+  <!-- taqqoslash: bitta fayl -->
+  <rect x="30" y="86" width="330" height="120" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="195" y="112" text-anchor="middle" font-size="15" font-weight="700" fill="#475569">Bitta fayl</text>
+  <rect x="55" y="126" width="280" height="30" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.2"/>
+  <text x="195" y="146" text-anchor="middle" font-size="13" fill="#1e293b">public $photo;</text>
+  <rect x="55" y="164" width="280" height="30" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.2"/>
+  <text x="195" y="184" text-anchor="middle" font-size="13" fill="#475569">wire:model="photo"</text>
+
+  <!-- taqqoslash: ko'p fayl -->
+  <rect x="400" y="86" width="330" height="120" rx="10" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="565" y="112" text-anchor="middle" font-size="15" font-weight="700" fill="#4f46e5">Ko'p fayl</text>
+  <rect x="425" y="126" width="280" height="30" rx="6" fill="#eef2ff" stroke="#c7d2fe" stroke-width="1.2"/>
+  <text x="565" y="146" text-anchor="middle" font-size="13" fill="#1e293b">public $photos = [];</text>
+  <rect x="425" y="164" width="280" height="30" rx="6" fill="#eef2ff" stroke="#c7d2fe" stroke-width="1.2"/>
+  <text x="565" y="184" text-anchor="middle" font-size="13" fill="#475569">wire:model="photos" multiple</text>
+
+  <!-- pastga oqim -->
+  <text x="380" y="240" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">Foydalanuvchi 3 ta rasm tanladi → $photos massivi</text>
+  <line x1="565" y1="206" x2="380" y2="252" stroke="#94a3b8" stroke-width="2" marker-end="url(#am)"/>
+
+  <!-- massiv qutilari -->
+  <rect x="90" y="266" width="170" height="120" rx="10" fill="#ffffff" stroke="#fb70a9" stroke-width="1.8"/>
+  <text x="175" y="290" text-anchor="middle" font-size="13" font-weight="700" fill="#1e293b">$photos[0]</text>
+  <rect x="120" y="300" width="110" height="50" rx="6" fill="#eef2ff" stroke="#c7d2fe" stroke-width="1.2"/>
+  <path d="M120 350 L150 320 L175 338 L195 326 L230 350 Z" fill="#6366f1"/>
+  <text x="175" y="372" text-anchor="middle" font-size="13" fill="#475569">vaqtinchalik #1</text>
+
+  <rect x="295" y="266" width="170" height="120" rx="10" fill="#ffffff" stroke="#fb70a9" stroke-width="1.8"/>
+  <text x="380" y="290" text-anchor="middle" font-size="13" font-weight="700" fill="#1e293b">$photos[1]</text>
+  <rect x="325" y="300" width="110" height="50" rx="6" fill="#eef2ff" stroke="#c7d2fe" stroke-width="1.2"/>
+  <path d="M325 350 L355 320 L380 338 L400 326 L435 350 Z" fill="#6366f1"/>
+  <text x="380" y="372" text-anchor="middle" font-size="13" fill="#475569">vaqtinchalik #2</text>
+
+  <rect x="500" y="266" width="170" height="120" rx="10" fill="#ffffff" stroke="#fb70a9" stroke-width="1.8"/>
+  <text x="585" y="290" text-anchor="middle" font-size="13" font-weight="700" fill="#1e293b">$photos[2]</text>
+  <rect x="530" y="300" width="110" height="50" rx="6" fill="#eef2ff" stroke="#c7d2fe" stroke-width="1.2"/>
+  <path d="M530 350 L560 320 L585 338 L605 326 L640 350 Z" fill="#6366f1"/>
+  <text x="585" y="372" text-anchor="middle" font-size="13" fill="#475569">vaqtinchalik #3</text>
+
+  <!-- izoh -->
+  <rect x="90" y="400" width="580" height="30" rx="8" fill="#fef9c3" stroke="#f59e0b" stroke-width="1.2"/>
+  <text x="380" y="420" text-anchor="middle" font-size="13" fill="#475569">@foreach ($photos as $photo) — har birini preview qiling; har biri alohida yuklanadi va validatsiya bo'ladi</text>
+
+  <defs>
+    <marker id="am" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+</svg>

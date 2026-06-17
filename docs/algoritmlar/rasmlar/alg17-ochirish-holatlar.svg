@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560">
+  <title>BST dan tugun o'chirishning uchta holati: bargni o'chirish, bitta bolasi bor tugunni o'chirish, ikkita bolasi bor tugunni in-order voris bilan almashtirib o'chirish</title>
+  <rect x="0" y="0" width="900" height="560" fill="#f8fafc"/>
+  <text x="450" y="34" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">O'chirishning 3 holati</text>
+
+  <!-- ============ CASE 1: leaf ============ -->
+  <text x="150" y="74" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">1) Barg (bolasi yo'q)</text>
+  <text x="150" y="94" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Shunchaki o'chir</text>
+
+  <line x1="150" y1="128" x2="100" y2="188" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="150" y1="128" x2="200" y2="188" stroke="#94a3b8" stroke-width="2"/>
+  <circle cx="150" cy="118" r="22" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="150" y="124" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#1e293b">30</text>
+  <circle cx="100" cy="198" r="20" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="100" y="204" text-anchor="middle" font-family="monospace" font-size="14" fill="#1e293b">20</text>
+  <!-- leaf 40 to delete -->
+  <circle cx="200" cy="198" r="20" fill="#fef2f2" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="5 4"/>
+  <text x="200" y="204" text-anchor="middle" font-family="monospace" font-size="14" fill="#dc2626">40</text>
+  <line x1="186" y1="184" x2="214" y2="212" stroke="#dc2626" stroke-width="2.5"/>
+  <line x1="214" y1="184" x2="186" y2="212" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="150" y="252" text-anchor="middle" font-family="monospace" font-size="13" fill="#dc2626">40 ni o'chir → bog' = null</text>
+
+  <!-- ============ CASE 2: one child ============ -->
+  <text x="450" y="74" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#f59e0b">2) Bitta bola</text>
+  <text x="450" y="94" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Bolani o'rniga ko'tar</text>
+
+  <line x1="450" y1="128" x2="450" y2="178" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5 4"/>
+  <line x1="450" y1="208" x2="450" y2="258" stroke="#16a34a" stroke-width="2"/>
+  <!-- node 30 to delete (one child) -->
+  <circle cx="450" cy="118" r="22" fill="#fef2f2" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="5 4"/>
+  <text x="450" y="124" text-anchor="middle" font-family="monospace" font-size="15" fill="#dc2626">30</text>
+  <line x1="436" y1="104" x2="464" y2="132" stroke="#dc2626" stroke-width="2.5"/>
+  <line x1="464" y1="104" x2="436" y2="132" stroke="#dc2626" stroke-width="2.5"/>
+  <!-- child 20 -->
+  <circle cx="450" cy="198" r="20" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="450" y="204" text-anchor="middle" font-family="monospace" font-size="14" fill="#1e293b">20</text>
+  <!-- grandchild 10 -->
+  <circle cx="450" cy="278" r="20" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="450" y="284" text-anchor="middle" font-family="monospace" font-size="14" fill="#1e293b">10</text>
+  <text x="450" y="318" text-anchor="middle" font-family="monospace" font-size="13" fill="#f59e0b">20 (qism-daraxti bilan) o'rniga chiqadi</text>
+
+  <!-- ============ CASE 3: two children ============ -->
+  <text x="745" y="74" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#7c3aed">3) Ikki bola</text>
+  <text x="745" y="94" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">In-order voris bilan almashtir</text>
+
+  <line x1="745" y1="128" x2="690" y2="188" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="745" y1="128" x2="810" y2="188" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="810" y1="208" x2="780" y2="268" stroke="#94a3b8" stroke-width="2"/>
+  <!-- node 50 to delete (two children) -->
+  <circle cx="745" cy="118" r="22" fill="#f5f3ff" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="745" y="124" text-anchor="middle" font-family="monospace" font-size="15" fill="#dc2626">50</text>
+  <!-- left child 30 -->
+  <circle cx="690" cy="198" r="20" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="690" y="204" text-anchor="middle" font-family="monospace" font-size="14" fill="#1e293b">30</text>
+  <!-- right child 70 -->
+  <circle cx="810" cy="198" r="20" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="810" y="204" text-anchor="middle" font-family="monospace" font-size="14" fill="#1e293b">70</text>
+  <!-- successor 60 = leftmost of right subtree -->
+  <circle cx="780" cy="278" r="20" fill="#ede9fe" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="780" y="284" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#1e293b">60</text>
+  <text x="780" y="318" text-anchor="middle" font-family="monospace" font-size="13" fill="#7c3aed">voris = o'ng-daraxt eng chapi</text>
+
+  <!-- arrow successor -> root -->
+  <path d="M 765 264 Q 700 200 730 134" fill="none" stroke="#7c3aed" stroke-width="2.5" stroke-dasharray="6 4"/>
+  <polygon points="730,134 726,148 740,144" fill="#7c3aed"/>
+
+  <!-- bottom explanation box -->
+  <rect x="60" y="380" width="780" height="150" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="450" y="406" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">Ikki bolali tugunni o'chirish (eng murakkab holat)</text>
+  <text x="80" y="434" font-family="Segoe UI" font-size="13" fill="#334155">1. O'chiriladigan tugunning IN-ORDER VORISini top: o'ng qism-daraxtning eng chap tuguni (eng kichik).</text>
+  <text x="80" y="458" font-family="Segoe UI" font-size="13" fill="#334155">2. O'chiriladigan tugun qiymatini voris qiymati bilan almashtir (bu yerda 50 → 60).</text>
+  <text x="80" y="482" font-family="Segoe UI" font-size="13" fill="#334155">3. Endi vorisni o'z joyidan o'chir — u barg yoki bitta bolali (holat 1 yoki 2), oson.</text>
+  <text x="80" y="510" font-family="monospace" font-size="13" fill="#7c3aed">Voris &gt; barcha chap qiymatlar, &lt; barcha qolgan o'ng qiymatlar → BST xossasi saqlanadi.</text>
+</svg>

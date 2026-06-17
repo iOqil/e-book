@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470">
+  <title>Facade va Proxy yonma-yon: Facade ko'p servisni soddalashtiradi, Proxy bitta obyektni bir xil interfeys bilan o'rab nazorat qiladi</title>
+  <rect x="0" y="0" width="780" height="470" fill="#f8fafc"/>
+  <text x="390" y="32" text-anchor="middle" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b">Facade va Proxy — taqqoslash</text>
+
+  <!-- Ajratuvchi chiziq -->
+  <line x1="390" y1="56" x2="390" y2="455" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- ============ FACADE (chap) ============ -->
+  <text x="195" y="78" text-anchor="middle" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#2563eb">FACADE</text>
+  <text x="195" y="98" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">ko'p quyi tizimni soddalashtiradi</text>
+
+  <!-- Mijoz -->
+  <rect x="135" y="115" width="120" height="46" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="195" y="143" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">Mijoz</text>
+
+  <!-- Facade -->
+  <rect x="110" y="195" width="170" height="60" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="195" y="222" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">BuyurtmaFacade</text>
+  <text x="195" y="242" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">buyurtmaBer(...)</text>
+
+  <line x1="195" y1="161" x2="195" y2="193" stroke="#334155" stroke-width="2" marker-end="url(#fstrelka)"/>
+
+  <!-- 4 ta servis -->
+  <rect x="55" y="305" width="80" height="44" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="95" y="332" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Ombor</text>
+  <rect x="150" y="305" width="80" height="44" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="190" y="332" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">To'lov</text>
+  <rect x="55" y="365" width="80" height="44" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="95" y="392" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Yetkazib</text>
+  <rect x="150" y="365" width="80" height="44" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="190" y="392" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Xabar</text>
+
+  <line x1="170" y1="255" x2="105" y2="303" stroke="#334155" stroke-width="1.5" marker-end="url(#fstrelka)"/>
+  <line x1="200" y1="255" x2="195" y2="303" stroke="#334155" stroke-width="1.5" marker-end="url(#fstrelka)"/>
+  <line x1="175" y1="255" x2="110" y2="363" stroke="#334155" stroke-width="1.5" marker-end="url(#fstrelka)"/>
+  <line x1="210" y1="255" x2="195" y2="363" stroke="#334155" stroke-width="1.5" marker-end="url(#fstrelka)"/>
+
+  <text x="195" y="438" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Interfeys SODDALASHADI</text>
+  <text x="195" y="456" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">(yangi, qisqaroq)</text>
+
+  <!-- ============ PROXY (o'ng) ============ -->
+  <text x="585" y="78" text-anchor="middle" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#16a34a">PROXY</text>
+  <text x="585" y="98" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">bitta obyektni o'rab nazorat qiladi</text>
+
+  <!-- Mijoz -->
+  <rect x="525" y="115" width="120" height="46" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="585" y="143" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">Mijoz</text>
+
+  <!-- Interfeys label -->
+  <text x="585" y="184" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">&#171;Hujjat interfeysi&#187; (bir xil)</text>
+
+  <!-- Proxy -->
+  <rect x="500" y="195" width="170" height="64" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="585" y="221" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#166534">HujjatProxy</text>
+  <text x="585" y="241" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">ruxsat + lazy + kesh</text>
+
+  <line x1="585" y1="161" x2="585" y2="193" stroke="#334155" stroke-width="2" marker-end="url(#fstrelka)"/>
+
+  <!-- Haqiqiy obyekt -->
+  <rect x="500" y="330" width="170" height="64" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="585" y="356" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">HaqiqiyHujjat</text>
+  <text x="585" y="376" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">"og'ir" haqiqiy ish</text>
+
+  <line x1="585" y1="259" x2="585" y2="328" stroke="#334155" stroke-width="2" marker-end="url(#fstrelka)"/>
+  <text x="660" y="298" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">faqat kerak</text>
+  <text x="660" y="314" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">bo'lganda</text>
+
+  <text x="585" y="438" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Interfeys O'ZGARMAYDI</text>
+  <text x="585" y="456" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">(bir xil, mijoz sezmaydi)</text>
+
+  <defs>
+    <marker id="fstrelka" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#334155"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420">
+  <title>register_rest_route namespace, route va args (methods, callback, permission_callback, args) ni qabul qilib /wp-json/kitkat/v1/kitoblar endpoint'ini yaratadi</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">register_rest_route() — endpoint qurish</text>
+
+  <!-- function box -->
+  <rect x="40" y="70" width="280" height="280" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="180" y="98" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e40af">register_rest_route(</text>
+
+  <!-- arg 1 namespace -->
+  <rect x="60" y="114" width="240" height="40" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="74" y="132" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">1. namespace</text>
+  <text x="74" y="149" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">'kitkat/v1'  (versiyalangan)</text>
+
+  <!-- arg 2 route -->
+  <rect x="60" y="162" width="240" height="40" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="74" y="180" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">2. route (regex)</text>
+  <text x="74" y="197" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">'/kitoblar/(?P&lt;id&gt;\d+)'</text>
+
+  <!-- arg 3 args -->
+  <rect x="60" y="210" width="240" height="120" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="74" y="228" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309">3. args [</text>
+  <text x="84" y="248" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">methods: READABLE</text>
+  <text x="84" y="268" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">callback: fn(...)</text>
+  <text x="84" y="288" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626">permission_callback (SHART)</text>
+  <text x="84" y="308" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">args: validate / sanitize</text>
+  <text x="74" y="326" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309">]</text>
+
+  <!-- arrow to hook -->
+  <line x1="320" y1="210" x2="420" y2="210" stroke="#94a3b8" stroke-width="3" marker-end="url(#arr16a)"/>
+  <text x="370" y="200" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">rest_api_init</text>
+  <text x="370" y="228" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">hook'da</text>
+
+  <!-- endpoint result -->
+  <rect x="430" y="120" width="290" height="180" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="575" y="150" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#15803d">Endpoint tayyor</text>
+  <rect x="448" y="170" width="254" height="44" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="575" y="190" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">GET /wp-json/</text>
+  <text x="575" y="208" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#15803d">kitkat/v1/kitoblar/42</text>
+  <rect x="448" y="226" width="254" height="58" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="575" y="248" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">JSON javob:</text>
+  <text x="575" y="270" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#15803d">{ "id": 42, "sarlavha": ... }</text>
+
+  <text x="380" y="385" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Namespace versiyasi (v1) eski klientlarni sindirmasdan v2 qo'shish imkonini beradi</text>
+
+  <defs>
+    <marker id="arr16a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/></marker>
+  </defs>
+</svg>

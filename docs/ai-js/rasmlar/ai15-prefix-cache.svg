@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Prompt caching prefiks: so'rov tartibi tools -> system (katta barqaror hujjat) -> messages. cache_control breakpoint barqaror qismdan keyin qo'yiladi. Birinchi chaqiruv keshni YOZADI (1.25x narx), keyingi chaqiruvlar keshni O'QIYDI (0.1x narx) — faqat yangi savol uchun to'liq narx to'lanadi.</title>
+  <defs>
+    <marker id="p15w" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#f59e0b"/>
+    </marker>
+    <marker id="p15r" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="800" height="520" fill="#f8fafc"/>
+  <text x="400" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Prefiks kesh — barqaror oldindan, o'zgaruvchi oxirida</text>
+  <text x="400" y="58" font-size="14" fill="#64748b" text-anchor="middle">So'rov tartibi: tools → system → messages. Breakpoint barqaror qismdan KEYIN.</text>
+
+  <!-- prefix bar -->
+  <rect x="40" y="84" width="500" height="64" rx="10" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="290" y="106" font-size="14" font-weight="bold" fill="#6366f1" text-anchor="middle">PREFIKS (barqaror — har so'rovda bir xil)</text>
+  <text x="160" y="132" font-size="13" fill="#475569" text-anchor="middle">tools</text>
+  <text x="290" y="132" font-size="13" fill="#475569" text-anchor="middle">+ system (katta hujjat)</text>
+  <text x="450" y="132" font-size="13" fill="#475569" text-anchor="middle">+ few-shot</text>
+
+  <!-- breakpoint -->
+  <line x1="540" y1="76" x2="540" y2="200" stroke="#d97757" stroke-width="3" stroke-dasharray="6,4"/>
+  <rect x="548" y="98" width="118" height="40" rx="8" fill="#fef3c7" stroke="#d97757" stroke-width="2"/>
+  <text x="607" y="115" font-size="13" font-weight="bold" fill="#d97757" text-anchor="middle">breakpoint</text>
+  <text x="607" y="131" font-size="13" fill="#475569" text-anchor="middle" font-family="Consolas, monospace">cache_control</text>
+
+  <!-- varying question -->
+  <rect x="676" y="84" width="84" height="64" rx="10" fill="#ffffff" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="718" y="112" font-size="13" font-weight="bold" fill="#0ea5e9" text-anchor="middle">yangi</text>
+  <text x="718" y="130" font-size="13" font-weight="bold" fill="#0ea5e9" text-anchor="middle">savol</text>
+
+  <!-- first call -->
+  <rect x="40" y="220" width="720" height="120" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="60" y="246" font-size="15" font-weight="bold" fill="#f59e0b" text-anchor="start">1-chaqiruv — keshni YOZADI</text>
+  <line x1="60" y1="290" x2="520" y2="290" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#p15w)"/>
+  <text x="290" y="282" font-size="13" fill="#475569" text-anchor="middle">prefiks keshga yoziladi</text>
+  <text x="290" y="312" font-size="13" font-weight="bold" fill="#f59e0b" text-anchor="middle">narx ≈ 1.25× (yozish)</text>
+  <text x="650" y="282" font-size="13" fill="#475569" text-anchor="middle">+ savol: to'liq narx</text>
+  <text x="650" y="312" font-size="13" fill="#475569" text-anchor="middle" font-family="Consolas, monospace">cache_creation &gt; 0</text>
+
+  <!-- later calls -->
+  <rect x="40" y="356" width="720" height="120" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="60" y="382" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="start">2, 3, 4-chaqiruv — keshni O'QIYDI</text>
+  <line x1="60" y1="426" x2="520" y2="426" stroke="#16a34a" stroke-width="2.5" marker-end="url(#p15r)"/>
+  <text x="290" y="418" font-size="13" fill="#475569" text-anchor="middle">prefiks keshdan o'qiladi</text>
+  <text x="290" y="448" font-size="13" font-weight="bold" fill="#16a34a" text-anchor="middle">narx ≈ 0.1× (90% arzon!)</text>
+  <text x="650" y="418" font-size="13" fill="#475569" text-anchor="middle">+ savol: to'liq narx</text>
+  <text x="650" y="448" font-size="13" fill="#475569" text-anchor="middle" font-family="Consolas, monospace">cache_read &gt; 0</text>
+
+  <rect x="40" y="490" width="720" height="22" rx="6" fill="#dbeafe"/>
+  <text x="400" y="506" font-size="13" fill="#1e293b" text-anchor="middle">Faqat OXIRGI yangi savol har safar to'liq narxda — katta prefiks deyarli tekin qayta ishlatiladi.</text>
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 520">
+  <title>Big-O ta'rifining vizual tushuntirilishi: n0 nuqtasidan keyin c marta g(n) egri chizigi f(n) ning ustida turadi, ya'ni f(n) ko'pi bilan c*g(n) ga teng</title>
+  <rect x="0" y="0" width="860" height="520" fill="#f8fafc"/>
+  <text x="430" y="38" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Big-O ta'rifi: f(n) ≤ c·g(n)  (barcha n ≥ n₀ uchun)</text>
+  <text x="430" y="64" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">c·g(n) chizig'i n₀ dan keyin f(n) ning ustida qoladi — demak f = O(g)</text>
+
+  <!-- plot area -->
+  <rect x="80" y="92" width="700" height="370" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+
+  <!-- axes -->
+  <line x1="80" y1="462" x2="780" y2="462" stroke="#334155" stroke-width="2"/>
+  <line x1="80" y1="92" x2="80" y2="462" stroke="#334155" stroke-width="2"/>
+  <text x="430" y="498" text-anchor="middle" font-family="Segoe UI" font-size="15" fill="#334155">n  →</text>
+
+  <!-- n0 vertical marker -->
+  <line x1="320" y1="92" x2="320" y2="462" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <text x="320" y="482" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#334155">n₀</text>
+
+  <!-- shaded region after n0 where bound holds -->
+  <rect x="320" y="92" width="460" height="370" fill="#16a34a" opacity="0.06"/>
+  <text x="550" y="118" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#16a34a">bu yerda f(n) ≤ c·g(n)  (ta'rif bajariladi)</text>
+
+  <!-- c*g(n): upper curve (here g=n so a line scaled by c) -->
+  <path d="M 80 440 L 780 130" fill="none" stroke="#2563eb" stroke-width="3"/>
+  <text x="700" y="140" font-family="monospace" font-size="14" fill="#2563eb">c·g(n)</text>
+
+  <!-- f(n): lower curve that crosses up early then stays below after n0 -->
+  <path d="M 80 412 Q 220 360 320 330 Q 480 285 640 245 L 780 215" fill="none" stroke="#dc2626" stroke-width="3"/>
+  <text x="700" y="232" font-family="monospace" font-size="14" fill="#dc2626">f(n)</text>
+
+  <!-- small region before n0 where f might exceed (illustrate "kichik n muhim emas") -->
+  <text x="200" y="448" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">kichik n: ahamiyatsiz</text>
+
+  <!-- vertical gap arrows after n0 to show f below c*g -->
+  <line x1="500" y1="278" x2="500" y2="232" stroke="#16a34a" stroke-width="2" marker-end="url(#ar)" marker-start="url(#ar)"/>
+  <defs>
+    <marker id="ar" markerWidth="9" markerHeight="9" refX="4.5" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+  <text x="512" y="262" font-family="Segoe UI" font-size="13" fill="#16a34a">farq ≥ 0</text>
+
+  <!-- caption box -->
+  <rect x="80" y="478" width="700" height="0" fill="none"/>
+</svg>

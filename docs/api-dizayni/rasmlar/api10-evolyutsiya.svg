@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 470">
+  <title>API evolyutsiya va deprecation vaqt o'qi: v1 dan v2 ga o'tish va eski versiyani o'chirish</title>
+  <rect x="0" y="0" width="900" height="470" fill="#f8fafc"/>
+  <text x="450" y="34" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">API evolyutsiya vaqt o'qi</text>
+  <text x="450" y="58" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Eski versiyani BIRDAN o'chirmang — bosqichma-bosqich, ogohlantirib</text>
+
+  <!-- Vaqt o'qi chizig'i -->
+  <line x1="70" y1="150" x2="830" y2="150" stroke="#94a3b8" stroke-width="3"/>
+  <polygon points="830,150 818,144 818,156" fill="#94a3b8"/>
+  <text x="836" y="155" font-family="Segoe UI" font-size="13" fill="#64748b">vaqt</text>
+
+  <!-- Bosqich 1: v1 jonli -->
+  <circle cx="150" cy="150" r="9" fill="#16a34a"/>
+  <line x1="150" y1="150" x2="150" y2="200" stroke="#16a34a" stroke-width="2"/>
+  <rect x="60" y="200" width="180" height="92" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="150" y="224" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#15803d">1. v1 jonli</text>
+  <text x="150" y="248" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">GET /v1/orders</text>
+  <text x="150" y="270" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Mijozlar foydalanmoqda,</text>
+  <text x="150" y="286" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">to'liq qo'llab-quvvatlash</text>
+
+  <!-- Bosqich 2: v2 chiqdi -->
+  <circle cx="370" cy="150" r="9" fill="#2563eb"/>
+  <line x1="370" y1="150" x2="370" y2="200" stroke="#2563eb" stroke-width="2"/>
+  <rect x="280" y="200" width="180" height="92" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="370" y="224" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">2. v2 chiqarish</text>
+  <text x="370" y="248" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">GET /v2/orders</text>
+  <text x="370" y="270" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">v1 ham, v2 ham ishlaydi.</text>
+  <text x="370" y="286" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Migratsiya yo'riqnomasi</text>
+
+  <!-- Bosqich 3: v1 deprecated -->
+  <circle cx="590" cy="150" r="9" fill="#f59e0b"/>
+  <line x1="590" y1="150" x2="590" y2="200" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="500" y="200" width="180" height="92" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="590" y="224" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#b45309">3. v1 deprecated</text>
+  <text x="590" y="246" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">Deprecation: true</text>
+  <text x="590" y="264" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">Sunset: &lt;sana&gt;</text>
+  <text x="590" y="286" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Ishlaydi, lekin ogohlantirildi</text>
+
+  <!-- Bosqich 4: v1 o'chirildi -->
+  <circle cx="810" cy="150" r="9" fill="#dc2626"/>
+  <line x1="810" y1="150" x2="810" y2="200" stroke="#dc2626" stroke-width="2"/>
+  <rect x="720" y="200" width="170" height="92" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="805" y="224" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#b91c1c">4. v1 o'chirish</text>
+  <text x="805" y="248" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">410 Gone</text>
+  <text x="805" y="270" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Sunset sanasidan keyin</text>
+  <text x="805" y="286" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">v1 to'xtatiladi</text>
+
+  <!-- Pastki izoh paneli -->
+  <rect x="60" y="330" width="780" height="106" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="450" y="356" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#7c3aed">Mijozga vaqt bering — aloqa kaliti</text>
+  <text x="80" y="382" font-family="Segoe UI" font-size="13" fill="#334155">• Deprecation sarlavhasi (RFC 9745) — "bu eskirgan" signali</text>
+  <text x="80" y="404" font-family="Segoe UI" font-size="13" fill="#334155">• Sunset sarlavhasi (RFC 8594) — o'chirish sanasi</text>
+  <text x="80" y="426" font-family="Segoe UI" font-size="13" fill="#334155">• Changelog + migratsiya yo'riqnomasi + email/portal e'lon — odamlar tayyorlansin</text>
+  <text x="470" y="382" font-family="Segoe UI" font-size="13" fill="#334155">• Bosqichlar orasida real oylar bering</text>
+  <text x="470" y="404" font-family="Segoe UI" font-size="13" fill="#334155">  (public API uchun ko'pincha 6–12 oy)</text>
+  <text x="470" y="426" font-family="Segoe UI" font-size="13" fill="#334155">• Trafikni kuzating: hech kim ishlatmasa o'chiring</text>
+</svg>

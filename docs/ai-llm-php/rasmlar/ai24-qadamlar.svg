@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 380" width="780" height="380" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Ilovani qurish qadamlari: indekslash -> qidiruv -> javob -> tool -> UI -> xavfsizlik -> deploy</title>
+  <rect x="0" y="0" width="780" height="380" fill="#f8fafc"/>
+  <text x="390" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Qurish qadamlari</text>
+
+  <defs>
+    <marker id="rq" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#7c3aed"/>
+    </marker>
+  </defs>
+
+  <!-- 1 -->
+  <rect x="30" y="80" width="160" height="70" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="110" y="106" text-anchor="middle" font-size="15" font-weight="700" fill="#16a34a">1</text>
+  <text x="110" y="128" text-anchor="middle" font-size="14" fill="#1e293b">Indekslash</text>
+  <text x="110" y="145" text-anchor="middle" font-size="13" fill="#94a3b8">o'qish/chunk/embed</text>
+
+  <!-- 2 -->
+  <rect x="230" y="80" width="160" height="70" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="310" y="106" text-anchor="middle" font-size="15" font-weight="700" fill="#16a34a">2</text>
+  <text x="310" y="128" text-anchor="middle" font-size="14" fill="#1e293b">Qidiruv</text>
+  <text x="310" y="145" text-anchor="middle" font-size="13" fill="#94a3b8">eng yaqin bo'laklar</text>
+
+  <!-- 3 -->
+  <rect x="430" y="80" width="160" height="70" rx="10" fill="#ffffff" stroke="#d97757" stroke-width="2"/>
+  <text x="510" y="106" text-anchor="middle" font-size="15" font-weight="700" fill="#d97757">3</text>
+  <text x="510" y="128" text-anchor="middle" font-size="14" fill="#1e293b">Javob (RAG)</text>
+  <text x="510" y="145" text-anchor="middle" font-size="13" fill="#94a3b8">kontekst+Claude</text>
+
+  <!-- 4 -->
+  <rect x="620" y="80" width="135" height="70" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="687" y="106" text-anchor="middle" font-size="15" font-weight="700" fill="#f59e0b">4</text>
+  <text x="687" y="128" text-anchor="middle" font-size="14" fill="#1e293b">Tool</text>
+  <text x="687" y="145" text-anchor="middle" font-size="13" fill="#94a3b8">runner</text>
+
+  <!-- 5 -->
+  <rect x="430" y="200" width="160" height="70" rx="10" fill="#ffffff" stroke="#a855f7" stroke-width="2"/>
+  <text x="510" y="226" text-anchor="middle" font-size="15" font-weight="700" fill="#a855f7">5</text>
+  <text x="510" y="248" text-anchor="middle" font-size="14" fill="#1e293b">UI / Streaming</text>
+  <text x="510" y="265" text-anchor="middle" font-size="13" fill="#94a3b8">CLI / SSE</text>
+
+  <!-- 6 -->
+  <rect x="230" y="200" width="160" height="70" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="310" y="226" text-anchor="middle" font-size="15" font-weight="700" fill="#dc2626">6</text>
+  <text x="310" y="248" text-anchor="middle" font-size="14" fill="#1e293b">Xavfsizlik</text>
+  <text x="310" y="265" text-anchor="middle" font-size="13" fill="#94a3b8">injection/kalit/ruxsat</text>
+
+  <!-- 7 -->
+  <rect x="30" y="200" width="160" height="70" rx="10" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="110" y="226" text-anchor="middle" font-size="15" font-weight="700" fill="#4f46e5">7</text>
+  <text x="110" y="248" text-anchor="middle" font-size="14" fill="#1e293b">Deploy + kuzatuv</text>
+  <text x="110" y="265" text-anchor="middle" font-size="13" fill="#94a3b8">log/narx (22-bob)</text>
+
+  <!-- arrows top row -->
+  <line x1="190" y1="115" x2="228" y2="115" stroke="#7c3aed" stroke-width="2" marker-end="url(#rq)"/>
+  <line x1="390" y1="115" x2="428" y2="115" stroke="#7c3aed" stroke-width="2" marker-end="url(#rq)"/>
+  <line x1="590" y1="115" x2="618" y2="115" stroke="#7c3aed" stroke-width="2" marker-end="url(#rq)"/>
+  <!-- down to row 2 -->
+  <line x1="687" y1="150" x2="687" y2="235" stroke="#7c3aed" stroke-width="2"/>
+  <line x1="687" y1="235" x2="592" y2="235" stroke="#7c3aed" stroke-width="2" marker-end="url(#rq)"/>
+  <line x1="430" y1="235" x2="392" y2="235" stroke="#7c3aed" stroke-width="2" marker-end="url(#rq)"/>
+  <line x1="230" y1="235" x2="192" y2="235" stroke="#7c3aed" stroke-width="2" marker-end="url(#rq)"/>
+
+  <text x="390" y="330" text-anchor="middle" font-size="14" fill="#475569">Har qadam — kichik, ishlaydigan bo'lak; oxirida hammasi bitta ilova</text>
+  <text x="390" y="356" text-anchor="middle" font-size="13" fill="#94a3b8">Indekslash bir marta; qidiruv-javob-tool-UI har savolda; xavfsizlik+deploy doimiy</text>
+</svg>

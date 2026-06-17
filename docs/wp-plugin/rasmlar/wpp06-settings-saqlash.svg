@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 420" width="740" height="420">
+  <title>Sozlamani saqlash yo'li: forma settings_fields nonce'ni qo'shadi, options.php nonce va ruxsatni tekshiradi, sanitize_callback qiymatni tozalaydi, options jadvalga yoziladi va get_option bilan o'qiladi</title>
+  <defs>
+    <marker id="ss-arrow" markerWidth="12" markerHeight="12" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="740" height="420" fill="#f8fafc"/>
+
+  <text x="370" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Sozlamani saqlash yo'li</text>
+  <text x="370" y="54" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Formadan bazagacha — har bosqichda himoya</text>
+
+  <!-- step 1: form -->
+  <rect x="40" y="80" width="300" height="92" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="190" y="106" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">1. Forma (sozlamalar sahifasi)</text>
+  <text x="190" y="130" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">settings_fields( 'guruh' )</text>
+  <text x="190" y="152" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">nonce + option_page + action maydonlari</text>
+
+  <!-- step 2: options.php -->
+  <rect x="400" y="80" width="300" height="92" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="550" y="106" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b45309">2. options.php (WP yadrosi)</text>
+  <text x="550" y="130" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">nonce'ni tekshiradi (CSRF himoya)</text>
+  <text x="550" y="152" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">current_user_can() tekshiradi</text>
+
+  <!-- step 3: sanitize -->
+  <rect x="400" y="212" width="300" height="92" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="550" y="238" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">3. sanitize_callback</text>
+  <text x="550" y="262" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">absint, sanitize_text_field, allowlist</text>
+  <text x="550" y="284" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Ishonchsiz kirish to'g'rilanadi</text>
+
+  <!-- step 4: db -->
+  <rect x="40" y="212" width="300" height="92" rx="10" fill="#fff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="190" y="238" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">4. wp_options jadval</text>
+  <text x="190" y="262" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">tozalangan qiymat saqlanadi</text>
+  <text x="190" y="284" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(update_option avtomatik)</text>
+
+  <!-- step 5: read -->
+  <rect x="40" y="334" width="660" height="56" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="370" y="358" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#7c3aed">5. get_option( 'nom', $default ) — frontend va admin shu yerdan o'qiydi</text>
+  <text x="370" y="380" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Default qiymat bilan: sozlama hali saqlanmagan bo'lsa ham kod ishlaydi</text>
+
+  <!-- arrows -->
+  <line x1="342" y1="126" x2="398" y2="126" stroke="#2563eb" stroke-width="2.5" marker-end="url(#ss-arrow)"/>
+  <line x1="550" y1="174" x2="550" y2="210" stroke="#2563eb" stroke-width="2.5" marker-end="url(#ss-arrow)"/>
+  <line x1="398" y1="258" x2="342" y2="258" stroke="#2563eb" stroke-width="2.5" marker-end="url(#ss-arrow)"/>
+  <line x1="190" y1="306" x2="190" y2="332" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#ss-arrow)"/>
+</svg>

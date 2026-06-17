@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 460" width="760" height="460">
+  <title>Dockerfile direktivalari pastdan yuqoriga image layerlar stekiga aylanadi: FROM base, WORKDIR, COPY package.json, RUN npm ci, COPY hamma kod va CMD</title>
+  <rect x="0" y="0" width="760" height="460" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Image — layerlar steki</text>
+  <text x="380" y="56" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">Har direktiva = bitta layer; image = layerlarning ustma-ust uyumi</text>
+
+  <!-- Left column: Dockerfile -->
+  <text x="40" y="86" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Dockerfile</text>
+  <rect x="40" y="96" width="300" height="320" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="56" y="128" font-family="Consolas, monospace" font-size="13.5" fill="#1e293b">FROM node:lts-alpine</text>
+  <text x="56" y="178" font-family="Consolas, monospace" font-size="13.5" fill="#1e293b">WORKDIR /app</text>
+  <text x="56" y="228" font-family="Consolas, monospace" font-size="13.5" fill="#1e293b">COPY package*.json ./</text>
+  <text x="56" y="278" font-family="Consolas, monospace" font-size="13.5" fill="#1e293b">RUN npm ci</text>
+  <text x="56" y="328" font-family="Consolas, monospace" font-size="13.5" fill="#1e293b">COPY . .</text>
+  <text x="56" y="378" font-family="Consolas, monospace" font-size="13.5" fill="#1e293b">CMD ["node","server.js"]</text>
+
+  <!-- Arrow -->
+  <text x="372" y="262" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="26" fill="#2563eb">&#8594;</text>
+
+  <!-- Right column: stack of layers (top = CMD, bottom = FROM) -->
+  <text x="420" y="86" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Image layerlari (yuqori = oxirgi)</text>
+
+  <!-- CMD (metadata, not a fs layer but shown as top) -->
+  <rect x="420" y="96" width="300" height="44" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="570" y="123" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">CMD &#8212; run buyrug'i (metadata)</text>
+
+  <rect x="420" y="148" width="300" height="44" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="570" y="175" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">Layer: hamma kod (COPY . .)</text>
+
+  <rect x="420" y="200" width="300" height="44" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="570" y="227" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">Layer: node_modules (RUN npm ci)</text>
+
+  <rect x="420" y="252" width="300" height="44" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="570" y="279" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">Layer: package*.json</text>
+
+  <rect x="420" y="304" width="300" height="44" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="570" y="331" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">Layer: /app papka (WORKDIR)</text>
+
+  <rect x="420" y="356" width="300" height="56" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="570" y="380" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#1e293b">Base: node:lts-alpine</text>
+  <text x="570" y="399" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(Linux + Node.js) &#8212; poydevor</text>
+
+  <text x="380" y="444" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Layerlar read-only va keshlanadi: o'zgarmagan layer qayta qurilmaydi</text>
+</svg>

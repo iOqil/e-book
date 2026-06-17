@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 460" width="760" height="460" font-family="Segoe UI, system-ui, sans-serif">
+  <title>RAG ikki fazasi: indekslash (offline) va so'rov (online)</title>
+  <rect x="0" y="0" width="760" height="460" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">RAG: ikki faza</text>
+
+  <defs>
+    <marker id="ru-arr" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#4f46e5"/>
+    </marker>
+    <marker id="ru-arr-g" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#16a34a"/>
+    </marker>
+    <marker id="ru-arr-b" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#0284c7"/>
+    </marker>
+  </defs>
+
+  <!-- PHASE 1: indexing (offline) -->
+  <rect x="24" y="58" width="712" height="160" rx="14" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <rect x="24" y="58" width="712" height="34" rx="14" fill="#eef2ff"/>
+  <text x="44" y="81" font-size="16" font-weight="700" fill="#4338ca">1-faza: INDEKSLASH (offline, oldindan — BU BOB)</text>
+
+  <rect x="44" y="116" width="120" height="74" rx="10" fill="#e0f2fe" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="104" y="148" text-anchor="middle" font-size="14" font-weight="700" fill="#0284c7">Hujjatlar</text>
+  <text x="104" y="168" text-anchor="middle" font-size="13" fill="#475569">.txt .md .pdf</text>
+
+  <rect x="216" y="116" width="120" height="74" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="276" y="148" text-anchor="middle" font-size="14" font-weight="700" fill="#b45309">Chunk</text>
+  <text x="276" y="168" text-anchor="middle" font-size="13" fill="#92400e">bo'laklarga</text>
+
+  <rect x="388" y="116" width="120" height="74" rx="10" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="448" y="148" text-anchor="middle" font-size="14" font-weight="700" fill="#4338ca">Embed</text>
+  <text x="448" y="168" text-anchor="middle" font-size="13" fill="#475569">vektorga</text>
+
+  <rect x="560" y="116" width="156" height="74" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="638" y="148" text-anchor="middle" font-size="14" font-weight="700" fill="#166534">Vektor baza</text>
+  <text x="638" y="168" text-anchor="middle" font-size="13" fill="#166534">saqlanadi</text>
+
+  <line x1="164" y1="153" x2="212" y2="153" stroke="#4f46e5" stroke-width="2.5" marker-end="url(#ru-arr)"/>
+  <line x1="336" y1="153" x2="384" y2="153" stroke="#4f46e5" stroke-width="2.5" marker-end="url(#ru-arr)"/>
+  <line x1="508" y1="153" x2="556" y2="153" stroke="#4f46e5" stroke-width="2.5" marker-end="url(#ru-arr)"/>
+
+  <!-- PHASE 2: query (online) -->
+  <rect x="24" y="246" width="712" height="174" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <rect x="24" y="246" width="712" height="34" rx="14" fill="#dcfce7"/>
+  <text x="44" y="269" font-size="16" font-weight="700" fill="#166534">2-faza: SO'ROV (online, real vaqt — keyingi bob)</text>
+
+  <rect x="44" y="306" width="118" height="64" rx="10" fill="#e0f2fe" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="103" y="334" text-anchor="middle" font-size="14" font-weight="700" fill="#0284c7">Savol</text>
+  <text x="103" y="354" text-anchor="middle" font-size="13" fill="#475569">foydalanuvchi</text>
+
+  <rect x="214" y="306" width="150" height="64" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="289" y="333" text-anchor="middle" font-size="14" font-weight="700" fill="#b45309">Qidirish</text>
+  <text x="289" y="353" text-anchor="middle" font-size="13" fill="#92400e">tegishli chunklar</text>
+
+  <rect x="416" y="306" width="138" height="64" rx="10" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="485" y="333" text-anchor="middle" font-size="14" font-weight="700" fill="#4338ca">Kontekst + savol</text>
+  <text x="485" y="353" text-anchor="middle" font-size="13" fill="#475569">-&gt; LLM</text>
+
+  <rect x="606" y="306" width="110" height="64" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="661" y="334" text-anchor="middle" font-size="14" font-weight="700" fill="#166534">Javob</text>
+  <text x="661" y="354" text-anchor="middle" font-size="13" fill="#166534">manbaga asos.</text>
+
+  <line x1="162" y1="338" x2="210" y2="338" stroke="#16a34a" stroke-width="2.5" marker-end="url(#ru-arr-g)"/>
+  <line x1="364" y1="338" x2="412" y2="338" stroke="#16a34a" stroke-width="2.5" marker-end="url(#ru-arr-g)"/>
+  <line x1="554" y1="338" x2="602" y2="338" stroke="#16a34a" stroke-width="2.5" marker-end="url(#ru-arr-g)"/>
+
+  <!-- shared DB link -->
+  <path d="M638,190 C638,222 470,228 360,290" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-dasharray="6 4" marker-end="url(#ru-arr-b)"/>
+  <text x="540" y="232" text-anchor="middle" font-size="13" font-weight="700" fill="#0284c7">bir xil bazadan o'qiladi</text>
+
+  <text x="380" y="444" text-anchor="middle" font-size="13" fill="#64748b">Indekslash bir marta tayyorlaydi; so'rov esa har savolda shu tayyor bazadan foydalanadi</text>
+</svg>

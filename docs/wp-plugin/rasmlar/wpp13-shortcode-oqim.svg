@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420">
+  <title>Foydalanuvchi postga shortcode yorlig'ini yozadi, WordPress uni parse qiladi, callback chaqiriladi va u return qilgan HTML aynan yorliq turgan joyda paydo bo'ladi</title>
+  <defs>
+    <marker id="s-arr" markerWidth="13" markerHeight="13" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Shortcode hayot sikli</text>
+  <text x="380" y="54" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">yorliq matni in HTML out — return qilingan natija yorliq o'rnida</text>
+
+  <!-- 1: foydalanuvchi post -->
+  <rect x="36" y="86" width="200" height="84" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="136" y="112" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">1. Post / sahifa</text>
+  <text x="136" y="134" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e40af">Foydalanuvchi yozadi:</text>
+  <text x="136" y="155" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">[kitoblar soni="5"]</text>
+
+  <line x1="236" y1="128" x2="288" y2="128" stroke="#475569" stroke-width="2" marker-end="url(#s-arr)"/>
+
+  <!-- 2: WordPress parse -->
+  <rect x="290" y="86" width="200" height="84" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="390" y="112" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">2. WordPress</text>
+  <text x="390" y="134" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">the_content filterida</text>
+  <text x="390" y="155" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">yorliqni topadi (parse)</text>
+
+  <line x1="490" y1="128" x2="542" y2="128" stroke="#475569" stroke-width="2" marker-end="url(#s-arr)"/>
+
+  <!-- 3: callback -->
+  <rect x="544" y="86" width="184" height="84" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="636" y="112" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#7c3aed">3. Callback</text>
+  <text x="636" y="134" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">add_shortcode bilan</text>
+  <text x="636" y="155" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">ulangan funksiya</text>
+
+  <!-- callback -> return (down) -->
+  <line x1="636" y1="170" x2="636" y2="214" stroke="#475569" stroke-width="2" marker-end="url(#s-arr)"/>
+
+  <!-- 4: return HTML -->
+  <rect x="500" y="216" width="228" height="78" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="614" y="242" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">4. return $html</text>
+  <text x="614" y="264" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">&lt;ul&gt;...&lt;/ul&gt; (escape bilan)</text>
+  <text x="614" y="285" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626">echo EMAS — return!</text>
+
+  <line x1="500" y1="255" x2="320" y2="255" stroke="#475569" stroke-width="2" marker-end="url(#s-arr)"/>
+
+  <!-- 5: sahifada -->
+  <rect x="36" y="216" width="252" height="78" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="162" y="242" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">5. Sahifada chiqadi</text>
+  <text x="162" y="264" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">HTML aynan yorliq</text>
+  <text x="162" y="285" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">turgan joyga qo'yiladi</text>
+
+  <!-- warning box -->
+  <rect x="36" y="324" width="692" height="64" rx="10" fill="#fff" stroke="#dc2626" stroke-width="2"/>
+  <text x="56" y="350" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">Diqqat: callback echo qilsa</text>
+  <text x="56" y="372" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">matn yorliq o'rnida emas, butun sahifaning tepasida chiqib ketadi. Har doim return qiling.</text>
+</svg>

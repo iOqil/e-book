@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" width="800" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>URL ekranga aylanadi: context.go('/user/42') chaqiriladi, go_router uni '/user/:id' shabloniga moslaydi, id=42 ni ajratib oladi va UserPage(42) ekranini quradi</title>
+  <defs>
+    <marker id="fl20u" markerWidth="12" markerHeight="12" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#027dfd"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="800" height="440" fill="#f8fafc"/>
+  <text x="400" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">URL ekranga qanday aylanadi</text>
+  <text x="400" y="58" text-anchor="middle" font-size="14" fill="#475569">go_router yo'lni shablonga moslaydi, parametrni ajratib oladi va ekranni quradi</text>
+
+  <!-- Step 1: call -->
+  <rect x="40" y="100" width="220" height="80" rx="12" fill="#ffffff" stroke="#027dfd" stroke-width="2.5"/>
+  <text x="150" y="128" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">1. Siz chaqirasiz</text>
+  <text x="150" y="153" text-anchor="middle" font-size="14" fill="#027dfd">context.go(</text>
+  <text x="150" y="172" text-anchor="middle" font-size="14" fill="#027dfd">'/user/42')</text>
+
+  <!-- arrow 1->2 -->
+  <path d="M260 140 L300 140" stroke="#027dfd" stroke-width="2.5" fill="none" marker-end="url(#fl20u)"/>
+
+  <!-- Step 2: match -->
+  <rect x="305" y="100" width="230" height="80" rx="12" fill="#ffffff" stroke="#6366f1" stroke-width="2.5"/>
+  <text x="420" y="128" text-anchor="middle" font-size="15" font-weight="700" fill="#6366f1">2. Shablonga moslaydi</text>
+  <text x="420" y="153" text-anchor="middle" font-size="14" fill="#475569">jadvaldan topadi:</text>
+  <text x="420" y="172" text-anchor="middle" font-size="14" fill="#475569">'/user/:id'</text>
+
+  <!-- arrow 2->3 -->
+  <path d="M535 140 L575 140" stroke="#027dfd" stroke-width="2.5" fill="none" marker-end="url(#fl20u)"/>
+
+  <!-- Step 3: extract -->
+  <rect x="580" y="100" width="180" height="80" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="670" y="128" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">3. Ajratadi</text>
+  <text x="670" y="153" text-anchor="middle" font-size="14" fill="#f59e0b">:id  =  "42"</text>
+  <text x="670" y="172" text-anchor="middle" font-size="13" fill="#475569">parametr qiymati</text>
+
+  <!-- param matching visual -->
+  <text x="270" y="232" text-anchor="middle" font-size="14" fill="#64748b">moslik (matching):</text>
+  <rect x="360" y="212" width="120" height="34" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="420" y="234" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">:id  ⟷  42</text>
+  <text x="560" y="232" text-anchor="middle" font-size="14" fill="#64748b">state.pathParameters['id']</text>
+
+  <!-- arrow down to step 4 -->
+  <path d="M400 256 L400 296" stroke="#027dfd" stroke-width="2.5" fill="none" marker-end="url(#fl20u)"/>
+
+  <!-- Step 4: build screen -->
+  <rect x="240" y="300" width="320" height="92" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="400" y="328" text-anchor="middle" font-size="15" font-weight="700" fill="#16a34a">4. Ekranni quradi</text>
+  <text x="400" y="354" text-anchor="middle" font-size="14" fill="#1e293b">builder: (context, state) {</text>
+  <text x="400" y="375" text-anchor="middle" font-size="14" fill="#1e293b">final id = state.pathParameters['id']!; }</text>
+
+  <text x="400" y="420" text-anchor="middle" font-size="13" fill="#94a3b8">Natija: ekranda UserPage(id: '42') ko'rinadi — URL to'g'ridan-to'g'ri ekranga aylandi.</text>
+</svg>

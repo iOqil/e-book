@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" font-family="Segoe UI">
+  <title>Xavfsiz refactoring sikli: kichik o'zgarish, keyin test, yana kichik o'zgarish, yana test</title>
+  <rect x="0" y="0" width="880" height="420" fill="#f8fafc"/>
+
+  <text x="440" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#1e293b">Xavfsiz refactoring sikli</text>
+  <text x="440" y="62" text-anchor="middle" font-size="14" fill="#64748b">Kichik qadam -&gt; test yashil -&gt; yana kichik qadam. Hech qachon ko'p narsani birvarakayiga emas.</text>
+
+  <!-- step 1: small change -->
+  <rect x="50" y="120" width="170" height="84" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="135" y="152" text-anchor="middle" font-size="15" font-weight="bold" fill="#2563eb">Kichik o'zgarish</text>
+  <text x="135" y="176" text-anchor="middle" font-size="13" fill="#334155">bitta nom yoki</text>
+  <text x="135" y="194" text-anchor="middle" font-size="13" fill="#334155">bitta extract</text>
+
+  <text x="240" y="168" text-anchor="middle" font-size="30" fill="#16a34a">-&gt;</text>
+
+  <!-- step 2: run tests green -->
+  <rect x="270" y="120" width="170" height="84" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="355" y="152" text-anchor="middle" font-size="15" font-weight="bold" fill="#16a34a">Testni ishga tushir</text>
+  <text x="355" y="178" text-anchor="middle" font-size="14" fill="#16a34a">yashil = davom et</text>
+  <circle cx="320" cy="192" r="6" fill="#16a34a"/>
+  <circle cx="340" cy="192" r="6" fill="#16a34a"/>
+  <circle cx="360" cy="192" r="6" fill="#16a34a"/>
+  <circle cx="380" cy="192" r="6" fill="#16a34a"/>
+
+  <text x="460" y="168" text-anchor="middle" font-size="30" fill="#16a34a">-&gt;</text>
+
+  <!-- step 3: small change -->
+  <rect x="490" y="120" width="170" height="84" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="575" y="152" text-anchor="middle" font-size="15" font-weight="bold" fill="#2563eb">Kichik o'zgarish</text>
+  <text x="575" y="176" text-anchor="middle" font-size="13" fill="#334155">keyingisi,</text>
+  <text x="575" y="194" text-anchor="middle" font-size="13" fill="#334155">yana mayda</text>
+
+  <text x="680" y="168" text-anchor="middle" font-size="30" fill="#16a34a">-&gt;</text>
+
+  <!-- step 4: run tests green -->
+  <rect x="710" y="120" width="120" height="84" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="770" y="152" text-anchor="middle" font-size="15" font-weight="bold" fill="#16a34a">Test</text>
+  <text x="770" y="176" text-anchor="middle" font-size="14" fill="#16a34a">yashil</text>
+  <circle cx="745" cy="192" r="6" fill="#16a34a"/>
+  <circle cx="770" cy="192" r="6" fill="#16a34a"/>
+  <circle cx="795" cy="192" r="6" fill="#16a34a"/>
+
+  <!-- loop arrow back -->
+  <path d="M 770 204 L 770 250 L 135 250 L 135 204" fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6 5"/>
+  <polygon points="135,204 129,216 141,216" fill="#94a3b8"/>
+  <text x="440" y="244" text-anchor="middle" font-size="13" fill="#64748b">takrorla: har qadamda kod ishlab turadi</text>
+
+  <!-- red warning -->
+  <rect x="160" y="300" width="560" height="80" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="440" y="328" text-anchor="middle" font-size="14" font-weight="bold" fill="#dc2626">Agar test qizarsa</text>
+  <text x="440" y="350" text-anchor="middle" font-size="13" fill="#334155">Darhol to'xta va oxirgi mayda qadamni orqaga qaytar. Qadam kichik bo'lgani uchun</text>
+  <text x="440" y="370" text-anchor="middle" font-size="13" fill="#334155">nima buzilganini topish oson — soatlab "qaerda xato?" qidirmaysiz.</text>
+</svg>

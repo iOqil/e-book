@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 540">
+  <title>Prefiks bo'yicha qidiruv va avtoto'ldirish: "ol" prefiksidan kelib chiqadigan so'zlar</title>
+  <rect x="0" y="0" width="860" height="540" fill="#f8fafc"/>
+  <text x="430" y="34" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Prefiks qidiruv: avtoto'ldirish</text>
+  <text x="430" y="58" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">"ol" prefiksiga tushib, undan keyingi butun qism-daraxtni yig'amiz</text>
+
+  <!-- step 1 box -->
+  <rect x="40" y="86" width="320" height="40" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="56" y="111" font-family="Segoe UI" font-size="14" fill="#1e40af" font-weight="bold">1-qadam: "o" -> "l" yo'lidan "ol" tuguniga tushamiz</text>
+
+  <!-- path to ol (highlighted) -->
+  <line x1="200" y1="180" x2="200" y2="250" stroke="#2563eb" stroke-width="4"/>
+  <line x1="200" y1="250" x2="200" y2="320" stroke="#2563eb" stroke-width="4"/>
+  <text x="184" y="220" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#2563eb">o</text>
+  <text x="184" y="290" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#2563eb">l</text>
+
+  <!-- root -->
+  <circle cx="200" cy="180" r="20" fill="#ffffff" stroke="#7c3aed" stroke-width="3"/>
+  <text x="200" y="186" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#7c3aed">●</text>
+
+  <!-- o -->
+  <circle cx="200" cy="250" r="20" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+  <text x="200" y="256" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#1e40af">o</text>
+
+  <!-- ol (anchor) -->
+  <circle cx="200" cy="320" r="22" fill="#dbeafe" stroke="#2563eb" stroke-width="4"/>
+  <text x="200" y="326" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#1e40af">ol</text>
+  <text x="200" y="362" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#2563eb" font-weight="bold">"ol" tuguni (anchor)</text>
+
+  <!-- subtree under ol -->
+  <!-- ol -> olm -> olma -->
+  <line x1="200" y1="342" x2="130" y2="410" stroke="#16a34a" stroke-width="3"/>
+  <line x1="130" y1="410" x2="130" y2="470" stroke="#16a34a" stroke-width="3"/>
+  <text x="156" y="382" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#16a34a">m</text>
+  <text x="118" y="448" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#16a34a">a</text>
+  <!-- ol -> olc -> olcha -->
+  <line x1="200" y1="342" x2="290" y2="410" stroke="#16a34a" stroke-width="3"/>
+  <line x1="290" y1="410" x2="290" y2="470" stroke="#16a34a" stroke-width="3"/>
+  <text x="258" y="382" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#16a34a">c</text>
+  <text x="278" y="448" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#16a34a">ha</text>
+
+  <!-- ol is itself a word -->
+  <circle cx="200" cy="320" r="9" fill="none" stroke="#16a34a" stroke-width="2.5"/>
+
+  <circle cx="130" cy="410" r="20" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="130" y="416" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="#166534">olm</text>
+  <circle cx="130" cy="470" r="22" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+  <text x="130" y="476" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="#166534">olma</text>
+
+  <circle cx="290" cy="410" r="20" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="290" y="416" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="#166534">olc</text>
+  <circle cx="290" cy="470" r="22" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+  <text x="290" y="476" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="#166534">olcha</text>
+
+  <!-- step 2 + results -->
+  <rect x="470" y="86" width="350" height="40" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="486" y="111" font-family="Segoe UI" font-size="14" fill="#166534" font-weight="bold">2-qadam: "ol" ostidagi BARCHA so'z oxirini yig'amiz</text>
+
+  <rect x="470" y="150" width="350" height="270" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="645" y="180" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#166534">Avtoto'ldirish takliflari</text>
+
+  <rect x="492" y="200" width="306" height="40" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="510" y="225" font-family="monospace" font-size="15" fill="#166534" font-weight="bold">ol</text>
+  <text x="784" y="225" text-anchor="end" font-family="Segoe UI" font-size="13" fill="#64748b">(prefiksning o'zi ham so'z)</text>
+
+  <rect x="492" y="248" width="306" height="40" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="510" y="273" font-family="monospace" font-size="15" fill="#166534" font-weight="bold">olma</text>
+
+  <rect x="492" y="296" width="306" height="40" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="510" y="321" font-family="monospace" font-size="15" fill="#166534" font-weight="bold">olcha</text>
+
+  <text x="492" y="368" font-family="Segoe UI" font-size="13" fill="#334155">Narx: O(p) prefiksgacha tushish</text>
+  <text x="492" y="390" font-family="Segoe UI" font-size="13" fill="#334155">+ O(natijalar hajmi) qism-daraxtni</text>
+  <text x="492" y="412" font-family="Segoe UI" font-size="13" fill="#334155">yurib chiqish. Hash jadval buni qila olmaydi!</text>
+
+  <!-- bottom note -->
+  <rect x="40" y="500" width="780" height="30" rx="8" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="430" y="520" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#92400e">DFS bilan qism-daraxtni alifbo tartibida yursak, takliflar ham tartiblangan chiqadi.</text>
+</svg>

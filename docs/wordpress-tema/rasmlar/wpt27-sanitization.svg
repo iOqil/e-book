@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 500" width="760" height="500">
+  <title>Sanitization oqimi: kirish ma'lumoti turiga qarab mos sanitize funksiyasi</title>
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="760" height="500" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1e293b">Sanitization — KIRISHda himoya</text>
+  <text x="380" y="58" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Ma'lumot turiga qarab mos sanitize_* funksiyasini tanlang</text>
+
+  <!-- source -->
+  <rect x="270" y="78" width="220" height="56" rx="10" fill="#dc2626"/>
+  <text x="380" y="103" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">$_POST / $_GET</text>
+  <text x="380" y="124" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#fee2e2">ISHONCHSIZ (foydalanuvchi nazoratida)</text>
+
+  <!-- unslash step -->
+  <rect x="270" y="156" width="220" height="40" rx="8" fill="#f59e0b"/>
+  <text x="380" y="181" text-anchor="middle" font-family="Consolas, monospace" font-size="14" font-weight="bold" fill="#1e293b">wp_unslash( ... )</text>
+  <line x1="380" y1="134" x2="380" y2="155" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- branch lines -->
+  <line x1="380" y1="196" x2="380" y2="214" stroke="#475569" stroke-width="2"/>
+  <line x1="130" y1="214" x2="630" y2="214" stroke="#475569" stroke-width="2"/>
+
+  <!-- 6 type boxes -->
+  <!-- box 1 -->
+  <line x1="130" y1="214" x2="130" y2="236" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+  <rect x="30" y="238" width="200" height="84" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="44" y="260" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">Bir qatorli matn</text>
+  <text x="44" y="283" font-family="Consolas, monospace" font-size="13" fill="#1e293b">sanitize_text_field()</text>
+  <text x="44" y="307" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">teglar o'chadi, bo'shliq siqiladi</text>
+
+  <!-- box 2 -->
+  <line x1="380" y1="214" x2="380" y2="236" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+  <rect x="280" y="238" width="200" height="84" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="294" y="260" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">Email</text>
+  <text x="294" y="283" font-family="Consolas, monospace" font-size="13" fill="#1e293b">sanitize_email()</text>
+  <text x="294" y="307" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">+ is_email() tekshiruv</text>
+
+  <!-- box 3 -->
+  <line x1="630" y1="214" x2="630" y2="236" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+  <rect x="530" y="238" width="200" height="84" rx="10" fill="#ffffff" stroke="#d97706" stroke-width="2"/>
+  <text x="544" y="260" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#d97706">Musbat butun son</text>
+  <text x="544" y="283" font-family="Consolas, monospace" font-size="13" fill="#1e293b">absint()</text>
+  <text x="544" y="307" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">'-42abc' -&gt; 42</text>
+
+  <!-- second row -->
+  <rect x="30" y="338" width="200" height="84" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="44" y="360" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#7c3aed">Ko'p qatorli matn</text>
+  <text x="44" y="383" font-family="Consolas, monospace" font-size="13" fill="#1e293b">sanitize_textarea_field()</text>
+  <text x="44" y="407" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">teglarsiz, qatorlar saqlanadi</text>
+
+  <rect x="280" y="338" width="200" height="84" rx="10" fill="#ffffff" stroke="#0891b2" stroke-width="2"/>
+  <text x="294" y="360" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#0891b2">Slug / kalit</text>
+  <text x="294" y="383" font-family="Consolas, monospace" font-size="13" fill="#1e293b">sanitize_key()</text>
+  <text x="294" y="407" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">faqat a-z 0-9 _ -</text>
+
+  <rect x="530" y="338" width="200" height="84" rx="10" fill="#ffffff" stroke="#be185d" stroke-width="2"/>
+  <text x="544" y="360" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#be185d">Boy HTML matn</text>
+  <text x="544" y="383" font-family="Consolas, monospace" font-size="13" fill="#1e293b">wp_kses_post()</text>
+  <text x="544" y="407" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">ruxsat etilgan teglar</text>
+
+  <!-- result -->
+  <rect x="270" y="444" width="220" height="44" rx="10" fill="#16a34a"/>
+  <text x="380" y="471" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">TOZA -&gt; saqlash xavfsiz</text>
+</svg>

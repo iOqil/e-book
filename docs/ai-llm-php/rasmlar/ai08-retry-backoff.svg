@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Exponential backoff — xatoda ortib boruvchi kechikish bilan qayta urinish</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Exponential backoff (ortib boruvchi kutish)</text>
+  <text x="380" y="60" text-anchor="middle" font-size="14" fill="#475569">Har urinishdan keyin kutish vaqti ikki barobar oshadi</text>
+
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#6366f1"/>
+    </marker>
+  </defs>
+
+  <!-- Urinish 1: xato -->
+  <rect x="40" y="100" width="130" height="60" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="105" y="126" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">1-urinish</text>
+  <text x="105" y="147" text-anchor="middle" font-size="14" fill="#dc2626">xato (429)</text>
+
+  <!-- kut 1s -->
+  <line x1="170" y1="130" x2="218" y2="130" stroke="#6366f1" stroke-width="2" marker-end="url(#arr)"/>
+  <rect x="222" y="108" width="76" height="44" rx="8" fill="#fef9c3" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="260" y="135" text-anchor="middle" font-size="14" font-weight="700" fill="#475569">kut 1s</text>
+
+  <!-- Urinish 2: xato -->
+  <line x1="298" y1="130" x2="346" y2="130" stroke="#6366f1" stroke-width="2" marker-end="url(#arr)"/>
+  <rect x="350" y="100" width="130" height="60" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="415" y="126" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">2-urinish</text>
+  <text x="415" y="147" text-anchor="middle" font-size="14" fill="#dc2626">xato (429)</text>
+
+  <!-- kut 2s -->
+  <line x1="480" y1="130" x2="528" y2="130" stroke="#6366f1" stroke-width="2" marker-end="url(#arr)"/>
+  <rect x="532" y="108" width="76" height="44" rx="8" fill="#fef9c3" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="570" y="135" text-anchor="middle" font-size="14" font-weight="700" fill="#475569">kut 2s</text>
+
+  <!-- Urinish 3: xato -->
+  <line x1="608" y1="130" x2="656" y2="130" stroke="#6366f1" stroke-width="2" marker-end="url(#arr)"/>
+  <rect x="630" y="100" width="100" height="60" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="680" y="126" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">3-urinish</text>
+  <text x="680" y="147" text-anchor="middle" font-size="14" fill="#dc2626">xato</text>
+
+  <!-- pastga -->
+  <line x1="680" y1="160" x2="680" y2="210" stroke="#6366f1" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- kut 4s -->
+  <rect x="592" y="218" width="176" height="44" rx="8" fill="#fef9c3" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="680" y="245" text-anchor="middle" font-size="14" font-weight="700" fill="#475569">kut 4s (ikki barobar)</text>
+
+  <!-- chapga -->
+  <line x1="590" y1="240" x2="500" y2="240" stroke="#6366f1" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Urinish 4: muvaffaqiyat -->
+  <rect x="330" y="210" width="160" height="60" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="410" y="236" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">4-urinish</text>
+  <text x="410" y="257" text-anchor="middle" font-size="14" font-weight="700" fill="#16a34a">muvaffaqiyat!</text>
+
+  <!-- Kechikish ustuni grafikasi -->
+  <text x="60" y="305" font-size="15" font-weight="700" fill="#1e293b">Kutish: 1s -> 2s -> 4s -> 8s ... (lekin chegara: maks. kutish va maks. urinish)</text>
+
+  <!-- Pastki izoh -->
+  <rect x="40" y="324" width="680" height="76" rx="8" fill="#ede9fe" stroke="#c7d2fe" stroke-width="1.5"/>
+  <text x="60" y="348" font-size="14" fill="#4f46e5" font-weight="700">Nega darhol takrorlamaymiz?</text>
+  <text x="60" y="370" font-size="14" fill="#475569">Server allaqachon yuklangan — darhol qaytarish uni yana bosadi. Kutib turish nafas oldiradi.</text>
+  <text x="60" y="390" font-size="14" fill="#475569">"Jitter" (kichik tasodifiy qo'shimcha) — hamma mijoz bir vaqtda urinmasligi uchun.</text>
+</svg>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 450" width="760" height="450" font-family="Segoe UI, system-ui, sans-serif">
+  <title>OpenAI-mos API: bitta kod va faqat baseUri, kalit, model o'zgarishi bilan Ollama, OpenRouter, LocalAI, Mistral kabi ko'p provayder</title>
+  <rect x="0" y="0" width="760" height="450" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">OpenAI-mos API: bitta kod, ko'p provayder</text>
+  <text x="380" y="60" text-anchor="middle" font-size="14" fill="#475569">faqat baseUri + kalit + model o'zgaradi, qolgani aynan o'sha</text>
+
+  <defs>
+    <marker id="ar2" markerWidth="12" markerHeight="12" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 Z" fill="#7c3aed"/>
+    </marker>
+  </defs>
+
+  <!-- chap: bitta kod -->
+  <rect x="40" y="120" width="230" height="200" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="2.5"/>
+  <rect x="40" y="120" width="230" height="44" rx="12" fill="#ede9fe"/>
+  <text x="155" y="148" text-anchor="middle" font-size="16" font-weight="700" fill="#6d28d9">Bitta openai-php kod</text>
+  <text x="155" y="190" text-anchor="middle" font-size="13" fill="#1e293b">chat()-&gt;create([...])</text>
+  <text x="155" y="214" text-anchor="middle" font-size="13" fill="#1e293b">choices[0]-&gt;message</text>
+  <line x1="60" y1="232" x2="250" y2="232" stroke="#ddd6fe" stroke-width="1.5"/>
+  <text x="155" y="256" text-anchor="middle" font-size="13" font-weight="700" fill="#7c3aed">o'zgaradigan 3 narsa:</text>
+  <text x="155" y="278" text-anchor="middle" font-size="13" fill="#475569">baseUri</text>
+  <text x="155" y="298" text-anchor="middle" font-size="13" fill="#475569">apiKey · model</text>
+
+  <!-- markaziy almashtirgich -->
+  <rect x="320" y="190" width="120" height="60" rx="10" fill="#fff7ed" stroke="#f59e0b" stroke-width="2"/>
+  <text x="380" y="216" text-anchor="middle" font-size="14" font-weight="700" fill="#b45309">withBaseUri()</text>
+  <text x="380" y="236" text-anchor="middle" font-size="13" fill="#b45309">almashtirgich</text>
+
+  <line x1="270" y1="220" x2="318" y2="220" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#ar2)"/>
+
+  <!-- o'ng: provayderlar -->
+  <rect x="500" y="92" width="230" height="56" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="615" y="116" text-anchor="middle" font-size="15" font-weight="700" fill="#b45309">Ollama (lokal)</text>
+  <text x="615" y="137" text-anchor="middle" font-size="13" fill="#475569">localhost:11434/v1</text>
+
+  <rect x="500" y="158" width="230" height="56" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="615" y="182" text-anchor="middle" font-size="15" font-weight="700" fill="#15803d">OpenRouter</text>
+  <text x="615" y="203" text-anchor="middle" font-size="13" fill="#475569">openrouter.ai/api/v1</text>
+
+  <rect x="500" y="224" width="230" height="56" rx="10" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="615" y="248" text-anchor="middle" font-size="15" font-weight="700" fill="#4338ca">LocalAI · LM Studio</text>
+  <text x="615" y="269" text-anchor="middle" font-size="13" fill="#475569">lokal OpenAI-mos</text>
+
+  <rect x="500" y="290" width="230" height="56" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="615" y="314" text-anchor="middle" font-size="15" font-weight="700" fill="#6d28d9">Mistral · Together · ...</text>
+  <text x="615" y="335" text-anchor="middle" font-size="13" fill="#475569">OpenAI-mos provayderlar</text>
+
+  <!-- almashtirgichdan provayderlarga -->
+  <line x1="440" y1="210" x2="498" y2="120" stroke="#cbd5e1" stroke-width="2" marker-end="url(#ar2)"/>
+  <line x1="440" y1="216" x2="498" y2="186" stroke="#cbd5e1" stroke-width="2" marker-end="url(#ar2)"/>
+  <line x1="440" y1="224" x2="498" y2="252" stroke="#cbd5e1" stroke-width="2" marker-end="url(#ar2)"/>
+  <line x1="440" y1="230" x2="498" y2="318" stroke="#cbd5e1" stroke-width="2" marker-end="url(#ar2)"/>
+
+  <text x="380" y="392" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Provayderni almashtirish = .env da bitta qator (LLM_PROVIDER)</text>
+  <text x="380" y="418" text-anchor="middle" font-size="13" fill="#475569">bugun lokal Ollama, ertaga OpenRouter, indinga OpenAI — o'sha kod</text>
+</svg>

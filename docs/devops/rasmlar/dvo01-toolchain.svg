@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" width="760" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>DevOps texnologiya qatlamlari pastdan tepaga: Linux server poydevori, ustida Docker konteynerlari, CI/CD avtomatlashtirish, Nginx va HTTPS, Kubernetes orkestratsiya, eng tepada Monitoring va Infrastructure as Code</title>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="36" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">DevOps qatlamlari — kitob xaritasi</text>
+  <text x="380" y="60" font-size="13.5" fill="#475569" text-anchor="middle">Har qatlam pastdagisi ustiga quriladi (poydevordan orkestratsiyagacha)</text>
+
+  <!-- Qatlam 6: Monitoring + IaC (tepa) -->
+  <rect x="150" y="84" width="460" height="52" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="380" y="110" font-size="16" font-weight="bold" fill="#6d28d9" text-anchor="middle">Monitoring / Observability + IaC</text>
+  <text x="380" y="128" font-size="13" fill="#475569" text-anchor="middle">Prometheus · Grafana · Ansible · Terraform (25-28-boblar)</text>
+
+  <!-- Qatlam 5: Kubernetes -->
+  <rect x="150" y="146" width="460" height="52" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="172" font-size="16" font-weight="bold" fill="#1e40af" text-anchor="middle">Kubernetes — orkestratsiya</text>
+  <text x="380" y="190" font-size="13" fill="#475569" text-anchor="middle">ko'p konteynerni avtomatik boshqarish (21-24-boblar)</text>
+
+  <!-- Qatlam 4: Nginx + HTTPS -->
+  <rect x="150" y="208" width="460" height="52" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="380" y="234" font-size="16" font-weight="bold" fill="#b45309" text-anchor="middle">Nginx + HTTPS — tashqi dunyoga ulash</text>
+  <text x="380" y="252" font-size="13" fill="#475569" text-anchor="middle">reverse proxy · domen · Let's Encrypt (16-20-boblar)</text>
+
+  <!-- Qatlam 3: CI/CD -->
+  <rect x="150" y="270" width="460" height="52" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="380" y="296" font-size="16" font-weight="bold" fill="#15803d" text-anchor="middle">CI/CD — avtomatik test, build, deploy</text>
+  <text x="380" y="314" font-size="13" fill="#475569" text-anchor="middle">GitHub Actions · GHCR (12-15-boblar)</text>
+
+  <!-- Qatlam 2: Docker -->
+  <rect x="150" y="332" width="460" height="52" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="358" font-size="16" font-weight="bold" fill="#1e40af" text-anchor="middle">Docker — konteynerlar</text>
+  <text x="380" y="376" font-size="13" fill="#475569" text-anchor="middle">"menda ishlaydi-ku" muammosini yo'q qiladi (6-11-boblar)</text>
+
+  <!-- Qatlam 1: Linux (poydevor) -->
+  <rect x="150" y="394" width="460" height="56" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="380" y="420" font-size="16" font-weight="bold" fill="#334155" text-anchor="middle">Linux server — poydevor</text>
+  <text x="380" y="438" font-size="13" fill="#475569" text-anchor="middle">SSH · fayl tizimi · paketlar · xavfsizlik (1-5-boblar)</text>
+
+  <!-- pastdan tepaga strelka (chap) -->
+  <defs>
+    <marker id="tcar" markerWidth="11" markerHeight="11" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <line x1="100" y1="440" x2="100" y2="100" stroke="#64748b" stroke-width="2.5" marker-end="url(#tcar)"/>
+  <text x="78" y="270" font-size="13.5" font-weight="bold" fill="#475569" text-anchor="middle" transform="rotate(-90 78 270)">quramiz: pastdan tepaga</text>
+</svg>

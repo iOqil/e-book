@@ -1,5 +1,5 @@
 site_name: Oqil E-kitoblar
-site_description: "Dasturlash bo'yicha o'zbekcha e-kitoblar — 0 dan expertgacha. 12 ta qo'llanma, 600 SVG diagramma."
+site_description: "Dasturlash bo'yicha o'zbekcha e-kitoblar — 0 dan ekspertgacha. 24 ta amaliy qo'llanma, ishlab tekshirilgan kod va minglab masala."
 copyright: '© 2026 <a href="/litsenziya/">Oqil Imomnazarov</a> · bepul · savdo taqiqlanadi · CC BY-NC-SA 4.0'
 repo_url: https://github.com/iOqil/e-book
 repo_name: iOqil/e-book
@@ -115,6 +115,34 @@ nav:
           - "20 — CSS arxitekturasi va uslublar": html-css/20-arxitektura-uslublar.md
           - "21 — Formalar, UI holatlari va kirish imkoniyati": html-css/21-amaliy-forma-ui-states.md
           - "22 — Yakuniy loyiha — responsive landing page": html-css/22-capstone-loyiha.md
+      - "Tailwind CSS":
+          - "Tailwind CSS — 0 dan Expertgacha (o'zbek tilida)": tailwind/README.md
+          - "01 — Tailwind nima va nega?": tailwind/01-tailwind-nima.md
+          - "02 — O'rnatish va birinchi qadamlar": tailwind/02-ornatish-birinchi-qadam.md
+          - "03 — Utility-first ish jarayoni": tailwind/03-utility-first-ish-jarayoni.md
+          - "04 — Spacing, sizing va o'lcham tizimi": tailwind/04-spacing-sizing.md
+          - "05 — Display va box model utility'lari": tailwind/05-box-model-display.md
+          - "06 — Flexbox": tailwind/06-flexbox.md
+          - "07 — CSS Grid": tailwind/07-grid.md
+          - "08 — Positioning, z-index va overflow": tailwind/08-positioning-overflow.md
+          - "09 — Responsive dizayn": tailwind/09-responsive-dizayn.md
+          - "10 — Container queries": tailwind/10-container-queries.md
+          - "11 — Ranglar va rang tizimi": tailwind/11-ranglar.md
+          - "12 — Tipografiya": tailwind/12-tipografiya.md
+          - "13 — Fon, gradient va chegara": tailwind/13-fon-gradient-border.md
+          - "14 — Soya, filter va mask": tailwind/14-soya-filter-mask.md
+          - "15 — Holat variantlari": tailwind/15-holat-variantlari.md
+          - "16 — Dark mode": tailwind/16-dark-mode.md
+          - "17 — Transition, transform va animatsiya": tailwind/17-transition-transform-animatsiya.md
+          - "18 — @theme bilan dizayn tizimi": tailwind/18-theme-dizayn-tizimi.md
+          - "19 — Custom utility va variant yaratish": tailwind/19-custom-utility-variant.md
+          - "20 — Direktiva va funksiyalar": tailwind/20-direktiva-funksiyalar.md
+          - "21 — Plaginlar ekotizimi": tailwind/21-plaginlar.md
+          - "22 — Komponentlar va framework integratsiyasi": tailwind/22-komponentlar-framework.md
+          - "23 — Forma va UI komponentlari amaliy": tailwind/23-forma-ui-komponentlar.md
+          - "24 — Production: optimizatsiya va asboblar": tailwind/24-production-optimizatsiya.md
+          - "25 — Best practices, arxitektura va migratsiya": tailwind/25-best-practices-migratsiya.md
+          - "26 — Yakuniy loyiha: to'liq dashboard/landing": tailwind/26-capstone-loyiha.md
       - "JavaScript":
           - "JavaScript — 0 dan Expertgacha (O'zbek tilida)": js/README.md
           - "1-qism — Asoslar: o'zgaruvchilar, shartlar, sikllar (0–4)": js/javascript-qollanma-1-qism.md
@@ -185,63 +213,127 @@ nav:
           - "08 — Data Fetching & Server (Nitro)": vue/08-nuxt-data-server.md
           - "09 — Nuxt UI: asoslar, o'rnatish va theming": vue/09-nuxt-ui-asoslar.md
           - "10 — Nuxt UI komponentlari (to'liq ma'lumotnoma)": vue/10-nuxt-ui-komponentlar.md
-  - "⚙️ Backend":
-      - "SQL & MySQL":
-          - "SQL va MySQL — Noldan boshlovchilar uchun amaliy kitob": sql/README.md
-          - "01 — Ma'lumotlar bazasi nima?": sql/01-malumotlar-bazasi-nima.md
-          - "02 — MySQL'ni o'rnatish va ishga tushirish": sql/02-mysql-ornatish.md
-          - "03 — Amaliyot bazalarini tayyorlash (4 ta tizim)": sql/03-amaliyot-bazalari.md
-          - "04 — CREATE — baza va jadval yaratish": sql/04-create.md
-          - "05 — Ma'lumot turlari": sql/05-malumot-turlari.md
-          - "06 — INSERT — ma'lumot kiritish": sql/06-insert.md
-          - "07 — SELECT — ma'lumot o'qish": sql/07-select.md
-          - "08 — WHERE — filtrlash": sql/08-where.md
-          - "09 — ORDER BY, LIMIT, DISTINCT": sql/09-order-limit-distinct.md
-          - "10 — Built-in funksiyalar (matn, son, sana)": sql/10-builtin-funksiyalar.md
-          - "11 — Aggregate funksiyalar va GROUP BY": sql/11-aggregate-group-by.md
-          - "12 — JOIN — jadvallarni bog'lash": sql/12-join.md
-          - "13 — UNION — natijalarni birlashtirish": sql/13-union.md
-          - "14 — Subquery — query ichida query": sql/14-subquery.md
-          - "15 — CTE — WITH bilan ishlash": sql/15-cte.md
-          - "16 — Window funksiyalar": sql/16-window-funksiyalar.md
-          - "17 — UPDATE va DELETE — chuqur": sql/17-update-delete.md
-          - "18 — ALTER, Constraint, Foreign Key": sql/18-alter-constraint-fk.md
-          - "19 — Tranzaksiyalar": sql/19-tranzaksiyalar.md
-          - "20 — Normalizatsiya — to'g'ri schema": sql/20-normalizatsiya.md
-          - "21 — Indekslar": sql/21-indekslar.md
-          - "22 — VIEW (chuqur)": sql/22-view.md
-          - "23 — Stored Procedure va Function": sql/23-procedure-function.md
-          - "24 — Trigger va Event": sql/24-trigger-event.md
-          - "25 — Cursor va qatorma-qator ishlov": sql/25-cursor.md
-          - "26 — EXPLAIN va optimizatsiya": sql/26-explain-optimizatsiya.md
-          - "27 — Xavfsizlik va administratsiya": sql/27-xavfsizlik-admin.md
-          - "28 — Yakuniy loyihalar": sql/28-yakuniy-loyihalar.md
-      - "Ma'lumotlar bazasi dizayni":
-          - "Ma'lumotlar bazasi dizayni — 0 dan ekspertgacha": db-dizayni/README.md
-          - "01 — Dizayn nima va nega muhim": db-dizayni/01-dizayn-nima.md
-          - "02 — Talab tahlili va domen modellashtirish": db-dizayni/02-talab-tahlili.md
-          - "03 — ER-diagramma": db-dizayni/03-er-diagramma.md
-          - "04 — Bog'lanishlar va kardinallik": db-dizayni/04-boglanish-kardinallik.md
-          - "05 — Relyatsion model va kalit turlari": db-dizayni/05-relyatsion-model.md
-          - "06 — Kalit dizayni (UUID, surrogate, kompozit)": db-dizayni/06-kalit-dizayni.md
-          - "07 — Normalizatsiya I (1NF, 2NF, 3NF)": db-dizayni/07-normalizatsiya-asoslari.md
-          - "08 — Normalizatsiya II (BCNF, 4NF, denorm)": db-dizayni/08-normalizatsiya-ilgor.md
-          - "09 — Logik modeldan fizik sxemaga": db-dizayni/09-logik-fizik-sxema.md
-          - "10 — Ma'lumot turini tanlash (PostgreSQL)": db-dizayni/10-malumot-turlari.md
-          - "11 — Yaxlitlik va constraint dizayni": db-dizayni/11-constraint-dizayni.md
-          - "12 — Dizayn naqshlari": db-dizayni/12-dizayn-naqshlari.md
-          - "13 — Anti-naqshlar": db-dizayni/13-anti-naqshlar.md
-          - "14 — Indeks strategiyasi": db-dizayni/14-indeks-strategiyasi.md
-          - "15 — Performans (EXPLAIN ANALYZE)": db-dizayni/15-performans.md
-          - "16 — Tranzaksiya va parallellik": db-dizayni/16-tranzaksiya-parallellik.md
-          - "17 — Daraxt va graf strukturalari": db-dizayni/17-daraxt-graf.md
-          - "18 — Vaqtinchalik va versiyalangan ma'lumot": db-dizayni/18-temporal-versiya.md
-          - "19 — Multi-tenancy va RLS": db-dizayni/19-multi-tenancy.md
-          - "20 — NoSQL ma'lumot modellashtirish": db-dizayni/20-nosql-modellashtirish.md
-          - "21 — Analitik dizayn va ma'lumotlar ombori": db-dizayni/21-analitik-ombor.md
-          - "22 — Partitioning, sharding, masshtab": db-dizayni/22-partitioning-masshtab.md
-          - "23 — Migratsiya va sxema evolyutsiyasi": db-dizayni/23-migratsiya-evolyutsiya.md
-          - "24 — Yakuniy loyiha": db-dizayni/24-yakuniy-loyiha.md
+  - "📱 Mobil":
+      - "Flutter & Dart":
+          - "Flutter & Dart — 0 dan Expertgacha (o'zbek tilida)": flutter/README.md
+          - "01 — Kirish va muhitni o'rnatish": flutter/01-kirish-muhit.md
+          - "02 — Dart asoslari: o'zgaruvchi va tiplar": flutter/02-dart-asoslari.md
+          - "03 — Boshqaruv oqimi": flutter/03-boshqaruv-oqimi.md
+          - "04 — Funksiyalar": flutter/04-funksiyalar.md
+          - "05 — To'plamlar: List, Set, Map": flutter/05-toplamlar.md
+          - "06 — Null safety": flutter/06-null-safety.md
+          - "07 — OOP — obyektga yo'naltirilgan dasturlash": flutter/07-oop-asoslari.md
+          - "08 — Dart 3 zamonaviy imkoniyatlari": flutter/08-dart3-zamonaviy.md
+          - "09 — Asinxron Dart": flutter/09-asinxron-dart.md
+          - "10 — Flutter bilan tanishuv": flutter/10-flutter-kirish.md
+          - "11 — Hamma narsa widget": flutter/11-widgetlar-stateless.md
+          - "12 — Layout I: Row, Column, Flex": flutter/12-layout-row-column.md
+          - "13 — Layout II: Stack va Constraints": flutter/13-layout-stack-constraints.md
+          - "14 — Material 3, Cupertino va theming": flutter/14-material-cupertino-theming.md
+          - "15 — Asosiy UI widgetlar": flutter/15-ui-widgetlar.md
+          - "16 — StatefulWidget va setState": flutter/16-statefulwidget-setstate.md
+          - "17 — Formalar va foydalanuvchi kiritmasi": flutter/17-formalar-kiritma.md
+          - "18 — Ro'yxatlar va scroll": flutter/18-royxatlar-scroll.md
+          - "19 — Navigatsiya: Navigator 1.0": flutter/19-navigatsiya-navigator.md
+          - "20 — go_router bilan deklarativ navigatsiya": flutter/20-go-router.md
+          - "21 — Tarmoq (networking) va API": flutter/21-networking-http.md
+          - "22 — Mahalliy ma'lumotlarni saqlash": flutter/22-mahalliy-saqlash.md
+          - "23 — Stream va reaktiv UI": flutter/23-stream-reaktiv.md
+          - "24 — Provider va InheritedWidget": flutter/24-provider.md
+          - "25 — Riverpod (3.x)": flutter/25-riverpod.md
+          - "26 — Bloc va Cubit": flutter/26-bloc-cubit.md
+          - "27 — Animatsiya": flutter/27-animatsiya.md
+          - "28 — Platforma, paketlar va moslashuv": flutter/28-platforma-paketlar.md
+          - "29 — Testing, debugging va ishlab chiqarish": flutter/29-testing-performance.md
+          - "30 — Yakuniy loyiha: to'liq ilova": flutter/30-kapston-loyiha.md
+      - "React Native":
+          - "React Native — 0 dan Expertgacha (o'zbek tilida)": react-native/README.md
+          - "01 — React Native nima va nega kerak": react-native/01-react-native-nima.md
+          - "02 — Muhit sozlash va birinchi ilova": react-native/02-muhit-birinchi-ilova.md
+          - "03 — JSX va Core komponentlar": react-native/03-jsx-core-komponentlar.md
+          - "04 — Stillar: StyleSheet": react-native/04-stillar-stylesheet.md
+          - "05 — Flexbox va layout": react-native/05-flexbox-layout.md
+          - "06 — Input va tugmalar": react-native/06-input-tugma.md
+          - "07 — ScrollView, SafeArea, StatusBar": react-native/07-scrollview-safearea.md
+          - "08 — Ro'yxatlar: FlatList": react-native/08-royxatlar-flatlist.md
+          - "09 — State va hodisalar": react-native/09-state-hodisalar.md
+          - "10 — Props va kompozitsiya": react-native/10-props-kompozitsiya.md
+          - "11 — useEffect va yon ta'sirlar": react-native/11-useeffect.md
+          - "12 — Hooks chuqur": react-native/12-hooks-chuqur.md
+          - "13 — Custom hooks va loyiha tuzilishi": react-native/13-custom-hooks-tuzilish.md
+          - "14 — Expo Router asoslari": react-native/14-expo-router-asoslari.md
+          - "15 — Tabs va Drawer navigatsiya": react-native/15-tabs-drawer.md
+          - "16 — Dinamik marshrut va parametrlar": react-native/16-dinamik-marshrut.md
+          - "17 — Tarmoq va API": react-native/17-tarmoq-api.md
+          - "18 — Lokal saqlash": react-native/18-lokal-saqlash.md
+          - "19 — Global holat: Context va Zustand": react-native/19-global-holat.md
+          - "20 — Formalar va validatsiya": react-native/20-formalar-validatsiya.md
+          - "21 — Kamera, rasm va galereya": react-native/21-kamera-rasm.md
+          - "22 — Joylashuv va xarita": react-native/22-joylashuv-xarita.md
+          - "23 — Bildirishnoma va sensorlar": react-native/23-bildirishnoma-sensor.md
+          - "24 — Animatsiya va gestlar": react-native/24-animatsiya-gest.md
+          - "25 — Autentifikatsiya": react-native/25-autentifikatsiya.md
+          - "26 — Testlash va debugging": react-native/26-testlash-debugging.md
+          - "27 — Performance, New Architecture va deploy": react-native/27-performance-build-deploy.md
+          - "28 — Yakuniy loyiha: to'liq mobil ilova": react-native/28-kapston-loyiha.md
+  - "🟢 Node.js (JavaScript)":
+      - "Node.js":
+          - "Node.js — 0 dan Backend dasturchigacha": nodejs/README.md
+          - "01 — Node.js nima va o'rnatish": nodejs/01-nodejs-nima.md
+          - "02 — Modullar: CommonJS va ESM": nodejs/02-modullar.md
+          - "03 — npm va package.json": nodejs/03-npm.md
+          - "04 — Zamonaviy JavaScript va globallar": nodejs/04-zamonaviy-js.md
+          - "05 — Event loop va non-blocking I/O": nodejs/05-event-loop.md
+          - "06 — Asinxronlik: callback, Promise, async/await": nodejs/06-asinxron.md
+          - "07 — EventEmitter va hodisa-asoslangan dasturlash": nodejs/07-eventemitter.md
+          - "08 — Fayl tizimi (fs) va path": nodejs/08-fayl-tizimi.md
+          - "09 — Streams va Buffers": nodejs/09-streams-buffers.md
+          - "10 — process, os, CLI va child_process": nodejs/10-process-cli.md
+          - "11 — HTTP moduli: native server": nodejs/11-http-modul.md
+          - "12 — Express asoslari": nodejs/12-express-asoslari.md
+          - "13 — Middleware": nodejs/13-middleware.md
+          - "14 — REST API qurish": nodejs/14-rest-api.md
+          - "15 — Validatsiya va xato boshqaruvi": nodejs/15-validatsiya-xato.md
+          - "16 — SQLite (better-sqlite3)": nodejs/16-sqlite.md
+          - "17 — MySQL: mysql2, pool, tranzaksiya": nodejs/17-mysql.md
+          - "18 — Prisma ORM": nodejs/18-prisma.md
+          - "19 — MongoDB va Mongoose": nodejs/19-mongodb.md
+          - "20 — Autentifikatsiya va avtorizatsiya": nodejs/20-auth.md
+          - "21 — Fayl yuklash, config va xavfsizlik": nodejs/21-xavfsizlik-config.md
+          - "22 — Real-time: WebSocket va Socket.io": nodejs/22-realtime.md
+          - "23 — Testlash (Vitest + supertest)": nodejs/23-testlash.md
+          - "24 — Production: logging, performance, deploy": nodejs/24-production.md
+          - "25 — TypeScript va Node": nodejs/25-typescript-node.md
+          - "26 — Yakuniy kapston: to'liq REST API loyiha": nodejs/26-kapston.md
+      - "Telegram bot (JavaScript / grammY)":
+          - "Telegram bot (JS / grammY) — 0 dan Expertgacha": tgbot-js/README.md
+          - "01 — Telegram botlar va grammY bilan tanishuv": tgbot-js/01-telegram-grammy-tanishuv.md
+          - "02 — Birinchi bot: echo va /start": tgbot-js/02-birinchi-bot.md
+          - "03 — Update'lar, handlerlar va Composer": tgbot-js/03-handlerlar-composer.md
+          - "04 — Filtrlar va buyruqlar (filter queries)": tgbot-js/04-filtrlar-buyruqlar.md
+          - "05 — Xabar yuborish, formatlash va media": tgbot-js/05-xabar-formatlash-media.md
+          - "06 — Klaviaturalar: reply va inline": tgbot-js/06-klaviaturalar.md
+          - "07 — Callback query va inline rejim": tgbot-js/07-callback-inline.md
+          - "08 — Conversations — suhbatlar": tgbot-js/08-conversations.md
+          - "09 — Middleware va Composer daraxti": tgbot-js/09-middleware.md
+          - "10 — Sessiya va ma'lumotlar bazasi": tgbot-js/10-sessiya-malumotlar-bazasi.md
+          - "11 — Loyiha tuzilishi va konfiguratsiya": tgbot-js/11-loyiha-tuzilishi.md
+          - "12 — Maxsus xususiyatlar va plaginlar": tgbot-js/12-maxsus-xususiyatlar.md
+          - "13 — Webhook va deploy server": tgbot-js/13-webhook.md
+          - "14 — To'lovlar va Telegram Stars": tgbot-js/14-tolovlar-stars.md
+          - "15 — Rejalashtirilgan vazifalar va broadcast": tgbot-js/15-rejalashtirilgan-broadcast.md
+          - "16 — Testlash va xatolarni boshqarish": tgbot-js/16-testlash-xatolar.md
+          - "17 — Production va deploy": tgbot-js/17-production-deploy.md
+          - "18 — Yakuniy kapston: to'liq bot": tgbot-js/18-kapston.md
+          - "19 — Guruhlarda ishlash": tgbot-js/19-guruhlar.md
+          - "20 — Guruh moderatsiyasi": tgbot-js/20-guruh-moderatsiya.md
+          - "21 — Kanallar bilan ishlash": tgbot-js/21-kanallar.md
+          - "22 — Majburiy obuna": tgbot-js/22-majburiy-obuna.md
+          - "23 — Telegram Web App (Mini App) asoslari": tgbot-js/23-webapp-asoslari.md
+          - "24 — Web App xavfsizligi: initData": tgbot-js/24-webapp-xavfsizlik.md
+          - "25 — Mini App backend": tgbot-js/25-miniapp-backend.md
+          - "26 — Kapston: Hamster uslubidagi clicker Mini App": tgbot-js/26-kapston-clicker.md
+  - "🐘 PHP":
       - "PHP":
           - "PHP — Mutlaqo Noldan Boshlovchilar Uchun": php/README.md
           - "0.1 Dasturlash nima va PHP nima?": php/01-dasturlash-nima-va-php-nima.md
@@ -324,27 +416,6 @@ nav:
           - "28 — Async va parallel PHP": php-expert/28-async.md
           - "29 — Navbatlar, observability va deploy": php-expert/29-production.md
           - "30 — Yakuniy senior kapston": php-expert/30-kapston.md
-      - "Python":
-          - "Python: Noldan boshlab — Boshlovchilar uchun": python/README.md
-          - "01 — Asoslar: sintaksis, tiplar, \"Pythonic\" tafakkur": python/01-asoslar.md
-          - "02 — Boshqaruv va funksiyalar": python/02-boshqaruv-funksiyalar.md
-          - "03 — Ma'lumot tuzilmalari": python/03-malumot-tuzilmalari.md
-          - "04 — Stringlar (matn bilan ishlash)": python/04-stringlar.md
-          - "05 — OOP: klasslar va obyektlar": python/05-oop.md
-          - "06 — Modullar va muhit": python/06-modullar-muhit.md
-          - "07 — Xatolarni boshqarish (try / except)": python/07-xatolar-context.md
-          - "08 — Fayllar, JSON va CSV": python/08-fayl-malumot.md
-          - "09 — Generatorlar va dekoratorlar": python/09-iterator-generator-decorator.md
-          - "10 — Tip ko'rsatmalari va map/filter": python/10-typing-functional.md
-          - "11 — Standart kutubxona (\"hammasi ichida\")": python/11-standart-kutubxona.md
-          - "12 — Parallel ishlash va asyncio": python/12-concurrency-async.md
-          - "13 — Dasturni test qilish (pytest)": python/13-testlash.md
-          - "14 — FastAPI bilan veb API": python/14-web-capstone.md
-          - "15 — Ma'lumotlar bazasi va SQL": python/15-malumotlar-bazasi.md
-          - "16 — Muntazam ifodalar (regex)": python/16-regex.md
-          - "17 — OOP — ilg'or (property, dunder, dataclass)": python/17-oop-ilgor.md
-          - "18 — Type hints — chuqur (Protocol, Generic, mypy)": python/18-typing-chuqur.md
-          - "19 — Funksional dasturlash (functools, itertools)": python/19-funksional.md
       - "Laravel":
           - "Laravel — 0 dan Expertgacha (o'zbek tilida)": laravel/README.md
           - "01 — Laravel nima va nega kerak?": laravel/01-laravel-nima.md
@@ -371,61 +442,34 @@ nav:
           - "22 — Testing (Pest va PHPUnit)": laravel/22-testing.md
           - "23 — Caching va performance": laravel/23-caching-performance.md
           - "24 — Deploy va yakuniy loyiha": laravel/24-deploy-yakuniy.md
-      - "Node.js":
-          - "Node.js — 0 dan Backend dasturchigacha": nodejs/README.md
-          - "01 — Node.js nima va o'rnatish": nodejs/01-nodejs-nima.md
-          - "02 — Modullar: CommonJS va ESM": nodejs/02-modullar.md
-          - "03 — npm va package.json": nodejs/03-npm.md
-          - "04 — Zamonaviy JavaScript va globallar": nodejs/04-zamonaviy-js.md
-          - "05 — Event loop va non-blocking I/O": nodejs/05-event-loop.md
-          - "06 — Asinxronlik: callback, Promise, async/await": nodejs/06-asinxron.md
-          - "07 — EventEmitter va hodisa-asoslangan dasturlash": nodejs/07-eventemitter.md
-          - "08 — Fayl tizimi (fs) va path": nodejs/08-fayl-tizimi.md
-          - "09 — Streams va Buffers": nodejs/09-streams-buffers.md
-          - "10 — process, os, CLI va child_process": nodejs/10-process-cli.md
-          - "11 — HTTP moduli: native server": nodejs/11-http-modul.md
-          - "12 — Express asoslari": nodejs/12-express-asoslari.md
-          - "13 — Middleware": nodejs/13-middleware.md
-          - "14 — REST API qurish": nodejs/14-rest-api.md
-          - "15 — Validatsiya va xato boshqaruvi": nodejs/15-validatsiya-xato.md
-          - "16 — SQLite (better-sqlite3)": nodejs/16-sqlite.md
-          - "17 — MySQL: mysql2, pool, tranzaksiya": nodejs/17-mysql.md
-          - "18 — Prisma ORM": nodejs/18-prisma.md
-          - "19 — MongoDB va Mongoose": nodejs/19-mongodb.md
-          - "20 — Autentifikatsiya va avtorizatsiya": nodejs/20-auth.md
-          - "21 — Fayl yuklash, config va xavfsizlik": nodejs/21-xavfsizlik-config.md
-          - "22 — Real-time: WebSocket va Socket.io": nodejs/22-realtime.md
-          - "23 — Testlash (Vitest + supertest)": nodejs/23-testlash.md
-          - "24 — Production: logging, performance, deploy": nodejs/24-production.md
-          - "25 — TypeScript va Node": nodejs/25-typescript-node.md
-          - "26 — Yakuniy kapston: to'liq REST API loyiha": nodejs/26-kapston.md
-      - "Django":
-          - "Django — 0 dan Expertgacha": django/README.md
-          - "01 — Django bilan tanishuv": django/01-django-tanishuv.md
-          - "02 — O'rnatish va birinchi loyiha": django/02-ornatish-loyiha.md
-          - "03 — View va URL marshrutlash": django/03-view-url.md
-          - "04 — Template tizimi (DTL)": django/04-template-tizimi.md
-          - "05 — Modellar va migratsiya": django/05-modellar-migratsiya.md
-          - "06 — ORM va QuerySet so'rovlar": django/06-orm-queryset.md
-          - "07 — Model munosabatlari": django/07-munosabatlar.md
-          - "08 — Admin panel": django/08-admin-panel.md
-          - "09 — Ilg'or ORM va optimizatsiya": django/09-ilgor-orm.md
-          - "10 — Formalar va validatsiya": django/10-formalar.md
-          - "11 — Class-based views (CBV)": django/11-class-based-views.md
-          - "12 — Static, media va to'liq layout": django/12-static-media-layout.md
-          - "13 — Autentifikatsiya va ruxsatlar": django/13-auth-tizimi.md
-          - "14 — Sessiyalar, messages va middleware": django/14-sessions-middleware.md
-          - "15 — DRF kirish va serializers": django/15-drf-serializers.md
-          - "16 — DRF ViewSets va routers": django/16-drf-viewsets-routers.md
-          - "17 — DRF autentifikatsiya (Token, JWT)": django/17-drf-auth.md
-          - "18 — DRF filtrlash, paginatsiya, nested": django/18-drf-filtering-pagination.md
-          - "19 — Signallar va custom mantiq": django/19-signals-custom.md
-          - "20 — Keshlash va performance": django/20-caching-performance.md
-          - "21 — Async va fon vazifalari": django/21-async-celery.md
-          - "22 — Testlash": django/22-testing.md
-          - "23 — Settings, env va xavfsizlik": django/23-settings-xavfsizlik.md
-          - "24 — Deployment (production)": django/24-deployment.md
-          - "25 — Yakuniy kapston loyiha": django/25-kapston.md
+      - "Laravel Livewire":
+          - "Laravel Livewire — 0 dan Expertgacha (o'zbek tilida)": livewire/README.md
+          - "01 — Livewire nima va nega kerak": livewire/01-livewire-nima.md
+          - "02 — O'rnatish va birinchi komponent": livewire/02-ornatish-muhit.md
+          - "03 — Birinchi komponent: hisoblagich": livewire/03-birinchi-komponent.md
+          - "04 — Komponent anatomiyasi": livewire/04-komponent-anatomiyasi.md
+          - "05 — Properties: komponent holati": livewire/05-properties-holat.md
+          - "06 — Data binding: wire:model": livewire/06-data-binding.md
+          - "07 — Actions: amallar va hodisalar": livewire/07-actions.md
+          - "08 — Lifecycle hooks": livewire/08-lifecycle.md
+          - "09 — Formalar bilan ishlash": livewire/09-formalar.md
+          - "10 — Validatsiya": livewire/10-validatsiya.md
+          - "11 — Form Objects": livewire/11-form-objects.md
+          - "12 — Fayl yuklash": livewire/12-fayl-yuklash.md
+          - "13 — Ma'lumot ko'rsatish va ro'yxatlar": livewire/13-royxatlar.md
+          - "14 — Pagination, qidiruv va filtr": livewire/14-pagination-qidiruv.md
+          - "15 — Computed properties": livewire/15-computed-properties.md
+          - "16 — To'liq CRUD ilova": livewire/16-toliq-crud.md
+          - "17 — Nested komponentlar": livewire/17-nested-komponentlar.md
+          - "18 — Events: hodisalar bilan aloqa": livewire/18-events.md
+          - "19 — URL va query string": livewire/19-url-query-string.md
+          - "20 — Loading va progress holatlari": livewire/20-loading-holatlar.md
+          - "21 — Lazy, polling va SPA navigatsiya": livewire/21-lazy-poll-navigate.md
+          - "22 — Alpine.js integratsiyasi": livewire/22-alpine-js.md
+          - "23 — Xavfsizlik": livewire/23-xavfsizlik.md
+          - "24 — Testlash": livewire/24-testing.md
+          - "25 — Tezlik (performance) va deploy": livewire/25-performance-deploy.md
+          - "26 — Kapston: real-vaqt vazifa boshqaruvchi": livewire/26-kapston-loyiha.md
       - "NativePHP (Desktop va Mobil)":
           - "NativePHP — PHP bilan Desktop va Mobil": nativephp/README.md
           - "01 — NativePHP nima va falsafasi": nativephp/01-nativephp-nima.md
@@ -446,34 +490,6 @@ nav:
           - "16 — Desktop build va packaging": nativephp/16-desktop-build-packaging.md
           - "17 — Mobil build va deploy (App Store, Play Store)": nativephp/17-mobil-build-deploy.md
           - "18 — Yakuniy kapston: cross-platform ilova": nativephp/18-kapston.md
-      - "Telegram bot (Python aiogram)":
-          - "Telegram bot — 0 dan Expertgacha": tgbot-python/README.md
-          - "01 — Telegram botlar va aiogram bilan tanishuv": tgbot-python/01-telegram-aiogram-tanishuv.md
-          - "02 — Birinchi bot: echo va /start": tgbot-python/02-birinchi-bot.md
-          - "03 — Handlerlar va Router": tgbot-python/03-handlerlar-router.md
-          - "04 — Filtrlar va buyruqlar": tgbot-python/04-filtrlar-buyruqlar.md
-          - "05 — Xabar yuborish, formatlash va media": tgbot-python/05-xabar-formatlash-media.md
-          - "06 — Klaviaturalar: reply va inline": tgbot-python/06-klaviaturalar.md
-          - "07 — Callback query va inline rejim": tgbot-python/07-callback-inline.md
-          - "08 — FSM — holatlar mashinasi": tgbot-python/08-fsm-holatlar.md
-          - "09 — Middleware": tgbot-python/09-middleware.md
-          - "10 — Ma'lumotlar bazasi bilan ishlash": tgbot-python/10-malumotlar-bazasi.md
-          - "11 — Loyiha tuzilishi va konfiguratsiya": tgbot-python/11-loyiha-tuzilishi.md
-          - "12 — Maxsus xususiyatlar": tgbot-python/12-maxsus-xususiyatlar.md
-          - "13 — Webhook va aiohttp server": tgbot-python/13-webhook-deploy.md
-          - "14 — To'lovlar va Telegram Stars": tgbot-python/14-tolovlar-stars.md
-          - "15 — Rejalashtirilgan vazifalar va broadcast": tgbot-python/15-rejalashtirilgan-broadcast.md
-          - "16 — Testlash va xatolarni boshqarish": tgbot-python/16-testlash-xatolar.md
-          - "17 — Production va deploy": tgbot-python/17-production-deploy.md
-          - "18 — Yakuniy kapston: to'liq bot": tgbot-python/18-kapston.md
-          - "19 — Guruhlarda ishlash": tgbot-python/19-guruhlar.md
-          - "20 — Guruh moderatsiyasi": tgbot-python/20-guruh-moderatsiya.md
-          - "21 — Kanallar bilan ishlash": tgbot-python/21-kanallar.md
-          - "22 — Majburiy obuna": tgbot-python/22-majburiy-obuna.md
-          - "23 — Telegram Web App (Mini App) asoslari": tgbot-python/23-webapp-asoslari.md
-          - "24 — Web App xavfsizligi: initData": tgbot-python/24-webapp-xavfsizlik.md
-          - "25 — Mini App backend": tgbot-python/25-miniapp-backend.md
-          - "26 — Kapston: Hamster uslubidagi clicker Mini App": tgbot-python/26-kapston-clicker.md
       - "Telegram bot (PHP / Nutgram)":
           - "Telegram bot (PHP / Nutgram) — 0 dan Expertgacha": tgbot-php/README.md
           - "01 — Telegram bot va Nutgram bilan tanishuv": tgbot-php/01-nutgram-tanishuv.md
@@ -502,34 +518,289 @@ nav:
           - "24 — Web App xavfsizligi: initData": tgbot-php/24-webapp-xavfsizlik.md
           - "25 — Mini App backend": tgbot-php/25-miniapp-backend.md
           - "26 — Kapston: Hamster uslubidagi clicker Mini App": tgbot-php/26-kapston-clicker.md
-      - "Telegram bot (JavaScript / grammY)":
-          - "Telegram bot (JS / grammY) — 0 dan Expertgacha": tgbot-js/README.md
-          - "01 — Telegram botlar va grammY bilan tanishuv": tgbot-js/01-telegram-grammy-tanishuv.md
-          - "02 — Birinchi bot: echo va /start": tgbot-js/02-birinchi-bot.md
-          - "03 — Update'lar, handlerlar va Composer": tgbot-js/03-handlerlar-composer.md
-          - "04 — Filtrlar va buyruqlar (filter queries)": tgbot-js/04-filtrlar-buyruqlar.md
-          - "05 — Xabar yuborish, formatlash va media": tgbot-js/05-xabar-formatlash-media.md
-          - "06 — Klaviaturalar: reply va inline": tgbot-js/06-klaviaturalar.md
-          - "07 — Callback query va inline rejim": tgbot-js/07-callback-inline.md
-          - "08 — Conversations — suhbatlar": tgbot-js/08-conversations.md
-          - "09 — Middleware va Composer daraxti": tgbot-js/09-middleware.md
-          - "10 — Sessiya va ma'lumotlar bazasi": tgbot-js/10-sessiya-malumotlar-bazasi.md
-          - "11 — Loyiha tuzilishi va konfiguratsiya": tgbot-js/11-loyiha-tuzilishi.md
-          - "12 — Maxsus xususiyatlar va plaginlar": tgbot-js/12-maxsus-xususiyatlar.md
-          - "13 — Webhook va deploy server": tgbot-js/13-webhook.md
-          - "14 — To'lovlar va Telegram Stars": tgbot-js/14-tolovlar-stars.md
-          - "15 — Rejalashtirilgan vazifalar va broadcast": tgbot-js/15-rejalashtirilgan-broadcast.md
-          - "16 — Testlash va xatolarni boshqarish": tgbot-js/16-testlash-xatolar.md
-          - "17 — Production va deploy": tgbot-js/17-production-deploy.md
-          - "18 — Yakuniy kapston: to'liq bot": tgbot-js/18-kapston.md
-          - "19 — Guruhlarda ishlash": tgbot-js/19-guruhlar.md
-          - "20 — Guruh moderatsiyasi": tgbot-js/20-guruh-moderatsiya.md
-          - "21 — Kanallar bilan ishlash": tgbot-js/21-kanallar.md
-          - "22 — Majburiy obuna": tgbot-js/22-majburiy-obuna.md
-          - "23 — Telegram Web App (Mini App) asoslari": tgbot-js/23-webapp-asoslari.md
-          - "24 — Web App xavfsizligi: initData": tgbot-js/24-webapp-xavfsizlik.md
-          - "25 — Mini App backend": tgbot-js/25-miniapp-backend.md
-          - "26 — Kapston: Hamster uslubidagi clicker Mini App": tgbot-js/26-kapston-clicker.md
+      - "WordPress tema yaratish":
+          - "WordPress tema yaratish — 0 dan ekspertgacha": wordpress-tema/README.md
+          - "01 — WordPress va tema nima": wordpress-tema/01-wordpress-tema-nima.md
+          - "02 — Lokal muhit va birinchi tema": wordpress-tema/02-lokal-muhit-birinchi-tema.md
+          - "03 — So'rov hayoti va template hierarchy": wordpress-tema/03-sorov-hayoti-template-hierarchy.md
+          - "04 — Tema anatomiyasi va standartlar": wordpress-tema/04-tema-anatomiyasi-standartlar.md
+          - "05 — The Loop va WP_Query": wordpress-tema/05-the-loop-wp-query.md
+          - "06 — Template va shartli teglar": wordpress-tema/06-template-shartli-teglar.md
+          - "07 — Shablon iyerarxiyasi amalda": wordpress-tema/07-shablon-iyerarxiyasi.md
+          - "08 — header, footer, sidebar": wordpress-tema/08-header-footer-sidebar.md
+          - "09 — functions.php, hooks, theme setup": wordpress-tema/09-functions-php-hooks.md
+          - "10 — Asset ulash (enqueue)": wordpress-tema/10-asset-enqueue.md
+          - "11 — Navigatsiya menyulari (Walker)": wordpress-tema/11-menyular.md
+          - "12 — Widget va dinamik sidebar": wordpress-tema/12-widget-sidebar.md
+          - "13 — Custom Post Type va Taxonomy": wordpress-tema/13-custom-post-type-taxonomy.md
+          - "14 — Custom Fields, meta, Customizer": wordpress-tema/14-custom-fields-customizer.md
+          - "15 — Block temaga kirish": wordpress-tema/15-block-temaga-kirish.md
+          - "16 — theme.json I: settings": wordpress-tema/16-theme-json-settings.md
+          - "17 — theme.json II: styles": wordpress-tema/17-theme-json-styles.md
+          - "18 — Block templates va parts": wordpress-tema/18-block-templates-parts.md
+          - "19 — Global styles va variations": wordpress-tema/19-global-styles-variations.md
+          - "20 — Block patterns": wordpress-tema/20-patterns.md
+          - "21 — Site Editor va hybrid temalar": wordpress-tema/21-site-editor-hybrid.md
+          - "22 — Custom blok asoslari": wordpress-tema/22-block-dev-asoslari.md
+          - "23 — Edit/Save va attributes": wordpress-tema/23-edit-save-attributes.md
+          - "24 — Dinamik bloklar (render_callback)": wordpress-tema/24-dinamik-bloklar.md
+          - "25 — InnerBlocks va Interactivity API": wordpress-tema/25-innerblocks-interactivity.md
+          - "26 — WooCommerce tema integratsiyasi": wordpress-tema/26-woocommerce-tema.md
+          - "27 — Xavfsizlik: escaping, nonce": wordpress-tema/27-xavfsizlik.md
+          - "28 — i18n va accessibility": wordpress-tema/28-i18n-accessibility.md
+          - "29 — Performans va tarqatish": wordpress-tema/29-performans-tarqatish.md
+          - "30 — Yakuniy loyiha: to'liq tema": wordpress-tema/30-yakuniy-loyiha.md
+      - "WordPress plagin yaratish":
+          - "WordPress plugin yozish — 0 dan Expertgacha (o'zbek tilida)": wp-plugin/README.md
+          - "01 — WordPress arxitekturasi va plugin falsafasi": wp-plugin/01-arxitektura-falsafa.md
+          - "02 — Lokal muhit va asboblar": wp-plugin/02-lokal-muhit.md
+          - "03 — Birinchi plugin: tuzilish va hayot sikli": wp-plugin/03-birinchi-plugin.md
+          - "04 — Hooks: action va filter (chuqur)": wp-plugin/04-hooks-action-filter.md
+          - "05 — Zamonaviy PHP: namespace, autoload, OOP": wp-plugin/05-namespace-oop-autoload.md
+          - "06 — Settings API va admin sahifalar": wp-plugin/06-settings-api-admin.md
+          - "07 — Custom Post Type'lar": wp-plugin/07-custom-post-types.md
+          - "08 — Taxonomiyalar": wp-plugin/08-taxonomiyalar.md
+          - "09 — Meta box va custom fields": wp-plugin/09-meta-box-custom-fields.md
+          - "10 — Ma'lumotlar bazasi: $wpdb, options, transients": wp-plugin/10-malumotlar-bazasi.md
+          - "11 — Foydalanuvchi, rol va capabilities": wp-plugin/11-rollar-capabilities.md
+          - "12 — Xavfsizlik asoslari: nonce, sanitize, escape": wp-plugin/12-xavfsizlik-asoslari.md
+          - "13 — Shortcode'lar": wp-plugin/13-shortcode.md
+          - "14 — Skript va stillarni ulash (enqueue)": wp-plugin/14-enqueue-assets.md
+          - "15 — AJAX (admin-ajax va zamonaviy)": wp-plugin/15-ajax.md
+          - "16 — REST API: o'z endpoint'laringiz": wp-plugin/16-rest-api.md
+          - "17 — WP-Cron va fon vazifalari": wp-plugin/17-wp-cron.md
+          - "18 — Email, HTTP API va keshlash": wp-plugin/18-email-http-cache.md
+          - "19 — Blok muharririga kirish va create-block": wp-plugin/19-blok-kirish-create-block.md
+          - "20 — Static blok: edit, save, attributes": wp-plugin/20-static-blok.md
+          - "21 — Dynamic blok va PHP-only registratsiya": wp-plugin/21-dynamic-blok.md
+          - "22 — Blok variations, styles, InnerBlocks, patterns": wp-plugin/22-blok-kengaytmalar.md
+          - "23 — Sidebar plugin, SlotFill va @wordpress/data": wp-plugin/23-sidebar-slotfill-data.md
+          - "24 — i18n va lokalizatsiya": wp-plugin/24-i18n-lokalizatsiya.md
+          - "25 — Testlash: PHPUnit, wp-env, PHPCS/WPCS": wp-plugin/25-testlash.md
+          - "26 — Performance va keshlash": wp-plugin/26-performance.md
+          - "27 — WooCommerce kengaytirish (HPOS)": wp-plugin/27-woocommerce.md
+          - "28 — Distribution: readme.txt, SVN, yangilanish": wp-plugin/28-distribution.md
+          - "29 — Xavfsizlik auditi (chuqur)": wp-plugin/29-xavfsizlik-audit.md
+          - "30 — Yakuniy kapston: to'liq professional plugin": wp-plugin/30-kapston.md
+  - "🐍 Python":
+      - "Python":
+          - "Python: Noldan boshlab — Boshlovchilar uchun": python/README.md
+          - "01 — Asoslar: sintaksis, tiplar, \"Pythonic\" tafakkur": python/01-asoslar.md
+          - "02 — Boshqaruv va funksiyalar": python/02-boshqaruv-funksiyalar.md
+          - "03 — Ma'lumot tuzilmalari": python/03-malumot-tuzilmalari.md
+          - "04 — Stringlar (matn bilan ishlash)": python/04-stringlar.md
+          - "05 — OOP: klasslar va obyektlar": python/05-oop.md
+          - "06 — Modullar va muhit": python/06-modullar-muhit.md
+          - "07 — Xatolarni boshqarish (try / except)": python/07-xatolar-context.md
+          - "08 — Fayllar, JSON va CSV": python/08-fayl-malumot.md
+          - "09 — Generatorlar va dekoratorlar": python/09-iterator-generator-decorator.md
+          - "10 — Tip ko'rsatmalari va map/filter": python/10-typing-functional.md
+          - "11 — Standart kutubxona (\"hammasi ichida\")": python/11-standart-kutubxona.md
+          - "12 — Parallel ishlash va asyncio": python/12-concurrency-async.md
+          - "13 — Dasturni test qilish (pytest)": python/13-testlash.md
+          - "14 — FastAPI bilan veb API": python/14-web-capstone.md
+          - "15 — Ma'lumotlar bazasi va SQL": python/15-malumotlar-bazasi.md
+          - "16 — Muntazam ifodalar (regex)": python/16-regex.md
+          - "17 — OOP — ilg'or (property, dunder, dataclass)": python/17-oop-ilgor.md
+          - "18 — Type hints — chuqur (Protocol, Generic, mypy)": python/18-typing-chuqur.md
+          - "19 — Funksional dasturlash (functools, itertools)": python/19-funksional.md
+      - "Django":
+          - "Django — 0 dan Expertgacha": django/README.md
+          - "01 — Django bilan tanishuv": django/01-django-tanishuv.md
+          - "02 — O'rnatish va birinchi loyiha": django/02-ornatish-loyiha.md
+          - "03 — View va URL marshrutlash": django/03-view-url.md
+          - "04 — Template tizimi (DTL)": django/04-template-tizimi.md
+          - "05 — Modellar va migratsiya": django/05-modellar-migratsiya.md
+          - "06 — ORM va QuerySet so'rovlar": django/06-orm-queryset.md
+          - "07 — Model munosabatlari": django/07-munosabatlar.md
+          - "08 — Admin panel": django/08-admin-panel.md
+          - "09 — Ilg'or ORM va optimizatsiya": django/09-ilgor-orm.md
+          - "10 — Formalar va validatsiya": django/10-formalar.md
+          - "11 — Class-based views (CBV)": django/11-class-based-views.md
+          - "12 — Static, media va to'liq layout": django/12-static-media-layout.md
+          - "13 — Autentifikatsiya va ruxsatlar": django/13-auth-tizimi.md
+          - "14 — Sessiyalar, messages va middleware": django/14-sessions-middleware.md
+          - "15 — DRF kirish va serializers": django/15-drf-serializers.md
+          - "16 — DRF ViewSets va routers": django/16-drf-viewsets-routers.md
+          - "17 — DRF autentifikatsiya (Token, JWT)": django/17-drf-auth.md
+          - "18 — DRF filtrlash, paginatsiya, nested": django/18-drf-filtering-pagination.md
+          - "19 — Signallar va custom mantiq": django/19-signals-custom.md
+          - "20 — Keshlash va performance": django/20-caching-performance.md
+          - "21 — Async va fon vazifalari": django/21-async-celery.md
+          - "22 — Testlash": django/22-testing.md
+          - "23 — Settings, env va xavfsizlik": django/23-settings-xavfsizlik.md
+          - "24 — Deployment (production)": django/24-deployment.md
+          - "25 — Yakuniy kapston loyiha": django/25-kapston.md
+      - "Telegram bot (Python aiogram)":
+          - "Telegram bot — 0 dan Expertgacha": tgbot-python/README.md
+          - "01 — Telegram botlar va aiogram bilan tanishuv": tgbot-python/01-telegram-aiogram-tanishuv.md
+          - "02 — Birinchi bot: echo va /start": tgbot-python/02-birinchi-bot.md
+          - "03 — Handlerlar va Router": tgbot-python/03-handlerlar-router.md
+          - "04 — Filtrlar va buyruqlar": tgbot-python/04-filtrlar-buyruqlar.md
+          - "05 — Xabar yuborish, formatlash va media": tgbot-python/05-xabar-formatlash-media.md
+          - "06 — Klaviaturalar: reply va inline": tgbot-python/06-klaviaturalar.md
+          - "07 — Callback query va inline rejim": tgbot-python/07-callback-inline.md
+          - "08 — FSM — holatlar mashinasi": tgbot-python/08-fsm-holatlar.md
+          - "09 — Middleware": tgbot-python/09-middleware.md
+          - "10 — Ma'lumotlar bazasi bilan ishlash": tgbot-python/10-malumotlar-bazasi.md
+          - "11 — Loyiha tuzilishi va konfiguratsiya": tgbot-python/11-loyiha-tuzilishi.md
+          - "12 — Maxsus xususiyatlar": tgbot-python/12-maxsus-xususiyatlar.md
+          - "13 — Webhook va aiohttp server": tgbot-python/13-webhook-deploy.md
+          - "14 — To'lovlar va Telegram Stars": tgbot-python/14-tolovlar-stars.md
+          - "15 — Rejalashtirilgan vazifalar va broadcast": tgbot-python/15-rejalashtirilgan-broadcast.md
+          - "16 — Testlash va xatolarni boshqarish": tgbot-python/16-testlash-xatolar.md
+          - "17 — Production va deploy": tgbot-python/17-production-deploy.md
+          - "18 — Yakuniy kapston: to'liq bot": tgbot-python/18-kapston.md
+          - "19 — Guruhlarda ishlash": tgbot-python/19-guruhlar.md
+          - "20 — Guruh moderatsiyasi": tgbot-python/20-guruh-moderatsiya.md
+          - "21 — Kanallar bilan ishlash": tgbot-python/21-kanallar.md
+          - "22 — Majburiy obuna": tgbot-python/22-majburiy-obuna.md
+          - "23 — Telegram Web App (Mini App) asoslari": tgbot-python/23-webapp-asoslari.md
+          - "24 — Web App xavfsizligi: initData": tgbot-python/24-webapp-xavfsizlik.md
+          - "25 — Mini App backend": tgbot-python/25-miniapp-backend.md
+          - "26 — Kapston: Hamster uslubidagi clicker Mini App": tgbot-python/26-kapston-clicker.md
+  - "🤖 AI / LLM integratsiyasi":
+      - "JavaScript":
+          - "AI/LLM integratsiyasi — JavaScript bilan (0 dan Expertgacha)": ai-js/README.md
+          - "01 — LLM nima va qanday ishlaydi": ai-js/01-llm-nima.md
+          - "02 — O'rnatish va birinchi chaqiruv": ai-js/02-ornatish-birinchi-chaqiruv.md
+          - "03 — Messages API chuqur": ai-js/03-messages-api.md
+          - "04 — Streaming (oqimli javob)": ai-js/04-streaming.md
+          - "05 — Prompt engineering": ai-js/05-prompt-engineering.md
+          - "06 — Strukturali chiqish (JSON)": ai-js/06-structured-output.md
+          - "07 — Tool use (funksiya chaqirish)": ai-js/07-tool-use.md
+          - "08 — Tool runner va Zod": ai-js/08-tool-runner-zod.md
+          - "09 — Vision va hujjatlar": ai-js/09-vision-fayllar.md
+          - "10 — Adaptiv thinking va effort": ai-js/10-thinking-effort.md
+          - "11 — Vercel AI SDK bilan tanishuv": ai-js/11-vercel-ai-sdk-kirish.md
+          - "12 — AI SDK: strukturali chiqish va vositalar": ai-js/12-ai-sdk-structured-tools.md
+          - "13 — AI SDK UI: chat interfeysi": ai-js/13-ai-sdk-ui.md
+          - "14 — Token, narx va limitlar": ai-js/14-token-narx-limit.md
+          - "15 — Prompt caching": ai-js/15-prompt-caching.md
+          - "16 — Xatolar, retry va ishonchlilik": ai-js/16-xatolar-retry.md
+          - "17 — Embeddings va semantik qidiruv": ai-js/17-embeddings.md
+          - "18 — Vektor baza va RAG": ai-js/18-vector-db-rag.md
+          - "19 — Agentlar asoslari": ai-js/19-agentlar-asoslari.md
+          - "20 — MCP — Model Context Protocol": ai-js/20-mcp.md
+          - "21 — Ko'p bosqichli va ko'p agentli ish": ai-js/21-multi-agent.md
+          - "22 — Xavfsizlik": ai-js/22-xavfsizlik.md
+          - "23 — Observability va evals": ai-js/23-observability-evals.md
+          - "24 — Batch API va optimizatsiya": ai-js/24-batch-optimizatsiya.md
+          - "25 — Deploy: serverless va edge": ai-js/25-deploy.md
+          - "26 — Yakuniy loyiha: to'liq AI ilova": ai-js/26-kapston-loyiha.md
+      - "PHP":
+          - "AI/LLM integratsiyasi — PHP bilan (0 dan ekspertgacha)": ai-llm-php/README.md
+          - "01 — LLM nima va AI integratsiyasi nima": ai-llm-php/01-llm-nima.md
+          - "02 — Muhit va birinchi so'rov": ai-llm-php/02-muhit-birinchi-sorov.md
+          - "03 — Prompt muhandisligi asoslari": ai-llm-php/03-prompt-muhandisligi.md
+          - "04 — Suhbat va kontekst": ai-llm-php/04-suhbat-kontekst.md
+          - "05 — Streaming (jonli javob)": ai-llm-php/05-streaming.md
+          - "06 — Strukturali chiqish (JSON)": ai-llm-php/06-strukturali-chiqish.md
+          - "07 — Vision va hujjatlar": ai-llm-php/07-vision-hujjatlar.md
+          - "08 — Xatolar, qayta urinish va ishonchlilik": ai-llm-php/08-xatolar-ishonchlilik.md
+          - "09 — Function calling (tool use) asoslari": ai-llm-php/09-function-calling.md
+          - "10 — Tool runner va ko'p tool": ai-llm-php/10-tool-runner.md
+          - "11 — Agentlar qurish": ai-llm-php/11-agentlar.md
+          - "12 — MCP (Model Context Protocol)": ai-llm-php/12-mcp.md
+          - "13 — Embedding va semantik qidiruv": ai-llm-php/13-embedding-semantik-qidiruv.md
+          - "14 — Vektor bazalar": ai-llm-php/14-vektor-bazalar.md
+          - "15 — RAG (Retrieval-Augmented Generation)": ai-llm-php/15-rag.md
+          - "16 — Kesh va xarajat optimizatsiyasi": ai-llm-php/16-kesh-xarajat.md
+          - "17 — PHP GenAI frameworklari": ai-llm-php/17-frameworklar.md
+          - "18 — Laravel'ga integratsiya": ai-llm-php/18-laravel-integratsiya.md
+          - "19 — Boshqa provayderlar (OpenAI/Gemini/Ollama)": ai-llm-php/19-boshqa-provayderlar.md
+          - "20 — Xavfsizlik": ai-llm-php/20-xavfsizlik.md
+          - "21 — Testlash va baholash": ai-llm-php/21-testlash-baholash.md
+          - "22 — Production va kuzatuv": ai-llm-php/22-production-kuzatuv.md
+          - "23 — Promptlarni boshqarish va ilg'or naqshlar": ai-llm-php/23-promptlarni-boshqarish.md
+          - "24 — Yakuniy loyiha: to'liq AI ilova": ai-llm-php/24-kapston-loyiha.md
+      - "Python":
+          - "AI / LLM integratsiyasi (Python) — 0 dan ekspertgacha": ai-python/README.md
+          - "01 — AI/LLM integratsiyasi nima va nega kerak": ai-python/01-ai-llm-integratsiya-nima.md
+          - "02 — Muhitni sozlash va birinchi so'rov": ai-python/02-muhit-birinchi-sorov.md
+          - "03 — Chat formati: messages, rollar, suhbat": ai-python/03-chat-formati-rollar.md
+          - "04 — Modellar va provayderlar: bitta SDK, ko'p provayder": ai-python/04-modellar-provayderlar.md
+          - "05 — Prompt muhandisligi": ai-python/05-prompt-muhandisligi.md
+          - "06 — Generatsiya parametrlari": ai-python/06-parametrlar.md
+          - "07 — Streaming: token-token javob": ai-python/07-streaming.md
+          - "08 — Suhbat xotirasi va kontekst boshqaruvi": ai-python/08-suhbat-xotira-kontekst.md
+          - "09 — Strukturali natija (JSON + Pydantic)": ai-python/09-strukturali-natija-json.md
+          - "10 — Function/tool calling asoslari": ai-python/10-tool-calling-asoslari.md
+          - "11 — Tool calling chuqur va ko'p qadamli": ai-python/11-tool-calling-chuqur.md
+          - "12 — Multimodal: rasm va ovoz": ai-python/12-multimodal-rasm-ovoz.md
+          - "13 — Embeddings va semantik qidiruv": ai-python/13-embeddings-semantik-qidiruv.md
+          - "14 — Vektor bazalari": ai-python/14-vektor-bazalari.md
+          - "15 — RAG: chunking va indekslash": ai-python/15-rag-chunking-indekslash.md
+          - "16 — RAG: retrieval va generatsiya": ai-python/16-rag-retrieval-generatsiya.md
+          - "17 — RAG'ni yaxshilash va baholash": ai-python/17-rag-yaxshilash-baholash.md
+          - "18 — Agentlar va ReAct sikli": ai-python/18-agentlar-react.md
+          - "19 — 0 dan agent qurish": ai-python/19-agent-qurish.md
+          - "20 — Agent freymvorklari va MCP": ai-python/20-agent-freymvork-mcp.md
+          - "21 — Lokal LLM: Ollama": ai-python/21-lokal-llm-ollama.md
+          - "22 — Xarajat, token va keshlash": ai-python/22-xarajat-token-kesh.md
+          - "23 — Ishonchlilik: xato, retry, rate limit": ai-python/23-ishonchlilik-retry.md
+          - "24 — Xavfsizlik va prompt injection": ai-python/24-xavfsizlik-prompt-injection.md
+          - "25 — Kuzatuv, logging va baholash (eval)": ai-python/25-kuzatuv-baholash.md
+          - "26 — Deploy: FastAPI bilan LLM xizmati": ai-python/26-deploy-fastapi.md
+          - "27 — Kapston I: RAG chatbot": ai-python/27-kapston-rag-chatbot.md
+          - "28 — Kapston II: agent-asoslangan avtomatlashtirish": ai-python/28-kapston-agent.md
+  - "🗄️ Ma'lumotlar bazasi":
+      - "SQL & MySQL":
+          - "SQL va MySQL — Noldan boshlovchilar uchun amaliy kitob": sql/README.md
+          - "01 — Ma'lumotlar bazasi nima?": sql/01-malumotlar-bazasi-nima.md
+          - "02 — MySQL'ni o'rnatish va ishga tushirish": sql/02-mysql-ornatish.md
+          - "03 — Amaliyot bazalarini tayyorlash (4 ta tizim)": sql/03-amaliyot-bazalari.md
+          - "04 — CREATE — baza va jadval yaratish": sql/04-create.md
+          - "05 — Ma'lumot turlari": sql/05-malumot-turlari.md
+          - "06 — INSERT — ma'lumot kiritish": sql/06-insert.md
+          - "07 — SELECT — ma'lumot o'qish": sql/07-select.md
+          - "08 — WHERE — filtrlash": sql/08-where.md
+          - "09 — ORDER BY, LIMIT, DISTINCT": sql/09-order-limit-distinct.md
+          - "10 — Built-in funksiyalar (matn, son, sana)": sql/10-builtin-funksiyalar.md
+          - "11 — Aggregate funksiyalar va GROUP BY": sql/11-aggregate-group-by.md
+          - "12 — JOIN — jadvallarni bog'lash": sql/12-join.md
+          - "13 — UNION — natijalarni birlashtirish": sql/13-union.md
+          - "14 — Subquery — query ichida query": sql/14-subquery.md
+          - "15 — CTE — WITH bilan ishlash": sql/15-cte.md
+          - "16 — Window funksiyalar": sql/16-window-funksiyalar.md
+          - "17 — UPDATE va DELETE — chuqur": sql/17-update-delete.md
+          - "18 — ALTER, Constraint, Foreign Key": sql/18-alter-constraint-fk.md
+          - "19 — Tranzaksiyalar": sql/19-tranzaksiyalar.md
+          - "20 — Normalizatsiya — to'g'ri schema": sql/20-normalizatsiya.md
+          - "21 — Indekslar": sql/21-indekslar.md
+          - "22 — VIEW (chuqur)": sql/22-view.md
+          - "23 — Stored Procedure va Function": sql/23-procedure-function.md
+          - "24 — Trigger va Event": sql/24-trigger-event.md
+          - "25 — Cursor va qatorma-qator ishlov": sql/25-cursor.md
+          - "26 — EXPLAIN va optimizatsiya": sql/26-explain-optimizatsiya.md
+          - "27 — Xavfsizlik va administratsiya": sql/27-xavfsizlik-admin.md
+          - "28 — Yakuniy loyihalar": sql/28-yakuniy-loyihalar.md
+      - "Ma'lumotlar bazasi dizayni":
+          - "Ma'lumotlar bazasi dizayni — 0 dan ekspertgacha": db-dizayni/README.md
+          - "01 — Dizayn nima va nega muhim": db-dizayni/01-dizayn-nima.md
+          - "02 — Talab tahlili va domen modellashtirish": db-dizayni/02-talab-tahlili.md
+          - "03 — ER-diagramma": db-dizayni/03-er-diagramma.md
+          - "04 — Bog'lanishlar va kardinallik": db-dizayni/04-boglanish-kardinallik.md
+          - "05 — Relyatsion model va kalit turlari": db-dizayni/05-relyatsion-model.md
+          - "06 — Kalit dizayni (UUID, surrogate, kompozit)": db-dizayni/06-kalit-dizayni.md
+          - "07 — Normalizatsiya I (1NF, 2NF, 3NF)": db-dizayni/07-normalizatsiya-asoslari.md
+          - "08 — Normalizatsiya II (BCNF, 4NF, denorm)": db-dizayni/08-normalizatsiya-ilgor.md
+          - "09 — Logik modeldan fizik sxemaga": db-dizayni/09-logik-fizik-sxema.md
+          - "10 — Ma'lumot turini tanlash (PostgreSQL)": db-dizayni/10-malumot-turlari.md
+          - "11 — Yaxlitlik va constraint dizayni": db-dizayni/11-constraint-dizayni.md
+          - "12 — Dizayn naqshlari": db-dizayni/12-dizayn-naqshlari.md
+          - "13 — Anti-naqshlar": db-dizayni/13-anti-naqshlar.md
+          - "14 — Indeks strategiyasi": db-dizayni/14-indeks-strategiyasi.md
+          - "15 — Performans (EXPLAIN ANALYZE)": db-dizayni/15-performans.md
+          - "16 — Tranzaksiya va parallellik": db-dizayni/16-tranzaksiya-parallellik.md
+          - "17 — Daraxt va graf strukturalari": db-dizayni/17-daraxt-graf.md
+          - "18 — Vaqtinchalik va versiyalangan ma'lumot": db-dizayni/18-temporal-versiya.md
+          - "19 — Multi-tenancy va RLS": db-dizayni/19-multi-tenancy.md
+          - "20 — NoSQL ma'lumot modellashtirish": db-dizayni/20-nosql-modellashtirish.md
+          - "21 — Analitik dizayn va ma'lumotlar ombori": db-dizayni/21-analitik-ombor.md
+          - "22 — Partitioning, sharding, masshtab": db-dizayni/22-partitioning-masshtab.md
+          - "23 — Migratsiya va sxema evolyutsiyasi": db-dizayni/23-migratsiya-evolyutsiya.md
+          - "24 — Yakuniy loyiha": db-dizayni/24-yakuniy-loyiha.md
   - "🧩 Asboblar va amaliyot":
       - "Git & GitHub":
           - "Git va GitHub — Noldan boshlovchilar uchun amaliy kitob": git-github/README.md
@@ -557,6 +828,224 @@ nav:
           - "22 — GitHub Pages va portfolio": git-github/22-github-pages-portfolio.md
           - "23 — Xavfsizlik va eng yaxshi amaliyotlar": git-github/23-xavfsizlik-amaliyot.md
           - "24 — Yakuniy loyiha va shpargalka": git-github/24-yakuniy-loyiha.md
+      - "DevOps & Deployment":
+        - "00. DevOps & Deployment": devops/README.md
+        - "01. DevOps nima?": devops/01-devops-nima.md
+        - "02. Linux server asoslari": devops/02-linux-server-asoslari.md
+        - "03. Bash skripting": devops/03-bash-skripting.md
+        - "04. Tarmoq va xavfsizlik": devops/04-tarmoq-xavfsizlik.md
+        - "05. Qo'lda deploy": devops/05-qolda-deploy.md
+        - "06. Docker nima?": devops/06-docker-nima.md
+        - "07. Konteyner ishlash prinsipi": devops/07-konteyner-ishlash.md
+        - "08. Dockerfile": devops/08-dockerfile.md
+        - "09. Image optimizatsiya": devops/09-image-optimizatsiya.md
+        - "10. Volume va Network": devops/10-volume-network.md
+        - "11. Docker Compose": devops/11-docker-compose.md
+        - "12. CI/CD GitHub Actions": devops/12-cicd-github-actions.md
+        - "13. Pipeline: Test va Build": devops/13-pipeline-test-build.md
+        - "14. Docker CI/CD": devops/14-docker-ci-ghcr.md
+        - "15. Avtomatik deploy": devops/15-avtomatik-deploy.md
+        - "16. Nginx asoslari": devops/16-nginx-asoslari.md
+        - "17. Reverse Proxy va Load Balancing": devops/17-reverse-proxy-load-balancing.md
+        - "18. HTTPS va Domen": devops/18-https-domen.md
+        - "19. Systemd Process Management": devops/19-systemd-process.md
+        - "20. To'liq Deploy": devops/20-toliq-deploy.md
+        - "21. Kubernetes nima?": devops/21-kubernetes-nima.md
+        - "22. Pod, Deployment va Service": devops/22-pod-deployment-service.md
+        - "23. Production Kubernetes": devops/23-production-k8s.md
+        - "24. Ingress, Helm va GitOps": devops/24-ingress-helm-gitops.md
+        - "25. Monitoring: Prometheus va Grafana": devops/25-monitoring-prometheus-grafana.md
+        - "26. Logging, Alerting va Backup": devops/26-logging-alerting-backup.md
+        - "27. IaC: Ansible va Terraform": devops/27-iac-ansible-terraform.md
+        - "28. Capstone loyiha": devops/28-kapston.md       
+      - "Dasturlash arxitekturasi":
+          - "Dasturiy ta'minot arxitekturasi — 0 dan Expertgacha": arxitektura/README.md
+          - "01 — Dasturiy arxitektura nima va nega muhim": arxitektura/01-arxitektura-nima.md
+          - "02 — Sifat atributlari va trade-off'lar": arxitektura/02-sifat-atributlari-tradeoff.md
+          - "03 — Arxitekturani hujjatlashtirish: C4, UML, ADR": arxitektura/03-hujjatlash-c4-adr.md
+          - "04 — Coupling va cohesion": arxitektura/04-coupling-cohesion.md
+          - "05 — SOLID printsiplari": arxitektura/05-solid.md
+          - "06 — Boshqa printsiplar: DRY, KISS, YAGNI, SoC": arxitektura/06-dry-kiss-yagni.md
+          - "07 — Yaratuvchi patternlar (creational)": arxitektura/07-creational-patterns.md
+          - "08 — Strukturaviy patternlar (structural)": arxitektura/08-structural-patterns.md
+          - "09 — Xulq-atvor patternlari (behavioral)": arxitektura/09-behavioral-patterns.md
+          - "10 — Modullik, komponentlar va chegaralar": arxitektura/10-modullik-komponentlar.md
+          - "11 — Qatlamli arxitektura (layered / n-tier)": arxitektura/11-qatlamli-arxitektura.md
+          - "12 — Hexagonal: portlar va adapterlar": arxitektura/12-hexagonal-portlar-adapterlar.md
+          - "13 — Onion va Clean Architecture": arxitektura/13-onion-clean-architecture.md
+          - "14 — Domain-Driven Design (DDD) asoslari": arxitektura/14-ddd-asoslari.md
+          - "15 — Event-driven arxitektura va CQRS": arxitektura/15-event-driven-cqrs.md
+          - "16 — Monolit, modulli monolit va mikroservislar": arxitektura/16-monolit-mikroservis.md
+          - "17 — Servislararo aloqa va API dizayni": arxitektura/17-api-dizayni-aloqa.md
+          - "18 — Ma'lumotlar bazasi: SQL vs NoSQL": arxitektura/18-malumotlar-bazasi-tanlovi.md
+          - "19 — Masshtablash va load balancing": arxitektura/19-masshtablash-load-balancing.md
+          - "20 — Keshlash strategiyalari": arxitektura/20-keshlash.md
+          - "21 — Message queue va asinxron aloqa": arxitektura/21-message-queue-async.md
+          - "22 — CAP, consistency va replikatsiya": arxitektura/22-cap-consistency-replikatsiya.md
+          - "23 — Ishonchlilik: fault tolerance va resilience": arxitektura/23-fault-tolerance-resilience.md
+          - "24 — Observability va operatsiya": arxitektura/24-observability.md
+          - "25 — Evolyutsion arxitektura, anti-patternlar va xavfsizlik": arxitektura/25-evolyutsion-antipatternlar.md
+          - "26 — Kapston: real tizimni noldan loyihalash": arxitektura/26-kapston-tizim-dizayni.md
+      - "Dasturchi yo'riqnomasi":
+          - "Dasturchi yo'riqnomasi — kod yozuvchidan professional muhandisgacha": dasturchi-yoriqnomasi/README.md
+          - "01 — Kod yozuvchidan muhandisgacha": dasturchi-yoriqnomasi/01-kod-yozuvchidan-muhandisgacha.md
+          - "02 — Muammoni yechish san'ati": dasturchi-yoriqnomasi/02-muammoni-yechish-sanati.md
+          - "03 — Begona kodni o'qish va tushunish": dasturchi-yoriqnomasi/03-begona-kodni-oqish.md
+          - "04 — Debugging: xatoni tizimli ovlash": dasturchi-yoriqnomasi/04-debugging-tizimli-ovlash.md
+          - "05 — Nomlash — eng qiyin oson ish": dasturchi-yoriqnomasi/05-nomlash-sanati.md
+          - "06 — Funksiyalar, modullik va kod tuzilishi": dasturchi-yoriqnomasi/06-funksiyalar-modullik.md
+          - "07 — Izoh va o'z-o'zini hujjatlovchi kod": dasturchi-yoriqnomasi/07-izoh-ozini-hujjatlovchi-kod.md
+          - "08 — Xatolarni boshqarish va mudofaaviy dasturlash": dasturchi-yoriqnomasi/08-xatolarni-boshqarish.md
+          - "09 — Refactoring va kod hidlari": dasturchi-yoriqnomasi/09-refactoring-kod-hidlari.md
+          - "10 — Texnik qarz: tushunish va boshqarish": dasturchi-yoriqnomasi/10-texnik-qarz.md
+          - "11 — Testlash madaniyati": dasturchi-yoriqnomasi/11-testlash-madaniyati.md
+          - "12 — Xavfsiz kod yozish asoslari": dasturchi-yoriqnomasi/12-xavfsiz-kod-asoslari.md
+          - "13 — Code review — berish va olish": dasturchi-yoriqnomasi/13-code-review.md
+          - "14 — Jamoaviy kod oqimi: commit, branch, PR madaniyati": dasturchi-yoriqnomasi/14-jamoaviy-kod-oqimi.md
+          - "15 — Agile amalda: Scrum, Kanban va sprintlar": dasturchi-yoriqnomasi/15-agile-scrum-kanban.md
+          - "16 — Baholash va rejalashtirish": dasturchi-yoriqnomasi/16-baholash-rejalashtirish.md
+          - "17 — Texnik kommunikatsiya: yaxshi savol va yozma muloqot": dasturchi-yoriqnomasi/17-texnik-kommunikatsiya.md
+          - "18 — Hujjatlash: README'dan runbook'gacha": dasturchi-yoriqnomasi/18-hujjatlash.md
+          - "19 — Fikr-mulohaza, mentorlik va mojaro": dasturchi-yoriqnomasi/19-fikr-mulohaza-mentorlik.md
+          - "20 — Ish muhiti va vositalar ustaligi": dasturchi-yoriqnomasi/20-ish-muhiti-vositalar.md
+          - "21 — Vaqt, diqqat va chuqur ish": dasturchi-yoriqnomasi/21-vaqt-diqqat-chuqur-ish.md
+          - "22 — O'rganishni o'rganish va dolzarb qolish": dasturchi-yoriqnomasi/22-organishni-organish.md
+          - "23 — Dasturchi karyera narvoni: junior'dan senior'gacha": dasturchi-yoriqnomasi/23-karyera-narvoni.md
+          - "24 — Ishni topish: rezyume, portfolio va tarmoq": dasturchi-yoriqnomasi/24-ish-topish-rezyume-portfolio.md
+          - "25 — Texnik intervyuga tayyorgarlik": dasturchi-yoriqnomasi/25-texnik-intervyu.md
+          - "26 — Frilans va masofaviy ish": dasturchi-yoriqnomasi/26-frilans-masofaviy-ish.md
+          - "27 — Professional etika, mas'uliyat va huquq": dasturchi-yoriqnomasi/27-etika-masuliyat.md
+          - "28 — Barqaror karyera: burnout, impostor va salomatlik": dasturchi-yoriqnomasi/28-barqaror-karyera-burnout.md
+          - "29 — Kapston: birinchi 90 kun va shaxsiy o'sish rejasi": dasturchi-yoriqnomasi/29-kapston-90-kun-osish-rejasi.md
+      - "Algoritmlar va ma'lumotlar strukturalari":
+          - "Algoritmlar va ma'lumotlar strukturalari — 0 dan Expertgacha": algoritmlar/README.md
+          - "01 — Algoritm nima va uning xossalari": algoritmlar/01-algoritm-nima.md
+          - "02 — Algoritmni tasvirlash: blok-sxema, psevdokod, trassirovka": algoritmlar/02-tasvirlash-blok-sxema-psevdokod.md
+          - "03 — Chiziqli (ketma-ket) algoritmlar": algoritmlar/03-chiziqli-algoritmlar.md
+          - "04 — Tarmoqlanuvchi algoritmlar (shartlar)": algoritmlar/04-tarmoqlanuvchi-algoritmlar.md
+          - "05 — Takrorlanuvchi algoritmlar va sikl invarianti": algoritmlar/05-takrorlanuvchi-algoritmlar.md
+          - "06 — Rekursiya asoslari": algoritmlar/06-rekursiya-asoslari.md
+          - "07 — Algoritm samaradorligi va hisoblash modeli": algoritmlar/07-samaradorlik-hisoblash-modeli.md
+          - "08 — Asimptotik notatsiya: Big-O, Ω, Θ": algoritmlar/08-asimptotik-notatsiya.md
+          - "09 — Murakkablikni hisoblash: vaqt va xotira": algoritmlar/09-murakkablikni-hisoblash.md
+          - "10 — Rekurrent munosabatlar va Master teorema": algoritmlar/10-rekurrent-master-teorema.md
+          - "11 — Amortizatsiyalangan tahlil": algoritmlar/11-amortizatsiyalangan-tahlil.md
+          - "12 — Massiv va dinamik massiv": algoritmlar/12-massiv-dinamik-massiv.md
+          - "13 — Bog'langan ro'yxatlar (linked list)": algoritmlar/13-boglangan-royxatlar.md
+          - "14 — Stack, Queue va Deque": algoritmlar/14-stack-queue-deque.md
+          - "15 — Hash jadval (hash table)": algoritmlar/15-hash-jadval.md
+          - "16 — Daraxtlar va traversal": algoritmlar/16-daraxtlar-traversal.md
+          - "17 — Binar qidiruv daraxti (BST)": algoritmlar/17-binar-qidiruv-daraxti.md
+          - "18 — Balanslangan daraxtlar (AVL, Red-Black, B-tree)": algoritmlar/18-balanslangan-daraxtlar.md
+          - "19 — Heap va Priority Queue": algoritmlar/19-heap-priority-queue.md
+          - "20 — Trie va string strukturalari": algoritmlar/20-trie-string-strukturalari.md
+          - "21 — Graflar: tasvirlash va Union-Find": algoritmlar/21-graflar-union-find.md
+          - "22 — Brute force va to'liq qidiruv": algoritmlar/22-brute-force.md
+          - "23 — Divide and Conquer (bo'lib hal qil)": algoritmlar/23-divide-and-conquer.md
+          - "24 — Greedy (ochko'z) algoritmlar": algoritmlar/24-greedy.md
+          - "25 — Dinamik dasturlash (DP)": algoritmlar/25-dinamik-dasturlash.md
+          - "26 — Backtracking (orqaga qaytish)": algoritmlar/26-backtracking.md
+          - "27 — Saralash algoritmlari": algoritmlar/27-saralash-algoritmlari.md
+          - "28 — Qidiruv algoritmlari": algoritmlar/28-qidiruv-algoritmlari.md
+          - "29 — Graf algoritmlari I: BFS, DFS va qo'llanmalar": algoritmlar/29-graf-algoritmlari-1.md
+          - "30 — Graf algoritmlari II: eng qisqa yo'l va MST": algoritmlar/30-graf-algoritmlari-2.md
+          - "31 — String algoritmlari": algoritmlar/31-string-algoritmlari.md
+          - "32 — Hisoblash murakkabligi: P, NP va NP-to'liqlik": algoritmlar/32-p-np-murakkablik-nazariyasi.md
+          - "33 — Kapston: muammodan yechimgacha — algoritm dizayni amaliyoti": algoritmlar/33-kapston-algoritm-dizayni.md
+      - "API dizayni":
+          - "API dizayni — 0 dan Expertgacha": api-dizayni/README.md
+          - "01 — API nima va nega muhim": api-dizayni/01-api-nima.md
+          - "02 — HTTP protokoli chuqur": api-dizayni/02-http-chuqur.md
+          - "03 — HTTP status kodlari": api-dizayni/03-http-status-kodlari.md
+          - "04 — API uslublari: REST, RPC, GraphQL, gRPC": api-dizayni/04-api-uslublari.md
+          - "05 — REST tamoyillari va Richardson Maturity Model": api-dizayni/05-rest-tamoyillari.md
+          - "06 — Resurs modellashtirish va URI dizayni": api-dizayni/06-resurs-uri-dizayni.md
+          - "07 — So'rov va javob dizayni (payload)": api-dizayni/07-sorov-javob-payload.md
+          - "08 — Sahifalash, filtrlash, saralash, qidiruv": api-dizayni/08-sahifalash-filtrlash.md
+          - "09 — Xatolarni dizayn qilish": api-dizayni/09-xato-dizayni.md
+          - "10 — API versiyalash va evolyutsiya": api-dizayni/10-versiyalash.md
+          - "11 — Autentifikatsiya": api-dizayni/11-autentifikatsiya.md
+          - "12 — Avtorizatsiya va ruxsatlar": api-dizayni/12-avtorizatsiya.md
+          - "13 — API xavfsizligi (OWASP API Top 10)": api-dizayni/13-api-xavfsizligi.md
+          - "14 — Rate limiting, throttling, kvotalar": api-dizayni/14-rate-limiting.md
+          - "15 — Idempotentlik va parallellik": api-dizayni/15-idempotentlik-parallellik.md
+          - "16 — Keshlash (HTTP caching)": api-dizayni/16-keshlash.md
+          - "17 — GraphQL dizayni": api-dizayni/17-graphql.md
+          - "18 — gRPC va Protocol Buffers": api-dizayni/18-grpc.md
+          - "19 — Asinxron API va webhooklar": api-dizayni/19-asinxron-webhook.md
+          - "20 — Real-time API: WebSocket va SSE": api-dizayni/20-realtime-websocket-sse.md
+          - "21 — OpenAPI spetsifikatsiyasi": api-dizayni/21-openapi.md
+          - "22 — Hujjatlash va Developer Experience": api-dizayni/22-hujjatlash-dx.md
+          - "23 — API gateway, BFF va kompozitsiya": api-dizayni/23-api-gateway-bff.md
+          - "24 — API testlash va contract testing": api-dizayni/24-testlash-contract.md
+          - "25 — Observability va ishlash": api-dizayni/25-observability.md
+          - "26 — API hayot sikli va boshqaruv": api-dizayni/26-hayot-sikli-governance.md
+          - "27 — Dizayn naqshlari va anti-naqshlari": api-dizayni/27-naqshlar-antinaqshlar.md
+          - "28 — Kapston: to'liq API'ni noldan loyihalash": api-dizayni/28-kapston.md
+      - "Dasturiy ta'minotni testlash":
+          - "Dasturiy ta'minotni testlash — 0 dan Expertgacha": testing/README.md
+          - "01 — Nega test yozamiz?": testing/01-nega-test-yozamiz.md
+          - "02 — Birinchi testingiz: AAA va test anatomiyasi": testing/02-birinchi-test-aaa.md
+          - "03 — Test turlari va test piramidasi": testing/03-test-turlari-piramida.md
+          - "04 — Yaxshi test xossalari: FIRST va izolyatsiya": testing/04-yaxshi-test-xossalari.md
+          - "05 — Assertion'lar va test holatlarini tanlash": testing/05-assertionlar-test-holatlari.md
+          - "06 — Test ma'lumotlari: fixture, parametrize, builder": testing/06-fixture-parametrize.md
+          - "07 — Test dublyorlari I: taksonomiya": testing/07-test-dublyorlari-nazariya.md
+          - "08 — Test dublyorlari II: amaliyot va tuzoqlar": testing/08-test-dublyorlari-amaliyot.md
+          - "09 — Vaqt, tasodif, I/O: bog'liqliklarni izolyatsiya": testing/09-bogliqliklarni-izolyatsiya.md
+          - "10 — Testlanadigan dizayn": testing/10-testlanadigan-dizayn.md
+          - "11 — TDD: Red-Green-Refactor": testing/11-tdd-red-green-refactor.md
+          - "12 — TDD amaliyotda: to'liq misol (kata)": testing/12-tdd-amaliyot-kata.md
+          - "13 — Refactoring va testlar": testing/13-refactoring-va-testlar.md
+          - "14 — BDD va spetsifikatsiya": testing/14-bdd-spetsifikatsiya.md
+          - "15 — Integratsiya testlari": testing/15-integratsiya-testlari.md
+          - "16 — Ma'lumotlar bazasi va tashqi servislarni testlash": testing/16-malumotlar-bazasi-testlash.md
+          - "17 — API va HTTP testlash": testing/17-api-http-testlash.md
+          - "18 — Kontrakt testlar": testing/18-kontrakt-testlar.md
+          - "19 — End-to-end va UI testlar": testing/19-e2e-ui-testlar.md
+          - "20 — Code coverage: foyda va xavf": testing/20-code-coverage.md
+          - "21 — Property-based testing": testing/21-property-based-testing.md
+          - "22 — Mutation testing": testing/22-mutation-testing.md
+          - "23 — Snapshot va approval testing": testing/23-snapshot-approval-testing.md
+          - "24 — Flaky testlar va barqarorlik": testing/24-flaky-testlar.md
+          - "25 — Performance, yuk va stress testlar": testing/25-performance-yuk-testlari.md
+          - "26 — Xavfsizlik testlash asoslari": testing/26-xavfsizlik-testlash.md
+          - "27 — Test avtomatlashtirish va CI/CD": testing/27-ci-cd-avtomatlashtirish.md
+          - "28 — Test strategiyasi va testing quadrants": testing/28-test-strategiyasi-quadrants.md
+          - "29 — Eski (legacy) kodni testlash": testing/29-legacy-kodni-testlash.md
+          - "30 — Kapston: loyihani noldan test bilan qoplash": testing/30-kapston.md
+      - "Soft & Hard skills":
+          - "Soft & Hard skills — dasturchining professional ko'nikmalari": soft-hard-skills/README.md
+          - "01 — Soft va Hard skills nima — T-shaped dasturchi": soft-hard-skills/01-skills-nima-t-shaped.md
+          - "02 — O'sish mentaliteti va imposter sindromi": soft-hard-skills/02-osish-mentaliteti.md
+          - "03 — O'rganishni o'rganish": soft-hard-skills/03-organishni-organish.md
+          - "04 — Bilim boshqaruvi va eslab qolish": soft-hard-skills/04-bilim-boshqaruvi-eslab-qolish.md
+          - "05 — Vaqtni boshqarish va prioritetlash": soft-hard-skills/05-vaqtni-boshqarish.md
+          - "06 — Diqqat, chuqur ish va e'tibor": soft-hard-skills/06-diqqat-chuqur-ish.md
+          - "07 — Maqsad qo'yish va odatlar": soft-hard-skills/07-maqsad-odatlar.md
+          - "08 — Stress, burnout va muvozanat": soft-hard-skills/08-stress-burnout-muvozanat.md
+          - "09 — Texnik muloqot asoslari": soft-hard-skills/09-texnik-muloqot-asoslari.md
+          - "10 — Yozma va asinxron muloqot": soft-hard-skills/10-yozma-asinxron-muloqot.md
+          - "11 — Og'zaki muloqot, taqdimot va public speaking": soft-hard-skills/11-ogzaki-taqdimot-public-speaking.md
+          - "12 — Faol tinglash va to'g'ri savol berish": soft-hard-skills/12-tinglash-savol-berish.md
+          - "13 — Fikr-mulohaza: berish va qabul qilish": soft-hard-skills/13-feedback-berish-qabul.md
+          - "14 — Jamoada ishlash va psixologik xavfsizlik": soft-hard-skills/14-jamoada-ishlash-xavfsizlik.md
+          - "15 — Code review: texnik va inson tomoni": soft-hard-skills/15-code-review-inson-tomoni.md
+          - "16 — Nizolarni hal qilish va qiyin suhbatlar": soft-hard-skills/16-nizolarni-hal-qilish.md
+          - "17 — Masofaviy ish va taqsimlangan jamoa": soft-hard-skills/17-masofaviy-ish-jamoa.md
+          - "18 — Agile, Scrum va jamoa jarayonlari": soft-hard-skills/18-agile-scrum-jarayonlar.md
+          - "19 — Muammoni hal qilish va tahliliy fikrlash": soft-hard-skills/19-muammoni-hal-qilish.md
+          - "20 — Debugging: tizimli yondashuv": soft-hard-skills/20-debugging-tizimli.md
+          - "21 — Begona kodni o'qish va kodbazada harakatlanish": soft-hard-skills/21-begona-kodni-oqish.md
+          - "22 — Baholash (estimation) va rejalashtirish": soft-hard-skills/22-baholash-rejalashtirish.md
+          - "23 — Texnik qaror va trade-off'lar": soft-hard-skills/23-texnik-qaror-tradeoff.md
+          - "24 — Hujjatlashtirish ko'nikmasi": soft-hard-skills/24-hujjatlashtirish.md
+          - "25 — CV, portfolio va GitHub profil": soft-hard-skills/25-cv-portfolio-github.md
+          - "26 — Texnik intervyuga tayyorgarlik": soft-hard-skills/26-texnik-intervyu.md
+          - "27 — Behavioral intervyu va STAR metodi": soft-hard-skills/27-behavioral-intervyu-star.md
+          - "28 — Maosh muzokarasi va ish taklifini baholash": soft-hard-skills/28-maosh-muzokara.md
+          - "29 — Networking, shaxsiy brend va jamoa": soft-hard-skills/29-networking-shaxsiy-brend.md
+          - "30 — Junior'dan senior va lead'gacha: o'sish va mentorlik": soft-hard-skills/30-junior-senior-lead-mentorlik.md
       - "1000 masala":
           - "1000 amaliy dasturlash masalasi — JS / PHP / Python yechimlari": 1000-masala/README.md
           - "1-bo'lim: Asoslar": 1000-masala/bo-lim-01.md

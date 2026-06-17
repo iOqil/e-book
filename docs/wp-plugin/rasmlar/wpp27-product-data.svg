@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430">
+  <title>Mahsulot custom field oqimi: admin General tabda woocommerce_wp_text_input maydonni chizadi, foydalanuvchi qiymat kiritadi, saqlashda woocommerce_admin_process_product_object WC_Product obyektini beradi, qiymat sanitize qilinib update_meta_data bilan saqlanadi va WooCommerce save qiladi</title>
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Mahsulot custom maydoni: chizish -> saqlash (CRUD)</text>
+
+  <!-- 1: chizish -->
+  <rect x="40" y="64" width="300" height="150" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="190" y="90" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e40af">1. Admin: maydonni chizish</text>
+  <text x="190" y="112" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">hook: woocommerce_product_options_</text>
+  <text x="190" y="130" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">general_product_data (action)</text>
+  <rect x="64" y="146" width="252" height="54" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="78" y="168" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">woocommerce_wp_text_input([</text>
+  <text x="78" y="190" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">  'id' =&gt; '_kitkat_muallif' ])</text>
+
+  <!-- 2: foydalanuvchi -->
+  <rect x="420" y="64" width="300" height="150" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="570" y="90" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">2. Foydalanuvchi qiymat kiritadi</text>
+  <rect x="444" y="108" width="252" height="44" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="458" y="135" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Muallif: [ Oqil Imomnazarov ]</text>
+  <text x="570" y="176" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">"Yangilash" tugmasi bosiladi</text>
+  <text x="570" y="198" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">-> $_POST yuboriladi</text>
+
+  <!-- strelka 1->2 -->
+  <line x1="340" y1="139" x2="418" y2="139" stroke="#475569" stroke-width="2"/>
+  <polygon points="418,139 408,134 408,144" fill="#475569"/>
+
+  <!-- 3: saqlash -->
+  <rect x="160" y="246" width="440" height="118" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="380" y="272" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">3. Saqlash (CRUD, post meta'ga to'g'ridan EMAS)</text>
+  <text x="380" y="294" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">hook: woocommerce_admin_process_product_object( WC_Product $product )</text>
+  <rect x="184" y="306" width="392" height="48" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="198" y="328" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">$val = sanitize_text_field( wp_unslash( $_POST[...] ) );</text>
+  <text x="198" y="348" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">$product-&gt;update_meta_data( '_kitkat_muallif', $val );</text>
+
+  <!-- strelka 2->3 -->
+  <line x1="570" y1="214" x2="500" y2="244" stroke="#475569" stroke-width="2"/>
+  <polygon points="500,244 511,242 505,234" fill="#475569"/>
+
+  <!-- pastki izoh -->
+  <rect x="120" y="378" width="520" height="40" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="380" y="403" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#7c3aed">WooCommerce hook'dan keyin $product-&gt;save() ni O'ZI chaqiradi</text>
+</svg>

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 470">
+  <title>Mutation testing oqimi: koddagi kichik mutant kiritiladi, test to'plami ishga tushiriladi, agar biror test yiqilsa mutant o'ldirildi (yaxshi), barcha test o'tsa mutant tirik qoldi (testlarda bo'shliq)</title>
+  <rect x="0" y="0" width="820" height="470" fill="#f8fafc"/>
+  <text x="410" y="38" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Mutation testing oqimi</text>
+  <text x="410" y="64" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Mutant kirit -> testlarni ishga tushir -> o'ldimi yoki tirik qoldimi?</text>
+
+  <!-- Step 1: original code -->
+  <rect x="40" y="100" width="220" height="120" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="150" y="128" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">1. Asl kod</text>
+  <text x="60" y="158" font-family="Segoe UI" font-size="14" fill="#1e293b">if summa &gt; 1000:</text>
+  <text x="60" y="182" font-family="Segoe UI" font-size="14" fill="#1e293b">    foiz = 10</text>
+  <text x="150" y="208" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">testlar yashil</text>
+
+  <!-- Arrow down with label -->
+  <line x1="150" y1="222" x2="150" y2="258" stroke="#7c3aed" stroke-width="2"/>
+  <polygon points="150,270 143,254 157,254" fill="#7c3aed"/>
+  <text x="262" y="248" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#7c3aed">mutant kirit</text>
+
+  <!-- Step 2: mutated code -->
+  <rect x="40" y="272" width="220" height="120" rx="10" fill="#f3e8ff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="150" y="300" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#6b21a8">2. Mutant kod</text>
+  <text x="60" y="330" font-family="Segoe UI" font-size="14" fill="#7c3aed">if summa &gt;= 1000:</text>
+  <text x="150" y="356" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#6b21a8">&gt; almashtirildi &gt;=</text>
+  <text x="150" y="378" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#6b21a8">kichik o'zgartirish</text>
+
+  <!-- Arrow to test run -->
+  <line x1="262" y1="332" x2="320" y2="332" stroke="#64748b" stroke-width="2"/>
+  <polygon points="332,332 316,325 316,339" fill="#64748b"/>
+
+  <!-- Step 3: run tests -->
+  <rect x="334" y="272" width="180" height="120" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="424" y="300" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e40af">3. Testlarni</text>
+  <text x="424" y="322" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e40af">ishga tushir</text>
+  <text x="424" y="352" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">pytest</text>
+  <text x="424" y="374" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">butun to'plam</text>
+
+  <!-- branch -->
+  <line x1="514" y1="332" x2="558" y2="200" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="560,190 549,205 564,209" fill="#16a34a"/>
+  <line x1="514" y1="332" x2="558" y2="420" stroke="#dc2626" stroke-width="2"/>
+  <polygon points="560,430 564,413 549,417" fill="#dc2626"/>
+
+  <!-- killed -->
+  <rect x="566" y="150" width="220" height="90" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="676" y="180" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#166534">Test YIQILDI</text>
+  <text x="676" y="206" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#166534">Mutant O'LDIRILDI</text>
+  <text x="676" y="226" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#166534">testlar uyg'oq — yaxshi</text>
+
+  <!-- survived -->
+  <rect x="566" y="372" width="220" height="90" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="676" y="402" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#991b1b">Hammasi O'TDI</text>
+  <text x="676" y="428" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#991b1b">Mutant TIRIK QOLDI</text>
+  <text x="676" y="448" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#991b1b">testlarda bo'shliq!</text>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 500" width="820" height="500">
+  <title>Yetkazish kafolatlari: at-most-once (yo'qolishi mumkin), at-least-once (takror mumkin), exactly-once (qiyin); amaliy yechim at-least-once + idempotentlik</title>
+  <rect x="0" y="0" width="820" height="500" fill="#f8fafc"/>
+  <text x="410" y="32" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Yetkazish kafolatlari (delivery guarantees)</text>
+
+  <defs>
+    <marker id="dg-ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#334155"/>
+    </marker>
+  </defs>
+
+  <!-- 1) at-most-once -->
+  <rect x="20" y="56" width="780" height="120" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="36" y="82" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#dc2626">at-most-once (ko'pi bilan bir marta)</text>
+  <text x="36" y="104" font-family="Segoe UI" font-size="13" fill="#334155">Xabar yuboriladi, tasdiq (ack) KUTILMAYDI. Yo'qolsa — yo'qoldi, qayta yuborilmaydi.</text>
+  <text x="36" y="124" font-family="Segoe UI" font-size="13" fill="#64748b">Natija: 0 yoki 1 marta yetadi. Tezkor, lekin xabar YO'QOLISHI mumkin.</text>
+  <text x="36" y="148" font-family="Segoe UI" font-size="13" fill="#334155">Qachon: metrika, log, "kerak bo'lsa keyingisi keladi" — yo'qotish arzon bo'lsa.</text>
+  <text x="690" y="124" font-family="Segoe UI" font-size="13" fill="#dc2626" text-anchor="middle" font-weight="bold">XAVF: yo'qolish</text>
+
+  <!-- 2) at-least-once -->
+  <rect x="20" y="186" width="780" height="120" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="36" y="212" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#b45309">at-least-once (kamida bir marta)</text>
+  <text x="36" y="234" font-family="Segoe UI" font-size="13" fill="#334155">Ack kelmasa, broker QAYTA yuboradi. Xabar yo'qolmaydi, lekin DUBLIKAT kelishi mumkin.</text>
+  <text x="36" y="254" font-family="Segoe UI" font-size="13" fill="#64748b">Natija: 1 yoki undan ko'p marta yetadi. Eng keng tarqalgan amaliy rejim.</text>
+  <text x="36" y="278" font-family="Segoe UI" font-size="13" fill="#334155">Qachon: ko'pchilik holatlar — DUBLIKATNI consumer idempotentlik bilan hal qiladi.</text>
+  <text x="690" y="234" font-family="Segoe UI" font-size="13" fill="#b45309" text-anchor="middle" font-weight="bold">XAVF: takror</text>
+
+  <!-- 3) exactly-once -->
+  <rect x="20" y="316" width="780" height="106" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="36" y="342" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#334155">exactly-once (aniq bir marta)</text>
+  <text x="36" y="364" font-family="Segoe UI" font-size="13" fill="#334155">Har xabar AYNAN bir marta ta'sir qiladi. Tarmoq xatolarida toza yetkazish QIYIN —</text>
+  <text x="36" y="384" font-family="Segoe UI" font-size="13" fill="#334155">tarqalgan tizimda yetkazish darajasida deyarli imkonsiz (faqat cheklangan sharoitlarda).</text>
+  <text x="36" y="408" font-family="Segoe UI" font-size="13" fill="#64748b">Brokerlar "exactly-once" desa, ko'pincha at-least-once + idempotent ishlov demoqchi.</text>
+
+  <!-- amaliy yechim -->
+  <rect x="20" y="436" width="780" height="50" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="410" y="461" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#15803d" text-anchor="middle">AMALIY YECHIM: at-least-once (yo'qotmaslik) + IDEMPOTENT consumer (dublikatni e'tiborsiz)</text>
+  <text x="410" y="479" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">= "effektiv exactly-once". Tartibni (ordering) alohida o'ylash kerak.</text>
+</svg>

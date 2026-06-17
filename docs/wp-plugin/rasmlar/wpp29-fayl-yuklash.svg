@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 460" width="760" height="460">
+  <title>Xavfsiz fayl yuklash oqimi: yuklangan fayl avval kengaytma va MIME tekshiruvidan o'tadi, mos kelsa wp_handle_upload xavfsiz papkaga joylaydi, bajariladigan PHP fayl esa rad etiladi</title>
+
+  <rect x="0" y="0" width="760" height="460" fill="#f8fafc"/>
+
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Xavfsiz fayl yuklash darvozalari</text>
+
+  <!-- 1: yuklangan fayl -->
+  <rect x="280" y="54" width="200" height="54" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="380" y="78" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309">Yuklangan fayl</text>
+  <text x="380" y="98" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">$_FILES['kitob_muqova']</text>
+
+  <line x1="380" y1="108" x2="380" y2="128" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#a29f)"/>
+
+  <!-- 2: kengaytma + MIME tekshiruvi -->
+  <rect x="170" y="132" width="420" height="74" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="380" y="157" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e40af">1-darvoza: kengaytma + MIME tekshiruvi</text>
+  <text x="380" y="178" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">wp_check_filetype_and_ext($file, $filename, $mimes)</text>
+  <text x="380" y="196" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">allowlist: jpg/png/webp - haqiqiy mazmun = kengaytma?</text>
+
+  <!-- ikkita yo'l -->
+  <line x1="300" y1="206" x2="220" y2="240" stroke="#16a34a" stroke-width="2.5" marker-end="url(#a29fg)"/>
+  <line x1="460" y1="206" x2="560" y2="240" stroke="#dc2626" stroke-width="2.5" marker-end="url(#a29fr)"/>
+  <text x="225" y="232" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#15803d">mos</text>
+  <text x="500" y="232" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#b91c1c">mos emas</text>
+
+  <!-- RAD: chap pastga emas, o'ng -->
+  <rect x="500" y="244" width="220" height="70" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="610" y="270" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b91c1c">RAD ETILADI</text>
+  <text x="610" y="291" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">.php / .phtml / .svg</text>
+  <text x="610" y="308" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">soxta MIME - WP_Error</text>
+
+  <!-- 3: wp_handle_upload -->
+  <rect x="40" y="244" width="380" height="70" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="230" y="270" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#15803d">2-darvoza: wp_handle_upload()</text>
+  <text x="230" y="291" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">test_form, mimes; noyob nom; xavfsiz joylash</text>
+  <text x="230" y="308" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">natijada 'error' kaliti yo'qmi - tekshiramiz</text>
+
+  <line x1="230" y1="314" x2="230" y2="336" stroke="#16a34a" stroke-width="2.5" marker-end="url(#a29fg)"/>
+
+  <!-- 4: xavfsiz papka -->
+  <rect x="40" y="340" width="380" height="74" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="230" y="366" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#6d28d9">uploads/ - xavfsiz papka</text>
+  <text x="230" y="387" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">bu yerda PHP BAJARILMAYDI</text>
+  <text x="230" y="404" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">server PHP'ni o'chirsin (deny .php)</text>
+
+  <text x="610" y="360" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-style="italic" fill="#475569">Hech qachon o'z qo'lingiz</text>
+  <text x="610" y="380" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-style="italic" fill="#475569">bilan move_uploaded_file</text>
+  <text x="610" y="400" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-style="italic" fill="#475569">qilmang - WP'ga ishoning</text>
+
+  <text x="380" y="444" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-style="italic" fill="#475569">Kengaytma + haqiqiy MIME + xavfsiz joylash + bajarilmaslik = to'liq himoya</text>
+
+  <defs>
+    <marker id="a29f" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/></marker>
+    <marker id="a29fg" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/></marker>
+    <marker id="a29fr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L8,3 L0,6 Z" fill="#dc2626"/></marker>
+  </defs>
+</svg>

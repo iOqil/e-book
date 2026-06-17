@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520">
+  <title>API versiyalashning uchta usuli: URI, sarlavha va query — kuchli va zaif tomonlari</title>
+  <rect x="0" y="0" width="900" height="520" fill="#f8fafc"/>
+  <text x="450" y="34" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">Versiyalashning 3 usuli</text>
+  <text x="450" y="58" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Bir xil maqsad — "qaysi versiya?" — uch xil joyda aytiladi</text>
+
+  <!-- URI karta -->
+  <rect x="30" y="86" width="270" height="396" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="165" y="116" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb">1. URI yo'lida</text>
+  <rect x="50" y="132" width="230" height="40" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1"/>
+  <text x="165" y="157" text-anchor="middle" font-family="monospace" font-size="14" fill="#1e3a8a">GET /v2/orders</text>
+
+  <text x="50" y="200" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">Kuchli</text>
+  <text x="50" y="222" font-family="Segoe UI" font-size="13" fill="#334155">+ Ko'zga ko'rinadi, oddiy</text>
+  <text x="50" y="242" font-family="Segoe UI" font-size="13" fill="#334155">+ Brauzer/curl bilan sinash oson</text>
+  <text x="50" y="262" font-family="Segoe UI" font-size="13" fill="#334155">+ Keshlash va yo'naltirish oson</text>
+
+  <text x="50" y="298" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">Zaif</text>
+  <text x="50" y="320" font-family="Segoe UI" font-size="13" fill="#334155">- "Toza REST emas" deyiladi</text>
+  <text x="50" y="340" font-family="Segoe UI" font-size="13" fill="#334155">- Bir resurs ko'p URL'ga ega</text>
+  <text x="50" y="360" font-family="Segoe UI" font-size="13" fill="#334155">- Yangilashda URL almashadi</text>
+
+  <rect x="50" y="392" width="230" height="74" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1"/>
+  <text x="165" y="416" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#15803d">Amalda eng ommabop</text>
+  <text x="165" y="438" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Stripe, GitHub (qisman),</text>
+  <text x="165" y="456" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">ko'p public API'lar</text>
+
+  <!-- Header karta -->
+  <rect x="315" y="86" width="270" height="396" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="450" y="116" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#7c3aed">2. Sarlavhada</text>
+  <rect x="335" y="132" width="230" height="40" rx="6" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1"/>
+  <text x="450" y="150" text-anchor="middle" font-family="monospace" font-size="13" fill="#5b21b6">API-Version: 2</text>
+  <text x="450" y="166" text-anchor="middle" font-family="monospace" font-size="13" fill="#5b21b6">yoki Accept: ...v2+json</text>
+
+  <text x="335" y="200" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">Kuchli</text>
+  <text x="335" y="222" font-family="Segoe UI" font-size="13" fill="#334155">+ URI "toza" qoladi</text>
+  <text x="335" y="242" font-family="Segoe UI" font-size="13" fill="#334155">+ Content negotiation g'oyasi</text>
+  <text x="335" y="262" font-family="Segoe UI" font-size="13" fill="#334155">+ Resurs bitta manzilda</text>
+
+  <text x="335" y="298" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">Zaif</text>
+  <text x="335" y="320" font-family="Segoe UI" font-size="13" fill="#334155">- Ko'rinmas, oson unutiladi</text>
+  <text x="335" y="340" font-family="Segoe UI" font-size="13" fill="#334155">- Sinash/debug qiyinroq</text>
+  <text x="335" y="360" font-family="Segoe UI" font-size="13" fill="#334155">- Keshda Vary kerak</text>
+
+  <rect x="335" y="392" width="230" height="74" rx="8" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1"/>
+  <text x="450" y="416" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#6d28d9">Media type = eng "REST"</text>
+  <text x="450" y="438" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">GitHub Accept sarlavhasi,</text>
+  <text x="450" y="456" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">ichki/ko'p-mijozli API'lar</text>
+
+  <!-- Query karta -->
+  <rect x="600" y="86" width="270" height="396" rx="12" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="735" y="116" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#b45309">3. Query parametrda</text>
+  <rect x="620" y="132" width="230" height="40" rx="6" fill="#fffbeb" stroke="#f59e0b" stroke-width="1"/>
+  <text x="735" y="157" text-anchor="middle" font-family="monospace" font-size="14" fill="#92400e">GET /orders?version=2</text>
+
+  <text x="620" y="200" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">Kuchli</text>
+  <text x="620" y="222" font-family="Segoe UI" font-size="13" fill="#334155">+ Yozish juda oson</text>
+  <text x="620" y="242" font-family="Segoe UI" font-size="13" fill="#334155">+ Brauzer bilan sinaladi</text>
+  <text x="620" y="262" font-family="Segoe UI" font-size="13" fill="#334155">+ Default versiya beriladi</text>
+
+  <text x="620" y="298" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">Zaif</text>
+  <text x="620" y="320" font-family="Segoe UI" font-size="13" fill="#334155">- Query = filtr, versiya emas</text>
+  <text x="620" y="340" font-family="Segoe UI" font-size="13" fill="#334155">- Keshlash izchilligi qiyin</text>
+  <text x="620" y="360" font-family="Segoe UI" font-size="13" fill="#334155">- Oson e'tibordan chetda</text>
+
+  <rect x="620" y="392" width="230" height="74" rx="8" fill="#fffbeb" stroke="#f59e0b" stroke-width="1"/>
+  <text x="735" y="416" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#b45309">Eng kam tavsiya etiladi</text>
+  <text x="735" y="438" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Tez prototip uchun mayli,</text>
+  <text x="735" y="456" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">jiddiy API'da ehtiyot bo'l</text>
+</svg>

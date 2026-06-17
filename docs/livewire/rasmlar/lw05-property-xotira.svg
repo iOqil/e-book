@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Property komponentning xotirasidagi nomli qutilar kabi: har qutining nomi (count, ism, narx, faol) va ichida saqlangan qiymati bor</title>
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Property = komponent xotirasidagi nomli qutilar</text>
+  <text x="380" y="62" text-anchor="middle" font-size="14" fill="#475569">Har qutining ustida nomi yozilgan, ichida esa hozirgi qiymat turadi</text>
+
+  <!-- Xotira ramkasi -->
+  <rect x="40" y="86" width="680" height="240" rx="14" fill="#eef2ff" stroke="#c7d2fe" stroke-width="2"/>
+  <text x="60" y="112" font-size="15" font-weight="700" fill="#4f46e5">ProfilKomponenti — xotira (holat)</text>
+
+  <!-- Quti 1: count -->
+  <rect x="70" y="132" width="290" height="78" rx="10" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <rect x="70" y="132" width="290" height="28" rx="10" fill="#4f46e5"/>
+  <text x="84" y="152" font-size="14" font-weight="700" fill="#ffffff">count</text>
+  <text x="345" y="152" text-anchor="end" font-size="13" fill="#c7d2fe">int</text>
+  <text x="215" y="190" text-anchor="middle" font-size="26" font-weight="700" fill="#1e293b">0</text>
+
+  <!-- Quti 2: ism -->
+  <rect x="400" y="132" width="290" height="78" rx="10" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <rect x="400" y="132" width="290" height="28" rx="10" fill="#4f46e5"/>
+  <text x="414" y="152" font-size="14" font-weight="700" fill="#ffffff">ism</text>
+  <text x="675" y="152" text-anchor="end" font-size="13" fill="#c7d2fe">string</text>
+  <text x="545" y="190" text-anchor="middle" font-size="24" font-weight="700" fill="#1e293b">"Oqil"</text>
+
+  <!-- Quti 3: narx -->
+  <rect x="70" y="226" width="290" height="78" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <rect x="70" y="226" width="290" height="28" rx="10" fill="#16a34a"/>
+  <text x="84" y="246" font-size="14" font-weight="700" fill="#ffffff">narx</text>
+  <text x="345" y="246" text-anchor="end" font-size="13" fill="#bbf7d0">float</text>
+  <text x="215" y="284" text-anchor="middle" font-size="24" font-weight="700" fill="#1e293b">19.99</text>
+
+  <!-- Quti 4: faol -->
+  <rect x="400" y="226" width="290" height="78" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="400" y="226" width="290" height="28" rx="10" fill="#f59e0b"/>
+  <text x="414" y="246" font-size="14" font-weight="700" fill="#ffffff">faol</text>
+  <text x="675" y="246" text-anchor="end" font-size="13" fill="#fef3c7">bool</text>
+  <text x="545" y="284" text-anchor="middle" font-size="24" font-weight="700" fill="#1e293b">true</text>
+
+  <!-- Izoh -->
+  <text x="380" y="362" text-anchor="middle" font-size="14" fill="#475569">Action ichida qutidagi qiymatni o'zgartirasiz: <tspan font-weight="700" fill="#4f46e5">$this-&gt;count = 1;</tspan></text>
+  <text x="380" y="390" text-anchor="middle" font-size="13" fill="#94a3b8">Bu qutilar to'plami — komponentning ayni damdagi holati (ko'rinishi).</text>
+</svg>

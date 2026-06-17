@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560">
+  <title>401 va 403 va 404 o'rtasidagi farq: qaror diagrammasi</title>
+  <rect x="0" y="0" width="880" height="560" fill="#f8fafc"/>
+  <text x="440" y="34" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">401 vs 403 vs 404 — kim aybdor, nimani yashiramiz?</text>
+  <text x="440" y="58" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">So'rov keldi: resursga kirishga urinish — qaysi javob to'g'ri?</text>
+
+  <defs>
+    <marker id="ar2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <!-- Q1 -->
+  <rect x="300" y="86" width="280" height="64" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="440" y="114" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#7c3aed">1. Kim ekaning ma'lummi?</text>
+  <text x="440" y="136" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">(token/login bormi va to'g'rimi?)</text>
+
+  <!-- arrow down-left to 401 -->
+  <line x1="380" y1="150" x2="200" y2="196" stroke="#64748b" stroke-width="2" marker-end="url(#ar2)"/>
+  <text x="250" y="172" font-family="Segoe UI" font-size="13" fill="#dc2626" font-weight="bold">YO'Q</text>
+
+  <!-- 401 box -->
+  <rect x="60" y="200" width="280" height="120" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="200" y="228" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#b45309">401 Unauthorized</text>
+  <text x="200" y="252" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Autentifikatsiya yo'q yoki noto'g'ri.</text>
+  <text x="200" y="274" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Nom chalg'ituvchi: aslida</text>
+  <text x="200" y="294" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">"unauthenticated" degani.</text>
+  <text x="200" y="314" text-anchor="middle" font-family="monospace" font-size="13" fill="#64748b">WWW-Authenticate sarlavhasi</text>
+
+  <!-- arrow down to Q2 -->
+  <line x1="500" y1="150" x2="560" y2="196" stroke="#64748b" stroke-width="2" marker-end="url(#ar2)"/>
+  <text x="540" y="172" font-family="Segoe UI" font-size="13" fill="#16a34a" font-weight="bold">HA</text>
+
+  <!-- Q2 -->
+  <rect x="450" y="200" width="370" height="64" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="635" y="228" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#7c3aed">2. Bu resursga ruxsating bormi?</text>
+  <text x="635" y="250" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">(rol/scope yetarlimi?)</text>
+
+  <!-- arrow to 200 -->
+  <line x1="560" y1="264" x2="500" y2="316" stroke="#64748b" stroke-width="2" marker-end="url(#ar2)"/>
+  <text x="500" y="292" font-family="Segoe UI" font-size="13" fill="#16a34a" font-weight="bold">HA</text>
+
+  <!-- 200 box -->
+  <rect x="380" y="320" width="220" height="78" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="490" y="350" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a">2xx OK</text>
+  <text x="490" y="376" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Resursni qaytar</text>
+
+  <!-- arrow to 403/404 -->
+  <line x1="710" y1="264" x2="710" y2="316" stroke="#64748b" stroke-width="2" marker-end="url(#ar2)"/>
+  <text x="722" y="292" font-family="Segoe UI" font-size="13" fill="#dc2626" font-weight="bold">YO'Q</text>
+
+  <!-- 403/404 box -->
+  <rect x="620" y="320" width="240" height="120" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="740" y="348" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#dc2626">403 Forbidden</text>
+  <text x="740" y="372" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Kim ekaning ma'lum,</text>
+  <text x="740" y="392" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">lekin ruxsat yo'q.</text>
+  <text x="740" y="418" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Mavjudlikni yashirsang -&gt; 404</text>
+
+  <!-- Note box -->
+  <rect x="60" y="448" width="800" height="92" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="460" y="476" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">Xavfsizlik nuansi: 403 vs 404</text>
+  <text x="460" y="502" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">403 — "resurs bor, lekin senga yo'q" deb tan oladi (mavjudligini oshkor qiladi).</text>
+  <text x="460" y="524" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Maxfiy resurslarda ataylab 404 berib, mavjudlikni butunlay yashirish mumkin.</text>
+</svg>

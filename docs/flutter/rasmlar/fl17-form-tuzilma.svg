@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 520" width="780" height="520" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Form tuzilmasi: Form(key: formKey) ildizda, ichida Column, undan ikki TextFormField (har biri validator bilan) va FilledButton (onPressed: validate). GlobalKey formni boshqaradi.</title>
+  <rect x="0" y="0" width="780" height="520" fill="#f8fafc"/>
+  <text x="390" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Form daraxti — bir nechta kiritmani birga boshqarish</text>
+  <text x="390" y="58" text-anchor="middle" font-size="14" fill="#475569">GlobalKey Form'ga "dasta" bo'ladi: validate() va save() ni butun formaga yuboradi</text>
+
+  <!-- GlobalKey controller box (left) -->
+  <rect x="40" y="96" width="180" height="76" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="130" y="126" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">GlobalKey</text>
+  <text x="130" y="148" text-anchor="middle" font-size="13" fill="#475569">&lt;FormState&gt;</text>
+  <text x="130" y="166" text-anchor="middle" font-size="13" fill="#64748b">formni boshqaradi</text>
+
+  <!-- arrow from key to Form -->
+  <line x1="220" y1="134" x2="298" y2="134" stroke="#f59e0b" stroke-width="2.5"/>
+  <polygon points="298,134 288,129 288,139" fill="#f59e0b"/>
+  <text x="259" y="124" text-anchor="middle" font-size="13" fill="#f59e0b">key:</text>
+
+  <!-- Form (root) -->
+  <rect x="300" y="110" width="200" height="48" rx="12" fill="#027dfd"/>
+  <text x="400" y="139" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">Form(key: formKey)</text>
+
+  <!-- connector Form -> Column -->
+  <line x1="400" y1="158" x2="400" y2="196" stroke="#94a3b8" stroke-width="2.5"/>
+
+  <!-- Column -->
+  <rect x="320" y="196" width="160" height="44" rx="12" fill="#6366f1"/>
+  <text x="400" y="224" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">Column</text>
+
+  <!-- connectors Column -> 3 children -->
+  <line x1="400" y1="240" x2="160" y2="290" stroke="#94a3b8" stroke-width="2.5"/>
+  <line x1="400" y1="240" x2="400" y2="290" stroke="#94a3b8" stroke-width="2.5"/>
+  <line x1="400" y1="240" x2="640" y2="290" stroke="#94a3b8" stroke-width="2.5"/>
+
+  <!-- Child 1: TextFormField -->
+  <rect x="40" y="290" width="240" height="86" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="160" y="318" text-anchor="middle" font-size="15" font-weight="700" fill="#16a34a">TextFormField</text>
+  <text x="160" y="340" text-anchor="middle" font-size="13" fill="#1e293b">'Ism' maydoni</text>
+  <text x="160" y="360" text-anchor="middle" font-size="13" fill="#64748b">validator: (v) => ...</text>
+
+  <!-- Child 2: TextFormField -->
+  <rect x="290" y="290" width="220" height="86" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="400" y="318" text-anchor="middle" font-size="15" font-weight="700" fill="#16a34a">TextFormField</text>
+  <text x="400" y="340" text-anchor="middle" font-size="13" fill="#1e293b">'Email' maydoni</text>
+  <text x="400" y="360" text-anchor="middle" font-size="13" fill="#64748b">validator: (v) => ...</text>
+
+  <!-- Child 3: FilledButton -->
+  <rect x="520" y="290" width="220" height="86" rx="12" fill="#dbeafe" stroke="#027dfd" stroke-width="2.5"/>
+  <text x="630" y="318" text-anchor="middle" font-size="15" font-weight="700" fill="#0553b1">FilledButton</text>
+  <text x="630" y="340" text-anchor="middle" font-size="13" fill="#1e293b">'Saqlash'</text>
+  <text x="630" y="360" text-anchor="middle" font-size="13" fill="#64748b">onPressed: validate()</text>
+
+  <!-- dashed control arrows from button back to fields via key -->
+  <path d="M630 376 C630 420, 160 420, 160 380" stroke="#027dfd" stroke-width="2" fill="none" stroke-dasharray="6 5"/>
+  <polygon points="160,380 155,391 165,391" fill="#027dfd"/>
+  <text x="400" y="436" text-anchor="middle" font-size="13" fill="#027dfd">tugma bosilganda formKey.currentState!.validate() HAMMA validatorni ishga soladi</text>
+
+  <!-- bottom note -->
+  <rect x="40" y="456" width="700" height="48" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="60" y="486" font-size="14" fill="#475569">Form — bu "konteyner": ichidagi barcha TextFormField'larni bir vaqtda tekshirish va saqlash imkonini beradi.</text>
+</svg>

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420">
+  <title>Xavfli yo'l: to'g'ridan $_GET SQL so'rovga ulanadi va SQL injection sodir bo'ladi; xavfsiz yo'l: $wpdb->prepare %s va %d placeholder bilan qiymatlarni xavfsiz bog'laydi</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="34" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">$wpdb-&gt;prepare() — SQL injection oldini olish</text>
+
+  <!-- LEFT: dangerous -->
+  <rect x="20" y="56" width="340" height="324" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <rect x="20" y="56" width="340" height="40" rx="12" fill="#dc2626"/>
+  <text x="190" y="82" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">XAVFLI — bunday qilmang</text>
+
+  <rect x="44" y="116" width="292" height="46" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="190" y="144" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">$_GET['janr'] = ' OR '1'='1</text>
+
+  <text x="190" y="186" font-family="Segoe UI, system-ui, sans-serif" font-size="22" fill="#dc2626" text-anchor="middle">&#8595;</text>
+  <text x="190" y="206" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">to'g'ridan so'rovga ulanadi</text>
+
+  <rect x="44" y="222" width="292" height="62" rx="8" fill="#1e293b"/>
+  <text x="60" y="246" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#fca5a5">"... WHERE status =</text>
+  <text x="60" y="266" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#fca5a5">  '{$janr}'"</text>
+
+  <rect x="44" y="304" width="292" height="56" rx="8" fill="#dc2626"/>
+  <text x="190" y="330" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">SQL INJECTION</text>
+  <text x="190" y="350" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#fee2e2" text-anchor="middle">jadval o'qiladi / o'chiriladi</text>
+
+  <!-- RIGHT: safe -->
+  <rect x="400" y="56" width="340" height="324" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <rect x="400" y="56" width="340" height="40" rx="12" fill="#16a34a"/>
+  <text x="570" y="82" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">XAVFSIZ — prepare()</text>
+
+  <rect x="424" y="116" width="292" height="46" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="570" y="138" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">sanitize_key( $_GET['janr'] )</text>
+  <text x="570" y="156" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">+ wp_unslash()</text>
+
+  <text x="570" y="186" font-family="Segoe UI, system-ui, sans-serif" font-size="22" fill="#16a34a" text-anchor="middle">&#8595;</text>
+  <text x="570" y="206" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">placeholder bilan bog'lanadi</text>
+
+  <rect x="424" y="222" width="292" height="62" rx="8" fill="#1e293b"/>
+  <text x="440" y="246" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#86efac">$wpdb-&gt;prepare(</text>
+  <text x="440" y="266" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#86efac">  "... = %s LIMIT %d", $j, $n )</text>
+
+  <rect x="424" y="304" width="292" height="56" rx="8" fill="#16a34a"/>
+  <text x="570" y="330" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">%s tirnoqlanadi + escape</text>
+  <text x="570" y="350" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dcfce7" text-anchor="middle">%s matn · %d son · %i nom</text>
+</svg>

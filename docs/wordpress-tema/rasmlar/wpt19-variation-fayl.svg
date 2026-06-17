@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480">
+  <title>Variation .json fayl tuzilishi: version, title (va section uchun slug+blockTypes), settings va styles bloklari</title>
+  <rect x="0" y="0" width="760" height="480" fill="#f8fafc"/>
+  <text x="380" y="30" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Variation .json fayl tuzilishi</text>
+
+  <!-- Outer JSON box -->
+  <rect x="40" y="55" width="680" height="370" rx="10" fill="#ffffff" stroke="#475569" stroke-width="2"/>
+  <text x="60" y="84" font-family="Consolas, Segoe UI, monospace" font-size="15" fill="#475569">{</text>
+
+  <!-- version -->
+  <rect x="80" y="98" width="620" height="34" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="96" y="120" font-family="Consolas, Segoe UI, monospace" font-size="14" fill="#1e293b">"version": 3</text>
+  <text x="430" y="120" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">— majburiy, theme.json bilan bir xil schema</text>
+
+  <!-- title -->
+  <rect x="80" y="140" width="620" height="34" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="96" y="162" font-family="Consolas, Segoe UI, monospace" font-size="14" fill="#166534">"title": "Tungi"</text>
+  <text x="430" y="162" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">— Browse styles'da ko'rinadigan nom</text>
+
+  <!-- slug + blockTypes (section only) -->
+  <rect x="80" y="182" width="620" height="58" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="96" y="204" font-family="Consolas, Segoe UI, monospace" font-size="14" fill="#991b1b">"slug": "section-quyuq",</text>
+  <text x="96" y="226" font-family="Consolas, Segoe UI, monospace" font-size="14" fill="#991b1b">"blockTypes": ["core/group", "core/columns"]</text>
+  <text x="440" y="215" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">FAQAT section variation uchun</text>
+
+  <!-- settings -->
+  <rect x="80" y="248" width="620" height="70" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="96" y="272" font-family="Consolas, Segoe UI, monospace" font-size="14" fill="#1e40af">"settings": {</text>
+  <text x="120" y="294" font-family="Consolas, Segoe UI, monospace" font-size="13" fill="#1e40af">"color": { "palette": [ ... ] },</text>
+  <text x="120" y="312" font-family="Consolas, Segoe UI, monospace" font-size="13" fill="#1e40af">"typography": { "fontFamilies": [ ... ] }</text>
+  <text x="470" y="262" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">qaysi imkoniyatlar</text>
+
+  <!-- styles -->
+  <rect x="80" y="326" width="620" height="80" rx="6" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text x="96" y="350" font-family="Consolas, Segoe UI, monospace" font-size="14" fill="#92400e">"styles": {</text>
+  <text x="120" y="372" font-family="Consolas, Segoe UI, monospace" font-size="13" fill="#92400e">"color": { "background": "var:preset|color|base" },</text>
+  <text x="120" y="392" font-family="Consolas, Segoe UI, monospace" font-size="13" fill="#92400e">"elements": { "button": { ... } }, "blocks": { ... }</text>
+  <text x="490" y="340" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#d97706">qanday ko'rinadi</text>
+
+  <text x="60" y="420" font-family="Consolas, Segoe UI, monospace" font-size="15" fill="#475569">}</text>
+
+  <!-- legend -->
+  <text x="40" y="452" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" font-weight="bold">Theme-level variation:</text>
+  <text x="220" y="452" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">version + title + settings/styles (blockTypes YO'Q)</text>
+  <text x="40" y="472" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626" font-weight="bold">Section variation:</text>
+  <text x="220" y="472" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">yuqoridagilar + slug + blockTypes (faqat shu bloklarga)</text>
+</svg>

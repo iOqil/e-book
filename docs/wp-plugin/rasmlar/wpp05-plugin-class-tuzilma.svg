@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 450" width="760" height="450">
+  <title>OOP plugin tuzilmasi: bootstrap fayl Plugin sinfini ishga tushiradi, Plugin::init() komponent sinflarni royxatga oladi</title>
+  <defs>
+    <marker id="pc-arr" markerWidth="13" markerHeight="13" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/>
+    </marker>
+    <marker id="pc-arr-g" markerWidth="13" markerHeight="13" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="760" height="450" fill="#f8fafc"/>
+
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">OOP plugin: bootstrap dan komponentlargacha</text>
+  <text x="380" y="54" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Asosiy fayl ulaydi; Plugin sinfi dirijyorlik qiladi</text>
+
+  <!-- Bootstrap fayl -->
+  <rect x="40" y="80" width="220" height="96" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="150" y="104" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">kitoblar-katalogi.php</text>
+  <text x="150" y="124" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">faqat BOOTSTRAP:</text>
+  <text x="150" y="142" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">header, konstanta,</text>
+  <text x="150" y="160" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">autoload, init() chaqir</text>
+
+  <!-- strelka -> Plugin -->
+  <line x1="260" y1="128" x2="318" y2="128" stroke="#2563eb" stroke-width="2.5" marker-end="url(#pc-arr)"/>
+  <text x="289" y="118" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">init()</text>
+
+  <!-- Plugin sinfi -->
+  <rect x="320" y="80" width="240" height="96" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="440" y="104" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">class Plugin</text>
+  <text x="440" y="126" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">instance() — singleton</text>
+  <text x="440" y="146" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">init() — komponentlarni</text>
+  <text x="440" y="164" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">yaratib register() qiladi</text>
+
+  <!-- Konteyner eslatma -->
+  <rect x="600" y="80" width="130" height="96" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="665" y="104" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#7c3aed">DI konteyner</text>
+  <text x="665" y="126" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(katta plugin'da</text>
+  <text x="665" y="144" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">singleton o'rniga):</text>
+  <text x="665" y="162" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">bog'liqlik beradi</text>
+  <line x1="560" y1="138" x2="600" y2="138" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="4 3"/>
+
+  <!-- Komponentlarga strelkalar -->
+  <line x1="440" y1="176" x2="170" y2="232" stroke="#16a34a" stroke-width="2.5" marker-end="url(#pc-arr-g)"/>
+  <line x1="440" y1="176" x2="440" y2="232" stroke="#16a34a" stroke-width="2.5" marker-end="url(#pc-arr-g)"/>
+  <line x1="440" y1="176" x2="600" y2="232" stroke="#16a34a" stroke-width="2.5" marker-end="url(#pc-arr-g)"/>
+
+  <!-- Komponent sinflar -->
+  <rect x="70" y="238" width="200" height="92" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="170" y="262" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">class PostTypes</text>
+  <text x="170" y="284" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">register():</text>
+  <text x="170" y="304" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">add_action('init', ...)</text>
+  <text x="170" y="322" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">CPT kitob</text>
+
+  <rect x="340" y="238" width="200" height="92" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="440" y="262" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">class Admin</text>
+  <text x="440" y="284" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">register():</text>
+  <text x="440" y="304" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">admin_menu hooks,</text>
+  <text x="440" y="322" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">sozlamalar sahifasi</text>
+
+  <rect x="600" y="238" width="130" height="92" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="665" y="262" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">class Rest</text>
+  <text x="665" y="284" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">register():</text>
+  <text x="665" y="304" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">rest_api_init,</text>
+  <text x="665" y="322" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">endpoint</text>
+
+  <!-- Pastki izoh -->
+  <rect x="40" y="356" width="690" height="74" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="380" y="382" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Har komponent BITTA vazifa uchun javobgar (Single Responsibility)</text>
+  <text x="380" y="406" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Yangi funksiya = yangi sinf. Plugin sinfi faqat ularni yig'ib, register() chaqiradi.</text>
+  <text x="380" y="424" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-style="italic" fill="#2563eb">10 000 qatorli bitta fayl emas — kichik, sinaladigan bo'laklar.</text>
+</svg>

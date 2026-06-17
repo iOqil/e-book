@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 470">
+  <title>Binar qidiruv: saralangan massivda 9 ni qidirish, har qadamda o'rtadagi element tekshiriladi va qidiruv oralig'i yarmiga qisqaradi, shuning uchun murakkablik O(log n)</title>
+  <rect x="0" y="0" width="860" height="470" fill="#f8fafc"/>
+  <text x="430" y="34" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Binar qidiruv: oraliq har qadamda yarimga kamayadi</text>
+  <text x="430" y="60" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Saralangan massivda 9 ni qidiramiz · T(n) = T(n/2) + O(1) = O(log n)</text>
+
+  <!-- index labels -->
+  <g font-family="monospace" font-size="13" fill="#94a3b8" text-anchor="middle">
+    <text x="115" y="92">0</text><text x="195" y="92">1</text><text x="275" y="92">2</text>
+    <text x="355" y="92">3</text><text x="435" y="92">4</text><text x="515" y="92">5</text><text x="595" y="92">6</text>
+  </g>
+
+  <!-- QADAM 1: full range, mid=3 (value 7), 7 < 9 -> go right -->
+  <text x="40" y="124" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#334155">1)</text>
+  <g font-family="monospace" font-size="15" text-anchor="middle">
+    <rect x="90"  y="104" width="50" height="38" rx="5" fill="#e0e7ff" stroke="#94a3b8" stroke-width="1.5"/><text x="115" y="129" fill="#334155">1</text>
+    <rect x="170" y="104" width="50" height="38" rx="5" fill="#e0e7ff" stroke="#94a3b8" stroke-width="1.5"/><text x="195" y="129" fill="#334155">3</text>
+    <rect x="250" y="104" width="50" height="38" rx="5" fill="#e0e7ff" stroke="#94a3b8" stroke-width="1.5"/><text x="275" y="129" fill="#334155">5</text>
+    <rect x="330" y="104" width="50" height="38" rx="5" fill="#fde68a" stroke="#f59e0b" stroke-width="2.5"/><text x="355" y="129" fill="#92400e">7</text>
+    <rect x="410" y="104" width="50" height="38" rx="5" fill="#e0e7ff" stroke="#94a3b8" stroke-width="1.5"/><text x="435" y="129" fill="#334155">9</text>
+    <rect x="490" y="104" width="50" height="38" rx="5" fill="#e0e7ff" stroke="#94a3b8" stroke-width="1.5"/><text x="515" y="129" fill="#334155">11</text>
+    <rect x="570" y="104" width="50" height="38" rx="5" fill="#e0e7ff" stroke="#94a3b8" stroke-width="1.5"/><text x="595" y="129" fill="#334155">13</text>
+  </g>
+  <text x="660" y="120" font-family="Segoe UI" font-size="13" fill="#64748b">o'rta=7</text>
+  <text x="660" y="138" font-family="Segoe UI" font-size="13" fill="#dc2626">7 &lt; 9 → o'ngga</text>
+
+  <!-- QADAM 2: range [4..6], mid=5 (value 11), 11 > 9 -> go left -->
+  <text x="40" y="194" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#334155">2)</text>
+  <g font-family="monospace" font-size="15" text-anchor="middle">
+    <rect x="90"  y="174" width="50" height="38" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/><text x="115" y="199" fill="#cbd5e1">1</text>
+    <rect x="170" y="174" width="50" height="38" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/><text x="195" y="199" fill="#cbd5e1">3</text>
+    <rect x="250" y="174" width="50" height="38" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/><text x="275" y="199" fill="#cbd5e1">5</text>
+    <rect x="330" y="174" width="50" height="38" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/><text x="355" y="199" fill="#cbd5e1">7</text>
+    <rect x="410" y="174" width="50" height="38" rx="5" fill="#e0e7ff" stroke="#94a3b8" stroke-width="1.5"/><text x="435" y="199" fill="#334155">9</text>
+    <rect x="490" y="174" width="50" height="38" rx="5" fill="#fde68a" stroke="#f59e0b" stroke-width="2.5"/><text x="515" y="199" fill="#92400e">11</text>
+    <rect x="570" y="174" width="50" height="38" rx="5" fill="#e0e7ff" stroke="#94a3b8" stroke-width="1.5"/><text x="595" y="199" fill="#334155">13</text>
+  </g>
+  <text x="660" y="190" font-family="Segoe UI" font-size="13" fill="#64748b">o'rta=11</text>
+  <text x="660" y="208" font-family="Segoe UI" font-size="13" fill="#dc2626">11 &gt; 9 → chapga</text>
+
+  <!-- QADAM 3: range [4..4], mid=4 (value 9), found! -->
+  <text x="40" y="264" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#334155">3)</text>
+  <g font-family="monospace" font-size="15" text-anchor="middle">
+    <rect x="90"  y="244" width="50" height="38" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/><text x="115" y="269" fill="#cbd5e1">1</text>
+    <rect x="170" y="244" width="50" height="38" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/><text x="195" y="269" fill="#cbd5e1">3</text>
+    <rect x="250" y="244" width="50" height="38" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/><text x="275" y="269" fill="#cbd5e1">5</text>
+    <rect x="330" y="244" width="50" height="38" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/><text x="355" y="269" fill="#cbd5e1">7</text>
+    <rect x="410" y="244" width="50" height="38" rx="5" fill="#bbf7d0" stroke="#16a34a" stroke-width="2.5"/><text x="435" y="269" fill="#166534">9</text>
+    <rect x="490" y="244" width="50" height="38" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/><text x="515" y="269" fill="#cbd5e1">11</text>
+    <rect x="570" y="244" width="50" height="38" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/><text x="595" y="269" fill="#cbd5e1">13</text>
+  </g>
+  <text x="660" y="260" font-family="Segoe UI" font-size="13" fill="#64748b">o'rta=9</text>
+  <text x="660" y="278" font-family="Segoe UI" font-size="13" fill="#16a34a">9 = 9 → topildi!</text>
+
+  <!-- halving illustration bar -->
+  <text x="430" y="320" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">Qolgan nomzodlar soni har qadamda yarimlanadi:</text>
+  <g font-family="monospace" font-size="14" text-anchor="middle">
+    <rect x="130" y="336" width="180" height="34" rx="6" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+    <text x="220" y="358" fill="#2563eb">7 ta</text>
+    <text x="335" y="358" fill="#94a3b8">→</text>
+    <rect x="360" y="336" width="100" height="34" rx="6" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+    <text x="410" y="358" fill="#7c3aed">3 ta</text>
+    <text x="485" y="358" fill="#94a3b8">→</text>
+    <rect x="510" y="336" width="60" height="34" rx="6" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+    <text x="540" y="358" fill="#d97706">1 ta</text>
+    <text x="595" y="358" fill="#94a3b8">→</text>
+    <rect x="620" y="336" width="110" height="34" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+    <text x="675" y="358" fill="#16a34a">topildi</text>
+  </g>
+
+  <rect x="230" y="404" width="400" height="40" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="430" y="430" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#16a34a">n=7 da atigi ⌊log₂ 7⌋+1 = 3 qadam</text>
+</svg>

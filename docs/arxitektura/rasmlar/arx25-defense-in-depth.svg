@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 540">
+  <title>Defense in Depth: ko'p qatlamli himoya. Hujumchi har qatlamda yangi to'siqqa duch keladi, bitta qatlam yiqilsa ham keyingisi ushlab qoladi</title>
+  <rect x="0" y="0" width="760" height="540" fill="#f8fafc"/>
+  <text x="380" y="34" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Defense in Depth — ko'p qatlamli himoya</text>
+  <text x="380" y="56" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">Bitta qatlam yetarli emas: har biri mustaqil to'siq. Bittasi yiqilsa, keyingisi ushlaydi.</text>
+
+  <!-- Concentric layers (rounded rects), outermost to innermost -->
+  <rect x="70" y="78" width="620" height="430" rx="14" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="86" y="100" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">1. Perimetr / Tarmoq</text>
+  <text x="86" y="120" font-family="Segoe UI" font-size="13" fill="#64748b">WAF, firewall, DDoS himoya, rate-limit, TLS</text>
+
+  <rect x="110" y="132" width="540" height="356" rx="12" fill="#fff7ed" stroke="#f59e0b" stroke-width="2"/>
+  <text x="126" y="154" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#b45309">2. Autentifikatsiya va sessiya</text>
+  <text x="126" y="174" font-family="Segoe UI" font-size="13" fill="#64748b">MFA, xavfsiz token, sessiya muddati, kuchli parol</text>
+
+  <rect x="150" y="186" width="460" height="288" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="166" y="208" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb">3. Avtorizatsiya (Least Privilege)</text>
+  <text x="166" y="228" font-family="Segoe UI" font-size="13" fill="#64748b">RBAC, minimal huquq, har so'rovda ruxsat tekshiruvi</text>
+
+  <rect x="190" y="240" width="380" height="220" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="206" y="262" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">4. Ilova qatlami (Input validation)</text>
+  <text x="206" y="282" font-family="Segoe UI" font-size="13" fill="#64748b">Validatsiya, parametrlangan so'rov, output encoding</text>
+
+  <rect x="230" y="294" width="300" height="152" rx="12" fill="#ffffff" stroke="#334155" stroke-width="2"/>
+  <text x="246" y="316" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">5. Ma'lumot qatlami</text>
+  <text x="246" y="336" font-family="Segoe UI" font-size="13" fill="#64748b">Shifrlash (at rest / in transit),</text>
+  <text x="246" y="354" font-family="Segoe UI" font-size="13" fill="#64748b">maxfiy boshqaruvi, audit log</text>
+
+  <!-- Crown jewel -->
+  <rect x="290" y="372" width="180" height="58" rx="8" fill="#1e293b"/>
+  <text x="380" y="398" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Maxfiy ma'lumot</text>
+  <text x="380" y="418" font-family="Segoe UI" font-size="13" fill="#cbd5e1" text-anchor="middle">(crown jewels)</text>
+
+  <!-- Attacker on the left with arrow blocked -->
+  <circle cx="34" cy="290" r="22" fill="#dc2626"/>
+  <text x="34" y="296" font-family="Segoe UI" font-size="18" fill="#ffffff" text-anchor="middle">!</text>
+  <text x="34" y="328" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#dc2626" text-anchor="middle">Hujum</text>
+  <line x1="58" y1="290" x2="190" y2="290" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="6 4" marker-end="url(#ax)"/>
+  <text x="120" y="282" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">har qatlamda yangi to'siq</text>
+
+  <text x="380" y="526" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle" font-style="italic">Secure by Design · Least Privilege · Secure Defaults · Zero Trust ("hech kimga ishonma, har doim tekshir")</text>
+
+  <defs>
+    <marker id="ax" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#dc2626"/></marker>
+  </defs>
+</svg>

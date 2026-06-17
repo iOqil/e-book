@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 410" width="800" height="410" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Notifier bir tomonlama oqimi: vidjet ref.watch(counterProvider) bilan holatni ko'rsatadi, foydalanuvchi bosadi, ref.read(counterProvider.notifier).increment() chaqiriladi, Notifier ichida state++ bo'ladi, watch qilgan vidjetlar qayta quriladi — toza bir yo'nalishli aylana</title>
+  <defs>
+    <marker id="fl25noA" markerWidth="12" markerHeight="12" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="800" height="410" fill="#f8fafc"/>
+  <text x="400" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Notifier oqimi — bir tomonlama aylana</text>
+  <text x="400" y="58" text-anchor="middle" font-size="14" fill="#475569">vidjet holatni o'qiydi → metod chaqiradi → state o'zgaradi → vidjet qayta quriladi</text>
+
+  <!-- Widget (top-left) -->
+  <rect x="60" y="110" width="240" height="80" rx="14" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="180" y="140" text-anchor="middle" font-size="15" font-weight="700" fill="#16a34a">Vidjet (ConsumerWidget)</text>
+  <text x="180" y="162" text-anchor="middle" font-size="13" fill="#475569">ref.watch(counterProvider)</text>
+  <text x="180" y="180" text-anchor="middle" font-size="13" fill="#64748b">holatni ekranda ko'rsatadi</text>
+
+  <!-- Notifier (right) -->
+  <rect x="500" y="110" width="240" height="80" rx="14" fill="#e0e7ff" stroke="#9333ea" stroke-width="2.5"/>
+  <text x="620" y="140" text-anchor="middle" font-size="15" font-weight="700" fill="#9333ea">Counter (Notifier&lt;int&gt;)</text>
+  <text x="620" y="162" text-anchor="middle" font-size="13" fill="#475569">increment() { state++; }</text>
+  <text x="620" y="180" text-anchor="middle" font-size="13" fill="#64748b">yagona holat egasi</text>
+
+  <!-- Tap action (bottom) -->
+  <rect x="280" y="280" width="240" height="62" rx="14" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="400" y="307" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">Foydalanuvchi bosdi</text>
+  <text x="400" y="328" text-anchor="middle" font-size="13" fill="#475569">onPressed</text>
+
+  <!-- arrow: widget -> tap (read.notifier.increment) -->
+  <path d="M180 192 Q180 311 274 311" stroke="#475569" stroke-width="2.2" fill="none" marker-end="url(#fl25noA)"/>
+  <text x="150" y="250" text-anchor="middle" font-size="13" fill="#64748b">2. bosish</text>
+
+  <!-- arrow: tap -> notifier (read .notifier.increment) -->
+  <path d="M520 311 Q620 311 620 196" stroke="#9333ea" stroke-width="2.2" fill="none" marker-end="url(#fl25noA)"/>
+  <text x="640" y="250" text-anchor="middle" font-size="13" fill="#9333ea">3. ref.read(...notifier)</text>
+  <text x="640" y="268" text-anchor="middle" font-size="13" fill="#9333ea">.increment()</text>
+
+  <!-- arrow: notifier -> widget (state changed, rebuild) -->
+  <path d="M500 150 L306 150" stroke="#16a34a" stroke-width="2.6" fill="none" marker-end="url(#fl25noA)"/>
+  <text x="400" y="138" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a">4. state o'zgardi → watcherlar qayta quriladi</text>
+
+  <text x="180" y="100" text-anchor="middle" font-size="13" fill="#94a3b8">1. ref.watch — obuna</text>
+
+  <!-- Footer note -->
+  <rect x="60" y="364" width="680" height="30" rx="8" fill="#dbeafe" stroke="#027dfd" stroke-width="1.5"/>
+  <text x="400" y="384" text-anchor="middle" font-size="13" fill="#0553b1">read = bir martalik (tugma bosilganda). watch = obuna (holat o'zgarsa qayta quriladi). Oqim faqat bir yo'nalishda.</text>
+</svg>

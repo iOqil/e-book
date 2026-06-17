@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420">
+  <title>Iterable quvuri: [1,2,3,4] dan .where (juftlarni saqlash) orqali [2,4], so'ng .map (10 ga ko'paytirish) orqali [20,40]</title>
+  <rect x="0" y="0" width="800" height="420" fill="#f8fafc"/>
+  <text x="400" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="21" font-weight="bold" fill="#1e293b">Quvur (pipeline): ma'lumotni bosqichma-bosqich o'zgartirish</text>
+  <text x="400" y="56" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Har metod yangi ro'yxat qaytaradi &#8212; asl ro'yxat o'zgarmaydi</text>
+
+  <!-- INPUT -->
+  <text x="120" y="100" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#475569">Kirish</text>
+  <g font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#ffffff">
+    <rect x="60" y="118" width="46" height="46" rx="6" fill="#94a3b8"/><text x="83" y="148" text-anchor="middle">1</text>
+    <rect x="108" y="118" width="46" height="46" rx="6" fill="#94a3b8"/><text x="131" y="148" text-anchor="middle">2</text>
+    <rect x="60" y="166" width="46" height="46" rx="6" fill="#94a3b8"/><text x="83" y="196" text-anchor="middle">3</text>
+    <rect x="108" y="166" width="46" height="46" rx="6" fill="#94a3b8"/><text x="131" y="196" text-anchor="middle">4</text>
+  </g>
+  <text x="107" y="240" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">[1, 2, 3, 4]</text>
+
+  <!-- arrow 1 -->
+  <line x1="170" y1="165" x2="250" y2="165" stroke="#027dfd" stroke-width="3"/>
+  <polygon points="250,158 264,165 250,172" fill="#027dfd"/>
+  <text x="212" y="148" text-anchor="middle" font-family="Consolas, monospace" font-size="14" font-weight="bold" fill="#027dfd">.where</text>
+  <text x="212" y="190" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#64748b">juftmi?</text>
+
+  <!-- STAGE 2 (filtered) -->
+  <text x="330" y="100" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#027dfd">filtr</text>
+  <g font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#ffffff">
+    <rect x="306" y="118" width="46" height="46" rx="6" fill="#027dfd"/><text x="329" y="148" text-anchor="middle">2</text>
+    <rect x="306" y="166" width="46" height="46" rx="6" fill="#027dfd"/><text x="329" y="196" text-anchor="middle">4</text>
+  </g>
+  <text x="329" y="240" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">[2, 4]</text>
+  <text x="329" y="262" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#64748b">1, 3 tushib qoldi</text>
+
+  <!-- arrow 2 -->
+  <line x1="368" y1="165" x2="448" y2="165" stroke="#16a34a" stroke-width="3"/>
+  <polygon points="448,158 462,165 448,172" fill="#16a34a"/>
+  <text x="410" y="148" text-anchor="middle" font-family="Consolas, monospace" font-size="14" font-weight="bold" fill="#16a34a">.map</text>
+  <text x="410" y="190" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#64748b">x &#215; 10</text>
+
+  <!-- STAGE 3 (mapped) -->
+  <text x="528" y="100" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">o'zgartirish</text>
+  <g font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">
+    <rect x="500" y="118" width="56" height="46" rx="6" fill="#16a34a"/><text x="528" y="148" text-anchor="middle">20</text>
+    <rect x="500" y="166" width="56" height="46" rx="6" fill="#16a34a"/><text x="528" y="196" text-anchor="middle">40</text>
+  </g>
+  <text x="528" y="240" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">[20, 40]</text>
+
+  <!-- arrow 3 -->
+  <line x1="572" y1="165" x2="650" y2="165" stroke="#475569" stroke-width="3"/>
+  <polygon points="650,158 664,165 650,172" fill="#475569"/>
+  <text x="618" y="148" text-anchor="middle" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#475569">.toList()</text>
+
+  <!-- OUTPUT -->
+  <rect x="672" y="118" width="108" height="94" rx="8" fill="#ffffff" stroke="#475569" stroke-width="2"/>
+  <text x="726" y="100" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#475569">Natija</text>
+  <text x="726" y="152" text-anchor="middle" font-family="Consolas, monospace" font-size="15" font-weight="bold" fill="#1e293b">List&lt;int&gt;</text>
+  <text x="726" y="180" text-anchor="middle" font-family="Consolas, monospace" font-size="16" font-weight="bold" fill="#1e293b">[20, 40]</text>
+
+  <!-- code line -->
+  <rect x="60" y="300" width="680" height="46" rx="8" fill="#1e293b"/>
+  <text x="80" y="329" font-family="Consolas, monospace" font-size="15" fill="#ffffff">[1,2,3,4]<tspan fill="#027dfd">.where</tspan>((x) =&gt; x % 2 == 0)<tspan fill="#16a34a">.map</tspan>((x) =&gt; x * 10)<tspan fill="#94a3b8">.toList()</tspan>;</text>
+
+  <text x="400" y="384" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Zanjir (chaining): bir metod natijasini keyingisiga uzatasiz &#8212; chapdan o'ngga o'qing.</text>
+  <text x="400" y="406" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#64748b" font-style="italic">Aynan shu naqsh Flutter'da ma'lumotni widget'larga aylantirishda har qadamda uchraydi.</text>
+</svg>

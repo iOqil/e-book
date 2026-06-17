@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 430" width="780" height="430" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Chapda Future: bitta quti keyin bir marta keladi va tugaydi. O'ngda Stream: quvurdan 1, 2, 3 qiymatlari vaqt o'tib birin-ketin chiqadi</title>
+  <defs>
+    <marker id="fl09fsA" markerWidth="12" markerHeight="12" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="780" height="430" fill="#f8fafc"/>
+
+  <text x="390" y="32" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">Future vs Stream</text>
+  <text x="390" y="54" text-anchor="middle" font-size="14" fill="#475569">Future = bitta qiymat (bir marta) · Stream = ko'p qiymat (vaqt o'tib)</text>
+
+  <!-- ajratuvchi -->
+  <line x1="390" y1="80" x2="390" y2="400" stroke="#94a3b8" stroke-width="1" stroke-dasharray="5 4"/>
+
+  <!-- ====== FUTURE (chap) ====== -->
+  <text x="190" y="108" text-anchor="middle" font-size="16" font-weight="bold" fill="#027dfd">Future&lt;T&gt; — bitta qiymat</text>
+
+  <!-- manba -->
+  <rect x="40" y="150" width="120" height="56" rx="10" fill="#ffffff" stroke="#027dfd" stroke-width="2.5"/>
+  <text x="100" y="174" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e293b">so'rov</text>
+  <text x="100" y="194" text-anchor="middle" font-size="13" fill="#64748b">boshlandi</text>
+
+  <!-- vaqt o'qi -->
+  <line x1="100" y1="240" x2="340" y2="240" stroke="#94a3b8" stroke-width="2" marker-end="url(#fl09fsA)"/>
+  <text x="320" y="262" text-anchor="middle" font-size="13" fill="#64748b">vaqt</text>
+
+  <!-- kutish -->
+  <text x="190" y="232" text-anchor="middle" font-size="13" fill="#64748b">. . . kutish . . .</text>
+
+  <!-- bitta quti keladi -->
+  <rect x="250" y="150" width="90" height="56" rx="10" fill="#027dfd" stroke="#027dfd" stroke-width="2"/>
+  <text x="295" y="184" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">42</text>
+  <text x="295" y="226" text-anchor="middle" font-size="13" fill="#027dfd">bir marta keldi</text>
+
+  <text x="190" y="312" text-anchor="middle" font-size="14" fill="#475569">bitta qiymat keladi,</text>
+  <text x="190" y="332" text-anchor="middle" font-size="14" fill="#475569">keyin Future TUGAYDI</text>
+  <text x="190" y="362" text-anchor="middle" font-size="13" fill="#64748b">await · .then()</text>
+
+  <!-- ====== STREAM (o'ng) ====== -->
+  <text x="585" y="108" text-anchor="middle" font-size="16" font-weight="bold" fill="#16a34a">Stream&lt;T&gt; — ko'p qiymat</text>
+
+  <!-- quvur -->
+  <rect x="420" y="158" width="90" height="44" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="465" y="184" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e293b">quvur</text>
+
+  <!-- vaqt o'qi -->
+  <line x1="510" y1="180" x2="740" y2="180" stroke="#94a3b8" stroke-width="2" marker-end="url(#fl09fsA)"/>
+  <text x="725" y="202" text-anchor="middle" font-size="13" fill="#64748b">vaqt</text>
+
+  <!-- chiqayotgan qiymatlar -->
+  <circle cx="555" cy="180" r="22" fill="#16a34a" stroke="#16a34a" stroke-width="2"/>
+  <text x="555" y="186" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">1</text>
+
+  <circle cx="620" cy="180" r="22" fill="#16a34a" stroke="#16a34a" stroke-width="2"/>
+  <text x="620" y="186" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">2</text>
+
+  <circle cx="685" cy="180" r="22" fill="#16a34a" stroke="#16a34a" stroke-width="2"/>
+  <text x="685" y="186" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">3</text>
+
+  <text x="585" y="232" text-anchor="middle" font-size="13" fill="#16a34a">birin-ketin oqib keladi</text>
+
+  <text x="585" y="312" text-anchor="middle" font-size="14" fill="#475569">vaqt o'tib ko'p qiymat,</text>
+  <text x="585" y="332" text-anchor="middle" font-size="14" fill="#475569">keyin oqim yopiladi</text>
+  <text x="585" y="362" text-anchor="middle" font-size="13" fill="#64748b">await for · .listen()</text>
+
+  <text x="390" y="398" text-anchor="middle" font-size="13" fill="#64748b">Future = 1 ta posilka · Stream = quvurdan oqib kelgan ko'p posilka</text>
+</svg>

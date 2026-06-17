@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 500" width="760" height="500" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Production deploy qadamlari ketma-ketligi</title>
+  <rect x="0" y="0" width="760" height="500" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">Production deploy — qadam-baqadam</text>
+
+  <!-- Step 1 -->
+  <rect x="60" y="60" width="640" height="48" rx="10" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <circle cx="92" cy="84" r="16" fill="#4f46e5"/>
+  <text x="92" y="90" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">1</text>
+  <text x="124" y="80" font-size="15" font-weight="700" fill="#1e293b">Kodni serverga ol</text>
+  <text x="124" y="99" font-size="13" fill="#475569">git pull (yoki hosting avtomatik tortadi)</text>
+
+  <!-- Step 2 -->
+  <rect x="60" y="118" width="640" height="48" rx="10" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <circle cx="92" cy="142" r="16" fill="#4f46e5"/>
+  <text x="92" y="148" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">2</text>
+  <text x="124" y="138" font-size="15" font-weight="700" fill="#1e293b">PHP paketlari</text>
+  <text x="124" y="157" font-size="13" fill="#475569">composer install --optimize-autoloader --no-dev</text>
+
+  <!-- Step 3 -->
+  <rect x="60" y="176" width="640" height="48" rx="10" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <circle cx="92" cy="200" r="16" fill="#4f46e5"/>
+  <text x="92" y="206" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">3</text>
+  <text x="124" y="196" font-size="15" font-weight="700" fill="#1e293b">Assetlarni build qil</text>
+  <text x="124" y="215" font-size="13" fill="#475569">npm install  &#8594;  npm run build  (Vite, production)</text>
+
+  <!-- Step 4 -->
+  <rect x="60" y="234" width="640" height="48" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <circle cx="92" cy="258" r="16" fill="#f59e0b"/>
+  <text x="92" y="264" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">4</text>
+  <text x="124" y="254" font-size="15" font-weight="700" fill="#1e293b">.env ni sozla</text>
+  <text x="124" y="273" font-size="13" fill="#475569">APP_ENV=production  ·  APP_DEBUG=false  ·  DB  ·  APP_KEY</text>
+
+  <!-- Step 5 -->
+  <rect x="60" y="292" width="640" height="48" rx="10" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <circle cx="92" cy="316" r="16" fill="#4f46e5"/>
+  <text x="92" y="322" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">5</text>
+  <text x="124" y="312" font-size="15" font-weight="700" fill="#1e293b">Bazani tayyorla</text>
+  <text x="124" y="331" font-size="13" fill="#475569">php artisan migrate --force</text>
+
+  <!-- Step 6 -->
+  <rect x="60" y="350" width="640" height="48" rx="10" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>
+  <circle cx="92" cy="374" r="16" fill="#4f46e5"/>
+  <text x="92" y="380" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">6</text>
+  <text x="124" y="370" font-size="15" font-weight="700" fill="#1e293b">Keshlarni yoq (tezlik)</text>
+  <text x="124" y="389" font-size="13" fill="#475569">php artisan optimize  (config + route + view kesh)</text>
+
+  <!-- Step 7 -->
+  <rect x="60" y="408" width="640" height="48" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <circle cx="92" cy="432" r="16" fill="#16a34a"/>
+  <text x="92" y="438" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">7</text>
+  <text x="124" y="428" font-size="15" font-weight="700" fill="#16a34a">HTTPS yoq + tekshir</text>
+  <text x="124" y="447" font-size="13" fill="#475569">SSL sertifikat; Livewire so'rovlari xavfsiz; sahifani sinab ko'r</text>
+
+  <text x="380" y="482" text-anchor="middle" font-size="13" fill="#94a3b8">Har yangi deploy'da 2, 3 va 6-qadamni qaytaring (kod o'zgargach kesh eskiradi)</text>
+</svg>

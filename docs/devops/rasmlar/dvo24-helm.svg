@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420">
+  <title>Helm chart (templates papkasidagi shablonlar va values.yaml qiymatlari) render bosqichidan o'tib tayyor Kubernetes manifestlariga aylanadi va klasterga release sifatida o'rnatiladi degan diagramma</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <defs>
+    <marker id="h24b" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="h24g" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="700" fill="#1e293b">Helm chart -&gt; render -&gt; release</text>
+
+  <g font-family="Segoe UI, system-ui, sans-serif">
+    <!-- Chart box -->
+    <rect x="30" y="78" width="208" height="270" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="134" y="104" text-anchor="middle" font-size="16" font-weight="700" fill="#1e40af">Helm chart</text>
+
+    <rect x="48" y="120" width="172" height="46" rx="6" fill="#fff" stroke="#2563eb" stroke-width="1.4"/>
+    <text x="134" y="139" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1e293b">Chart.yaml</text>
+    <text x="134" y="157" text-anchor="middle" font-size="13" fill="#475569">nom + versiya</text>
+
+    <rect x="48" y="174" width="172" height="46" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.4"/>
+    <text x="134" y="193" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1e293b">values.yaml</text>
+    <text x="134" y="211" text-anchor="middle" font-size="13" fill="#475569">sozlanadigan qiymat</text>
+
+    <rect x="48" y="228" width="172" height="104" rx="6" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.4"/>
+    <text x="134" y="248" text-anchor="middle" font-size="13.5" font-weight="700" fill="#7c3aed">templates/</text>
+    <text x="134" y="270" text-anchor="middle" font-size="13" fill="#475569">deployment.yaml</text>
+    <text x="134" y="289" text-anchor="middle" font-size="13" fill="#475569">service.yaml</text>
+    <text x="134" y="312" text-anchor="middle" font-size="13" fill="#475569">{{ shablon }}</text>
+
+    <!-- arrow to render -->
+    <line x1="238" y1="213" x2="300" y2="213" stroke="#2563eb" stroke-width="2.5" marker-end="url(#h24b)"/>
+    <text x="269" y="203" text-anchor="middle" font-size="13" font-weight="600" fill="#1e40af">helm</text>
+
+    <!-- Render -->
+    <rect x="302" y="160" width="150" height="106" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+    <text x="377" y="200" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">Render</text>
+    <text x="377" y="222" text-anchor="middle" font-size="13" fill="#475569">shablon + qiymat</text>
+    <text x="377" y="240" text-anchor="middle" font-size="13" fill="#475569">= tayyor YAML</text>
+
+    <line x1="452" y1="213" x2="514" y2="213" stroke="#16a34a" stroke-width="2.5" marker-end="url(#h24g)"/>
+
+    <!-- Manifests -->
+    <rect x="516" y="120" width="214" height="100" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+    <text x="623" y="146" text-anchor="middle" font-size="15" font-weight="700" fill="#16a34a">K8s manifestlar</text>
+    <text x="623" y="170" text-anchor="middle" font-size="13" fill="#475569">Deployment (replicas: 3)</text>
+    <text x="623" y="190" text-anchor="middle" font-size="13" fill="#475569">Service (port: 80)</text>
+    <text x="623" y="210" text-anchor="middle" font-size="13" fill="#475569">aniq qiymatlar bilan</text>
+
+    <line x1="623" y1="220" x2="623" y2="276" stroke="#16a34a" stroke-width="2.5" marker-end="url(#h24g)"/>
+    <text x="690" y="252" text-anchor="middle" font-size="13" font-weight="600" fill="#16a34a">apply</text>
+
+    <!-- Release / cluster -->
+    <rect x="516" y="278" width="214" height="70" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="623" y="304" text-anchor="middle" font-size="15" font-weight="700" fill="#1e40af">Release (klasterda)</text>
+    <text x="623" y="326" text-anchor="middle" font-size="13" fill="#475569">install / upgrade / rollback</text>
+  </g>
+
+  <rect x="30" y="364" width="700" height="40" rx="8" fill="#fff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="380" y="383" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">Bitta shablonni values bilan ko'p muhitga sozlaysiz; helm upgrade/rollback bilan release'ni versiyalaysiz.</text>
+  <text x="380" y="399" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">--set yoki -f values.yaml bilan qiymatlarni o'zgartirasiz.</text>
+</svg>

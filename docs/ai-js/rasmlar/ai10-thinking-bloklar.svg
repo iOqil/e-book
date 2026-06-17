@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="800" height="480" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Javob content oqimi: avval thinking bloklari (reasoning — Opus 4.8 da matni standart bo'yicha YASHIRIN/omitted, display:"summarized" bilan ko'rinadi), keyin text bloki (yakuniy javob). Kodda block.type ni tekshirib ikkalasini ajratasiz.</title>
+  <defs>
+    <marker id="a10b" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#6366f1"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="800" height="480" fill="#f8fafc"/>
+  <text x="400" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Javobdagi bloklar: avval thinking, keyin text</text>
+  <text x="400" y="58" font-size="14" fill="#64748b" text-anchor="middle">response.content — bloklar massivi. block.type bilan reasoning va yakuniy javobni ajratasiz.</text>
+
+  <!-- content array container -->
+  <text x="48" y="92" font-size="15" font-weight="bold" fill="#0ea5e9" text-anchor="start">response.content: [ ... ]</text>
+  <rect x="40" y="104" width="430" height="248" rx="12" fill="#dbeafe" stroke="#0ea5e9" stroke-width="2"/>
+
+  <!-- thinking block -->
+  <rect x="58" y="124" width="394" height="104" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="74" y="148" font-size="14" font-weight="bold" fill="#f59e0b" text-anchor="start">📝 type: "thinking"  (reasoning)</text>
+  <text x="74" y="172" font-size="13" fill="#475569" text-anchor="start" font-family="Consolas, monospace">block.thinking: "Avval tezlikni</text>
+  <text x="74" y="190" font-size="13" fill="#475569" text-anchor="start" font-family="Consolas, monospace">  hisoblayman, keyin solishtiraman..."</text>
+  <text x="74" y="214" font-size="13" fill="#ef4444" text-anchor="start">Opus 4.8: matn STANDART bo'yicha yashirin (omitted)</text>
+
+  <!-- text block -->
+  <rect x="58" y="240" width="394" height="94" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="74" y="264" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="start">✅ type: "text"  (yakuniy javob)</text>
+  <text x="74" y="290" font-size="13" fill="#475569" text-anchor="start" font-family="Consolas, monospace">block.text: "Ikkinchi poyezd</text>
+  <text x="74" y="310" font-size="13" fill="#475569" text-anchor="start" font-family="Consolas, monospace">  12.5% tezroq."</text>
+
+  <!-- arrow to code -->
+  <line x1="470" y1="228" x2="528" y2="228" stroke="#6366f1" stroke-width="2.5" marker-end="url(#a10b)"/>
+
+  <!-- code box: how to separate -->
+  <rect x="532" y="116" width="236" height="224" rx="12" fill="#1e293b"/>
+  <text x="550" y="142" font-size="13" fill="#94a3b8" text-anchor="start" font-family="Consolas, monospace">// bloklarni ajratamiz</text>
+  <text x="550" y="166" font-size="13" fill="#e0e7ff" text-anchor="start" font-family="Consolas, monospace">for (const b of</text>
+  <text x="550" y="184" font-size="13" fill="#e0e7ff" text-anchor="start" font-family="Consolas, monospace">     msg.content) {</text>
+  <text x="550" y="208" font-size="13" fill="#f59e0b" text-anchor="start" font-family="Consolas, monospace">  if (b.type ===</text>
+  <text x="550" y="226" font-size="13" fill="#f59e0b" text-anchor="start" font-family="Consolas, monospace">    "thinking")</text>
+  <text x="550" y="244" font-size="13" fill="#e0e7ff" text-anchor="start" font-family="Consolas, monospace">    show(b.thinking);</text>
+  <text x="550" y="268" font-size="13" fill="#dcfce7" text-anchor="start" font-family="Consolas, monospace">  if (b.type ===</text>
+  <text x="550" y="286" font-size="13" fill="#dcfce7" text-anchor="start" font-family="Consolas, monospace">    "text")</text>
+  <text x="550" y="304" font-size="13" fill="#e0e7ff" text-anchor="start" font-family="Consolas, monospace">    print(b.text);</text>
+  <text x="550" y="328" font-size="13" fill="#e0e7ff" text-anchor="start" font-family="Consolas, monospace">}</text>
+
+  <!-- footer -->
+  <rect x="40" y="372" width="728" height="86" rx="10" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="60" y="398" font-size="13.5" fill="#1e293b" text-anchor="start" font-weight="bold">Reasoning matnini KO'RISH uchun: thinking: { type: "adaptive", display: "summarized" }</text>
+  <text x="60" y="420" font-size="13.5" fill="#475569" text-anchor="start">Standart bo'yicha (omitted) thinking bloki keladi, lekin matni bo'sh — "o'ylamoqda..." UI uchun</text>
+  <text x="60" y="438" font-size="13.5" fill="#475569" text-anchor="start">"summarized" qo'ying. Streaming'da reasoning bo'laklari thinking_delta event sifatida oqadi (04-bob).</text>
+  <text x="60" y="452" font-size="13" fill="#9333ea" text-anchor="start" font-style="italic">Yodda tuting: thinking tokenlari ham CHIQISH tokeni — ya'ni pul (14-bob).</text>
+</svg>

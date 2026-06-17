@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 480">
+  <title>BFS boshlang'ich tugundan qatlamma-qatlam (daraja 0, 1, 2) kengayadi va navbat (queue) yordamida tugunlarni FIFO tartibida qayta ishlaydi</title>
+  <rect x="0" y="0" width="860" height="480" fill="#f8fafc"/>
+  <text x="430" y="36" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">BFS — kenglik bo'yicha qatlamma-qatlam</text>
+  <text x="430" y="60" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Boshlanish: A. Har qatlam = A dan bir xil masofadagi tugunlar</text>
+
+  <!-- layer labels -->
+  <text x="70" y="130" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb">Daraja 0</text>
+  <text x="70" y="230" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">Daraja 1</text>
+  <text x="70" y="330" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#f59e0b">Daraja 2</text>
+  <line x1="60" y1="155" x2="60" y2="360" stroke="#cbd5e1" stroke-width="1.5"/>
+
+  <!-- edges -->
+  <g stroke="#94a3b8" stroke-width="2">
+    <line x1="300" y1="135" x2="220" y2="225"/>
+    <line x1="300" y1="135" x2="420" y2="225"/>
+    <line x1="220" y1="225" x2="320" y2="320"/>
+    <line x1="420" y1="225" x2="320" y2="320"/>
+    <line x1="320" y1="320" x2="500" y2="320"/>
+  </g>
+
+  <!-- nodes -->
+  <g font-family="Segoe UI" font-size="16" font-weight="bold" text-anchor="middle">
+    <circle cx="300" cy="125" r="26" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+    <text x="300" y="131" fill="#1e40af">A</text>
+
+    <circle cx="220" cy="225" r="26" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+    <text x="220" y="231" fill="#15803d">B</text>
+    <circle cx="420" cy="225" r="26" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+    <text x="420" y="231" fill="#15803d">C</text>
+
+    <circle cx="320" cy="320" r="26" fill="#fef9c3" stroke="#f59e0b" stroke-width="2.5"/>
+    <text x="320" y="326" fill="#b45309">D</text>
+    <circle cx="500" cy="320" r="26" fill="#fef9c3" stroke="#f59e0b" stroke-width="2.5"/>
+    <text x="500" y="326" fill="#b45309">E</text>
+  </g>
+
+  <!-- queue panel -->
+  <text x="600" y="120" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">Navbat (queue, FIFO)</text>
+  <g font-family="monospace" font-size="14" text-anchor="middle">
+    <rect x="600" y="135" width="50" height="40" rx="4" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="625" y="161" fill="#334155">B</text>
+    <rect x="652" y="135" width="50" height="40" rx="4" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="677" y="161" fill="#334155">C</text>
+    <rect x="704" y="135" width="50" height="40" rx="4" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+    <text x="729" y="161" fill="#334155">D</text>
+    <rect x="756" y="135" width="50" height="40" rx="4" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+    <text x="781" y="161" fill="#334155">E</text>
+  </g>
+  <text x="625" y="195" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">chiqadi</text>
+  <text x="781" y="195" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">kiradi</text>
+
+  <!-- order -->
+  <rect x="600" y="225" width="206" height="120" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="615" y="250" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">Tashrif tartibi</text>
+  <text x="615" y="278" font-family="monospace" font-size="15" fill="#2563eb">A B C D E</text>
+  <text x="615" y="306" font-family="Segoe UI" font-size="13" fill="#64748b">Yaqinlar avval ko'riladi,</text>
+  <text x="615" y="326" font-family="Segoe UI" font-size="13" fill="#64748b">uzoqlar keyin.</text>
+
+  <text x="430" y="410" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">Belgi (visited) qayta tashrifni to'sadi. Murakkablik:</text>
+  <text x="430" y="436" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#7c3aed">O(V + E)</text>
+  <text x="430" y="462" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Vaznsiz grafda BFS daraja = eng qisqa masofa (qirralar soni).</text>
+</svg>

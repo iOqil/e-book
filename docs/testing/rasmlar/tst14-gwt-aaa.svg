@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 470">
+  <title>Given-When-Then va AAA yonma-yon: bir xil uch bosqichli skelet, ikki xil nuqtai nazar — xulq tili va texnik tuzilish</title>
+  <rect x="0" y="0" width="820" height="470" fill="#f8fafc"/>
+  <text x="410" y="38" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Given-When-Then va AAA — bitta skelet</text>
+  <text x="410" y="64" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Bir xil uch bosqich; chap — xulq tili (biznes), o'ng — test tuzilishi</text>
+
+  <!-- Column headers -->
+  <text x="225" y="108" text-anchor="middle" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#7c3aed">BDD — Given/When/Then</text>
+  <text x="595" y="108" text-anchor="middle" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#2563eb">Unit test — AAA (02-bob)</text>
+
+  <!-- Row 1: Given / Arrange -->
+  <rect x="40" y="128" width="370" height="92" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="60" y="158" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#5b21b6">Given — boshlang'ich kontekst</text>
+  <text x="60" y="184" font-family="Segoe UI" font-size="13" fill="#5b21b6">"16 yoshli foydalanuvchi va bo'sh savat"</text>
+  <text x="60" y="206" font-family="Segoe UI" font-size="13" fill="#5b21b6">Holatni o'rnatamiz</text>
+
+  <rect x="430" y="128" width="350" height="92" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="450" y="158" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#1e40af">Arrange — tayyorla</text>
+  <text x="450" y="184" font-family="Segoe UI" font-size="13" fill="#1e40af">magazin = Magazin(); yosh = 16</text>
+  <text x="450" y="206" font-family="Segoe UI" font-size="13" fill="#1e40af">Obyekt va ma'lumotni tayyorlaymiz</text>
+
+  <!-- Row 2: When / Act -->
+  <rect x="40" y="232" width="370" height="92" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="60" y="262" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#166534">When — hodisa / amal</text>
+  <text x="60" y="288" font-family="Segoe UI" font-size="13" fill="#166534">"spirtli ichimlikni qo'shmoqchi bo'ladi"</text>
+  <text x="60" y="310" font-family="Segoe UI" font-size="13" fill="#166534">Bitta hodisa yuz beradi</text>
+
+  <rect x="430" y="232" width="350" height="92" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="450" y="262" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#166534">Act — bajar</text>
+  <text x="450" y="288" font-family="Segoe UI" font-size="13" fill="#166534">magazin.mahsulot_qosh(yosh, ...)</text>
+  <text x="450" y="310" font-family="Segoe UI" font-size="13" fill="#166534">Tekshirilayotgan amalni ishga tushiramiz</text>
+
+  <!-- Row 3: Then / Assert -->
+  <rect x="40" y="336" width="370" height="92" rx="10" fill="#fef9f3" stroke="#f59e0b" stroke-width="2"/>
+  <text x="60" y="366" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#92400e">Then — kutilgan natija</text>
+  <text x="60" y="392" font-family="Segoe UI" font-size="13" fill="#92400e">"savdo rad etiladi"</text>
+  <text x="60" y="414" font-family="Segoe UI" font-size="13" fill="#92400e">Natijani kutamiz</text>
+
+  <rect x="430" y="336" width="350" height="92" rx="10" fill="#fef9f3" stroke="#f59e0b" stroke-width="2"/>
+  <text x="450" y="366" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#92400e">Assert — tekshir</text>
+  <text x="450" y="392" font-family="Segoe UI" font-size="13" fill="#92400e">with pytest.raises(YoshChegarasiXatosi)</text>
+  <text x="450" y="414" font-family="Segoe UI" font-size="13" fill="#92400e">Natija kutilganligini tasdiqlaymiz</text>
+</svg>

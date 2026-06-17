@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440">
+  <title>Observability uchta ustuni: Logs, Metrics, Traces — har biri boshqa savolga javob beradi</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b">Observability — uchta ustun (three pillars)</text>
+  <text x="380" y="58" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">har biri tizim haqida boshqa turdagi savolga javob beradi</text>
+
+  <!-- LOGS -->
+  <rect x="30" y="84" width="220" height="300" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <rect x="30" y="84" width="220" height="44" rx="10" fill="#2563eb"/>
+  <text x="140" y="113" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="bold" fill="#ffffff">LOGS</text>
+  <text x="140" y="150" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">hodisalar yozuvi</text>
+  <text x="140" y="170" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">"nima sodir bo'ldi?"</text>
+  <rect x="46" y="186" width="188" height="86" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+  <text x="56" y="206" font-family="Segoe UI" font-size="13" fill="#1e293b">{"level":"error",</text>
+  <text x="56" y="224" font-family="Segoe UI" font-size="13" fill="#1e293b"> "msg":"to'lov</text>
+  <text x="56" y="242" font-family="Segoe UI" font-size="13" fill="#1e293b">  rad etildi",</text>
+  <text x="56" y="260" font-family="Segoe UI" font-size="13" fill="#1e293b"> "orderId":5012}</text>
+  <text x="140" y="300" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#2563eb">diskret hodisa</text>
+  <text x="140" y="322" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">batafsil, qidiriladigan</text>
+  <text x="140" y="340" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">struktura JSON afzal</text>
+  <text x="140" y="368" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">narx: hajm katta</text>
+
+  <!-- METRICS -->
+  <rect x="270" y="84" width="220" height="300" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <rect x="270" y="84" width="220" height="44" rx="10" fill="#16a34a"/>
+  <text x="380" y="113" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="bold" fill="#ffffff">METRICS</text>
+  <text x="380" y="150" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">vaqt qatori raqamlar</text>
+  <text x="380" y="170" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">"qancha? qanchalik tez?"</text>
+  <!-- mini chart -->
+  <rect x="296" y="186" width="168" height="86" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+  <polyline points="306,258 326,240 346,250 366,224 386,232 406,206 426,214 446,196" fill="none" stroke="#16a34a" stroke-width="2.5"/>
+  <line x1="306" y1="262" x2="454" y2="262" stroke="#94a3b8" stroke-width="1"/>
+  <text x="380" y="300" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#16a34a">agregatsiya / trend</text>
+  <text x="380" y="322" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">p95 latency, RPS, CPU</text>
+  <text x="380" y="340" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">arzon saqlash, dashboard</text>
+  <text x="380" y="368" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">narx: kontekst yo'q</text>
+
+  <!-- TRACES -->
+  <rect x="510" y="84" width="220" height="300" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="510" y="84" width="220" height="44" rx="10" fill="#f59e0b"/>
+  <text x="620" y="113" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="bold" fill="#ffffff">TRACES</text>
+  <text x="620" y="150" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">so'rovning yo'li</text>
+  <text x="620" y="170" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">"vaqt qayerda ketdi?"</text>
+  <!-- span bars -->
+  <rect x="536" y="190" width="170" height="14" rx="3" fill="#fde68a" stroke="#f59e0b"/>
+  <text x="540" y="201" font-family="Segoe UI" font-size="13" fill="#1e293b">API gateway</text>
+  <rect x="552" y="210" width="120" height="14" rx="3" fill="#fde68a" stroke="#f59e0b"/>
+  <text x="556" y="221" font-family="Segoe UI" font-size="13" fill="#1e293b">order-service</text>
+  <rect x="568" y="230" width="80" height="14" rx="3" fill="#fca5a5" stroke="#dc2626"/>
+  <text x="572" y="241" font-family="Segoe UI" font-size="13" fill="#1e293b">payment (sekin)</text>
+  <rect x="568" y="250" width="40" height="14" rx="3" fill="#fde68a" stroke="#f59e0b"/>
+  <text x="572" y="261" font-family="Segoe UI" font-size="13" fill="#1e293b">db</text>
+  <text x="620" y="300" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#f59e0b">servislar bo'ylab</text>
+  <text x="620" y="322" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">distributed tracing</text>
+  <text x="620" y="340" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">span = bir bosqich</text>
+  <text x="620" y="368" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">narx: instrumentatsiya</text>
+
+  <text x="380" y="416" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Birgalikda: metric muammoni KO'RSATADI -> trace QAYERDA ekanini -> log NEGA ekanini</text>
+</svg>

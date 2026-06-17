@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Tool runner sikli: runner API'ni chaqiradi, Claude vosita so'raydi, SDK sizning run() funksiyangizni bajaradi, natijani qaytaradi, sikl takrorlanadi va oxirida yakuniy xabarni beradi. Loop SDK ichida.</title>
+  <defs>
+    <marker id="ro" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#6366f1"/>
+    </marker>
+    <marker id="rog" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="800" height="500" fill="#f8fafc"/>
+  <text x="400" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Tool runner sikli — loop SDK ichida aylanadi</text>
+  <text x="400" y="58" font-size="14" fill="#64748b" text-anchor="middle">Siz faqat boshlaysiz va yakuniy xabarni olasiz; o'rtadagi sikl avtomatik</text>
+
+  <!-- SDK container -->
+  <rect x="40" y="84" width="720" height="318" rx="14" fill="#e0e7ff" stroke="#6366f1" stroke-width="2.5" stroke-dasharray="8,5"/>
+  <text x="60" y="110" font-size="14" font-weight="bold" fill="#6366f1" text-anchor="start">SDK boshqaradigan sikl (siz yozmaysiz)</text>
+
+  <!-- node 1: runner calls API -->
+  <rect x="76" y="132" width="200" height="62" rx="10" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <text x="176" y="160" font-size="13.5" font-weight="bold" fill="#1e293b" text-anchor="middle">Runner API'ni chaqiradi</text>
+  <text x="176" y="180" font-size="13" fill="#475569" text-anchor="middle">xabarlarni yuboradi</text>
+
+  <!-- node 2: Claude requests tool -->
+  <rect x="524" y="132" width="200" height="62" rx="10" fill="#fef3c7" stroke="#d97757" stroke-width="2"/>
+  <text x="624" y="160" font-size="13.5" font-weight="bold" fill="#d97757" text-anchor="middle">Claude vosita so'raydi</text>
+  <text x="624" y="180" font-size="13" fill="#475569" text-anchor="middle">tool_use bloki</text>
+
+  <!-- node 3: SDK runs run() -->
+  <rect x="524" y="288" width="200" height="74" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="624" y="314" font-size="13.5" font-weight="bold" fill="#16a34a" text-anchor="middle">SDK sizning run() ni</text>
+  <text x="624" y="334" font-size="13.5" font-weight="bold" fill="#16a34a" text-anchor="middle">bajaradi</text>
+  <text x="624" y="354" font-size="13" fill="#475569" text-anchor="middle">(Zod input'ni tekshirib)</text>
+
+  <!-- node 4: feed result -->
+  <rect x="76" y="288" width="200" height="74" rx="10" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <text x="176" y="314" font-size="13.5" font-weight="bold" fill="#1e293b" text-anchor="middle">Natijani qaytaradi</text>
+  <text x="176" y="334" font-size="13" fill="#475569" text-anchor="middle">tool_result -&gt; xabarlarga</text>
+  <text x="176" y="354" font-size="13" fill="#6366f1" text-anchor="middle">va qaytadan boshlaydi</text>
+
+  <!-- arrows forming the cycle -->
+  <line x1="276" y1="163" x2="520" y2="163" stroke="#6366f1" stroke-width="2.5" marker-end="url(#ro)"/>
+  <line x1="624" y1="194" x2="624" y2="284" stroke="#6366f1" stroke-width="2.5" marker-end="url(#ro)"/>
+  <line x1="524" y1="325" x2="280" y2="325" stroke="#6366f1" stroke-width="2.5" marker-end="url(#ro)"/>
+  <line x1="176" y1="288" x2="176" y2="198" stroke="#6366f1" stroke-width="2.5" marker-end="url(#ro)"/>
+  <text x="400" y="252" font-size="13" fill="#6366f1" text-anchor="middle">↻ Claude yana vosita so'rasa — sikl davom etadi</text>
+
+  <!-- start in -->
+  <rect x="120" y="424" width="240" height="48" rx="10" fill="#dbeafe" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="240" y="453" font-size="13.5" fill="#1e293b" text-anchor="middle">SIZ: messages bilan boshlaysiz</text>
+  <line x1="240" y1="424" x2="200" y2="366" stroke="#0ea5e9" stroke-width="2.5" marker-end="url(#ro)"/>
+
+  <!-- final out -->
+  <rect x="440" y="424" width="240" height="48" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="560" y="453" font-size="13.5" fill="#1e293b" text-anchor="middle">SIZ: yakuniy xabarni olasiz</text>
+  <line x1="624" y1="366" x2="600" y2="424" stroke="#16a34a" stroke-width="2.5" marker-end="url(#rog)"/>
+  <text x="690" y="396" font-size="13" fill="#16a34a" text-anchor="middle">Claude tugatsa</text>
+</svg>

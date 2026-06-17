@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" width="760" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Multi-turn suhbat sikli: javob tarixga qo'shilib, suhbat o'sib boradi</title>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">Multi-turn suhbat sikli: messages o'sib boradi</text>
+
+  <defs>
+    <marker id="cy-arr" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#6366f1"/>
+    </marker>
+  </defs>
+
+  <!-- system (constant) -->
+  <rect x="240" y="70" width="280" height="48" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="380" y="92" text-anchor="middle" font-size="14" font-weight="700" fill="#b45309">system: "Sen yordamchisan." (1 marta)</text>
+  <text x="380" y="110" text-anchor="middle" font-size="13" fill="#b45309">boshda qo'shiladi, o'zgarmaydi</text>
+
+  <!-- turn 1 user -->
+  <rect x="120" y="138" width="240" height="46" rx="10" fill="#e0f2fe" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="135" y="158" font-size="13" font-weight="700" fill="#0284c7">user</text>
+  <text x="135" y="177" font-size="13" fill="#1e293b">"Python nima?"</text>
+
+  <!-- turn 1 assistant -->
+  <rect x="400" y="138" width="240" height="46" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="415" y="158" font-size="13" font-weight="700" fill="#166534">assistant</text>
+  <text x="415" y="177" font-size="13" fill="#1e293b">"Python — dasturlash tili."</text>
+
+  <line x1="360" y1="161" x2="396" y2="161" stroke="#6366f1" stroke-width="2.5" marker-end="url(#cy-arr)"/>
+  <text x="650" y="165" font-size="13" fill="#64748b">tarixga</text>
+  <text x="650" y="182" font-size="13" fill="#64748b">qo'shiladi</text>
+  <path d="M640,161 C700,161 700,230 644,230" fill="none" stroke="#6366f1" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#cy-arr)"/>
+
+  <!-- turn 2 user -->
+  <rect x="120" y="208" width="240" height="46" rx="10" fill="#e0f2fe" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="135" y="228" font-size="13" font-weight="700" fill="#0284c7">user</text>
+  <text x="135" y="247" font-size="13" fill="#1e293b">"Misol ko'rsat."</text>
+
+  <!-- turn 2 assistant -->
+  <rect x="400" y="208" width="240" height="46" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="415" y="228" font-size="13" font-weight="700" fill="#166534">assistant</text>
+  <text x="415" y="247" font-size="13" fill="#1e293b">"print('Salom')"</text>
+
+  <line x1="360" y1="231" x2="396" y2="231" stroke="#6366f1" stroke-width="2.5" marker-end="url(#cy-arr)"/>
+  <path d="M640,231 C700,231 700,300 644,300" fill="none" stroke="#6366f1" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#cy-arr)"/>
+
+  <!-- turn 3 user -->
+  <rect x="120" y="278" width="240" height="46" rx="10" fill="#e0f2fe" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="135" y="298" font-size="13" font-weight="700" fill="#0284c7">user</text>
+  <text x="135" y="317" font-size="13" fill="#1e293b">"... va davom etadi"</text>
+
+  <text x="135" y="356" font-size="13" fill="#64748b">Har navbatda butun tarix (system + barcha user/assistant)</text>
+  <text x="135" y="378" font-size="13" fill="#64748b">qayta modelga yuboriladi — shu sababli model "eslayotgandek" tuyuladi.</text>
+
+  <!-- cycle box -->
+  <rect x="120" y="400" width="520" height="50" rx="12" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="380" y="423" text-anchor="middle" font-size="14" font-weight="700" fill="#4338ca">Sikl: user yuborish -> javob olish -> javobni tarixga qo'shish -> takror</text>
+  <text x="380" y="442" text-anchor="middle" font-size="13" fill="#475569">messages ro'yxati har qadamda uzayadi</text>
+</svg>

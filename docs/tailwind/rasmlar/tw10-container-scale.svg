@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Konteyner o'lcham shkalasi @xs @sm @md @lg @xl @2xl rem qiymatlari bilan chizg'ich kabi; konteyner eni 28rem dan oshganda @md:grid-cols-2 ishga tushadi</title>
+  <rect x="0" y="0" width="800" height="420" fill="#f8fafc"/>
+
+  <text x="400" y="34" text-anchor="middle" font-size="21" font-weight="bold" fill="#1e293b">Konteyner o'lcham shkalasi</text>
+  <text x="400" y="58" text-anchor="middle" font-size="14" fill="#475569">bu nuqtalar viewport breakpointlardan ALOHIDA (oldida @ bor)</text>
+
+  <!-- chizg'ich chizig'i -->
+  <line x1="70" y1="120" x2="730" y2="120" stroke="#94a3b8" stroke-width="2"/>
+
+  <!-- belgilar: @xs 20, @sm 24, @md 28, @lg 32, @xl 36, @2xl 42 -->
+  <!-- @xs -->
+  <line x1="100" y1="112" x2="100" y2="128" stroke="#6366f1" stroke-width="2"/>
+  <text x="100" y="100" text-anchor="middle" font-size="14" font-weight="bold" fill="#4f46e5">@xs</text>
+  <text x="100" y="148" text-anchor="middle" font-size="13" fill="#64748b">20rem</text>
+  <!-- @sm -->
+  <line x1="210" y1="112" x2="210" y2="128" stroke="#6366f1" stroke-width="2"/>
+  <text x="210" y="100" text-anchor="middle" font-size="14" font-weight="bold" fill="#4f46e5">@sm</text>
+  <text x="210" y="148" text-anchor="middle" font-size="13" fill="#64748b">24rem</text>
+  <!-- @md (ajratib ko'rsatamiz) -->
+  <line x1="350" y1="108" x2="350" y2="132" stroke="#0ea5e9" stroke-width="3"/>
+  <circle cx="350" cy="120" r="6" fill="#0ea5e9"/>
+  <text x="350" y="98" text-anchor="middle" font-size="14" font-weight="bold" fill="#0284c7">@md</text>
+  <text x="350" y="150" text-anchor="middle" font-size="13" font-weight="bold" fill="#0284c7">28rem</text>
+  <!-- @lg -->
+  <line x1="470" y1="112" x2="470" y2="128" stroke="#6366f1" stroke-width="2"/>
+  <text x="470" y="100" text-anchor="middle" font-size="14" font-weight="bold" fill="#4f46e5">@lg</text>
+  <text x="470" y="148" text-anchor="middle" font-size="13" fill="#64748b">32rem</text>
+  <!-- @xl -->
+  <line x1="580" y1="112" x2="580" y2="128" stroke="#6366f1" stroke-width="2"/>
+  <text x="580" y="100" text-anchor="middle" font-size="14" font-weight="bold" fill="#4f46e5">@xl</text>
+  <text x="580" y="148" text-anchor="middle" font-size="13" fill="#64748b">36rem</text>
+  <!-- @2xl -->
+  <line x1="690" y1="112" x2="690" y2="128" stroke="#6366f1" stroke-width="2"/>
+  <text x="690" y="100" text-anchor="middle" font-size="14" font-weight="bold" fill="#4f46e5">@2xl</text>
+  <text x="690" y="148" text-anchor="middle" font-size="13" fill="#64748b">42rem</text>
+
+  <!-- ===== Misol: @md:grid-cols-2 28rem da yoqiladi ===== -->
+  <text x="400" y="196" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e293b">Misol: @md:grid-cols-2 — konteyner 28rem ga yetganda yoqiladi</text>
+
+  <!-- chap: konteyner < 28rem -> 1 ustun -->
+  <rect x="120" y="216" width="180" height="150" rx="9" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="210" y="238" text-anchor="middle" font-size="13" fill="#64748b">konteyner &lt; 28rem</text>
+  <rect x="138" y="250" width="144" height="44" rx="6" fill="#eef2ff" stroke="#6366f1" stroke-width="1"/>
+  <text x="210" y="277" text-anchor="middle" font-size="14" fill="#4f46e5">1</text>
+  <rect x="138" y="302" width="144" height="44" rx="6" fill="#eef2ff" stroke="#6366f1" stroke-width="1"/>
+  <text x="210" y="329" text-anchor="middle" font-size="14" fill="#4f46e5">2</text>
+
+  <!-- o'q -->
+  <line x1="320" y1="291" x2="480" y2="291" stroke="#0ea5e9" stroke-width="2"/>
+  <polygon points="480,291 468,285 468,297" fill="#0ea5e9"/>
+  <text x="400" y="282" text-anchor="middle" font-size="13" font-weight="bold" fill="#0284c7">28rem chegarasi</text>
+  <text x="400" y="312" text-anchor="middle" font-size="13" fill="#475569">o'tildi → @md:</text>
+
+  <!-- o'ng: konteyner >= 28rem -> 2 ustun -->
+  <rect x="500" y="216" width="180" height="150" rx="9" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="590" y="238" text-anchor="middle" font-size="13" font-weight="bold" fill="#0284c7">konteyner &#8805; 28rem</text>
+  <rect x="518" y="250" width="68" height="96" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1"/>
+  <text x="552" y="302" text-anchor="middle" font-size="14" fill="#16a34a">1</text>
+  <rect x="594" y="250" width="68" height="96" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1"/>
+  <text x="628" y="302" text-anchor="middle" font-size="14" fill="#16a34a">2</text>
+
+  <text x="400" y="398" text-anchor="middle" font-size="13" fill="#64748b">grid-cols-1 @md:grid-cols-2 — sindirish konteyner enidan, oynadan emas</text>
+</svg>

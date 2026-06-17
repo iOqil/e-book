@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 450" width="760" height="450" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Computed property hisoblanadi va keshlanadi (DB, filtr natijasi); oddiy public property esa saqlanadi va foydalanuvchi kiritadigan holatni ushlaydi — ularning farqi taqqoslash jadvalida</title>
+  <rect x="0" y="0" width="760" height="450" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Computed  vs  oddiy property</text>
+  <text x="380" y="58" text-anchor="middle" font-size="14" fill="#475569">Qaysi biri qachon kerak?</text>
+
+  <!-- chap ustun: COMPUTED -->
+  <rect x="28" y="80" width="346" height="344" rx="12" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <rect x="28" y="80" width="346" height="44" rx="12" fill="#eef2ff"/>
+  <rect x="28" y="108" width="346" height="16" fill="#eef2ff"/>
+  <text x="201" y="109" text-anchor="middle" font-size="17" font-weight="700" fill="#4f46e5">#[Computed] property</text>
+
+  <text x="48" y="150" font-size="14" font-weight="700" fill="#1e293b">Bu nima?</text>
+  <text x="48" y="170" font-size="13" fill="#475569">Metod — lekin xususiyat kabi ishlatiladi</text>
+  <text x="48" y="188" font-size="13" fill="#94a3b8">$this-&gt;posts  (qavssiz)</text>
+
+  <text x="48" y="216" font-size="14" font-weight="700" fill="#1e293b">Tabiati</text>
+  <text x="48" y="236" font-size="13" fill="#16a34a">HISOBLANADI / OLINADI</text>
+  <text x="48" y="254" font-size="13" fill="#475569">DB so'rovi, filtr, sanoq, jami summa</text>
+
+  <text x="48" y="282" font-size="14" font-weight="700" fill="#1e293b">Saqlanadimi?</text>
+  <text x="48" y="302" font-size="13" fill="#475569">Yo'q — snapshot'da saqlanmaydi</text>
+  <text x="48" y="320" font-size="13" fill="#475569">har so'rovda qaytadan hisoblanadi</text>
+  <text x="48" y="338" font-size="13" fill="#94a3b8">(lekin so'rov ichida keshlanadi)</text>
+
+  <text x="48" y="368" font-size="14" font-weight="700" fill="#1e293b">Misol</text>
+  <text x="48" y="388" font-size="13" fill="#475569">filtrlangan ro'yxat, statistika,</text>
+  <text x="48" y="406" font-size="13" fill="#475569">joriy foydalanuvchi, jami narx</text>
+
+  <!-- o'ng ustun: PROPERTY -->
+  <rect x="386" y="80" width="346" height="344" rx="12" fill="#ffffff" stroke="#fb70a9" stroke-width="2"/>
+  <rect x="386" y="80" width="346" height="44" rx="12" fill="#fdf2f8"/>
+  <rect x="386" y="108" width="346" height="16" fill="#fdf2f8"/>
+  <text x="559" y="109" text-anchor="middle" font-size="17" font-weight="700" fill="#be185d">oddiy public property</text>
+
+  <text x="406" y="150" font-size="14" font-weight="700" fill="#1e293b">Bu nima?</text>
+  <text x="406" y="170" font-size="13" fill="#475569">Klassdagi oddiy o'zgaruvchi</text>
+  <text x="406" y="188" font-size="13" fill="#94a3b8">public string $search = '';</text>
+
+  <text x="406" y="216" font-size="14" font-weight="700" fill="#1e293b">Tabiati</text>
+  <text x="406" y="236" font-size="13" fill="#be185d">SAQLANADI (holat)</text>
+  <text x="406" y="254" font-size="13" fill="#475569">foydalanuvchi kiritadi yoki o'zgartiradi</text>
+
+  <text x="406" y="282" font-size="14" font-weight="700" fill="#1e293b">Saqlanadimi?</text>
+  <text x="406" y="302" font-size="13" fill="#475569">Ha — snapshot'da brauzerga boradi</text>
+  <text x="406" y="320" font-size="13" fill="#475569">so'rovlar orasida eslab qolinadi</text>
+  <text x="406" y="338" font-size="13" fill="#94a3b8">wire:model bilan bog'lanadi</text>
+
+  <text x="406" y="368" font-size="14" font-weight="700" fill="#1e293b">Misol</text>
+  <text x="406" y="388" font-size="13" fill="#475569">qidiruv matni, tanlangan filtr,</text>
+  <text x="406" y="406" font-size="13" fill="#475569">forma maydonlari, sahifa raqami</text>
+</svg>

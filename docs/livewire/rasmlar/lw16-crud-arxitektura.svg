@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 500" width="760" height="500" font-family="Segoe UI, system-ui, sans-serif">
+  <title>PostManager komponenti arxitekturasi: ro'yxat (computed posts), modal oyna ichidagi forma (PostForm) va amallar metodlari (create, edit, save, delete) bir-biriga qanday bog'langani</title>
+  <rect x="0" y="0" width="760" height="500" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">PostManager — bitta komponent, to'liq CRUD</text>
+  <text x="380" y="57" text-anchor="middle" font-size="14" fill="#475569">Ro'yxat + modal forma + amallar — hammasi bitta sahifada</text>
+
+  <!-- Komponent qutisi -->
+  <rect x="28" y="78" width="704" height="392" rx="14" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="48" y="104" font-size="15" font-weight="700" fill="#4f46e5">PostManager komponenti</text>
+
+  <!-- Holat (state) -->
+  <rect x="48" y="120" width="320" height="120" rx="10" fill="#eef2ff" stroke="#c7d2fe" stroke-width="1.5"/>
+  <text x="208" y="144" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">Holat (properties)</text>
+  <text x="68" y="170" font-size="13" fill="#475569">public PostForm $form;</text>
+  <text x="68" y="192" font-size="13" fill="#475569">public bool $showModal = false;</text>
+  <text x="68" y="214" font-size="13" fill="#475569">public string $search = '';</text>
+  <text x="68" y="232" font-size="13" fill="#94a3b8">#[Computed] posts() — ro'yxat manbai</text>
+
+  <!-- Amallar -->
+  <rect x="392" y="120" width="320" height="120" rx="10" fill="#fff7ed" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="552" y="144" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">Amallar (metodlar)</text>
+  <text x="412" y="170" font-size="13" fill="#475569">create()  — bo'sh modal ochadi</text>
+  <text x="412" y="192" font-size="13" fill="#475569">edit($post) — to'la modal ochadi</text>
+  <text x="412" y="214" font-size="13" fill="#475569">save()  — store yoki update</text>
+  <text x="412" y="232" font-size="13" fill="#475569">delete($post) — o'chiradi</text>
+
+  <!-- Ro'yxat (View) -->
+  <rect x="48" y="270" width="320" height="170" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="208" y="294" text-anchor="middle" font-size="15" font-weight="700" fill="#16a34a">READ — postlar ro'yxati</text>
+  <rect x="68" y="308" width="280" height="30" rx="6" fill="#f8fafc" stroke="#c7d2fe" stroke-width="1"/>
+  <text x="80" y="328" font-size="13" fill="#475569">Birinchi post</text>
+  <text x="300" y="328" font-size="13" fill="#4f46e5" text-anchor="end">tahrir · o'chir</text>
+  <rect x="68" y="344" width="280" height="30" rx="6" fill="#f8fafc" stroke="#c7d2fe" stroke-width="1"/>
+  <text x="80" y="364" font-size="13" fill="#475569">Ikkinchi post</text>
+  <text x="300" y="364" font-size="13" fill="#4f46e5" text-anchor="end">tahrir · o'chir</text>
+  <text x="208" y="394" text-anchor="middle" font-size="13" fill="#94a3b8">wire:key har qatorga</text>
+  <text x="208" y="414" text-anchor="middle" font-size="13" fill="#475569">manba: $this->posts (computed)</text>
+
+  <!-- Modal + Forma -->
+  <rect x="392" y="270" width="320" height="170" rx="10" fill="#ffffff" stroke="#fb70a9" stroke-width="2"/>
+  <text x="552" y="294" text-anchor="middle" font-size="15" font-weight="700" fill="#fb70a9">Modal oyna (showModal)</text>
+  <rect x="412" y="308" width="280" height="26" rx="6" fill="#fdf2f8" stroke="#fb70a9" stroke-width="1"/>
+  <text x="424" y="326" font-size="13" fill="#475569">wire:model="form.title"</text>
+  <rect x="412" y="340" width="280" height="40" rx="6" fill="#fdf2f8" stroke="#fb70a9" stroke-width="1"/>
+  <text x="424" y="364" font-size="13" fill="#475569">wire:model="form.body"</text>
+  <text x="552" y="404" text-anchor="middle" font-size="13" fill="#475569">PostForm: validatsiya + saqlash</text>
+  <text x="552" y="424" text-anchor="middle" font-size="13" fill="#94a3b8">create va edit bir xil formani ishlatadi</text>
+
+  <!-- Bog'lovchi strelkalar -->
+  <line x1="552" y1="240" x2="552" y2="266" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="552,266 547,256 557,256" fill="#94a3b8"/>
+  <line x1="208" y1="240" x2="208" y2="266" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="208,266 203,256 213,256" fill="#94a3b8"/>
+</svg>

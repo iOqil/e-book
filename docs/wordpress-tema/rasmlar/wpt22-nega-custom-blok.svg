@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" width="780" height="470">
+  <title>Qachon mavjud blok yetadi, qachon custom blok kerak</title>
+  <rect width="780" height="470" fill="#f8fafc"/>
+  <text x="390" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Mavjud blok yetadimi, yoki custom blok kerakmi?</text>
+
+  <!-- Decision diamond -->
+  <polygon points="390,60 510,118 390,176 270,118" fill="#f59e0b" stroke="#d97706" stroke-width="2"/>
+  <text x="390" y="112" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Kerakli ko'rinish</text>
+  <text x="390" y="132" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">core bloklar bilan</text>
+  <text x="390" y="151" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">chiqadimi?</text>
+
+  <!-- HA arrow -->
+  <g stroke="#94a3b8" stroke-width="2" fill="none">
+    <path d="M270 118 L160 118 L160 210"/>
+    <path d="M510 118 L620 118 L620 210"/>
+  </g>
+  <text x="205" y="110" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">HA</text>
+  <text x="575" y="110" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">YO'Q</text>
+
+  <!-- HA box -->
+  <rect x="30" y="210" width="260" height="210" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="160" y="238" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">Mavjud blokdan foydalan</text>
+  <g font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">
+    <text x="50" y="268">- core/group, core/columns</text>
+    <text x="50" y="294">- core/paragraph, heading</text>
+    <text x="50" y="320">- core/image, gallery</text>
+    <text x="50" y="346">- core/query (postlar)</text>
+    <text x="50" y="372">- pattern (20-bob) sifatida</text>
+    <text x="50" y="398">  birlashtirib saqla</text>
+  </g>
+
+  <!-- YO'Q box -->
+  <rect x="490" y="210" width="260" height="210" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="620" y="238" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">Custom blok yarat</text>
+  <g font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">
+    <text x="510" y="268">- maxsus UI / sozlamalar</text>
+    <text x="510" y="294">- dinamik ma'lumot (API)</text>
+    <text x="510" y="320">- brendli takroriy komponent</text>
+    <text x="510" y="346">- interaktiv funksiya</text>
+    <text x="510" y="372">- core'da yo'q maket</text>
+  </g>
+
+  <text x="390" y="448" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Qoida: avval core blok va pattern'ni sina; custom blok faqat ular yetmaganda.</text>
+</svg>

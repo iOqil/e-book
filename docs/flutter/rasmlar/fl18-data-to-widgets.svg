@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 440" width="780" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>List&lt;Mahsulot&gt; ma'lumot ro'yxati itemBuilder orqali har bir elementni ListTile widgetga aylantiradi va ekrandagi ro'yxatga chiziladi: ma'lumotdan UI'ga ko'prik</title>
+  <rect x="0" y="0" width="780" height="440" fill="#f8fafc"/>
+  <text x="390" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Ma'lumot &#8594; widget: itemBuilder ko'prigi</text>
+  <text x="390" y="58" text-anchor="middle" font-size="14" fill="#475569">Har bir Mahsulot obyekti bitta ListTile widgetga aylanadi (05-bobdagi .map fikrlashi)</text>
+
+  <!-- LEFT: data list -->
+  <text x="135" y="96" text-anchor="middle" font-size="14" font-weight="700" fill="#475569">List&lt;Mahsulot&gt;</text>
+
+  <rect x="40" y="108" width="190" height="62" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="135" y="132" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Olma</text>
+  <text x="135" y="154" text-anchor="middle" font-size="13" fill="#64748b">narx: 12 000</text>
+
+  <rect x="40" y="184" width="190" height="62" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="135" y="208" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Nok</text>
+  <text x="135" y="230" text-anchor="middle" font-size="13" fill="#64748b">narx: 15 000</text>
+
+  <rect x="40" y="260" width="190" height="62" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="135" y="284" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Banan</text>
+  <text x="135" y="306" text-anchor="middle" font-size="13" fill="#64748b">narx: 18 000</text>
+
+  <text x="135" y="350" text-anchor="middle" font-size="13" fill="#94a3b8">sof ma'lumot (raqam, matn)</text>
+
+  <!-- MIDDLE: builder -->
+  <line x1="234" y1="215" x2="296" y2="215" stroke="#027dfd" stroke-width="3"/>
+  <polygon points="296,209 312,215 296,221" fill="#027dfd"/>
+
+  <rect x="316" y="170" width="150" height="92" rx="12" fill="#6366f1"/>
+  <text x="391" y="202" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">itemBuilder</text>
+  <text x="391" y="224" text-anchor="middle" font-size="13" fill="#e0e7ff">(context, index)</text>
+  <text x="391" y="244" text-anchor="middle" font-size="13" fill="#e0e7ff">mahsulot &#8594; widget</text>
+
+  <line x1="466" y1="215" x2="528" y2="215" stroke="#16a34a" stroke-width="3"/>
+  <polygon points="528,209 544,215 528,221" fill="#16a34a"/>
+
+  <!-- RIGHT: rendered list -->
+  <text x="650" y="96" text-anchor="middle" font-size="14" font-weight="700" fill="#475569">Ekrandagi ro'yxat</text>
+
+  <rect x="548" y="108" width="200" height="62" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <circle cx="578" cy="139" r="14" fill="#16a34a"/>
+  <text x="578" y="144" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">O</text>
+  <text x="600" y="134" font-size="14" font-weight="700" fill="#1e293b">Olma</text>
+  <text x="600" y="154" font-size="13" fill="#64748b">12 000 so'm</text>
+
+  <rect x="548" y="184" width="200" height="62" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <circle cx="578" cy="215" r="14" fill="#16a34a"/>
+  <text x="578" y="220" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">N</text>
+  <text x="600" y="210" font-size="14" font-weight="700" fill="#1e293b">Nok</text>
+  <text x="600" y="230" font-size="13" fill="#64748b">15 000 so'm</text>
+
+  <rect x="548" y="260" width="200" height="62" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <circle cx="578" cy="291" r="14" fill="#16a34a"/>
+  <text x="578" y="296" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">B</text>
+  <text x="600" y="286" font-size="14" font-weight="700" fill="#1e293b">Banan</text>
+  <text x="600" y="306" font-size="13" fill="#64748b">18 000 so'm</text>
+
+  <text x="648" y="350" text-anchor="middle" font-size="13" fill="#94a3b8">ListTile widgetlar (ikon + matn)</text>
+
+  <text x="390" y="392" text-anchor="middle" font-size="14" fill="#475569">itemBuilder har bir indeks uchun ro'yxatdagi mahsulotni oladi va undan bitta ListTile yasaydi.</text>
+  <text x="390" y="416" text-anchor="middle" font-size="13" fill="#94a3b8">Ma'lumot o'zgarsa — ro'yxatni qaytadan qurasiz; UI avtomatik yangi holatga keladi (UI = f(holat)).</text>
+</svg>

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 460">
+  <title>Observability uch ustuni: loglar diskret hodisalar, metrikalar vaqt bo'yicha raqamlar va trend, tracing bitta so'rovning servislar bo'ylab yo'li</title>
+  <rect x="0" y="0" width="880" height="460" fill="#f8fafc"/>
+  <text x="440" y="36" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">Observability'ning uch ustuni</text>
+  <text x="440" y="60" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Uch xil ma'lumot uch xil savolga javob beradi — birga ular to'liq manzara beradi</text>
+
+  <!-- LOGLAR -->
+  <rect x="36" y="88" width="256" height="320" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="164" y="120" text-anchor="middle" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#2563eb">LOGLAR</text>
+  <text x="164" y="142" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">diskret hodisalar</text>
+  <text x="164" y="170" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Savol: "nima sodir bo'ldi?"</text>
+  <rect x="56" y="186" width="216" height="120" rx="6" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.2"/>
+  <text x="68" y="208" font-family="monospace" font-size="13" fill="#1e3a8a">{ "level": "error",</text>
+  <text x="68" y="228" font-family="monospace" font-size="13" fill="#1e3a8a">  "ts": "...09:01Z",</text>
+  <text x="68" y="248" font-family="monospace" font-size="13" fill="#1e3a8a">  "req_id": "r-88",</text>
+  <text x="68" y="268" font-family="monospace" font-size="13" fill="#1e3a8a">  "msg": "DB timeout",</text>
+  <text x="68" y="288" font-family="monospace" font-size="13" fill="#1e3a8a">  "route": "/orders" }</text>
+  <text x="164" y="334" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Bitta hodisaning</text>
+  <text x="164" y="352" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">batafsil tafsiloti</text>
+  <text x="164" y="384" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#2563eb">qidiriladi · saralanadi</text>
+
+  <!-- METRIKALAR -->
+  <rect x="312" y="88" width="256" height="320" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="440" y="120" text-anchor="middle" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#16a34a">METRIKALAR</text>
+  <text x="440" y="142" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">vaqt bo'yicha raqamlar</text>
+  <text x="440" y="170" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Savol: "qancha? qanaqa trend?"</text>
+  <rect x="332" y="186" width="216" height="120" rx="6" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.2"/>
+  <!-- mini trend chart -->
+  <line x1="350" y1="290" x2="530" y2="290" stroke="#86efac" stroke-width="1.2"/>
+  <line x1="350" y1="290" x2="350" y2="202" stroke="#86efac" stroke-width="1.2"/>
+  <polyline points="356,278 386,270 416,258 446,262 476,238 506,224 524,210" fill="none" stroke="#16a34a" stroke-width="2.4"/>
+  <text x="440" y="218" text-anchor="middle" font-family="monospace" font-size="13" fill="#166534">p99 latency ↑</text>
+  <text x="440" y="334" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">so'rov soni, xato %,</text>
+  <text x="440" y="352" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">kechikish (p50/p95/p99)</text>
+  <text x="440" y="384" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#16a34a">dashboard · alert</text>
+
+  <!-- TRACING -->
+  <rect x="588" y="88" width="256" height="320" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="716" y="120" text-anchor="middle" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#7c3aed">TRACING</text>
+  <text x="716" y="142" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">so'rovning yo'li</text>
+  <text x="716" y="170" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Savol: "qayerda sekinlashdi?"</text>
+  <rect x="608" y="186" width="216" height="120" rx="6" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1.2"/>
+  <rect x="620" y="200" width="190" height="16" rx="3" fill="#a78bfa"/>
+  <text x="624" y="213" font-family="monospace" font-size="13" fill="#ffffff">gateway</text>
+  <rect x="640" y="224" width="150" height="16" rx="3" fill="#8b5cf6"/>
+  <text x="644" y="237" font-family="monospace" font-size="13" fill="#ffffff">auth</text>
+  <rect x="660" y="248" width="120" height="16" rx="3" fill="#7c3aed"/>
+  <text x="664" y="261" font-family="monospace" font-size="13" fill="#ffffff">orders</text>
+  <rect x="680" y="272" width="90" height="16" rx="3" fill="#6d28d9"/>
+  <text x="684" y="285" font-family="monospace" font-size="13" fill="#ffffff">db (sekin)</text>
+  <text x="716" y="334" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">bitta trace ID, ko'p span;</text>
+  <text x="716" y="352" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">servis bo'ylab bog'lanadi</text>
+  <text x="716" y="384" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#7c3aed">qaysi qadam ayblanadi</text>
+</svg>

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 460" width="780" height="460">
+  <title>Bulkhead pattern: resurslarni bo'limlarga ajratish — bir bo'lim yiqilsa boshqasi ishlaydi</title>
+  <rect x="0" y="0" width="780" height="460" fill="#f8fafc"/>
+  <text x="390" y="34" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Bulkhead: kema bo'limlari kabi izolyatsiya</text>
+  <text x="390" y="58" font-family="Segoe UI" font-size="14" fill="#64748b" text-anchor="middle">Resursni (thread/ulanish) bo'limlarga ajrat — bitta yiqilsa, boshqalari suzib qoladi</text>
+
+  <!-- CHAP: bulkhead YO'Q -->
+  <text x="200" y="92" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#dc2626" text-anchor="middle">Bulkhead YO'Q: umumiy hovuz</text>
+
+  <rect x="60" y="110" width="280" height="120" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="200" y="135" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">Bitta umumiy thread-pool (100 ta)</text>
+  <!-- band threadlar (sekin servis hammasini yutdi) -->
+  <rect x="78" y="150" width="244" height="30" rx="5" fill="#fde2e2" stroke="#dc2626" stroke-width="1.2"/>
+  <text x="200" y="170" font-family="Segoe UI" font-size="13" fill="#dc2626" text-anchor="middle">Sekin "Tavsiya" servisi 100/100 ni egalladi</text>
+  <text x="200" y="205" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">-&gt; "To'lov" va "Profil" uchun thread QOLMADI</text>
+  <text x="200" y="222" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#dc2626" text-anchor="middle">butun tizim yiqildi (cascade)</text>
+
+  <!-- O'NG: bulkhead BOR -->
+  <text x="580" y="92" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="middle">Bulkhead BOR: ajratilgan bo'limlar</text>
+
+  <rect x="440" y="110" width="280" height="120" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <!-- 3 bo'lim -->
+  <rect x="456" y="128" width="82" height="86" rx="6" fill="#fde2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="497" y="148" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#dc2626" text-anchor="middle">Tavsiya</text>
+  <text x="497" y="166" font-family="Segoe UI" font-size="13" fill="#dc2626" text-anchor="middle">20 thread</text>
+  <text x="497" y="184" font-family="Segoe UI" font-size="13" fill="#dc2626" text-anchor="middle">TO'LDI</text>
+  <text x="497" y="202" font-family="Segoe UI" font-size="13" fill="#dc2626" text-anchor="middle">(yiqildi)</text>
+
+  <rect x="548" y="128" width="82" height="86" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="589" y="148" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#16a34a" text-anchor="middle">To'lov</text>
+  <text x="589" y="166" font-family="Segoe UI" font-size="13" fill="#16a34a" text-anchor="middle">40 thread</text>
+  <text x="589" y="184" font-family="Segoe UI" font-size="13" fill="#16a34a" text-anchor="middle">ishlayapti</text>
+
+  <rect x="640" y="128" width="64" height="86" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="672" y="148" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#16a34a" text-anchor="middle">Profil</text>
+  <text x="672" y="166" font-family="Segoe UI" font-size="13" fill="#16a34a" text-anchor="middle">40</text>
+  <text x="672" y="184" font-family="Segoe UI" font-size="13" fill="#16a34a" text-anchor="middle">ishlayapti</text>
+
+  <!-- Kema o'xshatishi -->
+  <text x="390" y="280" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">O'xshatish: kema bo'limlari (suvga chidamli devorlar)</text>
+  <path d="M120,310 L660,310 L600,400 L180,400 Z" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <!-- ichki devorlar -->
+  <line x1="240" y1="310" x2="240" y2="400" stroke="#2563eb" stroke-width="2"/>
+  <line x1="360" y1="310" x2="360" y2="400" stroke="#2563eb" stroke-width="2"/>
+  <line x1="480" y1="310" x2="480" y2="400" stroke="#2563eb" stroke-width="2"/>
+  <line x1="540" y1="310" x2="540" y2="400" stroke="#2563eb" stroke-width="2"/>
+  <!-- bitta bo'lim suv to'ldi -->
+  <path d="M242,360 L358,360 L358,398 L246,398 Z" fill="#bfdbfe"/>
+  <text x="300" y="384" font-family="Segoe UI" font-size="13" fill="#1e40af" text-anchor="middle">suv kirdi</text>
+  <text x="180" y="360" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">bo'lim 1</text>
+  <text x="420" y="360" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">bo'lim 3</text>
+  <text x="390" y="424" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">Bitta bo'lim suvga to'lsa ham, devorlar tufayli kema cho'kmaydi — qolgan bo'limlar quruq.</text>
+
+  <!-- Izoh paneli -->
+  <rect x="40" y="436" width="700" height="20" rx="5" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+  <text x="54" y="451" font-family="Segoe UI" font-size="13" fill="#334155">Resurs izolyatsiyasi: har bog'liqlikka alohida thread-pool/ulanish kvotasi -&gt; xato tarqalmaydi (no cascade).</text>
+</svg>

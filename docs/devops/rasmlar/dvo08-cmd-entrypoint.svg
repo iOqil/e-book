@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" width="760" height="470">
+  <title>CMD va ENTRYPOINT farqi: docker run argumenti CMD ni almashtiradi, ENTRYPOINT ga esa qo'shiladi; pastda exec-form va shell-form taqqoslanadi</title>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">CMD va ENTRYPOINT</text>
+  <text x="380" y="54" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">docker run'dagi argument qanday ta'sir qiladi?</text>
+
+  <!-- LEFT: CMD -->
+  <rect x="28" y="72" width="344" height="206" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="200" y="98" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e40af">CMD &#8212; ALMASHTIRILADI</text>
+  <text x="48" y="124" font-family="Consolas, monospace" font-size="13" fill="#1e293b">CMD ["node","server.js"]</text>
+
+  <rect x="48" y="138" width="304" height="52" rx="7" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="60" y="159" font-family="Consolas, monospace" font-size="13" fill="#475569">docker run myapp</text>
+  <text x="60" y="180" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#1e293b">&#8594; node server.js</text>
+
+  <rect x="48" y="200" width="304" height="64" rx="7" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="60" y="221" font-family="Consolas, monospace" font-size="13" fill="#475569">docker run myapp echo salom</text>
+  <text x="60" y="242" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#dc2626">&#8594; echo salom</text>
+  <text x="60" y="259" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(CMD butunlay almashdi)</text>
+
+  <!-- RIGHT: ENTRYPOINT + CMD -->
+  <rect x="388" y="72" width="344" height="206" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="560" y="98" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#7c3aed">ENTRYPOINT + CMD &#8212; QO'SHILADI</text>
+  <text x="408" y="124" font-family="Consolas, monospace" font-size="13" fill="#1e293b">ENTRYPOINT ["node","server.js"]</text>
+  <text x="408" y="140" font-family="Consolas, monospace" font-size="13" fill="#1e293b">CMD ["--port","3000"]</text>
+
+  <rect x="408" y="150" width="304" height="52" rx="7" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="420" y="171" font-family="Consolas, monospace" font-size="13" fill="#475569">docker run myapp</text>
+  <text x="420" y="192" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#1e293b">&#8594; node server.js --port 3000</text>
+
+  <rect x="408" y="212" width="304" height="52" rx="7" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="420" y="233" font-family="Consolas, monospace" font-size="13" fill="#475569">docker run myapp --port 8080</text>
+  <text x="420" y="254" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#1e293b">&#8594; node server.js --port 8080</text>
+
+  <!-- BOTTOM: exec vs shell form -->
+  <text x="380" y="308" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Exec-form vs shell-form</text>
+
+  <rect x="28" y="324" width="344" height="120" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="200" y="348" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">Exec-form (TAVSIYA)</text>
+  <text x="48" y="374" font-family="Consolas, monospace" font-size="13" fill="#1e293b">CMD ["node","server.js"]</text>
+  <text x="48" y="398" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">To'g'ridan-to'g'ri PID 1 bo'ladi</text>
+  <text x="48" y="420" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">docker stop &#8594; SIGTERM yetadi, toza o'chish</text>
+
+  <rect x="388" y="324" width="344" height="120" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="560" y="348" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">Shell-form (ehtiyot bo'ling)</text>
+  <text x="408" y="374" font-family="Consolas, monospace" font-size="13" fill="#1e293b">CMD node server.js</text>
+  <text x="408" y="398" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">/bin/sh -c orqali ishlaydi</text>
+  <text x="408" y="420" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">signal sh'da qoladi, majburan o'chadi</text>
+
+  <text x="380" y="460" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Doim exec-form (JSON massiv) ishlating</text>
+</svg>

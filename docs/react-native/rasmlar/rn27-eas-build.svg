@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>EAS Build quvuri: kod bulutda yig'ilib .aab/.ipa ga aylanadi va EAS Submit bilan do'konlarga yetadi</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">Koddan do'konga: EAS quvuri</text>
+  <text x="380" y="62" text-anchor="middle" font-size="14" fill="#475569">Kompyuterda Xcode/Android Studio shart emas</text>
+
+  <!-- Step 1: Code -->
+  <rect x="40" y="95" width="170" height="100" rx="12" fill="#ffffff" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="125" y="128" text-anchor="middle" font-size="16" font-weight="700" fill="#1e293b">Kodingiz</text>
+  <text x="125" y="152" text-anchor="middle" font-size="13" fill="#475569">Expo loyiha</text>
+  <text x="125" y="172" text-anchor="middle" font-size="13" fill="#94a3b8">eas build:configure</text>
+
+  <!-- arrow -->
+  <line x1="210" y1="145" x2="262" y2="145" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="262,140 272,145 262,150" fill="#94a3b8"/>
+
+  <!-- Step 2: EAS Build cloud -->
+  <rect x="272" y="85" width="200" height="120" rx="12" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="372" y="116" text-anchor="middle" font-size="16" font-weight="700" fill="#4f46e5">EAS Build</text>
+  <text x="372" y="138" text-anchor="middle" font-size="13" fill="#475569">bulutli serverlar</text>
+  <text x="372" y="158" text-anchor="middle" font-size="13" fill="#475569">(nonvoyxona)</text>
+  <text x="372" y="182" text-anchor="middle" font-size="13" fill="#94a3b8">eas build -p android/ios</text>
+
+  <!-- arrow -->
+  <line x1="472" y1="145" x2="524" y2="145" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="524,140 534,145 524,150" fill="#94a3b8"/>
+
+  <!-- Step 3: Artifacts -->
+  <rect x="534" y="85" width="186" height="120" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="627" y="114" text-anchor="middle" font-size="16" font-weight="700" fill="#16a34a">Tayyor fayl</text>
+  <text x="627" y="140" text-anchor="middle" font-size="13" fill="#475569">Android: .aab / .apk</text>
+  <text x="627" y="162" text-anchor="middle" font-size="13" fill="#475569">iOS: .ipa</text>
+  <text x="627" y="186" text-anchor="middle" font-size="13" fill="#94a3b8">yuklab olish havolasi</text>
+
+  <!-- arrow down to submit -->
+  <line x1="627" y1="205" x2="627" y2="248" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="622,248 627,258 632,248" fill="#94a3b8"/>
+
+  <!-- Step 4: EAS Submit -->
+  <rect x="290" y="258" width="340" height="74" rx="12" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="460" y="288" text-anchor="middle" font-size="16" font-weight="700" fill="#b45309">EAS Submit</text>
+  <text x="460" y="312" text-anchor="middle" font-size="13" fill="#475569">eas submit -p android/ios</text>
+
+  <!-- arrows to stores -->
+  <line x1="380" y1="332" x2="250" y2="368" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="252,362 244,370 256,370" fill="#94a3b8"/>
+  <line x1="540" y1="332" x2="660" y2="368" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="654,362 666,370 658,372" fill="#94a3b8"/>
+
+  <!-- Play Store -->
+  <rect x="90" y="372" width="270" height="50" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="225" y="403" text-anchor="middle" font-size="15" font-weight="700" fill="#16a34a">Google Play  (bir martalik $25)</text>
+
+  <!-- App Store -->
+  <rect x="400" y="372" width="270" height="50" rx="10" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="535" y="403" text-anchor="middle" font-size="15" font-weight="700" fill="#4f46e5">App Store  ($99 / yil)</text>
+</svg>

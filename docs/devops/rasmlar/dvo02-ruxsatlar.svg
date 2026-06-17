@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420">
+  <title>Linux fayl ruxsatlari: rwxr-xr-x belgisi egasi, guruh va boshqalar ustunlariga bo'linib 755 sakkizlik raqamga bog'lanishi</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="700" fill="#1e293b">Ruxsatlarni o'qish: rwxr-xr-x = 755</text>
+
+  <!-- the raw permission string broken into segments -->
+  <!-- type -->
+  <rect x="70" y="70" width="50" height="56" rx="7" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="95" y="106" text-anchor="middle" font-family="Consolas, monospace" font-size="22" font-weight="700" fill="#1e293b">-</text>
+  <text x="95" y="146" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tur</text>
+  <text x="95" y="163" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(- fayl)</text>
+
+  <!-- owner rwx -->
+  <rect x="140" y="70" width="180" height="56" rx="7" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="230" y="108" text-anchor="middle" font-family="Consolas, monospace" font-size="30" font-weight="700" fill="#1e40af">rwx</text>
+
+  <!-- group r-x -->
+  <rect x="340" y="70" width="180" height="56" rx="7" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="430" y="108" text-anchor="middle" font-family="Consolas, monospace" font-size="30" font-weight="700" fill="#16a34a">r-x</text>
+
+  <!-- others r-x -->
+  <rect x="540" y="70" width="180" height="56" rx="7" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="630" y="108" text-anchor="middle" font-family="Consolas, monospace" font-size="30" font-weight="700" fill="#92400e">r-x</text>
+
+  <!-- column labels -->
+  <text x="230" y="148" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="700" fill="#1e40af">egasi (owner)</text>
+  <text x="430" y="148" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="700" fill="#16a34a">guruh (group)</text>
+  <text x="630" y="148" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="700" fill="#92400e">boshqalar (others)</text>
+
+  <!-- arrows down to octal -->
+  <g stroke="#94a3b8" stroke-width="2" fill="none" marker-end="url(#ar)">
+    <path d="M230 172 L230 206"/>
+    <path d="M430 172 L430 206"/>
+    <path d="M630 172 L630 206"/>
+  </g>
+  <defs>
+    <marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+      <path d="M0 0 L8 4 L0 8 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <!-- octal computation row -->
+  <rect x="140" y="210" width="180" height="44" rx="7" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="230" y="238" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">4+2+1 = <tspan font-size="20" font-weight="700" fill="#1e40af">7</tspan></text>
+
+  <rect x="340" y="210" width="180" height="44" rx="7" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="430" y="238" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">4+0+1 = <tspan font-size="20" font-weight="700" fill="#16a34a">5</tspan></text>
+
+  <rect x="540" y="210" width="180" height="44" rx="7" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="630" y="238" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">4+0+1 = <tspan font-size="20" font-weight="700" fill="#92400e">5</tspan></text>
+
+  <!-- big result -->
+  <rect x="290" y="272" width="180" height="48" rx="9" fill="#2563eb"/>
+  <text x="380" y="305" text-anchor="middle" font-family="Consolas, monospace" font-size="26" font-weight="700" fill="#ffffff">chmod 755</text>
+
+  <!-- value key -->
+  <text x="70" y="300" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">r = 4 (o'qish)</text>
+  <text x="70" y="320" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">w = 2 (yozish)</text>
+  <text x="70" y="340" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">x = 1 (bajarish)</text>
+
+  <!-- common values legend -->
+  <rect x="60" y="356" width="640" height="48" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="76" y="378" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">Tez-tez: <tspan font-weight="700" fill="#1e293b">755</tspan> skript/papka · <tspan font-weight="700" fill="#1e293b">644</tspan> oddiy fayl (rw-r--r--)</text>
+  <text x="76" y="396" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569"><tspan font-weight="700" fill="#dc2626">600</tspan> maxfiy fayl: .env, SSH kalit (rw-------) — faqat egasi o'qiydi</text>
+</svg>

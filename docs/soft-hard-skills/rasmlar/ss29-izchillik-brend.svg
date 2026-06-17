@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 520">
+  <title>Shaxsiy brend izchillik orqali quriladi</title>
+  <rect x="0" y="0" width="820" height="520" fill="#f8fafc"/>
+  <text x="410" y="42" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Shaxsiy brend = izchillik</text>
+  <text x="410" y="68" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Kichik hissalar vaqt o'qi bo'ylab jamlanib obro' bo'ladi</text>
+
+  <!-- Axes -->
+  <line x1="90" y1="400" x2="760" y2="400" stroke="#334155" stroke-width="2"/>
+  <line x1="90" y1="400" x2="90" y2="110" stroke="#334155" stroke-width="2"/>
+  <text x="425" y="440" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Vaqt (oylar, yillar)</text>
+  <text x="55" y="255" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b" transform="rotate(-90 55 255)">Obro'</text>
+
+  <!-- Growth curve (compounding) -->
+  <defs>
+    <marker id="ah3" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+  <path d="M 90 392 Q 350 388 500 320 T 740 140" fill="none" stroke="#16a34a" stroke-width="3.5" marker-end="url(#ah3)"/>
+
+  <!-- Small contribution dots along the curve -->
+  <circle cx="150" cy="390" r="6" fill="#2563eb"/>
+  <circle cx="230" cy="384" r="6" fill="#2563eb"/>
+  <circle cx="320" cy="372" r="6" fill="#2563eb"/>
+  <circle cx="410" cy="350" r="6" fill="#2563eb"/>
+  <circle cx="500" cy="318" r="6" fill="#2563eb"/>
+  <circle cx="590" cy="270" r="6" fill="#2563eb"/>
+  <circle cx="670" cy="205" r="6" fill="#2563eb"/>
+
+  <!-- Labels for early dots -->
+  <text x="150" y="375" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">post</text>
+  <text x="230" y="369" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">javob</text>
+  <text x="320" y="357" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">hissa</text>
+
+  <!-- Reputation milestone -->
+  <rect x="560" y="120" width="220" height="64" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="670" y="148" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">"Doimiy sifatli</text>
+  <text x="670" y="170" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">odam" obro'si</text>
+
+  <!-- Contrast: one big spike, no follow-up -->
+  <path d="M 150 392 L 175 200 L 200 392" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="6 4"/>
+  <text x="175" y="190" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">bir marta</text>
+  <text x="175" y="172" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">"viral"</text>
+
+  <text x="410" y="478" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#dc2626">Bitta katta cho'qqi tez so'nadi — kichik, doimiy hissalar murakkab foiz kabi o'sadi</text>
+  <text x="410" y="504" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Brend — siz xonada bo'lmaganingizda odamlar siz haqingizda aytadigan narsa</text>
+</svg>

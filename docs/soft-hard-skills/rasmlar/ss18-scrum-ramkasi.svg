@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 560">
+  <title>Scrum ramkasi: sprint sikli, rollar va artefaktlar</title>
+  <rect x="0" y="0" width="860" height="560" fill="#f8fafc"/>
+  <text x="430" y="40" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Scrum ramkasi</text>
+  <text x="430" y="66" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Bir sprint sikli: rejalashtirishdan retrospektivagacha, qayta-qayta</text>
+
+  <!-- Product backlog -->
+  <rect x="40" y="120" width="170" height="90" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="125" y="152" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#7c3aed">Product backlog</text>
+  <text x="125" y="176" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Barcha ish ro'yxati</text>
+  <text x="125" y="196" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">PO tartiblaydi</text>
+
+  <!-- Arrow to planning -->
+  <line x1="210" y1="165" x2="265" y2="165" stroke="#334155" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Planning -->
+  <rect x="270" y="120" width="160" height="90" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="350" y="152" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">Sprint rejasi</text>
+  <text x="350" y="176" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Sprint backlog tanlanadi</text>
+  <text x="350" y="196" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Maqsad qo'yiladi</text>
+
+  <!-- Arrow to sprint -->
+  <line x1="430" y1="165" x2="485" y2="165" stroke="#334155" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Sprint box (big) -->
+  <rect x="490" y="105" width="330" height="200" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="655" y="132" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb">Sprint (1-4 hafta)</text>
+  <!-- daily cycle -->
+  <circle cx="655" cy="210" r="58" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="655" y="200" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb">Kunlik</text>
+  <text x="655" y="222" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb">standup</text>
+  <text x="655" y="244" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">+ ishlanma</text>
+  <text x="655" y="288" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Natija: Increment</text>
+
+  <!-- Arrow down to review -->
+  <line x1="655" y1="305" x2="655" y2="350" stroke="#334155" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Review -->
+  <rect x="455" y="355" width="190" height="80" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="550" y="385" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">Sprint review</text>
+  <text x="550" y="408" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Demo + mahsulot fikri</text>
+  <text x="550" y="426" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Nima qildik?</text>
+
+  <!-- Arrow to retro -->
+  <line x1="455" y1="395" x2="400" y2="395" stroke="#334155" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Retro -->
+  <rect x="200" y="355" width="195" height="80" rx="10" fill="#fff7ed" stroke="#f59e0b" stroke-width="2"/>
+  <text x="297" y="385" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#d97706">Retrospektiva</text>
+  <text x="297" y="408" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Jarayonni yaxshilash</text>
+  <text x="297" y="426" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Qanday ishladik?</text>
+
+  <!-- Loop arrow back to planning -->
+  <path d="M 200 380 C 90 380, 80 250, 270 200" fill="none" stroke="#7c3aed" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arp)"/>
+  <text x="120" y="300" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#7c3aed">Keyingi sprint</text>
+
+  <!-- Roles legend -->
+  <rect x="40" y="475" width="780" height="58" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="55" y="498" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">Uch rol:</text>
+  <text x="135" y="498" font-family="Segoe UI" font-size="13" fill="#7c3aed">Product Owner (nima/nega)</text>
+  <text x="370" y="498" font-family="Segoe UI" font-size="13" fill="#2563eb">Scrum Master (jarayon/to'siq)</text>
+  <text x="640" y="498" font-family="Segoe UI" font-size="13" fill="#16a34a">Developerlar (qanday)</text>
+  <text x="55" y="522" font-family="Segoe UI" font-size="13" fill="#64748b">Artefaktlar: Product backlog (umumiy) - Sprint backlog (shu sprint) - Increment (tayyor natija).</text>
+
+  <defs>
+    <marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto">
+      <path d="M0,0 L7,3.5 L0,7 Z" fill="#334155"/>
+    </marker>
+    <marker id="arp" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto">
+      <path d="M0,0 L7,3.5 L0,7 Z" fill="#7c3aed"/>
+    </marker>
+  </defs>
+</svg>

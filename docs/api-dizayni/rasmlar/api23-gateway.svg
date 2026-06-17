@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520">
+  <title>API gateway: yagona kirish nuqtasi va edge masalalari ichki servislar oldida</title>
+  <rect x="0" y="0" width="900" height="520" fill="#f8fafc"/>
+  <text x="450" y="34" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">API gateway — yagona kirish nuqtasi</text>
+  <text x="450" y="58" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Mijoz -> gateway (edge masalalar) -> ichki mikroservislar</text>
+
+  <!-- Clients -->
+  <rect x="30" y="120" width="150" height="60" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="105" y="146" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1d4ed8">Web mijoz</text>
+  <text x="105" y="166" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">brauzer / SPA</text>
+
+  <rect x="30" y="230" width="150" height="60" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="105" y="256" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1d4ed8">Mobil mijoz</text>
+  <text x="105" y="276" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">iOS / Android</text>
+
+  <rect x="30" y="340" width="150" height="60" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="105" y="366" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1d4ed8">3rd-party</text>
+  <text x="105" y="386" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">tashqi integratsiya</text>
+
+  <!-- arrows to gateway -->
+  <line x1="180" y1="150" x2="320" y2="240" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrG)"/>
+  <line x1="180" y1="260" x2="320" y2="260" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrG)"/>
+  <line x1="180" y1="370" x2="320" y2="280" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrG)"/>
+
+  <!-- Gateway -->
+  <rect x="320" y="110" width="230" height="300" rx="14" fill="#ffffff" stroke="#7c3aed" stroke-width="3"/>
+  <text x="435" y="140" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#6d28d9">API GATEWAY</text>
+  <text x="435" y="160" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">edge masalalar bir joyda</text>
+
+  <rect x="340" y="176" width="190" height="30" rx="6" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1"/>
+  <text x="435" y="196" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">TLS terminatsiya</text>
+  <rect x="340" y="212" width="190" height="30" rx="6" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1"/>
+  <text x="435" y="232" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Auth / avtorizatsiya</text>
+  <rect x="340" y="248" width="190" height="30" rx="6" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1"/>
+  <text x="435" y="268" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Rate limiting</text>
+  <rect x="340" y="284" width="190" height="30" rx="6" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1"/>
+  <text x="435" y="304" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Routing (yo'naltirish)</text>
+  <rect x="340" y="320" width="190" height="30" rx="6" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1"/>
+  <text x="435" y="340" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Kesh + transformatsiya</text>
+  <rect x="340" y="356" width="190" height="30" rx="6" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1"/>
+  <text x="435" y="376" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Logging / monitoring</text>
+
+  <!-- arrows to services -->
+  <line x1="550" y1="180" x2="690" y2="150" stroke="#16a34a" stroke-width="2" marker-end="url(#arrG2)"/>
+  <line x1="550" y1="260" x2="690" y2="260" stroke="#16a34a" stroke-width="2" marker-end="url(#arrG2)"/>
+  <line x1="550" y1="340" x2="690" y2="370" stroke="#16a34a" stroke-width="2" marker-end="url(#arrG2)"/>
+
+  <!-- Internal services -->
+  <text x="785" y="100" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#15803d">Ichki mikroservislar</text>
+  <rect x="690" y="118" width="190" height="56" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="785" y="142" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#15803d">Buyurtma servisi</text>
+  <text x="785" y="161" text-anchor="middle" font-family="monospace" font-size="13" fill="#64748b">/orders</text>
+
+  <rect x="690" y="232" width="190" height="56" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="785" y="256" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#15803d">Foydalanuvchi servisi</text>
+  <text x="785" y="275" text-anchor="middle" font-family="monospace" font-size="13" fill="#64748b">/users</text>
+
+  <rect x="690" y="346" width="190" height="56" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="785" y="370" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#15803d">To'lov servisi</text>
+  <text x="785" y="389" text-anchor="middle" font-family="monospace" font-size="13" fill="#64748b">/payments</text>
+
+  <rect x="30" y="450" width="840" height="48" rx="8" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="450" y="471" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#b45309">Cross-cutting (kesishuvchi) masalalar markazlashtiriladi</text>
+  <text x="450" y="489" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Ichki tuzilma mijozga oshkor bo'lmaydi — gateway uni yashiradi</text>
+
+  <defs>
+    <marker id="arrG" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 Z" fill="#94a3b8"/>
+    </marker>
+    <marker id="arrG2" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+</svg>

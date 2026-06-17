@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 520">
+  <title>Yaxshi va yomon URI dizayni: resurs-markazli vs RPC uslubi</title>
+  <rect x="0" y="0" width="880" height="520" fill="#f8fafc"/>
+  <text x="440" y="36" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">URI dizayni — resurs-markazli (ot) vs RPC uslubi (fe'l)</text>
+  <text x="440" y="60" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">URI resursni identifikatsiya qiladi; harakat HTTP metod bilan ifodalanadi</text>
+
+  <!-- Yaxshi ustun -->
+  <rect x="40" y="86" width="380" height="300" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="60" y="116" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a">✓ Yaxshi — resurs (ot)</text>
+
+  <text x="60" y="150" font-family="monospace" font-size="14" fill="#15803d">GET /users/42/orders</text>
+  <text x="60" y="172" font-family="Segoe UI" font-size="13" fill="#64748b">42-mijozning buyurtmalari ro'yxati</text>
+
+  <text x="60" y="204" font-family="monospace" font-size="14" fill="#15803d">POST /orders</text>
+  <text x="60" y="226" font-family="Segoe UI" font-size="13" fill="#64748b">Yangi buyurtma yaratish (201 Created)</text>
+
+  <text x="60" y="258" font-family="monospace" font-size="14" fill="#15803d">DELETE /orders/42</text>
+  <text x="60" y="280" font-family="Segoe UI" font-size="13" fill="#64748b">42-buyurtmani o'chirish</text>
+
+  <text x="60" y="312" font-family="monospace" font-size="14" fill="#15803d">GET /order-items?status=open</text>
+  <text x="60" y="334" font-family="Segoe UI" font-size="13" fill="#64748b">kebab-case yo'l + query filtr</text>
+
+  <text x="60" y="366" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#16a34a">Harakat = metod, ne'mat = URI</text>
+
+  <!-- Yomon ustun -->
+  <rect x="460" y="86" width="380" height="300" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="480" y="116" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#dc2626">✗ Yomon — fe'l (RPC uslubi)</text>
+
+  <text x="480" y="150" font-family="monospace" font-size="14" fill="#b91c1c">GET /getUserOrders?id=42</text>
+  <text x="480" y="172" font-family="Segoe UI" font-size="13" fill="#64748b">fe'l URI'da; resurs identifikatsiyasi query'da</text>
+
+  <text x="480" y="204" font-family="monospace" font-size="14" fill="#b91c1c">POST /createOrder</text>
+  <text x="480" y="226" font-family="Segoe UI" font-size="13" fill="#64748b">metod allaqachon "yaratish"ni bildiradi</text>
+
+  <text x="480" y="258" font-family="monospace" font-size="14" fill="#b91c1c">GET /deleteOrder?id=42</text>
+  <text x="480" y="280" font-family="Segoe UI" font-size="13" fill="#64748b">o'chirishni GET orqali — safe buziladi!</text>
+
+  <text x="480" y="312" font-family="monospace" font-size="14" fill="#b91c1c">GET /order_items.json</text>
+  <text x="480" y="334" font-family="Segoe UI" font-size="13" fill="#64748b">snake_case + fayl kengaytmasi</text>
+
+  <text x="480" y="366" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#dc2626">Har amal uchun yangi fe'l — nizosiz</text>
+
+  <!-- Pastki qoidalar paneli -->
+  <rect x="40" y="408" width="800" height="92" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="60" y="436" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">Asosiy qoidalar</text>
+  <text x="60" y="462" font-family="Segoe UI" font-size="13" fill="#334155">• Otlar, fe'l emas   • Kolleksiya = ko'plik   • Kichik harf + kebab-case   • Yo'l = identifikatsiya</text>
+  <text x="60" y="484" font-family="Segoe UI" font-size="13" fill="#334155">• Query = filtr/sahifalash   • Trailing slash va .json kengaytmasidan saqlaning   • Izchillik shart</text>
+</svg>

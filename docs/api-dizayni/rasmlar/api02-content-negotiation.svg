@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 470">
+  <title>Content negotiation: Accept va Content-Type kelishuvi</title>
+  <rect x="0" y="0" width="880" height="470" fill="#f8fafc"/>
+  <text x="440" y="34" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">Content negotiation (format kelishuvi)</text>
+  <text x="440" y="58" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Mijoz NIMA xohlayotganini aytadi · Server NIMA yuborayotganini aytadi</text>
+
+  <defs>
+    <marker id="cn" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <!-- Client -->
+  <rect x="40" y="170" width="180" height="130" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="130" y="200" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb">Mijoz</text>
+  <text x="130" y="226" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">"Menga JSON,</text>
+  <text x="130" y="246" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">o'zbek tilida,</text>
+  <text x="130" y="266" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">gzip siqilgan</text>
+  <text x="130" y="286" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">bo'lsa yaxshi"</text>
+
+  <!-- Server -->
+  <rect x="660" y="170" width="180" height="130" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="750" y="200" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a">Server</text>
+  <text x="750" y="226" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">"Mana JSON,</text>
+  <text x="750" y="246" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">o'zbek tilida,</text>
+  <text x="750" y="266" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">gzip siqilgan —</text>
+  <text x="750" y="286" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">iltimos"</text>
+
+  <!-- request arrow + headers -->
+  <rect x="244" y="120" width="392" height="86" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="440" y="142" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#2563eb">So'rov sarlavhalari (mijoz xohishi)</text>
+  <text x="258" y="164" font-family="monospace" font-size="13" fill="#334155">Accept: application/json</text>
+  <text x="258" y="182" font-family="monospace" font-size="13" fill="#334155">Accept-Language: uz</text>
+  <text x="258" y="200" font-family="monospace" font-size="13" fill="#334155">Accept-Encoding: gzip, br</text>
+  <line x1="222" y1="163" x2="242" y2="163" stroke="#64748b" stroke-width="2" marker-end="url(#cn)"/>
+  <line x1="638" y1="163" x2="658" y2="163" stroke="#64748b" stroke-width="2" marker-end="url(#cn)"/>
+
+  <!-- response arrow + headers -->
+  <rect x="244" y="264" width="392" height="86" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="440" y="286" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#16a34a">Javob sarlavhalari (server tanlovi)</text>
+  <text x="258" y="308" font-family="monospace" font-size="13" fill="#334155">Content-Type: application/json</text>
+  <text x="258" y="326" font-family="monospace" font-size="13" fill="#334155">Content-Language: uz</text>
+  <text x="258" y="344" font-family="monospace" font-size="13" fill="#334155">Content-Encoding: gzip</text>
+  <line x1="658" y1="307" x2="638" y2="307" stroke="#64748b" stroke-width="2" marker-end="url(#cn)"/>
+  <line x1="242" y1="307" x2="222" y2="307" stroke="#64748b" stroke-width="2" marker-end="url(#cn)"/>
+
+  <!-- note -->
+  <rect x="120" y="380" width="640" height="74" rx="8" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="440" y="404" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Server xohishni qondira olmasa -&gt; 406 Not Acceptable qaytarishi mumkin.</text>
+  <text x="440" y="426" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Accept = "men nima xohlayman"; Content-Type = "men nima yubordim".</text>
+  <text x="440" y="446" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Ko'p API faqat application/json qo'llab-quvvatlaydi — bu ham haqiqiy tanlov.</text>
+</svg>

@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 520">
+  <title>Chiziqli qidiruvda eng yaxshi, o'rtacha va eng yomon holat: qidirilayotgan element massivning qayerida</title>
+  <rect x="0" y="0" width="820" height="520" fill="#f8fafc"/>
+  <text x="410" y="38" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Uch holat: chiziqli qidiruv (target = 7)</text>
+  <text x="410" y="63" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Bir xil algoritm, lekin kirishga qarab amallar soni har xil</text>
+
+  <!-- BEST CASE -->
+  <text x="40" y="110" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a">Eng yaxshi holat (best case)</text>
+  <text x="40" y="132" font-family="Segoe UI" font-size="13" fill="#64748b">Element birinchi katakda topiladi — 1 ta taqqoslash.</text>
+  <g font-family="monospace" font-size="15">
+    <rect x="40" y="142" width="56" height="44" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+    <text x="68" y="170" text-anchor="middle" fill="#16a34a" font-weight="bold">7</text>
+    <rect x="96" y="142" width="56" height="44" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="124" y="170" text-anchor="middle" fill="#94a3b8">3</text>
+    <rect x="152" y="142" width="56" height="44" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="180" y="170" text-anchor="middle" fill="#94a3b8">9</text>
+    <rect x="208" y="142" width="56" height="44" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="236" y="170" text-anchor="middle" fill="#94a3b8">1</text>
+    <rect x="264" y="142" width="56" height="44" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="292" y="170" text-anchor="middle" fill="#94a3b8">5</text>
+    <rect x="320" y="142" width="56" height="44" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="348" y="170" text-anchor="middle" fill="#94a3b8">8</text>
+  </g>
+  <text x="400" y="170" font-family="monospace" font-size="15" fill="#16a34a">-> 1 amal  =  O(1)</text>
+  <text x="68" y="206" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">topildi</text>
+
+  <!-- AVERAGE CASE -->
+  <text x="40" y="248" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#f59e0b">O'rtacha holat (average case)</text>
+  <text x="40" y="270" font-family="Segoe UI" font-size="13" fill="#64748b">Element o'rtada — taxminan n/2 ta taqqoslash.</text>
+  <g font-family="monospace" font-size="15">
+    <rect x="40" y="280" width="56" height="44" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+    <text x="68" y="308" text-anchor="middle" fill="#b45309">3</text>
+    <rect x="96" y="280" width="56" height="44" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+    <text x="124" y="308" text-anchor="middle" fill="#b45309">9</text>
+    <rect x="152" y="280" width="56" height="44" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+    <text x="180" y="308" text-anchor="middle" fill="#b45309">1</text>
+    <rect x="208" y="280" width="56" height="44" fill="#fed7aa" stroke="#f59e0b" stroke-width="2.5"/>
+    <text x="236" y="308" text-anchor="middle" fill="#b45309" font-weight="bold">7</text>
+    <rect x="264" y="280" width="56" height="44" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="292" y="308" text-anchor="middle" fill="#94a3b8">5</text>
+    <rect x="320" y="280" width="56" height="44" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="348" y="308" text-anchor="middle" fill="#94a3b8">8</text>
+  </g>
+  <text x="400" y="308" font-family="monospace" font-size="15" fill="#f59e0b">-> ~n/2 amal  =  O(n)</text>
+  <text x="236" y="344" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#b45309">topildi</text>
+
+  <!-- WORST CASE -->
+  <text x="40" y="386" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#dc2626">Eng yomon holat (worst case)</text>
+  <text x="40" y="408" font-family="Segoe UI" font-size="13" fill="#64748b">Element oxirida yoki umuman yo'q — n ta taqqoslash.</text>
+  <g font-family="monospace" font-size="15">
+    <rect x="40" y="418" width="56" height="44" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+    <text x="68" y="446" text-anchor="middle" fill="#b91c1c">3</text>
+    <rect x="96" y="418" width="56" height="44" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+    <text x="124" y="446" text-anchor="middle" fill="#b91c1c">9</text>
+    <rect x="152" y="418" width="56" height="44" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+    <text x="180" y="446" text-anchor="middle" fill="#b91c1c">1</text>
+    <rect x="208" y="418" width="56" height="44" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+    <text x="236" y="446" text-anchor="middle" fill="#b91c1c">5</text>
+    <rect x="264" y="418" width="56" height="44" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+    <text x="292" y="446" text-anchor="middle" fill="#b91c1c">8</text>
+    <rect x="320" y="418" width="56" height="44" fill="#fecaca" stroke="#dc2626" stroke-width="2.5"/>
+    <text x="348" y="446" text-anchor="middle" fill="#b91c1c" font-weight="bold">7</text>
+  </g>
+  <text x="400" y="446" font-family="monospace" font-size="15" fill="#dc2626">-> n amal  =  O(n)</text>
+  <text x="348" y="482" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#b91c1c">oxirda topildi</text>
+
+  <!-- Footer note -->
+  <rect x="40" y="494" width="740" height="20" fill="none"/>
+  <text x="410" y="510" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#1e293b">Big-O odatda eng yomon holatni bildiradi: chiziqli qidiruv = O(n).</text>
+</svg>

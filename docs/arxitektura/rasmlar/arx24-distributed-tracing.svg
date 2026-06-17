@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 460">
+  <title>Distributed tracing: bitta so'rov uchta servis bo'ylab, trace ID va span'lar bilan bog'lanadi</title>
+  <rect x="0" y="0" width="780" height="460" fill="#f8fafc"/>
+  <text x="390" y="32" text-anchor="middle" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b">Distributed tracing — bitta so'rov, ko'p servis</text>
+  <text x="390" y="56" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">trace ID = butun so'rov; span = bitta bosqich (boshlanish + davomiylik)</text>
+
+  <!-- top: flow of services -->
+  <g font-family="Segoe UI">
+    <rect x="40" y="80" width="150" height="56" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+    <text x="115" y="106" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e293b">A: API gateway</text>
+    <text x="115" y="124" text-anchor="middle" font-size="13" fill="#64748b">so'rovni qabul qiladi</text>
+
+    <rect x="315" y="80" width="150" height="56" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+    <text x="390" y="106" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e293b">B: order-service</text>
+    <text x="390" y="124" text-anchor="middle" font-size="13" fill="#64748b">buyurtmani tuzadi</text>
+
+    <rect x="590" y="80" width="150" height="56" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+    <text x="665" y="106" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e293b">C: payment</text>
+    <text x="665" y="124" text-anchor="middle" font-size="13" fill="#64748b">to'lovni amalga</text>
+  </g>
+
+  <!-- arrows -->
+  <defs>
+    <marker id="ah" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#334155"/>
+    </marker>
+  </defs>
+  <line x1="190" y1="108" x2="312" y2="108" stroke="#334155" stroke-width="2" marker-end="url(#ah)"/>
+  <text x="251" y="100" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">traceparent</text>
+  <line x1="465" y1="108" x2="587" y2="108" stroke="#334155" stroke-width="2" marker-end="url(#ah)"/>
+  <text x="526" y="100" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">traceparent</text>
+
+  <!-- trace id banner -->
+  <rect x="40" y="156" width="700" height="30" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1"/>
+  <text x="390" y="176" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">trace ID = <tspan font-weight="bold" fill="#2563eb">4bf92f...a7</tspan>  — uchchala servisda BIR XIL (so'rov bilan tarqaladi)</text>
+
+  <!-- waterfall / spans -->
+  <text x="40" y="218" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">Span sharsharasi (waterfall) — vaqt o'qi bo'ylab:</text>
+  <!-- time axis -->
+  <line x1="160" y1="234" x2="740" y2="234" stroke="#94a3b8" stroke-width="1"/>
+  <text x="160" y="250" font-family="Segoe UI" font-size="13" fill="#64748b">0ms</text>
+  <text x="450" y="250" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">150ms</text>
+  <text x="740" y="250" text-anchor="end" font-family="Segoe UI" font-size="13" fill="#64748b">300ms</text>
+
+  <!-- span A (root) -->
+  <text x="40" y="276" font-family="Segoe UI" font-size="13" fill="#334155">A gateway</text>
+  <rect x="160" y="264" width="560" height="18" rx="3" fill="#bfdbfe" stroke="#2563eb"/>
+  <text x="166" y="277" font-family="Segoe UI" font-size="13" fill="#1e293b">span (root, parent=yo'q)  ~290ms</text>
+
+  <!-- span B -->
+  <text x="40" y="306" font-family="Segoe UI" font-size="13" fill="#334155">B order</text>
+  <rect x="200" y="294" width="480" height="18" rx="3" fill="#bbf7d0" stroke="#16a34a"/>
+  <text x="206" y="307" font-family="Segoe UI" font-size="13" fill="#1e293b">child span (parent=A)  ~250ms</text>
+
+  <!-- span C (slow) -->
+  <text x="40" y="336" font-family="Segoe UI" font-size="13" fill="#334155">C payment</text>
+  <rect x="380" y="324" width="280" height="18" rx="3" fill="#fca5a5" stroke="#dc2626"/>
+  <text x="386" y="337" font-family="Segoe UI" font-size="13" fill="#1e293b">child span (parent=B)  ~145ms  &lt;-- BUTUN BO'YINBOG'</text>
+
+  <!-- span db -->
+  <text x="40" y="366" font-family="Segoe UI" font-size="13" fill="#334155">db query</text>
+  <rect x="200" y="354" width="70" height="18" rx="3" fill="#bbf7d0" stroke="#16a34a"/>
+  <text x="206" y="367" font-family="Segoe UI" font-size="13" fill="#1e293b">35ms</text>
+
+  <!-- insight box -->
+  <rect x="40" y="392" width="700" height="48" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="56" y="414" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#dc2626">Tahlil:</text>
+  <text x="110" y="414" font-family="Segoe UI" font-size="13" fill="#1e293b">umumiy 290ms ning 145ms i payment'da ketgan — sekinlikning manbasi shu (waterfall ko'rsatadi).</text>
+  <text x="56" y="432" font-family="Segoe UI" font-size="13" fill="#64748b">Trace bo'lmasa, faqat "so'rov sekin" deb bilardingiz, AMMO qaysi servisda ekanini bilmasdingiz.</text>
+</svg>

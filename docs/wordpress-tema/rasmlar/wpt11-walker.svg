@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 560" width="840" height="560" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Walker_Nav_Menu metodlari: start_lvl / start_el / end_el / end_lvl qaysi HTML qismini chiqaradi</title>
+  <rect x="0" y="0" width="840" height="560" fill="#f8fafc"/>
+  <text x="420" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Walker_Nav_Menu: to'rt metod, to'rt HTML qism</text>
+  <text x="420" y="56" text-anchor="middle" font-size="14" fill="#475569">Walker menyu daraxtini aylanib, har bo'g'in uchun mos metodni chaqiradi</text>
+
+  <!-- chap: metodlar ro'yxati -->
+  <rect x="36" y="84" width="320" height="300" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="196" y="112" text-anchor="middle" font-size="15" font-weight="700" fill="#7c3aed">Metodlar (kengaytiriladi)</text>
+
+  <rect x="54" y="128" width="284" height="54" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="1"/>
+  <text x="66" y="150" font-size="14" font-weight="700" fill="#5b21b6" font-family="Consolas, monospace">start_lvl(&amp;$output, $depth, $args)</text>
+  <text x="66" y="172" font-size="13" fill="#475569">Sub-menu &lt;ul&gt; ni OCHADI</text>
+
+  <rect x="54" y="190" width="284" height="54" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1"/>
+  <text x="66" y="212" font-size="14" font-weight="700" fill="#1e40af" font-family="Consolas, monospace">start_el(&amp;$output, $item, $depth ...)</text>
+  <text x="66" y="234" font-size="13" fill="#475569">&lt;li&gt; va &lt;a&gt; ni OCHADI (har element)</text>
+
+  <rect x="54" y="252" width="284" height="54" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1"/>
+  <text x="66" y="274" font-size="14" font-weight="700" fill="#1e40af" font-family="Consolas, monospace">end_el(&amp;$output, $item, $depth ...)</text>
+  <text x="66" y="296" font-size="13" fill="#475569">&lt;/li&gt; ni YOPADI</text>
+
+  <rect x="54" y="314" width="284" height="54" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="1"/>
+  <text x="66" y="336" font-size="14" font-weight="700" fill="#5b21b6" font-family="Consolas, monospace">end_lvl(&amp;$output, $depth, $args)</text>
+  <text x="66" y="358" font-size="13" fill="#475569">Sub-menu &lt;/ul&gt; ni YOPADI</text>
+
+  <!-- strelka -->
+  <defs>
+    <marker id="arw" markerWidth="12" markerHeight="12" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 Z" fill="#475569"/>
+    </marker>
+  </defs>
+  <line x1="356" y1="234" x2="406" y2="234" stroke="#475569" stroke-width="3" marker-end="url(#arw)"/>
+
+  <!-- o'ng: HTML natija, ranglar metodlarga mos -->
+  <rect x="416" y="84" width="388" height="300" rx="12" fill="#0f172a"/>
+  <text x="610" y="112" text-anchor="middle" font-size="14" font-weight="700" fill="#e2e8f0">Hosil bo'lgan HTML</text>
+
+  <text x="436" y="148" font-size="13" fill="#c4b5fd" font-family="Consolas, monospace">&lt;ul class="navbar-nav"&gt;</text>
+  <text x="450" y="174" font-size="13" fill="#93c5fd" font-family="Consolas, monospace">&lt;li class="nav-item"&gt;</text>
+  <text x="464" y="196" font-size="13" fill="#93c5fd" font-family="Consolas, monospace">&lt;a class="nav-link"&gt;Xizmatlar&lt;/a&gt;</text>
+  <text x="464" y="222" font-size="13" fill="#c4b5fd" font-family="Consolas, monospace">&lt;ul class="dropdown-menu"&gt;</text>
+  <text x="478" y="246" font-size="13" fill="#93c5fd" font-family="Consolas, monospace">&lt;li class="nav-item"&gt;</text>
+  <text x="492" y="268" font-size="13" fill="#93c5fd" font-family="Consolas, monospace">&lt;a class="dropdown-item"&gt;Veb&lt;/a&gt;</text>
+  <text x="478" y="290" font-size="13" fill="#93c5fd" font-family="Consolas, monospace">&lt;/li&gt;</text>
+  <text x="464" y="312" font-size="13" fill="#c4b5fd" font-family="Consolas, monospace">&lt;/ul&gt;</text>
+  <text x="450" y="334" font-size="13" fill="#93c5fd" font-family="Consolas, monospace">&lt;/li&gt;</text>
+  <text x="436" y="356" font-size="13" fill="#c4b5fd" font-family="Consolas, monospace">&lt;/ul&gt;</text>
+
+  <!-- rang izohi -->
+  <rect x="436" y="368" width="14" height="10" fill="#c4b5fd"/>
+  <text x="456" y="378" font-size="13" fill="#cbd5e1">start_lvl / end_lvl</text>
+  <rect x="590" y="367" width="14" height="11" fill="#93c5fd"/>
+  <text x="610" y="378" font-size="13" fill="#cbd5e1">start_el / end_el</text>
+
+  <!-- pastki: chaqiruv tartibi -->
+  <rect x="36" y="404" width="768" height="76" rx="10" fill="#e2e8f0"/>
+  <text x="420" y="430" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Chaqirilish tartibi (bola elementli element uchun):</text>
+  <text x="420" y="458" text-anchor="middle" font-size="13" fill="#475569" font-family="Consolas, monospace">start_el  ->  start_lvl  ->  (bolalar: start_el ... end_el)  ->  end_lvl  ->  end_el</text>
+
+  <text x="420" y="510" text-anchor="middle" font-size="13" fill="#475569">Faqat o'zgartirmoqchi bo'lgan metodni qayta yozing — qolganini ota-sinf (Walker_Nav_Menu) bajaradi</text>
+  <text x="420" y="536" text-anchor="middle" font-size="13" fill="#94a3b8">Metod imzolari yadrodagidek bo'lishi shart (&amp;$output havola bilan uzatiladi)</text>
+</svg>

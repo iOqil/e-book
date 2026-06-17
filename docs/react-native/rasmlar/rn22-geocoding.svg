@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" width="760" height="360" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Geocoding: manzil va koordinata orasidagi ikki tomonlama almashinish</title>
+  <rect x="0" y="0" width="760" height="360" fill="#f8fafc"/>
+  <text x="380" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">Geocoding — manzil va koordinata</text>
+
+  <!-- Left: address -->
+  <rect x="44" y="120" width="240" height="130" rx="14" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="164" y="156" text-anchor="middle" font-size="17" font-weight="700" fill="#4f46e5">Manzil (matn)</text>
+  <text x="164" y="186" text-anchor="middle" font-size="14" fill="#475569">"Toshkent,</text>
+  <text x="164" y="206" text-anchor="middle" font-size="14" fill="#475569">Amir Temur ko'chasi 1"</text>
+  <text x="164" y="232" text-anchor="middle" font-size="13" fill="#94a3b8">odam o'qiy oladi</text>
+
+  <!-- Right: coords -->
+  <rect x="476" y="120" width="240" height="130" rx="14" fill="#ffffff" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="596" y="156" text-anchor="middle" font-size="17" font-weight="700" fill="#0ea5e9">Koordinata (raqam)</text>
+  <text x="596" y="186" text-anchor="middle" font-size="14" fill="#475569">latitude: 41.3111</text>
+  <text x="596" y="206" text-anchor="middle" font-size="14" fill="#475569">longitude: 69.2797</text>
+  <text x="596" y="232" text-anchor="middle" font-size="13" fill="#94a3b8">xarita tushunadi</text>
+
+  <!-- Top arrow: geocode (address -> coords) -->
+  <line x1="290" y1="148" x2="466" y2="148" stroke="#16a34a" stroke-width="2.5"/>
+  <polygon points="466,142 480,148 466,154" fill="#16a34a"/>
+  <rect x="318" y="86" width="124" height="44" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="380" y="106" text-anchor="middle" font-size="14" font-weight="700" fill="#16a34a">geocodeAsync</text>
+  <text x="380" y="123" text-anchor="middle" font-size="13" fill="#475569">manzil &#8594; koordinata</text>
+
+  <!-- Bottom arrow: reverse (coords -> address) -->
+  <line x1="470" y1="222" x2="294" y2="222" stroke="#f59e0b" stroke-width="2.5"/>
+  <polygon points="294,216 280,222 294,228" fill="#f59e0b"/>
+  <rect x="300" y="238" width="160" height="44" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="380" y="258" text-anchor="middle" font-size="14" font-weight="700" fill="#b45309">reverseGeocodeAsync</text>
+  <text x="380" y="275" text-anchor="middle" font-size="13" fill="#475569">koordinata &#8594; manzil</text>
+
+  <text x="380" y="324" text-anchor="middle" font-size="14" fill="#475569">Ikkalasi ham massiv qaytaradi — birinchi natijani (&#91;0&#93;) oling.</text>
+  <text x="380" y="346" text-anchor="middle" font-size="13" fill="#94a3b8">geocode = oldinga · reverseGeocode = orqaga</text>
+</svg>

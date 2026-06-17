@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 430" width="800" height="430" font-family="Segoe UI, system-ui, sans-serif">
+  <title>shared_preferences kalit-qiymat ombori: setString('user','Ali') yozasiz, ilovani yopasiz, qayta ochasiz va getString('user') yana 'Ali' qaytaradi — ma'lumot qurilmada saqlanib qoladi</title>
+  <rect x="0" y="0" width="800" height="430" fill="#f8fafc"/>
+  <text x="400" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">shared_preferences — kalit/qiymat qurilmada saqlanadi</text>
+  <text x="400" y="60" text-anchor="middle" font-size="14" fill="#475569">Ilova yopilib qayta ochilsa ham, yozilgan qiymat yo'qolmaydi</text>
+
+  <!-- Step 1: write -->
+  <rect x="40" y="92" width="200" height="120" rx="14" fill="#dbeafe" stroke="#027dfd" stroke-width="2.5"/>
+  <text x="140" y="120" text-anchor="middle" font-size="15" font-weight="700" fill="#0553b1">1) Yozish</text>
+  <text x="140" y="150" text-anchor="middle" font-size="13" fill="#1e293b">prefs.setString(</text>
+  <text x="140" y="170" text-anchor="middle" font-size="13" fill="#1e293b">'user', 'Ali')</text>
+  <text x="140" y="196" text-anchor="middle" font-size="13" fill="#64748b">qiymatni saqlaymiz</text>
+
+  <!-- arrow 1 -> store -->
+  <line x1="240" y1="152" x2="300" y2="152" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="300,152 288,146 288,158" fill="#94a3b8"/>
+
+  <!-- Device store (key-value) -->
+  <rect x="300" y="84" width="200" height="190" rx="14" fill="#ffffff" stroke="#6366f1" stroke-width="2.5"/>
+  <text x="400" y="110" text-anchor="middle" font-size="14" font-weight="700" fill="#6366f1">Qurilma xotirasi</text>
+  <text x="400" y="128" text-anchor="middle" font-size="13" fill="#64748b">(disk — doimiy)</text>
+
+  <!-- key-value rows -->
+  <rect x="320" y="142" width="80" height="34" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <rect x="400" y="142" width="80" height="34" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="360" y="164" text-anchor="middle" font-size="13" font-weight="700" fill="#1e293b">'user'</text>
+  <text x="440" y="164" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a">'Ali'</text>
+
+  <rect x="320" y="178" width="80" height="34" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <rect x="400" y="178" width="80" height="34" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="360" y="200" text-anchor="middle" font-size="13" font-weight="700" fill="#1e293b">'dark'</text>
+  <text x="440" y="200" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a">true</text>
+
+  <text x="360" y="234" text-anchor="middle" font-size="13" fill="#64748b">kalit</text>
+  <text x="440" y="234" text-anchor="middle" font-size="13" fill="#64748b">qiymat</text>
+  <text x="400" y="260" text-anchor="middle" font-size="13" fill="#475569">restart bo'lsa ham qoladi</text>
+
+  <!-- arrow store -> read -->
+  <line x1="500" y1="180" x2="560" y2="180" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="560,180 548,174 548,186" fill="#94a3b8"/>
+
+  <!-- Step 3: read -->
+  <rect x="560" y="120" width="200" height="120" rx="14" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="660" y="148" text-anchor="middle" font-size="15" font-weight="700" fill="#16a34a">3) O'qish</text>
+  <text x="660" y="178" text-anchor="middle" font-size="13" fill="#1e293b">prefs.getString(</text>
+  <text x="660" y="198" text-anchor="middle" font-size="13" fill="#1e293b">'user')</text>
+  <text x="660" y="224" text-anchor="middle" font-size="13" fill="#475569">-&gt; 'Ali' qaytadi</text>
+
+  <!-- Step 2: close/reopen banner -->
+  <rect x="220" y="300" width="360" height="56" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="400" y="324" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">2) Ilovani yopib, qayta ochasiz</text>
+  <text x="400" y="344" text-anchor="middle" font-size="13" fill="#475569">xotira tozalanadi — lekin disk saqlangani qoladi</text>
+
+  <!-- connecting curved hints -->
+  <line x1="140" y1="300" x2="140" y2="212" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <line x1="660" y1="300" x2="660" y2="240" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5,4"/>
+
+  <!-- Footer -->
+  <rect x="40" y="376" width="720" height="40" rx="10" fill="#ffffff" stroke="#027dfd" stroke-width="1.5"/>
+  <text x="400" y="401" text-anchor="middle" font-size="14" fill="#0553b1">Avval await SharedPreferences.getInstance() — keyin setString/getString va boshqalar</text>
+</svg>

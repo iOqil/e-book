@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 560">
+  <title>Stack trace anatomiyasi: xato xabarini to'g'ri o'qish</title>
+  <rect x="0" y="0" width="820" height="560" fill="#f8fafc"/>
+  <text x="410" y="40" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Stack trace'ni to'g'ri o'qish</text>
+  <text x="410" y="66" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Tepa = eng ichki joy (xato shu yerda) · Past = boshlangan nuqta</text>
+
+  <!-- terminal-like panel -->
+  <rect x="120" y="95" width="500" height="300" rx="10" fill="#ffffff" stroke="#334155" stroke-width="2"/>
+
+  <!-- error line -->
+  <rect x="120" y="95" width="500" height="42" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="138" y="122" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#dc2626">TypeError: cannot read 'name' of null</text>
+
+  <!-- frames -->
+  <text x="138" y="172" font-family="Segoe UI" font-size="14" fill="#94a3b8">at lib/render.js:88   (kutubxona)</text>
+  <text x="138" y="200" font-family="Segoe UI" font-size="14" fill="#94a3b8">at lib/format.js:51   (kutubxona)</text>
+
+  <rect x="128" y="218" width="484" height="34" rx="6" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="138" y="241" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#b45309">at src/profile.js:23  &lt;- O'Z FAYLINGIZ</text>
+
+  <text x="138" y="280" font-family="Segoe UI" font-size="14" fill="#475569">at src/page.js:14</text>
+  <text x="138" y="308" font-family="Segoe UI" font-size="14" fill="#475569">at src/main.js:7</text>
+  <text x="138" y="336" font-family="Segoe UI" font-size="14" fill="#475569">at startup</text>
+
+  <text x="138" y="378" font-family="Segoe UI" font-size="13" fill="#64748b">pastga - dastur shu yerdan boshlangan</text>
+
+  <!-- annotations on the right -->
+  <text x="650" y="118" font-family="Segoe UI" font-size="13" fill="#dc2626" font-weight="bold">1) Xabarni</text>
+  <text x="650" y="138" font-family="Segoe UI" font-size="13" fill="#dc2626" font-weight="bold">oxirigacha o'qi</text>
+
+  <text x="650" y="190" font-family="Segoe UI" font-size="13" fill="#94a3b8">Tepadagi kadrlar</text>
+  <text x="650" y="210" font-family="Segoe UI" font-size="13" fill="#94a3b8">odatda kutubxona -</text>
+  <text x="650" y="230" font-family="Segoe UI" font-size="13" fill="#94a3b8">o'tkazib yubor</text>
+
+  <text x="650" y="262" font-family="Segoe UI" font-size="13" fill="#b45309" font-weight="bold">2) O'z faylingiz</text>
+  <text x="650" y="282" font-family="Segoe UI" font-size="13" fill="#b45309" font-weight="bold">birinchi ko'ringan</text>
+  <text x="650" y="302" font-family="Segoe UI" font-size="13" fill="#b45309" font-weight="bold">qator = sabab</text>
+
+  <!-- root cause reminder -->
+  <rect x="120" y="430" width="580" height="90" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="410" y="462" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a">Simptom emas, ildiz sabab</text>
+  <text x="410" y="488" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">null'ni yashirma - null NEGA keldi? "Besh nega" bilan</text>
+  <text x="410" y="508" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">asl sababga yet, aks holda bug boshqa shaklda qaytadi</text>
+</svg>

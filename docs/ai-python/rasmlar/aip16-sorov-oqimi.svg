@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" width="760" height="360" font-family="Segoe UI, system-ui, sans-serif">
+  <title>RAG so'rov fazasining oqimi: embed, retrieve, augment, generate, javob</title>
+  <rect x="0" y="0" width="760" height="360" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">RAG so'rov oqimi (5 qadam)</text>
+
+  <defs>
+    <marker id="oq" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#4f46e5"/>
+    </marker>
+  </defs>
+
+  <!-- Savol -->
+  <rect x="20" y="80" width="130" height="64" rx="12" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+  <text x="85" y="108" text-anchor="middle" font-size="15" font-weight="700" fill="#0284c7">Savol</text>
+  <text x="85" y="130" text-anchor="middle" font-size="13" fill="#64748b">foydalanuvchi</text>
+
+  <!-- Embed -->
+  <rect x="180" y="80" width="130" height="64" rx="12" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="245" y="104" text-anchor="middle" font-size="15" font-weight="700" fill="#4338ca">1. Embed</text>
+  <text x="245" y="126" text-anchor="middle" font-size="13" fill="#64748b">savol -> vektor</text>
+
+  <!-- Retrieve -->
+  <rect x="340" y="80" width="150" height="64" rx="12" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="415" y="104" text-anchor="middle" font-size="15" font-weight="700" fill="#4338ca">2. Retrieve</text>
+  <text x="415" y="126" text-anchor="middle" font-size="13" fill="#64748b">top-k chunk</text>
+
+  <!-- Vektor baza -->
+  <rect x="355" y="200" width="120" height="60" rx="12" fill="#eef2ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="415" y="226" text-anchor="middle" font-size="14" font-weight="700" fill="#4338ca">Vektor baza</text>
+  <text x="415" y="247" text-anchor="middle" font-size="13" fill="#64748b">(15-bob indeksi)</text>
+
+  <!-- Augment -->
+  <rect x="520" y="80" width="150" height="64" rx="12" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="595" y="104" text-anchor="middle" font-size="15" font-weight="700" fill="#b45309">3. Augment</text>
+  <text x="595" y="126" text-anchor="middle" font-size="13" fill="#64748b">prompt yig'ish</text>
+
+  <!-- Generate -->
+  <rect x="520" y="220" width="150" height="64" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="595" y="244" text-anchor="middle" font-size="15" font-weight="700" fill="#166534">4. Generate</text>
+  <text x="595" y="266" text-anchor="middle" font-size="13" fill="#64748b">model javobi</text>
+
+  <!-- Javob -->
+  <rect x="300" y="220" width="160" height="64" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="380" y="244" text-anchor="middle" font-size="15" font-weight="700" fill="#166534">5. Javob</text>
+  <text x="380" y="266" text-anchor="middle" font-size="13" fill="#64748b">+ manbalar</text>
+
+  <!-- Arrows: savol -> embed -> retrieve -> augment -->
+  <line x1="150" y1="112" x2="176" y2="112" stroke="#4f46e5" stroke-width="2.5" marker-end="url(#oq)"/>
+  <line x1="310" y1="112" x2="336" y2="112" stroke="#4f46e5" stroke-width="2.5" marker-end="url(#oq)"/>
+  <line x1="490" y1="112" x2="516" y2="112" stroke="#4f46e5" stroke-width="2.5" marker-end="url(#oq)"/>
+
+  <!-- retrieve <-> vektor baza -->
+  <line x1="415" y1="144" x2="415" y2="196" stroke="#6366f1" stroke-width="2.5" marker-end="url(#oq)"/>
+
+  <!-- augment -> generate -->
+  <line x1="595" y1="144" x2="595" y2="216" stroke="#4f46e5" stroke-width="2.5" marker-end="url(#oq)"/>
+
+  <!-- generate -> javob -->
+  <line x1="520" y1="252" x2="464" y2="252" stroke="#4f46e5" stroke-width="2.5" marker-end="url(#oq)"/>
+
+  <text x="380" y="328" text-anchor="middle" font-size="14" fill="#475569">Embed + Retrieve = RAG yuragi · Augment + Generate = kontekstli LLM so'rovi</text>
+</svg>

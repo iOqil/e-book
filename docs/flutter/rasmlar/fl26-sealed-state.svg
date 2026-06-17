@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 470" width="800" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Sealed UsersState ierarxiyasi - Initial, Loading, Loaded, Error - BlocBuilder ichidagi switch ga oziq beradi va har bir holat uchun alohida UI quriladi, kompilyator barchasini tekshiradi</title>
+  <rect x="0" y="0" width="800" height="470" fill="#f8fafc"/>
+
+  <text x="400" y="34" text-anchor="middle" font-size="21" font-weight="bold" fill="#1e293b">Sealed State + BlocBuilder switch</text>
+  <text x="400" y="56" text-anchor="middle" font-size="14" fill="#475569">Har bir holatga &#8212; aniq UI; kompilyator hech birini unutmaydi</text>
+
+  <!-- sealed parent -->
+  <rect x="310" y="78" width="180" height="54" rx="12" fill="#9333ea"/>
+  <text x="400" y="102" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">sealed UsersState</text>
+  <text x="400" y="122" text-anchor="middle" font-size="13" fill="#ffffff">muhrlangan ota-tur</text>
+
+  <!-- connectors -->
+  <line x1="400" y1="132" x2="400" y2="146" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="105" y1="146" x2="695" y2="146" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="105" y1="146" x2="105" y2="162" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="303" y1="146" x2="303" y2="162" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="497" y1="146" x2="497" y2="162" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="695" y1="146" x2="695" y2="162" stroke="#94a3b8" stroke-width="2"/>
+
+  <!-- 4 subclasses -->
+  <rect x="35" y="164" width="140" height="56" rx="10" fill="#ffffff" stroke="#64748b" stroke-width="2.5"/>
+  <text x="105" y="188" text-anchor="middle" font-size="14" font-weight="bold" fill="#64748b">UsersInitial</text>
+  <text x="105" y="209" text-anchor="middle" font-size="13" fill="#475569">boshlang'ich</text>
+
+  <rect x="233" y="164" width="140" height="56" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="303" y="188" text-anchor="middle" font-size="14" font-weight="bold" fill="#f59e0b">UsersLoading</text>
+  <text x="303" y="209" text-anchor="middle" font-size="13" fill="#475569">yuklanmoqda</text>
+
+  <rect x="427" y="164" width="140" height="56" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="497" y="188" text-anchor="middle" font-size="14" font-weight="bold" fill="#16a34a">UsersLoaded</text>
+  <text x="497" y="209" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#475569">List users</text>
+
+  <rect x="625" y="164" width="140" height="56" rx="10" fill="#ffffff" stroke="#ef4444" stroke-width="2.5"/>
+  <text x="695" y="188" text-anchor="middle" font-size="14" font-weight="bold" fill="#ef4444">UsersError</text>
+  <text x="695" y="209" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#475569">String msg</text>
+
+  <!-- arrows into switch -->
+  <line x1="105" y1="220" x2="105" y2="244" stroke="#475569" stroke-width="2.5"/>
+  <polygon points="99,244 105,256 111,244" fill="#475569"/>
+  <line x1="303" y1="220" x2="303" y2="244" stroke="#475569" stroke-width="2.5"/>
+  <polygon points="297,244 303,256 309,244" fill="#475569"/>
+  <line x1="497" y1="220" x2="497" y2="244" stroke="#475569" stroke-width="2.5"/>
+  <polygon points="491,244 497,256 503,244" fill="#475569"/>
+  <line x1="695" y1="220" x2="695" y2="244" stroke="#475569" stroke-width="2.5"/>
+  <polygon points="689,244 695,256 701,244" fill="#475569"/>
+
+  <!-- switch box -->
+  <rect x="35" y="260" width="730" height="150" rx="12" fill="#ffffff" stroke="#6366f1" stroke-width="2.5"/>
+  <text x="400" y="284" text-anchor="middle" font-size="15" font-weight="bold" fill="#6366f1">BlocBuilder&lt;UsersBloc, UsersState&gt; &#8212; switch (state)</text>
+
+  <rect x="55" y="300" width="160" height="96" rx="8" fill="#f8fafc" stroke="#64748b" stroke-width="1.5"/>
+  <text x="135" y="324" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">UsersInitial()</text>
+  <text x="135" y="350" text-anchor="middle" font-size="13" fill="#475569">"Boshlash" tugmasi</text>
+  <text x="135" y="382" text-anchor="middle" font-size="13" fill="#16a34a">&#10003;</text>
+
+  <rect x="233" y="300" width="160" height="96" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="313" y="324" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">UsersLoading()</text>
+  <text x="313" y="350" text-anchor="middle" font-size="13" fill="#475569">aylanma indikator</text>
+  <text x="313" y="382" text-anchor="middle" font-size="13" fill="#16a34a">&#10003;</text>
+
+  <rect x="411" y="300" width="160" height="96" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="491" y="324" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">UsersLoaded(:users)</text>
+  <text x="491" y="350" text-anchor="middle" font-size="13" fill="#475569">ListView ro'yxati</text>
+  <text x="491" y="382" text-anchor="middle" font-size="13" fill="#16a34a">&#10003;</text>
+
+  <rect x="589" y="300" width="160" height="96" rx="8" fill="#ffffff" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="669" y="324" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">UsersError(:msg)</text>
+  <text x="669" y="350" text-anchor="middle" font-size="13" fill="#475569">xato + "Qayta"</text>
+  <text x="669" y="382" text-anchor="middle" font-size="13" fill="#16a34a">&#10003;</text>
+
+  <!-- exhaustive badge -->
+  <rect x="220" y="426" width="360" height="36" rx="18" fill="#16a34a"/>
+  <text x="400" y="450" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">&#10003; exhaustive &#8212; kompilyator hammasini tekshiradi</text>
+</svg>

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 470">
+  <title>Algoritmik fikrlash sikli: tushun, misol, sodda yechim, murakkablik byudjeti, yaxshilash va test bosqichlari</title>
+  <rect x="0" y="0" width="880" height="470" fill="#f8fafc"/>
+  <text x="440" y="38" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Muammodan yechimgacha: algoritmik fikrlash sikli</text>
+  <text x="440" y="64" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Oltita bosqich — har biri keyingisini boshqaradi</text>
+
+  <!-- 1 TUSHUN -->
+  <rect x="40" y="110" width="180" height="90" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2.2"/>
+  <text x="130" y="142" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">1. Tushun</text>
+  <text x="130" y="164" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">kirish / chiqish</text>
+  <text x="130" y="184" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">cheklovlar, n qancha?</text>
+
+  <!-- 2 MISOL -->
+  <rect x="350" y="110" width="180" height="90" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="2.2"/>
+  <text x="440" y="142" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#7c3aed">2. Misol</text>
+  <text x="440" y="164" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">qo'lda kichik misol</text>
+  <text x="440" y="184" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">chegaraviy holatlar</text>
+
+  <!-- 3 SODDA -->
+  <rect x="660" y="110" width="180" height="90" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2.2"/>
+  <text x="750" y="142" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">3. Sodda yechim</text>
+  <text x="750" y="164" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">brute force, ishlaydigan</text>
+  <text x="750" y="184" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">avval to'g'ri, keyin tez</text>
+
+  <!-- 6 TEST -->
+  <rect x="40" y="300" width="180" height="90" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2.2"/>
+  <text x="130" y="332" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#dc2626">6. To'g'rilik va test</text>
+  <text x="130" y="354" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">invariant, chegara</text>
+  <text x="130" y="374" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">brute bilan solishtir</text>
+
+  <!-- 5 YAXSHILASH -->
+  <rect x="350" y="300" width="180" height="90" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2.2"/>
+  <text x="440" y="332" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">5. Yaxshilash</text>
+  <text x="440" y="354" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">struktura / paradigma</text>
+  <text x="440" y="374" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">hash, heap, DP, BFS...</text>
+
+  <!-- 4 BYUDJET -->
+  <rect x="660" y="300" width="180" height="90" rx="12" fill="#ffffff" stroke="#f59e0b" stroke-width="2.2"/>
+  <text x="750" y="332" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#d97706">4. Murakkablik byudjeti</text>
+  <text x="750" y="354" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">n -> maqsadli O(...)</text>
+  <text x="750" y="374" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">qancha amal mumkin?</text>
+
+  <!-- arrows top row -->
+  <line x1="220" y1="155" x2="345" y2="155" stroke="#334155" stroke-width="2"/>
+  <polygon points="345,149 357,155 345,161" fill="#334155"/>
+  <line x1="530" y1="155" x2="655" y2="155" stroke="#334155" stroke-width="2"/>
+  <polygon points="655,149 667,155 655,161" fill="#334155"/>
+
+  <!-- arrow 3 -> 4 (down) -->
+  <line x1="750" y1="200" x2="750" y2="295" stroke="#334155" stroke-width="2"/>
+  <polygon points="744,295 750,307 756,295" fill="#334155"/>
+
+  <!-- arrows bottom row (right to left) -->
+  <line x1="660" y1="345" x2="535" y2="345" stroke="#334155" stroke-width="2"/>
+  <polygon points="535,339 523,345 535,351" fill="#334155"/>
+  <line x1="350" y1="345" x2="225" y2="345" stroke="#334155" stroke-width="2"/>
+  <polygon points="225,339 213,345 225,351" fill="#334155"/>
+
+  <!-- feedback loop 6 -> 3 (test fails -> qayta) -->
+  <path d="M 130 300 C 130 250, 600 250, 720 205" fill="none" stroke="#dc2626" stroke-width="1.8" stroke-dasharray="6 4"/>
+  <polygon points="724,210 728,198 716,200" fill="#dc2626"/>
+  <text x="430" y="244" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">test o'tmasa -> qayta o'yla</text>
+
+  <text x="440" y="438" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">Sikl: byudjet yaxshilashni boshqaradi, test esa kerak bo'lsa sizni boshlanishga qaytaradi.</text>
+</svg>

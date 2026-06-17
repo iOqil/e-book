@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Holatni yuqoriga ko'tarish: ota holatni saqlaydi, ikki bolaga props va callback bilan ulashadi</title>
+  <rect x="0" y="0" width="760" height="480" fill="#f8fafc"/>
+  <text x="380" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">Holatni yuqoriga ko'tarish (lifting state up)</text>
+
+  <defs>
+    <marker id="down" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0ea5e9"/>
+    </marker>
+    <marker id="up" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+
+  <!-- Ota -->
+  <rect x="250" y="70" width="260" height="100" rx="14" fill="#ffffff" stroke="#4f46e5" stroke-width="2.5"/>
+  <text x="380" y="102" text-anchor="middle" font-size="17" font-weight="700" fill="#4f46e5">Ota komponent</text>
+  <text x="380" y="128" text-anchor="middle" font-size="14" fill="#16a34a">const [soni, setSoni] = useState(0)</text>
+  <text x="380" y="152" text-anchor="middle" font-size="13" fill="#94a3b8">Holat shu yerda yashaydi</text>
+
+  <!-- Chap bola: Hisoblagich -->
+  <rect x="60" y="300" width="270" height="120" rx="14" fill="#ffffff" stroke="#0ea5e9" stroke-width="2.5"/>
+  <text x="195" y="332" text-anchor="middle" font-size="16" font-weight="700" fill="#0ea5e9">Hisoblagich</text>
+  <text x="195" y="358" text-anchor="middle" font-size="14" fill="#475569">soni'ni ko'rsatadi</text>
+  <text x="195" y="384" text-anchor="middle" font-size="14" fill="#1e293b">&lt;Text&gt;{'{soni}'}&lt;/Text&gt;</text>
+
+  <!-- O'ng bola: Boshqaruv -->
+  <rect x="430" y="300" width="270" height="120" rx="14" fill="#ffffff" stroke="#0ea5e9" stroke-width="2.5"/>
+  <text x="565" y="332" text-anchor="middle" font-size="16" font-weight="700" fill="#0ea5e9">Boshqaruv</text>
+  <text x="565" y="358" text-anchor="middle" font-size="14" fill="#475569">tugmalar (+ / -)</text>
+  <text x="565" y="384" text-anchor="middle" font-size="14" fill="#1e293b">onBos -&gt; setSoni</text>
+
+  <!-- Strelka: ota -> Hisoblagich (props pastga) -->
+  <path d="M300,170 C230,210 195,250 195,296" fill="none" stroke="#0ea5e9" stroke-width="2.5" marker-end="url(#down)"/>
+  <rect x="150" y="220" width="120" height="26" rx="6" fill="#e0f2fe"/>
+  <text x="210" y="238" text-anchor="middle" font-size="13" font-weight="700" fill="#0369a1">props: soni</text>
+
+  <!-- Strelka: Boshqaruv -> ota (callback yuqoriga) -->
+  <path d="M565,296 C565,250 530,210 460,172" fill="none" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#up)"/>
+  <rect x="490" y="220" width="170" height="26" rx="6" fill="#fef3c7"/>
+  <text x="575" y="238" text-anchor="middle" font-size="13" font-weight="700" fill="#b45309">callback: onOshir()</text>
+
+  <!-- Pastki izoh -->
+  <rect x="60" y="438" width="640" height="30" rx="8" fill="#ffffff" stroke="#c7d2fe" stroke-width="1.5"/>
+  <text x="380" y="458" text-anchor="middle" font-size="14" fill="#475569">Ikki bola bir holatni ulashishi kerak bo'lsa — holatni ularning umumiy otasiga ko'tariladi.</text>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" width="780" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Provider yechimi: model ildizga yaqin ChangeNotifierProvider ichiga qo'yiladi, ixtiyoriy chuqurlikdagi avlod widget uni to'g'ridan-to'g'ri context.watch yoki context.read bilan o'qiydi — oraliq widgetlar orqali hech narsa uzatilmaydi</title>
+  <defs>
+    <marker id="fl24s" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="780" height="470" fill="#f8fafc"/>
+  <text x="390" y="32" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Provider bilan yechim</text>
+  <text x="390" y="56" text-anchor="middle" font-size="14" fill="#475569">model ildizda turadi — istalgan avlod uni to'g'ridan-to'g'ri o'qiydi</text>
+
+  <!-- provider boundary -->
+  <rect x="40" y="78" width="700" height="362" rx="16" fill="#e0e7ff" stroke="#6366f1" stroke-width="2" stroke-dasharray="7 5"/>
+  <text x="60" y="100" font-size="13" font-weight="700" fill="#6366f1">ChangeNotifierProvider(create: (_) =&gt; CartModel())</text>
+
+  <!-- model store (left) -->
+  <rect x="60" y="200" width="190" height="92" rx="12" fill="#dbeafe" stroke="#027dfd" stroke-width="2.5"/>
+  <text x="155" y="232" text-anchor="middle" font-size="15" font-weight="700" fill="#0553b1">CartModel</text>
+  <text x="155" y="256" text-anchor="middle" font-size="13" fill="#475569">items, addItem()</text>
+  <text x="155" y="276" text-anchor="middle" font-size="13" fill="#475569">notifyListeners()</text>
+
+  <!-- widget tree (right) -->
+  <rect x="470" y="118" width="220" height="46" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="580" y="146" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">HomeScreen</text>
+
+  <rect x="470" y="186" width="220" height="46" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="580" y="214" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Layout</text>
+
+  <rect x="470" y="254" width="220" height="46" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="580" y="282" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">AppBarArea</text>
+
+  <rect x="470" y="322" width="220" height="52" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="580" y="345" text-anchor="middle" font-size="14" font-weight="700" fill="#16a34a">CartBadge</text>
+  <text x="580" y="364" text-anchor="middle" font-size="13" fill="#475569">context.watch&lt;CartModel&gt;()</text>
+
+  <!-- tree connectors (plain, no data passed) -->
+  <path d="M580 164 L580 184" stroke="#94a3b8" stroke-width="1.5" fill="none"/>
+  <path d="M580 232 L580 252" stroke="#94a3b8" stroke-width="1.5" fill="none"/>
+  <path d="M580 300 L580 320" stroke="#94a3b8" stroke-width="1.5" fill="none"/>
+
+  <!-- direct read: model -> deep child (curved, clean) -->
+  <path d="M250 270 C 360 360, 380 348, 466 348" stroke="#16a34a" stroke-width="3" fill="none" marker-end="url(#fl24s)"/>
+  <rect x="280" y="378" width="200" height="28" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="380" y="397" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a">to'g'ridan-to'g'ri o'qish</text>
+
+  <!-- annotation: no drilling -->
+  <text x="580" y="200" text-anchor="middle" font-size="13" fill="#64748b">(oraliq widgetlar</text>
+  <text x="580" y="240" text-anchor="middle" font-size="13" fill="#64748b">hech narsa uzatmaydi)</text>
+
+  <text x="390" y="430" text-anchor="middle" font-size="13" fill="#94a3b8">Konstruktor zanjiri yo'q — avlod modelni o'zi so'rab oladi.</text>
+</svg>

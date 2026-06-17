@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540">
+  <title>HTTP so'rov va javob anatomiyasi yonma-yon</title>
+  <rect x="0" y="0" width="900" height="540" fill="#f8fafc"/>
+  <text x="450" y="34" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">HTTP so'rov va javob anatomiyasi</text>
+  <text x="450" y="58" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Har ikkisi: birinchi qator + sarlavhalar + BO'SH QATOR + body</text>
+
+  <!-- REQUEST card -->
+  <rect x="36" y="80" width="400" height="430" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="236" y="108" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb">SO'ROV (request) — mijoz -&gt; server</text>
+
+  <!-- request line -->
+  <rect x="56" y="124" width="360" height="34" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1"/>
+  <text x="70" y="146" font-family="monospace" font-size="14" fill="#16a34a">POST</text>
+  <text x="118" y="146" font-family="monospace" font-size="14" fill="#7c3aed">/v1/orders</text>
+  <text x="225" y="146" font-family="monospace" font-size="14" fill="#dc2626">HTTP/1.1</text>
+  <text x="70" y="176" font-family="Segoe UI" font-size="13" fill="#64748b">^ metod</text>
+  <text x="155" y="176" font-family="Segoe UI" font-size="13" fill="#64748b">^ nishon (path)</text>
+  <text x="300" y="176" font-family="Segoe UI" font-size="13" fill="#64748b">^ versiya</text>
+
+  <!-- request headers -->
+  <text x="70" y="206" font-family="monospace" font-size="13" fill="#334155">Host: api.example.com</text>
+  <text x="70" y="226" font-family="monospace" font-size="13" fill="#334155">Content-Type: application/json</text>
+  <text x="70" y="246" font-family="monospace" font-size="13" fill="#334155">Accept: application/json</text>
+  <text x="70" y="266" font-family="monospace" font-size="13" fill="#334155">Authorization: Bearer &lt;token&gt;</text>
+  <text x="290" y="226" font-family="Segoe UI" font-size="13" fill="#64748b">sarlavhalar</text>
+
+  <!-- empty line -->
+  <line x1="56" y1="286" x2="416" y2="286" stroke="#f59e0b" stroke-width="2" stroke-dasharray="5 4"/>
+  <text x="236" y="304" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#f59e0b">— BO'SH QATOR (sarlavha/body chegarasi) —</text>
+
+  <!-- request body -->
+  <rect x="56" y="318" width="360" height="100" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1"/>
+  <text x="70" y="342" font-family="monospace" font-size="13" fill="#334155">{</text>
+  <text x="86" y="362" font-family="monospace" font-size="13" fill="#334155">"item_id": 42,</text>
+  <text x="86" y="382" font-family="monospace" font-size="13" fill="#334155">"quantity": 2</text>
+  <text x="70" y="402" font-family="monospace" font-size="13" fill="#334155">}</text>
+  <text x="290" y="342" font-family="Segoe UI" font-size="13" fill="#16a34a">body (JSON)</text>
+  <text x="236" y="445" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">GET so'rovda odatda body bo'lmaydi</text>
+  <text x="236" y="480" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Metod nimani so'rayotganini, path qaysi resurs ekanini bildiradi</text>
+
+  <!-- arrow between -->
+  <defs>
+    <marker id="a2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <line x1="440" y1="250" x2="462" y2="250" stroke="#64748b" stroke-width="2" marker-end="url(#a2)"/>
+  <line x1="462" y1="290" x2="440" y2="290" stroke="#64748b" stroke-width="2" marker-end="url(#a2)"/>
+
+  <!-- RESPONSE card -->
+  <rect x="466" y="80" width="400" height="430" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="666" y="108" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a">JAVOB (response) — server -&gt; mijoz</text>
+
+  <!-- status line -->
+  <rect x="486" y="124" width="360" height="34" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1"/>
+  <text x="500" y="146" font-family="monospace" font-size="14" fill="#dc2626">HTTP/1.1</text>
+  <text x="582" y="146" font-family="monospace" font-size="14" fill="#2563eb">201</text>
+  <text x="618" y="146" font-family="monospace" font-size="14" fill="#16a34a">Created</text>
+  <text x="500" y="176" font-family="Segoe UI" font-size="13" fill="#64748b">^ versiya</text>
+  <text x="582" y="176" font-family="Segoe UI" font-size="13" fill="#64748b">^ kod</text>
+  <text x="640" y="176" font-family="Segoe UI" font-size="13" fill="#64748b">^ sabab (reason)</text>
+
+  <!-- response headers -->
+  <text x="500" y="206" font-family="monospace" font-size="13" fill="#334155">Location: /v1/orders/1001</text>
+  <text x="500" y="226" font-family="monospace" font-size="13" fill="#334155">Content-Type: application/json</text>
+  <text x="500" y="246" font-family="monospace" font-size="13" fill="#334155">ETag: "a1b2c3"</text>
+  <text x="500" y="266" font-family="monospace" font-size="13" fill="#334155">Cache-Control: no-store</text>
+  <text x="700" y="226" font-family="Segoe UI" font-size="13" fill="#64748b">sarlavhalar</text>
+
+  <!-- empty line -->
+  <line x1="486" y1="286" x2="846" y2="286" stroke="#f59e0b" stroke-width="2" stroke-dasharray="5 4"/>
+  <text x="666" y="304" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#f59e0b">— BO'SH QATOR —</text>
+
+  <!-- response body -->
+  <rect x="486" y="318" width="360" height="100" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1"/>
+  <text x="500" y="342" font-family="monospace" font-size="13" fill="#334155">{</text>
+  <text x="516" y="362" font-family="monospace" font-size="13" fill="#334155">"id": 1001,</text>
+  <text x="516" y="382" font-family="monospace" font-size="13" fill="#334155">"status": "pending"</text>
+  <text x="500" y="402" font-family="monospace" font-size="13" fill="#334155">}</text>
+  <text x="700" y="342" font-family="Segoe UI" font-size="13" fill="#2563eb">body (JSON)</text>
+  <text x="666" y="445" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">204 No Content javobida body bo'lmaydi</text>
+  <text x="666" y="480" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Status kod natijani, sarlavhalar metama'lumotni bildiradi</text>
+</svg>

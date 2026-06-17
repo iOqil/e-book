@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Paket ish oqimi: pub.dev'da geolocator paketini topib baholaysiz (platformalar, likes, mashhurlik), flutter pub add geolocator buyrug'ini bersangiz u pubspec.yaml dependencies'ga yoziladi, so'ng import qilib koddan ishlatasiz</title>
+  <rect x="0" y="0" width="800" height="520" fill="#f8fafc"/>
+  <text x="400" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Paketni qo'shishning to'rt qadami</text>
+  <text x="400" y="58" text-anchor="middle" font-size="14" fill="#475569">Boshqalar yozgan kodni topib, loyihangizga ulaysiz — g'ildirakni qaytadan ixtiro qilmaysiz</text>
+
+  <!-- arrows between stages -->
+  <defs>
+    <marker id="fl28pA" markerWidth="12" markerHeight="12" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- 1) pub.dev -->
+  <rect x="40" y="90" width="320" height="170" rx="14" fill="#ffffff" stroke="#027dfd" stroke-width="2.5"/>
+  <rect x="40" y="90" width="320" height="34" rx="14" fill="#027dfd"/>
+  <text x="200" y="113" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">1. pub.dev — paketni baholang</text>
+  <text x="62" y="150" font-size="15" font-weight="700" fill="#1e293b">geolocator</text>
+  <rect x="62" y="162" width="78" height="26" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="101" y="180" text-anchor="middle" font-size="13" fill="#16a34a">Android</text>
+  <rect x="148" y="162" width="50" height="26" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="173" y="180" text-anchor="middle" font-size="13" fill="#16a34a">iOS</text>
+  <rect x="206" y="162" width="62" height="26" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="237" y="180" text-anchor="middle" font-size="13" fill="#16a34a">Web</text>
+  <text x="62" y="214" font-size="13" fill="#64748b">👍 likes · 📈 mashhurlik (popularity)</text>
+  <text x="62" y="236" font-size="13" fill="#64748b">✅ null-safety · 🕒 yangilangan</text>
+
+  <!-- 2) flutter pub add -->
+  <rect x="440" y="90" width="320" height="170" rx="14" fill="#1e293b"/>
+  <rect x="440" y="90" width="320" height="34" rx="14" fill="#0553b1"/>
+  <text x="600" y="113" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">2. Terminal buyrug'i</text>
+  <text x="460" y="160" font-size="15" font-weight="700" fill="#0ea5e9">$ flutter pub add</text>
+  <text x="460" y="184" font-size="15" font-weight="700" fill="#dbeafe">geolocator</text>
+  <text x="460" y="222" font-size="13" fill="#94a3b8">Bu buyruq paketni topadi,</text>
+  <text x="460" y="242" font-size="13" fill="#94a3b8">eng so'nggi versiyani yozadi.</text>
+
+  <line x1="360" y1="175" x2="438" y2="175" stroke="#475569" stroke-width="2.5" marker-end="url(#fl28pA)"/>
+
+  <!-- 3) pubspec.yaml -->
+  <rect x="40" y="300" width="320" height="170" rx="14" fill="#ffffff" stroke="#9333ea" stroke-width="2.5"/>
+  <rect x="40" y="300" width="320" height="34" rx="14" fill="#9333ea"/>
+  <text x="200" y="323" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">3. pubspec.yaml (avtomatik)</text>
+  <text x="62" y="362" font-size="14" font-weight="700" fill="#1e293b">dependencies:</text>
+  <text x="82" y="386" font-size="14" fill="#475569">flutter:</text>
+  <text x="102" y="408" font-size="14" fill="#475569">sdk: flutter</text>
+  <text x="82" y="432" font-size="14" font-weight="700" fill="#9333ea">geolocator: ^14.0.0</text>
+  <text x="82" y="456" font-size="13" fill="#64748b">^ — kichik yangilanishni oladi</text>
+
+  <line x1="600" y1="260" x2="600" y2="300" stroke="#475569" stroke-width="2.5"/>
+  <line x1="600" y1="300" x2="362" y2="385" stroke="#475569" stroke-width="2.5" marker-end="url(#fl28pA)"/>
+
+  <!-- 4) import & use -->
+  <rect x="440" y="300" width="320" height="170" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <rect x="440" y="300" width="320" height="34" rx="14" fill="#16a34a"/>
+  <text x="600" y="323" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">4. Koddan ishlating</text>
+  <text x="460" y="362" font-size="13" fill="#9333ea">import 'package:geolocator</text>
+  <text x="460" y="382" font-size="13" fill="#9333ea">/geolocator.dart';</text>
+  <text x="460" y="414" font-size="13" fill="#0553b1">final pos = await Geolocator</text>
+  <text x="460" y="434" font-size="13" fill="#0553b1">.getCurrentPosition();</text>
+  <text x="460" y="458" font-size="13" fill="#64748b">tayyor — qurilma joylashuvi qo'lda!</text>
+
+  <line x1="360" y1="385" x2="200" y2="300" stroke="#475569" stroke-width="0"/>
+  <line x1="362" y1="385" x2="438" y2="385" stroke="#475569" stroke-width="2.5" marker-end="url(#fl28pA)"/>
+
+  <rect x="40" y="490" width="720" height="0" fill="none"/>
+  <text x="400" y="504" text-anchor="middle" font-size="13" fill="#94a3b8">pub.dev → buyruq → pubspec.yaml → import: bitta paket shu yo'l bilan loyihaga qo'shiladi</text>
+</svg>

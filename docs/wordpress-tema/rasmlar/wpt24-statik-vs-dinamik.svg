@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 460" width="780" height="460">
+  <title>Statik blok (markup bazada saqlanadi) va dinamik blok (markup har safar PHP da generatsiya qilinadi) farqi</title>
+  <rect width="780" height="460" fill="#f8fafc"/>
+  <text x="390" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Statik blok va Dinamik blok</text>
+
+  <!-- STATIK column -->
+  <rect x="24" y="56" width="345" height="372" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <rect x="24" y="56" width="345" height="40" rx="12" fill="#16a34a"/>
+  <text x="196" y="83" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#ffffff">STATIK blok (save)</text>
+
+  <rect x="48" y="112" width="297" height="44" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="196" y="132" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#166534">Saqlash payti (Save)</text>
+  <text x="196" y="150" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">JS save() HTML markupni qaytaradi</text>
+
+  <path d="M196 156 L196 178" stroke="#94a3b8" stroke-width="2" marker-end="url(#g)"/>
+
+  <rect x="48" y="182" width="297" height="56" rx="8" fill="#e2e8f0" stroke="#475569" stroke-width="1.5"/>
+  <text x="196" y="205" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Bazaga (post_content) YOZILADI</text>
+  <text x="196" y="225" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">&lt;!-- wp:... --&gt; + tayyor HTML</text>
+
+  <path d="M196 238 L196 260" stroke="#94a3b8" stroke-width="2" marker-end="url(#g)"/>
+
+  <rect x="48" y="264" width="297" height="56" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="196" y="287" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#166534">Sahifa ochilganda</text>
+  <text x="196" y="307" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Bazadagi HTML to'g'ridan ko'rsatiladi</text>
+
+  <rect x="48" y="338" width="297" height="74" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="196" y="360" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#166534">Qachon: o'zgarmas mazmun</text>
+  <text x="196" y="381" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">sarlavha, matn, tugma, rasm</text>
+  <text x="196" y="400" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tez, PHP ishlamaydi</text>
+
+  <!-- DINAMIK column -->
+  <rect x="411" y="56" width="345" height="372" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <rect x="411" y="56" width="345" height="40" rx="12" fill="#2563eb"/>
+  <text x="583" y="83" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#ffffff">DINAMIK blok (render.php)</text>
+
+  <rect x="435" y="112" width="297" height="44" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="583" y="132" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e3a8a">Saqlash payti (Save)</text>
+  <text x="583" y="150" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">save: () =&gt; null  (HTML yo'q)</text>
+
+  <path d="M583 156 L583 178" stroke="#94a3b8" stroke-width="2" marker-end="url(#g)"/>
+
+  <rect x="435" y="182" width="297" height="56" rx="8" fill="#e2e8f0" stroke="#475569" stroke-width="1.5"/>
+  <text x="583" y="205" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Bazaga faqat KOMMENT yoziladi</text>
+  <text x="583" y="225" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">&lt;!-- wp:.../  --&gt; (atributlar bilan)</text>
+
+  <path d="M583 238 L583 260" stroke="#94a3b8" stroke-width="2" marker-end="url(#g)"/>
+
+  <rect x="435" y="264" width="297" height="56" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="583" y="287" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e3a8a">Sahifa ochilganda</text>
+  <text x="583" y="307" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">render.php HAR safar markup yaratadi</text>
+
+  <rect x="435" y="338" width="297" height="74" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="583" y="360" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e3a8a">Qachon: o'zgaruvchan mazmun</text>
+  <text x="583" y="381" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">oxirgi postlar, joriy sana, user</text>
+  <text x="583" y="400" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">doim yangi, PHP ishlaydi</text>
+
+  <defs>
+    <marker id="g" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0 0 L9 4.5 L0 9 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+</svg>

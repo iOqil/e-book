@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400">
+  <title>Alerting oqimi: Prometheus alert qoidasi expr sharti bajarilganda (masalan up == 0) alert otiladi, Alertmanager uni guruhlaydi va routing bo'yicha kerakli receiver — Telegram yoki email — orqali jamoaga xabar yetkazadi</title>
+  <rect x="0" y="0" width="760" height="400" fill="#f8fafc"/>
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Alerting: muammodan xabargacha</text>
+
+  <!-- 1: Prometheus rule -->
+  <rect x="28" y="64" width="200" height="120" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="128" y="90" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e40af">1. Prometheus</text>
+  <text x="128" y="112" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">alert qoidasi</text>
+  <rect x="44" y="124" width="168" height="48" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="128" y="143" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">expr: up == 0</text>
+  <text x="128" y="162" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">for: 2m</text>
+
+  <!-- shart buzildi belgisi -->
+  <text x="128" y="206" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626" font-weight="bold">shart 2m bajarildi -> FIRING</text>
+
+  <!-- o'q 1->2 -->
+  <line x1="228" y1="124" x2="288" y2="124" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arrr)"/>
+
+  <!-- 2: Alertmanager -->
+  <rect x="290" y="64" width="210" height="120" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="395" y="90" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#92400e">2. Alertmanager</text>
+  <text x="395" y="116" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">guruhlash (group_by)</text>
+  <text x="395" y="138" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">routing (severity)</text>
+  <text x="395" y="160" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">spam'ni kamaytirish</text>
+
+  <!-- o'q 2->3 -->
+  <line x1="500" y1="124" x2="560" y2="124" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#arry)"/>
+
+  <!-- 3: Receivers -->
+  <rect x="562" y="64" width="170" height="120" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="647" y="90" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#166534">3. Receivers</text>
+  <rect x="578" y="104" width="138" height="32" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="1"/>
+  <text x="647" y="125" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Telegram (critical)</text>
+  <rect x="578" y="142" width="138" height="32" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="1"/>
+  <text x="647" y="163" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">email (warning)</text>
+
+  <!-- routing tushuntirish -->
+  <rect x="28" y="222" width="704" height="84" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="380" y="246" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#7c3aed">Routing: bir xil alert -> turli kanal (severity label bo'yicha)</text>
+  <text x="200" y="272" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626" font-weight="bold">severity = critical</text>
+  <text x="200" y="292" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">-> Telegram, har 1 soatda takror</text>
+  <line x1="380" y1="262" x2="380" y2="300" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="560" y="272" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#f59e0b" font-weight="bold">severity = warning</text>
+  <text x="560" y="292" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">-> email, har 4 soatda takror</text>
+
+  <!-- guruhlash izohi -->
+  <rect x="28" y="320" width="704" height="62" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="380" y="344" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#1e40af">Nega Alertmanager? Prometheus alertni "otadi", lekin KIMGA, QANDAY yetkazishni bilmaydi.</text>
+  <text x="380" y="366" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">10 ta bir xil alert -> 1 ta xabar (group), tinch vaqt (group_wait), takrorni cheklash (repeat_interval).</text>
+
+  <defs>
+    <marker id="arrr" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#dc2626"/></marker>
+    <marker id="arry" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#f59e0b"/></marker>
+  </defs>
+</svg>

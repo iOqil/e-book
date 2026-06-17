@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520" font-family="Segoe UI, system-ui, sans-serif">
+  <title>messages massivi sikl davomida o'sadi: [user] -> [user, assistant(tool_use)] -> [user, assistant(tool_use), user(tool_result)] -> yakuniy assistant(matn). tool_use_id natijani chaqiruvga bog'laydi.</title>
+  <defs>
+    <marker id="mo1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="800" height="520" fill="#f8fafc"/>
+  <text x="400" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">messages massivi sikl davomida o'sib boradi</text>
+  <text x="400" y="58" font-size="14" fill="#64748b" text-anchor="middle">Har qadamda massivga bitta blok qo'shasiz va qayta yuborasiz (API holatsiz).</text>
+
+  <!-- Step 1 -->
+  <text x="40" y="90" font-size="14" font-weight="bold" fill="#475569" text-anchor="start">1-qadam — savol yuborasiz</text>
+  <rect x="40" y="100" width="200" height="40" rx="8" fill="#dbeafe" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="140" y="118" font-size="13" font-weight="bold" fill="#1e293b" text-anchor="middle">user</text>
+  <text x="140" y="134" font-size="13" fill="#475569" text-anchor="middle">"ob-havo va 15% hisobi"</text>
+
+  <line x1="250" y1="120" x2="300" y2="120" stroke="#64748b" stroke-width="2" marker-end="url(#mo1)"/>
+
+  <!-- Step 2 -->
+  <text x="312" y="90" font-size="14" font-weight="bold" fill="#475569" text-anchor="start">2-qadam — Claude tool_use qaytaradi</text>
+  <rect x="312" y="100" width="200" height="40" rx="8" fill="#dbeafe" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="412" y="124" font-size="13" font-weight="bold" fill="#1e293b" text-anchor="middle">user</text>
+  <rect x="312" y="146" width="448" height="48" rx="8" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="328" y="166" font-size="13" font-weight="bold" fill="#6366f1" text-anchor="start">assistant — tool_use</text>
+  <text x="328" y="186" font-size="13" fill="#1e293b" text-anchor="start" font-family="Consolas, monospace">id: "toolu_01A"  ·  name: "get_weather"</text>
+
+  <!-- arrow down -->
+  <line x1="412" y1="200" x2="412" y2="232" stroke="#64748b" stroke-width="2" marker-end="url(#mo1)"/>
+  <text x="520" y="222" font-size="13" fill="#64748b" text-anchor="start">funksiyani bajarasiz, natijani qo'shasiz</text>
+
+  <!-- Step 3 -->
+  <text x="40" y="258" font-size="14" font-weight="bold" fill="#475569" text-anchor="start">3-qadam — natijani user(tool_result) sifatida qo'shasiz</text>
+  <rect x="40" y="268" width="160" height="36" rx="8" fill="#dbeafe" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="120" y="291" font-size="13" font-weight="bold" fill="#1e293b" text-anchor="middle">user (savol)</text>
+  <rect x="212" y="268" width="220" height="36" rx="8" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="322" y="291" font-size="13" font-weight="bold" fill="#6366f1" text-anchor="middle">assistant (tool_use)</text>
+  <rect x="444" y="268" width="316" height="36" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="602" y="285" font-size="13" font-weight="bold" fill="#16a34a" text-anchor="middle">user — tool_result</text>
+  <text x="602" y="300" font-size="13" fill="#1e293b" text-anchor="middle" font-family="Consolas, monospace">tool_use_id: "toolu_01A" · "18°C"</text>
+
+  <!-- linking line between tool_use id and tool_result id -->
+  <line x1="322" y1="304" x2="322" y2="328" stroke="#d97757" stroke-width="2"/>
+  <line x1="322" y1="328" x2="602" y2="328" stroke="#d97757" stroke-width="2" stroke-dasharray="6,4"/>
+  <line x1="602" y1="328" x2="602" y2="306" stroke="#d97757" stroke-width="2" marker-end="url(#mo1)"/>
+  <text x="462" y="346" font-size="13" font-weight="bold" fill="#d97757" text-anchor="middle">tool_use_id natijani aynan shu chaqiruvga bog'laydi</text>
+
+  <line x1="400" y1="356" x2="400" y2="388" stroke="#64748b" stroke-width="2" marker-end="url(#mo1)"/>
+  <text x="520" y="378" font-size="13" fill="#64748b" text-anchor="start">qayta yuborasiz</text>
+
+  <!-- Step 4 -->
+  <text x="40" y="414" font-size="14" font-weight="bold" fill="#475569" text-anchor="start">4-qadam — Claude yakuniy matnni beradi (end_turn)</text>
+  <rect x="40" y="424" width="720" height="44" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="60" y="444" font-size="13" font-weight="bold" fill="#16a34a" text-anchor="start">assistant — text  ✅  stop_reason: "end_turn"</text>
+  <text x="60" y="462" font-size="13" fill="#1e293b" text-anchor="start">"Toshkentda 18°C, ochiq. 240 ning 15% — 36."</text>
+
+  <!-- footer -->
+  <rect x="40" y="480" width="720" height="30" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="400" y="500" font-size="13.5" fill="#1e293b" text-anchor="middle">Massivni har safar to'liq yuborasiz — assistant'ning tool_use bloki ham ichida qolishi SHART.</text>
+</svg>

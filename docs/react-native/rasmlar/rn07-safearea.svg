@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Zamonaviy telefonlarda notch va pastki chiziq kontentni to'sadi; SafeAreaView kontentni xavfsiz hududga joylashtiradi</title>
+  <rect x="0" y="0" width="760" height="480" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">SafeAreaView: kontent o'yiq ostida qolmasin</text>
+
+  <!-- LEFT phone: WITHOUT safe area -->
+  <text x="210" y="70" text-anchor="middle" font-size="16" font-weight="700" fill="#dc2626">SafeAreaView'siz</text>
+  <rect x="120" y="84" width="180" height="350" rx="28" fill="#ffffff" stroke="#1e293b" stroke-width="2.5"/>
+  <!-- notch -->
+  <rect x="175" y="84" width="70" height="22" rx="11" fill="#1e293b"/>
+  <!-- content goes UNDER notch -->
+  <rect x="134" y="92" width="152" height="40" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="210" y="116" text-anchor="middle" font-size="13" fill="#dc2626">Sarlavha o'yiq ostida!</text>
+  <rect x="134" y="140" width="152" height="240" rx="6" fill="#f1f5f9"/>
+  <text x="210" y="265" text-anchor="middle" font-size="13" fill="#64748b">kontent</text>
+  <!-- bottom home bar overlapping -->
+  <rect x="134" y="388" width="152" height="34" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="210" y="409" text-anchor="middle" font-size="13" fill="#dc2626">tugma chiziq ostida</text>
+  <rect x="160" y="416" width="100" height="6" rx="3" fill="#1e293b"/>
+
+  <!-- RIGHT phone: WITH safe area -->
+  <text x="550" y="70" text-anchor="middle" font-size="16" font-weight="700" fill="#16a34a">SafeAreaView bilan</text>
+  <rect x="460" y="84" width="180" height="350" rx="28" fill="#ffffff" stroke="#1e293b" stroke-width="2.5"/>
+  <rect x="515" y="84" width="70" height="22" rx="11" fill="#1e293b"/>
+  <!-- safe area inset top (empty) -->
+  <rect x="474" y="92" width="152" height="22" rx="4" fill="#dcfce7"/>
+  <text x="550" y="107" text-anchor="middle" font-size="13" fill="#16a34a">insets.top bo'shliq</text>
+  <!-- safe content -->
+  <rect x="474" y="120" width="152" height="40" rx="6" fill="#e0f2fe" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="550" y="144" text-anchor="middle" font-size="13" fill="#16a34a">Sarlavha ko'rinadi</text>
+  <rect x="474" y="166" width="152" height="208" rx="6" fill="#f1f5f9"/>
+  <text x="550" y="272" text-anchor="middle" font-size="13" fill="#64748b">kontent</text>
+  <!-- safe area inset bottom -->
+  <rect x="474" y="382" width="152" height="20" rx="4" fill="#dcfce7"/>
+  <text x="550" y="396" text-anchor="middle" font-size="13" fill="#16a34a">insets.bottom bo'shliq</text>
+  <rect x="500" y="416" width="100" height="6" rx="3" fill="#1e293b"/>
+
+  <!-- middle arrow -->
+  <path d="M312 250 L448 250" stroke="#0ea5e9" stroke-width="3" marker-end="url(#a)"/>
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0 0 L8 3 L0 6 Z" fill="#0ea5e9"/>
+    </marker>
+  </defs>
+
+  <!-- bottom note -->
+  <rect x="100" y="446" width="560" height="26" rx="8" fill="#eff6ff" stroke="#bae6fd" stroke-width="1.5"/>
+  <text x="380" y="464" text-anchor="middle" font-size="13" fill="#1e293b">import { SafeAreaView } from 'react-native-safe-area-context';  (RN o'rnatilgani EMAS)</text>
+</svg>

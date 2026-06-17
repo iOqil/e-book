@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Himoyalangan marshrutlar: (auth) va (app) guruhlari va layout qo'riqchisi</title>
+  <rect x="0" y="0" width="760" height="480" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Himoyalangan marshrutlar</text>
+  <text x="380" y="58" text-anchor="middle" font-size="14" fill="#475569">Har layout tokenni tekshiradi va kerak bo'lsa yo'naltiradi</text>
+
+  <!-- Decision diamond -->
+  <polygon points="380,86 470,140 380,194 290,140" fill="#ffffff" stroke="#6366f1" stroke-width="2.5"/>
+  <text x="380" y="135" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">token</text>
+  <text x="380" y="156" text-anchor="middle" font-size="14" fill="#475569">bormi?</text>
+  <text x="380" y="80" text-anchor="middle" font-size="13" fill="#475569">useAuth() -&gt; layout tekshiradi</text>
+
+  <!-- YO'Q branch -> (auth) -->
+  <line x1="290" y1="140" x2="180" y2="140" stroke="#dc2626" stroke-width="2"/>
+  <line x1="180" y1="140" x2="180" y2="226" stroke="#dc2626" stroke-width="2"/>
+  <polygon points="180,230 175,220 185,220" fill="#dc2626"/>
+  <text x="232" y="132" text-anchor="middle" font-size="14" font-weight="700" fill="#dc2626">YO'Q</text>
+
+  <!-- HA branch -> (app) -->
+  <line x1="470" y1="140" x2="580" y2="140" stroke="#16a34a" stroke-width="2"/>
+  <line x1="580" y1="140" x2="580" y2="226" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="580,230 575,220 585,220" fill="#16a34a"/>
+  <text x="528" y="132" text-anchor="middle" font-size="14" font-weight="700" fill="#16a34a">HA</text>
+
+  <!-- (auth) group -->
+  <rect x="60" y="234" width="240" height="190" rx="14" fill="#fef2f2" stroke="#dc2626" stroke-width="2" stroke-dasharray="8 5"/>
+  <text x="180" y="262" text-anchor="middle" font-size="16" font-weight="700" fill="#dc2626">(auth) guruhi</text>
+  <text x="180" y="284" text-anchor="middle" font-size="13" fill="#475569">kirmaganlar uchun</text>
+
+  <rect x="88" y="298" width="184" height="40" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="180" y="323" text-anchor="middle" font-size="14" fill="#1e293b">login.tsx  -&gt;  /login</text>
+  <rect x="88" y="346" width="184" height="40" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="180" y="371" text-anchor="middle" font-size="14" fill="#1e293b">signup.tsx  -&gt;  /signup</text>
+  <text x="180" y="408" text-anchor="middle" font-size="13" fill="#dc2626">_layout: token BOR -&gt; (app)'ga</text>
+
+  <!-- (app) group -->
+  <rect x="460" y="234" width="240" height="190" rx="14" fill="#ecfdf5" stroke="#16a34a" stroke-width="2" stroke-dasharray="8 5"/>
+  <text x="580" y="262" text-anchor="middle" font-size="16" font-weight="700" fill="#16a34a">(app) guruhi</text>
+  <text x="580" y="284" text-anchor="middle" font-size="13" fill="#475569">faqat kirganlar uchun</text>
+
+  <rect x="488" y="298" width="184" height="40" rx="8" fill="#ffffff" stroke="#bbf7d0" stroke-width="1.5"/>
+  <text x="580" y="323" text-anchor="middle" font-size="14" fill="#1e293b">(tabs)/index.tsx</text>
+  <rect x="488" y="346" width="184" height="40" rx="8" fill="#ffffff" stroke="#bbf7d0" stroke-width="1.5"/>
+  <text x="580" y="371" text-anchor="middle" font-size="14" fill="#1e293b">(tabs)/profil.tsx</text>
+  <text x="580" y="408" text-anchor="middle" font-size="13" fill="#16a34a">_layout: token YO'Q -&gt; login'ga</text>
+
+  <!-- Redirect labels on branches -->
+  <rect x="306" y="224" width="148" height="30" rx="6" fill="#ffffff" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="380" y="244" text-anchor="middle" font-size="13" fill="#dc2626">&lt;Redirect href="/login"/&gt;</text>
+
+  <text x="380" y="456" text-anchor="middle" font-size="13" fill="#94a3b8">Login bo'lganda token o'zgaradi -&gt; layout qayta render -&gt; avtomatik (app)'ga o'tadi</text>
+</svg>

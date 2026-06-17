@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" width="780" height="470">
+  <title>Event-driven arxitektura: producer hodisani broker'ga yuboradi, bir nechta consumer mustaqil tinglaydi</title>
+  <rect x="0" y="0" width="780" height="470" fill="#f8fafc"/>
+  <text x="390" y="34" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Event-driven: producer broker'ga e'lon qiladi, consumer'lar tinglaydi</text>
+  <text x="390" y="58" font-family="Segoe UI" font-size="14" fill="#64748b" text-anchor="middle">Producer consumer'larni KIM ekanini bilmaydi — faqat fakt e'lon qiladi (loose coupling)</text>
+
+  <defs>
+    <marker id="ed-ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <!-- Producer -->
+  <rect x="40" y="200" width="170" height="80" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="125" y="234" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#dc2626" text-anchor="middle">Buyurtma servisi</text>
+  <text x="125" y="258" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">(producer)</text>
+
+  <!-- Hodisa label on arrow -->
+  <rect x="228" y="206" width="172" height="34" rx="8" fill="#fef9c3" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="314" y="228" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">buyurtma.yaratildi</text>
+
+  <!-- Broker -->
+  <rect x="318" y="160" width="150" height="160" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="393" y="190" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb" text-anchor="middle">Event broker</text>
+  <text x="393" y="212" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">(Kafka / RabbitMQ /</text>
+  <text x="393" y="228" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">in-memory bus)</text>
+  <line x1="332" y1="244" x2="454" y2="244" stroke="#94a3b8" stroke-width="1"/>
+  <text x="393" y="266" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">hodisani qabul qiladi</text>
+  <text x="393" y="284" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">va tarqatadi</text>
+
+  <!-- Producer -> Broker arrow -->
+  <line x1="210" y1="240" x2="316" y2="240" stroke="#2563eb" stroke-width="2.5" marker-end="url(#ed-ar)"/>
+
+  <!-- Consumers -->
+  <rect x="560" y="80" width="200" height="74" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="660" y="110" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">Email servisi</text>
+  <text x="660" y="134" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">mijozga tasdiq yuboradi</text>
+
+  <rect x="560" y="203" width="200" height="74" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="660" y="233" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">Inventar servisi</text>
+  <text x="660" y="257" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">zaxirani kamaytiradi</text>
+
+  <rect x="560" y="326" width="200" height="74" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="660" y="356" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">Analitika servisi</text>
+  <text x="660" y="380" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">daromadni log'ga yozadi</text>
+
+  <!-- Broker -> Consumers arrows -->
+  <line x1="468" y1="210" x2="558" y2="120" stroke="#2563eb" stroke-width="2" marker-end="url(#ed-ar)"/>
+  <line x1="468" y1="240" x2="558" y2="240" stroke="#2563eb" stroke-width="2" marker-end="url(#ed-ar)"/>
+  <line x1="468" y1="270" x2="558" y2="360" stroke="#2563eb" stroke-width="2" marker-end="url(#ed-ar)"/>
+
+  <!-- Note -->
+  <rect x="40" y="330" width="250" height="100" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="165" y="356" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#334155" text-anchor="middle">Nega muhim</text>
+  <text x="56" y="380" font-family="Segoe UI" font-size="13" fill="#334155">Yangi consumer qo'shsang,</text>
+  <text x="56" y="400" font-family="Segoe UI" font-size="13" fill="#334155">buyurtma servisi tegilmaydi (OCP).</text>
+  <text x="56" y="420" font-family="Segoe UI" font-size="13" fill="#64748b">Observer'ning tarmoq miqyosi.</text>
+</svg>

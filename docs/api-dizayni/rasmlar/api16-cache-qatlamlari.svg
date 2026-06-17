@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 520">
+  <title>Kesh qatlamlari: mijoz brauzer keshi, CDN proxy shared kesh, server origin</title>
+  <rect x="0" y="0" width="880" height="520" fill="#f8fafc"/>
+  <text x="440" y="36" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">Kesh qatlamlari</text>
+  <text x="440" y="60" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Har qatlam javobni saqlashi mumkin — so'rov server'ga yetib bormasligi mumkin</text>
+
+  <!-- Mijoz / brauzer -->
+  <rect x="40" y="120" width="220" height="160" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="150" y="150" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb">Mijoz (brauzer)</text>
+  <rect x="64" y="166" width="172" height="40" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1"/>
+  <text x="150" y="191" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e3a8a">Private kesh</text>
+  <text x="150" y="232" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Faqat shu foydalanuvchi.</text>
+  <text x="150" y="252" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">private / no-store</text>
+  <text x="150" y="272" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">bu yerda muhim.</text>
+
+  <!-- CDN / proxy -->
+  <rect x="330" y="120" width="220" height="160" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="440" y="150" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#7c3aed">CDN / proxy</text>
+  <rect x="354" y="166" width="172" height="40" rx="6" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1"/>
+  <text x="440" y="191" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#5b21b6">Shared kesh</text>
+  <text x="440" y="232" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Ko'p foydalanuvchi uchun</text>
+  <text x="440" y="252" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">umumiy. s-maxage,</text>
+  <text x="440" y="272" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">public bu yerga ta'sir qiladi.</text>
+
+  <!-- Server / origin -->
+  <rect x="620" y="120" width="220" height="160" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="730" y="150" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a">Server (origin)</text>
+  <rect x="644" y="166" width="172" height="40" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1"/>
+  <text x="730" y="191" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#15803d">Manba (haqiqat)</text>
+  <text x="730" y="232" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Cache-Control / ETag'ni</text>
+  <text x="730" y="252" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">shu yerda belgilaydi.</text>
+  <text x="730" y="272" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Validatsiya manbasi.</text>
+
+  <!-- arrows -->
+  <line x1="260" y1="200" x2="330" y2="200" stroke="#64748b" stroke-width="2"/>
+  <polygon points="330,200 318,195 318,205" fill="#64748b"/>
+  <line x1="550" y1="200" x2="620" y2="200" stroke="#64748b" stroke-width="2"/>
+  <polygon points="620,200 608,195 608,205" fill="#64748b"/>
+
+  <text x="295" y="190" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">so'rov</text>
+  <text x="585" y="190" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">so'rov</text>
+
+  <!-- HIT izohlar -->
+  <rect x="40" y="320" width="800" height="68" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="60" y="346" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#15803d">Kesh HIT (yangi nusxa bor):</text>
+  <text x="60" y="370" font-family="Segoe UI" font-size="13" fill="#334155">So'rov yangi nusxasi bor birinchi qatlamda to'xtaydi — server'ga yetib bormaydi. Eng tez javob.</text>
+
+  <rect x="40" y="398" width="800" height="92" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="60" y="424" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#b45309">Diqqat — private vs shared:</text>
+  <text x="60" y="448" font-family="Segoe UI" font-size="13" fill="#334155">Foydalanuvchiga xos data (balans, profil) ni SHARED keshda saqlash xavfli — boshqa</text>
+  <text x="60" y="468" font-family="Segoe UI" font-size="13" fill="#334155">foydalanuvchiga sizib chiqishi mumkin. Bunda: private (yoki no-store) + Vary: Authorization.</text>
+</svg>

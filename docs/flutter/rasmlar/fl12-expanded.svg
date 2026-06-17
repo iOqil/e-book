@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 440" width="780" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Expanded ikkita namuna: qat'iy ikon + Expanded matn ortib qolgan joyni to'ldiradi + ortidagi ikon; va Expanded(flex:2) bilan Expanded(flex:1) bo'sh joyni 2:1 nisbatda bo'lishi</title>
+  <rect x="0" y="0" width="780" height="440" fill="#f8fafc"/>
+  <text x="390" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Expanded — ortib qolgan asosiy o'q joyini to'ldiradi</text>
+  <text x="390" y="58" text-anchor="middle" font-size="14" fill="#475569">Avval qat'iy o'lchamli bolalar joylashadi, qolgan joyni Expanded'lar flex nisbatida bo'lishadi</text>
+
+  <!-- ===== Pattern 1: icon + Expanded(text) + icon ===== -->
+  <text x="40" y="100" font-size="15" font-weight="700" fill="#027dfd">1) ikon + Expanded(matn) + ikon</text>
+  <rect x="40" y="112" width="700" height="64" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+
+  <!-- leading fixed icon -->
+  <rect x="52" y="124" width="48" height="40" rx="8" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="76" y="149" text-anchor="middle" font-size="13" font-weight="700" fill="#1e293b">ikon</text>
+
+  <!-- expanded text -->
+  <rect x="112" y="124" width="556" height="40" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="390" y="149" text-anchor="middle" font-size="14" font-weight="700" fill="#16a34a">Expanded(child: Text(...)) — qolgan butun joyni egallaydi</text>
+
+  <!-- trailing fixed icon -->
+  <rect x="680" y="124" width="48" height="40" rx="8" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="704" y="149" text-anchor="middle" font-size="13" font-weight="700" fill="#1e293b">ikon</text>
+
+  <text x="76" y="196" text-anchor="middle" font-size="13" fill="#64748b">qat'iy</text>
+  <text x="704" y="196" text-anchor="middle" font-size="13" fill="#64748b">qat'iy</text>
+  <text x="390" y="196" text-anchor="middle" font-size="13" fill="#64748b">cho'ziluvchan (qancha joy bo'lsa shuncha)</text>
+
+  <!-- ===== Pattern 2: 2:1 split ===== -->
+  <text x="40" y="252" font-size="15" font-weight="700" fill="#027dfd">2) Expanded(flex: 2) va Expanded(flex: 1) — bo'sh joyni 2:1 bo'lish</text>
+  <rect x="40" y="264" width="700" height="72" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+
+  <!-- flex 2 -->
+  <rect x="52" y="276" width="448" height="48" rx="8" fill="#dbeafe" stroke="#027dfd" stroke-width="2"/>
+  <text x="276" y="305" text-anchor="middle" font-size="15" font-weight="700" fill="#0553b1">Expanded(flex: 2)</text>
+
+  <!-- flex 1 -->
+  <rect x="508" y="276" width="220" height="48" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="618" y="305" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">flex: 1</text>
+
+  <!-- ratio braces -->
+  <line x1="52" y1="350" x2="500" y2="350" stroke="#027dfd" stroke-width="2"/>
+  <text x="276" y="370" text-anchor="middle" font-size="13" font-weight="700" fill="#027dfd">2 ulush</text>
+  <line x1="508" y1="350" x2="728" y2="350" stroke="#f59e0b" stroke-width="2"/>
+  <text x="618" y="370" text-anchor="middle" font-size="13" font-weight="700" fill="#f59e0b">1 ulush</text>
+
+  <text x="390" y="404" text-anchor="middle" font-size="14" fill="#475569">Spacer() = bo'sh Expanded; SizedBox(width: 16) = qat'iy oraliq</text>
+  <text x="390" y="428" text-anchor="middle" font-size="13" fill="#94a3b8">Expanded bo'sh joyni bo'ladi → "RenderFlex overflowed" xatosini ham shu hal qiladi.</text>
+</svg>

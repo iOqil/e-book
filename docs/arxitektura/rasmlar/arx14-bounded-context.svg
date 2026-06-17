@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 520" width="820" height="520">
+  <title>Context Map: bir nechta Bounded Context va ular o'rtasidagi aloqa turlari; "Mijoz" atamasi har kontekstda boshqa ma'no</title>
+  <rect x="0" y="0" width="820" height="520" fill="#f8fafc"/>
+  <text x="410" y="34" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Context Map: chegaralangan kontekstlar va ular orasidagi aloqa</text>
+  <text x="410" y="58" font-family="Segoe UI" font-size="14" fill="#64748b" text-anchor="middle">"Mijoz" atamasi har kontekstda HAR XIL model — yagona universal model yo'q</text>
+
+  <defs>
+    <marker id="bc-ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#334155"/>
+    </marker>
+  </defs>
+
+  <!-- Savdo (Sales) konteksti -->
+  <rect x="50" y="100" width="320" height="160" rx="14" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="210" y="128" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb" text-anchor="middle">Savdo konteksti (Sales)</text>
+  <line x1="50" y1="142" x2="370" y2="142" stroke="#94a3b8" stroke-width="1"/>
+  <text x="70" y="168" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#334155">Mijoz =</text>
+  <text x="140" y="168" font-family="Segoe UI" font-size="14" fill="#64748b">potensial xaridor (lead)</text>
+  <text x="70" y="194" font-family="Segoe UI" font-size="13" fill="#334155">- savdo voronkasi, kontaktlar</text>
+  <text x="70" y="216" font-family="Segoe UI" font-size="13" fill="#334155">Buyurtma = qoralama, narx kelishuvi</text>
+  <text x="70" y="240" font-family="Segoe UI" font-size="13" font-style="italic" fill="#64748b">Ubiquitous Language: "lead", "deal"</text>
+
+  <!-- To'lov (Billing) konteksti -->
+  <rect x="450" y="100" width="320" height="160" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="610" y="128" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a" text-anchor="middle">To'lov konteksti (Billing)</text>
+  <line x1="450" y1="142" x2="770" y2="142" stroke="#94a3b8" stroke-width="1"/>
+  <text x="470" y="168" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#334155">Mijoz =</text>
+  <text x="540" y="168" font-family="Segoe UI" font-size="14" fill="#64748b">to'lovchi (payer, hisob)</text>
+  <text x="470" y="194" font-family="Segoe UI" font-size="13" fill="#334155">- balans, kredit limiti, INN</text>
+  <text x="470" y="216" font-family="Segoe UI" font-size="13" fill="#334155">Buyurtma = invoys, summa, soliq</text>
+  <text x="470" y="240" font-family="Segoe UI" font-size="13" font-style="italic" fill="#64748b">Ubiquitous Language: "invoice", "payer"</text>
+
+  <!-- Yetkazib berish (Shipping) konteksti -->
+  <rect x="250" y="320" width="320" height="160" rx="14" fill="#ffffff" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="410" y="348" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#f59e0b" text-anchor="middle">Yetkazish konteksti (Shipping)</text>
+  <line x1="250" y1="362" x2="570" y2="362" stroke="#94a3b8" stroke-width="1"/>
+  <text x="270" y="388" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#334155">Mijoz =</text>
+  <text x="340" y="388" font-family="Segoe UI" font-size="14" fill="#64748b">qabul qiluvchi (recipient)</text>
+  <text x="270" y="414" font-family="Segoe UI" font-size="13" fill="#334155">- manzil, telefon, kuryer zonasi</text>
+  <text x="270" y="436" font-family="Segoe UI" font-size="13" fill="#334155">Buyurtma = jo'natma, trek raqami</text>
+  <text x="270" y="460" font-family="Segoe UI" font-size="13" font-style="italic" fill="#64748b">Ubiquitous Language: "parcel", "route"</text>
+
+  <!-- Aloqa: Savdo -> To'lov (Customer/Supplier) -->
+  <line x1="370" y1="180" x2="450" y2="180" stroke="#334155" stroke-width="2" marker-end="url(#bc-ar)"/>
+  <text x="410" y="172" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">hodisa</text>
+  <text x="410" y="200" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">"BuyurtmaTasdiqlandi"</text>
+
+  <!-- Aloqa: To'lov -> Yetkazish -->
+  <line x1="560" y1="260" x2="470" y2="320" stroke="#334155" stroke-width="2" marker-end="url(#bc-ar)"/>
+  <text x="560" y="298" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">"To'landi"</text>
+
+  <!-- Aloqa: Savdo -> Yetkazish -->
+  <line x1="250" y1="260" x2="345" y2="320" stroke="#334155" stroke-width="2" marker-end="url(#bc-ar)"/>
+  <text x="270" y="298" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">manzil ma'lumoti</text>
+
+  <!-- Pastki izoh -->
+  <rect x="600" y="320" width="180" height="160" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="690" y="346" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#dc2626" text-anchor="middle">Diqqat</text>
+  <text x="615" y="372" font-family="Segoe UI" font-size="13" fill="#334155">Bitta ulkan "Mijoz"</text>
+  <text x="615" y="392" font-family="Segoe UI" font-size="13" fill="#334155">sinfini 3 kontekstga</text>
+  <text x="615" y="412" font-family="Segoe UI" font-size="13" fill="#334155">ZO'RLAB tiqish =</text>
+  <text x="615" y="432" font-family="Segoe UI" font-size="13" fill="#dc2626">"Big Ball of Mud".</text>
+  <text x="615" y="456" font-family="Segoe UI" font-size="13" fill="#16a34a">Chegara = aniqlik.</text>
+</svg>

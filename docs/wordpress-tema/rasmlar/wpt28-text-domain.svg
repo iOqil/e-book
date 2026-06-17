@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 440" width="860" height="440">
+  <title>Text domain (tema slug, literal) va sprintf %s placeholder</title>
+  <rect x="0" y="0" width="860" height="440" fill="#f8fafc"/>
+  <text x="430" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Text domain va %s placeholder</text>
+
+  <!-- Text domain section -->
+  <text x="40" y="70" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">1. Text domain = tema slug (string LITERAL)</text>
+
+  <!-- style.css header -->
+  <rect x="40" y="84" width="360" height="96" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="56" y="106" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">style.css (header):</text>
+  <text x="56" y="130" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#16a34a">Text Domain: mytheme</text>
+  <text x="56" y="152" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#16a34a">Domain Path: /languages</text>
+  <text x="56" y="172" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">= tema papka nomi bilan bir xil</text>
+
+  <!-- arrow -->
+  <line x1="404" y1="132" x2="456" y2="132" stroke="#475569" stroke-width="2" marker-end="url(#ar2)"/>
+
+  <!-- usage -->
+  <rect x="460" y="84" width="360" height="96" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="476" y="106" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Funksiyada (har joyda bir xil):</text>
+  <text x="476" y="132" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#16a34a">__('Matn', 'mytheme')</text>
+  <text x="476" y="156" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#16a34a">_e('Matn', 'mytheme')</text>
+
+  <!-- correct vs wrong -->
+  <rect x="40" y="196" width="380" height="56" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="58" y="218" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">TO'G'RI (literal):</text>
+  <text x="58" y="240" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">__('Salom', 'mytheme')</text>
+
+  <rect x="440" y="196" width="380" height="56" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="458" y="218" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">XATO (o'zgaruvchi):</text>
+  <text x="458" y="240" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">__('Salom', $domain)</text>
+
+  <!-- sprintf section -->
+  <text x="40" y="288" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">2. sprintf/printf bilan %s placeholder</text>
+
+  <!-- wrong concat -->
+  <rect x="40" y="302" width="380" height="100" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="58" y="324" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">XATO — birlashtirish (tarjib qiyin):</text>
+  <text x="58" y="350" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">__('Salom ', 'mytheme') . $ism</text>
+  <text x="58" y="376" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">So'z tartibi tilga bog'liq —</text>
+  <text x="58" y="394" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tarjimon o'rnini o'zgartira olmaydi.</text>
+
+  <!-- correct sprintf -->
+  <rect x="440" y="302" width="380" height="100" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="458" y="324" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">TO'G'RI — placeholder:</text>
+  <text x="458" y="350" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">printf(</text>
+  <text x="468" y="370" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">__('Salom, %s!', 'mytheme'),</text>
+  <text x="468" y="390" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">esc_html($ism) );</text>
+
+  <!-- bottom note -->
+  <rect x="40" y="414" width="780" height="20" fill="none"/>
+  <text x="430" y="429" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Bir nechta o'rin uchun %1$s, %2$s (raqamli) — tarjimon tartibni o'zi belgilaydi.</text>
+
+  <defs>
+    <marker id="ar2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+</svg>

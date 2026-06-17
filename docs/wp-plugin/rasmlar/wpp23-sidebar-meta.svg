@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430">
+  <title>PluginSidebar ichidagi TextControl useEntityProp yoki editPost orqali post meta'ni yangilaydi; meta register_post_meta da show_in_rest true bo'lgani uchun REST orqali saqlanadi</title>
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Sidebar control dan post meta'ga (zamonaviy yo'l)</text>
+
+  <!-- step 1 PluginSidebar UI -->
+  <rect x="30" y="64" width="200" height="150" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="130" y="90" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e40af">1. PluginSidebar</text>
+  <rect x="50" y="106" width="160" height="40" rx="5" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="60" y="124" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Muallif</text>
+  <text x="60" y="140" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">TextControl</text>
+  <rect x="50" y="154" width="160" height="44" rx="5" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="60" y="172" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">ISBN</text>
+  <text x="60" y="190" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">TextControl</text>
+
+  <!-- step 2 setter -->
+  <rect x="280" y="64" width="200" height="150" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="380" y="90" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">2. onChange =&gt; setter</text>
+  <text x="296" y="118" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">useEntityProp(</text>
+  <text x="296" y="137" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">  'postType', 'kitob',</text>
+  <text x="296" y="156" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">  'meta' )</text>
+  <text x="296" y="180" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">yoki editPost({meta})</text>
+  <text x="296" y="200" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">setMeta({ ... })</text>
+
+  <!-- step 3 store -->
+  <rect x="530" y="64" width="200" height="150" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="630" y="90" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#7c3aed">3. core/editor store</text>
+  <text x="630" y="120" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">meta xotirada</text>
+  <text x="630" y="142" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">o'zgaradi (dirty)</text>
+  <text x="630" y="170" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">"Saqlash" bosilganda</text>
+  <text x="630" y="190" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">REST ga yuboriladi</text>
+
+  <!-- arrows row 1 -->
+  <line x1="230" y1="139" x2="278" y2="139" stroke="#475569" stroke-width="2.5"/>
+  <polygon points="278,139 268,134 268,144" fill="#475569"/>
+  <line x1="480" y1="139" x2="528" y2="139" stroke="#475569" stroke-width="2.5"/>
+  <polygon points="528,139 518,134 518,144" fill="#475569"/>
+
+  <!-- step 4 REST -->
+  <rect x="280" y="250" width="200" height="100" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="380" y="278" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">4. REST: wp/v2/kitob</text>
+  <text x="380" y="304" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">PUT { "meta": {</text>
+  <text x="380" y="324" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">  "kitkat_isbn": "..." } }</text>
+  <text x="380" y="343" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">sanitize_callback ishlaydi</text>
+
+  <line x1="630" y1="214" x2="480" y2="290" stroke="#f59e0b" stroke-width="2.5"/>
+  <polygon points="480,290 491,286 488,297" fill="#f59e0b"/>
+
+  <!-- gate: register_post_meta -->
+  <rect x="120" y="372" width="520" height="46" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="380" y="392" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">SHART: register_post_meta( 'kitob', 'kitkat_isbn', [ 'show_in_rest' =&gt; true ] )</text>
+  <text x="380" y="411" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">show_in_rest siz meta REST/blok muharririda KO'RINMAYDI (9-bob)</text>
+</svg>

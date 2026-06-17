@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 540">
+  <title>Domen entity'larini resurslarga aylantirish va fe'lni resursga keltirish</title>
+  <rect x="0" y="0" width="880" height="540" fill="#f8fafc"/>
+  <text x="440" y="36" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">Resurs modellashtirish — domendan URI'gacha</text>
+  <text x="440" y="60" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Entity'lar resursga, harakatlar metod yoki sub-resursga aylanadi</text>
+
+  <!-- Chap: domen -->
+  <rect x="40" y="96" width="240" height="380" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="60" y="124" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#7c3aed">1. Domen (real dunyo)</text>
+
+  <rect x="64" y="142" width="192" height="52" rx="8" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="78" y="164" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#6d28d9">Mijoz (entity)</text>
+  <text x="78" y="184" font-family="Segoe UI" font-size="13" fill="#64748b">ism, email, manzil</text>
+
+  <rect x="64" y="206" width="192" height="52" rx="8" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="78" y="228" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#6d28d9">Buyurtma (entity)</text>
+  <text x="78" y="248" font-family="Segoe UI" font-size="13" fill="#64748b">qatorlar, summa, holat</text>
+
+  <rect x="64" y="290" width="192" height="68" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="78" y="312" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#b91c1c">Harakatlar (fe'l)</text>
+  <text x="78" y="332" font-family="Segoe UI" font-size="13" fill="#64748b">buyurtma berish,</text>
+  <text x="78" y="350" font-family="Segoe UI" font-size="13" fill="#64748b">bekor qilish, to'lash</text>
+
+  <text x="60" y="392" font-family="Segoe UI" font-size="13" fill="#334155">Entity = ot →</text>
+  <text x="60" y="412" font-family="Segoe UI" font-size="13" fill="#334155">resurs nomzodi.</text>
+  <text x="60" y="436" font-family="Segoe UI" font-size="13" fill="#334155">Fe'l = harakat →</text>
+  <text x="60" y="456" font-family="Segoe UI" font-size="13" fill="#334155">metod yoki sub-resurs.</text>
+
+  <!-- O'q -->
+  <line x1="284" y1="286" x2="332" y2="286" stroke="#16a34a" stroke-width="2.5"/>
+  <polygon points="344,286 328,279 328,293" fill="#16a34a"/>
+
+  <!-- O'ng: resurslar -->
+  <rect x="348" y="96" width="492" height="380" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="368" y="124" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">2. API resurslari (URI)</text>
+
+  <rect x="368" y="142" width="452" height="44" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="384" y="170" font-family="monospace" font-size="14" fill="#15803d">/customers/{id}</text>
+  <text x="600" y="170" font-family="Segoe UI" font-size="13" fill="#64748b">← Mijoz</text>
+
+  <rect x="368" y="196" width="452" height="44" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="384" y="224" font-family="monospace" font-size="14" fill="#15803d">/orders/{id}</text>
+  <text x="600" y="224" font-family="Segoe UI" font-size="13" fill="#64748b">← Buyurtma</text>
+
+  <rect x="368" y="252" width="452" height="44" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="384" y="280" font-family="monospace" font-size="14" fill="#1d4ed8">POST /orders</text>
+  <text x="540" y="280" font-family="Segoe UI" font-size="13" fill="#64748b">← "buyurtma berish"</text>
+
+  <rect x="368" y="308" width="452" height="44" rx="8" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="384" y="336" font-family="monospace" font-size="14" fill="#b45309">POST /orders/42/cancellation</text>
+  <text x="660" y="336" font-family="Segoe UI" font-size="13" fill="#64748b">← "bekor qilish"</text>
+
+  <rect x="368" y="364" width="452" height="44" rx="8" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="384" y="392" font-family="monospace" font-size="14" fill="#b45309">POST /orders/42/payment</text>
+  <text x="660" y="392" font-family="Segoe UI" font-size="13" fill="#64748b">← "to'lash"</text>
+
+  <text x="368" y="438" font-family="Segoe UI" font-size="13" fill="#334155">Oddiy CRUD → metod; murakkab aksiya → ataylab nomlangan</text>
+  <text x="368" y="458" font-family="Segoe UI" font-size="13" fill="#334155">sub-resurs (cancellation, payment). Sof fe'lli URI'dan saqlaning.</text>
+</svg>

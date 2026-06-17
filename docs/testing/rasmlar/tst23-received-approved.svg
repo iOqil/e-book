@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 440">
+  <title>Approval testing oqimi: kod received fayl yozadi, inson uni ko'rib approved qiladi, keyin har run received approved bilan solishtiriladi</title>
+  <rect x="0" y="0" width="840" height="440" fill="#f8fafc"/>
+  <text x="420" y="40" text-anchor="middle" font-family="Segoe UI" font-size="23" font-weight="bold" fill="#1e293b">Approval testing: received vs approved</text>
+  <text x="420" y="66" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">inson natijani bir marta tasdiqlaydi, keyin u oltin standart</text>
+
+  <!-- 1: kod received yozadi -->
+  <rect x="40" y="100" width="220" height="120" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="150" y="128" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">1. Test ishlaydi</text>
+  <text x="150" y="155" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">natijani yozadi:</text>
+  <rect x="65" y="168" width="170" height="34" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="150" y="190" text-anchor="middle" font-family="Consolas,monospace" font-size="13" fill="#92400e">x.received.txt</text>
+
+  <!-- 2: inson tasdiqlaydi -->
+  <rect x="310" y="100" width="220" height="120" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="420" y="128" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">2. Inson ko'radi</text>
+  <text x="420" y="155" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">to'g'ri bo'lsa tasdiqlaydi</text>
+  <text x="420" y="177" text-anchor="middle" font-family="Consolas,monospace" font-size="13" fill="#5b21b6">received -&gt; approved</text>
+  <text x="420" y="200" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">(faqat bir marta)</text>
+
+  <!-- 3: approved oltin standart -->
+  <rect x="580" y="100" width="220" height="120" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="690" y="128" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#166534">3. Oltin standart</text>
+  <rect x="605" y="142" width="170" height="34" rx="6" fill="#bbf7d0" stroke="#16a34a" stroke-width="2"/>
+  <text x="690" y="164" text-anchor="middle" font-family="Consolas,monospace" font-size="13" fill="#166534">x.approved.txt</text>
+  <text x="690" y="198" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#166534">versiya nazoratiga kiradi</text>
+
+  <line x1="262" y1="160" x2="306" y2="160" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="532" y1="160" x2="576" y2="160" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- keyingi run -->
+  <text x="420" y="265" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#1e293b">Har keyingi run: received'ni approved bilan solishtir</text>
+
+  <rect x="180" y="290" width="200" height="90" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="280" y="318" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#166534">bir xil</text>
+  <text x="280" y="341" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#166534">PASS</text>
+  <text x="280" y="363" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#166534">received o'chiriladi</text>
+
+  <rect x="460" y="290" width="200" height="90" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="560" y="318" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#991b1b">farqli</text>
+  <text x="560" y="341" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#991b1b">FAIL</text>
+  <text x="560" y="363" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#991b1b">received qoladi -&gt; qayta ko'r</text>
+
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+</svg>

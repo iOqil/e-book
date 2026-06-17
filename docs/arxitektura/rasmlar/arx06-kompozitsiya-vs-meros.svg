@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440">
+  <title>Meros (qattiq is-a ierarxiya, fragile base class) vs kompozitsiya (qobiliyatni has-a tarzda ulash, moslashuvchan)</title>
+  <defs>
+    <marker id="km-ok" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/>
+    </marker>
+    <marker id="km-ok-yashil" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Meros o'rniga kompozitsiya</text>
+
+  <!-- CHAP: MEROS -->
+  <rect x="24" y="52" width="340" height="356" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="194" y="78" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#dc2626">Meros (is-a) — qattiq ierarxiya</text>
+
+  <!-- ota klass -->
+  <rect x="124" y="96" width="140" height="50" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="194" y="118" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#7f1d1d">Bird</text>
+  <text x="194" y="136" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#991b1b">fly() · eat()</text>
+
+  <!-- bolalar -->
+  <rect x="48" y="206" width="120" height="44" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="108" y="226" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Eagle</text>
+  <text x="108" y="242" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">fly() OK</text>
+
+  <rect x="220" y="206" width="120" height="44" rx="6" fill="#ffffff" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="280" y="226" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Penguin</text>
+  <text x="280" y="242" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">fly() -> xato!</text>
+
+  <line x1="160" y1="146" x2="115" y2="202" stroke="#dc2626" stroke-width="2" marker-end="url(#km-ok)"/>
+  <line x1="228" y1="146" x2="273" y2="202" stroke="#dc2626" stroke-width="2" marker-end="url(#km-ok)"/>
+
+  <text x="194" y="288" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#334155">Pingvin uchmaydi -> fly()'ni "qaytarib</text>
+  <text x="194" y="306" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#334155">olishga" majbur -> LSP buziladi.</text>
+
+  <text x="194" y="338" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#7f1d1d">• fragile base class (ota o'zgarsa hamma buziladi)</text>
+  <text x="194" y="358" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#7f1d1d">• gorilla-banan (1 metod uchun butun ota)</text>
+  <text x="194" y="378" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#7f1d1d">• kompilyatsiya vaqtida qotib qoladi</text>
+
+  <!-- O'NG: KOMPOZITSIYA -->
+  <rect x="396" y="52" width="340" height="356" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="566" y="78" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">Kompozitsiya (has-a) — moslashuvchan</text>
+
+  <!-- Qush -->
+  <rect x="496" y="96" width="140" height="50" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="566" y="118" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#14532d">Qush</text>
+  <text x="566" y="136" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#166534">harakat: Harakat</text>
+
+  <!-- interfeys + strategiyalar -->
+  <rect x="420" y="206" width="130" height="44" rx="6" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="485" y="226" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#2563eb">«interface»</text>
+  <text x="485" y="242" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Harakat.yur()</text>
+
+  <rect x="588" y="194" width="120" height="34" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="648" y="216" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Ucha</text>
+  <rect x="588" y="232" width="120" height="34" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="648" y="254" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Suzadi</text>
+
+  <!-- Qush -> Harakat (has-a) -->
+  <line x1="540" y1="146" x2="495" y2="202" stroke="#16a34a" stroke-width="2" marker-end="url(#km-ok-yashil)"/>
+  <text x="498" y="178" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">has-a</text>
+  <!-- strategiyalar -> interfeys -->
+  <line x1="588" y1="211" x2="552" y2="222" stroke="#2563eb" stroke-width="1.5" marker-end="url(#km-ok)"/>
+  <line x1="588" y1="249" x2="552" y2="234" stroke="#2563eb" stroke-width="1.5" marker-end="url(#km-ok)"/>
+
+  <text x="566" y="296" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#334155">Pingvin = Qush + Suzadi. Hech kim</text>
+  <text x="566" y="314" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#334155">keraksiz qobiliyatni meros olmaydi.</text>
+
+  <text x="566" y="346" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#14532d">• ish vaqtida almashtirsa bo'ladi</text>
+  <text x="566" y="366" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#14532d">• yangi qobiliyat = yangi klass (OCP)</text>
+  <text x="566" y="386" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#14532d">• bo'shroq bog'liqlik (loose coupling)</text>
+
+  <!-- pastki xulosa -->
+  <text x="380" y="430" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">Meros — "is-a" haqiqatan to'g'ri va barqaror bo'lgandagina. Shubha bo'lsa — kompozitsiya.</text>
+</svg>

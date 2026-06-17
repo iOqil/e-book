@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 450" width="760" height="450">
+  <title>Server hardening: qatlamli himoya checklisti — user, SSH, firewall, fail2ban, yangilanish, eng kam imtiyoz</title>
+  <rect width="760" height="450" fill="#f8fafc"/>
+  <text x="380" y="36" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Server hardening: qatlamli himoya</text>
+  <text x="380" y="58" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569" text-anchor="middle">Tashqi qatlamdan ichkariga — har qatlam hujum yuzasini kichraytiradi</text>
+
+  <!-- Layer 1: Firewall (eng tashqi) -->
+  <rect x="60" y="78" width="640" height="56" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="80" y="105" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#92400e">1. Firewall (ufw)</text>
+  <text x="80" y="125" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#92400e">default deny incoming; faqat 22 / 80 / 443 ochiq</text>
+
+  <!-- Layer 2: fail2ban -->
+  <rect x="90" y="142" width="580" height="52" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="110" y="167" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#6d28d9">2. fail2ban</text>
+  <text x="110" y="186" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#6d28d9">brute-force: 5 xato urinish -> IP ban (1 soat)</text>
+
+  <!-- Layer 3: SSH -->
+  <rect x="120" y="202" width="520" height="52" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="140" y="227" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e40af">3. SSH (kalit-only)</text>
+  <text x="140" y="246" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e40af">PasswordAuthentication no; PermitRootLogin no</text>
+
+  <!-- Layer 4: Users -->
+  <rect x="150" y="262" width="460" height="52" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="170" y="287" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">4. Non-root sudo user</text>
+  <text x="170" y="306" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#15803d">root bilan kundalik ishlamaslik; eng kam imtiyoz</text>
+
+  <!-- Layer 5: Updates (ichki yadro) -->
+  <rect x="190" y="322" width="380" height="56" rx="10" fill="#ffffff" stroke="#334155" stroke-width="2"/>
+  <text x="210" y="347" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">5. Avtomatik yangilanish</text>
+  <text x="210" y="367" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">unattended-upgrades + kerakmas servislarni o'chirish</text>
+
+  <!-- Asosiy prinsip plitasi -->
+  <rect x="60" y="396" width="640" height="40" rx="8" fill="#1e293b"/>
+  <text x="380" y="421" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#f8fafc" text-anchor="middle">Asos: eng kam imtiyoz (least privilege) — har biri faqat zarurini qila olsin</text>
+</svg>

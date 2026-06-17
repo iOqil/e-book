@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Taxonomy CPT bilan bog'lanishi: hierarchical (kategoriya) vs flat (teg)</title>
+  <rect x="0" y="0" width="800" height="500" fill="#f8fafc"/>
+  <text x="400" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">Taxonomy: kontentni guruhlash usuli</text>
+  <text x="400" y="60" text-anchor="middle" font-size="14" fill="#475569">register_taxonomy($slug, $object_type, $args) — CPT'ga biriktiriladi</text>
+
+  <!-- CPT center -->
+  <rect x="320" y="86" width="160" height="56" rx="10" fill="#21759b"/>
+  <text x="400" y="112" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">CPT: 'loyiha'</text>
+  <text x="400" y="132" text-anchor="middle" font-size="13" fill="#e2e8f0">(Loyihalar)</text>
+
+  <!-- arrows down to two taxonomies -->
+  <line x1="360" y1="142" x2="220" y2="180" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="214,176 220,188 228,176" fill="#94a3b8"/>
+  <line x1="440" y1="142" x2="580" y2="180" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="572,176 580,188 586,176" fill="#94a3b8"/>
+
+  <!-- LEFT: hierarchical category -->
+  <rect x="40" y="190" width="350" height="290" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <rect x="40" y="190" width="350" height="44" rx="12" fill="#16a34a"/>
+  <text x="215" y="219" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">hierarchical =&gt; true (kategoriya)</text>
+  <text x="215" y="258" text-anchor="middle" font-size="14" font-weight="700" fill="#16a34a">Ota-bola daraja bor — category kabi</text>
+
+  <!-- tree -->
+  <rect x="70" y="278" width="200" height="34" rx="7" fill="#e2e8f0"/>
+  <text x="86" y="300" font-size="14" font-weight="700" fill="#1e293b">Veb-saytlar</text>
+  <line x1="100" y1="312" x2="100" y2="334" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="110" y="324" width="200" height="32" rx="7" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="124" y="345" font-size="13" fill="#475569">Online-do'kon</text>
+  <line x1="100" y1="356" x2="100" y2="378" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="110" y="368" width="200" height="32" rx="7" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="124" y="389" font-size="13" fill="#475569">Korporativ sayt</text>
+
+  <text x="215" y="430" text-anchor="middle" font-size="13" fill="#475569">URL: /loyiha-kategoriya/veb-saytlar/</text>
+  <text x="215" y="452" text-anchor="middle" font-size="13" fill="#475569">Shablon: taxonomy-loyiha_kategoriya.php</text>
+  <text x="215" y="472" text-anchor="middle" font-size="13" fill="#2563eb">Misol: mahsulot turkumlari, bo'limlar</text>
+
+  <!-- RIGHT: flat tag -->
+  <rect x="410" y="190" width="350" height="290" rx="12" fill="#ffffff" stroke="#d97706" stroke-width="2.5"/>
+  <rect x="410" y="190" width="350" height="44" rx="12" fill="#d97706"/>
+  <text x="585" y="219" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">hierarchical =&gt; false (teg)</text>
+  <text x="585" y="258" text-anchor="middle" font-size="14" font-weight="700" fill="#d97706">Tekis ro'yxat — post_tag kabi</text>
+
+  <!-- tags -->
+  <rect x="440" y="280" width="100" height="32" rx="16" fill="#fef3c7" stroke="#d97706"/>
+  <text x="490" y="301" text-anchor="middle" font-size="13" fill="#92400e">React</text>
+  <rect x="552" y="280" width="100" height="32" rx="16" fill="#fef3c7" stroke="#d97706"/>
+  <text x="602" y="301" text-anchor="middle" font-size="13" fill="#92400e">Laravel</text>
+  <rect x="664" y="280" width="80" height="32" rx="16" fill="#fef3c7" stroke="#d97706"/>
+  <text x="704" y="301" text-anchor="middle" font-size="13" fill="#92400e">UX</text>
+  <rect x="440" y="322" width="120" height="32" rx="16" fill="#fef3c7" stroke="#d97706"/>
+  <text x="500" y="343" text-anchor="middle" font-size="13" fill="#92400e">WordPress</text>
+  <rect x="572" y="322" width="100" height="32" rx="16" fill="#fef3c7" stroke="#d97706"/>
+  <text x="622" y="343" text-anchor="middle" font-size="13" fill="#92400e">Figma</text>
+
+  <text x="585" y="430" text-anchor="middle" font-size="13" fill="#475569">URL: /loyiha-teg/react/</text>
+  <text x="585" y="452" text-anchor="middle" font-size="13" fill="#475569">Shablon: taxonomy-loyiha_teg.php</text>
+  <text x="585" y="472" text-anchor="middle" font-size="13" fill="#2563eb">Misol: texnologiyalar, kalit so'zlar</text>
+
+  <text x="400" y="496" text-anchor="middle" font-size="13" fill="#dc2626">Bitta CPT'ga bir nechta taxonomy biriktirsa bo'ladi</text>
+</svg>

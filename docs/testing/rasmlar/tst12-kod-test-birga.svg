@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 470">
+  <title>Kod va testlar birga o'sadi: test yetaklaydi, kod ergashadi</title>
+  <rect x="0" y="0" width="820" height="470" fill="#f8fafc"/>
+  <text x="410" y="38" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Test va kod birga o'sadi</text>
+  <text x="410" y="64" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Avval test yoziladi (RED), keyin kod yetib oladi (GREEN)</text>
+
+  <!-- ikki ustun sarlavhasi -->
+  <rect x="60" y="92" width="320" height="34" rx="8" fill="#dc2626"/>
+  <text x="220" y="115" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#ffffff">Test (oldinda yuradi)</text>
+  <rect x="440" y="92" width="320" height="34" rx="8" fill="#16a34a"/>
+  <text x="600" y="115" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#ffffff">Kod (ergashadi)</text>
+
+  <!-- sikl 1 -->
+  <rect x="60" y="140" width="320" height="44" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="76" y="167" font-family="Segoe UI" font-size="13" fill="#1e293b">+ test_bosh_satr ... == 0</text>
+  <rect x="440" y="140" width="320" height="44" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="456" y="167" font-family="Segoe UI" font-size="13" fill="#1e293b">return 0</text>
+
+  <!-- sikl 2-4 -->
+  <rect x="60" y="194" width="320" height="44" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="76" y="221" font-family="Segoe UI" font-size="13" fill="#1e293b">+ bitta / ikki / ko'p son testlari</text>
+  <rect x="440" y="194" width="320" height="44" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="456" y="221" font-family="Segoe UI" font-size="13" fill="#1e293b">split(",") + sum(...)</text>
+
+  <!-- sikl 5-6 -->
+  <rect x="60" y="248" width="320" height="44" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="76" y="275" font-family="Segoe UI" font-size="13" fill="#1e293b">+ yangi qator / maxsus ajratuvchi</text>
+  <rect x="440" y="248" width="320" height="44" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="456" y="275" font-family="Segoe UI" font-size="13" fill="#1e293b">ajratuvchini ajrat + replace</text>
+
+  <!-- sikl 7-9 -->
+  <rect x="60" y="302" width="320" height="44" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="76" y="329" font-family="Segoe UI" font-size="13" fill="#1e293b">+ manfiy/1000 test (raises)</text>
+  <rect x="440" y="302" width="320" height="44" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="456" y="329" font-family="Segoe UI" font-size="13" fill="#1e293b">tekshiruv + filtr (&#8804;1000)</text>
+
+  <!-- refactor qatori -->
+  <rect x="60" y="362" width="700" height="44" rx="8" fill="#faf5ff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="410" y="389" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#7c3aed">REFACTOR: kod yordamchilarga ajraladi &#8212; testlar o'zgarmaydi, hammasi yashil</text>
+
+  <!-- pastga strelka -->
+  <text x="30" y="280" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#64748b" transform="rotate(-90 30 280)">vaqt &#8595;</text>
+  <text x="410" y="438" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Har qatorda chap (test) o'ng (kod)dan oldin yoziladi</text>
+</svg>

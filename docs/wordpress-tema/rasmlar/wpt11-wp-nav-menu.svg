@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 540" width="820" height="540" font-family="Segoe UI, system-ui, sans-serif">
+  <title>wp_nav_menu() asosiy parametrlari va ular chiqaradigan HTML</title>
+  <rect x="0" y="0" width="820" height="540" fill="#f8fafc"/>
+  <text x="410" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">wp_nav_menu( $args ) asosiy parametrlari</text>
+  <text x="410" y="56" text-anchor="middle" font-size="14" fill="#475569">Chap: argumentlar — O'ng: ular boshqaradigan HTML</text>
+
+  <!-- chap panel: parametrlar -->
+  <rect x="40" y="80" width="380" height="420" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="230" y="108" text-anchor="middle" font-size="15" font-weight="700" fill="#2563eb">$args massivi</text>
+
+  <text x="60" y="148" font-size="14" font-weight="700" fill="#1e293b" font-family="Consolas, monospace">theme_location</text>
+  <text x="60" y="168" font-size="13" fill="#475569">Qaysi menyu joyi (eng muhim)</text>
+
+  <text x="60" y="200" font-size="14" font-weight="700" fill="#1e293b" font-family="Consolas, monospace">container</text>
+  <text x="60" y="220" font-size="13" fill="#475569">O'rab turuvchi teg: 'nav' / 'div' / false</text>
+
+  <text x="60" y="252" font-size="14" font-weight="700" fill="#1e293b" font-family="Consolas, monospace">menu_class</text>
+  <text x="60" y="272" font-size="13" fill="#475569">&lt;ul&gt; uchun CSS klass</text>
+
+  <text x="60" y="304" font-size="14" font-weight="700" fill="#1e293b" font-family="Consolas, monospace">menu_id</text>
+  <text x="60" y="324" font-size="13" fill="#475569">&lt;ul&gt; uchun id atributi</text>
+
+  <text x="60" y="356" font-size="14" font-weight="700" fill="#1e293b" font-family="Consolas, monospace">depth</text>
+  <text x="60" y="376" font-size="13" fill="#475569">Nechta daraja (0 = cheksiz)</text>
+
+  <text x="60" y="408" font-size="14" font-weight="700" fill="#1e293b" font-family="Consolas, monospace">fallback_cb</text>
+  <text x="60" y="428" font-size="13" fill="#475569">Menyu yo'q bo'lsa nima chiqsin</text>
+
+  <text x="60" y="460" font-size="14" font-weight="700" fill="#1e293b" font-family="Consolas, monospace">walker</text>
+  <text x="60" y="480" font-size="13" fill="#475569">Maxsus HTML uchun Walker obyekti</text>
+
+  <!-- strelka -->
+  <defs>
+    <marker id="ar2" markerWidth="12" markerHeight="12" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+  <line x1="420" y1="290" x2="470" y2="290" stroke="#16a34a" stroke-width="3" marker-end="url(#ar2)"/>
+  <text x="445" y="280" text-anchor="middle" font-size="13" fill="#16a34a" font-weight="700">HTML</text>
+
+  <!-- o'ng panel: HTML natija -->
+  <rect x="478" y="80" width="302" height="420" rx="12" fill="#0f172a"/>
+  <text x="629" y="108" text-anchor="middle" font-size="14" font-weight="700" fill="#e2e8f0">Chiqadigan HTML</text>
+
+  <text x="496" y="146" font-size="13" fill="#7dd3fc" font-family="Consolas, monospace">&lt;nav class="site-nav"&gt;</text>
+  <text x="510" y="172" font-size="13" fill="#a5b4fc" font-family="Consolas, monospace">&lt;ul id="primary-menu"</text>
+  <text x="524" y="194" font-size="13" fill="#a5b4fc" font-family="Consolas, monospace">    class="main-nav"&gt;</text>
+  <text x="524" y="222" font-size="13" fill="#86efac" font-family="Consolas, monospace">&lt;li class="menu-item</text>
+  <text x="538" y="242" font-size="13" fill="#86efac" font-family="Consolas, monospace">  current-menu-item"&gt;</text>
+  <text x="538" y="266" font-size="13" fill="#fde68a" font-family="Consolas, monospace">&lt;a href="/"&gt;Bosh&lt;/a&gt;</text>
+  <text x="524" y="288" font-size="13" fill="#86efac" font-family="Consolas, monospace">&lt;/li&gt;</text>
+  <text x="524" y="316" font-size="13" fill="#86efac" font-family="Consolas, monospace">&lt;li class="menu-item</text>
+  <text x="538" y="336" font-size="13" fill="#86efac" font-family="Consolas, monospace">  has-children"&gt;</text>
+  <text x="538" y="360" font-size="13" fill="#fde68a" font-family="Consolas, monospace">&lt;a&gt;Xizmatlar&lt;/a&gt;</text>
+  <text x="538" y="384" font-size="13" fill="#a5b4fc" font-family="Consolas, monospace">&lt;ul class="sub-menu"&gt;</text>
+  <text x="552" y="406" font-size="13" fill="#86efac" font-family="Consolas, monospace">&lt;li&gt;...&lt;/li&gt;</text>
+  <text x="538" y="428" font-size="13" fill="#a5b4fc" font-family="Consolas, monospace">&lt;/ul&gt;</text>
+  <text x="524" y="450" font-size="13" fill="#86efac" font-family="Consolas, monospace">&lt;/li&gt;</text>
+  <text x="510" y="474" font-size="13" fill="#a5b4fc" font-family="Consolas, monospace">&lt;/ul&gt;</text>
+  <text x="496" y="494" font-size="13" fill="#7dd3fc" font-family="Consolas, monospace">&lt;/nav&gt;</text>
+
+  <text x="410" y="524" text-anchor="middle" font-size="13" fill="#475569">WP joriy sahifaga avtomatik current-menu-item / current-menu-parent klasslarini qo'shadi</text>
+</svg>

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" width="780" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>get_template_part bilan modulli bo'laklar: content-{post-type} tanlanishi</title>
+  <rect x="0" y="0" width="780" height="470" fill="#f8fafc"/>
+  <text x="390" y="32" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">get_template_part(): modulli, qayta ishlatiluvchi bo'laklar</text>
+
+  <!-- chaqiruv -->
+  <rect x="160" y="56" width="460" height="46" rx="8" fill="#1e293b"/>
+  <text x="390" y="85" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">get_template_part( 'template-parts/content', get_post_type() );</text>
+
+  <!-- strelka pastga -->
+  <line x1="390" y1="102" x2="390" y2="134" stroke="#475569" stroke-width="2.5"/>
+  <polygon points="382,134 390,150 398,134" fill="#475569"/>
+
+  <!-- get_post_type -->
+  <rect x="250" y="150" width="280" height="42" rx="8" fill="#fef9c3" stroke="#d97706" stroke-width="2"/>
+  <text x="390" y="170" text-anchor="middle" font-size="13" fill="#475569">get_post_type() qaysi qiymatni qaytarsa,</text>
+  <text x="390" y="187" text-anchor="middle" font-size="13" font-weight="700" fill="#d97706">o'sha nomli fayl izlanadi</text>
+
+  <!-- 3 holat -->
+  <line x1="390" y1="192" x2="390" y2="210" stroke="#475569" stroke-width="2"/>
+  <line x1="160" y1="210" x2="620" y2="210" stroke="#475569" stroke-width="2"/>
+  <line x1="160" y1="210" x2="160" y2="228" stroke="#475569" stroke-width="2"/>
+  <line x1="390" y1="210" x2="390" y2="228" stroke="#475569" stroke-width="2"/>
+  <line x1="620" y1="210" x2="620" y2="228" stroke="#475569" stroke-width="2"/>
+
+  <!-- holat 1: post -->
+  <rect x="40" y="228" width="240" height="96" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="160" y="252" text-anchor="middle" font-size="14" font-weight="700" fill="#2563eb">post-type = "post"</text>
+  <text x="160" y="278" text-anchor="middle" font-size="13" fill="#16a34a" font-weight="700">content-post.php</text>
+  <text x="160" y="298" text-anchor="middle" font-size="13" fill="#94a3b8">topilsa -> shu yuklanadi</text>
+  <text x="160" y="316" text-anchor="middle" font-size="13" fill="#475569">aks holda content.php</text>
+
+  <!-- holat 2: page -->
+  <rect x="290" y="228" width="200" height="96" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="390" y="252" text-anchor="middle" font-size="14" font-weight="700" fill="#16a34a">post-type = "page"</text>
+  <text x="390" y="278" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a">content-page.php</text>
+  <text x="390" y="298" text-anchor="middle" font-size="13" fill="#94a3b8">topilsa -> shu yuklanadi</text>
+  <text x="390" y="316" text-anchor="middle" font-size="13" fill="#475569">aks holda content.php</text>
+
+  <!-- holat 3: product -->
+  <rect x="500" y="228" width="240" height="96" rx="10" fill="#ffffff" stroke="#d97706" stroke-width="2.5"/>
+  <text x="620" y="252" text-anchor="middle" font-size="14" font-weight="700" fill="#d97706">post-type = "product"</text>
+  <text x="620" y="278" text-anchor="middle" font-size="13" fill="#dc2626" font-weight="700">content-product.php yo'q</text>
+  <text x="620" y="298" text-anchor="middle" font-size="13" fill="#94a3b8">-> zaxiraga qaytadi</text>
+  <text x="620" y="316" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a">content.php</text>
+
+  <!-- pastki izoh -->
+  <rect x="40" y="346" width="700" height="100" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="60" y="370" font-size="14" font-weight="700" fill="#2563eb">Nega bu yaxshi?</text>
+  <text x="60" y="394" font-size="13" fill="#475569">- Bir loop ichida har xil post-tipi avtomatik mos shablonni oladi (DRY - takrorlanmaslik).</text>
+  <text x="60" y="416" font-size="13" fill="#475569">- $args (WP 5.5+) bilan bo'lakka qiymat uzatish mumkin: get_template_part('parts/card', null, ['rang'=&gt;'kok']).</text>
+  <text x="60" y="438" font-size="13" fill="#475569">- Child tema xohlagan bo'lakni ALOHIDA almashtira oladi - butun shablonni emas.</text>
+</svg>

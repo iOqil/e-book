@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580">
+  <title>GraphQL schema (SDL): tip ta'riflari va Query/Mutation/Subscription ildiz tiplari bog'lanishi</title>
+  <rect x="0" y="0" width="900" height="580" fill="#f8fafc"/>
+  <text x="450" y="34" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">GraphQL schema — tiplar shartnomasi (SDL)</text>
+  <text x="450" y="58" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Tiplar o'zaro bog'lanadi; uchta ildiz tip — kirish nuqtasi</text>
+
+  <!-- Uchta ildiz tip yuqorida -->
+  <rect x="60" y="86" width="240" height="70" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="180" y="112" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">type Query</text>
+  <text x="180" y="134" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">o'qish (GET ekvivalenti)</text>
+  <text x="180" y="150" text-anchor="middle" font-family="monospace" font-size="13" fill="#64748b">user(id: ID!): User</text>
+
+  <rect x="330" y="86" width="240" height="70" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="450" y="112" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">type Mutation</text>
+  <text x="450" y="134" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">o'zgartirish (POST/PUT)</text>
+  <text x="450" y="150" text-anchor="middle" font-family="monospace" font-size="13" fill="#64748b">createPost(...): Post</text>
+
+  <rect x="600" y="86" width="240" height="70" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="720" y="112" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#7c3aed">type Subscription</text>
+  <text x="720" y="134" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">real-time oqim</text>
+  <text x="720" y="150" text-anchor="middle" font-family="monospace" font-size="13" fill="#64748b">postAdded: Post</text>
+
+  <text x="450" y="184" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">ildiz tiplar pastdagi obyekt tiplariga olib boradi</text>
+
+  <!-- bog'lovchi chiziqlar -->
+  <line x1="180" y1="156" x2="230" y2="210" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="450" y1="156" x2="450" y2="210" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="720" y1="156" x2="660" y2="210" stroke="#94a3b8" stroke-width="1.5"/>
+
+  <!-- User tip -->
+  <rect x="100" y="210" width="260" height="180" rx="10" fill="#ffffff" stroke="#1e293b" stroke-width="2"/>
+  <text x="230" y="236" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">type User</text>
+  <line x1="120" y1="246" x2="340" y2="246" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="120" y="270" font-family="monospace" font-size="13" fill="#334155">id: ID!</text>
+  <text x="120" y="292" font-family="monospace" font-size="13" fill="#334155">name: String!</text>
+  <text x="120" y="314" font-family="monospace" font-size="13" fill="#334155">email: String</text>
+  <text x="120" y="336" font-family="monospace" font-size="13" fill="#334155">role: Role</text>
+  <text x="120" y="358" font-family="monospace" font-size="13" fill="#2563eb">posts: [Post!]!</text>
+  <text x="120" y="380" font-family="Segoe UI" font-size="13" fill="#64748b">! = null bo'lmaydi</text>
+
+  <!-- Post tip -->
+  <rect x="540" y="210" width="260" height="180" rx="10" fill="#ffffff" stroke="#1e293b" stroke-width="2"/>
+  <text x="670" y="236" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">type Post</text>
+  <line x1="560" y1="246" x2="780" y2="246" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="560" y="270" font-family="monospace" font-size="13" fill="#334155">id: ID!</text>
+  <text x="560" y="292" font-family="monospace" font-size="13" fill="#334155">title: String!</text>
+  <text x="560" y="314" font-family="monospace" font-size="13" fill="#334155">body: String!</text>
+  <text x="560" y="336" font-family="monospace" font-size="13" fill="#2563eb">author: User!</text>
+  <text x="560" y="358" font-family="monospace" font-size="13" fill="#334155">published: Boolean!</text>
+  <text x="560" y="380" font-family="Segoe UI" font-size="13" fill="#64748b">[Post!]! = ro'yxat</text>
+
+  <!-- User <-> Post bog'lanish -->
+  <line x1="360" y1="352" x2="540" y2="332" stroke="#2563eb" stroke-width="2"/>
+  <polygon points="540,332 527,330 530,341" fill="#2563eb"/>
+  <text x="450" y="328" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#2563eb">User.posts -> Post</text>
+  <line x1="540" y1="338" x2="360" y2="280" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="360,280 373,282 370,291" fill="#16a34a"/>
+  <text x="450" y="300" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">Post.author -> User</text>
+
+  <!-- skalyar va enum -->
+  <rect x="100" y="416" width="340" height="120" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="270" y="440" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#b45309">Skalyar tiplar (atomik)</text>
+  <text x="270" y="464" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">Int  Float  String  Boolean  ID</text>
+  <text x="270" y="490" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">bular barg (leaf) — boshqa maydoni yo'q</text>
+  <text x="270" y="514" text-anchor="middle" font-family="monospace" font-size="13" fill="#b45309">enum Role { ADMIN  USER  GUEST }</text>
+
+  <rect x="460" y="416" width="340" height="120" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="630" y="440" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">input (mutatsiya argumenti)</text>
+  <text x="480" y="466" font-family="monospace" font-size="13" fill="#334155">input CreatePostInput {</text>
+  <text x="496" y="488" font-family="monospace" font-size="13" fill="#334155">title: String!</text>
+  <text x="496" y="510" font-family="monospace" font-size="13" fill="#334155">body: String!</text>
+  <text x="480" y="528" font-family="monospace" font-size="13" fill="#334155">}</text>
+</svg>

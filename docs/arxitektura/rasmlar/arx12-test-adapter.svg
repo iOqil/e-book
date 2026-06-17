@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 480" width="820" height="480">
+  <title>Testlash kuchi: bir xil use-case (biznes mantiq) bir xil port orqali ishlaydi; productionda real DB adapteri, testda fake/in-memory adapter ulanadi — biznes kod o'zgarmaydi, infratuzilmasiz tez test</title>
+
+  <rect x="0" y="0" width="820" height="480" fill="#f8fafc"/>
+
+  <text x="410" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Adapter almashtirish: real DB &lt;-&gt; fake (test)</text>
+
+  <!-- markaz: bir xil use-case + port -->
+  <rect x="310" y="190" width="200" height="80" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="410" y="222" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#92400e">RoyxatdanOtkaz</text>
+  <text x="410" y="242" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309">use-case (o'zgarmaydi)</text>
+  <text x="410" y="260" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309">infratuzilmani bilmaydi</text>
+
+  <!-- port (interfeys) -->
+  <rect x="330" y="295" width="160" height="40" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2.5" stroke-dasharray="7 4"/>
+  <text x="410" y="313" text-anchor="middle" font-family="Consolas, monospace" font-size="13" font-style="italic" fill="#2563eb">&#171;port&#187; UserRepository</text>
+  <text x="410" y="329" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#64748b">emailBoyichaTop / saqla</text>
+
+  <line x1="410" y1="270" x2="410" y2="295" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#orangearr)"/>
+
+  <!-- ===== CHAP: PRODUCTION (real adapter) ===== -->
+  <rect x="50" y="370" width="280" height="86" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="190" y="396" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#15803d">PRODUCTION</text>
+  <text x="190" y="418" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">PostgresUserRepository</text>
+  <text x="190" y="438" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#64748b">haqiqiy DB, sekin, tarmoq kerak</text>
+
+  <!-- ===== O'NG: TEST (fake adapter) ===== -->
+  <rect x="490" y="370" width="280" height="86" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="630" y="396" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1d4ed8">TEST</text>
+  <text x="630" y="418" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">InMemoryUserRepository</text>
+  <text x="630" y="438" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#64748b">xotirada, tez, tarmoqsiz</text>
+
+  <!-- adapterlar -> port (implements, o'q yuqoriga) -->
+  <line x1="190" y1="370" x2="345" y2="338" stroke="#16a34a" stroke-width="2.5" marker-end="url(#greenarr)"/>
+  <line x1="630" y1="370" x2="475" y2="338" stroke="#2563eb" stroke-width="2.5" marker-end="url(#bluearr)"/>
+  <text x="245" y="356" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">implements</text>
+  <text x="575" y="356" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">implements</text>
+
+  <!-- almashtirish strelkasi -->
+  <line x1="345" y1="413" x2="485" y2="413" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="6 4" marker-end="url(#redarr)" marker-start="url(#redarrS)"/>
+  <text x="415" y="405" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626">almashtirish</text>
+
+  <!-- yuqori izoh -->
+  <rect x="135" y="72" width="550" height="92" rx="10" fill="#fef9c3" stroke="#f59e0b" stroke-width="2"/>
+  <text x="410" y="98" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309">Bir xil port -&gt; ikkala adapter ham mos keladi</text>
+  <text x="410" y="120" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#92400e">Biznes mantiqni real DB ulamasdan, fake adapter bilan test qilamiz:</text>
+  <text x="410" y="140" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#92400e">millisekundda ishlaydi, tarmoq/Docker/migratsiya kerak emas,</text>
+  <text x="410" y="156" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#92400e">aynan biznes qoidalari sinaladi (validatsiya, dublikat, oqim).</text>
+
+  <defs>
+    <marker id="bluearr" markerWidth="13" markerHeight="13" refX="9" refY="5" orient="auto">
+      <path d="M1,1 L10,5 L1,9 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="greenarr" markerWidth="13" markerHeight="13" refX="9" refY="5" orient="auto">
+      <path d="M1,1 L10,5 L1,9 Z" fill="#16a34a"/>
+    </marker>
+    <marker id="orangearr" markerWidth="13" markerHeight="13" refX="9" refY="5" orient="auto">
+      <path d="M1,1 L10,5 L1,9 Z" fill="#f59e0b"/>
+    </marker>
+    <marker id="redarr" markerWidth="13" markerHeight="13" refX="9" refY="5" orient="auto">
+      <path d="M1,1 L10,5 L1,9 Z" fill="#dc2626"/>
+    </marker>
+    <marker id="redarrS" markerWidth="13" markerHeight="13" refX="3" refY="5" orient="auto">
+      <path d="M10,1 L1,5 L10,9 Z" fill="#dc2626"/>
+    </marker>
+  </defs>
+</svg>

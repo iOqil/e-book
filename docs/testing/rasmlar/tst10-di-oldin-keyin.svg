@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 470">
+  <title>Dependency Injection: oldin bog'liqlik ichkarida yaratilib qattiq bog'lanadi va testlash qiyin, keyin bog'liqlik tashqaridan beriladi va dublyor qo'yish oson</title>
+  <rect x="0" y="0" width="820" height="470" fill="#f8fafc"/>
+  <text x="410" y="38" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Bog'liqlikni tashqaridan berish (DI)</text>
+  <text x="410" y="64" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Bog'liqlik qayerda yaratiladi — ichkaridami yoki tashqaridanmi?</text>
+
+  <!-- OLDIN -->
+  <rect x="40" y="92" width="345" height="330" rx="12" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="212" y="120" text-anchor="middle" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#991b1b">Oldin — qattiq bog'langan</text>
+
+  <rect x="80" y="142" width="265" height="120" rx="8" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="212" y="168" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">chegirma_xabari()</text>
+  <rect x="105" y="184" width="100" height="60" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="155" y="210" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#991b1b">requests</text>
+  <text x="155" y="230" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#991b1b">.get()</text>
+  <rect x="220" y="184" width="100" height="60" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="270" y="210" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#991b1b">datetime</text>
+  <text x="270" y="230" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#991b1b">.now()</text>
+
+  <text x="212" y="296" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#991b1b">Test = 2 ta patch kerak</text>
+  <text x="212" y="320" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#991b1b">tarmoq + vaqt ichkarida</text>
+  <text x="212" y="340" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#991b1b">qotib qolgan</text>
+  <text x="212" y="372" text-anchor="middle" font-family="Segoe UI" font-size="26" fill="#dc2626">&#10007;</text>
+  <text x="212" y="402" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#991b1b">sekin, mo'rt, real tarmoqqa bog'liq</text>
+
+  <!-- arrow -->
+  <line x1="395" y1="257" x2="425" y2="257" stroke="#64748b" stroke-width="3"/>
+  <polygon points="438,257 422,250 422,264" fill="#64748b"/>
+
+  <!-- KEYIN -->
+  <rect x="448" y="92" width="332" height="330" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="614" y="120" text-anchor="middle" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#166534">Keyin — inject qilingan</text>
+
+  <rect x="485" y="142" width="258" height="120" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="614" y="168" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">chegirma_xabari(</text>
+  <text x="614" y="200" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#166534">daraja, soat</text>
+  <text x="614" y="222" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">)</text>
+  <text x="614" y="248" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#166534">faqat sof mantiq qoladi</text>
+
+  <text x="614" y="296" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#166534">Test = oddiy qiymat uzating</text>
+  <text x="614" y="320" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#166534">("vip", 2) -&gt; "30%"</text>
+  <text x="614" y="340" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#166534">patch shart emas</text>
+  <text x="614" y="372" text-anchor="middle" font-family="Segoe UI" font-size="26" fill="#16a34a">&#10003;</text>
+  <text x="614" y="402" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#166534">tez, determinstik, yakkalangan</text>
+</svg>

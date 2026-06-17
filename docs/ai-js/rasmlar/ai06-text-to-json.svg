@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 470" width="800" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Strukturasiz matn (Ali Valiyev, ali@co.uz, Enterprise) sxema-cheklangan model orqali tipli JSON ga, so'ng JSON.parse orqali ishlatsa bo'ladigan JS obyektiga aylanadi</title>
+  <defs>
+    <marker id="a6a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#d97757"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="800" height="470" fill="#f8fafc"/>
+  <text x="400" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Strukturasiz matn → tipli JSON → JS obyekti</text>
+  <text x="400" y="58" font-size="14" fill="#64748b" text-anchor="middle">Maqsad: kodda ishonib ishlatsa bo'ladigan tuzilma olish, "matn parchasi" emas</text>
+
+  <!-- Step 1: prose -->
+  <text x="150" y="92" font-size="15" font-weight="bold" fill="#d97757" text-anchor="middle">1. Strukturasiz matn</text>
+  <rect x="30" y="104" width="240" height="96" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="46" y="130" font-size="13" fill="#475569" text-anchor="start">"Ali Valiyev bilan</text>
+  <text x="46" y="150" font-size="13" fill="#475569" text-anchor="start">bog'laning: ali@co.uz,</text>
+  <text x="46" y="170" font-size="13" fill="#475569" text-anchor="start">u Enterprise rejasini</text>
+  <text x="46" y="190" font-size="13" fill="#475569" text-anchor="start">xohlaydi."</text>
+
+  <line x1="272" y1="152" x2="312" y2="152" stroke="#d97757" stroke-width="2.5" marker-end="url(#a6a)"/>
+
+  <!-- Step 2: model with schema -->
+  <text x="400" y="92" font-size="15" font-weight="bold" fill="#6366f1" text-anchor="middle">2. Sxema-cheklangan model</text>
+  <rect x="318" y="104" width="164" height="96" rx="12" fill="#6366f1"/>
+  <text x="400" y="138" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">Claude</text>
+  <text x="400" y="160" font-size="13" fill="#e0e7ff" text-anchor="middle">+ json_schema</text>
+  <text x="400" y="182" font-size="13" fill="#e0e7ff" text-anchor="middle">(majburiy shakl)</text>
+
+  <line x1="484" y1="152" x2="524" y2="152" stroke="#6366f1" stroke-width="2.5" marker-end="url(#a6a)"/>
+
+  <!-- Step 3: typed JSON -->
+  <text x="650" y="92" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="middle">3. Kafolatli JSON matni</text>
+  <rect x="530" y="104" width="240" height="96" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="546" y="128" font-size="13" fill="#1e293b" text-anchor="start" font-family="Consolas, monospace">{</text>
+  <text x="560" y="148" font-size="13" fill="#1e293b" text-anchor="start" font-family="Consolas, monospace">"ism": "Ali Valiyev",</text>
+  <text x="560" y="168" font-size="13" fill="#1e293b" text-anchor="start" font-family="Consolas, monospace">"email": "ali@co.uz",</text>
+  <text x="560" y="186" font-size="13" fill="#1e293b" text-anchor="start" font-family="Consolas, monospace">"reja": "Enterprise" }</text>
+
+  <!-- arrow down to parse -->
+  <line x1="650" y1="200" x2="650" y2="248" stroke="#16a34a" stroke-width="2.5" marker-end="url(#a6a)"/>
+  <text x="668" y="228" font-size="13" font-weight="bold" fill="#16a34a" text-anchor="start">JSON.parse</text>
+
+  <!-- Step 4: JS object usable -->
+  <text x="400" y="280" font-size="15" font-weight="bold" fill="#0ea5e9" text-anchor="middle">4. JS obyekti — kodda to'g'ridan-to'g'ri ishlatasiz</text>
+  <rect x="120" y="296" width="560" height="118" rx="10" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="140" y="324" font-size="14" fill="#1e293b" text-anchor="start" font-family="Consolas, monospace">const data = JSON.parse(msg.content[0].text);</text>
+  <text x="140" y="350" font-size="14" fill="#475569" text-anchor="start" font-family="Consolas, monospace">// kafolatlangan: tekshiruvsiz ishlatsa bo'ladi</text>
+  <text x="140" y="378" font-size="14" fill="#1e293b" text-anchor="start" font-family="Consolas, monospace">await db.leads.insert(data.ism, data.email);</text>
+  <text x="140" y="402" font-size="14" fill="#1e293b" text-anchor="start" font-family="Consolas, monospace">if (data.reja === "Enterprise") notifySotuv();</text>
+
+  <text x="400" y="448" font-size="14" fill="#475569" text-anchor="middle" font-weight="bold">Sxema = qolip. Model chiqishi shu qolipga majburan moslashadi → siz xavfsiz JSON.parse qilasiz.</text>
+</svg>

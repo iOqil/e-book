@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 440" width="780" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>TextField anatomiyasi: InputDecoration ichidagi qismlar — labelText (yorliq), prefixIcon (oldingi ikonka), hintText (maslahat matni), border (OutlineInputBorder hoshiya), suffixIcon (keyingi ikonka), helperText va errorText (pastdagi yordam/xato matni) — har biri tegishli xususiyat bilan belgilangan</title>
+  <rect x="0" y="0" width="780" height="440" fill="#f8fafc"/>
+  <text x="390" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">TextField anatomiyasi — InputDecoration qismlari</text>
+  <text x="390" y="58" text-anchor="middle" font-size="14" fill="#475569">Maydonning har bir bo'lagi decoration: ichidagi bitta xususiyat bilan boshqariladi.</text>
+
+  <!-- The field -->
+  <rect x="220" y="150" width="340" height="64" rx="10" fill="#ffffff" stroke="#027dfd" stroke-width="2.5"/>
+
+  <!-- floating label sitting on the border -->
+  <rect x="246" y="139" width="56" height="22" rx="4" fill="#f8fafc"/>
+  <text x="274" y="155" text-anchor="middle" font-size="14" font-weight="700" fill="#027dfd">Email</text>
+
+  <!-- prefix icon -->
+  <circle cx="252" cy="182" r="11" fill="#dbeafe" stroke="#027dfd" stroke-width="1.5"/>
+  <text x="252" y="187" text-anchor="middle" font-size="13" fill="#0553b1">@</text>
+
+  <!-- hint text -->
+  <text x="278" y="187" text-anchor="start" font-size="14" fill="#94a3b8">misol@pochta.uz</text>
+
+  <!-- suffix icon -->
+  <text x="532" y="188" text-anchor="middle" font-size="16" fill="#64748b">&#10005;</text>
+
+  <!-- helper text below -->
+  <text x="222" y="234" text-anchor="start" font-size="13" fill="#64748b">Emailingizni kiriting</text>
+
+  <!-- ===== labels with leader lines ===== -->
+  <!-- label -> labelText (top-left) -->
+  <text x="40" y="128" text-anchor="start" font-size="14" font-weight="700" fill="#027dfd">labelText</text>
+  <text x="40" y="146" text-anchor="start" font-size="13" fill="#475569">suzuvchi yorliq</text>
+  <line x1="150" y1="142" x2="246" y2="150" stroke="#027dfd" stroke-width="1.5"/>
+
+  <!-- prefixIcon (left, lower) -->
+  <text x="40" y="262" text-anchor="start" font-size="14" font-weight="700" fill="#027dfd">prefixIcon</text>
+  <text x="40" y="280" text-anchor="start" font-size="13" fill="#475569">oldidagi ikonka</text>
+  <line x1="130" y1="270" x2="248" y2="190" stroke="#027dfd" stroke-width="1.5"/>
+
+  <!-- hintText (bottom-left) -->
+  <text x="40" y="320" text-anchor="start" font-size="14" font-weight="700" fill="#94a3b8">hintText</text>
+  <text x="40" y="338" text-anchor="start" font-size="13" fill="#475569">bo'sh holatdagi maslahat</text>
+  <line x1="180" y1="328" x2="300" y2="190" stroke="#94a3b8" stroke-width="1.5"/>
+
+  <!-- border (right) -->
+  <text x="740" y="138" text-anchor="end" font-size="14" font-weight="700" fill="#6366f1">border</text>
+  <text x="740" y="156" text-anchor="end" font-size="13" fill="#475569">OutlineInputBorder()</text>
+  <line x1="630" y1="150" x2="560" y2="158" stroke="#6366f1" stroke-width="1.5"/>
+
+  <!-- suffixIcon (right) -->
+  <text x="740" y="262" text-anchor="end" font-size="14" font-weight="700" fill="#64748b">suffixIcon</text>
+  <text x="740" y="280" text-anchor="end" font-size="13" fill="#475569">keyingi ikonka (tozalash)</text>
+  <line x1="640" y1="270" x2="538" y2="192" stroke="#64748b" stroke-width="1.5"/>
+
+  <!-- helperText / errorText (bottom-right) -->
+  <text x="740" y="320" text-anchor="end" font-size="14" font-weight="700" fill="#16a34a">helperText</text>
+  <text x="740" y="338" text-anchor="end" font-size="13" fill="#475569">pastdagi yordam (xato bo'lsa errorText)</text>
+  <line x1="500" y1="328" x2="360" y2="232" stroke="#16a34a" stroke-width="1.5"/>
+
+  <text x="390" y="404" text-anchor="middle" font-size="13" fill="#475569">Kiritilgan matnni o'qish uchun controller yoki onChanged kerak — to'liq 17-bobda.</text>
+</svg>

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 520" width="820" height="520">
+  <title>Aggregate: Buyurtma root + ichki qatorlar; tashqi kod faqat root orqali kiradi, invariant chegara ichida himoyalanadi</title>
+  <rect x="0" y="0" width="820" height="520" fill="#f8fafc"/>
+  <text x="410" y="34" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Aggregate: yaxlitlik chegarasi va Aggregate Root</text>
+  <text x="410" y="58" font-family="Segoe UI" font-size="14" fill="#64748b" text-anchor="middle">Tashqi kod faqat ROOT orqali kiradi — invariant chegara ichida himoyalanadi</text>
+
+  <defs>
+    <marker id="ag-ar" markerWidth="11" markerHeight="11" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="ag-red" markerWidth="11" markerHeight="11" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 Z" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+  <!-- Aggregate chegara (katta nuqtali ramka) -->
+  <rect x="250" y="100" width="430" height="360" rx="18" fill="#eff6ff" stroke="#2563eb" stroke-width="2.5" stroke-dasharray="9,6"/>
+  <text x="465" y="128" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb" text-anchor="middle">Buyurtma aggregate (yaxlitlik chegarasi)</text>
+
+  <!-- Aggregate Root -->
+  <rect x="300" y="148" width="330" height="118" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="3"/>
+  <text x="465" y="176" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb" text-anchor="middle">Buyurtma  &lt;&lt;Aggregate Root&gt;&gt;</text>
+  <line x1="300" y1="190" x2="630" y2="190" stroke="#94a3b8" stroke-width="1"/>
+  <text x="318" y="214" font-family="Segoe UI" font-size="13" fill="#334155">+ qatorQoshish(q)   + tasdiqlash()</text>
+  <text x="318" y="236" font-family="Segoe UI" font-size="13" fill="#334155">+ jamiSumma()        - holat</text>
+  <text x="318" y="258" font-family="Segoe UI" font-size="13" font-style="italic" fill="#16a34a">Invariant: bo'sh tasdiqlanmaydi, &lt;=50 qator</text>
+
+  <!-- Ichki Entity'lar (qatorlar) -->
+  <rect x="300" y="300" width="150" height="64" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="375" y="326" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#16a34a" text-anchor="middle">BuyurtmaQatori</text>
+  <text x="375" y="348" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">&lt;&lt;Entity&gt;&gt;</text>
+
+  <rect x="480" y="300" width="150" height="64" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="555" y="326" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#16a34a" text-anchor="middle">BuyurtmaQatori</text>
+  <text x="555" y="348" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">&lt;&lt;Entity&gt;&gt;</text>
+
+  <!-- Value Object (Pul) -->
+  <rect x="390" y="392" width="150" height="50" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="465" y="414" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#f59e0b" text-anchor="middle">Pul  &lt;&lt;Value Object&gt;&gt;</text>
+  <text x="465" y="432" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">immutable, qiymat bo'yicha</text>
+
+  <!-- root -> qatorlar (egalik) -->
+  <line x1="400" y1="266" x2="375" y2="300" stroke="#2563eb" stroke-width="2" marker-end="url(#ag-ar)"/>
+  <line x1="530" y1="266" x2="555" y2="300" stroke="#2563eb" stroke-width="2" marker-end="url(#ag-ar)"/>
+  <line x1="420" y1="364" x2="450" y2="392" stroke="#f59e0b" stroke-width="1.5"/>
+  <line x1="540" y1="364" x2="500" y2="392" stroke="#f59e0b" stroke-width="1.5"/>
+
+  <!-- Tashqi kod (Repository / Service) -->
+  <rect x="40" y="180" width="170" height="80" rx="12" fill="#ffffff" stroke="#334155" stroke-width="2"/>
+  <text x="125" y="212" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#334155" text-anchor="middle">Tashqi kod</text>
+  <text x="125" y="234" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">Service / Repository</text>
+
+  <!-- RUXSAT: tashqi -> root (yashil, to'g'ri) -->
+  <line x1="210" y1="206" x2="298" y2="206" stroke="#16a34a" stroke-width="2.5" marker-end="url(#ag-ar)"/>
+  <text x="254" y="198" font-family="Segoe UI" font-size="13" fill="#16a34a" text-anchor="middle">root orqali</text>
+  <text x="254" y="170" font-family="Segoe UI" font-size="22" fill="#16a34a" text-anchor="middle">OK</text>
+
+  <!-- TAQIQ: tashqi -> ichki qator to'g'ridan-to'g'ri (qizil, kesilgan) -->
+  <line x1="210" y1="332" x2="298" y2="332" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="6,5" marker-end="url(#ag-red)"/>
+  <line x1="244" y1="318" x2="264" y2="346" stroke="#dc2626" stroke-width="3"/>
+  <line x1="264" y1="318" x2="244" y2="346" stroke="#dc2626" stroke-width="3"/>
+  <text x="125" y="320" font-family="Segoe UI" font-size="13" fill="#dc2626" text-anchor="middle">ichki Entity'ga</text>
+  <text x="125" y="338" font-family="Segoe UI" font-size="13" fill="#dc2626" text-anchor="middle">to'g'ridan-to'g'ri</text>
+  <text x="125" y="356" font-family="Segoe UI" font-size="13" fill="#dc2626" text-anchor="middle">TAQIQ</text>
+
+  <!-- Pastki izoh -->
+  <text x="410" y="490" font-family="Segoe UI" font-size="13" font-style="italic" fill="#64748b" text-anchor="middle">Repository butun aggregate'ni bir butun saqlaydi/yuklaydi; tranzaksiya chegarasi = aggregate chegarasi.</text>
+</svg>

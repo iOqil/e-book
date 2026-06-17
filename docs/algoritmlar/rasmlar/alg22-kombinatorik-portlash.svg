@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 560">
+  <title>Kombinatorik portlash: n o'sganda variantlar soni (n, n kvadrat, 2 darajada n, n faktorial) qanchalik tez o'sishini ko'rsatuvchi jadval va egri chiziqlar</title>
+  <rect x="0" y="0" width="860" height="560" fill="#f8fafc"/>
+  <text x="430" y="38" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Kombinatorik portlash</text>
+  <text x="430" y="64" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">n biroz o'ssa ham, 2ⁿ va n! variantlar soni "portlab" o'sadi</text>
+
+  <!-- TABLE -->
+  <text x="60" y="100" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">Variantlar soni n ortishi bilan</text>
+
+  <!-- header row -->
+  <rect x="60" y="112" width="90" height="34" fill="#e0e7ff" stroke="#94a3b8" stroke-width="1"/>
+  <rect x="150" y="112" width="120" height="34" fill="#e0e7ff" stroke="#94a3b8" stroke-width="1"/>
+  <rect x="270" y="112" width="200" height="34" fill="#e0e7ff" stroke="#94a3b8" stroke-width="1"/>
+  <rect x="470" y="112" width="320" height="34" fill="#e0e7ff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="105" y="134" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#1e293b">n</text>
+  <text x="210" y="134" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#2563eb">n²</text>
+  <text x="370" y="134" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#f59e0b">2ⁿ (qism-to'plamlar)</text>
+  <text x="630" y="134" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#dc2626">n! (tartiblar)</text>
+
+  <!-- rows -->
+  <g font-family="monospace" font-size="14" fill="#334155">
+    <rect x="60" y="146" width="90" height="32" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+    <rect x="150" y="146" width="120" height="32" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+    <rect x="270" y="146" width="200" height="32" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+    <rect x="470" y="146" width="320" height="32" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+    <text x="105" y="167" text-anchor="middle">10</text>
+    <text x="210" y="167" text-anchor="middle">100</text>
+    <text x="370" y="167" text-anchor="middle">1 024</text>
+    <text x="630" y="167" text-anchor="middle">3 628 800</text>
+
+    <rect x="60" y="178" width="90" height="32" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+    <rect x="150" y="178" width="120" height="32" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+    <rect x="270" y="178" width="200" height="32" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+    <rect x="470" y="178" width="320" height="32" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+    <text x="105" y="199" text-anchor="middle">20</text>
+    <text x="210" y="199" text-anchor="middle">400</text>
+    <text x="370" y="199" text-anchor="middle">~1.05 million</text>
+    <text x="630" y="199" text-anchor="middle">~2.4 × 10¹⁸</text>
+
+    <rect x="60" y="210" width="90" height="32" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+    <rect x="150" y="210" width="120" height="32" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+    <rect x="270" y="210" width="200" height="32" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+    <rect x="470" y="210" width="320" height="32" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+    <text x="105" y="231" text-anchor="middle">50</text>
+    <text x="210" y="231" text-anchor="middle">2 500</text>
+    <text x="370" y="231" text-anchor="middle">~1.1 × 10¹⁵</text>
+    <text x="630" y="231" text-anchor="middle">~3 × 10⁶⁴</text>
+  </g>
+
+  <text x="60" y="270" font-family="Segoe UI" font-size="13" fill="#64748b">n²  hali ham "qulay": n=50 da atigi 2 500.  Lekin 2ⁿ va n!  amaliy hisoblash chegarasidan oshib ketadi.</text>
+
+  <!-- CURVES -->
+  <rect x="90" y="300" width="560" height="210" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <line x1="90" y1="510" x2="650" y2="510" stroke="#334155" stroke-width="2"/>
+  <line x1="90" y1="300" x2="90" y2="510" stroke="#334155" stroke-width="2"/>
+  <text x="370" y="540" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">kirish hajmi  n  →</text>
+  <text x="50" y="405" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155" transform="rotate(-90 50 405)">variantlar soni  →</text>
+
+  <!-- n^2: moderate parabola -->
+  <path d="M 90 508 Q 350 470 470 380 T 600 250" fill="none" stroke="#2563eb" stroke-width="3"/>
+  <!-- 2^n: steep -->
+  <path d="M 90 508 Q 230 490 280 400 T 350 305" fill="none" stroke="#f59e0b" stroke-width="3"/>
+  <!-- n!: near vertical -->
+  <path d="M 90 508 Q 160 500 195 410 T 230 302" fill="none" stroke="#dc2626" stroke-width="3"/>
+
+  <!-- legend -->
+  <rect x="670" y="320" width="170" height="120" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <line x1="684" y1="350" x2="710" y2="350" stroke="#dc2626" stroke-width="3"/>
+  <text x="718" y="355" font-family="monospace" font-size="13" fill="#dc2626">n!</text>
+  <line x1="684" y1="382" x2="710" y2="382" stroke="#f59e0b" stroke-width="3"/>
+  <text x="718" y="387" font-family="monospace" font-size="13" fill="#d97706">2ⁿ</text>
+  <line x1="684" y1="414" x2="710" y2="414" stroke="#2563eb" stroke-width="3"/>
+  <text x="718" y="419" font-family="monospace" font-size="13" fill="#2563eb">n²</text>
+</svg>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="760" height="380">
+  <title>systemd Restart policy oqimi: ilova active (running) holatda qulaydi, systemd crash ni aniqlaydi, RestartSec kutadi, so'ng qayta ishga tushiradi va ilova yana active bo'ladi; StartLimitBurst dan oshib ketsa failed holatda to'xtaydi</title>
+  <rect x="0" y="0" width="760" height="380" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Restart=on-failure: qulasa avtomatik tiklanish</text>
+
+  <!-- 1: active running -->
+  <rect x="30" y="80" width="160" height="76" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="110" y="112" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#166534">active</text>
+  <text x="110" y="134" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#166534">(running)</text>
+
+  <line x1="190" y1="118" x2="262" y2="118" stroke="#dc2626" stroke-width="2.5" marker-end="url(#strel)"/>
+  <text x="226" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">crash</text>
+
+  <!-- 2: qulash -->
+  <rect x="264" y="80" width="160" height="76" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="344" y="106" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">Ilova qulaydi</text>
+  <text x="344" y="128" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">exit code != 0</text>
+  <text x="344" y="146" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">yoki signal</text>
+
+  <line x1="424" y1="118" x2="496" y2="118" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#strel)"/>
+
+  <!-- 3: systemd aniqlaydi -->
+  <rect x="498" y="80" width="232" height="76" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="614" y="106" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e40af">systemd aniqlaydi</text>
+  <text x="614" y="128" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Restart=on-failure</text>
+  <text x="614" y="146" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">-> tiklash kerak</text>
+
+  <!-- pastga -->
+  <line x1="614" y1="156" x2="614" y2="196" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#strel)"/>
+
+  <!-- 4: RestartSec kutish -->
+  <rect x="498" y="198" width="232" height="76" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="614" y="224" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#92400e">RestartSec=5 kutadi</text>
+  <text x="614" y="246" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">5 soniya pauza</text>
+  <text x="614" y="264" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(darrov emas)</text>
+
+  <line x1="498" y1="236" x2="426" y2="236" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#strel)"/>
+
+  <!-- 5: qayta ishga tushirish -->
+  <rect x="264" y="198" width="160" height="76" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="344" y="231" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e40af">qayta ishga</text>
+  <text x="344" y="253" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e40af">tushirish</text>
+
+  <line x1="264" y1="236" x2="192" y2="236" stroke="#16a34a" stroke-width="2.5" marker-end="url(#strel)"/>
+
+  <!-- 6: yana active (loop) -->
+  <rect x="30" y="198" width="160" height="76" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="110" y="231" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#166534">yana active</text>
+  <text x="110" y="253" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#166534">(running) — Up</text>
+
+  <!-- start limit ogohlantirish -->
+  <rect x="30" y="300" width="700" height="56" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="380" y="324" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#dc2626">Agar juda tez-tez qulaversa: StartLimitBurst=5 / 60s dan oshsa -> failed (cheksiz aylanma to'xtaydi)</text>
+  <text x="380" y="344" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">systemctl stop esa har doim tiklashni to'xtatadi (on-failure stop'ni hurmat qiladi)</text>
+
+  <defs>
+    <marker id="strel" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+</svg>

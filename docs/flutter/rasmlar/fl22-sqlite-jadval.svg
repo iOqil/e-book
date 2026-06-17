@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" font-family="Segoe UI, system-ui, sans-serif">
+  <title>SQLite 'tasks' jadvali: id, title, done ustunlari va qatorlari; CRUD amallari — db.insert (qator qo'shadi), db.query (o'qiydi), db.update (o'zgartiradi), db.delete (o'chiradi) — har biri jadvalga moslangan</title>
+  <rect x="0" y="0" width="800" height="500" fill="#f8fafc"/>
+  <text x="400" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">SQLite jadvali va CRUD amallari</text>
+  <text x="400" y="60" text-anchor="middle" font-size="14" fill="#475569">'tasks' jadvali — har qator bitta vazifa; CRUD = Create, Read, Update, Delete</text>
+
+  <!-- Table title -->
+  <rect x="250" y="86" width="300" height="34" rx="8" fill="#027dfd"/>
+  <text x="400" y="109" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">tasks (jadval)</text>
+
+  <!-- Header row -->
+  <rect x="250" y="124" width="80" height="40" fill="#1e293b"/>
+  <rect x="330" y="124" width="160" height="40" fill="#1e293b"/>
+  <rect x="490" y="124" width="60" height="40" fill="#1e293b"/>
+  <text x="290" y="149" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">id</text>
+  <text x="410" y="149" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">title</text>
+  <text x="520" y="149" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">done</text>
+
+  <!-- Row 1 -->
+  <rect x="250" y="164" width="80" height="40" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <rect x="330" y="164" width="160" height="40" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <rect x="490" y="164" width="60" height="40" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="290" y="189" text-anchor="middle" font-size="14" fill="#1e293b">1</text>
+  <text x="410" y="189" text-anchor="middle" font-size="14" fill="#1e293b">Non sotib olish</text>
+  <text x="520" y="189" text-anchor="middle" font-size="14" fill="#16a34a">1</text>
+
+  <!-- Row 2 -->
+  <rect x="250" y="204" width="80" height="40" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+  <rect x="330" y="204" width="160" height="40" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+  <rect x="490" y="204" width="60" height="40" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+  <text x="290" y="229" text-anchor="middle" font-size="14" fill="#1e293b">2</text>
+  <text x="410" y="229" text-anchor="middle" font-size="14" fill="#1e293b">Dars yozish</text>
+  <text x="520" y="229" text-anchor="middle" font-size="14" fill="#ef4444">0</text>
+
+  <!-- Row 3 -->
+  <rect x="250" y="244" width="80" height="40" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <rect x="330" y="244" width="160" height="40" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <rect x="490" y="244" width="60" height="40" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="290" y="269" text-anchor="middle" font-size="14" fill="#1e293b">3</text>
+  <text x="410" y="269" text-anchor="middle" font-size="14" fill="#1e293b">Sport zali</text>
+  <text x="520" y="269" text-anchor="middle" font-size="14" fill="#ef4444">0</text>
+
+  <!-- column captions -->
+  <text x="290" y="302" text-anchor="middle" font-size="13" fill="#64748b">PRIMARY KEY</text>
+  <text x="410" y="302" text-anchor="middle" font-size="13" fill="#64748b">TEXT</text>
+  <text x="520" y="302" text-anchor="middle" font-size="13" fill="#64748b">INTEGER (0/1)</text>
+
+  <!-- CRUD cards -->
+  <text x="400" y="346" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">Bu jadval ustida 4 ta amal (CRUD)</text>
+
+  <!-- Create -->
+  <rect x="40" y="362" width="175" height="100" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="127" y="388" text-anchor="middle" font-size="14" font-weight="700" fill="#16a34a">db.insert</text>
+  <text x="127" y="410" text-anchor="middle" font-size="13" fill="#475569">Create — yangi</text>
+  <text x="127" y="428" text-anchor="middle" font-size="13" fill="#475569">qator qo'shadi</text>
+  <text x="127" y="450" text-anchor="middle" font-size="13" fill="#64748b">INSERT INTO tasks</text>
+
+  <!-- Read -->
+  <rect x="227" y="362" width="175" height="100" rx="12" fill="#dbeafe" stroke="#027dfd" stroke-width="2.5"/>
+  <text x="314" y="388" text-anchor="middle" font-size="14" font-weight="700" fill="#0553b1">db.query</text>
+  <text x="314" y="410" text-anchor="middle" font-size="13" fill="#475569">Read — qatorlarni</text>
+  <text x="314" y="428" text-anchor="middle" font-size="13" fill="#475569">o'qiydi</text>
+  <text x="314" y="450" text-anchor="middle" font-size="13" fill="#64748b">SELECT * FROM tasks</text>
+
+  <!-- Update -->
+  <rect x="414" y="362" width="175" height="100" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="501" y="388" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">db.update</text>
+  <text x="501" y="410" text-anchor="middle" font-size="13" fill="#475569">Update — qatorni</text>
+  <text x="501" y="428" text-anchor="middle" font-size="13" fill="#475569">o'zgartiradi (where)</text>
+  <text x="501" y="450" text-anchor="middle" font-size="13" fill="#64748b">UPDATE tasks SET ...</text>
+
+  <!-- Delete -->
+  <rect x="601" y="362" width="160" height="100" rx="12" fill="#e0e7ff" stroke="#6366f1" stroke-width="2.5"/>
+  <text x="681" y="388" text-anchor="middle" font-size="14" font-weight="700" fill="#6366f1">db.delete</text>
+  <text x="681" y="410" text-anchor="middle" font-size="13" fill="#475569">Delete — qatorni</text>
+  <text x="681" y="428" text-anchor="middle" font-size="13" fill="#475569">o'chiradi (where)</text>
+  <text x="681" y="450" text-anchor="middle" font-size="13" fill="#64748b">DELETE FROM tasks</text>
+
+  <text x="400" y="484" text-anchor="middle" font-size="13" fill="#64748b">where / whereArgs — qaysi qatorlarga ta'sir qilishini belgilaydi (masalan id = 2)</text>
+</svg>

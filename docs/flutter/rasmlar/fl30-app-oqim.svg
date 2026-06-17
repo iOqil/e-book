@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 540" width="820" height="540" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Maqolalar ilovasining ekran oqimi va go_router xaritasi: Splash/Auth tekshiruvi -> StatefulShellRoute pastki menyu (Maqolalar ro'yxati / Sevimlilar / Profil) -> Maqola detali /article/:id. Kirmagan foydalanuvchi redirect bilan login sahifasiga yo'naltiriladi.</title>
+  <rect x="0" y="0" width="820" height="540" fill="#f8fafc"/>
+  <text x="410" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Ilovaning ekran xaritasi (go_router)</text>
+  <text x="410" y="58" text-anchor="middle" font-size="14" fill="#475569">Har ekran URL ga ega — 20-bob: ShellRoute pastki menyu + login redirect</text>
+
+  <!-- Splash / auth -->
+  <rect x="320" y="84" width="180" height="56" rx="12" fill="#027dfd"/>
+  <text x="410" y="110" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">Splash / Auth</text>
+  <text x="410" y="129" text-anchor="middle" font-size="13" fill="#dbeafe">redirect tekshiradi</text>
+
+  <!-- arrow down to login branch -->
+  <line x1="410" y1="140" x2="410" y2="172" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="410,172 403,160 417,160" fill="#94a3b8"/>
+
+  <!-- login (left, gated) -->
+  <line x1="320" y1="112" x2="190" y2="112" stroke="#ef4444" stroke-width="2.5" stroke-dasharray="6 4"/>
+  <polygon points="182,112 196,105 196,119" fill="#ef4444"/>
+  <rect x="40" y="86" width="140" height="52" rx="12" fill="#ffffff" stroke="#ef4444" stroke-width="2.5"/>
+  <text x="110" y="108" text-anchor="middle" font-size="14" font-weight="700" fill="#ef4444">/login</text>
+  <text x="110" y="126" text-anchor="middle" font-size="13" fill="#64748b">kirmagan -> bu yerga</text>
+
+  <!-- ShellRoute container -->
+  <rect x="110" y="184" width="600" height="170" rx="16" fill="#ffffff" stroke="#6366f1" stroke-width="2.5"/>
+  <text x="410" y="210" text-anchor="middle" font-size="15" font-weight="700" fill="#6366f1">StatefulShellRoute — doimiy pastki menyu (NavigationBar)</text>
+
+  <!-- branch 1 -->
+  <rect x="135" y="226" width="170" height="64" rx="10" fill="#dbeafe" stroke="#027dfd" stroke-width="2"/>
+  <text x="220" y="252" text-anchor="middle" font-size="14" font-weight="700" fill="#0553b1">Maqolalar</text>
+  <text x="220" y="272" text-anchor="middle" font-size="13" fill="#475569">/  (ro'yxat)</text>
+
+  <!-- branch 2 -->
+  <rect x="325" y="226" width="170" height="64" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="410" y="252" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Sevimlilar</text>
+  <text x="410" y="272" text-anchor="middle" font-size="13" fill="#475569">/favorites</text>
+
+  <!-- branch 3 -->
+  <rect x="515" y="226" width="170" height="64" rx="10" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="600" y="252" text-anchor="middle" font-size="14" font-weight="700" fill="#6366f1">Profil</text>
+  <text x="600" y="272" text-anchor="middle" font-size="13" fill="#475569">/profile</text>
+
+  <text x="410" y="328" text-anchor="middle" font-size="13" fill="#64748b">Har tab o'z navigatsiya tarixini saqlaydi (indexedStack)</text>
+
+  <!-- arrow down to detail -->
+  <line x1="220" y1="290" x2="220" y2="392" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="220,392 213,380 227,380" fill="#94a3b8"/>
+  <text x="300" y="375" text-anchor="middle" font-size="13" fill="#64748b">maqola bosilganda push</text>
+
+  <!-- detail -->
+  <rect x="120" y="404" width="200" height="64" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="220" y="430" text-anchor="middle" font-size="14" font-weight="700" fill="#16a34a">Maqola detali</text>
+  <text x="220" y="450" text-anchor="middle" font-size="13" fill="#475569">/article/:id (Hero rasm)</text>
+
+  <!-- favorites detail can also open -->
+  <line x1="410" y1="290" x2="410" y2="404" stroke="#94a3b8" stroke-width="2.5" stroke-dasharray="6 4"/>
+  <line x1="410" y1="404" x2="320" y2="436" stroke="#94a3b8" stroke-width="2.5" stroke-dasharray="6 4"/>
+  <polygon points="320,436 334,431 332,445" fill="#94a3b8"/>
+  <text x="510" y="430" text-anchor="middle" font-size="13" fill="#64748b">Sevimlilardan ham bir xil detal ochiladi</text>
+
+  <!-- footer -->
+  <rect x="110" y="492" width="600" height="36" rx="10" fill="#dbeafe" stroke="#027dfd" stroke-width="1.5"/>
+  <text x="410" y="516" text-anchor="middle" font-size="14" fill="#0553b1">UI = f(URL): bildirishnoma yoki havola to'g'ridan-to'g'ri /article/:id ni ochadi.</text>
+</svg>

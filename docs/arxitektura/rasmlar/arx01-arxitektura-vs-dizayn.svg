@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430">
+  <title>Arxitektura va dizayn farqi: qaytarib bo'lmaslik (reversibility) spektri</title>
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="34" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Arxitektura va dizayn: bitta spektr</text>
+  <text x="380" y="58" font-family="Segoe UI" font-size="14" fill="#64748b" text-anchor="middle">Chegara aniq emas — farq "o'zgartirish qanchalik qiyin" degan savolda</text>
+
+  <!-- Spektr o'qi -->
+  <defs>
+    <marker id="ok" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#334155"/>
+    </marker>
+  </defs>
+  <line x1="60" y1="110" x2="700" y2="110" stroke="#334155" stroke-width="2" marker-end="url(#ok)"/>
+  <text x="60" y="96" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">Oson qaytariladi (dizayn)</text>
+  <text x="700" y="96" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626" text-anchor="end">Qaytarib bo'lmaydi (arxitektura)</text>
+
+  <!-- Spektr nuqtalari -->
+  <circle cx="120" cy="110" r="8" fill="#16a34a"/>
+  <text x="120" y="150" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">Funksiya nomi,</text>
+  <text x="120" y="167" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">tugma rangi</text>
+
+  <circle cx="290" cy="110" r="8" fill="#16a34a"/>
+  <text x="290" y="150" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">Sinf tuzilishi,</text>
+  <text x="290" y="167" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">qaysi pattern</text>
+
+  <circle cx="470" cy="110" r="8" fill="#f59e0b"/>
+  <text x="470" y="150" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">Qatlamlar,</text>
+  <text x="470" y="167" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">API shartnomasi</text>
+
+  <circle cx="660" cy="110" r="8" fill="#dc2626"/>
+  <text x="660" y="150" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">DB tanlovi, til,</text>
+  <text x="660" y="167" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">monolit/mikroservis</text>
+
+  <!-- Ikki ustun: dizayn vs arxitektura -->
+  <rect x="60" y="210" width="310" height="180" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="215" y="238" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a" text-anchor="middle">Dizayn (local)</text>
+  <text x="80" y="266" font-family="Segoe UI" font-size="13" fill="#334155">- Bitta modul ichida</text>
+  <text x="80" y="290" font-family="Segoe UI" font-size="13" fill="#334155">- Keyin oson tuzatiladi</text>
+  <text x="80" y="314" font-family="Segoe UI" font-size="13" fill="#334155">- Refaktoring bilan o'zgaradi</text>
+  <text x="80" y="338" font-family="Segoe UI" font-size="13" fill="#334155">- Xatosi arzon</text>
+  <text x="80" y="368" font-family="Segoe UI" font-size="13" font-style="italic" fill="#64748b">"Qanday yozish kerak?"</text>
+
+  <rect x="390" y="210" width="310" height="180" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="545" y="238" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#dc2626" text-anchor="middle">Arxitektura (global)</text>
+  <text x="410" y="266" font-family="Segoe UI" font-size="13" fill="#334155">- Tizim bo'ylab tarqaladi</text>
+  <text x="410" y="290" font-family="Segoe UI" font-size="13" fill="#334155">- Keyin o'zgartirish qimmat</text>
+  <text x="410" y="314" font-family="Segoe UI" font-size="13" fill="#334155">- Migratsiya talab qiladi</text>
+  <text x="410" y="338" font-family="Segoe UI" font-size="13" fill="#334155">- Xatosi butun loyihaga</text>
+  <text x="410" y="368" font-family="Segoe UI" font-size="13" font-style="italic" fill="#64748b">"Nima qurish kerak va nega?"</text>
+</svg>

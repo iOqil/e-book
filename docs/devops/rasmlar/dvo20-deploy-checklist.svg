@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440">
+  <title>Production deploy bosqichlari ketma-ketligi: serverga SSH bilan kirish, kod yoki image yangilash (git pull yoki docker compose pull), docker compose up -d, healthcheck sog'lom bo'lguncha kutish, va agar muvaffaqiyatsiz bo'lsa oldingi image tag bilan rollback qilish</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Deploy oqimi: yangi versiyani chiqarish</text>
+
+  <defs>
+    <marker id="dc-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="dc-green" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+    <marker id="dc-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+  <!-- step 1 SSH -->
+  <rect x="40" y="74" width="200" height="74" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="140" y="104" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">1. Serverga kir</text>
+  <text x="140" y="128" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#475569">ssh deploy@server</text>
+
+  <!-- step 2 update -->
+  <rect x="280" y="74" width="200" height="74" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="380" y="100" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">2. Yangila</text>
+  <text x="380" y="122" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#475569">git pull  yoki</text>
+  <text x="380" y="140" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#475569">docker compose pull</text>
+
+  <!-- step 3 up -->
+  <rect x="520" y="74" width="200" height="74" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="620" y="104" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">3. Ishga tushir</text>
+  <text x="620" y="128" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#475569">docker compose up -d</text>
+
+  <line x1="240" y1="111" x2="278" y2="111" stroke="#2563eb" stroke-width="3" marker-end="url(#dc-blue)"/>
+  <line x1="480" y1="111" x2="518" y2="111" stroke="#2563eb" stroke-width="3" marker-end="url(#dc-blue)"/>
+
+  <!-- step 4 healthcheck wait -->
+  <line x1="620" y1="148" x2="620" y2="186" stroke="#2563eb" stroke-width="3" marker-end="url(#dc-blue)"/>
+  <rect x="500" y="190" width="240" height="80" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="620" y="218" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">4. Healthcheck kut</text>
+  <text x="620" y="240" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#475569">docker compose ps</text>
+  <text x="620" y="258" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">"healthy" bo'lsinmi?</text>
+
+  <!-- decision branches -->
+  <!-- OK branch -->
+  <line x1="500" y1="230" x2="372" y2="230" stroke="#16a34a" stroke-width="3" marker-end="url(#dc-green)"/>
+  <text x="436" y="220" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#166534">healthy = OK</text>
+  <rect x="160" y="192" width="210" height="76" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="265" y="222" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#166534">Deploy muvaffaqiyatli</text>
+  <text x="265" y="246" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">yangi versiya jonli</text>
+
+  <!-- FAIL branch -->
+  <line x1="620" y1="270" x2="620" y2="318" stroke="#dc2626" stroke-width="3" marker-end="url(#dc-red)"/>
+  <text x="700" y="296" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#991b1b">xato / unhealthy</text>
+  <rect x="480" y="322" width="240" height="86" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="600" y="350" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#991b1b">5. Rollback</text>
+  <text x="600" y="372" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">oldingi image tag:</text>
+  <text x="600" y="392" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#475569">...:1.4.2 -&gt; up -d</text>
+
+  <!-- rollback returns to running -->
+  <line x1="480" y1="365" x2="372" y2="365" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="6 4" marker-end="url(#dc-red)"/>
+  <rect x="160" y="330" width="210" height="70" rx="12" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="265" y="360" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14.5" font-weight="bold" fill="#1e293b">Oldingi versiya jonli</text>
+  <text x="265" y="384" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">sayt ishlab turaveradi</text>
+
+  <text x="380" y="430" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">Rollback uchun aniq versiya tag kerak (latest emas) — qaysi image ekani aniq bo'lsin</text>
+</svg>

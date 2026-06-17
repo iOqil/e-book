@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 450">
+  <title>Test Data Builder naqshi: aqlli default qiymatlar va faqat muhim maydonni o'zgartirish</title>
+  <rect x="0" y="0" width="820" height="450" fill="#f8fafc"/>
+  <text x="410" y="40" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Test Data Builder / Object Mother</text>
+  <text x="410" y="66" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">default'lar shovqinni yashiradi, test faqat MUHIM maydonni aytadi</text>
+
+  <!-- defaults card -->
+  <rect x="50" y="110" width="280" height="280" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="190" y="140" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb">Aqlli default'lar</text>
+  <g font-family="Consolas, Segoe UI" font-size="14" fill="#64748b">
+    <text x="72" y="176">ism   = "Sardor"</text>
+    <text x="72" y="204">yosh  = 30</text>
+    <text x="72" y="232">email = "...@example.uz"</text>
+    <text x="72" y="260">faol  = True</text>
+    <text x="72" y="288">rollar = []</text>
+  </g>
+  <text x="190" y="334" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">testga shovqin bermaydi,</text>
+  <text x="190" y="356" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">e'tibordan chetda turadi</text>
+
+  <!-- arrow override -->
+  <line x1="330" y1="250" x2="430" y2="250" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="430,250 420,245 420,255" fill="#94a3b8"/>
+  <text x="380" y="240" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#7c3aed">override</text>
+
+  <!-- override card -->
+  <rect x="430" y="110" width="330" height="280" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="595" y="140" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a">Faqat muhimni o'zgartir</text>
+
+  <text x="450" y="178" font-family="Consolas, Segoe UI" font-size="13" fill="#1e293b">Builder().yosh_bilan(15).qur()</text>
+  <text x="450" y="200" font-family="Segoe UI" font-size="13" fill="#64748b">&#8594; "15 yoshli" &#8212; niyat ko'rinadi</text>
+
+  <text x="450" y="240" font-family="Consolas, Segoe UI" font-size="13" fill="#1e293b">.yosh_bilan(40).nofaol().qur()</text>
+  <text x="450" y="262" font-family="Segoe UI" font-size="13" fill="#64748b">&#8594; "40 yoshli, nofaol"</text>
+
+  <text x="450" y="302" font-family="Consolas, Segoe UI" font-size="13" fill="#1e293b">foydalanuvchi_yarat(yosh=17)</text>
+  <text x="450" y="324" font-family="Segoe UI" font-size="13" fill="#64748b">&#8594; Object Mother (helper)</text>
+
+  <text x="595" y="364" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a" font-weight="bold">test o'z hikoyasini aytadi</text>
+
+  <!-- anti -->
+  <rect x="50" y="404" width="710" height="34" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="405" y="426" text-anchor="middle" font-family="Consolas, Segoe UI" font-size="13" fill="#dc2626">&#10007;  "magic": Foydalanuvchi("Sardor", 15, "...", True, [])  &#8212; nega True? nega []? niyat yashirin</text>
+</svg>

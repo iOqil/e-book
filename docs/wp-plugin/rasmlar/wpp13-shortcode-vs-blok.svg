@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430">
+  <title>Shortcode matnli yorliq sifatida hamma joyda ishlaydi va sodda PHP talab qiladi, Gutenberg blok esa muharrirda vizual jonli ko'rinish beradi lekin JS va build talab qiladi</title>
+
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Shortcode vs Gutenberg blok</text>
+  <text x="380" y="54" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">qachon qaysi — ikkalasi ham yashaydi</text>
+
+  <!-- Shortcode column -->
+  <rect x="36" y="78" width="338" height="296" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="205" y="106" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">Shortcode  [kitoblar]</text>
+
+  <!-- editor mock: text label -->
+  <rect x="58" y="122" width="294" height="52" rx="8" fill="#fff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="74" y="143" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Muharrirda:</text>
+  <text x="74" y="164" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">[kitoblar soni="5"]   (matn yorliq)</text>
+
+  <text x="58" y="200" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">+  Sodda: bitta PHP funksiya</text>
+  <text x="58" y="224" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">+  Hamma joyda: kontent, widget,</text>
+  <text x="74" y="244" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">tema (do_shortcode), email</text>
+  <text x="58" y="268" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">+  Eski kontentda ham ishlaydi</text>
+  <text x="58" y="296" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">-  Yorliqni eslab yozish kerak</text>
+  <text x="58" y="320" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">-  Muharrirda jonli ko'rinmaydi</text>
+  <text x="58" y="350" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e40af">Tanlang: tez, universal, PHP-only</text>
+
+  <!-- Block column -->
+  <rect x="388" y="78" width="338" height="296" rx="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="557" y="106" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#7c3aed">Gutenberg blok</text>
+
+  <!-- editor mock: visual block -->
+  <rect x="410" y="122" width="294" height="52" rx="8" fill="#fff" stroke="#7c3aed" stroke-width="1.5"/>
+  <rect x="422" y="134" width="60" height="28" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="452" y="152" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">Kitob</text>
+  <rect x="492" y="134" width="60" height="28" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="522" y="152" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">Kitob</text>
+  <text x="640" y="152" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">jonli</text>
+
+  <text x="410" y="200" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">+  Vizual: "+" dan tanlanadi</text>
+  <text x="410" y="224" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">+  Muharrirda jonli preview</text>
+  <text x="410" y="248" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">+  UI panel: tanlov, slayder</text>
+  <text x="410" y="272" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">+  Zamonaviy (tavsiya)</text>
+  <text x="410" y="300" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">-  JS/JSX + block.json + build</text>
+  <text x="410" y="324" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">-  Asosan muharrirda (19-23 bob)</text>
+  <text x="410" y="350" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#7c3aed">Tanlang: vizual, foydalanuvchiga qulay</text>
+
+  <!-- bottom DRY note -->
+  <rect x="36" y="388" width="690" height="34" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="380" y="410" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">DRY: render mantig'ini bitta funksiyaga ajrating — shortcode ham, dynamic blok ham uni ulashadi</text>
+</svg>

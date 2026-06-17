@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>EAS Update OTA: JS o'zgarishi build'siz darhol foydalanuvchiga yetadi, native o'zgarish esa yangi build talab qiladi</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">OTA yangilanish: qachon va qanday</text>
+  <text x="380" y="62" text-anchor="middle" font-size="14" fill="#475569">Oddiy qoida: faqat JS o'zgarsa — OTA; native qism o'zgarsa — yangi build</text>
+
+  <!-- LEFT path: JS change -->
+  <rect x="30" y="90" width="330" height="320" rx="14" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="195" y="120" text-anchor="middle" font-size="17" font-weight="700" fill="#16a34a">JS o'zgarishi</text>
+  <text x="195" y="142" text-anchor="middle" font-size="13" fill="#475569">matn, rang, mantiq, bug tuzatish</text>
+
+  <rect x="70" y="160" width="250" height="50" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="195" y="190" text-anchor="middle" font-size="14" font-weight="600" fill="#1e293b">eas update --branch ...</text>
+
+  <line x1="195" y1="210" x2="195" y2="244" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="190,244 195,254 200,244" fill="#16a34a"/>
+
+  <rect x="70" y="254" width="250" height="50" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="195" y="284" text-anchor="middle" font-size="13" fill="#475569">Expo serveriga joylanadi</text>
+
+  <line x1="195" y1="304" x2="195" y2="338" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="190,338 195,348 200,348" fill="#16a34a"/>
+
+  <rect x="70" y="348" width="250" height="48" rx="10" fill="#16a34a"/>
+  <text x="195" y="370" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">Darhol foydalanuvchiga!</text>
+  <text x="195" y="389" text-anchor="middle" font-size="13" fill="#dcfce7">do'kon tekshiruvisiz, build'siz</text>
+
+  <!-- RIGHT path: native change -->
+  <rect x="400" y="90" width="330" height="320" rx="14" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="565" y="120" text-anchor="middle" font-size="17" font-weight="700" fill="#dc2626">Native o'zgarishi</text>
+  <text x="565" y="142" text-anchor="middle" font-size="13" fill="#475569">yangi native paket, ruxsat, SDK</text>
+
+  <rect x="440" y="160" width="250" height="50" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="565" y="190" text-anchor="middle" font-size="14" font-weight="600" fill="#1e293b">eas build (yangidan)</text>
+
+  <line x1="565" y1="210" x2="565" y2="244" stroke="#dc2626" stroke-width="2"/>
+  <polygon points="560,244 565,254 570,244" fill="#dc2626"/>
+
+  <rect x="440" y="254" width="250" height="50" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="565" y="280" text-anchor="middle" font-size="13" fill="#475569">do'konga qayta yuborish</text>
+  <text x="565" y="298" text-anchor="middle" font-size="13" fill="#475569">(eas submit) + tekshiruv</text>
+
+  <line x1="565" y1="304" x2="565" y2="338" stroke="#dc2626" stroke-width="2"/>
+  <polygon points="560,338 565,348 570,348" fill="#dc2626"/>
+
+  <rect x="440" y="348" width="250" height="48" rx="10" fill="#dc2626"/>
+  <text x="565" y="370" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">Bir necha kundan keyin</text>
+  <text x="565" y="389" text-anchor="middle" font-size="13" fill="#fee2e2">foydalanuvchi do'kondan yangilaydi</text>
+</svg>

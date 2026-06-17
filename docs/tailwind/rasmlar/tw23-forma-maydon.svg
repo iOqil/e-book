@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 440" width="780" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Forma maydonining anatomiyasi: label, input qutisi (fokus halqasi chizilgan), yordamchi matn va qizil xato matni — har bir qism o'z utility klasslari bilan belgilangan</title>
+  <rect x="0" y="0" width="780" height="440" fill="#f8fafc"/>
+
+  <text x="390" y="36" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">Forma maydonining anatomiyasi</text>
+  <text x="390" y="59" text-anchor="middle" font-size="14" fill="#475569">To'rt qism: label &#183; input &#183; yordam &#183; xato</text>
+
+  <!-- LEFT: the field stack -->
+  <!-- label -->
+  <text x="120" y="108" font-size="15" font-weight="bold" fill="#1e293b">Email manzil</text>
+  <text x="225" y="108" font-size="15" font-weight="bold" fill="#ef4444">*</text>
+
+  <!-- input box with focus ring -->
+  <rect x="113" y="124" width="320" height="54" rx="11" fill="none" stroke="#38bdf8" stroke-width="3"/>
+  <rect x="117" y="128" width="312" height="46" rx="9" fill="#ffffff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="135" y="157" font-size="15" fill="#1e293b">oqil&#64;misol.uz</text>
+  <line x1="248" y1="139" x2="248" y2="163" stroke="#475569" stroke-width="1.5"/>
+
+  <!-- helper text -->
+  <text x="120" y="204" font-size="13" fill="#64748b">Bu manzilga tasdiq xati yuboramiz.</text>
+
+  <!-- error text (alternative state) -->
+  <text x="120" y="262" font-size="14" font-weight="bold" fill="#475569">Xato holatida (user-invalid:):</text>
+  <rect x="117" y="276" width="312" height="46" rx="9" fill="#fef2f2" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="135" y="305" font-size="15" fill="#1e293b">oqil&#64;</text>
+  <text x="120" y="348" font-size="13" fill="#ef4444">To'g'ri email kiriting.</text>
+
+  <!-- RIGHT: labeled class callouts -->
+  <line x1="470" y1="90" x2="470" y2="360" stroke="#94a3b8" stroke-width="1" stroke-dasharray="5 4"/>
+
+  <!-- 1 label -->
+  <circle cx="500" cy="105" r="13" fill="#6366f1"/>
+  <text x="500" y="110" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">1</text>
+  <text x="524" y="102" font-size="14" font-weight="bold" fill="#1e293b">Label</text>
+  <text x="524" y="121" font-size="13" fill="#64748b">block text-sm font-medium</text>
+
+  <!-- 2 input -->
+  <circle cx="500" cy="155" r="13" fill="#6366f1"/>
+  <text x="500" y="160" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">2</text>
+  <text x="524" y="146" font-size="14" font-weight="bold" fill="#1e293b">Input + fokus halqasi</text>
+  <text x="524" y="165" font-size="13" fill="#64748b">rounded-lg border border-gray-300</text>
+  <text x="524" y="183" font-size="13" fill="#0ea5e9">focus-visible:ring-2</text>
+
+  <!-- 3 helper -->
+  <circle cx="500" cy="223" r="13" fill="#6366f1"/>
+  <text x="500" y="228" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">3</text>
+  <text x="524" y="214" font-size="14" font-weight="bold" fill="#1e293b">Yordamchi matn</text>
+  <text x="524" y="233" font-size="13" fill="#64748b">text-sm text-gray-500</text>
+
+  <!-- 4 error -->
+  <circle cx="500" cy="273" r="13" fill="#ef4444"/>
+  <text x="500" y="278" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">4</text>
+  <text x="524" y="264" font-size="14" font-weight="bold" fill="#1e293b">Xato matni</text>
+  <text x="524" y="283" font-size="13" fill="#ef4444">text-sm text-red-600</text>
+  <text x="524" y="301" font-size="13" fill="#64748b">user-invalid:border-red-500</text>
+
+  <!-- footer note -->
+  <rect x="113" y="380" width="554" height="34" rx="8" fill="#eef2ff"/>
+  <text x="390" y="402" text-anchor="middle" font-size="13" fill="#4f46e5">Label &#8596; input &#8217;id&#8217; orqali bog'lanadi (for / id) &#8212; bosish va ekran o'quvchi uchun shart</text>
+</svg>

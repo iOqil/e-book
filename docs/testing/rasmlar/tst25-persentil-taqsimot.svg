@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 470">
+  <title>Latency taqsimoti: ko'pchilik so'rov tez, lekin uzun dum (tail) bor; o'rtacha qiymat bu dumni yashiradi, p95 va p99 esa uni ko'rsatadi</title>
+  <rect x="0" y="0" width="820" height="470" fill="#f8fafc"/>
+  <text x="410" y="38" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">O'rtacha yolg'on gapiradi</text>
+  <text x="410" y="64" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Latency taqsimoti va uning uzun "dumi" (tail)</text>
+
+  <!-- O'qlar -->
+  <line x1="80" y1="360" x2="760" y2="360" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="80" y1="120" x2="80" y2="360" stroke="#94a3b8" stroke-width="2"/>
+  <text x="420" y="398" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">latency (kechikish, ms) ko'paymoqda &#8594;</text>
+  <text x="40" y="240" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b" transform="rotate(-90 40 240)">so'rovlar soni</text>
+
+  <!-- Taqsimot ustunlari (qiya: chap baland, o'ngga uzun dum) -->
+  <rect x="100" y="250" width="26" height="110" fill="#bfdbfe"/>
+  <rect x="128" y="180" width="26" height="180" fill="#93c5fd"/>
+  <rect x="156" y="150" width="26" height="210" fill="#60a5fa"/>
+  <rect x="184" y="200" width="26" height="160" fill="#93c5fd"/>
+  <rect x="212" y="270" width="26" height="90" fill="#bfdbfe"/>
+  <rect x="240" y="305" width="26" height="55" fill="#bfdbfe"/>
+  <rect x="268" y="325" width="26" height="35" fill="#dbeafe"/>
+  <rect x="296" y="335" width="26" height="25" fill="#dbeafe"/>
+  <rect x="324" y="342" width="26" height="18" fill="#dbeafe"/>
+  <rect x="352" y="346" width="26" height="14" fill="#dbeafe"/>
+  <rect x="380" y="349" width="26" height="11" fill="#e0e7ff"/>
+  <rect x="430" y="351" width="20" height="9" fill="#e0e7ff"/>
+  <rect x="480" y="352" width="16" height="8" fill="#e0e7ff"/>
+  <rect x="560" y="353" width="14" height="7" fill="#fecaca"/>
+  <rect x="640" y="353" width="12" height="7" fill="#fca5a5"/>
+  <rect x="690" y="354" width="12" height="6" fill="#f87171"/>
+
+  <text x="640" y="320" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#dc2626">uzun dum (tail)</text>
+  <text x="640" y="338" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">eng yomon tajriba</text>
+
+  <!-- O'rtacha chizig'i -->
+  <line x1="215" y1="120" x2="215" y2="360" stroke="#16a34a" stroke-width="2.5" stroke-dasharray="6 4"/>
+  <text x="215" y="112" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#16a34a">o'rtacha 62</text>
+
+  <!-- p95 -->
+  <line x1="300" y1="140" x2="300" y2="360" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="300" y="132" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#b45309">p95 = 74</text>
+
+  <!-- p99 -->
+  <line x1="565" y1="160" x2="565" y2="360" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="565" y="152" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#dc2626">p99 = 356</text>
+
+  <text x="410" y="438" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">O'rtacha 62 ms "yaxshi" ko'rinadi — lekin har 100 foydalanuvchidan biri 356 ms kutadi</text>
+</svg>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" width="760" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>render() ichidagi og'ir so'rov har yangilanishda DB ga uch marta boradi; computed property esa bitta so'rov ichida natijani keshlab DB ga faqat bir marta boradi</title>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">render() ichida so'rov  vs  #[Computed] kesh</text>
+  <text x="380" y="58" text-anchor="middle" font-size="14" fill="#475569">Blade'da postlar ro'yxati 3 joyda ishlatilsa, nima bo'ladi?</text>
+
+  <!-- CHAP: render ichida -->
+  <rect x="28" y="84" width="340" height="350" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="198" y="112" text-anchor="middle" font-size="16" font-weight="700" fill="#dc2626">Yomon: render() ichida so'rov</text>
+  <text x="198" y="134" text-anchor="middle" font-size="13" fill="#94a3b8">Post::latest()-&gt;get() Blade'da 3 marta</text>
+
+  <rect x="58" y="152" width="280" height="36" rx="8" fill="#fef2f2" stroke="#fca5a5" stroke-width="1.5"/>
+  <text x="198" y="175" text-anchor="middle" font-size="13" fill="#1e293b">1-joy: ro'yxat chiqarish</text>
+  <rect x="58" y="196" width="280" height="36" rx="8" fill="#fef2f2" stroke="#fca5a5" stroke-width="1.5"/>
+  <text x="198" y="219" text-anchor="middle" font-size="13" fill="#1e293b">2-joy: postlar soni (count)</text>
+  <rect x="58" y="240" width="280" height="36" rx="8" fill="#fef2f2" stroke="#fca5a5" stroke-width="1.5"/>
+  <text x="198" y="263" text-anchor="middle" font-size="13" fill="#1e293b">3-joy: birinchi post sarlavhasi</text>
+
+  <!-- 3 ta strelka DB ga -->
+  <line x1="198" y1="288" x2="198" y2="324" stroke="#dc2626" stroke-width="2"/>
+  <line x1="160" y1="288" x2="160" y2="324" stroke="#dc2626" stroke-width="2"/>
+  <line x1="236" y1="288" x2="236" y2="324" stroke="#dc2626" stroke-width="2"/>
+  <polygon points="198,330 192,320 204,320" fill="#dc2626"/>
+  <polygon points="160,330 154,320 166,320" fill="#dc2626"/>
+  <polygon points="236,330 230,320 242,320" fill="#dc2626"/>
+
+  <rect x="98" y="336" width="200" height="56" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="198" y="362" text-anchor="middle" font-size="15" font-weight="700" fill="#dc2626">DB: 3 ta so'rov</text>
+  <text x="198" y="382" text-anchor="middle" font-size="13" fill="#475569">SEKIN — bir xil ish 3 marta</text>
+  <text x="198" y="418" text-anchor="middle" font-size="13" fill="#94a3b8">har yangilanishda yana 3 marta</text>
+
+  <!-- O'NG: computed -->
+  <rect x="392" y="84" width="340" height="350" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="562" y="112" text-anchor="middle" font-size="16" font-weight="700" fill="#16a34a">Yaxshi: #[Computed] posts()</text>
+  <text x="562" y="134" text-anchor="middle" font-size="13" fill="#94a3b8">$this-&gt;posts Blade'da 3 marta</text>
+
+  <rect x="422" y="152" width="280" height="36" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+  <text x="562" y="175" text-anchor="middle" font-size="13" fill="#1e293b">1-joy: $this-&gt;posts</text>
+  <rect x="422" y="196" width="280" height="36" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+  <text x="562" y="219" text-anchor="middle" font-size="13" fill="#1e293b">2-joy: $this-&gt;posts-&gt;count()</text>
+  <rect x="422" y="240" width="280" height="36" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+  <text x="562" y="263" text-anchor="middle" font-size="13" fill="#1e293b">3-joy: $this-&gt;posts-&gt;first()</text>
+
+  <!-- kesh qutisi -->
+  <line x1="562" y1="288" x2="562" y2="312" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="562,318 556,308 568,308" fill="#16a34a"/>
+  <rect x="462" y="320" width="200" height="34" rx="8" fill="#eef2ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="562" y="342" text-anchor="middle" font-size="13" font-weight="700" fill="#4f46e5">KESH (so'rov ichida)</text>
+
+  <line x1="562" y1="354" x2="562" y2="372" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="562,378 556,368 568,368" fill="#16a34a"/>
+  <rect x="462" y="380" width="200" height="42" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="562" y="406" text-anchor="middle" font-size="15" font-weight="700" fill="#16a34a">DB: faqat 1 ta so'rov</text>
+
+  <text x="380" y="456" text-anchor="middle" font-size="13" fill="#94a3b8">Computed birinchi murojaatdan keyin natijani eslab qoladi — qolgan murojaatlar tekin</text>
+</svg>

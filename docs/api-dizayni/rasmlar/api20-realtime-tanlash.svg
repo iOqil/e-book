@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560">
+  <title>Qaysi real-time texnikani tanlash: qaror diagrammasi</title>
+  <rect x="0" y="0" width="880" height="560" fill="#f8fafc"/>
+  <text x="440" y="34" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">Qaysi real-time texnika? Qaror daraxti</text>
+  <text x="440" y="58" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Printsip: eng oddiy yetarli yechimni tanla</text>
+
+  <!-- Q1 -->
+  <rect x="290" y="84" width="300" height="64" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="440" y="112" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">Yangilanish tez-tez keladimi?</text>
+  <text x="440" y="134" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">(real vaqtda push kerakmi?)</text>
+
+  <!-- Q1 -> No (polling) -->
+  <line x1="290" y1="116" x2="150" y2="190" stroke="#64748b" stroke-width="2" marker-end="url(#arrB)"/>
+  <text x="180" y="160" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#dc2626">YO'Q / kamdan-kam</text>
+
+  <!-- Q1 -> Yes -->
+  <line x1="590" y1="116" x2="700" y2="190" stroke="#64748b" stroke-width="2" marker-end="url(#arrB)"/>
+  <text x="690" y="160" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#16a34a">HA</text>
+
+  <!-- Polling result -->
+  <rect x="40" y="196" width="240" height="92" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="160" y="224" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#b45309">POLLING yetarli</text>
+  <text x="160" y="248" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Mijoz vaqti-vaqti bilan</text>
+  <text x="160" y="266" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">GET yuboradi. Oddiy.</text>
+
+  <!-- Q2 -->
+  <rect x="560" y="196" width="290" height="64" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="705" y="224" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">Mijoz ham yuboradimi?</text>
+  <text x="705" y="246" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">ikki tomonlama kerakmi?</text>
+
+  <!-- Q2 -> No (SSE) -->
+  <line x1="620" y1="260" x2="470" y2="338" stroke="#64748b" stroke-width="2" marker-end="url(#arrB)"/>
+  <text x="500" y="306" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#dc2626">YO'Q (faqat server push)</text>
+
+  <!-- Q2 -> Yes (WS) -->
+  <line x1="780" y1="260" x2="780" y2="338" stroke="#64748b" stroke-width="2" marker-end="url(#arrB)"/>
+  <text x="790" y="306" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#16a34a">HA</text>
+
+  <!-- SSE result -->
+  <rect x="330" y="346" width="300" height="100" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="480" y="374" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#6d28d9">SSE</text>
+  <text x="480" y="398" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Server -> mijoz oqim.</text>
+  <text x="480" y="416" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">HTTP-do'st, oddiy, avto</text>
+  <text x="480" y="434" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">qayta-ulanish. Feed/narx.</text>
+
+  <!-- WS result -->
+  <rect x="660" y="346" width="190" height="100" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="755" y="374" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1d4ed8">WEBSOCKET</text>
+  <text x="755" y="398" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Ikki tomonlama,</text>
+  <text x="755" y="416" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">past kechikish.</text>
+  <text x="755" y="434" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Chat, o'yin.</text>
+
+  <!-- bottom rule -->
+  <rect x="120" y="486" width="640" height="50" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="440" y="510" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#15803d">Murakkablikni faqat haqiqiy ehtiyoj oqlasa qo'shing</text>
+  <text x="440" y="528" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">WebSocket kuchli, lekin stateful va masshtab qiyinroq — kerak bo'lsagina</text>
+
+  <defs>
+    <marker id="arrB" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 520" font-family="Segoe UI">
+  <title>SBI ramka: Vaziyat, Xulq, Ta'sir uch bosqichi va noaniq feedback bilan taqqoslash</title>
+  <rect x="0" y="0" width="880" height="520" fill="#f8fafc"/>
+
+  <text x="440" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#1e293b">SBI ramka: feedback'ni qaysi suyak ustiga qurish</text>
+  <text x="440" y="62" text-anchor="middle" font-size="14" fill="#64748b">Vaziyat &#8594; Xulq &#8594; Ta'sir: faktdan boshlab, his-tuyg'u bilan tugat</text>
+
+  <!-- Three SBI steps -->
+  <rect x="40" y="92" width="250" height="150" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="165" y="124" text-anchor="middle" font-size="17" font-weight="bold" fill="#1e40af">1. Vaziyat (Situation)</text>
+  <text x="165" y="152" text-anchor="middle" font-size="14" fill="#334155">Qachon va qayerda?</text>
+  <text x="60" y="184" font-size="13" fill="#1e293b">"Kechagi standup'da,</text>
+  <text x="60" y="206" font-size="13" fill="#1e293b">deploy haqida gaplashganda..."</text>
+  <text x="165" y="232" text-anchor="middle" font-size="13" fill="#64748b">aniq, bahssiz kontekst</text>
+
+  <rect x="315" y="92" width="250" height="150" rx="12" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="440" y="124" text-anchor="middle" font-size="17" font-weight="bold" fill="#6d28d9">2. Xulq (Behavior)</text>
+  <text x="440" y="152" text-anchor="middle" font-size="14" fill="#334155">Aynan nima qildi?</text>
+  <text x="335" y="184" font-size="13" fill="#1e293b">"...migratsiyani aytmasdan</text>
+  <text x="335" y="206" font-size="13" fill="#1e293b">prod'ga chiqarding."</text>
+  <text x="440" y="232" text-anchor="middle" font-size="13" fill="#64748b">kuzatilgan harakat, taxmin emas</text>
+
+  <rect x="590" y="92" width="250" height="150" rx="12" fill="#ecfdf5" stroke="#16a34a" stroke-width="2"/>
+  <text x="715" y="124" text-anchor="middle" font-size="17" font-weight="bold" fill="#166534">3. Ta'sir (Impact)</text>
+  <text x="715" y="152" text-anchor="middle" font-size="14" fill="#334155">Bu nimaga olib keldi?</text>
+  <text x="610" y="184" font-size="13" fill="#1e293b">"...natijada men kutilmagan</text>
+  <text x="610" y="206" font-size="13" fill="#1e293b">xatoni 1 soat qidirdim."</text>
+  <text x="715" y="232" text-anchor="middle" font-size="13" fill="#64748b">oqibat, his-tuyg'u</text>
+
+  <!-- arrows between steps -->
+  <line x1="290" y1="167" x2="313" y2="167" stroke="#94a3b8" stroke-width="3"/>
+  <polygon points="313,167 303,162 303,172" fill="#94a3b8"/>
+  <line x1="565" y1="167" x2="588" y2="167" stroke="#94a3b8" stroke-width="3"/>
+  <polygon points="588,167 578,162 578,172" fill="#94a3b8"/>
+
+  <!-- comparison row -->
+  <rect x="40" y="282" width="800" height="86" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="60" y="314" font-size="16" font-weight="bold" fill="#991b1b">&#10060; Noaniq feedback</text>
+  <text x="60" y="342" font-size="14" fill="#1e293b">"Sen ehtiyotsizsan, har doim narsalarni buzasan."</text>
+  <text x="60" y="362" font-size="13" fill="#dc2626">shaxsga yorliq, fakt yo'q, mudofaaga undaydi</text>
+
+  <rect x="40" y="386" width="800" height="106" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="60" y="418" font-size="16" font-weight="bold" fill="#166534">&#9989; SBI bilan</text>
+  <text x="60" y="446" font-size="14" fill="#1e293b">"Kechagi standup'dan keyin (V) migratsiyani aytmasdan prod'ga chiqarding (X),</text>
+  <text x="60" y="468" font-size="14" fill="#1e293b">natijada men sababsiz xatoni bir soat qidirdim (T). Keyingi safar oldindan ayta olasanmi?"</text>
+  <text x="60" y="487" font-size="13" fill="#166534">fakt + xulq + oqibat: bahslashishga emas, tuzatishga undaydi</text>
+</svg>

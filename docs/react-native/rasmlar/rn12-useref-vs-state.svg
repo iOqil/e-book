@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430" font-family="Segoe UI, system-ui, sans-serif">
+  <title>useState va useRef farqi: qaysi biri re-render keltirib chiqaradi</title>
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">useState va useRef: qiymat o'zgarganda nima bo'ladi?</text>
+
+  <!-- LEFT: useState -->
+  <rect x="40" y="64" width="330" height="320" rx="14" fill="#ffffff" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="205" y="96" text-anchor="middle" font-size="17" font-weight="700" fill="#0ea5e9">useState</text>
+  <text x="205" y="120" text-anchor="middle" font-size="14" fill="#475569">o'zgaradigan UI holati</text>
+
+  <rect x="72" y="142" width="266" height="50" rx="9" fill="#e0f2fe" stroke="#bae6fd" stroke-width="1.5"/>
+  <text x="205" y="166" text-anchor="middle" font-size="14" fill="#1e293b">setSoni(soni + 1)</text>
+  <text x="205" y="184" text-anchor="middle" font-size="13" fill="#475569">qiymat o'zgardi</text>
+
+  <line x1="205" y1="192" x2="205" y2="226" stroke="#0ea5e9" stroke-width="2.5" marker-end="url(#strelka1)"/>
+
+  <rect x="72" y="226" width="266" height="56" rx="9" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="205" y="250" text-anchor="middle" font-size="15" font-weight="700" fill="#16a34a">RE-RENDER bo'ladi</text>
+  <text x="205" y="271" text-anchor="middle" font-size="13" fill="#475569">ekran yangilanadi, yangi qiymat ko'rinadi</text>
+
+  <rect x="72" y="304" width="266" height="56" rx="9" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="205" y="328" text-anchor="middle" font-size="13" fill="#475569">Qachon: ekranda ko'rinadigan,</text>
+  <text x="205" y="347" text-anchor="middle" font-size="13" fill="#475569">o'zgarsa qayta chizilishi kerak narsa</text>
+
+  <!-- RIGHT: useRef -->
+  <rect x="390" y="64" width="330" height="320" rx="14" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="555" y="96" text-anchor="middle" font-size="17" font-weight="700" fill="#4f46e5">useRef</text>
+  <text x="555" y="120" text-anchor="middle" font-size="14" fill="#475569">re-render'siz saqlanadigan qiymat</text>
+
+  <rect x="422" y="142" width="266" height="50" rx="9" fill="#e0e7ff" stroke="#c7d2fe" stroke-width="1.5"/>
+  <text x="555" y="166" text-anchor="middle" font-size="14" fill="#1e293b">ref.current = yangiQiymat</text>
+  <text x="555" y="184" text-anchor="middle" font-size="13" fill="#475569">qiymat o'zgardi</text>
+
+  <line x1="555" y1="192" x2="555" y2="226" stroke="#4f46e5" stroke-width="2.5" marker-end="url(#strelka2)"/>
+
+  <rect x="422" y="226" width="266" height="56" rx="9" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="555" y="250" text-anchor="middle" font-size="15" font-weight="700" fill="#dc2626">RE-RENDER YO'Q</text>
+  <text x="555" y="271" text-anchor="middle" font-size="13" fill="#475569">ekran o'zgarmaydi, qiymat jimgina saqlanadi</text>
+
+  <rect x="422" y="304" width="266" height="56" rx="9" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="555" y="328" text-anchor="middle" font-size="13" fill="#475569">Qachon: taymer ID, oldingi qiymat,</text>
+  <text x="555" y="347" text-anchor="middle" font-size="13" fill="#475569">elementga havola (.current?.focus())</text>
+
+  <text x="380" y="412" text-anchor="middle" font-size="13" fill="#94a3b8">Yopishqoq qog'oz: yozasiz, saqlanadi — lekin ekranni qayta chizmaydi</text>
+
+  <defs>
+    <marker id="strelka1" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#0ea5e9"/>
+    </marker>
+    <marker id="strelka2" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#4f46e5"/>
+    </marker>
+  </defs>
+</svg>

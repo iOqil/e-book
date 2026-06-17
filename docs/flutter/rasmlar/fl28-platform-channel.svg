@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 470" width="800" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Platform channel ko'prigi: Dart tomonidan MethodChannel('app/battery').invokeMethod('getLevel') chaqirilganda xabar ko'prik orqali platforma tomoniga (Android Kotlin yoki iOS Swift) o'tadi, u qurilmadan natijani oladi va xabar yana Dart'ga qaytariladi</title>
+  <rect x="0" y="0" width="800" height="470" fill="#f8fafc"/>
+  <text x="400" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Platform channel — Dart va native kod ko'prigi</text>
+  <text x="400" y="58" text-anchor="middle" font-size="14" fill="#475569">Paket yo'q bo'lsa, native (Kotlin/Swift) kodga xabar yuborib, natijani qaytarib olasiz</text>
+
+  <defs>
+    <marker id="fl28cA" markerWidth="12" markerHeight="12" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#027dfd"/>
+    </marker>
+    <marker id="fl28cB" markerWidth="12" markerHeight="12" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <!-- Dart side -->
+  <rect x="40" y="100" width="280" height="290" rx="16" fill="#dbeafe" stroke="#027dfd" stroke-width="2.5"/>
+  <text x="180" y="130" text-anchor="middle" font-size="16" font-weight="700" fill="#0553b1">Dart tomoni (Flutter)</text>
+  <rect x="62" y="150" width="236" height="120" rx="10" fill="#ffffff" stroke="#027dfd" stroke-width="2"/>
+  <text x="80" y="180" font-size="14" font-weight="700" fill="#1e293b">MethodChannel</text>
+  <text x="80" y="204" font-size="13" fill="#0553b1">('app/battery')</text>
+  <text x="80" y="234" font-size="14" font-weight="700" fill="#1e293b">.invokeMethod(</text>
+  <text x="80" y="258" font-size="13" fill="#9333ea">  'getLevel')</text>
+  <rect x="62" y="300" width="236" height="64" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="180" y="328" text-anchor="middle" font-size="14" font-weight="700" fill="#16a34a">natija: 87 (%)</text>
+  <text x="180" y="350" text-anchor="middle" font-size="13" fill="#475569">Dart'ga qaytib keladi</text>
+
+  <!-- Bridge -->
+  <rect x="350" y="190" width="100" height="110" rx="12" fill="#6366f1"/>
+  <text x="400" y="230" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">Ko'prik</text>
+  <text x="400" y="252" text-anchor="middle" font-size="13" fill="#e0e7ff">(channel)</text>
+  <text x="400" y="276" text-anchor="middle" font-size="13" fill="#e0e7ff">xabar</text>
+
+  <!-- request arrow -->
+  <line x1="298" y1="205" x2="350" y2="220" stroke="#027dfd" stroke-width="3" marker-end="url(#fl28cA)"/>
+  <text x="324" y="196" text-anchor="middle" font-size="13" font-weight="700" fill="#027dfd">so'rov →</text>
+  <!-- response arrow -->
+  <line x1="350" y1="280" x2="298" y2="320" stroke="#16a34a" stroke-width="3" marker-end="url(#fl28cB)"/>
+  <text x="326" y="312" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a">← javob</text>
+
+  <!-- Native side -->
+  <rect x="480" y="100" width="280" height="290" rx="16" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="620" y="130" text-anchor="middle" font-size="16" font-weight="700" fill="#1e293b">Native tomoni (platforma)</text>
+
+  <rect x="502" y="150" width="236" height="90" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="620" y="178" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Android — Kotlin</text>
+  <text x="620" y="202" text-anchor="middle" font-size="13" fill="#475569">BatteryManager dan</text>
+  <text x="620" y="222" text-anchor="middle" font-size="13" fill="#475569">zaryad darajasini o'qiydi</text>
+
+  <rect x="502" y="252" width="236" height="90" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="620" y="280" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">iOS — Swift</text>
+  <text x="620" y="304" text-anchor="middle" font-size="13" fill="#475569">UIDevice.batteryLevel</text>
+  <text x="620" y="324" text-anchor="middle" font-size="13" fill="#475569">dan o'qiydi</text>
+
+  <!-- bridge to native -->
+  <line x1="450" y1="220" x2="500" y2="195" stroke="#027dfd" stroke-width="3" marker-end="url(#fl28cA)"/>
+  <line x1="500" y1="297" x2="450" y2="270" stroke="#16a34a" stroke-width="3" marker-end="url(#fl28cB)"/>
+
+  <rect x="40" y="410" width="720" height="40" rx="10" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="400" y="435" text-anchor="middle" font-size="13" fill="#0553b1">Kanal nomi ('app/battery') ikki tomonda bir xil bo'lishi shart. Ko'pchilik vaziyatda tayyor paket bor — channel kamdan-kam kerak.</text>
+</svg>

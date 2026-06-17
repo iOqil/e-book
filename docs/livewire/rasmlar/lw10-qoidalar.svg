@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Keng ishlatiladigan validatsiya qoidalari jadvali: required, min, max, email, numeric, confirmed, same, unique, in va boshqalar vazifasi bilan</title>
+  <rect x="0" y="0" width="760" height="480" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Eng ko'p ishlatiladigan qoidalar</text>
+  <text x="380" y="58" text-anchor="middle" font-size="14" fill="#475569">Qoidalarni | (vertikal chiziq) bilan ulang: 'required|min:3|max:255'</text>
+
+  <!-- jadval ramkasi -->
+  <rect x="30" y="78" width="700" height="386" rx="12" fill="#ffffff" stroke="#c7d2fe" stroke-width="2"/>
+
+  <!-- sarlavha qatori -->
+  <rect x="30" y="78" width="700" height="38" rx="12" fill="#eef2ff"/>
+  <rect x="30" y="100" width="700" height="16" fill="#eef2ff"/>
+  <text x="56" y="103" font-size="14" font-weight="700" fill="#4f46e5">Qoida</text>
+  <text x="270" y="103" font-size="14" font-weight="700" fill="#4f46e5">Vazifasi</text>
+  <text x="600" y="103" font-size="14" font-weight="700" fill="#4f46e5">Misol</text>
+  <line x1="30" y1="116" x2="730" y2="116" stroke="#c7d2fe" stroke-width="1.5"/>
+
+  <!-- qatorlar -->
+  <!-- 1 required -->
+  <text x="56" y="143" font-size="13" font-weight="700" fill="#1e293b">required</text>
+  <text x="270" y="143" font-size="13" fill="#475569">Maydon bo'sh bo'lmasin</text>
+  <text x="600" y="143" font-size="13" fill="#16a34a">'required'</text>
+  <line x1="46" y1="156" x2="714" y2="156" stroke="#f1f5f9" stroke-width="1.5"/>
+
+  <!-- 2 min:n -->
+  <text x="56" y="181" font-size="13" font-weight="700" fill="#1e293b">min:n</text>
+  <text x="270" y="181" font-size="13" fill="#475569">Kamida n belgi yoki qiymat</text>
+  <text x="600" y="181" font-size="13" fill="#16a34a">'min:3'</text>
+  <line x1="46" y1="194" x2="714" y2="194" stroke="#f1f5f9" stroke-width="1.5"/>
+
+  <!-- 3 max:n -->
+  <text x="56" y="219" font-size="13" font-weight="700" fill="#1e293b">max:n</text>
+  <text x="270" y="219" font-size="13" fill="#475569">Ko'pi bilan n belgi yoki qiymat</text>
+  <text x="600" y="219" font-size="13" fill="#16a34a">'max:255'</text>
+  <line x1="46" y1="232" x2="714" y2="232" stroke="#f1f5f9" stroke-width="1.5"/>
+
+  <!-- 4 email -->
+  <text x="56" y="257" font-size="13" font-weight="700" fill="#1e293b">email</text>
+  <text x="270" y="257" font-size="13" fill="#475569">To'g'ri email formati</text>
+  <text x="600" y="257" font-size="13" fill="#16a34a">'required|email'</text>
+  <line x1="46" y1="270" x2="714" y2="270" stroke="#f1f5f9" stroke-width="1.5"/>
+
+  <!-- 5 numeric/integer -->
+  <text x="56" y="295" font-size="13" font-weight="700" fill="#1e293b">numeric</text>
+  <text x="270" y="295" font-size="13" fill="#475569">Faqat son (integer = butun son)</text>
+  <text x="600" y="295" font-size="13" fill="#16a34a">'numeric|min:0'</text>
+  <line x1="46" y1="308" x2="714" y2="308" stroke="#f1f5f9" stroke-width="1.5"/>
+
+  <!-- 6 confirmed -->
+  <text x="56" y="333" font-size="13" font-weight="700" fill="#1e293b">confirmed</text>
+  <text x="270" y="333" font-size="13" fill="#475569">_confirmation sherigiga mos</text>
+  <text x="600" y="333" font-size="13" fill="#16a34a">'confirmed'</text>
+  <line x1="46" y1="346" x2="714" y2="346" stroke="#f1f5f9" stroke-width="1.5"/>
+
+  <!-- 7 same -->
+  <text x="56" y="371" font-size="13" font-weight="700" fill="#1e293b">same:field</text>
+  <text x="270" y="371" font-size="13" fill="#475569">Boshqa maydonga teng bo'lsin</text>
+  <text x="600" y="371" font-size="13" fill="#16a34a">'same:password'</text>
+  <line x1="46" y1="384" x2="714" y2="384" stroke="#f1f5f9" stroke-width="1.5"/>
+
+  <!-- 8 unique -->
+  <text x="56" y="409" font-size="13" font-weight="700" fill="#1e293b">unique:jadval</text>
+  <text x="270" y="409" font-size="13" fill="#475569">Bazada takrorlanmasin (noyob)</text>
+  <text x="600" y="409" font-size="13" fill="#16a34a">'unique:users,email'</text>
+  <line x1="46" y1="422" x2="714" y2="422" stroke="#f1f5f9" stroke-width="1.5"/>
+
+  <!-- 9 in -->
+  <text x="56" y="447" font-size="13" font-weight="700" fill="#1e293b">in:a,b,c</text>
+  <text x="270" y="447" font-size="13" fill="#475569">Ruxsat etilgan qiymatlardan biri</text>
+  <text x="600" y="447" font-size="13" fill="#16a34a">'in:erkak,ayol'</text>
+</svg>

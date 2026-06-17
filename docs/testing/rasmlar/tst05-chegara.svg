@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 360">
+  <title>Chegara qiymatlari: sinflar tutashgan nuqtalarning ikki tomonidagi qiymatlar sinaladi</title>
+  <rect x="0" y="0" width="820" height="360" fill="#f8fafc"/>
+  <text x="410" y="40" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Chegara qiymatlari</text>
+  <text x="410" y="66" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Xatolar chegarada yashaydi — har tutashish nuqtasining ikki tomonini sinang</text>
+
+  <!-- number line -->
+  <line x1="80" y1="180" x2="740" y2="180" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="740,180 730,174 730,186" fill="#94a3b8"/>
+  <text x="752" y="184" text-anchor="start" font-family="Segoe UI" font-size="13" fill="#64748b">yosh</text>
+
+  <!-- boundary 17/18 -->
+  <circle cx="300" cy="180" r="9" fill="#f59e0b" stroke="#b45309" stroke-width="2"/>
+  <circle cx="360" cy="180" r="9" fill="#f59e0b" stroke="#b45309" stroke-width="2"/>
+  <text x="300" y="155" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">17</text>
+  <text x="360" y="155" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">18</text>
+  <text x="330" y="225" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">0% | 10% chegarasi</text>
+
+  <!-- boundary 64/65 -->
+  <circle cx="520" cy="180" r="9" fill="#f59e0b" stroke="#b45309" stroke-width="2"/>
+  <circle cx="580" cy="180" r="9" fill="#dc2626" stroke="#991b1b" stroke-width="2"/>
+  <text x="520" y="155" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">64</text>
+  <text x="580" y="155" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">65</text>
+  <text x="550" y="225" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">10% | 20% chegarasi</text>
+
+  <!-- the off-by-one callout -->
+  <rect x="430" y="260" width="320" height="70" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="590" y="286" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">Off-by-one tuzog'i</text>
+  <text x="590" y="308" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">&gt; 65 (xato) -&gt; 65 yosh 20% emas, 10% oladi</text>
+  <text x="590" y="324" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">to'g'risi: &gt;= 65</text>
+  <line x1="580" y1="192" x2="590" y2="258" stroke="#dc2626" stroke-width="2" stroke-dasharray="4 3"/>
+
+  <!-- legend -->
+  <circle cx="110" cy="290" r="9" fill="#f59e0b" stroke="#b45309" stroke-width="2"/>
+  <text x="128" y="294" text-anchor="start" font-family="Segoe UI" font-size="13" fill="#64748b">chegara qiymati (sinaladi)</text>
+  <text x="110" y="320" text-anchor="start" font-family="Segoe UI" font-size="13" fill="#64748b">+ bo'sh, bitta element, 0, max, max+1</text>
+</svg>

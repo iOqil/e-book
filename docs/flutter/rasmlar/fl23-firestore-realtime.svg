@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 430" width="800" height="430" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Serverda Firestore kolleksiyasi o'zgaradi, .snapshots() oqimi yangilanishni qurilmaga itaradi, StreamBuilder ro'yxatni jonli qayta chizadi — qo'lda yangilashsiz real-vaqt chat</title>
+  <defs>
+    <marker id="fl23frA" markerWidth="12" markerHeight="12" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#9333ea"/>
+    </marker>
+    <marker id="fl23frB" markerWidth="12" markerHeight="12" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="800" height="430" fill="#f8fafc"/>
+
+  <text x="400" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">Firestore .snapshots() → jonli chat ro'yxati</text>
+  <text x="400" y="56" text-anchor="middle" font-size="14" fill="#475569">server o'zgaradi → oqim itaradi → UI o'zini yangilaydi (qo'lda emas)</text>
+
+  <!-- 1. Server: Firestore kolleksiya -->
+  <rect x="36" y="110" width="190" height="200" rx="14" fill="#ffffff" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="131" y="138" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e293b">Firestore (server)</text>
+  <text x="131" y="158" text-anchor="middle" font-size="13" fill="#64748b">collection('messages')</text>
+
+  <rect x="56" y="174" width="150" height="30" rx="6" fill="#fef3c7"/>
+  <text x="131" y="194" text-anchor="middle" font-size="13" fill="#1e293b">"Salom"</text>
+  <rect x="56" y="210" width="150" height="30" rx="6" fill="#fef3c7"/>
+  <text x="131" y="230" text-anchor="middle" font-size="13" fill="#1e293b">"Qalaysiz?"</text>
+  <rect x="56" y="246" width="150" height="30" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="131" y="266" text-anchor="middle" font-size="13" font-weight="bold" fill="#16a34a">"Yangi xabar" +</text>
+  <text x="131" y="296" text-anchor="middle" font-size="13" fill="#16a34a">boshqa qurilma add() qildi</text>
+
+  <!-- arrow 1: snapshots oqimi itaradi -->
+  <line x1="226" y1="210" x2="318" y2="210" stroke="#9333ea" stroke-width="2.5" marker-end="url(#fl23frA)"/>
+  <text x="272" y="194" text-anchor="middle" font-size="13" font-weight="bold" fill="#9333ea">.snapshots()</text>
+  <text x="272" y="232" text-anchor="middle" font-size="13" fill="#9333ea">Stream itaradi</text>
+
+  <!-- 2. StreamBuilder -->
+  <rect x="322" y="150" width="170" height="120" rx="12" fill="#e0e7ff" stroke="#6366f1" stroke-width="2.5"/>
+  <text x="407" y="182" text-anchor="middle" font-size="15" font-weight="bold" fill="#6366f1">StreamBuilder</text>
+  <text x="407" y="206" text-anchor="middle" font-size="13" fill="#1e293b">&lt;QuerySnapshot&gt;</text>
+  <text x="407" y="230" text-anchor="middle" font-size="13" fill="#475569">yangi snapshot →</text>
+  <text x="407" y="250" text-anchor="middle" font-size="13" fill="#475569">ListView qayta chiziladi</text>
+
+  <!-- arrow 2: UI -->
+  <line x1="492" y1="210" x2="566" y2="210" stroke="#475569" stroke-width="2" marker-end="url(#fl23frB)"/>
+
+  <!-- 3. Qurilma ekran (telefon) -->
+  <rect x="570" y="96" width="190" height="290" rx="22" fill="#ffffff" stroke="#1e293b" stroke-width="2.5"/>
+  <rect x="586" y="116" width="158" height="30" rx="6" fill="#027dfd"/>
+  <text x="665" y="136" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">Chat</text>
+
+  <rect x="586" y="156" width="158" height="34" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+  <text x="665" y="178" text-anchor="middle" font-size="13" fill="#1e293b">Salom</text>
+  <rect x="586" y="196" width="158" height="34" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+  <text x="665" y="218" text-anchor="middle" font-size="13" fill="#1e293b">Qalaysiz?</text>
+  <rect x="586" y="236" width="158" height="34" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="665" y="258" text-anchor="middle" font-size="13" font-weight="bold" fill="#16a34a">Yangi xabar</text>
+
+  <text x="665" y="300" text-anchor="middle" font-size="13" font-weight="bold" fill="#16a34a">LIVE yangilandi</text>
+  <text x="665" y="322" text-anchor="middle" font-size="13" fill="#475569">"yangilash" tugmasi</text>
+  <text x="665" y="340" text-anchor="middle" font-size="13" fill="#475569">bosilmadi</text>
+
+  <!-- pastki xulosa -->
+  <rect x="36" y="350" width="456" height="56" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="264" y="376" text-anchor="middle" font-size="14" font-weight="bold" fill="#16a34a">Real-vaqt reaktiv zanjir</text>
+  <text x="264" y="396" text-anchor="middle" font-size="13" fill="#1e293b">server o'zgardi → oqim → StreamBuilder → UI jonli yangilandi</text>
+</svg>

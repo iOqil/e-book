@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 460" width="780" height="460" font-family="Segoe UI, system-ui, sans-serif">
+  <title>space-y va gap farqi: space-y bolalar orasiga margin qo'shadi (birinchisida yo'q), gap esa elementlar orasida bir tekis bo'shliq beradi</title>
+  <rect x="0" y="0" width="780" height="460" fill="#f8fafc"/>
+
+  <text x="390" y="36" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">space-y-4  va  gap-4 — farqi nimada?</text>
+
+  <!-- LEFT: space-y-4 -->
+  <text x="190" y="74" text-anchor="middle" font-size="16" font-weight="bold" fill="#4f46e5">space-y-4</text>
+  <text x="190" y="94" text-anchor="middle" font-size="13" fill="#64748b">bolalar orasiga margin-top qo'yiladi</text>
+
+  <rect x="60" y="108" width="260" height="300" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+
+  <!-- item 1: no margin -->
+  <rect x="80" y="124" width="220" height="48" rx="6" fill="#eef2ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="190" y="153" text-anchor="middle" font-size="14" fill="#4f46e5">1-bola</text>
+  <!-- gap label 1 (no margin) -->
+  <text x="334" y="153" font-size="13" fill="#16a34a">margin yo'q</text>
+  <text x="334" y="170" font-size="13" fill="#64748b">(birinchisi)</text>
+
+  <!-- margin band 1 -->
+  <rect x="80" y="172" width="220" height="20" fill="#fde68a" opacity="0.55"/>
+  <text x="190" y="186" text-anchor="middle" font-size="13" fill="#b45309">mt-4 (1rem)</text>
+
+  <!-- item 2 -->
+  <rect x="80" y="192" width="220" height="48" rx="6" fill="#eef2ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="190" y="221" text-anchor="middle" font-size="14" fill="#4f46e5">2-bola</text>
+
+  <!-- margin band 2 -->
+  <rect x="80" y="240" width="220" height="20" fill="#fde68a" opacity="0.55"/>
+  <text x="190" y="254" text-anchor="middle" font-size="13" fill="#b45309">mt-4 (1rem)</text>
+
+  <!-- item 3 -->
+  <rect x="80" y="260" width="220" height="48" rx="6" fill="#eef2ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="190" y="289" text-anchor="middle" font-size="14" fill="#4f46e5">3-bola</text>
+
+  <!-- margin band 3 -->
+  <rect x="80" y="308" width="220" height="20" fill="#fde68a" opacity="0.55"/>
+  <text x="190" y="322" text-anchor="middle" font-size="13" fill="#b45309">mt-4 (1rem)</text>
+
+  <!-- item 4 -->
+  <rect x="80" y="328" width="220" height="48" rx="6" fill="#eef2ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="190" y="357" text-anchor="middle" font-size="14" fill="#4f46e5">4-bola</text>
+
+  <text x="190" y="398" text-anchor="middle" font-size="13" fill="#16a34a">sariq = qo'shilgan margin (faqat orasida)</text>
+
+  <!-- RIGHT: gap-4 -->
+  <text x="590" y="74" text-anchor="middle" font-size="16" font-weight="bold" fill="#16a34a">gap-4 (flex flex-col)</text>
+  <text x="590" y="94" text-anchor="middle" font-size="13" fill="#64748b">konteyner bo'shliqlarni o'zi taqsimlaydi</text>
+
+  <rect x="460" y="108" width="260" height="300" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="1.5" stroke-dasharray="6 4"/>
+
+  <rect x="480" y="124" width="220" height="48" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="590" y="153" text-anchor="middle" font-size="14" fill="#16a34a">1-bola</text>
+
+  <rect x="480" y="192" width="220" height="48" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="590" y="221" text-anchor="middle" font-size="14" fill="#16a34a">2-bola</text>
+
+  <rect x="480" y="260" width="220" height="48" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="590" y="289" text-anchor="middle" font-size="14" fill="#16a34a">3-bola</text>
+
+  <rect x="480" y="328" width="220" height="48" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="590" y="357" text-anchor="middle" font-size="14" fill="#16a34a">4-bola</text>
+
+  <!-- gap brackets -->
+  <line x1="590" y1="172" x2="590" y2="192" stroke="#0ea5e9" stroke-width="2"/>
+  <line x1="590" y1="240" x2="590" y2="260" stroke="#0ea5e9" stroke-width="2"/>
+  <line x1="590" y1="308" x2="590" y2="328" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="640" y="187" font-size="13" fill="#0ea5e9">gap</text>
+  <text x="640" y="255" font-size="13" fill="#0ea5e9">gap</text>
+  <text x="640" y="323" font-size="13" fill="#0ea5e9">gap</text>
+
+  <text x="590" y="398" text-anchor="middle" font-size="13" fill="#16a34a">hech bir bolada margin yo'q — toza</text>
+
+  <line x1="60" y1="424" x2="720" y2="424" stroke="#94a3b8" stroke-width="1" stroke-dasharray="5 4"/>
+  <text x="390" y="448" text-anchor="middle" font-size="14" fill="#475569">Tavsiya: flex/grid ichida gap, oddiy block taxlamada space-y</text>
+</svg>

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 420" width="860" height="420">
+  <title>i18n oqimi: __() o'ralgan string -> make-pot -> .po tarjima -> .mo -> ko'rsatish</title>
+  <rect x="0" y="0" width="860" height="420" fill="#f8fafc"/>
+  <text x="430" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">i18n tarjima oqimi: koddan ekrangacha</text>
+
+  <!-- 1. Source -->
+  <rect x="30" y="70" width="200" height="110" rx="8" fill="#e2e8f0" stroke="#2563eb" stroke-width="2"/>
+  <text x="130" y="95" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">1. Manba kod (.php)</text>
+  <text x="130" y="122" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">String __() ga o'ralgan:</text>
+  <rect x="48" y="134" width="164" height="32" rx="4" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="130" y="155" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">__('Salom','mytheme')</text>
+
+  <!-- arrow 1 -->
+  <line x1="234" y1="125" x2="298" y2="125" stroke="#475569" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="266" y="115" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#d97706">make-pot</text>
+
+  <!-- 2. POT -->
+  <rect x="300" y="70" width="200" height="110" rx="8" fill="#e2e8f0" stroke="#d97706" stroke-width="2"/>
+  <text x="400" y="95" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">2. .pot (shablon)</text>
+  <text x="400" y="120" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Barcha matnlar ro'yxati,</text>
+  <text x="400" y="140" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">tarjimasiz:</text>
+  <text x="400" y="164" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">msgstr "" (bo'sh)</text>
+
+  <!-- arrow 2 -->
+  <line x1="504" y1="125" x2="568" y2="125" stroke="#475569" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="536" y="115" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#d97706">tarjimon</text>
+
+  <!-- 3. PO -->
+  <rect x="570" y="70" width="200" height="110" rx="8" fill="#e2e8f0" stroke="#16a34a" stroke-width="2"/>
+  <text x="670" y="95" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">3. .po (tarjima)</text>
+  <text x="670" y="120" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Til uchun to'ldirilgan:</text>
+  <text x="670" y="146" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">msgstr "Salom" (uz)</text>
+  <text x="670" y="166" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tahrirlanadigan matn</text>
+
+  <!-- arrow down from PO to MO -->
+  <line x1="670" y1="184" x2="670" y2="240" stroke="#475569" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="700" y="216" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#d97706">make-mo</text>
+
+  <!-- 4. MO -->
+  <rect x="570" y="244" width="200" height="96" rx="8" fill="#2563eb" stroke="#1e293b" stroke-width="2"/>
+  <text x="670" y="270" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">4. .mo (binar)</text>
+  <text x="670" y="295" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#e2e8f0">WordPress o'qiydigan</text>
+  <text x="670" y="315" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#e2e8f0">tez format</text>
+
+  <!-- arrow left from MO to render -->
+  <line x1="566" y1="292" x2="502" y2="292" stroke="#475569" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="534" y="282" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#d97706">load</text>
+
+  <!-- 5. Render -->
+  <rect x="270" y="244" width="232" height="96" rx="8" fill="#e2e8f0" stroke="#16a34a" stroke-width="2"/>
+  <text x="386" y="270" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">5. Sahifada ko'rsatish</text>
+  <text x="386" y="296" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">__() o'rniga tarjima qaytadi:</text>
+  <text x="386" y="320" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">"Salom" (mos tilda)</text>
+
+  <!-- note -->
+  <rect x="30" y="360" width="800" height="44" rx="6" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="430" y="378" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Eslatma: text domain string LITERAL bo'lishi shart ('mytheme'), o'zgaruvchi EMAS — aks holda make-pot matnni topolmaydi.</text>
+  <text x="430" y="396" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">load_theme_textdomain() yoki wordpress.org temalari uchun WP 4.6+ avtomatik yuklaydi.</text>
+
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+</svg>

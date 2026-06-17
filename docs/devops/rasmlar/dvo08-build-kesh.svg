@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440">
+  <title>Kod o'zgarganda ikki build tartibi yonma-yon: to'g'ri tartibda npm ci layeri keshda qoladi, noto'g'ri tartibda esa npm ci qaytadan quriladi</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Build kesh: faqat kod o'zgardi</text>
+  <text x="380" y="54" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">Bir xil o'zgarish, ikki Dockerfile tartibi &#8212; natija juda farq qiladi</text>
+
+  <!-- LEFT: correct order -->
+  <rect x="28" y="72" width="344" height="336" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="200" y="98" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">To'g'ri tartib</text>
+
+  <rect x="48" y="114" width="304" height="40" rx="7" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="60" y="139" font-family="Consolas, monospace" font-size="13" fill="#1e293b">COPY package*.json ./</text>
+  <text x="338" y="139" text-anchor="end" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">CACHED</text>
+
+  <rect x="48" y="160" width="304" height="40" rx="7" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="60" y="185" font-family="Consolas, monospace" font-size="13" fill="#1e293b">RUN npm ci</text>
+  <text x="338" y="185" text-anchor="end" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">CACHED</text>
+
+  <rect x="48" y="206" width="304" height="40" rx="7" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="60" y="231" font-family="Consolas, monospace" font-size="13" fill="#1e293b">COPY . .</text>
+  <text x="338" y="231" text-anchor="end" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#2563eb">qayta</text>
+
+  <rect x="48" y="262" width="304" height="60" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="200" y="288" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">Bog'liqlik o'zgarmadi &#8594;</text>
+  <text x="200" y="308" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#16a34a">npm ci keshdan olinadi</text>
+
+  <text x="200" y="350" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="22" fill="#16a34a">&#9201; soniyalar</text>
+  <text x="200" y="384" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">faqat kod layeri qayta quriladi</text>
+
+  <!-- RIGHT: wrong order -->
+  <rect x="388" y="72" width="344" height="336" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="560" y="98" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">Noto'g'ri tartib</text>
+
+  <rect x="408" y="114" width="304" height="40" rx="7" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="420" y="139" font-family="Consolas, monospace" font-size="13" fill="#1e293b">COPY . .</text>
+  <text x="698" y="139" text-anchor="end" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626">qayta</text>
+
+  <rect x="408" y="160" width="304" height="40" rx="7" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="420" y="185" font-family="Consolas, monospace" font-size="13" fill="#1e293b">RUN npm ci</text>
+  <text x="698" y="185" text-anchor="end" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626">qayta!</text>
+
+  <rect x="408" y="262" width="304" height="60" rx="8" fill="#ffffff" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="560" y="288" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">Kod kontekstda &#8594; COPY keshi</text>
+  <text x="560" y="308" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#dc2626">buzildi &#8594; npm ci qaytadan</text>
+
+  <text x="560" y="350" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="22" fill="#dc2626">&#9201; o'nlab soniya</text>
+  <text x="560" y="384" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">bog'liqliklar har safar qayta o'rnatiladi</text>
+
+  <text x="380" y="428" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Saboq: kam o'zgaradigan bog'liqlikni yuqoriga, tez o'zgaradigan kodni pastga qo'ying</text>
+</svg>

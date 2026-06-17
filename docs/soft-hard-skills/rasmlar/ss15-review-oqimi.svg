@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 360">
+  <title>Code review oqimi: PR ochishdan merge gacha</title>
+  <rect x="0" y="0" width="860" height="360" fill="#f8fafc"/>
+  <text x="430" y="38" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Code review oqimi</text>
+  <text x="430" y="62" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Author va reviewer birgalikda kod sifatini ko'taradi</text>
+
+  <!-- Step 1 -->
+  <rect x="30" y="110" width="150" height="90" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="105" y="148" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb">1. Author</text>
+  <text x="105" y="172" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">Kichik PR + aniq</text>
+  <text x="105" y="190" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">tavsif ochadi</text>
+
+  <!-- Step 2 -->
+  <rect x="215" y="110" width="150" height="90" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="290" y="148" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#7c3aed">2. Reviewer</text>
+  <text x="290" y="172" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">O'qiydi, mehribon</text>
+  <text x="290" y="190" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">izoh qoldiradi</text>
+
+  <!-- Step 3 -->
+  <rect x="400" y="110" width="150" height="90" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="475" y="148" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#b45309">3. Muhokama</text>
+  <text x="475" y="172" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">Savol, javob,</text>
+  <text x="475" y="190" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">kelishuv</text>
+
+  <!-- Step 4 -->
+  <rect x="585" y="110" width="150" height="90" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="660" y="148" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb">4. Tuzatish</text>
+  <text x="660" y="172" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">Author yangilaydi</text>
+  <text x="660" y="190" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">yoki tushuntiradi</text>
+
+  <!-- Step 5 -->
+  <rect x="685" y="245" width="150" height="80" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="760" y="280" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a">5. Approve</text>
+  <text x="760" y="304" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">va merge</text>
+
+  <!-- Arrows -->
+  <line x1="180" y1="155" x2="213" y2="155" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="365" y1="155" x2="398" y2="155" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="550" y1="155" x2="583" y2="155" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="660" y1="200" x2="660" y2="265" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="683" y1="285" x2="660" y2="285" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- Loop back arrow: tuzatish -> reviewer -->
+  <path d="M 660 110 L 660 88 L 290 88 L 290 108" fill="none" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#a)"/>
+  <text x="475" y="82" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">kerak bo'lsa qayta ko'rib chiqish</text>
+
+  <defs>
+    <marker id="a" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+</svg>

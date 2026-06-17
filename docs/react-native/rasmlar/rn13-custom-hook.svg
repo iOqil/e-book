@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" width="760" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Takroriy mantiq uch komponentda bitta custom hookka ajratiladi</title>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Takroriy mantiqni custom hookka ajratish</text>
+
+  <!-- AVVAL -->
+  <text x="190" y="74" text-anchor="middle" font-size="16" font-weight="700" fill="#dc2626">AVVAL: kod takrorlanadi</text>
+
+  <!-- 3 komponent -->
+  <g>
+    <rect x="60" y="92" width="260" height="74" rx="10" fill="#ffffff" stroke="#fca5a5" stroke-width="2"/>
+    <text x="76" y="116" font-size="14" font-weight="700" fill="#1e293b">ProfilEkrani</text>
+    <text x="76" y="138" font-size="13" fill="#475569">const [v, setV] = useState(false)</text>
+    <text x="76" y="157" font-size="13" fill="#475569">const toggle = () =&gt; setV(!v)</text>
+  </g>
+  <g>
+    <rect x="60" y="176" width="260" height="74" rx="10" fill="#ffffff" stroke="#fca5a5" stroke-width="2"/>
+    <text x="76" y="200" font-size="14" font-weight="700" fill="#1e293b">TafsilotEkrani</text>
+    <text x="76" y="222" font-size="13" fill="#475569">const [v, setV] = useState(false)</text>
+    <text x="76" y="241" font-size="13" fill="#475569">const toggle = () =&gt; setV(!v)</text>
+  </g>
+  <g>
+    <rect x="60" y="260" width="260" height="74" rx="10" fill="#ffffff" stroke="#fca5a5" stroke-width="2"/>
+    <text x="76" y="284" font-size="14" font-weight="700" fill="#1e293b">TunRejimEkrani</text>
+    <text x="76" y="306" font-size="13" fill="#475569">const [v, setV] = useState(false)</text>
+    <text x="76" y="325" font-size="13" fill="#475569">const toggle = () =&gt; setV(!v)</text>
+  </g>
+
+  <text x="190" y="362" text-anchor="middle" font-size="13" fill="#dc2626">Bir xil kod 3 marta — DRY buzilgan</text>
+
+  <!-- strelka -->
+  <g>
+    <line x1="340" y1="213" x2="430" y2="213" stroke="#94a3b8" stroke-width="3"/>
+    <polygon points="430,206 446,213 430,220" fill="#94a3b8"/>
+    <text x="393" y="200" text-anchor="middle" font-size="14" font-weight="700" fill="#475569">ajratamiz</text>
+  </g>
+
+  <!-- KEYIN: custom hook -->
+  <text x="595" y="74" text-anchor="middle" font-size="16" font-weight="700" fill="#16a34a">KEYIN: bitta custom hook</text>
+  <rect x="460" y="92" width="270" height="120" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="595" y="120" text-anchor="middle" font-size="16" font-weight="700" fill="#0ea5e9">useToggle()</text>
+  <line x1="476" y1="132" x2="714" y2="132" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="476" y="156" font-size="13" fill="#475569">const [v, setV] = useState(false)</text>
+  <text x="476" y="178" font-size="13" fill="#475569">const toggle = () =&gt; setV(!v)</text>
+  <text x="476" y="200" font-size="13" fill="#16a34a">return [v, toggle]</text>
+
+  <!-- qayta ishlatish -->
+  <g>
+    <line x1="595" y1="212" x2="595" y2="248" stroke="#16a34a" stroke-width="2.5"/>
+    <polygon points="588,248 595,262 602,248" fill="#16a34a"/>
+  </g>
+  <rect x="468" y="266" width="254" height="56" rx="10" fill="#ecfdf5" stroke="#16a34a" stroke-width="2"/>
+  <text x="595" y="290" text-anchor="middle" font-size="13" fill="#1e293b">useToggle() — har uch ekranda</text>
+  <text x="595" y="310" text-anchor="middle" font-size="13" fill="#475569">bir marta yozildi, ko'p marta ishlatiladi</text>
+
+  <text x="595" y="362" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a">DRY · toza komponent · oson test</text>
+
+  <!-- pastki izoh -->
+  <rect x="60" y="392" width="640" height="56" rx="10" fill="#eff6ff" stroke="#bae6fd" stroke-width="1.5"/>
+  <text x="380" y="416" text-anchor="middle" font-size="14" fill="#1e293b">Custom hook = "use" bilan boshlanadigan funksiya, ichida hooklar ishlatadi, qiymat qaytaradi</text>
+  <text x="380" y="437" text-anchor="middle" font-size="13" fill="#475569">O'z asbobingizni yasash: kerakli hooklarni bitta qulay funksiyaga jamlash</text>
+</svg>

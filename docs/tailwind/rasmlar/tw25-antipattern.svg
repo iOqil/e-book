@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Tailwind anti-naqshlar va to'g'ri yo'l, juftlangan qatorlar: chap (qizil) ustunda anti-naqshlar — @apply hammasi, arbitrary qiymatlar, dinamik text-color-500, focus o'rniga hech narsa, dark mode'da sof qora; o'ng (yashil) ustunda to'g'ri yo'l — komponent ekstraksiyasi, theme tokenlar, to'liq klass nomlari, focus-visible, slate-900</title>
+  <rect x="0" y="0" width="800" height="500" fill="#f8fafc"/>
+
+  <text x="400" y="38" text-anchor="middle" font-size="21" font-weight="bold" fill="#1e293b">Anti-naqsh  vs  To'g'ri yo'l</text>
+  <text x="400" y="62" text-anchor="middle" font-size="14" fill="#475569">Har bir "shunday qilmang" yonida — "shunday qiling"</text>
+
+  <!-- ustun sarlavhalari -->
+  <rect x="36" y="84" width="350" height="40" rx="10" fill="#ef4444"/>
+  <text x="211" y="110" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">✗ QILMANG (anti-naqsh)</text>
+  <rect x="414" y="84" width="350" height="40" rx="10" fill="#16a34a"/>
+  <text x="589" y="110" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">✓ QILING (to'g'ri yo'l)</text>
+
+  <!-- ROW 1 -->
+  <rect x="36" y="134" width="350" height="58" rx="8" fill="#fee2e2" stroke="#ef4444" stroke-width="1"/>
+  <text x="52" y="159" font-size="14" font-weight="bold" fill="#1e293b">Hamma joyda @apply</text>
+  <text x="52" y="180" font-size="13" fill="#64748b">.btn { @apply ... }</text>
+  <rect x="414" y="134" width="350" height="58" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1"/>
+  <text x="430" y="159" font-size="14" font-weight="bold" fill="#1e293b">Komponent ekstraksiyasi</text>
+  <text x="430" y="180" font-size="13" fill="#475569">&lt;Button variant="primary"&gt;</text>
+  <text x="400" y="167" text-anchor="middle" font-size="16" fill="#94a3b8">→</text>
+
+  <!-- ROW 2 -->
+  <rect x="36" y="198" width="350" height="58" rx="8" fill="#fee2e2" stroke="#ef4444" stroke-width="1"/>
+  <text x="52" y="223" font-size="14" font-weight="bold" fill="#1e293b">Arbitrary qiymatlar sochilgan</text>
+  <text x="52" y="244" font-size="13" fill="#64748b">p-[13px]  text-[#3b7a2e]</text>
+  <rect x="414" y="198" width="350" height="58" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1"/>
+  <text x="430" y="223" font-size="14" font-weight="bold" fill="#1e293b">Theme tokenlaridan tanlang</text>
+  <text x="430" y="244" font-size="13" fill="#475569">p-3  text-primary</text>
+  <text x="400" y="231" text-anchor="middle" font-size="16" fill="#94a3b8">→</text>
+
+  <!-- ROW 3 -->
+  <rect x="36" y="262" width="350" height="58" rx="8" fill="#fee2e2" stroke="#ef4444" stroke-width="1"/>
+  <text x="52" y="287" font-size="14" font-weight="bold" fill="#1e293b">Dinamik klass qatori</text>
+  <text x="52" y="308" font-size="13" fill="#64748b">text-${color}-500</text>
+  <rect x="414" y="262" width="350" height="58" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1"/>
+  <text x="430" y="287" font-size="14" font-weight="bold" fill="#1e293b">To'liq klass nomlari</text>
+  <text x="430" y="308" font-size="13" fill="#475569">RANG[color] = "text-red-500"</text>
+  <text x="400" y="295" text-anchor="middle" font-size="16" fill="#94a3b8">→</text>
+
+  <!-- ROW 4 -->
+  <rect x="36" y="326" width="350" height="58" rx="8" fill="#fee2e2" stroke="#ef4444" stroke-width="1"/>
+  <text x="52" y="351" font-size="14" font-weight="bold" fill="#1e293b">Fokus halqasi yo'q</text>
+  <text x="52" y="372" font-size="13" fill="#64748b">outline-hidden  (hech narsa)</text>
+  <rect x="414" y="326" width="350" height="58" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1"/>
+  <text x="430" y="351" font-size="14" font-weight="bold" fill="#1e293b">focus-visible: har doim</text>
+  <text x="430" y="372" font-size="13" fill="#475569">focus-visible:ring-2</text>
+  <text x="400" y="359" text-anchor="middle" font-size="16" fill="#94a3b8">→</text>
+
+  <!-- ROW 5 -->
+  <rect x="36" y="390" width="350" height="58" rx="8" fill="#fee2e2" stroke="#ef4444" stroke-width="1"/>
+  <text x="52" y="415" font-size="14" font-weight="bold" fill="#1e293b">Dark mode'da sof qora</text>
+  <text x="52" y="436" font-size="13" fill="#64748b">bg-black</text>
+  <rect x="56" y="424" width="18" height="18" rx="3" fill="#000000"/>
+  <rect x="414" y="390" width="350" height="58" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1"/>
+  <text x="430" y="415" font-size="14" font-weight="bold" fill="#1e293b">Yumshoqroq quyuq rang</text>
+  <text x="430" y="436" font-size="13" fill="#475569">bg-slate-900</text>
+  <rect x="540" y="424" width="18" height="18" rx="3" fill="#0f172a"/>
+  <text x="400" y="423" text-anchor="middle" font-size="16" fill="#94a3b8">→</text>
+
+  <!-- pastki izoh -->
+  <text x="400" y="478" text-anchor="middle" font-size="13" fill="#64748b">Qoida: takrorni komponent boshqaradi, dizaynni token, fokusni har doim ko'rsating.</text>
+</svg>

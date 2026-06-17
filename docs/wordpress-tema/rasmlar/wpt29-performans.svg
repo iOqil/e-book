@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 470" width="820" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Performans uch o'qi: shartli enqueue, lazy rasm va transient kesh</title>
+  <rect x="0" y="0" width="820" height="470" fill="#f8fafc"/>
+  <text x="410" y="36" font-size="22" font-weight="bold" fill="#1e293b" text-anchor="middle">Tema performansining uch o'qi</text>
+
+  <!-- O'q 1: Shartli enqueue -->
+  <rect x="24" y="64" width="248" height="378" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <rect x="24" y="64" width="248" height="44" rx="12" fill="#2563eb"/>
+  <text x="148" y="93" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">1. Asset (enqueue)</text>
+
+  <text x="44" y="138" font-size="14" fill="#475569">wp_enqueue_scripts:</text>
+  <rect x="44" y="150" width="208" height="58" rx="6" fill="#e2e8f0"/>
+  <text x="54" y="172" font-size="13" fill="#16a34a">if ( is_front_page() )</text>
+  <text x="54" y="192" font-size="13" fill="#1e293b">  slider.js (defer)</text>
+
+  <rect x="44" y="218" width="208" height="58" rx="6" fill="#e2e8f0"/>
+  <text x="54" y="240" font-size="13" fill="#16a34a">if ( is_page_template )</text>
+  <text x="54" y="260" font-size="13" fill="#1e293b">  kontakt.css</text>
+
+  <rect x="44" y="294" width="208" height="40" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="148" y="312" font-size="13" fill="#dc2626" text-anchor="middle" font-weight="bold">hammasini hamma joyda</text>
+  <text x="148" y="328" font-size="13" fill="#dc2626" text-anchor="middle">= sekin</text>
+
+  <text x="148" y="362" font-size="14" fill="#475569" text-anchor="middle">Faqat KERAKLI sahifada</text>
+  <text x="148" y="384" font-size="14" fill="#475569" text-anchor="middle">+ versiya = kesh-buzish</text>
+  <text x="148" y="406" font-size="14" fill="#475569" text-anchor="middle">+ defer / footer</text>
+
+  <!-- O'q 2: Lazy rasm -->
+  <rect x="286" y="64" width="248" height="378" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <rect x="286" y="64" width="248" height="44" rx="12" fill="#16a34a"/>
+  <text x="410" y="93" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">2. Rasm</text>
+
+  <text x="306" y="138" font-size="14" fill="#475569">add_image_size():</text>
+  <rect x="306" y="150" width="208" height="40" rx="6" fill="#e2e8f0"/>
+  <text x="410" y="175" font-size="13" fill="#1e293b" text-anchor="middle">mos o'lcham (600x400)</text>
+
+  <text x="306" y="216" font-size="14" fill="#475569">the_post_thumbnail():</text>
+  <rect x="306" y="228" width="208" height="80" rx="6" fill="#dcfce7"/>
+  <text x="410" y="252" font-size="13" fill="#16a34a" text-anchor="middle" font-weight="bold">loading="lazy"</text>
+  <text x="410" y="272" font-size="13" fill="#16a34a" text-anchor="middle" font-weight="bold">srcset / sizes</text>
+  <text x="410" y="294" font-size="13" fill="#475569" text-anchor="middle">(WP avtomatik qo'shadi)</text>
+
+  <rect x="306" y="320" width="208" height="40" rx="6" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text x="410" y="338" font-size="13" fill="#d97706" text-anchor="middle" font-weight="bold">LCP rasm: lazy EMAS</text>
+  <text x="410" y="354" font-size="13" fill="#d97706" text-anchor="middle">fetchpriority=high</text>
+
+  <text x="410" y="392" font-size="14" fill="#475569" text-anchor="middle">WebP / SVG (tema rasmi)</text>
+  <text x="410" y="414" font-size="14" fill="#475569" text-anchor="middle">o'lcham atributi -> CLS yo'q</text>
+
+  <!-- O'q 3: Transient kesh -->
+  <rect x="548" y="64" width="248" height="378" rx="12" fill="#ffffff" stroke="#d97706" stroke-width="2"/>
+  <rect x="548" y="64" width="248" height="44" rx="12" fill="#d97706"/>
+  <text x="672" y="93" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">3. Query + kesh</text>
+
+  <rect x="568" y="124" width="208" height="46" rx="6" fill="#e2e8f0"/>
+  <text x="672" y="143" font-size="13" fill="#1e293b" text-anchor="middle">get_transient('kalit')</text>
+  <text x="672" y="161" font-size="13" fill="#94a3b8" text-anchor="middle">bormi?</text>
+
+  <!-- arrow ha -->
+  <text x="600" y="190" font-size="13" fill="#16a34a" font-weight="bold">ha</text>
+  <path d="M610 172 L610 196" stroke="#16a34a" stroke-width="2" marker-end="url(#ar)"/>
+  <rect x="568" y="200" width="98" height="42" rx="6" fill="#dcfce7"/>
+  <text x="617" y="225" font-size="13" fill="#16a34a" text-anchor="middle">keshdan</text>
+
+  <!-- arrow yoq -->
+  <text x="700" y="190" font-size="13" fill="#dc2626" font-weight="bold">yo'q</text>
+  <path d="M730 172 L730 196" stroke="#dc2626" stroke-width="2" marker-end="url(#ar)"/>
+  <rect x="678" y="200" width="98" height="42" rx="6" fill="#fee2e2"/>
+  <text x="727" y="219" font-size="13" fill="#dc2626" text-anchor="middle">WP_Query</text>
+  <text x="727" y="235" font-size="13" fill="#dc2626" text-anchor="middle">(qimmat)</text>
+
+  <path d="M727 242 L727 262" stroke="#475569" stroke-width="2" marker-end="url(#ar)"/>
+  <rect x="568" y="266" width="208" height="40" rx="6" fill="#e2e8f0"/>
+  <text x="672" y="291" font-size="13" fill="#1e293b" text-anchor="middle">set_transient(... 12h)</text>
+
+  <path d="M672 306 L672 324" stroke="#475569" stroke-width="2" marker-end="url(#ar)"/>
+  <rect x="568" y="328" width="208" height="44" rx="6" fill="#dbeafe"/>
+  <text x="672" y="347" font-size="13" fill="#2563eb" text-anchor="middle" font-weight="bold">save_post -></text>
+  <text x="672" y="365" font-size="13" fill="#2563eb" text-anchor="middle">delete_transient (tozalash)</text>
+
+  <text x="672" y="400" font-size="13" fill="#475569" text-anchor="middle">no_found_rows, fields=ids</text>
+  <text x="672" y="420" font-size="13" fill="#475569" text-anchor="middle">pre_get_posts (asosiy so'rov)</text>
+
+  <defs>
+    <marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+      <path d="M0 0 L8 4 L0 8 z" fill="#475569"/>
+    </marker>
+  </defs>
+</svg>

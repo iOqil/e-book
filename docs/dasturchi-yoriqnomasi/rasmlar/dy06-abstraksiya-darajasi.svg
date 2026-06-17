@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 480" font-family="Segoe UI">
+  <title>Aralash abstraksiya darajalari yomon, izchil bitta daraja yaxshi</title>
+  <rect x="0" y="0" width="880" height="480" fill="#f8fafc"/>
+
+  <text x="440" y="36" text-anchor="middle" font-size="22" font-weight="bold" fill="#1e293b">Bitta abstraksiya darajasi qoidasi</text>
+  <text x="440" y="60" text-anchor="middle" font-size="14" fill="#64748b">Bir funksiya ichida "yuqori mantiq" va "mayda detal" aralashmasin</text>
+
+  <!-- BAD: mixed levels -->
+  <rect x="40" y="88" width="380" height="356" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="230" y="118" text-anchor="middle" font-size="18" font-weight="bold" fill="#dc2626">Aralash daraja</text>
+
+  <rect x="64" y="138" width="332" height="48" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="230" y="167" text-anchor="middle" font-size="14" fill="#1e293b">foydalanuvchiniRoyxatdanOtkaz()</text>
+
+  <rect x="64" y="200" width="332" height="42" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="230" y="226" text-anchor="middle" font-size="13" fill="#334155">emailniTekshir()  -- yuqori</text>
+
+  <rect x="64" y="252" width="332" height="42" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="230" y="278" text-anchor="middle" font-size="13" fill="#334155">for (c of email) {...}  -- past detal</text>
+
+  <rect x="64" y="304" width="332" height="42" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="230" y="330" text-anchor="middle" font-size="13" fill="#334155">hisobYarat()  -- yuqori</text>
+
+  <rect x="64" y="356" width="332" height="42" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="230" y="382" text-anchor="middle" font-size="13" fill="#334155">db.query("INSERT...")  -- past detal</text>
+
+  <text x="230" y="424" text-anchor="middle" font-size="13" fill="#dc2626">Ko'z yuqoridan pastga sakraydi, charchaydi</text>
+
+  <!-- GOOD: consistent level -->
+  <rect x="460" y="88" width="380" height="356" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="650" y="118" text-anchor="middle" font-size="18" font-weight="bold" fill="#16a34a">Izchil bitta daraja</text>
+
+  <rect x="484" y="138" width="332" height="48" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="650" y="167" text-anchor="middle" font-size="14" fill="#1e293b">foydalanuvchiniRoyxatdanOtkaz()</text>
+
+  <rect x="484" y="200" width="332" height="42" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="650" y="226" text-anchor="middle" font-size="13" fill="#334155">kiritmaniTasdiqla()</text>
+
+  <rect x="484" y="252" width="332" height="42" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="650" y="278" text-anchor="middle" font-size="13" fill="#334155">hisobniYarat()</text>
+
+  <rect x="484" y="304" width="332" height="42" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="650" y="330" text-anchor="middle" font-size="13" fill="#334155">hisobniSaqla()</text>
+
+  <rect x="484" y="356" width="332" height="42" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="650" y="382" text-anchor="middle" font-size="13" fill="#334155">tasdiqXatiniYubor()</text>
+
+  <text x="650" y="424" text-anchor="middle" font-size="13" fill="#16a34a">Hammasi bir balandlikda, hikoyadek o'qiladi</text>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440">
+  <title>Test piramidasi: pastda ko'p tez unit test, o'rtada o'rtacha integration test, tepada kam sekin e2e test</title>
+
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+
+  <text x="380" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Test piramidasi</text>
+  <text x="380" y="58" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">pastda ko'p va tez, tepada kam va sekin</text>
+
+  <!-- E2E (top, small) -->
+  <polygon points="380,80 300,150 460,150" fill="#fecaca" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="380" y="124" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">e2e</text>
+  <text x="380" y="143" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#7f1d1d">kam</text>
+
+  <!-- Integration (middle) -->
+  <polygon points="300,150 460,150 520,250 240,250" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="380" y="200" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">integration</text>
+  <text x="380" y="224" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">o'rtacha (WP yuklanadi)</text>
+
+  <!-- Unit (bottom, large) -->
+  <polygon points="240,250 520,250 600,380 160,380" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="380" y="305" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#16a34a">unit</text>
+  <text x="380" y="332" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">ko'p, tez, izolyatsiyada</text>
+  <text x="380" y="352" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(WP'siz sof mantiq)</text>
+
+  <!-- Side annotations -->
+  <text x="635" y="120" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626" font-weight="bold">sekin, qimmat</text>
+  <text x="635" y="140" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">mo'rt (brauzer)</text>
+
+  <text x="635" y="320" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" font-weight="bold">tez, arzon</text>
+  <text x="635" y="340" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">mustahkam</text>
+
+  <!-- Arrow showing speed gradient -->
+  <line x1="120" y1="100" x2="120" y2="370" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="120,375 115,363 125,363" fill="#94a3b8"/>
+  <text x="105" y="240" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" transform="rotate(-90 105 240)">tezroq, ko'proq pastga</text>
+
+  <!-- examples -->
+  <text x="380" y="412" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">misol: unit = kitkat_sanitize_isbn() | integration = post_type_exists('kitob') | e2e = blokni saqlash oqimi</text>
+</svg>

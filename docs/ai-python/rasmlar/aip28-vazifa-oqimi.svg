@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Boshdan oxir vazifa oqimi: maqsad -> agent qadamlari (tool chaqiruvlari, inson tasdig'i, log) -> yakuniy hisobot va token/narx</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">Boshdan oxir vazifa oqimi</text>
+
+  <defs>
+    <marker id="a28v-i" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#4f46e5"/>
+    </marker>
+    <marker id="a28v-g" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#16a34a"/>
+    </marker>
+    <marker id="a28v-y" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#b45309"/>
+    </marker>
+  </defs>
+
+  <!-- MAQSAD -->
+  <rect x="30" y="80" width="180" height="120" rx="14" fill="#e0f2fe" stroke="#0ea5e9" stroke-width="2"/>
+  <rect x="30" y="80" width="180" height="34" rx="14" fill="#bae6fd"/>
+  <text x="120" y="103" text-anchor="middle" font-size="15" font-weight="700" fill="#0284c7">Maqsad</text>
+  <text x="120" y="138" text-anchor="middle" font-size="13" fill="#475569">"Eng qimmat 3</text>
+  <text x="120" y="158" text-anchor="middle" font-size="13" fill="#475569">mahsulotni hisobla,</text>
+  <text x="120" y="178" text-anchor="middle" font-size="13" fill="#475569">faylga yoz"</text>
+  <line x1="210" y1="140" x2="252" y2="140" stroke="#0ea5e9" stroke-width="2.5" marker-end="url(#a28v-i)"/>
+
+  <!-- QADAMLAR (agent) -->
+  <rect x="254" y="64" width="270" height="312" rx="14" fill="#ffffff" stroke="#4f46e5" stroke-width="2.5"/>
+  <rect x="254" y="64" width="270" height="34" rx="14" fill="#eef2ff"/>
+  <text x="389" y="87" text-anchor="middle" font-size="15" font-weight="700" fill="#4338ca">Agent qadamlari</text>
+
+  <!-- step 1 -->
+  <rect x="274" y="110" width="230" height="44" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="389" y="130" text-anchor="middle" font-size="13" font-weight="700" fill="#166534">1. kalkulyator: yig'indi</text>
+  <text x="389" y="147" text-anchor="middle" font-size="13" fill="#166534">1200+990+850 = 3040</text>
+  <!-- step 2 -->
+  <rect x="274" y="162" width="230" height="44" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="389" y="182" text-anchor="middle" font-size="13" font-weight="700" fill="#166534">2. kalkulyator: o'rtacha</text>
+  <text x="389" y="199" text-anchor="middle" font-size="13" fill="#166534">3040 / 3 = 1013.33</text>
+  <!-- step 3 with human approval -->
+  <rect x="274" y="214" width="230" height="58" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="389" y="234" text-anchor="middle" font-size="13" font-weight="700" fill="#b45309">3. fayl_yoz: hisobot.txt</text>
+  <text x="389" y="252" text-anchor="middle" font-size="13" fill="#92400e">inson tasdig'i: (ha/yo'q)</text>
+  <text x="389" y="268" text-anchor="middle" font-size="13" fill="#92400e">xavfli tool -> nazorat sizda</text>
+  <!-- log note -->
+  <rect x="274" y="282" width="230" height="34" rx="9" fill="#f1f5f9" stroke="#64748b" stroke-width="1.5"/>
+  <text x="389" y="304" text-anchor="middle" font-size="13" fill="#475569">har qadam agent.log ga yoziladi</text>
+  <!-- limit note -->
+  <text x="389" y="338" text-anchor="middle" font-size="13" fill="#b45309">qadam &lt; maks_qadam (cheksiz loopdan himoya)</text>
+  <text x="389" y="360" text-anchor="middle" font-size="13" fill="#64748b">yo'lni model O'ZI tuzadi</text>
+
+  <line x1="524" y1="180" x2="566" y2="180" stroke="#4f46e5" stroke-width="2.5" marker-end="url(#a28v-i)"/>
+
+  <!-- NATIJA -->
+  <rect x="568" y="92" width="172" height="180" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <rect x="568" y="92" width="172" height="34" rx="14" fill="#dcfce7"/>
+  <text x="654" y="115" text-anchor="middle" font-size="15" font-weight="700" fill="#166534">Yakuniy hisobot</text>
+  <text x="654" y="148" text-anchor="middle" font-size="13" fill="#1e293b">Yig'indi: 3040</text>
+  <text x="654" y="170" text-anchor="middle" font-size="13" fill="#1e293b">O'rtacha: 1013.33</text>
+  <text x="654" y="192" text-anchor="middle" font-size="13" fill="#1e293b">hisobot.txt saqlandi</text>
+  <line x1="588" y1="210" x2="720" y2="210" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="654" y="232" text-anchor="middle" font-size="13" font-weight="700" fill="#b45309">token: 1843</text>
+  <text x="654" y="254" text-anchor="middle" font-size="13" font-weight="700" fill="#b45309">narx: $0.0011</text>
+
+  <!-- bottom summary -->
+  <rect x="30" y="392" width="710" height="34" rx="10" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="385" y="414" text-anchor="middle" font-size="14" font-weight="700" fill="#4338ca">Maqsad -> agent qadamlarni o'zi tuzadi -> har qadam log -> yakuniy hisobot + xarajat</text>
+</svg>

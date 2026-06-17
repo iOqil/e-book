@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Inson-tasdiqlash: agent xavfli amal so'raydi, inson tasdiqlaydi yoki rad etadi</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Inson-tasdiqlash (human-in-the-loop)</text>
+  <text x="380" y="60" text-anchor="middle" font-size="14" fill="#475569">Xavfli amal — inson tasdig'isiz bajarilmaydi</text>
+
+  <defs>
+    <marker id="arr11h" markerWidth="11" markerHeight="11" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 Z" fill="#6366f1"/>
+    </marker>
+    <marker id="arr11g" markerWidth="11" markerHeight="11" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 Z" fill="#16a34a"/>
+    </marker>
+    <marker id="arr11r" markerWidth="11" markerHeight="11" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 Z" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+  <!-- Agent -->
+  <rect x="60" y="180" width="170" height="70" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="145" y="210" text-anchor="middle" font-size="16" font-weight="700" fill="#1e293b">Agent</text>
+  <text x="145" y="232" text-anchor="middle" font-size="13" fill="#475569">tool chaqirmoqchi</text>
+
+  <line x1="230" y1="215" x2="290" y2="215" stroke="#6366f1" stroke-width="2" marker-end="url(#arr11h)"/>
+
+  <!-- Tekshiruv: xavflimi? (romb) -->
+  <polygon points="380,160 470,215 380,270 290,215" fill="#fef9c3" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="380" y="208" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Xavfli</text>
+  <text x="380" y="228" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">amalmi?</text>
+
+  <!-- Xavfsiz -> avtomatik bajar (pastga) -->
+  <line x1="380" y1="270" x2="380" y2="330" stroke="#16a34a" stroke-width="2" marker-end="url(#arr11g)"/>
+  <text x="392" y="300" font-size="13" fill="#16a34a">yo'q (xavfsiz)</text>
+  <rect x="295" y="334" width="170" height="56" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="380" y="358" text-anchor="middle" font-size="14" font-weight="700" fill="#16a34a">Avtomatik bajar</text>
+  <text x="380" y="378" text-anchor="middle" font-size="13" fill="#475569">tasdiq kerak emas</text>
+
+  <!-- Xavfli -> inson tasdig'i (o'ngga) -->
+  <line x1="470" y1="215" x2="540" y2="215" stroke="#6366f1" stroke-width="2" marker-end="url(#arr11h)"/>
+  <text x="505" y="205" text-anchor="middle" font-size="13" fill="#f59e0b">ha</text>
+
+  <!-- Inson tasdig'i -->
+  <rect x="545" y="178" width="170" height="74" rx="12" fill="#ede9fe" stroke="#4f46e5" stroke-width="2.5"/>
+  <text x="630" y="206" text-anchor="middle" font-size="16" font-weight="700" fill="#4f46e5">Inson so'raladi</text>
+  <text x="630" y="228" text-anchor="middle" font-size="13" fill="#475569">"Ruxsat berasizmi?"</text>
+  <text x="630" y="246" text-anchor="middle" font-size="13" fill="#475569">(ha / yo'q)</text>
+
+  <!-- Tasdiq -> bajar (pastga chapdan) -->
+  <line x1="600" y1="252" x2="600" y2="330" stroke="#16a34a" stroke-width="2" marker-end="url(#arr11g)"/>
+  <text x="540" y="295" font-size="13" font-weight="700" fill="#16a34a">HA</text>
+  <rect x="515" y="334" width="170" height="56" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="600" y="358" text-anchor="middle" font-size="14" font-weight="700" fill="#16a34a">Amal bajariladi</text>
+  <text x="600" y="378" text-anchor="middle" font-size="13" fill="#475569">email/to'lov/o'chirish</text>
+
+  <!-- Rad -> to'xtat (o'ngga pastga) -->
+  <line x1="690" y1="252" x2="710" y2="300" stroke="#dc2626" stroke-width="2" marker-end="url(#arr11r)"/>
+  <text x="715" y="290" font-size="13" font-weight="700" fill="#dc2626">YO'Q</text>
+  <rect x="700" y="334" width="56" height="56" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="728" y="360" text-anchor="middle" font-size="13" font-weight="700" fill="#dc2626">Rad</text>
+  <text x="728" y="378" text-anchor="middle" font-size="13" fill="#dc2626">etildi</text>
+
+  <!-- Pastki izoh -->
+  <rect x="40" y="110" width="430" height="34" rx="8" fill="#fde8df" stroke="#d97757" stroke-width="1.5"/>
+  <text x="60" y="132" font-size="13" fill="#475569">Xavfli = qaytarib bo'lmaydigan amal: email, to'lov, o'chirish.</text>
+</svg>

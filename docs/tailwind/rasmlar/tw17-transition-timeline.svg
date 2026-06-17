@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" width="780" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Transition vaqt chizig'i: holat A dan holat B ga duration-200 ease-out davomida silliq o'tish; delay, duration va easing nimani anglatishi</title>
+  <rect x="0" y="0" width="780" height="470" fill="#f8fafc"/>
+
+  <text x="390" y="38" text-anchor="middle" font-size="21" font-weight="bold" fill="#1e293b">Transition = ikki holat orasidagi silliq o'tish</text>
+  <text x="390" y="62" text-anchor="middle" font-size="14" fill="#475569">hover:bg-indigo-700 transition-colors duration-200 ease-out</text>
+
+  <!-- Holat A qutisi -->
+  <rect x="40" y="100" width="150" height="90" rx="10" fill="#6366f1"/>
+  <text x="115" y="138" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">Holat A</text>
+  <text x="115" y="162" text-anchor="middle" font-size="13" fill="#ffffff">bg-indigo-500</text>
+  <text x="115" y="210" text-anchor="middle" font-size="13" fill="#64748b">boshlang'ich (asos)</text>
+
+  <!-- Holat B qutisi -->
+  <rect x="590" y="100" width="150" height="90" rx="10" fill="#4f46e5"/>
+  <text x="665" y="138" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">Holat B</text>
+  <text x="665" y="162" text-anchor="middle" font-size="13" fill="#ffffff">hover:bg-indigo-700</text>
+  <text x="665" y="210" text-anchor="middle" font-size="13" fill="#64748b">trigger (hover:)</text>
+
+  <!-- O'rtadagi o'tish chizig'i -->
+  <line x1="190" y1="145" x2="590" y2="145" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="590,145 576,138 576,152" fill="#94a3b8"/>
+
+  <!-- Easing egri chizig'i (ease-out) -->
+  <rect x="250" y="240" width="280" height="160" rx="10" fill="#ffffff" stroke="#c7d2fe" stroke-width="1.5"/>
+  <text x="390" y="266" text-anchor="middle" font-size="14" font-weight="bold" fill="#4f46e5">ease-out egri chizig'i</text>
+  <!-- o'qlar -->
+  <line x1="285" y1="380" x2="500" y2="380" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="285" y1="380" x2="285" y2="285" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="392" y="398" text-anchor="middle" font-size="13" fill="#64748b">vaqt &#8594;</text>
+  <text x="278" y="300" text-anchor="end" font-size="13" fill="#64748b">B</text>
+  <text x="278" y="378" text-anchor="end" font-size="13" fill="#64748b">A</text>
+  <!-- ease-out: tez boshlanib, sekin tugaydi -->
+  <path d="M 285 380 C 320 300 420 292 500 290" fill="none" stroke="#0ea5e9" stroke-width="3"/>
+  <text x="392" y="335" text-anchor="middle" font-size="13" fill="#0284c7">boshda tez, oxirida sekin</text>
+
+  <!-- Vaqt o'qi: delay + duration -->
+  <text x="390" y="430" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e293b">Vaqt o'qi</text>
+  <line x1="40" y1="448" x2="740" y2="448" stroke="#94a3b8" stroke-width="2"/>
+
+  <!-- delay segmenti -->
+  <line x1="40" y1="440" x2="160" y2="440" stroke="#f59e0b" stroke-width="6"/>
+  <text x="100" y="463" text-anchor="middle" font-size="13" fill="#f59e0b" font-weight="bold">delay-100</text>
+
+  <!-- duration segmenti -->
+  <line x1="160" y1="440" x2="520" y2="440" stroke="#16a34a" stroke-width="6"/>
+  <text x="340" y="463" text-anchor="middle" font-size="13" fill="#16a34a" font-weight="bold">duration-200 (o'tish davomiyligi)</text>
+
+  <!-- tugagan -->
+  <circle cx="520" cy="440" r="6" fill="#4f46e5"/>
+  <text x="640" y="463" text-anchor="middle" font-size="13" fill="#64748b">B ga yetib keldi</text>
+</svg>

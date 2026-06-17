@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560">
+  <title>Rabin-Karp: dumalab keluvchi hash (rolling hash) bilan oyna hashini yangilash</title>
+  <rect x="0" y="0" width="880" height="560" fill="#f8fafc"/>
+  <text x="440" y="34" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Rabin-Karp: dumalab keluvchi hash</text>
+  <text x="440" y="58" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Oyna bir belgi siljiganda hashni O(1) da yangilaymiz, qaytadan hisoblamaymiz</text>
+
+  <!-- text cells -->
+  <text x="60" y="110" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#334155">Matn T:</text>
+  <g font-family="monospace" font-size="18" font-weight="bold">
+    <rect x="150" y="90" width="46" height="44" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/><text x="173" y="119" text-anchor="middle" fill="#1e40af">a</text>
+    <rect x="196" y="90" width="46" height="44" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/><text x="219" y="119" text-anchor="middle" fill="#1e40af">b</text>
+    <rect x="242" y="90" width="46" height="44" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/><text x="265" y="119" text-anchor="middle" fill="#1e40af">c</text>
+    <rect x="288" y="90" width="46" height="44" fill="#ffffff" stroke="#334155" stroke-width="2"/><text x="311" y="119" text-anchor="middle" fill="#1e293b">d</text>
+    <rect x="334" y="90" width="46" height="44" fill="#ffffff" stroke="#334155" stroke-width="2"/><text x="357" y="119" text-anchor="middle" fill="#1e293b">e</text>
+    <rect x="380" y="90" width="46" height="44" fill="#ffffff" stroke="#334155" stroke-width="2"/><text x="403" y="119" text-anchor="middle" fill="#1e293b">f</text>
+  </g>
+
+  <!-- window 1 bracket -->
+  <path d="M150,142 L150,150 L288,150 L288,142" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <text x="219" y="170" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#2563eb">oyna 1: "abc"</text>
+
+  <!-- hash window 1 -->
+  <rect x="470" y="92" width="350" height="80" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="486" y="118" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#2563eb">h("abc") =</text>
+  <text x="486" y="142" font-family="monospace" font-size="13" fill="#334155">a·B² + b·B¹ + c·B⁰   (mod q)</text>
+  <text x="486" y="163" font-family="Segoe UI" font-size="13" fill="#64748b">B = asos (masalan 256), q = katta tub son</text>
+
+  <!-- roll arrow -->
+  <line x1="440" y1="200" x2="440" y2="234" stroke="#f59e0b" stroke-width="3" marker-end="url(#ar2)"/>
+  <defs><marker id="ar2" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#f59e0b"/></marker></defs>
+  <text x="455" y="222" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#b45309">oynani 1 ga siljitamiz</text>
+
+  <!-- text cells again (window 2) -->
+  <text x="60" y="280" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#334155">Matn T:</text>
+  <g font-family="monospace" font-size="18" font-weight="bold">
+    <rect x="150" y="260" width="46" height="44" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/><text x="173" y="289" text-anchor="middle" fill="#dc2626">a</text>
+    <rect x="196" y="260" width="46" height="44" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><text x="219" y="289" text-anchor="middle" fill="#166534">b</text>
+    <rect x="242" y="260" width="46" height="44" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><text x="265" y="289" text-anchor="middle" fill="#166534">c</text>
+    <rect x="288" y="260" width="46" height="44" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><text x="311" y="289" text-anchor="middle" fill="#166534">d</text>
+    <rect x="334" y="260" width="46" height="44" fill="#ffffff" stroke="#334155" stroke-width="2"/><text x="357" y="289" text-anchor="middle" fill="#1e293b">e</text>
+    <rect x="380" y="260" width="46" height="44" fill="#ffffff" stroke="#334155" stroke-width="2"/><text x="403" y="289" text-anchor="middle" fill="#1e293b">f</text>
+  </g>
+  <path d="M196,312 L196,320 L334,320 L334,312" fill="none" stroke="#16a34a" stroke-width="2"/>
+  <text x="265" y="340" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#16a34a">oyna 2: "bcd"</text>
+
+  <!-- rolling formula -->
+  <rect x="470" y="240" width="350" height="116" rx="12" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="486" y="266" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#92400e">Yangilash (rolling) — O(1):</text>
+  <text x="486" y="292" font-family="monospace" font-size="13" fill="#334155">1) eski "a" ni olib tashla:</text>
+  <text x="500" y="312" font-family="monospace" font-size="13" fill="#dc2626">h −= a·B²</text>
+  <text x="486" y="334" font-family="monospace" font-size="13" fill="#334155">2) h ·= B,  keyin "d" ni qo'sh:</text>
+  <text x="500" y="352" font-family="monospace" font-size="13" fill="#16a34a">h += d   (mod q)</text>
+
+  <!-- compare with pattern -->
+  <rect x="150" y="372" width="676" height="80" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="166" y="398" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#7c3aed">Solishtirish:</text>
+  <text x="166" y="422" font-family="Segoe UI" font-size="13" fill="#334155">Oyna hashi = namuna hashi bo'lsa → bu shunchaki NOMZOD. Belgi-belgi tasdiqlaymiz</text>
+  <text x="166" y="444" font-family="Segoe UI" font-size="13" fill="#334155">(hash to'qnashuvi bo'lishi mumkin). Hash boshqa bo'lsa → aniq mos kelmaydi, o'tib ketamiz.</text>
+
+  <!-- complexity -->
+  <rect x="150" y="466" width="676" height="76" rx="12" fill="#ecfdf5" stroke="#16a34a" stroke-width="2"/>
+  <text x="488" y="492" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#166534">o'rtacha: O(n + m)   ·   eng yomon: O(n · m)</text>
+  <text x="488" y="516" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#166534">Eng yomon = juda ko'p hash to'qnashuvi (yomon q tanlansa).</text>
+  <text x="488" y="536" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#166534">Ko'p namunani bir vaqtda qidirishda ayniqsa qulay.</text>
+</svg>

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Yaxshi promptning tuzilishi: system (rol + qoidalar) va user (XML teglar ichidagi kontekst + aniq vazifa + kerakli format)</title>
+  <defs>
+    <marker id="pt1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#6366f1"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="800" height="520" fill="#f8fafc"/>
+  <text x="400" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Yaxshi promptning tuzilishi (anatomiyasi)</text>
+  <text x="400" y="58" font-size="14" fill="#64748b" text-anchor="middle">Barqaror qoidalar — system'da; vazifa — user'da, qismlarga ajratilgan</text>
+
+  <!-- SYSTEM block -->
+  <rect x="40" y="84" width="720" height="116" rx="12" fill="#fef3c7" stroke="#d97757" stroke-width="2.5"/>
+  <text x="62" y="112" font-size="16" font-weight="bold" fill="#d97757" text-anchor="start" font-family="Consolas, monospace">system</text>
+  <text x="170" y="112" font-size="13" fill="#94a3b8" text-anchor="start">— bir marta o'rnatiladi, har chaqiruvda amal qiladi</text>
+  <rect x="62" y="124" width="330" height="60" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="80" y="148" font-size="13.5" font-weight="bold" fill="#1e293b" text-anchor="start">ROL / persona</text>
+  <text x="80" y="170" font-size="13" fill="#475569" text-anchor="start">"Siz o'zbekcha kod-tekshiruvchisiz"</text>
+  <rect x="408" y="124" width="330" height="60" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="426" y="148" font-size="13.5" font-weight="bold" fill="#1e293b" text-anchor="start">QOIDALAR</text>
+  <text x="426" y="170" font-size="13" fill="#475569" text-anchor="start">"Doim o'zbekcha, sodda javob ber"</text>
+
+  <line x1="400" y1="202" x2="400" y2="232" stroke="#6366f1" stroke-width="2.5" marker-end="url(#pt1)"/>
+
+  <!-- USER block -->
+  <rect x="40" y="238" width="720" height="208" rx="12" fill="#dbeafe" stroke="#0ea5e9" stroke-width="2.5"/>
+  <text x="62" y="266" font-size="16" font-weight="bold" fill="#0ea5e9" text-anchor="start" font-family="Consolas, monospace">user</text>
+  <text x="142" y="266" font-size="13" fill="#94a3b8" text-anchor="start">— bu safargi aniq vazifa</text>
+
+  <rect x="62" y="280" width="676" height="58" rx="8" fill="#ffffff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="80" y="304" font-size="13.5" font-weight="bold" fill="#9333ea" text-anchor="start">1. KONTEKST — XML teg ichida</text>
+  <text x="80" y="326" font-size="13" fill="#1e293b" text-anchor="start" font-family="Consolas, monospace">&lt;document&gt; ...ma'lumot/matn... &lt;/document&gt;</text>
+
+  <rect x="62" y="346" width="330" height="84" rx="8" fill="#ffffff" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="80" y="370" font-size="13.5" font-weight="bold" fill="#0ea5e9" text-anchor="start">2. ANIQ VAZIFA</text>
+  <text x="80" y="392" font-size="13" fill="#475569" text-anchor="start">"Hujjatdan barcha email'larni</text>
+  <text x="80" y="412" font-size="13" fill="#475569" text-anchor="start">topib chiqar"</text>
+
+  <rect x="408" y="346" width="330" height="84" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="426" y="370" font-size="13.5" font-weight="bold" fill="#16a34a" text-anchor="start">3. KERAKLI FORMAT</text>
+  <text x="426" y="392" font-size="13" fill="#475569" text-anchor="start">"Har birini yangi qatorda,</text>
+  <text x="426" y="412" font-size="13" fill="#475569" text-anchor="start">muqaddimasiz ro'yxat qil"</text>
+
+  <rect x="40" y="464" width="720" height="40" rx="10" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="400" y="489" font-size="13.5" fill="#1e293b" text-anchor="middle">XML teglar (&lt;document&gt;, &lt;instructions&gt;) ma'lumotni ko'rsatmadan ajratadi — Claude ularni hurmat qilishga o'rgatilgan</text>
+</svg>

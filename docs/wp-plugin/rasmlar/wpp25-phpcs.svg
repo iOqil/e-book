@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400">
+  <title>PHPCS oqimi: kod phpcs orqali WPCS ruleset bilan tekshiriladi, xato va ogohlantirish chiqadi, phpcbf avto-tuzatadigan qoidalarni tuzatadi</title>
+  <defs>
+    <marker id="c-arr" markerWidth="13" markerHeight="13" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="400" fill="#f8fafc"/>
+
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">PHPCS: kod uslubini avtomatik tekshirish</text>
+  <text x="380" y="56" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">WPCS ruleset + PHPCompatibility</text>
+
+  <!-- code -->
+  <rect x="40" y="150" width="150" height="80" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="115" y="183" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">PHP kod</text>
+  <text x="115" y="205" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">.php fayllar</text>
+
+  <!-- phpcs -->
+  <rect x="250" y="140" width="180" height="100" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="340" y="172" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">phpcs</text>
+  <text x="340" y="194" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">phpcs.xml.dist</text>
+  <text x="340" y="212" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(WPCS ruleset)</text>
+  <text x="340" y="230" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">bilan tekshiradi</text>
+
+  <line x1="190" y1="190" x2="245" y2="190" stroke="#475569" stroke-width="2" marker-end="url(#c-arr)"/>
+
+  <!-- errors -->
+  <rect x="490" y="90" width="230" height="76" rx="10" fill="#fecaca" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="605" y="118" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">ERROR / WARNING</text>
+  <text x="605" y="140" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#7f1d1d">escape yo'q, prefiks yo'q,</text>
+  <text x="605" y="158" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#7f1d1d">tab/bo'shliq, eskirgan API</text>
+
+  <line x1="430" y1="175" x2="485" y2="135" stroke="#475569" stroke-width="2" marker-end="url(#c-arr)"/>
+
+  <!-- phpcbf -->
+  <rect x="490" y="214" width="230" height="76" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="605" y="242" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">phpcbf (avto-tuzatish)</text>
+  <text x="605" y="264" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">[x] belgili qoidalarni</text>
+  <text x="605" y="282" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">o'zi to'g'rilaydi</text>
+
+  <line x1="430" y1="205" x2="485" y2="245" stroke="#475569" stroke-width="2" marker-end="url(#c-arr)"/>
+
+  <!-- phpcbf back to code -->
+  <line x1="605" y1="290" x2="605" y2="330" stroke="#16a34a" stroke-width="2"/>
+  <line x1="605" y1="330" x2="115" y2="330" stroke="#16a34a" stroke-width="2"/>
+  <line x1="115" y1="330" x2="115" y2="234" stroke="#16a34a" stroke-width="2" marker-end="url(#c-arr)"/>
+  <text x="360" y="352" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" font-weight="bold">phpcbf tuzatilgan kodni qaytaradi</text>
+
+  <text x="380" y="380" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">escape kabi mantiqiy qoidalarni qo'lda tuzatasiz; CI'da phpcs darvozabon</text>
+</svg>

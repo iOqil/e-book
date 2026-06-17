@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" width="800" height="560" font-family="Segoe UI, system-ui, sans-serif">
+  <title>RAG quvuri ikki bosqichda. INDEKSLASH (oldindan, offline): hujjatlar -> chunk (bo'laklarga bo'lish) -> embed (vektorga aylantirish, 17-bob) -> vektor bazaga saqlash. SO'ROV PAYTI (real vaqt): savol -> embed -> top-k yaqin bo'laklarni cosine bilan topish -> kontekst + savol promptini qurish -> Claude grounded (manbaga tayangan) javob beradi.</title>
+  <defs>
+    <marker id="r18a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#6366f1"/>
+    </marker>
+    <marker id="r18b" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#0ea5e9"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="800" height="560" fill="#f8fafc"/>
+  <text x="400" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">RAG quvuri — indekslash + so'rov payti</text>
+  <text x="400" y="58" font-size="14" fill="#64748b" text-anchor="middle">Sizning hujjatlaringizdan kerakli bo'lakni topib, Claude'ga kontekst sifatida beramiz</text>
+
+  <!-- INDEXING PHASE -->
+  <rect x="24" y="78" width="752" height="186" rx="12" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="44" y="104" font-size="15" font-weight="bold" fill="#6366f1" text-anchor="start">A) INDEKSLASH — oldindan, bir marta (offline)</text>
+
+  <rect x="44" y="122" width="150" height="116" rx="10" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <text x="119" y="150" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Hujjatlar</text>
+  <text x="119" y="174" font-size="13" fill="#475569" text-anchor="middle">KB, docs, FAQ,</text>
+  <text x="119" y="192" font-size="13" fill="#475569" text-anchor="middle">qo'llanma, sayt</text>
+  <text x="119" y="216" font-size="13" fill="#64748b" text-anchor="middle">sizning ma'lumot</text>
+
+  <line x1="194" y1="180" x2="232" y2="180" stroke="#6366f1" stroke-width="2.5" marker-end="url(#r18a)"/>
+
+  <rect x="236" y="122" width="150" height="116" rx="10" fill="#dbeafe" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="311" y="150" font-size="14" font-weight="bold" fill="#0ea5e9" text-anchor="middle">1. Chunk</text>
+  <text x="311" y="174" font-size="13" fill="#475569" text-anchor="middle">~200-800 token</text>
+  <text x="311" y="192" font-size="13" fill="#475569" text-anchor="middle">bo'laklarga bo'l</text>
+  <text x="311" y="216" font-size="13" fill="#64748b" text-anchor="middle">(ozgina ustma-ust)</text>
+
+  <line x1="386" y1="180" x2="424" y2="180" stroke="#6366f1" stroke-width="2.5" marker-end="url(#r18a)"/>
+
+  <rect x="428" y="122" width="150" height="116" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="503" y="150" font-size="14" font-weight="bold" fill="#f59e0b" text-anchor="middle">2. Embed</text>
+  <text x="503" y="174" font-size="13" fill="#475569" text-anchor="middle">17-bob: vektorga</text>
+  <text x="503" y="192" font-size="13" fill="#475569" text-anchor="middle">aylantir (provayder</text>
+  <text x="503" y="216" font-size="13" fill="#64748b" text-anchor="middle">Anthropic emas)</text>
+
+  <line x1="578" y1="180" x2="616" y2="180" stroke="#6366f1" stroke-width="2.5" marker-end="url(#r18a)"/>
+
+  <rect x="620" y="122" width="134" height="116" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="687" y="150" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">3. Saqlash</text>
+  <text x="687" y="174" font-size="13" fill="#475569" text-anchor="middle">vektor baza</text>
+  <text x="687" y="192" font-size="13" fill="#475569" text-anchor="middle">{text, vektor,</text>
+  <text x="687" y="210" font-size="13" fill="#475569" text-anchor="middle">source}</text>
+  <text x="687" y="230" font-size="13" fill="#64748b" text-anchor="middle">pgvector...</text>
+
+  <!-- arrow down from store to retrieve -->
+  <line x1="687" y1="264" x2="687" y2="316" stroke="#16a34a" stroke-width="2.5" marker-end="url(#r18a)"/>
+  <text x="710" y="294" font-size="13" fill="#16a34a" text-anchor="start">indeks</text>
+
+  <!-- QUERY PHASE -->
+  <rect x="24" y="306" width="752" height="200" rx="12" fill="#dbeafe" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="44" y="332" font-size="15" font-weight="bold" fill="#0ea5e9" text-anchor="start">B) SO'ROV PAYTI — har savolda (real vaqt)</text>
+
+  <rect x="44" y="350" width="140" height="92" rx="10" fill="#ffffff" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="114" y="378" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Savol</text>
+  <text x="114" y="402" font-size="13" fill="#475569" text-anchor="middle">"Qaytarish</text>
+  <text x="114" y="420" font-size="13" fill="#475569" text-anchor="middle">muddati qancha?"</text>
+
+  <line x1="184" y1="396" x2="218" y2="396" stroke="#0ea5e9" stroke-width="2.5" marker-end="url(#r18b)"/>
+
+  <rect x="222" y="350" width="130" height="92" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="287" y="384" font-size="14" font-weight="bold" fill="#f59e0b" text-anchor="middle">4. Embed</text>
+  <text x="287" y="408" font-size="13" fill="#475569" text-anchor="middle">savolni vektorga</text>
+  <text x="287" y="426" font-size="13" fill="#64748b" text-anchor="middle">(BIR XIL model!)</text>
+
+  <line x1="352" y1="396" x2="386" y2="396" stroke="#0ea5e9" stroke-width="2.5" marker-end="url(#r18b)"/>
+
+  <rect x="390" y="350" width="150" height="92" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="465" y="378" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">5. Retrieve</text>
+  <text x="465" y="402" font-size="13" fill="#475569" text-anchor="middle">cosine -> top-k</text>
+  <text x="465" y="420" font-size="13" fill="#64748b" text-anchor="middle">(eng yaqin 3-5)</text>
+
+  <line x1="540" y1="396" x2="574" y2="396" stroke="#0ea5e9" stroke-width="2.5" marker-end="url(#r18b)"/>
+
+  <rect x="578" y="350" width="176" height="92" rx="10" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="666" y="374" font-size="14" font-weight="bold" fill="#6366f1" text-anchor="middle">6. Augment + Claude</text>
+  <text x="666" y="398" font-size="13" fill="#475569" text-anchor="middle">&lt;context&gt;bo'laklar&lt;/&gt;</text>
+  <text x="666" y="416" font-size="13" fill="#475569" text-anchor="middle">+ savol -> Claude</text>
+  <text x="666" y="434" font-size="13" fill="#d97757" text-anchor="middle">grounded javob</text>
+
+  <rect x="44" y="458" width="710" height="36" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="399" y="481" font-size="13.5" fill="#1e293b" text-anchor="middle">Claude FAQAT topilgan kontekstdan javob beradi va manbani keltiradi — yo'q bo'lsa "bilmayman".</text>
+
+  <rect x="24" y="518" width="752" height="30" rx="8" fill="#fef3c7"/>
+  <text x="400" y="538" font-size="13.5" fill="#1e293b" text-anchor="middle">Analogiya: ochiq-kitob imtihoni — Claude aqlli, RAG unga kerakli sahifani topib beradi.</text>
+</svg>

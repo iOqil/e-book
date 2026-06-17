@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 520" width="860" height="520">
+  <title>WordPress so'rov hayoti: URL dan render gacha oqim</title>
+  <rect x="0" y="0" width="860" height="520" fill="#f8fafc"/>
+  <text x="430" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">So'rov hayoti: brauzerdan render gacha</text>
+
+  <!-- 1 URL -->
+  <rect x="40" y="62" width="300" height="62" rx="8" fill="#2563eb"/>
+  <text x="190" y="88" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">1. Brauzer so'rov yuboradi</text>
+  <text x="190" y="110" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#dbeafe">GET /category/news/</text>
+
+  <!-- 2 index.php / WP boot -->
+  <rect x="40" y="146" width="300" height="62" rx="8" fill="#475569"/>
+  <text x="190" y="172" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">2. WordPress yuklanadi</text>
+  <text x="190" y="194" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#e2e8f0">index.php -> wp-load -> wp()</text>
+
+  <!-- 3 parse_request -->
+  <rect x="40" y="230" width="300" height="70" rx="8" fill="#475569"/>
+  <text x="190" y="256" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">3. URL tahlil qilinadi</text>
+  <text x="190" y="278" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#e2e8f0">WP::parse_request()</text>
+  <text x="190" y="296" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#cbd5e1">rewrite qoidalari -> query vars</text>
+
+  <!-- 4 WP_Query -->
+  <rect x="40" y="322" width="300" height="70" rx="8" fill="#16a34a"/>
+  <text x="190" y="348" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">4. WP_Query bazaga so'rov</text>
+  <text x="190" y="370" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#dcfce7">postlar olinadi + shartlar aniqlanadi</text>
+  <text x="190" y="388" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#bbf7d0">is_category() = true</text>
+
+  <!-- 5 template_redirect -->
+  <rect x="40" y="414" width="300" height="62" rx="8" fill="#d97706"/>
+  <text x="190" y="440" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">5. template_redirect</text>
+  <text x="190" y="462" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#fef3c7">redirect uchun oxirgi imkon (action)</text>
+
+  <!-- right column -->
+  <!-- 6 template-loader -->
+  <rect x="520" y="146" width="300" height="86" rx="8" fill="#21759b"/>
+  <text x="670" y="172" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">6. Shablon tanlanadi</text>
+  <text x="670" y="194" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#e0f2fe">template-loader.php</text>
+  <text x="670" y="214" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#bae6fd">is_* shartlar -> Template Hierarchy</text>
+
+  <!-- 7 get_query_template -->
+  <rect x="520" y="252" width="300" height="86" rx="8" fill="#21759b"/>
+  <text x="670" y="278" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">7. Fayl topiladi</text>
+  <text x="670" y="300" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#e0f2fe">category-news.php? category.php?</text>
+  <text x="670" y="319" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#bae6fd">archive.php? -> index.php (fallback)</text>
+
+  <!-- 8 template_include -->
+  <rect x="520" y="358" width="300" height="62" rx="8" fill="#d97706"/>
+  <text x="670" y="384" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">8. template_include (filtr)</text>
+  <text x="670" y="406" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#fef3c7">yo'lni o'zgartirishning oxirgi joyi</text>
+
+  <!-- 9 render -->
+  <rect x="520" y="440" width="300" height="62" rx="8" fill="#dc2626"/>
+  <text x="670" y="466" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">9. Shablon ishga tushadi</text>
+  <text x="670" y="488" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#fee2e2">The Loop -> HTML -> brauzerga</text>
+
+  <!-- arrows left column -->
+  <g stroke="#94a3b8" stroke-width="2.5" fill="none" marker-end="url(#ar)">
+    <line x1="190" y1="124" x2="190" y2="144"/>
+    <line x1="190" y1="208" x2="190" y2="228"/>
+    <line x1="190" y1="300" x2="190" y2="320"/>
+    <line x1="190" y1="392" x2="190" y2="412"/>
+  </g>
+  <!-- bridge from left bottom to right top -->
+  <path d="M 340 445 L 430 445 L 430 189 L 518 189" stroke="#94a3b8" stroke-width="2.5" fill="none" marker-end="url(#ar)"/>
+  <!-- arrows right column -->
+  <g stroke="#94a3b8" stroke-width="2.5" fill="none" marker-end="url(#ar)">
+    <line x1="670" y1="232" x2="670" y2="250"/>
+    <line x1="670" y1="338" x2="670" y2="356"/>
+    <line x1="670" y1="420" x2="670" y2="438"/>
+  </g>
+
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <text x="430" y="512" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Yashil = ma'lumot (query) · Ko'k WP = shablon tanlash · Sariq = hook/filtr · Qizil = render</text>
+</svg>

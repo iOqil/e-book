@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="800" height="480" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Bir ilova uch kenglikda: telefon (kenglik 600 dan kichik) pastda NavigationBar bilan, planshet (600 dan 1200) yon NavigationRail bilan, desktop (1200 dan katta) yon rail va kengroq tarkib bilan — bularning hammasini LayoutBuilder kenglik chegarasi (breakpoint) orqali boshqaradi</title>
+  <rect x="0" y="0" width="800" height="480" fill="#f8fafc"/>
+  <text x="400" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Bitta ilova, ekran kengligiga moslashadi</text>
+  <text x="400" y="58" text-anchor="middle" font-size="14" fill="#475569">LayoutBuilder kenglikni o'lchaydi va chegaraga (breakpoint) qarab joylashuvni tanlaydi</text>
+
+  <!-- breakpoint bar -->
+  <rect x="70" y="78" width="660" height="30" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="290" y1="78" x2="290" y2="108" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="510" y1="78" x2="510" y2="108" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="180" y="98" text-anchor="middle" font-size="13" font-weight="700" fill="#ef4444">&lt; 600 — telefon</text>
+  <text x="400" y="98" text-anchor="middle" font-size="13" font-weight="700" fill="#f59e0b">600–1200 — planshet</text>
+  <text x="620" y="98" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a">&gt; 1200 — desktop</text>
+
+  <!-- ===== Phone ===== -->
+  <text x="135" y="142" text-anchor="middle" font-size="14" font-weight="700" fill="#64748b">Telefon → NavigationBar (past)</text>
+  <rect x="80" y="155" width="110" height="270" rx="14" fill="#ffffff" stroke="#ef4444" stroke-width="2.5"/>
+  <rect x="92" y="167" width="86" height="24" rx="6" fill="#dbeafe"/>
+  <text x="135" y="184" text-anchor="middle" font-size="13" fill="#0553b1">AppBar</text>
+  <rect x="92" y="197" width="86" height="180" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="135" y="290" text-anchor="middle" font-size="13" fill="#64748b">tarkib</text>
+  <rect x="92" y="383" width="86" height="32" rx="8" fill="#027dfd"/>
+  <text x="135" y="404" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">▢ ▢ ▢</text>
+
+  <!-- ===== Tablet ===== -->
+  <text x="350" y="142" text-anchor="middle" font-size="14" font-weight="700" fill="#64748b">Planshet → NavigationRail (yon)</text>
+  <rect x="245" y="155" width="210" height="270" rx="14" fill="#ffffff" stroke="#f59e0b" stroke-width="2.5"/>
+  <rect x="257" y="167" width="40" height="246" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="277" y="210" text-anchor="middle" font-size="13" fill="#f59e0b">▢</text>
+  <text x="277" y="250" text-anchor="middle" font-size="13" fill="#f59e0b">▢</text>
+  <text x="277" y="290" text-anchor="middle" font-size="13" fill="#f59e0b">▢</text>
+  <rect x="305" y="167" width="138" height="24" rx="6" fill="#dbeafe"/>
+  <text x="374" y="184" text-anchor="middle" font-size="13" fill="#0553b1">AppBar</text>
+  <rect x="305" y="197" width="138" height="216" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="374" y="310" text-anchor="middle" font-size="13" fill="#64748b">tarkib</text>
+
+  <!-- ===== Desktop ===== -->
+  <text x="610" y="142" text-anchor="middle" font-size="14" font-weight="700" fill="#64748b">Desktop → Rail + kengroq tarkib</text>
+  <rect x="500" y="155" width="220" height="270" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <rect x="512" y="167" width="54" height="246" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="539" y="208" text-anchor="middle" font-size="13" fill="#16a34a">▢ Uy</text>
+  <text x="539" y="248" text-anchor="middle" font-size="13" fill="#16a34a">▢ Qid</text>
+  <text x="539" y="288" text-anchor="middle" font-size="13" fill="#16a34a">▢ Prof</text>
+  <rect x="574" y="167" width="134" height="116" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="641" y="229" text-anchor="middle" font-size="13" fill="#64748b">tarkib (chap)</text>
+  <rect x="574" y="291" width="134" height="122" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="641" y="356" text-anchor="middle" font-size="13" fill="#64748b">tarkib (o'ng)</text>
+
+  <rect x="80" y="442" width="640" height="0" fill="none"/>
+  <text x="400" y="456" text-anchor="middle" font-size="13" fill="#94a3b8">Bitta kod bazasi — bir xil ilova telefonda ham, planshetda ham, desktopda ham tabiiy ko'rinadi</text>
+</svg>

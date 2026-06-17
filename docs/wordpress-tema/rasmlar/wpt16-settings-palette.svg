@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 500" width="780" height="500">
+  <title>settings.color.palette va typography.fontSizes preset CSS o'zgaruvchilarga aylanishi</title>
+  <rect width="780" height="500" fill="#f8fafc"/>
+  <text x="390" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">settings -&gt; CSS preset o'zgaruvchilar</text>
+
+  <!-- LEFT: theme.json input -->
+  <rect x="20" y="56" width="330" height="410" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="185" y="82" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">theme.json settings (siz yozasiz)</text>
+
+  <text x="40" y="112" font-family="Consolas, monospace" font-size="13.5" fill="#475569">"color": {</text>
+  <text x="56" y="132" font-family="Consolas, monospace" font-size="13.5" fill="#475569">"palette": [{</text>
+  <text x="72" y="152" font-family="Consolas, monospace" font-size="13.5" fill="#16a34a">"slug": "asosiy",</text>
+  <text x="72" y="172" font-family="Consolas, monospace" font-size="13.5" fill="#dc2626">"color": "#2563eb",</text>
+  <text x="72" y="192" font-family="Consolas, monospace" font-size="13.5" fill="#475569">"name": "Asosiy"</text>
+  <text x="56" y="212" font-family="Consolas, monospace" font-size="13.5" fill="#475569">}]</text>
+  <text x="40" y="232" font-family="Consolas, monospace" font-size="13.5" fill="#475569">}</text>
+
+  <line x1="40" y1="252" x2="330" y2="252" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <text x="40" y="282" font-family="Consolas, monospace" font-size="13.5" fill="#475569">"typography": {</text>
+  <text x="56" y="302" font-family="Consolas, monospace" font-size="13.5" fill="#475569">"fontSizes": [{</text>
+  <text x="72" y="322" font-family="Consolas, monospace" font-size="13.5" fill="#16a34a">"slug": "large",</text>
+  <text x="72" y="342" font-family="Consolas, monospace" font-size="13.5" fill="#dc2626">"size": "2rem",</text>
+  <text x="72" y="362" font-family="Consolas, monospace" font-size="13.5" fill="#475569">"name": "Katta"</text>
+  <text x="56" y="382" font-family="Consolas, monospace" font-size="13.5" fill="#475569">}]</text>
+  <text x="40" y="402" font-family="Consolas, monospace" font-size="13.5" fill="#475569">}</text>
+
+  <!-- arrow -->
+  <g>
+    <line x1="358" y1="260" x2="430" y2="260" stroke="#f59e0b" stroke-width="4"/>
+    <polygon points="430,250 452,260 430,270" fill="#f59e0b"/>
+    <text x="405" y="245" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#d97706">WP avtomatik</text>
+    <text x="405" y="290" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#d97706">generatsiya</text>
+  </g>
+
+  <!-- RIGHT: generated CSS -->
+  <rect x="460" y="56" width="300" height="240" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="610" y="82" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">Generatsiya qilingan CSS</text>
+
+  <text x="478" y="112" font-family="Consolas, monospace" font-size="13" fill="#475569">body {</text>
+  <text x="490" y="138" font-family="Consolas, monospace" font-size="13" fill="#2563eb">--wp--preset--color--</text>
+  <text x="490" y="156" font-family="Consolas, monospace" font-size="13" fill="#2563eb">  asosiy: #2563eb;</text>
+  <text x="490" y="184" font-family="Consolas, monospace" font-size="13" fill="#16a34a">--wp--preset--font-size--</text>
+  <text x="490" y="202" font-family="Consolas, monospace" font-size="13" fill="#16a34a">  large: 2rem;</text>
+  <text x="478" y="228" font-family="Consolas, monospace" font-size="13" fill="#475569">}</text>
+  <text x="478" y="262" font-family="Consolas, monospace" font-size="13" fill="#94a3b8">/* + .has-asosiy-color */</text>
+  <text x="478" y="282" font-family="Consolas, monospace" font-size="13" fill="#94a3b8">/* + .has-large-font-size */</text>
+
+  <!-- BOTTOM: usage -->
+  <rect x="460" y="316" width="300" height="150" rx="10" fill="#e2e8f0" stroke="#475569" stroke-width="1.5"/>
+  <text x="610" y="342" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Foydalanuvchi ko'radi</text>
+  <text x="610" y="372" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">Editor rang tanlovida "Asosiy",</text>
+  <text x="610" y="392" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">shrift o'lchamida "Katta" chiqadi.</text>
+  <text x="610" y="420" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">CSS yozish shart emas — WP</text>
+  <text x="610" y="440" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">o'zgaruvchilarni o'zi ulaydi.</text>
+
+  <text x="390" y="488" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">slug -&gt; o'zgaruvchi nomi · color/size -&gt; qiymat · name -&gt; editorda ko'rinadigan yorliq</text>
+</svg>

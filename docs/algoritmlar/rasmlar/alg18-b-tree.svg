@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560">
+  <title>B-tree tuguni: ko'p kalit va ko'p bola, har tugun bitta disk blokiga mos keladi</title>
+  <rect x="0" y="0" width="900" height="560" fill="#f8fafc"/>
+  <text x="450" y="34" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">B-tree — ko'p tarmoqli, disk uchun</text>
+  <text x="450" y="58" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Har tugun ko'p kalitni saqlaydi -> daraxt juda past -> kam disk o'qish</text>
+
+  <!-- root node: keys 30 | 60 -->
+  <rect x="360" y="90" width="180" height="44" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="3"/>
+  <line x1="420" y1="90" x2="420" y2="134" stroke="#2563eb" stroke-width="2"/>
+  <line x1="480" y1="90" x2="480" y2="134" stroke="#2563eb" stroke-width="2"/>
+  <text x="390" y="119" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#1e293b">30</text>
+  <text x="450" y="119" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#1e293b">60</text>
+  <text x="450" y="80" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#2563eb" font-weight="bold">ildiz tuguni (2 kalit -> 3 bola)</text>
+
+  <!-- pointers down -->
+  <line x1="360" y1="134" x2="180" y2="210" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="450" y1="134" x2="450" y2="210" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="540" y1="134" x2="720" y2="210" stroke="#94a3b8" stroke-width="2"/>
+
+  <!-- child 1: < 30 -->
+  <rect x="90" y="210" width="180" height="44" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <line x1="150" y1="210" x2="150" y2="254" stroke="#16a34a" stroke-width="2"/>
+  <line x1="210" y1="210" x2="210" y2="254" stroke="#16a34a" stroke-width="2"/>
+  <text x="120" y="239" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#1e293b">10</text>
+  <text x="180" y="239" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#1e293b">20</text>
+  <text x="180" y="278" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">kalitlar &lt; 30</text>
+
+  <!-- child 2: 30..60 -->
+  <rect x="360" y="210" width="180" height="44" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <line x1="420" y1="210" x2="420" y2="254" stroke="#16a34a" stroke-width="2"/>
+  <line x1="480" y1="210" x2="480" y2="254" stroke="#16a34a" stroke-width="2"/>
+  <text x="390" y="239" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#1e293b">40</text>
+  <text x="450" y="239" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#1e293b">50</text>
+  <text x="450" y="278" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">30 &lt; kalitlar &lt; 60</text>
+
+  <!-- child 3: > 60 -->
+  <rect x="630" y="210" width="180" height="44" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <line x1="690" y1="210" x2="690" y2="254" stroke="#16a34a" stroke-width="2"/>
+  <line x1="750" y1="210" x2="750" y2="254" stroke="#16a34a" stroke-width="2"/>
+  <text x="660" y="239" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#1e293b">70</text>
+  <text x="720" y="239" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#1e293b">90</text>
+  <text x="720" y="278" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">kalitlar &gt; 60</text>
+
+  <!-- disk block mapping -->
+  <rect x="60" y="320" width="780" height="150" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="80" y="348" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#7c3aed">Nega B-tree ma'lumotlar bazasida ishlatiladi?</text>
+
+  <!-- disk icon -->
+  <ellipse cx="160" cy="408" rx="58" ry="18" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <path d="M102,408 L102,440 A58,18 0 0,0 218,440 L218,408" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <ellipse cx="160" cy="408" rx="58" ry="18" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <circle cx="160" cy="408" r="6" fill="#7c3aed"/>
+  <text x="160" y="466" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#7c3aed" font-weight="bold">disk (sekin)</text>
+
+  <line x1="230" y1="408" x2="290" y2="408" stroke="#334155" stroke-width="2" marker-end="url(#bar)"/>
+  <defs>
+    <marker id="bar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#334155"/>
+    </marker>
+  </defs>
+
+  <text x="310" y="382" font-family="Segoe UI" font-size="14" fill="#334155">1 tugun = 1 disk bloki (masalan, 4 KB) -> 1 o'qishda yuzlab kalit.</text>
+  <text x="310" y="408" font-family="Segoe UI" font-size="14" fill="#334155">Tugun ko'p bola (yuqori "fan-out") -> daraxt balandligi juda past.</text>
+  <text x="310" y="434" font-family="Segoe UI" font-size="14" fill="#334155">Disk o'qish soni = balandlik. AVL log2(n), B-tree log_t(n) &lt;&lt; log2.</text>
+  <text x="310" y="460" font-family="monospace" font-size="14" fill="#7c3aed">10^6 yozuv: t=100 da atigi ~3 daraja -> ~3 disk o'qish</text>
+</svg>

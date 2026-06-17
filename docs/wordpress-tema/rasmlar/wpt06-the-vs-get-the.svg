@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420" font-family="Segoe UI, system-ui, sans-serif">
+  <title>the_title() echo qiladi vs get_the_title() qiymat qaytaradi</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">the_* vs get_the_*</text>
+  <text x="380" y="56" text-anchor="middle" font-size="14" fill="#475569">"the_" — to'g'ridan ekranga chiqaradi (echo); "get_the_" — qiymatni qaytaradi (return)</text>
+
+  <!-- the_title (chap) -->
+  <rect x="40" y="84" width="320" height="300" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <rect x="40" y="84" width="320" height="44" rx="12" fill="#2563eb"/>
+  <text x="200" y="113" text-anchor="middle" font-size="17" font-weight="700" fill="#ffffff">the_title()</text>
+
+  <text x="60" y="160" font-size="14" font-weight="700" fill="#1e293b">Vazifasi: ECHO (chiqarish)</text>
+  <rect x="60" y="174" width="280" height="44" rx="6" fill="#0f172a"/>
+  <text x="74" y="202" font-size="14" fill="#7dd3fc" font-family="Consolas, monospace">&lt;h2&gt;&lt;?php the_title(); ?&gt;&lt;/h2&gt;</text>
+
+  <text x="60" y="248" font-size="13" fill="#475569">Natija to'g'ridan HTMLga tushadi:</text>
+  <rect x="60" y="258" width="280" height="40" rx="6" fill="#dbeafe"/>
+  <text x="200" y="283" text-anchor="middle" font-size="14" fill="#1e3a8a">&lt;h2&gt;Mening birinchi postim&lt;/h2&gt;</text>
+
+  <text x="60" y="328" font-size="13" fill="#16a34a" font-weight="700">+ Tez, qisqa — shablonda yozish uchun</text>
+  <text x="60" y="352" font-size="13" fill="#dc2626" font-weight="700">- Qiymatni o'zgaruvchiga ololmaysiz</text>
+  <text x="60" y="374" font-size="13" fill="#475569">Misol: the_content(), the_permalink()</text>
+
+  <!-- get_the_title (o'ng) -->
+  <rect x="400" y="84" width="320" height="300" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <rect x="400" y="84" width="320" height="44" rx="12" fill="#16a34a"/>
+  <text x="560" y="113" text-anchor="middle" font-size="17" font-weight="700" fill="#ffffff">get_the_title()</text>
+
+  <text x="420" y="160" font-size="14" font-weight="700" fill="#1e293b">Vazifasi: RETURN (qaytarish)</text>
+  <rect x="420" y="174" width="280" height="44" rx="6" fill="#0f172a"/>
+  <text x="434" y="202" font-size="13" fill="#86efac" font-family="Consolas, monospace">$sarlavha = get_the_title();</text>
+
+  <text x="420" y="248" font-size="13" fill="#475569">Qiymat o'zgaruvchida — ishlov bering:</text>
+  <rect x="420" y="258" width="280" height="40" rx="6" fill="#dcfce7"/>
+  <text x="560" y="283" text-anchor="middle" font-size="13" fill="#14532d" font-family="Consolas, monospace">echo esc_html($sarlavha);</text>
+
+  <text x="420" y="328" font-size="13" fill="#16a34a" font-weight="700">+ Tekshirish/o'zgartirish/escape mumkin</text>
+  <text x="420" y="352" font-size="13" fill="#dc2626" font-weight="700">- Yozmasangiz ekranga chiqmaydi</text>
+  <text x="420" y="374" font-size="13" fill="#475569">Misol: get_permalink(), get_the_excerpt()</text>
+
+  <text x="380" y="408" text-anchor="middle" font-size="13" fill="#94a3b8">Qoida: chiqishni boshqarish (shart, escape, o'zgaruvchi) kerak bo'lsa get_the_* ni tanlang</text>
+</svg>

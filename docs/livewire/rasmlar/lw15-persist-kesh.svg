@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 460" width="760" height="460" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Oddiy computed kesh faqat bitta so'rov ichida saqlanadi va so'rov tugashi bilan yo'qoladi; persist kesh esa so'rovlar orasida Laravel Cache'da belgilangan muddatgacha saqlanadi</title>
+  <rect x="0" y="0" width="760" height="460" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Oddiy kesh  vs  persist kesh</text>
+  <text x="380" y="58" text-anchor="middle" font-size="14" fill="#475569">Kesh qancha vaqt yashaydi?</text>
+
+  <!-- TEPA: oddiy computed -->
+  <rect x="28" y="80" width="704" height="156" rx="12" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <text x="48" y="108" font-size="16" font-weight="700" fill="#4f46e5">#[Computed]  — oddiy kesh (so'rov ichida)</text>
+  <text x="48" y="128" font-size="13" fill="#94a3b8">natija faqat shu so'rov tugaguncha eslab qolinadi</text>
+
+  <!-- so'rov 1 -->
+  <rect x="60" y="148" width="180" height="68" rx="10" fill="#eef2ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="150" y="174" text-anchor="middle" font-size="14" font-weight="700" fill="#4f46e5">So'rov 1</text>
+  <text x="150" y="195" text-anchor="middle" font-size="13" fill="#16a34a">hisoblaydi -&gt; keshlaydi</text>
+  <text x="150" y="211" text-anchor="middle" font-size="13" fill="#dc2626">tugashda kesh O'CHADI</text>
+
+  <text x="270" y="186" text-anchor="middle" font-size="20" fill="#94a3b8">&#8594;</text>
+  <text x="270" y="206" text-anchor="middle" font-size="13" fill="#94a3b8">kesh yo'q</text>
+
+  <!-- so'rov 2 -->
+  <rect x="300" y="148" width="180" height="68" rx="10" fill="#eef2ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="390" y="174" text-anchor="middle" font-size="14" font-weight="700" fill="#4f46e5">So'rov 2</text>
+  <text x="390" y="195" text-anchor="middle" font-size="13" fill="#dc2626">yana hisoblaydi</text>
+  <text x="390" y="211" text-anchor="middle" font-size="13" fill="#94a3b8">(noldan boshlanadi)</text>
+
+  <rect x="520" y="148" width="190" height="68" rx="10" fill="#f8fafc" stroke="#c7d2fe" stroke-width="1.5"/>
+  <text x="615" y="178" text-anchor="middle" font-size="13" fill="#475569">Tez-tez o'zgaradigan</text>
+  <text x="615" y="196" text-anchor="middle" font-size="13" fill="#475569">ma'lumot uchun</text>
+
+  <!-- PAST: persist computed -->
+  <rect x="28" y="256" width="704" height="172" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="48" y="284" font-size="16" font-weight="700" fill="#16a34a">#[Computed(persist: true, seconds: 3600)]  — so'rovlar orasida</text>
+  <text x="48" y="304" font-size="13" fill="#94a3b8">natija Laravel Cache'ga yoziladi va muddat tugaguncha saqlanadi</text>
+
+  <!-- so'rov 1 -->
+  <rect x="60" y="324" width="180" height="80" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="150" y="350" text-anchor="middle" font-size="14" font-weight="700" fill="#16a34a">So'rov 1</text>
+  <text x="150" y="371" text-anchor="middle" font-size="13" fill="#475569">hisoblaydi -&gt; Cache</text>
+  <text x="150" y="389" text-anchor="middle" font-size="13" fill="#16a34a">kesh QOLADI</text>
+
+  <!-- cache idishi o'rtada -->
+  <rect x="300" y="330" width="160" height="68" rx="10" fill="#fff7ed" stroke="#f59e0b" stroke-width="2"/>
+  <text x="380" y="358" text-anchor="middle" font-size="14" font-weight="700" fill="#92400e">Laravel Cache</text>
+  <text x="380" y="380" text-anchor="middle" font-size="13" fill="#475569">3600 soniya yashaydi</text>
+
+  <!-- so'rov 2 -->
+  <rect x="520" y="324" width="190" height="80" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="615" y="350" text-anchor="middle" font-size="14" font-weight="700" fill="#16a34a">So'rov 2</text>
+  <text x="615" y="371" text-anchor="middle" font-size="13" fill="#16a34a">hisoblamaydi!</text>
+  <text x="615" y="389" text-anchor="middle" font-size="13" fill="#475569">Cache'dan oladi (tez)</text>
+
+  <!-- strelkalar -->
+  <line x1="240" y1="364" x2="298" y2="364" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="300,364 290,359 290,369" fill="#16a34a"/>
+  <line x1="460" y1="364" x2="518" y2="364" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="520,364 510,359 510,369" fill="#16a34a"/>
+
+  <text x="380" y="448" text-anchor="middle" font-size="13" fill="#94a3b8">Persist = kam o'zgaradigan, og'ir ma'lumot uchun (masalan, kun davomida o'zgarmaydigan statistika)</text>
+</svg>

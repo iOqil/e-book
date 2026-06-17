@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520" width="760" height="520" font-family="Segoe UI, system-ui, sans-serif">
+  <title>FlatList virtualizatsiyasi: faqat ekranda ko'rinadigan elementlar render qilinadi, qolganlari xotirada saqlanmaydi</title>
+  <rect x="0" y="0" width="760" height="520" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">FlatList: faqat ko'rinadigan oynani render qiladi</text>
+  <text x="380" y="60" text-anchor="middle" font-size="14" fill="#475569">1000 ta element bo'lsa ham, ekrandagi 8-10 tasigina chizadi (virtualizatsiya)</text>
+
+  <!-- Butun ro'yxat ustuni (chap) -->
+  <text x="180" y="96" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">Butun ro'yxat (1000 element)</text>
+
+  <!-- yuqori ko'rinmas elementlar -->
+  <rect x="80" y="110" width="200" height="26" rx="5" fill="#e2e8f0"/>
+  <text x="180" y="128" text-anchor="middle" font-size="13" fill="#94a3b8">#1  (ekrandan tashqarida)</text>
+  <rect x="80" y="140" width="200" height="26" rx="5" fill="#e2e8f0"/>
+  <text x="180" y="158" text-anchor="middle" font-size="13" fill="#94a3b8">#2  (xotirada emas)</text>
+
+  <!-- ko'rinadigan oyna -->
+  <rect x="74" y="172" width="212" height="170" rx="10" fill="#e0f2fe" stroke="#0ea5e9" stroke-width="3"/>
+  <text x="180" y="190" text-anchor="middle" font-size="13" font-weight="700" fill="#0284c7">Ekran oynasi</text>
+  <rect x="84" y="198" width="192" height="28" rx="5" fill="#ffffff" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="180" y="217" text-anchor="middle" font-size="13" fill="#1e293b">#48  ko'rinadi</text>
+  <rect x="84" y="230" width="192" height="28" rx="5" fill="#ffffff" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="180" y="249" text-anchor="middle" font-size="13" fill="#1e293b">#49  ko'rinadi</text>
+  <rect x="84" y="262" width="192" height="28" rx="5" fill="#ffffff" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="180" y="281" text-anchor="middle" font-size="13" fill="#1e293b">#50  ko'rinadi</text>
+  <rect x="84" y="294" width="192" height="28" rx="5" fill="#ffffff" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="180" y="313" text-anchor="middle" font-size="13" fill="#1e293b">#51  ko'rinadi</text>
+
+  <!-- past ko'rinmas elementlar -->
+  <rect x="80" y="348" width="200" height="26" rx="5" fill="#e2e8f0"/>
+  <text x="180" y="366" text-anchor="middle" font-size="13" fill="#94a3b8">#52  (xotirada emas)</text>
+  <rect x="80" y="378" width="200" height="26" rx="5" fill="#e2e8f0"/>
+  <text x="180" y="396" text-anchor="middle" font-size="13" fill="#94a3b8">...  #1000 gacha</text>
+
+  <!-- O'q -->
+  <line x1="300" y1="260" x2="370" y2="260" stroke="#475569" stroke-width="2.5"/>
+  <polygon points="370,260 358,253 358,267" fill="#475569"/>
+
+  <!-- Taqqoslash (o'ng) -->
+  <!-- ScrollView -->
+  <rect x="390" y="100" width="350" height="180" rx="14" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <rect x="390" y="100" width="350" height="40" rx="14" fill="#fee2e2"/>
+  <text x="565" y="126" text-anchor="middle" font-size="16" font-weight="700" fill="#dc2626">ScrollView (uzun ro'yxatda yomon)</text>
+  <text x="410" y="166" font-size="14" fill="#475569">Hamma 1000 element DARHOL render bo'ladi</text>
+  <text x="410" y="192" font-size="14" fill="#475569">Xotira to'ladi, ochilishi sekin</text>
+  <text x="410" y="218" font-size="14" fill="#475569">Skroll sakraydi (lag)</text>
+  <text x="410" y="252" font-size="14" font-weight="700" fill="#dc2626">Faqat kam (10-20) element uchun</text>
+
+  <!-- FlatList -->
+  <rect x="390" y="300" width="350" height="200" rx="14" fill="#ffffff" stroke="#0ea5e9" stroke-width="3"/>
+  <rect x="390" y="300" width="350" height="40" rx="14" fill="#e0f2fe"/>
+  <text x="565" y="326" text-anchor="middle" font-size="16" font-weight="700" fill="#0284c7">FlatList (uzun ro'yxat uchun)</text>
+  <text x="410" y="366" font-size="14" fill="#475569">Faqat ko'rinadiganlarni render qiladi</text>
+  <text x="410" y="392" font-size="14" fill="#475569">Tepaga chiqqani xotiradan tushadi</text>
+  <text x="410" y="418" font-size="14" fill="#475569">Xotira kam, skroll silliq</text>
+  <text x="410" y="452" font-size="14" font-weight="700" fill="#16a34a">Minglab element bo'lsa ham tez</text>
+  <text x="410" y="484" font-size="13" fill="#94a3b8" font-style="italic">"Konveyer lenta" kabi: faqat ko'z oldidagi qism harakatda</text>
+</svg>

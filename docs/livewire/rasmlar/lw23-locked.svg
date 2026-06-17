@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Locked atributi: mijoz qulflangan xususiyatni o'zgartirishga urinadi va Livewire so'rovni rad etadi</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">#[Locked] — muhrlangan xususiyat</text>
+  <text x="380" y="58" text-anchor="middle" font-size="14" fill="#475569">qiymat o'zgargan bo'lsa, Livewire so'rovni rad etadi</text>
+
+  <!-- Komponent kod -->
+  <rect x="40" y="84" width="280" height="96" rx="10" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="60" y="110" font-size="14" font-weight="700" fill="#4f46e5">Komponentda:</text>
+  <text x="60" y="136" font-size="14" fill="#16a34a">#[Locked]</text>
+  <text x="60" y="160" font-size="14" fill="#1e293b">public int $price = 100;</text>
+
+  <!-- Mijoz urinishi -->
+  <rect x="40" y="208" width="280" height="120" rx="10" fill="#1e293b"/>
+  <text x="60" y="234" font-size="13" font-weight="700" fill="#94a3b8">Mijoz konsolda:</text>
+  <text x="60" y="262" font-size="14" fill="#fb70a9">&gt; $wire.price = 1</text>
+  <text x="60" y="288" font-size="14" fill="#fb70a9">&gt; $wire.buy()</text>
+  <text x="60" y="314" font-size="13" fill="#f59e0b">qiymatni o'zgartirib jo'natdi</text>
+
+  <!-- Arrow to livewire -->
+  <path d="M324 268 L416 268" fill="none" stroke="#475569" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="370" y="258" text-anchor="middle" font-size="13" fill="#475569">so'rov</text>
+
+  <!-- Livewire muhr tekshiruvi -->
+  <rect x="420" y="208" width="300" height="120" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="570" y="236" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">Livewire muhrni tekshiradi</text>
+  <text x="570" y="262" text-anchor="middle" font-size="13" fill="#475569">server: 100 · brauzer: 1</text>
+  <text x="570" y="286" text-anchor="middle" font-size="14" font-weight="700" fill="#dc2626">mos kelmadi — muhr buzilgan!</text>
+  <text x="570" y="310" text-anchor="middle" font-size="13" fill="#94a3b8">o'zgarish rad etiladi</text>
+
+  <!-- Result error -->
+  <rect x="420" y="84" width="300" height="96" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="570" y="112" text-anchor="middle" font-size="15" font-weight="700" fill="#dc2626">Natija: XATO</text>
+  <text x="570" y="140" text-anchor="middle" font-size="13" fill="#1e293b">Cannot update locked</text>
+  <text x="570" y="160" text-anchor="middle" font-size="13" fill="#1e293b">property: [price]</text>
+
+  <!-- arrow up to error -->
+  <path d="M570 208 L570 184" fill="none" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arrred)"/>
+
+  <!-- Bottom note -->
+  <rect x="40" y="356" width="680" height="60" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="60" y="382" font-size="14" font-weight="700" fill="#16a34a">Devor o'rnatildi</text>
+  <text x="60" y="404" font-size="14" fill="#475569">Qiymat brauzerga ketadi (ko'rinadi), lekin o'zgartirib bo'lmaydi — id, narx, egalik uchun ideal.</text>
+
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0 0 L8 3 L0 6 Z" fill="#475569"/>
+    </marker>
+    <marker id="arrred" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0 0 L8 3 L0 6 Z" fill="#dc2626"/>
+    </marker>
+  </defs>
+</svg>

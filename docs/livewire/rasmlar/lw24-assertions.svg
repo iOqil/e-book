@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 500" width="760" height="500" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Livewire asosiy assertion metodlari jadvali: ko'rinish, holat, validatsiya, event, yo'naltirish, status bo'limlari bo'yicha</title>
+  <rect x="0" y="0" width="760" height="500" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Asosiy assertion metodlari</text>
+
+  <!-- KO'RINISH -->
+  <rect x="30" y="58" width="700" height="68" rx="11" fill="#ffffff" stroke="#c7d2fe" stroke-width="2"/>
+  <rect x="30" y="58" width="150" height="68" rx="11" fill="#eef2ff"/>
+  <text x="105" y="89" text-anchor="middle" font-size="14" font-weight="700" fill="#4f46e5">KO'RINISH</text>
+  <text x="105" y="110" text-anchor="middle" font-size="13" fill="#475569">HTML matni</text>
+  <text x="200" y="84" font-size="13" font-weight="700" fill="#1e293b">assertSee('matn')</text>
+  <text x="200" y="103" font-size="13" fill="#475569">render'da matn BOR</text>
+  <text x="470" y="84" font-size="13" font-weight="700" fill="#1e293b">assertDontSee('matn')</text>
+  <text x="470" y="103" font-size="13" fill="#475569">render'da matn YO'Q</text>
+
+  <!-- HOLAT -->
+  <rect x="30" y="134" width="700" height="56" rx="11" fill="#ffffff" stroke="#c7d2fe" stroke-width="2"/>
+  <rect x="30" y="134" width="150" height="56" rx="11" fill="#eef2ff"/>
+  <text x="105" y="159" text-anchor="middle" font-size="14" font-weight="700" fill="#4f46e5">HOLAT</text>
+  <text x="105" y="179" text-anchor="middle" font-size="13" fill="#475569">xususiyat</text>
+  <text x="200" y="160" font-size="13" font-weight="700" fill="#1e293b">assertSet('count', 6)</text>
+  <text x="200" y="179" font-size="13" fill="#475569">xususiyat qiymati aynan shunday</text>
+
+  <!-- VALIDATSIYA -->
+  <rect x="30" y="198" width="700" height="68" rx="11" fill="#ffffff" stroke="#c7d2fe" stroke-width="2"/>
+  <rect x="30" y="198" width="150" height="68" rx="11" fill="#fdf2f8"/>
+  <text x="105" y="229" text-anchor="middle" font-size="14" font-weight="700" fill="#be185d">VALIDATSIYA</text>
+  <text x="105" y="250" text-anchor="middle" font-size="13" fill="#475569">xatolar</text>
+  <text x="200" y="224" font-size="13" font-weight="700" fill="#1e293b">assertHasErrors(['title' =&gt; 'required'])</text>
+  <text x="200" y="243" font-size="13" fill="#475569">xato BOR (maydon + qoida)</text>
+  <text x="200" y="261" font-size="13" font-weight="700" fill="#16a34a">assertHasNoErrors()  — hech xato YO'Q</text>
+
+  <!-- EVENT -->
+  <rect x="30" y="274" width="700" height="68" rx="11" fill="#ffffff" stroke="#c7d2fe" stroke-width="2"/>
+  <rect x="30" y="274" width="150" height="68" rx="11" fill="#fef3c7"/>
+  <text x="105" y="305" text-anchor="middle" font-size="14" font-weight="700" fill="#92400e">EVENT</text>
+  <text x="105" y="326" text-anchor="middle" font-size="13" fill="#475569">hodisa</text>
+  <text x="200" y="300" font-size="13" font-weight="700" fill="#1e293b">assertDispatched('saved')</text>
+  <text x="200" y="319" font-size="13" fill="#475569">event YUBORILDI</text>
+  <text x="200" y="337" font-size="13" font-weight="700" fill="#1e293b">assertNotDispatched('saved')  — YUBORILMADI</text>
+
+  <!-- YO'NALTIRISH -->
+  <rect x="30" y="350" width="700" height="56" rx="11" fill="#ffffff" stroke="#c7d2fe" stroke-width="2"/>
+  <rect x="30" y="350" width="150" height="56" rx="11" fill="#eef2ff"/>
+  <text x="105" y="375" text-anchor="middle" font-size="14" font-weight="700" fill="#4f46e5">YO'NALTIRISH</text>
+  <text x="105" y="395" text-anchor="middle" font-size="13" fill="#475569">redirect</text>
+  <text x="200" y="376" font-size="13" font-weight="700" fill="#1e293b">assertRedirect('/posts')</text>
+  <text x="200" y="395" font-size="13" fill="#475569">shu manzilga yo'naltirdi</text>
+
+  <!-- STATUS -->
+  <rect x="30" y="414" width="700" height="68" rx="11" fill="#ffffff" stroke="#c7d2fe" stroke-width="2"/>
+  <rect x="30" y="414" width="150" height="68" rx="11" fill="#f0fdf4"/>
+  <text x="105" y="445" text-anchor="middle" font-size="14" font-weight="700" fill="#16a34a">STATUS</text>
+  <text x="105" y="466" text-anchor="middle" font-size="13" fill="#475569">javob kodi</text>
+  <text x="200" y="440" font-size="13" font-weight="700" fill="#1e293b">assertStatus(200)</text>
+  <text x="200" y="459" font-size="13" fill="#475569">javob kodi (200 = OK)</text>
+  <text x="200" y="477" font-size="13" font-weight="700" fill="#dc2626">assertForbidden()  — 403 (taqiqlangan)</text>
+  <text x="540" y="440" font-size="13" font-weight="700" fill="#1e293b">assertViewHas('posts')</text>
+  <text x="540" y="459" font-size="13" fill="#475569">shablonga o'zgaruvchi</text>
+  <text x="540" y="477" font-size="13" fill="#475569">uzatilgan</text>
+</svg>

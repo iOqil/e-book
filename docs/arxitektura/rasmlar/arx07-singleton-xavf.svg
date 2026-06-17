@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480">
+  <title>Singleton tuzog'i: global holat ko'p modulni yashirin bog'lab tashlaydi, testni qiyinlashtiradi; muqobil — DI orqali bitta nusxani uzatish</title>
+  <rect x="0" y="0" width="760" height="480" fill="#f8fafc"/>
+  <text x="380" y="34" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Singleton tuzog'i va muqobil (DI)</text>
+
+  <!-- LEFT: Singleton trap -->
+  <text x="195" y="66" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#dc2626" text-anchor="middle">TUZOQ: global Singleton</text>
+
+  <!-- singleton box -->
+  <rect x="130" y="200" width="130" height="70" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="195" y="230" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626" text-anchor="middle">Konfig</text>
+  <text x="195" y="252" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">.olish() global</text>
+
+  <!-- modules pointing in (hidden coupling) -->
+  <rect x="40" y="90" width="110" height="44" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="95" y="117" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">Buyurtma</text>
+  <rect x="240" y="90" width="110" height="44" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="295" y="117" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">Email</text>
+  <rect x="30" y="320" width="110" height="44" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="85" y="347" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">Hisobot</text>
+  <rect x="250" y="320" width="110" height="44" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="305" y="347" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">Auth</text>
+
+  <line x1="105" y1="134" x2="170" y2="198" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#red)"/>
+  <line x1="285" y1="134" x2="222" y2="198" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#red)"/>
+  <line x1="110" y1="320" x2="168" y2="270" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#red)"/>
+  <line x1="295" y1="320" x2="225" y2="270" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#red)"/>
+
+  <text x="195" y="300" font-family="Segoe UI" font-size="13" fill="#dc2626" text-anchor="middle">yashirin bog'liqlik</text>
+
+  <!-- divider -->
+  <line x1="385" y1="80" x2="385" y2="420" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="4 4"/>
+
+  <!-- RIGHT: DI alternative -->
+  <text x="575" y="66" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="middle">MUQOBIL: DI orqali uzatish</text>
+
+  <rect x="500" y="90" width="150" height="50" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="575" y="113" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#2563eb" text-anchor="middle">main / composition root</text>
+  <text x="575" y="131" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">bitta nusxa yaratadi</text>
+
+  <rect x="500" y="200" width="150" height="60" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="575" y="226" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">Konfig (oddiy obyekt)</text>
+  <text x="575" y="247" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">global emas</text>
+
+  <line x1="575" y1="140" x2="575" y2="198" stroke="#2563eb" stroke-width="2" marker-end="url(#blue)"/>
+
+  <rect x="430" y="330" width="130" height="44" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="495" y="357" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">Buyurtma(konfig)</text>
+  <rect x="590" y="330" width="130" height="44" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="655" y="357" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">Email(konfig)</text>
+
+  <line x1="540" y1="260" x2="500" y2="328" stroke="#16a34a" stroke-width="2" marker-end="url(#green)"/>
+  <line x1="610" y1="260" x2="650" y2="328" stroke="#16a34a" stroke-width="2" marker-end="url(#green)"/>
+  <text x="575" y="300" font-family="Segoe UI" font-size="13" fill="#16a34a" text-anchor="middle">oshkora uzatiladi (DIP)</text>
+
+  <!-- bottom note -->
+  <rect x="40" y="425" width="680" height="48" rx="8" fill="#fffbeb" stroke="#f59e0b" stroke-width="1"/>
+  <text x="60" y="447" font-family="Segoe UI" font-size="13" fill="#334155">Singleton kamchiligi: yashirin global holat, parallel testlar bir-biriga ta'sir qiladi, bog'liqlik signaturada ko'rinmaydi.</text>
+  <text x="60" y="466" font-family="Segoe UI" font-size="13" fill="#334155">DI'da bog'liqlik konstruktorda OSHKORA — testda soxta (mock) nusxa uzatish oson.</text>
+
+  <defs>
+    <marker id="red" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L9,5 L0,10 Z" fill="#dc2626"/></marker>
+    <marker id="blue" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L9,5 L0,10 Z" fill="#2563eb"/></marker>
+    <marker id="green" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L9,5 L0,10 Z" fill="#16a34a"/></marker>
+  </defs>
+</svg>

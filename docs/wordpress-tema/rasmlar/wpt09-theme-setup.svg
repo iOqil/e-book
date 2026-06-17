@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 540" width="800" height="540" font-family="Segoe UI, system-ui, sans-serif">
+  <title>after_setup_theme hookida add_theme_support bilan yoqiladigan tema imkoniyatlari</title>
+  <rect x="0" y="0" width="800" height="540" fill="#f8fafc"/>
+  <text x="400" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Theme setup: after_setup_theme + add_theme_support()</text>
+
+  <!-- central hook box -->
+  <rect x="250" y="56" width="300" height="64" rx="12" fill="#16a34a"/>
+  <text x="400" y="83" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">add_action('after_setup_theme',</text>
+  <text x="400" y="105" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">'mening_temam_setup')</text>
+
+  <line x1="400" y1="120" x2="400" y2="146" stroke="#16a34a" stroke-width="3"/>
+  <polygon points="400,154 393,142 407,142" fill="#16a34a"/>
+
+  <text x="400" y="176" text-anchor="middle" font-size="14" font-weight="700" fill="#475569">funksiya ichida add_theme_support(...) chaqiriladi:</text>
+
+  <!-- feature cards grid 3x3 -->
+  <!-- row 1 -->
+  <rect x="40" y="192" width="232" height="64" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="156" y="214" text-anchor="middle" font-size="14" font-weight="700" fill="#2563eb">title-tag</text>
+  <text x="156" y="236" text-anchor="middle" font-size="13" fill="#475569">&lt;title&gt; ni WP boshqaradi</text>
+
+  <rect x="284" y="192" width="232" height="64" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="400" y="214" text-anchor="middle" font-size="14" font-weight="700" fill="#2563eb">post-thumbnails</text>
+  <text x="400" y="236" text-anchor="middle" font-size="13" fill="#475569">featured image + add_image_size</text>
+
+  <rect x="528" y="192" width="232" height="64" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="644" y="214" text-anchor="middle" font-size="14" font-weight="700" fill="#2563eb">html5</text>
+  <text x="644" y="236" text-anchor="middle" font-size="13" fill="#475569">zamonaviy markup (forma...)</text>
+
+  <!-- row 2 -->
+  <rect x="40" y="268" width="232" height="64" rx="8" fill="#ffffff" stroke="#d97706" stroke-width="2"/>
+  <text x="156" y="290" text-anchor="middle" font-size="14" font-weight="700" fill="#d97706">custom-logo</text>
+  <text x="156" y="312" text-anchor="middle" font-size="13" fill="#475569">sozlamadan logo yuklash</text>
+
+  <rect x="284" y="268" width="232" height="64" rx="8" fill="#ffffff" stroke="#d97706" stroke-width="2"/>
+  <text x="400" y="290" text-anchor="middle" font-size="14" font-weight="700" fill="#d97706">post-formats</text>
+  <text x="400" y="312" text-anchor="middle" font-size="13" fill="#475569">aside, quote, video...</text>
+
+  <rect x="528" y="268" width="232" height="64" rx="8" fill="#ffffff" stroke="#d97706" stroke-width="2"/>
+  <text x="644" y="290" text-anchor="middle" font-size="14" font-weight="700" fill="#d97706">automatic-feed-links</text>
+  <text x="644" y="312" text-anchor="middle" font-size="13" fill="#475569">RSS havolasi &lt;head&gt; da</text>
+
+  <!-- row 3 -->
+  <rect x="40" y="344" width="232" height="64" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="156" y="366" text-anchor="middle" font-size="14" font-weight="700" fill="#16a34a">responsive-embeds</text>
+  <text x="156" y="388" text-anchor="middle" font-size="13" fill="#475569">moslashuvchan video</text>
+
+  <rect x="284" y="344" width="232" height="64" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="400" y="366" text-anchor="middle" font-size="14" font-weight="700" fill="#16a34a">editor-styles</text>
+  <text x="400" y="388" text-anchor="middle" font-size="13" fill="#475569">muharrirda tema ko'rinishi</text>
+
+  <rect x="528" y="344" width="232" height="64" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="644" y="366" text-anchor="middle" font-size="14" font-weight="700" fill="#16a34a">align-wide</text>
+  <text x="644" y="388" text-anchor="middle" font-size="13" fill="#475569">keng / to'liq tekislash</text>
+
+  <!-- block theme note -->
+  <rect x="40" y="430" width="720" height="86" rx="10" fill="#eff6ff" stroke="#21759b" stroke-width="2"/>
+  <text x="60" y="456" font-size="14" font-weight="700" fill="#21759b">Block tema (FSE) eslatmasi:</text>
+  <text x="60" y="480" font-size="13" fill="#475569">block-templates, block-template-parts, wp-block-styles ham mavjud. Lekin block temada ko'p</text>
+  <text x="60" y="500" font-size="13" fill="#475569">sozlama theme.json orqali beriladi (16-17-bob) - bu yerdagilar asosan KLASSIK tema uchun.</text>
+</svg>

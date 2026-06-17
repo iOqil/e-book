@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440">
+  <title>Prefikssiz global funksiya nomlari ikki plugin orasida toqnashadi; namespace yoki prefiks bilan ular ajraladi</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Global makon: nomlar toqnashuvi</text>
+  <text x="380" y="54" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">WordPress hamma plugin'ni BITTA PHP jarayonida yuklaydi</text>
+
+  <!-- YOMON: prefikssiz -->
+  <rect x="30" y="78" width="340" height="200" rx="10" fill="#fef3c7" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="200" y="104" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#dc2626">YOMON: prefikssiz</text>
+
+  <rect x="52" y="120" width="135" height="64" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="119" y="140" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">Plugin A</text>
+  <text x="119" y="160" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">function init()</text>
+  <text x="119" y="176" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">class Book</text>
+
+  <rect x="213" y="120" width="135" height="64" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="280" y="140" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">Plugin B</text>
+  <text x="280" y="160" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">function init()</text>
+  <text x="280" y="176" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">class Book</text>
+
+  <!-- toqnashuv chaqmog'i -->
+  <line x1="187" y1="152" x2="213" y2="152" stroke="#dc2626" stroke-width="3"/>
+  <text x="200" y="216" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="26" fill="#dc2626">&#9889;</text>
+  <text x="200" y="248" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626">Fatal error: Cannot redeclare</text>
+  <text x="200" y="266" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">init() / class Book</text>
+
+  <!-- YAXSHI: namespace -->
+  <rect x="390" y="78" width="340" height="200" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="560" y="104" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">YAXSHI: namespace</text>
+
+  <rect x="412" y="120" width="135" height="78" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="479" y="140" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">Oqil\KitobKatalog</text>
+  <text x="479" y="160" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">init()</text>
+  <text x="479" y="178" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">class Book</text>
+  <text x="479" y="194" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a" font-weight="bold">OK</text>
+
+  <rect x="573" y="120" width="135" height="78" rx="6" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="640" y="140" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#2563eb">Boshqa\Plugin</text>
+  <text x="640" y="160" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">init()</text>
+  <text x="640" y="178" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">class Book</text>
+  <text x="640" y="194" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb" font-weight="bold">OK</text>
+
+  <text x="560" y="232" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">To'liq nom: Oqil\KitobKatalog\Book</text>
+  <text x="560" y="252" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">!= Boshqa\Plugin\Book — toqnashmaydi</text>
+
+  <!-- Pastki: prefiks muqobili -->
+  <rect x="30" y="300" width="700" height="110" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="326" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">Namespace bolmasa: prefiks (eski uslub, lekin amal qiladi)</text>
+  <text x="380" y="352" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">function kitkat_init()  ·  class KitKat_Book  ·  const KITKAT_VERSION</text>
+  <text x="380" y="374" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Kamida 4-5 harfli noyob prefiks. wp_ / __ / _ bilan boshlanmasin (yadro band qilgan).</text>
+  <text x="380" y="396" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-style="italic" fill="#2563eb">Zamonaviy tanlov = namespace; prefiks faqat global funksiyalarga (hook nomlari, konstanta).</text>
+</svg>

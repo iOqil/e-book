@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Qo'lda while-loop (07-bob) ko'p qadamli bo'lakli kod talab qiladi; tool runner esa loop'ni SDK ichiga yashiradi va siz faqat vositalarni e'lon qilasiz</title>
+  <defs>
+    <marker id="mvr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="800" height="520" fill="#f8fafc"/>
+  <text x="400" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Qo'lda loop vs Tool runner — bir xil natija, kam kod</text>
+  <text x="400" y="58" font-size="14" fill="#64748b" text-anchor="middle">Ikkalasi ham agent siklini bajaradi; farqi — kim yozadi?</text>
+
+  <!-- LEFT: manual loop -->
+  <rect x="28" y="80" width="356" height="408" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="206" y="108" font-size="16" font-weight="bold" fill="#d97757" text-anchor="middle">QO'LDA while-loop (07-bob)</text>
+  <text x="206" y="130" font-size="13" fill="#94a3b8" text-anchor="middle">har qadamni o'zingiz yozasiz</text>
+
+  <rect x="52" y="146" width="308" height="40" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="206" y="171" font-size="13.5" fill="#1e293b" text-anchor="middle">1. API'ni chaqir (messages.create)</text>
+
+  <rect x="52" y="194" width="308" height="40" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="206" y="219" font-size="13.5" fill="#1e293b" text-anchor="middle">2. stop_reason ni tekshir</text>
+
+  <rect x="52" y="242" width="308" height="40" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="206" y="267" font-size="13.5" fill="#1e293b" text-anchor="middle">3. tool_use bloklarini ajratib ol</text>
+
+  <rect x="52" y="290" width="308" height="40" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="206" y="315" font-size="13.5" fill="#1e293b" text-anchor="middle">4. funksiyani bajar</text>
+
+  <rect x="52" y="338" width="308" height="40" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="206" y="363" font-size="13.5" fill="#1e293b" text-anchor="middle">5. tool_result bloklarini yasa</text>
+
+  <rect x="52" y="386" width="308" height="40" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="206" y="411" font-size="13.5" fill="#1e293b" text-anchor="middle">6. qayta chaqir -> 1-qadamga qayt</text>
+
+  <rect x="52" y="438" width="308" height="34" rx="8" fill="#fef3c7" stroke="#d97757" stroke-width="1.5"/>
+  <text x="206" y="460" font-size="13" fill="#475569" text-anchor="middle">ko'p bo'lakli kod (boilerplate)</text>
+
+  <!-- arrow between -->
+  <line x1="392" y1="284" x2="416" y2="284" stroke="#64748b" stroke-width="2.5" marker-end="url(#mvr)"/>
+  <text x="404" y="272" font-size="13" fill="#16a34a" text-anchor="middle">=</text>
+
+  <!-- RIGHT: tool runner -->
+  <rect x="424" y="80" width="348" height="408" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="598" y="108" font-size="16" font-weight="bold" fill="#16a34a" text-anchor="middle">TOOL RUNNER (SDK)</text>
+  <text x="598" y="130" font-size="13" fill="#94a3b8" text-anchor="middle">siz faqat vositalarni e'lon qilasiz</text>
+
+  <rect x="448" y="158" width="300" height="92" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="598" y="190" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">1. Vositalarni e'lon qil</text>
+  <text x="598" y="214" font-size="13" fill="#475569" text-anchor="middle">betaZodTool({ name, description,</text>
+  <text x="598" y="234" font-size="13" fill="#475569" text-anchor="middle">inputSchema, run })</text>
+
+  <rect x="448" y="270" width="300" height="72" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="598" y="300" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">2. Runner'ni ishga tushir</text>
+  <text x="598" y="324" font-size="13" fill="#475569" text-anchor="middle">for await (const m of runner)</text>
+
+  <rect x="448" y="362" width="300" height="62" rx="10" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="598" y="388" font-size="13.5" font-weight="bold" fill="#6366f1" text-anchor="middle">1-6 qadamlarning HAMMASI</text>
+  <text x="598" y="410" font-size="13.5" fill="#1e293b" text-anchor="middle">SDK ichida yashirin</text>
+
+  <rect x="448" y="436" width="300" height="36" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="598" y="459" font-size="13" fill="#475569" text-anchor="middle">kam kod, kam xato</text>
+</svg>

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 500">
+  <title>HTTP metodlari: safe, idempotent va na safe na idempotent xususiyatlari jadvali (RFC 9110)</title>
+  <rect x="0" y="0" width="880" height="500" fill="#f8fafc"/>
+  <text x="440" y="34" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">Metodlar: safe va idempotent (RFC 9110)</text>
+  <text x="440" y="58" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Safe = holatni o'zgartirmaydi · Idempotent = takror = bir marta</text>
+
+  <!-- jadval ramkasi -->
+  <!-- sarlavha qatori -->
+  <rect x="40" y="80" width="200" height="46" fill="#1e293b"/>
+  <rect x="240" y="80" width="160" height="46" fill="#1e293b"/>
+  <rect x="400" y="80" width="160" height="46" fill="#1e293b"/>
+  <rect x="560" y="80" width="280" height="46" fill="#1e293b"/>
+  <text x="140" y="109" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#ffffff">Metod</text>
+  <text x="320" y="109" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#ffffff">Safe?</text>
+  <text x="480" y="109" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#ffffff">Idempotent?</text>
+  <text x="700" y="109" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#ffffff">Izoh</text>
+
+  <!-- GET -->
+  <rect x="40" y="126" width="200" height="52" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="240" y="126" width="160" height="52" fill="#f0fdf4" stroke="#e2e8f0"/>
+  <rect x="400" y="126" width="160" height="52" fill="#f0fdf4" stroke="#e2e8f0"/>
+  <rect x="560" y="126" width="280" height="52" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="58" y="158" font-family="monospace" font-size="15" font-weight="bold" fill="#2563eb">GET / HEAD</text>
+  <text x="320" y="158" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#16a34a">HA</text>
+  <text x="480" y="158" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#16a34a">HA</text>
+  <text x="576" y="158" font-family="Segoe UI" font-size="13" fill="#334155">Faqat o'qish — keshlash mumkin</text>
+
+  <!-- PUT -->
+  <rect x="40" y="178" width="200" height="52" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="240" y="178" width="160" height="52" fill="#fef2f2" stroke="#e2e8f0"/>
+  <rect x="400" y="178" width="160" height="52" fill="#f0fdf4" stroke="#e2e8f0"/>
+  <rect x="560" y="178" width="280" height="52" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="58" y="210" font-family="monospace" font-size="15" font-weight="bold" fill="#7c3aed">PUT</text>
+  <text x="320" y="210" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#dc2626">YO'Q</text>
+  <text x="480" y="210" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#16a34a">HA</text>
+  <text x="576" y="210" font-family="Segoe UI" font-size="13" fill="#334155">To'liq o'rnatadi — takror bir xil</text>
+
+  <!-- DELETE -->
+  <rect x="40" y="230" width="200" height="52" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="240" y="230" width="160" height="52" fill="#fef2f2" stroke="#e2e8f0"/>
+  <rect x="400" y="230" width="160" height="52" fill="#f0fdf4" stroke="#e2e8f0"/>
+  <rect x="560" y="230" width="280" height="52" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="58" y="262" font-family="monospace" font-size="15" font-weight="bold" fill="#7c3aed">DELETE</text>
+  <text x="320" y="262" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#dc2626">YO'Q</text>
+  <text x="480" y="262" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#16a34a">HA</text>
+  <text x="576" y="262" font-family="Segoe UI" font-size="13" fill="#334155">O'chgan resurs o'chgancha qoladi</text>
+
+  <!-- PATCH -->
+  <rect x="40" y="282" width="200" height="52" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="240" y="282" width="160" height="52" fill="#fef2f2" stroke="#e2e8f0"/>
+  <rect x="400" y="282" width="160" height="52" fill="#fef9c3" stroke="#e2e8f0"/>
+  <rect x="560" y="282" width="280" height="52" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="58" y="314" font-family="monospace" font-size="15" font-weight="bold" fill="#f59e0b">PATCH</text>
+  <text x="320" y="314" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#dc2626">YO'Q</text>
+  <text x="480" y="314" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#b45309">SHART EMAS</text>
+  <text x="576" y="314" font-family="Segoe UI" font-size="13" fill="#334155">Bog'liq: masalan "+1" idempotent emas</text>
+
+  <!-- POST -->
+  <rect x="40" y="334" width="200" height="52" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="240" y="334" width="160" height="52" fill="#fef2f2" stroke="#e2e8f0"/>
+  <rect x="400" y="334" width="160" height="52" fill="#fef2f2" stroke="#e2e8f0"/>
+  <rect x="560" y="334" width="280" height="52" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="58" y="366" font-family="monospace" font-size="15" font-weight="bold" fill="#dc2626">POST</text>
+  <text x="320" y="366" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#dc2626">YO'Q</text>
+  <text x="480" y="366" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#dc2626">YO'Q</text>
+  <text x="576" y="366" font-family="Segoe UI" font-size="13" fill="#334155">Har takror yangi yaratadi</text>
+
+  <!-- pastki eslatma karta -->
+  <rect x="40" y="404" width="800" height="72" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="60" y="430" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e3a8a">POST ni idempotent qilish:</text>
+  <text x="60" y="452" font-family="Segoe UI" font-size="13" fill="#334155">Idempotency-Key header bilan (IETF draft) — server kalitni saqlaydi va takrorni qayta bajarmaydi.</text>
+  <text x="60" y="470" font-family="Segoe UI" font-size="13" fill="#64748b">Idempotentlik = SERVER holati bo'yicha; javob status kodi har doim bir xil bo'lishi shart emas.</text>
+</svg>

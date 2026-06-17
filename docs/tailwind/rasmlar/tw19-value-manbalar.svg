@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="800" height="480" font-family="Segoe UI, system-ui, sans-serif">
+  <title>--value() funksiyasi qiymatni to'rt manbadan oladi: bare qiymat (integer/number), arbitrary [length]/[integer], literal kalit so'z 'auto'/'full', va tema namespace --spacing-* / --color-* — barchasi bitta funksional utility'ni oziqlantiradi</title>
+  <rect x="0" y="0" width="800" height="480" fill="#f8fafc"/>
+
+  <text x="400" y="36" text-anchor="middle" font-size="21" font-weight="bold" fill="#1e293b">--value() qiymatni qayerdan oladi?</text>
+  <text x="400" y="60" text-anchor="middle" font-size="14" fill="#475569">Klassdagi * o'rnini to'rt xil manbadan hal qiladi — bittasida bir nechtasini birga yozish mumkin</text>
+
+  <!-- markaziy utility (pastda) -->
+  <rect x="250" y="392" width="300" height="62" rx="12" fill="#4f46e5" stroke="#4338ca" stroke-width="1.5"/>
+  <text x="400" y="418" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">@utility size-* &#123; ... --value(...) ... &#125;</text>
+  <text x="400" y="440" text-anchor="middle" font-size="13" fill="#ffffff">bitta funksional utility</text>
+
+  <!-- 4 manba qutilari -->
+  <!-- 1. bare -->
+  <rect x="30" y="96" width="178" height="118" rx="10" fill="#ffffff" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="119" y="120" text-anchor="middle" font-size="14" font-weight="bold" fill="#0284c7">1. Bare (yalang'och)</text>
+  <text x="46" y="146" font-size="14" fill="#16a34a">--value(integer)</text>
+  <text x="46" y="167" font-size="14" fill="#16a34a">--value(number)</text>
+  <text x="46" y="188" font-size="14" fill="#16a34a">--value(percentage)</text>
+  <text x="46" y="208" font-size="13" fill="#475569">misol: <tspan fill="#1e293b" font-weight="bold">size-4</tspan></text>
+
+  <!-- 2. arbitrary -->
+  <rect x="222" y="96" width="178" height="118" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="311" y="120" text-anchor="middle" font-size="14" font-weight="bold" fill="#b45309">2. Arbitrary [ ]</text>
+  <text x="238" y="146" font-size="14" fill="#16a34a">--value([length])</text>
+  <text x="238" y="167" font-size="14" fill="#16a34a">--value([integer])</text>
+  <text x="238" y="188" font-size="14" fill="#16a34a">--value([*])</text>
+  <text x="238" y="208" font-size="13" fill="#475569">misol: <tspan fill="#1e293b" font-weight="bold">size-[13px]</tspan></text>
+
+  <!-- 3. keyword -->
+  <rect x="414" y="96" width="178" height="118" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="503" y="120" text-anchor="middle" font-size="14" font-weight="bold" fill="#16a34a">3. Literal kalit so'z</text>
+  <text x="430" y="146" font-size="14" fill="#16a34a">--value('auto')</text>
+  <text x="430" y="167" font-size="14" fill="#16a34a">--value('full')</text>
+  <text x="430" y="188" font-size="13" fill="#475569">aniq matnga moslaydi</text>
+  <text x="430" y="208" font-size="13" fill="#475569">misol: <tspan fill="#1e293b" font-weight="bold">size-full</tspan></text>
+
+  <!-- 4. theme namespace -->
+  <rect x="606" y="96" width="178" height="118" rx="10" fill="#ffffff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="695" y="120" text-anchor="middle" font-size="14" font-weight="bold" fill="#4f46e5">4. Tema namespace</text>
+  <text x="622" y="146" font-size="14" fill="#16a34a">--value(--spacing-*)</text>
+  <text x="622" y="167" font-size="14" fill="#16a34a">--value(--color-*)</text>
+  <text x="622" y="188" font-size="13" fill="#475569">@theme tokenini o'qiydi</text>
+  <text x="622" y="208" font-size="13" fill="#475569">misol: <tspan fill="#1e293b" font-weight="bold">size-md</tspan></text>
+
+  <!-- strelkalar har bir qutidan markazga -->
+  <line x1="119" y1="214" x2="330" y2="388" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="330,388 318,381 325,372" fill="#94a3b8"/>
+  <line x1="311" y1="214" x2="370" y2="388" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="370,388 360,379 366,368" fill="#94a3b8"/>
+  <line x1="503" y1="214" x2="430" y2="388" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="430,388 434,374 442,383" fill="#94a3b8"/>
+  <line x1="695" y1="214" x2="470" y2="388" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="470,388 474,374 482,383" fill="#94a3b8"/>
+
+  <!-- birlashtirilgan eslatma -->
+  <rect x="150" y="296" width="500" height="60" rx="10" fill="#eef2ff" stroke="#c7d2fe" stroke-width="1"/>
+  <text x="400" y="320" text-anchor="middle" font-size="13" font-weight="bold" fill="#4f46e5">Bir --value() ichida bir nechta manbani vergul bilan yozasiz:</text>
+  <text x="400" y="344" text-anchor="middle" font-size="14" fill="#1e293b">--value(integer, [integer], 'auto')</text>
+</svg>

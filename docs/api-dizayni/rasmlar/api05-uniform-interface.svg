@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 520">
+  <title>Uniform interface: bir resurs ustida turli metodlar bir xil ma'noda</title>
+  <rect x="0" y="0" width="880" height="520" fill="#f8fafc"/>
+  <text x="440" y="34" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">Uniform Interface — bir resurs, bashorat qilinadigan metodlar</text>
+  <text x="440" y="58" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">URI ob'ektni ko'rsatadi · metod nima qilishni bildiradi</text>
+
+  <!-- central resource -->
+  <rect x="330" y="100" width="220" height="70" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="440" y="130" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Resurs (bitta URI)</text>
+  <text x="440" y="156" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#7c3aed">/orders/42</text>
+
+  <!-- GET -->
+  <rect x="40" y="250" width="180" height="120" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="130" y="280" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#16a34a">GET</text>
+  <text x="130" y="306" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">o'qish (safe)</text>
+  <text x="130" y="328" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">42-buyurtmani ko'r</text>
+  <text x="130" y="352" text-anchor="middle" font-family="monospace" font-size="13" fill="#15803d">-> 200 OK</text>
+
+  <!-- PUT -->
+  <rect x="250" y="250" width="180" height="120" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="340" y="280" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#2563eb">PUT</text>
+  <text x="340" y="306" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">to'liq almashtirish</text>
+  <text x="340" y="328" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">(idempotent)</text>
+  <text x="340" y="352" text-anchor="middle" font-family="monospace" font-size="13" fill="#1d4ed8">-> 200 / 204</text>
+
+  <!-- PATCH -->
+  <rect x="460" y="250" width="180" height="120" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="550" y="280" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#b45309">PATCH</text>
+  <text x="550" y="306" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">qisman o'zgartirish</text>
+  <text x="550" y="328" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">faqat bir maydon</text>
+  <text x="550" y="352" text-anchor="middle" font-family="monospace" font-size="13" fill="#b45309">-> 200 OK</text>
+
+  <!-- DELETE -->
+  <rect x="670" y="250" width="180" height="120" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="760" y="280" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#dc2626">DELETE</text>
+  <text x="760" y="306" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">o'chirish</text>
+  <text x="760" y="328" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">(idempotent)</text>
+  <text x="760" y="352" text-anchor="middle" font-family="monospace" font-size="13" fill="#b91c1c">-> 204 No Content</text>
+
+  <!-- connectors -->
+  <line x1="370" y1="170" x2="130" y2="248" stroke="#16a34a" stroke-width="1.6"/>
+  <polygon points="130,248 138,236 144,244" fill="#16a34a"/>
+  <line x1="410" y1="170" x2="340" y2="248" stroke="#2563eb" stroke-width="1.6"/>
+  <polygon points="340,248 339,236 347,238" fill="#2563eb"/>
+  <line x1="470" y1="170" x2="550" y2="248" stroke="#f59e0b" stroke-width="1.6"/>
+  <polygon points="550,248 543,238 551,236" fill="#f59e0b"/>
+  <line x1="510" y1="170" x2="760" y2="248" stroke="#dc2626" stroke-width="1.6"/>
+  <polygon points="760,248 746,244 752,236" fill="#dc2626"/>
+
+  <text x="440" y="430" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">Bir xil URI ustidagi har metodning ma'nosi standart va bashorat qilinadi.</text>
+  <text x="440" y="456" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Mijoz yangi resursni ham xuddi shu qoidalar bilan ishlata oladi — o'rganish bir marta.</text>
+</svg>

@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" width="760" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Semantik qidiruv oqimi: savol vektori har bir hujjat vektori bilan cosine orqali solishtiriladi</title>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">Semantik qidiruv oqimi</text>
+
+  <defs>
+    <marker id="sq" markerWidth="12" markerHeight="12" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#4f46e5"/>
+    </marker>
+  </defs>
+
+  <!-- Savol -->
+  <rect x="30" y="75" width="200" height="70" rx="14" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+  <text x="130" y="103" text-anchor="middle" font-size="15" font-weight="700" fill="#0284c7">Savol</text>
+  <text x="130" y="128" text-anchor="middle" font-size="14" fill="#1e293b">"parolimni unutdim"</text>
+
+  <!-- arrow down to embed -->
+  <line x1="130" y1="147" x2="130" y2="183" stroke="#4f46e5" stroke-width="3" marker-end="url(#sq)"/>
+
+  <!-- Embed model -->
+  <rect x="30" y="188" width="200" height="60" rx="14" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="130" y="215" text-anchor="middle" font-size="15" font-weight="700" fill="#4338ca">Embedding modeli</text>
+  <text x="130" y="236" text-anchor="middle" font-size="13" fill="#6366f1">savol -> savol vektori</text>
+
+  <!-- arrow to compare -->
+  <line x1="234" y1="218" x2="305" y2="218" stroke="#4f46e5" stroke-width="3" marker-end="url(#sq)"/>
+
+  <!-- Compare box -->
+  <rect x="310" y="80" width="200" height="280" rx="14" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="310" y="80" width="200" height="40" rx="14" fill="#fef3c7"/>
+  <text x="410" y="106" text-anchor="middle" font-size="15" font-weight="700" fill="#b45309">cosine solishtirish</text>
+  <text x="410" y="142" text-anchor="middle" font-size="13" fill="#475569">savol vektori X</text>
+  <text x="410" y="160" text-anchor="middle" font-size="13" fill="#475569">har bir hujjat vektori</text>
+
+  <!-- doc rows with scores -->
+  <rect x="328" y="178" width="164" height="30" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="340" y="198" font-size="13" fill="#166534">hujjat 1</text>
+  <text x="478" y="198" text-anchor="end" font-size="13" font-weight="700" fill="#166534">0.61</text>
+
+  <rect x="328" y="214" width="164" height="30" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="340" y="234" font-size="13" fill="#166534">hujjat 5</text>
+  <text x="478" y="234" text-anchor="end" font-size="13" font-weight="700" fill="#166534">0.54</text>
+
+  <rect x="328" y="250" width="164" height="30" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="340" y="270" font-size="13" fill="#64748b">hujjat 3</text>
+  <text x="478" y="270" text-anchor="end" font-size="13" fill="#64748b">0.12</text>
+
+  <rect x="328" y="286" width="164" height="30" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="340" y="306" font-size="13" fill="#64748b">hujjat 2</text>
+  <text x="478" y="306" text-anchor="end" font-size="13" fill="#64748b">0.08</text>
+
+  <text x="410" y="344" text-anchor="middle" font-size="13" fill="#b45309">ball bo'yicha saralanadi</text>
+
+  <!-- arrow to result -->
+  <line x1="514" y1="218" x2="585" y2="218" stroke="#4f46e5" stroke-width="3" marker-end="url(#sq)"/>
+
+  <!-- Result -->
+  <rect x="590" y="158" width="150" height="120" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <rect x="590" y="158" width="150" height="36" rx="14" fill="#dcfce7"/>
+  <text x="665" y="182" text-anchor="middle" font-size="15" font-weight="700" fill="#166534">Natija</text>
+  <text x="665" y="218" text-anchor="middle" font-size="13" fill="#1e293b">eng yuqori ballli</text>
+  <text x="665" y="238" text-anchor="middle" font-size="13" fill="#1e293b">top_k hujjat</text>
+  <text x="665" y="262" text-anchor="middle" font-size="13" fill="#16a34a">ma'noga mos</text>
+
+  <!-- Hujjatlar prebuilt note -->
+  <rect x="30" y="395" width="710" height="55" rx="12" fill="#eef2ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="385" y="420" text-anchor="middle" font-size="14" font-weight="700" fill="#4338ca">Hujjat vektorlari OLDINDAN bir marta hisoblanadi (saqlanadi)</text>
+  <text x="385" y="440" text-anchor="middle" font-size="13" fill="#475569">faqat savol har so'rovda yangi embedding qilinadi</text>
+</svg>

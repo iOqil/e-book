@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 480">
+  <title>Avtomatlashtirilgan xavfsizlik testlash turlari kod hayotining qaysi bosqichida qo'llaniladi: SAST va secret scan kodda, SCA bog'liqliklarda, DAST ishlab turgan ilovada, fuzzing kirishlarda</title>
+  <rect x="0" y="0" width="860" height="480" fill="#f8fafc"/>
+  <text x="430" y="38" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Xavfsizlik testlash turlari qayerda ishlaydi</text>
+  <text x="430" y="64" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Kod -&gt; Bog'liqliklar -&gt; Ishlab turgan ilova</text>
+
+  <!-- pipeline arrow -->
+  <line x1="60" y1="130" x2="800" y2="130" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="800,130 788,124 788,136" fill="#94a3b8"/>
+
+  <!-- Stage 1: code / SAST + secret -->
+  <rect x="60" y="150" width="180" height="170" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="150" y="178" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e40af">1. Kod (statik)</text>
+  <rect x="78" y="192" width="144" height="44" rx="7" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="150" y="212" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#1e40af">SAST</text>
+  <text x="150" y="229" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e40af">Bandit, Semgrep</text>
+  <rect x="78" y="246" width="144" height="44" rx="7" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="150" y="266" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#1e40af">Secret scan</text>
+  <text x="150" y="283" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e40af">gitleaks</text>
+  <text x="150" y="308" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Ishga tushirmasdan</text>
+
+  <!-- Stage 2: deps / SCA -->
+  <rect x="270" y="150" width="180" height="170" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="360" y="178" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#6d28d9">2. Bog'liqliklar</text>
+  <rect x="288" y="192" width="144" height="44" rx="7" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="360" y="212" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#6d28d9">SCA</text>
+  <text x="360" y="229" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#6d28d9">pip-audit, Snyk</text>
+  <text x="360" y="266" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#6d28d9">Zaif kutubxonalar</text>
+  <text x="360" y="290" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#6d28d9">(CVE bazasi)</text>
+  <text x="360" y="312" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">Eng oson g'alaba</text>
+
+  <!-- Stage 3: running app / DAST + fuzzing -->
+  <rect x="480" y="150" width="180" height="170" rx="10" fill="#fff7ed" stroke="#f59e0b" stroke-width="2"/>
+  <text x="570" y="178" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#b45309">3. Ishlab turgan</text>
+  <rect x="498" y="192" width="144" height="44" rx="7" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="570" y="212" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#b45309">DAST</text>
+  <text x="570" y="229" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#b45309">OWASP ZAP</text>
+  <rect x="498" y="246" width="144" height="44" rx="7" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="570" y="266" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#b45309">Fuzzing</text>
+  <text x="570" y="283" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#b45309">tasodifiy kirish</text>
+  <text x="570" y="308" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Ishlatib turib</text>
+
+  <!-- right note -->
+  <rect x="690" y="150" width="150" height="170" rx="10" fill="#ecfdf5" stroke="#16a34a" stroke-width="2"/>
+  <text x="765" y="178" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#166534">CI'da</text>
+  <text x="765" y="206" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#166534">Har commit'da:</text>
+  <text x="765" y="230" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#166534">SAST + SCA +</text>
+  <text x="765" y="250" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#166534">secret scan</text>
+  <text x="765" y="284" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#166534">DAST: kechroq</text>
+  <text x="765" y="304" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#166534">(sekinroq)</text>
+
+  <text x="430" y="372" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">Shift left: xavfsizlikni ERTA (chapda) tut — arzon va tez</text>
+  <text x="430" y="420" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Hech biri pentest yoki threat modeling o'rnini bosmaydi — lekin eng keng tarqalgan xatolarni erta ushlaydi</text>
+</svg>

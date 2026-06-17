@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 480">
+  <title>Qator qamrovi vs shox qamrovi: aynan bir kod va bir test qator bo'yicha 100% beradi, lekin if ning yolg'on tarmog'i hech sinalmagani uchun shox bo'yicha 86% chiqadi</title>
+  <rect x="0" y="0" width="820" height="480" fill="#f8fafc"/>
+  <text x="410" y="38" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Bir kod, ikki xil foiz</text>
+  <text x="410" y="64" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Qator (statement) qamrovi vs shox (branch) qamrovi</text>
+
+  <!-- Code box -->
+  <rect x="250" y="92" width="320" height="116" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="270" y="120" font-family="Segoe UI" font-size="14" fill="#1e293b">natija = "yiqildi"</text>
+  <text x="270" y="146" font-family="Segoe UI" font-size="14" fill="#1e293b">if ball &gt;= 60:</text>
+  <text x="290" y="172" font-family="Segoe UI" font-size="14" fill="#16a34a">natija = "o'tdi"   (sinaldi)</text>
+  <text x="270" y="198" font-family="Segoe UI" font-size="14" fill="#1e293b">return natija</text>
+  <text x="410" y="84" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Test: faqat ball=90 (shart = rost)</text>
+
+  <!-- Left: line coverage gauge -->
+  <rect x="60" y="250" width="300" height="180" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="210" y="284" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#166534">Qator qamrovi</text>
+  <text x="210" y="338" text-anchor="middle" font-family="Segoe UI" font-size="44" font-weight="bold" fill="#16a34a">100%</text>
+  <text x="210" y="372" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#166534">Har bir qator bajarildi</text>
+  <text x="210" y="394" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#166534">"Hammasi yashil" — xotirjam</text>
+  <text x="210" y="416" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">...lekin bu yolg'on tinchlik</text>
+
+  <!-- Right: branch coverage gauge -->
+  <rect x="460" y="250" width="300" height="180" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="610" y="284" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#92400e">Shox qamrovi</text>
+  <text x="610" y="338" text-anchor="middle" font-family="Segoe UI" font-size="44" font-weight="bold" fill="#f59e0b">86%</text>
+  <text x="610" y="372" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#92400e">if ning YOLG'ON yo'li</text>
+  <text x="610" y="394" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#92400e">(ball &lt; 60) hech sinalmadi</text>
+  <text x="610" y="416" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">3-&gt;5 tarmoq qoplanmagan</text>
+
+  <text x="410" y="232" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Qator "bajarildi" ni, shox "har ikki yo'l sinaldi" ni o'lchaydi</text>
+</svg>

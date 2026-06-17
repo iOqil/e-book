@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 540">
+  <title>Sikl blok-sxemasi: shart tekshiriladi, rost bo'lsa tana bajariladi va shartga qaytiladi, yolg'on bo'lsa chiqiladi</title>
+  <rect x="0" y="0" width="820" height="540" fill="#f8fafc"/>
+  <text x="410" y="38" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Siklning umumiy oqimi</text>
+  <text x="410" y="64" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Shart rost ekan tana qayta-qayta bajariladi; yolg'on bo'lsa sikldan chiqiladi</text>
+
+  <!-- Start -->
+  <rect x="320" y="92" width="180" height="44" rx="22" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="410" y="120" text-anchor="middle" font-family="Segoe UI" font-size="15" fill="#334155">Boshlash (init)</text>
+
+  <!-- Arrow to decision -->
+  <line x1="410" y1="136" x2="410" y2="172" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="410,172 405,162 415,162" fill="#94a3b8"/>
+
+  <!-- Decision diamond -->
+  <polygon points="410,172 540,242 410,312 280,242" fill="#ffffff" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="410" y="238" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">Shart rostmi?</text>
+  <text x="410" y="260" text-anchor="middle" font-family="monospace" font-size="14" fill="#64748b">i &lt;= n</text>
+
+  <!-- YES branch (down to body) -->
+  <line x1="410" y1="312" x2="410" y2="356" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="410,356 405,346 415,346" fill="#16a34a"/>
+  <text x="432" y="338" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">HA</text>
+
+  <!-- Body -->
+  <rect x="290" y="356" width="240" height="60" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="410" y="382" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">Sikl tanasi bajariladi</text>
+  <text x="410" y="403" text-anchor="middle" font-family="monospace" font-size="14" fill="#64748b">yigindi += i;  i += 1</text>
+
+  <!-- Back arrow (loop) from body left side up to decision -->
+  <line x1="290" y1="386" x2="150" y2="386" stroke="#7c3aed" stroke-width="2"/>
+  <line x1="150" y1="386" x2="150" y2="242" stroke="#7c3aed" stroke-width="2"/>
+  <line x1="150" y1="242" x2="276" y2="242" stroke="#7c3aed" stroke-width="2"/>
+  <polygon points="280,242 270,237 270,247" fill="#7c3aed"/>
+  <text x="150" y="312" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#7c3aed">orqaga</text>
+  <text x="150" y="330" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#7c3aed">qaytish</text>
+
+  <!-- NO branch (right to exit) -->
+  <line x1="540" y1="242" x2="660" y2="242" stroke="#dc2626" stroke-width="2"/>
+  <polygon points="660,242 650,237 650,247" fill="#dc2626"/>
+  <text x="600" y="232" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">YO'Q</text>
+  <line x1="660" y1="242" x2="660" y2="456" stroke="#dc2626" stroke-width="2"/>
+
+  <!-- Exit -->
+  <line x1="410" y1="416" x2="410" y2="456" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5,4"/>
+  <line x1="410" y1="456" x2="660" y2="456" stroke="#dc2626" stroke-width="2"/>
+  <rect x="320" y="456" width="180" height="44" rx="22" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="410" y="484" text-anchor="middle" font-family="Segoe UI" font-size="15" fill="#334155">Sikldan chiqish</text>
+
+  <text x="700" y="349" font-family="Segoe UI" font-size="13" fill="#64748b">shart</text>
+  <text x="700" y="367" font-family="Segoe UI" font-size="13" fill="#64748b">buzilganda</text>
+</svg>

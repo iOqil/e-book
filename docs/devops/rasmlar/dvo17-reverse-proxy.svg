@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="760" height="380">
+  <title>Reverse proxy oqimi: klient 80-portdagi Nginx'ga so'rov yuboradi, Nginx proxy_pass bilan so'rovni ichki 127.0.0.1:3000'dagi Node ilovaga uzatadi va X-Forwarded headerlarini qo'shadi, ilova javobi shu yo'l bilan klientga qaytadi</title>
+  <rect x="0" y="0" width="760" height="380" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Reverse proxy: Nginx ilova oldida turadi</text>
+
+  <!-- client -->
+  <rect x="30" y="130" width="150" height="100" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="105" y="170" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Klient</text>
+  <text x="105" y="194" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">brauzer / curl</text>
+  <text x="105" y="214" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#475569">HTTP :80</text>
+
+  <!-- nginx -->
+  <rect x="290" y="105" width="190" height="150" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="385" y="138" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Nginx (reverse proxy)</text>
+  <text x="385" y="160" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#475569">listen 80;</text>
+  <rect x="306" y="174" width="158" height="64" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="385" y="194" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#166534">proxy_pass</text>
+  <text x="385" y="212" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#475569">http://127.0.0.1</text>
+  <text x="385" y="230" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#475569">:3000</text>
+
+  <!-- app -->
+  <rect x="590" y="130" width="150" height="100" rx="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="665" y="170" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Node ilova</text>
+  <text x="665" y="194" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">vazifalar API</text>
+  <text x="665" y="214" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#475569">127.0.0.1:3000</text>
+
+  <!-- arrows client -> nginx -->
+  <line x1="180" y1="160" x2="288" y2="160" stroke="#2563eb" stroke-width="3" marker-end="url(#blue)"/>
+  <text x="234" y="150" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e40af">so'rov</text>
+  <!-- arrows nginx -> app -->
+  <line x1="480" y1="160" x2="588" y2="160" stroke="#16a34a" stroke-width="3" marker-end="url(#green)"/>
+  <text x="534" y="150" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#166534">uzatadi</text>
+  <!-- return -->
+  <line x1="588" y1="206" x2="482" y2="206" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#gray)"/>
+  <line x1="288" y1="206" x2="182" y2="206" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#gray)"/>
+  <text x="384" y="276" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">javob (orqaga) - - -</text>
+
+  <!-- headers box -->
+  <rect x="220" y="296" width="320" height="66" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="380" y="318" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#1e293b">Nginx qo'shadigan headerlar:</text>
+  <text x="380" y="338" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#475569">Host, X-Real-IP,</text>
+  <text x="380" y="356" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#475569">X-Forwarded-For, X-Forwarded-Proto</text>
+
+  <defs>
+    <marker id="blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="green" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+    <marker id="gray" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+</svg>

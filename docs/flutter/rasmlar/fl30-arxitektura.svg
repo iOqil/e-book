@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 560" width="820" height="560" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Maqolalar ilovasining qatlamli arxitekturasi: Presentation (ekranlar/widgetlar, 11-18-bob) -> State (Riverpod providerlar, 25-bob) -> Domain (ArticleRepository, 21/22-bob) -> Data (API va lokal SQLite). Foydalanuvchi hodisalari pastga oqadi, ma'lumot esa qaytib yuqoriga oqadi.</title>
+  <rect x="0" y="0" width="820" height="560" fill="#f8fafc"/>
+  <text x="410" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Maqolalar ilovasi — qatlamli arxitektura</text>
+  <text x="410" y="58" text-anchor="middle" font-size="14" fill="#475569">Har qatlam faqat o'zidan pastdagini biladi — toza ajratish (separation of concerns)</text>
+
+  <!-- Layer 1: Presentation -->
+  <rect x="90" y="84" width="640" height="92" rx="14" fill="#ffffff" stroke="#027dfd" stroke-width="2.5"/>
+  <text x="410" y="112" text-anchor="middle" font-size="16" font-weight="700" fill="#027dfd">1. Presentation — ekranlar va widgetlar</text>
+  <text x="410" y="136" text-anchor="middle" font-size="14" fill="#475569">MaqolalarRoyxati · MaqolaDetal · Sevimlilar · Qidiruv · forma</text>
+  <text x="410" y="160" text-anchor="middle" font-size="13" fill="#64748b">11-18-bob: widget, layout, ro'yxat, forma, theming (14-bob)</text>
+
+  <!-- Layer 2: State -->
+  <rect x="90" y="200" width="640" height="92" rx="14" fill="#ffffff" stroke="#6366f1" stroke-width="2.5"/>
+  <text x="410" y="228" text-anchor="middle" font-size="16" font-weight="700" fill="#6366f1">2. State — Riverpod providerlar</text>
+  <text x="410" y="252" text-anchor="middle" font-size="14" fill="#475569">articlesProvider (AsyncValue) · favoritesNotifier · themeMode · searchQuery</text>
+  <text x="410" y="276" text-anchor="middle" font-size="13" fill="#64748b">25-bob: AsyncNotifier/Notifier, .when bilan loading/error/data</text>
+
+  <!-- Layer 3: Domain -->
+  <rect x="90" y="316" width="640" height="92" rx="14" fill="#ffffff" stroke="#9333ea" stroke-width="2.5"/>
+  <text x="410" y="344" text-anchor="middle" font-size="16" font-weight="700" fill="#9333ea">3. Domain — ArticleRepository</text>
+  <text x="410" y="368" text-anchor="middle" font-size="14" fill="#475569">getArticles() · getById() · toggleFavorite() · search()</text>
+  <text x="410" y="392" text-anchor="middle" font-size="13" fill="#64748b">21/22-bob: ma'lumot manbalarini birlashtiradi — UI bilmaydi qayerdan</text>
+
+  <!-- Layer 4: Data -->
+  <rect x="90" y="432" width="305" height="92" rx="14" fill="#dbeafe" stroke="#0ea5e9" stroke-width="2.5"/>
+  <text x="242" y="460" text-anchor="middle" font-size="15" font-weight="700" fill="#0553b1">4a. Remote — API (http/dio)</text>
+  <text x="242" y="484" text-anchor="middle" font-size="14" fill="#475569">JSON -> Article model</text>
+  <text x="242" y="506" text-anchor="middle" font-size="13" fill="#64748b">21-bob: tarmoq</text>
+
+  <rect x="425" y="432" width="305" height="92" rx="14" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="577" y="460" text-anchor="middle" font-size="15" font-weight="700" fill="#16a34a">4b. Local — SQLite (sqflite)</text>
+  <text x="577" y="484" text-anchor="middle" font-size="14" fill="#475569">kesh + sevimlilar</text>
+  <text x="577" y="506" text-anchor="middle" font-size="13" fill="#64748b">22-bob: mahalliy saqlash</text>
+
+  <!-- Down arrow: events flow down (left side) -->
+  <line x1="55" y1="100" x2="55" y2="500" stroke="#ef4444" stroke-width="3"/>
+  <polygon points="55,508 48,494 62,494" fill="#ef4444"/>
+  <text x="36" y="310" text-anchor="middle" font-size="13" font-weight="700" fill="#ef4444" transform="rotate(-90 36 310)">hodisa / so'rov pastga</text>
+
+  <!-- Up arrow: data flows up (right side) -->
+  <line x1="765" y1="508" x2="765" y2="108" stroke="#16a34a" stroke-width="3"/>
+  <polygon points="765,100 758,114 772,114" fill="#16a34a"/>
+  <text x="786" y="310" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a" transform="rotate(-90 786 310)">ma'lumot yuqoriga</text>
+</svg>

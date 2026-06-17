@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Prompt caching: bir xil prefiks qayta ishlatilganda tejash</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">Prompt caching: prefiksni qayta to'lamang</text>
+
+  <defs>
+    <marker id="kc" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#4f46e5"/>
+    </marker>
+  </defs>
+
+  <!-- Request 1 -->
+  <text x="60" y="86" font-size="16" font-weight="700" fill="#1e293b">1-so'rov (birinchi marta)</text>
+  <rect x="60" y="98" width="380" height="40" rx="8" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="250" y="123" text-anchor="middle" font-size="14" font-weight="700" fill="#4338ca">Katta prefiks: system + kontekst</text>
+  <rect x="450" y="98" width="120" height="40" rx="8" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+  <text x="510" y="123" text-anchor="middle" font-size="14" fill="#0284c7">savol A</text>
+  <text x="585" y="116" font-size="13" fill="#dc2626">to'liq narx</text>
+  <text x="585" y="134" font-size="13" fill="#dc2626">(keshga yoziladi)</text>
+
+  <!-- arrow to cache -->
+  <line x1="250" y1="140" x2="250" y2="178" stroke="#4f46e5" stroke-width="2.5" marker-end="url(#kc)"/>
+
+  <!-- Cache store -->
+  <rect x="120" y="186" width="260" height="48" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="250" y="206" text-anchor="middle" font-size="15" font-weight="700" fill="#b45309">KESH (xotirada saqlanadi)</text>
+  <text x="250" y="225" text-anchor="middle" font-size="13" fill="#b45309">prefiks bir marta o'qildi</text>
+
+  <!-- arrow from cache to req2/req3 -->
+  <line x1="380" y1="210" x2="455" y2="280" stroke="#16a34a" stroke-width="2.5" marker-end="url(#kc)"/>
+  <line x1="380" y1="220" x2="455" y2="350" stroke="#16a34a" stroke-width="2.5" marker-end="url(#kc)"/>
+
+  <!-- Request 2 -->
+  <text x="60" y="280" font-size="16" font-weight="700" fill="#1e293b">2-so'rov</text>
+  <rect x="60" y="292" width="380" height="40" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="250" y="317" text-anchor="middle" font-size="14" font-weight="700" fill="#166534">bir xil prefiks (keshdan)</text>
+  <rect x="450" y="292" width="120" height="40" rx="8" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+  <text x="510" y="317" text-anchor="middle" font-size="14" fill="#0284c7">savol B</text>
+  <text x="585" y="310" font-size="13" fill="#16a34a">arzon o'qish</text>
+  <text x="585" y="328" font-size="13" fill="#16a34a">(~10% narx)</text>
+
+  <!-- Request 3 -->
+  <text x="60" y="350" font-size="16" font-weight="700" fill="#1e293b">3-so'rov</text>
+  <rect x="60" y="362" width="380" height="40" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="250" y="387" text-anchor="middle" font-size="14" font-weight="700" fill="#166534">bir xil prefiks (keshdan)</text>
+  <rect x="450" y="362" width="120" height="40" rx="8" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+  <text x="510" y="387" text-anchor="middle" font-size="14" fill="#0284c7">savol C</text>
+  <text x="585" y="380" font-size="13" fill="#16a34a">arzon o'qish</text>
+  <text x="585" y="398" font-size="13" fill="#16a34a">(~10% narx)</text>
+
+  <text x="380" y="428" text-anchor="middle" font-size="13" fill="#64748b">Faqat o'zgaruvchan qism (savol) to'liq narxlanadi; o'zgarmas prefiks arzon</text>
+</svg>

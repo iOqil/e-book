@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Exponential backoff: urinishlar orasida kutish vaqti ikkilanadi</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">Exponential backoff: kutish vaqti ikkilanadi</text>
+  <text x="380" y="64" text-anchor="middle" font-size="14" fill="#64748b">har muvaffaqiyatsiz urinishdan keyin uzunroq kutiladi (+jitter)</text>
+
+  <defs>
+    <marker id="bk-wait" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+
+  <!-- base line -->
+  <line x1="40" y1="300" x2="720" y2="300" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="40" y="330" font-size="13" fill="#64748b">vaqt →</text>
+
+  <!-- Attempt 1 (fail) -->
+  <rect x="50" y="252" width="80" height="48" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="90" y="274" text-anchor="middle" font-size="14" font-weight="700" fill="#dc2626">Urinish 1</text>
+  <text x="90" y="292" text-anchor="middle" font-size="13" fill="#dc2626">xato (429)</text>
+
+  <!-- wait 1s -->
+  <line x1="130" y1="276" x2="178" y2="276" stroke="#f59e0b" stroke-width="3" marker-end="url(#bk-wait)"/>
+  <rect x="138" y="210" width="30" height="34" rx="6" fill="#fef3c7" stroke="#b45309" stroke-width="1.5"/>
+  <text x="153" y="232" text-anchor="middle" font-size="14" font-weight="700" fill="#b45309">1s</text>
+
+  <!-- Attempt 2 (fail) -->
+  <rect x="190" y="252" width="80" height="48" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="230" y="274" text-anchor="middle" font-size="14" font-weight="700" fill="#dc2626">Urinish 2</text>
+  <text x="230" y="292" text-anchor="middle" font-size="13" fill="#dc2626">xato</text>
+
+  <!-- wait 2s -->
+  <line x1="270" y1="276" x2="338" y2="276" stroke="#f59e0b" stroke-width="3" marker-end="url(#bk-wait)"/>
+  <rect x="288" y="198" width="34" height="46" rx="6" fill="#fef3c7" stroke="#b45309" stroke-width="1.5"/>
+  <text x="305" y="226" text-anchor="middle" font-size="14" font-weight="700" fill="#b45309">2s</text>
+
+  <!-- Attempt 3 (fail) -->
+  <rect x="350" y="252" width="80" height="48" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="390" y="274" text-anchor="middle" font-size="14" font-weight="700" fill="#dc2626">Urinish 3</text>
+  <text x="390" y="292" text-anchor="middle" font-size="13" fill="#dc2626">xato</text>
+
+  <!-- wait 4s -->
+  <line x1="430" y1="276" x2="518" y2="276" stroke="#f59e0b" stroke-width="3" marker-end="url(#bk-wait)"/>
+  <rect x="458" y="180" width="40" height="64" rx="6" fill="#fef3c7" stroke="#b45309" stroke-width="1.5"/>
+  <text x="478" y="218" text-anchor="middle" font-size="14" font-weight="700" fill="#b45309">4s</text>
+
+  <!-- Attempt 4 (success) -->
+  <rect x="530" y="252" width="90" height="48" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="575" y="274" text-anchor="middle" font-size="14" font-weight="700" fill="#166534">Urinish 4</text>
+  <text x="575" y="292" text-anchor="middle" font-size="13" fill="#166534">javob! ✓</text>
+
+  <!-- doubling note -->
+  <rect x="120" y="346" width="520" height="56" rx="10" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.5"/>
+  <text x="380" y="370" text-anchor="middle" font-size="14" fill="#4338ca">kutish = asos × 2^urinish  (1 → 2 → 4 → 8 ...), maks chegara bilan</text>
+  <text x="380" y="392" text-anchor="middle" font-size="13" fill="#475569">jitter = kichik tasodif qo'shadi, urinishlar bir vaqtga to'planmaydi</text>
+</svg>

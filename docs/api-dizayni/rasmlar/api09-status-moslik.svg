@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 600">
+  <title>Xato turi va HTTP status kod moslik jadvali</title>
+  <rect x="0" y="0" width="880" height="600" fill="#f8fafc"/>
+  <text x="440" y="34" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">Xato turi va status kod mosligi</text>
+  <text x="440" y="58" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Har bir xato turini to'g'ri status kodga moslang — RFC 9110 semantikasi</text>
+
+  <!-- Jadval sarlavhasi -->
+  <rect x="40" y="82" width="320" height="40" rx="6" fill="#1e293b"/>
+  <text x="200" y="108" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#ffffff">Xato turi (kontekst)</text>
+  <rect x="364" y="82" width="150" height="40" rx="6" fill="#1e293b"/>
+  <text x="439" y="108" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#ffffff">Status</text>
+  <rect x="518" y="82" width="322" height="40" rx="6" fill="#1e293b"/>
+  <text x="679" y="108" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#ffffff">Izoh</text>
+
+  <!-- Qator 1: validatsiya -->
+  <rect x="40" y="128" width="320" height="44" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="56" y="155" font-family="Segoe UI" font-size="14" fill="#334155">Semantik validatsiya xatosi</text>
+  <rect x="364" y="128" width="150" height="44" rx="6" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="439" y="155" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#b45309">422</text>
+  <rect x="518" y="128" width="322" height="44" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="534" y="155" font-family="Segoe UI" font-size="13" fill="#64748b">Sintaksis to'g'ri, qoidalar buzilgan</text>
+
+  <!-- Qator 2: buzilgan -->
+  <rect x="40" y="176" width="320" height="44" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="56" y="203" font-family="Segoe UI" font-size="14" fill="#334155">Buzilgan/o'qib bo'lmas so'rov</text>
+  <rect x="364" y="176" width="150" height="44" rx="6" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="439" y="203" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#b45309">400</text>
+  <rect x="518" y="176" width="322" height="44" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="534" y="203" font-family="Segoe UI" font-size="13" fill="#64748b">Noto'g'ri JSON, yetishmayotgan tana</text>
+
+  <!-- Qator 3: auth yo'q -->
+  <rect x="40" y="224" width="320" height="44" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="56" y="251" font-family="Segoe UI" font-size="14" fill="#334155">Autentifikatsiya yo'q/noto'g'ri</text>
+  <rect x="364" y="224" width="150" height="44" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="439" y="251" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#dc2626">401</text>
+  <rect x="518" y="224" width="322" height="44" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="534" y="251" font-family="Segoe UI" font-size="13" fill="#64748b">"Kim ekaning noma'lum" (unauthenticated)</text>
+
+  <!-- Qator 4: ruxsat yo'q -->
+  <rect x="40" y="272" width="320" height="44" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="56" y="299" font-family="Segoe UI" font-size="14" fill="#334155">Ruxsat yo'q (rol/scope)</text>
+  <rect x="364" y="272" width="150" height="44" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="439" y="299" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#dc2626">403</text>
+  <rect x="518" y="272" width="322" height="44" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="534" y="299" font-family="Segoe UI" font-size="13" fill="#64748b">Kim ekaning ma'lum, lekin mumkin emas</text>
+
+  <!-- Qator 5: topilmadi -->
+  <rect x="40" y="320" width="320" height="44" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="56" y="347" font-family="Segoe UI" font-size="14" fill="#334155">Resurs topilmadi</text>
+  <rect x="364" y="320" width="150" height="44" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="439" y="347" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#dc2626">404</text>
+  <rect x="518" y="320" width="322" height="44" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="534" y="347" font-family="Segoe UI" font-size="13" fill="#64748b">Yo'q yoki ataylab yashirilgan</text>
+
+  <!-- Qator 6: konflikt -->
+  <rect x="40" y="368" width="320" height="44" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="56" y="395" font-family="Segoe UI" font-size="14" fill="#334155">Konflikt (holat ziddiyati)</text>
+  <rect x="364" y="368" width="150" height="44" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="439" y="395" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#dc2626">409</text>
+  <rect x="518" y="368" width="322" height="44" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="534" y="395" font-family="Segoe UI" font-size="13" fill="#64748b">Takror yozuv, eskirgan versiya</text>
+
+  <!-- Qator 7: rate limit -->
+  <rect x="40" y="416" width="320" height="44" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="56" y="443" font-family="Segoe UI" font-size="14" fill="#334155">So'rov chegarasi oshib ketdi</text>
+  <rect x="364" y="416" width="150" height="44" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="439" y="443" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#dc2626">429</text>
+  <rect x="518" y="416" width="322" height="44" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="534" y="443" font-family="Segoe UI" font-size="13" fill="#64748b">Retry-After sarlavhasi bilan</text>
+
+  <!-- Qator 8: server -->
+  <rect x="40" y="464" width="320" height="44" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="56" y="491" font-family="Segoe UI" font-size="14" fill="#334155">Server ichki xatosi</text>
+  <rect x="364" y="464" width="150" height="44" rx="6" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="439" y="491" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#7c3aed">5xx</text>
+  <rect x="518" y="464" width="322" height="44" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="534" y="491" font-family="Segoe UI" font-size="13" fill="#64748b">500 ichki, 503 band (Retry-After)</text>
+
+  <!-- Pastki eslatma -->
+  <rect x="40" y="524" width="800" height="56" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="440" y="548" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#2563eb">Qoida: 4xx = mijoz aybi (so'rovni tuzating), 5xx = server aybi (mijoz aybsiz).</text>
+  <text x="440" y="570" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">"Hammasi 500" yoki "200 + ichida error" = anti-naqsh. Status semantikasini hurmat qiling.</text>
+</svg>

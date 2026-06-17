@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="760" height="380">
+  <title>Matrix strategiyasi: bitta test job ta'rifi node-version [20, 22, 24] bo'yicha uchta parallel job'ga yoyiladi, har biri o'z Node versiyasida testni alohida ishlatadi</title>
+  <rect x="0" y="0" width="760" height="380" fill="#f8fafc"/>
+  <text x="380" y="38" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Matrix: bitta ta'rif, ko'p parallel job</text>
+
+  <!-- single definition box -->
+  <rect x="40" y="80" width="220" height="150" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="150" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">test job (1 ta ta'rif)</text>
+  <text x="150" y="138" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e40af">strategy:</text>
+  <text x="150" y="160" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e40af">matrix:</text>
+  <text x="150" y="182" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e40af">node-version:</text>
+  <text x="150" y="204" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e40af">[20, 22, 24]</text>
+
+  <!-- fan-out arrows -->
+  <line x1="260" y1="120" x2="470" y2="105" stroke="#2563eb" stroke-width="3" marker-end="url(#arr)"/>
+  <line x1="260" y1="155" x2="470" y2="200" stroke="#2563eb" stroke-width="3" marker-end="url(#arr)"/>
+  <line x1="260" y1="190" x2="470" y2="295" stroke="#2563eb" stroke-width="3" marker-end="url(#arr)"/>
+
+  <!-- three parallel jobs -->
+  <rect x="480" y="80" width="240" height="56" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="600" y="105" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">test (node 20)</text>
+  <text x="600" y="125" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#166534">npm ci &#8594; npm test</text>
+
+  <rect x="480" y="172" width="240" height="56" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="600" y="197" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">test (node 22)</text>
+  <text x="600" y="217" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#166534">npm ci &#8594; npm test</text>
+
+  <rect x="480" y="264" width="240" height="56" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="600" y="289" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">test (node 24)</text>
+  <text x="600" y="309" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#166534">npm ci &#8594; npm test</text>
+
+  <text x="600" y="352" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">Uchchalasi bir vaqtda (parallel) ishlaydi &#8212; har Node versiyasi alohida tekshiriladi</text>
+
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+  </defs>
+</svg>

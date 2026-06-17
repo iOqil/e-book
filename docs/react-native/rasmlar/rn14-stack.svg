@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 500" width="760" height="500" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Stack navigator: ekranlar ustma-ust, push yangi ekran qo'shadi, back orqaga qaytaradi</title>
+  <rect x="0" y="0" width="760" height="500" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">Stack navigator — ekranlar dastasi</text>
+  <text x="380" y="60" text-anchor="middle" font-size="14" fill="#475569">Yangi ekran ustiga qo'shiladi (push), orqaga qaytishda olib tashlanadi (back)</text>
+
+  <!-- Chap: stacked cards (qog'ozlar dastasi) -->
+  <text x="195" y="92" text-anchor="middle" font-size="15" font-weight="700" fill="#475569">Ekranlar dastasi</text>
+
+  <!-- Bosh (eng past) -->
+  <rect x="80" y="330" width="230" height="120" rx="12" fill="#e0f2fe" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="100" y="358" font-size="15" font-weight="700" fill="#0369a1">1. Bosh</text>
+  <text x="100" y="382" font-size="13" fill="#475569">eng pastda turadi</text>
+
+  <!-- Profil (o'rta) -->
+  <rect x="105" y="245" width="230" height="120" rx="12" fill="#ede9fe" stroke="#6366f1" stroke-width="2"/>
+  <text x="125" y="273" font-size="15" font-weight="700" fill="#4f46e5">2. Profil</text>
+  <text x="125" y="297" font-size="13" fill="#475569">Bosh ustiga qo'shildi</text>
+
+  <!-- Sozlamalar (eng tepa - faol) -->
+  <rect x="130" y="160" width="230" height="120" rx="12" fill="#ffffff" stroke="#4f46e5" stroke-width="3"/>
+  <text x="150" y="188" font-size="15" font-weight="700" fill="#4f46e5">3. Sozlamalar</text>
+  <text x="150" y="212" font-size="13" fill="#16a34a">faol (ko'rinib turibdi)</text>
+  <text x="150" y="234" font-size="13" fill="#94a3b8">&#8592; orqaga tugmasi</text>
+
+  <!-- push o'q (pastdan tepaga) -->
+  <line x1="395" y1="400" x2="395" y2="200" stroke="#16a34a" stroke-width="3" marker-end="url(#yashilUq)"/>
+  <text x="408" y="305" font-size="14" font-weight="700" fill="#16a34a">push</text>
+  <text x="408" y="325" font-size="13" fill="#475569">(yangi)</text>
+
+  <!-- back o'q (tepadan pastga) -->
+  <line x1="450" y1="200" x2="450" y2="400" stroke="#dc2626" stroke-width="3" marker-end="url(#qizilUq)"/>
+  <text x="463" y="305" font-size="14" font-weight="700" fill="#dc2626">back</text>
+  <text x="463" y="325" font-size="13" fill="#475569">(qaytish)</text>
+
+  <!-- O'ng: telefon mokap -->
+  <rect x="540" y="110" width="180" height="340" rx="24" fill="#ffffff" stroke="#1e293b" stroke-width="3"/>
+  <!-- Header -->
+  <rect x="540" y="110" width="180" height="50" rx="24" fill="#4f46e5"/>
+  <rect x="540" y="138" width="180" height="22" fill="#4f46e5"/>
+  <text x="560" y="142" font-size="18" font-weight="700" fill="#ffffff">&#8592;</text>
+  <text x="635" y="142" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">Sozlamalar</text>
+  <!-- Ekran tanasi -->
+  <text x="630" y="250" text-anchor="middle" font-size="14" fill="#475569">Sozlamalar</text>
+  <text x="630" y="272" text-anchor="middle" font-size="14" fill="#475569">ekrani</text>
+  <rect x="570" y="300" width="120" height="38" rx="8" fill="#16a34a"/>
+  <text x="630" y="324" text-anchor="middle" font-size="13" font-weight="600" fill="#ffffff">Boshga</text>
+  <text x="630" y="430" text-anchor="middle" font-size="13" fill="#94a3b8">header avtomatik</text>
+
+  <defs>
+    <marker id="yashilUq" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/>
+    </marker>
+    <marker id="qizilUq" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/>
+    </marker>
+  </defs>
+</svg>

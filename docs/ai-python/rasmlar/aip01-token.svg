@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="760" height="380" font-family="Segoe UI, system-ui, sans-serif">
+  <title>LLM matnni tokenlarga bo'lib, keyingi tokenni bashorat qiladi</title>
+  <rect x="0" y="0" width="760" height="380" fill="#f8fafc"/>
+  <text x="380" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">Token: matn -> bo'laklar -> keyingi tokenni bashorat</text>
+
+  <!-- Input text -->
+  <text x="40" y="92" font-size="15" font-weight="600" fill="#475569">Kirish matni:</text>
+  <rect x="40" y="104" width="400" height="40" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="240" y="130" text-anchor="middle" font-size="16" fill="#1e293b">"Quyosh sharqdan ..."</text>
+
+  <!-- Tokens -->
+  <text x="40" y="186" font-size="15" font-weight="600" fill="#475569">Tokenlarga bo'linadi:</text>
+  <rect x="40" y="198" width="92" height="38" rx="8" fill="#eef2ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="86" y="223" text-anchor="middle" font-size="15" fill="#4338ca">Quyosh</text>
+  <rect x="144" y="198" width="92" height="38" rx="8" fill="#eef2ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="190" y="223" text-anchor="middle" font-size="15" fill="#4338ca">sharq</text>
+  <rect x="248" y="198" width="72" height="38" rx="8" fill="#eef2ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="284" y="223" text-anchor="middle" font-size="15" fill="#4338ca">dan</text>
+
+  <!-- Model box -->
+  <rect x="470" y="150" width="250" height="180" rx="14" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="595" y="182" text-anchor="middle" font-size="17" font-weight="700" fill="#4f46e5">Model bashorati</text>
+  <text x="500" y="216" font-size="14" fill="#1e293b">"chiqadi"</text>
+  <rect x="600" y="204" width="100" height="16" rx="8" fill="#dcfce7"/>
+  <rect x="600" y="204" width="86" height="16" rx="8" fill="#16a34a"/>
+  <text x="660" y="216" text-anchor="middle" font-size="13" fill="#ffffff">92%</text>
+  <text x="500" y="248" font-size="14" fill="#1e293b">"botadi"</text>
+  <rect x="600" y="236" width="100" height="16" rx="8" fill="#dcfce7"/>
+  <rect x="600" y="236" width="20" height="16" rx="8" fill="#16a34a"/>
+  <text x="660" y="248" text-anchor="middle" font-size="13" fill="#166534">5%</text>
+  <text x="500" y="280" font-size="14" fill="#1e293b">"...boshqa"</text>
+  <rect x="600" y="268" width="100" height="16" rx="8" fill="#dcfce7"/>
+  <rect x="600" y="268" width="10" height="16" rx="8" fill="#16a34a"/>
+  <text x="660" y="280" text-anchor="middle" font-size="13" fill="#166534">3%</text>
+  <text x="595" y="312" text-anchor="middle" font-size="13" fill="#64748b">eng ehtimollisini tanlaydi</text>
+
+  <defs>
+    <marker id="tk" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#4f46e5"/>
+    </marker>
+  </defs>
+  <line x1="40" y1="124" x2="40" y2="180" stroke="#cbd5e1" stroke-width="1.5"/>
+  <line x1="330" y1="217" x2="466" y2="217" stroke="#4f46e5" stroke-width="3" marker-end="url(#tk)"/>
+
+  <text x="380" y="360" text-anchor="middle" font-size="14" fill="#64748b">Bu sikl har bir yangi token uchun takrorlanadi — shunday qilib butun javob hosil bo'ladi</text>
+</svg>

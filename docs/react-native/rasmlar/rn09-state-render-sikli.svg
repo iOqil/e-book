@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" width="760" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Holat yangilanish sikli: foydalanuvchi hodisasi -> setState chaqiriladi -> React qayta chizadi (re-render) -> yangi UI ekranda</title>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">Holat o'zgarish sikli (re-render)</text>
+  <text x="380" y="62" text-anchor="middle" font-size="14" fill="#475569">Holat o'zgarsa, React komponentni qaytadan chizadi va ekranda yangi qiymat ko'rinadi</text>
+
+  <!-- Node 1: Hodisa -->
+  <rect x="60" y="100" width="240" height="92" rx="14" fill="#ffffff" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="180" y="134" text-anchor="middle" font-size="16" font-weight="700" fill="#b45309">1. Foydalanuvchi hodisasi</text>
+  <text x="180" y="158" text-anchor="middle" font-size="13" fill="#475569">tugmani bosadi (onPress),</text>
+  <text x="180" y="176" text-anchor="middle" font-size="13" fill="#475569">matn yozadi (onChangeText)</text>
+
+  <!-- Node 2: setState -->
+  <rect x="460" y="100" width="240" height="92" rx="14" fill="#ffffff" stroke="#4f46e5" stroke-width="2.5"/>
+  <text x="580" y="134" text-anchor="middle" font-size="16" font-weight="700" fill="#4f46e5">2. setState chaqiriladi</text>
+  <text x="580" y="158" text-anchor="middle" font-size="13" fill="#475569">setSoni(soni + 1)</text>
+  <text x="580" y="176" text-anchor="middle" font-size="13" fill="#475569">React holatni yangilaydi</text>
+
+  <!-- Node 3: re-render -->
+  <rect x="460" y="290" width="240" height="92" rx="14" fill="#ffffff" stroke="#0ea5e9" stroke-width="2.5"/>
+  <text x="580" y="324" text-anchor="middle" font-size="16" font-weight="700" fill="#0284c7">3. Qayta chizish (re-render)</text>
+  <text x="580" y="348" text-anchor="middle" font-size="13" fill="#475569">komponent funksiyasi</text>
+  <text x="580" y="366" text-anchor="middle" font-size="13" fill="#475569">yangi qiymat bilan qaytadan ishlaydi</text>
+
+  <!-- Node 4: yangi UI -->
+  <rect x="60" y="290" width="240" height="92" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="180" y="324" text-anchor="middle" font-size="16" font-weight="700" fill="#15803d">4. Yangi UI ekranda</text>
+  <text x="180" y="348" text-anchor="middle" font-size="13" fill="#475569">foydalanuvchi o'zgarishni</text>
+  <text x="180" y="366" text-anchor="middle" font-size="13" fill="#475569">ko'radi -> yana hodisa...</text>
+
+  <!-- arrows -->
+  <!-- 1 -> 2 -->
+  <line x1="300" y1="146" x2="452" y2="146" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="460,146 448,140 448,152" fill="#94a3b8"/>
+  <!-- 2 -> 3 -->
+  <line x1="580" y1="192" x2="580" y2="282" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="580,290 574,278 586,278" fill="#94a3b8"/>
+  <!-- 3 -> 4 -->
+  <line x1="460" y1="336" x2="308" y2="336" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="300,336 312,330 312,342" fill="#94a3b8"/>
+  <!-- 4 -> 1 (loop) -->
+  <line x1="180" y1="290" x2="180" y2="200" stroke="#94a3b8" stroke-width="2.5" stroke-dasharray="6 5"/>
+  <polygon points="180,192 174,204 186,204" fill="#94a3b8"/>
+
+  <text x="380" y="446" text-anchor="middle" font-size="13" fill="#94a3b8">Sikl: hodisa -> holat o'zgaradi -> qayta chiziladi -> yangi ekran -> yangi hodisa...</text>
+</svg>

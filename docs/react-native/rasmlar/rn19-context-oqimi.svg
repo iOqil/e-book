@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 450" width="760" height="450" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Context oqimi: Provider ildizdan har bir bolaga ma'lumot beradi</title>
+  <rect x="0" y="0" width="760" height="450" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Context API ma'lumot oqimi</text>
+  <text x="380" y="58" text-anchor="middle" font-size="14" fill="#475569">Provider ildizda o'raydi, useContext istalgan boladan o'qiydi</text>
+
+  <!-- Provider envelope -->
+  <rect x="60" y="84" width="640" height="320" rx="16" fill="#eef2ff" stroke="#4f46e5" stroke-width="2.5" stroke-dasharray="8 5"/>
+  <rect x="84" y="100" width="280" height="40" rx="8" fill="#4f46e5"/>
+  <text x="224" y="125" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">&lt;TemaContext.Provider value={'{...}'}&gt;</text>
+  <text x="540" y="125" text-anchor="middle" font-size="13" fill="#4f46e5">ildizda bir marta o'raladi</text>
+
+  <!-- central value -->
+  <rect x="300" y="170" width="160" height="56" rx="10" fill="#ffffff" stroke="#4f46e5" stroke-width="2.5"/>
+  <text x="380" y="194" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">value</text>
+  <text x="380" y="213" text-anchor="middle" font-size="13" fill="#4f46e5">{'{ tema, setTema }'}</text>
+
+  <!-- consumers -->
+  <g>
+    <rect x="100" y="290" width="160" height="84" rx="10" fill="#ffffff" stroke="#0ea5e9" stroke-width="2"/>
+    <text x="180" y="315" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Sarlavha</text>
+    <text x="180" y="337" text-anchor="middle" font-size="13" fill="#475569">useTema()</text>
+    <text x="180" y="356" text-anchor="middle" font-size="13" fill="#0ea5e9">tema'ni o'qiydi</text>
+  </g>
+  <g>
+    <rect x="300" y="290" width="160" height="84" rx="10" fill="#ffffff" stroke="#0ea5e9" stroke-width="2"/>
+    <text x="380" y="315" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Karta</text>
+    <text x="380" y="337" text-anchor="middle" font-size="13" fill="#475569">useTema()</text>
+    <text x="380" y="356" text-anchor="middle" font-size="13" fill="#0ea5e9">tema'ni o'qiydi</text>
+  </g>
+  <g>
+    <rect x="500" y="290" width="160" height="84" rx="10" fill="#ffffff" stroke="#0ea5e9" stroke-width="2"/>
+    <text x="580" y="315" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Tugma</text>
+    <text x="580" y="337" text-anchor="middle" font-size="13" fill="#475569">useTema()</text>
+    <text x="580" y="356" text-anchor="middle" font-size="13" fill="#0ea5e9">setTema() chaqiradi</text>
+  </g>
+
+  <!-- arrows from value to consumers -->
+  <line x1="350" y1="226" x2="200" y2="288" stroke="#0ea5e9" stroke-width="2"/>
+  <polygon points="180,288 188,282 192,290" fill="#0ea5e9"/>
+  <line x1="380" y1="226" x2="380" y2="288" stroke="#0ea5e9" stroke-width="2"/>
+  <polygon points="380,290 376,282 384,282" fill="#0ea5e9"/>
+  <line x1="410" y1="226" x2="560" y2="288" stroke="#0ea5e9" stroke-width="2"/>
+  <polygon points="580,288 568,290 572,282" fill="#0ea5e9"/>
+
+  <text x="380" y="430" text-anchor="middle" font-size="13" fill="#475569">Props uzatish yo'q — bolalar Provider'dan to'g'ridan-to'g'ri oladi</text>
+</svg>

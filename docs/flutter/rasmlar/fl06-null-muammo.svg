@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" width="780" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Non-null quti doim to'la — ochish xavfsiz; nullable ? quti bo'sh bo'lishi mumkin — bo'shini ochish crash</title>
+  <rect x="0" y="0" width="780" height="470" fill="#f8fafc"/>
+  <text x="390" y="36" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Quti to'lami yoki bo'shmi?</text>
+  <text x="390" y="60" text-anchor="middle" font-size="14" fill="#475569">non-null doim qiymatga ega · nullable (?) bo'sh bo'lishi mumkin</text>
+
+  <!-- LEFT: non-null, always full -->
+  <rect x="40" y="86" width="330" height="330" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <rect x="40" y="86" width="330" height="40" rx="14" fill="#16a34a"/>
+  <text x="205" y="113" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">String ism  —  non-null</text>
+
+  <text x="205" y="152" text-anchor="middle" font-size="14" fill="#475569">Doim ichida qiymat bor</text>
+
+  <!-- full box -->
+  <rect x="120" y="172" width="170" height="96" rx="10" fill="#f8fafc" stroke="#16a34a" stroke-width="2"/>
+  <rect x="138" y="196" width="134" height="48" rx="8" fill="#16a34a"/>
+  <text x="205" y="226" text-anchor="middle" font-size="17" font-weight="700" fill="#ffffff">'Ali'</text>
+  <text x="205" y="290" text-anchor="middle" font-size="13" fill="#64748b">quti to'la</text>
+
+  <rect x="70" y="316" width="270" height="80" rx="10" fill="#f8fafc"/>
+  <text x="205" y="342" text-anchor="middle" font-size="14" fill="#1e293b">ism.length  &#10003;</text>
+  <text x="205" y="368" text-anchor="middle" font-size="13" fill="#16a34a" font-weight="700">XAVFSIZ — crash bo'lmaydi</text>
+  <text x="205" y="388" text-anchor="middle" font-size="13" fill="#64748b">kompilyator kafolatlaydi</text>
+
+  <!-- RIGHT: nullable, might be empty -->
+  <rect x="410" y="86" width="330" height="330" rx="14" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="410" y="86" width="330" height="40" rx="14" fill="#f59e0b"/>
+  <text x="575" y="113" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">String? ism  —  nullable</text>
+
+  <text x="575" y="152" text-anchor="middle" font-size="14" fill="#475569">? = "bo'sh bo'lishi mumkin"</text>
+
+  <!-- empty box -->
+  <rect x="490" y="172" width="170" height="96" rx="10" fill="#f8fafc" stroke="#f59e0b" stroke-width="2" stroke-dasharray="7 5"/>
+  <text x="575" y="226" text-anchor="middle" font-size="17" font-weight="700" fill="#94a3b8">null</text>
+  <text x="575" y="290" text-anchor="middle" font-size="13" fill="#64748b">quti bo'sh</text>
+
+  <rect x="440" y="316" width="270" height="80" rx="10" fill="#f8fafc" stroke="#ef4444" stroke-width="1"/>
+  <text x="575" y="342" text-anchor="middle" font-size="14" fill="#1e293b">ism.length  &#10007;</text>
+  <text x="575" y="368" text-anchor="middle" font-size="13" fill="#ef4444" font-weight="700">CRASH — bo'shni ochib bo'lmaydi</text>
+  <text x="575" y="388" text-anchor="middle" font-size="13" fill="#64748b">avval ?. yoki ?? bilan tekshir</text>
+
+  <text x="390" y="446" text-anchor="middle" font-size="13" fill="#94a3b8">? belgisi quti bo'sh bo'lishi mumkinligini ogohlantiradi — Dart sizni tekshirishga majbur qiladi</text>
+</svg>

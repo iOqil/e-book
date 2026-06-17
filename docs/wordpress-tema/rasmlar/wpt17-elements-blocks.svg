@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480">
+  <title>styles.elements (link, button, heading) va styles.blocks per-block stillar qanday qo'llanadi</title>
+  <rect x="0" y="0" width="760" height="480" fill="#f8fafc"/>
+  <text x="380" y="32" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="700" fill="#1e293b" text-anchor="middle">elements (kenglik) vs blocks (aniqlik)</text>
+
+  <!-- LEFT: elements -->
+  <rect x="24" y="52" width="346" height="404" rx="10" fill="#ffffff" stroke="#d97706" stroke-width="2"/>
+  <rect x="24" y="52" width="346" height="40" rx="10" fill="#d97706"/>
+  <rect x="24" y="78" width="346" height="14" fill="#d97706"/>
+  <text x="197" y="79" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">"styles": &#123; "elements": ... &#125;</text>
+
+  <text x="44" y="118" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Sayt bo'ylab HAR JOYDAGI elementga</text>
+
+  <!-- link -->
+  <rect x="44" y="132" width="306" height="86" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="58" y="154" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="700" fill="#92400e">"link"</text>
+  <text x="58" y="176" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">color.text: var:preset|color|asosiy</text>
+  <text x="58" y="196" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">":hover" &#8594; textDecoration: none</text>
+  <text x="58" y="213" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">&#8594; barcha &lt;a&gt; ssilkalar</text>
+
+  <!-- heading -->
+  <rect x="44" y="228" width="306" height="64" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="58" y="250" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="700" fill="#92400e">"heading" / "h1".."h6"</text>
+  <text x="58" y="271" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">fontWeight: 700, lineHeight: 1.2</text>
+  <text x="58" y="288" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">&#8594; barcha sarlavhalar</text>
+
+  <!-- button -->
+  <rect x="44" y="302" width="306" height="64" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="58" y="324" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="700" fill="#92400e">"button"</text>
+  <text x="58" y="345" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">color.background, ":hover"</text>
+  <text x="58" y="362" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">&#8594; barcha tugmalar</text>
+
+  <text x="197" y="392" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="700" fill="#d97706" text-anchor="middle">KENG: tip bo'yicha</text>
+  <text x="197" y="414" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">bir element &#8212; barcha bloklarda</text>
+  <text x="197" y="434" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">link, heading, button,</text>
+  <text x="197" y="452" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">caption, cite</text>
+
+  <!-- RIGHT: blocks -->
+  <rect x="390" y="52" width="346" height="404" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <rect x="390" y="52" width="346" height="40" rx="10" fill="#dc2626"/>
+  <rect x="390" y="78" width="346" height="14" fill="#dc2626"/>
+  <text x="563" y="79" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">"styles": &#123; "blocks": ... &#125;</text>
+
+  <text x="410" y="118" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">FAQAT aytilgan blokka</text>
+
+  <!-- quote -->
+  <rect x="410" y="132" width="306" height="86" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="424" y="154" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="700" fill="#991b1b">"core/quote"</text>
+  <text x="424" y="176" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">border.width: 0 0 0 4px</text>
+  <text x="424" y="196" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">elements.cite &#8594; ichki element</text>
+  <text x="424" y="213" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">&#8594; faqat Quote bloki</text>
+
+  <!-- button block -->
+  <rect x="410" y="228" width="306" height="64" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="424" y="250" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="700" fill="#991b1b">"core/button"</text>
+  <text x="424" y="271" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">border.radius: 8px</text>
+  <text x="424" y="288" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">&#8594; faqat Button bloki</text>
+
+  <!-- code block -->
+  <rect x="410" y="302" width="306" height="64" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="424" y="324" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="700" fill="#991b1b">"core/code"</text>
+  <text x="424" y="345" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">color, css: "&amp; code &#123;...&#125;"</text>
+  <text x="424" y="362" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">&#8594; faqat Code bloki</text>
+
+  <text x="563" y="392" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="700" fill="#dc2626" text-anchor="middle">ANIQ: bitta blok</text>
+  <text x="563" y="414" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">blok nomi haqiqiy bo'lsin:</text>
+  <text x="563" y="434" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">core/quote, core/button...</text>
+  <text x="563" y="452" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">(jonli WP da ro'yxatda bor)</text>
+</svg>

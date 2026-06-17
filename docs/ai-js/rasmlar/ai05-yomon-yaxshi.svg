@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Yomon prompt va yaxshi prompt: noaniq ko'rsatma noaniq javob beradi, aniq strukturali prompt (rol + vazifa + format + misol) aniq javob beradi</title>
+  <defs>
+    <marker id="aw1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#ef4444"/>
+    </marker>
+    <marker id="aw2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="800" height="500" fill="#f8fafc"/>
+  <text x="400" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Prompt qanaqa bo'lsa, javob ham shunaqa</text>
+  <text x="400" y="58" font-size="14" fill="#64748b" text-anchor="middle">Model promptni AYNAN bajaradi: noaniq kirsa — noaniq chiqadi</text>
+
+  <!-- BAD column -->
+  <text x="205" y="92" font-size="16" font-weight="bold" fill="#ef4444" text-anchor="middle">❌ Noaniq prompt</text>
+  <rect x="40" y="104" width="330" height="78" rx="10" fill="#ffffff" stroke="#ef4444" stroke-width="2"/>
+  <text x="58" y="130" font-size="13.5" fill="#1e293b" text-anchor="start" font-family="Consolas, monospace">"itlar haqida yoz"</text>
+  <text x="58" y="156" font-size="13" fill="#94a3b8" text-anchor="start">format yo'q · uzunlik yo'q</text>
+  <text x="58" y="174" font-size="13" fill="#94a3b8" text-anchor="start">til yo'q · auditoriya yo'q</text>
+
+  <line x1="205" y1="186" x2="205" y2="226" stroke="#ef4444" stroke-width="2.5" marker-end="url(#aw1)"/>
+
+  <rect x="40" y="232" width="330" height="120" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="205" y="258" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Noaniq javob</text>
+  <text x="58" y="284" font-size="13" fill="#475569" text-anchor="start">Qaysi tilda? Qancha uzun?</text>
+  <text x="58" y="306" font-size="13" fill="#475569" text-anchor="start">Esse? Ro'yxat? Bola uchunmi,</text>
+  <text x="58" y="328" font-size="13" fill="#475569" text-anchor="start">olimmi? — model o'zi taxmin</text>
+  <text x="58" y="346" font-size="13" fill="#ef4444" text-anchor="start" font-weight="bold">qiladi → kerakmasini beradi</text>
+
+  <!-- GOOD column -->
+  <text x="595" y="92" font-size="16" font-weight="bold" fill="#16a34a" text-anchor="middle">✅ Aniq, strukturali prompt</text>
+  <rect x="430" y="104" width="330" height="118" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="448" y="128" font-size="13" fill="#9333ea" text-anchor="start"><tspan font-weight="bold">rol:</tspan> "Siz biolog ustozisiz"</text>
+  <text x="448" y="150" font-size="13" fill="#0ea5e9" text-anchor="start"><tspan font-weight="bold">vazifa:</tspan> nega itlar sodiq</text>
+  <text x="448" y="172" font-size="13" fill="#d97757" text-anchor="start"><tspan font-weight="bold">format:</tspan> 3 jumla, o'zbekcha</text>
+  <text x="448" y="194" font-size="13" fill="#6366f1" text-anchor="start"><tspan font-weight="bold">auditoriya:</tspan> boshlovchi uchun</text>
+  <text x="448" y="214" font-size="13" fill="#16a34a" text-anchor="start"><tspan font-weight="bold">misol:</tspan> bitta namuna javob</text>
+
+  <line x1="595" y1="226" x2="595" y2="266" stroke="#16a34a" stroke-width="2.5" marker-end="url(#aw2)"/>
+
+  <rect x="430" y="272" width="330" height="100" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="595" y="298" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Aniq javob</text>
+  <text x="448" y="324" font-size="13" fill="#475569" text-anchor="start">Aynan 3 jumla, o'zbekcha,</text>
+  <text x="448" y="346" font-size="13" fill="#475569" text-anchor="start">sodda til — siz so'raganidek.</text>
+  <text x="448" y="366" font-size="13" fill="#16a34a" text-anchor="start" font-weight="bold">Hech taxminga o'rin qolmaydi.</text>
+
+  <rect x="40" y="404" width="720" height="72" rx="10" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="400" y="432" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">"Garbage in, garbage out" — kiritmang sifatsiz bo'lsa, chiqishi ham sifatsiz</text>
+  <text x="400" y="458" font-size="13" fill="#475569" text-anchor="middle">Opus 4.8 da temperature/sampling parametrlari yo'q — siz faqat SO'Z bilan boshqarasiz</text>
+</svg>

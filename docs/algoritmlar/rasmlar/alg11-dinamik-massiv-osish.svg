@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 520">
+  <title>Dinamik massivga element qo'shish: ko'p arzon O(1) qo'shishlar, vaqti-vaqti bilan sig'imni ikkilantirish bilan qimmat O(n) nusxalash</title>
+  <rect x="0" y="0" width="880" height="520" fill="#f8fafc"/>
+  <text x="440" y="36" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Dinamik massivga element qo'shish (append)</text>
+  <text x="440" y="62" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Sig'im to'lganda massiv 2 baravar kattalashadi va eski elementlar nusxalanadi</text>
+
+  <!-- bars: cost of each append -->
+  <text x="60" y="100" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">Har bir append amalining narxi (baholi qutilar soni)</text>
+
+  <!-- baseline -->
+  <line x1="60" y1="280" x2="820" y2="280" stroke="#94a3b8" stroke-width="2"/>
+  <text x="50" y="285" text-anchor="end" font-family="monospace" font-size="13" fill="#64748b">0</text>
+
+  <!-- cheap bars (height 1) and spikes -->
+  <!-- i=1 spike (resize 1) -->
+  <rect x="70"  y="262" width="40" height="18" fill="#dc2626" stroke="#dc2626"/>
+  <rect x="120" y="262" width="40" height="18" fill="#16a34a"/>
+  <!-- i=2 spike -->
+  <rect x="170" y="244" width="40" height="36" fill="#dc2626"/>
+  <rect x="220" y="262" width="40" height="18" fill="#16a34a"/>
+  <rect x="270" y="262" width="40" height="18" fill="#16a34a"/>
+  <!-- i=4 spike -->
+  <rect x="320" y="208" width="40" height="72" fill="#dc2626"/>
+  <rect x="370" y="262" width="40" height="18" fill="#16a34a"/>
+  <rect x="420" y="262" width="40" height="18" fill="#16a34a"/>
+  <rect x="470" y="262" width="40" height="18" fill="#16a34a"/>
+  <!-- i=8 spike -->
+  <rect x="520" y="136" width="40" height="144" fill="#dc2626"/>
+  <rect x="570" y="262" width="40" height="18" fill="#16a34a"/>
+  <rect x="620" y="262" width="40" height="18" fill="#16a34a"/>
+  <rect x="670" y="262" width="40" height="18" fill="#16a34a"/>
+  <rect x="720" y="262" width="40" height="18" fill="#16a34a"/>
+  <rect x="770" y="262" width="40" height="18" fill="#16a34a"/>
+
+  <!-- spike labels -->
+  <text x="190" y="236" text-anchor="middle" font-family="monospace" font-size="13" fill="#dc2626">2</text>
+  <text x="340" y="200" text-anchor="middle" font-family="monospace" font-size="13" fill="#dc2626">4</text>
+  <text x="540" y="128" text-anchor="middle" font-family="monospace" font-size="13" fill="#dc2626">8</text>
+
+  <!-- x labels -->
+  <text x="90"  y="300" text-anchor="middle" font-family="monospace" font-size="13" fill="#64748b">1</text>
+  <text x="190" y="300" text-anchor="middle" font-family="monospace" font-size="13" fill="#64748b">2</text>
+  <text x="340" y="300" text-anchor="middle" font-family="monospace" font-size="13" fill="#64748b">4</text>
+  <text x="540" y="300" text-anchor="middle" font-family="monospace" font-size="13" fill="#64748b">8</text>
+  <text x="440" y="320" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">append tartib raqami (i) →</text>
+
+  <!-- legend -->
+  <rect x="120" y="345" width="18" height="18" fill="#16a34a"/>
+  <text x="146" y="359" font-family="Segoe UI" font-size="13" fill="#334155">arzon append: O(1) — bo'sh joyga yozish</text>
+  <rect x="480" y="345" width="18" height="18" fill="#dc2626"/>
+  <text x="506" y="359" font-family="Segoe UI" font-size="13" fill="#334155">qimmat append: O(n) — ikkilantirish + nusxalash</text>
+
+  <!-- doubling boxes illustration -->
+  <text x="60" y="400" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">Sig'im (capacity) qanday o'sadi</text>
+  <g font-family="monospace" font-size="13" fill="#2563eb">
+    <rect x="60"  y="415" width="24" height="24" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="115" y="432" font-family="Segoe UI" fill="#64748b">cap=1</text>
+
+    <rect x="170" y="415" width="24" height="24" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+    <rect x="196" y="415" width="24" height="24" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="245" y="432" font-family="Segoe UI" fill="#64748b">cap=2</text>
+
+    <rect x="300" y="415" width="24" height="24" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+    <rect x="326" y="415" width="24" height="24" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+    <rect x="352" y="415" width="24" height="24" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+    <rect x="378" y="415" width="24" height="24" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="425" y="432" font-family="Segoe UI" fill="#64748b">cap=4</text>
+
+    <rect x="490" y="415" width="24" height="24" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+    <rect x="516" y="415" width="24" height="24" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+    <rect x="542" y="415" width="24" height="24" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+    <rect x="568" y="415" width="24" height="24" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+    <rect x="594" y="415" width="24" height="24" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+    <rect x="620" y="415" width="24" height="24" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+    <rect x="646" y="415" width="24" height="24" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+    <rect x="672" y="415" width="24" height="24" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="730" y="432" font-family="Segoe UI" fill="#64748b">cap=8</text>
+  </g>
+
+  <text x="440" y="480" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#16a34a">Jami nusxalash &lt; 2n  ⟹  har append O(1) amortized</text>
+</svg>

@@ -61,8 +61,14 @@ Yo'nalishingizdan qat'i nazar, **birinchi kunlardanoq** kodingizni Git bilan saq
 4. **[React](react/README.md)** — zamonaviy interfeyslar komponentlardan quriladi. Bugungi bozorda eng ko'p so'raladigan.
 5. **[Next.js](nextjs/README.md)** — React'ni production darajasiga olib chiqadi: SSR, marshrutlash, tezlik.
 
+!!! tip "Uslublashni tezlashtirish — Tailwind CSS"
+    HTML & CSS'ni o'zlashtirgach, **[Tailwind CSS](tailwind/README.md)** ni qo'shing — bu utility-first CSS freymvorki bo'lib, dizaynni to'g'ridan-to'g'ri HTML'da, izchil dizayn tizimi ichida tez yozish imkonini beradi. Zamonaviy React/Next.js va Vue loyihalarining aksariyati aynan Tailwind ishlatadi. **Avval toza CSS'ni tushuning** (box model, flex, grid) — Tailwind CSS o'rnini bosmaydi, uni tezlashtiradi.
+
 !!! note "Muqobil yo'l"
     React/Next.js o'rniga **[Vue & Nuxt](vue/README.md)** ni tanlashingiz mumkin — u ham kuchli va o'rganish biroz yengilroq. Bittasini tanlang, ikkalasini bir vaqtda emas. (Keyinroq ikkinchisi oson o'rganiladi.)
+
+!!! tip "React'dan mobilga — React Native"
+    React'ni o'rgangach, deyarli o'sha bilim bilan **[React Native](react-native/README.md)** orqali iOS va Android uchun **haqiqiy mobil ilova** qura olasiz: bir xil komponentlar, hooklar va JSX, lekin native UI. Expo bilan oson boshlash, kamera/GPS/push, App Store va Play Store'ga chiqarishgacha.
 
 **Nima qura olasiz:** portfolio sayt, landing page, interaktiv dashboard, internet-do'kon interfeysi.
 
@@ -84,14 +90,29 @@ Yo'nalishingizdan qat'i nazar, **birinchi kunlardanoq** kodingizni Git bilan saq
 !!! tip "Ma'lumotlar bazasini chuqur loyihalash"
     SQL so'rovlarini bilgach, keyingi bosqich — **[Ma'lumotlar bazasi dizayni](db-dizayni/README.md)** (PostgreSQL 18): qanday *to'g'ri sxema* qurish — ER-modellashtirish, normalizatsiya, kalit/indeks strategiyasi, NoSQL, analitik ombor va masshtablash. Sintaksis emas — **dizayn qarori**. Har bir backend dasturchi uchun muhim ko'nikma.
 
+!!! tip "Kod yozishdan arxitekturaga (senior darajaga ko'prik)"
+    Bir-ikki real loyiha qurganingizdan keyin savol o'zgaradi: "qanday ishlaydi?" emas, "qanday *to'g'ri* qurish kerak?". **[Dasturlash arxitekturasi](arxitektura/README.md)** — til-mustaqil kitob: coupling/cohesion, SOLID, GoF patternlar, hexagonal/Clean/DDD, monolit vs mikroservis, API/DB tanlovi, masshtablash, keshlash, message queue, CAP, fault tolerance, observability va real tizimni noldan loyihalash (C4 + ADR). Har bir qaror — **trade-off**.
+
+!!! tip "Backend dasturchining alohida ko'nikmasi — API dizayni"
+    Framework bilan API yozishni bilish boshqa, **yaxshi API loyihalash** boshqa. **[API dizayni](api-dizayni/README.md)** — til-mustaqil kitob: HTTP va REST chuqur, status kodlari, resurs/URI dizayni, payload va xato (RFC 9457 Problem Details), autentifikatsiya (OAuth/JWT) va OWASP xavfsizligi, rate limiting, idempotentlik, keshlash, versiyalash, GraphQL/gRPC/webhook, OpenAPI va Developer Experience. Boshqa dasturchilar sizning API'ngizdan foydalanadi — u **mahsulot**, va uni izchil, xavfsiz, qulay qilish — alohida mahorat.
+
 !!! question "PHP yoki Python — qaysi biri?"
     - **Python** — agar AI, ma'lumot tahlili, avtomatlashtirish yoki zamonaviy startaplar qiziqtirsa. Sintaksisi sodda, FastAPI tez.
     - **PHP** — agar tez ishga joylashish kerak bo'lsa: dunyodagi saytlarning katta qismi PHP'da (WordPress, Laravel), O'zbekistonda ham vakansiya ko'p.
+
+!!! tip "Laravel'dan keyin — reaktiv UI"
+    Laravel'ni o'rgangach, [Laravel Livewire](livewire/README.md) bilan **JavaScript framework (React/Vue) o'rganmasdan** zamonaviy, "jonli" interfeyslar — jonli qidiruv, formalar, modal, real-vaqt yangilanish — qura olasiz. Faqat PHP va Blade bilan. Livewire 4 asosida, 0 dan kapston loyihagacha.
 
 !!! tip "Faqat web emas — desktop, mobil va botlar ham"
     Laravel/PHP bilsangiz, [NativePHP](nativephp/README.md) orqali **bitta kod bazasidan** desktop (Windows/macOS/Linux) va mobil (iOS/Android) ilovalar qura olasiz. **Telegram bot** — O'zbekistonda ayniqsa talabgir amaliy yo'nalish: [Python/aiogram](tgbot-python/README.md), [PHP/Nutgram](tgbot-php/README.md) yoki [JavaScript/grammY](tgbot-js/README.md) (uchalasi ham guruh/kanal, majburiy obuna va Mini App/clicker o'yingacha). Bular ilg'or/maxsus — avval asosiy tilni puxta egallang.
 
     Ikkalasi ham backend uchun a'lo. Birini tanlab, **chuqur** o'rganing — keyin ikkinchisi oson o'tadi.
+
+!!! tip "WordPress — eng katta freelance bozori"
+    Internetdagi saytlarning katta qismi **WordPress**'da ishlaydi; O'zbekistonda ham WordPress sayt va tema yaratish eng talabgir freelance yo'nalishlardan. PHP bilsangiz, [WordPress tema yaratish](wordpress-tema/README.md) bilan klassik va zamonaviy (block/FSE) temalar, **custom bloklar** (React/JSX) va **WooCommerce** do'konlarini qura olasiz. PHP kitobidan keyingi tabiiy amaliy davom.
+
+!!! tip "Ilovangizga sun'iy intellekt qo'shing — AI/LLM integratsiyasi"
+    Asosiy tilni egallagach, ilovalaringizga **AI (LLM)** ulashni o'rganing — bu bugungi eng talabgir ko'nikmalardan. Har til uchun alohida nashr bor: [AI/LLM integratsiyasi (JavaScript)](ai-js/README.md) (Anthropic SDK + Vercel AI SDK), [AI/LLM integratsiyasi (PHP)](ai-llm-php/README.md) (Anthropic PHP SDK, Laravel bilan) va [AI/LLM integratsiyasi (Python)](ai-python/README.md) (**ko'p provayderli** — OpenAI/Claude/Gemini/Ollama, FastAPI bilan). Uchalasida ham chat, streaming, tool use (funksiya chaqirish), RAG (o'z hujjatlaringizdan javob), vektor bazalar, agentlar, MCP, xavfsizlik va ishlab chiqarishgacha o'rganasiz.
 
 **Nima qura olasiz:** login/ro'yxatdan o'tish tizimi, REST API, internet-do'kon backendi, telegram bot, ma'lumot boshqaruv panellari.
 
@@ -119,12 +140,17 @@ Yo'nalishingizdan qat'i nazar, **birinchi kunlardanoq** kodingizni Git bilan saq
 
 ## 🧩 Algoritmlar — qachon va nega?
 
-[1000 masala](1000-masala/README.md) kitobi alohida yo'nalish emas — u **butun yo'l davomida parallel** ishlatiladigan mashq to'plami. Nega kerak:
+Algoritmika ikki qismdan iborat — **nazariya** (tushunish) va **amaliyot** (mashq), va ular birga ishlaydi:
+
+- **[Algoritmlar va ma'lumotlar strukturalari](algoritmlar/README.md)** — til-mustaqil **nazariy** kitob: chiziqli algoritmdan boshlab, Big-O murakkablik tahlili, barcha asosiy ma'lumot strukturalari (massiv, ro'yxat, stack/queue, hash, daraxt, heap, graf), algoritm paradigmalari (divide & conquer, greedy, DP, backtracking), klassik algoritmlar va P/NP nazariyasi. *Nega* ishlashini va *qancha tez* ekanini o'rgatadi.
+- **[1000 masala](1000-masala/README.md)** — xuddi shu nazariyani mustahkamlovchi **amaliy** mashq to'plami (JS/PHP/Python yechimlari bilan), butun yo'l davomida parallel ishlatiladi.
+
+Nega kerak:
 
 - **Intervyu:** kompaniyalar texnik suhbatda aynan algoritmik masalalar beradi.
 - **Fikrlash:** muammoni qismlarga bo'lib yechishni o'rgatadi — bu har qanday kodda asqotadi.
 
-**Qachon boshlash:** JavaScript (yoki Python/PHP) asoslarini o'zlashtirgach. Kuniga 1-2 masaladan yeting — shoshilmasdan, lekin uzluksiz.
+**Qachon boshlash:** JavaScript (yoki Python/PHP) asoslarini o'zlashtirgach. Avval nazariy bobni o'qing, keyin shu mavzuda masalalar yeching — kuniga 1-2 masaladan, uzluksiz.
 
 ---
 
@@ -135,7 +161,8 @@ Yo'nalishingizdan qat'i nazar, **birinchi kunlardanoq** kodingizni Git bilan saq
 | 🎨 **Frontend** | HTML & CSS → JavaScript → TypeScript → React → Next.js | ~6–9 oy |
 | ⚙️ **Backend** | (Web asoslari) → PHP yoki Python → SQL & MySQL → Laravel / Django / Node.js | ~5–8 oy |
 | 🚀 **Full Stack** | HTML & CSS → JavaScript → TypeScript → React/Next → SQL → PHP/Python | ~9–14 oy |
-| 🧩 **Algoritmlar** | 1000 masala (barcha yo'nalishlar uchun, parallel) | uzluksiz |
+| 📱 **Mobil** | (Dasturlash asoslari) → [Flutter & Dart](flutter/README.md), yoki React'ni bilsangiz [React Native](react-native/README.md) — bitta koddan Android+iOS | ~4–7 oy |
+| 🧩 **Algoritmlar** | [Algoritmlar va ma'lumotlar strukturalari](algoritmlar/README.md) (nazariya) + [1000 masala](1000-masala/README.md) (amaliyot) — barcha yo'nalishlar uchun, parallel | uzluksiz |
 | 🐙 **Git & GitHub** | Barcha yo'nalishlar uchun (parallel, birinchi kundan) | uzluksiz |
 
 \* *Kuniga 1–2 soat muntazam mashq qilingan holatda. Vaqt — yo'l-yo'riq, qonun emas: kimdir tezroq, kimdir sekinroq o'rganadi. Asosiysi — to'xtamaslik.*

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 470" width="800" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>stop_reason tarmoqlari: end_turn, max_tokens, tool_use, refusal — har birini qanday qayta ishlash</title>
+  <defs>
+    <marker id="sr1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="800" height="470" fill="#f8fafc"/>
+  <text x="400" y="32" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">msg.stop_reason — model NEGA to'xtadi?</text>
+  <text x="400" y="56" font-size="14" fill="#64748b" text-anchor="middle">Javobni qayta ishlashdan oldin shuni tekshiring — har holatga boshqacha munosabat.</text>
+
+  <!-- central node -->
+  <rect x="330" y="80" width="140" height="52" rx="12" fill="#1e293b"/>
+  <text x="400" y="104" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">javob keldi</text>
+  <text x="400" y="123" font-size="13" fill="#94a3b8" text-anchor="middle">stop_reason?</text>
+
+  <!-- four branches -->
+  <line x1="360" y1="132" x2="150" y2="180" stroke="#64748b" stroke-width="2" marker-end="url(#sr1)"/>
+  <line x1="385" y1="132" x2="335" y2="180" stroke="#64748b" stroke-width="2" marker-end="url(#sr1)"/>
+  <line x1="415" y1="132" x2="465" y2="180" stroke="#64748b" stroke-width="2" marker-end="url(#sr1)"/>
+  <line x1="440" y1="132" x2="650" y2="180" stroke="#64748b" stroke-width="2" marker-end="url(#sr1)"/>
+
+  <!-- end_turn -->
+  <rect x="30" y="186" width="180" height="120" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="120" y="212" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="middle">"end_turn"  ✅</text>
+  <text x="120" y="236" font-size="13" fill="#1e293b" text-anchor="middle">Tabiiy tugadi.</text>
+  <text x="120" y="258" font-size="13" fill="#475569" text-anchor="middle">Javob to'liq.</text>
+  <text x="120" y="284" font-size="13" fill="#475569" text-anchor="middle">Matnni ko'rsating —</text>
+  <text x="120" y="300" font-size="13" fill="#475569" text-anchor="middle">hech narsa kerakmas.</text>
+
+  <!-- max_tokens -->
+  <rect x="222" y="186" width="180" height="120" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="312" y="212" font-size="15" font-weight="bold" fill="#f59e0b" text-anchor="middle">"max_tokens" ⚠️</text>
+  <text x="312" y="236" font-size="13" fill="#1e293b" text-anchor="middle">Chegaraga urildi.</text>
+  <text x="312" y="258" font-size="13" fill="#475569" text-anchor="middle">Javob KESILGAN.</text>
+  <text x="312" y="284" font-size="13" fill="#475569" text-anchor="middle">max_tokens ni oshiring</text>
+  <text x="312" y="300" font-size="13" fill="#475569" text-anchor="middle">yoki streaming ishlating.</text>
+
+  <!-- tool_use -->
+  <rect x="414" y="186" width="180" height="120" rx="12" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="504" y="212" font-size="15" font-weight="bold" fill="#6366f1" text-anchor="middle">"tool_use"  🔧</text>
+  <text x="504" y="236" font-size="13" fill="#1e293b" text-anchor="middle">Vosita chaqirmoqchi.</text>
+  <text x="504" y="258" font-size="13" fill="#475569" text-anchor="middle">Vositani bajaring,</text>
+  <text x="504" y="284" font-size="13" fill="#475569" text-anchor="middle">natijani qaytaring</text>
+  <text x="504" y="300" font-size="13" fill="#475569" text-anchor="middle">(07-bob).</text>
+
+  <!-- refusal -->
+  <rect x="606" y="186" width="180" height="120" rx="12" fill="#ffffff" stroke="#ef4444" stroke-width="2"/>
+  <text x="696" y="212" font-size="15" font-weight="bold" fill="#ef4444" text-anchor="middle">"refusal"  🛑</text>
+  <text x="696" y="236" font-size="13" fill="#1e293b" text-anchor="middle">Xavfsizlik bo'yicha</text>
+  <text x="696" y="258" font-size="13" fill="#475569" text-anchor="middle">rad etdi.</text>
+  <text x="696" y="284" font-size="13" fill="#475569" text-anchor="middle">Foydalanuvchiga</text>
+  <text x="696" y="300" font-size="13" fill="#475569" text-anchor="middle">bildiring, qayta urinmang.</text>
+
+  <!-- code snippet footer -->
+  <rect x="60" y="332" width="680" height="112" rx="10" fill="#1e293b"/>
+  <text x="80" y="358" font-size="13" fill="#94a3b8" text-anchor="start" font-family="Consolas, monospace">const msg = await client.messages.create({ ... });</text>
+  <text x="80" y="380" font-size="13" fill="#dcfce7" text-anchor="start" font-family="Consolas, monospace">if (msg.stop_reason === "end_turn")   { /* javob to'liq */ }</text>
+  <text x="80" y="402" font-size="13" fill="#fef3c7" text-anchor="start" font-family="Consolas, monospace">if (msg.stop_reason === "max_tokens") { /* kesilgan — oshiring */ }</text>
+  <text x="80" y="424" font-size="13" fill="#e0e7ff" text-anchor="start" font-family="Consolas, monospace">if (msg.stop_reason === "tool_use")   { /* vositani bajaring */ }</text>
+</svg>

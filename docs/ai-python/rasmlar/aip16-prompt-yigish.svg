@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Promptni yig'ish: tizim ko'rsatmasi, kontekst chunklari va savol yagona promptga birlashadi</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">Promptni yig'ish</text>
+
+  <defs>
+    <marker id="py" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#4f46e5"/>
+    </marker>
+  </defs>
+
+  <!-- Left: three parts -->
+  <!-- System -->
+  <rect x="30" y="70" width="300" height="80" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="48" y="96" font-size="15" font-weight="700" fill="#dc2626">Tizim ko'rsatmasi (system)</text>
+  <text x="48" y="118" font-size="13" fill="#475569">"FAQAT kontekstga tayanib</text>
+  <text x="48" y="138" font-size="13" fill="#475569">javob ber; yo'q bo'lsa 'bilmayman' dey"</text>
+
+  <!-- Context -->
+  <rect x="30" y="166" width="300" height="120" rx="12" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="48" y="192" font-size="15" font-weight="700" fill="#4338ca">Kontekst (top-k chunk)</text>
+  <rect x="48" y="204" width="264" height="22" rx="5" fill="#eef2ff"/>
+  <text x="58" y="220" font-size="13" fill="#1e293b">[1] (manba: qollanma.pdf) ...matn...</text>
+  <rect x="48" y="232" width="264" height="22" rx="5" fill="#eef2ff"/>
+  <text x="58" y="248" font-size="13" fill="#1e293b">[2] (manba: qollanma.pdf) ...matn...</text>
+  <rect x="48" y="260" width="264" height="22" rx="5" fill="#eef2ff"/>
+  <text x="58" y="276" font-size="13" fill="#1e293b">[3] (manba: faq.md) ...matn...</text>
+
+  <!-- Question -->
+  <rect x="30" y="302" width="300" height="62" rx="12" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+  <text x="48" y="328" font-size="15" font-weight="700" fill="#0284c7">Savol (user)</text>
+  <text x="48" y="350" font-size="13" fill="#475569">"Ta'til necha kun?"</text>
+
+  <!-- Arrows to combined prompt -->
+  <line x1="330" y1="110" x2="436" y2="180" stroke="#4f46e5" stroke-width="2.5" marker-end="url(#py)"/>
+  <line x1="330" y1="226" x2="436" y2="220" stroke="#4f46e5" stroke-width="2.5" marker-end="url(#py)"/>
+  <line x1="330" y1="333" x2="436" y2="262" stroke="#4f46e5" stroke-width="2.5" marker-end="url(#py)"/>
+
+  <!-- Right: combined prompt -->
+  <rect x="450" y="120" width="280" height="180" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <rect x="450" y="120" width="280" height="40" rx="14" fill="#dcfce7"/>
+  <text x="590" y="146" text-anchor="middle" font-size="16" font-weight="700" fill="#166534">Yagona prompt</text>
+  <text x="470" y="186" font-size="14" fill="#1e293b">system: qoidalar</text>
+  <line x1="470" y1="198" x2="710" y2="198" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="470" y="222" font-size="14" fill="#1e293b">user:</text>
+  <text x="470" y="244" font-size="13" fill="#475569">  KONTEKST: [1][2][3]...</text>
+  <text x="470" y="266" font-size="13" fill="#475569">  SAVOL: ...</text>
+  <line x1="470" y1="278" x2="710" y2="278" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="590" y="296" text-anchor="middle" font-size="13" fill="#64748b">-> modelga yuboriladi</text>
+
+  <text x="590" y="346" text-anchor="middle" font-size="14" fill="#475569">Uch qism birlashib</text>
+  <text x="590" y="368" text-anchor="middle" font-size="14" fill="#475569">kontekstli so'rovni hosil qiladi</text>
+</svg>

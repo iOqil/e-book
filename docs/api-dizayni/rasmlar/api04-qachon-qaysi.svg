@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580">
+  <title>Qaysi API uslubini qachon tanlash qaror daraxti</title>
+  <rect x="0" y="0" width="900" height="580" fill="#f8fafc"/>
+  <text x="450" y="34" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">Qaysi uslubni qachon tanlash?</text>
+  <text x="450" y="58" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Savollar zanjiri — kontekst boʻyicha yoʻnaltiruvchi qaror, qatʼiy qoida emas</text>
+
+  <!-- Start -->
+  <rect x="350" y="78" width="200" height="48" rx="24" fill="#1e293b"/>
+  <text x="450" y="108" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#ffffff">API kim uchun?</text>
+
+  <!-- Q1: who consumes -->
+  <line x1="450" y1="126" x2="450" y2="150" stroke="#64748b" stroke-width="2"/>
+
+  <!-- branch labels -->
+  <text x="200" y="170" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Public / koʻp xil mijoz</text>
+  <text x="700" y="170" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Faqat ichki tizimlar</text>
+  <line x1="450" y1="150" x2="200" y2="184" stroke="#64748b" stroke-width="2"/>
+  <line x1="450" y1="150" x2="700" y2="184" stroke="#64748b" stroke-width="2"/>
+
+  <!-- LEFT path: public -->
+  <rect x="60" y="184" width="280" height="60" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="200" y="210" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb">Mijoz maʼlumot ehtiyoji</text>
+  <text x="200" y="230" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">barqaror yoki oʻzgaruvchanmi?</text>
+
+  <line x1="200" y1="244" x2="200" y2="268" stroke="#64748b" stroke-width="2"/>
+  <text x="115" y="284" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Barqaror CRUD</text>
+  <text x="300" y="284" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Oʻzgaruvchan UI</text>
+  <line x1="200" y1="268" x2="115" y2="300" stroke="#64748b" stroke-width="2"/>
+  <line x1="200" y1="268" x2="300" y2="300" stroke="#64748b" stroke-width="2"/>
+
+  <rect x="35" y="300" width="160" height="86" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="115" y="330" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb">REST</text>
+  <text x="115" y="352" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Sodda, keshlanadi,</text>
+  <text x="115" y="370" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">hamma tushunadi</text>
+
+  <rect x="220" y="300" width="170" height="86" rx="10" fill="#faf5ff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="305" y="330" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#7c3aed">GraphQL</text>
+  <text x="305" y="352" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Mobil/koʻp ekran,</text>
+  <text x="305" y="370" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">moslashuvchan maydon</text>
+
+  <!-- RIGHT path: internal -->
+  <rect x="560" y="184" width="280" height="60" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="700" y="210" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">Aloqa shakli qanday?</text>
+  <text x="700" y="230" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">soʻrov-javob yoki oqimmi?</text>
+
+  <line x1="700" y1="244" x2="700" y2="268" stroke="#64748b" stroke-width="2"/>
+  <text x="615" y="284" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Tezkor RPC/oqim</text>
+  <text x="800" y="284" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Hodisa / real-time</text>
+  <line x1="700" y1="268" x2="615" y2="300" stroke="#64748b" stroke-width="2"/>
+  <line x1="700" y1="268" x2="800" y2="300" stroke="#64748b" stroke-width="2"/>
+
+  <rect x="535" y="300" width="160" height="86" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="615" y="330" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a">gRPC</text>
+  <text x="615" y="352" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Tez, ixcham, tipli</text>
+  <text x="615" y="370" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">mikroservis aloqasi</text>
+
+  <rect x="720" y="300" width="160" height="86" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="800" y="328" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#f59e0b">WebSocket /</text>
+  <text x="800" y="348" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#f59e0b">SSE / queue</text>
+  <text x="800" y="370" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">push, event-driven</text>
+
+  <!-- Hybrid note -->
+  <rect x="120" y="430" width="660" height="120" rx="12" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="450" y="458" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">Haqiqatda — koʻpincha gibrid</text>
+  <text x="450" y="484" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Tashqi mijozlar uchun public REST · ichki xizmatlar orasida gRPC ·</text>
+  <text x="450" y="506" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">murakkab mobil ekranlar uchun GraphQL · bildirishnoma uchun WebSocket/webhook</text>
+  <text x="450" y="532" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Uslub — vositadan biri; muammoga mosini tanlang, modaga emas</text>
+</svg>

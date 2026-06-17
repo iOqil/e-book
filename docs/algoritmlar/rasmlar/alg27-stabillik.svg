@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 540">
+  <title>Barqarorlik (stability): teng kalitli elementlarning nisbiy tartibi saqlanishi (barqaror) yoki buzilishi (barqaror emas), va taqqoslash saralashining O(n log n) quyi chegarasi qaror daraxti orqali</title>
+  <rect x="0" y="0" width="880" height="540" fill="#f8fafc"/>
+  <text x="440" y="32" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Barqarorlik va taqqoslash chegarasi</text>
+
+  <!-- ===== TOP: STABILITY ===== -->
+  <text x="40" y="64" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#1e293b">1. Barqarorlik: teng kalitlilar tartibi saqlanadimi?</text>
+
+  <!-- input -->
+  <text x="40" y="92" font-family="Segoe UI" font-size="14" fill="#64748b">Kirish (kalit, belgi) — kalit bo'yicha saralaymiz:</text>
+  <g font-family="monospace" font-size="14">
+    <rect x="40" y="102" width="56" height="34" rx="5" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+    <text x="68" y="124" text-anchor="middle" fill="#2563eb">3a</text>
+    <rect x="100" y="102" width="56" height="34" rx="5" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+    <text x="128" y="124" text-anchor="middle" fill="#16a34a">1b</text>
+    <rect x="160" y="102" width="56" height="34" rx="5" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+    <text x="188" y="124" text-anchor="middle" fill="#2563eb">3c</text>
+    <rect x="220" y="102" width="56" height="34" rx="5" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+    <text x="248" y="124" text-anchor="middle" fill="#7c3aed">2d</text>
+    <rect x="280" y="102" width="56" height="34" rx="5" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+    <text x="308" y="124" text-anchor="middle" fill="#16a34a">1e</text>
+  </g>
+
+  <!-- stable result -->
+  <text x="40" y="172" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">BARQAROR (merge, insertion):  b oldin e, a oldin c — tartib saqlandi</text>
+  <g font-family="monospace" font-size="14">
+    <rect x="40" y="182" width="56" height="34" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+    <text x="68" y="204" text-anchor="middle" fill="#16a34a">1b</text>
+    <rect x="100" y="182" width="56" height="34" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+    <text x="128" y="204" text-anchor="middle" fill="#16a34a">1e</text>
+    <rect x="160" y="182" width="56" height="34" rx="5" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+    <text x="188" y="204" text-anchor="middle" fill="#7c3aed">2d</text>
+    <rect x="220" y="182" width="56" height="34" rx="5" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="248" y="204" text-anchor="middle" fill="#2563eb">3a</text>
+    <rect x="280" y="182" width="56" height="34" rx="5" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="308" y="204" text-anchor="middle" fill="#2563eb">3c</text>
+  </g>
+  <text x="346" y="204" font-family="Segoe UI" font-size="13" fill="#16a34a">&#10003; b..e va a..c asl tartibda</text>
+
+  <!-- unstable result -->
+  <text x="40" y="250" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">BARQAROR EMAS (selection, quick, heap):  c oldin a — tartib buzildi</text>
+  <g font-family="monospace" font-size="14">
+    <rect x="40" y="260" width="56" height="34" rx="5" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+    <text x="68" y="282" text-anchor="middle" fill="#dc2626">1e</text>
+    <rect x="100" y="260" width="56" height="34" rx="5" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+    <text x="128" y="282" text-anchor="middle" fill="#dc2626">1b</text>
+    <rect x="160" y="260" width="56" height="34" rx="5" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+    <text x="188" y="282" text-anchor="middle" fill="#7c3aed">2d</text>
+    <rect x="220" y="260" width="56" height="34" rx="5" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+    <text x="248" y="282" text-anchor="middle" fill="#dc2626">3c</text>
+    <rect x="280" y="260" width="56" height="34" rx="5" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+    <text x="308" y="282" text-anchor="middle" fill="#dc2626">3a</text>
+  </g>
+  <text x="346" y="282" font-family="Segoe UI" font-size="13" fill="#dc2626">&#10007; e..b va c..a teskari bo'ldi</text>
+
+  <text x="40" y="318" font-family="Segoe UI" font-size="13" fill="#64748b">Kalit bir xil (1, 1 yoki 3, 3) bo'lganda nisbiy tartibni saqlash = barqaror.</text>
+
+  <!-- divider -->
+  <line x1="40" y1="338" x2="840" y2="338" stroke="#cbd5e1" stroke-width="1.5"/>
+
+  <!-- ===== BOTTOM: LOWER BOUND ===== -->
+  <text x="40" y="366" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#1e293b">2. Quyi chegara: qaror daraxti -> Ω(n log n)</text>
+
+  <!-- decision tree -->
+  <!-- root -->
+  <ellipse cx="240" cy="400" rx="58" ry="22" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="240" y="405" text-anchor="middle" font-family="monospace" font-size="13" fill="#7c3aed">a&lt;b ?</text>
+  <!-- level 1 -->
+  <ellipse cx="140" cy="460" rx="58" ry="22" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="140" y="465" text-anchor="middle" font-family="monospace" font-size="13" fill="#7c3aed">b&lt;c ?</text>
+  <ellipse cx="340" cy="460" rx="58" ry="22" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="340" y="465" text-anchor="middle" font-family="monospace" font-size="13" fill="#7c3aed">a&lt;c ?</text>
+  <line x1="205" y1="415" x2="170" y2="442" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="275" y1="415" x2="310" y2="442" stroke="#94a3b8" stroke-width="2"/>
+  <text x="178" y="432" font-family="Segoe UI" font-size="13" fill="#16a34a">ha</text>
+  <text x="288" y="432" font-family="Segoe UI" font-size="13" fill="#dc2626">yo'q</text>
+
+  <!-- leaves -->
+  <rect x="60" y="500" width="80" height="28" rx="4" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="100" y="519" text-anchor="middle" font-family="monospace" font-size="13" fill="#16a34a">a,b,c</text>
+  <rect x="150" y="500" width="80" height="28" rx="4" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="190" y="519" text-anchor="middle" font-family="monospace" font-size="13" fill="#16a34a">a,c,b</text>
+  <rect x="280" y="500" width="80" height="28" rx="4" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="320" y="519" text-anchor="middle" font-family="monospace" font-size="13" fill="#16a34a">b,a,c</text>
+  <rect x="370" y="500" width="80" height="28" rx="4" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="410" y="519" text-anchor="middle" font-family="monospace" font-size="13" fill="#16a34a">...</text>
+  <line x1="118" y1="478" x2="100" y2="500" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="162" y1="478" x2="190" y2="500" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="318" y1="478" x2="320" y2="500" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="362" y1="478" x2="410" y2="500" stroke="#94a3b8" stroke-width="2"/>
+
+  <!-- explanation -->
+  <text x="500" y="400" font-family="Segoe UI" font-size="14" fill="#334155">Har tugun = bitta taqqoslash (ha/yo'q).</text>
+  <text x="500" y="424" font-family="Segoe UI" font-size="14" fill="#334155">n! ta tartiblanish -> kamida n! ta barg.</text>
+  <text x="500" y="448" font-family="Segoe UI" font-size="14" fill="#334155">Balandlik h bo'lsa: barglar &#8804; 2&#8462;.</text>
+  <text x="500" y="472" font-family="monospace" font-size="14" fill="#2563eb">2&#8462; &#8805; n!  =>  h &#8805; log&#8322;(n!)</text>
+  <text x="500" y="496" font-family="monospace" font-size="14" fill="#dc2626">log&#8322;(n!) = &#920;(n log n)</text>
+  <text x="500" y="522" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">=> hech qaysi taqqoslash sort O(n log n) dan tez emas</text>
+</svg>

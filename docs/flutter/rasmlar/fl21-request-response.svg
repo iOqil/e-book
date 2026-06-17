@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Klient-server aylanasi: Flutter ilova HTTP GET so'rov yuboradi (metod va manzil), server/API uni qabul qiladi va JSON javob qaytaradi (status kodi 200 va body); ilova javobni oladi</title>
+  <defs>
+    <marker id="fl21rrA" markerWidth="12" markerHeight="12" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#027dfd"/>
+    </marker>
+    <marker id="fl21rrB" markerWidth="12" markerHeight="12" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="800" height="420" fill="#f8fafc"/>
+  <text x="400" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">So'rov va javob (request / response)</text>
+  <text x="400" y="58" text-anchor="middle" font-size="14" fill="#475569">ilova so'rov yuboradi, server JSON javob qaytaradi — bu bitta aylana</text>
+
+  <!-- Client (Flutter app) -->
+  <rect x="40" y="110" width="200" height="200" rx="14" fill="#ffffff" stroke="#027dfd" stroke-width="2.5"/>
+  <text x="140" y="142" text-anchor="middle" font-size="16" font-weight="700" fill="#027dfd">Flutter ilova</text>
+  <text x="140" y="164" text-anchor="middle" font-size="13" fill="#64748b">(klient)</text>
+  <rect x="64" y="184" width="152" height="44" rx="8" fill="#dbeafe" stroke="#027dfd" stroke-width="1.5"/>
+  <text x="140" y="204" text-anchor="middle" font-size="13" fill="#1e293b">http.get(</text>
+  <text x="140" y="222" text-anchor="middle" font-size="13" fill="#1e293b">Uri.parse(url))</text>
+  <text x="140" y="262" text-anchor="middle" font-size="13" fill="#64748b">javobni kutadi</text>
+  <text x="140" y="284" text-anchor="middle" font-size="13" fill="#64748b">(await)</text>
+
+  <!-- Server / API -->
+  <rect x="560" y="110" width="200" height="200" rx="14" fill="#ffffff" stroke="#6366f1" stroke-width="2.5"/>
+  <text x="660" y="142" text-anchor="middle" font-size="16" font-weight="700" fill="#6366f1">Server / API</text>
+  <text x="660" y="164" text-anchor="middle" font-size="13" fill="#64748b">(internetda)</text>
+  <rect x="584" y="184" width="152" height="64" rx="8" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="660" y="208" text-anchor="middle" font-size="13" fill="#1e293b">so'rovni qabul qiladi,</text>
+  <text x="660" y="228" text-anchor="middle" font-size="13" fill="#1e293b">ma'lumotni topadi,</text>
+  <text x="660" y="248" text-anchor="middle" font-size="13" fill="#1e293b">javob tayyorlaydi</text>
+
+  <!-- Request arrow (top) -->
+  <path d="M242 178 L558 178" stroke="#027dfd" stroke-width="2.5" fill="none" marker-end="url(#fl21rrA)"/>
+  <rect x="300" y="138" width="200" height="34" rx="8" fill="#dbeafe" stroke="#027dfd" stroke-width="1.5"/>
+  <text x="400" y="160" text-anchor="middle" font-size="14" font-weight="700" fill="#027dfd">SO'ROV: GET /users</text>
+
+  <!-- Response arrow (bottom) -->
+  <path d="M558 250 L242 250" stroke="#16a34a" stroke-width="2.5" fill="none" marker-end="url(#fl21rrB)"/>
+  <rect x="300" y="262" width="200" height="34" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="400" y="284" text-anchor="middle" font-size="14" font-weight="700" fill="#16a34a">JAVOB: 200 + body</text>
+
+  <!-- legend / labels -->
+  <text x="400" y="334" text-anchor="middle" font-size="13" fill="#94a3b8">metod: GET · POST · PUT · DELETE</text>
+  <text x="400" y="356" text-anchor="middle" font-size="13" fill="#94a3b8">status: 200 OK · 201 yaratildi · 404 topilmadi · 500 server xatosi</text>
+  <text x="400" y="386" text-anchor="middle" font-size="13" fill="#475569">body — odatda JSON: {"id":1,"name":"Ali"}</text>
+</svg>

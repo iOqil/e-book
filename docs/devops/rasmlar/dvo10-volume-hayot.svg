@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430">
+  <title>Volume umr chizig'i: konteyner yaratiladi, ma'lumot yoziladi, konteyner o'chiriladi va qayta yaratiladi, lekin volume va undagi ma'lumot vaqt o'qi bo'ylab saqlanib qoladi</title>
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Volume umri: konteyner o'tkinchi, ma'lumot doimiy</text>
+
+  <defs>
+    <marker id="tm" markerWidth="11" markerHeight="11" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <!-- konteyner qatori (yuqorida, o'tkinchi) -->
+  <text x="40" y="88" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#475569">Konteyner</text>
+  <text x="40" y="106" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">(o'tkinchi)</text>
+
+  <!-- 1: yaratildi -->
+  <rect x="150" y="70" width="140" height="58" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="220" y="94" text-anchor="middle" font-family="Consolas, monospace" font-size="13.5" font-weight="bold" fill="#1e40af">dvo10pg #1</text>
+  <text x="220" y="115" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">yaratildi</text>
+
+  <!-- 2: o'chdi (X) -->
+  <rect x="350" y="70" width="120" height="58" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="410" y="98" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#dc2626">rm -f</text>
+  <text x="410" y="118" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">o'chirildi</text>
+
+  <!-- 3: qayta yaratildi -->
+  <rect x="530" y="70" width="140" height="58" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="600" y="94" text-anchor="middle" font-family="Consolas, monospace" font-size="13.5" font-weight="bold" fill="#1e40af">dvo10pg #2</text>
+  <text x="600" y="115" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">qayta yaratildi</text>
+
+  <!-- vaqt o'qi -->
+  <line x1="150" y1="200" x2="710" y2="200" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#tm)"/>
+  <text x="700" y="222" text-anchor="end" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">vaqt</text>
+  <circle cx="220" cy="200" r="5" fill="#2563eb"/>
+  <circle cx="410" cy="200" r="5" fill="#dc2626"/>
+  <circle cx="600" cy="200" r="5" fill="#2563eb"/>
+
+  <!-- konteyner -> vaqt o'qi ulagichlar -->
+  <line x1="220" y1="128" x2="220" y2="195" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <line x1="410" y1="128" x2="410" y2="195" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <line x1="600" y1="128" x2="600" y2="195" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="3 3"/>
+
+  <!-- volume (pastda, doimiy yashil polosa) -->
+  <text x="40" y="296" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#166534">Volume</text>
+  <text x="40" y="314" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">(doimiy)</text>
+
+  <rect x="150" y="262" width="560" height="86" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="430" y="290" text-anchor="middle" font-family="Consolas, monospace" font-size="14.5" font-weight="bold" fill="#166534">dvo10vol  (named volume)</text>
+  <text x="430" y="314" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#166534">jadval "vazifalar" + 2 qator — BARDAVOM saqlanadi</text>
+  <text x="430" y="334" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">konteyner #1 o'chsa ham, #2 shu ma'lumotni ko'radi</text>
+
+  <!-- konteyner ichidagi papka -> volume ulagich -->
+  <line x1="220" y1="200" x2="220" y2="258" stroke="#16a34a" stroke-width="2" marker-end="url(#tm)"/>
+  <text x="252" y="240" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">yozadi</text>
+  <line x1="600" y1="258" x2="600" y2="205" stroke="#16a34a" stroke-width="2" marker-end="url(#tm)"/>
+  <text x="632" y="240" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">o'qiydi</text>
+
+  <text x="380" y="392" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#1e293b">docker rm konteyner — named volume'ni O'CHIRMAYDI</text>
+  <text x="380" y="414" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">volume'ni faqat docker volume rm o'chiradi — shuning uchun DB ma'lumoti xavfsiz</text>
+</svg>

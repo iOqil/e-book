@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 470" width="720" height="470">
+  <title>Bash skript anatomiyasi: shebang, set -euo pipefail, o'zgaruvchi, funksiya, shart va sikl qatlamlari yuqoridan pastga ketma-ket joylashgan</title>
+  <rect x="0" y="0" width="720" height="470" fill="#f8fafc"/>
+  <text x="360" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Bash skript anatomiyasi</text>
+
+  <!-- shebang -->
+  <rect x="60" y="56" width="600" height="52" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="78" y="80" font-family="Segoe UI, system-ui, sans-serif" font-size="14.5" font-weight="bold" fill="#1e40af">1. Shebang</text>
+  <text x="78" y="99" font-family="Consolas, monospace" font-size="13.5" fill="#1e293b">#!/usr/bin/env bash &#8212; qaysi interpretator bilan ishga tushadi</text>
+
+  <!-- set -->
+  <rect x="60" y="116" width="600" height="52" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="78" y="140" font-family="Segoe UI, system-ui, sans-serif" font-size="14.5" font-weight="bold" fill="#1e293b">2. Xavfsizlik rejimi</text>
+  <text x="78" y="159" font-family="Consolas, monospace" font-size="13.5" fill="#1e293b">set -euo pipefail &#8212; xato bo'lsa darrov to'xtaydi</text>
+
+  <!-- variables -->
+  <rect x="60" y="176" width="600" height="52" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="78" y="200" font-family="Segoe UI, system-ui, sans-serif" font-size="14.5" font-weight="bold" fill="#1e293b">3. O'zgaruvchi va argument</text>
+  <text x="78" y="219" font-family="Consolas, monospace" font-size="13.5" fill="#1e293b">name="qiymat"   |   manzil="$1"   |   "${name}"</text>
+
+  <!-- function -->
+  <rect x="60" y="236" width="600" height="52" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="78" y="260" font-family="Segoe UI, system-ui, sans-serif" font-size="14.5" font-weight="bold" fill="#1e293b">4. Funksiya</text>
+  <text x="78" y="279" font-family="Consolas, monospace" font-size="13.5" fill="#1e293b">deploy() { local x=1; ... }  &#8212; takror kodni bir joyga yig'ish</text>
+
+  <!-- condition -->
+  <rect x="60" y="296" width="290" height="64" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="78" y="320" font-family="Segoe UI, system-ui, sans-serif" font-size="14.5" font-weight="bold" fill="#1e40af">5. Shart</text>
+  <text x="78" y="340" font-family="Consolas, monospace" font-size="13" fill="#1e293b">if [[ -f fayl ]]; then</text>
+  <text x="78" y="356" font-family="Consolas, monospace" font-size="13" fill="#1e293b">  ... ; fi</text>
+
+  <!-- loop -->
+  <rect x="370" y="296" width="290" height="64" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="388" y="320" font-family="Segoe UI, system-ui, sans-serif" font-size="14.5" font-weight="bold" fill="#1e40af">6. Sikl</text>
+  <text x="388" y="340" font-family="Consolas, monospace" font-size="13" fill="#1e293b">for f in *.log; do</text>
+  <text x="388" y="356" font-family="Consolas, monospace" font-size="13" fill="#1e293b">  ... ; done</text>
+
+  <!-- exit -->
+  <rect x="60" y="372" width="600" height="56" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="78" y="396" font-family="Segoe UI, system-ui, sans-serif" font-size="14.5" font-weight="bold" fill="#1e293b">7. Exit code</text>
+  <text x="78" y="416" font-family="Consolas, monospace" font-size="13.5" fill="#1e293b">exit 0  &#8212; muvaffaqiyat   |   exit 1  &#8212; xato   |   $? oxirgi natija</text>
+
+  <text x="360" y="452" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Yuqoridan pastga: skript shu tartibda o'qiladi va bajariladi</text>
+</svg>

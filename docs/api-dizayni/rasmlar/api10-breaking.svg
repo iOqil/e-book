@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540">
+  <title>Buzuvchi va xavfsiz API o'zgarishlari: qaysi o'zgarish mijozni sindiradi</title>
+  <rect x="0" y="0" width="900" height="540" fill="#f8fafc"/>
+  <text x="450" y="34" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">Buzuvchi vs xavfsiz o'zgarishlar</text>
+  <text x="450" y="58" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Savol: bu o'zgarish mavjud mijoz kodini sindiradimi?</text>
+
+  <!-- Xavfsiz (yashil) ustun -->
+  <rect x="30" y="86" width="410" height="420" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="235" y="116" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a">XAVFSIZ (non-breaking, additive)</text>
+  <text x="235" y="138" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Qo'shasiz — eski mijoz e'tibor bermaydi</text>
+
+  <rect x="52" y="156" width="366" height="44" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1"/>
+  <text x="68" y="174" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#15803d">+ Yangi optional maydon qo'shish</text>
+  <text x="68" y="192" font-family="Segoe UI" font-size="13" fill="#334155">javobga yangi "discount" qo'shildi</text>
+
+  <rect x="52" y="208" width="366" height="44" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1"/>
+  <text x="68" y="226" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#15803d">+ Yangi endpoint qo'shish</text>
+  <text x="68" y="244" font-family="Segoe UI" font-size="13" fill="#334155">POST /v1/refunds — yangi resurs</text>
+
+  <rect x="52" y="260" width="366" height="44" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1"/>
+  <text x="68" y="278" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#15803d">+ Yangi optional query param</text>
+  <text x="68" y="296" font-family="Segoe UI" font-size="13" fill="#334155">?include=items — eskisi ishlayveradi</text>
+
+  <rect x="52" y="312" width="366" height="44" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1"/>
+  <text x="68" y="330" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#15803d">+ Yangi optional enum qiymati</text>
+  <text x="68" y="348" font-family="Segoe UI" font-size="13" fill="#334155">status'ga "partially_paid" qo'shildi</text>
+
+  <rect x="52" y="370" width="366" height="118" rx="8" fill="#ecfdf5" stroke="#16a34a" stroke-width="1"/>
+  <text x="235" y="394" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#15803d">Tolerant reader / Postel qonuni</text>
+  <text x="235" y="418" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">"Yuborishda qat'iy bo'l,</text>
+  <text x="235" y="438" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">qabul qilishda kechirimli bo'l."</text>
+  <text x="235" y="462" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Noma'lum maydonni e'tiborsiz</text>
+  <text x="235" y="480" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">qoldirgan mijoz oldinga moslashadi</text>
+
+  <!-- Buzuvchi (qizil) ustun -->
+  <rect x="460" y="86" width="410" height="420" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="665" y="116" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#dc2626">BUZUVCHI (breaking)</text>
+  <text x="665" y="138" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Eski mijoz kodi sinadi — yangi MAJOR versiya kerak</text>
+
+  <rect x="482" y="156" width="366" height="44" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1"/>
+  <text x="498" y="174" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#b91c1c">- Maydonni o'chirish / nomini o'zgartirish</text>
+  <text x="498" y="192" font-family="Segoe UI" font-size="13" fill="#334155">"customer_name" -> "name"</text>
+
+  <rect x="482" y="208" width="366" height="44" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1"/>
+  <text x="498" y="226" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#b91c1c">- Maydon tipini o'zgartirish</text>
+  <text x="498" y="244" font-family="Segoe UI" font-size="13" fill="#334155">id: 1001 (son) -> "1001" (matn)</text>
+
+  <rect x="482" y="260" width="366" height="44" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1"/>
+  <text x="498" y="278" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#b91c1c">- Majburiy param/maydon qo'shish</text>
+  <text x="498" y="296" font-family="Segoe UI" font-size="13" fill="#334155">"currency" endi shart — eski so'rov 400</text>
+
+  <rect x="482" y="312" width="366" height="44" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1"/>
+  <text x="498" y="330" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#b91c1c">- Status / xato semantikasini o'zgartirish</text>
+  <text x="498" y="348" font-family="Segoe UI" font-size="13" fill="#334155">200 edi -> endi 202; xato kodi o'zgardi</text>
+
+  <rect x="482" y="370" width="366" height="44" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1"/>
+  <text x="498" y="388" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#b91c1c">- URI yoki default xulqni o'zgartirish</text>
+  <text x="498" y="406" font-family="Segoe UI" font-size="13" fill="#334155">/orders -> /sales-orders; limit 20 -> 50</text>
+
+  <rect x="482" y="452" width="366" height="36" rx="8" fill="#fff1f2" stroke="#dc2626" stroke-width="1"/>
+  <text x="665" y="475" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#b91c1c">Oltin qoida: shubha bo'lsa — buzuvchi deb hisobla</text>
+
+  <text x="450" y="528" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Maqsad: imkon qadar additive (yashil) o'sib, MAJOR versiyani imkon qadar kechiktirish</text>
+</svg>

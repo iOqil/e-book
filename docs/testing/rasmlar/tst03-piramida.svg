@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 520">
+  <title>Test piramidasi: pastda ko'p va tez unit testlar, o'rtada kamroq integratsiya, tepada oz va sekin E2E; chap o'qda tezlik va son, o'ng o'qda narx va realistiklik</title>
+  <rect x="0" y="0" width="820" height="520" fill="#f8fafc"/>
+  <text x="410" y="40" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Test piramidasi</text>
+  <text x="410" y="66" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Pastdan tepaga: kamroq, sekinroq, qimmatroq — lekin realroq</text>
+
+  <!-- E2E top -->
+  <polygon points="410,100 510,180 310,180" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="410" y="150" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="bold" fill="#991b1b">E2E</text>
+  <text x="410" y="170" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#991b1b">oz (tizim)</text>
+
+  <!-- Integration middle -->
+  <polygon points="310,182 510,182 590,300 230,300" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="410" y="245" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="bold" fill="#92400e">Integratsiya</text>
+  <text x="410" y="268" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#92400e">kamroq (modullar birga)</text>
+
+  <!-- Unit base -->
+  <polygon points="230,302 590,302 670,440 150,440" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="410" y="365" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="bold" fill="#166534">Unit (birlik)</text>
+  <text x="410" y="390" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#166534">juda ko'p (bitta birlik, yakkalangan)</text>
+
+  <!-- Left axis: tezlik + son -->
+  <line x1="90" y1="100" x2="90" y2="440" stroke="#2563eb" stroke-width="2"/>
+  <polygon points="90,96 85,108 95,108" fill="#2563eb"/>
+  <text x="74" y="120" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#2563eb" transform="rotate(-90 74 270)">tez · ko'p test</text>
+  <text x="90" y="460" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#2563eb">past = sekin · oz</text>
+
+  <!-- Right axis: narx + realistiklik -->
+  <line x1="730" y1="440" x2="730" y2="100" stroke="#7c3aed" stroke-width="2"/>
+  <polygon points="730,96 725,108 735,108" fill="#7c3aed"/>
+  <text x="752" y="270" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#7c3aed" transform="rotate(90 752 270)">qimmat · realroq</text>
+  <text x="730" y="460" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#7c3aed">past = arzon · soxta</text>
+
+  <text x="410" y="495" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Asos keng — chunki tez fikr-mulohaza eng past darajadan keladi</text>
+</svg>

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 440" width="780" height="440">
+  <title>Editorda ServerSideRender komponenti atributlarni REST API orqali serverga yuboradi va render.php qaytargan HTML ni jonli preview sifatida ko'rsatadi</title>
+  <rect width="780" height="440" fill="#f8fafc"/>
+  <text x="390" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">ServerSideRender — editorda dinamik preview</text>
+
+  <!-- Editor box -->
+  <rect x="30" y="64" width="300" height="300" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <rect x="30" y="64" width="300" height="36" rx="12" fill="#2563eb"/>
+  <text x="180" y="89" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">Editor (brauzer, React)</text>
+
+  <rect x="52" y="116" width="256" height="70" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="180" y="140" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e3a8a">edit() funksiya</text>
+  <text x="180" y="162" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#475569">&lt;ServerSideRender</text>
+  <text x="180" y="178" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#475569">block="kitob/oxirgi" /&gt;</text>
+
+  <rect x="52" y="200" width="256" height="64" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="180" y="223" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e3a8a">InspectorControls</text>
+  <text x="180" y="244" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">user atributni o'zgartiradi</text>
+  <text x="180" y="258" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(soni: 5 &#8594; 3)</text>
+
+  <rect x="52" y="278" width="256" height="70" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="180" y="302" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#166534">Jonli preview</text>
+  <text x="180" y="324" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">render.php HTML editorda</text>
+  <text x="180" y="340" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">avtomatik yangilanadi</text>
+
+  <!-- Server box -->
+  <rect x="450" y="64" width="300" height="300" rx="12" fill="#ffffff" stroke="#d97706" stroke-width="2"/>
+  <rect x="450" y="64" width="300" height="36" rx="12" fill="#d97706"/>
+  <text x="600" y="89" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">Server (PHP, WordPress)</text>
+
+  <rect x="472" y="130" width="256" height="64" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text x="600" y="154" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#92400e">REST endpoint</text>
+  <text x="600" y="175" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#475569">/wp/v2/block-renderer/</text>
+  <text x="600" y="189" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#475569">kitob/oxirgi</text>
+
+  <rect x="472" y="232" width="256" height="80" rx="8" fill="#fff7ed" stroke="#d97706" stroke-width="1.5"/>
+  <text x="600" y="256" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#92400e">render.php ishlaydi</text>
+  <text x="600" y="278" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">WP_Query + markup</text>
+  <text x="600" y="296" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(frontend bilan bir xil)</text>
+
+  <!-- arrows between -->
+  <path d="M330 156 L470 156" stroke="#2563eb" stroke-width="2.5" marker-end="url(#b)"/>
+  <text x="400" y="146" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">atributlar (POST)</text>
+
+  <path d="M470 290 L332 290" stroke="#16a34a" stroke-width="2.5" marker-end="url(#bg)"/>
+  <text x="400" y="280" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">tayyor HTML</text>
+
+  <text x="390" y="396" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Editor save() markupni emas, server natijasini ko'rsatadi &#8594; preview = real frontend</text>
+  <text x="390" y="418" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">Paket: @wordpress/server-side-render (asset bog'liqligi: wp-server-side-render)</text>
+
+  <defs>
+    <marker id="b" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#2563eb"/>
+    </marker>
+    <marker id="bg" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+</svg>

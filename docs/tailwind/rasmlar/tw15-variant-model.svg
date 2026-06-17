@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 460" width="780" height="460" font-family="Segoe UI, system-ui, sans-serif">
+  <title>variant:utility modeli — dark:hover:bg-indigo-700 ikki shartni qatlamlaydi (dark mode VA hover) va faqat ikkalasi rost bo'lganda fon qo'llanadi; oddiy bg-indigo-600 esa doim ishlaydi</title>
+  <rect x="0" y="0" width="780" height="460" fill="#f8fafc"/>
+
+  <text x="390" y="38" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">variant:utility — har bir variant bitta shart qo'shadi</text>
+  <text x="390" y="64" text-anchor="middle" font-size="14" fill="#475569">Utility faqat HAMMA variant-shart rost bo'lgandagina qo'llanadi</text>
+
+  <!-- segment boxes: dark: hover: bg-indigo-700 -->
+  <rect x="120" y="92" width="130" height="52" rx="8" fill="#ffffff" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="185" y="125" text-anchor="middle" font-size="21" font-weight="bold" fill="#0ea5e9">dark:</text>
+
+  <rect x="260" y="92" width="150" height="52" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="335" y="125" text-anchor="middle" font-size="21" font-weight="bold" fill="#f59e0b">hover:</text>
+
+  <rect x="420" y="92" width="240" height="52" rx="8" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <text x="540" y="125" text-anchor="middle" font-size="21" font-weight="bold" fill="#4f46e5">bg-indigo-700</text>
+
+  <!-- arrows down -->
+  <line x1="185" y1="144" x2="185" y2="176" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="185,184 180,174 190,174" fill="#94a3b8"/>
+  <line x1="335" y1="144" x2="335" y2="176" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="335,184 330,174 340,174" fill="#94a3b8"/>
+  <line x1="540" y1="144" x2="540" y2="176" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="540,184 535,174 545,174" fill="#94a3b8"/>
+
+  <!-- labels -->
+  <rect x="110" y="188" width="150" height="66" rx="8" fill="#e0f2fe" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="185" y="212" text-anchor="middle" font-size="14" font-weight="bold" fill="#0ea5e9">SHART 1</text>
+  <text x="185" y="233" text-anchor="middle" font-size="13" fill="#475569">qorong'u rejim</text>
+  <text x="185" y="249" text-anchor="middle" font-size="13" fill="#64748b">(media-shart)</text>
+
+  <rect x="270" y="188" width="140" height="66" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="340" y="212" text-anchor="middle" font-size="14" font-weight="bold" fill="#f59e0b">SHART 2</text>
+  <text x="340" y="233" text-anchor="middle" font-size="13" fill="#475569">sichqoncha ustida</text>
+  <text x="340" y="249" text-anchor="middle" font-size="13" fill="#64748b">(:hover psevdo)</text>
+
+  <rect x="420" y="188" width="240" height="66" rx="8" fill="#eef2ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="540" y="212" text-anchor="middle" font-size="14" font-weight="bold" fill="#4f46e5">NIMA (utility)</text>
+  <text x="540" y="233" text-anchor="middle" font-size="13" fill="#475569">background-color</text>
+  <text x="540" y="249" text-anchor="middle" font-size="13" fill="#64748b">: indigo-700</text>
+
+  <!-- AND gate idea -->
+  <text x="390" y="288" text-anchor="middle" font-size="14" fill="#16a34a" font-weight="bold">Faqat SHART 1 VA SHART 2 birga rost bo'lsa &#8594; fon o'zgaradi</text>
+
+  <!-- divider -->
+  <line x1="120" y1="308" x2="660" y2="308" stroke="#94a3b8" stroke-width="1" stroke-dasharray="5 4"/>
+
+  <!-- contrast: plain bg-indigo-600 -->
+  <text x="390" y="334" text-anchor="middle" font-size="14" fill="#475569">Taqqoslang: prefikssiz utility shartsiz, DOIM ishlaydi</text>
+
+  <rect x="180" y="350" width="180" height="50" rx="8" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <text x="270" y="382" text-anchor="middle" font-size="19" font-weight="bold" fill="#4f46e5">bg-indigo-600</text>
+
+  <line x1="368" y1="375" x2="430" y2="375" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="438,375 428,370 428,380" fill="#94a3b8"/>
+
+  <rect x="446" y="350" width="180" height="50" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="536" y="374" text-anchor="middle" font-size="14" font-weight="bold" fill="#16a34a">shartsiz qo'llanadi</text>
+  <text x="536" y="392" text-anchor="middle" font-size="13" fill="#475569">(0 ta variant = asos)</text>
+
+  <rect x="120" y="418" width="540" height="32" rx="8" fill="#eef2ff" stroke="#c7d2fe" stroke-width="1"/>
+  <text x="390" y="439" text-anchor="middle" font-size="13" fill="#4f46e5">Inline style buni qila olmaydi: u shart-holatni (hover/dark) bilmaydi</text>
+</svg>

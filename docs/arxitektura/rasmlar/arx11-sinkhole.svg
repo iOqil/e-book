@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" width="800" height="440">
+  <title>Architecture sinkhole anti-pattern: so'rov qatlamlardan hech qanday mantiqsiz o'tib ketadi</title>
+  <rect x="0" y="0" width="800" height="440" fill="#f8fafc"/>
+  <text x="400" y="34" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Anti-pattern: Architecture Sinkhole</text>
+  <text x="400" y="58" font-family="Segoe UI" font-size="14" fill="#64748b" text-anchor="middle">So'rov qatlamlardan o'tadi, lekin hech bir qatlam MANTIQ qo'shmaydi</text>
+
+  <defs>
+    <marker id="sk-ar" markerWidth="11" markerHeight="11" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L9,3 L0,6 Z" fill="#dc2626"/>
+    </marker>
+    <marker id="sk-arg" markerWidth="11" markerHeight="11" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L9,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <!-- CHAP: sinkhole (yomon) -->
+  <text x="210" y="92" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#dc2626" text-anchor="middle">Sinkhole (80% so'rov)</text>
+
+  <rect x="90" y="106" width="240" height="56" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="210" y="132" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb" text-anchor="middle">Controller</text>
+  <text x="210" y="151" font-family="Segoe UI" font-size="13" fill="#dc2626" text-anchor="middle">return service.get(id)</text>
+
+  <rect x="90" y="190" width="240" height="56" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="210" y="216" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">Service</text>
+  <text x="210" y="235" font-family="Segoe UI" font-size="13" fill="#dc2626" text-anchor="middle">return repo.get(id)</text>
+
+  <rect x="90" y="274" width="240" height="56" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="210" y="300" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#f59e0b" text-anchor="middle">Repository</text>
+  <text x="210" y="319" font-family="Segoe UI" font-size="13" fill="#dc2626" text-anchor="middle">SELECT * ... id</text>
+
+  <line x1="210" y1="162" x2="210" y2="190" stroke="#dc2626" stroke-width="2.5" marker-end="url(#sk-ar)"/>
+  <line x1="210" y1="246" x2="210" y2="274" stroke="#dc2626" stroke-width="2.5" marker-end="url(#sk-ar)"/>
+
+  <rect x="90" y="352" width="240" height="58" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="210" y="376" font-family="Segoe UI" font-size="13" fill="#dc2626" text-anchor="middle">Service hech narsa qilmadi:</text>
+  <text x="210" y="396" font-family="Segoe UI" font-size="13" fill="#dc2626" text-anchor="middle">shunchaki o'tkazgich (passthrough)</text>
+
+  <!-- O'NG: sog'lom (yaxshi) -->
+  <text x="590" y="92" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="middle">Sog'lom qatlam</text>
+
+  <rect x="470" y="106" width="240" height="56" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="590" y="132" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb" text-anchor="middle">Controller</text>
+  <text x="590" y="151" font-family="Segoe UI" font-size="13" fill="#16a34a" text-anchor="middle">HTTP -> DTO, status kod</text>
+
+  <rect x="470" y="190" width="240" height="56" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="590" y="214" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">Service</text>
+  <text x="590" y="233" font-family="Segoe UI" font-size="13" fill="#16a34a" text-anchor="middle">noyoblik, narx, soliq, ruxsat</text>
+
+  <rect x="470" y="274" width="240" height="56" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="590" y="298" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#f59e0b" text-anchor="middle">Repository</text>
+  <text x="590" y="317" font-family="Segoe UI" font-size="13" fill="#16a34a" text-anchor="middle">so'rov, mapping, tranzaksiya</text>
+
+  <line x1="590" y1="162" x2="590" y2="190" stroke="#16a34a" stroke-width="2.5" marker-end="url(#sk-arg)"/>
+  <line x1="590" y1="246" x2="590" y2="274" stroke="#16a34a" stroke-width="2.5" marker-end="url(#sk-arg)"/>
+
+  <rect x="470" y="352" width="240" height="58" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="590" y="376" font-family="Segoe UI" font-size="13" fill="#16a34a" text-anchor="middle">Har qatlam o'z ishini qiladi —</text>
+  <text x="590" y="396" font-family="Segoe UI" font-size="13" fill="#16a34a" text-anchor="middle">qatlam o'zini oqlaydi</text>
+
+  <!-- O'rtada ajratuvchi -->
+  <line x1="400" y1="100" x2="400" y2="410" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="6,5"/>
+</svg>

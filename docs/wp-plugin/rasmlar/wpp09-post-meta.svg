@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" width="720" height="380">
+  <title>Kitob post'iga biriktirilgan post meta: bitta kitob post'i wp_postmeta jadvalida bir nechta kalit-qiymat juftligiga ega — muallif, ISBN, nashr yili</title>
+
+  <rect x="0" y="0" width="720" height="380" fill="#f8fafc"/>
+
+  <text x="360" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Post meta: post + kalit/qiymat juftliklari</text>
+
+  <!-- POST -->
+  <rect x="48" y="120" width="220" height="150" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="158" y="152" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e40af">kitob (post)</text>
+  <line x1="68" y1="166" x2="248" y2="166" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="158" y="192" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">ID: 42</text>
+  <text x="158" y="216" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">post_title: "Halqa hukmdori"</text>
+  <text x="158" y="240" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">post_type: kitob</text>
+  <text x="158" y="262" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">wp_posts jadvali</text>
+
+  <!-- Bog'lovchi label -->
+  <line x1="268" y1="195" x2="356" y2="195" stroke="#94a3b8" stroke-width="3" marker-end="url(#arr)"/>
+  <text x="312" y="184" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">post_id = 42</text>
+
+  <!-- META jadval -->
+  <text x="540" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b45309">wp_postmeta (meta_key -> meta_value)</text>
+
+  <!-- meta 1 -->
+  <rect x="360" y="108" width="320" height="50" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="382" y="138" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309">_kitob_muallif</text>
+  <text x="660" y="138" text-anchor="end" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">"Tolkien"</text>
+
+  <!-- meta 2 -->
+  <rect x="360" y="166" width="320" height="50" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="382" y="196" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309">_kitob_isbn</text>
+  <text x="660" y="196" text-anchor="end" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">"9780261103252"</text>
+
+  <!-- meta 3 -->
+  <rect x="360" y="224" width="320" height="50" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="382" y="254" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309">_kitob_yil</text>
+  <text x="660" y="254" text-anchor="end" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">1954</text>
+
+  <!-- bog'lovchi chiziqlar metalardan post tomonga (1 ko'p) -->
+  <line x1="360" y1="133" x2="312" y2="180" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <line x1="360" y1="249" x2="312" y2="210" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4 3"/>
+
+  <!-- pastki izoh -->
+  <rect x="48" y="300" width="624" height="56" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="360" y="324" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#15803d">get_post_meta(42, '_kitob_muallif', true)  ->  "Tolkien"</text>
+  <text x="360" y="346" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">bitta post = cheksiz meta juftligi; "_" bilan boshlangan kalit eski Custom Fields panelida yashirin</text>
+
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/></marker>
+  </defs>
+</svg>

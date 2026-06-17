@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 540" width="760" height="540" font-family="Segoe UI, system-ui, sans-serif">
+  <title>AI xavfsizlik checklisti: kalit himoyasi, injection ajratish, kiritmani validatsiya, chiqishni sanitizatsiya, PII tozalash, moderatsiya, rate limit, autorizatsiya, log</title>
+  <rect x="0" y="0" width="760" height="540" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">AI xavfsizlik checklisti</text>
+  <text x="380" y="60" text-anchor="middle" font-size="14" fill="#475569">production'ga chiqishdan oldin har bandni belgilang</text>
+
+  <!-- 9 ta band, 3 ustun x 3 qator -->
+  <!-- 1 -->
+  <rect x="24" y="84" width="232" height="124" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="44" y="114" font-size="20">🔑</text>
+  <text x="76" y="112" font-size="15" font-weight="700" fill="#1e293b">Kalit himoyasi</text>
+  <text x="44" y="142" font-size="13" fill="#475569">.env + getenv,</text>
+  <text x="44" y="162" font-size="13" fill="#475569">.gitignore, frontendda</text>
+  <text x="44" y="182" font-size="13" fill="#475569">YO'Q, backend proxy</text>
+
+  <!-- 2 -->
+  <rect x="264" y="84" width="232" height="124" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="284" y="114" font-size="20">🛡️</text>
+  <text x="316" y="112" font-size="15" font-weight="700" fill="#1e293b">Injection ajratish</text>
+  <text x="284" y="142" font-size="13" fill="#475569">kiritmani tag/delimiter</text>
+  <text x="284" y="162" font-size="13" fill="#475569">bilan ajrat, "ma'lumot,</text>
+  <text x="284" y="182" font-size="13" fill="#475569">ko'rsatma emas" deb ol</text>
+
+  <!-- 3 -->
+  <rect x="504" y="84" width="232" height="124" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="524" y="114" font-size="20">✅</text>
+  <text x="556" y="112" font-size="15" font-weight="700" fill="#1e293b">Kiritmani validate</text>
+  <text x="524" y="142" font-size="13" fill="#475569">tool argumenti, model</text>
+  <text x="524" y="162" font-size="13" fill="#475569">chiqishi ishonchsiz;</text>
+  <text x="524" y="182" font-size="13" fill="#475569">SQL/buyruqni tekshir</text>
+
+  <!-- 4 -->
+  <rect x="24" y="220" width="232" height="124" rx="10" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <text x="44" y="250" font-size="20">🧼</text>
+  <text x="76" y="248" font-size="15" font-weight="700" fill="#1e293b">Chiqishni sanitize</text>
+  <text x="44" y="278" font-size="13" fill="#475569">htmlspecialchars (XSS),</text>
+  <text x="44" y="298" font-size="13" fill="#475569">eval QILMA, link/buyruq</text>
+  <text x="44" y="318" font-size="13" fill="#475569">taklifini tekshir</text>
+
+  <!-- 5 -->
+  <rect x="264" y="220" width="232" height="124" rx="10" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <text x="284" y="250" font-size="20">🙈</text>
+  <text x="316" y="248" font-size="15" font-weight="700" fill="#1e293b">PII tozalash</text>
+  <text x="284" y="278" font-size="13" fill="#475569">parol, karta, telefon,</text>
+  <text x="284" y="298" font-size="13" fill="#475569">PII ni modelga yubormay,</text>
+  <text x="284" y="318" font-size="13" fill="#475569">maskala/o'chir</text>
+
+  <!-- 6 -->
+  <rect x="504" y="220" width="232" height="124" rx="10" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <text x="524" y="250" font-size="20">🚦</text>
+  <text x="556" y="248" font-size="15" font-weight="700" fill="#1e293b">Moderatsiya</text>
+  <text x="524" y="278" font-size="13" fill="#475569">zararli so'rovni filtr,</text>
+  <text x="524" y="298" font-size="13" fill="#475569">jailbreak'ni rad et,</text>
+  <text x="524" y="318" font-size="13" fill="#475569">foydalanish shartlari</text>
+
+  <!-- 7 -->
+  <rect x="24" y="356" width="232" height="124" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="44" y="386" font-size="20">⏱️</text>
+  <text x="76" y="384" font-size="15" font-weight="700" fill="#1e293b">Rate limit</text>
+  <text x="44" y="414" font-size="13" fill="#475569">per-user so'rov limiti,</text>
+  <text x="44" y="434" font-size="13" fill="#475569">maxTokens cheklash,</text>
+  <text x="44" y="454" font-size="13" fill="#475569">byudjet (DoS himoyasi)</text>
+
+  <!-- 8 -->
+  <rect x="264" y="356" width="232" height="124" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="284" y="386" font-size="20">🔒</text>
+  <text x="316" y="384" font-size="15" font-weight="700" fill="#1e293b">Autorizatsiya</text>
+  <text x="284" y="414" font-size="13" fill="#475569">foydalanuvchi faqat O'Z</text>
+  <text x="284" y="434" font-size="13" fill="#475569">ma'lumotini ko'rsin;</text>
+  <text x="284" y="454" font-size="13" fill="#475569">RAG'da filtr qo'y</text>
+
+  <!-- 9 -->
+  <rect x="504" y="356" width="232" height="124" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="524" y="386" font-size="20">📋</text>
+  <text x="556" y="384" font-size="15" font-weight="700" fill="#1e293b">Log va kuzatuv</text>
+  <text x="524" y="414" font-size="13" fill="#475569">so'rov/javobni log qil,</text>
+  <text x="524" y="434" font-size="13" fill="#475569">suiiste'mol va anomaliya</text>
+  <text x="524" y="454" font-size="13" fill="#475569">aniqla (22-bob)</text>
+
+  <text x="380" y="514" text-anchor="middle" font-size="14" font-weight="700" fill="#7c3aed">Xavfsizlik bir martalik ish emas — har qatlamda doimiy</text>
+</svg>

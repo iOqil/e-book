@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" width="780" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Matn embedding modeli orqali sonlar vektoriga aylanadi; o'xshash ma'noli matnlar ma'no xaritasida bir-biriga yaqin joylashadi: mashina/avtomobil bir to'da, olma/banan boshqa to'da</title>
+  <defs>
+    <marker id="ev" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#6366f1"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="780" height="470" fill="#f8fafc"/>
+  <text x="390" y="32" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Embedding — matnni ma'no vektoriga aylantirish</text>
+  <text x="390" y="56" font-size="14" fill="#64748b" text-anchor="middle">Matn kiradi, sonlar vektori chiqadi. O'xshash ma'no -&gt; yaqin vektor.</text>
+
+  <!-- LEFT: text -> model -> vector -->
+  <rect x="28" y="92" width="150" height="46" rx="9" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="103" y="121" font-size="14" fill="#1e293b" text-anchor="middle">"Mashina sotaman"</text>
+
+  <line x1="178" y1="115" x2="222" y2="115" stroke="#6366f1" stroke-width="2.5" marker-end="url(#ev)"/>
+
+  <rect x="222" y="86" width="118" height="58" rx="9" fill="#d97757" stroke="#d97757" stroke-width="2"/>
+  <text x="281" y="111" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Embedding</text>
+  <text x="281" y="131" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">modeli</text>
+
+  <line x1="340" y1="115" x2="384" y2="115" stroke="#6366f1" stroke-width="2.5" marker-end="url(#ev)"/>
+
+  <rect x="384" y="92" width="368" height="46" rx="9" fill="#ffffff" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="568" y="121" font-size="14.5" fill="#1e293b" text-anchor="middle" font-family="Consolas, monospace">[0.12, -0.40, 0.91, ... ] (1024 son)</text>
+
+  <text x="390" y="170" font-size="13" fill="#475569" text-anchor="middle">Bu vektor — matnning MA'NOSI, sonlar bilan yozilgani. Bu Claude EMAS: alohida provayder (Voyage AI v.b.).</text>
+
+  <!-- MEANING MAP -->
+  <rect x="40" y="190" width="700" height="252" rx="12" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="62" y="216" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="start">Ma'no xaritasi — yaqin ma'nolar bir to'da bo'ladi</text>
+
+  <!-- axes -->
+  <line x1="72" y1="420" x2="708" y2="420" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#ev)"/>
+  <line x1="72" y1="420" x2="72" y2="234" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#ev)"/>
+
+  <!-- cluster 1: vehicles (blue) -->
+  <circle cx="200" cy="300" r="58" fill="#dbeafe" stroke="#0ea5e9" stroke-width="1.5"/>
+  <circle cx="184" cy="288" r="6" fill="#0ea5e9"/>
+  <text x="184" y="278" font-size="13" fill="#1e293b" text-anchor="middle">mashina</text>
+  <circle cx="222" cy="300" r="6" fill="#0ea5e9"/>
+  <text x="232" y="304" font-size="13" fill="#1e293b" text-anchor="start">avtomobil</text>
+  <circle cx="196" cy="322" r="6" fill="#0ea5e9"/>
+  <text x="196" y="342" font-size="13" fill="#1e293b" text-anchor="middle">ulov</text>
+  <text x="200" y="372" font-size="13.5" font-weight="bold" fill="#0ea5e9" text-anchor="middle">transport to'dasi</text>
+
+  <!-- cluster 2: fruit (green) -->
+  <circle cx="560" cy="290" r="58" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <circle cx="544" cy="278" r="6" fill="#16a34a"/>
+  <text x="544" y="268" font-size="13" fill="#1e293b" text-anchor="middle">olma</text>
+  <circle cx="582" cy="290" r="6" fill="#16a34a"/>
+  <text x="592" y="294" font-size="13" fill="#1e293b" text-anchor="start">banan</text>
+  <circle cx="556" cy="312" r="6" fill="#16a34a"/>
+  <text x="556" y="332" font-size="13" fill="#1e293b" text-anchor="middle">meva</text>
+  <text x="560" y="362" font-size="13.5" font-weight="bold" fill="#16a34a" text-anchor="middle">meva to'dasi</text>
+
+  <!-- distance hint -->
+  <line x1="258" y1="300" x2="502" y2="290" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <text x="380" y="285" font-size="13" fill="#ef4444" text-anchor="middle">uzoq = ma'no boshqa</text>
+</svg>

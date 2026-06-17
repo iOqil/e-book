@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 480" width="780" height="480" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Null quroli: ?. xavfsiz murojaat, ?? standart qiymat, ??= bo'sh bo'lsa o'zlashtir, ! xavfli tasdiq — har biri kichik misol bilan</title>
+  <rect x="0" y="0" width="780" height="480" fill="#f8fafc"/>
+  <text x="390" y="36" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Null quroli — to'rt operator</text>
+  <text x="390" y="60" text-anchor="middle" font-size="14" fill="#475569">nullable qiymat bilan xavfsiz ishlash</text>
+
+  <!-- ?. -->
+  <rect x="34" y="84" width="350" height="170" rx="12" fill="#ffffff" stroke="#027dfd" stroke-width="2"/>
+  <rect x="34" y="84" width="64" height="170" rx="12" fill="#027dfd"/>
+  <text x="66" y="176" text-anchor="middle" font-size="20" font-weight="700" fill="#ffffff">?.</text>
+  <text x="116" y="112" font-size="16" font-weight="700" fill="#1e293b">xavfsiz murojaat</text>
+  <text x="116" y="136" font-size="13" fill="#64748b">null bo'lsa crash emas, null qaytaradi</text>
+  <rect x="116" y="152" width="250" height="84" rx="8" fill="#f8fafc"/>
+  <text x="130" y="178" font-size="13" fill="#475569">String? ism;   // null</text>
+  <text x="130" y="206" font-size="13" font-weight="700" fill="#027dfd">ism?.length</text>
+  <text x="130" y="228" font-size="13" fill="#16a34a">&#8594; null  (crash YO'Q)</text>
+
+  <!-- ?? -->
+  <rect x="396" y="84" width="350" height="170" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <rect x="396" y="84" width="64" height="170" rx="12" fill="#16a34a"/>
+  <text x="428" y="176" text-anchor="middle" font-size="20" font-weight="700" fill="#ffffff">??</text>
+  <text x="478" y="112" font-size="16" font-weight="700" fill="#1e293b">standart qiymat</text>
+  <text x="478" y="136" font-size="13" fill="#64748b">chap null bo'lsa, o'ngni ol</text>
+  <rect x="478" y="152" width="250" height="84" rx="8" fill="#f8fafc"/>
+  <text x="492" y="178" font-size="13" fill="#475569">String? ism;   // null</text>
+  <text x="492" y="206" font-size="13" font-weight="700" fill="#16a34a">ism ?? 'Mehmon'</text>
+  <text x="492" y="228" font-size="13" fill="#16a34a">&#8594; 'Mehmon'</text>
+
+  <!-- ??= -->
+  <rect x="34" y="272" width="350" height="170" rx="12" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <rect x="34" y="272" width="64" height="170" rx="12" fill="#6366f1"/>
+  <text x="66" y="364" text-anchor="middle" font-size="18" font-weight="700" fill="#ffffff">??=</text>
+  <text x="116" y="300" font-size="16" font-weight="700" fill="#1e293b">bo'sh bo'lsa o'zlashtir</text>
+  <text x="116" y="324" font-size="13" fill="#64748b">faqat null bo'lganda qiymat beradi</text>
+  <rect x="116" y="340" width="250" height="84" rx="8" fill="#f8fafc"/>
+  <text x="130" y="366" font-size="13" fill="#475569">String? til;   // null</text>
+  <text x="130" y="394" font-size="13" font-weight="700" fill="#6366f1">til ??= 'uz';</text>
+  <text x="130" y="416" font-size="13" fill="#16a34a">&#8594; til = 'uz'</text>
+
+  <!-- ! risky -->
+  <rect x="396" y="272" width="350" height="170" rx="12" fill="#ffffff" stroke="#ef4444" stroke-width="2"/>
+  <rect x="396" y="272" width="64" height="170" rx="12" fill="#ef4444"/>
+  <text x="428" y="364" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">!</text>
+  <text x="478" y="300" font-size="16" font-weight="700" fill="#1e293b">tasdiq  &#9888; xavfli</text>
+  <text x="478" y="324" font-size="13" fill="#64748b">"null emas" deb va'da — xato bo'lsa crash</text>
+  <rect x="478" y="340" width="250" height="84" rx="8" fill="#f8fafc" stroke="#ef4444" stroke-width="1"/>
+  <text x="492" y="366" font-size="13" fill="#475569">String? ism;   // null</text>
+  <text x="492" y="394" font-size="13" font-weight="700" fill="#ef4444">ism!.length</text>
+  <text x="492" y="416" font-size="13" fill="#ef4444">&#8594; CRASH!  (kam ishlat)</text>
+
+  <text x="390" y="468" text-anchor="middle" font-size="13" fill="#94a3b8">Maslahat: avval ?. va ?? ni o'yla — ! ni faqat 100% ishonchda ishlat</text>
+</svg>

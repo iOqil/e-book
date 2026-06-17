@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" width="780" height="470">
+  <title>Trade-off tarozisi: bir atributni ko'tarish ko'pincha boshqasini pasaytiradi (consistency/availability, performance/maintainability, security/usability, scalability/simplicity)</title>
+
+  <rect x="0" y="0" width="780" height="470" fill="#f8fafc"/>
+
+  <text x="390" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="21" font-weight="bold" fill="#1e293b">Har atribut — trade-off (ayirboshlash)</text>
+  <text x="390" y="60" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">birini ko'tarsang, ko'pincha ikkinchisi pasayadi — hammasini bir vaqtda olib bo'lmaydi</text>
+
+  <!-- markaziy katta tarozi -->
+  <!-- ustun -->
+  <rect x="384" y="120" width="12" height="150" rx="3" fill="#64748b"/>
+  <polygon points="360,278 420,278 390,120" fill="#94a3b8"/>
+  <!-- ko'ndalang nur (qiya) -->
+  <line x1="200" y1="135" x2="580" y2="170" stroke="#334155" stroke-width="6" stroke-linecap="round"/>
+  <!-- chap tovoq (pastroq = og'irroq tanlangan) -->
+  <line x1="200" y1="135" x2="200" y2="180" stroke="#64748b" stroke-width="2"/>
+  <rect x="120" y="180" width="160" height="56" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="200" y="206" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e40af">Consistency</text>
+  <text x="200" y="226" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e40af">(izchillik)</text>
+  <!-- o'ng tovoq (yuqoriroq = yengilroq) -->
+  <line x1="580" y1="170" x2="580" y2="205" stroke="#64748b" stroke-width="2"/>
+  <rect x="500" y="205" width="160" height="56" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="580" y="231" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b91c1c">Availability</text>
+  <text x="580" y="251" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b91c1c">(yetishuvchanlik)</text>
+
+  <text x="390" y="300" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#64748b" font-style="italic">misol: distributed tizimda partitsiya paytida — CAP (22-bob)</text>
+
+  <!-- pastki uchta juftlik -->
+  <g font-family="Segoe UI, system-ui, sans-serif">
+    <!-- juftlik 1 -->
+    <rect x="36" y="330" width="226" height="116" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="149" y="356" text-anchor="middle" font-size="14.5" font-weight="bold" fill="#16a34a">Performance</text>
+    <text x="149" y="384" text-anchor="middle" font-size="16" fill="#64748b">&#8645;</text>
+    <text x="149" y="412" text-anchor="middle" font-size="14.5" font-weight="bold" fill="#f59e0b">Maintainability</text>
+    <text x="149" y="434" text-anchor="middle" font-size="13" fill="#64748b">tez kod ko'pincha chigal</text>
+
+    <!-- juftlik 2 -->
+    <rect x="277" y="330" width="226" height="116" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="390" y="356" text-anchor="middle" font-size="14.5" font-weight="bold" fill="#dc2626">Security</text>
+    <text x="390" y="384" text-anchor="middle" font-size="16" fill="#64748b">&#8645;</text>
+    <text x="390" y="412" text-anchor="middle" font-size="14.5" font-weight="bold" fill="#2563eb">Usability</text>
+    <text x="390" y="434" text-anchor="middle" font-size="13" fill="#64748b">har himoya to'siq qo'shadi</text>
+
+    <!-- juftlik 3 -->
+    <rect x="518" y="330" width="226" height="116" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="631" y="356" text-anchor="middle" font-size="14.5" font-weight="bold" fill="#2563eb">Scalability</text>
+    <text x="631" y="384" text-anchor="middle" font-size="16" fill="#64748b">&#8645;</text>
+    <text x="631" y="412" text-anchor="middle" font-size="14.5" font-weight="bold" fill="#16a34a">Simplicity</text>
+    <text x="631" y="434" text-anchor="middle" font-size="13" fill="#64748b">masshtab murakkablik qo'shadi</text>
+  </g>
+</svg>

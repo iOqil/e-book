@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" width="760" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Props drilling (har qavatga uzatish) va global holat taqqoslashi</title>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Props drilling va global holat</text>
+
+  <!-- LEFT: props drilling -->
+  <text x="195" y="68" text-anchor="middle" font-size="16" font-weight="700" fill="#dc2626">Props drilling (charchatadi)</text>
+
+  <!-- App (manba) -->
+  <rect x="120" y="84" width="150" height="44" rx="8" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="195" y="104" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">App</text>
+  <text x="195" y="121" text-anchor="middle" font-size="13" fill="#dc2626">tema bu yerda</text>
+
+  <!-- Ekran -->
+  <rect x="120" y="170" width="150" height="40" rx="8" fill="#fff7ed" stroke="#f59e0b" stroke-width="2"/>
+  <text x="195" y="186" text-anchor="middle" font-size="13" fill="#475569">Ekran</text>
+  <text x="195" y="202" text-anchor="middle" font-size="13" fill="#94a3b8">tema'ni shunchaki uzatadi</text>
+
+  <!-- Karta -->
+  <rect x="120" y="252" width="150" height="40" rx="8" fill="#fff7ed" stroke="#f59e0b" stroke-width="2"/>
+  <text x="195" y="268" text-anchor="middle" font-size="13" fill="#475569">Karta</text>
+  <text x="195" y="284" text-anchor="middle" font-size="13" fill="#94a3b8">tema'ni shunchaki uzatadi</text>
+
+  <!-- Tugma (kerak) -->
+  <rect x="120" y="334" width="150" height="44" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="195" y="354" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Tugma</text>
+  <text x="195" y="371" text-anchor="middle" font-size="13" fill="#16a34a">tema bu yerda KERAK</text>
+
+  <!-- arrows with props label -->
+  <line x1="195" y1="128" x2="195" y2="168" stroke="#dc2626" stroke-width="2"/>
+  <polygon points="195,170 191,162 199,162" fill="#dc2626"/>
+  <text x="280" y="153" font-size="13" fill="#dc2626">tema={'{tema}'}</text>
+
+  <line x1="195" y1="210" x2="195" y2="250" stroke="#dc2626" stroke-width="2"/>
+  <polygon points="195,252 191,244 199,244" fill="#dc2626"/>
+  <text x="280" y="235" font-size="13" fill="#dc2626">tema={'{tema}'}</text>
+
+  <line x1="195" y1="292" x2="195" y2="332" stroke="#dc2626" stroke-width="2"/>
+  <polygon points="195,334 191,326 199,326" fill="#dc2626"/>
+  <text x="280" y="317" font-size="13" fill="#dc2626">tema={'{tema}'}</text>
+
+  <text x="195" y="420" text-anchor="middle" font-size="13" fill="#475569">Oraliq qavatlar tema'ni</text>
+  <text x="195" y="438" text-anchor="middle" font-size="13" fill="#475569">faqat "olib o'tadi" — ortiqcha ish</text>
+
+  <!-- divider -->
+  <line x1="395" y1="60" x2="395" y2="450" stroke="#e2e8f0" stroke-width="2" stroke-dasharray="6 5"/>
+
+  <!-- RIGHT: global -->
+  <text x="575" y="68" text-anchor="middle" font-size="16" font-weight="700" fill="#16a34a">Global holat (qulay)</text>
+
+  <!-- store markaz -->
+  <rect x="500" y="220" width="150" height="56" rx="10" fill="#ecfdf5" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="575" y="244" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Markaziy do'kon</text>
+  <text x="575" y="263" text-anchor="middle" font-size="13" fill="#16a34a">tema bu yerda</text>
+
+  <!-- consumers -->
+  <rect x="450" y="100" width="120" height="40" rx="8" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="510" y="125" text-anchor="middle" font-size="13" fill="#475569">Ekran</text>
+
+  <rect x="595" y="100" width="120" height="40" rx="8" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="655" y="125" text-anchor="middle" font-size="13" fill="#475569">Tugma</text>
+
+  <rect x="450" y="356" width="120" height="40" rx="8" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="510" y="381" text-anchor="middle" font-size="13" fill="#475569">Karta</text>
+
+  <rect x="595" y="356" width="120" height="40" rx="8" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="655" y="381" text-anchor="middle" font-size="13" fill="#475569">Profil</text>
+
+  <!-- direct lines from store to each -->
+  <line x1="540" y1="220" x2="510" y2="142" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="510,140 506,148 514,147" fill="#16a34a"/>
+  <line x1="610" y1="220" x2="655" y2="142" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="655,140 650,147 659,148" fill="#16a34a"/>
+  <line x1="540" y1="276" x2="510" y2="354" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="510,356 506,348 514,349" fill="#16a34a"/>
+  <line x1="610" y1="276" x2="655" y2="354" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="655,356 650,349 659,348" fill="#16a34a"/>
+
+  <text x="575" y="432" text-anchor="middle" font-size="13" fill="#475569">Har komponent to'g'ridan-to'g'ri oladi —</text>
+  <text x="575" y="450" text-anchor="middle" font-size="13" fill="#475569">oraliq qavatlar bezovta bo'lmaydi</text>
+</svg>

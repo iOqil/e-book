@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600" font-family="Segoe UI, system-ui, sans-serif">
+  <title>get_template_directory() vs get_stylesheet_directory(): parent va child tema</title>
+  <rect x="0" y="0" width="900" height="600" fill="#f8fafc"/>
+  <text x="450" y="34" font-size="22" font-weight="bold" fill="#1e293b" text-anchor="middle">template = PARENT, stylesheet = AKTIV tema</text>
+
+  <!-- Parent tema -->
+  <rect x="40" y="70" width="300" height="150" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="190" y="100" font-size="18" font-weight="bold" fill="#2563eb" text-anchor="middle">PARENT tema</text>
+  <text x="190" y="126" font-size="15" fill="#1e293b" text-anchor="middle">portfolio-tema/</text>
+  <text x="190" y="152" font-size="14" fill="#475569" text-anchor="middle">to'liq tema: barcha shablonlar,</text>
+  <text x="190" y="174" font-size="14" fill="#475569" text-anchor="middle">functions.php, assets</text>
+  <text x="190" y="200" font-size="13" fill="#475569" text-anchor="middle">get_template() => "portfolio-tema"</text>
+
+  <!-- Child tema -->
+  <rect x="560" y="70" width="300" height="150" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="710" y="100" font-size="18" font-weight="bold" fill="#16a34a" text-anchor="middle">CHILD tema (AKTIV)</text>
+  <text x="710" y="126" font-size="15" fill="#1e293b" text-anchor="middle">portfolio-child/</text>
+  <text x="710" y="152" font-size="14" fill="#475569" text-anchor="middle">faqat farqlar: style.css +</text>
+  <text x="710" y="174" font-size="14" fill="#475569" text-anchor="middle">bir nechta override fayl</text>
+  <text x="710" y="200" font-size="13" fill="#475569" text-anchor="middle">get_stylesheet() => "portfolio-child"</text>
+
+  <!-- Strelka child -> parent -->
+  <line x1="560" y1="145" x2="345" y2="145" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="452" y="136" font-size="13" fill="#475569" text-anchor="middle">meros oladi (Template:)</text>
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- Jadval -->
+  <text x="450" y="270" font-size="18" font-weight="bold" fill="#1e293b" text-anchor="middle">Qaysi funksiya nimaga ishora qiladi?</text>
+
+  <!-- header row -->
+  <rect x="40" y="290" width="370" height="42" fill="#475569"/>
+  <rect x="410" y="290" width="225" height="42" fill="#2563eb"/>
+  <rect x="635" y="290" width="225" height="42" fill="#16a34a"/>
+  <text x="60" y="317" font-size="15" font-weight="bold" fill="#ffffff">Funksiya</text>
+  <text x="522" y="317" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">PARENT'ga</text>
+  <text x="747" y="317" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">AKTIV (child)'ga</text>
+
+  <g font-size="14">
+    <!-- r1 -->
+    <rect x="40" y="332" width="370" height="38" fill="#ffffff" stroke="#cbd5e1"/>
+    <rect x="410" y="332" width="225" height="38" fill="#ffffff" stroke="#cbd5e1"/>
+    <rect x="635" y="332" width="225" height="38" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="52" y="356" fill="#1e293b" font-family="Consolas, monospace">get_template_directory()</text>
+    <text x="522" y="356" fill="#16a34a" text-anchor="middle" font-weight="bold">HA (yo'l)</text>
+    <text x="747" y="356" fill="#dc2626" text-anchor="middle">yo'q</text>
+    <!-- r2 -->
+    <rect x="40" y="370" width="370" height="38" fill="#f1f5f9" stroke="#cbd5e1"/>
+    <rect x="410" y="370" width="225" height="38" fill="#f1f5f9" stroke="#cbd5e1"/>
+    <rect x="635" y="370" width="225" height="38" fill="#f1f5f9" stroke="#cbd5e1"/>
+    <text x="52" y="394" fill="#1e293b" font-family="Consolas, monospace">get_template_directory_uri()</text>
+    <text x="522" y="394" fill="#16a34a" text-anchor="middle" font-weight="bold">HA (URL)</text>
+    <text x="747" y="394" fill="#dc2626" text-anchor="middle">yo'q</text>
+    <!-- r3 -->
+    <rect x="40" y="408" width="370" height="38" fill="#ffffff" stroke="#cbd5e1"/>
+    <rect x="410" y="408" width="225" height="38" fill="#ffffff" stroke="#cbd5e1"/>
+    <rect x="635" y="408" width="225" height="38" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="52" y="432" fill="#1e293b" font-family="Consolas, monospace">get_stylesheet_directory()</text>
+    <text x="522" y="432" fill="#dc2626" text-anchor="middle">yo'q</text>
+    <text x="747" y="432" fill="#16a34a" text-anchor="middle" font-weight="bold">HA (yo'l)</text>
+    <!-- r4 -->
+    <rect x="40" y="446" width="370" height="38" fill="#f1f5f9" stroke="#cbd5e1"/>
+    <rect x="410" y="446" width="225" height="38" fill="#f1f5f9" stroke="#cbd5e1"/>
+    <rect x="635" y="446" width="225" height="38" fill="#f1f5f9" stroke="#cbd5e1"/>
+    <text x="52" y="470" fill="#1e293b" font-family="Consolas, monospace">get_stylesheet_directory_uri()</text>
+    <text x="522" y="470" fill="#dc2626" text-anchor="middle">yo'q</text>
+    <text x="747" y="470" fill="#16a34a" text-anchor="middle" font-weight="bold">HA (URL)</text>
+    <!-- r5 -->
+    <rect x="40" y="484" width="370" height="38" fill="#ffffff" stroke="#cbd5e1"/>
+    <rect x="410" y="484" width="225" height="38" fill="#ffffff" stroke="#cbd5e1"/>
+    <rect x="635" y="484" width="225" height="38" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="52" y="508" fill="#1e293b" font-family="Consolas, monospace">get_theme_file_path/uri()</text>
+    <text x="522" y="508" fill="#475569" text-anchor="middle">zaxira</text>
+    <text x="747" y="508" fill="#16a34a" text-anchor="middle" font-weight="bold">avval child</text>
+  </g>
+
+  <rect x="40" y="536" width="820" height="46" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text x="56" y="565" font-size="14" fill="#475569">Qoida: <tspan font-weight="bold">require/include va asset</tspan> uchun child'ga e'tibor bersangiz get_stylesheet_* yoki get_theme_file_*; faqat parent kerak bo'lsa get_template_*.</text>
+</svg>

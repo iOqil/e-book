@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="760" height="380" font-family="Segoe UI, system-ui, sans-serif">
+  <title>chat.completions.create so'rovi va javob obyektining tuzilishi</title>
+  <rect x="0" y="0" width="760" height="380" fill="#f8fafc"/>
+  <text x="380" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">So'rov va javob anatomiyasi</text>
+
+  <!-- Request -->
+  <rect x="30" y="70" width="300" height="200" rx="14" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <rect x="30" y="70" width="300" height="40" rx="14" fill="#eef2ff"/>
+  <text x="180" y="96" text-anchor="middle" font-size="16" font-weight="700" fill="#4338ca">So'rov (siz yuborasiz)</text>
+  <text x="50" y="142" font-size="14" font-family="JetBrains Mono, monospace" fill="#1e293b">client.chat.completions</text>
+  <text x="50" y="164" font-size="14" font-family="JetBrains Mono, monospace" fill="#1e293b">  .create(</text>
+  <text x="50" y="190" font-size="14" font-family="JetBrains Mono, monospace" fill="#7c3aed">    model="gpt-5.4-mini",</text>
+  <text x="50" y="216" font-size="14" font-family="JetBrains Mono, monospace" fill="#0284c7">    messages=[...],</text>
+  <text x="50" y="242" font-size="14" font-family="JetBrains Mono, monospace" fill="#1e293b">  )</text>
+
+  <!-- Response -->
+  <rect x="430" y="70" width="300" height="270" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <rect x="430" y="70" width="300" height="40" rx="14" fill="#dcfce7"/>
+  <text x="580" y="96" text-anchor="middle" font-size="16" font-weight="700" fill="#166534">Javob obyekti</text>
+  <text x="450" y="140" font-size="14" font-family="JetBrains Mono, monospace" fill="#1e293b">javob</text>
+  <text x="450" y="166" font-size="14" font-family="JetBrains Mono, monospace" fill="#475569"> .choices[0]</text>
+  <text x="450" y="192" font-size="14" font-family="JetBrains Mono, monospace" fill="#475569">  .message</text>
+  <text x="450" y="218" font-size="14" font-family="JetBrains Mono, monospace" fill="#16a34a">   .content  -> matn</text>
+  <line x1="450" y1="236" x2="710" y2="236" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="450" y="262" font-size="14" font-family="JetBrains Mono, monospace" fill="#1e293b">javob.usage</text>
+  <text x="450" y="288" font-size="14" font-family="JetBrains Mono, monospace" fill="#b45309"> .total_tokens -> narx</text>
+  <text x="580" y="322" text-anchor="middle" font-size="13" fill="#64748b">javob — bu obyekt, oddiy matn emas</text>
+
+  <defs>
+    <marker id="sj" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#4f46e5"/>
+    </marker>
+  </defs>
+  <line x1="332" y1="170" x2="426" y2="170" stroke="#4f46e5" stroke-width="3" marker-end="url(#sj)"/>
+  <text x="380" y="360" text-anchor="middle" font-size="14" fill="#64748b">Matnni olish uchun obyektdan kerakli maydonni o'qiysiz</text>
+</svg>

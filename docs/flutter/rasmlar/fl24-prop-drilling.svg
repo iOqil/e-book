@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" width="780" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Prop-drilling muammosi: holat eng yuqorida (App), lekin u kerakli chuqur ekranga (CartBadge) yetib borishi uchun uni o'rtadagi to'rt qatlam widget orqali konstruktor parametri sifatida uzatish kerak, garchi o'sha widgetlar bu holatni ishlatmasa ham</title>
+  <defs>
+    <marker id="fl24p" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#ef4444"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="780" height="470" fill="#f8fafc"/>
+  <text x="390" y="32" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Prop-drilling muammosi</text>
+  <text x="390" y="56" text-anchor="middle" font-size="14" fill="#475569">holatni har bir qatlam orqali qo'lda uzatish kerak — ko'pi uni ishlatmaydi ham</text>
+
+  <!-- top: state owner -->
+  <rect x="285" y="80" width="210" height="56" rx="12" fill="#dbeafe" stroke="#027dfd" stroke-width="2.5"/>
+  <text x="390" y="104" text-anchor="middle" font-size="15" font-weight="700" fill="#0553b1">App (holat shu yerda)</text>
+  <text x="390" y="124" text-anchor="middle" font-size="13" fill="#475569">CartModel cart</text>
+
+  <!-- layer 1 -->
+  <rect x="285" y="160" width="210" height="52" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="390" y="183" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">HomeScreen</text>
+  <text x="390" y="201" text-anchor="middle" font-size="13" fill="#64748b">cart ni ishlatmaydi — faqat uzatadi</text>
+
+  <!-- layer 2 -->
+  <rect x="285" y="234" width="210" height="52" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="390" y="257" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Layout</text>
+  <text x="390" y="275" text-anchor="middle" font-size="13" fill="#64748b">cart ni ishlatmaydi — faqat uzatadi</text>
+
+  <!-- layer 3 -->
+  <rect x="285" y="308" width="210" height="52" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="390" y="331" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">AppBarArea</text>
+  <text x="390" y="349" text-anchor="middle" font-size="13" fill="#64748b">cart ni ishlatmaydi — faqat uzatadi</text>
+
+  <!-- deep child: actual user -->
+  <rect x="285" y="384" width="210" height="56" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="390" y="408" text-anchor="middle" font-size="14" font-weight="700" fill="#16a34a">CartBadge</text>
+  <text x="390" y="428" text-anchor="middle" font-size="13" fill="#475569">NIHOYAT cart ni ishlatadi</text>
+
+  <!-- drilling arrows (down the middle) -->
+  <path d="M390 136 L390 158" stroke="#ef4444" stroke-width="2.5" fill="none" marker-end="url(#fl24p)"/>
+  <path d="M390 212 L390 232" stroke="#ef4444" stroke-width="2.5" fill="none" marker-end="url(#fl24p)"/>
+  <path d="M390 286 L390 306" stroke="#ef4444" stroke-width="2.5" fill="none" marker-end="url(#fl24p)"/>
+  <path d="M390 360 L390 382" stroke="#ef4444" stroke-width="2.5" fill="none" marker-end="url(#fl24p)"/>
+
+  <!-- labels on each arrow: passing cart -->
+  <rect x="500" y="138" width="150" height="26" rx="7" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="575" y="156" text-anchor="middle" font-size="13" fill="#1e293b">cart: cart (uzatildi)</text>
+  <rect x="500" y="212" width="150" height="26" rx="7" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="575" y="230" text-anchor="middle" font-size="13" fill="#1e293b">cart: cart (uzatildi)</text>
+  <rect x="500" y="286" width="150" height="26" rx="7" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="575" y="304" text-anchor="middle" font-size="13" fill="#1e293b">cart: cart (uzatildi)</text>
+
+  <!-- left annotation -->
+  <text x="135" y="250" text-anchor="middle" font-size="14" fill="#64748b">3 ta oraliq widget</text>
+  <text x="135" y="270" text-anchor="middle" font-size="14" fill="#64748b">cart ni shunchaki</text>
+  <text x="135" y="290" text-anchor="middle" font-size="14" fill="#ef4444" font-weight="700">tashib o'tadi</text>
+
+  <text x="390" y="462" text-anchor="middle" font-size="13" fill="#94a3b8">Ekran qancha chuqur bo'lsa, "burg'ulash" shuncha uzun — bu masshtablanmaydi.</text>
+</svg>

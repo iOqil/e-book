@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Guardrails — kirish-guard, model va chiqish-guard qatlamlari xavfli yoki noto'g'ri narsani to'sadi</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Guardrails — kirish va chiqish qo'riqlash qatlamlari</text>
+  <text x="380" y="60" text-anchor="middle" font-size="14" fill="#475569">Model atrofiga ikki tekshiruv qo'yamiz: nima kiradi va nima chiqadi</text>
+
+  <defs>
+    <marker id="arr23m" markerWidth="11" markerHeight="11" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 Z" fill="#16a34a"/>
+    </marker>
+    <marker id="arr23x" markerWidth="11" markerHeight="11" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 Z" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+  <!-- Foydalanuvchi -->
+  <rect x="30" y="170" width="120" height="64" rx="10" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="90" y="198" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Foydalanuvchi</text>
+  <text x="90" y="219" text-anchor="middle" font-size="13" fill="#475569">so'rovi</text>
+
+  <line x1="150" y1="202" x2="194" y2="202" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arr23m)"/>
+
+  <!-- Kirish guard -->
+  <rect x="198" y="158" width="150" height="88" rx="10" fill="#fef9c3" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="273" y="184" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Kirish-guard</text>
+  <text x="273" y="206" text-anchor="middle" font-size="13" fill="#475569">- mavzuda mi?</text>
+  <text x="273" y="226" text-anchor="middle" font-size="13" fill="#475569">- injection?</text>
+
+  <!-- rad -->
+  <line x1="273" y1="158" x2="273" y2="116" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arr23x)"/>
+  <rect x="198" y="74" width="150" height="40" rx="9" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="273" y="99" text-anchor="middle" font-size="13" font-weight="700" fill="#dc2626">Rad et — modelga bormaydi</text>
+
+  <line x1="348" y1="202" x2="392" y2="202" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arr23m)"/>
+
+  <!-- Model -->
+  <rect x="396" y="158" width="150" height="88" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="471" y="190" text-anchor="middle" font-size="15" font-weight="700" fill="#4f46e5">LLM</text>
+  <text x="471" y="214" text-anchor="middle" font-size="13" fill="#475569">prompt + javob</text>
+
+  <line x1="546" y1="202" x2="590" y2="202" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arr23m)"/>
+
+  <!-- Chiqish guard -->
+  <rect x="594" y="158" width="140" height="88" rx="10" fill="#fef9c3" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="664" y="184" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Chiqish-guard</text>
+  <text x="664" y="206" text-anchor="middle" font-size="13" fill="#475569">- sxema/qoida?</text>
+  <text x="664" y="226" text-anchor="middle" font-size="13" fill="#475569">- xavfli kontent?</text>
+
+  <!-- chiqish rad -->
+  <line x1="664" y1="158" x2="664" y2="116" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arr23x)"/>
+  <rect x="586" y="74" width="156" height="40" rx="9" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="664" y="99" text-anchor="middle" font-size="13" font-weight="700" fill="#dc2626">To'sib qol / qayta so'ra</text>
+
+  <!-- javob ok -->
+  <line x1="664" y1="246" x2="664" y2="300" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arr23m)"/>
+  <rect x="586" y="304" width="156" height="56" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="664" y="330" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Xavfsiz javob</text>
+  <text x="664" y="350" text-anchor="middle" font-size="13" fill="#16a34a">foydalanuvchiga</text>
+
+  <!-- pastki izoh -->
+  <rect x="30" y="300" width="516" height="110" rx="10" fill="#ffffff" stroke="#ddd6fe" stroke-width="1.5"/>
+  <text x="50" y="326" font-size="14" font-weight="700" fill="#4f46e5">Asosiy qoida: modelga ham, modeldan ham ishonma — tekshir</text>
+  <text x="50" y="352" font-size="13" fill="#475569">- Kirish-guard: mavzudan tashqari yoki xavfli so'rovni modelga umuman yubormaydi.</text>
+  <text x="50" y="374" font-size="13" fill="#475569">- Chiqish-guard: javob qoidaga (JSON sxema, til, xavfsizlik) mos kelishini tekshiradi.</text>
+  <text x="50" y="396" font-size="13" fill="#475569">- Ikki qatlam — 20-bobdagi xavfsizlik amaliyotining kengaytmasi.</text>
+</svg>

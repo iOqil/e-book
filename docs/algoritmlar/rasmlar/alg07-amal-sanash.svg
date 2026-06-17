@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 470">
+  <title>Bitta sikl uchun amallar sonini sanash: har bir kod qatori necha marta bajarilishi belgilangan</title>
+  <rect x="0" y="0" width="820" height="470" fill="#f8fafc"/>
+  <text x="410" y="38" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Amallarni sanash: har qator necha marta?</text>
+  <text x="410" y="63" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Kirish hajmi n; jami amallar = barcha qatorlar yig'indisi</text>
+
+  <!-- Code panel -->
+  <rect x="40" y="92" width="430" height="316" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="60" y="124" font-family="monospace" font-size="15" fill="#334155">yigindi = 0</text>
+  <text x="60" y="160" font-family="monospace" font-size="15" fill="#334155">i = 0</text>
+  <text x="60" y="196" font-family="monospace" font-size="15" fill="#334155">while i &lt; n:</text>
+  <text x="90" y="232" font-family="monospace" font-size="15" fill="#334155">yigindi = yigindi + a[i]</text>
+  <text x="90" y="268" font-family="monospace" font-size="15" fill="#334155">i = i + 1</text>
+  <text x="60" y="304" font-family="monospace" font-size="15" fill="#334155">return yigindi</text>
+
+  <!-- Count column header -->
+  <text x="650" y="124" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">necha marta</text>
+
+  <!-- Count badges -->
+  <rect x="540" y="106" width="220" height="0.5" fill="#e2e8f0"/>
+  <rect x="600" y="146" width="100" height="30" rx="15" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="650" y="166" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#16a34a">1</text>
+
+  <rect x="600" y="182" width="100" height="30" rx="15" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="650" y="202" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#16a34a">1</text>
+
+  <rect x="600" y="218" width="100" height="30" rx="15" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="650" y="238" text-anchor="middle" font-family="monospace" font-size="14" fill="#f59e0b">n + 1</text>
+
+  <rect x="600" y="254" width="100" height="30" rx="15" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="650" y="274" text-anchor="middle" font-family="monospace" font-size="14" fill="#7c3aed">n</text>
+
+  <rect x="600" y="290" width="100" height="30" rx="15" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="650" y="310" text-anchor="middle" font-family="monospace" font-size="14" fill="#7c3aed">n</text>
+
+  <rect x="600" y="326" width="100" height="30" rx="15" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="650" y="346" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#16a34a">1</text>
+
+  <!-- connectors -->
+  <line x1="478" y1="161" x2="596" y2="161" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="478" y1="197" x2="596" y2="197" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="478" y1="233" x2="596" y2="233" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="478" y1="269" x2="596" y2="269" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="478" y1="305" x2="596" y2="305" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- Sum box -->
+  <rect x="40" y="424" width="720" height="34" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="60" y="447" font-family="monospace" font-size="15" fill="#334155">T(n) = 1 + 1 + (n+1) + n + n + 1  =  3n + 4   →   chiziqli o'sish</text>
+</svg>

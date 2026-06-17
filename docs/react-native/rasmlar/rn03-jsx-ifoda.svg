@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480" font-family="Segoe UI, system-ui, sans-serif">
+  <title>JSX ichida jingalak qavs bilan JavaScript ifoda joylashishi: o'zgaruvchi, hisob, shart va ternar operator</title>
+  <rect x="0" y="0" width="760" height="480" fill="#f8fafc"/>
+  <text x="380" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">JSX ichida { } bilan JavaScript</text>
+  <text x="380" y="62" text-anchor="middle" font-size="14" fill="#475569">Jingalak qavs { } — "bu yerda JavaScript boshlanadi" degani</text>
+
+  <!-- Markaziy kod kartasi -->
+  <rect x="60" y="84" width="640" height="172" rx="14" fill="#1e293b"/>
+  <text x="84" y="118" font-size="15" font-family="monospace" fill="#94a3b8">&lt;Text&gt;Salom, <tspan fill="#38bdf8">{ism}</tspan>!&lt;/Text&gt;</text>
+  <text x="84" y="148" font-size="15" font-family="monospace" fill="#94a3b8">&lt;Text&gt;Yig'indi: <tspan fill="#38bdf8">{2 + 2}</tspan>&lt;/Text&gt;</text>
+  <text x="84" y="178" font-size="15" font-family="monospace" fill="#94a3b8">&lt;Text&gt;<tspan fill="#fbbf24">{faol &amp;&amp;</tspan> 'Faol'<tspan fill="#fbbf24">}</tspan>&lt;/Text&gt;</text>
+  <text x="84" y="208" font-size="15" font-family="monospace" fill="#94a3b8">&lt;Text&gt;<tspan fill="#a78bfa">{soni &gt; 0 ? 'Bor' : 'Yo`q'}</tspan>&lt;/Text&gt;</text>
+  <text x="84" y="238" font-size="15" font-family="monospace" fill="#94a3b8">&lt;Text&gt;<tspan fill="#86efac">{royxat.map(...)}</tspan>&lt;/Text&gt;</text>
+
+  <!-- 4 ta tushuntirish kartochkasi -->
+  <rect x="60" y="282" width="155" height="166" rx="12" fill="#ffffff" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="137" y="314" text-anchor="middle" font-size="16" font-weight="700" fill="#0284c7">{ism}</text>
+  <text x="137" y="342" text-anchor="middle" font-size="14" font-weight="600" fill="#1e293b">O'zgaruvchi</text>
+  <text x="137" y="368" text-anchor="middle" font-size="13" fill="#475569">qiymatni matnga</text>
+  <text x="137" y="388" text-anchor="middle" font-size="13" fill="#475569">qo'shadi</text>
+  <text x="137" y="424" text-anchor="middle" font-size="13" fill="#94a3b8">natija: "Oqil"</text>
+
+  <rect x="227" y="282" width="155" height="166" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="304" y="314" text-anchor="middle" font-size="16" font-weight="700" fill="#16a34a">{2 + 2}</text>
+  <text x="304" y="342" text-anchor="middle" font-size="14" font-weight="600" fill="#1e293b">Hisob ifodasi</text>
+  <text x="304" y="368" text-anchor="middle" font-size="13" fill="#475569">JS hisoblab,</text>
+  <text x="304" y="388" text-anchor="middle" font-size="13" fill="#475569">natijani chizadi</text>
+  <text x="304" y="424" text-anchor="middle" font-size="13" fill="#94a3b8">natija: 4</text>
+
+  <rect x="394" y="282" width="155" height="166" rx="12" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="471" y="314" text-anchor="middle" font-size="15" font-weight="700" fill="#b45309">{faol &amp;&amp; ...}</text>
+  <text x="471" y="342" text-anchor="middle" font-size="14" font-weight="600" fill="#1e293b">Shartli</text>
+  <text x="471" y="368" text-anchor="middle" font-size="13" fill="#475569">faqat rost bo'lsa</text>
+  <text x="471" y="388" text-anchor="middle" font-size="13" fill="#475569">ko'rsatadi</text>
+  <text x="471" y="424" text-anchor="middle" font-size="13" fill="#94a3b8">bor / yo'q</text>
+
+  <rect x="561" y="282" width="155" height="166" rx="12" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <text x="638" y="314" text-anchor="middle" font-size="15" font-weight="700" fill="#4f46e5">{a ? b : c}</text>
+  <text x="638" y="342" text-anchor="middle" font-size="14" font-weight="600" fill="#1e293b">Tanlov (ternar)</text>
+  <text x="638" y="368" text-anchor="middle" font-size="13" fill="#475569">rost -> b,</text>
+  <text x="638" y="388" text-anchor="middle" font-size="13" fill="#475569">yolg'on -> c</text>
+  <text x="638" y="424" text-anchor="middle" font-size="13" fill="#94a3b8">ikkitadan biri</text>
+</svg>

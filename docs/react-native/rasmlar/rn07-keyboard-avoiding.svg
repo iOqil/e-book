@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 460" width="760" height="460" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Klaviatura ochilganda KeyboardAvoidingView inputni yuqoriga suradi, shunda klaviatura inputni to'smaydi</title>
+  <rect x="0" y="0" width="760" height="460" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">KeyboardAvoidingView: input klaviatura ostida qolmasin</text>
+
+  <!-- LEFT: without -->
+  <text x="210" y="68" text-anchor="middle" font-size="16" font-weight="700" fill="#dc2626">Himoyasiz: klaviatura inputni to'sadi</text>
+  <rect x="120" y="82" width="180" height="330" rx="26" fill="#ffffff" stroke="#1e293b" stroke-width="2.5"/>
+  <rect x="134" y="98" width="152" height="30" rx="6" fill="#e0f2fe"/>
+  <text x="210" y="118" text-anchor="middle" font-size="13" fill="#475569">Sarlavha</text>
+  <!-- input near bottom, hidden by keyboard -->
+  <rect x="134" y="250" width="152" height="34" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="210" y="272" text-anchor="middle" font-size="13" fill="#dc2626">input (to'silgan)</text>
+  <!-- keyboard overlay -->
+  <rect x="120" y="278" width="180" height="134" rx="0" fill="#cbd5e1"/>
+  <rect x="120" y="394" width="180" height="18" rx="0" fill="#94a3b8"/>
+  <g fill="#ffffff">
+    <rect x="132" y="290" width="22" height="20" rx="3"/><rect x="160" y="290" width="22" height="20" rx="3"/>
+    <rect x="188" y="290" width="22" height="20" rx="3"/><rect x="216" y="290" width="22" height="20" rx="3"/>
+    <rect x="244" y="290" width="22" height="20" rx="3"/>
+    <rect x="132" y="316" width="22" height="20" rx="3"/><rect x="160" y="316" width="22" height="20" rx="3"/>
+    <rect x="188" y="316" width="22" height="20" rx="3"/><rect x="216" y="316" width="22" height="20" rx="3"/>
+    <rect x="244" y="316" width="22" height="20" rx="3"/>
+    <rect x="132" y="342" width="50" height="20" rx="3"/><rect x="188" y="342" width="78" height="20" rx="3"/>
+  </g>
+  <text x="210" y="382" text-anchor="middle" font-size="13" fill="#475569">klaviatura</text>
+
+  <!-- arrow -->
+  <path d="M312 240 L448 240" stroke="#16a34a" stroke-width="3" marker-end="url(#k)"/>
+  <defs>
+    <marker id="k" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0 0 L8 3 L0 6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <!-- RIGHT: with -->
+  <text x="550" y="68" text-anchor="middle" font-size="16" font-weight="700" fill="#16a34a">KeyboardAvoidingView bilan</text>
+  <rect x="460" y="82" width="180" height="330" rx="26" fill="#ffffff" stroke="#1e293b" stroke-width="2.5"/>
+  <rect x="474" y="98" width="152" height="30" rx="6" fill="#e0f2fe"/>
+  <text x="550" y="118" text-anchor="middle" font-size="13" fill="#475569">Sarlavha</text>
+  <!-- input pushed UP above keyboard -->
+  <rect x="474" y="166" width="152" height="34" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="550" y="188" text-anchor="middle" font-size="13" fill="#16a34a">input (ko'rinadi)</text>
+  <!-- up arrow inside -->
+  <path d="M550 230 L550 206" stroke="#16a34a" stroke-width="2.5" marker-end="url(#k)"/>
+  <text x="550" y="248" text-anchor="middle" font-size="13" fill="#16a34a">yuqoriga suriladi</text>
+  <!-- keyboard overlay -->
+  <rect x="460" y="278" width="180" height="134" rx="0" fill="#cbd5e1"/>
+  <rect x="460" y="394" width="180" height="18" rx="0" fill="#94a3b8"/>
+  <g fill="#ffffff">
+    <rect x="472" y="290" width="22" height="20" rx="3"/><rect x="500" y="290" width="22" height="20" rx="3"/>
+    <rect x="528" y="290" width="22" height="20" rx="3"/><rect x="556" y="290" width="22" height="20" rx="3"/>
+    <rect x="584" y="290" width="22" height="20" rx="3"/>
+    <rect x="472" y="316" width="22" height="20" rx="3"/><rect x="500" y="316" width="22" height="20" rx="3"/>
+    <rect x="528" y="316" width="22" height="20" rx="3"/><rect x="556" y="316" width="22" height="20" rx="3"/>
+    <rect x="584" y="316" width="22" height="20" rx="3"/>
+    <rect x="472" y="342" width="50" height="20" rx="3"/><rect x="528" y="342" width="78" height="20" rx="3"/>
+  </g>
+  <text x="550" y="382" text-anchor="middle" font-size="13" fill="#475569">klaviatura</text>
+
+  <!-- bottom note -->
+  <rect x="100" y="426" width="560" height="26" rx="8" fill="#fff7ed" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="380" y="444" text-anchor="middle" font-size="13" fill="#92400e">behavior={Platform.OS === 'ios' ? 'padding' : 'height'}</text>
+</svg>

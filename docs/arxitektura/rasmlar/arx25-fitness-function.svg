@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470">
+  <title>Fitness function CI quvurida arxitektura xususiyatlarini avtomatik himoyalaydi: qoidaga mos commit o'tadi, buzilgan commit bloklanadi</title>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="34" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Fitness function = arxitekturani himoyalovchi avtomatik test</text>
+
+  <!-- Developer commit -->
+  <rect x="30" y="80" width="150" height="70" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="105" y="112" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">Dasturchi</text>
+  <text x="105" y="133" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">commit / push</text>
+
+  <!-- Arrow -->
+  <line x1="180" y1="115" x2="230" y2="115" stroke="#334155" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- CI pipeline box -->
+  <rect x="232" y="62" width="496" height="180" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="480" y="86" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb" text-anchor="middle">CI quvuri (pipeline)</text>
+
+  <rect x="252" y="100" width="130" height="120" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="317" y="126" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Unit / integ.</text>
+  <text x="317" y="146" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">testlar</text>
+  <text x="317" y="172" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">(xulq-atvor</text>
+  <text x="317" y="190" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">to'g'rimi?)</text>
+
+  <line x1="382" y1="160" x2="412" y2="160" stroke="#334155" stroke-width="2" marker-end="url(#ar)"/>
+
+  <rect x="414" y="100" width="290" height="120" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="559" y="126" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">Fitness function'lar</text>
+  <text x="559" y="150" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">aylanma bog'liqlik yo'qmi?</text>
+  <text x="559" y="170" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">qatlam qoidasi buzilmadimi?</text>
+  <text x="559" y="190" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">javob &lt;100ms saqlandimi?</text>
+  <text x="559" y="210" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">(arxitektura to'g'rimi?)</text>
+
+  <!-- Two outcomes -->
+  <line x1="480" y1="242" x2="480" y2="280" stroke="#334155" stroke-width="2"/>
+  <line x1="290" y1="280" x2="670" y2="280" stroke="#334155" stroke-width="2"/>
+  <line x1="290" y1="280" x2="290" y2="318" stroke="#16a34a" stroke-width="2" marker-end="url(#arg)"/>
+  <line x1="670" y1="280" x2="670" y2="318" stroke="#dc2626" stroke-width="2" marker-end="url(#arr)"/>
+
+  <rect x="160" y="320" width="260" height="110" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="290" y="348" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="middle">PASS — yashil</text>
+  <text x="290" y="372" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">qoidalar saqlangan</text>
+  <text x="290" y="392" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">-&gt; merge / deploy</text>
+  <text x="290" y="414" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">arxitektura himoyalandi</text>
+
+  <rect x="540" y="320" width="260" height="110" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="670" y="348" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#dc2626" text-anchor="middle">FAIL — qizil</text>
+  <text x="670" y="372" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">qoida buzildi</text>
+  <text x="670" y="392" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">-&gt; build to'xtaydi (exit 1)</text>
+  <text x="670" y="414" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">eroziya bloklandi</text>
+
+  <text x="380" y="458" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle" font-style="italic">Test = xulq-atvorni qo'riqlaydi · Fitness function = arxitektura xususiyatini qo'riqlaydi</text>
+
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#334155"/></marker>
+    <marker id="arg" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/></marker>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#dc2626"/></marker>
+  </defs>
+</svg>

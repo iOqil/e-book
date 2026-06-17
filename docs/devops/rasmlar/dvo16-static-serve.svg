@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="760" height="380">
+  <title>Statik fayl serve oqimi: brauzer Nginx ning 80-portiga GET so'rov yuboradi, Nginx root papkasi var www vazifalar ichidan mos statik faylni topadi va to'g'ri MIME turi bilan brauzerga to'g'ridan-to'g'ri qaytaradi, ilovaga umuman tegmaydi</title>
+  <rect x="0" y="0" width="760" height="380" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Statik fayllarni serve qilish</text>
+
+  <!-- Brauzer -->
+  <rect x="34" y="130" width="160" height="120" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="114" y="166" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e40af">Brauzer</text>
+  <text x="114" y="194" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">GET /static/style.css</text>
+  <text x="114" y="222" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">GET /index.html</text>
+
+  <!-- strelka so'rov -->
+  <line x1="194" y1="172" x2="288" y2="172" stroke="#2563eb" stroke-width="2.5" marker-end="url(#b2s)"/>
+  <text x="241" y="162" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">so'rov</text>
+  <!-- strelka javob -->
+  <line x1="288" y1="210" x2="194" y2="210" stroke="#16a34a" stroke-width="2.5" marker-end="url(#c2s)"/>
+  <text x="241" y="230" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">fayl + MIME</text>
+
+  <!-- Nginx -->
+  <rect x="292" y="120" width="180" height="140" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="382" y="152" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#92400e">Nginx</text>
+  <text x="382" y="178" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">listen 80</text>
+  <text x="382" y="202" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">root /var/www/vazifalar</text>
+  <text x="382" y="226" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">try_files faylni topadi</text>
+  <text x="382" y="248" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">.css -> text/css (MIME)</text>
+
+  <!-- strelka diskka -->
+  <line x1="472" y1="190" x2="566" y2="190" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#a2s)"/>
+  <text x="519" y="180" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">diskdan o'qiydi</text>
+
+  <!-- Statik fayllar (disk) -->
+  <rect x="570" y="120" width="166" height="140" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="653" y="150" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#15803d">Statik fayllar</text>
+  <text x="653" y="174" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">/var/www/vazifalar/</text>
+  <text x="653" y="200" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">index.html</text>
+  <text x="653" y="222" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">static/style.css</text>
+  <text x="653" y="244" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">static/app.js</text>
+
+  <!-- Ilova (chetda, tegmaydi) -->
+  <rect x="292" y="290" width="180" height="58" rx="9" fill="#ffffff" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="382" y="315" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#475569">Node ilova (:3000)</text>
+  <text x="382" y="336" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">statik fayl uchun BEZOVTA EMAS</text>
+
+  <line x1="382" y1="260" x2="382" y2="288" stroke="#dc2626" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#x2s)"/>
+  <text x="470" y="278" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">tegmaydi</text>
+
+  <text x="380" y="372" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Nginx statik faylni to'g'ridan diskdan beradi — ilova faqat haqiqiy mantiq bilan band</text>
+
+  <defs>
+    <marker id="b2s" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="c2s" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#16a34a"/>
+    </marker>
+    <marker id="a2s" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#94a3b8"/>
+    </marker>
+    <marker id="x2s" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#dc2626"/>
+    </marker>
+  </defs>
+</svg>

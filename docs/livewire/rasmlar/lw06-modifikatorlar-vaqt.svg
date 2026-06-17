@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" width="760" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Deferred, live, blur va debounce modifikatorlari foydalanuvchi "S-a-l-o-m" deb yozganda qachon serverga so'rov yuborilishini vaqt o'qida taqqoslaydi</title>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="32" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Qachon serverga so'rov ketadi?</text>
+  <text x="380" y="55" text-anchor="middle" font-size="13" fill="#475569">Foydalanuvchi "S a l o m" deb yozadi, keyin inputdan chiqadi (blur)</text>
+
+  <!-- Vaqt o'qi belgilari (ustki) -->
+  <text x="120" y="92" text-anchor="middle" font-size="13" fill="#94a3b8">S</text>
+  <text x="200" y="92" text-anchor="middle" font-size="13" fill="#94a3b8">a</text>
+  <text x="280" y="92" text-anchor="middle" font-size="13" fill="#94a3b8">l</text>
+  <text x="360" y="92" text-anchor="middle" font-size="13" fill="#94a3b8">o</text>
+  <text x="440" y="92" text-anchor="middle" font-size="13" fill="#94a3b8">m</text>
+  <text x="560" y="92" text-anchor="middle" font-size="13" fill="#94a3b8">blur</text>
+  <text x="680" y="92" text-anchor="middle" font-size="13" fill="#94a3b8">tugma</text>
+  <line x1="100" y1="100" x2="720" y2="100" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <!-- Qator 1: deferred (default) -->
+  <rect x="16" y="116" width="80" height="56" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="56" y="140" text-anchor="middle" font-size="13" font-weight="700" fill="#1e293b">default</text>
+  <text x="56" y="158" text-anchor="middle" font-size="13" fill="#475569">deferred</text>
+  <line x1="100" y1="144" x2="720" y2="144" stroke="#cbd5e1" stroke-width="2"/>
+  <circle cx="680" cy="144" r="9" fill="#16a34a"/>
+  <text x="680" y="148" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">1</text>
+  <text x="300" y="138" text-anchor="middle" font-size="13" fill="#94a3b8">yozganda so'rov YO'Q</text>
+
+  <!-- Qator 2: .live -->
+  <rect x="16" y="186" width="80" height="56" rx="8" fill="#ffffff" stroke="#4f46e5" stroke-width="1.5"/>
+  <text x="56" y="218" text-anchor="middle" font-size="13" font-weight="700" fill="#4f46e5">.live</text>
+  <line x1="100" y1="214" x2="720" y2="214" stroke="#cbd5e1" stroke-width="2"/>
+  <circle cx="120" cy="214" r="9" fill="#4f46e5"/>
+  <circle cx="200" cy="214" r="9" fill="#4f46e5"/>
+  <circle cx="280" cy="214" r="9" fill="#4f46e5"/>
+  <circle cx="360" cy="214" r="9" fill="#4f46e5"/>
+  <circle cx="440" cy="214" r="9" fill="#4f46e5"/>
+  <text x="585" y="218" font-size="13" fill="#94a3b8">har harfda so'rov (5 marta!)</text>
+
+  <!-- Qator 3: .live.debounce.500ms -->
+  <rect x="16" y="256" width="80" height="56" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="56" y="280" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a">.live</text>
+  <text x="56" y="298" text-anchor="middle" font-size="13" fill="#475569">.debounce</text>
+  <line x1="100" y1="284" x2="720" y2="284" stroke="#cbd5e1" stroke-width="2"/>
+  <circle cx="500" cy="284" r="9" fill="#16a34a"/>
+  <text x="500" y="288" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">1</text>
+  <text x="300" y="278" text-anchor="middle" font-size="13" fill="#94a3b8">yozishni to'xtatgach 500ms</text>
+
+  <!-- Qator 4: .live.blur -->
+  <rect x="16" y="326" width="80" height="56" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="56" y="350" text-anchor="middle" font-size="13" font-weight="700" fill="#f59e0b">.live</text>
+  <text x="56" y="368" text-anchor="middle" font-size="13" fill="#475569">.blur</text>
+  <line x1="100" y1="354" x2="720" y2="354" stroke="#cbd5e1" stroke-width="2"/>
+  <circle cx="560" cy="354" r="9" fill="#f59e0b"/>
+  <text x="560" y="358" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">1</text>
+  <text x="300" y="348" text-anchor="middle" font-size="13" fill="#94a3b8">faqat inputdan chiqqanda</text>
+
+  <!-- Izoh -->
+  <rect x="16" y="400" width="728" height="54" rx="10" fill="#eef2ff" stroke="#c7d2fe" stroke-width="1.5"/>
+  <circle cx="44" cy="427" r="9" fill="#4f46e5"/>
+  <text x="62" y="423" font-size="13" fill="#1e293b">= serverga bitta so'rov.</text>
+  <text x="62" y="442" font-size="13" fill="#475569">Maslahat: default'dan boshlang; jonliylik kerak bo'lsa .live.debounce ishlating, .live yolg'iz emas.</text>
+</svg>

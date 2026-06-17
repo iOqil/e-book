@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 520">
+  <title>Backtracking qaror daraxti: tarmoqlar bo'ylab yechim qurish, tupik (dead-end) da orqaga qaytish va cheklov buzilgan shoxni kesib tashlash (pruning)</title>
+  <rect x="0" y="0" width="880" height="520" fill="#f8fafc"/>
+  <text x="440" y="36" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Backtracking: qaror daraxti</text>
+  <text x="440" y="62" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Har tugunda variant tanla → yaroqsiz shoxni KES → tupikda ORQAGA QAYT</text>
+
+  <!-- legend -->
+  <g font-family="Segoe UI" font-size="13">
+    <circle cx="610" cy="92" r="9" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+    <text x="626" y="97" fill="#334155">yaroqli yo'l</text>
+    <circle cx="710" cy="92" r="9" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+    <text x="726" y="97" fill="#334155">kesilgan (pruning)</text>
+  </g>
+
+  <!-- edges -->
+  <g stroke="#94a3b8" stroke-width="1.5" fill="none">
+    <line x1="440" y1="135" x2="240" y2="195"/>
+    <line x1="440" y1="135" x2="640" y2="195"/>
+    <!-- left subtree -->
+    <line x1="240" y1="207" x2="150" y2="277"/>
+    <line x1="240" y1="207" x2="330" y2="277"/>
+    <!-- right subtree: pruned edge in red -->
+    <line x1="330" y1="289" x2="270" y2="365"/>
+    <line x1="330" y1="289" x2="400" y2="365"/>
+  </g>
+  <!-- pruned edge (right child of root) -->
+  <line x1="440" y1="135" x2="640" y2="195" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="6 5"/>
+  <!-- dead-end edge -->
+  <line x1="240" y1="207" x2="150" y2="277" stroke="#f59e0b" stroke-width="2.5"/>
+
+  <!-- edge labels -->
+  <g font-family="monospace" font-size="13" fill="#64748b">
+    <text x="320" y="168">A</text>
+    <text x="548" y="168">B</text>
+    <text x="180" y="248">C</text>
+    <text x="298" y="248">D</text>
+    <text x="288" y="335">E</text>
+    <text x="378" y="335">F</text>
+  </g>
+
+  <!-- root -->
+  <circle cx="440" cy="125" r="15" fill="#ffffff" stroke="#1e293b" stroke-width="2"/>
+  <text x="440" y="130" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">[ ]</text>
+  <text x="440" y="105" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">boshlang'ich</text>
+
+  <!-- left node (valid path) -->
+  <circle cx="240" cy="201" r="15" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="240" y="206" text-anchor="middle" font-family="monospace" font-size="13" fill="#16a34a">A</text>
+
+  <!-- right node: pruned -->
+  <circle cx="640" cy="201" r="15" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="640" y="206" text-anchor="middle" font-family="monospace" font-size="13" fill="#dc2626">B</text>
+  <text x="640" y="240" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#dc2626">cheklov buzildi</text>
+  <text x="640" y="258" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">→ butun shox kesildi</text>
+
+  <!-- left-left: dead end -->
+  <circle cx="150" cy="283" r="15" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="150" y="288" text-anchor="middle" font-family="monospace" font-size="13" fill="#b45309">C</text>
+  <text x="150" y="323" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#b45309">TUPIK</text>
+  <text x="150" y="341" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#b45309">orqaga qayt ↩</text>
+
+  <!-- left-right: continue -->
+  <circle cx="330" cy="283" r="15" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="330" y="288" text-anchor="middle" font-family="monospace" font-size="13" fill="#16a34a">D</text>
+
+  <!-- leaves under D -->
+  <circle cx="270" cy="371" r="15" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="270" y="376" text-anchor="middle" font-family="monospace" font-size="13" fill="#16a34a">E</text>
+  <text x="270" y="408" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#16a34a">✓ TO'LIQ YECHIM</text>
+
+  <circle cx="400" cy="371" r="15" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="400" y="376" text-anchor="middle" font-family="monospace" font-size="13" fill="#b45309">F</text>
+  <text x="400" y="408" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#b45309">tupik ↩</text>
+
+  <!-- summary box -->
+  <rect x="70" y="440" width="740" height="60" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="1.4"/>
+  <text x="440" y="464" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">Pruning kesilgan shox ostidagi BARCHA tugunlarni o'tkazib yuboradi — aynan shu yerda tejaladi.</text>
+  <text x="440" y="486" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Backtracking = aqlli brute force: qaror daraxtini kez, lekin umidsiz shoxlarni qurmasdan kes.</text>
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Tool use g'oyasi: model chaqir deydi, siz bajarasiz, natija qaytadi</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Tool use: model "chaqir" deydi — bajaruvchi SIZ</text>
+  <text x="380" y="60" text-anchor="middle" font-size="14" fill="#475569">Model hech narsa o'zi bajarmaydi — faqat qaysi funksiyani so'rashni aytadi</text>
+
+  <!-- Model qutisi -->
+  <rect x="40" y="110" width="200" height="120" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="140" y="142" text-anchor="middle" font-size="16" font-weight="700" fill="#7c3aed">Model (LLM)</text>
+  <text x="140" y="170" text-anchor="middle" font-size="13" fill="#475569">"Bu savolga javob uchun</text>
+  <text x="140" y="190" text-anchor="middle" font-size="13" fill="#475569">ob_havo('Toshkent')</text>
+  <text x="140" y="210" text-anchor="middle" font-size="13" fill="#475569">funksiyasi kerak"</text>
+
+  <!-- Siz (ilova) qutisi -->
+  <rect x="520" y="110" width="200" height="120" rx="12" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="620" y="142" text-anchor="middle" font-size="16" font-weight="700" fill="#4f46e5">SIZ (PHP kod)</text>
+  <text x="620" y="170" text-anchor="middle" font-size="13" fill="#475569">Funksiyani BAJARASIZ:</text>
+  <text x="620" y="190" text-anchor="middle" font-size="13" fill="#475569">bazaga kirish, API,</text>
+  <text x="620" y="210" text-anchor="middle" font-size="13" fill="#475569">hisob-kitob...</text>
+
+  <!-- 1: model -> siz (so'rov) -->
+  <line x1="240" y1="150" x2="516" y2="150" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#strelka)"/>
+  <rect x="300" y="124" width="160" height="24" rx="6" fill="#ede9fe"/>
+  <text x="380" y="141" text-anchor="middle" font-size="13" fill="#7c3aed" font-weight="600">1. "tool_use" so'rovi</text>
+
+  <!-- 2: siz -> model (natija) -->
+  <line x1="516" y1="200" x2="244" y2="200" stroke="#16a34a" stroke-width="2.5" marker-end="url(#strelka2)"/>
+  <rect x="300" y="202" width="160" height="24" rx="6" fill="#dcfce7"/>
+  <text x="380" y="219" text-anchor="middle" font-size="13" fill="#16a34a" font-weight="600">2. "tool_result" natija</text>
+
+  <!-- Natural til natija -->
+  <rect x="40" y="300" width="680" height="100" rx="12" fill="#ffffff" stroke="#d97757" stroke-width="2"/>
+  <text x="380" y="332" text-anchor="middle" font-size="16" font-weight="700" fill="#d97757">3. Model yakuniy javobni shakllantiradi</text>
+  <text x="380" y="362" text-anchor="middle" font-size="14" fill="#475569">"Toshkentda hozir 25°C, quyoshli ob-havo."</text>
+  <text x="380" y="386" text-anchor="middle" font-size="13" fill="#94a3b8">— endi model real ma'lumotga ega bo'lib, tabiiy til bilan javob beradi</text>
+
+  <!-- strelka model'dan natija qutisiga -->
+  <line x1="140" y1="230" x2="140" y2="296" stroke="#d97757" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#strelka3)"/>
+
+  <defs>
+    <marker id="strelka" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#7c3aed"/></marker>
+    <marker id="strelka2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/></marker>
+    <marker id="strelka3" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#d97757"/></marker>
+  </defs>
+</svg>

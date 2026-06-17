@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420">
+  <title>Horizontal Pod Autoscaler avtomatik miqyoslash: yuk past bo'lganda 2 ta pod ishlaydi va o'rtacha CPU maqsad 50% atrofida; yuk oshib o'rtacha CPU maqsaddan oshganda HPA replicas'ni 2 dan 5 ga avtomatik ko'taradi; yuk tushganda yana minReplicas ga qaytadi, hammasi minReplicas va maxReplicas oralig'ida</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">HPA: yuk oshganda replicas avtomatik 2 -&gt; 5</text>
+
+  <!-- HPA controller box -->
+  <rect x="270" y="52" width="220" height="56" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="380" y="76" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#5b21b6">HPA (autoscaling/v2)</text>
+  <text x="380" y="96" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">maqsad: o'rtacha CPU = 50%</text>
+
+  <text x="56" y="80" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">metrics-server</text>
+  <text x="56" y="98" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">-&gt; CPU o'lchaydi</text>
+  <line x1="160" y1="84" x2="268" y2="84" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#harr)"/>
+
+  <!-- LEFT state: low load, 2 pods -->
+  <rect x="40" y="140" width="320" height="226" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="200" y="166" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#166534">Past yuk: 2 pod</text>
+  <text x="200" y="186" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">o'rtacha CPU 20% (&lt; 50%)</text>
+  <rect x="92" y="206" width="64" height="50" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><text x="124" y="236" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#166534">pod</text>
+  <rect x="244" y="206" width="64" height="50" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><text x="276" y="236" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#166534">pod</text>
+  <text x="200" y="298" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">replicas = minReplicas = 2</text>
+  <text x="200" y="338" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">yuk past — qo'shimcha pod kerak emas</text>
+
+  <!-- big arrow: scale up -->
+  <line x1="364" y1="252" x2="408" y2="252" stroke="#f59e0b" stroke-width="4" marker-end="url(#harr-o)"/>
+  <text x="386" y="240" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#92400e">yuk</text>
+  <text x="386" y="276" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#92400e">oshdi</text>
+
+  <!-- RIGHT state: high load, 5 pods -->
+  <rect x="412" y="140" width="320" height="226" rx="12" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="572" y="166" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#92400e">Yuqori yuk: 5 pod</text>
+  <text x="572" y="186" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">o'rtacha CPU 100% (&gt; 50%)</text>
+  <rect x="436" y="206" width="50" height="50" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><text x="461" y="236" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#166534">pod</text>
+  <rect x="492" y="206" width="50" height="50" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><text x="517" y="236" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#166534">pod</text>
+  <rect x="548" y="206" width="50" height="50" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><text x="573" y="236" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#166534">pod</text>
+  <rect x="604" y="206" width="50" height="50" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/><text x="629" y="236" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#92400e">yangi</text>
+  <rect x="660" y="206" width="50" height="50" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/><text x="685" y="236" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#92400e">yangi</text>
+  <text x="572" y="298" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">replicas = 5 (maxReplicas = 10 gacha)</text>
+  <text x="572" y="338" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#92400e">HPA 3 ta yangi pod qo'shdi</text>
+
+  <!-- bottom note -->
+  <rect x="40" y="380" width="680" height="30" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="380" y="400" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e40af">Yuk tushsa HPA replicas'ni yana minReplicas (2) ga qaytaradi — har doim min/max oralig'ida</text>
+
+  <defs>
+    <marker id="harr" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#94a3b8"/></marker>
+    <marker id="harr-o" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#f59e0b"/></marker>
+  </defs>
+</svg>

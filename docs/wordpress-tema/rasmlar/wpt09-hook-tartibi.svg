@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520" font-family="Segoe UI, system-ui, sans-serif">
+  <title>WordPress yuklanishida asosiy hooklar bajarilish tartibi: muffle, after_setup_theme, init, wp_enqueue_scripts</title>
+  <rect x="0" y="0" width="800" height="520" fill="#f8fafc"/>
+  <text x="400" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Hooklar bajarilish tartibi (har so'rovda)</text>
+  <text x="400" y="58" text-anchor="middle" font-size="14" fill="#475569">WordPress yuklanganda hooklar SHU tartibda ishga tushadi</text>
+
+  <!-- vertical timeline line -->
+  <line x1="120" y1="92" x2="120" y2="466" stroke="#94a3b8" stroke-width="3"/>
+
+  <!-- step template: circle + box -->
+  <!-- 1 muplugins_loaded -->
+  <circle cx="120" cy="110" r="11" fill="#21759b"/>
+  <text x="120" y="115" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">1</text>
+  <rect x="150" y="92" width="610" height="42" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="166" y="111" font-size="14" font-weight="700" fill="#1e293b">muplugins_loaded / plugins_loaded</text>
+  <text x="166" y="128" font-size="13" fill="#475569">plaginlar yuklanadi (tema hali emas)</text>
+
+  <!-- 2 setup_theme -->
+  <circle cx="120" cy="166" r="11" fill="#21759b"/>
+  <text x="120" y="171" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">2</text>
+  <rect x="150" y="148" width="610" height="42" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="166" y="167" font-size="14" font-weight="700" fill="#1e293b">setup_theme</text>
+  <text x="166" y="184" font-size="13" fill="#475569">tema fayllari aniqlanadi</text>
+
+  <!-- 3 after_setup_theme HIGHLIGHT -->
+  <circle cx="120" cy="222" r="11" fill="#16a34a"/>
+  <text x="120" y="227" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">3</text>
+  <rect x="150" y="204" width="610" height="42" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="166" y="223" font-size="14" font-weight="700" fill="#16a34a">after_setup_theme   &#8592; functions.php shu yerda ishlaydi</text>
+  <text x="166" y="240" font-size="13" fill="#475569">add_theme_support(), register_nav_menus(), add_image_size()</text>
+
+  <!-- 4 init -->
+  <circle cx="120" cy="278" r="11" fill="#2563eb"/>
+  <text x="120" y="283" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">4</text>
+  <rect x="150" y="260" width="610" height="42" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="166" y="279" font-size="14" font-weight="700" fill="#2563eb">init</text>
+  <text x="166" y="296" font-size="13" fill="#475569">CPT, taxonomy, blok, shortcode ro'yxati (13-bob, 22-bob)</text>
+
+  <!-- 5 widgets_init -->
+  <circle cx="120" cy="334" r="11" fill="#2563eb"/>
+  <text x="120" y="339" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">5</text>
+  <rect x="150" y="316" width="610" height="42" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="166" y="335" font-size="14" font-weight="700" fill="#2563eb">widgets_init</text>
+  <text x="166" y="352" font-size="13" fill="#475569">register_sidebar() - widget hududlari (12-bob)</text>
+
+  <!-- 6 wp_loaded -->
+  <circle cx="120" cy="390" r="11" fill="#94a3b8"/>
+  <text x="120" y="395" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">6</text>
+  <rect x="150" y="372" width="610" height="42" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="166" y="391" font-size="14" font-weight="700" fill="#1e293b">wp_loaded</text>
+  <text x="166" y="408" font-size="13" fill="#475569">WP to'liq yuklandi; so'rov (query) endi qayta ishlanadi</text>
+
+  <!-- 7 wp_enqueue_scripts -->
+  <circle cx="120" cy="446" r="11" fill="#d97706"/>
+  <text x="120" y="451" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">7</text>
+  <rect x="150" y="428" width="610" height="42" rx="8" fill="#fff7ed" stroke="#d97706" stroke-width="2.5"/>
+  <text x="166" y="447" font-size="14" font-weight="700" fill="#d97706">wp_enqueue_scripts   &#8592; CSS/JS shu yerda ulanadi (10-bob)</text>
+  <text x="166" y="464" font-size="13" fill="#475569">wp_enqueue_style(), wp_enqueue_script() - faqat frontendda</text>
+
+  <!-- arrow down at bottom -->
+  <polygon points="120,486 112,472 128,472" fill="#94a3b8"/>
+  <text x="400" y="506" text-anchor="middle" font-size="13" fill="#94a3b8">... so'ng template tanlanadi (template_include) va sahifa chiqadi (wp_head -> The Loop -> wp_footer)</text>
+</svg>

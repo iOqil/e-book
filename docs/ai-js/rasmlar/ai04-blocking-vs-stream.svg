@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 470" width="800" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Blokli (streamingsiz) javob foydalanuvchi butun javobni kutadi va ekran bo'sh turadi; streaming bilan tokenlar darhol birma-bir paydo bo'ladi (mashinka effekti)</title>
+  <defs>
+    <marker id="ar4t" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="800" height="470" fill="#f8fafc"/>
+  <text x="400" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Streamingsiz vs Streaming — bir xil javob, boshqa his</text>
+  <text x="400" y="58" font-size="14" fill="#64748b" text-anchor="middle">Vaqt o'qi chapdan o'ngga oqadi. Foydalanuvchi nimani ko'radi?</text>
+
+  <!-- TOP: blocking -->
+  <text x="40" y="100" font-size="15" font-weight="bold" fill="#ef4444" text-anchor="start">Streamingsiz (blokli)</text>
+  <line x1="40" y1="150" x2="760" y2="150" stroke="#64748b" stroke-width="2" marker-end="url(#ar4t)"/>
+  <text x="755" y="172" font-size="13" fill="#64748b" text-anchor="end">vaqt</text>
+
+  <!-- long wait bar -->
+  <rect x="40" y="116" width="560" height="26" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="320" y="134" font-size="13.5" fill="#1e293b" text-anchor="middle">⏳ ekran BO'SH — butun javob hosil bo'lguncha kutamiz</text>
+  <!-- whole answer appears at once -->
+  <rect x="606" y="110" width="154" height="38" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="683" y="126" font-size="13" fill="#1e293b" text-anchor="middle">BARCHA matn</text>
+  <text x="683" y="142" font-size="13" fill="#16a34a" text-anchor="middle">bir zumda paydo</text>
+  <text x="400" y="200" font-size="13.5" fill="#475569" text-anchor="middle">Sekin tuyuladi · uzun javobda HTTP timeout xavfi</text>
+
+  <!-- divider -->
+  <line x1="40" y1="226" x2="760" y2="226" stroke="#94a3b8" stroke-width="1" stroke-dasharray="6,5"/>
+
+  <!-- BOTTOM: streaming -->
+  <text x="40" y="262" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="start">Streaming bilan (oqimli)</text>
+  <line x1="40" y1="330" x2="760" y2="330" stroke="#64748b" stroke-width="2" marker-end="url(#ar4t)"/>
+  <text x="755" y="352" font-size="13" fill="#64748b" text-anchor="end">vaqt</text>
+
+  <!-- token chunks appearing one by one -->
+  <rect x="40" y="296" width="92" height="30" rx="6" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="86" y="316" font-size="13" fill="#1e293b" text-anchor="middle">Salom</text>
+  <rect x="142" y="296" width="92" height="30" rx="6" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="188" y="316" font-size="13" fill="#1e293b" text-anchor="middle">, men</text>
+  <rect x="244" y="296" width="92" height="30" rx="6" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="290" y="316" font-size="13" fill="#1e293b" text-anchor="middle">sizga</text>
+  <rect x="346" y="296" width="92" height="30" rx="6" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="392" y="316" font-size="13" fill="#1e293b" text-anchor="middle">yordam</text>
+  <rect x="448" y="296" width="92" height="30" rx="6" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="494" y="316" font-size="13" fill="#1e293b" text-anchor="middle">bera</text>
+  <rect x="550" y="296" width="92" height="30" rx="6" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="596" y="316" font-size="13" fill="#1e293b" text-anchor="middle">olaman</text>
+  <rect x="652" y="296" width="92" height="30" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="698" y="316" font-size="13" fill="#16a34a" text-anchor="middle">.</text>
+
+  <text x="86" y="362" font-size="13" fill="#16a34a" text-anchor="middle">⚡ darhol</text>
+  <text x="400" y="392" font-size="13.5" fill="#475569" text-anchor="middle">Har token kelishi bilanoq ekranda chiqadi — "mashinka" (typewriter) effekti</text>
+
+  <!-- analogy footer -->
+  <rect x="40" y="416" width="720" height="40" rx="10" fill="#dbeafe" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="400" y="441" font-size="13.5" fill="#1e293b" text-anchor="middle">Analogiya: ovqatni laqcha-laqcha tarelkaga qo'yib berishni KO'RIB turish vs butun taom tayyor bo'lguncha kutish</text>
+</svg>

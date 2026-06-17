@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 480" font-family="Segoe UI">
+  <title>Parol salt bilan bir tomonlama hash qilib saqlanadi, tekshirishda kiritilgan parol qayta hashlanib taqqoslanadi</title>
+  <rect x="0" y="0" width="880" height="480" fill="#f8fafc"/>
+
+  <text x="440" y="36" text-anchor="middle" font-size="22" font-weight="bold" fill="#1e293b">Parol saqlanmaydi -- hash qilinadi</text>
+  <text x="440" y="60" text-anchor="middle" font-size="14" fill="#64748b">Hash bir tomonlama: orqaga qaytib bo'lmaydi. Salt har parolni noyob qiladi</text>
+
+  <!-- TOP: registration / storing -->
+  <rect x="30" y="84" width="820" height="170" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="52" y="112" font-size="17" font-weight="bold" fill="#1e3a8a">1. Ro'yxatdan o'tish -- saqlash</text>
+
+  <rect x="52" y="130" width="150" height="58" rx="8" fill="#eff6ff" stroke="#2563eb"/>
+  <text x="127" y="156" text-anchor="middle" font-size="14" fill="#1e3a8a">Parol</text>
+  <text x="127" y="176" text-anchor="middle" font-size="13" fill="#1e3a8a">"P@rol123"</text>
+
+  <line x1="202" y1="159" x2="244" y2="159" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="248,159 238,154 238,164" fill="#94a3b8"/>
+
+  <rect x="248" y="124" width="180" height="70" rx="8" fill="#f5f3ff" stroke="#7c3aed"/>
+  <text x="338" y="150" text-anchor="middle" font-size="14" fill="#5b21b6">bcrypt / argon2</text>
+  <text x="338" y="170" text-anchor="middle" font-size="13" fill="#5b21b6">+ tasodifiy salt</text>
+  <text x="338" y="187" text-anchor="middle" font-size="13" fill="#5b21b6">(sekin, bir tomonlama)</text>
+
+  <line x1="428" y1="159" x2="470" y2="159" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="474,159 464,154 464,164" fill="#94a3b8"/>
+
+  <rect x="474" y="124" width="354" height="70" rx="8" fill="#1e293b"/>
+  <text x="494" y="150" font-size="13" fill="#86efac">DB'da saqlanadi (parol EMAS):</text>
+  <text x="494" y="172" font-size="13" fill="#94a3b8">$2b$12$Kx9..salt..hash..7Qe</text>
+  <text x="494" y="189" font-size="13" fill="#64748b">asl parol hech qaerda yo'q</text>
+
+  <text x="52" y="232" font-size="13" fill="#1e293b">Salt bir xil parollarni ham turli hashga aylantiradi -- oldindan tayyor jadval (rainbow) ishlamaydi.</text>
+
+  <!-- BOTTOM: login / verifying -->
+  <rect x="30" y="270" width="820" height="190" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="52" y="298" font-size="17" font-weight="bold" fill="#166534">2. Kirish -- tekshirish (qayta-hash taqqoslash)</text>
+
+  <rect x="52" y="316" width="150" height="58" rx="8" fill="#f0fdf4" stroke="#16a34a"/>
+  <text x="127" y="342" text-anchor="middle" font-size="14" fill="#166534">Kiritilgan parol</text>
+  <text x="127" y="362" text-anchor="middle" font-size="13" fill="#166534">"P@rol123"</text>
+
+  <line x1="202" y1="345" x2="244" y2="345" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="248,345 238,340 238,350" fill="#94a3b8"/>
+
+  <rect x="248" y="316" width="180" height="58" rx="8" fill="#f5f3ff" stroke="#7c3aed"/>
+  <text x="338" y="342" text-anchor="middle" font-size="14" fill="#5b21b6">Saqlangan salt bilan</text>
+  <text x="338" y="362" text-anchor="middle" font-size="13" fill="#5b21b6">qayta hashlash</text>
+
+  <line x1="428" y1="345" x2="470" y2="345" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="474,345 464,340 464,350" fill="#94a3b8"/>
+
+  <rect x="474" y="312" width="200" height="66" rx="8" fill="#eff6ff" stroke="#2563eb"/>
+  <text x="574" y="338" text-anchor="middle" font-size="14" fill="#1e3a8a">Yangi hash == DB hash?</text>
+  <text x="574" y="360" text-anchor="middle" font-size="13" fill="#1e3a8a">teng-vaqt taqqoslash</text>
+
+  <line x1="674" y1="345" x2="716" y2="345" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="720,345 710,340 710,350" fill="#16a34a"/>
+
+  <rect x="720" y="312" width="108" height="66" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="774" y="340" text-anchor="middle" font-size="14" font-weight="bold" fill="#166534">Mos kelsa</text>
+  <text x="774" y="362" text-anchor="middle" font-size="13" fill="#166534">kirish OK</text>
+
+  <text x="52" y="412" font-size="13" fill="#166534">Server asl parolni hech qachon bilmaydi -- faqat hashlarni solishtiradi.</text>
+  <text x="52" y="436" font-size="13" fill="#dc2626">md5/sha1 yetarli emas: juda tez -- brute-force oson. bcrypt/argon2 ataylab sekin.</text>
+</svg>

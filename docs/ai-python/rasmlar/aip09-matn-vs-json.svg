@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Erkin matn ilovaga ulanmaydi, strukturali JSON ulanadi</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">Erkin matn va strukturali JSON</text>
+
+  <defs>
+    <marker id="mj-ok" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#16a34a"/>
+    </marker>
+    <marker id="mj-bad" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+  <!-- LEFT: free text (bad) -->
+  <rect x="30" y="70" width="320" height="120" rx="14" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <rect x="30" y="70" width="320" height="36" rx="14" fill="#fee2e2"/>
+  <text x="190" y="94" text-anchor="middle" font-size="16" font-weight="700" fill="#dc2626">Erkin matn (LLM javobi)</text>
+  <text x="50" y="132" font-size="14" fill="#1e293b">"Mahsulot — iPhone 15, narxi</text>
+  <text x="50" y="154" font-size="14" fill="#1e293b">taxminan 9 mln so'm, Toshkentda."</text>
+  <text x="50" y="178" font-size="13" fill="#64748b">Har safar boshqacha shaklda keladi.</text>
+
+  <!-- app (left, blocked) -->
+  <rect x="430" y="80" width="300" height="100" rx="14" fill="#ffffff" stroke="#475569" stroke-width="2"/>
+  <text x="580" y="120" text-anchor="middle" font-size="16" font-weight="700" fill="#1e293b">Ilova / Ma'lumotlar bazasi</text>
+  <text x="580" y="148" text-anchor="middle" font-size="13" fill="#64748b">narx, joy, telefonni alohida</text>
+  <text x="580" y="168" text-anchor="middle" font-size="13" fill="#64748b">maydonlarga yozish kerak</text>
+
+  <line x1="352" y1="130" x2="426" y2="130" stroke="#dc2626" stroke-width="3" stroke-dasharray="7 5" marker-end="url(#mj-bad)"/>
+  <text x="389" y="120" text-anchor="middle" font-size="20" fill="#dc2626">✕</text>
+
+  <!-- RIGHT: JSON (good) -->
+  <rect x="30" y="230" width="320" height="150" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <rect x="30" y="230" width="320" height="36" rx="14" fill="#dcfce7"/>
+  <text x="190" y="254" text-anchor="middle" font-size="16" font-weight="700" fill="#166534">Strukturali JSON</text>
+  <text x="50" y="290" font-size="13" font-family="JetBrains Mono, monospace" fill="#1e293b">{</text>
+  <text x="50" y="310" font-size="13" font-family="JetBrains Mono, monospace" fill="#7c3aed">  "nom": "iPhone 15",</text>
+  <text x="50" y="330" font-size="13" font-family="JetBrains Mono, monospace" fill="#0284c7">  "narx": 9000000,</text>
+  <text x="50" y="350" font-size="13" font-family="JetBrains Mono, monospace" fill="#16a34a">  "joy": "Toshkent"</text>
+  <text x="50" y="370" font-size="13" font-family="JetBrains Mono, monospace" fill="#1e293b">}</text>
+
+  <!-- app (right, ok) -->
+  <rect x="430" y="240" width="300" height="120" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="580" y="280" text-anchor="middle" font-size="16" font-weight="700" fill="#166534">Ilova / Ma'lumotlar bazasi</text>
+  <text x="580" y="308" text-anchor="middle" font-size="13" fill="#475569">obj["narx"] -> ustunga yoziladi</text>
+  <text x="580" y="328" text-anchor="middle" font-size="13" fill="#475569">aniq, ishonchli, qayta ishlanadi</text>
+
+  <line x1="352" y1="300" x2="426" y2="300" stroke="#16a34a" stroke-width="3" marker-end="url(#mj-ok)"/>
+  <text x="389" y="290" text-anchor="middle" font-size="18" fill="#16a34a">✓</text>
+
+  <text x="380" y="408" text-anchor="middle" font-size="13" fill="#64748b">Kompyuter erkin matnni emas, qat'iy strukturani ishonch bilan o'qiy oladi</text>
+</svg>

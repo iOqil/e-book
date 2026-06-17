@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="800" height="480" font-family="Segoe UI, system-ui, sans-serif">
+  <title>messages massivi: system top-level ko'rsatma, navbatlashuvchi user/assistant, birinchi user, har turda massiv o'sadi</title>
+  <defs>
+    <marker id="r1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#d97757"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="800" height="480" fill="#f8fafc"/>
+  <text x="400" y="32" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">So'rovning anatomiyasi: system + messages</text>
+  <text x="400" y="56" font-size="14" fill="#64748b" text-anchor="middle">system — alohida parametr (rol emas). messages — navbatlashuvchi turlar massivi.</text>
+
+  <!-- system block (top-level) -->
+  <rect x="60" y="80" width="680" height="58" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="78" y="104" font-size="14" font-weight="bold" fill="#f59e0b" text-anchor="start">system  (top-level parametr — barqaror ko'rsatma/persona)</text>
+  <text x="78" y="126" font-size="13" fill="#1e293b" text-anchor="start">"Sen o'zbekcha gapiruvchi yordamchi ustozsan. Qisqa va aniq javob ber."</text>
+
+  <!-- messages array container -->
+  <text x="80" y="166" font-size="14" font-weight="bold" fill="#475569" text-anchor="start">messages: [   ← suhbat shu yerda o'sadi (push bilan)</text>
+
+  <!-- turn 1 user -->
+  <rect x="80" y="178" width="640" height="42" rx="8" fill="#dbeafe" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="98" y="204" font-size="13" fill="#1e293b" text-anchor="start"><tspan font-weight="bold" fill="#0ea5e9">user</tspan>      "Quyosh tizimida nechta sayyora bor?"   ← birinchi MAJBURIY user</text>
+
+  <!-- turn 1 assistant -->
+  <rect x="80" y="226" width="640" height="42" rx="8" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="98" y="252" font-size="13" fill="#1e293b" text-anchor="start"><tspan font-weight="bold" fill="#6366f1">assistant</tspan>  "Sakkizta sayyora bor."   ← modelning javobi (siz qo'shasiz)</text>
+
+  <!-- turn 2 user -->
+  <rect x="80" y="274" width="640" height="42" rx="8" fill="#dbeafe" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="98" y="300" font-size="13" fill="#1e293b" text-anchor="start"><tspan font-weight="bold" fill="#0ea5e9">user</tspan>      "Eng kattasi qaysi?"</text>
+
+  <!-- turn 2 assistant (new) -->
+  <rect x="80" y="322" width="640" height="42" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="98" y="348" font-size="13" fill="#1e293b" text-anchor="start"><tspan font-weight="bold" fill="#16a34a">assistant</tspan>  "Yupiter."   ← yangi javob massivga QO'SHILADI</text>
+
+  <text x="80" y="386" font-size="14" font-weight="bold" fill="#475569" text-anchor="start">]</text>
+
+  <!-- alternation arrows on the right -->
+  <path d="M735 199 C 765 213, 765 233, 737 247" fill="none" stroke="#d97757" stroke-width="2" marker-end="url(#r1)"/>
+  <path d="M735 247 C 765 261, 765 287, 737 295" fill="none" stroke="#d97757" stroke-width="2" marker-end="url(#r1)"/>
+  <path d="M735 295 C 765 309, 765 335, 737 343" fill="none" stroke="#d97757" stroke-width="2" marker-end="url(#r1)"/>
+  <text x="788" y="275" font-size="13" font-weight="bold" fill="#d97757" text-anchor="middle" transform="rotate(90 788 275)">navbatlashadi: user ↔ assistant</text>
+
+  <!-- footer rules -->
+  <rect x="60" y="406" width="680" height="58" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="78" y="430" font-size="13" fill="#1e293b" text-anchor="start">• Birinchi xabar SHART <tspan font-weight="bold" fill="#0ea5e9">user</tspan> bo'lishi kerak.   • Turlar navbatlashadi (ketma-ket bir xil rol birlashtiriladi).</text>
+  <text x="78" y="452" font-size="13" fill="#1e293b" text-anchor="start">• <tspan font-weight="bold" fill="#f59e0b">system</tspan> = barqaror qoidalar (kim ekanligini aytadi).   • <tspan font-weight="bold" fill="#0ea5e9">user</tspan> = haqiqiy so'rov/savol.</text>
+</svg>

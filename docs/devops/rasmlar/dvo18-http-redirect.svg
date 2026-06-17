@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="760" height="380">
+  <title>HTTP redirect oqimi: brauzer port 80 ga HTTP so'rov yuboradi, nginx 301 redirect bilan port 443 HTTPS'ga yo'naltiradi, HTTPS javobida HSTS sarlavhasi qo'shiladi va brauzer keyin to'g'ridan-to'g'ri HTTPS'ga boradi</title>
+  <rect x="0" y="0" width="760" height="380" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">HTTP &#8594; HTTPS redirect</text>
+
+  <!-- brauzer -->
+  <rect x="40" y="120" width="170" height="120" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="125" y="152" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e40af">Brauzer</text>
+  <text x="125" y="180" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">http://example.uz</text>
+  <text x="125" y="216" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">qulf belgisi</text>
+  <text x="125" y="234" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#166534">&#128274; xavfsiz</text>
+
+  <!-- port 80 -->
+  <rect x="300" y="80" width="160" height="80" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="380" y="110" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309">nginx :80 (HTTP)</text>
+  <text x="380" y="134" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">return 301</text>
+  <text x="380" y="151" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">shifrlanmagan</text>
+
+  <!-- port 443 -->
+  <rect x="300" y="220" width="160" height="100" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="380" y="250" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#166534">nginx :443 (HTTPS)</text>
+  <text x="380" y="274" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">TLS shifrlangan</text>
+  <text x="380" y="294" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">+ HSTS header</text>
+  <text x="380" y="312" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">ilovaga proxy_pass</text>
+
+  <!-- ilova -->
+  <rect x="560" y="240" width="160" height="60" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="640" y="266" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#1e293b">Ilova</text>
+  <text x="640" y="286" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">127.0.0.1:3000</text>
+
+  <!-- so'rov: brauzer -> :80 -->
+  <line x1="210" y1="140" x2="298" y2="120" stroke="#2563eb" stroke-width="3" marker-end="url(#arrB)"/>
+  <text x="252" y="118" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e40af">so'rov</text>
+
+  <!-- 301: :80 -> brauzer -->
+  <line x1="298" y1="148" x2="212" y2="170" stroke="#f59e0b" stroke-width="3" marker-end="url(#arrA)"/>
+  <text x="252" y="190" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#b45309">301 &#8594; https://</text>
+
+  <!-- brauzer -> :443 -->
+  <line x1="210" y1="210" x2="298" y2="250" stroke="#16a34a" stroke-width="3" marker-end="url(#arrG)"/>
+  <text x="248" y="244" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#166534">HTTPS so'rov</text>
+
+  <!-- :443 -> ilova -->
+  <line x1="460" y1="270" x2="558" y2="270" stroke="#16a34a" stroke-width="3" marker-end="url(#arrG)"/>
+
+  <text x="380" y="356" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">301 doimiy redirect + HSTS: brauzer keyingi safar to'g'ridan-to'g'ri HTTPS'ga boradi</text>
+
+  <defs>
+    <marker id="arrB" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrA" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#f59e0b"/>
+    </marker>
+    <marker id="arrG" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+</svg>

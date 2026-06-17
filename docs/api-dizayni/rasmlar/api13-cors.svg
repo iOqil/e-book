@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560">
+  <title>CORS preflight oqimi: brauzer OPTIONS preflight, server Access-Control sarlavhalari, haqiqiy so'rov</title>
+  <rect x="0" y="0" width="880" height="560" fill="#f8fafc"/>
+  <text x="440" y="34" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">CORS preflight oqimi</text>
+  <text x="440" y="58" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Same-origin policy: brauzer cross-origin so'rovni serverdan ruxsat so'rab tekshiradi</text>
+
+  <!-- Aktyorlar -->
+  <rect x="80" y="80" width="200" height="44" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="180" y="108" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">Brauzer (app.example.com)</text>
+
+  <rect x="600" y="80" width="200" height="44" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="700" y="108" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">Server (api.example.com)</text>
+
+  <!-- Hayot chiziqlari -->
+  <line x1="180" y1="124" x2="180" y2="500" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5,5"/>
+  <line x1="700" y1="124" x2="700" y2="500" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5,5"/>
+
+  <!-- Preflight bosqichi qutisi -->
+  <rect x="120" y="146" width="640" height="120" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="140" y="168" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#d97706">1-bosqich: PREFLIGHT (faqat "murakkab" so'rovlarda)</text>
+
+  <!-- OPTIONS so'rov -->
+  <line x1="180" y1="190" x2="698" y2="190" stroke="#f59e0b" stroke-width="2"/>
+  <polygon points="698,190 686,185 686,195" fill="#f59e0b"/>
+  <text x="440" y="184" text-anchor="middle" font-family="monospace" font-size="13" fill="#92400e">OPTIONS /v1/orders  + Origin, Access-Control-Request-Method</text>
+
+  <!-- Preflight javob -->
+  <line x1="700" y1="232" x2="182" y2="232" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="182,232 194,227 194,237" fill="#16a34a"/>
+  <text x="440" y="226" text-anchor="middle" font-family="monospace" font-size="13" fill="#166534">204  Access-Control-Allow-Origin / -Methods / -Headers / -Max-Age</text>
+  <text x="440" y="252" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Brauzer javobni tekshiradi: Origin ruxsat etilganmi? Metod / sarlavha mosmi?</text>
+
+  <!-- Haqiqiy so'rov bosqichi -->
+  <rect x="120" y="290" width="640" height="120" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="140" y="312" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb">2-bosqich: HAQIQIY so'rov (preflight muvaffaqiyatli bo'lsa)</text>
+
+  <line x1="180" y1="334" x2="698" y2="334" stroke="#2563eb" stroke-width="2"/>
+  <polygon points="698,334 686,329 686,339" fill="#2563eb"/>
+  <text x="440" y="328" text-anchor="middle" font-family="monospace" font-size="13" fill="#1e3a8a">POST /v1/orders  Content-Type: application/json  + Origin</text>
+
+  <line x1="700" y1="376" x2="182" y2="376" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="182,376 194,371 194,381" fill="#16a34a"/>
+  <text x="440" y="370" text-anchor="middle" font-family="monospace" font-size="13" fill="#166534">201 Created  + Access-Control-Allow-Origin: app.example.com</text>
+  <text x="440" y="396" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Sarlavha mos kelmasa — brauzer JS'ga javobni BERMAYDI (server allaqachon bajargan)</text>
+
+  <!-- Muhim ogohlantirish -->
+  <rect x="80" y="430" width="720" height="92" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="440" y="456" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#dc2626">Diqqat: CORS — bu BRAUZER himoyasi, server himoyasi EMAS</text>
+  <text x="100" y="482" font-family="Segoe UI" font-size="13" fill="#334155">curl, Postman, server-to-server, mobil ilova — same-origin policy'ga bo'ysunmaydi.</text>
+  <text x="100" y="504" font-family="Segoe UI" font-size="13" fill="#334155">Avtorizatsiya va auth bilan adashtirmang: CORS faqat brauzerdagi JS o'qishini cheklaydi.</text>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 440">
+  <title>Shrinking: Hypothesis xatoni topgach uni kichraytirib boradi, katta va tushunarsiz yiqituvchi misoldan eng kichik minimal yiqituvchi misolgacha qisqartiradi</title>
+  <rect x="0" y="0" width="820" height="440" fill="#f8fafc"/>
+  <text x="410" y="38" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Shrinking: minimal yiqituvchi misol</text>
+  <text x="410" y="64" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Hypothesis xatoni topgach uni eng sodda holatga qisqartiradi</text>
+
+  <!-- big failing example -->
+  <rect x="60" y="100" width="290" height="130" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="205" y="128" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#991b1b">Topilgan xato (xom)</text>
+  <text x="205" y="158" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">[847, -3, 0, 512, 0, -91,</text>
+  <text x="205" y="180" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">22, 0, -1, 738, 4, 0]</text>
+  <text x="205" y="210" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#991b1b">Katta, tushunarsiz, debug qiyin</text>
+
+  <!-- shrink arrow -->
+  <line x1="360" y1="165" x2="460" y2="165" stroke="#f59e0b" stroke-width="3" marker-end="url(#s)"/>
+  <text x="410" y="150" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#92400e">shrink</text>
+  <text x="410" y="190" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#92400e">qayta-qayta</text>
+
+  <!-- minimal failing example -->
+  <rect x="470" y="100" width="290" height="130" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="615" y="128" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#166534">Minimal yiqituvchi misol</text>
+  <text x="615" y="172" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">[0, 0, -1]</text>
+  <text x="615" y="210" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#166534">Kichik, aniq, sabab ko'rinib turadi</text>
+
+  <!-- steps -->
+  <text x="410" y="270" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">Qisqartirish bosqichlari (g'oya)</text>
+  <text x="410" y="300" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">elementlarni olib tashlash, sonlarni 0 ga yaqinlashtirish - har safar "hali ham yiqiladimi?"</text>
+
+  <rect x="120" y="320" width="120" height="40" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="180" y="345" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#92400e">12 element</text>
+  <line x1="240" y1="340" x2="288" y2="340" stroke="#94a3b8" stroke-width="2" marker-end="url(#s2)"/>
+  <rect x="290" y="320" width="120" height="40" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="350" y="345" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#92400e">5 element</text>
+  <line x1="410" y1="340" x2="458" y2="340" stroke="#94a3b8" stroke-width="2" marker-end="url(#s2)"/>
+  <rect x="460" y="320" width="120" height="40" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="520" y="345" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#92400e">3 element</text>
+  <line x1="580" y1="340" x2="628" y2="340" stroke="#94a3b8" stroke-width="2" marker-end="url(#s2)"/>
+  <rect x="630" y="320" width="120" height="40" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="690" y="345" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#166534">minimal</text>
+
+  <text x="410" y="400" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">Falsifying example: test_saralash_tartibli(ro_yxat=[0, 0, -1])</text>
+
+  <defs>
+    <marker id="s" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#f59e0b"/>
+    </marker>
+    <marker id="s2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540">
+  <title>REST over/under-fetching va GraphQL bitta soʻrov</title>
+  <rect x="0" y="0" width="900" height="540" fill="#f8fafc"/>
+  <text x="450" y="34" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">Bir ekran uchun maʼlumot olish</text>
+  <text x="450" y="58" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Maqsad: foydalanuvchi ismi + uning soʻnggi 3 ta postining sarlavhasi</text>
+
+  <!-- LEFT: REST -->
+  <rect x="30" y="80" width="400" height="430" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="230" y="110" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb">REST — koʻp soʻrov</text>
+
+  <!-- request 1 -->
+  <rect x="55" y="128" width="350" height="56" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="70" y="150" font-family="monospace" font-size="13" fill="#1e293b">GET /users/42</text>
+  <text x="70" y="172" font-family="Segoe UI" font-size="13" fill="#dc2626">→ ism + 20 ta keraksiz maydon (over-fetch)</text>
+
+  <!-- request 2 -->
+  <rect x="55" y="196" width="350" height="56" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="70" y="218" font-family="monospace" font-size="13" fill="#1e293b">GET /users/42/posts</text>
+  <text x="70" y="240" font-family="Segoe UI" font-size="13" fill="#dc2626">→ 200 ta post (kerak: 3 ta) (over-fetch)</text>
+
+  <!-- under-fetch note -->
+  <rect x="55" y="264" width="350" height="78" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="70" y="288" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#dc2626">Under-fetching</text>
+  <text x="70" y="310" font-family="Segoe UI" font-size="13" fill="#334155">Bitta soʻrov yetmaydi — kerakli maʼlumot</text>
+  <text x="70" y="328" font-family="Segoe UI" font-size="13" fill="#334155">uchun yana soʻrov yuborish kerak boʻladi.</text>
+
+  <!-- summary -->
+  <rect x="55" y="356" width="350" height="130" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="70" y="380" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#1e293b">Natija</text>
+  <text x="70" y="404" font-family="Segoe UI" font-size="13" fill="#334155">• 2+ marta tarmoq aylanishi (round-trip)</text>
+  <text x="70" y="426" font-family="Segoe UI" font-size="13" fill="#334155">• Keraksiz baytlar (over-fetch)</text>
+  <text x="70" y="448" font-family="Segoe UI" font-size="13" fill="#334155">• Mobil/sekin tarmoqda sezilarli</text>
+  <text x="70" y="472" font-family="Segoe UI" font-size="13" fill="#16a34a">+ Lekin har soʻrov keshlanadi va sodda</text>
+
+  <!-- RIGHT: GraphQL -->
+  <rect x="470" y="80" width="400" height="430" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="670" y="110" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#7c3aed">GraphQL — bitta soʻrov</text>
+
+  <rect x="495" y="128" width="350" height="214" rx="8" fill="#faf5ff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="510" y="150" font-family="monospace" font-size="13" fill="#1e293b">POST /graphql</text>
+  <text x="510" y="174" font-family="monospace" font-size="13" fill="#334155">query {</text>
+  <text x="510" y="194" font-family="monospace" font-size="13" fill="#334155">  user(id: 42) {</text>
+  <text x="510" y="214" font-family="monospace" font-size="13" fill="#16a34a">    name</text>
+  <text x="510" y="234" font-family="monospace" font-size="13" fill="#16a34a">    posts(last: 3) {</text>
+  <text x="510" y="254" font-family="monospace" font-size="13" fill="#16a34a">      title</text>
+  <text x="510" y="274" font-family="monospace" font-size="13" fill="#334155">    }</text>
+  <text x="510" y="294" font-family="monospace" font-size="13" fill="#334155">  }</text>
+  <text x="510" y="314" font-family="monospace" font-size="13" fill="#334155">}</text>
+  <text x="510" y="334" font-family="Segoe UI" font-size="13" fill="#7c3aed">Mijoz aynan kerakli maydonni soʻraydi</text>
+
+  <rect x="495" y="356" width="350" height="130" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="510" y="380" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#1e293b">Natija</text>
+  <text x="510" y="404" font-family="Segoe UI" font-size="13" fill="#16a34a">• 1 ta tarmoq aylanishi</text>
+  <text x="510" y="426" font-family="Segoe UI" font-size="13" fill="#16a34a">• Aniq maydon — over/under-fetch yoʻq</text>
+  <text x="510" y="448" font-family="Segoe UI" font-size="13" fill="#dc2626">− HTTP kesh murakkab (hamma POST)</text>
+  <text x="510" y="472" font-family="Segoe UI" font-size="13" fill="#dc2626">− Serverda N+1 va murakkablik xavfi</text>
+
+  <text x="450" y="530" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Bir muammoga ikki yondashuv: REST soddalik va keshni, GraphQL aniqlik va moslashuvchanlikni tanlaydi</text>
+</svg>

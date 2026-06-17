@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 520">
+  <title>RBAC (rol -&gt; ruxsatlar) va ABAC (atributlarga asoslangan qoidalar) yonma-yon</title>
+  <rect x="0" y="0" width="880" height="520" fill="#f8fafc"/>
+  <text x="440" y="36" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">RBAC va ABAC — ruxsatni hal qilishning ikki modeli</text>
+  <text x="440" y="60" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Rol orqali (sodda) yoki atribut + qoida orqali (moslashuvchan)</text>
+
+  <defs>
+    <marker id="a12b" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <!-- RBAC column -->
+  <rect x="40" y="84" width="380" height="406" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="230" y="114" text-anchor="middle" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#2563eb">RBAC — rolga asoslangan</text>
+
+  <rect x="80" y="134" width="120" height="48" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="140" y="163" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#1e293b">Foydalanuvchi</text>
+
+  <line x1="200" y1="158" x2="258" y2="158" stroke="#64748b" stroke-width="2" marker-end="url(#a12b)"/>
+
+  <rect x="262" y="134" width="120" height="48" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="322" y="156" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#1e293b">Rol</text>
+  <text x="322" y="174" text-anchor="middle" font-family="monospace" font-size="13" fill="#64748b">editor</text>
+
+  <line x1="322" y1="182" x2="322" y2="214" stroke="#64748b" stroke-width="2" marker-end="url(#a12b)"/>
+
+  <rect x="80" y="218" width="302" height="120" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="231" y="244" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">Ruxsatlar</text>
+  <text x="231" y="268" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">articles:read</text>
+  <text x="231" y="288" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">articles:write</text>
+  <text x="231" y="308" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">articles:publish</text>
+  <text x="231" y="330" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">users:delete  (yo'q)</text>
+
+  <text x="230" y="372" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a" font-weight="bold">+ Sodda, tushunarli, keng tarqalgan</text>
+  <text x="230" y="396" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">- Qo'pol: "o'z bo'limidagi" kabi</text>
+  <text x="230" y="414" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">  nozik shartlarni ifodalay olmaydi</text>
+  <text x="230" y="440" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Savol: "rolingda bu ruxsat bormi?"</text>
+  <text x="230" y="464" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Rollar ko'paysa -&gt; "rol portlashi"</text>
+
+  <!-- ABAC column -->
+  <rect x="460" y="84" width="380" height="406" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="650" y="114" text-anchor="middle" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#7c3aed">ABAC — atributga asoslangan</text>
+
+  <rect x="490" y="134" width="320" height="120" rx="8" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="650" y="158" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">Atributlar</text>
+  <text x="650" y="182" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">user.dept = "moliya"</text>
+  <text x="650" y="202" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">doc.dept = "moliya"</text>
+  <text x="650" y="222" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">action = "edit"</text>
+  <text x="650" y="242" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">time = 14:00 (ish vaqti)</text>
+
+  <line x1="650" y1="254" x2="650" y2="282" stroke="#64748b" stroke-width="2" marker-end="url(#a12b)"/>
+
+  <rect x="490" y="286" width="320" height="74" rx="8" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="650" y="310" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">Qoida (policy)</text>
+  <text x="650" y="334" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">IF user.dept == doc.dept</text>
+  <text x="650" y="352" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">AND ish_vaqti -&gt; ALLOW</text>
+
+  <text x="650" y="394" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a" font-weight="bold">+ Juda moslashuvchan, nozik</text>
+  <text x="650" y="412" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">  (kontekst: bo'lim, vaqt, joy)</text>
+  <text x="650" y="436" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">- Murakkab, sinash/tushunish qiyin</text>
+  <text x="650" y="464" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Savol: "atributlar qoidaga mosmi?"</text>
+</svg>

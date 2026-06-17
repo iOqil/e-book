@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 440" width="780" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Tailwind CLI build oqimi: input.css va HTML fayllar Oxide dvigatelidan o'tib output.css ga aylanadi, --watch tsikli bilan brauzerga yetkaziladi</title>
+  <defs>
+    <marker id="tw02b-strelka" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4f46e5"/>
+    </marker>
+    <marker id="tw02b-loop" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="780" height="440" fill="#f8fafc"/>
+  <text x="390" y="36" text-anchor="middle" font-size="21" font-weight="bold" fill="#1e293b">Tailwind CLI build oqimi</text>
+  <text x="390" y="60" text-anchor="middle" font-size="14" fill="#64748b">siz nima yozasiz · dvigatel nima qiladi · brauzer nima ko'radi</text>
+
+  <!-- KIRISH: input.css -->
+  <rect x="30" y="92" width="220" height="76" rx="10" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <text x="140" y="118" text-anchor="middle" font-size="15" font-weight="bold" fill="#4f46e5">src/input.css</text>
+  <text x="140" y="142" text-anchor="middle" font-size="13" fill="#1e293b">@import "tailwindcss";</text>
+  <text x="140" y="160" text-anchor="middle" font-size="13" fill="#64748b">(va sizning @theme)</text>
+
+  <!-- KIRISH: HTML -->
+  <rect x="30" y="196" width="220" height="76" rx="10" fill="#ffffff" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="140" y="222" text-anchor="middle" font-size="15" font-weight="bold" fill="#0ea5e9">HTML / JS fayllar</text>
+  <text x="140" y="246" text-anchor="middle" font-size="13" fill="#1e293b">class="text-3xl font-bold"</text>
+  <text x="140" y="264" text-anchor="middle" font-size="13" fill="#64748b">(avtomatik aniqlanadi)</text>
+
+  <!-- strelkalar dvigatelga -->
+  <line x1="250" y1="130" x2="318" y2="170" stroke="#4f46e5" stroke-width="2.5" marker-end="url(#tw02b-strelka)"/>
+  <line x1="250" y1="234" x2="318" y2="194" stroke="#4f46e5" stroke-width="2.5" marker-end="url(#tw02b-strelka)"/>
+
+  <!-- DVIGATEL -->
+  <rect x="324" y="138" width="170" height="88" rx="12" fill="#4f46e5" stroke="#4f46e5" stroke-width="2"/>
+  <text x="409" y="172" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">Tailwind CLI</text>
+  <text x="409" y="194" text-anchor="middle" font-size="14" fill="#ffffff">Oxide dvigatel</text>
+  <text x="409" y="214" text-anchor="middle" font-size="13" fill="#ffffff">(Rust — juda tez)</text>
+
+  <!-- strelka outputga -->
+  <line x1="494" y1="182" x2="556" y2="182" stroke="#4f46e5" stroke-width="2.5" marker-end="url(#tw02b-strelka)"/>
+
+  <!-- CHIQISH: output.css -->
+  <rect x="562" y="146" width="190" height="72" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="657" y="174" text-anchor="middle" font-size="15" font-weight="bold" fill="#16a34a">output.css</text>
+  <text x="657" y="198" text-anchor="middle" font-size="13" fill="#475569">faqat kerakli CSS</text>
+
+  <!-- strelka brauzerga -->
+  <line x1="657" y1="218" x2="657" y2="262" stroke="#4f46e5" stroke-width="2.5" marker-end="url(#tw02b-strelka)"/>
+
+  <!-- BRAUZER -->
+  <rect x="562" y="266" width="190" height="84" rx="10" fill="#ffffff" stroke="#0ea5e9" stroke-width="2"/>
+  <rect x="562" y="266" width="190" height="22" rx="10" fill="#0ea5e9"/>
+  <rect x="562" y="277" width="190" height="11" fill="#0ea5e9"/>
+  <text x="657" y="282" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">brauzer</text>
+  <text x="657" y="312" text-anchor="middle" font-size="16" font-weight="bold" fill="#4f46e5">Salom!</text>
+  <text x="657" y="334" text-anchor="middle" font-size="13" fill="#64748b">stillangan ko'rinish</text>
+
+  <!-- WATCH tsikli -->
+  <path d="M 560 318 C 360 410, 200 400, 140 282" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#tw02b-loop)"/>
+  <rect x="300" y="376" width="220" height="30" rx="15" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="410" y="396" text-anchor="middle" font-size="14" font-weight="bold" fill="#b45309">--watch: saqlash &#8594; qayta-build</text>
+
+  <text x="140" y="300" text-anchor="middle" font-size="13" fill="#64748b">siz klass yozasiz, saqlaysiz...</text>
+</svg>

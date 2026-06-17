@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 440" width="780" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>switch ifodasi (expression) kirish qiymatlarini (1, 2, 3 va qolgani) chiqish matnlariga moslaydi va bitta qiymat qaytaradi</title>
+  <defs>
+    <marker id="fl03sw" markerWidth="12" markerHeight="12" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="780" height="440" fill="#f8fafc"/>
+
+  <text x="390" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">switch ifodasi — kirishni chiqishga moslaydi</text>
+  <text x="390" y="56" text-anchor="middle" font-size="14" fill="#475569">Har bir => o'q (arm) bitta qiymat qaytaradi. _ — qolganlarini ushlaydi</text>
+
+  <!-- kirish -->
+  <rect x="40" y="180" width="140" height="70" rx="10" fill="#dbeafe" stroke="#027dfd" stroke-width="2.5"/>
+  <text x="110" y="208" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e293b">kirish: kun</text>
+  <text x="110" y="232" text-anchor="middle" font-size="13" fill="#475569">(int qiymat)</text>
+
+  <!-- arm 1 -->
+  <line x1="180" y1="200" x2="270" y2="120" stroke="#475569" stroke-width="2" marker-end="url(#fl03sw)"/>
+  <rect x="275" y="92" width="120" height="46" rx="8" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <text x="335" y="121" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e293b">1 =&gt;</text>
+
+  <!-- arm 2 -->
+  <line x1="180" y1="210" x2="270" y2="170" stroke="#475569" stroke-width="2" marker-end="url(#fl03sw)"/>
+  <rect x="275" y="148" width="120" height="46" rx="8" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <text x="335" y="177" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e293b">2 =&gt;</text>
+
+  <!-- arm 3 -->
+  <line x1="180" y1="220" x2="270" y2="225" stroke="#475569" stroke-width="2" marker-end="url(#fl03sw)"/>
+  <rect x="275" y="204" width="120" height="46" rx="8" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <text x="335" y="233" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e293b">3 =&gt;</text>
+
+  <!-- arm _ -->
+  <line x1="180" y1="232" x2="270" y2="300" stroke="#475569" stroke-width="2" marker-end="url(#fl03sw)"/>
+  <rect x="275" y="280" width="120" height="46" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="335" y="309" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e293b">_ =&gt;</text>
+
+  <!-- chiqishlar -->
+  <rect x="450" y="92" width="200" height="46" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="550" y="121" text-anchor="middle" font-size="14" fill="#1e293b">'dushanba'</text>
+  <line x1="395" y1="115" x2="445" y2="115" stroke="#475569" stroke-width="2" marker-end="url(#fl03sw)"/>
+
+  <rect x="450" y="148" width="200" height="46" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="550" y="177" text-anchor="middle" font-size="14" fill="#1e293b">'seshanba'</text>
+  <line x1="395" y1="171" x2="445" y2="171" stroke="#475569" stroke-width="2" marker-end="url(#fl03sw)"/>
+
+  <rect x="450" y="204" width="200" height="46" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="550" y="233" text-anchor="middle" font-size="14" fill="#1e293b">'chorshanba'</text>
+  <line x1="395" y1="227" x2="445" y2="227" stroke="#475569" stroke-width="2" marker-end="url(#fl03sw)"/>
+
+  <rect x="450" y="280" width="200" height="46" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="550" y="303" text-anchor="middle" font-size="14" fill="#1e293b">'boshqa kun'</text>
+  <text x="550" y="320" text-anchor="middle" font-size="13" fill="#475569">qolgan hamma qiymat</text>
+  <line x1="395" y1="303" x2="445" y2="303" stroke="#475569" stroke-width="2" marker-end="url(#fl03sw)"/>
+
+  <!-- natija qutisi -->
+  <rect x="225" y="370" width="330" height="52" rx="10" fill="#eef2ff" stroke="#6366f1" stroke-width="2.5"/>
+  <text x="390" y="392" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e293b">final nom = switch(kun) { ... };</text>
+  <text x="390" y="412" text-anchor="middle" font-size="13" fill="#475569">butun ifoda BITTA qiymat qaytaradi — nom'ga saqlanadi</text>
+</svg>

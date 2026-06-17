@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 470">
+  <title>Parametrize: bitta test funksiyasi N ta kirish-natija jufti uchun N marta alohida ishlaydi</title>
+  <rect x="0" y="0" width="820" height="470" fill="#f8fafc"/>
+  <text x="410" y="40" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">parametrize: 1 test &#8594; N holat</text>
+  <text x="410" y="66" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">har qator alohida test (sikl emas!) &#8212; biri yiqilsa qolgani ishlaydi</text>
+
+  <!-- single test function -->
+  <rect x="60" y="110" width="220" height="120" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="170" y="140" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb">test_chegirma</text>
+  <text x="170" y="166" text-anchor="middle" font-family="Consolas, Segoe UI" font-size="13" fill="#1e293b">@parametrize</text>
+  <text x="170" y="188" text-anchor="middle" font-family="Consolas, Segoe UI" font-size="13" fill="#1e293b">(narx, foiz,</text>
+  <text x="170" y="208" text-anchor="middle" font-family="Consolas, Segoe UI" font-size="13" fill="#1e293b"> kutilgan)</text>
+
+  <!-- fan-out arrows -->
+  <line x1="280" y1="170" x2="380" y2="135" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="280" y1="170" x2="380" y2="205" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="280" y1="170" x2="380" y2="275" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="280" y1="170" x2="380" y2="345" stroke="#94a3b8" stroke-width="2"/>
+
+  <!-- cases -->
+  <g font-family="Consolas, Segoe UI" font-size="14">
+    <rect x="380" y="112" width="280" height="46" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+    <text x="396" y="140" fill="#1e293b">[100.0-10-90.0]</text>
+    <text x="640" y="140" text-anchor="end" fill="#16a34a" font-weight="bold">PASSED</text>
+
+    <rect x="380" y="182" width="280" height="46" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+    <text x="396" y="210" fill="#1e293b">[200.0-25-150.0]</text>
+    <text x="640" y="210" text-anchor="end" fill="#16a34a" font-weight="bold">PASSED</text>
+
+    <rect x="380" y="252" width="280" height="46" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+    <text x="396" y="280" fill="#1e293b">[100.0-100-0.0]</text>
+    <text x="640" y="280" text-anchor="end" fill="#16a34a" font-weight="bold">PASSED</text>
+
+    <rect x="380" y="322" width="280" height="46" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+    <text x="396" y="350" fill="#1e293b">[4-15]  (4*4=16)</text>
+    <text x="640" y="350" text-anchor="end" fill="#dc2626" font-weight="bold">FAILED</text>
+  </g>
+
+  <!-- ids hint -->
+  <text x="396" y="392" font-family="Consolas, Segoe UI" font-size="13" fill="#7c3aed">ids=["oddiy-10%", ...]  &#8594;  o'qiladigan nom</text>
+
+  <!-- summary -->
+  <rect x="60" y="410" width="700" height="44" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="410" y="438" text-anchor="middle" font-family="Consolas, Segoe UI" font-size="14" fill="#1e293b">3 passed, 1 failed  &#8212;  pytest aynan qaysi holat yiqilganini ko'rsatadi</text>
+</svg>

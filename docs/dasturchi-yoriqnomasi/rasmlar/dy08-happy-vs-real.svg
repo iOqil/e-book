@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 480" font-family="Segoe UI">
+  <title>Faqat baxtli yo'lni hisoblagan oqim va xato shoxlarini hisobga olgan oqim taqqoslanadi</title>
+  <rect x="0" y="0" width="880" height="480" fill="#f8fafc"/>
+
+  <text x="440" y="36" text-anchor="middle" font-size="22" font-weight="bold" fill="#1e293b">Baxtli yo'l vs real dunyo</text>
+  <text x="440" y="60" text-anchor="middle" font-size="14" fill="#64748b">Bir xil vazifa: foydalanuvchi profilini yuklash va ko'rsatish</text>
+
+  <!-- LEFT: only happy path -->
+  <rect x="34" y="84" width="390" height="364" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="229" y="114" text-anchor="middle" font-size="17" font-weight="bold" fill="#dc2626">Faqat baxtli yo'l</text>
+
+  <rect x="119" y="134" width="220" height="40" rx="8" fill="#eff6ff" stroke="#2563eb"/>
+  <text x="229" y="159" text-anchor="middle" font-size="14" fill="#1e293b">Profilni so'ra</text>
+
+  <line x1="229" y1="174" x2="229" y2="206" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="119" y="206" width="220" height="40" rx="8" fill="#eff6ff" stroke="#2563eb"/>
+  <text x="229" y="231" text-anchor="middle" font-size="14" fill="#1e293b">Ismni ekranga chiqar</text>
+
+  <line x1="229" y1="246" x2="229" y2="278" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="119" y="278" width="220" height="40" rx="8" fill="#f0fdf4" stroke="#16a34a"/>
+  <text x="229" y="303" text-anchor="middle" font-size="14" fill="#166534">Tayyor</text>
+
+  <rect x="64" y="346" width="330" height="86" rx="8" fill="#fef2f2"/>
+  <text x="229" y="372" text-anchor="middle" font-size="13" fill="#dc2626">Tarmoq uzilsa? Profil yo'q bo'lsa?</text>
+  <text x="229" y="392" text-anchor="middle" font-size="13" fill="#dc2626">Ism bo'sh bo'lsa? -- HISOBGA OLINMAGAN</text>
+  <text x="229" y="416" text-anchor="middle" font-size="13" fill="#991b1b" font-weight="bold">Real dunyoda kutilmaganda yiqiladi</text>
+
+  <!-- RIGHT: real with error branches -->
+  <rect x="456" y="84" width="390" height="364" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="651" y="114" text-anchor="middle" font-size="17" font-weight="bold" fill="#16a34a">Xato shoxlari hisobga olingan</text>
+
+  <rect x="541" y="134" width="220" height="38" rx="8" fill="#eff6ff" stroke="#2563eb"/>
+  <text x="651" y="158" text-anchor="middle" font-size="14" fill="#1e293b">Profilni so'ra</text>
+
+  <line x1="651" y1="172" x2="651" y2="196" stroke="#94a3b8" stroke-width="2"/>
+  <!-- decision: network ok? -->
+  <polygon points="651,196 711,224 651,252 591,224" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="651" y="229" text-anchor="middle" font-size="13" fill="#92400e">Tarmoq joyida?</text>
+  <text x="725" y="216" font-size="13" fill="#dc2626">yo'q</text>
+  <line x1="711" y1="224" x2="788" y2="224" stroke="#dc2626" stroke-width="2"/>
+  <rect x="788" y="206" width="58" height="36" rx="8" fill="#fef2f2" stroke="#dc2626"/>
+  <text x="817" y="223" text-anchor="middle" font-size="13" fill="#991b1b">Qayta</text>
+  <text x="817" y="237" text-anchor="middle" font-size="13" fill="#991b1b">urin</text>
+
+  <line x1="651" y1="252" x2="651" y2="276" stroke="#16a34a" stroke-width="2"/>
+  <text x="664" y="269" font-size="13" fill="#16a34a">ha</text>
+  <polygon points="651,276 711,304 651,332 591,304" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="651" y="309" text-anchor="middle" font-size="13" fill="#92400e">Profil bor?</text>
+  <text x="725" y="296" font-size="13" fill="#dc2626">yo'q</text>
+  <line x1="711" y1="304" x2="788" y2="304" stroke="#dc2626" stroke-width="2"/>
+  <rect x="788" y="286" width="58" height="36" rx="8" fill="#fff7ed" stroke="#f59e0b"/>
+  <text x="817" y="303" text-anchor="middle" font-size="13" fill="#92400e">Bo'sh</text>
+  <text x="817" y="317" text-anchor="middle" font-size="13" fill="#92400e">holat</text>
+
+  <line x1="651" y1="332" x2="651" y2="356" stroke="#16a34a" stroke-width="2"/>
+  <text x="664" y="349" font-size="13" fill="#16a34a">ha</text>
+  <rect x="541" y="356" width="220" height="38" rx="8" fill="#f0fdf4" stroke="#16a34a"/>
+  <text x="651" y="380" text-anchor="middle" font-size="14" fill="#166534">Ismni ko'rsat</text>
+
+  <text x="651" y="424" text-anchor="middle" font-size="13" fill="#166534" font-weight="bold">Har shoxda kutilgan, aniq xatti-harakat</text>
+</svg>

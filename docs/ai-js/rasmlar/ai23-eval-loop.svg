@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="800" height="480" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Eval sikli: eval to'plami (input, criteria) -> quvurni ishlat -> ball (strukturali tekshiruv + LLM-as-judge) -> pass rate -> promptni o'zgartir -> qayta ishlat -> solishtir. Promptlar uchun testlar, regressiyani ushlaydi</title>
+  <defs>
+    <marker id="ar23b" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#d97757"/>
+    </marker>
+    <marker id="ar23bg" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#6366f1"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="800" height="480" fill="#f8fafc"/>
+  <text x="400" y="32" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Eval sikli — "promptlar uchun testlar"</text>
+  <text x="400" y="56" font-size="14" fill="#64748b" text-anchor="middle">Aniq matnni assert qila olmaysiz — to'plam ustida ball qo'yib, pass rate o'lchaysiz</text>
+
+  <!-- 1 eval set -->
+  <rect x="40" y="92" width="200" height="92" rx="10" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="140" y="118" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">1. Eval to'plami</text>
+  <text x="140" y="142" font-size="13" fill="#475569" text-anchor="middle">[ { input, criteria } ]</text>
+  <text x="140" y="164" font-size="13" fill="#475569" text-anchor="middle">~5-50 ta holat</text>
+
+  <!-- arrow -->
+  <line x1="240" y1="138" x2="296" y2="138" stroke="#d97757" stroke-width="2.5" marker-end="url(#ar23b)"/>
+
+  <!-- 2 run pipeline -->
+  <rect x="300" y="92" width="200" height="92" rx="10" fill="#dbeafe" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="400" y="118" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">2. Quvurni ishlat</text>
+  <text x="400" y="142" font-size="13" fill="#475569" text-anchor="middle">promptingiz + Claude</text>
+  <text x="400" y="164" font-size="13" fill="#475569" text-anchor="middle">har input -&gt; output</text>
+
+  <!-- arrow -->
+  <line x1="500" y1="138" x2="556" y2="138" stroke="#d97757" stroke-width="2.5" marker-end="url(#ar23b)"/>
+
+  <!-- 3 score -->
+  <rect x="560" y="92" width="200" height="92" rx="10" fill="#ffffff" stroke="#475569" stroke-width="2"/>
+  <text x="660" y="116" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">3. Ball qo'y</text>
+  <text x="660" y="140" font-size="13" fill="#16a34a" text-anchor="middle">strukturali tekshiruv</text>
+  <text x="660" y="162" font-size="13" fill="#9333ea" text-anchor="middle">+ LLM-as-judge</text>
+
+  <!-- down arrow to pass rate -->
+  <line x1="660" y1="184" x2="660" y2="230" stroke="#d97757" stroke-width="2.5" marker-end="url(#ar23b)"/>
+
+  <!-- 4 pass rate -->
+  <rect x="540" y="234" width="220" height="88" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="650" y="260" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">4. Pass rate</text>
+  <text x="650" y="286" font-size="18" font-weight="bold" fill="#1e293b" text-anchor="middle">4 / 5 = 80%</text>
+  <text x="650" y="308" font-size="13" fill="#475569" text-anchor="middle">qaysi holat yiqildi?</text>
+
+  <!-- arrow to tweak -->
+  <line x1="540" y1="278" x2="464" y2="278" stroke="#6366f1" stroke-width="2.5" marker-end="url(#ar23bg)"/>
+
+  <!-- 5 tweak prompt -->
+  <rect x="240" y="234" width="220" height="88" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="350" y="260" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">5. Promptni o'zgartir</text>
+  <text x="350" y="284" font-size="13" fill="#475569" text-anchor="middle">(yoki model, 05-bob)</text>
+  <text x="350" y="306" font-size="13" fill="#475569" text-anchor="middle">gipotezani sina</text>
+
+  <!-- loop back arrow: tweak -> re-run pipeline (into bottom of box 2) -->
+  <path d="M240,256 L150,256 L150,208 L350,208 L350,186" fill="none" stroke="#6366f1" stroke-width="2.5" marker-end="url(#ar23bg)"/>
+  <text x="118" y="226" font-size="13" font-weight="bold" fill="#6366f1" text-anchor="middle">qayta</text>
+  <text x="118" y="244" font-size="13" font-weight="bold" fill="#6366f1" text-anchor="middle">ishlat</text>
+
+  <!-- compare footer -->
+  <rect x="40" y="356" width="720" height="48" rx="10" fill="#dbeafe" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="400" y="378" font-size="13.5" font-weight="bold" fill="#1e293b" text-anchor="middle">6. Solishtir: eski 80% -&gt; yangi 92%? Yaxshilandi. -&gt; 60%? Regressiya — orqaga qayt.</text>
+  <text x="400" y="397" font-size="13" fill="#475569" text-anchor="middle">Promptni har o'zgartirganda eval ishlating — jim regressiyani ushlaysiz</text>
+
+  <!-- prod note -->
+  <rect x="40" y="416" width="720" height="48" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="400" y="438" font-size="13.5" fill="#1e293b" text-anchor="middle">Ishlab chiqarishda: real trafikdan namuna ol, sifat "drift"ini kuzat,</text>
+  <text x="400" y="457" font-size="13" fill="#475569" text-anchor="middle">promptlarni A/B sina, foydalanuvchi 👍/👎 ni eval signali sifatida yig'</text>
+</svg>

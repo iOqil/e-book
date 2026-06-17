@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Sliding window va xulosalash strategiyalarini taqqoslash</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">Sliding window va xulosalash</text>
+
+  <!-- Full history (top, shared source) -->
+  <text x="380" y="68" text-anchor="middle" font-size="15" font-weight="600" fill="#475569">To'liq tarix (juda uzun)</text>
+  <g>
+    <rect x="200" y="78" width="50" height="24" rx="5" fill="#e2e8f0"/>
+    <rect x="256" y="78" width="50" height="24" rx="5" fill="#e2e8f0"/>
+    <rect x="312" y="78" width="50" height="24" rx="5" fill="#e2e8f0"/>
+    <rect x="368" y="78" width="50" height="24" rx="5" fill="#e2e8f0"/>
+    <rect x="424" y="78" width="50" height="24" rx="5" fill="#e0f2fe"/>
+    <rect x="480" y="78" width="50" height="24" rx="5" fill="#dcfce7"/>
+  </g>
+  <text x="225" y="95" text-anchor="middle" font-size="13" fill="#64748b">eski</text>
+  <text x="505" y="95" text-anchor="middle" font-size="13" fill="#166534">yangi</text>
+
+  <defs>
+    <marker id="ws" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#4f46e5"/>
+    </marker>
+  </defs>
+  <line x1="280" y1="106" x2="220" y2="160" stroke="#4f46e5" stroke-width="2.5" marker-end="url(#ws)"/>
+  <line x1="480" y1="106" x2="540" y2="160" stroke="#4f46e5" stroke-width="2.5" marker-end="url(#ws)"/>
+
+  <!-- Left: Sliding window -->
+  <rect x="30" y="170" width="330" height="210" rx="14" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+  <rect x="30" y="170" width="330" height="36" rx="14" fill="#e0f2fe"/>
+  <text x="195" y="194" text-anchor="middle" font-size="17" font-weight="700" fill="#0284c7">Sliding window</text>
+  <text x="50" y="230" font-size="14" fill="#475569">Oxirgi N xabarni saqla, eskini tashla.</text>
+
+  <rect x="50" y="244" width="290" height="22" rx="5" fill="#eef2ff"/>
+  <text x="58" y="260" font-size="13" fill="#4338ca">system (doim qoladi)</text>
+  <rect x="50" y="270" width="290" height="22" rx="5" fill="#e0f2fe"/>
+  <text x="58" y="286" font-size="13" fill="#0284c7">user N-1</text>
+  <rect x="50" y="296" width="290" height="22" rx="5" fill="#dcfce7"/>
+  <text x="58" y="312" font-size="13" fill="#166534">assistant N-1</text>
+  <rect x="50" y="322" width="290" height="22" rx="5" fill="#e0f2fe"/>
+  <text x="58" y="338" font-size="13" fill="#0284c7">user N (so'nggi)</text>
+  <text x="195" y="368" text-anchor="middle" font-size="13" fill="#dc2626">- eski tafsilot yo'qoladi, + sodda/tez</text>
+
+  <!-- Right: Summary -->
+  <rect x="400" y="170" width="330" height="210" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <rect x="400" y="170" width="330" height="36" rx="14" fill="#dcfce7"/>
+  <text x="565" y="194" text-anchor="middle" font-size="17" font-weight="700" fill="#166534">Xulosalash</text>
+  <text x="420" y="230" font-size="14" fill="#475569">Eskini LLM bilan qisqa xulosaga aylantir.</text>
+
+  <rect x="420" y="244" width="290" height="22" rx="5" fill="#eef2ff"/>
+  <text x="428" y="260" font-size="13" fill="#4338ca">system</text>
+  <rect x="420" y="270" width="290" height="22" rx="5" fill="#fef3c7"/>
+  <text x="428" y="286" font-size="13" fill="#b45309">[Xulosa: eski suhbat haqida...]</text>
+  <rect x="420" y="296" width="290" height="22" rx="5" fill="#dcfce7"/>
+  <text x="428" y="312" font-size="13" fill="#166534">assistant N-1</text>
+  <rect x="420" y="322" width="290" height="22" rx="5" fill="#e0f2fe"/>
+  <text x="428" y="338" font-size="13" fill="#0284c7">user N (so'nggi)</text>
+  <text x="565" y="368" text-anchor="middle" font-size="13" fill="#166534">+ kontekst saqlanadi, - qo'shimcha so'rov</text>
+</svg>

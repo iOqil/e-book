@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" width="760" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>CRUD to'rt amali: Create, Read, Update, Delete har biri qaysi Livewire metodi va atributi orqali ishlaydi va natijada nima sodir bo'ladi</title>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">CRUD — to'rt amal, to'rt metod</text>
+  <text x="380" y="57" text-anchor="middle" font-size="14" fill="#475569">Create · Read · Update · Delete — har biri o'z oqimi bilan</text>
+
+  <!-- CREATE -->
+  <rect x="28" y="82" width="346" height="166" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <rect x="28" y="82" width="346" height="34" rx="12" fill="#16a34a"/>
+  <rect x="28" y="100" width="346" height="16" fill="#16a34a"/>
+  <text x="48" y="105" font-size="16" font-weight="700" fill="#ffffff">C — Create (yaratish)</text>
+  <text x="48" y="142" font-size="13" fill="#475569">Tugma: wire:click="create" → modal ochiladi</text>
+  <text x="48" y="166" font-size="13" fill="#475569">Forma: wire:model="form.title" / "form.body"</text>
+  <text x="48" y="190" font-size="13" fill="#475569">Saqlash: $form->store() → Post::create()</text>
+  <text x="48" y="214" font-size="13" fill="#16a34a" font-weight="700">Natija: yangi yozuv, ro'yxatda paydo bo'ladi</text>
+  <text x="48" y="236" font-size="13" fill="#94a3b8">unset($this->posts) — ro'yxat yangilanadi</text>
+
+  <!-- READ -->
+  <rect x="386" y="82" width="346" height="166" rx="12" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <rect x="386" y="82" width="346" height="34" rx="12" fill="#4f46e5"/>
+  <rect x="386" y="100" width="346" height="16" fill="#4f46e5"/>
+  <text x="406" y="105" font-size="16" font-weight="700" fill="#ffffff">R — Read (o'qish)</text>
+  <text x="406" y="142" font-size="13" fill="#475569">Manba: #[Computed] posts() metodi</text>
+  <text x="406" y="166" font-size="13" fill="#475569">Ko'rsatish: @forelse ($this->posts ...)</text>
+  <text x="406" y="190" font-size="13" fill="#475569">Har qator: wire:key="post-{{ $id }}"</text>
+  <text x="406" y="214" font-size="13" fill="#4f46e5" font-weight="700">Natija: postlar ro'yxati ko'rinadi</text>
+  <text x="406" y="236" font-size="13" fill="#94a3b8">Qidiruv: wire:model.live.debounce="search"</text>
+
+  <!-- UPDATE -->
+  <rect x="28" y="262" width="346" height="166" rx="12" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="28" y="262" width="346" height="34" rx="12" fill="#f59e0b"/>
+  <rect x="28" y="280" width="346" height="16" fill="#f59e0b"/>
+  <text x="48" y="285" font-size="16" font-weight="700" fill="#ffffff">U — Update (tahrirlash)</text>
+  <text x="48" y="322" font-size="13" fill="#475569">Tugma: wire:click="edit({{ $post->id }})"</text>
+  <text x="48" y="346" font-size="13" fill="#475569">To'ldirish: $form->setPost($post) → modal</text>
+  <text x="48" y="370" font-size="13" fill="#475569">Saqlash: $form->update() → $post->update()</text>
+  <text x="48" y="394" font-size="13" fill="#f59e0b" font-weight="700">Natija: yozuv yangilanadi (bir xil forma)</text>
+  <text x="48" y="416" font-size="13" fill="#94a3b8">create va edit DRY — bitta forma</text>
+
+  <!-- DELETE -->
+  <rect x="386" y="262" width="346" height="166" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <rect x="386" y="262" width="346" height="34" rx="12" fill="#dc2626"/>
+  <rect x="386" y="280" width="346" height="16" fill="#dc2626"/>
+  <text x="406" y="285" font-size="16" font-weight="700" fill="#ffffff">D — Delete (o'chirish)</text>
+  <text x="406" y="322" font-size="13" fill="#475569">Tugma: wire:click="delete({{ $post->id }})"</text>
+  <text x="406" y="346" font-size="13" fill="#475569">Tasdiq: wire:confirm="Rostdan o'chirilsinmi?"</text>
+  <text x="406" y="370" font-size="13" fill="#475569">Metod: $post->delete()</text>
+  <text x="406" y="394" font-size="13" fill="#dc2626" font-weight="700">Natija: yozuv o'chadi, ro'yxatdan ketadi</text>
+  <text x="406" y="416" font-size="13" fill="#94a3b8">unset($this->posts) — ro'yxat yangilanadi</text>
+
+  <text x="380" y="456" text-anchor="middle" font-size="13" fill="#475569">To'rttasi ham bitta PostManager komponentida, sahifa qayta yuklanmasdan ishlaydi.</text>
+</svg>

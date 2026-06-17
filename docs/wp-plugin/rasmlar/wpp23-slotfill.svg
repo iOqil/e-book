@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440">
+  <title>SlotFill mexanizmi: WordPress muharrir UI da oldindan belgilangan Slot joylar bor, plugin Fill bilan ularni to'ldiradi va o'z UI sini muharrirga qo'shadi</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">SlotFill: muharrirni blokdan tashqari kengaytirish</text>
+
+  <!-- Slot side (WordPress) -->
+  <rect x="30" y="60" width="320" height="330" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="190" y="88" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#1e40af">WordPress muharrir = Slot lar</text>
+  <text x="190" y="110" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">UI da oldindan ochilgan "teshik" lar</text>
+
+  <rect x="55" y="128" width="270" height="48" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="68" y="148" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Yon panel maydoni (PluginSidebar)</text>
+  <text x="68" y="167" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">o'ng tomonda alohida panel</text>
+
+  <rect x="55" y="186" width="270" height="48" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="68" y="206" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Hujjat sozlamalari (PluginDocument-</text>
+  <text x="68" y="225" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">SettingPanel) — Post panelida</text>
+
+  <rect x="55" y="244" width="270" height="48" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="68" y="264" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Ko'proq menyu (PluginSidebar-</text>
+  <text x="68" y="283" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">MoreMenuItem) — uch nuqta menyusi</text>
+
+  <rect x="55" y="302" width="270" height="68" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="68" y="324" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Slot lar @wordpress/editor da</text>
+  <text x="68" y="344" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">tayyor turadi — siz ochmaysiz,</text>
+  <text x="68" y="362" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">faqat to'ldirasiz</text>
+
+  <!-- Fill side (plugin) -->
+  <rect x="430" y="60" width="300" height="330" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="580" y="88" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#16a34a">Sizning plugin = Fill</text>
+  <text x="580" y="110" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">registerPlugin bilan ro'yxatdan</text>
+
+  <rect x="455" y="128" width="250" height="92" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="468" y="150" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">registerPlugin(</text>
+  <text x="468" y="170" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">  'kitkat-sidebar',</text>
+  <text x="468" y="190" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">  { render: Komponent }</text>
+  <text x="468" y="210" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">)</text>
+
+  <rect x="455" y="230" width="250" height="140" rx="6" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="468" y="252" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">render returns:</text>
+  <text x="468" y="274" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#7c3aed">&lt;PluginSidebar&gt;</text>
+  <text x="468" y="296" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">  &lt;PanelBody&gt;</text>
+  <text x="468" y="318" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">    &lt;TextControl /&gt;</text>
+  <text x="468" y="340" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">  &lt;/PanelBody&gt;</text>
+  <text x="468" y="362" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#7c3aed">&lt;/PluginSidebar&gt;</text>
+
+  <!-- arrow -->
+  <line x1="350" y1="200" x2="428" y2="200" stroke="#475569" stroke-width="2.5"/>
+  <polygon points="350,200 362,194 362,206" fill="#475569"/>
+  <text x="389" y="190" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">to'ldiradi</text>
+</svg>

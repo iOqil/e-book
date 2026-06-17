@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420" font-family="Segoe UI, system-ui, sans-serif">
+  <title>RAG so'rov bosqichi: savol embed qilinadi, vektor bazada eng yaqin bo'laklar topiladi, ular kontekst sifatida promptga qo'shilib Claude javob beradi</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">2-bosqich: so'rov (har savolda)</text>
+  <text x="380" y="58" text-anchor="middle" font-size="14" fill="#475569">Savolga mos bo'laklarni topib, kontekst bilan modelga so'raymiz</text>
+
+  <!-- 1. Savol -->
+  <rect x="30" y="90" width="160" height="64" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="110" y="116" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">Savol</text>
+  <text x="110" y="138" text-anchor="middle" font-size="13" fill="#475569">"Qaytarish necha kun?"</text>
+
+  <line x1="192" y1="122" x2="228" y2="122" stroke="#94a3b8" stroke-width="2" marker-end="url(#a15s)"/>
+
+  <!-- 2. Embed -->
+  <rect x="232" y="90" width="150" height="64" rx="10" fill="#ede9fe" stroke="#4f46e5" stroke-width="2"/>
+  <text x="307" y="118" text-anchor="middle" font-size="14" font-weight="700" fill="#4f46e5">Embed (vektor)</text>
+  <text x="307" y="138" text-anchor="middle" font-size="13" fill="#475569" font-family="monospace">[0.1, -0.8, ...]</text>
+
+  <line x1="384" y1="122" x2="420" y2="122" stroke="#94a3b8" stroke-width="2" marker-end="url(#a15s)"/>
+
+  <!-- 3. Vektor baza qidiruv -->
+  <rect x="424" y="86" width="150" height="72" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <ellipse cx="499" cy="104" rx="50" ry="9" fill="#ecfdf5" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="499" y="128" text-anchor="middle" font-size="14" font-weight="700" fill="#16a34a">Vektor baza</text>
+  <text x="499" y="147" text-anchor="middle" font-size="13" fill="#475569">eng yaqin K ta</text>
+
+  <line x1="576" y1="122" x2="612" y2="122" stroke="#94a3b8" stroke-width="2" marker-end="url(#a15s)"/>
+
+  <!-- 4. Topilgan bo'laklar -->
+  <rect x="616" y="84" width="120" height="76" rx="10" fill="#ffffff" stroke="#c7d2fe" stroke-width="2"/>
+  <text x="676" y="106" text-anchor="middle" font-size="14" font-weight="700" fill="#4f46e5">Topilgan</text>
+  <text x="676" y="124" text-anchor="middle" font-size="14" font-weight="700" fill="#4f46e5">bo'laklar</text>
+  <text x="676" y="146" text-anchor="middle" font-size="13" fill="#475569">[1] [2] [3]</text>
+
+  <!-- arrow down to prompt -->
+  <line x1="676" y1="162" x2="676" y2="196" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="676" y1="196" x2="430" y2="196" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="430" y1="196" x2="430" y2="222" stroke="#94a3b8" stroke-width="2" marker-end="url(#a15s)"/>
+
+  <!-- 5. Prompt + kontekst -->
+  <rect x="240" y="226" width="380" height="86" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="430" y="252" text-anchor="middle" font-size="15" font-weight="700" fill="#4f46e5">Prompt = kontekst + savol</text>
+  <text x="430" y="276" text-anchor="middle" font-size="13" fill="#475569">"Quyidagi kontekstga tayanib javob ber.</text>
+  <text x="430" y="294" text-anchor="middle" font-size="13" fill="#475569">Bo'lmasa 'bilmayman' de. Manbani ko'rsat."</text>
+
+  <line x1="430" y1="314" x2="430" y2="340" stroke="#94a3b8" stroke-width="2" marker-end="url(#a15s)"/>
+
+  <!-- 6. Claude -->
+  <rect x="244" y="344" width="170" height="58" rx="10" fill="#ffffff" stroke="#d97757" stroke-width="2.5"/>
+  <text x="329" y="370" text-anchor="middle" font-size="15" font-weight="700" fill="#d97757">Claude (model)</text>
+  <text x="329" y="390" text-anchor="middle" font-size="13" fill="#475569">javob generatsiyasi</text>
+
+  <line x1="416" y1="373" x2="452" y2="373" stroke="#94a3b8" stroke-width="2" marker-end="url(#a15s)"/>
+
+  <!-- 7. Javob -->
+  <rect x="456" y="344" width="280" height="58" rx="10" fill="#ecfdf5" stroke="#16a34a" stroke-width="2"/>
+  <text x="596" y="368" text-anchor="middle" font-size="14" font-weight="700" fill="#16a34a">Aniq javob + manba</text>
+  <text x="596" y="388" text-anchor="middle" font-size="13" fill="#475569">"14 kun ichida [1]"</text>
+
+  <defs>
+    <marker id="a15s" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+</svg>

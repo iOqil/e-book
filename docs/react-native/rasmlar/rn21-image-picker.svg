@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420" font-family="Segoe UI, system-ui, sans-serif">
+  <title>expo-image-picker oqimi: galereya yoki kamera tanlash, launchAsync chaqirish, result.assets[0].uri olish va Image bilan ko'rsatish</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">expo-image-picker oqimi</text>
+
+  <!-- two sources -->
+  <rect x="50" y="70" width="290" height="78" rx="12" fill="#ffffff" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="195" y="100" text-anchor="middle" font-size="15" font-weight="700" fill="#0ea5e9">Galereya</text>
+  <text x="195" y="126" text-anchor="middle" font-size="13" fill="#475569">launchImageLibraryAsync()</text>
+
+  <rect x="420" y="70" width="290" height="78" rx="12" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="565" y="100" text-anchor="middle" font-size="15" font-weight="700" fill="#4f46e5">Kamera</text>
+  <text x="565" y="126" text-anchor="middle" font-size="13" fill="#475569">launchCameraAsync()</text>
+
+  <!-- arrows down to result -->
+  <line x1="195" y1="148" x2="320" y2="184" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="324,186 313,183 316,194" fill="#94a3b8"/>
+  <line x1="565" y1="148" x2="440" y2="184" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="436,186 447,183 444,194" fill="#94a3b8"/>
+
+  <!-- result object -->
+  <rect x="230" y="186" width="300" height="92" rx="12" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="380" y="214" text-anchor="middle" font-size="15" font-weight="700" fill="#b45309">result (natija)</text>
+  <text x="380" y="238" text-anchor="middle" font-size="13" fill="#475569">canceled: false  -&gt;  davom etamiz</text>
+  <text x="380" y="260" text-anchor="middle" font-size="13" fill="#1e293b">assets[0].uri = "file://.../rasm.jpg"</text>
+
+  <!-- arrow to image -->
+  <line x1="380" y1="278" x2="380" y2="308" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="380,314 374,304 386,304" fill="#94a3b8"/>
+
+  <!-- show with Image -->
+  <rect x="250" y="314" width="260" height="80" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="380" y="344" text-anchor="middle" font-size="14" font-weight="700" fill="#16a34a">Ekranda ko'rsatish</text>
+  <text x="380" y="368" text-anchor="middle" font-size="13" fill="#475569">&lt;Image source={{ uri }} /&gt;</text>
+</svg>

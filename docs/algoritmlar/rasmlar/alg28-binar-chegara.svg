@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 540">
+  <title>Binar qidiruvda lo, hi va mid ko'rsatkichlari har qadamda qanday harakatlanadi va izlanayotgan oraliq qanday torayib boradi</title>
+  <rect x="0" y="0" width="860" height="540" fill="#f8fafc"/>
+  <text x="430" y="36" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Binar qidiruv: lo, hi, mid ko'rsatkichlari</text>
+  <text x="430" y="60" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Indekslar 0..7, qidirilayotgan qiymat = 56 (oraliq [lo, hi] yopiq)</text>
+
+  <!-- index header -->
+  <g font-family="monospace" font-size="13" text-anchor="middle" fill="#64748b">
+    <text x="92" y="98">0</text>
+    <text x="172" y="98">1</text>
+    <text x="252" y="98">2</text>
+    <text x="332" y="98">3</text>
+    <text x="412" y="98">4</text>
+    <text x="492" y="98">5</text>
+    <text x="572" y="98">6</text>
+    <text x="652" y="98">7</text>
+  </g>
+
+  <!-- QADAM 1 -->
+  <text x="40" y="135" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#334155">Qadam 1: lo=0, hi=7, mid=3 → a[3]=19 &lt; 56 → lo=mid+1</text>
+  <g font-family="monospace" font-size="14" text-anchor="middle">
+    <rect x="60" y="148" width="64" height="40" rx="5" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/><text x="92" y="174" fill="#334155">3</text>
+    <rect x="140" y="148" width="64" height="40" rx="5" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/><text x="172" y="174" fill="#334155">8</text>
+    <rect x="220" y="148" width="64" height="40" rx="5" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/><text x="252" y="174" fill="#334155">15</text>
+    <rect x="300" y="148" width="64" height="40" rx="5" fill="#fef9c3" stroke="#f59e0b" stroke-width="2.5"/><text x="332" y="174" fill="#d97706" font-weight="bold">19</text>
+    <rect x="380" y="148" width="64" height="40" rx="5" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/><text x="412" y="174" fill="#334155">23</text>
+    <rect x="460" y="148" width="64" height="40" rx="5" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/><text x="492" y="174" fill="#334155">42</text>
+    <rect x="540" y="148" width="64" height="40" rx="5" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/><text x="572" y="174" fill="#334155">56</text>
+    <rect x="620" y="148" width="64" height="40" rx="5" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/><text x="652" y="174" fill="#334155">71</text>
+  </g>
+  <text x="92" y="206" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#16a34a">lo</text>
+  <text x="332" y="206" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#d97706">mid</text>
+  <text x="652" y="206" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#dc2626">hi</text>
+
+  <!-- QADAM 2 -->
+  <text x="40" y="252" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#334155">Qadam 2: lo=4, hi=7, mid=5 → a[5]=42 &lt; 56 → lo=mid+1</text>
+  <g font-family="monospace" font-size="14" text-anchor="middle">
+    <rect x="60" y="265" width="64" height="40" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"/><text x="92" y="291" fill="#94a3b8">3</text>
+    <rect x="140" y="265" width="64" height="40" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"/><text x="172" y="291" fill="#94a3b8">8</text>
+    <rect x="220" y="265" width="64" height="40" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"/><text x="252" y="291" fill="#94a3b8">15</text>
+    <rect x="300" y="265" width="64" height="40" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"/><text x="332" y="291" fill="#94a3b8">19</text>
+    <rect x="380" y="265" width="64" height="40" rx="5" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/><text x="412" y="291" fill="#334155">23</text>
+    <rect x="460" y="265" width="64" height="40" rx="5" fill="#fef9c3" stroke="#f59e0b" stroke-width="2.5"/><text x="492" y="291" fill="#d97706" font-weight="bold">42</text>
+    <rect x="540" y="265" width="64" height="40" rx="5" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/><text x="572" y="291" fill="#334155">56</text>
+    <rect x="620" y="265" width="64" height="40" rx="5" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/><text x="652" y="291" fill="#334155">71</text>
+  </g>
+  <text x="412" y="323" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#16a34a">lo</text>
+  <text x="492" y="323" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#d97706">mid</text>
+  <text x="652" y="323" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#dc2626">hi</text>
+
+  <!-- QADAM 3 -->
+  <text x="40" y="369" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#334155">Qadam 3: lo=6, hi=7, mid=6 → a[6]=56 = 56 → topildi! (indeks 6)</text>
+  <g font-family="monospace" font-size="14" text-anchor="middle">
+    <rect x="60" y="382" width="64" height="40" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"/><text x="92" y="408" fill="#94a3b8">3</text>
+    <rect x="140" y="382" width="64" height="40" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"/><text x="172" y="408" fill="#94a3b8">8</text>
+    <rect x="220" y="382" width="64" height="40" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"/><text x="252" y="408" fill="#94a3b8">15</text>
+    <rect x="300" y="382" width="64" height="40" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"/><text x="332" y="408" fill="#94a3b8">19</text>
+    <rect x="380" y="382" width="64" height="40" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"/><text x="412" y="408" fill="#94a3b8">23</text>
+    <rect x="460" y="382" width="64" height="40" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"/><text x="492" y="408" fill="#94a3b8">42</text>
+    <rect x="540" y="382" width="64" height="40" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/><text x="572" y="408" fill="#16a34a" font-weight="bold">56</text>
+    <rect x="620" y="382" width="64" height="40" rx="5" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/><text x="652" y="408" fill="#334155">71</text>
+  </g>
+  <text x="572" y="440" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#16a34a">lo=mid ✓</text>
+  <text x="652" y="440" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#dc2626">hi</text>
+
+  <!-- footer invariant -->
+  <rect x="60" y="470" width="740" height="50" rx="8" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="430" y="491" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#7c3aed">Sikl invarianti: agar qiymat massivda bo'lsa, u doim [lo, hi] oralig'ida bo'ladi.</text>
+  <text x="430" y="511" text-anchor="middle" font-family="monospace" font-size="14" fill="#334155">Oraliq uzunligi: 8 → 4 → 2 → 1   (har qadamda yarmiga)</text>
+</svg>

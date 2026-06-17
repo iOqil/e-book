@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" width="760" height="470">
+  <title>Defense-in-depth: ishonchsiz so'rov to'rt himoya qatlamidan o'tadi - kirishni sanitize, harakatni capability va nonce, SQL prepare, chiqishni escape; bitta qatlam tushib qolsa zaiflik ochiladi</title>
+
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+
+  <text x="380" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Defense-in-depth: to'rt mustaqil himoya qatlami</text>
+
+  <!-- ishonchsiz so'rov -->
+  <rect x="280" y="56" width="200" height="50" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="380" y="78" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b91c1c">Ishonchsiz so'rov</text>
+  <text x="380" y="97" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">$_POST / $_GET / REST / fayl</text>
+
+  <line x1="380" y1="106" x2="380" y2="128" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#a29q)"/>
+
+  <!-- qatlam 1: INPUT sanitize -->
+  <rect x="120" y="132" width="520" height="56" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="146" y="158" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e40af">1. KIRISH qatlami - sanitize</text>
+  <text x="146" y="178" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">wp_unslash + sanitize_text_field / absint / sanitize_key / wp_kses</text>
+
+  <line x1="380" y1="188" x2="380" y2="208" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#a29q)"/>
+
+  <!-- qatlam 2: PROCESS auth -->
+  <rect x="120" y="212" width="520" height="56" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="146" y="238" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b45309">2. JARAYON qatlami - intent + ruxsat</text>
+  <text x="146" y="258" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">nonce (CSRF) + current_user_can($cap, $id) (capability, IDOR)</text>
+
+  <line x1="380" y1="268" x2="380" y2="288" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#a29q)"/>
+
+  <!-- qatlam 3: DB -->
+  <rect x="120" y="292" width="520" height="56" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="146" y="318" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#6d28d9">3. BAZA qatlami - parametrlash</text>
+  <text x="146" y="338" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">$wpdb->prepare (%s %d %i) + esc_like (SQLi himoyasi)</text>
+
+  <line x1="380" y1="348" x2="380" y2="368" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#a29q)"/>
+
+  <!-- qatlam 4: OUTPUT escape -->
+  <rect x="120" y="372" width="520" height="56" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="146" y="398" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#15803d">4. CHIQISH qatlami - kontekstli escape</text>
+  <text x="146" y="418" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">esc_html / esc_attr / esc_url / esc_js / wp_kses_post (XSS himoyasi)</text>
+
+  <!-- yon izoh -->
+  <text x="380" y="452" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-style="italic" fill="#475569">Bitta qatlam tushib qolsa - shu turdagi zaiflik (XSS, CSRF, SQLi, IDOR) ochiladi</text>
+
+  <defs>
+    <marker id="a29q" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/></marker>
+  </defs>
+</svg>

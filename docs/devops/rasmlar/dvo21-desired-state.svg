@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400">
+  <title>Desired state va reconciliation halqasi: siz 3 nusxa xohlaysiz, bitta pod o'lganda actual 2 ga tushadi, controller farqni sezadi va yangi pod yaratib actual'ni yana 3 ga qaytaradi degan diagramma</title>
+  <rect x="0" y="0" width="760" height="400" fill="#f8fafc"/>
+  <defs>
+    <marker id="a21dr" markerWidth="11" markerHeight="11" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="700" fill="#1e293b">Desired state va reconciliation halqasi</text>
+
+  <!-- Desired -->
+  <g font-family="Segoe UI, system-ui, sans-serif">
+    <rect x="30" y="66" width="200" height="120" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="130" y="92" text-anchor="middle" font-size="15" font-weight="700" fill="#1e40af">Desired (xohlangan)</text>
+    <text x="130" y="113" text-anchor="middle" font-size="14" fill="#475569">replicas: 3</text>
+    <rect x="52" y="128" width="34" height="40" rx="5" fill="#16a34a"/>
+    <rect x="113" y="128" width="34" height="40" rx="5" fill="#16a34a"/>
+    <rect x="174" y="128" width="34" height="40" rx="5" fill="#16a34a"/>
+    <text x="130" y="200" text-anchor="middle" font-size="13" fill="#475569">"men 3 nusxa xohlayman"</text>
+  </g>
+
+  <!-- Actual -->
+  <g font-family="Segoe UI, system-ui, sans-serif">
+    <rect x="530" y="66" width="200" height="120" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+    <text x="630" y="92" text-anchor="middle" font-size="15" font-weight="700" fill="#dc2626">Actual (haqiqiy)</text>
+    <text x="630" y="113" text-anchor="middle" font-size="14" fill="#475569">running: 2</text>
+    <rect x="552" y="128" width="34" height="40" rx="5" fill="#16a34a"/>
+    <rect x="613" y="128" width="34" height="40" rx="5" fill="#16a34a"/>
+    <rect x="674" y="128" width="34" height="40" rx="5" fill="none" stroke="#dc2626" stroke-width="2" stroke-dasharray="4 3"/>
+    <line x1="678" y1="132" x2="704" y2="164" stroke="#dc2626" stroke-width="2"/>
+    <line x1="704" y1="132" x2="678" y2="164" stroke="#dc2626" stroke-width="2"/>
+    <text x="630" y="200" text-anchor="middle" font-size="13" fill="#dc2626">bitta pod o'ldi</text>
+  </g>
+
+  <!-- Controller -->
+  <g font-family="Segoe UI, system-ui, sans-serif">
+    <rect x="270" y="86" width="220" height="80" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+    <text x="380" y="116" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">controller</text>
+    <text x="380" y="138" text-anchor="middle" font-size="13" fill="#475569">desired vs actual ni</text>
+    <text x="380" y="155" text-anchor="middle" font-size="13" fill="#475569">doimo solishtiradi</text>
+  </g>
+
+  <!-- arrows: actual -> controller (observe), controller -> actual (act) -->
+  <line x1="530" y1="118" x2="492" y2="118" stroke="#2563eb" stroke-width="2.2" marker-end="url(#a21dr)"/>
+  <text x="511" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e40af">kuzat</text>
+  <line x1="270" y1="118" x2="232" y2="118" stroke="#2563eb" stroke-width="2.2" marker-end="url(#a21dr)"/>
+
+  <!-- reconcile loop bottom -->
+  <g font-family="Segoe UI, system-ui, sans-serif">
+    <rect x="120" y="232" width="520" height="76" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+    <text x="380" y="260" text-anchor="middle" font-size="15" font-weight="700" fill="#16a34a">Reconciliation: farq bo'lsa -&gt; tuzat</text>
+    <text x="380" y="285" text-anchor="middle" font-size="13.5" fill="#1e293b">controller yangi pod yaratadi -&gt; actual yana 3 -&gt; desired = actual</text>
+  </g>
+
+  <!-- loop arrows -->
+  <line x1="380" y1="166" x2="380" y2="228" stroke="#16a34a" stroke-width="2.2" marker-end="url(#a21dr)"/>
+  <text x="380" y="350" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">Bu halqa to'xtamaydi: K8s holatni doimo xohlangan holatga intiltiradi.</text>
+</svg>

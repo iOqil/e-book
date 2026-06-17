@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" width="760" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>O'rnatish oqimi: PHP va Composer dan birinchi so'rovgacha to'rt qadam</title>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Muhitni tayyorlash — 4 qadam</text>
+  <text x="380" y="60" text-anchor="middle" font-size="14" fill="#475569">Tekshirishdan birinchi javobgacha</text>
+
+  <!-- Qadam 1 -->
+  <rect x="40" y="95" width="320" height="115" rx="12" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <circle cx="72" cy="127" r="17" fill="#6366f1"/>
+  <text x="72" y="133" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">1</text>
+  <text x="102" y="125" font-size="16" font-weight="700" fill="#1e293b">Talablarni tekshir</text>
+  <text x="102" y="150" font-size="13" fill="#475569">PHP 8.1+ (8.4 tavsiya)</text>
+  <text x="102" y="170" font-size="13" fill="#475569">va Composer 2.x</text>
+  <text x="102" y="192" font-size="13" fill="#7c3aed">php -v · composer --version</text>
+
+  <!-- Qadam 2 -->
+  <rect x="400" y="95" width="320" height="115" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="2.5"/>
+  <circle cx="432" cy="127" r="17" fill="#7c3aed"/>
+  <text x="432" y="133" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">2</text>
+  <text x="462" y="125" font-size="16" font-weight="700" fill="#7c3aed">SDK + Guzzle o'rnat</text>
+  <text x="462" y="150" font-size="13" fill="#7c3aed">composer require</text>
+  <text x="462" y="170" font-size="13" fill="#475569">anthropic-ai/sdk</text>
+  <text x="462" y="190" font-size="13" font-weight="700" fill="#dc2626">guzzlehttp/guzzle (SHART)</text>
+
+  <!-- Qadam 3 -->
+  <rect x="40" y="255" width="320" height="115" rx="12" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <circle cx="72" cy="287" r="17" fill="#f59e0b"/>
+  <text x="72" y="293" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">3</text>
+  <text x="102" y="285" font-size="16" font-weight="700" fill="#1e293b">API kalitni saqla</text>
+  <text x="102" y="310" font-size="13" fill="#475569">.env faylga yoz</text>
+  <text x="102" y="330" font-size="13" fill="#475569">.gitignore ga .env qo'sh</text>
+  <text x="102" y="352" font-size="13" font-weight="700" fill="#dc2626">kodga YOZMA!</text>
+
+  <!-- Qadam 4 -->
+  <rect x="400" y="255" width="320" height="115" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <circle cx="432" cy="287" r="17" fill="#16a34a"/>
+  <text x="432" y="293" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">4</text>
+  <text x="462" y="285" font-size="16" font-weight="700" fill="#16a34a">Birinchi so'rov</text>
+  <text x="462" y="310" font-size="13" fill="#475569">new Client(apiKey: ...)</text>
+  <text x="462" y="330" font-size="13" fill="#475569">messages-&gt;create(...)</text>
+  <text x="462" y="352" font-size="13" fill="#475569">javob ekranda!</text>
+
+  <!-- arrows -->
+  <line x1="360" y1="152" x2="397" y2="152" stroke="#7c3aed" stroke-width="2.5"/>
+  <polygon points="397,152 387,147 387,157" fill="#7c3aed"/>
+
+  <line x1="560" y1="210" x2="560" y2="252" stroke="#7c3aed" stroke-width="2.5"/>
+  <polygon points="560,252 555,242 565,242" fill="#7c3aed"/>
+
+  <line x1="397" y1="312" x2="362" y2="312" stroke="#7c3aed" stroke-width="2.5"/>
+  <polygon points="362,312 372,307 372,317" fill="#7c3aed"/>
+
+  <!-- footer note -->
+  <rect x="40" y="400" width="680" height="50" rx="10" fill="#ede9fe" stroke="#ddd6fe" stroke-width="1.5"/>
+  <text x="60" y="421" font-size="13" font-weight="700" fill="#1e293b">Eslatma:</text>
+  <text x="60" y="440" font-size="13" fill="#475569">Guzzle bo'lmasa — "Could not find resource using any discovery strategy" xatosi chiqadi.</text>
+</svg>

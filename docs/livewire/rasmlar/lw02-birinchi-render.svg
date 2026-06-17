@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Birinchi render so'rov yo'li: brauzerdan komponent va layout orqali HTMLgacha</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Birinchi render so'rov yo'li</text>
+  <text x="380" y="60" text-anchor="middle" font-size="14" fill="#475569">/counter manziliga kirilganda sahifa qanday yig'iladi</text>
+
+  <!-- 1. Browser -->
+  <rect x="40" y="92" width="180" height="74" rx="12" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="130" y="122" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">1. Brauzer</text>
+  <text x="130" y="145" text-anchor="middle" font-size="13" fill="#475569">GET /counter</text>
+
+  <!-- arrow 1->2 -->
+  <line x1="220" y1="129" x2="290" y2="129" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="296,129 288,124 288,134" fill="#94a3b8"/>
+
+  <!-- 2. Route -->
+  <rect x="296" y="92" width="180" height="74" rx="12" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="386" y="118" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">2. Route</text>
+  <text x="386" y="139" text-anchor="middle" font-size="13" fill="#475569">Route::livewire(</text>
+  <text x="386" y="156" text-anchor="middle" font-size="13" fill="#475569">'/counter','counter')</text>
+
+  <!-- arrow 2->3 -->
+  <line x1="476" y1="129" x2="546" y2="129" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="552,129 544,124 544,134" fill="#94a3b8"/>
+
+  <!-- 3. Component -->
+  <rect x="552" y="92" width="180" height="74" rx="12" fill="#fff7fb" stroke="#fb70a9" stroke-width="2"/>
+  <text x="642" y="118" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">3. Komponent</text>
+  <text x="642" y="139" text-anchor="middle" font-size="13" fill="#475569">&#9889;counter (SFC)</text>
+  <text x="642" y="156" text-anchor="middle" font-size="13" fill="#475569">&lt;div&gt; render bo'ladi</text>
+
+  <!-- arrow 3->4 (down) -->
+  <line x1="642" y1="166" x2="642" y2="210" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="642,216 637,208 647,208" fill="#94a3b8"/>
+
+  <!-- 4. Layout -->
+  <rect x="492" y="216" width="240" height="80" rx="12" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="612" y="244" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">4. Layout (app.blade.php)</text>
+  <text x="612" y="266" text-anchor="middle" font-size="13" fill="#475569">komponent {{ $slot }} ga</text>
+  <text x="612" y="284" text-anchor="middle" font-size="13" fill="#475569">"quyiladi"</text>
+
+  <!-- arrow 4->5 (left) -->
+  <line x1="492" y1="256" x2="320" y2="256" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="314,256 322,251 322,261" fill="#94a3b8"/>
+
+  <!-- 5. HTML -->
+  <rect x="134" y="216" width="180" height="80" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="224" y="244" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">5. To'liq HTML</text>
+  <text x="224" y="266" text-anchor="middle" font-size="13" fill="#475569">@livewireScripts</text>
+  <text x="224" y="284" text-anchor="middle" font-size="13" fill="#475569">bilan birga</text>
+
+  <!-- arrow 5->6 (down) -->
+  <line x1="224" y1="296" x2="224" y2="338" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="224,344 219,336 229,336" fill="#94a3b8"/>
+
+  <!-- 6. Browser final -->
+  <rect x="134" y="344" width="492" height="60" rx="12" fill="#ecfdf5" stroke="#16a34a" stroke-width="2"/>
+  <text x="380" y="370" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">6. Brauzer sahifani ko'rsatadi (HTTP 200)</text>
+  <text x="380" y="392" text-anchor="middle" font-size="13" fill="#475569">Livewire JS ulanadi — sahifa endi "jonli" va reaktivlikka tayyor</text>
+</svg>

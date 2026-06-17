@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 450" width="760" height="450">
+  <title>Block variation oldindan to'ldirilgan atributlar bilan bitta blokning varianti, block style esa blokka qo'shiladigan CSS sinf tanlovi; ikkalasining farqi ko'rsatilgan</title>
+  <rect x="0" y="0" width="760" height="450" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Variation va Style: nimasi farq qiladi?</text>
+
+  <!-- bitta blok -->
+  <rect x="290" y="56" width="180" height="50" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="380" y="80" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">oqil/kitob-kartasi</text>
+  <text x="380" y="98" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">bitta blok turi</text>
+
+  <line x1="300" y1="106" x2="200" y2="140" stroke="#475569" stroke-width="2"/>
+  <polygon points="200,140 211,138 205,130" fill="#475569"/>
+  <line x1="460" y1="106" x2="560" y2="140" stroke="#475569" stroke-width="2"/>
+  <polygon points="560,140 555,130 549,138" fill="#475569"/>
+
+  <!-- VARIATION panel -->
+  <rect x="30" y="146" width="330" height="262" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="195" y="174" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#1e40af">VARIATION</text>
+  <text x="195" y="195" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">oldindan to'ldirilgan atributlar</text>
+
+  <rect x="50" y="210" width="290" height="86" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="64" y="232" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">registerBlockVariation(</text>
+  <text x="64" y="252" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">  'oqil/kitob-kartasi', {</text>
+  <text x="64" y="272" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">    name: 'ilmiy-kitob',</text>
+  <text x="64" y="290" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">    attributes: {muallif:'…'} })</text>
+
+  <text x="64" y="324" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Inserter'da AYRIM blok bo'lib</text>
+  <text x="64" y="342" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">ko'rinadi, qiymatlar bilan keladi.</text>
+  <text x="64" y="368" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">isActive: ['muallif']</text>
+  <text x="64" y="388" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">qaysi variant faolligini aniqlaydi</text>
+
+  <!-- STYLE panel -->
+  <rect x="400" y="146" width="330" height="262" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="565" y="174" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#16a34a">STYLE</text>
+  <text x="565" y="195" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">CSS sinf tanlovi (ko'rinish)</text>
+
+  <rect x="420" y="210" width="290" height="86" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="434" y="232" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">registerBlockStyle(</text>
+  <text x="434" y="252" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">  'oqil/kitob-kartasi', {</text>
+  <text x="434" y="272" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">    name: 'doirali',</text>
+  <text x="434" y="290" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">    label: 'Doirali' })</text>
+
+  <text x="434" y="324" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Yon panelda STIL tanlovi chiqadi.</text>
+  <text x="434" y="342" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Tanlanganda blok class'iga</text>
+  <text x="434" y="368" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">.is-style-doirali</text>
+  <text x="434" y="388" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">qo'shiladi; atributlar O'ZGARMAYDI</text>
+
+  <!-- bottom note -->
+  <rect x="110" y="418" width="540" height="26" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="380" y="436" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Variation = boshlang'ich QIYMAT  |  Style = qo'shimcha CSS SINF</text>
+</svg>

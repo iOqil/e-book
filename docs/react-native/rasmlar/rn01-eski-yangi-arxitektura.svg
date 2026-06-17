@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Eski arxitektura (bridge: sekin, asinxron) va New Architecture (JSI: tez, sinxron) taqqoslash</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">Eski "bridge" va New Architecture</text>
+
+  <!-- OLD architecture -->
+  <rect x="30" y="60" width="340" height="350" rx="14" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <rect x="30" y="60" width="340" height="44" rx="14" fill="#fee2e2"/>
+  <text x="200" y="89" text-anchor="middle" font-size="17" font-weight="700" fill="#dc2626">Eski: Bridge (RN 0.75 gacha)</text>
+
+  <rect x="70" y="126" width="260" height="50" rx="10" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="200" y="156" text-anchor="middle" font-size="14" font-weight="600" fill="#475569">JS qatlami</text>
+
+  <!-- bridge zone -->
+  <line x1="200" y1="176" x2="200" y2="200" stroke="#dc2626" stroke-width="2"/>
+  <polygon points="200,206 194,194 206,194" fill="#dc2626"/>
+  <rect x="70" y="208" width="260" height="58" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="200" y="232" text-anchor="middle" font-size="14" font-weight="700" fill="#dc2626">BRIDGE</text>
+  <text x="200" y="253" text-anchor="middle" font-size="13" fill="#475569">xabarlar JSON'ga aylanadi</text>
+  <line x1="200" y1="266" x2="200" y2="290" stroke="#dc2626" stroke-width="2"/>
+  <polygon points="200,296 194,284 206,284" fill="#dc2626"/>
+
+  <rect x="70" y="298" width="260" height="50" rx="10" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="200" y="328" text-anchor="middle" font-size="14" font-weight="600" fill="#475569">Native qatlami</text>
+
+  <text x="200" y="378" text-anchor="middle" font-size="13" fill="#dc2626" font-weight="600">Asinxron, sekin —</text>
+  <text x="200" y="396" text-anchor="middle" font-size="13" fill="#dc2626" font-weight="600">tirbandlik bo'lishi mumkin</text>
+
+  <!-- VS -->
+  <text x="390" y="240" text-anchor="middle" font-size="18" font-weight="700" fill="#94a3b8">vs</text>
+
+  <!-- NEW architecture -->
+  <rect x="410" y="60" width="340" height="350" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="3"/>
+  <rect x="410" y="60" width="340" height="44" rx="14" fill="#dcfce7"/>
+  <text x="580" y="89" text-anchor="middle" font-size="17" font-weight="700" fill="#15803d">New Architecture (0.76+)</text>
+
+  <rect x="450" y="126" width="260" height="50" rx="10" fill="#f1f5f9" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="580" y="156" text-anchor="middle" font-size="14" font-weight="600" fill="#475569">JS qatlami (Hermes)</text>
+
+  <!-- JSI direct -->
+  <line x1="580" y1="176" x2="580" y2="208" stroke="#16a34a" stroke-width="4"/>
+  <polygon points="580,216 571,202 589,202" fill="#16a34a"/>
+  <rect x="450" y="186" width="260" height="0"/>
+  <rect x="618" y="180" width="120" height="24" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="678" y="197" text-anchor="middle" font-size="13" font-weight="700" fill="#15803d">JSI to'g'ridan</text>
+
+  <rect x="450" y="222" width="260" height="50" rx="10" fill="#f1f5f9" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="580" y="252" text-anchor="middle" font-size="14" font-weight="600" fill="#475569">Native (Fabric, TurboModules)</text>
+
+  <text x="580" y="306" text-anchor="middle" font-size="13" fill="#15803d" font-weight="600">JSON tarjima yo'q —</text>
+  <text x="580" y="326" text-anchor="middle" font-size="13" fill="#15803d" font-weight="600">to'g'ridan-to'g'ri chaqiruv</text>
+  <text x="580" y="350" text-anchor="middle" font-size="14" fill="#15803d" font-weight="700">Sinxron, tez, silliq</text>
+  <text x="580" y="386" text-anchor="middle" font-size="13" fill="#94a3b8">2026: standart, default yoniq</text>
+</svg>

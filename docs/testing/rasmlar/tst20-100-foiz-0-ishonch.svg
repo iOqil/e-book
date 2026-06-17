@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 480">
+  <title>100% qamrov lekin 0 ishonch: assert'siz test kodni to'liq bajaradi va qamrovni 100% qiladi, ammo hech narsani tekshirmaydi, shuning uchun xatoni topa olmaydi</title>
+  <rect x="0" y="0" width="820" height="480" fill="#f8fafc"/>
+  <text x="410" y="38" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">100% qamrov, 0 ishonch</text>
+  <text x="410" y="64" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Assert'siz test: kodni "qoplaydi", lekin hech narsani tekshirmaydi</text>
+
+  <!-- Left: the assertionless test -->
+  <rect x="50" y="100" width="340" height="150" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="220" y="128" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">Assert'siz "test"</text>
+  <text x="70" y="160" font-family="Segoe UI" font-size="14" fill="#1e293b">def test_baho_qoplaydi():</text>
+  <text x="90" y="186" font-family="Segoe UI" font-size="14" fill="#dc2626">xabar(90)</text>
+  <text x="90" y="212" font-family="Segoe UI" font-size="14" fill="#dc2626">xabar(40)</text>
+  <text x="220" y="238" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">assert YO'Q — hech narsa tekshirilmaydi</text>
+
+  <!-- Arrow -->
+  <line x1="392" y1="175" x2="448" y2="175" stroke="#64748b" stroke-width="2"/>
+  <polygon points="460,175 444,168 444,182" fill="#64748b"/>
+
+  <!-- Right: coverage shows 100% -->
+  <rect x="470" y="100" width="300" height="150" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="620" y="132" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#166534">Coverage hisoboti</text>
+  <text x="620" y="186" text-anchor="middle" font-family="Segoe UI" font-size="40" font-weight="bold" fill="#16a34a">100%</text>
+  <text x="620" y="220" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#166534">qator ham, shox ham</text>
+  <text x="620" y="240" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#166534">"Mukammal!" deydi raqam</text>
+
+  <!-- Bottom: reality bug slips through -->
+  <rect x="160" y="300" width="500" height="130" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="410" y="332" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#991b1b">Lekin xato bemalol o'tib ketadi</text>
+  <text x="410" y="362" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#991b1b">Agar xabar() noto'g'ri natija qaytarsa ham — test YASHIL bo'ladi</text>
+  <text x="410" y="386" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#991b1b">Qamrov "bajarildi" ni o'lchaydi, "to'g'ri tekshirildi" ni EMAS</text>
+  <text x="410" y="412" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Foiz baland — ishonch nol</text>
+</svg>

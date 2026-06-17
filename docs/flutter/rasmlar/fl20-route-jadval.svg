@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 520" width="780" height="520" font-family="Segoe UI, system-ui, sans-serif">
+  <title>go_router yo'l jadvali: GoRouter ildizidan GoRoute'lar tarmoqlanadi — '/' Home'ga, '/user/:id' UserPage'ga, '/settings' nested '/settings/profile' bilan — bu ilovaning xaritasi</title>
+  <rect x="0" y="0" width="780" height="520" fill="#f8fafc"/>
+  <text x="390" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Yo'l jadvali — ilovangizning xaritasi</text>
+  <text x="390" y="58" text-anchor="middle" font-size="14" fill="#475569">Har bir URL yo'li (path) qaysi ekranga (builder) borishini bir joyda e'lon qilasiz</text>
+
+  <!-- Connector lines (under boxes) -->
+  <line x1="390" y1="118" x2="390" y2="150" stroke="#94a3b8" stroke-width="2.5"/>
+  <!-- GoRouter splits to three routes -->
+  <line x1="390" y1="150" x2="150" y2="190" stroke="#94a3b8" stroke-width="2.5"/>
+  <line x1="390" y1="150" x2="390" y2="190" stroke="#94a3b8" stroke-width="2.5"/>
+  <line x1="390" y1="150" x2="630" y2="190" stroke="#94a3b8" stroke-width="2.5"/>
+  <!-- route -> screen -->
+  <line x1="150" y1="244" x2="150" y2="284" stroke="#94a3b8" stroke-width="2.5"/>
+  <line x1="390" y1="244" x2="390" y2="284" stroke="#94a3b8" stroke-width="2.5"/>
+  <line x1="630" y1="244" x2="630" y2="284" stroke="#94a3b8" stroke-width="2.5"/>
+  <!-- settings nested child -->
+  <line x1="630" y1="338" x2="630" y2="378" stroke="#94a3b8" stroke-width="2.5"/>
+
+  <!-- GoRouter root -->
+  <rect x="280" y="84" width="220" height="44" rx="12" fill="#027dfd"/>
+  <text x="390" y="112" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">GoRouter(routes: [ ... ])</text>
+
+  <!-- Route 1: / -->
+  <rect x="50" y="190" width="200" height="54" rx="12" fill="#ffffff" stroke="#6366f1" stroke-width="2.5"/>
+  <text x="150" y="214" text-anchor="middle" font-size="15" font-weight="700" fill="#6366f1">GoRoute(path: '/')</text>
+  <text x="150" y="234" text-anchor="middle" font-size="13" fill="#64748b">bosh sahifa yo'li</text>
+
+  <rect x="60" y="284" width="180" height="46" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="150" y="306" text-anchor="middle" font-size="14" font-weight="700" fill="#16a34a">HomePage</text>
+  <text x="150" y="323" text-anchor="middle" font-size="13" fill="#64748b">ekran (builder)</text>
+
+  <!-- Route 2: /user/:id -->
+  <rect x="290" y="190" width="200" height="54" rx="12" fill="#ffffff" stroke="#6366f1" stroke-width="2.5"/>
+  <text x="390" y="214" text-anchor="middle" font-size="15" font-weight="700" fill="#6366f1">GoRoute('/user/:id')</text>
+  <text x="390" y="234" text-anchor="middle" font-size="13" fill="#f59e0b">:id — yo'l parametri</text>
+
+  <rect x="300" y="284" width="180" height="46" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="390" y="306" text-anchor="middle" font-size="14" font-weight="700" fill="#16a34a">UserPage(id)</text>
+  <text x="390" y="323" text-anchor="middle" font-size="13" fill="#64748b">ekran (builder)</text>
+
+  <!-- Route 3: /settings + nested -->
+  <rect x="530" y="190" width="200" height="54" rx="12" fill="#ffffff" stroke="#6366f1" stroke-width="2.5"/>
+  <text x="630" y="214" text-anchor="middle" font-size="15" font-weight="700" fill="#6366f1">GoRoute('/settings')</text>
+  <text x="630" y="234" text-anchor="middle" font-size="13" fill="#64748b">routes: [ ... ] bilan</text>
+
+  <rect x="540" y="284" width="180" height="46" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="630" y="306" text-anchor="middle" font-size="14" font-weight="700" fill="#16a34a">SettingsPage</text>
+  <text x="630" y="323" text-anchor="middle" font-size="13" fill="#64748b">ekran (builder)</text>
+
+  <!-- Nested child route -->
+  <rect x="530" y="378" width="200" height="56" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="630" y="401" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">GoRoute('profile')</text>
+  <text x="630" y="420" text-anchor="middle" font-size="13" fill="#475569">to'liq yo'l: /settings/profile</text>
+
+  <text x="630" y="362" text-anchor="middle" font-size="13" fill="#64748b">ichki (nested) yo'l</text>
+
+  <!-- Footer note -->
+  <rect x="50" y="460" width="680" height="42" rx="10" fill="#dbeafe" stroke="#027dfd" stroke-width="1.5"/>
+  <text x="390" y="486" text-anchor="middle" font-size="14" fill="#0553b1">Jadvalni bir marta e'lon qilasiz — navigatsiya endi URL yo'li orqali boshqariladi, qo'lda emas.</text>
+</svg>

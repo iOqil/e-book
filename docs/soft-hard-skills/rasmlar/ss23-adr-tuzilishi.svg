@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 560">
+  <title>ADR -- Arxitektura qaror yozuvi tuzilishi: kontekst, qaror, holat, oqibatlar</title>
+  <rect x="0" y="0" width="820" height="560" fill="#f8fafc"/>
+  <text x="410" y="44" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">ADR tuzilishi</text>
+  <text x="410" y="72" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Michael Nygard shabloni (2011) -- bitta qaror, bitta hujjat</text>
+
+  <!-- Sarlavha + holat (top bar) -->
+  <rect x="90" y="100" width="640" height="56" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="120" y="126" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#7c3aed">Sarlavha + raqam</text>
+  <text x="120" y="146" font-family="Segoe UI" font-size="13" fill="#64748b">ADR-007: Auth uchun JWT tanlandi</text>
+  <rect x="560" y="116" width="150" height="26" rx="13" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="635" y="134" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">Holat: Qabul qilindi</text>
+
+  <!-- Kontekst -->
+  <rect x="90" y="176" width="640" height="86" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="120" y="202" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb">1. Kontekst</text>
+  <text x="120" y="226" font-family="Segoe UI" font-size="13" fill="#334155">Qanday vaziyat, kuchlar va cheklovlar bizni qaror oldiga qoʻydi?</text>
+  <text x="120" y="246" font-family="Segoe UI" font-size="13" fill="#334155">Masalan: mobil + web mijoz, stateless server kerak, jamoa kichik.</text>
+
+  <!-- Arrow -->
+  <line x1="410" y1="262" x2="410" y2="282" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="410,290 404,278 416,278" fill="#94a3b8"/>
+
+  <!-- Qaror -->
+  <rect x="90" y="290" width="640" height="80" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="120" y="316" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a">2. Qaror</text>
+  <text x="120" y="340" font-family="Segoe UI" font-size="13" fill="#334155">Biz nimani tanladik? Faol ovozda, aniq: "Biz JWT ishlatamiz".</text>
+  <text x="120" y="360" font-family="Segoe UI" font-size="13" fill="#334155">Tanlangan variant + nega aynan u (qisqacha dalil).</text>
+
+  <!-- Arrow -->
+  <line x1="410" y1="370" x2="410" y2="390" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="410,398 404,386 416,386" fill="#94a3b8"/>
+
+  <!-- Oqibatlar -->
+  <rect x="90" y="398" width="640" height="106" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="120" y="424" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#f59e0b">3. Oqibatlar (consequences)</text>
+  <text x="120" y="448" font-family="Segoe UI" font-size="13" fill="#16a34a">+ Ijobiy: stateless, masshtablash oson, mijozdan mustaqil.</text>
+  <text x="120" y="470" font-family="Segoe UI" font-size="13" fill="#dc2626">- Salbiy: tokenni bekor qilish qiyin, oʻlcham kattaroq.</text>
+  <text x="120" y="492" font-family="Segoe UI" font-size="13" fill="#334155">~ Neytral: kelajakda refresh-token mexanizmi kerak boʻladi.</text>
+
+  <text x="410" y="534" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Eng muhimi -- oqibatlar: yaxshi ham, yomon ham. Halol yozing.</text>
+</svg>

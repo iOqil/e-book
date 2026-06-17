@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" width="780" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Tailwind v4 build oqimi: manba fayllar (HTML/JSX/Vue) -> Oxide skaner ishlatilgan klasslarni topadi -> faqat shu utility'lar generatsiya qilinadi -> minifikatsiya -> kichik output.css -> brauzer; o'lik CSS yo'q</title>
+  <rect x="0" y="0" width="780" height="470" fill="#f8fafc"/>
+
+  <text x="390" y="34" text-anchor="middle" font-size="21" font-weight="bold" fill="#1e293b">Build oqimi: manbadan kichik CSS'gacha</text>
+  <text x="390" y="58" text-anchor="middle" font-size="14" fill="#475569">Tailwind manbani skanerlaydi va FAQAT ishlatilgan utility'larni chiqaradi</text>
+
+  <!-- 1. Manba fayllar -->
+  <rect x="30" y="90" width="180" height="120" rx="10" fill="#ffffff" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="120" y="83" text-anchor="middle" font-size="13" font-weight="bold" fill="#0284c7">1. MANBA FAYLLAR</text>
+  <rect x="46" y="104" width="148" height="28" rx="6" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1"/>
+  <text x="120" y="123" text-anchor="middle" font-size="13" fill="#1e293b">index.html</text>
+  <rect x="46" y="138" width="148" height="28" rx="6" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1"/>
+  <text x="120" y="157" text-anchor="middle" font-size="13" fill="#1e293b">Card.jsx</text>
+  <rect x="46" y="172" width="148" height="28" rx="6" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1"/>
+  <text x="120" y="191" text-anchor="middle" font-size="13" fill="#1e293b">App.vue</text>
+
+  <!-- strelka -->
+  <line x1="210" y1="150" x2="258" y2="150" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="258,150 246,144 246,156" fill="#94a3b8"/>
+
+  <!-- 2. Oxide skaner -->
+  <rect x="258" y="106" width="180" height="88" rx="10" fill="#4f46e5" stroke="#4338ca" stroke-width="1.5"/>
+  <text x="348" y="83" text-anchor="middle" font-size="13" font-weight="bold" fill="#64748b">2. SKANER (Oxide)</text>
+  <text x="348" y="138" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">Tailwind dvigateli</text>
+  <text x="348" y="160" text-anchor="middle" font-size="13" fill="#ffffff">klasslarni topadi</text>
+  <text x="348" y="180" text-anchor="middle" font-size="13" fill="#ffffff">(Rust — juda tez)</text>
+
+  <!-- topilgan klasslar -->
+  <rect x="258" y="206" width="180" height="34" rx="6" fill="#eef2ff" stroke="#6366f1" stroke-width="1"/>
+  <text x="348" y="228" text-anchor="middle" font-size="13" fill="#4f46e5">topildi: p-4  bg-sky-500  flex</text>
+
+  <!-- strelka -->
+  <line x1="438" y1="150" x2="486" y2="150" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="486,150 474,144 474,156" fill="#94a3b8"/>
+
+  <!-- 3. generatsiya + minify -->
+  <rect x="486" y="106" width="264" height="88" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="618" y="83" text-anchor="middle" font-size="13" font-weight="bold" fill="#16a34a">3. GENERATSIYA + MINIFY</text>
+  <text x="500" y="132" font-size="13" fill="#1e293b">.p-4&#123;padding:1rem&#125;</text>
+  <text x="500" y="152" font-size="13" fill="#1e293b">.bg-sky-500&#123;...&#125;.flex&#123;...&#125;</text>
+  <text x="500" y="178" font-size="13" font-weight="bold" fill="#16a34a">faqat ishlatilgan klasslar</text>
+
+  <!-- strelka pastga -->
+  <line x1="618" y1="194" x2="618" y2="232" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="618,232 612,220 624,220" fill="#94a3b8"/>
+
+  <!-- 4. output.css -->
+  <rect x="486" y="244" width="264" height="64" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="618" y="270" text-anchor="middle" font-size="15" font-weight="bold" fill="#166534">output.css</text>
+  <text x="618" y="293" text-anchor="middle" font-size="13" fill="#475569">kichik · gzip ~ bir necha KB</text>
+
+  <!-- strelka brauzerga -->
+  <line x1="486" y1="276" x2="392" y2="276" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="392,276 404,270 404,282" fill="#94a3b8"/>
+
+  <!-- 5. brauzer -->
+  <rect x="206" y="244" width="180" height="64" rx="10" fill="#ffffff" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="296" y="270" text-anchor="middle" font-size="15" font-weight="bold" fill="#0284c7">Brauzer</text>
+  <text x="296" y="293" text-anchor="middle" font-size="13" fill="#475569">sahifa stillanadi</text>
+
+  <!-- pastki taqqoslash paneli -->
+  <rect x="30" y="338" width="350" height="104" rx="10" fill="#fef2f2" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="50" y="364" font-size="14" font-weight="bold" fill="#b91c1c">Qo'lda yozilgan CSS</text>
+  <text x="50" y="388" font-size="13" fill="#1e293b">Har yangi stil = yangi qator.</text>
+  <text x="50" y="408" font-size="13" fill="#1e293b">Fayl FAQAT o'sadi, o'lik CSS</text>
+  <text x="50" y="428" font-size="13" fill="#1e293b">to'planadi, hech kim o'chirmaydi.</text>
+
+  <rect x="400" y="338" width="350" height="104" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="420" y="364" font-size="14" font-weight="bold" fill="#166534">Tailwind utility'lari</text>
+  <text x="420" y="388" font-size="13" fill="#1e293b">Klasslar qayta ishlatiladi —</text>
+  <text x="420" y="408" font-size="13" fill="#1e293b">CSS sub-chiziqli o'sadi.</text>
+  <text x="420" y="428" font-size="13" font-weight="bold" fill="#166534">Ishlatilmagani umuman chiqmaydi.</text>
+</svg>

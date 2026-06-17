@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="800" height="480" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Chat arxitekturasi: brauzerdagi React useChat POST /api/chat orqali sizning serveringizga so'rov yuboradi, server API kalitini ushlab streamText bilan Anthropic'ni chaqiradi, tokenlar oqimi server orqali brauzerga qaytadi. Asosiy qoida: API kalit serverda qoladi, hech qachon brauzerga chiqmaydi.</title>
+  <defs>
+    <marker id="a13a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#6366f1"/>
+    </marker>
+    <marker id="a13g" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="800" height="480" fill="#f8fafc"/>
+  <text x="400" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Chat arxitekturasi — kalit hech qachon brauzerga chiqmaydi</text>
+  <text x="400" y="58" font-size="14" fill="#64748b" text-anchor="middle">Brauzer → sizning serveringiz → Anthropic; tokenlar xuddi shu yo'l bilan qaytadi</text>
+
+  <!-- Browser -->
+  <rect x="36" y="96" width="208" height="150" rx="12" fill="#dbeafe" stroke="#0ea5e9" stroke-width="2.5"/>
+  <text x="140" y="124" font-size="15" font-weight="bold" fill="#0ea5e9" text-anchor="middle">Brauzer (React)</text>
+  <rect x="60" y="140" width="160" height="40" rx="8" fill="#ffffff" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="140" y="165" font-size="13.5" fill="#1e293b" text-anchor="middle">useChat() hook</text>
+  <text x="140" y="206" font-size="13" fill="#475569" text-anchor="middle">xabarlar ro'yxati</text>
+  <text x="140" y="226" font-size="13" fill="#475569" text-anchor="middle">+ kiritish maydoni</text>
+
+  <!-- Server -->
+  <rect x="296" y="96" width="208" height="150" rx="12" fill="#e0e7ff" stroke="#6366f1" stroke-width="2.5"/>
+  <text x="400" y="124" font-size="15" font-weight="bold" fill="#6366f1" text-anchor="middle">Sizning serveringiz</text>
+  <text x="400" y="142" font-size="13" fill="#475569" text-anchor="middle">/api/chat route</text>
+  <rect x="320" y="156" width="160" height="36" rx="8" fill="#ffffff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="400" y="179" font-size="13" fill="#1e293b" text-anchor="middle">streamText(...)</text>
+  <rect x="320" y="200" width="160" height="34" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="400" y="222" font-size="13" font-weight="bold" fill="#1e293b" text-anchor="middle">🔑 API KALIT shu yerda</text>
+
+  <!-- Anthropic -->
+  <rect x="556" y="96" width="208" height="150" rx="12" fill="#fef3c7" stroke="#d97757" stroke-width="2.5"/>
+  <text x="660" y="124" font-size="15" font-weight="bold" fill="#d97757" text-anchor="middle">Anthropic</text>
+  <text x="660" y="156" font-size="13" fill="#475569" text-anchor="middle">claude-opus-4-8</text>
+  <rect x="580" y="172" width="160" height="46" rx="8" fill="#ffffff" stroke="#d97757" stroke-width="1.5"/>
+  <text x="660" y="194" font-size="13" fill="#1e293b" text-anchor="middle">model tokenlarni</text>
+  <text x="660" y="212" font-size="13" fill="#1e293b" text-anchor="middle">hosil qiladi</text>
+
+  <!-- forward arrows -->
+  <line x1="244" y1="150" x2="292" y2="150" stroke="#6366f1" stroke-width="2.5" marker-end="url(#a13a)"/>
+  <text x="268" y="140" font-size="13" fill="#6366f1" text-anchor="middle">POST</text>
+  <line x1="504" y1="150" x2="552" y2="150" stroke="#6366f1" stroke-width="2.5" marker-end="url(#a13a)"/>
+
+  <!-- return token stream -->
+  <line x1="552" y1="200" x2="504" y2="200" stroke="#16a34a" stroke-width="2.5" marker-end="url(#a13g)"/>
+  <line x1="292" y1="200" x2="244" y2="200" stroke="#16a34a" stroke-width="2.5" marker-end="url(#a13g)"/>
+  <text x="400" y="270" font-size="13.5" fill="#16a34a" text-anchor="middle">⚡ Tokenlar oqimi: Anthropic → server → brauzer (xuddi shu yo'ldan teskari)</text>
+
+  <!-- forbidden direct call -->
+  <line x1="140" y1="246" x2="600" y2="300" stroke="#ef4444" stroke-width="3" stroke-dasharray="9,6"/>
+  <line x1="350" y1="262" x2="390" y2="286" stroke="#ef4444" stroke-width="3"/>
+  <line x1="390" y1="262" x2="350" y2="286" stroke="#ef4444" stroke-width="3"/>
+  <rect x="250" y="312" width="300" height="34" rx="8" fill="#ffffff" stroke="#ef4444" stroke-width="2"/>
+  <text x="400" y="334" font-size="13.5" font-weight="bold" fill="#ef4444" text-anchor="middle">❌ Brauzer → Anthropic TO'G'RIDAN: kalit oshkor!</text>
+
+  <!-- big callout -->
+  <rect x="60" y="372" width="680" height="88" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="400" y="400" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="middle">Asosiy qoida — kalit faqat serverda</text>
+  <text x="400" y="424" font-size="13.5" fill="#1e293b" text-anchor="middle">ANTHROPIC_API_KEY brauzer kodiga HECH QACHON tushmasligi kerak. Brauzer kodi har</text>
+  <text x="400" y="445" font-size="13.5" fill="#1e293b" text-anchor="middle">kimga ko'rinadi — kalit o'sha yerda bo'lsa, uni o'g'irlash mumkin (22-bobga qarang).</text>
+</svg>

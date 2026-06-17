@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="760" height="380">
+  <title>Avtomatik deploy oqimi: git push GitHub Actions ni ishga tushiradi, build job Docker image quradi va GHCR ga push qiladi, deploy job serverga ssh bilan kirib docker compose pull va up qiladi, ilova yangi versiyada ishlaydi</title>
+  <rect x="0" y="0" width="760" height="380" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">CI/CD avtomatik deploy zanjiri</text>
+
+  <!-- git push -->
+  <rect x="24" y="150" width="130" height="80" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="89" y="183" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e40af">git push</text>
+  <text x="89" y="205" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">main / release</text>
+
+  <line x1="154" y1="190" x2="196" y2="190" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#strel)"/>
+
+  <!-- GitHub Actions konteyneri -->
+  <rect x="200" y="78" width="300" height="224" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="350" y="104" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#5b21b6">GitHub Actions</text>
+
+  <!-- build job -->
+  <rect x="222" y="124" width="256" height="64" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="350" y="148" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e40af">build job</text>
+  <text x="350" y="170" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">image quradi va push qiladi</text>
+
+  <!-- needs strelka -->
+  <line x1="350" y1="188" x2="350" y2="214" stroke="#94a3b8" stroke-width="2" marker-end="url(#strel)"/>
+  <text x="402" y="206" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">needs: build</text>
+
+  <!-- deploy job -->
+  <rect x="222" y="220" width="256" height="64" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="350" y="244" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#166534">deploy job</text>
+  <text x="350" y="266" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">serverga ssh -> compose</text>
+
+  <!-- GHCR -->
+  <rect x="546" y="92" width="190" height="74" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="641" y="124" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#92400e">GHCR</text>
+  <text x="641" y="146" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">image:sha-... </text>
+
+  <!-- build -> GHCR push -->
+  <line x1="478" y1="150" x2="544" y2="135" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#strelo)"/>
+  <text x="512" y="128" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#92400e">push</text>
+
+  <!-- Server -->
+  <rect x="546" y="200" width="190" height="120" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="641" y="228" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">VPS server</text>
+  <text x="641" y="252" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">docker compose pull</text>
+  <text x="641" y="272" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">docker compose up -d</text>
+  <text x="641" y="298" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">ilova yangi versiyada</text>
+
+  <!-- deploy job -> server ssh -->
+  <line x1="478" y1="252" x2="544" y2="252" stroke="#16a34a" stroke-width="2.5" marker-end="url(#strelg)"/>
+  <text x="512" y="244" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#166534">ssh</text>
+
+  <!-- server pull from GHCR -->
+  <line x1="641" y1="200" x2="641" y2="168" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#strel)"/>
+  <text x="690" y="186" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">pull</text>
+
+  <text x="380" y="352" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">Build CI'da, deploy serverga itariladi (push-based) — odam aralashuvisiz</text>
+
+  <defs>
+    <marker id="strel" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#94a3b8"/>
+    </marker>
+    <marker id="strelo" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#f59e0b"/>
+    </marker>
+    <marker id="strelg" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+</svg>

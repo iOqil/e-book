@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" width="800" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Kenglik o'qida uch variant: md: (min, 768px dan o'ngga), max-md: (768px dan chapga) va md:max-lg: (768 va 1024 oralig'idagi tasma) soyalangan zonalar bilan</title>
+  <rect x="0" y="0" width="800" height="440" fill="#f8fafc"/>
+
+  <text x="400" y="36" text-anchor="middle" font-size="21" font-weight="bold" fill="#1e293b">min, max va oraliq (range) zonalari</text>
+  <text x="400" y="60" text-anchor="middle" font-size="14" fill="#475569">Kenglik o'qida har bir variant qaysi diapazonda yoqiladi</text>
+
+  <!-- Belgilangan vertikal chiziqlar: md=768 -> x=300, lg=1024 -> x=540 -->
+  <!-- O'q: x 80..740, 0px chapda, kenglik o'ngda -->
+
+  <!-- ===== Qator 1: md: (min) ===== -->
+  <text x="80" y="108" font-size="15" font-weight="bold" fill="#1e293b">md:flex</text>
+  <text x="200" y="108" font-size="13" fill="#64748b">(min-width &#8805; 768px — shu nuqtadan o'ngga)</text>
+  <line x1="80" y1="128" x2="740" y2="128" stroke="#cbd5e1" stroke-width="2"/>
+  <rect x="300" y="118" width="440" height="20" fill="#6366f1" opacity="0.85"/>
+  <line x1="300" y1="112" x2="300" y2="144" stroke="#4f46e5" stroke-width="2"/>
+  <text x="300" y="162" text-anchor="middle" font-size="13" fill="#4f46e5" font-weight="bold">768</text>
+  <text x="525" y="133" text-anchor="middle" font-size="13" fill="#ffffff" font-weight="bold">YOQILGAN &#8594;</text>
+
+  <!-- ===== Qator 2: max-md: (max) ===== -->
+  <text x="80" y="210" font-size="15" font-weight="bold" fill="#1e293b">max-md:flex</text>
+  <text x="220" y="210" font-size="13" fill="#64748b">(max-width &lt; 768px — shu nuqtadan chapga)</text>
+  <line x1="80" y1="230" x2="740" y2="230" stroke="#cbd5e1" stroke-width="2"/>
+  <rect x="80" y="220" width="220" height="20" fill="#f59e0b" opacity="0.9"/>
+  <line x1="300" y1="214" x2="300" y2="246" stroke="#b45309" stroke-width="2"/>
+  <text x="300" y="264" text-anchor="middle" font-size="13" fill="#b45309" font-weight="bold">768</text>
+  <text x="190" y="235" text-anchor="middle" font-size="13" fill="#ffffff" font-weight="bold">&#8592; YOQILGAN</text>
+
+  <!-- ===== Qator 3: md:max-lg: (range) ===== -->
+  <text x="80" y="312" font-size="15" font-weight="bold" fill="#1e293b">md:max-lg:flex</text>
+  <text x="250" y="312" font-size="13" fill="#64748b">(faqat 768px ... 1024px oralig'idagi tasma)</text>
+  <line x1="80" y1="332" x2="740" y2="332" stroke="#cbd5e1" stroke-width="2"/>
+  <rect x="300" y="322" width="240" height="20" fill="#16a34a" opacity="0.9"/>
+  <line x1="300" y1="316" x2="300" y2="348" stroke="#15803d" stroke-width="2"/>
+  <line x1="540" y1="316" x2="540" y2="348" stroke="#15803d" stroke-width="2"/>
+  <text x="300" y="366" text-anchor="middle" font-size="13" fill="#15803d" font-weight="bold">768</text>
+  <text x="540" y="366" text-anchor="middle" font-size="13" fill="#15803d" font-weight="bold">1024</text>
+  <text x="420" y="337" text-anchor="middle" font-size="13" fill="#ffffff" font-weight="bold">FAQAT shu tasma</text>
+
+  <!-- pastki xulosa qutisi -->
+  <rect x="80" y="388" width="660" height="38" rx="8" fill="#eef2ff" stroke="#c7d2fe" stroke-width="1"/>
+  <text x="410" y="412" text-anchor="middle" font-size="13" fill="#4f46e5">Aqliy model: prefikssiz/min = "shu yerdan O'NGGA" · max = "shu yerdan CHAPGA" · min+max = tasma</text>
+</svg>

@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" width="800" height="560" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Grounding prompt: system ("faqat kontekstdan javob ber, manbani keltir, javob yo'q bo'lsa 'bilmayman' de") + &lt;context&gt; topilgan bo'laklar (manba bilan) + foydalanuvchi savoli -> Claude. Javob ikki yo'l: kontekstda bor bo'lsa manbani keltirib javob beradi; yo'q bo'lsa to'qib chiqarmasdan "bilmayman" deydi. Bu gallyutsinatsiyani kamaytiradi.</title>
+  <defs>
+    <marker id="g18a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#6366f1"/>
+    </marker>
+    <marker id="g18g" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+    <marker id="g18r" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="800" height="560" fill="#f8fafc"/>
+  <text x="400" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Grounding prompt — to'qib chiqarishga qarshi</text>
+  <text x="400" y="58" font-size="14" fill="#64748b" text-anchor="middle">"Faqat kontekstdan javob ber" — RAG'ni ishonchli qiladigan asosiy ko'rsatma</text>
+
+  <!-- system -->
+  <rect x="40" y="82" width="320" height="92" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="60" y="108" font-size="14" font-weight="bold" fill="#f59e0b" text-anchor="start">system (05-bob: grounding)</text>
+  <text x="60" y="132" font-size="13" fill="#475569" text-anchor="start">"Faqat &lt;context&gt; dan javob ber."</text>
+  <text x="60" y="151" font-size="13" fill="#475569" text-anchor="start">"Har bir faktda manbani keltir."</text>
+  <text x="60" y="170" font-size="13" fill="#475569" text-anchor="start">"Javob yo'q bo'lsa — 'bilmayman'."</text>
+
+  <!-- context -->
+  <rect x="40" y="186" width="320" height="116" rx="10" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="60" y="212" font-size="14" font-weight="bold" fill="#6366f1" text-anchor="start">&lt;context&gt; — topilgan bo'laklar</text>
+  <text x="60" y="236" font-size="13" fill="#475569" text-anchor="start">[siyosat.md] "14 kun ichida</text>
+  <text x="60" y="254" font-size="13" fill="#475569" text-anchor="start">qaytarish mumkin."</text>
+  <text x="60" y="278" font-size="13" fill="#475569" text-anchor="start">[tolov.md] "Pul 3 kunda</text>
+  <text x="60" y="296" font-size="13" fill="#475569" text-anchor="start">qaytariladi." &lt;/context&gt;</text>
+
+  <!-- question -->
+  <rect x="40" y="314" width="320" height="64" rx="10" fill="#dbeafe" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="60" y="340" font-size="14" font-weight="bold" fill="#0ea5e9" text-anchor="start">user savoli</text>
+  <text x="60" y="364" font-size="13" fill="#475569" text-anchor="start">"Tovarni necha kunda qaytaray?"</text>
+
+  <!-- arrow to claude -->
+  <line x1="360" y1="230" x2="430" y2="230" stroke="#6366f1" stroke-width="2.5" marker-end="url(#g18a)"/>
+
+  <!-- Claude -->
+  <rect x="434" y="196" width="120" height="74" rx="12" fill="#d97757"/>
+  <text x="494" y="228" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Claude</text>
+  <text x="494" y="250" font-size="13" fill="#ffffff" text-anchor="middle">grounded</text>
+
+  <!-- two outcomes -->
+  <line x1="554" y1="216" x2="612" y2="150" stroke="#16a34a" stroke-width="2.5" marker-end="url(#g18g)"/>
+  <line x1="554" y1="250" x2="612" y2="350" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#g18r)"/>
+
+  <!-- good outcome: in context -->
+  <rect x="616" y="96" width="160" height="120" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="696" y="122" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">Kontekstda BOR</text>
+  <text x="696" y="148" font-size="13" fill="#475569" text-anchor="middle">"14 kun ichida</text>
+  <text x="696" y="166" font-size="13" fill="#475569" text-anchor="middle">qaytarsangiz bo'ladi."</text>
+  <text x="696" y="192" font-size="13" font-weight="bold" fill="#16a34a" text-anchor="middle">manba: [siyosat.md]</text>
+  <text x="696" y="210" font-size="13" fill="#64748b" text-anchor="middle">✅ ishonchli</text>
+
+  <!-- fallback outcome: not in context -->
+  <rect x="616" y="296" width="160" height="120" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="696" y="322" font-size="14" font-weight="bold" fill="#f59e0b" text-anchor="middle">Kontekstda YO'Q</text>
+  <text x="696" y="348" font-size="13" fill="#475569" text-anchor="middle">(masalan "kafolat</text>
+  <text x="696" y="366" font-size="13" fill="#475569" text-anchor="middle">muddati qancha?")</text>
+  <text x="696" y="392" font-size="14" font-weight="bold" fill="#d97757" text-anchor="middle">"bilmayman"</text>
+  <text x="696" y="410" font-size="13" fill="#64748b" text-anchor="middle">to'qib chiqarmaydi</text>
+
+  <!-- contrast: without instruction -->
+  <rect x="40" y="404" width="514" height="64" rx="10" fill="#ffffff" stroke="#ef4444" stroke-width="2"/>
+  <text x="60" y="430" font-size="14" font-weight="bold" fill="#ef4444" text-anchor="start">❌ "Faqat kontekstdan" ko'rsatmasiz</text>
+  <text x="60" y="454" font-size="13" fill="#475569" text-anchor="start">Claude bo'shliqni o'z xotirasi bilan to'ldiradi -> ishonchli ko'rinishli, lekin SOXTA javob (gallyutsinatsiya).</text>
+
+  <rect x="40" y="486" width="736" height="58" rx="10" fill="#dbeafe"/>
+  <text x="408" y="510" font-size="13.5" fill="#1e293b" text-anchor="middle">Ikki gard: (1) kontekstdan tashqari javob berma; (2) bo'lmasa "bilmayman" de.</text>
+  <text x="408" y="532" font-size="13.5" fill="#1e293b" text-anchor="middle">Manbani keltirish foydalanuvchiga javobni tekshirish imkonini beradi — ishonch ortadi.</text>
+</svg>

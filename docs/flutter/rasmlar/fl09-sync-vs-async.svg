@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 440" width="780" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Yuqorida sinxron usul: uzoq ish ketayotganda UI muzlaydi (qizil). Pastda asinxron usul: ish fonda ketadi, UI javob beraveradi (yashil), natija keyin keladi</title>
+  <defs>
+    <marker id="fl09svA" markerWidth="12" markerHeight="12" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="780" height="440" fill="#f8fafc"/>
+
+  <text x="390" y="32" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">Sinxron vs Asinxron — vaqt o'qi bo'ylab</text>
+
+  <!-- ====== SINXRON ====== -->
+  <text x="30" y="74" font-size="16" font-weight="bold" fill="#ef4444">Sinxron — UI muzlaydi</text>
+
+  <!-- vaqt o'qi -->
+  <line x1="40" y1="150" x2="720" y2="150" stroke="#94a3b8" stroke-width="2" marker-end="url(#fl09svA)"/>
+  <text x="700" y="172" text-anchor="middle" font-size="13" fill="#64748b">vaqt</text>
+
+  <!-- uzoq ish bloki -->
+  <rect x="120" y="92" width="380" height="46" rx="8" fill="#ef4444" stroke="#ef4444" stroke-width="2"/>
+  <text x="310" y="120" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">uzoq ish: serverdan ma'lumot kutish</text>
+
+  <!-- UI holati -->
+  <rect x="120" y="148" width="380" height="40" rx="8" fill="#ffffff" stroke="#ef4444" stroke-width="2.5"/>
+  <text x="310" y="173" text-anchor="middle" font-size="14" font-weight="bold" fill="#ef4444">UI MUZLADI — tugma, animatsiya ishlamaydi</text>
+
+  <text x="540" y="118" font-size="13" fill="#475569">boshqa ish</text>
+  <text x="540" y="135" font-size="13" fill="#475569">qila olmaydi</text>
+
+  <!-- ajratuvchi -->
+  <line x1="40" y1="210" x2="740" y2="210" stroke="#94a3b8" stroke-width="1" stroke-dasharray="5 4"/>
+
+  <!-- ====== ASINXRON ====== -->
+  <text x="30" y="248" font-size="16" font-weight="bold" fill="#16a34a">Asinxron — UI javob beraveradi</text>
+
+  <!-- vaqt o'qi -->
+  <line x1="40" y1="330" x2="720" y2="330" stroke="#94a3b8" stroke-width="2" marker-end="url(#fl09svA)"/>
+  <text x="700" y="352" text-anchor="middle" font-size="13" fill="#64748b">vaqt</text>
+
+  <!-- ish fonda -->
+  <rect x="120" y="266" width="380" height="34" rx="8" fill="#94a3b8" stroke="#64748b" stroke-width="2"/>
+  <text x="310" y="289" text-anchor="middle" font-size="14" fill="#ffffff">await: ish fonda ketadi (bloklamaydi)</text>
+
+  <!-- UI bo'sh -->
+  <rect x="120" y="304" width="380" height="40" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="310" y="329" text-anchor="middle" font-size="14" font-weight="bold" fill="#16a34a">UI ERKIN — tugma, animatsiya ishlaydi</text>
+
+  <!-- natija keladi -->
+  <rect x="520" y="266" width="170" height="78" rx="10" fill="#16a34a" stroke="#16a34a" stroke-width="2"/>
+  <text x="605" y="298" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">natija keldi</text>
+  <text x="605" y="320" text-anchor="middle" font-size="13" fill="#ffffff">(davomi navbatga</text>
+  <text x="605" y="336" text-anchor="middle" font-size="13" fill="#ffffff">qo'yildi)</text>
+  <line x1="500" y1="283" x2="516" y2="295" stroke="#475569" stroke-width="2" marker-end="url(#fl09svA)"/>
+
+  <text x="390" y="418" text-anchor="middle" font-size="13" fill="#64748b">Asinxron tezroq emas — kutish davomida bloklanmaslik degani (oshxona buzzer'i)</text>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 430" width="780" height="430" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Ring vs border vs outline: border layout joyini egallaydi, ring va outline box-shadow kabi tashqarida turadi va layoutni siljitmaydi</title>
+  <rect x="0" y="0" width="780" height="430" fill="#f8fafc"/>
+
+  <text x="390" y="40" text-anchor="middle" font-size="22" font-weight="bold" fill="#1e293b">border vs ring vs outline</text>
+  <text x="390" y="66" text-anchor="middle" font-size="14" fill="#475569">Uchalasi ham chiziq chizadi — lekin joyni har xil egallaydi</text>
+
+  <!-- reference baseline grid lines to show layout box -->
+  <text x="390" y="98" text-anchor="middle" font-size="13" fill="#64748b">Punktir — elementning asl layout qutisi (border-box)</text>
+
+  <!-- CARD 1: border-2 -->
+  <text x="140" y="140" text-anchor="middle" font-size="15" font-weight="bold" fill="#4f46e5">border-2</text>
+  <!-- dashed layout box -->
+  <rect x="70" y="160" width="140" height="100" rx="8" fill="none" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 4"/>
+  <!-- border sits inside the box, eating content space -->
+  <rect x="70" y="160" width="140" height="100" rx="8" fill="#ffffff" stroke="#6366f1" stroke-width="6"/>
+  <rect x="84" y="174" width="112" height="72" rx="4" fill="#eef2ff"/>
+  <text x="140" y="216" text-anchor="middle" font-size="13" fill="#475569">kontent</text>
+  <text x="140" y="284" text-anchor="middle" font-size="13" fill="#475569">Chiziq qutining</text>
+  <text x="140" y="302" text-anchor="middle" font-size="13" fill="#475569">ICHIDA — joy oladi,</text>
+  <text x="140" y="320" text-anchor="middle" font-size="13" fill="#ef4444">layout siljiydi</text>
+
+  <!-- CARD 2: ring-2 -->
+  <text x="390" y="140" text-anchor="middle" font-size="15" font-weight="bold" fill="#4f46e5">ring-2</text>
+  <rect x="320" y="160" width="140" height="100" rx="8" fill="none" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 4"/>
+  <!-- ring sits OUTSIDE as a halo -->
+  <rect x="316" y="156" width="148" height="108" rx="10" fill="none" stroke="#0ea5e9" stroke-width="5"/>
+  <rect x="320" y="160" width="140" height="100" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <rect x="334" y="174" width="112" height="72" rx="4" fill="#e0f2fe"/>
+  <text x="390" y="216" text-anchor="middle" font-size="13" fill="#475569">kontent</text>
+  <text x="390" y="284" text-anchor="middle" font-size="13" fill="#475569">box-shadow kabi</text>
+  <text x="390" y="302" text-anchor="middle" font-size="13" fill="#475569">TASHQARIDA —</text>
+  <text x="390" y="320" text-anchor="middle" font-size="13" fill="#16a34a">layout siljimaydi</text>
+
+  <!-- CARD 3: outline-2 outline-offset-2 -->
+  <text x="640" y="140" text-anchor="middle" font-size="15" font-weight="bold" fill="#4f46e5">outline-2</text>
+  <rect x="570" y="160" width="140" height="100" rx="8" fill="none" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 4"/>
+  <!-- outline with offset gap -->
+  <rect x="563" y="153" width="154" height="114" rx="10" fill="none" stroke="#f59e0b" stroke-width="4"/>
+  <rect x="570" y="160" width="140" height="100" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <rect x="584" y="174" width="112" height="72" rx="4" fill="#fef3c7"/>
+  <text x="640" y="216" text-anchor="middle" font-size="13" fill="#475569">kontent</text>
+  <text x="640" y="284" text-anchor="middle" font-size="13" fill="#475569">tashqarida + bo'shliq</text>
+  <text x="640" y="302" text-anchor="middle" font-size="13" fill="#475569">(outline-offset-2);</text>
+  <text x="640" y="320" text-anchor="middle" font-size="13" fill="#16a34a">layout siljimaydi</text>
+
+  <!-- bottom takeaway -->
+  <rect x="120" y="352" width="540" height="56" rx="10" fill="#ffffff" stroke="#c7d2fe" stroke-width="1.5"/>
+  <text x="390" y="376" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e293b">Fokus halqasi uchun ring yoki outline ideal —</text>
+  <text x="390" y="396" text-anchor="middle" font-size="14" fill="#475569">paydo bo'lganda sahifa "sakramaydi"</text>
+</svg>

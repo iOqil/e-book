@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 500">
+  <title>Test ROI egri chizig'i: birinchi testlar (kritik yo'l) ko'p qiymat keltiradi, keyin qaytim kamayadi. "Yetarlicha" zonasi optimal, 100% ga intilish kam foyda yuqori narx beradi</title>
+  <rect x="0" y="0" width="820" height="500" fill="#f8fafc"/>
+  <text x="410" y="36" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Test ROI: qancha test yetarli</text>
+  <text x="410" y="62" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Birinchi testlar ko'p qiymat, keyin qaytim kamayadi</text>
+
+  <!-- Axes -->
+  <line x1="110" y1="420" x2="740" y2="420" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="110" y1="420" x2="110" y2="100" stroke="#94a3b8" stroke-width="2"/>
+  <text x="425" y="468" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#1e293b">Test soni / sarflangan kuch  -></text>
+  <text x="40" y="260" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#1e293b" transform="rotate(-90 40 260)">Qiymat (ishonch)</text>
+
+  <!-- Diminishing returns curve: steep then flat -->
+  <path d="M 110 410 C 200 180, 320 120, 460 110 C 560 104, 650 102, 740 100" fill="none" stroke="#2563eb" stroke-width="3"/>
+
+  <!-- Zone shading: sweet spot -->
+  <rect x="300" y="100" width="160" height="320" fill="#dcfce7" opacity="0.45"/>
+  <text x="380" y="150" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#166534">"Yetarlicha"</text>
+  <text x="380" y="172" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#166534">optimal zona</text>
+
+  <!-- early zone -->
+  <text x="195" y="300" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#2563eb" font-weight="bold">Kritik yo'l</text>
+  <text x="195" y="320" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#2563eb">tik o'sish</text>
+
+  <!-- late zone -->
+  <rect x="600" y="100" width="140" height="320" fill="#fee2e2" opacity="0.4"/>
+  <text x="670" y="220" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#991b1b" font-weight="bold">100% ga intilish</text>
+  <text x="670" y="240" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#991b1b">kam foyda,</text>
+  <text x="670" y="258" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#991b1b">yuqori narx</text>
+
+  <!-- markers on curve -->
+  <circle cx="160" cy="320" r="6" fill="#2563eb"/>
+  <circle cx="380" cy="115" r="6" fill="#16a34a"/>
+  <circle cx="700" cy="101" r="6" fill="#dc2626"/>
+
+  <text x="410" y="448" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Maqsad — 100% emas, "xavfga yarasha yetarlicha"</text>
+</svg>

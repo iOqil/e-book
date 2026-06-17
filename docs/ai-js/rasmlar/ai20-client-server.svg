@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" font-family="Segoe UI, system-ui, sans-serif">
+  <title>MCP klient va server: klient (AI host) vositalarni so'raydi va chaqiradi; server vositalar/resurslar/promptlarni ochadi va handler funksiyalarni bajaradi; transport stdio (lokal) yoki HTTP/SSE (uzoq); natija orqaga oqib keladi. Protokol shakli.</title>
+  <defs>
+    <marker id="cs1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="800" height="500" fill="#f8fafc"/>
+  <text x="400" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">MCP klient ↔ server — protokol shakli</text>
+  <text x="400" y="58" font-size="14" fill="#64748b" text-anchor="middle">Klient vositalarni ro'yxatlaydi va chaqiradi; server ularni ochadi va bajaradi.</text>
+
+  <!-- CLIENT box -->
+  <rect x="50" y="100" width="270" height="250" rx="12" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="185" y="128" font-size="16" font-weight="bold" fill="#6366f1" text-anchor="middle">MCP KLIENT (AI host)</text>
+  <text x="185" y="150" font-size="13" fill="#475569" text-anchor="middle">sizning ilova / Claude Desktop / Code</text>
+  <rect x="74" y="168" width="222" height="40" rx="8" fill="#ffffff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="185" y="193" font-size="13" fill="#1e293b" text-anchor="middle">1. Vositalarni ro'yxatla (list)</text>
+  <rect x="74" y="218" width="222" height="40" rx="8" fill="#ffffff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="185" y="243" font-size="13" fill="#1e293b" text-anchor="middle">2. Vositani chaqir (call)</text>
+  <rect x="74" y="268" width="222" height="40" rx="8" fill="#ffffff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="185" y="293" font-size="13" fill="#1e293b" text-anchor="middle">3. Natijani Claude'ga uzat</text>
+
+  <!-- SERVER box -->
+  <rect x="480" y="100" width="270" height="250" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="615" y="128" font-size="16" font-weight="bold" fill="#f59e0b" text-anchor="middle">MCP SERVER</text>
+  <text x="615" y="150" font-size="13" fill="#475569" text-anchor="middle">vositalarni ochadi (expose qiladi)</text>
+  <rect x="504" y="168" width="222" height="34" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="615" y="190" font-size="13" fill="#1e293b" text-anchor="middle">tools — funksiyalar + sxema</text>
+  <rect x="504" y="210" width="222" height="34" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="615" y="232" font-size="13" fill="#1e293b" text-anchor="middle">resources — ma'lumot</text>
+  <rect x="504" y="252" width="222" height="34" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="615" y="274" font-size="13" fill="#1e293b" text-anchor="middle">prompts — tayyor shablonlar</text>
+  <rect x="504" y="296" width="222" height="34" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="615" y="318" font-size="13" fill="#16a34a" text-anchor="middle">handler — kodni bajaradi</text>
+
+  <!-- request arrow -->
+  <line x1="320" y1="200" x2="480" y2="200" stroke="#64748b" stroke-width="2" marker-end="url(#cs1)"/>
+  <text x="400" y="190" font-size="13" fill="#475569" text-anchor="middle">so'rov: list / call</text>
+
+  <!-- response arrow -->
+  <line x1="480" y1="270" x2="320" y2="270" stroke="#16a34a" stroke-width="2" marker-end="url(#cs1)"/>
+  <text x="400" y="290" font-size="13" fill="#16a34a" text-anchor="middle">javob: natija</text>
+
+  <!-- transport label -->
+  <rect x="330" y="218" width="140" height="34" rx="8" fill="#dbeafe" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="400" y="240" font-size="13" fill="#1e293b" text-anchor="middle">TRANSPORT</text>
+
+  <!-- transport options footer -->
+  <rect x="50" y="382" width="340" height="92" rx="10" fill="#ffffff" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="220" y="408" font-size="14" font-weight="bold" fill="#0ea5e9" text-anchor="middle">stdio (lokal)</text>
+  <text x="220" y="432" font-size="13" fill="#475569" text-anchor="middle">server — bir xil mashinada</text>
+  <text x="220" y="454" font-size="13" fill="#475569" text-anchor="middle">jarayon (lokal vositalar uchun)</text>
+
+  <rect x="410" y="382" width="340" height="92" rx="10" fill="#ffffff" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="580" y="408" font-size="14" font-weight="bold" fill="#0ea5e9" text-anchor="middle">Streamable HTTP / SSE (uzoq)</text>
+  <text x="580" y="432" font-size="13" fill="#475569" text-anchor="middle">server — uzoq URL'da</text>
+  <text x="580" y="454" font-size="13" fill="#475569" text-anchor="middle">(masofadagi servis uchun)</text>
+</svg>

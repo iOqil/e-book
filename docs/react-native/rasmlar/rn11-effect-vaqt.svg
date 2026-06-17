@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" width="760" height="360" font-family="Segoe UI, system-ui, sans-serif">
+  <title>useEffect vaqt o'qi: render, ekranga chiqish, effekt ishlashi</title>
+  <rect x="0" y="0" width="760" height="360" fill="#f8fafc"/>
+  <text x="380" y="38" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">useEffect QACHON ishlaydi?</text>
+  <text x="380" y="62" text-anchor="middle" font-size="14" fill="#475569">Effekt — renderdan KEYIN, ekran chizilgach ishlaydi</text>
+
+  <!-- vaqt o'qi -->
+  <line x1="70" y1="300" x2="690" y2="300" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="690,300 678,294 678,306" fill="#94a3b8"/>
+  <text x="690" y="330" text-anchor="end" font-size="13" fill="#94a3b8">vaqt →</text>
+
+  <!-- 1: render -->
+  <circle cx="170" cy="300" r="7" fill="#4f46e5"/>
+  <line x1="170" y1="300" x2="170" y2="150" stroke="#c7d2fe" stroke-width="2" stroke-dasharray="4 4"/>
+  <rect x="90" y="110" width="160" height="56" rx="10" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="170" y="134" text-anchor="middle" font-size="15" font-weight="700" fill="#4f46e5">1. Render</text>
+  <text x="170" y="154" text-anchor="middle" font-size="13" fill="#475569">JSX hisoblanadi</text>
+
+  <!-- 2: ekran -->
+  <circle cx="380" cy="300" r="7" fill="#0ea5e9"/>
+  <line x1="380" y1="300" x2="380" y2="190" stroke="#bae6fd" stroke-width="2" stroke-dasharray="4 4"/>
+  <rect x="300" y="150" width="160" height="56" rx="10" fill="#ffffff" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="380" y="174" text-anchor="middle" font-size="15" font-weight="700" fill="#0ea5e9">2. Ekranga chiqdi</text>
+  <text x="380" y="194" text-anchor="middle" font-size="13" fill="#475569">foydalanuvchi ko'radi</text>
+
+  <!-- 3: effekt -->
+  <circle cx="590" cy="300" r="7" fill="#16a34a"/>
+  <line x1="590" y1="300" x2="590" y2="150" stroke="#bbf7d0" stroke-width="2" stroke-dasharray="4 4"/>
+  <rect x="510" y="110" width="170" height="56" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="595" y="134" text-anchor="middle" font-size="15" font-weight="700" fill="#16a34a">3. useEffect</text>
+  <text x="595" y="154" text-anchor="middle" font-size="13" fill="#475569">yon ta'sir bajariladi</text>
+
+  <text x="380" y="262" text-anchor="middle" font-size="13" fill="#94a3b8">ma'lumot yuklash · taymer · obuna · log</text>
+</svg>

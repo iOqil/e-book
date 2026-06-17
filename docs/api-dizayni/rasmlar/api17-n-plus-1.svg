@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580">
+  <title>N+1 muammosi: bitta query ko'p bog'liq DB so'roviga aylanadi va DataLoader/batching bilan yechiladi</title>
+  <rect x="0" y="0" width="900" height="580" fill="#f8fafc"/>
+  <text x="450" y="34" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">N+1 muammosi va DataLoader yechimi</text>
+  <text x="450" y="58" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Bitta query — lekin server ortda ko'p marta DB'ga uradi</text>
+
+  <!-- chap: muammo -->
+  <rect x="30" y="84" width="410" height="466" rx="12" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="235" y="110" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#dc2626">Muammo: N+1 so'rov</text>
+
+  <rect x="60" y="124" width="350" height="56" rx="8" fill="#ffffff" stroke="#64748b" stroke-width="1.5"/>
+  <text x="235" y="146" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">query { posts { title author { name } } }</text>
+  <text x="235" y="168" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">10 ta post, har birida author</text>
+
+  <!-- 1-so'rov -->
+  <rect x="60" y="196" width="350" height="40" rx="6" fill="#ffffff" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="78" y="221" font-family="monospace" font-size="13" fill="#dc2626">1) SELECT * FROM posts  (10 ta)</text>
+
+  <!-- N ta so'rov -->
+  <rect x="60" y="248" width="350" height="40" rx="6" fill="#ffffff" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="78" y="273" font-family="monospace" font-size="13" fill="#dc2626">2) SELECT author WHERE id=1</text>
+  <rect x="60" y="294" width="350" height="40" rx="6" fill="#ffffff" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="78" y="319" font-family="monospace" font-size="13" fill="#dc2626">3) SELECT author WHERE id=2</text>
+  <text x="235" y="356" text-anchor="middle" font-family="monospace" font-size="14" fill="#dc2626">. . . har post uchun alohida . . .</text>
+  <rect x="60" y="370" width="350" height="40" rx="6" fill="#ffffff" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="78" y="395" font-family="monospace" font-size="13" fill="#dc2626">11) SELECT author WHERE id=10</text>
+
+  <rect x="60" y="430" width="350" height="100" rx="8" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="235" y="456" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#dc2626">Jami: 1 + N = 11 so'rov</text>
+  <text x="235" y="482" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">N ta bog'liq element = N ta qo'shimcha</text>
+  <text x="235" y="502" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">DB so'rovi. 1000 post -> 1001 so'rov!</text>
+  <text x="235" y="522" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">resolver har element uchun alohida ishlaydi</text>
+
+  <!-- o'ng: yechim -->
+  <rect x="460" y="84" width="410" height="466" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="665" y="110" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a">Yechim: DataLoader (batching)</text>
+
+  <rect x="490" y="124" width="350" height="56" rx="8" fill="#ffffff" stroke="#64748b" stroke-width="1.5"/>
+  <text x="665" y="146" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">aynan o'sha query</text>
+  <text x="665" y="168" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">lekin author so'rovlari yig'iladi</text>
+
+  <rect x="490" y="196" width="350" height="40" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="508" y="221" font-family="monospace" font-size="13" fill="#16a34a">1) SELECT * FROM posts  (10 ta)</text>
+
+  <!-- yig'ish -->
+  <rect x="490" y="248" width="350" height="64" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="665" y="272" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#b45309">DataLoader id'larni bir tikda yig'adi</text>
+  <text x="665" y="294" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">[1, 2, 3, ... 10]</text>
+
+  <line x1="665" y1="312" x2="665" y2="338" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="665,338 660,326 670,326" fill="#16a34a"/>
+
+  <rect x="490" y="340" width="350" height="44" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="508" y="368" font-family="monospace" font-size="13" fill="#16a34a">2) SELECT ... WHERE id IN (1..10)</text>
+
+  <rect x="490" y="404" width="350" height="126" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="665" y="432" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">Jami: 2 so'rov</text>
+  <text x="665" y="458" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">11 emas, 2. 1000 post bo'lsa ham 2.</text>
+  <text x="665" y="482" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Bir "tick" ichidagi barcha bir xil</text>
+  <text x="665" y="502" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">so'rovlar -> bitta IN (...) so'rovga.</text>
+  <text x="665" y="522" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">+ bir so'rov ichida kesh (dedup)</text>
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" width="780" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Kiritmani olishning ikki usuli: TextEditingController har lahzada controller.text orqali jonli o'qiydi; validator/onSaved esa save() chaqirilganda barcha qiymatlarni yig'ib oladi. Yonma-yon solishtiruv.</title>
+  <rect x="0" y="0" width="780" height="470" fill="#f8fafc"/>
+  <text x="390" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Kiritmani olishning ikki usuli</text>
+  <text x="390" y="58" text-anchor="middle" font-size="14" fill="#475569">Controller — istalgan paytda jonli o'qish; onSaved — save() bo'lganda birga yig'ish</text>
+
+  <!-- LEFT: Controller -->
+  <rect x="30" y="84" width="340" height="340" rx="14" fill="#ffffff" stroke="#027dfd" stroke-width="2.5"/>
+  <rect x="30" y="84" width="340" height="46" rx="14" fill="#027dfd"/>
+  <text x="200" y="114" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">1. TextEditingController</text>
+
+  <text x="50" y="158" font-size="14" font-weight="700" fill="#0553b1">Maydonga ulanadi:</text>
+  <rect x="50" y="170" width="300" height="40" rx="8" fill="#dbeafe"/>
+  <text x="200" y="195" text-anchor="middle" font-size="13" fill="#1e293b">controller: _ismController</text>
+
+  <text x="50" y="240" font-size="14" font-weight="700" fill="#0553b1">Istalgan paytda jonli o'qish:</text>
+  <rect x="50" y="252" width="300" height="40" rx="8" fill="#dbeafe"/>
+  <text x="200" y="277" text-anchor="middle" font-size="13" fill="#1e293b">final ism = _ismController.text;</text>
+
+  <text x="50" y="322" font-size="13" fill="#16a34a">+ Matnni o'qish ham, o'rnatish ham mumkin</text>
+  <text x="50" y="346" font-size="13" fill="#16a34a">+ Yozilayotganda kuzatish (listener)</text>
+  <text x="50" y="370" font-size="13" fill="#ef4444">- dispose() qilish SHART (xotira oqmasin)</text>
+  <text x="50" y="402" font-size="13" font-weight="700" fill="#475569">Jonli qiymat kerak bo'lsa — shu yo'l</text>
+
+  <!-- RIGHT: onSaved -->
+  <rect x="410" y="84" width="340" height="340" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <rect x="410" y="84" width="340" height="46" rx="14" fill="#16a34a"/>
+  <text x="580" y="114" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">2. validator / onSaved</text>
+
+  <text x="430" y="158" font-size="14" font-weight="700" fill="#16a34a">Maydon o'zi yig'adi:</text>
+  <rect x="430" y="170" width="300" height="40" rx="8" fill="#dcfce7"/>
+  <text x="580" y="195" text-anchor="middle" font-size="13" fill="#1e293b">onSaved: (v) => _ism = v!,</text>
+
+  <text x="430" y="240" font-size="14" font-weight="700" fill="#16a34a">save() hamma onSaved'ni chaqiradi:</text>
+  <rect x="430" y="252" width="300" height="40" rx="8" fill="#dcfce7"/>
+  <text x="580" y="277" text-anchor="middle" font-size="13" fill="#1e293b">formKey.currentState!.save();</text>
+
+  <text x="430" y="322" font-size="13" fill="#16a34a">+ Controller yaratish/dispose shart emas</text>
+  <text x="430" y="346" font-size="13" fill="#16a34a">+ validate() bilan tabiiy ishlaydi</text>
+  <text x="430" y="370" font-size="13" fill="#ef4444">- Faqat save() paytida qiymat keladi</text>
+  <text x="430" y="402" font-size="13" font-weight="700" fill="#475569">Faqat yuborishda kerak bo'lsa — shu yetadi</text>
+
+  <!-- middle divider label -->
+  <text x="390" y="448" text-anchor="middle" font-size="13" fill="#94a3b8">Ikkalasini birga ham ishlatish mumkin: tekshirish uchun validator, jonli o'qish uchun controller.</text>
+</svg>

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 640" width="940" height="640">
+  <title>Clean Architecture to'rt konsentrik doirasi: ichkaridan tashqariga Entities, Use Cases, Interface Adapters, Frameworks va Drivers; bog'liqlik o'qlari markazga ishora qiladi; o'ngda har doirada nima joylashishi izohlanadi</title>
+
+  <rect x="0" y="0" width="940" height="640" fill="#f8fafc"/>
+
+  <text x="470" y="38" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1e293b">Clean Architecture — to'rt doira (Robert C. Martin)</text>
+
+  <!-- ===== Konsentrik doiralar ===== -->
+  <!-- 4-doira: Frameworks & Drivers -->
+  <circle cx="300" cy="350" r="252" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="300" y="126" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">Frameworks &amp; Drivers</text>
+  <text x="300" y="148" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b91c1c">DB · Web · UI · tashqi servis</text>
+
+  <!-- 3-doira: Interface Adapters -->
+  <circle cx="300" cy="350" r="192" fill="#fef9c3" stroke="#f59e0b" stroke-width="2"/>
+  <text x="300" y="188" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#d97706">Interface Adapters</text>
+  <text x="300" y="210" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#a16207">Controller · Presenter · Gateway</text>
+
+  <!-- 2-doira: Use Cases -->
+  <circle cx="300" cy="350" r="132" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="300" y="248" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Use Cases</text>
+  <text x="300" y="270" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#15803d">Ilova biznes qoidalari</text>
+
+  <!-- 1-doira: Entities (markaz) -->
+  <circle cx="300" cy="350" r="72" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="300" y="346" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">Entities</text>
+  <text x="300" y="368" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1d4ed8">Korxona qoidalari</text>
+
+  <!-- Bog'liqlik o'qi: tashqaridan markazga (pastdan) -->
+  <line x1="300" y1="594" x2="300" y2="426" stroke="#1e293b" stroke-width="3" marker-end="url(#cinarr)"/>
+  <text x="314" y="540" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">bog'liqlik</text>
+  <text x="314" y="558" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">markazga</text>
+
+  <!-- ===== O'ng panel: nima qayerda ===== -->
+  <text x="620" y="100" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">Qaysi narsa qaysi doirada</text>
+
+  <rect x="620" y="116" width="296" height="84" rx="9" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="634" y="140" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">Entities</text>
+  <text x="634" y="162" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#334155">Korxonaning eng barqaror qoidalari.</text>
+  <text x="634" y="182" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#334155">Ilovasiz ham mavjud ("balans manfiy</text>
+  <text x="634" y="196" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#334155">bo'lmaydi").</text>
+
+  <rect x="620" y="210" width="296" height="84" rx="9" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="634" y="234" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">Use Cases</text>
+  <text x="634" y="256" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#334155">Ilovaga xos oqim: interactor.</text>
+  <text x="634" y="276" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#334155">Masalan "Pul o'tkazish". Portlarni</text>
+  <text x="634" y="290" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#334155">shu yer e'lon qiladi.</text>
+
+  <rect x="620" y="304" width="296" height="84" rx="9" fill="#fef9c3" stroke="#f59e0b" stroke-width="2"/>
+  <text x="634" y="328" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#d97706">Interface Adapters</text>
+  <text x="634" y="350" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#334155">Tarjimon: HTTP -&gt; DTO, entity -&gt;</text>
+  <text x="634" y="370" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#334155">JSON, SQL satr -&gt; obyekt. Controller,</text>
+  <text x="634" y="384" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#334155">presenter, repository.</text>
+
+  <rect x="620" y="398" width="296" height="84" rx="9" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="634" y="422" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">Frameworks &amp; Drivers</text>
+  <text x="634" y="444" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#334155">Detal: Express, PostgreSQL, React.</text>
+  <text x="634" y="464" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#334155">"Framework — detal, markaz emas."</text>
+  <text x="634" y="478" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#334155">Almashtirsa ichki qatlam o'zgarmaydi.</text>
+
+  <rect x="620" y="500" width="296" height="100" rx="9" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="634" y="524" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Tashqariga qarab:</text>
+  <text x="634" y="546" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#334155">- barqarorlik kamayadi, almashish ko'p</text>
+  <text x="634" y="566" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#334155">- detallar ko'payadi, siyosat kamayadi</text>
+  <text x="634" y="586" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#334155">- markaz: muhim, sekin o'zgaradi</text>
+
+  <defs>
+    <marker id="cinarr" markerWidth="14" markerHeight="14" refX="10" refY="6" orient="auto">
+      <path d="M1,1 L11,6 L1,11 Z" fill="#1e293b"/>
+    </marker>
+  </defs>
+</svg>

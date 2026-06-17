@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" width="760" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Har provayderda bir xil tushunchalar — messages, system, streaming, tool, embedding — faqat sintaksis farqli</title>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Tushunchalar bir xil, faqat sintaksis farqli</text>
+  <text x="380" y="60" text-anchor="middle" font-size="14" fill="#475569">1-16 bobdagi g'oyalar har provayderga ishlaydi</text>
+
+  <!-- markaziy umumiy tushunchalar ustuni -->
+  <rect x="285" y="92" width="190" height="290" rx="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="380" y="118" text-anchor="middle" font-size="16" font-weight="700" fill="#6d28d9">Umumiy g'oyalar</text>
+  <rect x="305" y="134" width="150" height="34" rx="7" fill="#ffffff" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="380" y="156" text-anchor="middle" font-size="14" fill="#1e293b">messages</text>
+  <rect x="305" y="176" width="150" height="34" rx="7" fill="#ffffff" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="380" y="198" text-anchor="middle" font-size="14" fill="#1e293b">system</text>
+  <rect x="305" y="218" width="150" height="34" rx="7" fill="#ffffff" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="380" y="240" text-anchor="middle" font-size="14" fill="#1e293b">streaming</text>
+  <rect x="305" y="260" width="150" height="34" rx="7" fill="#ffffff" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="380" y="282" text-anchor="middle" font-size="14" fill="#1e293b">tool calling</text>
+  <rect x="305" y="302" width="150" height="34" rx="7" fill="#ffffff" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="380" y="324" text-anchor="middle" font-size="14" fill="#1e293b">embedding</text>
+  <rect x="305" y="344" width="150" height="30" rx="7" fill="#ffffff" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="380" y="364" text-anchor="middle" font-size="13" fill="#1e293b">RAG, agent</text>
+
+  <!-- chap: Claude -->
+  <rect x="40" y="120" width="210" height="120" rx="12" fill="#ffffff" stroke="#d97757" stroke-width="2"/>
+  <text x="145" y="146" text-anchor="middle" font-size="16" font-weight="700" fill="#d97757">Claude</text>
+  <text x="145" y="172" text-anchor="middle" font-size="13" fill="#475569">system: (alohida)</text>
+  <text x="145" y="194" text-anchor="middle" font-size="13" fill="#475569">content[0]-&gt;text</text>
+  <text x="145" y="216" text-anchor="middle" font-size="13" fill="#475569">createStream(...)</text>
+
+  <!-- chap past: OpenAI -->
+  <rect x="40" y="262" width="210" height="120" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="145" y="288" text-anchor="middle" font-size="16" font-weight="700" fill="#15803d">OpenAI / OpenAI-mos</text>
+  <text x="145" y="314" text-anchor="middle" font-size="13" fill="#475569">role=system (ichida)</text>
+  <text x="145" y="336" text-anchor="middle" font-size="13" fill="#475569">choices[0]-&gt;message</text>
+  <text x="145" y="358" text-anchor="middle" font-size="13" fill="#475569">createStreamed(...)</text>
+
+  <!-- o'ng: Gemini -->
+  <rect x="510" y="120" width="210" height="120" rx="12" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="615" y="146" text-anchor="middle" font-size="16" font-weight="700" fill="#4338ca">Gemini</text>
+  <text x="615" y="172" text-anchor="middle" font-size="13" fill="#475569">contents / parts</text>
+  <text x="615" y="194" text-anchor="middle" font-size="13" fill="#475569">parts[0]-&gt;text</text>
+  <text x="615" y="216" text-anchor="middle" font-size="13" fill="#475569">REST (Guzzle)</text>
+
+  <!-- o'ng past: Ollama -->
+  <rect x="510" y="262" width="210" height="120" rx="12" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="615" y="288" text-anchor="middle" font-size="16" font-weight="700" fill="#b45309">Ollama (lokal)</text>
+  <text x="615" y="314" text-anchor="middle" font-size="13" fill="#475569">OpenAI-mos format</text>
+  <text x="615" y="336" text-anchor="middle" font-size="13" fill="#475569">baseUri = localhost</text>
+  <text x="615" y="358" text-anchor="middle" font-size="13" fill="#475569">bepul, maxfiy</text>
+
+  <!-- bog'lovchi chiziqlar markazga -->
+  <line x1="250" y1="180" x2="285" y2="200" stroke="#cbd5e1" stroke-width="2"/>
+  <line x1="250" y1="322" x2="285" y2="280" stroke="#cbd5e1" stroke-width="2"/>
+  <line x1="510" y1="180" x2="475" y2="200" stroke="#cbd5e1" stroke-width="2"/>
+  <line x1="510" y1="322" x2="475" y2="280" stroke="#cbd5e1" stroke-width="2"/>
+
+  <text x="380" y="430" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Yangi narsa o'rganmaysiz — faqat bir tildan boshqasiga "tarjima" qilasiz</text>
+  <text x="380" y="454" text-anchor="middle" font-size="13" fill="#475569">savol bering: messages qayerda? system qayerda? javob qayerda?</text>
+</svg>

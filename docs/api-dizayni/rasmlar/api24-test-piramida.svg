@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 540">
+  <title>API test piramidasi: ko'p unit, o'rta integratsiya va contract, kam E2E</title>
+  <rect x="0" y="0" width="880" height="540" fill="#f8fafc"/>
+  <text x="440" y="36" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">API test piramidasi</text>
+  <text x="440" y="60" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Pastdan tepaga: kamayadigan son, oshadigan narx va sekinlik</text>
+
+  <!-- piramida qatlamlari -->
+  <!-- E2E -->
+  <polygon points="440,90 540,150 340,150" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="440" y="128" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#b91c1c">E2E</text>
+  <text x="440" y="145" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#b91c1c">to'liq oqim (kam)</text>
+
+  <!-- Contract -->
+  <polygon points="340,150 540,150 590,210 290,210" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="440" y="184" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#5b21b6">Contract</text>
+  <text x="440" y="201" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#5b21b6">shartnoma mosligi</text>
+
+  <!-- Integratsiya -->
+  <polygon points="290,210 590,210 650,280 230,280" fill="#fff7ed" stroke="#f59e0b" stroke-width="2"/>
+  <text x="440" y="245" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#b45309">Integratsiya</text>
+  <text x="440" y="263" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#b45309">endpoint + DB (o'rta)</text>
+
+  <!-- Unit -->
+  <polygon points="230,280 650,280 730,370 150,370" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="440" y="318" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#166534">Unit</text>
+  <text x="440" y="337" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#166534">mantiq, validatsiya (ko'p)</text>
+  <text x="440" y="356" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#166534">tez, arzon, izolyatsiyalangan</text>
+
+  <!-- chap o'q: narx/sekinlik oshadi -->
+  <line x1="100" y1="370" x2="100" y2="95" stroke="#dc2626" stroke-width="2" marker-end="url(#arrR)"/>
+  <text x="92" y="235" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626" transform="rotate(-90 92 235)">narx + sekinlik + mo'rtlik oshadi</text>
+
+  <!-- o'ng o'q: son oshadi -->
+  <line x1="780" y1="95" x2="780" y2="370" stroke="#16a34a" stroke-width="2" marker-end="url(#arrG2)"/>
+  <text x="788" y="235" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a" transform="rotate(90 788 235)">testlar soni oshadi</text>
+
+  <!-- pastki izoh paneli -->
+  <rect x="150" y="402" width="580" height="116" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="440" y="426" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">Trade-off: muvozanat qidir</text>
+  <text x="170" y="450" font-family="Segoe UI" font-size="13" fill="#16a34a">+ Unit: millisekundlarda ishlaydi, lekin tashqi xulqni isbotlamaydi</text>
+  <text x="170" y="472" font-family="Segoe UI" font-size="13" fill="#f59e0b">+ Integratsiya/Contract: haqiqiy endpoint va shartnomani tekshiradi</text>
+  <text x="170" y="494" font-family="Segoe UI" font-size="13" fill="#dc2626">- E2E: ishonchli, ammo sekin va mo'rt -> faqat asosiy oqimlarga</text>
+  <text x="170" y="512" font-family="Segoe UI" font-size="13" fill="#64748b">Maqsad: ko'p arzon test pastda, kam qimmat test tepada</text>
+
+  <defs>
+    <marker id="arrR" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto"><path d="M0,0 L7,3.2 L0,6.4 Z" fill="#dc2626"/></marker>
+    <marker id="arrG2" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto"><path d="M0,0 L7,3.2 L0,6.4 Z" fill="#16a34a"/></marker>
+  </defs>
+</svg>

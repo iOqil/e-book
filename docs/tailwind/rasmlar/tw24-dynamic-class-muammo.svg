@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 460" width="780" height="460" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Dinamik klass muammosi: chap tomonda bg-${color}-500 shablon satrini skaner ko'rmaydi, klass production'da yo'qoladi; o'ng tomonda to'liq nomli lookup map yoki @source inline orqali klass CSS'ga kiritiladi</title>
+  <rect x="0" y="0" width="780" height="460" fill="#f8fafc"/>
+
+  <text x="390" y="34" text-anchor="middle" font-size="21" font-weight="bold" fill="#1e293b">Dinamik klass muammosi va yechimi</text>
+  <text x="390" y="58" text-anchor="middle" font-size="14" fill="#475569">Skaner faqat TO'LIQ klass satrini ko'radi — qism-qismdan qurilganini emas</text>
+
+  <!-- CHAP: NOTO'G'RI -->
+  <rect x="28" y="80" width="350" height="350" rx="12" fill="#fef2f2" stroke="#ef4444" stroke-width="1.5"/>
+  <circle cx="58" cy="110" r="13" fill="#ef4444"/>
+  <text x="58" y="115" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">&#215;</text>
+  <text x="80" y="115" font-size="15" font-weight="bold" fill="#b91c1c">NOTO'G'RI — shablon satr</text>
+
+  <rect x="48" y="130" width="310" height="68" rx="8" fill="#ffffff" stroke="#fca5a5" stroke-width="1"/>
+  <text x="64" y="156" font-size="13" fill="#1e293b">const color = props.color;</text>
+  <text x="64" y="180" font-size="13" fill="#ef4444">&lt;div class=&#123;`bg-$&#123;color&#125;-500`&#125;&gt;</text>
+
+  <text x="60" y="226" font-size="13" fill="#475569">Skaner faylda topadigani:</text>
+  <rect x="48" y="236" width="310" height="34" rx="6" fill="#fee2e2" stroke="#fca5a5" stroke-width="1"/>
+  <text x="64" y="258" font-size="13" fill="#b91c1c">"bg-$&#123;color&#125;-500"  — to'liq nom EMAS</text>
+
+  <text x="203" y="296" text-anchor="middle" font-size="13" fill="#475569">natijada CSS'da:</text>
+  <rect x="48" y="306" width="310" height="44" rx="6" fill="#ffffff" stroke="#fca5a5" stroke-width="1"/>
+  <text x="203" y="333" text-anchor="middle" font-size="14" font-weight="bold" fill="#b91c1c">bg-red-500 YO'Q</text>
+
+  <text x="203" y="380" text-anchor="middle" font-size="13" fill="#1e293b">dev'da "ishlardi", prod'da</text>
+  <text x="203" y="400" text-anchor="middle" font-size="13" font-weight="bold" fill="#b91c1c">stil YO'QOLADI</text>
+
+  <!-- O'NG: TO'G'RI -->
+  <rect x="402" y="80" width="350" height="350" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <circle cx="432" cy="110" r="13" fill="#16a34a"/>
+  <text x="432" y="116" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">&#10003;</text>
+  <text x="454" y="115" font-size="15" font-weight="bold" fill="#166534">TO'G'RI — ikki yo'l</text>
+
+  <text x="422" y="148" font-size="13" font-weight="bold" fill="#166534">A. To'liq nomli lookup map</text>
+  <rect x="422" y="158" width="310" height="80" rx="8" fill="#ffffff" stroke="#86efac" stroke-width="1"/>
+  <text x="438" y="182" font-size="13" fill="#1e293b">const map = &#123;</text>
+  <text x="452" y="202" font-size="13" fill="#16a34a">red: "bg-red-500",</text>
+  <text x="452" y="222" font-size="13" fill="#16a34a">blue: "bg-blue-500" &#125;;</text>
+
+  <text x="422" y="266" font-size="13" font-weight="bold" fill="#166534">B. @source inline (safelist)</text>
+  <rect x="422" y="276" width="310" height="60" rx="8" fill="#ffffff" stroke="#86efac" stroke-width="1"/>
+  <text x="438" y="300" font-size="13" fill="#1e293b">@source inline(</text>
+  <text x="452" y="320" font-size="13" fill="#16a34a">"bg-&#123;red,green,blue&#125;-500");</text>
+
+  <rect x="422" y="350" width="310" height="60" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1"/>
+  <text x="577" y="374" text-anchor="middle" font-size="14" font-weight="bold" fill="#166534">to'liq nom ko'rinadi</text>
+  <text x="577" y="396" text-anchor="middle" font-size="13" fill="#166534">klass CSS'ga kiritiladi</text>
+</svg>

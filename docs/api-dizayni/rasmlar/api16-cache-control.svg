@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560">
+  <title>Cache-Control direktivalari: max-age, no-cache, no-store, private, public, must-revalidate</title>
+  <rect x="0" y="0" width="880" height="560" fill="#f8fafc"/>
+  <text x="440" y="36" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">Cache-Control direktivalari (RFC 9111)</text>
+  <text x="440" y="60" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Javob qancha vaqt yangi, qayerda saqlanadi, qachon qayta tekshiriladi</text>
+
+  <!-- max-age -->
+  <rect x="40" y="88" width="390" height="92" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="58" y="116" font-family="monospace" font-size="15" font-weight="bold" fill="#16a34a">max-age=3600</text>
+  <text x="58" y="140" font-family="Segoe UI" font-size="13" fill="#334155">Javob 3600 sekund (1 soat) yangi hisoblanadi.</text>
+  <text x="58" y="160" font-family="Segoe UI" font-size="13" fill="#334155">Shu vaqtgacha kesh server'ga bormaydi.</text>
+
+  <!-- s-maxage -->
+  <rect x="450" y="88" width="390" height="92" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="468" y="116" font-family="monospace" font-size="15" font-weight="bold" fill="#16a34a">s-maxage=600</text>
+  <text x="468" y="140" font-family="Segoe UI" font-size="13" fill="#334155">Faqat shared kesh (CDN/proxy) uchun.</text>
+  <text x="468" y="160" font-family="Segoe UI" font-size="13" fill="#334155">max-age'ni shared keshda bekor qiladi.</text>
+
+  <!-- no-cache -->
+  <rect x="40" y="196" width="390" height="92" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="58" y="224" font-family="monospace" font-size="15" font-weight="bold" fill="#b45309">no-cache</text>
+  <text x="58" y="248" font-family="Segoe UI" font-size="13" fill="#334155">Saqlash mumkin, lekin ishlatishdan oldin</text>
+  <text x="58" y="268" font-family="Segoe UI" font-size="13" fill="#334155">HAR safar server'da validatsiya qil (ETag).</text>
+
+  <!-- no-store -->
+  <rect x="450" y="196" width="390" height="92" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="468" y="224" font-family="monospace" font-size="15" font-weight="bold" fill="#dc2626">no-store</text>
+  <text x="468" y="248" font-family="Segoe UI" font-size="13" fill="#334155">Umuman saqlama — hech qayerda.</text>
+  <text x="468" y="268" font-family="Segoe UI" font-size="13" fill="#334155">Maxfiy ma'lumot uchun (token, balans).</text>
+
+  <!-- private -->
+  <rect x="40" y="304" width="390" height="92" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="58" y="332" font-family="monospace" font-size="15" font-weight="bold" fill="#7c3aed">private</text>
+  <text x="58" y="356" font-family="Segoe UI" font-size="13" fill="#334155">Faqat mijoz keshi (brauzer) saqlasin.</text>
+  <text x="58" y="376" font-family="Segoe UI" font-size="13" fill="#334155">Shared CDN/proxy SAQLAMASIN.</text>
+
+  <!-- public -->
+  <rect x="450" y="304" width="390" height="92" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="468" y="332" font-family="monospace" font-size="15" font-weight="bold" fill="#2563eb">public</text>
+  <text x="468" y="356" font-family="Segoe UI" font-size="13" fill="#334155">Shared kesh ham saqlashi mumkin.</text>
+  <text x="468" y="376" font-family="Segoe UI" font-size="13" fill="#334155">Umumiy (foydalanuvchiga xos bo'lmagan) data.</text>
+
+  <!-- must-revalidate -->
+  <rect x="40" y="412" width="390" height="92" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="58" y="440" font-family="monospace" font-size="15" font-weight="bold" fill="#b45309">must-revalidate</text>
+  <text x="58" y="464" font-family="Segoe UI" font-size="13" fill="#334155">Muddat tugagach, eski (stale) javobni</text>
+  <text x="58" y="484" font-family="Segoe UI" font-size="13" fill="#334155">ishlatma — qat'iy qayta tekshir.</text>
+
+  <!-- birikma misol -->
+  <rect x="450" y="412" width="390" height="92" rx="10" fill="#0f172a" stroke="#16a34a" stroke-width="2"/>
+  <text x="468" y="440" font-family="monospace" font-size="14" fill="#93c5fd">Cache-Control:</text>
+  <text x="468" y="462" font-family="monospace" font-size="14" fill="#4ade80">  public, max-age=3600,</text>
+  <text x="468" y="484" font-family="monospace" font-size="14" fill="#4ade80">  must-revalidate</text>
+
+  <text x="440" y="534" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Direktivalarni vergul bilan birlashtirib bersa bo'ladi</text>
+</svg>

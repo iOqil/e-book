@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 560">
+  <title>Trie (prefiks daraxti): "olma", "ol", "ona" so'zlari saqlangan, so'z oxiri belgilangan tugunlar</title>
+  <rect x="0" y="0" width="860" height="560" fill="#f8fafc"/>
+  <text x="430" y="34" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Trie: prefiks daraxti</text>
+  <text x="430" y="58" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">"olma", "ol", "ona" so'zlari saqlangan — umumiy prefiks ("o") bir marta turadi</text>
+
+  <!-- edges -->
+  <line x1="430" y1="118" x2="300" y2="208" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="300" y1="208" x2="200" y2="298" stroke="#16a34a" stroke-width="3"/>
+  <line x1="300" y1="208" x2="430" y2="298" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="200" y1="298" x2="200" y2="388" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="200" y1="388" x2="200" y2="478" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="430" y1="298" x2="430" y2="388" stroke="#94a3b8" stroke-width="2"/>
+
+  <!-- edge letters -->
+  <text x="356" y="158" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#2563eb">o</text>
+  <text x="238" y="253" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#16a34a">l</text>
+  <text x="376" y="253" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#2563eb">n</text>
+  <text x="184" y="343" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#2563eb">m</text>
+  <text x="184" y="433" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#2563eb">a</text>
+  <text x="446" y="343" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#2563eb">a</text>
+
+  <!-- root -->
+  <circle cx="430" cy="118" r="22" fill="#ffffff" stroke="#7c3aed" stroke-width="3"/>
+  <text x="430" y="124" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#7c3aed">●</text>
+  <text x="430" y="98" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#7c3aed" font-weight="bold">ildiz (bo'sh)</text>
+
+  <!-- node o -->
+  <circle cx="300" cy="208" r="22" fill="#ffffff" stroke="#334155" stroke-width="2"/>
+  <text x="300" y="214" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#1e293b">o</text>
+
+  <!-- node ol (word end) -->
+  <circle cx="200" cy="298" r="22" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+  <text x="200" y="304" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#166534">ol</text>
+
+  <!-- node on -->
+  <circle cx="430" cy="298" r="22" fill="#ffffff" stroke="#334155" stroke-width="2"/>
+  <text x="430" y="304" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#1e293b">on</text>
+
+  <!-- node olm -->
+  <circle cx="200" cy="388" r="22" fill="#ffffff" stroke="#334155" stroke-width="2"/>
+  <text x="200" y="394" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#1e293b">olm</text>
+
+  <!-- node olma (word end) -->
+  <circle cx="200" cy="478" r="22" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+  <text x="200" y="484" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="#166534">olma</text>
+
+  <!-- node ona (word end) -->
+  <circle cx="430" cy="388" r="22" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+  <text x="430" y="394" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="#166534">ona</text>
+
+  <!-- word-end markers -->
+  <text x="246" y="304" font-family="Segoe UI" font-size="13" fill="#16a34a" font-weight="bold">★ so'z oxiri</text>
+  <text x="246" y="484" font-family="Segoe UI" font-size="13" fill="#16a34a" font-weight="bold">★ so'z oxiri</text>
+  <text x="476" y="394" font-family="Segoe UI" font-size="13" fill="#16a34a" font-weight="bold">★ so'z oxiri</text>
+
+  <!-- legend -->
+  <rect x="560" y="118" width="282" height="150" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="576" y="144" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb">Qoidalar</text>
+  <text x="576" y="170" font-family="Segoe UI" font-size="13" fill="#334155">• har qirra = bitta belgi</text>
+  <text x="576" y="194" font-family="Segoe UI" font-size="13" fill="#334155">• ildizdan yo'l = prefiks</text>
+  <circle cx="586" cy="216" r="9" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="602" y="221" font-family="Segoe UI" font-size="13" fill="#334155">= so'z shu tugunda tugaydi</text>
+  <text x="576" y="248" font-family="Segoe UI" font-size="13" fill="#334155">• umumiy prefiks bir marta!</text>
+
+  <!-- key fact -->
+  <rect x="560" y="290" width="282" height="80" rx="12" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="701" y="318" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#92400e" font-weight="bold">"ol" — bu ham so'z, ham</text>
+  <text x="701" y="338" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#92400e">"olma" so'zining prefiksi.</text>
+  <text x="701" y="358" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#92400e">Shuning uchun bayroq kerak.</text>
+
+  <!-- bottom note -->
+  <rect x="60" y="512" width="500" height="36" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="310" y="535" text-anchor="middle" font-family="monospace" font-size="13" fill="#7c3aed">qidiruv / qo'shish narxi = O(L), L = so'z uzunligi (so'zlar soniga bog'liq emas)</text>
+</svg>

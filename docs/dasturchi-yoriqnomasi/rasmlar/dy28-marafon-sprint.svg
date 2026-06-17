@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 470" font-family="Segoe UI">
+  <title>Karyera sprint kabi tez yonib o'chish emas, marafon kabi barqaror temp bilan uzoq masofa</title>
+  <rect x="0" y="0" width="900" height="470" fill="#f8fafc"/>
+
+  <text x="450" y="36" text-anchor="middle" font-size="22" font-weight="bold" fill="#1e293b">Karyera — sprint emas, marafon</text>
+  <text x="450" y="60" text-anchor="middle" font-size="14" fill="#64748b">Barqarorlik = uzoq masofada eng yuqori umumiy natija</text>
+
+  <!-- axes -->
+  <line x1="80" y1="370" x2="850" y2="370" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="80" y1="110" x2="80" y2="370" stroke="#94a3b8" stroke-width="2"/>
+  <text x="465" y="402" text-anchor="middle" font-size="14" fill="#64748b">vaqt (yillar) &#8594;</text>
+  <text x="40" y="240" text-anchor="middle" font-size="14" fill="#64748b" transform="rotate(-90 40 240)">energiya / natija</text>
+
+  <!-- sprint curve: high spike then crash -->
+  <path d="M 80 360 C 130 360 150 130 200 130 C 250 130 270 350 330 360 C 360 364 380 360 400 360"
+        fill="none" stroke="#dc2626" stroke-width="4"/>
+  <circle cx="200" cy="130" r="6" fill="#dc2626"/>
+  <text x="205" y="120" font-size="14" font-weight="bold" fill="#dc2626">tez baland cho'qqi</text>
+  <text x="300" y="345" font-size="13" fill="#dc2626">burnout / qulash</text>
+  <text x="150" y="430" text-anchor="middle" font-size="15" font-weight="bold" fill="#dc2626">Sprint: yon-tomon yonib o'chish</text>
+
+  <!-- marathon curve: steady moderate rising -->
+  <path d="M 80 320 C 250 300 450 250 850 200"
+        fill="none" stroke="#16a34a" stroke-width="4"/>
+  <circle cx="850" cy="200" r="6" fill="#16a34a"/>
+  <text x="560" y="245" font-size="14" font-weight="bold" fill="#16a34a">barqaror, ko'tariluvchi temp</text>
+  <text x="650" y="430" text-anchor="middle" font-size="15" font-weight="bold" fill="#16a34a">Marafon: uzoq masofa, barqaror temp</text>
+
+  <text x="450" y="455" text-anchor="middle" font-size="13" fill="#64748b">Cho'qqi balandligi emas, egri chiziq ostidagi umumiy maydon muhim</text>
+</svg>

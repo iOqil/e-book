@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 480" width="780" height="480">
+  <title>Interactivity API: data-wp-* direktivalar va store o'zaro bog'lanishi</title>
+  <rect width="780" height="480" fill="#f8fafc"/>
+  <text x="390" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Interactivity API — direktivalar va store</text>
+
+  <!-- HTML (server render) -->
+  <rect x="32" y="58" width="340" height="386" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="52" y="86" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e40af">HTML (render.php)</text>
+
+  <rect x="52" y="100" width="300" height="40" rx="6" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="64" y="118" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">data-wp-interactive="kitob/akkordion"</text>
+  <text x="64" y="134" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">namespace ulaydi</text>
+
+  <rect x="52" y="148" width="300" height="40" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="64" y="166" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">data-wp-context='{"ochiq":false}'</text>
+  <text x="64" y="182" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">lokal holat</text>
+
+  <rect x="52" y="196" width="300" height="40" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="64" y="214" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#166534">data-wp-on--click="actions.almashtir"</text>
+  <text x="64" y="230" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">hodisa -&gt; action</text>
+
+  <rect x="52" y="244" width="300" height="40" rx="6" fill="#ffffff" stroke="#d97706" stroke-width="1.5"/>
+  <text x="64" y="262" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#92400e">data-wp-bind--hidden="!state.ochiqMi"</text>
+  <text x="64" y="278" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">atributni state'ga bog'lash</text>
+
+  <rect x="52" y="292" width="300" height="40" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="64" y="310" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">data-wp-class--faol="state.ochiqMi"</text>
+  <text x="64" y="326" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">CSS klassni shartli qo'shish</text>
+
+  <rect x="52" y="340" width="300" height="40" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="64" y="358" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">data-wp-text="state.yorliq"</text>
+  <text x="64" y="374" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">matn tarkibi</text>
+
+  <rect x="52" y="388" width="300" height="40" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="64" y="406" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">data-wp-init / data-wp-watch</text>
+  <text x="64" y="422" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">callbacks (yon ta'sir)</text>
+
+  <!-- O'q -->
+  <line x1="378" y1="250" x2="438" y2="250" stroke="#475569" stroke-width="2.5" marker-end="url(#i25)"/>
+  <text x="408" y="240" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">view.js</text>
+  <defs>
+    <marker id="i25" markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto">
+      <path d="M0,0 L11,5.5 L0,11 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- store -->
+  <rect x="446" y="74" width="300" height="354" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="466" y="102" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#166534">store( 'kitob/akkordion', {...} )</text>
+  <text x="466" y="122" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">@wordpress/interactivity</text>
+
+  <rect x="466" y="138" width="260" height="80" rx="7" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="482" y="162" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#166534">state</text>
+  <text x="482" y="184" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#334155">get ochiqMi() {</text>
+  <text x="482" y="204" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#334155">  return getContext().ochiq }</text>
+
+  <rect x="466" y="230" width="260" height="80" rx="7" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="482" y="254" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e40af">actions</text>
+  <text x="482" y="276" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#334155">almashtir() {</text>
+  <text x="482" y="296" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#334155">  ctx.ochiq = !ctx.ochiq }</text>
+
+  <rect x="466" y="322" width="260" height="80" rx="7" fill="#ffffff" stroke="#d97706" stroke-width="1.5"/>
+  <text x="482" y="346" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#92400e">callbacks</text>
+  <text x="482" y="368" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#334155">init() { getContext()... }</text>
+  <text x="482" y="388" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">reaktiv yon ta'sirlar</text>
+
+  <text x="390" y="468" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#64748b">getContext() lokal data-wp-context'ga kiradi · state o'zgarsa direktivalar avtomatik yangilanadi</text>
+</svg>

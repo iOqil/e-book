@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 520">
+  <title>Interpolyatsion qidiruv qiymatga qarab massivning taxminiy joyiga sakraydi, xuddi telefon kitobida M harfini o'rtadan emas, oxirroqdan qidirgandek</title>
+  <rect x="0" y="0" width="860" height="520" fill="#f8fafc"/>
+  <text x="430" y="36" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Interpolyatsion qidiruv: qiymatga qarab sakrash</text>
+  <text x="430" y="60" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Telefon kitobi analogiyasi: "Toshmatov" ni o'rtadan emas, oxirroqdan ochasiz</text>
+
+  <!-- analogy: phone book -->
+  <rect x="40" y="90" width="360" height="180" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="220" y="116" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#7c3aed">Telefon kitobi (A ... Z)</text>
+  <!-- spine -->
+  <rect x="70" y="135" width="300" height="26" rx="4" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.2"/>
+  <text x="78" y="153" font-family="Segoe UI" font-size="13" fill="#334155">A</text>
+  <text x="358" y="153" text-anchor="end" font-family="Segoe UI" font-size="13" fill="#334155">Z</text>
+  <!-- binary would open here -->
+  <line x1="220" y1="135" x2="220" y2="161" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4 3"/>
+  <text x="220" y="182" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#94a3b8">binar: o'rta (M ~ "M")</text>
+  <!-- interpolation opens near T -->
+  <line x1="305" y1="135" x2="305" y2="161" stroke="#16a34a" stroke-width="2.5"/>
+  <polygon points="299,127 311,127 305,135" fill="#16a34a"/>
+  <text x="305" y="210" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#16a34a">"T" — bu yerda</text>
+  <text x="220" y="240" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Inson "T" ni oxirroqdan qidiradi,</text>
+  <text x="220" y="258" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">harf qiymatiga qarab joyni taxmin qiladi.</text>
+
+  <!-- formula card -->
+  <rect x="430" y="90" width="390" height="180" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="625" y="116" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">Pozitsiyani taxmin qilish</text>
+  <text x="625" y="148" text-anchor="middle" font-family="monospace" font-size="14" fill="#334155">pos = lo + (x − a[lo])</text>
+  <text x="625" y="172" text-anchor="middle" font-family="monospace" font-size="14" fill="#334155">      ───────────── × (hi − lo)</text>
+  <text x="625" y="196" text-anchor="middle" font-family="monospace" font-size="14" fill="#334155">      (a[hi] − a[lo])</text>
+  <text x="625" y="228" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Bir tekis taqsimotda: o'rtacha O(log log n)</text>
+  <text x="625" y="250" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">Notekis taqsimotda: eng yomon O(n)</text>
+
+  <!-- array example -->
+  <text x="40" y="312" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#334155">Misol: x = 90, qiymatlar bir tekis taqsimlangan (10..100)</text>
+  <g font-family="monospace" font-size="14" text-anchor="middle">
+    <rect x="60" y="328" width="76" height="44" rx="5" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/><text x="98" y="356" fill="#334155">10</text>
+    <rect x="142" y="328" width="76" height="44" rx="5" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/><text x="180" y="356" fill="#334155">20</text>
+    <rect x="224" y="328" width="76" height="44" rx="5" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/><text x="262" y="356" fill="#334155">30</text>
+    <rect x="306" y="328" width="76" height="44" rx="5" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/><text x="344" y="356" fill="#334155">40</text>
+    <rect x="388" y="328" width="76" height="44" rx="5" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/><text x="426" y="356" fill="#334155">50</text>
+    <rect x="470" y="328" width="76" height="44" rx="5" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/><text x="508" y="356" fill="#334155">60</text>
+    <rect x="552" y="328" width="76" height="44" rx="5" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/><text x="590" y="356" fill="#334155">70</text>
+    <rect x="634" y="328" width="76" height="44" rx="5" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/><text x="672" y="356" fill="#334155">80</text>
+    <rect x="716" y="328" width="76" height="44" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/><text x="754" y="356" fill="#16a34a" font-weight="bold">90</text>
+  </g>
+  <g font-family="monospace" font-size="13" text-anchor="middle" fill="#64748b">
+    <text x="98" y="390">0</text><text x="180" y="390">1</text><text x="262" y="390">2</text>
+    <text x="344" y="390">3</text><text x="426" y="390">4</text><text x="508" y="390">5</text>
+    <text x="590" y="390">6</text><text x="672" y="390">7</text><text x="754" y="390">8</text>
+  </g>
+
+  <!-- jump arrow -->
+  <path d="M 98 410 Q 426 470 754 410" fill="none" stroke="#16a34a" stroke-width="2.5"/>
+  <polygon points="748,402 760,408 750,416" fill="#16a34a"/>
+  <text x="426" y="468" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#16a34a">pos = 0 + (90−10)/(90−10) × 8 = 8 → bir sakrashda topildi!</text>
+
+  <rect x="60" y="486" width="732" height="26" rx="6" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="426" y="504" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Binar har doim o'rtaga boradi; interpolyatsion qiymatning kattaligiga qarab "aqlli" taxmin qiladi.</text>
+</svg>

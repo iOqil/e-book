@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400">
+  <title>Law of Demeter: uzun zanjir (a.getB().getC().getD()) ichki tuzilmaga bog'lanadi vs faqat yaqin qo'shni bilan gaplashish (delegatsiya)</title>
+  <defs>
+    <marker id="dm-ok-qizil" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/>
+    </marker>
+    <marker id="dm-ok-yashil" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="760" height="400" fill="#f8fafc"/>
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Law of Demeter — "begona bilan gaplashma"</text>
+
+  <!-- YUQORI: ZANJIR (YOMON) -->
+  <rect x="24" y="56" width="712" height="148" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="44" y="82" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">Yomon: uzun zanjir — ichki tuzilmaga kirib borasiz</text>
+
+  <rect x="48" y="100" width="120" height="50" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="108" y="130" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#7f1d1d">buyurtma</text>
+
+  <rect x="248" y="100" width="120" height="50" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="308" y="130" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">mijoz</text>
+  <rect x="448" y="100" width="120" height="50" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="508" y="130" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">manzil</text>
+  <rect x="616" y="100" width="100" height="50" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="666" y="130" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">shahar</text>
+
+  <line x1="168" y1="125" x2="246" y2="125" stroke="#dc2626" stroke-width="2" marker-end="url(#dm-ok-qizil)"/>
+  <line x1="368" y1="125" x2="446" y2="125" stroke="#dc2626" stroke-width="2" marker-end="url(#dm-ok-qizil)"/>
+  <line x1="568" y1="125" x2="614" y2="125" stroke="#dc2626" stroke-width="2" marker-end="url(#dm-ok-qizil)"/>
+
+  <text x="392" y="178" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#7f1d1d">buyurtma.getMijoz().getManzil().getShahar()</text>
+  <text x="392" y="196" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">mijoz yoki manzil tuzilmasi o'zgarsa — bu chaqiruv ham buziladi (qattiq bog'liqlik)</text>
+
+  <!-- PAST: DELEGATSIYA (YAXSHI) -->
+  <rect x="24" y="224" width="712" height="148" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="44" y="250" text-anchor="start" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Yaxshi: faqat yaqin qo'shni bilan gaplash (delegatsiya)</text>
+
+  <rect x="48" y="268" width="120" height="50" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="108" y="298" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#14532d">buyurtma</text>
+
+  <rect x="296" y="268" width="160" height="50" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="376" y="290" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">mijoz</text>
+  <text x="376" y="307" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#64748b">shahriniBer() — ichini yashiradi</text>
+
+  <line x1="168" y1="293" x2="294" y2="293" stroke="#16a34a" stroke-width="2" marker-end="url(#dm-ok-yashil)"/>
+  <text x="231" y="284" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">so'ra</text>
+
+  <text x="380" y="346" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#14532d">buyurtma.getMijoz().shahriniBer()</text>
+  <text x="380" y="364" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">manzil tuzilmasi ichkarida o'zgarsa — chaqiruvchi sezmaydi (bo'sh bog'liqlik)</text>
+</svg>

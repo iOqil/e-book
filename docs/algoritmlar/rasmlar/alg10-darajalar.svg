@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 500">
+  <title>T(n)=2T(n/2)+n uchun daraja bo'yicha ishni yig'ish jadvali: har bir daraja, undagi tugunlar soni, bitta tugun ishi va shu daraja umumiy ishi ko'rsatilgan</title>
+  <rect x="0" y="0" width="880" height="500" fill="#f8fafc"/>
+  <text x="440" y="36" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Daraja bo'yicha ishni yig'ish</text>
+  <text x="440" y="62" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">T(n) = 2T(n/2) + n  →  har darajada tugunlar soni 2× ko'payadi, har tugun ishi 2× kichrayadi</text>
+
+  <!-- table header -->
+  <rect x="40" y="90" width="120" height="44" fill="#1e293b"/>
+  <rect x="160" y="90" width="200" height="44" fill="#1e293b"/>
+  <rect x="360" y="90" width="220" height="44" fill="#1e293b"/>
+  <rect x="580" y="90" width="260" height="44" fill="#1e293b"/>
+  <text x="100" y="118" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#ffffff">Daraja i</text>
+  <text x="260" y="118" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#ffffff">Tugunlar soni</text>
+  <text x="470" y="118" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#ffffff">Bitta tugun ishi</text>
+  <text x="710" y="118" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#ffffff">Daraja ishi</text>
+
+  <!-- row 0 -->
+  <rect x="40" y="134" width="800" height="42" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="100" y="161" text-anchor="middle" font-family="monospace" font-size="14" fill="#334155">0</text>
+  <text x="260" y="161" text-anchor="middle" font-family="monospace" font-size="14" fill="#2563eb">1 = 2⁰</text>
+  <text x="470" y="161" text-anchor="middle" font-family="monospace" font-size="14" fill="#7c3aed">n</text>
+  <text x="710" y="161" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#16a34a">1 · n = n</text>
+
+  <!-- row 1 -->
+  <rect x="40" y="176" width="800" height="42" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="100" y="203" text-anchor="middle" font-family="monospace" font-size="14" fill="#334155">1</text>
+  <text x="260" y="203" text-anchor="middle" font-family="monospace" font-size="14" fill="#2563eb">2 = 2¹</text>
+  <text x="470" y="203" text-anchor="middle" font-family="monospace" font-size="14" fill="#7c3aed">n/2</text>
+  <text x="710" y="203" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#16a34a">2 · n/2 = n</text>
+
+  <!-- row 2 -->
+  <rect x="40" y="218" width="800" height="42" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="100" y="245" text-anchor="middle" font-family="monospace" font-size="14" fill="#334155">2</text>
+  <text x="260" y="245" text-anchor="middle" font-family="monospace" font-size="14" fill="#2563eb">4 = 2²</text>
+  <text x="470" y="245" text-anchor="middle" font-family="monospace" font-size="14" fill="#7c3aed">n/4</text>
+  <text x="710" y="245" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#16a34a">4 · n/4 = n</text>
+
+  <!-- row i -->
+  <rect x="40" y="260" width="800" height="42" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="100" y="287" text-anchor="middle" font-family="monospace" font-size="14" fill="#334155">i</text>
+  <text x="260" y="287" text-anchor="middle" font-family="monospace" font-size="14" fill="#2563eb">2^i</text>
+  <text x="470" y="287" text-anchor="middle" font-family="monospace" font-size="14" fill="#7c3aed">n/2^i</text>
+  <text x="710" y="287" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#16a34a">2^i · n/2^i = n</text>
+
+  <!-- row last -->
+  <rect x="40" y="302" width="800" height="42" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="100" y="329" text-anchor="middle" font-family="monospace" font-size="14" fill="#334155">log₂ n</text>
+  <text x="260" y="329" text-anchor="middle" font-family="monospace" font-size="14" fill="#2563eb">n = 2^(log₂ n)</text>
+  <text x="470" y="329" text-anchor="middle" font-family="monospace" font-size="14" fill="#7c3aed">1  (barg)</text>
+  <text x="710" y="329" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#16a34a">n · 1 = n</text>
+
+  <!-- key observation -->
+  <rect x="40" y="362" width="800" height="50" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="440" y="392" text-anchor="middle" font-family="Segoe UI" font-size="15" fill="#1e40af">Muhim kuzatuv: HAR bir darajada ish aynan n ga teng (tugun ko'payishi tugun kichrayishini muvozanatlaydi).</text>
+
+  <!-- grand total -->
+  <rect x="190" y="426" width="500" height="56" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="440" y="460" text-anchor="middle" font-family="monospace" font-size="17" font-weight="bold" fill="#16a34a">Jami = n · (log₂ n + 1) = Θ(n log n)</text>
+</svg>

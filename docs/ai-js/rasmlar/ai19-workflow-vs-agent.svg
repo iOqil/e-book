@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Workflow vs Agent. WORKFLOW: siz qadamlarni qattiq yozasiz (1 -> 2 -> 3), oqim har doim bir xil, model faqat bo'shliqlarni to'ldiradi — bu retsept, aniq amal qilasiz. AGENT: maqsad berasiz, model qaysi asbobni, qachon va qachon to'xtashni O'ZI tanlaydi, oqim har safar boshqacha bo'lishi mumkin — bu maqsad va oshxona berilgan oshpaz, qadamlarni o'zi o'ylab topadi.</title>
+  <defs>
+    <marker id="w19i" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#6366f1"/>
+    </marker>
+    <marker id="w19s" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#0ea5e9"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="800" height="520" fill="#f8fafc"/>
+  <text x="400" y="32" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Workflow vs Agent — kim qadamlarni tanlaydi?</text>
+
+  <!-- LEFT: workflow -->
+  <rect x="24" y="56" width="368" height="430" rx="14" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="208" y="84" font-size="17" font-weight="bold" fill="#6366f1" text-anchor="middle">WORKFLOW</text>
+  <text x="208" y="106" font-size="13.5" fill="#475569" text-anchor="middle">qadamlarni SIZ qattiq yozasiz</text>
+
+  <rect x="76" y="122" width="264" height="48" rx="9" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <text x="208" y="151" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">1. Matnni oling</text>
+  <line x1="208" y1="170" x2="208" y2="194" stroke="#6366f1" stroke-width="2.5" marker-end="url(#w19i)"/>
+
+  <rect x="76" y="198" width="264" height="48" rx="9" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <text x="208" y="227" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">2. Modelga tarjima qildiring</text>
+  <line x1="208" y1="246" x2="208" y2="270" stroke="#6366f1" stroke-width="2.5" marker-end="url(#w19i)"/>
+
+  <rect x="76" y="274" width="264" height="48" rx="9" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <text x="208" y="303" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">3. Natijani bazaga yozing</text>
+
+  <rect x="48" y="346" width="320" height="56" rx="10" fill="#dbeafe" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="208" y="369" font-size="13.5" fill="#1e293b" text-anchor="middle">Oqim HAR DOIM bir xil. Model faqat</text>
+  <text x="208" y="388" font-size="13.5" fill="#1e293b" text-anchor="middle">bo'shliqlarni to'ldiradi (tarjima).</text>
+
+  <rect x="48" y="414" width="320" height="56" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="208" y="437" font-size="13.5" font-weight="bold" fill="#d97757" text-anchor="middle">Analogiya: RETSEPT</text>
+  <text x="208" y="456" font-size="13.5" fill="#475569" text-anchor="middle">aniq amal qilasiz — o'ylab topish yo'q</text>
+
+  <!-- RIGHT: agent -->
+  <rect x="408" y="56" width="368" height="430" rx="14" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="592" y="84" font-size="17" font-weight="bold" fill="#16a34a" text-anchor="middle">AGENT</text>
+  <text x="592" y="106" font-size="13.5" fill="#475569" text-anchor="middle">qadamlarni MODEL o'zi tanlaydi</text>
+
+  <rect x="460" y="122" width="264" height="48" rx="9" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="592" y="151" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Maqsad: "vazifani bajar"</text>
+  <line x1="592" y1="170" x2="592" y2="194" stroke="#0ea5e9" stroke-width="2.5" marker-end="url(#w19s)"/>
+
+  <rect x="460" y="198" width="264" height="64" rx="9" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="592" y="223" font-size="14" font-weight="bold" fill="#f59e0b" text-anchor="middle">Model fikrlaydi + tanlaydi</text>
+  <text x="592" y="245" font-size="13" fill="#475569" text-anchor="middle">qaysi asbob? qachon? tugadimi?</text>
+
+  <!-- branching arrows: dynamic -->
+  <line x1="540" y1="262" x2="510" y2="290" stroke="#0ea5e9" stroke-width="2.5" marker-end="url(#w19s)"/>
+  <line x1="592" y1="262" x2="592" y2="290" stroke="#0ea5e9" stroke-width="2.5" marker-end="url(#w19s)"/>
+  <line x1="644" y1="262" x2="674" y2="290" stroke="#0ea5e9" stroke-width="2.5" marker-end="url(#w19s)"/>
+
+  <rect x="460" y="294" width="80" height="44" rx="9" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="500" y="321" font-size="13" fill="#1e293b" text-anchor="middle">qidiruv</text>
+  <rect x="552" y="294" width="80" height="44" rx="9" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="592" y="321" font-size="13" fill="#1e293b" text-anchor="middle">hisobla</text>
+  <rect x="644" y="294" width="80" height="44" rx="9" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="684" y="321" font-size="13" fill="#1e293b" text-anchor="middle">saqla</text>
+
+  <!-- loop back -->
+  <line x1="500" y1="338" x2="500" y2="356" stroke="#0ea5e9" stroke-width="2.5"/>
+  <line x1="500" y1="356" x2="448" y2="356" stroke="#0ea5e9" stroke-width="2.5"/>
+  <line x1="448" y1="356" x2="448" y2="230" stroke="#0ea5e9" stroke-width="2.5"/>
+  <line x1="448" y1="230" x2="458" y2="230" stroke="#0ea5e9" stroke-width="2.5" marker-end="url(#w19s)"/>
+  <text x="430" y="294" font-size="13" font-weight="bold" fill="#0ea5e9" text-anchor="middle" transform="rotate(-90 430 294)">yana fikrla</text>
+
+  <rect x="432" y="370" width="320" height="32" rx="10" fill="#dbeafe" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="592" y="391" font-size="13.5" fill="#1e293b" text-anchor="middle">Oqim HAR SAFAR boshqacha bo'lishi mumkin.</text>
+
+  <rect x="432" y="414" width="320" height="56" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="592" y="437" font-size="13.5" font-weight="bold" fill="#d97757" text-anchor="middle">Analogiya: OSHPAZ</text>
+  <text x="592" y="456" font-size="13.5" fill="#475569" text-anchor="middle">maqsad + oshxona berilgan, qadamni o'zi o'ylaydi</text>
+</svg>

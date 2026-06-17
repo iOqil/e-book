@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560">
+  <title>API dizayni yaxshi amaliyotlari: izchillik, to'g'ri metod va status, yaxshi xato, pagination, versiyalash, auth, hujjat</title>
+  <rect x="0" y="0" width="880" height="560" fill="#f8fafc"/>
+  <text x="440" y="36" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">Yaxshi amaliyotlar — qisqa ma'lumotnoma</text>
+  <text x="440" y="60" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Har bir naqsh — kitobning bir bobiga tayanadi</text>
+
+  <!-- Row 1 -->
+  <rect x="36" y="86" width="262" height="96" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="56" y="114" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">1. Izchillik (consistency)</text>
+  <text x="56" y="138" font-family="Segoe UI" font-size="13" fill="#334155">Bir xil nom, format, struktura —</text>
+  <text x="56" y="156" font-family="Segoe UI" font-size="13" fill="#334155">butun API bo'ylab. Eng muhim</text>
+  <text x="56" y="174" font-family="Segoe UI" font-size="13" fill="#64748b">06-bob · 07-bob</text>
+
+  <rect x="310" y="86" width="262" height="96" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="330" y="114" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">2. Resurs-markazli URL</text>
+  <text x="330" y="138" font-family="monospace" font-size="13" fill="#334155">/v1/orders/42  (ot)</text>
+  <text x="330" y="156" font-family="Segoe UI" font-size="13" fill="#334155">fe'l emas, ko'plik kolleksiya</text>
+  <text x="330" y="174" font-family="Segoe UI" font-size="13" fill="#64748b">06-bob</text>
+
+  <rect x="584" y="86" width="262" height="96" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="604" y="114" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">3. To'g'ri metod + status</text>
+  <text x="604" y="138" font-family="monospace" font-size="13" fill="#334155">GET safe · PUT idempotent</text>
+  <text x="604" y="156" font-family="monospace" font-size="13" fill="#334155">201 Created · 422 · 409</text>
+  <text x="604" y="174" font-family="Segoe UI" font-size="13" fill="#64748b">02-bob · 03-bob</text>
+
+  <!-- Row 2 -->
+  <rect x="36" y="198" width="262" height="96" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="56" y="226" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#dc2626">4. Foydali, izchil xato</text>
+  <text x="56" y="250" font-family="monospace" font-size="13" fill="#334155">problem+json (RFC 9457)</text>
+  <text x="56" y="268" font-family="Segoe UI" font-size="13" fill="#334155">type·title·status·detail·code</text>
+  <text x="56" y="286" font-family="Segoe UI" font-size="13" fill="#64748b">09-bob</text>
+
+  <rect x="310" y="198" width="262" height="96" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="330" y="226" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#7c3aed">5. Pagination + filter</text>
+  <text x="330" y="250" font-family="Segoe UI" font-size="13" fill="#334155">Ro'yxat doim cheklangan;</text>
+  <text x="330" y="268" font-family="Segoe UI" font-size="13" fill="#334155">cursor yoki offset, Link header</text>
+  <text x="330" y="286" font-family="Segoe UI" font-size="13" fill="#64748b">08-bob</text>
+
+  <rect x="584" y="198" width="262" height="96" rx="12" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="604" y="226" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#d97706">6. Versiyalash + evolyutsiya</text>
+  <text x="604" y="250" font-family="Segoe UI" font-size="13" fill="#334155">Additive o'zgarish; breaking</text>
+  <text x="604" y="268" font-family="Segoe UI" font-size="13" fill="#334155">uchun yangi versiya + Sunset</text>
+  <text x="604" y="286" font-family="Segoe UI" font-size="13" fill="#64748b">10-bob</text>
+
+  <!-- Row 3 -->
+  <rect x="36" y="310" width="262" height="96" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="56" y="338" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#dc2626">7. Auth + least privilege</text>
+  <text x="56" y="362" font-family="Segoe UI" font-size="13" fill="#334155">OAuth2.1 + PKCE; har so'rovda</text>
+  <text x="56" y="380" font-family="Segoe UI" font-size="13" fill="#334155">obyekt-egasi tekshiruv (BOLA)</text>
+  <text x="56" y="398" font-family="Segoe UI" font-size="13" fill="#64748b">11-bob · 12-bob</text>
+
+  <rect x="310" y="310" width="262" height="96" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="330" y="338" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#7c3aed">8. Rate limit + idempotentlik</text>
+  <text x="330" y="362" font-family="monospace" font-size="13" fill="#334155">429 + Retry-After</text>
+  <text x="330" y="380" font-family="monospace" font-size="13" fill="#334155">Idempotency-Key (yozish)</text>
+  <text x="330" y="398" font-family="Segoe UI" font-size="13" fill="#64748b">14-bob · 15-bob</text>
+
+  <rect x="584" y="310" width="262" height="96" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="604" y="338" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">9. Kesh + observability</text>
+  <text x="604" y="362" font-family="monospace" font-size="13" fill="#334155">ETag/Cache-Control · 304</text>
+  <text x="604" y="380" font-family="Segoe UI" font-size="13" fill="#334155">log · metrik · trace</text>
+  <text x="604" y="398" font-family="Segoe UI" font-size="13" fill="#64748b">16-bob · 25-bob</text>
+
+  <!-- Row 4 -->
+  <rect x="36" y="422" width="810" height="96" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="56" y="450" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">10. OpenAPI = yagona haqiqat manbai + yaxshi hujjat / DX</text>
+  <text x="56" y="476" font-family="Segoe UI" font-size="13" fill="#334155">Shartnoma OpenAPI 3.1 da yoziladi; undan hujjat, mock, SDK, contract test generatsiya bo'ladi.</text>
+  <text x="56" y="496" font-family="Segoe UI" font-size="13" fill="#334155">Tezkor start, ishlaydigan misol, sandbox — dasturchi 5 daqiqada birinchi so'rovni yuborsin.</text>
+  <text x="700" y="496" font-family="Segoe UI" font-size="13" fill="#64748b">21-bob · 22-bob</text>
+</svg>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Qaror oqimi: kerakli qiymat scale'da bormi - token, dinamik yoki arbitrary qiymat tanlash</title>
+  <rect x="0" y="0" width="760" height="480" fill="#f8fafc"/>
+
+  <text x="380" y="38" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">Qaysi qiymatni tanlash kerak?</text>
+
+  <!-- Decision diamond (drawn as rounded rect for readable text) -->
+  <rect x="250" y="64" width="260" height="74" rx="14" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <text x="380" y="94" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e293b">Kerakli qiymat dizayn</text>
+  <text x="380" y="116" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e293b">scale'da bormi?</text>
+
+  <!-- YES branch (left) -->
+  <line x1="250" y1="101" x2="160" y2="101" stroke="#16a34a" stroke-width="2"/>
+  <line x1="160" y1="101" x2="160" y2="176" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="160,184 155,174 165,174" fill="#16a34a"/>
+  <text x="205" y="92" text-anchor="middle" font-size="14" font-weight="bold" fill="#16a34a">HA</text>
+
+  <rect x="50" y="186" width="220" height="96" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="160" y="212" text-anchor="middle" font-size="15" font-weight="bold" fill="#16a34a">Token ishlat</text>
+  <text x="160" y="238" text-anchor="middle" font-size="16" font-weight="bold" fill="#1e293b">mt-4  p-6  text-lg</text>
+  <text x="160" y="262" text-anchor="middle" font-size="13" fill="#475569">eng yaxshi: izchil,</text>
+  <text x="160" y="278" text-anchor="middle" font-size="13" fill="#475569">o'qiladigan, tema'ga bog'liq</text>
+
+  <!-- NO branch (right) -->
+  <line x1="510" y1="101" x2="600" y2="101" stroke="#f59e0b" stroke-width="2"/>
+  <line x1="600" y1="101" x2="600" y2="176" stroke="#f59e0b" stroke-width="2"/>
+  <polygon points="600,184 595,174 605,174" fill="#f59e0b"/>
+  <text x="555" y="92" text-anchor="middle" font-size="14" font-weight="bold" fill="#f59e0b">YO'Q</text>
+
+  <!-- NO -> two options -->
+  <!-- dynamic -->
+  <rect x="490" y="186" width="220" height="92" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="600" y="210" text-anchor="middle" font-size="14" font-weight="bold" fill="#f59e0b">Dinamik qiymat</text>
+  <text x="600" y="234" text-anchor="middle" font-size="16" font-weight="bold" fill="#1e293b">mt-17  w-29  z-73</text>
+  <text x="600" y="256" text-anchor="middle" font-size="13" fill="#475569">scale qoidasiga bo'ysunadi</text>
+  <text x="600" y="272" text-anchor="middle" font-size="13" fill="#475569">(17 x 0.25rem), config kerak emas</text>
+
+  <line x1="600" y1="278" x2="600" y2="316" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="600,324 595,314 605,314" fill="#94a3b8"/>
+  <text x="600" y="346" text-anchor="middle" font-size="13" fill="#475569">Mutlaqo o'zboshimcha qiymatmi?</text>
+
+  <!-- arbitrary -->
+  <rect x="490" y="360" width="220" height="92" rx="12" fill="#fee2e2" stroke="#ef4444" stroke-width="2"/>
+  <text x="600" y="384" text-anchor="middle" font-size="14" font-weight="bold" fill="#ef4444">Arbitrary qiymat</text>
+  <text x="600" y="408" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e293b">mt-[19px]  bg-[#1da1f2]</text>
+  <text x="600" y="430" text-anchor="middle" font-size="13" fill="#475569">to'rtburchak qavs ichida</text>
+  <text x="600" y="446" text-anchor="middle" font-size="13" fill="#475569">aniq CSS qiymati</text>
+
+  <!-- Warning box (bottom-left) -->
+  <rect x="40" y="320" width="380" height="132" rx="12" fill="#ffffff" stroke="#ef4444" stroke-width="2"/>
+  <text x="62" y="348" font-size="15" font-weight="bold" fill="#ef4444">Ogohlantirish — arbitrary = oxirgi chora</text>
+  <text x="62" y="376" font-size="13" fill="#1e293b">Arbitrary qiymat tizimdan "chiqib ketadi":</text>
+  <text x="62" y="398" font-size="13" fill="#475569">• tema o'zgarsa avtomatik yangilanmaydi</text>
+  <text x="62" y="418" font-size="13" fill="#475569">• izchillik buziladi (har joyda boshqa raqam)</text>
+  <text x="62" y="438" font-size="13" fill="#475569">• avval token, keyin dinamik, eng oxirida [ ]</text>
+</svg>

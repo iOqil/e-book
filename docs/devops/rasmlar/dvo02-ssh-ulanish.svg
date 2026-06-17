@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" width="760" height="360">
+  <title>SSH ulanish oqimi: lokal kompyuter SSH mijozi orqali internet bo'ylab shifrlangan tunnel bilan masofaviy serverning 22-portiga ulanadi</title>
+  <rect x="0" y="0" width="760" height="360" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="700" fill="#1e293b">SSH bilan serverga ulanish</text>
+
+  <!-- local computer -->
+  <rect x="50" y="110" width="200" height="130" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="150" y="140" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="700" fill="#1e40af">Lokal kompyuter</text>
+  <text x="150" y="162" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">(Windows / macOS / Linux)</text>
+  <rect x="74" y="178" width="152" height="44" rx="7" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="150" y="200" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="700" fill="#1e293b">SSH mijozi</text>
+  <text x="150" y="216" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#475569">ssh user@host</text>
+
+  <!-- remote server -->
+  <rect x="510" y="110" width="200" height="130" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="610" y="140" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="700" fill="#16a34a">Masofaviy server</text>
+  <text x="610" y="162" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">Ubuntu 26.04 LTS</text>
+  <rect x="534" y="178" width="152" height="44" rx="7" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="610" y="200" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="700" fill="#1e293b">SSH demoni (sshd)</text>
+  <text x="610" y="216" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#475569">22-portni tinglaydi</text>
+
+  <!-- tunnel band between them -->
+  <rect x="262" y="158" width="236" height="36" rx="18" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="380" y="181" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="700" fill="#7c3aed">shifrlangan tunnel (internet)</text>
+
+  <!-- arrow forward (buyruq) -->
+  <g stroke="#2563eb" stroke-width="2.5" fill="none" marker-end="url(#fwd)">
+    <path d="M250 145 L510 145"/>
+  </g>
+  <text x="380" y="138" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e40af">buyruq + parol/kalit -> 22-port</text>
+
+  <!-- arrow back (natija) -->
+  <g stroke="#16a34a" stroke-width="2.5" fill="none" marker-end="url(#bwd)">
+    <path d="M510 210 L250 210"/>
+  </g>
+  <text x="380" y="232" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">natija (terminal chiqishi) qaytadi</text>
+
+  <defs>
+    <marker id="fwd" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#2563eb"/>
+    </marker>
+    <marker id="bwd" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <!-- bottom note -->
+  <rect x="50" y="278" width="660" height="56" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="70" y="302" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">Parol bilan ulanish — vaqtinchalik. Xavfsiz usul: SSH kalit (parolsiz, kriptografik juftlik).</text>
+  <text x="70" y="322" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">Kalit autentifikatsiyasi va server mustahkamlash — 04-bobda chuqur ko'riladi.</text>
+</svg>

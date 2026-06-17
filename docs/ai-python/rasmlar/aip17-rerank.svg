@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Re-ranking: ko'p nomzod olib, re-ranker bilan eng tegishli top-k ni qayta tartiblash</title>
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">Re-ranking: ko'p nomzod -&gt; eng tegishli top-k</text>
+
+  <defs>
+    <marker id="rr" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#4f46e5"/>
+    </marker>
+    <marker id="rrg" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <!-- Stage 1: vector retrieval - many candidates -->
+  <text x="130" y="78" text-anchor="middle" font-size="16" font-weight="700" fill="#4338ca">1. Vektor qidiruv</text>
+  <text x="130" y="98" text-anchor="middle" font-size="13" fill="#64748b">tez, ko'p nomzod (top-20)</text>
+  <rect x="40" y="112" width="180" height="252" rx="12" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <rect x="56" y="128" width="148" height="26" rx="6" fill="#eef2ff"/>
+  <text x="130" y="146" text-anchor="middle" font-size="13" fill="#4338ca">nomzod 1</text>
+  <rect x="56" y="160" width="148" height="26" rx="6" fill="#fef3c7"/>
+  <text x="130" y="178" text-anchor="middle" font-size="13" fill="#b45309">nomzod 2 (shovqin)</text>
+  <rect x="56" y="192" width="148" height="26" rx="6" fill="#dcfce7"/>
+  <text x="130" y="210" text-anchor="middle" font-size="13" fill="#166534">nomzod 3 (eng yaxshi)</text>
+  <rect x="56" y="224" width="148" height="26" rx="6" fill="#eef2ff"/>
+  <text x="130" y="242" text-anchor="middle" font-size="13" fill="#4338ca">nomzod 4</text>
+  <rect x="56" y="256" width="148" height="26" rx="6" fill="#fef3c7"/>
+  <text x="130" y="274" text-anchor="middle" font-size="13" fill="#b45309">nomzod 5 (shovqin)</text>
+  <text x="130" y="306" text-anchor="middle" font-size="13" fill="#64748b">... 20 tagacha</text>
+  <text x="130" y="338" text-anchor="middle" font-size="13" fill="#475569">tartib: taxminiy,</text>
+  <text x="130" y="356" text-anchor="middle" font-size="13" fill="#475569">aralash sifat</text>
+
+  <line x1="222" y1="238" x2="288" y2="238" stroke="#4f46e5" stroke-width="3" marker-end="url(#rr)"/>
+
+  <!-- Stage 2: re-ranker -->
+  <text x="380" y="78" text-anchor="middle" font-size="16" font-weight="700" fill="#0284c7">2. Re-ranker</text>
+  <text x="380" y="98" text-anchor="middle" font-size="13" fill="#64748b">aniq, sekinroq</text>
+  <rect x="290" y="150" width="180" height="170" rx="12" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+  <text x="380" y="186" text-anchor="middle" font-size="14" font-weight="700" fill="#0284c7">cross-encoder</text>
+  <text x="380" y="210" text-anchor="middle" font-size="13" fill="#475569">savol + chunkni</text>
+  <text x="380" y="228" text-anchor="middle" font-size="13" fill="#475569">BIRGA o'qib</text>
+  <text x="380" y="252" text-anchor="middle" font-size="13" fill="#475569">tegishlilik bahosi</text>
+  <text x="380" y="270" text-anchor="middle" font-size="13" fill="#475569">beradi (0..1)</text>
+  <text x="380" y="300" text-anchor="middle" font-size="13" fill="#0284c7">qayta tartiblaydi</text>
+
+  <line x1="472" y1="238" x2="538" y2="238" stroke="#16a34a" stroke-width="3" marker-end="url(#rrg)"/>
+
+  <!-- Stage 3: top-k best -->
+  <text x="640" y="78" text-anchor="middle" font-size="16" font-weight="700" fill="#166534">3. Top-3 (eng yaxshi)</text>
+  <text x="640" y="98" text-anchor="middle" font-size="13" fill="#64748b">modelga shu boradi</text>
+  <rect x="540" y="150" width="190" height="170" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <rect x="556" y="170" width="158" height="34" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="635" y="192" text-anchor="middle" font-size="13" fill="#166534">eng yaxshi (0.94)</text>
+  <rect x="556" y="214" width="158" height="34" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="635" y="236" text-anchor="middle" font-size="13" fill="#166534">2-tegishli (0.88)</text>
+  <rect x="556" y="258" width="158" height="34" rx="8" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.5"/>
+  <text x="635" y="280" text-anchor="middle" font-size="13" fill="#4338ca">3-tegishli (0.81)</text>
+  <text x="635" y="310" text-anchor="middle" font-size="13" fill="#64748b">shovqin tashlandi</text>
+
+  <text x="380" y="364" text-anchor="middle" font-size="14" font-weight="600" fill="#1e293b">Ko'p olib (recall), aniq tanlash (precision) — ikkalasi ham yuqori</text>
+  <text x="380" y="392" text-anchor="middle" font-size="14" fill="#64748b">Vektor qidiruv = tez elak; re-ranker = aniq tarozi</text>
+  <text x="380" y="416" text-anchor="middle" font-size="13" fill="#64748b">re-ranker faqat 20 ta chunkni baholaydi — butun bazani emas, shuning uchun tez</text>
+</svg>

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420" font-family="Segoe UI, system-ui, sans-serif">
+  <title>wire:model orqali xususiyat o'zgarishi: avval updating hook ishlaydi (qiymat o'rnatilishidan oldin), keyin yangi qiymat o'rnatiladi, so'ng updated hook ishlaydi (o'zgargach)</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">updating va updated qachon ishlaydi?</text>
+  <text x="380" y="60" text-anchor="middle" font-size="14" fill="#475569">wire:model orqali xususiyat o'zgarganda — avval tekshirish, keyin yon ta'sir</text>
+
+  <!-- 1: foydalanuvchi yozdi -->
+  <rect x="40" y="100" width="170" height="86" rx="10" fill="#ffffff" stroke="#fb70a9" stroke-width="2"/>
+  <text x="125" y="128" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">Foydalanuvchi</text>
+  <text x="125" y="150" text-anchor="middle" font-size="13" fill="#475569">maydonga yozdi</text>
+  <text x="125" y="170" text-anchor="middle" font-size="13" fill="#94a3b8">wire:model.live</text>
+
+  <!-- strelka 1 -->
+  <line x1="210" y1="143" x2="266" y2="143" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="266,143 256,138 256,148" fill="#94a3b8"/>
+
+  <!-- 2: updating -->
+  <rect x="270" y="92" width="220" height="102" rx="10" fill="#fff7ed" stroke="#f59e0b" stroke-width="2"/>
+  <text x="380" y="118" text-anchor="middle" font-size="15" font-weight="700" fill="#92400e">updating($prop, $val)</text>
+  <text x="380" y="140" text-anchor="middle" font-size="13" fill="#475569">qiymat hali O'RNATILMAGAN</text>
+  <text x="380" y="160" text-anchor="middle" font-size="13" fill="#475569">tekshirish / bekor qilish</text>
+  <text x="380" y="180" text-anchor="middle" font-size="13" fill="#94a3b8">$this-&gt;prop = ESKI qiymat</text>
+
+  <!-- strelka 2 -->
+  <line x1="490" y1="143" x2="546" y2="143" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="546,143 536,138 536,148" fill="#94a3b8"/>
+
+  <!-- 3: qiymat o'rnatiladi -->
+  <rect x="550" y="100" width="180" height="86" rx="10" fill="#eef2ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="640" y="132" text-anchor="middle" font-size="15" font-weight="700" fill="#4f46e5">Qiymat</text>
+  <text x="640" y="154" text-anchor="middle" font-size="15" font-weight="700" fill="#4f46e5">O'RNATILADI</text>
+  <text x="640" y="174" text-anchor="middle" font-size="13" fill="#94a3b8">prop = YANGI qiymat</text>
+
+  <!-- pastga strelka -->
+  <line x1="640" y1="186" x2="640" y2="234" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="640,234 635,224 645,224" fill="#94a3b8"/>
+
+  <!-- 4: updated -->
+  <rect x="270" y="242" width="460" height="100" rx="10" fill="#fff7ed" stroke="#f59e0b" stroke-width="2"/>
+  <text x="500" y="270" text-anchor="middle" font-size="15" font-weight="700" fill="#92400e">updated($prop, $val)</text>
+  <text x="500" y="292" text-anchor="middle" font-size="13" fill="#475569">qiymat ALLAQACHON o'rnatilgan ($this-&gt;prop = yangi)</text>
+  <text x="500" y="312" text-anchor="middle" font-size="13" fill="#475569">yon ta'sir: log yozish, boshqa xususiyatni yangilash, hodisa jo'natish</text>
+  <text x="500" y="330" text-anchor="middle" font-size="13" fill="#94a3b8">masalan: updatedSearch() ichida resetPage()</text>
+
+  <!-- strelka updating-tepa -> updated -->
+  <line x1="125" y1="186" x2="125" y2="292" stroke="#c7d2fe" stroke-width="2" stroke-dasharray="4 4"/>
+  <line x1="125" y1="292" x2="266" y2="292" stroke="#c7d2fe" stroke-width="2" stroke-dasharray="4 4"/>
+  <polygon points="266,292 256,287 256,297" fill="#c7d2fe"/>
+
+  <!-- xulosa pastda -->
+  <text x="380" y="380" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">-ing = oldin (jarayon davom etyapti)   ·   -ed = keyin (jarayon tugadi)</text>
+  <text x="380" y="402" text-anchor="middle" font-size="13" fill="#94a3b8">Bu hooklar faqat wire:model / $set orqali kelgan o'zgarishlarni ushlaydi</text>
+</svg>

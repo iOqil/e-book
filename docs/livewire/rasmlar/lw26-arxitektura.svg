@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 560" width="760" height="560" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Vazifalar taxtasi ilovasining arxitekturasi: TaskBoard komponenti, TaskForm Form Object, Task model va ma'lumotlar bazasi bog'liqliklari</title>
+  <rect x="0" y="0" width="760" height="560" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">Vazifalar taxtasi — arxitektura</text>
+
+  <!-- Sahifa / Route -->
+  <rect x="280" y="60" width="200" height="46" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="380" y="82" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Route::livewire('/board')</text>
+  <text x="380" y="99" text-anchor="middle" font-size="13" fill="#475569">full-page komponent</text>
+
+  <line x1="380" y1="106" x2="380" y2="138" stroke="#94a3b8" stroke-width="2"/>
+
+  <!-- TaskBoard ota komponent -->
+  <rect x="190" y="138" width="380" height="150" rx="12" fill="#ffffff" stroke="#4f46e5" stroke-width="2.5"/>
+  <text x="380" y="162" text-anchor="middle" font-size="16" font-weight="700" fill="#4f46e5">TaskBoard (ota komponent)</text>
+  <text x="210" y="186" font-size="13" fill="#475569">#[Url] $search, $filter — qidiruv/filtr (14,19-bob)</text>
+  <text x="210" y="207" font-size="13" fill="#475569">#[Computed] tasks() — ro'yxat, keshlanadi (15-bob)</text>
+  <text x="210" y="228" font-size="13" fill="#475569">addTask() · setStatus() · delete() (7,16-bob)</text>
+  <text x="210" y="249" font-size="13" fill="#475569">authorize() — faqat o'z vazifasi (23-bob)</text>
+  <text x="210" y="270" font-size="13" fill="#475569">dispatch('task-saved') — toast (18-bob)</text>
+
+  <!-- TaskForm -->
+  <rect x="60" y="330" width="270" height="110" rx="12" fill="#ffffff" stroke="#fb70a9" stroke-width="2.5"/>
+  <text x="195" y="354" text-anchor="middle" font-size="15" font-weight="700" fill="#be185d">TaskForm (Form Object, 11-bob)</text>
+  <text x="78" y="378" font-size="13" fill="#475569">#[Validate] $title — tekshirish (10-bob)</text>
+  <text x="78" y="399" font-size="13" fill="#475569">store($userId) — yangi vazifa yaratadi</text>
+  <text x="78" y="420" font-size="13" fill="#475569">reset() — formani tozalaydi</text>
+
+  <!-- Task model -->
+  <rect x="430" y="330" width="270" height="110" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="565" y="354" text-anchor="middle" font-size="15" font-weight="700" fill="#16a34a">Task model (Eloquent)</text>
+  <text x="448" y="378" font-size="13" fill="#475569">$fillable: title, status, user_id</text>
+  <text x="448" y="399" font-size="13" fill="#475569">belongsTo(User) — egasi</text>
+  <text x="448" y="420" font-size="13" fill="#475569">TaskPolicy — kim boshqaradi</text>
+
+  <!-- Aloqa chiziqlari -->
+  <line x1="300" y1="288" x2="195" y2="330" stroke="#fb70a9" stroke-width="2"/>
+  <text x="225" y="312" font-size="13" fill="#be185d">$form</text>
+  <line x1="460" y1="288" x2="565" y2="330" stroke="#16a34a" stroke-width="2"/>
+  <text x="510" y="312" font-size="13" fill="#16a34a">create/query</text>
+
+  <!-- DB -->
+  <line x1="565" y1="440" x2="565" y2="478" stroke="#16a34a" stroke-width="2"/>
+  <path d="M 440 490 a 125 16 0 0 0 250 0 v 38 a 125 16 0 0 1 -250 0 z" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <ellipse cx="565" cy="490" rx="125" ry="16" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="565" y="495" text-anchor="middle" font-size="14" font-weight="700" fill="#16a34a">tasks jadvali</text>
+  <text x="565" y="522" text-anchor="middle" font-size="13" fill="#475569">id · user_id · title · status</text>
+
+  <!-- Users jadvali -->
+  <ellipse cx="195" cy="500" rx="95" ry="15" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <path d="M 100 500 v 30 a 95 15 0 0 0 190 0 v -30" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <ellipse cx="195" cy="500" rx="95" ry="15" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="195" y="505" text-anchor="middle" font-size="14" font-weight="700" fill="#475569">users jadvali</text>
+  <text x="195" y="528" text-anchor="middle" font-size="13" fill="#94a3b8">auth() — kim kirgan</text>
+  <line x1="290" y1="510" x2="440" y2="508" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5,4"/>
+</svg>

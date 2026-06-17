@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 430">
+  <title>Portlar va adapterlar: biznes yadro port interfeysi orqali gaplashadi; ishlab chiqarishda real adapter ulanadi, testda esa shu portga fake yoki stub qo'yiladi</title>
+  <rect x="0" y="0" width="820" height="430" fill="#f8fafc"/>
+  <text x="410" y="38" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Portlar va adapterlar — yadro tanlovni qoldiradi</text>
+  <text x="410" y="64" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Yadro faqat portni biladi; ortidagi adapter almashtiriladi</text>
+
+  <!-- Core -->
+  <rect x="60" y="150" width="180" height="120" rx="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="150" y="200" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#5b21b6">Biznes yadro</text>
+  <text x="150" y="224" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#5b21b6">Bildirgich</text>
+  <text x="150" y="244" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#5b21b6">xush_kelibsiz()</text>
+
+  <!-- Port -->
+  <line x1="240" y1="210" x2="330" y2="210" stroke="#64748b" stroke-width="2"/>
+  <polygon points="342,210 326,203 326,217" fill="#64748b"/>
+  <rect x="350" y="160" width="150" height="100" rx="12" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="425" y="200" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#92400e">Port</text>
+  <text x="425" y="222" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#92400e">XabarPorti</text>
+  <text x="425" y="242" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#92400e">yubor()</text>
+
+  <!-- Real adapter (top) -->
+  <line x1="500" y1="185" x2="600" y2="135" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="612,129 595,131 601,144" fill="#16a34a"/>
+  <rect x="610" y="96" width="170" height="80" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="695" y="128" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#166534">Real adapter</text>
+  <text x="695" y="150" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#166534">SMS / email yuboradi</text>
+  <text x="695" y="168" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#166534">(ishlab chiqarish)</text>
+
+  <!-- Fake adapter (bottom) -->
+  <line x1="500" y1="235" x2="600" y2="290" stroke="#2563eb" stroke-width="2"/>
+  <polygon points="612,297 601,283 595,295" fill="#2563eb"/>
+  <rect x="610" y="280" width="170" height="80" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="695" y="312" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e40af">Fake adapter</text>
+  <text x="695" y="334" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e40af">ro'yxatga yozadi</text>
+  <text x="695" y="352" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e40af">(test)</text>
+
+  <text x="410" y="410" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Portni biz egamiz, shuning uchun unga dublyor qo'yish halol</text>
+</svg>

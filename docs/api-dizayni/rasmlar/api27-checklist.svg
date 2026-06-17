@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 600">
+  <title>API dizayn review checklist: resurs, so'rov-javob, xato, xavfsizlik, pagination, versiyalash, kesh, hujjat, observability bo'limlari</title>
+  <rect x="0" y="0" width="880" height="600" fill="#f8fafc"/>
+  <text x="440" y="36" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">API dizayn review checklist</text>
+  <text x="440" y="60" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Yangi endpoint yoki PR'ni baholashda bo'lim-bo'lim o'tib chiqing</text>
+
+  <!-- Column 1 -->
+  <rect x="36" y="84" width="262" height="232" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="56" y="112" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">Resurs / URL</text>
+  <text x="56" y="138" font-family="Segoe UI" font-size="13" fill="#334155">[ ] Ot, ko'plik, fe'lsiz</text>
+  <text x="56" y="158" font-family="Segoe UI" font-size="13" fill="#334155">[ ] Nesting 2 darajadan kam</text>
+  <text x="56" y="178" font-family="Segoe UI" font-size="13" fill="#334155">[ ] Izchil nomlash konvensiya</text>
+
+  <text x="56" y="208" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">So'rov / javob</text>
+  <text x="56" y="234" font-family="Segoe UI" font-size="13" fill="#334155">[ ] Bitta key-case (snake/camel)</text>
+  <text x="56" y="254" font-family="Segoe UI" font-size="13" fill="#334155">[ ] Vaqt = ISO 8601 / RFC 3339</text>
+  <text x="56" y="274" font-family="Segoe UI" font-size="13" fill="#334155">[ ] Faqat ruxsat etilgan maydon</text>
+  <text x="56" y="294" font-family="Segoe UI" font-size="13" fill="#334155">[ ] Ichki struktura sizmaydi</text>
+
+  <!-- Column 2 -->
+  <rect x="310" y="84" width="262" height="232" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="330" y="112" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#dc2626">Status / xato</text>
+  <text x="330" y="138" font-family="Segoe UI" font-size="13" fill="#334155">[ ] To'g'ri metod (safe/idem.)</text>
+  <text x="330" y="158" font-family="Segoe UI" font-size="13" fill="#334155">[ ] Mos status (201/204/422...)</text>
+  <text x="330" y="178" font-family="Segoe UI" font-size="13" fill="#334155">[ ] problem+json, barqaror code</text>
+  <text x="330" y="198" font-family="Segoe UI" font-size="13" fill="#334155">[ ] Validatsiya errors[] birga</text>
+
+  <text x="330" y="228" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#dc2626">Auth / xavfsizlik</text>
+  <text x="330" y="254" font-family="Segoe UI" font-size="13" fill="#334155">[ ] 401 vs 403 to'g'ri</text>
+  <text x="330" y="274" font-family="Segoe UI" font-size="13" fill="#334155">[ ] Obyekt-egasi tekshiruv (BOLA)</text>
+  <text x="330" y="294" font-family="Segoe UI" font-size="13" fill="#334155">[ ] Maxfiy ma'lumot log/URL'da yo'q</text>
+
+  <!-- Column 3 -->
+  <rect x="584" y="84" width="262" height="232" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="604" y="112" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#7c3aed">Ro'yxat / kesh</text>
+  <text x="604" y="138" font-family="Segoe UI" font-size="13" fill="#334155">[ ] Pagination majburiy</text>
+  <text x="604" y="158" font-family="Segoe UI" font-size="13" fill="#334155">[ ] Filtr/sort hujjatlangan</text>
+  <text x="604" y="178" font-family="Segoe UI" font-size="13" fill="#334155">[ ] ETag/Cache-Control mos</text>
+  <text x="604" y="198" font-family="Segoe UI" font-size="13" fill="#334155">[ ] Rate limit + Retry-After</text>
+
+  <text x="604" y="228" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#7c3aed">Versiyalash</text>
+  <text x="604" y="254" font-family="Segoe UI" font-size="13" fill="#334155">[ ] O'zgarish additive (breaking?)</text>
+  <text x="604" y="274" font-family="Segoe UI" font-size="13" fill="#334155">[ ] Breaking = yangi versiya</text>
+  <text x="604" y="294" font-family="Segoe UI" font-size="13" fill="#334155">[ ] Deprecation/Sunset e'loni</text>
+
+  <!-- Bottom wide: docs + observability -->
+  <rect x="36" y="332" width="404" height="120" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="56" y="360" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">Hujjat / DX</text>
+  <text x="56" y="386" font-family="Segoe UI" font-size="13" fill="#334155">[ ] OpenAPI 3.1 yangilandi (manba)</text>
+  <text x="56" y="406" font-family="Segoe UI" font-size="13" fill="#334155">[ ] Har endpointda ishlaydigan misol</text>
+  <text x="56" y="426" font-family="Segoe UI" font-size="13" fill="#334155">[ ] Xato javoblari ham hujjatlangan</text>
+
+  <rect x="448" y="332" width="398" height="120" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="468" y="360" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">Observability</text>
+  <text x="468" y="386" font-family="Segoe UI" font-size="13" fill="#334155">[ ] So'rov log'lanadi (trace_id bilan)</text>
+  <text x="468" y="406" font-family="Segoe UI" font-size="13" fill="#334155">[ ] Metrik: latency, xato darajasi</text>
+  <text x="468" y="426" font-family="Segoe UI" font-size="13" fill="#334155">[ ] Maxfiy maydon log'da redact qilingan</text>
+
+  <!-- Footer note -->
+  <rect x="36" y="470" width="810" height="100" rx="12" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="56" y="500" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#d97706">"It depends" — checklist o'ylash uchun, ko'r-ko'rona emas</text>
+  <text x="56" y="526" font-family="Segoe UI" font-size="13" fill="#334155">Har naqsh kontekstga bog'liq: kichik ichki API'ga kerakli narsa katta public API'da boshqacha.</text>
+  <text x="56" y="548" font-family="Segoe UI" font-size="13" fill="#334155">Checklist savol beradi — javobni jamoa va kontekst beradi. Qoidani buzsangiz — sababini yozing.</text>
+</svg>

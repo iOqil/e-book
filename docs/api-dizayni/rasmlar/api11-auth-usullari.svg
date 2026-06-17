@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540">
+  <title>Autentifikatsiya usullari taqqoslash: API key, Basic, Bearer/JWT, OAuth 2.0</title>
+  <rect x="0" y="0" width="900" height="540" fill="#f8fafc"/>
+  <text x="450" y="34" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">Autentifikatsiya usullari: qulaylik vs xavfsizlik</text>
+  <text x="450" y="58" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Soddadan murakkabga: har biri boshqa muammoni yechadi</text>
+
+  <!-- column headers -->
+  <text x="150" y="96" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#64748b">Usul</text>
+  <text x="430" y="96" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#64748b">Qanday yuboriladi</text>
+  <text x="720" y="96" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#64748b">Qachon mos</text>
+
+  <!-- Row 1: API key -->
+  <rect x="40" y="108" width="220" height="90" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="150" y="138" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb">API key</text>
+  <text x="150" y="162" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Oddiy sir.</text>
+  <text x="150" y="182" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Foydalanuvchini bilmaydi.</text>
+
+  <rect x="300" y="108" width="260" height="90" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="430" y="148" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">X-API-Key: sk_live_a1b2</text>
+  <text x="430" y="172" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">(query'da EMAS!)</text>
+
+  <rect x="600" y="108" width="260" height="90" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="720" y="148" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Server-to-server,</text>
+  <text x="720" y="172" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">ochiq ma'lumot</text>
+
+  <!-- Row 2: Basic -->
+  <rect x="40" y="210" width="220" height="90" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="150" y="240" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#b45309">Basic Auth</text>
+  <text x="150" y="264" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">base64(user:parol)</text>
+  <text x="150" y="284" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">FAQAT HTTPS</text>
+
+  <rect x="300" y="210" width="260" height="90" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="430" y="250" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">Authorization:</text>
+  <text x="430" y="272" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">Basic YWxpOjEyMw==</text>
+
+  <rect x="600" y="210" width="260" height="90" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="720" y="250" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Ichki vositalar,</text>
+  <text x="720" y="272" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">tezkor prototip</text>
+
+  <!-- Row 3: Bearer/JWT -->
+  <rect x="40" y="312" width="220" height="90" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="150" y="342" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a">Bearer / JWT</text>
+  <text x="150" y="366" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Token (opaque/JWT).</text>
+  <text x="150" y="386" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Eng keng tarqalgan.</text>
+
+  <rect x="300" y="312" width="260" height="90" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="430" y="352" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">Authorization:</text>
+  <text x="430" y="374" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">Bearer eyJhbGci...</text>
+
+  <rect x="600" y="312" width="260" height="90" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="720" y="352" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Foydalanuvchili API,</text>
+  <text x="720" y="374" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">SPA, mobil, web</text>
+
+  <!-- Row 4: OAuth -->
+  <rect x="40" y="414" width="220" height="90" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="150" y="444" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#7c3aed">OAuth 2.0 / OIDC</text>
+  <text x="150" y="468" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Delegatsiya: parolni</text>
+  <text x="150" y="488" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">bermasdan ruxsat.</text>
+
+  <rect x="300" y="414" width="260" height="90" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="430" y="448" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Oqim orqali access</text>
+  <text x="430" y="470" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">token olinadi, keyin</text>
+  <text x="430" y="490" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">Bearer ...</text>
+
+  <rect x="600" y="414" width="260" height="90" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="720" y="448" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Uchinchi tomon ruxsati</text>
+  <text x="720" y="470" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">("Google bilan kirish"),</text>
+  <text x="720" y="490" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">platformalararo SSO</text>
+
+  <!-- arrow indicating complexity gradient -->
+  <text x="20" y="306" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#94a3b8" transform="rotate(-90 20 306)">soddadan murakkabga / xavfsizlikka</text>
+</svg>

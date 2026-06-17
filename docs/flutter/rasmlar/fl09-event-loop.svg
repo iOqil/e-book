@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" width="780" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Event loop: main kodi avval to'liq yuradi, asinxron natijalar navbatga (queue) qo'yiladi, loop bo'shaganda navbatdan birma-bir oladi va davomini yurgizadi</title>
+  <defs>
+    <marker id="fl09elA" markerWidth="12" markerHeight="12" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+    <marker id="fl09elB" markerWidth="12" markerHeight="12" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#027dfd"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="780" height="470" fill="#f8fafc"/>
+
+  <text x="390" y="32" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">Event Loop — bitta ishchi, bitta navbat</text>
+  <text x="390" y="54" text-anchor="middle" font-size="14" fill="#475569">Dart bitta oqimda ishlaydi: avval main, keyin navbatdagi vazifalar birma-bir</text>
+
+  <!-- main kod bloki -->
+  <rect x="40" y="90" width="220" height="120" rx="12" fill="#ffffff" stroke="#027dfd" stroke-width="2.5"/>
+  <text x="150" y="116" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e293b">1. main() kodi</text>
+  <text x="150" y="142" text-anchor="middle" font-size="13" fill="#475569">hamma sinxron kod</text>
+  <text x="150" y="160" text-anchor="middle" font-size="13" fill="#475569">oxirigacha to'liq yuradi</text>
+  <text x="150" y="186" text-anchor="middle" font-size="13" fill="#64748b">await uchragach: ish</text>
+  <text x="150" y="202" text-anchor="middle" font-size="13" fill="#64748b">fonga uzatiladi</text>
+
+  <!-- strelka mainga -> navbat -->
+  <path d="M260 150 L300 150" stroke="#027dfd" stroke-width="2.5" fill="none" marker-end="url(#fl09elB)"/>
+  <text x="280" y="136" text-anchor="middle" font-size="13" fill="#027dfd">tayyor</text>
+
+  <!-- NAVBAT (queue) -->
+  <rect x="305" y="90" width="270" height="120" rx="12" fill="#f8fafc" stroke="#6366f1" stroke-width="2.5"/>
+  <text x="440" y="114" text-anchor="middle" font-size="15" font-weight="bold" fill="#6366f1">2. Navbat (queue)</text>
+
+  <rect x="322" y="128" width="74" height="64" rx="8" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <text x="359" y="156" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e293b">davom-1</text>
+  <text x="359" y="178" text-anchor="middle" font-size="13" fill="#64748b">callback</text>
+
+  <rect x="404" y="128" width="74" height="64" rx="8" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <text x="441" y="156" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e293b">davom-2</text>
+  <text x="441" y="178" text-anchor="middle" font-size="13" fill="#64748b">callback</text>
+
+  <rect x="486" y="128" width="74" height="64" rx="8" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <text x="523" y="156" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e293b">davom-3</text>
+  <text x="523" y="178" text-anchor="middle" font-size="13" fill="#64748b">callback</text>
+
+  <!-- ISHCHI (loop) -->
+  <circle cx="650" cy="150" r="60" fill="#16a34a" stroke="#16a34a" stroke-width="2"/>
+  <text x="650" y="142" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">3. Loop</text>
+  <text x="650" y="164" text-anchor="middle" font-size="13" fill="#ffffff">ishchi</text>
+
+  <!-- navbatdan ishchiga -->
+  <path d="M575 150 L585 150" stroke="#475569" stroke-width="2.5" fill="none" marker-end="url(#fl09elA)"/>
+  <text x="540" y="234" text-anchor="middle" font-size="13" fill="#475569">navbatdan birma-bir oladi</text>
+
+  <!-- doiraviy strelka: loop qaytadi -->
+  <path d="M650 90 C650 30, 150 30, 150 84" stroke="#16a34a" stroke-width="2.5" fill="none" marker-end="url(#fl09elB)"/>
+  <text x="400" y="26" text-anchor="middle" font-size="13" fill="#16a34a">navbat bo'shamaguncha to'xtovsiz aylanadi</text>
+
+  <!-- pastki tushuntirish bloki -->
+  <rect x="40" y="280" width="700" height="150" rx="12" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="60" y="312" font-size="15" font-weight="bold" fill="#1e293b">Asosiy qoida</text>
+  <text x="60" y="342" font-size="14" fill="#475569">• Ishchi navbatdan BITTA vazifani oladi va uni TO'LIQ tugatadi, keyin keyingisiga o'tadi.</text>
+  <text x="60" y="368" font-size="14" fill="#475569">• Shuning uchun bitta uzoq sinxron ish butun dasturni to'xtatadi — UI muzlaydi.</text>
+  <text x="60" y="394" font-size="14" fill="#16a34a">• await ishni FONGA uzatadi, navbatni band qilmaydi — natija kelganda davomi navbatga qo'yiladi.</text>
+  <text x="60" y="420" font-size="14" fill="#ef4444">• Og'ir HISOB (kutish emas) -> Isolate'ga bering, aks holda navbat bloklanadi.</text>
+</svg>

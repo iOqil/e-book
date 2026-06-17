@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 540">
+  <title>Dijkstra algoritmi: boshlang'ich tugundan masofalar relaxation orqali yangilanishi va prioritet navbat bilan eng yaqin tugunni tanlash</title>
+  <rect x="0" y="0" width="880" height="540" fill="#f8fafc"/>
+  <text x="440" y="34" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Dijkstra: eng qisqa yo'l (bitta manba)</text>
+  <text x="440" y="58" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Har qadamda eng yaqin tashrif etilmagan tugunni tanlab, qo'shnilarini relaxation qilamiz</text>
+
+  <defs>
+    <marker id="d-ah" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L9,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <!-- ===== Chap: graf ===== -->
+  <rect x="24" y="80" width="430" height="280" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="239" y="106" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb">Vaznli graf (manba = A)</text>
+
+  <!-- qirralar -->
+  <line x1="110" y1="180" x2="240" y2="150" stroke="#94a3b8" stroke-width="2" marker-end="url(#d-ah)"/>
+  <line x1="110" y1="190" x2="155" y2="290" stroke="#94a3b8" stroke-width="2" marker-end="url(#d-ah)"/>
+  <line x1="180" y1="300" x2="245" y2="170" stroke="#94a3b8" stroke-width="2" marker-end="url(#d-ah)"/>
+  <line x1="270" y1="160" x2="345" y2="220" stroke="#94a3b8" stroke-width="2" marker-end="url(#d-ah)"/>
+  <line x1="195" y1="305" x2="345" y2="240" stroke="#94a3b8" stroke-width="2" marker-end="url(#d-ah)"/>
+
+  <text x="178" y="158" text-anchor="middle" font-family="monospace" font-size="14" fill="#dc2626">4</text>
+  <text x="120" y="248" text-anchor="middle" font-family="monospace" font-size="14" fill="#16a34a">1</text>
+  <text x="222" y="240" text-anchor="middle" font-family="monospace" font-size="14" fill="#16a34a">2</text>
+  <text x="318" y="180" text-anchor="middle" font-family="monospace" font-size="14" fill="#dc2626">1</text>
+  <text x="280" y="290" text-anchor="middle" font-family="monospace" font-size="14" fill="#16a34a">5</text>
+
+  <!-- tugunlar: pastdagi raqam = yakuniy masofa -->
+  <circle cx="95" cy="185" r="22" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="95" y="190" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">A</text>
+  <text x="95" y="225" text-anchor="middle" font-family="monospace" font-size="13" fill="#16a34a">d=0</text>
+
+  <circle cx="262" cy="145" r="22" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="262" y="150" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">B</text>
+  <text x="262" y="115" text-anchor="middle" font-family="monospace" font-size="13" fill="#16a34a">d=3</text>
+
+  <circle cx="170" cy="305" r="22" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="170" y="310" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">C</text>
+  <text x="170" y="345" text-anchor="middle" font-family="monospace" font-size="13" fill="#16a34a">d=1</text>
+
+  <circle cx="368" cy="235" r="22" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="368" y="240" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">D</text>
+  <text x="408" y="240" text-anchor="middle" font-family="monospace" font-size="13" fill="#16a34a">d=4</text>
+
+  <text x="239" y="350" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">eng qisqa: A→C→B→D = 1+2+1 = 4</text>
+
+  <!-- ===== O'ng: relaxation va navbat ===== -->
+  <rect x="478" y="80" width="378" height="280" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="667" y="106" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#7c3aed">Relaxation (bo'shashtirish)</text>
+
+  <rect x="500" y="122" width="334" height="64" rx="8" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="667" y="148" text-anchor="middle" font-family="monospace" font-size="14" fill="#1e293b">agar d[u] + w(u,v) &lt; d[v]:</text>
+  <text x="667" y="172" text-anchor="middle" font-family="monospace" font-size="14" fill="#7c3aed">d[v] = d[u] + w(u,v)</text>
+
+  <text x="500" y="214" font-family="Segoe UI" font-size="14" fill="#334155">Prioritet navbat (min-heap) holati:</text>
+
+  <!-- navbat qadamlari -->
+  <rect x="500" y="228" width="334" height="30" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="510" y="248" font-family="monospace" font-size="13" fill="#334155">pop A(0) → C=1, B=4 push</text>
+
+  <rect x="500" y="264" width="334" height="30" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="510" y="284" font-family="monospace" font-size="13" fill="#334155">pop C(1) → B=3 (4→3), D=6 push</text>
+
+  <rect x="500" y="300" width="334" height="30" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="510" y="320" font-family="monospace" font-size="13" fill="#334155">pop B(3) → D=4 (6→4) push</text>
+
+  <rect x="500" y="336" width="334" height="20" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="510" y="351" font-family="monospace" font-size="13" fill="#16a34a">pop D(4) → tugadi: barchasi final</text>
+
+  <!-- pastki izoh -->
+  <rect x="24" y="378" width="832" height="138" rx="12" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="44" y="404" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#b45309">Nega greedy ishlaydi (musbat qirralar)</text>
+  <text x="44" y="430" font-family="Segoe UI" font-size="14" fill="#334155">Navbatdan eng kichik masofali tugun chiqqanida — uning masofasi YAKUNIY (final). Boshqa har</text>
+  <text x="44" y="452" font-family="Segoe UI" font-size="14" fill="#334155">qanday yo'l undan uzunroq tugundan o'tadi, qirralar musbat bo'lgani uchun u faqat qimmatlashadi.</text>
+  <text x="44" y="478" font-family="Segoe UI" font-size="14" fill="#dc2626">Salbiy qirra bo'lsa, bu kafolat buziladi: keyinroq topilgan salbiy qirra final masofani arzonlatardi.</text>
+  <text x="44" y="502" font-family="monospace" font-size="14" fill="#64748b">Murakkablik: O((V + E) log V) — har push/pop O(log V), jami E ta relaxation.</text>
+</svg>

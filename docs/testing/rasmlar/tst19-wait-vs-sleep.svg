@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 410">
+  <title>sleep qotib turadi va element kechiksa yiqiladi, tez bo'lsa vaqt behuda ketadi; explicit wait esa element tayyor bo'lguncha qisqa oraliqlarda tekshiradi va barqaror bo'ladi</title>
+  <rect x="0" y="0" width="820" height="410" fill="#f8fafc"/>
+  <text x="410" y="38" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">sleep vs explicit wait</text>
+  <text x="410" y="64" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Aniq kutish flaky'ni kamaytiradi</text>
+
+  <!-- sleep (yomon) -->
+  <rect x="40" y="92" width="340" height="280" rx="12" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="210" y="122" text-anchor="middle" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#991b1b">sleep(2) — yomon</text>
+  <text x="210" y="148" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#991b1b">"Ko'r-ko'rona 2 soniya kut"</text>
+
+  <line x1="70" y1="180" x2="350" y2="180" stroke="#94a3b8" stroke-width="2"/>
+  <text x="70" y="172" font-family="Segoe UI" font-size="13" fill="#64748b">vaqt</text>
+  <rect x="70" y="190" width="200" height="22" rx="4" fill="#fecaca" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="170" y="206" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#991b1b">qotib kutadi</text>
+  <circle cx="300" cy="180" r="7" fill="#16a34a"/>
+  <text x="300" y="232" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#166534">element tayyor</text>
+
+  <text x="210" y="270" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#991b1b">Sekin chiqsa (&gt;2s) -&gt; YIQILADI (flaky)</text>
+  <text x="210" y="296" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#991b1b">Tez chiqsa -&gt; vaqt behuda ketadi</text>
+  <text x="210" y="340" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">Sekin VA ishonchsiz</text>
+
+  <!-- explicit wait (yaxshi) -->
+  <rect x="440" y="92" width="340" height="280" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="610" y="122" text-anchor="middle" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#166534">wait(element) — yaxshi</text>
+  <text x="610" y="148" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#166534">"Tayyor bo'lguncha tekshir"</text>
+
+  <line x1="470" y1="180" x2="750" y2="180" stroke="#94a3b8" stroke-width="2"/>
+  <text x="470" y="172" font-family="Segoe UI" font-size="13" fill="#64748b">vaqt</text>
+  <circle cx="500" cy="180" r="5" fill="#f59e0b"/>
+  <circle cx="540" cy="180" r="5" fill="#f59e0b"/>
+  <circle cx="580" cy="180" r="5" fill="#f59e0b"/>
+  <circle cx="620" cy="180" r="8" fill="#16a34a"/>
+  <text x="545" y="208" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#92400e">qisqa tekshiruvlar</text>
+  <text x="620" y="232" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#166534">tayyor -&gt; darhol davom</text>
+
+  <text x="610" y="270" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#166534">Tayyor bo'lishi bilan davom etadi</text>
+  <text x="610" y="296" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#166534">Kech chiqsa ham timeout'gacha kutadi</text>
+  <text x="610" y="340" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">Tez VA barqaror</text>
+</svg>

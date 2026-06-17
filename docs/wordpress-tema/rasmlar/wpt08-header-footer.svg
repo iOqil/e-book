@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 480" width="780" height="480" font-family="Segoe UI, system-ui, sans-serif">
+  <title>header.php (wp_head) va footer.php (wp_footer) tuzilishi va nega majburiy</title>
+  <rect x="0" y="0" width="780" height="480" fill="#f8fafc"/>
+  <text x="390" y="32" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">header.php va footer.php: wp_head() va wp_footer() nega majburiy</text>
+
+  <!-- header.php blok -->
+  <rect x="40" y="60" width="320" height="180" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="200" y="84" text-anchor="middle" font-size="16" font-weight="700" fill="#2563eb">header.php</text>
+  <line x1="60" y1="94" x2="340" y2="94" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="58" y="116" font-size="13" fill="#475569">&lt;!DOCTYPE html&gt;</text>
+  <text x="58" y="136" font-size="13" fill="#475569">&lt;html &lt;?php language_attributes(); ?&gt;&gt;</text>
+  <text x="58" y="156" font-size="13" fill="#475569">&lt;head&gt; &lt;meta charset=...&gt;</text>
+  <rect x="56" y="166" width="288" height="22" rx="4" fill="#dcfce7"/>
+  <text x="64" y="182" font-size="13" font-weight="700" fill="#16a34a">&lt;?php wp_head(); ?&gt;  &lt;-- MAJBURIY</text>
+  <text x="58" y="206" font-size="13" fill="#475569">&lt;/head&gt;</text>
+  <text x="58" y="226" font-size="13" fill="#475569">&lt;body &lt;?php body_class(); ?&gt;&gt;</text>
+
+  <!-- footer.php blok -->
+  <rect x="420" y="60" width="320" height="180" rx="10" fill="#ffffff" stroke="#d97706" stroke-width="2.5"/>
+  <text x="580" y="84" text-anchor="middle" font-size="16" font-weight="700" fill="#d97706">footer.php</text>
+  <line x1="440" y1="94" x2="720" y2="94" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="438" y="116" font-size="13" fill="#475569">&lt;footer&gt; ... copyright ... &lt;/footer&gt;</text>
+  <rect x="436" y="130" width="288" height="22" rx="4" fill="#dcfce7"/>
+  <text x="444" y="146" font-size="13" font-weight="700" fill="#16a34a">&lt;?php wp_footer(); ?&gt;  &lt;-- MAJBURIY</text>
+  <text x="438" y="170" font-size="13" fill="#475569">&lt;/body&gt;</text>
+  <text x="438" y="190" font-size="13" fill="#475569">&lt;/html&gt;</text>
+  <text x="438" y="220" font-size="13" fill="#94a3b8">Sahifaning eng ohirgi qatori</text>
+
+  <!-- NEGA majburiy -->
+  <text x="390" y="276" text-anchor="middle" font-size="16" font-weight="700" fill="#1e293b">wp_head() / wp_footer() ga WordPress va plaginlar nimani ulaydi?</text>
+
+  <rect x="40" y="294" width="220" height="150" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="150" y="316" text-anchor="middle" font-size="14" font-weight="700" fill="#2563eb">wp_head() &lt;head&gt; ichida</text>
+  <text x="56" y="340" font-size="13" fill="#475569">- enqueue qilingan CSS</text>
+  <text x="56" y="362" font-size="13" fill="#475569">- SEO / meta teglar</text>
+  <text x="56" y="384" font-size="13" fill="#475569">- title teg (title-tag)</text>
+  <text x="56" y="406" font-size="13" fill="#475569">- plaginlar kodi</text>
+  <text x="56" y="428" font-size="13" fill="#475569">- admin bar uslublari</text>
+
+  <rect x="280" y="294" width="220" height="150" rx="10" fill="#fff7ed" stroke="#d97706" stroke-width="2"/>
+  <text x="390" y="316" text-anchor="middle" font-size="14" font-weight="700" fill="#d97706">wp_footer() &lt;/body&gt; oldida</text>
+  <text x="296" y="340" font-size="13" fill="#475569">- enqueue qilingan JS</text>
+  <text x="296" y="362" font-size="13" fill="#475569">- admin bar (panel)</text>
+  <text x="296" y="384" font-size="13" fill="#475569">- analitika skriptlari</text>
+  <text x="296" y="406" font-size="13" fill="#475569">- chat / forma JS</text>
+  <text x="296" y="428" font-size="13" fill="#475569">- Interactivity API</text>
+
+  <rect x="520" y="294" width="220" height="150" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="630" y="316" text-anchor="middle" font-size="14" font-weight="700" fill="#dc2626">Agar chaqirmasangiz</text>
+  <text x="536" y="340" font-size="13" fill="#475569">- CSS/JS yuklanmaydi</text>
+  <text x="536" y="362" font-size="13" fill="#475569">- plaginlar ishlamaydi</text>
+  <text x="536" y="384" font-size="13" fill="#475569">- admin bar yo'qoladi</text>
+  <text x="536" y="406" font-size="13" fill="#475569">- SEO buziladi</text>
+  <text x="536" y="428" font-size="13" font-weight="700" fill="#dc2626">- tema "buziq" sanaladi</text>
+</svg>

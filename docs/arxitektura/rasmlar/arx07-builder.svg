@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470">
+  <title>Builder: murakkab obyektni bosqichma-bosqich, fluent (zanjirli) interfeys orqali qurish — telescoping konstruktor muammosiga yechim</title>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="34" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Builder — bosqichma-bosqich qurish</text>
+  <text x="380" y="56" font-family="Segoe UI" font-size="14" fill="#64748b" text-anchor="middle">har qadam this qaytaradi -> zanjir (fluent), oxirida qur() tayyor obyekt beradi</text>
+
+  <!-- Problem: telescoping constructor -->
+  <rect x="40" y="80" width="320" height="92" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="200" y="104" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626" text-anchor="middle">MUAMMO: telescoping konstruktor</text>
+  <text x="56" y="128" font-family="Segoe UI" font-size="13" fill="#334155">new Sorov("POST", url, hdr, body,</text>
+  <text x="56" y="148" font-family="Segoe UI" font-size="13" fill="#334155">           true, 30, null, undefined)</text>
+  <text x="56" y="166" font-family="Segoe UI" font-size="13" fill="#dc2626">qaysi argument nima? o'qib bo'lmaydi</text>
+
+  <!-- Solution: fluent builder -->
+  <rect x="400" y="80" width="320" height="92" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="560" y="104" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">YECHIM: fluent builder</text>
+  <text x="416" y="128" font-family="Segoe UI" font-size="13" fill="#334155">new Builder().usul("POST")</text>
+  <text x="416" y="148" font-family="Segoe UI" font-size="13" fill="#334155">  .manzil(url).jsonTana(obj)</text>
+  <text x="416" y="166" font-family="Segoe UI" font-size="13" fill="#16a34a">  .qur()  — har qadam nomli, aniq</text>
+
+  <line x1="360" y1="126" x2="396" y2="126" stroke="#94a3b8" stroke-width="2" marker-end="url(#barr)"/>
+
+  <!-- Fluent chain (steps) -->
+  <rect x="60" y="220" width="130" height="56" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="125" y="246" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb" text-anchor="middle">usul("POST")</text>
+  <text x="125" y="266" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">return this</text>
+
+  <rect x="225" y="220" width="135" height="56" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="292" y="246" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb" text-anchor="middle">manzil(url)</text>
+  <text x="292" y="266" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">return this</text>
+
+  <rect x="395" y="220" width="150" height="56" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="470" y="246" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb" text-anchor="middle">jsonTana(obj)</text>
+  <text x="470" y="266" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">return this</text>
+
+  <rect x="580" y="220" width="120" height="56" rx="8" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="640" y="246" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#b45309" text-anchor="middle">qur()</text>
+  <text x="640" y="266" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">validatsiya</text>
+
+  <line x1="190" y1="248" x2="223" y2="248" stroke="#2563eb" stroke-width="2" marker-end="url(#barr2)"/>
+  <line x1="360" y1="248" x2="393" y2="248" stroke="#2563eb" stroke-width="2" marker-end="url(#barr2)"/>
+  <line x1="545" y1="248" x2="578" y2="248" stroke="#2563eb" stroke-width="2" marker-end="url(#barr2)"/>
+
+  <!-- Result object -->
+  <line x1="640" y1="276" x2="640" y2="330" stroke="#f59e0b" stroke-width="2" marker-end="url(#barr3)"/>
+  <rect x="500" y="335" width="220" height="80" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="610" y="360" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">HttpSorov (tayyor)</text>
+  <line x1="500" y1="370" x2="720" y2="370" stroke="#94a3b8" stroke-width="1"/>
+  <text x="516" y="392" font-family="Segoe UI" font-size="13" fill="#334155">metod, url, sarlavhalar, tana</text>
+  <text x="516" y="409" font-family="Segoe UI" font-size="13" fill="#64748b">— immutable, doim yaroqli</text>
+
+  <!-- note -->
+  <rect x="40" y="335" width="430" height="80" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1"/>
+  <text x="56" y="359" font-family="Segoe UI" font-size="13" fill="#334155">Qachon: ko'p ixtiyoriy parametr, qadam tartibi muhim,</text>
+  <text x="56" y="379" font-family="Segoe UI" font-size="13" fill="#334155">yoki obyekt yaratilgach o'zgarmas (immutable) bo'lishi kerak.</text>
+  <text x="56" y="401" font-family="Segoe UI" font-size="13" fill="#64748b">Misol: SQL query builder, HTTP so'rov, test ma'lumot fixture.</text>
+
+  <defs>
+    <marker id="barr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L9,5 L0,10 Z" fill="#94a3b8"/></marker>
+    <marker id="barr2" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L9,5 L0,10 Z" fill="#2563eb"/></marker>
+    <marker id="barr3" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L9,5 L0,10 Z" fill="#f59e0b"/></marker>
+  </defs>
+</svg>

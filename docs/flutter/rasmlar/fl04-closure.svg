@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Closure: ichki funksiya count ozgaruvchisini orqa sumka kabi olib chiqadi va chaqiruvlar orasida saqlaydi</title>
+
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+
+  <text x="380" y="36" text-anchor="middle" font-size="21" font-weight="bold" fill="#1e293b">Closure — xotirali funksiya</text>
+
+  <!-- tashqi funksiya doirasi -->
+  <rect x="30" y="64" width="320" height="200" rx="12" fill="#ffffff" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6 5"/>
+  <text x="190" y="90" text-anchor="middle" font-size="15" font-weight="bold" fill="#475569">hisoblagichYasa( )  scope</text>
+
+  <!-- count ozgaruvchisi -->
+  <rect x="60" y="106" width="120" height="48" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="120" y="129" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e293b">count</text>
+  <text x="120" y="147" text-anchor="middle" font-size="13" fill="#475569">tashqi ozgaruvchi</text>
+
+  <!-- ichki funksiya -->
+  <rect x="60" y="174" width="260" height="72" rx="8" fill="#dbeafe" stroke="#027dfd" stroke-width="2"/>
+  <text x="190" y="200" text-anchor="middle" font-size="15" font-weight="bold" fill="#027dfd">ichki funksiya</text>
+  <text x="190" y="224" text-anchor="middle" font-size="13.5" fill="#475569">() { count++; return count; }</text>
+
+  <!-- "ushlab oladi" bog'lanish -->
+  <line x1="120" y1="154" x2="120" y2="174" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="250" y="166" text-anchor="middle" font-size="13" fill="#16a34a">count'ni ushlab oladi</text>
+
+  <!-- chiqib ketish strelkasi -->
+  <line x1="350" y1="210" x2="430" y2="210" stroke="#475569" stroke-width="3"/>
+  <polygon points="430,202 448,210 430,218" fill="#475569"/>
+  <text x="395" y="198" text-anchor="middle" font-size="13" fill="#475569">qaytariladi</text>
+
+  <!-- chiqib ketgan funksiya + sumka -->
+  <rect x="455" y="150" width="270" height="120" rx="12" fill="#6366f1" stroke="#475569" stroke-width="2"/>
+  <text x="590" y="180" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">var hisobla = ...</text>
+  <!-- orqa sumka -->
+  <rect x="500" y="196" width="180" height="54" rx="8" fill="#ffffff"/>
+  <text x="590" y="218" text-anchor="middle" font-size="13.5" fill="#1e293b">orqa sumka:</text>
+  <text x="590" y="240" text-anchor="middle" font-size="14" font-weight="bold" fill="#f59e0b">count'ni olib chiqdi</text>
+
+  <!-- chaqiruvlar natijasi -->
+  <rect x="60" y="300" width="640" height="96" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="380" y="328" text-anchor="middle" font-size="15" font-weight="bold" fill="#16a34a">Har chaqiruvda count saqlanadi — noldan boshlanmaydi</text>
+  <text x="200" y="362" text-anchor="middle" font-size="15" fill="#1e293b">hisobla() &#8594; 1</text>
+  <text x="380" y="362" text-anchor="middle" font-size="15" fill="#1e293b">hisobla() &#8594; 2</text>
+  <text x="560" y="362" text-anchor="middle" font-size="15" fill="#1e293b">hisobla() &#8594; 3</text>
+  <text x="380" y="385" text-anchor="middle" font-size="13" fill="#475569">funksiya oz holatini (state) yodida tutadi</text>
+</svg>

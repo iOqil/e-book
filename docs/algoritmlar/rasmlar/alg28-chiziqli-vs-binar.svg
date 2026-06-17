@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 520">
+  <title>Chiziqli qidiruv har bir elementni navbat bilan tekshiradi (O(n)), binar qidiruv esa saralangan massivni har qadamda yarmiga bo'ladi (O(log n))</title>
+  <rect x="0" y="0" width="860" height="520" fill="#f8fafc"/>
+  <text x="430" y="36" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Chiziqli qidiruv vs binar qidiruv</text>
+  <text x="430" y="60" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Qidirilayotgan qiymat: 23 — massiv saralangan</text>
+
+  <!-- CHIZIQLI -->
+  <text x="40" y="100" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#dc2626">Chiziqli: har bir elementni navbat bilan</text>
+
+  <!-- cells linear -->
+  <g font-family="monospace" font-size="14" text-anchor="middle">
+    <rect x="40" y="115" width="64" height="44" rx="5" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+    <text x="72" y="143" fill="#334155">3</text>
+    <rect x="110" y="115" width="64" height="44" rx="5" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+    <text x="142" y="143" fill="#334155">8</text>
+    <rect x="180" y="115" width="64" height="44" rx="5" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+    <text x="212" y="143" fill="#334155">15</text>
+    <rect x="250" y="115" width="64" height="44" rx="5" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+    <text x="282" y="143" fill="#334155">19</text>
+    <rect x="320" y="115" width="64" height="44" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+    <text x="352" y="143" fill="#16a34a" font-weight="bold">23</text>
+    <rect x="390" y="115" width="64" height="44" rx="5" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="422" y="143" fill="#94a3b8">42</text>
+    <rect x="460" y="115" width="64" height="44" rx="5" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="492" y="143" fill="#94a3b8">56</text>
+    <rect x="530" y="115" width="64" height="44" rx="5" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="562" y="143" fill="#94a3b8">71</text>
+  </g>
+  <!-- arrows scanning -->
+  <text x="72" y="178" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">1✗</text>
+  <text x="142" y="178" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">2✗</text>
+  <text x="212" y="178" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">3✗</text>
+  <text x="282" y="178" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">4✗</text>
+  <text x="352" y="178" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a" font-weight="bold">5✓</text>
+  <text x="650" y="143" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">5 ta taqqoslash</text>
+  <text x="650" y="178" font-family="monospace" font-size="14" font-weight="bold" fill="#dc2626">O(n)</text>
+
+  <!-- divider -->
+  <line x1="40" y1="215" x2="820" y2="215" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <!-- BINAR -->
+  <text x="40" y="252" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb">Binar: har qadamda oraliqni yarmiga bo'lib</text>
+
+  <!-- cells binary step 1 -->
+  <g font-family="monospace" font-size="14" text-anchor="middle">
+    <rect x="40" y="268" width="64" height="44" rx="5" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="72" y="296" fill="#334155">3</text>
+    <rect x="110" y="268" width="64" height="44" rx="5" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="142" y="296" fill="#334155">8</text>
+    <rect x="180" y="268" width="64" height="44" rx="5" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="212" y="296" fill="#334155">15</text>
+    <rect x="250" y="268" width="64" height="44" rx="5" fill="#fef9c3" stroke="#f59e0b" stroke-width="2.5"/>
+    <text x="282" y="296" fill="#d97706" font-weight="bold">19</text>
+    <rect x="320" y="268" width="64" height="44" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+    <text x="352" y="296" fill="#16a34a" font-weight="bold">23</text>
+    <rect x="390" y="268" width="64" height="44" rx="5" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="422" y="296" fill="#94a3b8">42</text>
+    <rect x="460" y="268" width="64" height="44" rx="5" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="492" y="296" fill="#94a3b8">56</text>
+    <rect x="530" y="268" width="64" height="44" rx="5" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="562" y="296" fill="#94a3b8">71</text>
+  </g>
+  <text x="282" y="335" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#d97706" font-weight="bold">mid: 19 &lt; 23 → o'ngga</text>
+
+  <!-- step 2 -->
+  <g font-family="monospace" font-size="14" text-anchor="middle">
+    <rect x="390" y="360" width="64" height="44" rx="5" fill="#fef9c3" stroke="#f59e0b" stroke-width="2.5"/>
+    <text x="422" y="388" fill="#d97706" font-weight="bold">42</text>
+    <rect x="320" y="360" width="64" height="44" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+    <text x="352" y="388" fill="#16a34a" font-weight="bold">23</text>
+    <rect x="460" y="360" width="64" height="44" rx="5" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="492" y="388" fill="#94a3b8">56</text>
+    <rect x="530" y="360" width="64" height="44" rx="5" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="562" y="388" fill="#94a3b8">71</text>
+  </g>
+  <text x="422" y="427" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#d97706" font-weight="bold">mid: 42 &gt; 23 → chapga</text>
+
+  <!-- step 3 -->
+  <g font-family="monospace" font-size="14" text-anchor="middle">
+    <rect x="320" y="448" width="64" height="44" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+    <text x="352" y="476" fill="#16a34a" font-weight="bold">23</text>
+  </g>
+  <text x="416" y="476" font-family="Segoe UI" font-size="13" fill="#16a34a" font-weight="bold">mid: 23 = 23 ✓ topildi!</text>
+
+  <text x="650" y="296" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb">3 ta taqqoslash</text>
+  <text x="650" y="335" font-family="monospace" font-size="14" font-weight="bold" fill="#2563eb">O(log n)</text>
+</svg>

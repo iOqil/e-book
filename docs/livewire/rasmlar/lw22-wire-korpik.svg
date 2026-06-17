@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>$wire ko'prigi: Alpine ichidan Livewire komponentiga murojaat</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">$wire — Alpine'dan Livewire'ga ko'prik</text>
+
+  <!-- Alpine side -->
+  <rect x="30" y="70" width="220" height="300" rx="14" fill="#ffffff" stroke="#fb70a9" stroke-width="2"/>
+  <text x="140" y="100" text-anchor="middle" font-size="16" font-weight="700" fill="#db2777">ALPINE (brauzer)</text>
+  <text x="140" y="122" text-anchor="middle" font-size="13" fill="#94a3b8">x-data, @click, x-text</text>
+  <rect x="52" y="146" width="176" height="200" rx="10" fill="#fdeef5" stroke="#fbcfe8"/>
+  <text x="140" y="180" text-anchor="middle" font-size="14" fill="#1e293b">Alpine kodi ichida</text>
+  <text x="140" y="206" text-anchor="middle" font-size="15" font-weight="700" fill="#db2777">$wire</text>
+  <text x="140" y="230" text-anchor="middle" font-size="13" fill="#475569">deganda — yonidagi</text>
+  <text x="140" y="250" text-anchor="middle" font-size="13" fill="#475569">Livewire komponenti</text>
+  <text x="140" y="270" text-anchor="middle" font-size="13" fill="#475569">qo'lingizga keladi</text>
+  <text x="140" y="306" text-anchor="middle" font-size="13" fill="#94a3b8">@click="$wire..."</text>
+  <text x="140" y="326" text-anchor="middle" font-size="13" fill="#94a3b8">x-text="$wire.count"</text>
+
+  <!-- Livewire side -->
+  <rect x="510" y="70" width="220" height="300" rx="14" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="620" y="100" text-anchor="middle" font-size="16" font-weight="700" fill="#4f46e5">LIVEWIRE (server)</text>
+  <text x="620" y="122" text-anchor="middle" font-size="13" fill="#94a3b8">public xususiyat &amp; metod</text>
+  <rect x="532" y="146" width="176" height="90" rx="10" fill="#eef2ff" stroke="#c7d2fe"/>
+  <text x="620" y="178" text-anchor="middle" font-size="14" fill="#1e293b">public int $count;</text>
+  <text x="620" y="206" text-anchor="middle" font-size="14" fill="#1e293b">function increment()</text>
+  <text x="620" y="224" text-anchor="middle" font-size="13" fill="#475569">{ $this-&gt;count++; }</text>
+  <rect x="532" y="250" width="176" height="96" rx="10" fill="#eef2ff" stroke="#c7d2fe"/>
+  <text x="620" y="282" text-anchor="middle" font-size="14" fill="#1e293b">public bool $open;</text>
+  <text x="620" y="312" text-anchor="middle" font-size="13" fill="#475569">$wire ularni</text>
+  <text x="620" y="330" text-anchor="middle" font-size="13" fill="#475569">o'qiydi/o'zgartiradi</text>
+
+  <!-- Bridge arrows in middle -->
+  <g font-size="13" fill="#1e293b">
+    <rect x="280" y="146" width="200" height="34" rx="8" fill="#ffffff" stroke="#6366f1"/>
+    <text x="380" y="168" text-anchor="middle" font-size="13" fill="#4f46e5" font-weight="600">$wire.count</text>
+    <text x="380" y="143" text-anchor="middle" font-size="13" fill="#94a3b8">xususiyatni o'qish</text>
+
+    <rect x="280" y="196" width="200" height="34" rx="8" fill="#ffffff" stroke="#6366f1"/>
+    <text x="380" y="218" text-anchor="middle" font-size="13" fill="#4f46e5" font-weight="600">$wire.increment()</text>
+    <text x="380" y="193" text-anchor="middle" font-size="13" fill="#94a3b8">metodni chaqirish</text>
+
+    <rect x="280" y="246" width="200" height="34" rx="8" fill="#ffffff" stroke="#6366f1"/>
+    <text x="380" y="268" text-anchor="middle" font-size="13" fill="#4f46e5" font-weight="600">$wire.$set('open', true)</text>
+    <text x="380" y="243" text-anchor="middle" font-size="13" fill="#94a3b8">qiymat o'rnatish</text>
+
+    <rect x="280" y="296" width="200" height="34" rx="8" fill="#ffffff" stroke="#6366f1"/>
+    <text x="380" y="318" text-anchor="middle" font-size="13" fill="#4f46e5" font-weight="600">$wire.$refresh()</text>
+    <text x="380" y="293" text-anchor="middle" font-size="13" fill="#94a3b8">qayta render qilish</text>
+  </g>
+
+  <!-- connector lines -->
+  <line x1="250" y1="220" x2="280" y2="220" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="480" y1="220" x2="510" y2="220" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="510,220 500,215 500,225" fill="#94a3b8"/>
+  <polygon points="280,220 290,215 290,225" fill="#94a3b8"/>
+
+  <text x="380" y="406" text-anchor="middle" font-size="14" fill="#475569">$wire — Alpine kodidan Livewire'ning xususiyat va metodlariga to'g'ridan-to'g'ri yo'l</text>
+  <text x="380" y="428" text-anchor="middle" font-size="13" fill="#94a3b8">Maxsus amallar $ bilan: $set, $refresh, $dispatch, $get</text>
+</svg>

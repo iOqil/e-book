@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="760" height="380">
+  <title>wp_set_object_terms orqali kitob post va janr termlari o'rtasidagi bog'lanish oqimi diagrammasi</title>
+  <rect x="0" y="0" width="760" height="380" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Term'ni post'ga biriktirish oqimi</text>
+
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <!-- 1: chaqiruv -->
+  <rect x="40" y="80" width="220" height="92" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="150" y="106" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e40af">1. Chaqiruv</text>
+  <text x="150" y="130" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">wp_set_object_terms(</text>
+  <text x="150" y="150" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">$kitob_id, ['Ilmiy'],</text>
+  <text x="150" y="166" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">'janr', $append )</text>
+
+  <!-- 2: WP qayta ishlaydi -->
+  <rect x="300" y="80" width="220" height="92" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="410" y="106" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#475569">2. WordPress</text>
+  <text x="410" y="130" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">term bormi? yo'q bo'lsa</text>
+  <text x="410" y="148" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">yaratadi; bog'lanish</text>
+  <text x="410" y="166" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">yozuvini saqlaydi</text>
+
+  <!-- 3: natija -->
+  <rect x="560" y="80" width="200" height="92" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="660" y="106" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">3. Bog'landi</text>
+  <text x="660" y="130" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">kitob #42</text>
+  <text x="660" y="150" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">&#8596; janr: Ilmiy</text>
+
+  <line x1="260" y1="126" x2="298" y2="126" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arr)"/>
+  <line x1="520" y1="126" x2="558" y2="126" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <!-- append izoh -->
+  <rect x="120" y="210" width="520" height="60" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="380" y="234" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">$append parametri</text>
+  <text x="380" y="256" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">false (standart) = eski term'larni ALMASHTIRADI &#160;&#160;|&#160;&#160; true = QO'SHADI</text>
+
+  <!-- o'qish funksiyalari -->
+  <rect x="120" y="296" width="520" height="56" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="319" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e40af">Keyin o'qish:</text>
+  <text x="380" y="340" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">get_the_terms($id, 'janr') &#8594; WP_Term[] &#160;&#160;|&#160;&#160; has_term('Ilmiy','janr') &#8594; bool</text>
+</svg>

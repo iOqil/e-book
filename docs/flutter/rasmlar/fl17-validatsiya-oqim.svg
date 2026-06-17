@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 540" width="780" height="540" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Validatsiya oqimi: foydalanuvchi Saqlash tugmasini bosadi, formKey.currentState.validate() har bir validatorni ishga soladi, agar hammasi null qaytarsa forma haqiqiy (davom etadi), birortasi xato matn qaytarsa maydon ostida xato ko'rsatiladi.</title>
+  <rect x="0" y="0" width="780" height="540" fill="#f8fafc"/>
+  <text x="390" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Validatsiya oqimi — tugma bosilgandan natijagacha</text>
+  <text x="390" y="58" text-anchor="middle" font-size="14" fill="#475569">validate() har bir validatorni chaqiradi: null = to'g'ri, matn = xato</text>
+
+  <!-- Step 1: user taps submit -->
+  <rect x="270" y="84" width="240" height="50" rx="12" fill="#027dfd"/>
+  <text x="390" y="114" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">Foydalanuvchi 'Saqlash'ni bosadi</text>
+
+  <line x1="390" y1="134" x2="390" y2="160" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="390,160 385,150 395,150" fill="#94a3b8"/>
+
+  <!-- Step 2: validate() -->
+  <rect x="230" y="160" width="320" height="50" rx="12" fill="#6366f1"/>
+  <text x="390" y="184" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">formKey.currentState!.validate()</text>
+  <text x="390" y="202" text-anchor="middle" font-size="13" fill="#e0e7ff">har bir maydonning validator'ini ishga soladi</text>
+
+  <line x1="390" y1="210" x2="390" y2="236" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="390,236 385,226 395,226" fill="#94a3b8"/>
+
+  <!-- validators row -->
+  <rect x="120" y="236" width="160" height="60" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="200" y="262" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Ism validator</text>
+  <text x="200" y="282" text-anchor="middle" font-size="13" fill="#64748b">bo'sh emasmi?</text>
+
+  <rect x="310" y="236" width="160" height="60" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="390" y="262" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Email validator</text>
+  <text x="390" y="282" text-anchor="middle" font-size="13" fill="#64748b">'@' bormi?</text>
+
+  <rect x="500" y="236" width="160" height="60" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="580" y="262" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Parol validator</text>
+  <text x="580" y="282" text-anchor="middle" font-size="13" fill="#64748b">uzunligi yetarlimi?</text>
+
+  <!-- decision -->
+  <line x1="390" y1="296" x2="390" y2="324" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="390,324 385,314 395,314" fill="#94a3b8"/>
+  <polygon points="390,330 540,372 390,414 240,372" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="390" y="368" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">Hammasi null</text>
+  <text x="390" y="388" text-anchor="middle" font-size="13" fill="#475569">qaytardimi?</text>
+
+  <!-- YES branch -->
+  <line x1="540" y1="372" x2="610" y2="372" stroke="#16a34a" stroke-width="2.5"/>
+  <polygon points="610,372 600,367 600,377" fill="#16a34a"/>
+  <text x="575" y="362" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a">HA</text>
+  <rect x="612" y="344" width="150" height="56" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="687" y="370" text-anchor="middle" font-size="14" font-weight="700" fill="#16a34a">To'g'ri</text>
+  <text x="687" y="388" text-anchor="middle" font-size="13" fill="#475569">save() + davom et</text>
+
+  <!-- NO branch -->
+  <line x1="240" y1="372" x2="170" y2="372" stroke="#ef4444" stroke-width="2.5"/>
+  <polygon points="170,372 180,367 180,377" fill="#ef4444"/>
+  <text x="205" y="362" text-anchor="middle" font-size="13" font-weight="700" fill="#ef4444">YO'Q</text>
+  <rect x="18" y="344" width="150" height="56" rx="10" fill="#ffffff" stroke="#ef4444" stroke-width="2.5"/>
+  <text x="93" y="370" text-anchor="middle" font-size="14" font-weight="700" fill="#ef4444">Xato bor</text>
+  <text x="93" y="388" text-anchor="middle" font-size="13" fill="#475569">maydon ostida ko'rsat</text>
+
+  <!-- error field illustration -->
+  <rect x="160" y="442" width="460" height="76" rx="12" fill="#ffffff" stroke="#ef4444" stroke-width="2.5"/>
+  <text x="180" y="468" font-size="14" font-weight="700" fill="#1e293b">Email</text>
+  <text x="180" y="490" font-size="13" fill="#64748b">salomdunyo.com</text>
+  <text x="180" y="510" font-size="13" font-weight="700" fill="#ef4444">Email noto'g'ri — '@' belgisi yo'q</text>
+  <text x="500" y="490" text-anchor="middle" font-size="13" fill="#ef4444">xato matni avtomatik</text>
+  <text x="500" y="508" text-anchor="middle" font-size="13" fill="#ef4444">maydon ostida chiqadi</text>
+</svg>

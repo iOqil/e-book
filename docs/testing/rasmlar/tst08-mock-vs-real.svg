@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 470">
+  <title>Mock vs real: chegarada mock, ichkarida haqiqiy mantiq</title>
+  <rect x="0" y="0" width="820" height="470" fill="#f8fafc"/>
+  <text x="410" y="38" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Qachon mock, qachon real?</text>
+  <text x="410" y="64" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Mock'ni tashqi chegarada ishlat, ichki mantiqni real qoldir</text>
+
+  <!-- markaziy doira: real mantiq -->
+  <circle cx="410" cy="250" r="110" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+  <text x="410" y="232" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="bold" fill="#16a34a">REAL</text>
+  <text x="410" y="258" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#1e293b">biznes mantiq</text>
+  <text x="410" y="280" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#475569">sof funksiya, hisob,</text>
+  <text x="410" y="298" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#475569">domen qoidalari</text>
+
+  <!-- chegara dublyorlari (qizil/amber) -->
+  <rect x="40" y="150" width="150" height="60" rx="10" fill="#fef9f3" stroke="#f59e0b" stroke-width="2"/>
+  <text x="115" y="178" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">Tarmoq / API</text>
+  <text x="115" y="198" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#f59e0b">mock / stub</text>
+
+  <rect x="40" y="290" width="150" height="60" rx="10" fill="#fef9f3" stroke="#f59e0b" stroke-width="2"/>
+  <text x="115" y="318" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">Vaqt / tasodif</text>
+  <text x="115" y="338" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#f59e0b">mock / fake</text>
+
+  <rect x="630" y="150" width="150" height="60" rx="10" fill="#fef9f3" stroke="#f59e0b" stroke-width="2"/>
+  <text x="705" y="178" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">Fayl / DB</text>
+  <text x="705" y="198" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#f59e0b">fake / stub</text>
+
+  <rect x="630" y="290" width="150" height="60" rx="10" fill="#fef9f3" stroke="#f59e0b" stroke-width="2"/>
+  <text x="705" y="318" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">Email / SMS</text>
+  <text x="705" y="338" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#f59e0b">mock</text>
+
+  <!-- ulovchi chiziqlar -->
+  <line x1="190" y1="180" x2="310" y2="220" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="190" y1="320" x2="310" y2="280" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="630" y1="180" x2="510" y2="220" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="630" y1="320" x2="510" y2="280" stroke="#94a3b8" stroke-width="2"/>
+
+  <text x="410" y="430" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Tashqi dunyoga chiqish nuqtalari (sariq) — sekin/nodeterminik => dublyor</text>
+  <text x="410" y="452" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#16a34a">Ichki yadro (yashil) — tez/deterministik => haqiqiy ishlat</text>
+</svg>

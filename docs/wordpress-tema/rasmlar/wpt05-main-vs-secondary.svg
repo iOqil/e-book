@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 520" width="780" height="520" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Main query (avtomatik) va new WP_Query ikkilamchi so'rovi farqi va wp_reset_postdata ning roli</title>
+  <rect x="0" y="0" width="780" height="520" fill="#f8fafc"/>
+  <text x="390" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Main query va ikkilamchi so'rov</text>
+  <text x="390" y="56" text-anchor="middle" font-size="14" fill="#475569">Ikkalasi The Loop ishlatadi, lekin manbasi va tozalanishi farq qiladi</text>
+
+  <!-- CHAP: MAIN QUERY -->
+  <rect x="40" y="90" width="320" height="370" rx="14" fill="#e2e8f0" stroke="#21759b" stroke-width="2"/>
+  <rect x="40" y="90" width="320" height="48" rx="14" fill="#21759b"/>
+  <text x="200" y="121" text-anchor="middle" font-size="17" font-weight="700" fill="#ffffff">MAIN QUERY</text>
+
+  <text x="60" y="170" font-size="14" font-weight="700" fill="#1e293b">URL -> WP avtomatik bajaradi</text>
+  <text x="60" y="195" font-size="13" fill="#475569">Manba: joriy sahifa so'rovi</text>
+  <text x="60" y="216" font-size="13" fill="#475569">(global $wp_query)</text>
+
+  <rect x="60" y="234" width="280" height="92" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="74" y="258" font-size="13" font-family="Consolas, monospace" fill="#1e293b">if ( have_posts() ) :</text>
+  <text x="74" y="280" font-size="13" font-family="Consolas, monospace" fill="#1e293b">  while ( have_posts() ) :</text>
+  <text x="74" y="302" font-size="13" font-family="Consolas, monospace" fill="#1e293b">    the_post();</text>
+  <text x="74" y="320" font-size="13" font-family="Consolas, monospace" fill="#1e293b">  endwhile; endif;</text>
+
+  <rect x="60" y="346" width="280" height="48" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="200" y="368" text-anchor="middle" font-size="13" font-weight="700" fill="#166534">reset KERAK EMAS</text>
+  <text x="200" y="386" text-anchor="middle" font-size="13" fill="#166534">($wp_query ni o'zgartirmaysiz)</text>
+
+  <text x="60" y="424" font-size="13" fill="#475569">Misol: index.php, archive.php</text>
+  <text x="60" y="444" font-size="13" fill="#475569">asosiy post ro'yxati</text>
+
+  <!-- ONG: NEW WP_QUERY -->
+  <rect x="420" y="90" width="320" height="370" rx="14" fill="#e2e8f0" stroke="#2563eb" stroke-width="2"/>
+  <rect x="420" y="90" width="320" height="48" rx="14" fill="#2563eb"/>
+  <text x="580" y="121" text-anchor="middle" font-size="17" font-weight="700" fill="#ffffff">new WP_Query($args)</text>
+
+  <text x="440" y="170" font-size="14" font-weight="700" fill="#1e293b">Siz qo'lda yaratasiz</text>
+  <text x="440" y="195" font-size="13" fill="#475569">Manba: o'zingiz bergan $args</text>
+  <text x="440" y="216" font-size="13" fill="#475569">(post_type, posts_per_page...)</text>
+
+  <rect x="440" y="234" width="280" height="92" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="454" y="258" font-size="13" font-family="Consolas, monospace" fill="#1e293b">$q = new WP_Query($args);</text>
+  <text x="454" y="280" font-size="13" font-family="Consolas, monospace" fill="#1e293b">while ( $q-&gt;have_posts() ) :</text>
+  <text x="454" y="302" font-size="13" font-family="Consolas, monospace" fill="#1e293b">  $q-&gt;the_post();</text>
+  <text x="454" y="320" font-size="13" font-family="Consolas, monospace" fill="#1e293b">endwhile;</text>
+
+  <rect x="440" y="346" width="280" height="48" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="580" y="368" text-anchor="middle" font-size="13" font-weight="700" fill="#991b1b">wp_reset_postdata() SHART!</text>
+  <text x="580" y="386" text-anchor="middle" font-size="13" fill="#991b1b">global $post ni qaytaradi</text>
+
+  <text x="440" y="424" font-size="13" fill="#475569">Misol: "oxirgi 3 post" widget,</text>
+  <text x="440" y="444" font-size="13" fill="#475569">aloqador postlar, slayder</text>
+
+  <text x="390" y="492" text-anchor="middle" font-size="14" font-weight="700" fill="#dc2626">Eslab qol: ikkilamchi so'rovdan keyin wp_reset_postdata() ni unutma</text>
+</svg>

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430">
+  <title>Bog'liqlik grafi: o'z skriptingiz deps massivi orqali jquery va wp-element kabi handle'larga bog'lanadi, WordPress ularni avval yuklaydi; index.asset.php esa @wordpress/scripts build natijasida dependencies va version'ni avtomatik beradi</title>
+  <defs>
+    <marker id="bg-arrow" markerWidth="12" markerHeight="12" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Bog'liqlik grafi va asset.php avtomatikasi</text>
+
+  <!-- dependency graph: deps loaded before our handle -->
+  <text x="190" y="70" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#475569">Qo'lda: deps massivi</text>
+
+  <rect x="40" y="86" width="130" height="50" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="105" y="116" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">jquery</text>
+
+  <rect x="210" y="86" width="130" height="50" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="275" y="116" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">wp-element</text>
+
+  <rect x="100" y="186" width="180" height="64" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="190" y="212" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e40af">kitkat-frontend</text>
+  <text x="190" y="234" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(sizning skriptingiz)</text>
+
+  <line x1="105" y1="138" x2="160" y2="184" stroke="#94a3b8" stroke-width="2" marker-end="url(#bg-arrow)"/>
+  <line x1="275" y1="138" x2="220" y2="184" stroke="#94a3b8" stroke-width="2" marker-end="url(#bg-arrow)"/>
+
+  <text x="190" y="284" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">deps =&gt; ['jquery','wp-element']</text>
+  <text x="190" y="306" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">WP avval bog'liqliklarni yuklaydi</text>
+
+  <!-- divider -->
+  <line x1="380" y1="80" x2="380" y2="350" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="6 5"/>
+
+  <!-- asset.php side -->
+  <text x="570" y="70" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#475569">Avtomatik: index.asset.php</text>
+
+  <rect x="430" y="90" width="290" height="86" rx="8" fill="#1e293b"/>
+  <text x="450" y="116" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dbeafe">return array(</text>
+  <text x="466" y="138" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dcfce7">'dependencies' =&gt; ['wp-element',...],</text>
+  <text x="466" y="160" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#fef3c7">'version' =&gt; 'a1b2c3...'</text>
+
+  <rect x="430" y="200" width="290" height="60" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="450" y="224" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">$asset = require '.../index.asset.php';</text>
+  <text x="450" y="246" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">deps va ver SHU yerdan</text>
+
+  <line x1="575" y1="176" x2="575" y2="198" stroke="#94a3b8" stroke-width="2" marker-end="url(#bg-arrow)"/>
+
+  <rect x="430" y="284" width="290" height="60" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="450" y="308" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e40af">wp_enqueue_script( $h, $src,</text>
+  <text x="450" y="330" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e40af">  $asset['dependencies'], $asset['version'] )</text>
+
+  <line x1="575" y1="260" x2="575" y2="282" stroke="#94a3b8" stroke-width="2" marker-end="url(#bg-arrow)"/>
+
+  <text x="380" y="378" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">@wordpress/scripts (npm run build) index.asset.php ni o'zi yaratadi</text>
+  <text x="380" y="404" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">version = fayl hash'i =&gt; kod o'zgarsa kesh avtomatik buziladi (19-23 boblarga ko'prik)</text>
+</svg>

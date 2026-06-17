@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="800" height="480" font-family="Segoe UI, system-ui, sans-serif">
+  <title>StatefulWidget ikkiga bo'linadi: o'zgarmas Widget (konfiguratsiya, qayta-qayta yaratiladi) va doimiy State obyekti (o'zgaruvchan ma'lumot + build metodi, qayta qurishlarda saqlanib qoladi). createState ikkalasini bog'laydi.</title>
+  <rect x="0" y="0" width="800" height="480" fill="#f8fafc"/>
+  <text x="400" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">StatefulWidget ikkiga bo'linadi</text>
+  <text x="400" y="58" text-anchor="middle" font-size="14" fill="#475569">Widget o'zgarmas (qayta yaratiladi) — State doimiy (saqlanib qoladi)</text>
+
+  <!-- Widget (config) box -->
+  <rect x="40" y="92" width="320" height="176" rx="14" fill="#ffffff" stroke="#027dfd" stroke-width="2.5"/>
+  <text x="200" y="120" text-anchor="middle" font-size="16" font-weight="700" fill="#027dfd">Widget (konfiguratsiya)</text>
+  <text x="200" y="142" text-anchor="middle" font-size="13" fill="#64748b">class Counter extends StatefulWidget</text>
+  <rect x="60" y="156" width="280" height="44" rx="10" fill="#dbeafe" stroke="#027dfd" stroke-width="1.5"/>
+  <text x="200" y="176" text-anchor="middle" font-size="13" fill="#1e293b">o'zgarmas (immutable) maydonlar:</text>
+  <text x="200" y="193" text-anchor="middle" font-size="13" font-weight="700" fill="#0553b1">final String title;</text>
+  <rect x="60" y="208" width="280" height="44" rx="10" fill="#ffffff" stroke="#027dfd" stroke-width="1.5"/>
+  <text x="200" y="228" text-anchor="middle" font-size="13" fill="#1e293b">createState() => _CounterState();</text>
+  <text x="200" y="245" text-anchor="middle" font-size="13" fill="#64748b">State obyektini yaratadi</text>
+
+  <!-- createState arrow -->
+  <line x1="360" y1="230" x2="438" y2="230" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="438,230 426,224 426,236" fill="#94a3b8"/>
+  <text x="399" y="220" text-anchor="middle" font-size="13" font-weight="700" fill="#475569">yaratadi</text>
+
+  <!-- State box -->
+  <rect x="440" y="92" width="320" height="176" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="600" y="120" text-anchor="middle" font-size="16" font-weight="700" fill="#16a34a">State (doimiy obyekt)</text>
+  <text x="600" y="142" text-anchor="middle" font-size="13" fill="#64748b">class _CounterState extends State&lt;Counter&gt;</text>
+  <rect x="460" y="156" width="280" height="44" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="600" y="176" text-anchor="middle" font-size="13" fill="#1e293b">o'zgaruvchan (mutable) ma'lumot:</text>
+  <text x="600" y="193" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a">int count = 0;</text>
+  <rect x="460" y="208" width="280" height="44" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="600" y="228" text-anchor="middle" font-size="13" fill="#1e293b">build(context) { ... }</text>
+  <text x="600" y="245" text-anchor="middle" font-size="13" fill="#64748b">UI'ni shu yerda quradi</text>
+
+  <!-- Bottom: lifecycle of recreation -->
+  <rect x="40" y="300" width="350" height="150" rx="14" fill="#ffffff" stroke="#027dfd" stroke-width="2"/>
+  <text x="215" y="328" text-anchor="middle" font-size="15" font-weight="700" fill="#027dfd">Widget — tez-tez QAYTA yaratiladi</text>
+  <text x="60" y="356" font-size="13" fill="#475569">Ota qayta build qilganda yangi Widget</text>
+  <text x="60" y="376" font-size="13" fill="#475569">nusxasi tug'iladi (eski tashlanadi).</text>
+  <text x="60" y="402" font-size="13" fill="#64748b">U faqat sozlamani (title kabi) tashiydi,</text>
+  <text x="60" y="422" font-size="13" fill="#64748b">o'zgaruvchan holatni saqlamaydi.</text>
+
+  <rect x="410" y="300" width="350" height="150" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="585" y="328" text-anchor="middle" font-size="15" font-weight="700" fill="#16a34a">State — SAQLANIB qoladi</text>
+  <text x="430" y="356" font-size="13" fill="#475569">Bir marta yaratiladi va Widget qayta</text>
+  <text x="430" y="376" font-size="13" fill="#475569">yaratilsa ham xotirada turaveradi.</text>
+  <text x="430" y="402" font-size="13" font-weight="700" fill="#16a34a">count qiymati yo'qolmaydi.</text>
+  <text x="430" y="422" font-size="13" fill="#64748b">Aynan shu yerda holat yashaydi.</text>
+</svg>

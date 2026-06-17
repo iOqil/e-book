@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440">
+  <title>REST so'rov oqimi: klient kitkat/v1/kitoblar ga so'rov yuboradi, nonce bilan autentifikatsiya, args validate va sanitize, keyin callback ishlaydi va WP_REST_Response JSON qaytaradi</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">REST so'rovning to'liq oqimi</text>
+
+  <!-- 1 client -->
+  <rect x="40" y="70" width="200" height="74" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="140" y="98" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e40af">1. Klient</text>
+  <text x="140" y="120" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">JS / mobil / blok</text>
+  <text x="140" y="138" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">X-WP-Nonce bilan</text>
+
+  <line x1="240" y1="107" x2="320" y2="107" stroke="#94a3b8" stroke-width="3" marker-end="url(#arr16c)"/>
+
+  <!-- 2 route match -->
+  <rect x="320" y="70" width="200" height="74" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="420" y="98" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#6d28d9">2. Route topiladi</text>
+  <text x="420" y="120" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">/kitkat/v1/kitoblar</text>
+  <text x="420" y="138" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">WP_REST_Request</text>
+
+  <line x1="520" y1="107" x2="600" y2="107" stroke="#94a3b8" stroke-width="3" marker-end="url(#arr16c)"/>
+
+  <!-- 3 auth -->
+  <rect x="560" y="70" width="170" height="74" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="645" y="98" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b45309">3. permission_</text>
+  <text x="645" y="116" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b45309">callback</text>
+  <text x="645" y="136" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">nonce + capability</text>
+
+  <!-- down arrow -->
+  <line x1="645" y1="144" x2="645" y2="186" stroke="#94a3b8" stroke-width="3" marker-end="url(#arr16c)"/>
+
+  <!-- 4 validate/sanitize -->
+  <rect x="540" y="186" width="190" height="80" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="635" y="214" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b45309">4. args</text>
+  <text x="635" y="236" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">validate_callback</text>
+  <text x="635" y="255" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">sanitize_callback</text>
+
+  <line x1="540" y1="226" x2="460" y2="226" stroke="#94a3b8" stroke-width="3" marker-end="url(#arr16c)"/>
+
+  <!-- 5 callback -->
+  <rect x="260" y="186" width="200" height="80" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="360" y="214" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e40af">5. callback</text>
+  <text x="360" y="236" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">WP_Query / mantiq</text>
+  <text x="360" y="255" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">ma'lumotni tayyorlaydi</text>
+
+  <line x1="260" y1="226" x2="180" y2="226" stroke="#94a3b8" stroke-width="3" marker-end="url(#arr16c)"/>
+
+  <!-- 6 response -->
+  <rect x="40" y="186" width="140" height="80" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="110" y="214" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#15803d">6. Javob</text>
+  <text x="110" y="236" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">WP_REST_</text>
+  <text x="110" y="254" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Response</text>
+
+  <!-- down to JSON -->
+  <line x1="110" y1="266" x2="110" y2="312" stroke="#16a34a" stroke-width="3" marker-end="url(#arr16g2)"/>
+
+  <!-- JSON box -->
+  <rect x="40" y="312" width="690" height="74" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="60" y="340" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#15803d">Klientga JSON qaytadi (200/201):</text>
+  <text x="60" y="364" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">[ { "id": 1, "sarlavha": "PHP asoslari" }, { "id": 2, "sarlavha": "WordPress" } ]</text>
+
+  <text x="380" y="412" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">Auth yiqilsa 401/403, validatsiya yiqilsa 400 — callback umuman ishlamaydi</text>
+
+  <defs>
+    <marker id="arr16c" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/></marker>
+    <marker id="arr16g2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/></marker>
+  </defs>
+</svg>

@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 520" width="780" height="520">
+  <title>DIP: bog'liqlikni teskari aylantirish — avval yuqori daraja konkret klassga bog'langan, keyin ikkala daraja ham abstraksiyaga bog'lanadi va o'q yo'nalishi teskari bo'ladi</title>
+
+  <rect x="0" y="0" width="780" height="520" fill="#f8fafc"/>
+
+  <text x="390" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">DIP — bog'liqlik o'qini abstraksiyaga buramiz</text>
+
+  <!-- ===== YOMON ===== -->
+  <text x="195" y="72" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">Yomon: yuqori daraja konkretga bog'langan</text>
+
+  <rect x="80" y="92" width="230" height="60" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="195" y="116" text-anchor="middle" font-family="Consolas, monospace" font-size="14" font-weight="bold" fill="#1e293b">BuyurtmaXizmati</text>
+  <text x="195" y="138" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#334155">yuqori daraja (biznes)</text>
+
+  <rect x="80" y="252" width="230" height="60" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="195" y="276" text-anchor="middle" font-family="Consolas, monospace" font-size="14" font-weight="bold" fill="#1e293b">EmailXabarchi</text>
+  <text x="195" y="298" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#334155">past daraja (infratuzilma)</text>
+
+  <!-- o'q: yuqori -> past (yomon) -->
+  <line x1="195" y1="152" x2="195" y2="252" stroke="#dc2626" stroke-width="3" marker-end="url(#redarr)"/>
+  <text x="320" y="205" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">to'g'ridan-to'g'ri</text>
+  <text x="320" y="222" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">new bilan bog'langan</text>
+
+  <text x="195" y="356" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">SMS ga o'tsak -> biznes kodini O'ZGARTIRAMIZ</text>
+  <text x="195" y="376" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">Test uchun email yuborilib ketadi (mock qiyin)</text>
+
+  <!-- vertikal ajratuvchi -->
+  <line x1="390" y1="58" x2="390" y2="440" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 4"/>
+
+  <!-- ===== YAXSHI ===== -->
+  <text x="585" y="72" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Yaxshi: ikkalasi abstraksiyaga bog'langan</text>
+
+  <rect x="470" y="92" width="230" height="60" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="585" y="116" text-anchor="middle" font-family="Consolas, monospace" font-size="14" font-weight="bold" fill="#1e293b">BuyurtmaXizmati</text>
+  <text x="585" y="138" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#334155">yuqori daraja (biznes)</text>
+
+  <!-- interfeys o'rtada -->
+  <rect x="470" y="200" width="230" height="56" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2.5" stroke-dasharray="7 4"/>
+  <text x="585" y="223" text-anchor="middle" font-family="Consolas, monospace" font-size="13" font-style="italic" fill="#2563eb">&#171;interface&#187; Xabarchi</text>
+  <text x="585" y="243" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#334155">yubor(kimga, matn)</text>
+
+  <!-- pastki konkretlar -->
+  <rect x="448" y="320" width="120" height="56" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="508" y="346" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">EmailXabarchi</text>
+  <text x="508" y="365" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">past daraja</text>
+
+  <rect x="602" y="320" width="120" height="56" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="662" y="346" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">SmsXabarchi</text>
+  <text x="662" y="365" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">past daraja</text>
+
+  <!-- o'q: yuqori -> interfeys (pastga ishora, lekin abstraksiyaga) -->
+  <line x1="585" y1="152" x2="585" y2="200" stroke="#2563eb" stroke-width="3" marker-end="url(#bluearr)"/>
+  <text x="585" y="182" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">bog'lanadi</text>
+
+  <!-- o'q: konkretlar -> interfeys (YUQORIGA, teskari!) -->
+  <line x1="508" y1="320" x2="540" y2="256" stroke="#16a34a" stroke-width="3" marker-end="url(#greenarr)"/>
+  <line x1="662" y1="320" x2="630" y2="256" stroke="#16a34a" stroke-width="3" marker-end="url(#greenarr)"/>
+  <text x="585" y="298" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">implements (o'q YUQORIGA)</text>
+
+  <!-- KEY xabar -->
+  <rect x="440" y="398" width="290" height="44" rx="8" fill="#fef9c3" stroke="#f59e0b" stroke-width="2"/>
+  <text x="585" y="416" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#d97706">Past daraja endi abstraksiyaga "bo'ysunadi"</text>
+  <text x="585" y="433" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#d97706">-> bog'liqlik TESKARI aylandi (inversion)</text>
+
+  <!-- pastki umumiy xulosa -->
+  <text x="390" y="478" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Bu o'q yo'nalishi hexagonal va Clean arxitekturaning poydevori (12-13 bob)</text>
+  <text x="390" y="500" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#64748b">Biznes mantiq markazda, infratuzilma chekkada va markazga ishora qiladi</text>
+
+  <defs>
+    <marker id="redarr" markerWidth="14" markerHeight="14" refX="10" refY="6" orient="auto">
+      <path d="M1,1 L11,6 L1,11 Z" fill="#dc2626"/>
+    </marker>
+    <marker id="bluearr" markerWidth="14" markerHeight="14" refX="10" refY="6" orient="auto">
+      <path d="M1,1 L11,6 L1,11 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="greenarr" markerWidth="14" markerHeight="14" refX="10" refY="6" orient="auto">
+      <path d="M1,1 L11,6 L1,11 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+</svg>

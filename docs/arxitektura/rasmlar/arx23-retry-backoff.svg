@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" width="780" height="470">
+  <title>Retry: exponential backoff va jitter — qayta urinishlar orasidagi kechikish</title>
+  <rect x="0" y="0" width="780" height="470" fill="#f8fafc"/>
+  <text x="390" y="34" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Retry: exponential backoff + jitter</text>
+  <text x="390" y="58" font-family="Segoe UI" font-size="14" fill="#64748b" text-anchor="middle">Darrov takror urma — kechikishni ikkilantirib o'tkaz, jitter bilan tarqat</text>
+
+  <defs>
+    <marker id="rb-ar" markerWidth="10" markerHeight="10" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0 L8,3.5 L0,7 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <!-- Naive panel -->
+  <text x="40" y="92" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#dc2626">Anti-pattern: darrov takror urish (thundering herd)</text>
+  <line x1="60" y1="160" x2="740" y2="160" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#rb-ar)"/>
+  <text x="745" y="164" font-family="Segoe UI" font-size="13" fill="#64748b">vaqt</text>
+  <!-- yopishib turgan urinishlar -->
+  <rect x="72" y="138" width="6" height="22" fill="#dc2626"/>
+  <rect x="84" y="138" width="6" height="22" fill="#dc2626"/>
+  <rect x="96" y="138" width="6" height="22" fill="#dc2626"/>
+  <rect x="108" y="138" width="6" height="22" fill="#dc2626"/>
+  <rect x="120" y="138" width="6" height="22" fill="#dc2626"/>
+  <rect x="132" y="138" width="6" height="22" fill="#dc2626"/>
+  <text x="160" y="132" font-family="Segoe UI" font-size="13" fill="#dc2626">minglab klient bir vaqtda -&gt; serverni yana ezadi</text>
+
+  <line x1="40" y1="185" x2="740" y2="185" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Exponential backoff panel -->
+  <text x="40" y="222" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">Yaxshi: eksponensial backoff (kechikish ikkilanadi)</text>
+  <line x1="60" y1="300" x2="740" y2="300" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#rb-ar)"/>
+  <text x="745" y="304" font-family="Segoe UI" font-size="13" fill="#64748b">vaqt</text>
+
+  <!-- backoff urinishlari: oraliq ikkilanadi -->
+  <rect x="72" y="278" width="6" height="22" fill="#2563eb"/>
+  <text x="75" y="318" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">0</text>
+  <rect x="150" y="278" width="6" height="22" fill="#2563eb"/>
+  <text x="153" y="318" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">100ms</text>
+  <rect x="306" y="278" width="6" height="22" fill="#2563eb"/>
+  <text x="309" y="318" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">200ms</text>
+  <rect x="540" y="278" width="6" height="22" fill="#2563eb"/>
+  <text x="560" y="318" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">400ms (cap'gacha)</text>
+
+  <text x="100" y="262" font-family="Segoe UI" font-size="13" fill="#64748b">u1</text>
+  <text x="225" y="262" font-family="Segoe UI" font-size="13" fill="#64748b">u2 (x2)</text>
+  <text x="415" y="262" font-family="Segoe UI" font-size="13" fill="#64748b">u3 (x2)</text>
+
+  <line x1="40" y1="335" x2="740" y2="335" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Jitter panel -->
+  <text x="40" y="372" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#f59e0b">Eng yaxshi: backoff + jitter (tasodifiy tarqatish)</text>
+  <text x="40" y="394" font-family="Segoe UI" font-size="13" fill="#334155">Ko'p klient bir xil backoff'da yana TO'P bo'lib kelmasin uchun kutishga tasodif qo'shamiz:</text>
+  <text x="40" y="414" font-family="Segoe UI" font-size="13" fill="#334155">kutish = random(0 .. min(cap, base x 2^urinish)) — har klient boshqa vaqtda uradi.</text>
+
+  <!-- jitter: tarqalgan urinishlar -->
+  <rect x="500" y="395" width="5" height="18" fill="#f59e0b"/>
+  <rect x="538" y="395" width="5" height="18" fill="#f59e0b"/>
+  <rect x="567" y="395" width="5" height="18" fill="#f59e0b"/>
+  <rect x="612" y="395" width="5" height="18" fill="#f59e0b"/>
+  <rect x="655" y="395" width="5" height="18" fill="#f59e0b"/>
+  <rect x="700" y="395" width="5" height="18" fill="#f59e0b"/>
+  <line x1="490" y1="416" x2="720" y2="416" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="605" y="432" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">tekis tarqalgan -&gt; to'lqin yo'q</text>
+
+  <!-- Izoh paneli -->
+  <rect x="40" y="446" width="700" height="20" rx="5" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+  <text x="54" y="461" font-family="Segoe UI" font-size="13" fill="#334155">Retry FAQAT idempotent operatsiyada xavfsiz (GET, PUT). Aks holda ikki marta to'lov bo'lishi mumkin.</text>
+</svg>

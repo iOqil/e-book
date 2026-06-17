@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" width="800" height="360" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Filter taqqoslash: bitta rasm normal, grayscale, brightness-125, blur-sm va invert filtrlari bilan yonma-yon</title>
+  <rect x="0" y="0" width="800" height="360" fill="#f8fafc"/>
+
+  <text x="400" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#1e293b">Bir rasm — besh xil filter</text>
+  <text x="400" y="62" text-anchor="middle" font-size="14" fill="#475569">Filter rasmning piksellariga ta'sir qiladi; HTML va manba rasm o'zgarmaydi</text>
+
+  <defs>
+    <linearGradient id="img" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0ea5e9"/>
+      <stop offset="0.5" stop-color="#6366f1"/>
+      <stop offset="1" stop-color="#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="imgGray" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#94a3b8"/>
+      <stop offset="0.5" stop-color="#64748b"/>
+      <stop offset="1" stop-color="#cbd5e1"/>
+    </linearGradient>
+    <linearGradient id="imgInv" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f59e0b"/>
+      <stop offset="0.5" stop-color="#94a3b8"/>
+      <stop offset="1" stop-color="#0ea5e9"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="4"/></filter>
+  </defs>
+
+  <!-- helper: each tile 120 wide, gap ~26, start x=44, y=100, h=120 -->
+  <!-- normal -->
+  <rect x="44" y="100" width="120" height="120" rx="10" fill="url(#img)"/>
+  <circle cx="84" cy="138" r="16" fill="#ffffff" opacity="0.85"/>
+  <text x="104" y="248" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e293b">normal</text>
+  <text x="104" y="270" text-anchor="middle" font-size="13" fill="#64748b">(filtr yo'q)</text>
+
+  <!-- grayscale -->
+  <rect x="190" y="100" width="120" height="120" rx="10" fill="url(#imgGray)"/>
+  <circle cx="230" cy="138" r="16" fill="#ffffff" opacity="0.85"/>
+  <text x="250" y="248" text-anchor="middle" font-size="15" font-weight="bold" fill="#4f46e5">grayscale</text>
+  <text x="250" y="270" text-anchor="middle" font-size="13" fill="#64748b">rangsiz</text>
+
+  <!-- brightness-125 -->
+  <rect x="336" y="100" width="120" height="120" rx="10" fill="url(#img)"/>
+  <rect x="336" y="100" width="120" height="120" rx="10" fill="#ffffff" opacity="0.25"/>
+  <circle cx="376" cy="138" r="16" fill="#ffffff" opacity="0.95"/>
+  <text x="396" y="248" text-anchor="middle" font-size="15" font-weight="bold" fill="#4f46e5">brightness-125</text>
+  <text x="396" y="270" text-anchor="middle" font-size="13" fill="#64748b">yorqinroq</text>
+
+  <!-- blur-sm -->
+  <rect x="482" y="100" width="120" height="120" rx="10" fill="url(#img)" filter="url(#soft)"/>
+  <circle cx="522" cy="138" r="16" fill="#ffffff" opacity="0.85" filter="url(#soft)"/>
+  <text x="542" y="248" text-anchor="middle" font-size="15" font-weight="bold" fill="#4f46e5">blur-sm</text>
+  <text x="542" y="270" text-anchor="middle" font-size="13" fill="#64748b">xira</text>
+
+  <!-- invert -->
+  <rect x="628" y="100" width="120" height="120" rx="10" fill="url(#imgInv)"/>
+  <circle cx="668" cy="138" r="16" fill="#1e293b" opacity="0.85"/>
+  <text x="688" y="248" text-anchor="middle" font-size="15" font-weight="bold" fill="#4f46e5">invert</text>
+  <text x="688" y="270" text-anchor="middle" font-size="13" fill="#64748b">teskari rang</text>
+
+  <text x="400" y="318" text-anchor="middle" font-size="13" fill="#64748b">Filtrlarni birga ulash mumkin: grayscale hover:grayscale-0 — sichqoncha kelganda rang qaytadi</text>
+</svg>

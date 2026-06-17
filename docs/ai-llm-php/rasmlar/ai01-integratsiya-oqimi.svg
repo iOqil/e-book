@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430" font-family="Segoe UI, system-ui, sans-serif">
+  <title>AI integratsiya oqimi: PHP ilovadan API orqali LLM'ga so'rov va javob</title>
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">AI integratsiya oqimi</text>
+  <text x="380" y="60" text-anchor="middle" font-size="14" fill="#475569">Kodingiz → API → model → javob → kodingiz → foydalanuvchi</text>
+
+  <!-- Foydalanuvchi -->
+  <rect x="30" y="160" width="150" height="90" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="105" y="200" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">Foydalanuvchi</text>
+  <text x="105" y="224" text-anchor="middle" font-size="13" fill="#475569">savol beradi</text>
+
+  <!-- PHP ilova -->
+  <rect x="225" y="150" width="170" height="110" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="310" y="186" text-anchor="middle" font-size="16" font-weight="700" fill="#7c3aed">PHP ilova</text>
+  <text x="310" y="210" text-anchor="middle" font-size="13" fill="#475569">(sizning kodingiz)</text>
+  <text x="310" y="232" text-anchor="middle" font-size="13" fill="#475569">so'rovni tayyorlaydi</text>
+
+  <!-- API -->
+  <rect x="440" y="160" width="120" height="90" rx="10" fill="#ede9fe" stroke="#6366f1" stroke-width="2"/>
+  <text x="500" y="196" text-anchor="middle" font-size="15" font-weight="700" fill="#4f46e5">API</text>
+  <text x="500" y="220" text-anchor="middle" font-size="13" fill="#475569">(ko'prik)</text>
+
+  <!-- LLM -->
+  <rect x="600" y="150" width="135" height="110" rx="10" fill="#7c3aed" stroke="#6d28d9" stroke-width="2.5"/>
+  <text x="667" y="190" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">LLM</text>
+  <text x="667" y="214" text-anchor="middle" font-size="13" fill="#ede9fe">(model)</text>
+  <text x="667" y="234" text-anchor="middle" font-size="13" fill="#ede9fe">javob to'qiydi</text>
+
+  <!-- arrows: forward (so'rov) top row -->
+  <line x1="180" y1="190" x2="222" y2="190" stroke="#7c3aed" stroke-width="2.5"/>
+  <polygon points="222,190 212,185 212,195" fill="#7c3aed"/>
+
+  <line x1="395" y1="185" x2="437" y2="185" stroke="#7c3aed" stroke-width="2.5"/>
+  <polygon points="437,185 427,180 427,190" fill="#7c3aed"/>
+  <text x="416" y="172" text-anchor="middle" font-size="13" font-weight="700" fill="#7c3aed">so'rov</text>
+
+  <line x1="560" y1="185" x2="597" y2="185" stroke="#7c3aed" stroke-width="2.5"/>
+  <polygon points="597,185 587,180 587,190" fill="#7c3aed"/>
+
+  <!-- arrows: return (javob) bottom row -->
+  <line x1="597" y1="225" x2="562" y2="225" stroke="#16a34a" stroke-width="2.5"/>
+  <polygon points="562,225 572,220 572,230" fill="#16a34a"/>
+
+  <line x1="437" y1="230" x2="397" y2="230" stroke="#16a34a" stroke-width="2.5"/>
+  <polygon points="397,230 407,225 407,235" fill="#16a34a"/>
+  <text x="416" y="252" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a">javob</text>
+
+  <line x1="222" y1="225" x2="182" y2="225" stroke="#16a34a" stroke-width="2.5"/>
+  <polygon points="182,225 192,220 192,230" fill="#16a34a"/>
+
+  <!-- legend / notes -->
+  <rect x="30" y="300" width="705" height="100" rx="10" fill="#ffffff" stroke="#ddd6fe" stroke-width="1.5"/>
+  <text x="48" y="328" font-size="14" font-weight="700" fill="#1e293b">Yodda tuting:</text>
+  <text x="48" y="354" font-size="13" fill="#475569">• Model boshqa joyda (provayder serverida) — siz unga API orqali "telefon qilasiz".</text>
+  <text x="48" y="376" font-size="13" fill="#475569">• Sizning ishingiz: so'rovni tayyorlash, SDK orqali yuborish, javobni qayta ishlash.</text>
+  <text x="48" y="396" font-size="13" fill="#475569">• Modelni o'rgatish, saqlash, hisoblash quvvati — hammasi provayder zimmasida.</text>
+</svg>

@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" width="800" height="560" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Optimizatsiya vositalari to'plami: NARX dastaklari (to'g'ri model, prompt caching, batch 50%, kichik max_tokens, past effort, routing) va KECHIKISH dastaklari (streaming, Promise.all parallel, keshlash) — guruhlangan, har biri qaysi bobda ekani bilan.</title>
+  <rect x="0" y="0" width="800" height="560" fill="#f8fafc"/>
+  <text x="400" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Optimizatsiya to'plami — barcha dastaklar bir joyda</text>
+  <text x="400" y="58" font-size="14" fill="#64748b" text-anchor="middle">Kitob bo'ylab tarqalgan vositalar; har birining yonida qaysi bob</text>
+
+  <!-- COST panel -->
+  <rect x="32" y="78" width="368" height="442" rx="12" fill="#fef3c7" stroke="#d97757" stroke-width="2.5"/>
+  <text x="216" y="106" font-size="17" font-weight="bold" fill="#d97757" text-anchor="middle">NARXNI kamaytirish</text>
+
+  <rect x="52" y="122" width="328" height="56" rx="8" fill="#ffffff" stroke="#d97757" stroke-width="1.5"/>
+  <text x="68" y="144" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="start">To'g'ri model</text>
+  <text x="68" y="166" font-size="13" fill="#475569" text-anchor="start">oddiy ish = Haiku, qiyin ish = Opus</text>
+  <text x="364" y="144" font-size="13" font-weight="bold" fill="#d97757" text-anchor="end">14-bob</text>
+
+  <rect x="52" y="186" width="328" height="56" rx="8" fill="#ffffff" stroke="#d97757" stroke-width="1.5"/>
+  <text x="68" y="208" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="start">Prompt caching</text>
+  <text x="68" y="230" font-size="13" fill="#475569" text-anchor="start">takror prefiks ~90% arzon</text>
+  <text x="364" y="208" font-size="13" font-weight="bold" fill="#d97757" text-anchor="end">15-bob</text>
+
+  <rect x="52" y="250" width="328" height="56" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="68" y="272" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="start">Batch API</text>
+  <text x="68" y="294" font-size="13" fill="#475569" text-anchor="start">bulk asinxron = 50% (yarmi)</text>
+  <text x="364" y="272" font-size="13" font-weight="bold" fill="#16a34a" text-anchor="end">SHU bob</text>
+
+  <rect x="52" y="314" width="328" height="48" rx="8" fill="#ffffff" stroke="#d97757" stroke-width="1.5"/>
+  <text x="68" y="336" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="start">Kichik max_tokens</text>
+  <text x="68" y="356" font-size="13" fill="#475569" text-anchor="start">chiqishni cheklash = arzon chiqish</text>
+
+  <rect x="52" y="370" width="328" height="48" rx="8" fill="#ffffff" stroke="#d97757" stroke-width="1.5"/>
+  <text x="68" y="392" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="start">Qisqa prompt + past effort</text>
+  <text x="68" y="412" font-size="13" fill="#475569" text-anchor="start">kamroq fikrlash tokeni</text>
+  <text x="364" y="392" font-size="13" font-weight="bold" fill="#d97757" text-anchor="end">10-bob</text>
+
+  <rect x="52" y="426" width="328" height="48" rx="8" fill="#ffffff" stroke="#d97757" stroke-width="1.5"/>
+  <text x="68" y="448" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="start">Routing: arzon → qimmat</text>
+  <text x="68" y="468" font-size="13" fill="#475569" text-anchor="start">avval Haiku, kerak bo'lsa Opus</text>
+  <text x="364" y="448" font-size="13" font-weight="bold" fill="#d97757" text-anchor="end">21-bob</text>
+
+  <text x="216" y="500" font-size="13" fill="#475569" text-anchor="middle">O'lcha: cost(usage, model) bilan tasdiqla (14/23-bob)</text>
+
+  <!-- LATENCY panel -->
+  <rect x="416" y="78" width="352" height="442" rx="12" fill="#dbeafe" stroke="#0ea5e9" stroke-width="2.5"/>
+  <text x="592" y="106" font-size="17" font-weight="bold" fill="#0ea5e9" text-anchor="middle">KECHIKISHni kamaytirish</text>
+
+  <rect x="436" y="122" width="312" height="64" rx="8" fill="#ffffff" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="452" y="146" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="start">Streaming</text>
+  <text x="452" y="168" font-size="13" fill="#475569" text-anchor="start">token-token oqim = his etilgan</text>
+  <text x="452" y="184" font-size="13" fill="#475569" text-anchor="start">tezlik (foydalanuvchi darhol ko'radi)</text>
+  <text x="732" y="146" font-size="13" font-weight="bold" fill="#0ea5e9" text-anchor="end">04-bob</text>
+
+  <rect x="436" y="194" width="312" height="64" rx="8" fill="#ffffff" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="452" y="218" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="start">Promise.all parallel</text>
+  <text x="452" y="240" font-size="13" fill="#475569" text-anchor="start">mustaqil so'rovlarni bir vaqtda</text>
+  <text x="452" y="256" font-size="13" fill="#475569" text-anchor="start">yubor (ketma-ket emas)</text>
+  <text x="732" y="218" font-size="13" font-weight="bold" fill="#0ea5e9" text-anchor="end">21-bob</text>
+
+  <rect x="436" y="266" width="312" height="64" rx="8" fill="#ffffff" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="452" y="290" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="start">Kichikroq model</text>
+  <text x="452" y="312" font-size="13" fill="#475569" text-anchor="start">Haiku tez javob qaytaradi —</text>
+  <text x="452" y="328" font-size="13" fill="#475569" text-anchor="start">tezlik VA narx yutuq</text>
+  <text x="732" y="290" font-size="13" font-weight="bold" fill="#0ea5e9" text-anchor="end">14-bob</text>
+
+  <rect x="436" y="338" width="312" height="64" rx="8" fill="#ffffff" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="452" y="362" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="start">Keshlash (kesh hit)</text>
+  <text x="452" y="384" font-size="13" fill="#475569" text-anchor="start">kesh natijasi qaytsa, API ga</text>
+  <text x="452" y="400" font-size="13" fill="#475569" text-anchor="start">borishning hojati yo'q = darhol</text>
+  <text x="732" y="362" font-size="13" font-weight="bold" fill="#0ea5e9" text-anchor="end">15-bob</text>
+
+  <rect x="436" y="416" width="312" height="64" rx="8" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="592" y="440" font-size="14" font-weight="bold" fill="#6366f1" text-anchor="middle">Bir dastak — ikki foyda</text>
+  <text x="592" y="462" font-size="13" fill="#475569" text-anchor="middle">caching va kichik model</text>
+  <text x="592" y="478" font-size="13" fill="#475569" text-anchor="middle">HAM arzon HAM tez</text>
+
+  <text x="592" y="500" font-size="13" fill="#475569" text-anchor="middle">O'lcha: log qil, og'rigan joyni optimallashtir</text>
+</svg>

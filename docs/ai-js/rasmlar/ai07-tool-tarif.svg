@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 490" width="800" height="490" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Tool ta'rifining anatomiyasi: name, description (qachon chaqirish), input_schema (argumentlar) -> Claude unga mos tool_use blokini chiqaradi { name, input }. Ta'rifdan chaqiruvga moslik.</title>
+  <defs>
+    <marker id="tt1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="800" height="490" fill="#f8fafc"/>
+  <text x="400" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Tool ta'rifi — Claude buni o'qib qaror qiladi</text>
+  <text x="400" y="58" font-size="14" fill="#64748b" text-anchor="middle">SIZ ta'riflaysiz (chapda) → Claude unga mos chaqiruvni chiqaradi (o'ngda)</text>
+
+  <!-- LEFT: tool definition -->
+  <rect x="40" y="84" width="350" height="356" rx="12" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <text x="215" y="110" font-size="15" font-weight="bold" fill="#6366f1" text-anchor="middle">tools[] — sizning ta'rifingiz</text>
+
+  <!-- name -->
+  <rect x="60" y="124" width="310" height="58" rx="8" fill="#e0e7ff"/>
+  <text x="76" y="146" font-size="13" font-weight="bold" fill="#6366f1" text-anchor="start" font-family="Consolas, monospace">name:</text>
+  <text x="76" y="166" font-size="13" fill="#1e293b" text-anchor="start" font-family="Consolas, monospace">"get_weather"</text>
+  <text x="250" y="156" font-size="13" fill="#475569" text-anchor="start">aniq nom</text>
+
+  <!-- description -->
+  <rect x="60" y="190" width="310" height="84" rx="8" fill="#fef3c7"/>
+  <text x="76" y="212" font-size="13" font-weight="bold" fill="#f59e0b" text-anchor="start" font-family="Consolas, monospace">description:</text>
+  <text x="76" y="232" font-size="13" fill="#1e293b" text-anchor="start">"Berilgan shahar uchun joriy</text>
+  <text x="76" y="250" font-size="13" fill="#1e293b" text-anchor="start">ob-havoni oladi. Foydalanuvchi</text>
+  <text x="76" y="268" font-size="13" fill="#1e293b" text-anchor="start">ob-havo so'raganda chaqir."</text>
+
+  <!-- input_schema -->
+  <rect x="60" y="282" width="310" height="142" rx="8" fill="#dcfce7"/>
+  <text x="76" y="304" font-size="13" font-weight="bold" fill="#16a34a" text-anchor="start" font-family="Consolas, monospace">input_schema:</text>
+  <text x="76" y="326" font-size="13" fill="#1e293b" text-anchor="start" font-family="Consolas, monospace">type: "object",</text>
+  <text x="76" y="346" font-size="13" fill="#1e293b" text-anchor="start" font-family="Consolas, monospace">properties: {</text>
+  <text x="76" y="366" font-size="13" fill="#1e293b" text-anchor="start" font-family="Consolas, monospace">  city: { type: "string" }</text>
+  <text x="76" y="386" font-size="13" fill="#1e293b" text-anchor="start" font-family="Consolas, monospace">},</text>
+  <text x="76" y="406" font-size="13" fill="#1e293b" text-anchor="start" font-family="Consolas, monospace">required: ["city"]</text>
+
+  <!-- ARROW between -->
+  <line x1="396" y1="262" x2="470" y2="262" stroke="#64748b" stroke-width="2.5" marker-end="url(#tt1)"/>
+  <text x="433" y="250" font-size="13" fill="#64748b" text-anchor="middle">Claude</text>
+  <text x="433" y="282" font-size="13" fill="#64748b" text-anchor="middle">o'qiydi</text>
+
+  <!-- RIGHT: tool_use block emitted -->
+  <rect x="476" y="120" width="300" height="220" rx="12" fill="#1e293b"/>
+  <text x="626" y="146" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">Claude chiqargan tool_use</text>
+  <text x="496" y="178" font-size="13" fill="#94a3b8" text-anchor="start" font-family="Consolas, monospace">{</text>
+  <text x="496" y="200" font-size="13" fill="#94a3b8" text-anchor="start" font-family="Consolas, monospace">  type: "tool_use",</text>
+  <text x="496" y="222" font-size="13" fill="#94a3b8" text-anchor="start" font-family="Consolas, monospace">  id: "toolu_01A...",</text>
+  <text x="496" y="244" font-size="13" fill="#e0e7ff" text-anchor="start" font-family="Consolas, monospace">  name: "get_weather",</text>
+  <text x="496" y="266" font-size="13" fill="#dcfce7" text-anchor="start" font-family="Consolas, monospace">  input: { city: "Toshkent" }</text>
+  <text x="496" y="288" font-size="13" fill="#94a3b8" text-anchor="start" font-family="Consolas, monospace">}</text>
+  <text x="626" y="320" font-size="13" fill="#fef3c7" text-anchor="middle">name → qaysi funksiya</text>
+
+  <!-- mapping note for name -->
+  <text x="626" y="370" font-size="13" fill="#475569" text-anchor="middle">name + input — bu sizning</text>
+  <text x="626" y="390" font-size="13" fill="#475569" text-anchor="middle">funksiyangizni qanday</text>
+  <text x="626" y="410" font-size="13" fill="#475569" text-anchor="middle">chaqirishni aytadi.</text>
+
+  <!-- footer -->
+  <rect x="40" y="452" width="736" height="30" rx="8" fill="#dbeafe" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="408" y="472" font-size="13.5" fill="#1e293b" text-anchor="middle">description aniq bo'lsin — Claude QACHON chaqirishni faqat shundan biladi.</text>
+</svg>

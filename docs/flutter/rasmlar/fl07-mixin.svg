@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" width="780" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Mixin: Logger qobiliyati with orqali bir-biriga aloqasi yo'q ikki klassga (Mashina va Foydalanuvchi) qo'shiladi — meros vertikal bo'lsa, mixin gorizontal qobiliyat ulashishdir</title>
+  <rect x="0" y="0" width="780" height="470" fill="#f8fafc"/>
+  <text x="390" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Mixin — qobiliyatni gorizontal ulashish</text>
+  <text x="390" y="58" text-anchor="middle" font-size="14" fill="#475569">Meros: "bu narsa — o'sha narsa". Mixin: "bu narsa shu ishni ham qila oladi".</text>
+
+  <!-- The mixin capability -->
+  <rect x="290" y="84" width="200" height="92" rx="14" fill="#ffffff" stroke="#f59e0b" stroke-width="2.5"/>
+  <rect x="290" y="84" width="200" height="36" rx="14" fill="#f59e0b"/>
+  <text x="390" y="108" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">mixin Logger</text>
+  <rect x="308" y="130" width="164" height="28" rx="7" fill="#f8fafc"/>
+  <text x="390" y="149" text-anchor="middle" font-size="13" font-weight="700" fill="#f59e0b">void log(String x) {...}</text>
+  <text x="390" y="170" text-anchor="middle" font-size="13" fill="#64748b">qayta ishlatiladigan qobiliyat</text>
+
+  <!-- with arrows going down to two unrelated classes -->
+  <line x1="390" y1="176" x2="390" y2="196" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="180" y1="196" x2="600" y2="196" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6 4"/>
+  <line x1="180" y1="196" x2="180" y2="230" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6 4"/>
+  <line x1="600" y1="196" x2="600" y2="230" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6 4"/>
+  <polygon points="180,230 174,218 186,218" fill="#f59e0b"/>
+  <polygon points="600,230 594,218 606,218" fill="#f59e0b"/>
+  <rect x="338" y="182" width="104" height="24" rx="6" fill="#f59e0b"/>
+  <text x="390" y="199" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">with Logger</text>
+
+  <!-- Class A: Mashina (unrelated) -->
+  <rect x="56" y="236" width="248" height="120" rx="14" fill="#ffffff" stroke="#027dfd" stroke-width="2.5"/>
+  <rect x="56" y="236" width="248" height="36" rx="14" fill="#027dfd"/>
+  <text x="180" y="260" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">class Mashina with Logger</text>
+  <text x="180" y="294" text-anchor="middle" font-size="13" fill="#475569">o'z maydonlari: rang, yili</text>
+  <rect x="76" y="306" width="208" height="34" rx="8" fill="#f8fafc"/>
+  <text x="180" y="328" text-anchor="middle" font-size="13" font-weight="700" fill="#027dfd">log('o't oldi') &#10003;</text>
+
+  <!-- Class B: Foydalanuvchi (unrelated to Mashina) -->
+  <rect x="476" y="236" width="248" height="120" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <rect x="476" y="236" width="248" height="36" rx="14" fill="#16a34a"/>
+  <text x="600" y="260" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">class Foydalanuvchi with Logger</text>
+  <text x="600" y="294" text-anchor="middle" font-size="13" fill="#475569">o'z maydonlari: ism, email</text>
+  <rect x="496" y="306" width="208" height="34" rx="8" fill="#f8fafc"/>
+  <text x="600" y="328" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a">log('kirdi') &#10003;</text>
+
+  <text x="390" y="392" text-anchor="middle" font-size="13" fill="#94a3b8">Mashina va Foydalanuvchi bir-biriga umuman aloqador emas — meros bilan bog'lab bo'lmaydi.</text>
+
+  <rect x="170" y="408" width="440" height="48" rx="12" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="390" y="438" text-anchor="middle" font-size="13" fill="#475569">Mixin aynan shuni hal qiladi: bitta log() ni yozasiz, ikkala klassga ham ulashasiz.</text>
+</svg>

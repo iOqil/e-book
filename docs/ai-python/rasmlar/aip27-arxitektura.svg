@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 540" width="760" height="540" font-family="Segoe UI, system-ui, sans-serif">
+  <title>RAG chatbot to'liq arxitekturasi: indekslash fazasi va chat fazasi</title>
+  <rect x="0" y="0" width="760" height="540" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">RAG chatbot arxitekturasi</text>
+
+  <defs>
+    <marker id="ar27a" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#4f46e5"/>
+    </marker>
+    <marker id="ar27g" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <!-- INDEKSLASH FAZA (yuqori) -->
+  <rect x="24" y="58" width="712" height="138" rx="14" fill="#ffffff" stroke="#0ea5e9" stroke-width="2"/>
+  <rect x="24" y="58" width="712" height="32" rx="14" fill="#e0f2fe"/>
+  <text x="40" y="80" font-size="16" font-weight="700" fill="#0284c7">Indekslash fazasi (bir marta, oldindan)</text>
+
+  <rect x="48" y="108" width="150" height="66" rx="12" fill="#e0f2fe" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="123" y="136" text-anchor="middle" font-size="15" font-weight="700" fill="#0284c7">Hujjatlar</text>
+  <text x="123" y="158" text-anchor="middle" font-size="13" fill="#475569">.md .txt .pdf</text>
+
+  <rect x="270" y="108" width="170" height="66" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="355" y="136" text-anchor="middle" font-size="15" font-weight="700" fill="#b45309">ingest.py</text>
+  <text x="355" y="158" text-anchor="middle" font-size="13" fill="#92400e">chunk -> embed</text>
+
+  <rect x="512" y="108" width="180" height="66" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="602" y="136" text-anchor="middle" font-size="15" font-weight="700" fill="#166534">Chroma baza</text>
+  <text x="602" y="158" text-anchor="middle" font-size="13" fill="#166534">vektor + matn + meta</text>
+
+  <line x1="198" y1="141" x2="266" y2="141" stroke="#0284c7" stroke-width="2.5" marker-end="url(#ar27a)"/>
+  <line x1="440" y1="141" x2="508" y2="141" stroke="#0284c7" stroke-width="2.5" marker-end="url(#ar27a)"/>
+
+  <!-- CHAT FAZA (past) -->
+  <rect x="24" y="214" width="712" height="246" rx="14" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <rect x="24" y="214" width="712" height="32" rx="14" fill="#eef2ff"/>
+  <text x="40" y="236" font-size="16" font-weight="700" fill="#4338ca">Chat fazasi (har savolda)</text>
+
+  <!-- savol + tarix -->
+  <rect x="44" y="262" width="150" height="74" rx="12" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+  <text x="119" y="290" text-anchor="middle" font-size="15" font-weight="700" fill="#0284c7">Savol</text>
+  <text x="119" y="312" text-anchor="middle" font-size="13" fill="#64748b">+ suhbat</text>
+  <text x="119" y="328" text-anchor="middle" font-size="13" fill="#64748b">tarixi</text>
+
+  <!-- standalone -->
+  <rect x="232" y="262" width="160" height="74" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="312" y="288" text-anchor="middle" font-size="15" font-weight="700" fill="#b45309">Qayta yozish</text>
+  <text x="312" y="310" text-anchor="middle" font-size="13" fill="#92400e">savol -></text>
+  <text x="312" y="328" text-anchor="middle" font-size="13" fill="#92400e">standalone</text>
+
+  <!-- retrieve -->
+  <rect x="430" y="262" width="150" height="74" rx="12" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="505" y="290" text-anchor="middle" font-size="15" font-weight="700" fill="#4338ca">Retrieve</text>
+  <text x="505" y="312" text-anchor="middle" font-size="13" fill="#64748b">top-k chunk</text>
+  <text x="505" y="328" text-anchor="middle" font-size="13" fill="#64748b">(rag.py)</text>
+
+  <!-- prompt + LLM -->
+  <rect x="430" y="368" width="150" height="74" rx="12" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="505" y="396" text-anchor="middle" font-size="15" font-weight="700" fill="#4338ca">Prompt + LLM</text>
+  <text x="505" y="418" text-anchor="middle" font-size="13" fill="#64748b">kontekst +</text>
+  <text x="505" y="434" text-anchor="middle" font-size="13" fill="#64748b">savol -> javob</text>
+
+  <!-- javob -->
+  <rect x="232" y="368" width="160" height="74" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="312" y="396" text-anchor="middle" font-size="15" font-weight="700" fill="#166534">Javob</text>
+  <text x="312" y="418" text-anchor="middle" font-size="13" fill="#166534">+ manba</text>
+  <text x="312" y="434" text-anchor="middle" font-size="13" fill="#166534">+ tarixga qo'shish</text>
+
+  <!-- arrows chat -->
+  <line x1="194" y1="299" x2="228" y2="299" stroke="#4f46e5" stroke-width="2.5" marker-end="url(#ar27a)"/>
+  <line x1="392" y1="299" x2="426" y2="299" stroke="#4f46e5" stroke-width="2.5" marker-end="url(#ar27a)"/>
+  <line x1="505" y1="336" x2="505" y2="364" stroke="#4f46e5" stroke-width="2.5" marker-end="url(#ar27a)"/>
+  <line x1="430" y1="405" x2="396" y2="405" stroke="#16a34a" stroke-width="2.5" marker-end="url(#ar27g)"/>
+
+  <!-- shared DB: retrieve <- Chroma -->
+  <line x1="602" y1="174" x2="588" y2="258" stroke="#16a34a" stroke-width="2.5" stroke-dasharray="6 4" marker-end="url(#ar27a)"/>
+  <text x="624" y="220" font-size="13" fill="#16a34a">bir xil baza</text>
+
+  <text x="380" y="492" text-anchor="middle" font-size="14" fill="#475569">config.py barchasini sozlaydi · indekslash bir marta, chat har savolda</text>
+  <text x="380" y="516" text-anchor="middle" font-size="13" fill="#64748b">CLI yoki FastAPI — bir xil RAGChatbot yadrosi, ikki interfeys</text>
+</svg>

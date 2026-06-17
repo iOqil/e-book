@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 470">
+  <title>freeze_time oldin va keyin: vaqtga bog'liq test goh PASS goh FAIL bo'ladi, vaqtni muzlatgach esa har doim barqaror PASS bo'ladi</title>
+  <rect x="0" y="0" width="820" height="470" fill="#f8fafc"/>
+  <text x="410" y="40" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">freeze_time: flaky -&gt; barqaror</text>
+  <text x="410" y="66" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Vaqtni muzlatish testni oldindan aytib bo'ladigan qiladi</text>
+
+  <!-- OLDIN: flaky -->
+  <rect x="40" y="100" width="340" height="320" rx="12" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="210" y="130" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#92400e">Oldin — vaqtga bog'liq</text>
+  <text x="210" y="156" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#92400e">salomlashish() = now().hour ga qarab</text>
+
+  <rect x="70" y="180" width="280" height="50" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="100" y="211" font-family="Segoe UI" font-size="14" fill="#166534">soat 08:00 ishga tushdi</text>
+  <text x="320" y="211" text-anchor="end" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#166534">PASS</text>
+
+  <rect x="70" y="244" width="280" height="50" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="100" y="275" font-family="Segoe UI" font-size="14" fill="#991b1b">soat 20:00 ishga tushdi</text>
+  <text x="320" y="275" text-anchor="end" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#991b1b">FAIL</text>
+
+  <rect x="70" y="308" width="280" height="50" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="100" y="339" font-family="Segoe UI" font-size="14" fill="#166534">soat 09:00 ishga tushdi</text>
+  <text x="320" y="339" text-anchor="end" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#166534">PASS</text>
+
+  <text x="210" y="392" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#b45309">goh o'tadi, goh yiqiladi = flaky</text>
+
+  <!-- Strelka -->
+  <text x="410" y="245" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#2563eb">@freeze_time</text>
+  <line x1="385" y1="260" x2="435" y2="260" stroke="#2563eb" stroke-width="3"/>
+  <polygon points="440,260 426,253 426,267" fill="#2563eb"/>
+
+  <!-- KEYIN: barqaror -->
+  <rect x="460" y="100" width="320" height="320" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="620" y="130" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#166534">Keyin — vaqt muzlatilgan</text>
+  <text x="620" y="156" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#166534">@freeze_time("2026-01-01 08:30")</text>
+
+  <rect x="490" y="180" width="260" height="50" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="520" y="211" font-family="Segoe UI" font-size="14" fill="#166534">istalgan vaqtda ishga tushdi</text>
+  <text x="730" y="211" text-anchor="end" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#166534">PASS</text>
+
+  <rect x="490" y="244" width="260" height="50" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="520" y="275" font-family="Segoe UI" font-size="14" fill="#166534">CI serverida ishga tushdi</text>
+  <text x="730" y="275" text-anchor="end" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#166534">PASS</text>
+
+  <rect x="490" y="308" width="260" height="50" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="520" y="339" font-family="Segoe UI" font-size="14" fill="#166534">bir yildan keyin ishga tushdi</text>
+  <text x="730" y="339" text-anchor="end" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#166534">PASS</text>
+
+  <text x="620" y="392" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#166534">har doim bir xil = barqaror</text>
+
+  <text x="410" y="450" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Haqiqiy chiqish (soat 20:00): 1 failed, 2 passed</text>
+</svg>

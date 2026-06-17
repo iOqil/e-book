@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="760" height="380" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Streaming endpoint: server token-token SSE bilan jo'natadi</title>
+  <rect x="0" y="0" width="760" height="380" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">Streaming endpoint (SSE)</text>
+
+  <defs>
+    <marker id="s26" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#4f46e5"/>
+    </marker>
+  </defs>
+
+  <!-- Browser -->
+  <rect x="30" y="90" width="170" height="220" rx="14" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+  <rect x="30" y="90" width="170" height="38" rx="14" fill="#e0f2fe"/>
+  <text x="115" y="115" text-anchor="middle" font-size="16" font-weight="700" fill="#0284c7">Brauzer</text>
+  <text x="115" y="158" text-anchor="middle" font-size="14" fill="#475569">javobni jonli,</text>
+  <text x="115" y="180" text-anchor="middle" font-size="14" fill="#475569">token-token</text>
+  <text x="115" y="202" text-anchor="middle" font-size="14" fill="#475569">ko'rsatadi</text>
+  <text x="115" y="240" text-anchor="middle" font-size="14" fill="#16a34a">S a l o m...</text>
+  <text x="115" y="264" text-anchor="middle" font-size="14" fill="#16a34a">men yor...</text>
+  <text x="115" y="288" text-anchor="middle" font-size="13" fill="#64748b">bitta ulanish ochiq</text>
+
+  <!-- FastAPI -->
+  <rect x="295" y="90" width="180" height="220" rx="14" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>
+  <rect x="295" y="90" width="180" height="38" rx="14" fill="#e0e7ff"/>
+  <text x="385" y="115" text-anchor="middle" font-size="16" font-weight="700" fill="#4338ca">FastAPI</text>
+  <text x="385" y="158" text-anchor="middle" font-size="14" fill="#475569">StreamingResponse</text>
+  <text x="385" y="180" text-anchor="middle" font-size="13" fill="#64748b">media_type:</text>
+  <text x="385" y="200" text-anchor="middle" font-size="13" fill="#64748b">text/event-stream</text>
+  <text x="385" y="232" text-anchor="middle" font-size="14" fill="#475569">async generator:</text>
+  <text x="385" y="254" text-anchor="middle" font-size="14" fill="#475569">yield "data: ..."</text>
+  <text x="385" y="288" text-anchor="middle" font-size="13" fill="#64748b">har token kelishi bilan</text>
+
+  <!-- LLM -->
+  <rect x="570" y="120" width="160" height="160" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="650" y="150" text-anchor="middle" font-size="16" font-weight="700" fill="#166534">LLM</text>
+  <text x="650" y="178" text-anchor="middle" font-size="14" fill="#475569">stream=True</text>
+  <text x="650" y="200" text-anchor="middle" font-size="14" fill="#475569">chunk -> delta</text>
+  <text x="650" y="222" text-anchor="middle" font-size="13" fill="#64748b">(7-bobdagi oqim)</text>
+
+  <!-- arrows -->
+  <line x1="478" y1="180" x2="566" y2="180" stroke="#4f46e5" stroke-width="3" marker-end="url(#s26)"/>
+  <line x1="566" y1="222" x2="478" y2="222" stroke="#4f46e5" stroke-width="3" marker-end="url(#s26)"/>
+  <text x="522" y="170" text-anchor="middle" font-size="13" fill="#4338ca">so'rov</text>
+  <text x="522" y="242" text-anchor="middle" font-size="13" fill="#4338ca">delta</text>
+
+  <!-- SSE arrow browser <- api (token stream) -->
+  <line x1="291" y1="270" x2="204" y2="270" stroke="#16a34a" stroke-width="3" marker-end="url(#s26)"/>
+  <text x="247" y="262" text-anchor="middle" font-size="13" font-weight="600" fill="#16a34a">SSE token</text>
+
+  <text x="380" y="346" text-anchor="middle" font-size="15" fill="#64748b">Server bitta ulanish ustidan token kelishi bilan darrov uzatadi (push)</text>
+</svg>

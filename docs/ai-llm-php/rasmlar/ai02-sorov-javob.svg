@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420" font-family="Segoe UI, system-ui, sans-serif">
+  <title>So'rov-javob oqimi: Client dan messages-&gt;create orqali API ga, javob matnigacha</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Birinchi so'rovning yo'li</text>
+  <text x="380" y="60" text-anchor="middle" font-size="14" fill="#475569">Kodingizdan Claude'gacha va orqaga</text>
+
+  <!-- Client -->
+  <rect x="30" y="110" width="180" height="120" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="120" y="142" text-anchor="middle" font-size="16" font-weight="700" fill="#7c3aed">new Client(...)</text>
+  <text x="120" y="168" text-anchor="middle" font-size="13" fill="#475569">apiKey: getenv(</text>
+  <text x="120" y="186" text-anchor="middle" font-size="13" fill="#475569">'ANTHROPIC_API_KEY')</text>
+  <text x="120" y="212" text-anchor="middle" font-size="13" fill="#94a3b8">kalit .env dan</text>
+
+  <!-- messages->create -->
+  <rect x="290" y="110" width="180" height="120" rx="10" fill="#ede9fe" stroke="#6366f1" stroke-width="2.5"/>
+  <text x="380" y="138" text-anchor="middle" font-size="15" font-weight="700" fill="#4f46e5">messages-&gt;create</text>
+  <text x="380" y="162" text-anchor="middle" font-size="13" fill="#475569">model:</text>
+  <text x="380" y="180" text-anchor="middle" font-size="13" fill="#475569">maxTokens:</text>
+  <text x="380" y="198" text-anchor="middle" font-size="13" fill="#475569">messages:</text>
+  <text x="380" y="218" text-anchor="middle" font-size="13" fill="#94a3b8">(nomli argument)</text>
+
+  <!-- API / Model -->
+  <rect x="550" y="110" width="180" height="120" rx="10" fill="#7c3aed" stroke="#6d28d9" stroke-width="2.5"/>
+  <text x="640" y="146" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">Anthropic API</text>
+  <text x="640" y="172" text-anchor="middle" font-size="13" fill="#ede9fe">Claude model</text>
+  <text x="640" y="196" text-anchor="middle" font-size="13" fill="#ede9fe">javob to'qiydi</text>
+
+  <!-- forward arrows (so'rov) -->
+  <line x1="210" y1="150" x2="287" y2="150" stroke="#7c3aed" stroke-width="2.5"/>
+  <polygon points="287,150 277,145 277,155" fill="#7c3aed"/>
+  <line x1="470" y1="150" x2="547" y2="150" stroke="#7c3aed" stroke-width="2.5"/>
+  <polygon points="547,150 537,145 537,155" fill="#7c3aed"/>
+  <text x="510" y="138" text-anchor="middle" font-size="13" font-weight="700" fill="#7c3aed">so'rov</text>
+
+  <!-- return arrow (javob) -->
+  <line x1="547" y1="205" x2="472" y2="205" stroke="#16a34a" stroke-width="2.5"/>
+  <polygon points="472,205 482,200 482,210" fill="#16a34a"/>
+  <text x="510" y="226" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a">javob (JSON)</text>
+
+  <!-- result box -->
+  <line x1="380" y1="230" x2="380" y2="278" stroke="#16a34a" stroke-width="2.5"/>
+  <polygon points="380,278 375,268 385,268" fill="#16a34a"/>
+  <rect x="170" y="285" width="420" height="100" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="380" y="314" text-anchor="middle" font-size="15" font-weight="700" fill="#16a34a">$message-&gt;content[0]-&gt;text</text>
+  <text x="380" y="340" text-anchor="middle" font-size="13" fill="#475569">"Salom! Men Claude — AI yordamchiman..."</text>
+  <text x="380" y="366" text-anchor="middle" font-size="13" fill="#94a3b8">echo bilan ekranga chiqaramiz</text>
+</svg>

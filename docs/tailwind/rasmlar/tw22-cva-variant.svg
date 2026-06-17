@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 510" width="800" height="510" font-family="Segoe UI, system-ui, sans-serif">
+  <title>cva bilan qurilgan Button: asosiy klasslar ustiga intent (primary/secondary/danger) va size (sm/md/lg) variantlari jadvali; button({intent:'primary', size:'lg'}) chaqiruvi aniq klasslar to'plamini va render qilingan tugmani beradi</title>
+  <rect x="0" y="0" width="800" height="510" fill="#f8fafc"/>
+
+  <text x="400" y="34" text-anchor="middle" font-size="21" font-weight="bold" fill="#1e293b">cva — variantli komponent</text>
+  <text x="400" y="58" text-anchor="middle" font-size="14" fill="#475569">Bitta ta'rif → har xil ko'rinishlar; props bo'yicha to'g'ri klasslar tanlanadi</text>
+
+  <!-- ASOS -->
+  <rect x="40" y="82" width="720" height="48" rx="10" fill="#eef2ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="60" y="104" font-size="13" font-weight="bold" fill="#4f46e5">ASOS (base) — har doim qo'llanadi</text>
+  <text x="60" y="124" font-size="14" fill="#1e293b">'inline-flex items-center rounded-lg font-medium transition-colors'</text>
+
+  <!-- INTENT variantlari -->
+  <text x="60" y="160" font-size="15" font-weight="bold" fill="#1e293b">variants.intent</text>
+  <rect x="40" y="170" width="225" height="54" rx="10" fill="#6366f1"/>
+  <text x="152" y="194" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">primary</text>
+  <text x="152" y="214" text-anchor="middle" font-size="13" fill="#e0e7ff">bg-indigo-600 text-white</text>
+
+  <rect x="288" y="170" width="225" height="54" rx="10" fill="#ffffff" stroke="#475569" stroke-width="1.5"/>
+  <text x="400" y="194" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e293b">secondary</text>
+  <text x="400" y="214" text-anchor="middle" font-size="13" fill="#475569">bg-slate-200 text-slate-900</text>
+
+  <rect x="536" y="170" width="224" height="54" rx="10" fill="#ef4444"/>
+  <text x="648" y="194" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">danger</text>
+  <text x="648" y="214" text-anchor="middle" font-size="13" fill="#ffffff">bg-red-500 text-white</text>
+
+  <!-- SIZE variantlari -->
+  <text x="60" y="256" font-size="15" font-weight="bold" fill="#1e293b">variants.size</text>
+  <rect x="40" y="266" width="225" height="46" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="152" y="294" text-anchor="middle" font-size="13" fill="#1e293b">sm → px-3 py-1.5 text-sm</text>
+  <rect x="288" y="266" width="225" height="46" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="400" y="294" text-anchor="middle" font-size="13" fill="#1e293b">md → px-4 py-2 text-base</text>
+  <rect x="536" y="266" width="224" height="46" rx="10" fill="#ffffff" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="648" y="294" text-anchor="middle" font-size="13" fill="#1e293b">lg → px-6 py-3 text-lg</text>
+
+  <!-- chaqiruv -->
+  <rect x="40" y="334" width="720" height="44" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="400" y="362" text-anchor="middle" font-size="15" font-weight="bold" fill="#b45309">button({ intent: 'primary', size: 'lg' })</text>
+
+  <!-- strelka pastga -->
+  <line x1="400" y1="378" x2="400" y2="402" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="400,402 394,390 406,390" fill="#94a3b8"/>
+
+  <!-- natija klasslar -->
+  <rect x="40" y="404" width="720" height="48" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="60" y="426" font-size="13" font-weight="bold" fill="#16a34a">Hosil bo'lgan klasslar (asos + primary + lg):</text>
+  <text x="60" y="446" font-size="13" fill="#1e293b">inline-flex ... rounded-lg ... bg-indigo-600 text-white px-6 py-3 text-lg</text>
+
+  <!-- render qilingan tugma -->
+  <rect x="305" y="464" width="190" height="38" rx="8" fill="#4f46e5"/>
+  <text x="400" y="489" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">Saqlash</text>
+</svg>

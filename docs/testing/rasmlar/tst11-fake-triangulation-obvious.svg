@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 470">
+  <title>GREEN ga yetishning uch strategiyasi: fake it, triangulation, obvious implementation</title>
+  <rect x="0" y="0" width="820" height="470" fill="#f8fafc"/>
+  <text x="410" y="40" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">GREEN ga yetishning uch strategiyasi</text>
+  <text x="410" y="66" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Ishonchsizlik qancha katta bo'lsa, qadam shuncha kichik</text>
+
+  <defs>
+    <marker id="okp" markerWidth="12" markerHeight="12" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/>
+    </marker>
+  </defs>
+
+  <!-- 1. Fake it -->
+  <rect x="40" y="110" width="220" height="250" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="150" y="142" text-anchor="middle" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#dc2626">1. Fake it</text>
+  <text x="150" y="166" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">"Soxtalashtir"</text>
+  <text x="150" y="200" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">Natijani qattiq</text>
+  <text x="150" y="218" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">yozib qo'y (hardcode)</text>
+  <rect x="62" y="238" width="176" height="44" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="150" y="265" text-anchor="middle" font-family="Consolas, monospace" font-size="14" fill="#16a34a">return "1"</text>
+  <text x="150" y="312" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Eng katta</text>
+  <text x="150" y="330" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">ishonchsizlikda</text>
+
+  <!-- 2. Triangulation -->
+  <rect x="300" y="110" width="220" height="250" rx="12" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="410" y="142" text-anchor="middle" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#f59e0b">2. Triangulation</text>
+  <text x="410" y="166" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">"Uchburchaklash"</text>
+  <text x="410" y="200" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">Ikkinchi misol qo'sh,</text>
+  <text x="410" y="218" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">u umumlashtirishga</text>
+  <text x="410" y="236" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">majbur qiladi</text>
+  <rect x="322" y="252" width="176" height="44" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="410" y="279" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#16a34a">return str(n)</text>
+  <text x="410" y="324" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Naqsh noaniq bo'lganda</text>
+
+  <!-- 3. Obvious -->
+  <rect x="560" y="110" width="220" height="250" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="670" y="142" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a">3. Obvious impl.</text>
+  <text x="670" y="166" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">"Aniq yechim"</text>
+  <text x="670" y="200" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">To'g'ri kodni</text>
+  <text x="670" y="218" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">to'ppa-to'g'ri yoz</text>
+  <rect x="582" y="238" width="176" height="44" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="670" y="265" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#16a34a">return n * n</text>
+  <text x="670" y="312" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Yechim aniq</text>
+  <text x="670" y="330" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">bo'lganda</text>
+
+  <!-- arrows -->
+  <line x1="262" y1="235" x2="298" y2="235" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#okp)"/>
+  <line x1="522" y1="235" x2="558" y2="235" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#okp)"/>
+
+  <text x="410" y="412" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#1e293b">Hammasi bir maqsadga xizmat qiladi: testlar yashil, kod ortiqcha emas</text>
+  <text x="410" y="438" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Tajriba ortgani sayin chapdan o'ngga siljiysiz</text>
+</svg>

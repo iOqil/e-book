@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430">
+  <title>JS i18n oqimi: edit.js da __ funksiyasi wordpress i18n dan, PHP da wp_set_script_translations bogllaydi, make-json po fayldan json hosil qiladi</title>
+  <defs>
+    <marker id="js-arr" markerWidth="13" markerHeight="13" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">JS (blok) tarjimasi — uch qism</text>
+  <text x="380" y="56" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">JS .mo emas, .json formatini o'qiydi</text>
+
+  <!-- 1: JS code -->
+  <rect x="30" y="84" width="320" height="118" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="190" y="110" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e40af">1. JS kod (edit.js)</text>
+  <text x="48" y="138" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">import { __ } from</text>
+  <text x="48" y="158" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">  '@wordpress/i18n';</text>
+  <text x="48" y="184" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">__('Kitoblar', 'kitoblar-katalogi')</text>
+
+  <!-- 2: PHP wp_set_script_translations -->
+  <rect x="410" y="84" width="320" height="118" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="570" y="110" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">2. PHP bog'laydi</text>
+  <text x="428" y="138" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">wp_set_script_translations(</text>
+  <text x="428" y="158" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">  $handle,</text>
+  <text x="428" y="178" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">  'kitoblar-katalogi', $path )</text>
+
+  <line x1="350" y1="143" x2="408" y2="143" stroke="#475569" stroke-width="2" marker-end="url(#js-arr)"/>
+
+  <!-- 3: make-json -->
+  <rect x="30" y="234" width="320" height="118" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="190" y="260" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#7c3aed">3. make-json</text>
+  <text x="48" y="288" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">wp i18n make-json languages</text>
+  <text x="48" y="310" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">.po  ->  .json (Jed format)</text>
+  <text x="48" y="332" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">{slug}-{locale}-{md5}.json</text>
+
+  <!-- 4: result -->
+  <rect x="410" y="234" width="320" height="118" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="570" y="260" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">4. Muharrirda tarjima</text>
+  <text x="428" y="288" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">blok matni joriy tilda</text>
+  <text x="428" y="310" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">WP .json ni handle bo'yicha</text>
+  <text x="428" y="330" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">topib yuklaydi</text>
+
+  <line x1="350" y1="293" x2="408" y2="293" stroke="#16a34a" stroke-width="2" marker-end="url(#js-arr)"/>
+  <line x1="190" y1="202" x2="190" y2="232" stroke="#475569" stroke-width="2" marker-end="url(#js-arr)"/>
+
+  <text x="380" y="392" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">wp_set_script_translations() unutilsa — JS tarjimalar yuklanmaydi</text>
+  <text x="380" y="416" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">JS __ — @wordpress/i18n dan, PHP __ — yadrodan (alohida)</text>
+</svg>

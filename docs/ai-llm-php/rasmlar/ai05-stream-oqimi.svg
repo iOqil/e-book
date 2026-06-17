@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>createStream oqimi: hodisalar (delta) -> matn bo'lagi -> echo + flush -> foydalanuvchi</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">Streaming oqimi: createStream</text>
+
+  <defs>
+    <marker id="arr" markerWidth="11" markerHeight="11" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L9,4 L0,8 Z" fill="#7c3aed"/>
+    </marker>
+  </defs>
+
+  <!-- PHP ilova -->
+  <rect x="40" y="78" width="180" height="64" rx="10" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="130" y="106" text-anchor="middle" font-size="15" font-weight="600" fill="#1e293b">PHP ilova</text>
+  <text x="130" y="127" text-anchor="middle" font-size="13" fill="#475569">createStream(...)</text>
+
+  <!-- Claude model -->
+  <rect x="540" y="78" width="180" height="64" rx="10" fill="#ffffff" stroke="#d97757" stroke-width="2"/>
+  <text x="630" y="106" text-anchor="middle" font-size="15" font-weight="600" fill="#1e293b">Claude model</text>
+  <text x="630" y="127" text-anchor="middle" font-size="13" fill="#475569">javobni token-token</text>
+
+  <line x1="220" y1="110" x2="535" y2="110" stroke="#7c3aed" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="378" y="100" text-anchor="middle" font-size="13" fill="#7c3aed">so'rov</text>
+
+  <!-- Hodisalar oqimi (markazda) -->
+  <text x="380" y="176" text-anchor="middle" font-size="15" font-weight="700" fill="#7c3aed">Hodisalar oqimi (foreach $stream as $event)</text>
+
+  <rect x="40" y="194" width="150" height="50" rx="8" fill="#f5f3ff" stroke="#c7d2fe" stroke-width="1.5"/>
+  <text x="115" y="216" text-anchor="middle" font-size="13" fill="#475569">message_start</text>
+  <text x="115" y="234" text-anchor="middle" font-size="13" fill="#94a3b8">(boshlandi)</text>
+
+  <rect x="206" y="194" width="348" height="50" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="380" y="215" text-anchor="middle" font-size="14" font-weight="700" fill="#7c3aed">content_block_delta  ×N</text>
+  <text x="380" y="234" text-anchor="middle" font-size="13" fill="#475569">delta-&gt;type === 'text_delta'  -&gt;  delta-&gt;text</text>
+
+  <rect x="570" y="194" width="150" height="50" rx="8" fill="#f5f3ff" stroke="#c7d2fe" stroke-width="1.5"/>
+  <text x="645" y="216" text-anchor="middle" font-size="13" fill="#475569">message_stop</text>
+  <text x="645" y="234" text-anchor="middle" font-size="13" fill="#94a3b8">(tugadi)</text>
+
+  <!-- delta dan matn -->
+  <line x1="380" y1="244" x2="380" y2="282" stroke="#7c3aed" stroke-width="2" marker-end="url(#arr)"/>
+
+  <rect x="250" y="286" width="260" height="56" rx="9" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="380" y="310" text-anchor="middle" font-size="14" font-weight="600" fill="#1e293b">echo $event-&gt;delta-&gt;text;</text>
+  <text x="380" y="330" text-anchor="middle" font-size="13" fill="#16a34a">flush();  // darhol uzat</text>
+
+  <line x1="380" y1="342" x2="380" y2="380" stroke="#7c3aed" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- foydalanuvchi -->
+  <rect x="230" y="384" width="300" height="44" rx="9" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="380" y="411" text-anchor="middle" font-size="14" fill="#1e293b">Foydalanuvchi javobni jonli ko'radi</text>
+</svg>

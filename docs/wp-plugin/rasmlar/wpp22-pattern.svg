@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430">
+  <title>Block pattern tayyor bloklar guruhi: register_block_pattern bilan ro'yxatdan o'tadi, foydalanuvchi inserter dan bir marta qo'shadi va undan keyin bloklar oddiy tahrirlanadi</title>
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Block Pattern: tayyor bloklar guruhi</text>
+
+  <!-- 1. Registratsiya -->
+  <rect x="30" y="60" width="220" height="320" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="140" y="86" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e40af">1. Ro'yxatdan o'tkazish</text>
+  <text x="140" y="106" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(PHP, plugin ichida)</text>
+
+  <rect x="48" y="124" width="184" height="180" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="60" y="146" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">register_block_pattern(</text>
+  <text x="60" y="166" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">  'oqil/kitob-tavsiya',</text>
+  <text x="60" y="186" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">  [</text>
+  <text x="60" y="206" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">   'title' =&gt; '…',</text>
+  <text x="60" y="226" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">   'categories' =&gt; […],</text>
+  <text x="60" y="246" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">   'content' =&gt; '&lt;!-- wp:… --&gt;'</text>
+  <text x="60" y="266" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">  ] );</text>
+  <text x="60" y="292" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">content = bloklar markupi</text>
+
+  <text x="140" y="330" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">+ register_block_</text>
+  <text x="140" y="350" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">pattern_category()</text>
+  <text x="140" y="370" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(o'z toifa nomi)</text>
+
+  <!-- arrow -->
+  <line x1="252" y1="220" x2="296" y2="220" stroke="#475569" stroke-width="2"/>
+  <polygon points="296,220 286,215 286,225" fill="#475569"/>
+
+  <!-- 2. Inserter -->
+  <rect x="300" y="60" width="200" height="320" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="400" y="86" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">2. Inserter (Patterns)</text>
+  <text x="400" y="106" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">foydalanuvchi ko'radi</text>
+
+  <rect x="320" y="124" width="160" height="100" rx="6" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+  <rect x="334" y="140" width="132" height="22" rx="3" fill="#dbeafe"/>
+  <text x="400" y="156" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e40af">Kitob nomi</text>
+  <rect x="334" y="168" width="60" height="42" rx="3" fill="#e2e8f0"/>
+  <text x="364" y="193" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">rasm</text>
+  <rect x="402" y="168" width="64" height="42" rx="3" fill="#dcfce7"/>
+  <text x="434" y="193" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">tavsif</text>
+
+  <text x="400" y="252" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Bir marta bosib qo'yadi</text>
+  <text x="400" y="274" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">("Add pattern")</text>
+  <text x="400" y="306" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#7c3aed">Pattern = bog'lanmagan</text>
+  <text x="400" y="326" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#7c3aed">nusxa (reusable emas)</text>
+  <text x="400" y="356" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">keyin bloklar mustaqil</text>
+
+  <!-- arrow -->
+  <line x1="502" y1="220" x2="546" y2="220" stroke="#475569" stroke-width="2"/>
+  <polygon points="546,220 536,215 536,225" fill="#475569"/>
+
+  <!-- 3. Natija -->
+  <rect x="550" y="60" width="180" height="320" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="640" y="86" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">3. Postga joylanadi</text>
+
+  <rect x="568" y="110" width="144" height="40" rx="5" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="640" y="135" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">core/heading</text>
+  <rect x="568" y="158" width="144" height="40" rx="5" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="640" y="183" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">core/image</text>
+  <rect x="568" y="206" width="144" height="40" rx="5" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="640" y="231" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">core/paragraph</text>
+
+  <text x="640" y="288" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Oddiy bloklar — har</text>
+  <text x="640" y="308" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">birini erkin tahrirlaydi</text>
+  <text x="640" y="336" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">tez boshlash uchun</text>
+  <text x="640" y="356" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">tayyor andoza</text>
+</svg>

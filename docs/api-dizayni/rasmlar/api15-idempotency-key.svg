@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 540">
+  <title>Idempotency-Key oqimi: takroriy so'rov serverda bir marta bajariladi va bir xil javob qaytadi</title>
+  <rect x="0" y="0" width="880" height="540" fill="#f8fafc"/>
+  <text x="440" y="34" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">Idempotency-Key — to'lov ikki marta bo'lmaydi</text>
+  <text x="440" y="58" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Bir xil kalitli takroriy POST: server bir marta bajaradi, saqlangan javobni qaytaradi</text>
+
+  <!-- ustun sarlavhalari -->
+  <text x="150" y="92" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb">Mijoz</text>
+  <text x="460" y="92" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a">Server (API)</text>
+  <text x="760" y="92" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#7c3aed">Kalit ombori</text>
+
+  <!-- hayot chiziqlari -->
+  <line x1="150" y1="104" x2="150" y2="500" stroke="#cbd5e1" stroke-width="2"/>
+  <line x1="460" y1="104" x2="460" y2="500" stroke="#cbd5e1" stroke-width="2"/>
+  <line x1="760" y1="104" x2="760" y2="500" stroke="#cbd5e1" stroke-width="2"/>
+
+  <!-- 1-so'rov: birinchi marta -->
+  <rect x="40" y="120" width="220" height="48" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="54" y="142" font-family="monospace" font-size="13" fill="#1e3a8a">POST /payments</text>
+  <text x="54" y="160" font-family="monospace" font-size="13" fill="#1e3a8a">Idempotency-Key: k-abc</text>
+
+  <line x1="150" y1="150" x2="455" y2="150" stroke="#2563eb" stroke-width="2" marker-end="url(#arrB)"/>
+  <text x="305" y="142" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#2563eb">1) birinchi so'rov</text>
+
+  <!-- server kalitni tekshiradi -->
+  <line x1="460" y1="180" x2="755" y2="180" stroke="#7c3aed" stroke-width="2" marker-end="url(#arrP)"/>
+  <text x="608" y="172" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#7c3aed">k-abc bormi? YO'Q</text>
+
+  <rect x="600" y="194" width="240" height="36" rx="6" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="720" y="217" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#5b21b6">k-abc -> bajarilmoqda (lock)</text>
+
+  <!-- server ishni bajaradi -->
+  <rect x="350" y="244" width="220" height="34" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="460" y="266" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#166534">To'lov AMALGA oshiriladi</text>
+
+  <!-- javobni saqlaydi -->
+  <line x1="460" y1="298" x2="755" y2="298" stroke="#7c3aed" stroke-width="2" marker-end="url(#arrP)"/>
+  <text x="608" y="290" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#7c3aed">k-abc + javob (201) saqlanadi</text>
+
+  <!-- javob mijozga -->
+  <line x1="455" y1="326" x2="150" y2="326" stroke="#16a34a" stroke-width="2" marker-end="url(#arrG)"/>
+  <text x="305" y="318" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">201 Created {id: pay_1}</text>
+
+  <!-- ajratuvchi -->
+  <line x1="40" y1="346" x2="840" y2="346" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="440" y="364" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#b45309">--- tarmoq uzildi: mijoz javobni olmadi, AYNAN o'sha kalit bilan qayta yuboradi ---</text>
+
+  <!-- 2-so'rov: takror -->
+  <rect x="40" y="378" width="220" height="48" rx="8" fill="#fff7ed" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="54" y="400" font-family="monospace" font-size="13" fill="#b45309">POST /payments</text>
+  <text x="54" y="418" font-family="monospace" font-size="13" fill="#b45309">Idempotency-Key: k-abc</text>
+
+  <line x1="150" y1="408" x2="455" y2="408" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrA)"/>
+  <text x="305" y="400" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#b45309">2) takroriy so'rov</text>
+
+  <!-- server kalitni topadi -->
+  <line x1="460" y1="438" x2="755" y2="438" stroke="#7c3aed" stroke-width="2" marker-end="url(#arrP)"/>
+  <text x="608" y="430" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#7c3aed">k-abc bormi? HA -> saqlangan javob</text>
+
+  <rect x="350" y="452" width="220" height="34" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="460" y="474" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#b91c1c">QAYTA bajarilMAYDI</text>
+
+  <!-- javob mijozga (saqlangandan) -->
+  <line x1="455" y1="500" x2="150" y2="500" stroke="#16a34a" stroke-width="2" marker-end="url(#arrG)"/>
+  <text x="305" y="492" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">201 Created {id: pay_1} (xuddi o'sha)</text>
+
+  <defs>
+    <marker id="arrB" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto"><path d="M0,0 L7,3.2 L0,6.4 Z" fill="#2563eb"/></marker>
+    <marker id="arrG" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto"><path d="M0,0 L7,3.2 L0,6.4 Z" fill="#16a34a"/></marker>
+    <marker id="arrP" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto"><path d="M0,0 L7,3.2 L0,6.4 Z" fill="#7c3aed"/></marker>
+    <marker id="arrA" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto"><path d="M0,0 L7,3.2 L0,6.4 Z" fill="#f59e0b"/></marker>
+  </defs>
+</svg>

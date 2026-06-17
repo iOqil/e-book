@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Serverless funksiya vaqt chegarasi muammosi: qisqa chat chaqiruvi funksiyaning vaqt chegarasiga sig'adi (yashil, OK); uzoq ko'p-qadamli agent ishi chegaradan oshib ketadi (qizil, funksiya o'ladi). Yechim: ishni fon navbatiga (queue) yoki doimo ishlaydigan ishchiga (worker) o'tkazib, jarayonni oqim bilan ko'rsatish.</title>
+  <defs>
+    <marker id="t25a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="800" height="500" fill="#f8fafc"/>
+  <text x="400" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Serverless vaqt chegarasi — agentning tuzog'i</text>
+  <text x="400" y="58" font-size="14" fill="#64748b" text-anchor="middle">Funksiya cheksiz ishlay olmaydi: ~10–60s dan keyin platforma uni majburan to'xtatadi</text>
+
+  <!-- time limit line label -->
+  <text x="690" y="92" font-size="13" font-weight="bold" fill="#ef4444" text-anchor="middle">vaqt chegarasi</text>
+  <line x1="640" y1="100" x2="640" y2="356" stroke="#ef4444" stroke-width="2.5" stroke-dasharray="8,5"/>
+
+  <!-- GOOD: short chat -->
+  <rect x="36" y="104" width="724" height="104" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="56" y="132" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="start">✅ Qisqa chat / bitta chaqiruv — chegaraga sig'adi</text>
+  <rect x="56" y="146" width="540" height="34" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="326" y="168" font-size="13" fill="#1e293b" text-anchor="middle">so'rov → model javobi oqib chiqadi → tugadi</text>
+  <text x="326" y="198" font-size="13" fill="#475569" text-anchor="middle">streaming birinchi tokenni tez beradi — funksiya o'z vaqtida yopiladi</text>
+
+  <!-- BAD: long agent -->
+  <rect x="36" y="224" width="724" height="132" rx="12" fill="#ffffff" stroke="#ef4444" stroke-width="2.5"/>
+  <text x="56" y="252" font-size="15" font-weight="bold" fill="#ef4444" text-anchor="start">❌ Uzoq ko'p-qadamli agent — chegaradan oshadi</text>
+  <rect x="56" y="266" width="120" height="34" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="116" y="288" font-size="13" fill="#1e293b" text-anchor="middle">qadam 1: tool</text>
+  <rect x="186" y="266" width="120" height="34" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="246" y="288" font-size="13" fill="#1e293b" text-anchor="middle">qadam 2: tool</text>
+  <rect x="316" y="266" width="120" height="34" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="376" y="288" font-size="13" fill="#1e293b" text-anchor="middle">qadam 3: tool</text>
+  <rect x="446" y="266" width="120" height="34" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="506" y="288" font-size="13" fill="#1e293b" text-anchor="middle">qadam 4…</text>
+  <line x1="176" y1="283" x2="184" y2="283" stroke="#64748b" stroke-width="2" marker-end="url(#t25a)"/>
+  <line x1="306" y1="283" x2="314" y2="283" stroke="#64748b" stroke-width="2" marker-end="url(#t25a)"/>
+  <line x1="436" y1="283" x2="444" y2="283" stroke="#64748b" stroke-width="2" marker-end="url(#t25a)"/>
+  <!-- crossing the limit -->
+  <line x1="566" y1="283" x2="660" y2="283" stroke="#ef4444" stroke-width="2.5" stroke-dasharray="6,4"/>
+  <rect x="648" y="266" width="100" height="34" rx="8" fill="#ffffff" stroke="#ef4444" stroke-width="2"/>
+  <text x="698" y="288" font-size="13" font-weight="bold" fill="#ef4444" text-anchor="middle">⛔ uzildi</text>
+  <text x="400" y="338" font-size="13" fill="#ef4444" text-anchor="middle">funksiya chegaraga yetganda majburan to'xtaydi — agent yarmida qoladi</text>
+
+  <!-- SOLUTION -->
+  <rect x="36" y="372" width="724" height="108" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="400" y="398" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="middle">Yechim — uzoq ishni funksiyadan tashqariga chiqaring</text>
+  <text x="400" y="422" font-size="13.5" fill="#1e293b" text-anchor="middle">1) Ishni fon navbatiga (queue) qo'ying → 2) doimo ishlaydigan ishchi (worker / Node server) bajaradi</text>
+  <text x="400" y="444" font-size="13.5" fill="#1e293b" text-anchor="middle">3) Funksiya darhol "qabul qilindi" deb javob beradi → 4) jarayonni oqim/holat bilan ko'rsatasiz</text>
+  <text x="400" y="466" font-size="13.5" fill="#475569" text-anchor="middle">Ommaviy ish bo'lsa — Batches API (24-bob); doimo-yoqiq Node server vaqt chegarasini yo'qotadi.</text>
+</svg>

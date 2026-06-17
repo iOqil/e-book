@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420" font-family="Segoe UI, system-ui, sans-serif">
+  <title>DevOps cheksizlik halqasi: Plan, Code, Build, Test, Release bosqichlari Dev tomonida; Deploy, Operate, Monitor bosqichlari Ops tomonida uzluksiz aylanadi</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="36" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">DevOps hayot sikli — cheksizlik halqasi</text>
+
+  <!-- Dev / Ops yarmi yorliqlari -->
+  <text x="210" y="66" font-size="15" font-weight="bold" fill="#2563eb" text-anchor="middle">Dev tomoni</text>
+  <text x="550" y="66" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="middle">Ops tomoni</text>
+
+  <!-- chap halqa (Dev) - ko'k -->
+  <path d="M380,230 C380,120 250,120 200,160 C150,200 150,270 200,300 C250,330 380,310 380,230 Z"
+        fill="none" stroke="#2563eb" stroke-width="20" stroke-linecap="round" opacity="0.9"/>
+  <!-- o'ng halqa (Ops) - yashil -->
+  <path d="M380,230 C380,120 510,120 560,160 C610,200 610,270 560,300 C510,330 380,310 380,230 Z"
+        fill="none" stroke="#16a34a" stroke-width="20" stroke-linecap="round" opacity="0.9"/>
+
+  <!-- markaz tugun -->
+  <circle cx="380" cy="230" r="13" fill="#7c3aed"/>
+
+  <!-- DEV bosqich tugunlari va yorliqlari -->
+  <!-- Plan -->
+  <circle cx="200" cy="160" r="9" fill="#ffffff" stroke="#2563eb" stroke-width="3"/>
+  <text x="170" y="138" font-size="14" font-weight="bold" fill="#1e40af" text-anchor="middle">1. Plan</text>
+  <!-- Code -->
+  <circle cx="162" cy="218" r="9" fill="#ffffff" stroke="#2563eb" stroke-width="3"/>
+  <text x="120" y="208" font-size="14" font-weight="bold" fill="#1e40af" text-anchor="middle">2. Code</text>
+  <!-- Build -->
+  <circle cx="200" cy="298" r="9" fill="#ffffff" stroke="#2563eb" stroke-width="3"/>
+  <text x="168" y="328" font-size="14" font-weight="bold" fill="#1e40af" text-anchor="middle">3. Build</text>
+  <!-- Test -->
+  <circle cx="300" cy="318" r="9" fill="#ffffff" stroke="#2563eb" stroke-width="3"/>
+  <text x="300" y="348" font-size="14" font-weight="bold" fill="#1e40af" text-anchor="middle">4. Test</text>
+  <!-- Release -->
+  <circle cx="362" cy="288" r="9" fill="#ffffff" stroke="#2563eb" stroke-width="3"/>
+  <text x="372" y="312" font-size="14" font-weight="bold" fill="#1e40af" text-anchor="middle">5. Release</text>
+
+  <!-- OPS bosqich tugunlari va yorliqlari -->
+  <!-- Deploy -->
+  <circle cx="398" cy="288" r="9" fill="#ffffff" stroke="#16a34a" stroke-width="3"/>
+  <text x="408" y="312" font-size="14" font-weight="bold" fill="#15803d" text-anchor="middle">6. Deploy</text>
+  <!-- Operate -->
+  <circle cx="460" cy="318" r="9" fill="#ffffff" stroke="#16a34a" stroke-width="3"/>
+  <text x="470" y="348" font-size="14" font-weight="bold" fill="#15803d" text-anchor="middle">7. Operate</text>
+  <!-- Monitor -->
+  <circle cx="560" cy="298" r="9" fill="#ffffff" stroke="#16a34a" stroke-width="3"/>
+  <text x="592" y="328" font-size="14" font-weight="bold" fill="#15803d" text-anchor="middle">8. Monitor</text>
+
+  <!-- yo'nalish strelkalari (oqim) -->
+  <defs>
+    <marker id="loopar" markerWidth="11" markerHeight="11" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 Z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+  <!-- Monitor -> Plan (feedback) qaytish -->
+  <circle cx="598" cy="218" r="9" fill="#ffffff" stroke="#16a34a" stroke-width="3"/>
+  <path d="M598,150 C560,110 360,96 230,118" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-dasharray="6 5" marker-end="url(#loopar)"/>
+  <text x="412" y="100" font-size="13.5" fill="#b45309" text-anchor="middle">bog'lov (feedback): Monitor natijasi -> keyingi Plan</text>
+
+  <!-- pastki izoh -->
+  <text x="380" y="392" font-size="13.5" fill="#475569" text-anchor="middle">Hech qachon tugamaydi: har aylanish keyingisini boshlaydi. Markaz — Dev va Ops birlashgan nuqta.</text>
+</svg>

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470">
+  <title>SLI, SLO, SLA munosabati va error budget: 99.9 foiz SLO oyiga 43.2 daqiqa xato byudjetini beradi</title>
+  <rect x="0" y="0" width="780" height="470" fill="#f8fafc"/>
+  <text x="390" y="32" text-anchor="middle" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b">SLI -&gt; SLO -&gt; SLA va Error Budget</text>
+
+  <!-- SLI -->
+  <rect x="30" y="64" width="220" height="120" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="140" y="92" text-anchor="middle" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#2563eb">SLI</text>
+  <text x="140" y="112" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Indicator (ko'rsatkich)</text>
+  <text x="140" y="138" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">O'LCHANGAN raqam</text>
+  <text x="140" y="160" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">muvaffaqiyatli so'rov</text>
+  <text x="140" y="176" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">nisbati = 99.93%</text>
+
+  <!-- arrow -->
+  <defs>
+    <marker id="a2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#334155"/>
+    </marker>
+  </defs>
+  <line x1="250" y1="124" x2="278" y2="124" stroke="#334155" stroke-width="2" marker-end="url(#a2)"/>
+
+  <!-- SLO -->
+  <rect x="280" y="64" width="220" height="120" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="390" y="92" text-anchor="middle" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#16a34a">SLO</text>
+  <text x="390" y="112" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Objective (maqsad)</text>
+  <text x="390" y="138" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">ICHKI MAQSAD</text>
+  <text x="390" y="160" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">"99.9% bo'lsin"</text>
+  <text x="390" y="176" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">(jamoa o'zi qo'yadi)</text>
+
+  <line x1="500" y1="124" x2="528" y2="124" stroke="#334155" stroke-width="2" marker-end="url(#a2)"/>
+
+  <!-- SLA -->
+  <rect x="530" y="64" width="220" height="120" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="640" y="92" text-anchor="middle" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#dc2626">SLA</text>
+  <text x="640" y="112" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Agreement (shartnoma)</text>
+  <text x="640" y="138" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">MIJOZGA VA'DA</text>
+  <text x="640" y="160" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">"99.5%, aks holda</text>
+  <text x="640" y="176" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">pul qaytaramiz"</text>
+
+  <text x="390" y="212" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Qoida: SLO odatda SLA'dan QAT'IYROQ (ichkarida xavfsizlik chegarasi qoldiriladi)</text>
+
+  <!-- error budget bar -->
+  <text x="390" y="252" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#1e293b">Error Budget = 100% - SLO  (xatoga ruxsat etilgan qism)</text>
+
+  <rect x="60" y="270" width="660" height="44" rx="6" fill="#bbf7d0" stroke="#16a34a" stroke-width="2"/>
+  <rect x="660" y="270" width="60" height="44" rx="0" fill="#fca5a5" stroke="#dc2626" stroke-width="2"/>
+  <text x="380" y="297" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#166534">SLO 99.9% — ishlashi shart</text>
+  <text x="690" y="294" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#991b1b">0.1%</text>
+  <text x="690" y="308" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#991b1b">byudjet</text>
+
+  <!-- budget table -->
+  <text x="60" y="350" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">0.1% byudjet (30 kunlik oy = 43200 daqiqa) qancha downtime'ga to'g'ri keladi:</text>
+  <rect x="60" y="362" width="660" height="30" fill="#e2e8f0"/>
+  <text x="150" y="382" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#1e293b">SLO</text>
+  <text x="370" y="382" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#1e293b">oyiga downtime</text>
+  <text x="590" y="382" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#1e293b">haftasiga</text>
+
+  <rect x="60" y="392" width="660" height="26" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="150" y="410" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">99%</text>
+  <text x="370" y="410" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">432 daqiqa (~7.2 soat)</text>
+  <text x="590" y="410" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">100.8 daqiqa</text>
+
+  <rect x="60" y="418" width="660" height="26" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="150" y="436" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#16a34a">99.9%</text>
+  <text x="370" y="436" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">43.2 daqiqa</text>
+  <text x="590" y="436" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">10.08 daqiqa</text>
+
+  <rect x="60" y="444" width="660" height="24" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="150" y="461" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">99.99%</text>
+  <text x="370" y="461" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">4.32 daqiqa</text>
+  <text x="590" y="461" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">1.01 daqiqa</text>
+</svg>

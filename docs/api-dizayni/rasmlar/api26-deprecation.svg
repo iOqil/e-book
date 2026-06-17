@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 480">
+  <title>Deprecation vaqt o'qi: v1 deprecated e'lon, migratsiya davri, Sunset sanasi va o'chirish</title>
+  <rect x="0" y="0" width="920" height="480" fill="#f8fafc"/>
+  <text x="460" y="34" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">Deprecation jarayoni — mijozni sindirmasdan o'chirish</text>
+  <text x="460" y="58" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">E'lon → migratsiya davri (oylar) → Sunset sanasi → retire</text>
+
+  <!-- Vaqt o'qi -->
+  <line x1="70" y1="170" x2="850" y2="170" stroke="#94a3b8" stroke-width="3"/>
+  <polygon points="850,170 838,164 838,176" fill="#94a3b8"/>
+  <text x="856" y="175" font-family="Segoe UI" font-size="13" fill="#64748b">vaqt</text>
+
+  <!-- T0: E'lon -->
+  <circle cx="150" cy="170" r="9" fill="#f59e0b"/>
+  <line x1="150" y1="170" x2="150" y2="210" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="64" y="210" width="172" height="98" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="150" y="234" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#b45309">T0: E'lon</text>
+  <text x="150" y="256" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">Deprecation: @...</text>
+  <text x="150" y="274" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">Sunset: &lt;sana&gt;</text>
+  <text x="150" y="294" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">changelog + email</text>
+
+  <!-- Migratsiya davri (banner) -->
+  <rect x="300" y="138" width="300" height="32" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="450" y="159" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#1e40af">Migratsiya davri (oylar) — kuzat, eslat</text>
+
+  <!-- T1: Migratsiya/monitoring -->
+  <circle cx="450" cy="170" r="9" fill="#2563eb"/>
+  <line x1="450" y1="170" x2="450" y2="210" stroke="#2563eb" stroke-width="2"/>
+  <rect x="364" y="210" width="172" height="98" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="450" y="234" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">T1: Migratsiya</text>
+  <text x="450" y="256" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">yo'riqnoma: eski → yangi</text>
+  <text x="450" y="276" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">monitoring: kim hali</text>
+  <text x="450" y="294" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">ishlatyapti?</text>
+
+  <!-- T2: Brownout -->
+  <circle cx="660" cy="170" r="9" fill="#ea580c"/>
+  <line x1="660" y1="170" x2="660" y2="210" stroke="#ea580c" stroke-width="2"/>
+  <rect x="574" y="210" width="172" height="98" rx="10" fill="#ffffff" stroke="#ea580c" stroke-width="2"/>
+  <text x="660" y="234" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#c2410c">T2: Brownout</text>
+  <text x="660" y="256" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">qisqa vaqtinchalik</text>
+  <text x="660" y="276" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">o'chirishlar —</text>
+  <text x="660" y="294" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">"jiddiy" signali</text>
+
+  <!-- T3: Sunset/Retire -->
+  <circle cx="820" cy="170" r="9" fill="#dc2626"/>
+  <line x1="820" y1="170" x2="820" y2="210" stroke="#dc2626" stroke-width="2"/>
+  <rect x="744" y="210" width="160" height="98" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="824" y="234" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#b91c1c">T3: Retire</text>
+  <text x="824" y="256" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Sunset sanasida</text>
+  <text x="824" y="278" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">410 Gone</text>
+  <text x="824" y="298" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">+ Problem Details</text>
+
+  <!-- Pastki izoh paneli -->
+  <rect x="64" y="336" width="840" height="116" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="484" y="360" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#7c3aed">Standartlar va tamoyillar</text>
+  <text x="84" y="386" font-family="Segoe UI" font-size="13" fill="#334155">• Deprecation sarlavhasi = RFC 9745 (2025) — "eskirgan" + qachondan</text>
+  <text x="84" y="408" font-family="Segoe UI" font-size="13" fill="#334155">• Sunset sarlavhasi = RFC 8594 — o'chirish sanasi (IMF-fixdate)</text>
+  <text x="84" y="430" font-family="Segoe UI" font-size="13" fill="#334155">• 410 Gone = RFC 9110 — "bor edi, ataylab olib tashlandi" (404 emas)</text>
+  <text x="492" y="386" font-family="Segoe UI" font-size="13" fill="#334155">• Yetarli vaqt ber: public uchun 6–12 oy</text>
+  <text x="492" y="408" font-family="Segoe UI" font-size="13" fill="#334155">• Ko'p kanal: sarlavha + email + portal</text>
+  <text x="492" y="430" font-family="Segoe UI" font-size="13" fill="#334155">• Hech kim qolmaganda o'chir (monitoring)</text>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440">
+  <title>HPOS taqqoslash: eski usulda buyurtma wp_posts va wp_postmeta jadvalida sekin saqlanadi, HPOS usulida buyurtma wc_orders maxsus jadvalida tez saqlanadi va CRUD API orqali kiriladi</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">HPOS: buyurtmalar qayerda saqlanadi</text>
+
+  <!-- ESKI usul -->
+  <rect x="30" y="60" width="320" height="320" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="190" y="88" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#dc2626">Eski usul (legacy)</text>
+  <text x="190" y="110" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">buyurtma = oddiy post</text>
+
+  <rect x="55" y="128" width="270" height="58" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="68" y="152" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">wp_posts</text>
+  <text x="68" y="172" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">post_type = 'shop_order'</text>
+
+  <rect x="55" y="198" width="270" height="80" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="68" y="222" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">wp_postmeta</text>
+  <text x="68" y="242" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">jami, email, manzil... hammasi</text>
+  <text x="68" y="262" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">postmeta JUDA katta -> SEKIN</text>
+
+  <rect x="55" y="292" width="270" height="74" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="68" y="316" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626">Kirish (eskirgan):</text>
+  <text x="68" y="338" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">get_post_meta()</text>
+  <text x="68" y="358" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">WP_Query post_type</text>
+
+  <!-- HPOS usul -->
+  <rect x="410" y="60" width="320" height="320" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="570" y="88" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#16a34a">HPOS (zamonaviy)</text>
+  <text x="570" y="110" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">maxsus jadvallar</text>
+
+  <rect x="435" y="128" width="270" height="58" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="448" y="152" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">wc_orders</text>
+  <text x="448" y="172" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">status, jami, email — ustun</text>
+
+  <rect x="435" y="198" width="270" height="80" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="448" y="222" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">wc_orders_meta (+boshqalar)</text>
+  <text x="448" y="242" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">indekslangan, ajratilgan</text>
+  <text x="448" y="262" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">postlardan mustaqil -> TEZ</text>
+
+  <rect x="435" y="292" width="270" height="74" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="448" y="316" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">Kirish (TO'G'RI):</text>
+  <text x="448" y="338" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">wc_get_order() -> get_*/get_meta</text>
+  <text x="448" y="358" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">update_meta_data() + save()</text>
+
+  <!-- markaziy strelka -->
+  <line x1="350" y1="220" x2="408" y2="220" stroke="#475569" stroke-width="2"/>
+  <polygon points="408,220 398,215 398,225" fill="#475569"/>
+
+  <!-- pastki xulosa -->
+  <rect x="90" y="392" width="580" height="38" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="380" y="416" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">CRUD API ikkala holatda ham ishlaydi -> doim wc_get_order, hech qachon get_post_meta</text>
+</svg>

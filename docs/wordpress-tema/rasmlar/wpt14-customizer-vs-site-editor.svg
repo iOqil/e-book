@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 450" width="760" height="450" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Customizer (klassik) va Site Editor (block tema) sozlash usullari taqqoslash</title>
+  <rect x="0" y="0" width="760" height="450" fill="#f8fafc"/>
+  <text x="380" y="32" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">Sozlash: Customizer (klassik) vs Site Editor (block)</text>
+
+  <!-- Customizer side -->
+  <rect x="30" y="60" width="340" height="350" rx="12" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="30" y="60" width="340" height="44" rx="12" fill="#475569"/>
+  <text x="200" y="89" text-anchor="middle" font-size="17" font-weight="bold" fill="#ffffff">Customizer (klassik tema)</text>
+
+  <text x="50" y="134" font-size="14" fill="#1e293b">PHP API bilan sozlamalar:</text>
+  <text x="60" y="160" font-size="13" fill="#2563eb">customize_register hook</text>
+  <text x="60" y="184" font-size="13" fill="#2563eb">$wp_customize-&gt;add_section()</text>
+  <text x="60" y="208" font-size="13" fill="#2563eb">$wp_customize-&gt;add_setting()</text>
+  <text x="60" y="232" font-size="13" fill="#2563eb">$wp_customize-&gt;add_control()</text>
+  <text x="50" y="266" font-size="14" fill="#1e293b">Frontendda o'qish:</text>
+  <text x="60" y="290" font-size="13" fill="#16a34a">get_theme_mod('rang', '#000')</text>
+  <text x="50" y="324" font-size="14" fill="#1e293b">Jonli ko'rish: postMessage</text>
+  <text x="60" y="348" font-size="13" fill="#94a3b8">transport =&gt; 'postMessage' + JS</text>
+  <rect x="50" y="366" width="300" height="30" rx="6" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text x="200" y="386" text-anchor="middle" font-size="13" fill="#d97706">Hali ishlaydi, lekin klassik temaga mos</text>
+
+  <!-- Site Editor side -->
+  <rect x="390" y="60" width="340" height="350" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <rect x="390" y="60" width="340" height="44" rx="12" fill="#16a34a"/>
+  <text x="560" y="89" text-anchor="middle" font-size="17" font-weight="bold" fill="#ffffff">Site Editor (block tema / FSE)</text>
+
+  <text x="410" y="134" font-size="14" fill="#1e293b">Vizual sozlash (kod yo'q):</text>
+  <text x="420" y="160" font-size="13" fill="#16a34a">Tashqi ko'rinish &gt; Tahrirlash</text>
+  <text x="420" y="184" font-size="13" fill="#16a34a">Styles paneli (rang, shrift)</text>
+  <text x="420" y="208" font-size="13" fill="#16a34a">Style variations</text>
+  <text x="410" y="242" font-size="14" fill="#1e293b">Asosi — fayl:</text>
+  <text x="420" y="266" font-size="13" fill="#2563eb">theme.json (16-17 bob)</text>
+  <text x="410" y="300" font-size="14" fill="#1e293b">Foydalanuvchi to'g'ridan-to'g'ri</text>
+  <text x="410" y="320" font-size="14" fill="#1e293b">brauzerda o'zgartiradi.</text>
+  <rect x="410" y="366" width="300" height="30" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="560" y="386" text-anchor="middle" font-size="13" fill="#16a34a">2026 standarti: block temada AFZAL</text>
+
+  <!-- vs divider -->
+  <circle cx="380" cy="235" r="22" fill="#dc2626"/>
+  <text x="380" y="242" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">vs</text>
+</svg>

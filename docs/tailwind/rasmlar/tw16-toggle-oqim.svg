@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Dark mode toggle oqimi: foydalanuvchi tugmani bosadi, JS html elementiga dark klassini toggle qiladi, dark: utility'lari yoqiladi, tanlov localStorage ga saqlanadi; pastda sahifa yuklanganda FOUC oldini olish uchun bo'yashdan oldin localStorage/system o'qiladigan tarmoq</title>
+  <rect x="0" y="0" width="800" height="500" fill="#f8fafc"/>
+
+  <text x="400" y="38" text-anchor="middle" font-size="21" font-weight="bold" fill="#1e293b">Toggle oqimi: bosishdan sirt o'zgargunicha</text>
+  <text x="400" y="62" text-anchor="middle" font-size="14" fill="#475569">class strategiya: hammasi html dagi .dark klassiga bog'liq</text>
+
+  <!-- Step 1 -->
+  <rect x="40" y="92" width="170" height="74" rx="10" fill="#ffffff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="125" y="122" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e293b">1. Foydalanuvchi</text>
+  <text x="125" y="144" text-anchor="middle" font-size="13" fill="#475569">tugmani bosadi</text>
+
+  <!-- arrow -->
+  <line x1="210" y1="129" x2="248" y2="129" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="248,129 236,123 236,135" fill="#94a3b8"/>
+
+  <!-- Step 2 -->
+  <rect x="250" y="92" width="300" height="74" rx="10" fill="#eef2ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="400" y="118" text-anchor="middle" font-size="14" font-weight="bold" fill="#4f46e5">2. JS: html ga klassni almashtiradi</text>
+  <text x="400" y="142" text-anchor="middle" font-size="13" fill="#1e293b">document.documentElement.classList.toggle('dark')</text>
+
+  <!-- arrow -->
+  <line x1="550" y1="129" x2="588" y2="129" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="588,129 576,123 576,135" fill="#94a3b8"/>
+
+  <!-- Step 3 -->
+  <rect x="590" y="92" width="170" height="74" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+  <text x="675" y="118" text-anchor="middle" font-size="14" font-weight="bold" fill="#f1f5f9">3. dark: yoqiladi</text>
+  <text x="675" y="142" text-anchor="middle" font-size="13" fill="#94a3b8">sirt qorayadi</text>
+
+  <!-- down arrow to localStorage -->
+  <line x1="400" y1="166" x2="400" y2="204" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="400,204 394,192 406,192" fill="#94a3b8"/>
+
+  <!-- localStorage save -->
+  <rect x="250" y="206" width="300" height="64" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="400" y="232" text-anchor="middle" font-size="14" font-weight="bold" fill="#16a34a">4. Tanlovni saqlash</text>
+  <text x="400" y="256" text-anchor="middle" font-size="13" fill="#1e293b">localStorage.setItem('theme', 'dark')</text>
+
+  <!-- divider label -->
+  <line x1="40" y1="306" x2="760" y2="306" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="5 4"/>
+  <text x="400" y="332" text-anchor="middle" font-size="15" font-weight="bold" fill="#b45309">Sahifa keyingi yuklanganda — FOUC oldini olish</text>
+
+  <!-- load branch -->
+  <rect x="40" y="350" width="200" height="80" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="140" y="378" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e293b">head dagi inline</text>
+  <text x="140" y="400" text-anchor="middle" font-size="13" fill="#475569">script (bo'yashdan</text>
+  <text x="140" y="420" text-anchor="middle" font-size="13" fill="#475569">OLDIN ishlaydi)</text>
+
+  <line x1="240" y1="390" x2="278" y2="390" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="278,390 266,384 266,396" fill="#94a3b8"/>
+
+  <!-- decision -->
+  <polygon points="380,350 470,390 380,430 290,390" fill="#fff7ed" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="380" y="386" text-anchor="middle" font-size="13" font-weight="bold" fill="#b45309">localStorage</text>
+  <text x="380" y="404" text-anchor="middle" font-size="13" fill="#1e293b">bormi?</text>
+
+  <!-- yes -->
+  <line x1="470" y1="390" x2="528" y2="372" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="528,372 515,372 521,383" fill="#16a34a"/>
+  <text x="498" y="356" text-anchor="middle" font-size="13" font-weight="bold" fill="#16a34a">ha</text>
+  <rect x="530" y="350" width="230" height="34" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="645" y="372" text-anchor="middle" font-size="13" fill="#1e293b">saqlangan tanlovni qo'llash</text>
+
+  <!-- no -->
+  <line x1="470" y1="390" x2="528" y2="408" stroke="#64748b" stroke-width="2"/>
+  <polygon points="528,408 515,397 521,408" fill="#64748b"/>
+  <text x="498" y="426" text-anchor="middle" font-size="13" font-weight="bold" fill="#64748b">yo'q</text>
+  <rect x="530" y="396" width="230" height="34" rx="8" fill="#ffffff" stroke="#64748b" stroke-width="1.5"/>
+  <text x="645" y="418" text-anchor="middle" font-size="13" fill="#1e293b">matchMedia (OS) ga qarash</text>
+
+  <text x="400" y="470" text-anchor="middle" font-size="13" fill="#64748b">Klass bo'yashdan oldin qo'yilsa, noto'g'ri rejim chaqnashi (FOUC) yo'qoladi</text>
+</svg>

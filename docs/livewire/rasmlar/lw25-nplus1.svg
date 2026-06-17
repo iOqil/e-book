@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480" font-family="Segoe UI, system-ui, sans-serif">
+  <title>N+1 muammosi va eager loading taqqoslashi</title>
+  <rect x="0" y="0" width="760" height="480" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">N+1 muammosi  vs  Eager loading</text>
+
+  <!-- LEFT: N+1 bad -->
+  <rect x="30" y="58" width="340" height="386" rx="12" fill="#fff5f5" stroke="#dc2626" stroke-width="2"/>
+  <text x="200" y="86" text-anchor="middle" font-size="17" font-weight="700" fill="#dc2626">YOMON: N+1 (har element so'rov)</text>
+
+  <!-- list -->
+  <rect x="55" y="104" width="290" height="34" rx="7" fill="#ffffff" stroke="#c7d2fe" stroke-width="2"/>
+  <text x="70" y="126" font-size="13" fill="#475569">1-so'rov: Post::get() — 50 ta post</text>
+
+  <!-- per item queries -->
+  <rect x="75" y="150" width="250" height="28" rx="6" fill="#ffffff" stroke="#fca5a5" stroke-width="1.5"/>
+  <text x="90" y="169" font-size="13" fill="#dc2626">post 1 -&gt; author? (so'rov)</text>
+  <rect x="75" y="184" width="250" height="28" rx="6" fill="#ffffff" stroke="#fca5a5" stroke-width="1.5"/>
+  <text x="90" y="203" font-size="13" fill="#dc2626">post 2 -&gt; author? (so'rov)</text>
+  <rect x="75" y="218" width="250" height="28" rx="6" fill="#ffffff" stroke="#fca5a5" stroke-width="1.5"/>
+  <text x="90" y="237" font-size="13" fill="#dc2626">post 3 -&gt; author? (so'rov)</text>
+  <text x="200" y="268" text-anchor="middle" font-size="15" font-weight="700" fill="#dc2626">. . . 50 marta . . .</text>
+
+  <rect x="55" y="288" width="290" height="62" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="200" y="314" text-anchor="middle" font-size="16" font-weight="700" fill="#dc2626">Jami: 1 + 50 = 51 so'rov</text>
+  <text x="200" y="336" text-anchor="middle" font-size="13" fill="#475569">DB nafas ololmaydi — sekin sahifa</text>
+
+  <text x="200" y="378" text-anchor="middle" font-size="13" fill="#475569">$post-&gt;author har loop'da</text>
+  <text x="200" y="396" text-anchor="middle" font-size="13" fill="#475569">DB ga alohida boradi</text>
+  <rect x="55" y="408" width="290" height="26" rx="6" fill="#ffffff" stroke="#fca5a5" stroke-width="1.5"/>
+  <text x="200" y="426" text-anchor="middle" font-size="13" fill="#dc2626">Post::latest()-&gt;get()</text>
+
+  <!-- RIGHT: eager good -->
+  <rect x="390" y="58" width="340" height="386" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="560" y="86" text-anchor="middle" font-size="17" font-weight="700" fill="#16a34a">YAXSHI: eager loading</text>
+
+  <rect x="415" y="104" width="290" height="34" rx="7" fill="#ffffff" stroke="#c7d2fe" stroke-width="2"/>
+  <text x="430" y="126" font-size="13" fill="#475569">1-so'rov: Post::get() — 50 ta post</text>
+
+  <rect x="415" y="150" width="290" height="34" rx="7" fill="#ffffff" stroke="#86efac" stroke-width="2"/>
+  <text x="430" y="172" font-size="13" fill="#16a34a">2-so'rov: barcha author birdan</text>
+
+  <rect x="435" y="200" width="250" height="28" rx="6" fill="#ffffff" stroke="#86efac" stroke-width="1.5"/>
+  <text x="450" y="219" font-size="13" fill="#16a34a">post 1 -&gt; author (xotirada)</text>
+  <rect x="435" y="234" width="250" height="28" rx="6" fill="#ffffff" stroke="#86efac" stroke-width="1.5"/>
+  <text x="450" y="253" font-size="13" fill="#16a34a">post 2 -&gt; author (xotirada)</text>
+  <text x="560" y="284" text-anchor="middle" font-size="13" fill="#475569">. . . DB ga BORMAYDI . . .</text>
+
+  <rect x="415" y="298" width="290" height="62" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="560" y="324" text-anchor="middle" font-size="16" font-weight="700" fill="#16a34a">Jami: atigi 2 so'rov</text>
+  <text x="560" y="346" text-anchor="middle" font-size="13" fill="#475569">50 ta post bo'lsa ham — 2 ta</text>
+
+  <text x="560" y="390" text-anchor="middle" font-size="13" fill="#475569">with('author') postlar bilan</text>
+  <text x="560" y="408" text-anchor="middle" font-size="13" fill="#475569">muallifni BIRGA olib keladi</text>
+  <rect x="415" y="416" width="290" height="20" rx="5" fill="#ffffff" stroke="#86efac" stroke-width="1.5"/>
+  <text x="560" y="431" text-anchor="middle" font-size="13" fill="#16a34a">Post::with('author')-&gt;get()</text>
+</svg>

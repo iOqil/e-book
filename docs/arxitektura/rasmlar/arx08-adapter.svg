@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420">
+  <title>Adapter patterni: mijoz Tolov interfeysini biladi, StripeAdapter uni uchinchi tomon SDK ga moslaydi</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b">Adapter — mos kelmaydigan interfeysni moslash</text>
+
+  <!-- Mijoz -->
+  <rect x="40" y="160" width="150" height="90" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="115" y="195" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#1e293b">Mijoz</text>
+  <text x="115" y="218" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">faqat Tolov ni</text>
+  <text x="115" y="236" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">biladi</text>
+
+  <!-- Target interfeys -->
+  <rect x="270" y="150" width="170" height="110" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="355" y="180" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">&#171;interface&#187;</text>
+  <text x="355" y="202" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#1e293b">Tolov</text>
+  <line x1="285" y1="214" x2="425" y2="214" stroke="#94a3b8" stroke-width="1"/>
+  <text x="355" y="236" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">tola(somMiqdor)</text>
+
+  <!-- Adapter -->
+  <rect x="270" y="300" width="170" height="100" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="355" y="330" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a">StripeAdapter</text>
+  <line x1="285" y1="342" x2="425" y2="342" stroke="#94a3b8" stroke-width="1"/>
+  <text x="355" y="364" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">tola(som) {</text>
+  <text x="355" y="384" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">som-&gt;cent, charge() }</text>
+
+  <!-- Adaptee SDK -->
+  <rect x="560" y="300" width="170" height="100" rx="8" fill="#fef9c3" stroke="#f59e0b" stroke-width="2"/>
+  <text x="645" y="326" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#92400e">TashqiStripeSDK</text>
+  <text x="645" y="347" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">(uchinchi tomon)</text>
+  <line x1="575" y1="356" x2="715" y2="356" stroke="#94a3b8" stroke-width="1"/>
+  <text x="645" y="378" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">charge(cents, "usd")</text>
+
+  <!-- Mijoz -> Target (foydalanadi) -->
+  <line x1="190" y1="205" x2="266" y2="205" stroke="#2563eb" stroke-width="2" marker-end="url(#strelka)"/>
+  <text x="228" y="196" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#2563eb">foydalanadi</text>
+
+  <!-- Adapter implements Target (uchli ochiq strelka) -->
+  <line x1="355" y1="300" x2="355" y2="264" stroke="#16a34a" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#uchburchak)"/>
+  <text x="430" y="285" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">implements</text>
+
+  <!-- Adapter -> SDK (o'raydi/chaqiradi) -->
+  <line x1="440" y1="350" x2="556" y2="350" stroke="#334155" stroke-width="2" marker-end="url(#strelka)"/>
+  <text x="498" y="340" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">o'raydi</text>
+
+  <text x="380" y="120" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Mijoz SDK ni KO'RMAYDI. SDK o'zgarsa — faqat Adapter o'zgaradi.</text>
+
+  <defs>
+    <marker id="strelka" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#334155"/>
+    </marker>
+    <marker id="uchburchak" markerWidth="14" markerHeight="14" refX="11" refY="5" orient="auto">
+      <path d="M0,0 L11,5 L0,10 Z" fill="none" stroke="#16a34a" stroke-width="1.5"/>
+    </marker>
+  </defs>
+</svg>

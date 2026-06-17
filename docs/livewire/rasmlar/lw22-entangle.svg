@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420" font-family="Segoe UI, system-ui, sans-serif">
+  <title>@entangle: Alpine holati va Livewire xususiyati ikki tomonlama bog'lanadi</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">@entangle — ikki holatni bitta qilib bog'lash</text>
+  <text x="380" y="60" text-anchor="middle" font-size="14" fill="#475569">x-data="{ open: @entangle('open') }"</text>
+
+  <!-- Alpine box -->
+  <rect x="40" y="96" width="280" height="150" rx="14" fill="#ffffff" stroke="#fb70a9" stroke-width="2"/>
+  <rect x="40" y="96" width="280" height="40" rx="14" fill="#fdeef5"/>
+  <rect x="40" y="122" width="280" height="14" fill="#fdeef5"/>
+  <text x="180" y="123" text-anchor="middle" font-size="16" font-weight="700" fill="#db2777">ALPINE</text>
+  <text x="180" y="170" text-anchor="middle" font-size="14" fill="#1e293b">open: false</text>
+  <rect x="70" y="186" width="220" height="42" rx="8" fill="#fdeef5" stroke="#fbcfe8"/>
+  <text x="180" y="212" text-anchor="middle" font-size="14" fill="#475569">tez, serversiz (x-show)</text>
+
+  <!-- Livewire box -->
+  <rect x="440" y="96" width="280" height="150" rx="14" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <rect x="440" y="96" width="280" height="40" rx="14" fill="#eef2ff"/>
+  <rect x="440" y="122" width="280" height="14" fill="#eef2ff"/>
+  <text x="580" y="123" text-anchor="middle" font-size="16" font-weight="700" fill="#4f46e5">LIVEWIRE</text>
+  <text x="580" y="170" text-anchor="middle" font-size="14" fill="#1e293b">public bool $open = false;</text>
+  <rect x="470" y="186" width="220" height="42" rx="8" fill="#eef2ff" stroke="#c7d2fe"/>
+  <text x="580" y="212" text-anchor="middle" font-size="14" fill="#475569">serverda saqlanadi</text>
+
+  <!-- two-way arrows -->
+  <line x1="320" y1="150" x2="440" y2="150" stroke="#16a34a" stroke-width="3"/>
+  <polygon points="440,150 426,143 426,157" fill="#16a34a"/>
+  <text x="380" y="142" text-anchor="middle" font-size="13" fill="#16a34a" font-weight="600">Alpine o'zgartirsa</text>
+  <text x="380" y="165" text-anchor="middle" font-size="13" fill="#475569">-&gt; server ham yangilanadi</text>
+
+  <line x1="440" y1="200" x2="320" y2="200" stroke="#16a34a" stroke-width="3"/>
+  <polygon points="320,200 334,193 334,207" fill="#16a34a"/>
+  <text x="380" y="218" text-anchor="middle" font-size="13" fill="#16a34a" font-weight="600">server o'zgartirsa</text>
+  <text x="380" y="238" text-anchor="middle" font-size="13" fill="#475569">-&gt; Alpine ham yangilanadi</text>
+
+  <!-- bottom: result -->
+  <rect x="120" y="286" width="520" height="100" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="380" y="316" text-anchor="middle" font-size="15" font-weight="700" fill="#16a34a">Natija: bitta qiymat, ikki joyda doim bir xil</text>
+  <text x="380" y="344" text-anchor="middle" font-size="13" fill="#1e293b">Alpine darhol ochadi (x-show) — server ham xabardor bo'ladi</text>
+  <text x="380" y="368" text-anchor="middle" font-size="13" fill="#475569">Modal, sidebar, dropdown uchun ideal: tez UI + server holati</text>
+</svg>

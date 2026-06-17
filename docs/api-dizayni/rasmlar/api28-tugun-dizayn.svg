@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 540">
+  <title>Toliq endpoint dizayn jadvali: metod, URL, status, auth scope</title>
+  <rect x="0" y="0" width="880" height="540" fill="#f8fafc"/>
+  <text x="440" y="34" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">Endpoint dizayn jadvali — task manager</text>
+  <text x="440" y="58" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Resurs × metod → URL · status · auth scope</text>
+
+  <!-- header row -->
+  <rect x="30" y="80" width="120" height="38" fill="#1e293b"/>
+  <rect x="150" y="80" width="370" height="38" fill="#1e293b"/>
+  <rect x="520" y="80" width="160" height="38" fill="#1e293b"/>
+  <rect x="680" y="80" width="170" height="38" fill="#1e293b"/>
+  <text x="90" y="105" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#ffffff">Metod</text>
+  <text x="170" y="105" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#ffffff">URL</text>
+  <text x="600" y="105" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#ffffff">Status</text>
+  <text x="765" y="105" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#ffffff">Scope</text>
+
+  <!-- rows -->
+  <!-- r1 -->
+  <rect x="30" y="118" width="820" height="36" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="30" y="118" width="120" height="36" fill="#dcfce7"/>
+  <text x="90" y="141" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#16a34a">POST</text>
+  <text x="160" y="141" font-family="monospace" font-size="13" fill="#334155">/v1/projects</text>
+  <text x="600" y="141" text-anchor="middle" font-family="monospace" font-size="13" fill="#16a34a">201 + Location</text>
+  <text x="765" y="141" text-anchor="middle" font-family="monospace" font-size="13" fill="#64748b">projects:write</text>
+
+  <!-- r2 -->
+  <rect x="30" y="154" width="820" height="36" fill="#f8fafc" stroke="#e2e8f0"/>
+  <rect x="30" y="154" width="120" height="36" fill="#dbeafe"/>
+  <text x="90" y="177" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#2563eb">GET</text>
+  <text x="160" y="177" font-family="monospace" font-size="13" fill="#334155">/v1/projects</text>
+  <text x="600" y="177" text-anchor="middle" font-family="monospace" font-size="13" fill="#16a34a">200 OK</text>
+  <text x="765" y="177" text-anchor="middle" font-family="monospace" font-size="13" fill="#64748b">projects:read</text>
+
+  <!-- r3 -->
+  <rect x="30" y="190" width="820" height="36" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="30" y="190" width="120" height="36" fill="#fef3c7"/>
+  <text x="90" y="213" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#b45309">PATCH</text>
+  <text x="160" y="213" font-family="monospace" font-size="13" fill="#334155">/v1/projects/{pid}</text>
+  <text x="600" y="213" text-anchor="middle" font-family="monospace" font-size="13" fill="#16a34a">200 OK</text>
+  <text x="765" y="213" text-anchor="middle" font-family="monospace" font-size="13" fill="#64748b">projects:write</text>
+
+  <!-- r4 -->
+  <rect x="30" y="226" width="820" height="36" fill="#f8fafc" stroke="#e2e8f0"/>
+  <rect x="30" y="226" width="120" height="36" fill="#fee2e2"/>
+  <text x="90" y="249" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#dc2626">DELETE</text>
+  <text x="160" y="249" font-family="monospace" font-size="13" fill="#334155">/v1/projects/{pid}</text>
+  <text x="600" y="249" text-anchor="middle" font-family="monospace" font-size="13" fill="#16a34a">204 No Content</text>
+  <text x="765" y="249" text-anchor="middle" font-family="monospace" font-size="13" fill="#64748b">projects:write</text>
+
+  <!-- r5 -->
+  <rect x="30" y="262" width="820" height="36" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="30" y="262" width="120" height="36" fill="#dcfce7"/>
+  <text x="90" y="285" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#16a34a">POST</text>
+  <text x="160" y="285" font-family="monospace" font-size="13" fill="#334155">/v1/projects/{pid}/tasks</text>
+  <text x="600" y="285" text-anchor="middle" font-family="monospace" font-size="13" fill="#16a34a">201 + Location</text>
+  <text x="765" y="285" text-anchor="middle" font-family="monospace" font-size="13" fill="#64748b">tasks:write</text>
+
+  <!-- r6 -->
+  <rect x="30" y="298" width="820" height="36" fill="#f8fafc" stroke="#e2e8f0"/>
+  <rect x="30" y="298" width="120" height="36" fill="#dbeafe"/>
+  <text x="90" y="321" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#2563eb">GET</text>
+  <text x="160" y="321" font-family="monospace" font-size="13" fill="#334155">/v1/projects/{pid}/tasks</text>
+  <text x="600" y="321" text-anchor="middle" font-family="monospace" font-size="13" fill="#16a34a">200 OK</text>
+  <text x="765" y="321" text-anchor="middle" font-family="monospace" font-size="13" fill="#64748b">tasks:read</text>
+
+  <!-- r7 -->
+  <rect x="30" y="334" width="820" height="36" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="30" y="334" width="120" height="36" fill="#dbeafe"/>
+  <text x="90" y="357" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#2563eb">GET</text>
+  <text x="160" y="357" font-family="monospace" font-size="13" fill="#334155">/v1/tasks/{tid}</text>
+  <text x="600" y="357" text-anchor="middle" font-family="monospace" font-size="13" fill="#16a34a">200 OK</text>
+  <text x="765" y="357" text-anchor="middle" font-family="monospace" font-size="13" fill="#64748b">tasks:read</text>
+
+  <!-- r8 -->
+  <rect x="30" y="370" width="820" height="36" fill="#f8fafc" stroke="#e2e8f0"/>
+  <rect x="30" y="370" width="120" height="36" fill="#fef3c7"/>
+  <text x="90" y="393" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#b45309">PATCH</text>
+  <text x="160" y="393" font-family="monospace" font-size="13" fill="#334155">/v1/tasks/{tid}</text>
+  <text x="600" y="393" text-anchor="middle" font-family="monospace" font-size="13" fill="#16a34a">200 OK</text>
+  <text x="765" y="393" text-anchor="middle" font-family="monospace" font-size="13" fill="#64748b">tasks:write</text>
+
+  <!-- r9 -->
+  <rect x="30" y="406" width="820" height="36" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="30" y="406" width="120" height="36" fill="#dcfce7"/>
+  <text x="90" y="429" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#16a34a">POST</text>
+  <text x="160" y="429" font-family="monospace" font-size="13" fill="#334155">/v1/tasks/{tid}/comments</text>
+  <text x="600" y="429" text-anchor="middle" font-family="monospace" font-size="13" fill="#16a34a">201 + Location</text>
+  <text x="765" y="429" text-anchor="middle" font-family="monospace" font-size="13" fill="#64748b">tasks:write</text>
+
+  <!-- note bar -->
+  <rect x="30" y="456" width="820" height="64" rx="8" fill="#ffffff" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="48" y="480" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">BOLA:</text>
+  <text x="100" y="480" font-family="Segoe UI" font-size="13" fill="#334155">scope yetarli emas — har ob'ekt-so'rovda egalik tekshiriladi (OWASP API1).</text>
+  <text x="48" y="504" font-family="Segoe UI" font-size="13" fill="#64748b">Ko'rishga haqqi bo'lmaganda → 404 (mavjudligini yashirib, 403 o'rniga).</text>
+</svg>

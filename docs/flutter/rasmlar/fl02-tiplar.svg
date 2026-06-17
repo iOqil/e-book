@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 500" width="760" height="500" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Dart asosiy tiplari: int, double (num — ularning otasi), String va bool, har biri misol qiymati va izoh bilan</title>
+  <rect x="0" y="0" width="760" height="500" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Dart asosiy tiplari</text>
+  <text x="380" y="58" text-anchor="middle" font-size="14" fill="#475569">Tip — qiymatning turi: u son, matn yoki rost/yolg'onmi</text>
+
+  <!-- num umbrella -->
+  <rect x="40" y="80" width="430" height="44" rx="10" fill="#e0f2fe" stroke="#027dfd" stroke-width="2"/>
+  <text x="120" y="108" font-size="16" font-weight="700" fill="#0553b1">num</text>
+  <text x="255" y="108" text-anchor="middle" font-size="13" fill="#475569">son — int va double'ning umumiy "otasi"</text>
+  <line x1="150" y1="124" x2="150" y2="146" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="360" y1="124" x2="360" y2="146" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="150" y1="146" x2="360" y2="146" stroke="#94a3b8" stroke-width="2"/>
+
+  <!-- int -->
+  <rect x="40" y="148" width="200" height="92" rx="12" fill="#ffffff" stroke="#027dfd" stroke-width="2"/>
+  <text x="56" y="176" font-size="16" font-weight="700" fill="#027dfd">int</text>
+  <rect x="150" y="158" width="74" height="26" rx="6" fill="#e0f2fe"/>
+  <text x="187" y="176" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">25</text>
+  <text x="56" y="206" font-size="13" fill="#475569">butun son</text>
+  <text x="56" y="226" font-size="13" fill="#64748b">kasrsiz: ...-1, 0, 42</text>
+
+  <!-- double -->
+  <rect x="270" y="148" width="200" height="92" rx="12" fill="#ffffff" stroke="#027dfd" stroke-width="2"/>
+  <text x="286" y="176" font-size="16" font-weight="700" fill="#027dfd">double</text>
+  <rect x="380" y="158" width="74" height="26" rx="6" fill="#e0f2fe"/>
+  <text x="417" y="176" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">3.14</text>
+  <text x="286" y="206" font-size="13" fill="#475569">kasrli son</text>
+  <text x="286" y="226" font-size="13" fill="#64748b">nuqtali: 0.5, -2.0</text>
+
+  <!-- String -->
+  <rect x="40" y="264" width="430" height="92" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="56" y="292" font-size="16" font-weight="700" fill="#16a34a">String</text>
+  <rect x="180" y="274" width="160" height="26" rx="6" fill="#f0fdf4"/>
+  <text x="260" y="292" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">'Salom, Ali'</text>
+  <text x="56" y="322" font-size="13" fill="#475569">matn (harflar ketma-ketligi)</text>
+  <text x="56" y="342" font-size="13" fill="#64748b">qo'shtirnoq yoki bittalik tirnoq ichida</text>
+
+  <!-- bool -->
+  <rect x="40" y="380" width="430" height="92" rx="12" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="56" y="408" font-size="16" font-weight="700" fill="#b45309">bool</text>
+  <rect x="160" y="390" width="80" height="26" rx="6" fill="#fffbeb"/>
+  <text x="200" y="408" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">true</text>
+  <rect x="252" y="390" width="80" height="26" rx="6" fill="#fffbeb"/>
+  <text x="292" y="408" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">false</text>
+  <text x="56" y="438" font-size="13" fill="#475569">rost yoki yolg'on (faqat ikki qiymat)</text>
+  <text x="56" y="458" font-size="13" fill="#64748b">shart va mantiq uchun</text>
+
+  <!-- side note -->
+  <rect x="494" y="148" width="238" height="324" rx="12" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="613" y="178" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">Tipni kim aytadi?</text>
+  <text x="510" y="212" font-size="13" font-weight="700" fill="#6366f1">Aniq (explicit):</text>
+  <text x="510" y="232" font-size="13" fill="#475569">int x = 5;</text>
+  <text x="510" y="252" font-size="13" fill="#64748b">tipni o'zingiz yozasiz</text>
+
+  <text x="510" y="290" font-size="13" font-weight="700" fill="#6366f1">Taxmin (inference):</text>
+  <text x="510" y="310" font-size="13" fill="#475569">var x = 5;</text>
+  <text x="510" y="330" font-size="13" fill="#64748b">Dart 5 ni ko'rib,</text>
+  <text x="510" y="348" font-size="13" fill="#64748b">tipni int deb topadi</text>
+
+  <text x="510" y="386" font-size="13" font-weight="700" fill="#ef4444">dynamic — ehtiyot!</text>
+  <text x="510" y="406" font-size="13" fill="#475569">istalgan tip, lekin</text>
+  <text x="510" y="424" font-size="13" fill="#64748b">Dart xatoni ushlay</text>
+  <text x="510" y="442" font-size="13" fill="#64748b">olmaydi. Iloji boricha</text>
+  <text x="510" y="460" font-size="13" fill="#64748b">ishlatmang.</text>
+</svg>

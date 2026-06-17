@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 430" width="800" height="430" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Build pipeline: kod yozishdan boshlab flutter test va flutter analyze tekshiruvidan, imzolangan release buildni qurishdan, do'konga (Play Store / App Store) yuborish orqali foydalanuvchilarga yetib borishigacha bo'lgan yo'l</title>
+  <rect x="0" y="0" width="800" height="430" fill="#f8fafc"/>
+  <text x="400" y="36" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Koddan do'kongacha: chiqarish yo'li</text>
+  <text x="400" y="60" text-anchor="middle" font-size="14" fill="#475569">Har qadam keyingisidan oldin o'tilishi kerak</text>
+
+  <!-- Step 1: code -->
+  <rect x="40" y="92" width="150" height="92" rx="12" fill="#6366f1"/>
+  <text x="115" y="130" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">1. Kod</text>
+  <text x="115" y="154" text-anchor="middle" font-size="13" fill="#e0e7ff">ishlab chiqish</text>
+  <text x="115" y="172" text-anchor="middle" font-size="13" fill="#e0e7ff">(dev rejimi)</text>
+
+  <!-- arrow -->
+  <line x1="190" y1="138" x2="234" y2="138" stroke="#475569" stroke-width="3"/>
+  <polygon points="234,132 250,138 234,144" fill="#475569"/>
+
+  <!-- Step 2: checks (gate) -->
+  <rect x="252" y="80" width="178" height="116" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="341" y="108" text-anchor="middle" font-size="15" font-weight="700" fill="#16a34a">2. Tekshiruv (PASS)</text>
+  <text x="341" y="132" text-anchor="middle" font-size="13" fill="#1e293b">flutter test</text>
+  <text x="341" y="152" text-anchor="middle" font-size="13" fill="#1e293b">flutter analyze</text>
+  <text x="341" y="172" text-anchor="middle" font-size="13" fill="#1e293b">dart format</text>
+  <text x="341" y="190" text-anchor="middle" font-size="13" fill="#16a34a">hammasi yashil bo'lsa</text>
+
+  <!-- arrow -->
+  <line x1="430" y1="138" x2="474" y2="138" stroke="#475569" stroke-width="3"/>
+  <polygon points="474,132 490,138 474,144" fill="#475569"/>
+
+  <!-- Step 3: build/sign -->
+  <rect x="492" y="80" width="268" height="116" rx="12" fill="#dbeafe" stroke="#027dfd" stroke-width="2.5"/>
+  <text x="626" y="108" text-anchor="middle" font-size="15" font-weight="700" fill="#0553b1">3. Release build (imzolangan)</text>
+  <text x="626" y="132" text-anchor="middle" font-size="13" fill="#1e293b">flutter build appbundle --release</text>
+  <text x="626" y="152" text-anchor="middle" font-size="13" fill="#1e293b">--obfuscate --split-debug-info</text>
+  <text x="626" y="174" text-anchor="middle" font-size="13" fill="#475569">keystore (Android) / sertifikat (iOS)</text>
+  <text x="626" y="190" text-anchor="middle" font-size="13" fill="#475569">version: 1.0.0+1</text>
+
+  <!-- down arrow from step3 to store -->
+  <line x1="626" y1="196" x2="626" y2="244" stroke="#475569" stroke-width="3"/>
+  <polygon points="620,244 626,260 632,244" fill="#475569"/>
+
+  <!-- Step 4: stores -->
+  <rect x="470" y="262" width="312" height="86" rx="12" fill="#f59e0b"/>
+  <text x="626" y="292" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">4. Do'kon</text>
+  <text x="626" y="316" text-anchor="middle" font-size="13" fill="#fef3c7">Play Console (AAB) · App Store Connect (IPA)</text>
+  <text x="626" y="336" text-anchor="middle" font-size="13" fill="#fef3c7">skrinshot · tavsif · review · maxfiylik</text>
+
+  <!-- left arrow from store to users -->
+  <line x1="470" y1="305" x2="402" y2="305" stroke="#475569" stroke-width="3"/>
+  <polygon points="402,299 386,305 402,311" fill="#475569"/>
+
+  <!-- Step 5: users -->
+  <rect x="218" y="262" width="160" height="86" rx="12" fill="#16a34a"/>
+  <text x="298" y="298" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">5. Foydalanuvchilar</text>
+  <text x="298" y="322" text-anchor="middle" font-size="13" fill="#dcfce7">o'rnatadi va ishlatadi</text>
+
+  <text x="400" y="392" text-anchor="middle" font-size="13" fill="#64748b">Tekshiruv yiqilsa — orqaga qaytib tuzatamiz; do'kon faqat IMZOLANGAN buildni qabul qiladi</text>
+  <text x="400" y="414" text-anchor="middle" font-size="13" fill="#94a3b8">CI/CD (GitHub Actions / Codemagic / Fastlane) shu zanjirni avtomatlashtiradi</text>
+</svg>

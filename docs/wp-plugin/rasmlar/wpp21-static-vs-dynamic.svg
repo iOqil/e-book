@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430">
+  <title>Static blokda save() HTML ni post_content ga muzlatadi va o'zgarmaydi, dynamic blokda render.php har so'rovda yangi HTML hisoblaydi</title>
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Static vs Dynamic blok</text>
+
+  <!-- STATIC panel -->
+  <rect x="30" y="58" width="330" height="330" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="195" y="86" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#16a34a">STATIC (20-bob)</text>
+
+  <rect x="55" y="104" width="280" height="58" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="68" y="128" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">save() -&gt; HTML</text>
+  <text x="68" y="150" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">saqlash payti BIR MARTA</text>
+
+  <line x1="195" y1="162" x2="195" y2="188" stroke="#475569" stroke-width="2"/>
+  <polygon points="195,188 190,178 200,178" fill="#475569"/>
+
+  <rect x="55" y="190" width="280" height="64" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="195" y="214" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">post_content (DB)</text>
+  <text x="195" y="236" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">HTML MUZLAYDI</text>
+
+  <line x1="195" y1="254" x2="195" y2="280" stroke="#475569" stroke-width="2"/>
+  <polygon points="195,280 190,270 200,270" fill="#475569"/>
+
+  <rect x="55" y="282" width="280" height="58" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="195" y="306" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Frontend: tayyor HTML o'qiladi</text>
+  <text x="195" y="328" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">PHP hisoblamaydi (tez)</text>
+
+  <text x="195" y="368" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Ma'lumot o'zgarmas: kitob kartasi</text>
+
+  <!-- DYNAMIC panel -->
+  <rect x="400" y="58" width="330" height="330" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="565" y="86" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#1e40af">DYNAMIC (bu bob)</text>
+
+  <rect x="425" y="104" width="280" height="58" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="438" y="128" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">save() -&gt; null</text>
+  <text x="438" y="150" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">post_content da HTML yo'q</text>
+
+  <line x1="565" y1="162" x2="565" y2="188" stroke="#475569" stroke-width="2"/>
+  <polygon points="565,188 560,178 570,178" fill="#475569"/>
+
+  <rect x="425" y="190" width="280" height="64" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="565" y="214" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">render.php</text>
+  <text x="565" y="236" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">HER so'rovda QAYTA ishlaydi</text>
+
+  <line x1="565" y1="254" x2="565" y2="280" stroke="#475569" stroke-width="2"/>
+  <polygon points="565,280 560,270 570,270" fill="#475569"/>
+
+  <rect x="425" y="282" width="280" height="58" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="565" y="306" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Frontend: yangi HTML hisoblanadi</text>
+  <text x="565" y="328" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">doim JORIY ma'lumot</text>
+
+  <text x="565" y="368" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Ma'lumot o'zgaruvchan: so'nggi kitoblar</text>
+</svg>

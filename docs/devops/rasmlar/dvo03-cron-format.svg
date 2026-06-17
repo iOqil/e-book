@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 410" width="740" height="410">
+  <title>Cron jadval formati: beshta maydon (daqiqa, soat, oyning kuni, oy, haftaning kuni) va ularning ruxsat etilgan qiymatlari hamda amaliy misol</title>
+  <rect x="0" y="0" width="740" height="410" fill="#f8fafc"/>
+  <text x="370" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Cron jadvali: 5 maydon formati</text>
+
+  <!-- five stars -->
+  <g font-family="Consolas, monospace" font-size="30" font-weight="bold" fill="#2563eb" text-anchor="middle">
+    <text x="120" y="100">*</text>
+    <text x="240" y="100">*</text>
+    <text x="360" y="100">*</text>
+    <text x="480" y="100">*</text>
+    <text x="600" y="100">*</text>
+  </g>
+
+  <!-- connector lines -->
+  <g stroke="#94a3b8" stroke-width="1.5">
+    <line x1="120" y1="112" x2="120" y2="150"/>
+    <line x1="240" y1="112" x2="240" y2="150"/>
+    <line x1="360" y1="112" x2="360" y2="150"/>
+    <line x1="480" y1="112" x2="480" y2="150"/>
+    <line x1="600" y1="112" x2="600" y2="150"/>
+  </g>
+
+  <!-- field boxes -->
+  <g font-family="Segoe UI, system-ui, sans-serif" text-anchor="middle">
+    <rect x="60" y="152" width="120" height="62" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="120" y="176" font-size="14" font-weight="bold" fill="#1e40af">Daqiqa</text>
+    <text x="120" y="200" font-size="13" fill="#475569">0&#8211;59</text>
+
+    <rect x="180" y="152" width="120" height="62" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="240" y="176" font-size="14" font-weight="bold" fill="#1e40af">Soat</text>
+    <text x="240" y="200" font-size="13" fill="#475569">0&#8211;23</text>
+
+    <rect x="300" y="152" width="120" height="62" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="360" y="176" font-size="14" font-weight="bold" fill="#1e40af">Oy kuni</text>
+    <text x="360" y="200" font-size="13" fill="#475569">1&#8211;31</text>
+
+    <rect x="420" y="152" width="120" height="62" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="480" y="176" font-size="14" font-weight="bold" fill="#1e40af">Oy</text>
+    <text x="480" y="200" font-size="13" fill="#475569">1&#8211;12</text>
+
+    <rect x="540" y="152" width="120" height="62" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="600" y="176" font-size="14" font-weight="bold" fill="#1e40af">Hafta kuni</text>
+    <text x="600" y="200" font-size="13" fill="#475569">0&#8211;6 (0=Yak)</text>
+  </g>
+
+  <!-- meaning of star -->
+  <rect x="60" y="232" width="600" height="40" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="370" y="257" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">*  =  "har biri" (har daqiqa / har soat / har kun ...)</text>
+
+  <!-- example -->
+  <text x="60" y="306" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Misol:</text>
+  <rect x="60" y="318" width="600" height="44" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="78" y="345" font-family="Consolas, monospace" font-size="15" font-weight="bold" fill="#166534">0 3 * * *   /opt/backup.sh</text>
+
+  <text x="370" y="390" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">"Har kuni soat 03:00 da backup.sh ishga tushsin" (daqiqa=0, soat=3, qolgani *)</text>
+</svg>

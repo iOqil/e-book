@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430" font-family="Segoe UI, system-ui, sans-serif">
+  <title>temporaryUrl bilan preview mexanizmi: tanlangan fayl serverdagi vaqtinchalik papkada turadi, temporaryUrl unga vaqtincha havola beradi, brauzer img tegi orqali rasmni saqlashdan oldin ko'rsatadi</title>
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Preview: saqlashdan oldin ko'rsatish</text>
+  <text x="380" y="58" text-anchor="middle" font-size="14" fill="#475569">temporaryUrl() vaqtinchalik faylga vaqtincha havola beradi</text>
+
+  <!-- BRAUZER blok -->
+  <rect x="30" y="86" width="320" height="300" rx="12" fill="#ffffff" stroke="#c7d2fe" stroke-width="2"/>
+  <text x="190" y="114" text-anchor="middle" font-size="16" font-weight="700" fill="#4f46e5">Brauzer (mijoz)</text>
+
+  <!-- input -->
+  <rect x="60" y="132" width="260" height="48" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="190" y="153" text-anchor="middle" font-size="13" font-weight="700" fill="#1e293b">input type="file"</text>
+  <text x="190" y="171" text-anchor="middle" font-size="13" fill="#475569">wire:model="photo"</text>
+
+  <!-- img preview -->
+  <rect x="60" y="200" width="260" height="160" rx="8" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.5"/>
+  <text x="190" y="224" text-anchor="middle" font-size="13" font-weight="700" fill="#1e293b">@if ($photo)</text>
+  <rect x="120" y="238" width="140" height="86" rx="6" fill="#ffffff" stroke="#c7d2fe" stroke-width="1.5"/>
+  <circle cx="160" cy="276" r="14" fill="#fb70a9"/>
+  <path d="M120 318 L156 280 L185 304 L210 286 L260 318 Z" fill="#6366f1"/>
+  <text x="190" y="348" text-anchor="middle" font-size="13" fill="#475569">img src=temporaryUrl()</text>
+
+  <!-- SERVER blok -->
+  <rect x="430" y="86" width="300" height="300" rx="12" fill="#ffffff" stroke="#c7d2fe" stroke-width="2"/>
+  <text x="580" y="114" text-anchor="middle" font-size="16" font-weight="700" fill="#16a34a">Server</text>
+
+  <!-- vaqtinchalik papka -->
+  <rect x="460" y="140" width="240" height="100" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="580" y="166" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Vaqtinchalik papka</text>
+  <text x="580" y="190" text-anchor="middle" font-size="13" fill="#475569">livewire-tmp/...</text>
+  <rect x="540" y="202" width="120" height="26" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="600" y="220" text-anchor="middle" font-size="13" fill="#475569">tanlangan rasm</text>
+
+  <!-- preview route -->
+  <rect x="460" y="262" width="240" height="98" rx="8" fill="#eef2ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="580" y="288" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">preview-file marshruti</text>
+  <text x="580" y="312" text-anchor="middle" font-size="13" fill="#475569">imzolangan, vaqtincha</text>
+  <text x="580" y="332" text-anchor="middle" font-size="13" fill="#475569">havola (signed URL)</text>
+  <text x="580" y="350" text-anchor="middle" font-size="13" fill="#475569">faylni qaytaradi</text>
+
+  <!-- strelkalar -->
+  <!-- input -> server (yuklash) -->
+  <path d="M320 156 C380 156 380 190 458 190" fill="none" stroke="#fb70a9" stroke-width="2.5" marker-end="url(#ap)"/>
+  <text x="388" y="148" text-anchor="middle" font-size="13" fill="#fb70a9">1. yuklash</text>
+
+  <!-- server preview -> img (havola) -->
+  <path d="M458 300 C390 300 390 300 322 300" fill="none" stroke="#6366f1" stroke-width="2.5" marker-end="url(#ap)"/>
+  <text x="390" y="292" text-anchor="middle" font-size="13" fill="#6366f1">2. temporaryUrl()</text>
+
+  <!-- izoh -->
+  <text x="380" y="408" text-anchor="middle" font-size="13" fill="#94a3b8">Faqat ko'riladigan turlar uchun: jpg, png, gif, webp, svg, mp4, mp3 va h.k.</text>
+
+  <defs>
+    <marker id="ap" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 z" fill="#6366f1"/>
+    </marker>
+  </defs>
+</svg>

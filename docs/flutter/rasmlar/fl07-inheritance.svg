@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 480" width="780" height="480" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Meros (inheritance): Hayvon bazaviy klassi ovoz() metodiga ega; It va Mushuk uni extends bilan meros oladi va @override bilan o'zgartiradi, super orqali otaga murojaat qiladi</title>
+  <rect x="0" y="0" width="780" height="480" fill="#f8fafc"/>
+  <text x="390" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Meros — "bu narsa o'sha narsaning bir turi"</text>
+  <text x="390" y="58" text-anchor="middle" font-size="14" fill="#475569">It ham, Mushuk ham — Hayvon. Umumiyini bir marta yozasiz, farqini bola klassda o'zgartirasiz.</text>
+
+  <!-- Base class: Hayvon -->
+  <rect x="270" y="84" width="240" height="104" rx="14" fill="#ffffff" stroke="#9333ea" stroke-width="2.5"/>
+  <rect x="270" y="84" width="240" height="38" rx="14" fill="#9333ea"/>
+  <text x="390" y="109" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">class Hayvon</text>
+  <text x="390" y="142" text-anchor="middle" font-size="13" font-weight="700" fill="#1e293b">ota (bazaviy) klass</text>
+  <rect x="290" y="152" width="200" height="28" rx="7" fill="#f8fafc"/>
+  <text x="390" y="171" text-anchor="middle" font-size="13" font-weight="700" fill="#9333ea">String ovoz() =&gt; '...';</text>
+
+  <!-- extends lines -->
+  <line x1="390" y1="188" x2="390" y2="212" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="180" y1="212" x2="600" y2="212" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="180" y1="212" x2="180" y2="246" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="600" y1="212" x2="600" y2="246" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="180,246 174,234 186,234" fill="#94a3b8"/>
+  <polygon points="600,246 594,234 606,234" fill="#94a3b8"/>
+  <rect x="312" y="198" width="156" height="24" rx="6" fill="#027dfd"/>
+  <text x="390" y="215" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">extends Hayvon</text>
+
+  <!-- Child: It -->
+  <rect x="56" y="252" width="248" height="124" rx="14" fill="#ffffff" stroke="#027dfd" stroke-width="2.5"/>
+  <rect x="56" y="252" width="248" height="36" rx="14" fill="#027dfd"/>
+  <text x="180" y="276" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">class It extends Hayvon</text>
+  <rect x="76" y="300" width="86" height="22" rx="6" fill="#f8fafc"/>
+  <text x="119" y="316" text-anchor="middle" font-size="13" font-weight="700" fill="#f59e0b">@override</text>
+  <rect x="76" y="328" width="208" height="28" rx="7" fill="#f8fafc"/>
+  <text x="180" y="347" text-anchor="middle" font-size="13" font-weight="700" fill="#027dfd">String ovoz() =&gt; 'Vov!';</text>
+  <text x="180" y="370" text-anchor="middle" font-size="13" fill="#64748b">ovoz() ni o'ziga moslab yozadi</text>
+
+  <!-- Child: Mushuk -->
+  <rect x="476" y="252" width="248" height="124" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <rect x="476" y="252" width="248" height="36" rx="14" fill="#16a34a"/>
+  <text x="600" y="276" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">class Mushuk extends Hayvon</text>
+  <rect x="496" y="300" width="86" height="22" rx="6" fill="#f8fafc"/>
+  <text x="539" y="316" text-anchor="middle" font-size="13" font-weight="700" fill="#f59e0b">@override</text>
+  <rect x="496" y="328" width="208" height="28" rx="7" fill="#f8fafc"/>
+  <text x="600" y="347" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a">String ovoz() =&gt; 'Miyov!';</text>
+  <text x="600" y="370" text-anchor="middle" font-size="13" fill="#64748b">u ham o'z ovozini beradi</text>
+
+  <!-- super note -->
+  <rect x="250" y="404" width="280" height="58" rx="12" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="390" y="428" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">super</text>
+  <text x="390" y="450" text-anchor="middle" font-size="13" fill="#475569">bola klass ota'ning kodiga shunday murojaat qiladi</text>
+</svg>

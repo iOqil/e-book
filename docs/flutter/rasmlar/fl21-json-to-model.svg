@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 410" width="800" height="410" font-family="Segoe UI, system-ui, sans-serif">
+  <title>JSON va Dart model orasidagi ko'prik: tipsiz JSON matni {"id":1,"name":"Ali"} User.fromJson orqali tipli User obyektiga aylanadi, va toJson orqali yana JSON ga qaytadi</title>
+  <defs>
+    <marker id="fl21jmA" markerWidth="12" markerHeight="12" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#027dfd"/>
+    </marker>
+    <marker id="fl21jmB" markerWidth="12" markerHeight="12" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="800" height="410" fill="#f8fafc"/>
+  <text x="400" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">JSON ⟷ Dart model</text>
+  <text x="400" y="58" text-anchor="middle" font-size="14" fill="#475569">tipsiz JSON ni tipli obyektga aylantiramiz — va aksincha</text>
+
+  <!-- JSON side -->
+  <rect x="50" y="110" width="280" height="150" rx="14" fill="#ffffff" stroke="#64748b" stroke-width="2.5"/>
+  <text x="190" y="140" text-anchor="middle" font-size="15" font-weight="700" fill="#475569">Tipsiz JSON (matn)</text>
+  <rect x="74" y="156" width="232" height="80" rx="8" fill="#1e293b"/>
+  <text x="90" y="184" font-size="14" fill="#dbeafe" font-family="Consolas, monospace">{</text>
+  <text x="106" y="206" font-size="14" fill="#0ea5e9" font-family="Consolas, monospace">"id": 1,</text>
+  <text x="106" y="226" font-size="14" fill="#0ea5e9" font-family="Consolas, monospace">"name": "Ali"</text>
+  <text x="90" y="246" font-size="14" fill="#dbeafe" font-family="Consolas, monospace">}</text>
+
+  <!-- Model side -->
+  <rect x="470" y="110" width="280" height="150" rx="14" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="610" y="140" text-anchor="middle" font-size="15" font-weight="700" fill="#16a34a">Tipli User obyekti</text>
+  <rect x="494" y="156" width="232" height="80" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="510" y="184" font-size="14" fill="#1e293b" font-family="Consolas, monospace">class User {</text>
+  <text x="526" y="206" font-size="14" fill="#0553b1" font-family="Consolas, monospace">int id;</text>
+  <text x="526" y="226" font-size="14" fill="#0553b1" font-family="Consolas, monospace">String name;</text>
+
+  <!-- fromJson arrow (top, JSON -> model) -->
+  <path d="M332 160 L468 160" stroke="#027dfd" stroke-width="2.5" fill="none" marker-end="url(#fl21jmA)"/>
+  <rect x="338" y="128" width="124" height="28" rx="8" fill="#dbeafe" stroke="#027dfd" stroke-width="1.5"/>
+  <text x="400" y="147" text-anchor="middle" font-size="14" font-weight="700" fill="#027dfd">User.fromJson</text>
+
+  <!-- toJson arrow (bottom, model -> JSON) -->
+  <path d="M468 218 L332 218" stroke="#f59e0b" stroke-width="2.5" fill="none" marker-end="url(#fl21jmB)"/>
+  <rect x="346" y="218" width="108" height="28" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="400" y="237" text-anchor="middle" font-size="14" font-weight="700" fill="#f59e0b">user.toJson()</text>
+
+  <!-- explanation -->
+  <rect x="120" y="296" width="560" height="86" rx="12" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="400" y="324" text-anchor="middle" font-size="14" fill="#1e293b">fromJson: serverdan kelgan Map ni o'qib, tipli obyekt quradi</text>
+  <text x="400" y="348" text-anchor="middle" font-size="14" fill="#1e293b">toJson: obyektni yana Map ga aylantirib, serverga yuborishga tayyorlaydi</text>
+  <text x="400" y="372" text-anchor="middle" font-size="13" fill="#64748b">tipli obyekt = avtomatik to'ldirish + kompilyator tekshiruvi (xato kamayadi)</text>
+</svg>

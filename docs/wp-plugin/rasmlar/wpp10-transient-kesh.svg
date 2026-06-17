@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400">
+  <title>Transient kesh oqimi: so'rov keladi, transient bormi tekshiriladi, ha bo'lsa keshdan tez qaytadi, yo'q bo'lsa og'ir so'rov bajariladi va natija keshga saqlanadi</title>
+  <rect x="0" y="0" width="760" height="400" fill="#f8fafc"/>
+  <text x="380" y="34" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Transient bilan keshlash oqimi</text>
+
+  <!-- Step 1: request -->
+  <rect x="40" y="70" width="180" height="56" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="130" y="95" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">So'rov keladi</text>
+  <text x="130" y="114" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">"Top 10 kitob?"</text>
+
+  <!-- arrow -->
+  <path d="M220 98 L300 98" stroke="#94a3b8" stroke-width="2"/>
+  <path d="M300 98 l-10 -5 l0 10 z" fill="#94a3b8"/>
+
+  <!-- Step 2: decision -->
+  <path d="M390 64 L470 110 L390 156 L310 110 Z" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="390" y="106" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">get_transient</text>
+  <text x="390" y="124" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">bormi?</text>
+
+  <!-- HIT branch (right, up) -->
+  <path d="M470 110 L560 110" stroke="#16a34a" stroke-width="2"/>
+  <path d="M560 110 l-10 -5 l0 10 z" fill="#16a34a"/>
+  <text x="515" y="100" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a" text-anchor="middle">HA (HIT)</text>
+  <rect x="560" y="82" width="170" height="56" rx="10" fill="#16a34a"/>
+  <text x="645" y="107" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Keshdan qaytar</text>
+  <text x="645" y="126" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dcfce7" text-anchor="middle">tez, DB so'rovsiz</text>
+
+  <!-- MISS branch (down) -->
+  <path d="M390 156 L390 210" stroke="#dc2626" stroke-width="2"/>
+  <path d="M390 210 l-5 -10 l10 0 z" fill="#dc2626"/>
+  <text x="430" y="188" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626" text-anchor="middle">YO'Q (MISS)</text>
+
+  <rect x="270" y="210" width="240" height="58" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="390" y="235" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">Og'ir so'rovni bajar</text>
+  <text x="390" y="255" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">GROUP BY + COUNT (sekin)</text>
+
+  <!-- to save -->
+  <path d="M390 268 L390 308" stroke="#94a3b8" stroke-width="2"/>
+  <path d="M390 308 l-5 -10 l10 0 z" fill="#94a3b8"/>
+
+  <rect x="250" y="308" width="280" height="58" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="390" y="333" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">set_transient( natija, 1 soat )</text>
+  <text x="390" y="353" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">va natijani qaytar</text>
+
+  <!-- next request hint -->
+  <path d="M250 337 C150 337 130 200 130 132" stroke="#7c3aed" stroke-width="2" stroke-dasharray="6 4" fill="none"/>
+  <path d="M130 132 l-5 10 l10 0 z" fill="#7c3aed"/>
+  <text x="120" y="250" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#7c3aed" text-anchor="middle" transform="rotate(-90 120 250)">keyingi so'rov endi HIT</text>
+</svg>

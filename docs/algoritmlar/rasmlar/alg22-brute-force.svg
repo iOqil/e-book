@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 470">
+  <title>Brute force g'oyasi: kirishdan barcha mumkin nomzodlarni hosil qilish, har birini tekshirish va to'g'ri yoki eng yaxshi yechimni tanlash</title>
+  <rect x="0" y="0" width="860" height="470" fill="#f8fafc"/>
+  <text x="430" y="38" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Brute force: barcha variantlarni sinash g'oyasi</text>
+  <text x="430" y="64" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Hosil qil → har birini tekshir → to'g'ri / eng yaxshisini tanla</text>
+
+  <!-- kirish -->
+  <rect x="40" y="200" width="130" height="70" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="105" y="232" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">Kirish</text>
+  <text x="105" y="254" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">masala ma'lumoti</text>
+
+  <!-- arrow 1 -->
+  <line x1="170" y1="235" x2="225" y2="235" stroke="#334155" stroke-width="2"/>
+  <polygon points="225,229 237,235 225,241" fill="#334155"/>
+
+  <!-- barcha nomzodlar -->
+  <rect x="240" y="120" width="200" height="230" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="340" y="146" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#7c3aed">Barcha nomzodlar</text>
+  <text x="340" y="166" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">(yechim fazosi)</text>
+
+  <rect x="262" y="182" width="156" height="26" rx="5" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.2"/>
+  <text x="340" y="200" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">nomzod 1</text>
+  <rect x="262" y="216" width="156" height="26" rx="5" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.2"/>
+  <text x="340" y="234" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">nomzod 2</text>
+  <rect x="262" y="250" width="156" height="26" rx="5" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.2"/>
+  <text x="340" y="268" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">nomzod 3</text>
+  <text x="340" y="294" text-anchor="middle" font-family="monospace" font-size="14" fill="#7c3aed">...</text>
+  <rect x="262" y="304" width="156" height="26" rx="5" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.2"/>
+  <text x="340" y="322" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">nomzod N</text>
+
+  <!-- arrow 2 -->
+  <line x1="440" y1="235" x2="495" y2="235" stroke="#334155" stroke-width="2"/>
+  <polygon points="495,229 507,235 495,241" fill="#334155"/>
+
+  <!-- tekshirish -->
+  <rect x="510" y="160" width="150" height="150" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="585" y="186" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#d97706">Har birini</text>
+  <text x="585" y="206" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#d97706">tekshirish</text>
+  <text x="585" y="234" text-anchor="middle" font-family="monospace" font-size="13" fill="#dc2626">nomzod 1 ✗</text>
+  <text x="585" y="256" text-anchor="middle" font-family="monospace" font-size="13" fill="#dc2626">nomzod 2 ✗</text>
+  <text x="585" y="278" text-anchor="middle" font-family="monospace" font-size="13" fill="#16a34a">nomzod 3 ✓</text>
+  <text x="585" y="300" text-anchor="middle" font-family="monospace" font-size="13" fill="#dc2626">...        ✗</text>
+
+  <!-- arrow 3 -->
+  <line x1="660" y1="235" x2="715" y2="235" stroke="#334155" stroke-width="2"/>
+  <polygon points="715,229 727,235 715,241" fill="#334155"/>
+
+  <!-- natija -->
+  <rect x="730" y="200" width="100" height="70" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="780" y="230" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">Eng yaxshi</text>
+  <text x="780" y="250" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">yechim</text>
+
+  <text x="430" y="400" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">Eng sodda va eng umumiy strategiya: agar fazo cheklangan bo'lsa, javob har doim to'g'ri.</text>
+  <text x="430" y="430" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#7c3aed">narx ≈ (nomzodlar soni) × (bitta tekshiruv narxi)</text>
+</svg>

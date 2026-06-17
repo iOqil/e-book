@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420">
+  <title>wp-env test oqimi: wp-env tests-wordpress konteynerni ko'taradi, bootstrap WP test suite va plugin'ni yuklaydi, PHPUnit WP_UnitTestCase testlarini ishga tushiradi</title>
+  <defs>
+    <marker id="b-arr" markerWidth="13" markerHeight="13" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">wp-env bilan integration test oqimi</text>
+  <text x="380" y="56" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">test alohida konteyner va test-DB'da ishlaydi</text>
+
+  <!-- Step 1: wp-env -->
+  <rect x="40" y="90" width="200" height="80" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="140" y="120" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">wp-env start</text>
+  <text x="140" y="142" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Docker muhitini</text>
+  <text x="140" y="160" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">ko'taradi (2-bob)</text>
+
+  <!-- Step 2: tests-wordpress container -->
+  <rect x="290" y="80" width="220" height="100" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="400" y="110" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">tests-wordpress</text>
+  <text x="400" y="132" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">alohida test instansi</text>
+  <text x="400" y="150" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(:8889) + test-DB</text>
+  <text x="400" y="168" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">+ wp-tests-config.php</text>
+
+  <!-- Step 3: bootstrap -->
+  <rect x="560" y="90" width="170" height="80" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="645" y="118" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#7c3aed">bootstrap.php</text>
+  <text x="645" y="140" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">WP test suite +</text>
+  <text x="645" y="158" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">plugin'ni yuklaydi</text>
+
+  <line x1="240" y1="130" x2="285" y2="130" stroke="#475569" stroke-width="2" marker-end="url(#b-arr)"/>
+  <line x1="510" y1="130" x2="555" y2="130" stroke="#475569" stroke-width="2" marker-end="url(#b-arr)"/>
+
+  <!-- Step 4: PHPUnit -->
+  <rect x="290" y="240" width="220" height="80" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="400" y="270" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">PHPUnit</text>
+  <text x="400" y="292" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">WP_UnitTestCase</text>
+  <text x="400" y="310" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">testlarni ishga tushiradi</text>
+
+  <line x1="645" y1="170" x2="645" y2="280" stroke="#475569" stroke-width="2"/>
+  <line x1="645" y1="280" x2="515" y2="280" stroke="#475569" stroke-width="2" marker-end="url(#b-arr)"/>
+
+  <!-- Step 5: per-test rollback -->
+  <rect x="40" y="240" width="200" height="80" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="140" y="268" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">har test:</text>
+  <text x="140" y="290" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">set_up -> factory -></text>
+  <text x="140" y="308" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">assert -> DB rollback</text>
+
+  <line x1="290" y1="280" x2="245" y2="280" stroke="#475569" stroke-width="2" marker-end="url(#b-arr)"/>
+
+  <!-- result -->
+  <rect x="245" y="356" width="270" height="44" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="383" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">Natija: yashil (o'tdi) / qizil (yiqildi)</text>
+
+  <line x1="400" y1="320" x2="400" y2="352" stroke="#475569" stroke-width="2" marker-end="url(#b-arr)"/>
+</svg>

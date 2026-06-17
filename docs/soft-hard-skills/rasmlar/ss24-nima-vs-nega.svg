@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 500">
+  <title>Kod izohi: nima vs nega - yomon izoh va yaxshi izoh taqqosi</title>
+  <rect x="0" y="0" width="860" height="500" fill="#f8fafc"/>
+  <text x="430" y="40" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Kod izohi: "nima" emas, "nega"</text>
+  <text x="430" y="66" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Kodning o'zi "nima"ni aytadi; izoh "nega"ni aytsin</text>
+
+  <!-- Bad column -->
+  <rect x="40" y="100" width="370" height="320" rx="12" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="225" y="135" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="bold" fill="#dc2626">Yomon izoh ("nima")</text>
+  <text x="225" y="158" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Kod allaqachon aytayotganini takrorlaydi</text>
+
+  <rect x="65" y="180" width="320" height="60" rx="8" fill="#ffffff" stroke="#fca5a5" stroke-width="1.5"/>
+  <text x="80" y="205" font-family="Segoe UI" font-size="14" fill="#334155">i = i + 1</text>
+  <text x="80" y="228" font-family="Segoe UI" font-size="13" fill="#dc2626">// i ni bittaga oshiramiz</text>
+
+  <rect x="65" y="255" width="320" height="60" rx="8" fill="#ffffff" stroke="#fca5a5" stroke-width="1.5"/>
+  <text x="80" y="280" font-family="Segoe UI" font-size="14" fill="#334155">kutish(100)</text>
+  <text x="80" y="303" font-family="Segoe UI" font-size="13" fill="#dc2626">// 100 ms kutamiz</text>
+
+  <text x="225" y="350" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Shovqin. Hech qanday yangi</text>
+  <text x="225" y="370" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">ma'lumot bermaydi. Kod</text>
+  <text x="225" y="390" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">o'zgarsa izoh yolg'onga aylanadi.</text>
+
+  <!-- Good column -->
+  <rect x="450" y="100" width="370" height="320" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="635" y="135" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="bold" fill="#16a34a">Yaxshi izoh ("nega")</text>
+  <text x="635" y="158" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Koddan ko'rinmaydigan sababni aytadi</text>
+
+  <rect x="475" y="180" width="320" height="60" rx="8" fill="#ffffff" stroke="#86efac" stroke-width="1.5"/>
+  <text x="490" y="205" font-family="Segoe UI" font-size="14" fill="#334155">urinish = urinish + 1</text>
+  <text x="490" y="228" font-family="Segoe UI" font-size="13" fill="#16a34a">// 3-urinishda API bloklaydi</text>
+
+  <rect x="475" y="255" width="320" height="60" rx="8" fill="#ffffff" stroke="#86efac" stroke-width="1.5"/>
+  <text x="490" y="280" font-family="Segoe UI" font-size="14" fill="#334155">kutish(100)</text>
+  <text x="490" y="303" font-family="Segoe UI" font-size="13" fill="#16a34a">// rate limitdan oshmaslik uchun</text>
+
+  <text x="635" y="350" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Kontekst. O'quvchi koddan</text>
+  <text x="635" y="370" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">topa olmaydigan "nega"ni</text>
+  <text x="635" y="390" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">tushuntiradi - vaqtni tejaydi.</text>
+
+  <text x="430" y="462" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">Eng yaxshisi: o'zini tushuntiradigan kod nomi (urinish) + faqat zarur "nega" izohi.</text>
+</svg>

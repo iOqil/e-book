@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" width="760" height="470">
+  <title>systemd unit fayl tuzilishi: uch bo'lim — Unit (Description, After=network.target), Service (Type, User, WorkingDirectory, Environment, ExecStart, Restart, RestartSec) va Install (WantedBy=multi-user.target) — va har bo'lim qaysi savolga javob berishi</title>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">vazifalar.service — unit fayl uch bo'limi</text>
+
+  <!-- [Unit] -->
+  <rect x="40" y="58" width="420" height="92" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="60" y="84" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e40af">[Unit]</text>
+  <text x="60" y="110" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">Description=Vazifalar API (Node.js)</text>
+  <text x="60" y="134" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">After=network.target</text>
+  <!-- izoh -->
+  <rect x="480" y="58" width="240" height="92" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="600" y="98" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#92400e">Xizmat haqida + tartib</text>
+  <text x="600" y="122" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">"nima bu, qachon</text>
+  <text x="600" y="140" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">ishga tushsin?"</text>
+
+  <!-- [Service] -->
+  <rect x="40" y="166" width="420" height="194" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="60" y="192" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#166534">[Service]</text>
+  <text x="60" y="216" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">Type=simple</text>
+  <text x="60" y="238" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">User=deploy   Group=deploy</text>
+  <text x="60" y="260" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">WorkingDirectory=/opt/vazifalar-api</text>
+  <text x="60" y="282" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">Environment=PORT=3000</text>
+  <text x="60" y="306" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#166534">ExecStart=/usr/bin/node app.js</text>
+  <text x="60" y="328" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">Restart=on-failure</text>
+  <text x="60" y="350" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">RestartSec=5</text>
+  <!-- izoh -->
+  <rect x="480" y="166" width="240" height="194" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="600" y="216" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#92400e">Qanday ishlasin?</text>
+  <text x="600" y="244" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">ExecStart = to'liq yo'l</text>
+  <text x="600" y="268" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(PATH ishlatilmaydi)</text>
+  <text x="600" y="300" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">Restart = qulasa</text>
+  <text x="600" y="318" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">tikla (auto)</text>
+
+  <!-- [Install] -->
+  <rect x="40" y="376" width="420" height="74" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="60" y="402" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#7c3aed">[Install]</text>
+  <text x="60" y="428" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">WantedBy=multi-user.target</text>
+  <!-- izoh -->
+  <rect x="480" y="376" width="240" height="74" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="600" y="406" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#92400e">Boot'da yoqilsinmi?</text>
+  <text x="600" y="430" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">enable -> reboot'da ko'tar</text>
+</svg>

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 480" font-family="Segoe UI">
+  <title>Bisection: xatoni binar qidiruv bilan torlash, oraliqni yarimlash</title>
+  <rect x="0" y="0" width="860" height="480" fill="#f8fafc"/>
+
+  <text x="430" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#1e293b">Bisection - oraliqni yarimlash</text>
+  <text x="430" y="62" text-anchor="middle" font-size="14" fill="#64748b">Har tekshiruvda qidiruv maydonini ikkiga bo'lib qisqartiramiz</text>
+
+  <!-- Legend -->
+  <rect x="60" y="86" width="18" height="18" rx="3" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="86" y="100" font-size="13" fill="#334155">ishlaydi (yaxshi)</text>
+  <rect x="240" y="86" width="18" height="18" rx="3" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="266" y="100" font-size="13" fill="#334155">buzilgan (yomon)</text>
+  <rect x="420" y="86" width="18" height="18" rx="3" fill="#fef9c3" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="446" y="100" font-size="13" fill="#334155">hozir tekshirilayotgan (o'rta)</text>
+
+  <!-- Helper for a row of 8 commits -->
+  <!-- Row 1: 8 noma'lum, faqat chekka ma'lum -->
+  <text x="60" y="146" font-size="14" fill="#64748b">Boshlanish:</text>
+  <g>
+    <rect x="180" y="130" width="60" height="34" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+    <rect x="244" y="130" width="60" height="34" rx="5" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+    <rect x="308" y="130" width="60" height="34" rx="5" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+    <rect x="372" y="130" width="60" height="34" rx="5" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+    <rect x="436" y="130" width="60" height="34" rx="5" fill="#fef9c3" stroke="#f59e0b" stroke-width="2"/>
+    <rect x="500" y="130" width="60" height="34" rx="5" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+    <rect x="564" y="130" width="60" height="34" rx="5" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+    <rect x="628" y="130" width="60" height="34" rx="5" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+    <text x="210" y="152" text-anchor="middle" font-size="14" fill="#16a34a">c1</text>
+    <text x="466" y="152" text-anchor="middle" font-size="14" fill="#f59e0b" font-weight="bold">c5</text>
+    <text x="658" y="152" text-anchor="middle" font-size="14" fill="#dc2626">c8</text>
+  </g>
+  <text x="700" y="152" font-size="13" fill="#64748b">8 nomzod</text>
+
+  <!-- Row 2: c5 yaxshi chiqdi, chap yarmi tushadi -->
+  <text x="60" y="216" font-size="14" fill="#64748b">c5 yaxshi:</text>
+  <g>
+    <rect x="436" y="200" width="60" height="34" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+    <rect x="500" y="200" width="60" height="34" rx="5" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+    <rect x="564" y="200" width="60" height="34" rx="5" fill="#fef9c3" stroke="#f59e0b" stroke-width="2"/>
+    <rect x="628" y="200" width="60" height="34" rx="5" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+    <text x="466" y="222" text-anchor="middle" font-size="14" fill="#16a34a">c5</text>
+    <text x="594" y="222" text-anchor="middle" font-size="14" fill="#f59e0b" font-weight="bold">c7</text>
+    <text x="658" y="222" text-anchor="middle" font-size="14" fill="#dc2626">c8</text>
+  </g>
+  <text x="700" y="222" font-size="13" fill="#64748b">3 qoldi</text>
+
+  <!-- Row 3: c7 yomon chiqdi -->
+  <text x="60" y="286" font-size="14" fill="#64748b">c7 yomon:</text>
+  <g>
+    <rect x="436" y="270" width="60" height="34" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+    <rect x="500" y="270" width="60" height="34" rx="5" fill="#fef9c3" stroke="#f59e0b" stroke-width="2"/>
+    <rect x="564" y="270" width="60" height="34" rx="5" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+    <text x="466" y="292" text-anchor="middle" font-size="14" fill="#16a34a">c5</text>
+    <text x="530" y="292" text-anchor="middle" font-size="14" fill="#f59e0b" font-weight="bold">c6</text>
+    <text x="594" y="292" text-anchor="middle" font-size="14" fill="#dc2626">c7</text>
+  </g>
+  <text x="700" y="292" font-size="13" fill="#64748b">2 qoldi</text>
+
+  <!-- Row 4: topildi -->
+  <text x="60" y="356" font-size="14" fill="#64748b">c6 yomon:</text>
+  <g>
+    <rect x="500" y="340" width="60" height="34" rx="5" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5"/>
+    <text x="530" y="362" text-anchor="middle" font-size="14" fill="#dc2626" font-weight="bold">c6</text>
+  </g>
+  <text x="580" y="362" font-size="14" fill="#dc2626" font-weight="bold">topildi! aybdor = c6</text>
+
+  <!-- Conclusion box -->
+  <rect x="60" y="404" width="740" height="56" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="80" y="430" font-size="14" fill="#1e293b" font-weight="bold">8 nomzod -> 3 ta tekshiruvda topildi (log2 8 = 3).</text>
+  <text x="80" y="450" font-size="13" fill="#334155">Bir-bir tekshirsangiz 7 tagacha urinish kerak edi. Bu mantiq = git bisect.</text>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 480">
+  <title>Dependency injection: yashirin now va random o'rniga soat va RNG obyektlari tashqaridan beriladi, shunda test soxta soat va seedli RNG bilan natijani boshqaradi</title>
+  <rect x="0" y="0" width="820" height="480" fill="#f8fafc"/>
+  <text x="410" y="40" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Bog'liqlikni inject qilish</text>
+  <text x="410" y="66" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Yashirin manbani obyektga aylantirib, tashqaridan uzating</text>
+
+  <!-- YOMON: ichkarida -->
+  <rect x="40" y="100" width="340" height="330" rx="12" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="210" y="130" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#991b1b">❌ Yashirin (ichkarida)</text>
+  <rect x="80" y="160" width="260" height="120" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="210" y="200" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">Token</text>
+  <text x="210" y="228" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">now() <tspan font-weight="bold">ichkarida chaqiriladi</tspan></text>
+  <text x="210" y="252" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">random ichkarida</text>
+  <text x="210" y="320" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#991b1b">Test vaqtni boshqara olmaydi</text>
+  <text x="210" y="345" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#991b1b">-&gt; flaky</text>
+  <text x="210" y="395" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">nodeterministik yadro</text>
+
+  <!-- YAXSHI: inject -->
+  <rect x="440" y="100" width="340" height="330" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="610" y="130" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#166534">✅ Inject (tashqaridan)</text>
+  <rect x="480" y="160" width="260" height="80" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="610" y="195" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">Token(yaratilgan, soat)</text>
+  <text x="610" y="222" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#166534">soat.hozir() — inject qilingan</text>
+
+  <rect x="480" y="290" width="120" height="56" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="540" y="313" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#1e40af">SoxtaSoat</text>
+  <text x="540" y="333" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e40af">qotirilgan vaqt</text>
+  <rect x="620" y="290" width="120" height="56" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="680" y="313" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#5b21b6">Random(42)</text>
+  <text x="680" y="333" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#5b21b6">seedli RNG</text>
+  <line x1="540" y1="290" x2="560" y2="242" stroke="#2563eb" stroke-width="2"/>
+  <polygon points="563,240 551,242 556,250" fill="#2563eb"/>
+  <line x1="680" y1="290" x2="660" y2="242" stroke="#7c3aed" stroke-width="2"/>
+  <polygon points="657,240 669,242 664,250" fill="#7c3aed"/>
+  <text x="610" y="400" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#166534">Test natijani to'liq boshqaradi</text>
+  <text x="610" y="420" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">deterministik yadro</text>
+
+  <text x="410" y="465" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Bir naqsh: vaqt, tasodif, UUID — hammasi tashqaridan beriladi</text>
+</svg>

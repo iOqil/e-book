@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 520">
+  <title>Bank-jamg'arma analogiyasi: arzon amallarda ortiqcha to'lov kredit sifatida yig'iladi, qimmat amalda esa yig'ilgan kreditdan sarflanadi, balans hech qachon manfiy bo'lmaydi</title>
+  <rect x="0" y="0" width="880" height="520" fill="#f8fafc"/>
+  <text x="440" y="36" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Buxgalterlik / potensial usuli: jamg'arma analogiyasi</text>
+  <text x="440" y="62" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Arzon amallar &quot;kredit&quot; yig'adi; qimmat amal o'sha kreditdan to'laydi — balans ≥ 0</text>
+
+  <!-- left: cheap operation deposits -->
+  <rect x="60" y="100" width="340" height="150" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="230" y="128" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a">Arzon append (O(1))</text>
+  <text x="230" y="155" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">To'laydi: 3 birlik</text>
+  <text x="230" y="178" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Sarflaydi: 1 (yozish)</text>
+  <text x="230" y="201" text-anchor="middle" font-family="monospace" font-size="14" fill="#16a34a">+2 birlik → jamg'armaga</text>
+  <text x="230" y="228" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">(kelajakdagi nusxalash uchun zaxira)</text>
+
+  <!-- arrow to bank -->
+  <line x1="400" y1="175" x2="475" y2="175" stroke="#2563eb" stroke-width="2.5"/>
+  <polygon points="475,175 463,169 463,181" fill="#2563eb"/>
+  <text x="437" y="165" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#2563eb">depozit</text>
+
+  <!-- bank in middle -->
+  <rect x="480" y="100" width="320" height="150" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="640" y="128" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb">Jamg'arma (potensial Φ)</text>
+  <!-- coin stacks -->
+  <g fill="#f59e0b" stroke="#d97706" stroke-width="1">
+    <ellipse cx="560" cy="220" rx="22" ry="7"/>
+    <ellipse cx="560" cy="210" rx="22" ry="7"/>
+    <ellipse cx="560" cy="200" rx="22" ry="7"/>
+    <ellipse cx="640" cy="220" rx="22" ry="7"/>
+    <ellipse cx="640" cy="210" rx="22" ry="7"/>
+    <ellipse cx="640" cy="200" rx="22" ry="7"/>
+    <ellipse cx="640" cy="190" rx="22" ry="7"/>
+    <ellipse cx="720" cy="220" rx="22" ry="7"/>
+    <ellipse cx="720" cy="210" rx="22" ry="7"/>
+  </g>
+  <text x="640" y="160" text-anchor="middle" font-family="monospace" font-size="14" fill="#334155">balans = yig'ilgan kredit ≥ 0</text>
+
+  <!-- expensive operation -->
+  <rect x="200" y="300" width="480" height="120" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="440" y="328" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#dc2626">Qimmat append: sig'im to'ldi → ikkilantirish (O(n))</text>
+  <text x="440" y="355" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Haqiqiy narx: n ta eski elementni nusxalash</text>
+  <text x="440" y="380" text-anchor="middle" font-family="monospace" font-size="14" fill="#dc2626">Jamg'armadan to'lanadi — har element 2 birlik kredit yig'ib qo'ygan</text>
+  <text x="440" y="403" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Shuning uchun ko'rinadigan (amortized) narx baribir O(1)</text>
+
+  <!-- arrow bank -> expensive -->
+  <line x1="630" y1="250" x2="520" y2="300" stroke="#dc2626" stroke-width="2.5"/>
+  <polygon points="520,300 528,288 532,299" fill="#dc2626"/>
+  <text x="600" y="285" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">yechib olish</text>
+
+  <!-- formula footer -->
+  <rect x="160" y="450" width="560" height="46" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="440" y="479" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#7c3aed">amortized = haqiqiy_narx + (Φ_keyin − Φ_oldin)</text>
+</svg>

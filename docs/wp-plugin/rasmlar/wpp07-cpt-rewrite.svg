@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420">
+  <title>CPT slug kitob URL kitob nom ga aylanadi va flush_rewrite_rules faqat aktivatsiyada chaqiriladi</title>
+  <defs>
+    <marker id="rw-arr" markerWidth="13" markerHeight="13" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Slug, permalink va flush qoidasi</text>
+  <text x="380" y="54" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">rewrite['slug'] toza URL beradi — lekin qoidalarni bir marta yangilash kerak</text>
+
+  <!-- slug -->
+  <rect x="40" y="86" width="210" height="64" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="145" y="112" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">rewrite =></text>
+  <text x="145" y="134" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e40af">[ 'slug' => 'kitob' ]</text>
+
+  <line x1="250" y1="118" x2="298" y2="118" stroke="#475569" stroke-width="2" marker-end="url(#rw-arr)"/>
+
+  <!-- URL natija -->
+  <rect x="300" y="86" width="420" height="64" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="510" y="112" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">Toza URL hosil bo'ladi</text>
+  <text x="510" y="134" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">sayt.uz/kitob/qardoshlar/</text>
+
+  <!-- Muammo / yechim ajratuvchi -->
+  <line x1="40" y1="180" x2="720" y2="180" stroke="#e2e8f0" stroke-width="2"/>
+
+  <!-- 404 muammo -->
+  <rect x="40" y="200" width="330" height="100" rx="10" fill="#fff" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="205" y="226" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">Muammo: 404 xato</text>
+  <text x="58" y="252" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">WordPress yangi slug qoidasini hali</text>
+  <text x="58" y="272" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">bilmaydi — qoidalar keshlangan.</text>
+  <text x="58" y="292" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Yechim: qoidalarni yangilash kerak.</text>
+
+  <!-- to'g'ri naqsh -->
+  <rect x="390" y="200" width="330" height="100" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="555" y="226" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">flush_rewrite_rules() — to'g'ri joy</text>
+  <text x="408" y="252" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">FAQAT register_activation_hook da</text>
+  <text x="408" y="272" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">1) avval CPT ro'yxatga olinadi</text>
+  <text x="408" y="292" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">2) keyin flush — bir martagina</text>
+
+  <!-- ogohlantirish -->
+  <rect x="40" y="324" width="680" height="46" rx="10" fill="#fff" stroke="#dc2626" stroke-width="2"/>
+  <text x="380" y="352" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">HECH QACHON init da yoki har so'rovda flush qilmang — bu juda qimmat operatsiya!</text>
+
+  <text x="380" y="398" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Slug o'zgartirsangiz: plugin'ni qayta faollashtiring yoki Doimiy havolalar sahifasini saqlang.</text>
+</svg>

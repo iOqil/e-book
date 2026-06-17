@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440">
+  <title>WebSocket upgrade handshake: klient Upgrade websocket headeri bilan so'rov yuboradi, Nginx proxy_http_version 1.1 va Connection upgrade headerlari bilan uni ilovaga uzatadi, ilova 101 Switching Protocols qaytaradi va doimiy ikki tomonlama WebSocket ulanishi ochiladi</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">WebSocket: Upgrade handshake Nginx orqali</text>
+
+  <!-- columns -->
+  <rect x="60" y="64" width="160" height="44" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="140" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Klient</text>
+
+  <rect x="300" y="64" width="160" height="44" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="380" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Nginx</text>
+
+  <rect x="540" y="64" width="160" height="44" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="620" y="92" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Node ilova</text>
+
+  <!-- lifelines -->
+  <line x1="140" y1="108" x2="140" y2="400" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <line x1="380" y1="108" x2="380" y2="400" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <line x1="620" y1="108" x2="620" y2="400" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,4"/>
+
+  <!-- step 1: client -> nginx Upgrade -->
+  <line x1="140" y1="150" x2="378" y2="150" stroke="#2563eb" stroke-width="2.5" marker-end="url(#blue)"/>
+  <text x="258" y="140" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e40af">GET /ws/  Upgrade: websocket</text>
+
+  <!-- step 2: nginx -> app, http1.1 + upgrade -->
+  <line x1="380" y1="200" x2="618" y2="200" stroke="#16a34a" stroke-width="2.5" marker-end="url(#green)"/>
+  <text x="500" y="190" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#166534">HTTP/1.1  Connection: upgrade</text>
+
+  <!-- box explaining nginx settings -->
+  <rect x="252" y="216" width="256" height="48" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="380" y="236" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">proxy_http_version 1.1;</text>
+  <text x="380" y="256" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">Upgrade $http_upgrade;</text>
+
+  <!-- step 3: app -> nginx 101 -->
+  <line x1="620" y1="296" x2="382" y2="296" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#purple)"/>
+  <text x="500" y="286" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#5b21b6">101 Switching Protocols</text>
+
+  <!-- step 4: nginx -> client 101 -->
+  <line x1="378" y1="330" x2="140" y2="330" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#purple)"/>
+  <text x="258" y="320" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#5b21b6">101 Switching Protocols</text>
+
+  <!-- persistent connection -->
+  <line x1="140" y1="372" x2="618" y2="372" stroke="#16a34a" stroke-width="3.5" marker-start="url(#greenS)" marker-end="url(#green)"/>
+  <text x="380" y="396" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#166534">Doimiy ikki tomonlama WebSocket ulanishi (uzun proxy_read_timeout)</text>
+
+  <defs>
+    <marker id="blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="green" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+    <marker id="greenS" markerWidth="10" markerHeight="10" refX="2" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M8,0 L0,3 L8,6 Z" fill="#16a34a"/>
+    </marker>
+    <marker id="purple" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#7c3aed"/>
+    </marker>
+  </defs>
+</svg>

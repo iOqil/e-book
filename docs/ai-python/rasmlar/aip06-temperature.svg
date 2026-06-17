@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400" font-family="Segoe UI, system-ui, sans-serif">
+  <title>temperature shkalasi: past qiymat aniq va takrorlanuvchi, yuqori qiymat ijodiy va xilma-xil javob beradi</title>
+  <rect x="0" y="0" width="760" height="400" fill="#f8fafc"/>
+  <text x="380" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">temperature: aniqlikdan ijodgacha</text>
+
+  <!-- Gradient bar -->
+  <defs>
+    <linearGradient id="tg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0ea5e9"/>
+      <stop offset="0.5" stop-color="#6366f1"/>
+      <stop offset="1" stop-color="#dc2626"/>
+    </linearGradient>
+    <marker id="ar6t" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect x="60" y="80" width="640" height="34" rx="17" fill="url(#tg)"/>
+  <text x="78" y="103" font-size="15" font-weight="700" fill="#ffffff">0.0</text>
+  <text x="370" y="103" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">0.7</text>
+  <text x="676" y="103" text-anchor="end" font-size="15" font-weight="700" fill="#ffffff">~1.5</text>
+
+  <!-- ticks -->
+  <line x1="60" y1="118" x2="60" y2="132" stroke="#64748b" stroke-width="2"/>
+  <line x1="380" y1="118" x2="380" y2="132" stroke="#64748b" stroke-width="2"/>
+  <line x1="700" y1="118" x2="700" y2="132" stroke="#64748b" stroke-width="2"/>
+  <text x="60" y="150" text-anchor="middle" font-size="14" fill="#475569">past</text>
+  <text x="380" y="150" text-anchor="middle" font-size="14" fill="#475569">o'rta (standart)</text>
+  <text x="700" y="150" text-anchor="middle" font-size="14" fill="#475569">yuqori</text>
+
+  <!-- Low box -->
+  <rect x="60" y="180" width="300" height="170" rx="14" fill="#ffffff" stroke="#0ea5e9" stroke-width="2"/>
+  <rect x="60" y="180" width="300" height="38" rx="14" fill="#e0f2fe"/>
+  <text x="210" y="205" text-anchor="middle" font-size="16" font-weight="700" fill="#0284c7">Past (0.0 - 0.3)</text>
+  <text x="80" y="244" font-size="14" fill="#1e293b">Aniq, deterministikroq</text>
+  <text x="80" y="268" font-size="14" fill="#1e293b">Takrorlanuvchi javob</text>
+  <text x="80" y="292" font-size="14" fill="#1e293b">Kam "syurpriz"</text>
+  <text x="80" y="324" font-size="14" font-weight="700" fill="#0284c7">Mos: faktik, JSON,</text>
+  <text x="80" y="343" font-size="14" font-weight="700" fill="#0284c7">tasnif, ma'lumot ajratish</text>
+
+  <!-- High box -->
+  <rect x="400" y="180" width="300" height="170" rx="14" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <rect x="400" y="180" width="300" height="38" rx="14" fill="#fee2e2"/>
+  <text x="550" y="205" text-anchor="middle" font-size="16" font-weight="700" fill="#dc2626">Yuqori (0.8 - 1.2)</text>
+  <text x="420" y="244" font-size="14" fill="#1e293b">Ijodiy, xilma-xil</text>
+  <text x="420" y="268" font-size="14" fill="#1e293b">Har safar boshqacha</text>
+  <text x="420" y="292" font-size="14" fill="#1e293b">Ko'p "syurpriz"</text>
+  <text x="420" y="324" font-size="14" font-weight="700" fill="#dc2626">Mos: hikoya, reklama,</text>
+  <text x="420" y="343" font-size="14" font-weight="700" fill="#dc2626">g'oyalar, brainstorm</text>
+
+  <line x1="360" y1="265" x2="398" y2="265" stroke="#475569" stroke-width="2.5" marker-end="url(#ar6t)"/>
+  <text x="380" y="382" text-anchor="middle" font-size="14" fill="#64748b">Past = ishonchli, Yuqori = ijodiy. Vazifaga qarab tanlang.</text>
+</svg>

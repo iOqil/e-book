@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Hybrid search: kalit so'z (BM25) qidiruv va vektor (semantik) qidiruv natijalarini birlashtirish</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">Hybrid search: kalit so'z + semantik</text>
+
+  <defs>
+    <marker id="hb" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <!-- Query -->
+  <rect x="280" y="62" width="200" height="48" rx="12" fill="#ffffff" stroke="#1e293b" stroke-width="2"/>
+  <text x="380" y="91" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">Foydalanuvchi savoli</text>
+
+  <line x1="330" y1="112" x2="200" y2="156" stroke="#64748b" stroke-width="2.5" marker-end="url(#hb)"/>
+  <line x1="430" y1="112" x2="560" y2="156" stroke="#64748b" stroke-width="2.5" marker-end="url(#hb)"/>
+
+  <!-- LEFT: keyword / BM25 -->
+  <rect x="40" y="160" width="280" height="150" rx="14" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="40" y="160" width="280" height="38" rx="14" fill="#fef3c7"/>
+  <text x="180" y="185" text-anchor="middle" font-size="16" font-weight="700" fill="#b45309">Kalit so'z (BM25)</text>
+  <text x="60" y="222" font-size="13" fill="#475569">aniq so'z mosligi: "error 504"</text>
+  <text x="60" y="244" font-size="13" fill="#475569">kod, ID, nom, atama uchun zo'r</text>
+  <text x="60" y="266" font-size="13" fill="#1e293b">+ kuchli: aniq termin</text>
+  <text x="60" y="288" font-size="13" fill="#dc2626">- zaif: sinonim, ma'no</text>
+
+  <!-- RIGHT: vector / semantic -->
+  <rect x="440" y="160" width="280" height="150" rx="14" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <rect x="440" y="160" width="280" height="38" rx="14" fill="#eef2ff"/>
+  <text x="580" y="185" text-anchor="middle" font-size="16" font-weight="700" fill="#4338ca">Vektor (semantik)</text>
+  <text x="460" y="222" font-size="13" fill="#475569">ma'no yaqinligi: "sahifa</text>
+  <text x="460" y="244" font-size="13" fill="#475569">ochilmayapti" ~ "timeout"</text>
+  <text x="460" y="266" font-size="13" fill="#1e293b">+ kuchli: ma'no, sinonim</text>
+  <text x="460" y="288" font-size="13" fill="#dc2626">- zaif: aniq kod/ID</text>
+
+  <line x1="180" y1="312" x2="320" y2="356" stroke="#64748b" stroke-width="2.5" marker-end="url(#hb)"/>
+  <line x1="580" y1="312" x2="440" y2="356" stroke="#64748b" stroke-width="2.5" marker-end="url(#hb)"/>
+
+  <!-- merge -->
+  <rect x="230" y="360" width="300" height="50" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="380" y="382" text-anchor="middle" font-size="15" font-weight="700" fill="#166534">Birlashtirish (RRF / ball)</text>
+  <text x="380" y="402" text-anchor="middle" font-size="13" fill="#166534">ikki ro'yxat -> bitta yaxshi top-k</text>
+
+  <text x="380" y="432" text-anchor="middle" font-size="14" font-weight="600" fill="#1e293b">Ikki usulning kuchi birga: aniq so'z + ma'no -> kengroq va aniqroq qamrov</text>
+</svg>

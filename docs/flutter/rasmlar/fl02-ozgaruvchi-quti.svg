@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" width="760" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>O'zgaruvchi — qiymat saqlaydigan yorliqli quti; var, final va const farqi (const qulflangan)</title>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">O'zgaruvchi — yorliqli quti</text>
+
+  <!-- Ramziy quti: nom + tip + qiymat -->
+  <rect x="220" y="58" width="320" height="120" rx="14" fill="#ffffff" stroke="#027dfd" stroke-width="2"/>
+  <text x="380" y="84" text-anchor="middle" font-size="14" fill="#475569">nom (yorliq)</text>
+  <text x="380" y="108" text-anchor="middle" font-size="19" font-weight="700" fill="#0553b1">yosh</text>
+  <rect x="252" y="124" width="256" height="40" rx="8" fill="#e0f2fe"/>
+  <text x="380" y="150" text-anchor="middle" font-size="17" font-weight="700" fill="#1e293b">25</text>
+  <text x="556" y="150" font-size="13" fill="#64748b">&#8592; qiymat</text>
+  <text x="380" y="100" text-anchor="middle" font-size="13" fill="#94a3b8"></text>
+  <rect x="220" y="58" width="76" height="22" rx="6" fill="#027dfd"/>
+  <text x="258" y="74" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">int</text>
+  <text x="240" y="96" font-size="13" fill="#94a3b8">&#8593; tip</text>
+
+  <text x="380" y="206" text-anchor="middle" font-size="14" fill="#475569">Quti ichida qiymat yashaydi. Uni o'zgartirish yoki qulflash — uch usul:</text>
+
+  <!-- var -->
+  <rect x="28" y="232" width="226" height="200" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <rect x="28" y="232" width="226" height="38" rx="12" fill="#16a34a"/>
+  <text x="141" y="257" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">var</text>
+  <text x="141" y="296" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">o'zgaruvchan</text>
+  <text x="141" y="320" text-anchor="middle" font-size="13" fill="#475569">qiymatni keyin</text>
+  <text x="141" y="338" text-anchor="middle" font-size="13" fill="#475569">almashtirsa bo'ladi</text>
+  <rect x="48" y="356" width="186" height="56" rx="8" fill="#f0fdf4"/>
+  <text x="141" y="380" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a">var yosh = 25;</text>
+  <text x="141" y="400" text-anchor="middle" font-size="13" fill="#475569">yosh = 26; &#10003;</text>
+
+  <!-- final -->
+  <rect x="267" y="232" width="226" height="200" rx="12" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="267" y="232" width="226" height="38" rx="12" fill="#f59e0b"/>
+  <text x="380" y="257" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">final</text>
+  <text x="380" y="296" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">bir marta</text>
+  <text x="380" y="320" text-anchor="middle" font-size="13" fill="#475569">ishga tushganda</text>
+  <text x="380" y="338" text-anchor="middle" font-size="13" fill="#475569">qiymat oladi, keyin yo'q</text>
+  <rect x="287" y="356" width="186" height="56" rx="8" fill="#fffbeb"/>
+  <text x="380" y="380" text-anchor="middle" font-size="13" font-weight="700" fill="#b45309">final ism = 'Ali';</text>
+  <text x="380" y="400" text-anchor="middle" font-size="13" fill="#ef4444">ism = 'Vali'; &#10007;</text>
+
+  <!-- const (locked) -->
+  <rect x="506" y="232" width="226" height="200" rx="12" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <rect x="506" y="232" width="226" height="38" rx="12" fill="#6366f1"/>
+  <text x="619" y="257" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">const &#128274;</text>
+  <text x="619" y="296" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">qulflangan</text>
+  <text x="619" y="320" text-anchor="middle" font-size="13" fill="#475569">kompilyatsiya paytida</text>
+  <text x="619" y="338" text-anchor="middle" font-size="13" fill="#475569">ma'lum, butunlay doimiy</text>
+  <rect x="526" y="356" width="186" height="56" rx="8" fill="#eef2ff"/>
+  <text x="619" y="380" text-anchor="middle" font-size="13" font-weight="700" fill="#4f46e5">const pi = 3.14;</text>
+  <text x="619" y="400" text-anchor="middle" font-size="13" fill="#ef4444">pi = 3; &#10007;</text>
+
+  <text x="380" y="456" text-anchor="middle" font-size="13" fill="#94a3b8">Maslahat: imkon bo'lsa const, bo'lmasa final, faqat zarurda var</text>
+</svg>

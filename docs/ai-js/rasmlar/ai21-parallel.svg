@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="800" height="480" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Parallellashtirish Promise.all bilan. Yuqorida: KETMA-KET — 5 ta mustaqil chaqiruv birin-ketin (await), vaqt o'qi bo'ylab 5 ta blok ketma-ket joylashgan, umumiy vaqt 5T. Pastda: PARALLEL — bir xil 5 chaqiruv Promise.all bilan bir vaqtda ishga tushadi, hammasi bir vaqtda tugaydi, umumiy vaqt ~T (deyarli eng sekin bittasiga teng). Natija: ~5x tezroq. Faqat chaqiruvlar bir-biriga bog'liq bo'lmaganda ishlatiladi.</title>
+  <defs>
+    <marker id="pp21" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="800" height="480" fill="#f8fafc"/>
+  <text x="400" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Parallellashtirish — Promise.all bilan ~5× tez</text>
+  <text x="400" y="58" font-size="14" fill="#64748b" text-anchor="middle">5 ta mustaqil chaqiruvni ketma-ket emas, bir vaqtda ishlating</text>
+
+  <!-- SEQUENTIAL -->
+  <rect x="24" y="80" width="752" height="150" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="44" y="104" font-size="15" font-weight="bold" fill="#f59e0b" text-anchor="start">KETMA-KET (await birin-ketin) — sekin</text>
+  <text x="44" y="124" font-size="13" fill="#475569" text-anchor="start">for (const x of ...) await chaqir(x)  — har biri oldingisini kutadi</text>
+
+  <!-- sequential blocks on a timeline -->
+  <line x1="60" y1="200" x2="740" y2="200" stroke="#94a3b8" stroke-width="1.5"/>
+  <rect x="60" y="158" width="124" height="32" rx="5" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="122" y="179" font-size="13" fill="#1e293b" text-anchor="middle">chaqiruv 1</text>
+  <rect x="188" y="158" width="124" height="32" rx="5" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="250" y="179" font-size="13" fill="#1e293b" text-anchor="middle">chaqiruv 2</text>
+  <rect x="316" y="158" width="124" height="32" rx="5" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="378" y="179" font-size="13" fill="#1e293b" text-anchor="middle">chaqiruv 3</text>
+  <rect x="444" y="158" width="124" height="32" rx="5" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="506" y="179" font-size="13" fill="#1e293b" text-anchor="middle">chaqiruv 4</text>
+  <rect x="572" y="158" width="124" height="32" rx="5" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="634" y="179" font-size="13" fill="#1e293b" text-anchor="middle">chaqiruv 5</text>
+  <text x="724" y="216" font-size="13" font-weight="bold" fill="#ef4444" text-anchor="end">umumiy vaqt = 5T</text>
+
+  <!-- PARALLEL -->
+  <rect x="24" y="248" width="752" height="180" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="44" y="272" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="start">PARALLEL (Promise.all) — tez</text>
+  <text x="44" y="292" font-size="13" fill="#475569" text-anchor="start">await Promise.all(items.map(chaqir))  — hammasi bir vaqtda ishga tushadi</text>
+
+  <!-- parallel blocks stacked, same start/end -->
+  <rect x="60" y="306" width="124" height="22" rx="5" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="122" y="322" font-size="13" fill="#1e293b" text-anchor="middle">chaqiruv 1</text>
+  <rect x="60" y="332" width="124" height="22" rx="5" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="122" y="348" font-size="13" fill="#1e293b" text-anchor="middle">chaqiruv 2</text>
+  <rect x="60" y="358" width="124" height="22" rx="5" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="122" y="374" font-size="13" fill="#1e293b" text-anchor="middle">chaqiruv 3</text>
+  <rect x="60" y="384" width="124" height="22" rx="5" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="122" y="400" font-size="13" fill="#1e293b" text-anchor="middle">chaqiruv 4</text>
+  <rect x="60" y="334" width="124" height="0" fill="none"/>
+  <rect x="194" y="306" width="124" height="22" rx="5" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="256" y="322" font-size="13" fill="#1e293b" text-anchor="middle">chaqiruv 5</text>
+
+  <!-- start line and end line -->
+  <line x1="58" y1="300" x2="58" y2="412" stroke="#16a34a" stroke-width="2" stroke-dasharray="4 3"/>
+  <text x="58" y="426" font-size="13" fill="#16a34a" text-anchor="start">boshlanish</text>
+  <line x1="320" y1="300" x2="320" y2="412" stroke="#16a34a" stroke-width="2" stroke-dasharray="4 3"/>
+
+  <!-- time win arrow -->
+  <line x1="332" y1="360" x2="540" y2="360" stroke="#64748b" stroke-width="2" marker-end="url(#pp21)"/>
+  <rect x="420" y="316" width="316" height="88" rx="10" fill="#dbeafe" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="578" y="344" font-size="15" font-weight="bold" fill="#0ea5e9" text-anchor="middle">umumiy vaqt ≈ T</text>
+  <text x="578" y="368" font-size="13" fill="#475569" text-anchor="middle">deyarli eng sekin bittasiga teng</text>
+  <text x="578" y="392" font-size="13.5" font-weight="bold" fill="#16a34a" text-anchor="middle">5T -&gt; T  ≈  5× tezroq</text>
+
+  <!-- footer -->
+  <rect x="24" y="442" width="752" height="30" rx="8" fill="#fef3c7"/>
+  <text x="400" y="462" font-size="13.5" fill="#1e293b" text-anchor="middle">Faqat chaqiruvlar bir-biriga BOG'LIQ BO'LMAGANDA. B, A natijasini kutsa -&gt; ketma-ket zanjir.</text>
+</svg>

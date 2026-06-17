@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520" width="760" height="520" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Agent tizimi arxitekturasi: interfeys, Agent loop, tool registry, xotira, kuzatuv va tashqi toollar</title>
+  <rect x="0" y="0" width="760" height="520" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">Agent tizimi arxitekturasi</text>
+
+  <defs>
+    <marker id="a28a-i" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#4f46e5"/>
+    </marker>
+    <marker id="a28a-g" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#16a34a"/>
+    </marker>
+    <marker id="a28a-c" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#0284c7"/>
+    </marker>
+  </defs>
+
+  <!-- main.py interface -->
+  <rect x="40" y="64" width="200" height="68" rx="12" fill="#e0f2fe" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="140" y="92" text-anchor="middle" font-size="16" font-weight="700" fill="#0284c7">main.py — interfeys</text>
+  <text x="140" y="114" text-anchor="middle" font-size="13" fill="#475569">CLI yoki FastAPI</text>
+  <line x1="240" y1="98" x2="300" y2="98" stroke="#0ea5e9" stroke-width="2.5" marker-end="url(#a28a-c)"/>
+  <text x="270" y="88" text-anchor="middle" font-size="13" fill="#0284c7">vazifa</text>
+
+  <!-- agent.py loop -->
+  <rect x="300" y="64" width="250" height="150" rx="14" fill="#ffffff" stroke="#4f46e5" stroke-width="2.5"/>
+  <rect x="300" y="64" width="250" height="34" rx="14" fill="#eef2ff"/>
+  <text x="425" y="87" text-anchor="middle" font-size="15" font-weight="700" fill="#4338ca">agent.py — Agent loop</text>
+  <rect x="320" y="110" width="210" height="40" rx="10" fill="#eef2ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="425" y="135" text-anchor="middle" font-size="14" font-weight="700" fill="#4338ca">Model (miya) — qaror</text>
+  <polygon points="425,158 500,182 425,206 350,182" fill="#fff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="425" y="179" text-anchor="middle" font-size="13" font-weight="700" fill="#b45309">tool_calls</text>
+  <text x="425" y="195" text-anchor="middle" font-size="13" font-weight="700" fill="#b45309">bormi?</text>
+
+  <!-- memory column -->
+  <rect x="610" y="64" width="130" height="150" rx="12" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+  <rect x="610" y="64" width="130" height="32" rx="12" fill="#e0f2fe"/>
+  <text x="675" y="86" text-anchor="middle" font-size="14" font-weight="700" fill="#0284c7">Xotira</text>
+  <text x="675" y="118" text-anchor="middle" font-size="13" fill="#475569">messages</text>
+  <text x="675" y="140" text-anchor="middle" font-size="13" fill="#475569">system/user</text>
+  <text x="675" y="162" text-anchor="middle" font-size="13" fill="#4338ca">assistant</text>
+  <text x="675" y="184" text-anchor="middle" font-size="13" fill="#166534">tool natija</text>
+  <text x="675" y="204" text-anchor="middle" font-size="13" font-weight="700" fill="#0284c7">har qadam o'sadi</text>
+  <line x1="550" y1="120" x2="606" y2="120" stroke="#0284c7" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#a28a-c)"/>
+
+  <!-- kuzatuv -->
+  <rect x="300" y="232" width="250" height="48" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="425" y="256" text-anchor="middle" font-size="14" font-weight="700" fill="#b45309">Kuzatuv (logging)</text>
+  <text x="425" y="273" text-anchor="middle" font-size="13" fill="#92400e">har qadam, tool, vaqt, token</text>
+  <line x1="425" y1="206" x2="425" y2="230" stroke="#b45309" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#a28a-i)"/>
+
+  <!-- tools.py registry -->
+  <rect x="300" y="300" width="250" height="60" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="425" y="324" text-anchor="middle" font-size="15" font-weight="700" fill="#166534">tools.py — REGISTRY</text>
+  <text x="425" y="345" text-anchor="middle" font-size="13" fill="#166534">nom -> funksiya (sxema bilan)</text>
+  <line x1="500" y1="182" x2="500" y2="298" stroke="#16a34a" stroke-width="2.5" marker-end="url(#a28a-g)"/>
+  <text x="538" y="245" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a">HA: bajar</text>
+
+  <!-- tools row (external world) -->
+  <rect x="40" y="400" width="680" height="96" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="380" y="424" text-anchor="middle" font-size="14" font-weight="700" fill="#166534">Toollar — tashqi dunyoga ta'sir</text>
+  <rect x="60" y="438" width="150" height="44" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="135" y="458" text-anchor="middle" font-size="13" font-weight="700" fill="#166534">kalkulyator</text>
+  <text x="135" y="475" text-anchor="middle" font-size="13" fill="#166534">ast (xavfsiz)</text>
+  <rect x="222" y="438" width="150" height="44" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="297" y="458" text-anchor="middle" font-size="13" font-weight="700" fill="#166534">web_qidir</text>
+  <text x="297" y="475" text-anchor="middle" font-size="13" fill="#166534">qidiruv API</text>
+  <rect x="384" y="438" width="150" height="44" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="459" y="458" text-anchor="middle" font-size="13" font-weight="700" fill="#166534">fayl_yoz</text>
+  <text x="459" y="475" text-anchor="middle" font-size="13" fill="#166534">disk (tekshirilgan)</text>
+  <rect x="546" y="438" width="154" height="44" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="623" y="458" text-anchor="middle" font-size="13" font-weight="700" fill="#166534">hujjat_qidir</text>
+  <text x="623" y="475" text-anchor="middle" font-size="13" fill="#166534">RAG bazasi (27-bob)</text>
+  <line x1="425" y1="360" x2="425" y2="398" stroke="#16a34a" stroke-width="2.5" marker-end="url(#a28a-g)"/>
+
+  <text x="270" y="116" text-anchor="middle" font-size="13" fill="#4338ca"></text>
+</svg>

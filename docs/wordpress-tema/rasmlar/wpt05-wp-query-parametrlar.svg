@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 540" width="800" height="540" font-family="Segoe UI, system-ui, sans-serif">
+  <title>WP_Query asosiy parametrlari xaritasi: tur, son/sahifalash, tartib, meta_query va tax_query bo'yicha filtr</title>
+  <rect x="0" y="0" width="800" height="540" fill="#f8fafc"/>
+  <text x="400" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">WP_Query asosiy parametrlari</text>
+  <text x="400" y="56" text-anchor="middle" font-size="14" fill="#475569">$args massivi orqali qaysi postlarni, qancha va qanday tartibda olishni belgilaysiz</text>
+
+  <!-- markaz -->
+  <rect x="320" y="240" width="160" height="64" rx="12" fill="#21759b"/>
+  <text x="400" y="270" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">WP_Query</text>
+  <text x="400" y="291" text-anchor="middle" font-size="13" fill="#dbeafe">$args =&gt; SQL</text>
+
+  <!-- 1. TUR (yuqori chap) -->
+  <rect x="40" y="86" width="240" height="96" rx="10" fill="#2563eb"/>
+  <text x="60" y="112" font-size="14" font-weight="700" fill="#ffffff">Qaysi postlar</text>
+  <text x="60" y="134" font-size="13" fill="#dbeafe">post_type =&gt; 'post' | 'product'</text>
+  <text x="60" y="153" font-size="13" fill="#dbeafe">post_status =&gt; 'publish'</text>
+  <text x="60" y="172" font-size="13" fill="#dbeafe">post__in =&gt; array(12, 45)</text>
+  <line x1="280" y1="150" x2="322" y2="250" stroke="#94a3b8" stroke-width="2.5"/>
+
+  <!-- 2. SON / SAHIFALASH (yuqori ong) -->
+  <rect x="520" y="86" width="240" height="96" rx="10" fill="#16a34a"/>
+  <text x="540" y="112" font-size="14" font-weight="700" fill="#ffffff">Qancha / sahifalash</text>
+  <text x="540" y="134" font-size="13" fill="#dcfce7">posts_per_page =&gt; 6</text>
+  <text x="540" y="153" font-size="13" fill="#dcfce7">paged =&gt; get_query_var('paged')</text>
+  <text x="540" y="172" font-size="13" fill="#dcfce7">offset =&gt; 3</text>
+  <line x1="520" y1="150" x2="478" y2="250" stroke="#94a3b8" stroke-width="2.5"/>
+
+  <!-- 3. TARTIB (past chap) -->
+  <rect x="40" y="362" width="240" height="96" rx="10" fill="#d97706"/>
+  <text x="60" y="388" font-size="14" font-weight="700" fill="#ffffff">Tartib</text>
+  <text x="60" y="410" font-size="13" fill="#fff7ed">orderby =&gt; 'date' | 'title'</text>
+  <text x="60" y="429" font-size="13" fill="#fff7ed">order =&gt; 'ASC' | 'DESC'</text>
+  <text x="60" y="448" font-size="13" fill="#fff7ed">orderby =&gt; 'meta_value_num'</text>
+  <line x1="280" y1="394" x2="322" y2="296" stroke="#94a3b8" stroke-width="2.5"/>
+
+  <!-- 4. META / TAX FILTR (past ong) -->
+  <rect x="520" y="362" width="240" height="96" rx="10" fill="#475569"/>
+  <text x="540" y="388" font-size="14" font-weight="700" fill="#ffffff">Filtr (meta / taksonomiya)</text>
+  <text x="540" y="410" font-size="13" fill="#e2e8f0">meta_query =&gt; array(...)</text>
+  <text x="540" y="429" font-size="13" fill="#e2e8f0">tax_query =&gt; array(...)</text>
+  <text x="540" y="448" font-size="13" fill="#e2e8f0">meta_key + value + compare</text>
+  <line x1="520" y1="394" x2="478" y2="296" stroke="#94a3b8" stroke-width="2.5"/>
+
+  <text x="400" y="500" text-anchor="middle" font-size="13" font-weight="700" fill="#dc2626">Parametr nomlarini ixtiro qilma — developer.wordpress.org/WP_Query reference</text>
+  <text x="400" y="524" text-anchor="middle" font-size="13" fill="#94a3b8">Filtr parametrlari (meta_query/tax_query) jonli WP 7.0 da SQL'da tasdiqlangan</text>
+</svg>

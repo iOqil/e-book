@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 500">
+  <title>SLI dan SLO ga va SLA ga: o'lchanadigan ko'rsatkichdan ichki maqsadga va mijoz bilan kelishuvga; SLO dan error budget kelib chiqadi</title>
+  <rect x="0" y="0" width="880" height="500" fill="#f8fafc"/>
+  <text x="440" y="36" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">SLI → SLO → SLA va error budget</text>
+  <text x="440" y="60" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">o'lchov → ichki maqsad → tashqi kelishuv; "100% mukammallik" maqsad emas</text>
+
+  <!-- SLI -->
+  <rect x="40" y="92" width="250" height="150" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="165" y="122" text-anchor="middle" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#2563eb">SLI — Indicator</text>
+  <text x="165" y="146" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">o'lchanadigan ko'rsatkich</text>
+  <text x="165" y="174" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">"yaxshi so'rovlar / jami"</text>
+  <text x="165" y="196" text-anchor="middle" font-family="monospace" font-size="13" fill="#1e3a8a">mavjudlik = 99.94%</text>
+  <text x="165" y="218" text-anchor="middle" font-family="monospace" font-size="13" fill="#1e3a8a">p99 latency = 280 ms</text>
+
+  <!-- SLO -->
+  <rect x="315" y="92" width="250" height="150" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="440" y="122" text-anchor="middle" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#16a34a">SLO — Objective</text>
+  <text x="440" y="146" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">ichki maqsad (jamoa)</text>
+  <text x="440" y="174" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">"30 kunda mavjudlik"</text>
+  <text x="440" y="196" text-anchor="middle" font-family="monospace" font-size="13" fill="#166534">≥ 99.9% bo'lsin</text>
+  <text x="440" y="218" text-anchor="middle" font-family="monospace" font-size="13" fill="#166534">p99 ≤ 300 ms bo'lsin</text>
+
+  <!-- SLA -->
+  <rect x="590" y="92" width="250" height="150" rx="12" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="715" y="122" text-anchor="middle" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#b45309">SLA — Agreement</text>
+  <text x="715" y="146" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">mijoz bilan kontrakt</text>
+  <text x="715" y="174" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">"99.5% kafolat" + oqibat</text>
+  <text x="715" y="196" text-anchor="middle" font-family="monospace" font-size="13" fill="#92400e">buzilsa → kredit/jarima</text>
+  <text x="715" y="218" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">SLA &lt; SLO (zaxira qoldir)</text>
+
+  <!-- strelkalar -->
+  <line x1="290" y1="167" x2="312" y2="167" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#sA)"/>
+  <line x1="565" y1="167" x2="587" y2="167" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#sA)"/>
+  <text x="301" y="158" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">maqsad</text>
+  <text x="576" y="158" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">va'da</text>
+
+  <!-- ERROR BUDGET -->
+  <rect x="40" y="270" width="800" height="190" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="440" y="300" text-anchor="middle" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#7c3aed">Error budget = 100% − SLO</text>
+  <text x="440" y="324" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">SLO 99.9% → ruxsat etilgan "buzilish" = 0.1% ≈ 43 daqiqa / 30 kun</text>
+
+  <!-- budjet bar -->
+  <rect x="120" y="346" width="640" height="40" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <rect x="120" y="346" width="430" height="40" rx="6" fill="#bbf7d0"/>
+  <rect x="120" y="346" width="430" height="40" fill="#86efac"/>
+  <text x="335" y="371" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#166534">ishlatilgan budjet (67%)</text>
+  <rect x="550" y="346" width="210" height="40" rx="6" fill="#fef9c3"/>
+  <text x="655" y="371" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#92400e">qolgan (33%)</text>
+  <line x1="120" y1="340" x2="120" y2="392" stroke="#94a3b8" stroke-width="1.2"/>
+  <line x1="760" y1="340" x2="760" y2="392" stroke="#94a3b8" stroke-width="1.2"/>
+  <text x="120" y="406" font-family="monospace" font-size="13" fill="#64748b">0 (mukammal)</text>
+  <text x="760" y="406" text-anchor="end" font-family="monospace" font-size="13" fill="#64748b">budjet tugadi → SLO buzildi</text>
+
+  <text x="440" y="436" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Budjet bor → tezroq yangilik chiqar. Budjet tugadi → barqarorlikka o't, feature to'xtat.</text>
+  <text x="440" y="454" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#7c3aed">Trade-off: yangilik tezligi ↔ barqarorlik — error budget shuni miqdorlaydi</text>
+
+  <defs>
+    <marker id="sA" markerWidth="10" markerHeight="10" refX="7" refY="3.4" orient="auto"><path d="M0,0 L7,3.4 L0,6.8 Z" fill="#94a3b8"/></marker>
+  </defs>
+</svg>

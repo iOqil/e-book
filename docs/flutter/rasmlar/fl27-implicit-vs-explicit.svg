@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Implicit animatsiya (AnimatedContainer: xususiyatni o'zgartirib setState chaqirasiz, Flutter o'zi silliq o'tkazadi) va explicit animatsiya (AnimationController + Tween + AnimatedBuilder, har kadrni siz boshqarasiz) yonma-yon taqqoslangan, hamda qachon qaysi birini tanlash.</title>
+  <rect x="0" y="0" width="800" height="500" fill="#f8fafc"/>
+  <text x="400" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Implicit va Explicit animatsiya</text>
+  <text x="400" y="58" text-anchor="middle" font-size="14" fill="#475569">Oson va avtomatik — yoki to'liq boshqaruv</text>
+
+  <!-- IMPLICIT column -->
+  <rect x="36" y="80" width="350" height="296" rx="14" fill="#ffffff" stroke="#027dfd" stroke-width="2.5"/>
+  <text x="211" y="108" text-anchor="middle" font-size="16" font-weight="700" fill="#027dfd">IMPLICIT (oson)</text>
+  <text x="211" y="130" text-anchor="middle" font-size="13" fill="#64748b">AnimatedContainer, AnimatedOpacity ...</text>
+
+  <rect x="56" y="146" width="310" height="50" rx="10" fill="#dbeafe" stroke="#027dfd" stroke-width="1.5"/>
+  <text x="211" y="167" text-anchor="middle" font-size="13" fill="#1e293b">1. Xususiyatni o'zgartirasiz</text>
+  <text x="211" y="187" text-anchor="middle" font-size="13" font-weight="700" fill="#0553b1">setState(() =&gt; kenglik = 200);</text>
+
+  <line x1="211" y1="200" x2="211" y2="224" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="211,224 205,212 217,212" fill="#94a3b8"/>
+
+  <rect x="56" y="226" width="310" height="50" rx="10" fill="#ffffff" stroke="#027dfd" stroke-width="1.5"/>
+  <text x="211" y="247" text-anchor="middle" font-size="13" fill="#1e293b">2. Flutter eski va yangi orasini</text>
+  <text x="211" y="267" text-anchor="middle" font-size="13" font-weight="700" fill="#027dfd">o'zi silliq o'tkazadi (tween)</text>
+
+  <rect x="56" y="288" width="310" height="68" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="211" y="312" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a">duration: va curve: berasiz</text>
+  <text x="211" y="334" text-anchor="middle" font-size="13" fill="#475569">Controller YO'Q, dispose YO'Q.</text>
+
+  <!-- EXPLICIT column -->
+  <rect x="414" y="80" width="350" height="296" rx="14" fill="#ffffff" stroke="#9333ea" stroke-width="2.5"/>
+  <text x="589" y="108" text-anchor="middle" font-size="16" font-weight="700" fill="#9333ea">EXPLICIT (to'liq boshqaruv)</text>
+  <text x="589" y="130" text-anchor="middle" font-size="13" fill="#64748b">AnimationController + Tween</text>
+
+  <rect x="434" y="146" width="310" height="50" rx="10" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="589" y="167" text-anchor="middle" font-size="13" fill="#1e293b">1. Controller (vsync, duration)</text>
+  <text x="589" y="187" text-anchor="middle" font-size="13" font-weight="700" fill="#6366f1">initState'da yarat, dispose qil</text>
+
+  <line x1="589" y1="200" x2="589" y2="224" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="589,224 583,212 595,212" fill="#94a3b8"/>
+
+  <rect x="434" y="226" width="310" height="50" rx="10" fill="#ffffff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="589" y="247" text-anchor="middle" font-size="13" fill="#1e293b">2. Tween(begin, end).animate(curve)</text>
+  <text x="589" y="267" text-anchor="middle" font-size="13" font-weight="700" fill="#9333ea">AnimatedBuilder har kadr quradi</text>
+
+  <rect x="434" y="288" width="310" height="68" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="589" y="312" text-anchor="middle" font-size="13" font-weight="700" fill="#f59e0b">forward / reverse / repeat</text>
+  <text x="589" y="334" text-anchor="middle" font-size="13" fill="#475569">Takror, to'xtatish, ketma-ketlik.</text>
+
+  <!-- QACHON QAYSI bar -->
+  <rect x="36" y="396" width="728" height="86" rx="14" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="400" y="422" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">Qachon qaysi?</text>
+  <text x="56" y="448" font-size="13" fill="#475569">Implicit — holatga bog'liq oddiy o'tish (90% hollar): kengayish, ko'rinish, rang.</text>
+  <text x="56" y="470" font-size="13" fill="#475569">Explicit — takrorlanuvchi / boshqariladigan / murakkab ketma-ket animatsiya.</text>
+</svg>

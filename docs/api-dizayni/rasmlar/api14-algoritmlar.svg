@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560">
+  <title>Rate limit algoritmlari: fixed window, sliding window, token bucket, leaky bucket</title>
+  <rect x="0" y="0" width="900" height="560" fill="#f8fafc"/>
+  <text x="450" y="34" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">To'rt asosiy rate limit algoritmi</text>
+  <text x="450" y="58" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Hammasi tezlikni cheklaydi — farqi: burst'ga munosabat, aniqlik, xotira</text>
+
+  <!-- Fixed window -->
+  <rect x="30" y="84" width="410" height="210" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="50" y="112" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb">1. Fixed window (qat'iy oyna)</text>
+  <text x="50" y="134" font-family="Segoe UI" font-size="13" fill="#64748b">Har daqiqada hisoblagich 0 ga tushadi</text>
+  <rect x="50" y="148" width="170" height="40" rx="5" fill="#eff6ff" stroke="#2563eb" stroke-width="1"/>
+  <text x="135" y="166" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">12:00:00 - 12:00:59</text>
+  <text x="135" y="182" text-anchor="middle" font-family="monospace" font-size="13" fill="#16a34a">100 / 100 OK</text>
+  <rect x="240" y="148" width="170" height="40" rx="5" fill="#eff6ff" stroke="#2563eb" stroke-width="1"/>
+  <text x="325" y="166" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">12:01:00 - 12:01:59</text>
+  <text x="325" y="182" text-anchor="middle" font-family="monospace" font-size="13" fill="#16a34a">100 / 100 OK</text>
+  <rect x="50" y="200" width="360" height="80" rx="6" fill="#fffbeb" stroke="#f59e0b" stroke-width="1"/>
+  <text x="62" y="222" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#b45309">Muammo: oyna chetida burst</text>
+  <text x="62" y="242" font-family="Segoe UI" font-size="13" fill="#334155">12:00:59 da 100 + 12:01:00 da 100 =</text>
+  <text x="62" y="262" font-family="Segoe UI" font-size="13" fill="#dc2626">2 soniyada 200 ta so'rov o'tib ketadi</text>
+
+  <!-- Sliding window -->
+  <rect x="460" y="84" width="410" height="210" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="480" y="112" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#7c3aed">2. Sliding window (siljuvchi oyna)</text>
+  <text x="480" y="134" font-family="Segoe UI" font-size="13" fill="#64748b">Oyna "hozir"dan orqaga 60s suriladi</text>
+  <rect x="480" y="148" width="370" height="44" rx="5" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1"/>
+  <text x="490" y="167" font-family="Segoe UI" font-size="13" fill="#334155">[ hozir - 60s ............. hozir ]</text>
+  <text x="490" y="185" font-family="monospace" font-size="13" fill="#334155">oxirgi 60s ichidagi so'rovlar = 100</text>
+  <rect x="480" y="200" width="370" height="80" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1"/>
+  <text x="492" y="222" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#15803d">Yaxshi: chet burst muammosi yo'q</text>
+  <text x="492" y="242" font-family="Segoe UI" font-size="13" fill="#334155">Aniqroq, silliqroq taqsimot.</text>
+  <text x="492" y="262" font-family="Segoe UI" font-size="13" fill="#64748b">Narxi: ko'proq xotira/hisob (log yoki</text>
+  <text x="492" y="278" font-family="Segoe UI" font-size="13" fill="#64748b">2 oynaning vaznli o'rtachasi).</text>
+
+  <!-- Token bucket -->
+  <rect x="30" y="306" width="410" height="226" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="50" y="334" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a">3. Token bucket (eng ommabop)</text>
+  <text x="50" y="356" font-family="Segoe UI" font-size="13" fill="#64748b">Tokenlar doimiy tezlikda quyiladi</text>
+  <!-- bucket -->
+  <path d="M 70 380 L 70 470 Q 70 482 82 482 L 158 482 Q 170 482 170 470 L 170 380" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <circle cx="100" cy="430" r="8" fill="#16a34a"/>
+  <circle cx="125" cy="445" r="8" fill="#16a34a"/>
+  <circle cx="145" cy="425" r="8" fill="#16a34a"/>
+  <circle cx="110" cy="460" r="8" fill="#16a34a"/>
+  <text x="120" y="372" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#15803d">+ token / s</text>
+  <line x1="120" y1="356" x2="120" y2="378" stroke="#16a34a" stroke-width="2" marker-end="url(#arrG)"/>
+  <text x="200" y="396" font-family="Segoe UI" font-size="13" fill="#334155">- Har so'rov 1 token "yeydi"</text>
+  <text x="200" y="418" font-family="Segoe UI" font-size="13" fill="#334155">- Token bor -> OK; yo'q -> 429</text>
+  <text x="200" y="440" font-family="Segoe UI" font-size="13" fill="#334155">- To'plangan token = burst ruxsati</text>
+  <text x="200" y="462" font-family="Segoe UI" font-size="13" fill="#334155">- O'rtacha tezlik quyilish tezligi</text>
+  <text x="200" y="484" font-family="Segoe UI" font-size="13" fill="#64748b">bilan cheklangan (masalan 10/s).</text>
+  <text x="50" y="514" font-family="Segoe UI" font-size="13" fill="#16a34a">Burst ruxsati + o'rtacha cheklov: eng moslashuvchan.</text>
+
+  <!-- Leaky bucket -->
+  <rect x="460" y="306" width="410" height="226" rx="12" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="480" y="334" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#b45309">4. Leaky bucket (oqar idish)</text>
+  <text x="480" y="356" font-family="Segoe UI" font-size="13" fill="#64748b">So'rovlar navbatda turadi, doimiy oqadi</text>
+  <path d="M 500 376 L 500 460 Q 500 472 512 472 L 588 472 Q 600 472 600 460 L 600 376" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="512" y="392" width="76" height="12" rx="2" fill="#f59e0b"/>
+  <rect x="512" y="408" width="76" height="12" rx="2" fill="#f59e0b"/>
+  <rect x="512" y="424" width="76" height="12" rx="2" fill="#f59e0b"/>
+  <text x="550" y="372" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#b45309">burst kiradi</text>
+  <line x1="550" y1="472" x2="550" y2="496" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrA)"/>
+  <text x="550" y="514" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#b45309">doimiy tezlikda chiqadi</text>
+  <text x="620" y="400" font-family="Segoe UI" font-size="13" fill="#334155">- Chiqish tezligi qat'iy</text>
+  <text x="620" y="422" font-family="Segoe UI" font-size="13" fill="#334155">- Burst'ni silliqlaydi</text>
+  <text x="620" y="444" font-family="Segoe UI" font-size="13" fill="#334155">- Idish to'lsa -> 429</text>
+  <text x="620" y="466" font-family="Segoe UI" font-size="13" fill="#64748b">- Burst ruxsati yo'q</text>
+
+  <defs>
+    <marker id="arrG" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#16a34a"/>
+    </marker>
+    <marker id="arrA" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 480">
+  <title>Ochiq adreslash (open addressing / linear probing): kolliziyada keyingi bo'sh bucket qidiriladi</title>
+  <rect x="0" y="0" width="880" height="480" fill="#f8fafc"/>
+  <text x="440" y="36" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Kolliziyani yechish: ochiq adreslash (linear probing)</text>
+  <text x="440" y="62" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Bog'langan ro'yxat yo'q — barcha kalit shu massivning o'zida; band bo'lsa, keyingi bo'sh joyga o'tamiz</text>
+
+  <!-- massiv katakchalari -->
+  <g font-family="monospace" font-size="14">
+    <rect x="90" y="120" width="90" height="50" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="135" y="105" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">[0]</text>
+    <text x="135" y="150" text-anchor="middle" fill="#94a3b8">bo'sh</text>
+
+    <rect x="180" y="120" width="90" height="50" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+    <text x="225" y="105" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">[1]</text>
+    <text x="225" y="150" text-anchor="middle" fill="#16a34a">"olma"</text>
+
+    <rect x="270" y="120" width="90" height="50" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+    <text x="315" y="105" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">[2]</text>
+    <text x="315" y="150" text-anchor="middle" fill="#dc2626">"nok"</text>
+
+    <rect x="360" y="120" width="90" height="50" fill="#fef9c3" stroke="#f59e0b" stroke-width="2"/>
+    <text x="405" y="105" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">[3]</text>
+    <text x="405" y="150" text-anchor="middle" fill="#b45309">"uzum"</text>
+
+    <rect x="450" y="120" width="90" height="50" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="495" y="105" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">[4]</text>
+    <text x="495" y="150" text-anchor="middle" fill="#94a3b8">bo'sh</text>
+
+    <rect x="540" y="120" width="90" height="50" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="585" y="105" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">[5]</text>
+    <text x="585" y="150" text-anchor="middle" fill="#94a3b8">bo'sh</text>
+  </g>
+
+  <!-- probing scenario -->
+  <text x="60" y="220" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#7c3aed">"anor" qo'shamiz: h("anor") = 2, lekin [2] band ("nok")</text>
+
+  <!-- probe arrows -->
+  <text x="315" y="245" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">[2] band</text>
+  <path d="M 315 250 Q 360 280 405 250" fill="none" stroke="#7c3aed" stroke-width="2"/>
+  <polygon points="405,252 401,242 411,244" fill="#7c3aed"/>
+  <text x="405" y="245" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#b45309">[3] band</text>
+  <path d="M 405 250 Q 450 280 495 250" fill="none" stroke="#7c3aed" stroke-width="2"/>
+  <polygon points="495,252 491,242 501,244" fill="#7c3aed"/>
+  <text x="495" y="245" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">[4] bo'sh!</text>
+  <text x="495" y="296" text-anchor="middle" font-family="monospace" font-size="13" fill="#16a34a" font-weight="bold">"anor" -> [4]</text>
+
+  <!-- tombstone note -->
+  <rect x="40" y="320" width="800" height="140" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="60" y="348" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#7c3aed">Probing turlari va o'chirish nozikligi</text>
+  <text x="60" y="374" font-family="Segoe UI" font-size="14" fill="#334155">Linear probing: i, i+1, i+2, ... (ketma-ket). Quadratic: i+1, i+4, i+9, ... Double hashing: i + k*h2(kalit).</text>
+  <text x="60" y="400" font-family="Segoe UI" font-size="14" fill="#334155">O'chirishda katakni shunchaki "bo'sh" qilib bo'lmaydi — bu zanjirni uzib, keyingi kalitlarni "yo'qotadi".</text>
+  <text x="60" y="426" font-family="Segoe UI" font-size="14" fill="#334155">Yechim: TOMBSTONE (qabr toshi) — katakni "o'chirilgan" deb belgilash. Qidiruv undan o'tib ketadi, qo'shish</text>
+  <text x="60" y="448" font-family="Segoe UI" font-size="14" fill="#334155">esa uni qayta ishlatishi mumkin. Load factor a &lt; 1 bo'lishi SHART (joy massivning o'zida).</text>
+</svg>

@@ -19,6 +19,10 @@ BOOKS = [
     ('tgbot-python', 'Telegram bot (Python)'),
     ('tgbot-php', 'Telegram bot (PHP)'),
     ('tgbot-js', 'Telegram bot (JS)'),
+    ('arxitektura', 'Dasturlash arxitekturasi'),
+    ('algoritmlar', 'Algoritmlar va malumotlar strukturalari'),
+    ('api-dizayni', 'API dizayni'),
+    ('wordpress-tema', 'WordPress tema yaratish'),
 ]
 
 def natkey(s):

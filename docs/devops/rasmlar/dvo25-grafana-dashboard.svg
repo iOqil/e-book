@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400">
+  <title>Grafana Prometheusni data source sifatida qo'shadi va undan PromQL bilan ma'lumot olib, dashboarddagi panellarda (grafik, gauge, jadval) ko'rsatadi</title>
+  <rect x="0" y="0" width="760" height="400" fill="#f8fafc"/>
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Prometheus → Grafana → dashboard</text>
+
+  <defs>
+    <marker id="gdarr" markerWidth="11" markerHeight="11" refX="9" refY="3.2" orient="auto">
+      <path d="M0,0 L9,3.2 L0,6.4 Z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+
+  <!-- Prometheus -->
+  <rect x="30" y="150" width="170" height="100" rx="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="115" y="190" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#6d28d9">Prometheus</text>
+  <text x="115" y="214" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">TSDB + PromQL</text>
+  <text x="115" y="234" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#475569">:9090</text>
+
+  <!-- arrow -> grafana -->
+  <line x1="200" y1="200" x2="266" y2="200" stroke="#f59e0b" stroke-width="3" marker-end="url(#gdarr)"/>
+  <text x="233" y="190" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309">PromQL</text>
+
+  <!-- Grafana data source -->
+  <rect x="272" y="150" width="180" height="100" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="362" y="186" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#b45309">Grafana</text>
+  <text x="362" y="210" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">data source =</text>
+  <text x="362" y="229" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#475569">http://prometheus:9090</text>
+
+  <!-- arrow -> dashboard -->
+  <line x1="452" y1="200" x2="514" y2="200" stroke="#f59e0b" stroke-width="3" marker-end="url(#gdarr)"/>
+
+  <!-- Dashboard -->
+  <rect x="520" y="72" width="216" height="256" rx="14" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="628" y="98" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e40af">Dashboard</text>
+
+  <!-- panel: time-series -->
+  <rect x="538" y="112" width="180" height="74" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="628" y="132" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e40af">panel: so'rovlar / sek</text>
+  <polyline points="552,176 576,162 600,170 624,148 648,158 672,140 700,150" fill="none" stroke="#2563eb" stroke-width="2.5"/>
+
+  <!-- panel: gauge -->
+  <rect x="538" y="196" width="86" height="74" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="581" y="216" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#166534">CPU %</text>
+  <path d="M558,256 A23,23 0 0 1 604,256" fill="none" stroke="#16a34a" stroke-width="6"/>
+  <text x="581" y="252" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#166534">42%</text>
+
+  <!-- panel: stat -->
+  <rect x="632" y="196" width="86" height="74" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="675" y="216" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#b45309">RAM</text>
+  <text x="675" y="246" text-anchor="middle" font-family="Consolas, monospace" font-size="15" font-weight="bold" fill="#b45309">7.7 GB</text>
+
+  <!-- panel: table -->
+  <rect x="538" y="280" width="180" height="36" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="628" y="303" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">panel: jadval (top endpointlar)</text>
+
+  <text x="380" y="362" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">Grafana ma'lumotni saqlamaydi — har panel Prometheusga PromQL so'rovi yuboradi</text>
+  <text x="380" y="384" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">Tayyor dashboardni ID bo'yicha import qiling (masalan Node Exporter Full — 1860)</text>
+</svg>

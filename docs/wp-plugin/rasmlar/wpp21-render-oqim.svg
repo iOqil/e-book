@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" width="760" height="360">
+  <title>Frontend so'rovi render.php ni ishga tushiradi, u attributes ni oladi, WP_Query bilan ma'lumot tortadi, escape qiladi va xavfsiz HTML qaytaradi</title>
+  <rect x="0" y="0" width="760" height="360" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Dynamic blok render oqimi (har so'rovda)</text>
+
+  <!-- step 1 -->
+  <rect x="24" y="70" width="130" height="90" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="89" y="104" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e40af">Frontend</text>
+  <text x="89" y="126" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">so'rov</text>
+  <text x="89" y="146" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(sahifa ochiladi)</text>
+
+  <!-- step 2 -->
+  <rect x="186" y="70" width="150" height="90" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="261" y="100" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">render.php</text>
+  <text x="261" y="122" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">$attributes</text>
+  <text x="261" y="142" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">$content, $block</text>
+
+  <!-- step 3 -->
+  <rect x="368" y="70" width="150" height="90" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="443" y="100" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">WP_Query</text>
+  <text x="443" y="122" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">post_type kitob</text>
+  <text x="443" y="142" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">DB dan tortadi</text>
+
+  <!-- step 4 -->
+  <rect x="550" y="70" width="186" height="90" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="643" y="100" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">escape -&gt; HTML</text>
+  <text x="643" y="122" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">esc_html / esc_url</text>
+  <text x="643" y="142" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">xavfsiz natija</text>
+
+  <!-- arrows -->
+  <line x1="154" y1="115" x2="184" y2="115" stroke="#475569" stroke-width="2"/>
+  <polygon points="184,115 174,110 174,120" fill="#475569"/>
+  <line x1="336" y1="115" x2="366" y2="115" stroke="#475569" stroke-width="2"/>
+  <polygon points="366,115 356,110 356,120" fill="#475569"/>
+  <line x1="518" y1="115" x2="548" y2="115" stroke="#475569" stroke-width="2"/>
+  <polygon points="548,115 538,110 538,120" fill="#475569"/>
+
+  <!-- wrapper note -->
+  <rect x="120" y="196" width="520" height="48" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="218" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e40af">Eng tashqi element: get_block_wrapper_attributes()</text>
+  <text x="380" y="237" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">class / style / supports ni qo'shadi (allaqachon escape qilingan)</text>
+
+  <!-- warning note -->
+  <rect x="120" y="258" width="520" height="74" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="380" y="282" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">render.php JSX emas - escape SHART</text>
+  <text x="380" y="303" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">har chiqishni esc_html/esc_attr/esc_url bilan o'rab chiqaring</text>
+  <text x="380" y="323" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">WP_Query dan keyin wp_reset_postdata()</text>
+</svg>

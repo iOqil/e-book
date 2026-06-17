@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" width="800" height="460" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Ikki dark mode strategiyasi yonma-yon: media strategiya (prefers-color-scheme, OS boshqaradi, JS yo'q) va class strategiya (@custom-variant dark + .dark klass + toggle tugma); har birining ustun va kamchiliklari</title>
+  <rect x="0" y="0" width="800" height="460" fill="#f8fafc"/>
+
+  <text x="400" y="38" text-anchor="middle" font-size="21" font-weight="bold" fill="#1e293b">Ikki strategiya: media (standart) va class</text>
+  <text x="400" y="62" text-anchor="middle" font-size="14" fill="#475569">Toggle tugma kerakmi? Unda class strategiyani tanlang</text>
+
+  <!-- MEDIA strategy box -->
+  <rect x="40" y="90" width="350" height="330" rx="12" fill="#ffffff" stroke="#0ea5e9" stroke-width="2"/>
+  <rect x="40" y="90" width="350" height="46" rx="12" fill="#e0f2fe"/>
+  <rect x="40" y="120" width="350" height="16" fill="#e0f2fe"/>
+  <text x="215" y="120" text-anchor="middle" font-size="17" font-weight="bold" fill="#0284c7">media strategiya (standart)</text>
+
+  <text x="62" y="164" font-size="14" font-weight="bold" fill="#1e293b">Qanday ishlaydi:</text>
+  <text x="62" y="188" font-size="13" fill="#475569">dark: → @media (prefers-color-scheme)</text>
+  <text x="62" y="210" font-size="13" fill="#475569">OS sozlamasiga ERGASHADI · JS yo'q</text>
+
+  <rect x="62" y="226" width="306" height="30" rx="6" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1"/>
+  <text x="72" y="246" font-size="13" fill="#0369a1">class="bg-white dark:bg-gray-900"</text>
+
+  <text x="62" y="290" font-size="14" font-weight="bold" fill="#16a34a">+ Ustun:</text>
+  <text x="78" y="312" font-size="13" fill="#1e293b">• nol JavaScript, avtomatik</text>
+  <text x="78" y="334" font-size="13" fill="#1e293b">• ko'p sayt uchun yetarli</text>
+
+  <text x="62" y="368" font-size="14" font-weight="bold" fill="#ef4444">− Kamchilik:</text>
+  <text x="78" y="390" font-size="13" fill="#1e293b">• foydalanuvchi sayt ichida</text>
+  <text x="78" y="408" font-size="13" fill="#1e293b">&#160;&#160;rejimni ALMASHTIRA olmaydi</text>
+
+  <!-- CLASS strategy box -->
+  <rect x="410" y="90" width="350" height="330" rx="12" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <rect x="410" y="90" width="350" height="46" rx="12" fill="#eef2ff"/>
+  <rect x="410" y="120" width="350" height="16" fill="#eef2ff"/>
+  <text x="585" y="120" text-anchor="middle" font-size="17" font-weight="bold" fill="#4f46e5">class strategiya (toggle)</text>
+
+  <text x="432" y="164" font-size="14" font-weight="bold" fill="#1e293b">Qanday yoqiladi (v4, CSS-da):</text>
+  <rect x="432" y="176" width="306" height="30" rx="6" fill="#eef2ff" stroke="#c7d2fe" stroke-width="1"/>
+  <text x="442" y="196" font-size="13" fill="#4338ca">@custom-variant dark (&amp;:where(.dark...))</text>
+  <text x="432" y="228" font-size="13" fill="#475569">dark: → html da .dark klassi bo'lsa yoqiladi</text>
+  <text x="432" y="250" font-size="13" fill="#475569">toggle tugma + localStorage boshqaradi</text>
+
+  <text x="432" y="290" font-size="14" font-weight="bold" fill="#16a34a">+ Ustun:</text>
+  <text x="448" y="312" font-size="13" fill="#1e293b">• foydalanuvchi qo'lda almashtiradi</text>
+  <text x="448" y="334" font-size="13" fill="#1e293b">• system / light / dark — uch holat</text>
+
+  <text x="432" y="368" font-size="14" font-weight="bold" fill="#ef4444">− Kamchilik:</text>
+  <text x="448" y="390" font-size="13" fill="#1e293b">• biroz JS kerak (toggle + saqlash)</text>
+  <text x="448" y="408" font-size="13" fill="#1e293b">• FOUC ga e'tibor berish shart</text>
+
+  <text x="400" y="446" text-anchor="middle" font-size="13" fill="#64748b">Eslatma: bu v4 da CSS-da yoziladi — v3 dagi darkMode:'class' EMAS</text>
+</svg>

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Controlled input: TextInput va useState holati ikki tomonlama bog'lanishi</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">Controlled input — ikki tomonlama bog'lanish</text>
+  <text x="380" y="64" text-anchor="middle" font-size="14" fill="#475569">TextInput va holat (useState) doim bir-biriga mos turadi</text>
+
+  <!-- TextInput quti -->
+  <rect x="60" y="110" width="280" height="120" rx="12" fill="#ffffff" stroke="#0ea5e9" stroke-width="2.5"/>
+  <text x="200" y="140" text-anchor="middle" font-size="16" font-weight="700" fill="#0284c7">TextInput (ekran)</text>
+  <rect x="90" y="158" width="220" height="46" rx="8" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="104" y="187" font-size="16" fill="#1e293b">Oqil</text>
+  <rect x="252" y="166" width="2" height="30" fill="#0ea5e9"/>
+
+  <!-- useState quti -->
+  <rect x="420" y="110" width="280" height="120" rx="12" fill="#ffffff" stroke="#4f46e5" stroke-width="2.5"/>
+  <text x="560" y="140" text-anchor="middle" font-size="16" font-weight="700" fill="#4f46e5">Holat (useState)</text>
+  <rect x="450" y="158" width="220" height="46" rx="8" fill="#eef2ff" stroke="#c7d2fe" stroke-width="1.5"/>
+  <text x="560" y="187" text-anchor="middle" font-size="16" font-family="Consolas, monospace" fill="#3730a3">ism = "Oqil"</text>
+
+  <!-- Pastga -> o'qi: foydalanuvchi yozadi -> onChangeText -->
+  <path d="M 200 230 L 200 300" stroke="#16a34a" stroke-width="2.5" fill="none" marker-end="url(#yashil)"/>
+  <rect x="92" y="248" width="216" height="36" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="200" y="271" text-anchor="middle" font-size="13" fill="#15803d">1. yozasiz -> onChangeText(setIsm)</text>
+
+  <!-- Tepaga o'qi: value holatdan keladi -->
+  <path d="M 560 300 L 560 230" stroke="#f59e0b" stroke-width="2.5" fill="none" marker-end="url(#sariq)"/>
+  <rect x="452" y="248" width="216" height="36" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="560" y="271" text-anchor="middle" font-size="13" fill="#b45309">2. value={ism} -> ekranga qaytadi</text>
+
+  <!-- pastki tsikl quti -->
+  <rect x="60" y="318" width="640" height="86" rx="12" fill="#f0f9ff" stroke="#bae6fd" stroke-width="2"/>
+  <text x="380" y="348" text-anchor="middle" font-size="15" font-weight="700" fill="#0369a1">Aylanma: yozish -> holat yangilanadi -> qayta chiziladi</text>
+  <text x="380" y="376" text-anchor="middle" font-size="14" fill="#475569">Holat — yagona haqiqat manbai. Ekranda nima ko'rinsa, holatda ham aynan shu.</text>
+  <text x="380" y="396" text-anchor="middle" font-size="13" fill="#94a3b8">value siz, onChangeText siz — bu "controlled" (boshqariladigan) input</text>
+
+  <defs>
+    <marker id="yashil" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+    <marker id="sariq" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+</svg>

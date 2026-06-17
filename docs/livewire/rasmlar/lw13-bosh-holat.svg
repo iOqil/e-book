@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>@forelse direktivasi ikki holatni boshqaradi: ma'lumot bor bo'lsa ro'yxat, bo'sh bo'lsa @empty qismidagi bo'sh holat ko'rsatiladi</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="32" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">@forelse: ro'yxat yoki bo'sh holat</text>
+  <text x="380" y="56" text-anchor="middle" font-size="14" fill="#475569">Bitta direktiva ikkala holatni ham boshqaradi</text>
+
+  <!-- center decision -->
+  <polygon points="380,80 470,120 380,160 290,120" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="380" y="116" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">posts bo'shmi?</text>
+  <text x="380" y="134" text-anchor="middle" font-size="13" fill="#475569">@forelse</text>
+
+  <!-- arrows -->
+  <line x1="320" y1="138" x2="210" y2="190" stroke="#16a34a" stroke-width="2.5"/>
+  <polygon points="210,190 221,187 215,178" fill="#16a34a"/>
+  <text x="240" y="166" font-size="13" font-weight="700" fill="#16a34a">YO'Q (bor)</text>
+
+  <line x1="440" y1="138" x2="550" y2="190" stroke="#f59e0b" stroke-width="2.5"/>
+  <polygon points="550,190 539,178 545,187" fill="#f59e0b"/>
+  <text x="498" y="166" font-size="13" font-weight="700" fill="#f59e0b">HA (bo'sh)</text>
+
+  <!-- LEFT: list -->
+  <rect x="40" y="195" width="320" height="210" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="200" y="222" text-anchor="middle" font-size="15" font-weight="700" fill="#16a34a">Ma'lumot BOR &#8594; ro'yxat</text>
+
+  <rect x="62" y="238" width="276" height="44" rx="6" fill="#f0fdf4" stroke="#c7d2fe" stroke-width="1.5"/>
+  <text x="76" y="258" font-size="14" font-weight="700" fill="#1e293b">Livewire 4 chiqdi</text>
+  <text x="76" y="275" font-size="13" fill="#475569">2 daqiqa oldin</text>
+
+  <rect x="62" y="290" width="276" height="44" rx="6" fill="#f0fdf4" stroke="#c7d2fe" stroke-width="1.5"/>
+  <text x="76" y="310" font-size="14" font-weight="700" fill="#1e293b">Eloquent asoslari</text>
+  <text x="76" y="327" font-size="13" fill="#475569">1 soat oldin</text>
+
+  <text x="200" y="362" text-anchor="middle" font-size="13" fill="#475569">@forelse va @empty orasidagi qism</text>
+  <text x="200" y="382" text-anchor="middle" font-size="13" fill="#475569">har post uchun takrorlanadi.</text>
+
+  <!-- RIGHT: empty state -->
+  <rect x="400" y="195" width="320" height="210" rx="12" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="560" y="222" text-anchor="middle" font-size="15" font-weight="700" fill="#f59e0b">Ma'lumot YO'Q &#8594; bo'sh holat</text>
+
+  <rect x="430" y="240" width="260" height="96" rx="8" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.5"/>
+  <text x="560" y="272" text-anchor="middle" font-size="22">&#128237;</text>
+  <text x="560" y="298" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Hali post yo'q</text>
+  <text x="560" y="320" text-anchor="middle" font-size="13" fill="#475569">Birinchisini yozing!</text>
+
+  <text x="560" y="362" text-anchor="middle" font-size="13" fill="#475569">FAQAT @empty va @endforelse</text>
+  <text x="560" y="382" text-anchor="middle" font-size="13" fill="#475569">orasidagi qism ko'rinadi.</text>
+
+  <text x="380" y="426" text-anchor="middle" font-size="13" fill="#94a3b8">@forelse = @foreach + bo'sh holat. Ro'yxatlar uchun aynan shuni ishlating.</text>
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 470" font-family="Segoe UI">
+  <title>Ilmiy debugging sikli: Kuzat, Gipoteza, Tajriba, Xulosa</title>
+  <rect x="0" y="0" width="860" height="470" fill="#f8fafc"/>
+
+  <text x="430" y="40" text-anchor="middle" font-size="22" font-weight="bold" fill="#1e293b">Debugging - bu ilmiy usul</text>
+  <text x="430" y="66" text-anchor="middle" font-size="14" fill="#64748b">Taxmin bilan kod o'zgartirish emas, balki kuzatish va tekshirish</text>
+
+  <!-- 1 Kuzat -->
+  <rect x="60" y="120" width="200" height="100" rx="14" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="160" y="158" text-anchor="middle" font-size="18" font-weight="bold" fill="#2563eb">1. Kuzat</text>
+  <text x="160" y="184" text-anchor="middle" font-size="13" fill="#64748b">aniq nima bo'lyapti?</text>
+  <text x="160" y="202" text-anchor="middle" font-size="13" fill="#64748b">faktlar, log, xato xabari</text>
+
+  <!-- 2 Gipoteza -->
+  <rect x="600" y="120" width="200" height="100" rx="14" fill="#ffffff" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="700" y="158" text-anchor="middle" font-size="18" font-weight="bold" fill="#7c3aed">2. Gipoteza</text>
+  <text x="700" y="184" text-anchor="middle" font-size="13" fill="#64748b">sabab nima bo'lishi</text>
+  <text x="700" y="202" text-anchor="middle" font-size="13" fill="#64748b">mumkin? bitta taxmin</text>
+
+  <!-- 3 Tajriba -->
+  <rect x="600" y="320" width="200" height="100" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="700" y="358" text-anchor="middle" font-size="18" font-weight="bold" fill="#16a34a">3. Tajriba</text>
+  <text x="700" y="384" text-anchor="middle" font-size="13" fill="#64748b">gipotezani tekshir:</text>
+  <text x="700" y="402" text-anchor="middle" font-size="13" fill="#64748b">bitta o'zgaruvchi, o'lcha</text>
+
+  <!-- 4 Xulosa -->
+  <rect x="60" y="320" width="200" height="100" rx="14" fill="#ffffff" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="160" y="358" text-anchor="middle" font-size="18" font-weight="bold" fill="#f59e0b">4. Xulosa</text>
+  <text x="160" y="384" text-anchor="middle" font-size="13" fill="#64748b">tasdiqlandimi yoki rad?</text>
+  <text x="160" y="402" text-anchor="middle" font-size="13" fill="#64748b">sabab topildimi?</text>
+
+  <!-- Arrows -->
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0 0 L8 3 L0 6 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <line x1="260" y1="170" x2="600" y2="170" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#ar)"/>
+  <line x1="700" y1="220" x2="700" y2="320" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#ar)"/>
+  <line x1="600" y1="370" x2="260" y2="370" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#ar)"/>
+  <line x1="160" y1="320" x2="160" y2="220" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#ar)"/>
+
+  <!-- Loop back note -->
+  <text x="430" y="270" text-anchor="middle" font-size="14" font-weight="bold" fill="#dc2626">gipoteza rad etilsa - 2-bosqichga qayt, yangi gipoteza qur</text>
+</svg>

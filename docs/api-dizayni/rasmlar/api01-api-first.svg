@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 500">
+  <title>API-first dizayn sikli: shartnoma avval, parallel ishlab chiqish</title>
+  <rect x="0" y="0" width="880" height="500" fill="#f8fafc"/>
+  <text x="440" y="34" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">API-first dizayn: avval shartnoma, keyin kod</text>
+  <text x="440" y="58" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Shartnoma kelishilgach, frontend va backend parallel ishlaydi</text>
+
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#7c3aed"/>
+    </marker>
+    <marker id="arg" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <!-- Step 1 -->
+  <rect x="40" y="92" width="220" height="92" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="150" y="122" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#7c3aed">1. Shartnomani dizayn qilish</text>
+  <text x="150" y="146" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">OpenAPI spetsifikatsiyasi:</text>
+  <text x="150" y="166" text-anchor="middle" font-family="monospace" font-size="13" fill="#16a34a">paths, schemas, errors</text>
+
+  <!-- Step 2 -->
+  <rect x="330" y="92" width="220" height="92" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="440" y="122" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#7c3aed">2. Kelishuv (review)</text>
+  <text x="440" y="146" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Jamoa shartnomani tasdiqlaydi,</text>
+  <text x="440" y="166" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">mock server tayyorlanadi</text>
+
+  <line x1="262" y1="138" x2="328" y2="138" stroke="#7c3aed" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- branch down to two parallel tracks -->
+  <line x1="440" y1="186" x2="440" y2="220" stroke="#7c3aed" stroke-width="2"/>
+  <line x1="230" y1="220" x2="650" y2="220" stroke="#7c3aed" stroke-width="2"/>
+  <line x1="230" y1="220" x2="230" y2="250" stroke="#16a34a" stroke-width="2" marker-end="url(#arg)"/>
+  <line x1="650" y1="220" x2="650" y2="250" stroke="#16a34a" stroke-width="2" marker-end="url(#arg)"/>
+
+  <!-- Parallel: frontend -->
+  <rect x="80" y="258" width="300" height="120" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="230" y="286" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">3a. Frontend (parallel)</text>
+  <text x="230" y="312" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Mock serverga qarab UI quradi —</text>
+  <text x="230" y="334" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">backend tayyor bo'lishini</text>
+  <text x="230" y="356" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">kutmaydi</text>
+
+  <!-- Parallel: backend -->
+  <rect x="500" y="258" width="300" height="120" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="650" y="286" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">3b. Backend (parallel)</text>
+  <text x="650" y="312" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Shartnomaga mos haqiqiy</text>
+  <text x="650" y="334" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">implementatsiyani yozadi</text>
+  <text x="650" y="356" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">(DB, mantiq, test)</text>
+
+  <!-- merge -->
+  <line x1="230" y1="378" x2="230" y2="406" stroke="#16a34a" stroke-width="2"/>
+  <line x1="650" y1="378" x2="650" y2="406" stroke="#16a34a" stroke-width="2"/>
+  <line x1="230" y1="406" x2="650" y2="406" stroke="#16a34a" stroke-width="2"/>
+  <line x1="440" y1="406" x2="440" y2="430" stroke="#16a34a" stroke-width="2" marker-end="url(#arg)"/>
+
+  <rect x="290" y="438" width="300" height="48" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="440" y="468" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#f59e0b">4. Integratsiya: shartnoma kafolati</text>
+</svg>

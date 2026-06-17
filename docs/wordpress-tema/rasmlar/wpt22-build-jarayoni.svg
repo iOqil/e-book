@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 430" width="800" height="430">
+  <title>Build jarayoni: src -> wp-scripts build -> build -> register_block_type</title>
+  <rect width="800" height="430" fill="#f8fafc"/>
+  <text x="400" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Build jarayoni: manba koddan ishlaydigan blokgacha</text>
+
+  <!-- src box -->
+  <rect x="30" y="70" width="180" height="190" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="120" y="96" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">src/ (siz yozasiz)</text>
+  <g font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">
+    <text x="48" y="124">block.json</text>
+    <text x="48" y="150">index.js</text>
+    <text x="48" y="176">edit.js (JSX)</text>
+    <text x="48" y="202">save.js (JSX)</text>
+    <text x="48" y="228">style.scss</text>
+    <text x="48" y="252">editor.scss</text>
+  </g>
+
+  <!-- arrow 1 -->
+  <g stroke="#475569" stroke-width="2.5" fill="none">
+    <path d="M210 165 L280 165" marker-end="url(#ar)"/>
+  </g>
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- wp-scripts box -->
+  <rect x="290" y="100" width="200" height="130" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="390" y="128" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#d97706">wp-scripts build</text>
+  <g font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">
+    <text x="306" y="154">JSX -> oddiy JS</text>
+    <text x="306" y="176">SCSS -> CSS</text>
+    <text x="306" y="198">minify + bundling</text>
+    <text x="306" y="220">webpack ostida</text>
+  </g>
+  <text x="390" y="252" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">start = watch rejimi</text>
+
+  <!-- arrow 2 -->
+  <g stroke="#475569" stroke-width="2.5" fill="none">
+    <path d="M490 165 L560 165" marker-end="url(#ar)"/>
+  </g>
+
+  <!-- build box -->
+  <rect x="570" y="70" width="200" height="190" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="670" y="96" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">build/ (avtomatik)</text>
+  <g font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">
+    <text x="588" y="124">block.json</text>
+    <text x="588" y="150">index.js</text>
+    <text x="588" y="176">index.asset.php</text>
+    <text x="588" y="202">index.css</text>
+    <text x="588" y="228">style-index.css</text>
+  </g>
+  <text x="670" y="252" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">build/ ni git'ga qo'shma</text>
+
+  <!-- arrow down -->
+  <g stroke="#475569" stroke-width="2.5" fill="none">
+    <path d="M670 260 L670 310" marker-end="url(#ar)"/>
+  </g>
+
+  <!-- register box -->
+  <rect x="200" y="320" width="470" height="80" rx="10" fill="#21759b"/>
+  <text x="435" y="350" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">PHP: register_block_type( __DIR__ . '/build' );</text>
+  <text x="435" y="378" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#e0f2fe">init hookida. WP build/block.json ni o'qib, blokni ro'yxatga oladi.</text>
+
+  <!-- arrow from register left -->
+  <g stroke="#475569" stroke-width="2.5" fill="none">
+    <path d="M200 360 L120 360 L120 260" marker-end="url(#ar)"/>
+  </g>
+  <text x="120" y="300" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">blok inserter'da</text>
+  <text x="120" y="318" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">paydo bo'ladi</text>
+</svg>

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 450" width="760" height="450">
+  <title>InnerBlocks ota blok ichiga bola bloklarni joylaydi; allowedBlocks ruxsat berilgan bloklarni, template boshlang'ich tuzilmani, templateLock o'zgartirish ruxsatini boshqaradi</title>
+  <rect x="0" y="0" width="760" height="450" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">InnerBlocks: blok ichida bloklar</text>
+
+  <!-- Ota blok katta quti -->
+  <rect x="40" y="58" width="380" height="356" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="230" y="84" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e40af">Ota blok: oqil/kitob-kartasi</text>
+  <text x="230" y="104" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">&lt;InnerBlocks /&gt;  joylashuv maydoni</text>
+
+  <!-- Bola bloklar -->
+  <rect x="70" y="124" width="320" height="50" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="86" y="146" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">core/heading</text>
+  <text x="86" y="165" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Kitob nomi (sarlavha)</text>
+
+  <rect x="70" y="184" width="320" height="50" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="86" y="206" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">core/image</text>
+  <text x="86" y="225" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Muqova rasmi</text>
+
+  <rect x="70" y="244" width="320" height="50" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="86" y="266" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">core/paragraph</text>
+  <text x="86" y="285" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Qisqa tavsif</text>
+
+  <text x="230" y="324" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">edit():  &lt;InnerBlocks /&gt;</text>
+  <text x="230" y="346" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">save():  &lt;InnerBlocks.Content /&gt;</text>
+
+  <rect x="70" y="362" width="320" height="40" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="230" y="386" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Bola bloklar post_content ichiga yoziladi</text>
+
+  <!-- O'ng panel: props -->
+  <rect x="450" y="58" width="280" height="356" rx="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="590" y="84" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#7c3aed">Boshqaruv prop'lari</text>
+
+  <rect x="470" y="104" width="240" height="78" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="484" y="126" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">allowedBlocks</text>
+  <text x="484" y="146" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">faqat shu bloklar qo'shiladi:</text>
+  <text x="484" y="166" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">['core/heading','core/image']</text>
+
+  <rect x="470" y="192" width="240" height="78" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="484" y="214" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">template</text>
+  <text x="484" y="234" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">boshlang'ich tuzilma:</text>
+  <text x="484" y="254" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">[['core/heading',{level:3}]]</text>
+
+  <rect x="470" y="280" width="240" height="120" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="484" y="302" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">templateLock</text>
+  <text x="484" y="324" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">false</text>
+  <text x="540" y="324" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">— erkin qo'shish</text>
+  <text x="484" y="346" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">'insert'</text>
+  <text x="540" y="346" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">— qo'shib bo'lmaydi</text>
+  <text x="484" y="368" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">'all'</text>
+  <text x="540" y="368" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">— umuman qulflangan</text>
+  <text x="484" y="390" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">'contentOnly'</text>
+  <text x="592" y="390" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">— faqat matn</text>
+</svg>

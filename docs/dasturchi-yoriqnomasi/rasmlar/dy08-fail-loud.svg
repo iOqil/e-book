@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 470" font-family="Segoe UI">
+  <title>Xatoni jimgina yutib yuborish keyinroq katta halokatga olib keladi, erta va aniq yiqilish esa muammoni manbada ushlaydi</title>
+  <rect x="0" y="0" width="880" height="470" fill="#f8fafc"/>
+
+  <text x="440" y="36" text-anchor="middle" font-size="22" font-weight="bold" fill="#1e293b">Xatoni yutish vs erta yiqilish</text>
+  <text x="440" y="60" text-anchor="middle" font-size="14" fill="#64748b">Xato qachon yuzaga chiqsa, tuzatish shuncha arzon</text>
+
+  <!-- TOP: swallow -->
+  <rect x="34" y="84" width="812" height="160" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="56" y="112" font-size="17" font-weight="bold" fill="#dc2626">Xatoni jimgina yut (antipattern)</text>
+
+  <rect x="56" y="130" width="150" height="56" rx="8" fill="#fef2f2" stroke="#dc2626"/>
+  <text x="131" y="154" text-anchor="middle" font-size="14" fill="#991b1b">Xato yuz berdi</text>
+  <text x="131" y="174" text-anchor="middle" font-size="13" fill="#991b1b">(disk to'la)</text>
+
+  <line x1="206" y1="158" x2="246" y2="158" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="246,158 238,153 238,163" fill="#94a3b8"/>
+  <rect x="248" y="130" width="180" height="56" rx="8" fill="#f1f5f9" stroke="#94a3b8"/>
+  <text x="338" y="150" text-anchor="middle" font-size="13" fill="#64748b">catch { } -- jim</text>
+  <text x="338" y="170" text-anchor="middle" font-size="13" fill="#64748b">hech kim bilmaydi</text>
+
+  <line x1="428" y1="158" x2="468" y2="158" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="468,158 460,153 460,163" fill="#94a3b8"/>
+  <rect x="470" y="130" width="160" height="56" rx="8" fill="#fff7ed" stroke="#f59e0b"/>
+  <text x="550" y="150" text-anchor="middle" font-size="13" fill="#92400e">Soatlar o'tadi,</text>
+  <text x="550" y="170" text-anchor="middle" font-size="13" fill="#92400e">buzuq ma'lumot tarqaydi</text>
+
+  <line x1="630" y1="158" x2="670" y2="158" stroke="#dc2626" stroke-width="2"/>
+  <polygon points="670,158 662,153 662,163" fill="#dc2626"/>
+  <rect x="672" y="126" width="152" height="64" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="748" y="150" text-anchor="middle" font-size="14" font-weight="bold" fill="#991b1b">HALOKAT</text>
+  <text x="748" y="172" text-anchor="middle" font-size="13" fill="#991b1b">sababi noma'lum</text>
+
+  <text x="56" y="226" font-size="13" fill="#991b1b">Belgi manbadan uzoqda chiqadi -- debugging azobi, ma'lumot allaqachon buzilgan.</text>
+
+  <!-- BOTTOM: fail loud -->
+  <rect x="34" y="266" width="812" height="172" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="56" y="294" font-size="17" font-weight="bold" fill="#16a34a">Erta va aniq yiqil (fail loud / fail fast)</text>
+
+  <rect x="56" y="312" width="150" height="56" rx="8" fill="#fef2f2" stroke="#dc2626"/>
+  <text x="131" y="336" text-anchor="middle" font-size="14" fill="#991b1b">Xato yuz berdi</text>
+  <text x="131" y="356" text-anchor="middle" font-size="13" fill="#991b1b">(disk to'la)</text>
+
+  <line x1="206" y1="340" x2="246" y2="340" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="246,340 238,335 238,345" fill="#16a34a"/>
+  <rect x="248" y="312" width="200" height="56" rx="8" fill="#f0fdf4" stroke="#16a34a"/>
+  <text x="348" y="332" text-anchor="middle" font-size="13" fill="#166534">Darhol to'xta + logla</text>
+  <text x="348" y="352" text-anchor="middle" font-size="13" fill="#166534">kontekst bilan</text>
+
+  <line x1="448" y1="340" x2="488" y2="340" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="488,340 480,335 480,345" fill="#16a34a"/>
+  <rect x="490" y="312" width="190" height="56" rx="8" fill="#eff6ff" stroke="#2563eb"/>
+  <text x="585" y="332" text-anchor="middle" font-size="13" fill="#1e3a8a">Ogohlantirish chiqadi,</text>
+  <text x="585" y="352" text-anchor="middle" font-size="13" fill="#1e3a8a">dasturchi ko'radi</text>
+
+  <line x1="680" y1="340" x2="720" y2="340" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="720,340 712,335 712,345" fill="#16a34a"/>
+  <rect x="722" y="308" width="102" height="64" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="773" y="332" text-anchor="middle" font-size="14" font-weight="bold" fill="#166534">Tezda</text>
+  <text x="773" y="354" text-anchor="middle" font-size="13" fill="#166534">tuzatiladi</text>
+
+  <text x="56" y="418" font-size="13" fill="#166534">Belgi manbaga yaqin chiqadi -- sabab aniq, ta'sir cheklangan, tuzatish arzon.</text>
+</svg>

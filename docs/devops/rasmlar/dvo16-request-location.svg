@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420">
+  <title>Kelgan HTTP so'rov yo'li: brauzer so'rovi Nginx ga keladi, Nginx avval Host sarlavhasini server_name bilan solishtirib to'g'ri server blokini tanlaydi, so'ng URL yo'lini location bloklari bilan moslashtiradi va mos location ichidagi try_files root papkadan faylni topib javob qaytaradi</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">So'rov qanday server va location ni topadi</text>
+
+  <!-- 1. So'rov -->
+  <rect x="30" y="160" width="150" height="92" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="105" y="190" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e40af">Brauzer so'rovi</text>
+  <text x="105" y="212" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">GET /static/app.css</text>
+  <text x="105" y="232" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Host: vazifalar.uz</text>
+
+  <line x1="180" y1="206" x2="222" y2="206" stroke="#2563eb" stroke-width="2.5" marker-end="url(#b2r)"/>
+
+  <!-- 2. server_name moslik -->
+  <rect x="224" y="150" width="220" height="112" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="334" y="177" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#92400e">1-qadam: server tanlash</text>
+  <text x="334" y="201" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Host sarlavhasini</text>
+  <text x="334" y="221" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">server_name bilan</text>
+  <text x="334" y="241" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#92400e">solishtiradi</text>
+
+  <line x1="444" y1="206" x2="486" y2="206" stroke="#2563eb" stroke-width="2.5" marker-end="url(#b2r)"/>
+
+  <!-- 3. location moslik -->
+  <rect x="488" y="150" width="240" height="112" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="608" y="177" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#5b21b6">2-qadam: location tanlash</text>
+  <text x="608" y="201" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">URL yo'lini location'lar</text>
+  <text x="608" y="221" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">bilan: aniqroq prefiks</text>
+  <text x="608" y="241" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#5b21b6">/static/ ustun keladi</text>
+
+  <!-- strelka pastga: try_files -->
+  <line x1="608" y1="262" x2="608" y2="296" stroke="#94a3b8" stroke-width="2" marker-end="url(#a2r)"/>
+
+  <!-- 4. try_files + root -->
+  <rect x="430" y="298" width="298" height="86" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="579" y="324" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">3-qadam: try_files + root</text>
+  <text x="579" y="348" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">/var/www/vazifalar/static/app.css</text>
+  <text x="579" y="370" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">topilsa beradi, bo'lmasa =404</text>
+
+  <!-- 5. javob -->
+  <rect x="30" y="298" width="370" height="86" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="215" y="328" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#15803d">Javob brauzerga qaytadi</text>
+  <text x="215" y="352" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">200 OK + Content-Type: text/css</text>
+  <text x="215" y="372" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(MIME turi fayl kengaytmasidan)</text>
+
+  <line x1="430" y1="341" x2="402" y2="341" stroke="#16a34a" stroke-width="2.5" marker-end="url(#c2r)"/>
+
+  <text x="380" y="408" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Har so'rov: avval server (Host), keyin location (URL yo'li), keyin fayl</text>
+
+  <defs>
+    <marker id="b2r" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="a2r" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#94a3b8"/>
+    </marker>
+    <marker id="c2r" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+</svg>

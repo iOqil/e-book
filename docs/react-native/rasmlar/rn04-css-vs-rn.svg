@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 500" width="760" height="500" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Web CSS va React Native StyleSheet farqlari: kebab-case va px va meros, camelCase va raqam va merossiz</title>
+  <rect x="0" y="0" width="760" height="500" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">Web CSS va RN StyleSheet farqlari</text>
+
+  <!-- left: CSS -->
+  <rect x="30" y="64" width="345" height="404" rx="14" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="30" y="64" width="345" height="44" rx="14" fill="#fef3c7"/>
+  <text x="202" y="93" text-anchor="middle" font-size="17" font-weight="700" fill="#b45309">Web CSS (brauzer)</text>
+
+  <text x="50" y="140" font-size="14" font-weight="700" fill="#1e293b">Yozilishi</text>
+  <text x="50" y="164" font-size="13" fill="#b45309" font-family="Consolas, monospace">background-color: #4f46e5;</text>
+  <text x="50" y="186" font-size="13" fill="#b45309" font-family="Consolas, monospace">padding: 16px;</text>
+  <text x="50" y="208" font-size="13" fill="#b45309" font-family="Consolas, monospace">font-weight: 700;</text>
+
+  <line x1="50" y1="228" x2="355" y2="228" stroke="#fde68a" stroke-width="1.5"/>
+
+  <text x="50" y="256" font-size="14" font-weight="700" fill="#1e293b">Nomlash</text>
+  <text x="50" y="278" font-size="13" fill="#475569">kebab-case (chiziqcha bilan)</text>
+
+  <text x="50" y="312" font-size="14" font-weight="700" fill="#1e293b">Birlik</text>
+  <text x="50" y="334" font-size="13" fill="#475569">px, em, rem, % — birlik kerak</text>
+
+  <text x="50" y="368" font-size="14" font-weight="700" fill="#1e293b">Qiymat turi</text>
+  <text x="50" y="390" font-size="13" fill="#475569">deyarli hammasi matn (string)</text>
+
+  <text x="50" y="424" font-size="14" font-weight="700" fill="#1e293b">Meros / kaskad</text>
+  <text x="50" y="446" font-size="13" fill="#16a34a">BOR — ota stilni bolaga uzatadi</text>
+
+  <!-- right: RN -->
+  <rect x="385" y="64" width="345" height="404" rx="14" fill="#ffffff" stroke="#0ea5e9" stroke-width="3"/>
+  <rect x="385" y="64" width="345" height="44" rx="14" fill="#e0f2fe"/>
+  <text x="557" y="93" text-anchor="middle" font-size="17" font-weight="700" fill="#0284c7">RN StyleSheet (native)</text>
+
+  <text x="405" y="140" font-size="14" font-weight="700" fill="#1e293b">Yozilishi</text>
+  <text x="405" y="164" font-size="13" fill="#0284c7" font-family="Consolas, monospace">backgroundColor: '#4f46e5',</text>
+  <text x="405" y="186" font-size="13" fill="#0284c7" font-family="Consolas, monospace">padding: 16,</text>
+  <text x="405" y="208" font-size="13" fill="#0284c7" font-family="Consolas, monospace">fontWeight: '700',</text>
+
+  <line x1="405" y1="228" x2="710" y2="228" stroke="#bae6fd" stroke-width="1.5"/>
+
+  <text x="405" y="256" font-size="14" font-weight="700" fill="#1e293b">Nomlash</text>
+  <text x="405" y="278" font-size="13" fill="#475569">camelCase (katta harf bilan)</text>
+
+  <text x="405" y="312" font-size="14" font-weight="700" fill="#1e293b">Birlik</text>
+  <text x="405" y="334" font-size="13" fill="#475569">raqam (dp) yoki '50%' — px yo'q</text>
+
+  <text x="405" y="368" font-size="14" font-weight="700" fill="#1e293b">Qiymat turi</text>
+  <text x="405" y="390" font-size="13" fill="#475569">raqam yoki string (fontWeight str)</text>
+
+  <text x="405" y="424" font-size="14" font-weight="700" fill="#1e293b">Meros / kaskad</text>
+  <text x="405" y="446" font-size="13" fill="#dc2626">YO'Q — har komponent o'z stilini</text>
+</svg>

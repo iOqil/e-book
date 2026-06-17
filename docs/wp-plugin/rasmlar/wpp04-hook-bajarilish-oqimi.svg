@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420">
+  <title>Bitta hook ga ulangan callback'lar prioritet tartibida ishlaydi, kichik raqam birinchi</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="36" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="700" fill="#1e293b" text-anchor="middle">Bitta hook — prioritet bo'yicha bajarilish oqimi</text>
+  <text x="380" y="60" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">apply_filters('kitkat_narx', 50000, $kitob)</text>
+
+  <!-- start value -->
+  <rect x="40" y="170" width="92" height="56" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="86" y="195" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">boshlang'ich</text>
+  <text x="86" y="214" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="700" fill="#1e40af" text-anchor="middle">50000</text>
+
+  <!-- callbacks chain (priority order) -->
+  <!-- cb1 -->
+  <line x1="132" y1="198" x2="166" y2="198" stroke="#475569" stroke-width="2.5" marker-end="url(#arr)"/>
+  <rect x="168" y="156" width="128" height="84" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <rect x="168" y="156" width="128" height="26" rx="10" fill="#16a34a"/>
+  <text x="232" y="174" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">priority 5</text>
+  <text x="232" y="201" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">+1000</text>
+  <text x="232" y="222" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700" fill="#15803d" text-anchor="middle">= 51000</text>
+
+  <!-- cb2 -->
+  <line x1="296" y1="198" x2="330" y2="198" stroke="#475569" stroke-width="2.5" marker-end="url(#arr)"/>
+  <rect x="332" y="156" width="128" height="84" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <rect x="332" y="156" width="128" height="26" rx="10" fill="#16a34a"/>
+  <text x="396" y="174" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">priority 10 (default)</text>
+  <text x="396" y="201" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">x 1.12 (QQS)</text>
+  <text x="396" y="222" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700" fill="#15803d" text-anchor="middle">= 57120</text>
+
+  <!-- cb3 -->
+  <line x1="460" y1="198" x2="494" y2="198" stroke="#475569" stroke-width="2.5" marker-end="url(#arr)"/>
+  <rect x="496" y="156" width="128" height="84" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <rect x="496" y="156" width="128" height="26" rx="10" fill="#16a34a"/>
+  <text x="560" y="174" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">priority 20</text>
+  <text x="560" y="201" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">round()</text>
+  <text x="560" y="222" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700" fill="#15803d" text-anchor="middle">= 57120</text>
+
+  <!-- end -->
+  <line x1="624" y1="198" x2="658" y2="198" stroke="#475569" stroke-width="2.5" marker-end="url(#arr)"/>
+  <rect x="660" y="170" width="80" height="56" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="700" y="195" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#92400e" text-anchor="middle">natija</text>
+  <text x="700" y="214" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="700" fill="#92400e" text-anchor="middle">57120</text>
+
+  <!-- direction note -->
+  <line x1="168" y1="280" x2="624" y2="280" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrgrey)"/>
+  <text x="396" y="302" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">kichik priority OLDIN ishlaydi — bir xil priority bo'lsa qo'shilish tartibida</text>
+
+  <rect x="120" y="334" width="520" height="56" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="380" y="358" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#5b21b6" text-anchor="middle">Har callback oldingisining NATIJASINI oladi — bu yerda filter zanjiri.</text>
+  <text x="380" y="378" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#5b21b6" text-anchor="middle">Action'da ham tartib bir xil, lekin qiymat uzatilmaydi.</text>
+
+  <defs>
+    <marker id="arr" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#475569"/></marker>
+    <marker id="arrgrey" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#94a3b8"/></marker>
+  </defs>
+</svg>

@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560">
+  <title>API uslublari taqqoslashi: REST, RPC, GraphQL, gRPC</title>
+  <rect x="0" y="0" width="900" height="560" fill="#f8fafc"/>
+  <text x="450" y="34" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">Toʻrt uslub bir qarashda</text>
+  <text x="450" y="58" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Bir xil muammoni — masofadagi tizim bilan gaplashishni — har xil yoʻl bilan yechadi</text>
+
+  <!-- Column headers -->
+  <rect x="40" y="80" width="200" height="44" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="140" y="108" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb">REST</text>
+
+  <rect x="250" y="80" width="200" height="44" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="350" y="108" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#f59e0b">RPC</text>
+
+  <rect x="460" y="80" width="200" height="44" rx="8" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="560" y="108" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#7c3aed">GraphQL</text>
+
+  <rect x="670" y="80" width="190" height="44" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="765" y="108" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a">gRPC</text>
+
+  <!-- Row 1: model -->
+  <text x="450" y="150" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#64748b">Asosiy gʻoya (model)</text>
+  <text x="140" y="176" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Resurs (ot)</text>
+  <text x="350" y="176" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Funksiya (feʼl)</text>
+  <text x="560" y="176" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Soʻrov tili (maydon)</text>
+  <text x="765" y="176" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Funksiya (proto)</text>
+
+  <!-- Row 2: transport/format -->
+  <line x1="40" y1="192" x2="860" y2="192" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="450" y="214" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#64748b">Transport va format</text>
+  <text x="140" y="240" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">HTTP/1.1 + JSON</text>
+  <text x="350" y="240" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">HTTP + JSON/XML</text>
+  <text x="560" y="240" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">HTTP POST + JSON</text>
+  <text x="765" y="240" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">HTTP/2 + protobuf</text>
+
+  <!-- Row 3: contract -->
+  <line x1="40" y1="256" x2="860" y2="256" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="450" y="278" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#64748b">Shartnoma / tip</text>
+  <text x="140" y="304" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">OpenAPI (tashqi)</text>
+  <text x="350" y="304" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Yoʻq / ad-hoc</text>
+  <text x="560" y="304" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Schema (SDL)</text>
+  <text x="765" y="304" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">.proto (qatʼiy)</text>
+
+  <!-- Row 4: strengths -->
+  <line x1="40" y1="320" x2="860" y2="320" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="450" y="342" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">Kuchli tomoni</text>
+  <text x="140" y="366" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">Sodda, kesh,</text>
+  <text x="140" y="384" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">HTTPʼga tabiiy</text>
+  <text x="350" y="366" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">Sodda, amal</text>
+  <text x="350" y="384" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">tushunarli</text>
+  <text x="560" y="366" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">Aniq maydon,</text>
+  <text x="560" y="384" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">bitta soʻrov</text>
+  <text x="765" y="366" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">Tez, ixcham,</text>
+  <text x="765" y="384" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">streaming</text>
+
+  <!-- Row 5: weaknesses -->
+  <line x1="40" y1="400" x2="860" y2="400" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="450" y="422" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">Zaif tomoni</text>
+  <text x="140" y="446" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">Over/under-fetch,</text>
+  <text x="140" y="464" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">koʻp soʻrov</text>
+  <text x="350" y="446" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">Standart yoʻq,</text>
+  <text x="350" y="464" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">endpoint portlashi</text>
+  <text x="560" y="446" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">Kesh va rate-limit</text>
+  <text x="560" y="464" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">murakkab</text>
+  <text x="765" y="446" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">Brauzerda qiyin,</text>
+  <text x="765" y="464" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">debug ogʻir</text>
+
+  <!-- Row 6: best for -->
+  <line x1="40" y1="480" x2="860" y2="480" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="450" y="502" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#64748b">Eng mos joyi</text>
+  <text x="140" y="528" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Public CRUD API</text>
+  <text x="350" y="528" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Oddiy amallar</text>
+  <text x="560" y="528" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Moslashuvchan UI</text>
+  <text x="765" y="528" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Ichki mikroservis</text>
+
+  <text x="450" y="552" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Yagona toʻgʻri javob yoʻq — kontekst hal qiladi; koʻp tizim ularni aralash (gibrid) ishlatadi</text>
+</svg>

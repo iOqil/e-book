@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 470" width="800" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Multimodal user xabari: content massivi ikki blokdan iborat — image bloki (base64 yoki url manba) va text bloki ("Bu rasmda nima bor?"). Claude ikkalasini birga ko'radi va matnli javob qaytaradi.</title>
+  <defs>
+    <marker id="a9a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#6366f1"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="800" height="470" fill="#f8fafc"/>
+  <text x="400" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Multimodal xabar: rasm bloki + matn bloki</text>
+  <text x="400" y="58" font-size="14" fill="#64748b" text-anchor="middle">Bitta user xabari ICHIDA content massivi — Claude rasmni ham, savolni ham birga ko'radi</text>
+
+  <!-- user message container -->
+  <text x="220" y="92" font-size="15" font-weight="bold" fill="#0ea5e9" text-anchor="middle">role: "user" — content: [ ... ]</text>
+  <rect x="36" y="104" width="368" height="246" rx="12" fill="#dbeafe" stroke="#0ea5e9" stroke-width="2"/>
+
+  <!-- image block -->
+  <rect x="56" y="124" width="328" height="100" rx="10" fill="#ffffff" stroke="#d97757" stroke-width="2"/>
+  <text x="72" y="148" font-size="14" font-weight="bold" fill="#d97757" text-anchor="start">type: "image"</text>
+  <text x="72" y="172" font-size="13" fill="#475569" text-anchor="start" font-family="Consolas, monospace">source: { type: "base64",</text>
+  <text x="72" y="192" font-size="13" fill="#475569" text-anchor="start" font-family="Consolas, monospace">  media_type: "image/png",</text>
+  <text x="72" y="212" font-size="13" fill="#475569" text-anchor="start" font-family="Consolas, monospace">  data: "iVBORw0KGgo..." }</text>
+
+  <!-- text block -->
+  <rect x="56" y="236" width="328" height="94" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="72" y="260" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="start">type: "text"</text>
+  <text x="72" y="286" font-size="13" fill="#475569" text-anchor="start" font-family="Consolas, monospace">text: "Bu rasmda</text>
+  <text x="72" y="306" font-size="13" fill="#475569" text-anchor="start" font-family="Consolas, monospace">  nima bor?"</text>
+
+  <!-- arrow to Claude -->
+  <line x1="404" y1="227" x2="470" y2="227" stroke="#6366f1" stroke-width="2.5" marker-end="url(#a9a)"/>
+
+  <!-- Claude box -->
+  <rect x="474" y="178" width="150" height="98" rx="12" fill="#6366f1"/>
+  <text x="549" y="218" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Claude</text>
+  <text x="549" y="242" font-size="13" fill="#e0e7ff" text-anchor="middle">multimodal —</text>
+  <text x="549" y="260" font-size="13" fill="#e0e7ff" text-anchor="middle">rasmni KO'RADI</text>
+
+  <!-- arrow to answer -->
+  <line x1="624" y1="227" x2="690" y2="227" stroke="#6366f1" stroke-width="2.5" marker-end="url(#a9a)"/>
+
+  <!-- answer -->
+  <rect x="638" y="178" width="148" height="98" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="712" y="206" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">Matnli javob</text>
+  <text x="712" y="232" font-size="13" fill="#475569" text-anchor="middle">"Rasmda ko'k</text>
+  <text x="712" y="250" font-size="13" fill="#475569" text-anchor="middle">mashina va</text>
+  <text x="712" y="268" font-size="13" fill="#475569" text-anchor="middle">daraxt bor."</text>
+
+  <!-- footer -->
+  <rect x="36" y="372" width="750" height="74" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="56" y="398" font-size="13.5" fill="#1e293b" text-anchor="start" font-weight="bold">Asosiy g'oya: matn yuborganingizda content — oddiy satr; rasm qo'shganda content — BLOKLAR massivi.</text>
+  <text x="56" y="420" font-size="13.5" fill="#475569" text-anchor="start">image bloki avval, text bloki keyin (tartib muhim emas, lekin shu odat qulay). media_type rasm</text>
+  <text x="56" y="438" font-size="13.5" fill="#475569" text-anchor="start">turiga aniq mos kelishi SHART: image/png, image/jpeg, image/gif yoki image/webp.</text>
+</svg>

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 470">
+  <title>HTTP so'rov va javob anatomiyasi: testda tekshiriladigan qismlar</title>
+  <rect x="0" y="0" width="820" height="470" fill="#f8fafc"/>
+  <text x="410" y="38" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">HTTP so'rov va javob anatomiyasi</text>
+  <text x="410" y="64" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Test har bir qismni tekshiradi: metod, status, sarlavha, body</text>
+
+  <!-- Request card -->
+  <rect x="40" y="100" width="330" height="320" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="205" y="130" text-anchor="middle" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#2563eb">SO'ROV (request)</text>
+
+  <rect x="64" y="148" width="282" height="40" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="80" y="166" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#1e293b">Metod + manzil</text>
+  <text x="80" y="182" font-family="Segoe UI" font-size="13" fill="#475569">GET /mahsulot/1</text>
+
+  <rect x="64" y="198" width="282" height="56" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="80" y="216" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#1e293b">Sarlavhalar</text>
+  <text x="80" y="234" font-family="Segoe UI" font-size="13" fill="#475569">Authorization: Bearer ...</text>
+  <text x="80" y="250" font-family="Segoe UI" font-size="13" fill="#475569">Content-Type: application/json</text>
+
+  <rect x="64" y="264" width="282" height="62" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="80" y="282" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#1e293b">Body (POST/PUT)</text>
+  <text x="80" y="302" font-family="Segoe UI" font-size="13" fill="#475569">{ "nom": "Daftar",</text>
+  <text x="80" y="318" font-family="Segoe UI" font-size="13" fill="#475569">  "narx": 10000 }</text>
+
+  <text x="205" y="360" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Test: to'g'ri so'rov yuborildimi?</text>
+
+  <!-- Arrows -->
+  <line x1="378" y1="200" x2="442" y2="200" stroke="#16a34a" stroke-width="3"/>
+  <polygon points="442,200 432,194 432,206" fill="#16a34a"/>
+  <line x1="442" y1="310" x2="378" y2="310" stroke="#7c3aed" stroke-width="3"/>
+  <polygon points="378,310 388,304 388,316" fill="#7c3aed"/>
+
+  <!-- Response card -->
+  <rect x="450" y="100" width="330" height="320" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="615" y="130" text-anchor="middle" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#16a34a">JAVOB (response)</text>
+
+  <rect x="474" y="148" width="282" height="40" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="490" y="166" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#1e293b">Status kod</text>
+  <text x="490" y="182" font-family="Segoe UI" font-size="13" fill="#475569">200 OK  ·  404  ·  500</text>
+
+  <rect x="474" y="198" width="282" height="56" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="490" y="216" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#1e293b">Sarlavhalar</text>
+  <text x="490" y="234" font-family="Segoe UI" font-size="13" fill="#475569">Content-Type: application/json</text>
+  <text x="490" y="250" font-family="Segoe UI" font-size="13" fill="#475569">Cache-Control: ...</text>
+
+  <rect x="474" y="264" width="282" height="62" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="490" y="282" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#1e293b">Body (JSON)</text>
+  <text x="490" y="302" font-family="Segoe UI" font-size="13" fill="#475569">{ "id": 1, "nom": "Kitob",</text>
+  <text x="490" y="318" font-family="Segoe UI" font-size="13" fill="#475569">  "narx": 50000 }</text>
+
+  <text x="615" y="360" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Test: to'g'ri javob qaytdimi?</text>
+
+  <text x="410" y="402" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">Yaxshi test: status + sarlavha + body — uchchovini tekshiradi</text>
+</svg>

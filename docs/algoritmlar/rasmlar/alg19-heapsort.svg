@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 540">
+  <title>Heapsort bosqichlari: max-heap qurish, ildizni massiv oxiriga almashtirish, sift-down va takrorlash</title>
+  <rect x="0" y="0" width="880" height="540" fill="#f8fafc"/>
+  <text x="440" y="36" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Heapsort: in-place, O(n log n)</text>
+  <text x="440" y="62" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Max-heap qur, so'ng eng kattani oxirga surib heap'ni qisqartiraver</text>
+
+  <!-- Step 1 -->
+  <text x="60" y="100" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb">1-qadam. Max-heap qurish (heapify), O(n)</text>
+  <text x="60" y="124" font-family="Segoe UI" font-size="13" fill="#64748b">Kirish massiv: [5, 3, 8, 1, 9, 2, 7]  ->  max-heap (ildiz = 9)</text>
+  <g font-family="monospace" font-size="16">
+    <rect x="60"  y="138" width="46" height="42" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/><text x="83"  y="166" text-anchor="middle" font-weight="bold" fill="#1e293b">9</text>
+    <rect x="106" y="138" width="46" height="42" fill="#ffffff" stroke="#2563eb" stroke-width="2"/><text x="129" y="166" text-anchor="middle" font-weight="bold" fill="#1e293b">5</text>
+    <rect x="152" y="138" width="46" height="42" fill="#ffffff" stroke="#2563eb" stroke-width="2"/><text x="175" y="166" text-anchor="middle" font-weight="bold" fill="#1e293b">8</text>
+    <rect x="198" y="138" width="46" height="42" fill="#ffffff" stroke="#2563eb" stroke-width="2"/><text x="221" y="166" text-anchor="middle" font-weight="bold" fill="#1e293b">1</text>
+    <rect x="244" y="138" width="46" height="42" fill="#ffffff" stroke="#2563eb" stroke-width="2"/><text x="267" y="166" text-anchor="middle" font-weight="bold" fill="#1e293b">3</text>
+    <rect x="290" y="138" width="46" height="42" fill="#ffffff" stroke="#2563eb" stroke-width="2"/><text x="313" y="166" text-anchor="middle" font-weight="bold" fill="#1e293b">2</text>
+    <rect x="336" y="138" width="46" height="42" fill="#ffffff" stroke="#2563eb" stroke-width="2"/><text x="359" y="166" text-anchor="middle" font-weight="bold" fill="#1e293b">7</text>
+  </g>
+  <text x="83" y="200" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">ildiz = max</text>
+
+  <!-- Step 2 -->
+  <text x="60" y="248" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#f59e0b">2-qadam. ildiz (max=9) &#8596; oxir (7) almashtirildi</text>
+  <g font-family="monospace" font-size="16">
+    <rect x="60"  y="262" width="46" height="42" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/><text x="83"  y="290" text-anchor="middle" font-weight="bold" fill="#1e293b">7</text>
+    <rect x="106" y="262" width="46" height="42" fill="#ffffff" stroke="#2563eb" stroke-width="2"/><text x="129" y="290" text-anchor="middle" font-weight="bold" fill="#1e293b">5</text>
+    <rect x="152" y="262" width="46" height="42" fill="#ffffff" stroke="#2563eb" stroke-width="2"/><text x="175" y="290" text-anchor="middle" font-weight="bold" fill="#1e293b">8</text>
+    <rect x="198" y="262" width="46" height="42" fill="#ffffff" stroke="#2563eb" stroke-width="2"/><text x="221" y="290" text-anchor="middle" font-weight="bold" fill="#1e293b">1</text>
+    <rect x="244" y="262" width="46" height="42" fill="#ffffff" stroke="#2563eb" stroke-width="2"/><text x="267" y="290" text-anchor="middle" font-weight="bold" fill="#1e293b">3</text>
+    <rect x="290" y="262" width="46" height="42" fill="#ffffff" stroke="#2563eb" stroke-width="2"/><text x="313" y="290" text-anchor="middle" font-weight="bold" fill="#1e293b">2</text>
+    <rect x="336" y="262" width="46" height="42" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/><text x="359" y="290" text-anchor="middle" font-weight="bold" fill="#16a34a">9</text>
+  </g>
+  <path d="M 83 314 Q 221 350 359 314" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="4 3"/>
+  <text x="221" y="345" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#f59e0b">almashtirish</text>
+  <text x="359" y="334" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">qotgan (saralangan)</text>
+
+  <!-- Step 3 -->
+  <text x="60" y="392" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#dc2626">3-qadam. heap o'lchami 6 ga kamaydi, ildizdan sift-down</text>
+  <g font-family="monospace" font-size="16">
+    <rect x="60"  y="406" width="46" height="42" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/><text x="83"  y="434" text-anchor="middle" font-weight="bold" fill="#1e293b">8</text>
+    <rect x="106" y="406" width="46" height="42" fill="#ffffff" stroke="#2563eb" stroke-width="2"/><text x="129" y="434" text-anchor="middle" font-weight="bold" fill="#1e293b">5</text>
+    <rect x="152" y="406" width="46" height="42" fill="#ffffff" stroke="#2563eb" stroke-width="2"/><text x="175" y="434" text-anchor="middle" font-weight="bold" fill="#1e293b">7</text>
+    <rect x="198" y="406" width="46" height="42" fill="#ffffff" stroke="#2563eb" stroke-width="2"/><text x="221" y="434" text-anchor="middle" font-weight="bold" fill="#1e293b">1</text>
+    <rect x="244" y="406" width="46" height="42" fill="#ffffff" stroke="#2563eb" stroke-width="2"/><text x="267" y="434" text-anchor="middle" font-weight="bold" fill="#1e293b">3</text>
+    <rect x="290" y="406" width="46" height="42" fill="#ffffff" stroke="#2563eb" stroke-width="2"/><text x="313" y="434" text-anchor="middle" font-weight="bold" fill="#1e293b">2</text>
+    <rect x="336" y="406" width="46" height="42" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/><text x="359" y="434" text-anchor="middle" font-weight="bold" fill="#16a34a">9</text>
+  </g>
+  <text x="83" y="468" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">yangi max=8</text>
+  <text x="60" y="494" font-family="Segoe UI" font-size="14" fill="#334155">Takrorla: keyin 8&#8596;oxir, sift-down, ... toki heap 1 ta qolguncha.</text>
+
+  <!-- side complexity panel -->
+  <rect x="470" y="120" width="350" height="270" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="645" y="150" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#7c3aed">Murakkablik</text>
+  <text x="490" y="182" font-family="monospace" font-size="14" fill="#334155">heapify (build)   :  O(n)</text>
+  <text x="490" y="210" font-family="monospace" font-size="14" fill="#334155">n ta sift-down    :  O(n log n)</text>
+  <line x1="490" y1="224" x2="800" y2="224" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="490" y="252" font-family="monospace" font-size="14" fill="#7c3aed">jami vaqt         :  O(n log n)</text>
+  <text x="490" y="280" font-family="monospace" font-size="14" fill="#16a34a">qo'shimcha xotira :  O(1)  (in-place)</text>
+  <text x="490" y="316" font-family="Segoe UI" font-size="14" fill="#dc2626">Barqaror (stable) EMAS:</text>
+  <text x="490" y="338" font-family="Segoe UI" font-size="13" fill="#334155">teng elementlarning dastlabki</text>
+  <text x="490" y="358" font-family="Segoe UI" font-size="13" fill="#334155">tartibi saqlanmaydi.</text>
+
+  <text x="440" y="524" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Natija: [1, 2, 3, 5, 7, 8, 9] — massiv joyida saralanadi</text>
+</svg>

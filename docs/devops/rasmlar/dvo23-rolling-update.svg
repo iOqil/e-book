@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420">
+  <title>Rolling update bosqichlari: uchta eski v1 pod bittama-bitta yangi v2 pod bilan almashadi; har bosqichda avval yangi pod tayyor bo'ladi, keyin eski o'chadi, shuning uchun doimo yetarli pod ishlab turadi va sayt uzilmaydi; maxSurge ortiqcha pod sonini, maxUnavailable yo'q bo'lishi mumkin pod sonini cheklaydi</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Rolling update: v1 pod'lar bittama-bitta v2 ga almashadi</text>
+
+  <!-- legend -->
+  <rect x="250" y="48" width="16" height="16" rx="3" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="272" y="61" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">v1 (eski)</text>
+  <rect x="360" y="48" width="16" height="16" rx="3" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="382" y="61" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">v2 (yangi, tayyor)</text>
+
+  <!-- ROW labels and stages -->
+  <!-- Stage 1 -->
+  <text x="20" y="106" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e40af">Boshlanish</text>
+  <rect x="150" y="86" width="70" height="44" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/><text x="185" y="113" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e40af">v1</text>
+  <rect x="232" y="86" width="70" height="44" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/><text x="267" y="113" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e40af">v1</text>
+  <rect x="314" y="86" width="70" height="44" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/><text x="349" y="113" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e40af">v1</text>
+  <text x="560" y="113" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">3 ta v1 ishlayapti</text>
+
+  <!-- Stage 2 -->
+  <text x="20" y="176" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#475569">1-qadam</text>
+  <rect x="150" y="156" width="70" height="44" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/><text x="185" y="183" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e40af">v1</text>
+  <rect x="232" y="156" width="70" height="44" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/><text x="267" y="183" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e40af">v1</text>
+  <rect x="314" y="156" width="70" height="44" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/><text x="349" y="183" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e40af">v1</text>
+  <rect x="396" y="156" width="70" height="44" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><text x="431" y="183" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#166534">v2</text>
+  <text x="486" y="183" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">+1 yangi (maxSurge=1)</text>
+
+  <!-- Stage 3 -->
+  <text x="20" y="246" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#475569">2-qadam</text>
+  <rect x="150" y="226" width="70" height="44" rx="8" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5 4"/><text x="185" y="253" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">o'chdi</text>
+  <rect x="232" y="226" width="70" height="44" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/><text x="267" y="253" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e40af">v1</text>
+  <rect x="314" y="226" width="70" height="44" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><text x="349" y="253" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#166534">v2</text>
+  <rect x="396" y="226" width="70" height="44" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><text x="431" y="253" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#166534">v2</text>
+  <text x="486" y="253" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">v2 tayyor -&gt; v1 o'chadi</text>
+
+  <!-- Stage 4 -->
+  <text x="20" y="316" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#166534">Yakun</text>
+  <rect x="150" y="296" width="70" height="44" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><text x="185" y="323" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#166534">v2</text>
+  <rect x="232" y="296" width="70" height="44" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><text x="267" y="323" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#166534">v2</text>
+  <rect x="314" y="296" width="70" height="44" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><text x="349" y="323" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#166534">v2</text>
+  <text x="486" y="323" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">3 ta v2 — almashish tugadi</text>
+
+  <!-- down arrows between stages -->
+  <line x1="120" y1="132" x2="120" y2="154" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#ruarr)"/>
+  <line x1="120" y1="202" x2="120" y2="224" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#ruarr)"/>
+  <line x1="120" y1="272" x2="120" y2="294" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#ruarr)"/>
+
+  <!-- bottom note -->
+  <rect x="30" y="362" width="700" height="44" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="380" y="389" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#92400e">maxUnavailable=0: har lahza kamida 3 pod javob beradi -&gt; foydalanuvchi uzilishni sezmaydi (zero-downtime)</text>
+
+  <defs>
+    <marker id="ruarr" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+</svg>

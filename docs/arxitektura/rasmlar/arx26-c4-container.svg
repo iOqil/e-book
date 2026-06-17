@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 720" width="980" height="720">
+  <title>C4 Container diagrammasi: onlayn savdo platformasi - foydalanuvchilar, gateway, servislar, ma'lumot do'konlari va tashqi tizimlar, yorliqli aloqa o'qlari bilan</title>
+  <rect x="0" y="0" width="980" height="720" fill="#f8fafc"/>
+  <text x="490" y="32" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b" text-anchor="middle">C4 Container (L2) - Onlayn savdo platformasi</text>
+  <text x="490" y="56" font-family="Segoe UI" font-size="14" fill="#64748b" text-anchor="middle">har quti = alohida deploy/ishga tushiriladigan birlik (Docker emas - ilova yoki ma'lumot do'koni)</text>
+
+  <defs>
+    <marker id="a26c" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#334155"/>
+    </marker>
+    <marker id="a26e" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+
+  <!-- Foydalanuvchilar (Person) -->
+  <rect x="40" y="92" width="150" height="60" rx="30" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="115" y="118" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#3730a3" text-anchor="middle">Xaridor</text>
+  <text x="115" y="138" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">[Person]</text>
+
+  <rect x="40" y="172" width="150" height="60" rx="30" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="115" y="198" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#3730a3" text-anchor="middle">Sotuvchi/Admin</text>
+  <text x="115" y="218" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">[Person]</text>
+
+  <!-- Tizim chegarasi (system boundary) -->
+  <rect x="220" y="80" width="540" height="560" rx="14" fill="#ffffff" stroke="#94a3b8" stroke-width="2" stroke-dasharray="8,5"/>
+  <text x="490" y="102" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#475569" text-anchor="middle">Savdo platformasi tizimi (chegara)</text>
+
+  <!-- Frontend container'lar -->
+  <rect x="240" y="118" width="230" height="54" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="355" y="140" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#1e3a8a" text-anchor="middle">Veb SPA</text>
+  <text x="355" y="160" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">[React, brauzer]</text>
+
+  <rect x="510" y="118" width="230" height="54" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="625" y="140" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#1e3a8a" text-anchor="middle">Mobil ilova</text>
+  <text x="625" y="160" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">[iOS/Android]</text>
+
+  <!-- API Gateway -->
+  <rect x="330" y="196" width="320" height="48" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="490" y="216" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#92400e" text-anchor="middle">API Gateway / BFF</text>
+  <text x="490" y="234" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">[auth, marshrutlash, rate-limit]</text>
+
+  <!-- Servislar qatori 1 -->
+  <rect x="240" y="278" width="150" height="62" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="315" y="302" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#166534" text-anchor="middle">Katalog servisi</text>
+  <text x="315" y="320" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">[mahsulot, narx]</text>
+
+  <rect x="415" y="278" width="150" height="62" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="490" y="302" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#166534" text-anchor="middle">Buyurtma servisi</text>
+  <text x="490" y="320" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">[savat, buyurtma]</text>
+
+  <rect x="590" y="278" width="150" height="62" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="665" y="302" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#166534" text-anchor="middle">To'lov servisi</text>
+  <text x="665" y="320" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">[CP, idempotent]</text>
+
+  <!-- Servislar qatori 2 -->
+  <rect x="240" y="358" width="150" height="62" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="315" y="382" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#166534" text-anchor="middle">Qidiruv servisi</text>
+  <text x="315" y="400" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">[indeks, AP]</text>
+
+  <rect x="415" y="358" width="150" height="62" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="490" y="382" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#166534" text-anchor="middle">Inventar servisi</text>
+  <text x="490" y="400" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">[qoldiq]</text>
+
+  <rect x="590" y="358" width="150" height="62" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="665" y="382" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#166534" text-anchor="middle">Bildirishnoma</text>
+  <text x="665" y="400" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">[email/SMS, worker]</text>
+
+  <!-- Message broker -->
+  <rect x="300" y="446" width="380" height="40" rx="8" fill="#fde68a" stroke="#f59e0b" stroke-width="2"/>
+  <text x="490" y="471" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#92400e" text-anchor="middle">Message broker (Kafka/RabbitMQ) - asinxron event</text>
+
+  <!-- Ma'lumot do'konlari -->
+  <ellipse cx="315" cy="520" rx="44" ry="11" fill="#dcfce7" stroke="#16a34a"/>
+  <rect x="271" y="520" width="88" height="40" fill="#dcfce7" stroke="#16a34a"/>
+  <ellipse cx="315" cy="560" rx="44" ry="11" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="315" y="538" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#166534" text-anchor="middle">Katalog DB</text>
+  <text x="315" y="556" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">[PostgreSQL]</text>
+
+  <ellipse cx="445" cy="520" rx="44" ry="11" fill="#dcfce7" stroke="#16a34a"/>
+  <rect x="401" y="520" width="88" height="40" fill="#dcfce7" stroke="#16a34a"/>
+  <ellipse cx="445" cy="560" rx="44" ry="11" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="445" y="538" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#166534" text-anchor="middle">Buyurtma DB</text>
+  <text x="445" y="556" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">[PostgreSQL]</text>
+
+  <ellipse cx="575" cy="520" rx="44" ry="11" fill="#dcfce7" stroke="#16a34a"/>
+  <rect x="531" y="520" width="88" height="40" fill="#dcfce7" stroke="#16a34a"/>
+  <ellipse cx="575" cy="560" rx="44" ry="11" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="575" y="538" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#166534" text-anchor="middle">Qidiruv indeks</text>
+  <text x="575" y="556" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">[Elasticsearch]</text>
+
+  <ellipse cx="675" cy="520" rx="36" ry="11" fill="#fee2e2" stroke="#dc2626"/>
+  <rect x="639" y="520" width="72" height="40" fill="#fee2e2" stroke="#dc2626"/>
+  <ellipse cx="675" cy="560" rx="36" ry="11" fill="#fee2e2" stroke="#dc2626"/>
+  <text x="675" y="538" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#991b1b" text-anchor="middle">Kesh</text>
+  <text x="675" y="556" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">[Redis]</text>
+
+  <text x="490" y="600" font-family="Segoe UI" font-size="13" fill="#475569" text-anchor="middle">database-per-service: har servis FAQAT o'z DB siga kiradi; boshqasiga API/event orqali</text>
+  <text x="490" y="622" font-family="Segoe UI" font-size="13" fill="#475569" text-anchor="middle" font-style="italic">(savat va sessiya = Redis; sig'im raqamlari bobda "taxminiy/tartib")</text>
+
+  <!-- Tashqi tizimlar -->
+  <rect x="790" y="278" width="150" height="56" rx="8" fill="#f1f5f9" stroke="#64748b" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="865" y="302" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#334155" text-anchor="middle">To'lov shlyuzi</text>
+  <text x="865" y="320" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">[tashqi tizim]</text>
+
+  <rect x="790" y="358" width="150" height="56" rx="8" fill="#f1f5f9" stroke="#64748b" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="865" y="382" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#334155" text-anchor="middle">SMS/Email provayder</text>
+  <text x="865" y="400" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">[tashqi tizim]</text>
+
+  <!-- O'qlar: Person -> frontend -->
+  <line x1="190" y1="122" x2="240" y2="138" stroke="#334155" stroke-width="2" marker-end="url(#a26c)"/>
+  <line x1="190" y1="202" x2="505" y2="150" stroke="#334155" stroke-width="2" marker-end="url(#a26c)"/>
+  <text x="210" y="116" font-family="Segoe UI" font-size="13" fill="#475569">HTTPS</text>
+
+  <!-- frontend -> gateway -->
+  <line x1="355" y1="172" x2="430" y2="196" stroke="#334155" stroke-width="2" marker-end="url(#a26c)"/>
+  <line x1="625" y1="172" x2="550" y2="196" stroke="#334155" stroke-width="2" marker-end="url(#a26c)"/>
+  <text x="470" y="190" font-family="Segoe UI" font-size="13" fill="#475569" text-anchor="middle">JSON/HTTPS</text>
+
+  <!-- gateway -> servislar -->
+  <line x1="430" y1="244" x2="330" y2="278" stroke="#334155" stroke-width="2" marker-end="url(#a26c)"/>
+  <line x1="490" y1="244" x2="490" y2="278" stroke="#334155" stroke-width="2" marker-end="url(#a26c)"/>
+  <line x1="550" y1="244" x2="650" y2="278" stroke="#334155" stroke-width="2" marker-end="url(#a26c)"/>
+  <line x1="400" y1="244" x2="320" y2="358" stroke="#334155" stroke-width="1.5" marker-end="url(#a26c)"/>
+  <text x="540" y="266" font-family="Segoe UI" font-size="13" fill="#475569">REST/gRPC</text>
+
+  <!-- servis -> DB -->
+  <line x1="315" y1="340" x2="315" y2="509" stroke="#16a34a" stroke-width="1.5" marker-end="url(#a26c)"/>
+  <line x1="490" y1="340" x2="450" y2="509" stroke="#16a34a" stroke-width="1.5" marker-end="url(#a26c)"/>
+  <line x1="315" y1="420" x2="568" y2="509" stroke="#16a34a" stroke-width="1.5" marker-end="url(#a26c)"/>
+
+  <!-- servislar -> broker (event, sariq) -->
+  <line x1="490" y1="340" x2="490" y2="446" stroke="#f59e0b" stroke-width="2" marker-end="url(#a26e)"/>
+  <line x1="665" y1="340" x2="600" y2="446" stroke="#f59e0b" stroke-width="2" marker-end="url(#a26e)"/>
+  <line x1="450" y1="486" x2="640" y2="386" stroke="#f59e0b" stroke-width="2" marker-end="url(#a26e)"/>
+  <text x="560" y="438" font-family="Segoe UI" font-size="13" fill="#b45309" text-anchor="middle">event (publish/subscribe)</text>
+
+  <!-- To'lov -> tashqi shlyuz -->
+  <line x1="740" y1="306" x2="790" y2="306" stroke="#334155" stroke-width="2" marker-end="url(#a26c)"/>
+  <line x1="740" y1="388" x2="790" y2="386" stroke="#334155" stroke-width="2" marker-end="url(#a26c)"/>
+
+  <!-- Legend -->
+  <rect x="790" y="446" width="150" height="120" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="865" y="466" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#334155" text-anchor="middle">Izoh</text>
+  <line x1="800" y1="484" x2="830" y2="484" stroke="#334155" stroke-width="2" marker-end="url(#a26c)"/>
+  <text x="836" y="488" font-family="Segoe UI" font-size="13" fill="#475569">sinxron</text>
+  <line x1="800" y1="508" x2="830" y2="508" stroke="#f59e0b" stroke-width="2" marker-end="url(#a26e)"/>
+  <text x="836" y="512" font-family="Segoe UI" font-size="13" fill="#b45309">asinxron</text>
+  <rect x="800" y="524" width="16" height="12" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="822" y="534" font-family="Segoe UI" font-size="13" fill="#475569">frontend</text>
+  <rect x="800" y="544" width="16" height="12" fill="#ffffff" stroke="#16a34a"/>
+  <text x="822" y="554" font-family="Segoe UI" font-size="13" fill="#475569">servis</text>
+
+  <text x="490" y="660" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">Servis chegaralari = bounded context'lar (14-bob). Sinxron yo'l: xaridor -> gateway -> servis;</text>
+  <text x="490" y="680" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">asinxron yo'l (sariq): inventar/email/tavsiya broker orqali - to'lov oqimini bloklamaydi.</text>
+  <text x="490" y="704" font-family="Segoe UI" font-size="13" fill="#94a3b8" text-anchor="middle" font-style="italic">Bu konteyner darajasi (L2) - bitta system context (L1) qutisining ichi "kattalashtirilgan"</text>
+</svg>

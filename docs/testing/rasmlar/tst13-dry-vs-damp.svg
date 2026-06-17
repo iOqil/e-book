@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 460">
+  <title>DRY va DAMP testlar: takror kamaytirish vs niyatni ochiq qilish</title>
+  <rect x="0" y="0" width="820" height="460" fill="#f8fafc"/>
+  <text x="410" y="40" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Test kodida: DRY vs DAMP</text>
+  <text x="410" y="66" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Test ham kod — lekin maqsadi: niyatni ochiq, yiqilishini tushunarli qilish</text>
+
+  <!-- JUDA DRY -->
+  <rect x="50" y="100" width="340" height="290" rx="12" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="220" y="130" text-anchor="middle" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#dc2626">Juda DRY (niyat yashiringan)</text>
+  <rect x="70" y="148" width="300" height="120" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <g font-family="Consolas, monospace" font-size="13" fill="#1e293b">
+    <text x="84" y="172">for parol, kut in HOLATLAR:</text>
+    <text x="84" y="196">    assert holat(parol) == kut</text>
+  </g>
+  <text x="220" y="252" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">bitta sikl, hamma holat bir joyda</text>
+  <text x="70" y="298" font-family="Segoe UI" font-size="14" fill="#dc2626">Yiqilsa: "qaysi holat? nega?"</text>
+  <text x="70" y="322" font-family="Segoe UI" font-size="14" fill="#dc2626">noaniq — niyat ko'rinmaydi</text>
+  <text x="70" y="346" font-family="Segoe UI" font-size="14" fill="#dc2626">conditional logic test ichida</text>
+  <text x="70" y="370" font-family="Segoe UI" font-size="14" fill="#dc2626">birinchi yiqilishda to'xtaydi</text>
+
+  <!-- DAMP -->
+  <rect x="430" y="100" width="340" height="290" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="600" y="130" text-anchor="middle" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#16a34a">DAMP (niyat ochiq)</text>
+  <rect x="450" y="148" width="300" height="120" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <g font-family="Consolas, monospace" font-size="13" fill="#1e293b">
+    <text x="464" y="172">def test_qisqa_parol_zaif():</text>
+    <text x="464" y="196">    assert holat("ab12")</text>
+    <text x="464" y="220">        == "zaif"  # 8 dan kam</text>
+  </g>
+  <text x="450" y="298" font-family="Segoe UI" font-size="14" fill="#15803d">Har test = bitta aniq holat</text>
+  <text x="450" y="322" font-family="Segoe UI" font-size="14" fill="#15803d">nomi niyatni aytadi</text>
+  <text x="450" y="346" font-family="Segoe UI" font-size="14" fill="#15803d">yiqilsa: aynan qaysi holat</text>
+  <text x="450" y="370" font-family="Segoe UI" font-size="14" fill="#15803d">o'qishga oson, takror — ayb emas</text>
+
+  <!-- pastki muvozanat -->
+  <rect x="50" y="408" width="720" height="40" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="410" y="433" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#1e293b">Muvozanat: ko'p o'xshash holat bo'lsa -&gt; <tspan font-weight="bold" fill="#2563eb">parametrize</tspan> (DRY ma'lumot + DAMP yiqilish xabari)</text>
+</svg>

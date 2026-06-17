@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420">
+  <title>Ikki yondashuvni taqqoslash: chap tomonda traffic'ga asoslangan WP-Cron tashrifga bog'liq va kechikishi mumkin, o'ng tomonda DISABLE_WP_CRON plus tizim cron belgilangan aniq vaqtda ishonchli ishga tushadi</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="34" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">WP-Cron (default) vs tizim cron</text>
+
+  <!-- LEFT: traffic-based -->
+  <rect x="30" y="58" width="330" height="320" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="195" y="86" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b" text-anchor="middle">Traffic-based WP-Cron</text>
+  <text x="195" y="108" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">(standart holat)</text>
+
+  <rect x="55" y="128" width="280" height="46" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="195" y="156" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">Trigger: kelgan HTTP so'rov</text>
+
+  <rect x="55" y="186" width="280" height="46" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="195" y="207" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">Reja: "03:00 da hisobot"</text>
+  <text x="195" y="225" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">03:00-09:00 hech tashrif yo'q</text>
+
+  <rect x="55" y="244" width="280" height="46" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="195" y="266" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626" text-anchor="middle">Natija: 09:00 da ishlaydi</text>
+  <text x="195" y="284" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626" text-anchor="middle">(KECHIKISH)</text>
+
+  <text x="195" y="318" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Har so'rovda cron tekshiruvi yuki</text>
+  <text x="195" y="344" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Yaxshi: rivojlanish, kam-trafik</text>
+  <text x="195" y="364" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Yomon: aniq vaqt kafolati yo'q</text>
+
+  <!-- RIGHT: system cron -->
+  <rect x="400" y="58" width="330" height="320" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="565" y="86" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b" text-anchor="middle">DISABLE_WP_CRON + tizim cron</text>
+  <text x="565" y="108" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">(production)</text>
+
+  <rect x="425" y="128" width="280" height="46" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="565" y="150" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">wp-config: DISABLE_WP_CRON</text>
+  <text x="565" y="168" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">= true (avtomatik trigger o'chiq)</text>
+
+  <rect x="425" y="186" width="280" height="46" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="565" y="208" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">Tizim cron: wp-cron.php yoki</text>
+  <text x="565" y="226" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">wp cron event run --due-now</text>
+
+  <rect x="425" y="244" width="280" height="46" rx="8" fill="#16a34a"/>
+  <text x="565" y="266" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Natija: 03:00 da ANIQ ishlaydi</text>
+  <text x="565" y="284" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dcfce7" text-anchor="middle">(tashrifga bog'liq emas)</text>
+
+  <text x="565" y="318" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Oddiy so'rovlar yengilroq</text>
+  <text x="565" y="344" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Aniq vaqt + bashorat</text>
+  <text x="565" y="364" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Plugin kodi O'ZGARMAYDI</text>
+
+  <!-- divider arrow -->
+  <text x="380" y="222" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#94a3b8" text-anchor="middle">VS</text>
+</svg>

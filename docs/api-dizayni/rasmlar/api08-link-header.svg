@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 540">
+  <title>Sahifalash havolalarini berishning ikki usuli: Link sarlavha va body envelope</title>
+  <rect x="0" y="0" width="880" height="540" fill="#f8fafc"/>
+  <text x="440" y="36" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">"Keyingi sahifa qayerda?" — ikki javob</text>
+  <text x="440" y="60" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Mijozga navigatsiya havolalarini yetkazishning ikki konvensiyasi</text>
+
+  <!-- Link header approach -->
+  <rect x="40" y="88" width="385" height="412" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="64" y="118" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb">A) Link sarlavha</text>
+  <text x="64" y="140" font-family="Segoe UI" font-size="13" fill="#64748b">RFC 8288 (Web Linking)</text>
+
+  <rect x="64" y="156" width="337" height="150" rx="6" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="78" y="180" font-family="monospace" font-size="13" fill="#1e293b">HTTP/1.1 200 OK</text>
+  <text x="78" y="202" font-family="monospace" font-size="13" fill="#2563eb">Link: &lt;.../products?page=4&gt;;</text>
+  <text x="98" y="222" font-family="monospace" font-size="13" fill="#1d4ed8">rel="next",</text>
+  <text x="78" y="244" font-family="monospace" font-size="13" fill="#2563eb">&lt;.../products?page=2&gt;;</text>
+  <text x="98" y="264" font-family="monospace" font-size="13" fill="#1d4ed8">rel="prev",</text>
+  <text x="78" y="286" font-family="monospace" font-size="13" fill="#1d4ed8">&lt;...?page=99&gt;; rel="last"</text>
+
+  <text x="64" y="338" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">+ Metadata body'ni ifloslantirmaydi</text>
+  <text x="64" y="362" font-family="Segoe UI" font-size="13" fill="#334155">+ Standart rel: next/prev/first/last</text>
+  <text x="64" y="386" font-family="Segoe UI" font-size="13" fill="#334155">+ Body sof "data" bo'lib qoladi</text>
+  <text x="64" y="424" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">− O'qish noqulay (parse kerak)</text>
+  <text x="64" y="448" font-family="Segoe UI" font-size="13" fill="#334155">− Brauzer/JS sarlavhani ko'rmasligi</text>
+  <text x="64" y="472" font-family="Segoe UI" font-size="13" fill="#334155">  mumkin (CORS expose-headers)</text>
+
+  <!-- Body envelope approach -->
+  <rect x="455" y="88" width="385" height="412" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="479" y="118" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#7c3aed">B) Body envelope (meta+links)</text>
+  <text x="479" y="140" font-family="Segoe UI" font-size="13" fill="#64748b">JSON ichida data + meta + links</text>
+
+  <rect x="479" y="156" width="337" height="184" rx="6" fill="#f5f3ff" stroke="#ddd6fe"/>
+  <text x="493" y="180" font-family="monospace" font-size="13" fill="#1e293b">{</text>
+  <text x="505" y="202" font-family="monospace" font-size="13" fill="#6d28d9">"data": [ ... ],</text>
+  <text x="505" y="224" font-family="monospace" font-size="13" fill="#6d28d9">"meta": {</text>
+  <text x="525" y="246" font-family="monospace" font-size="13" fill="#7c3aed">"total": 1980,</text>
+  <text x="525" y="268" font-family="monospace" font-size="13" fill="#7c3aed">"next_cursor": "eyJ..."</text>
+  <text x="505" y="290" font-family="monospace" font-size="13" fill="#6d28d9">},</text>
+  <text x="505" y="312" font-family="monospace" font-size="13" fill="#6d28d9">"links": { "next": "...", ... }</text>
+  <text x="493" y="332" font-family="monospace" font-size="13" fill="#1e293b">}</text>
+
+  <text x="479" y="368" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">+ Mijozga o'qish oson, ko'rinarli</text>
+  <text x="479" y="392" font-family="Segoe UI" font-size="13" fill="#334155">+ total/cursor uchun joy bor</text>
+  <text x="479" y="416" font-family="Segoe UI" font-size="13" fill="#334155">+ JSON:API / ko'p framework default</text>
+  <text x="479" y="454" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">− Data endi "o'ralgan" (envelope)</text>
+  <text x="479" y="478" font-family="Segoe UI" font-size="13" fill="#334155">− Butun API'da izchil bo'lishi shart</text>
+</svg>

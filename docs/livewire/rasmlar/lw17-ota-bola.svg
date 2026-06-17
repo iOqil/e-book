@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>TaskList ota komponenti ichida mustaqil TaskItem bola komponentlari</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Ota va bola komponentlar daraxti</text>
+
+  <!-- Ota (parent) -->
+  <rect x="240" y="62" width="280" height="74" rx="12" fill="#ffffff" stroke="#4f46e5" stroke-width="2.5"/>
+  <text x="380" y="92" text-anchor="middle" font-size="17" font-weight="700" fill="#4f46e5">TaskList (ota)</text>
+  <text x="380" y="116" text-anchor="middle" font-size="14" fill="#475569">ro'yxatni boshqaradi · @foreach</text>
+
+  <!-- Connector lines from parent to children -->
+  <path d="M380 136 L380 162 M140 162 L620 162 M140 162 L140 192 M380 162 L380 192 M620 162 L620 192" fill="none" stroke="#c7d2fe" stroke-width="2.5"/>
+
+  <!-- Child 1 -->
+  <rect x="40" y="192" width="200" height="96" rx="11" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <text x="140" y="218" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">TaskItem (bola)</text>
+  <text x="140" y="240" text-anchor="middle" font-size="13" fill="#475569">matn: "Non olish"</text>
+  <text x="140" y="260" text-anchor="middle" font-size="13" fill="#16a34a">bajarildi: ha</text>
+  <text x="140" y="280" text-anchor="middle" font-size="13" fill="#94a3b8">o'z holati · o'z so'rovi</text>
+
+  <!-- Child 2 -->
+  <rect x="280" y="192" width="200" height="96" rx="11" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <text x="380" y="218" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">TaskItem (bola)</text>
+  <text x="380" y="240" text-anchor="middle" font-size="13" fill="#475569">matn: "Kod yozish"</text>
+  <text x="380" y="260" text-anchor="middle" font-size="13" fill="#dc2626">bajarildi: yo'q</text>
+  <text x="380" y="280" text-anchor="middle" font-size="13" fill="#94a3b8">o'z holati · o'z so'rovi</text>
+
+  <!-- Child 3 -->
+  <rect x="520" y="192" width="200" height="96" rx="11" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <text x="620" y="218" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">TaskItem (bola)</text>
+  <text x="620" y="240" text-anchor="middle" font-size="13" fill="#475569">matn: "Dam olish"</text>
+  <text x="620" y="260" text-anchor="middle" font-size="13" fill="#dc2626">bajarildi: yo'q</text>
+  <text x="620" y="280" text-anchor="middle" font-size="13" fill="#94a3b8">o'z holati · o'z so'rovi</text>
+
+  <!-- Key note -->
+  <rect x="40" y="316" width="680" height="92" rx="11" fill="#ffffff" stroke="#c7d2fe" stroke-width="1.5"/>
+  <text x="60" y="344" font-size="15" font-weight="700" fill="#4f46e5">Har bola — MUSTAQIL komponent</text>
+  <text x="60" y="368" font-size="14" fill="#475569">Bir boladagi o'zgarish (masalan "bajarildi") boshqa bolalarga ta'sir qilmaydi.</text>
+  <text x="60" y="390" font-size="14" fill="#475569">Ota tegida: <tspan fill="#1e293b" font-weight="700">&lt;livewire:task-item :matn="$vazifa" :key="$id" /&gt;</tspan></text>
+</svg>

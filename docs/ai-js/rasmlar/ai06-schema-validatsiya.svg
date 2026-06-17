@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="800" height="480" font-family="Segoe UI, system-ui, sans-serif">
+  <title>json_schema qolip vazifasini bajaradi: model chiqishi majburan sxemaga (majburiy maydonlar, tiplar, enum) mos keladi; faqat JSON so'rash esa buzuq yoki matnga o'ralgan JSON qaytarishi mumkin</title>
+  <defs>
+    <marker id="a6b" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="800" height="480" fill="#f8fafc"/>
+  <text x="400" y="32" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Sxema = qolip: faqat to'g'ri shakl chiqadi</text>
+
+  <!-- LEFT: just ask for JSON -->
+  <rect x="24" y="56" width="360" height="396" rx="12" fill="#ffffff" stroke="#ef4444" stroke-width="2"/>
+  <text x="204" y="84" font-size="16" font-weight="bold" fill="#ef4444" text-anchor="middle">Promptda "JSON ber" deyish</text>
+  <text x="204" y="106" font-size="13" fill="#64748b" text-anchor="middle">hech narsa kafolatlanmaydi</text>
+
+  <rect x="48" y="124" width="312" height="48" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="64" y="144" font-size="13" fill="#1e293b" text-anchor="start">Mana JSON: ```json</text>
+  <text x="64" y="163" font-size="13" fill="#ef4444" text-anchor="start">↑ markdown to'siq → parse uziladi</text>
+
+  <rect x="48" y="184" width="312" height="48" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="64" y="204" font-size="13" fill="#1e293b" text-anchor="start">{ "ism": "Ali", }</text>
+  <text x="64" y="223" font-size="13" fill="#ef4444" text-anchor="start">↑ ortiqcha vergul → buzuq JSON</text>
+
+  <rect x="48" y="244" width="312" height="48" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="64" y="264" font-size="13" fill="#1e293b" text-anchor="start">Albatta! Mana ma'lumot: ...</text>
+  <text x="64" y="283" font-size="13" fill="#ef4444" text-anchor="start">↑ chaynalgan matn → JSON emas</text>
+
+  <rect x="48" y="304" width="312" height="48" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="64" y="324" font-size="13" fill="#1e293b" text-anchor="start">{ "reja": "Premium" }</text>
+  <text x="64" y="343" font-size="13" fill="#ef4444" text-anchor="start">↑ enum'da yo'q qiymat</text>
+
+  <rect x="48" y="372" width="312" height="56" rx="8" fill="#ffffff" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="204" y="395" font-size="14" font-weight="bold" fill="#ef4444" text-anchor="middle">JSON.parse() → CRASH</text>
+  <text x="204" y="416" font-size="13" fill="#64748b" text-anchor="middle">yoki noto'g'ri tipdagi ma'lumot</text>
+
+  <!-- RIGHT: json_schema mold -->
+  <rect x="416" y="56" width="360" height="396" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="596" y="84" font-size="16" font-weight="bold" fill="#16a34a" text-anchor="middle">output_config.format (qolip)</text>
+  <text x="596" y="106" font-size="13" fill="#64748b" text-anchor="middle">model chiqishi qolipga majburan mos</text>
+
+  <!-- schema mold -->
+  <rect x="440" y="124" width="312" height="148" rx="9" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="456" y="146" font-size="13" font-weight="bold" fill="#6366f1" text-anchor="start" font-family="Consolas, monospace">schema (qolip):</text>
+  <text x="456" y="168" font-size="13" fill="#1e293b" text-anchor="start" font-family="Consolas, monospace">ism: string   ← majburiy</text>
+  <text x="456" y="190" font-size="13" fill="#1e293b" text-anchor="start" font-family="Consolas, monospace">email: string ← majburiy</text>
+  <text x="456" y="212" font-size="13" fill="#1e293b" text-anchor="start" font-family="Consolas, monospace">reja: enum[Free|Pro|</text>
+  <text x="456" y="230" font-size="13" fill="#1e293b" text-anchor="start" font-family="Consolas, monospace">              Enterprise]</text>
+  <text x="456" y="256" font-size="13" fill="#1e293b" text-anchor="start" font-family="Consolas, monospace">additionalProperties: false</text>
+
+  <line x1="596" y1="272" x2="596" y2="312" stroke="#475569" stroke-width="2.5" marker-end="url(#a6b)"/>
+  <text x="610" y="296" font-size="13" font-weight="bold" fill="#16a34a" text-anchor="start">faqat mos shakl o'tadi</text>
+
+  <!-- valid output -->
+  <rect x="440" y="320" width="312" height="64" rx="9" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="456" y="344" font-size="13" fill="#1e293b" text-anchor="start" font-family="Consolas, monospace">{ "ism": "Ali Valiyev",</text>
+  <text x="456" y="366" font-size="13" fill="#1e293b" text-anchor="start" font-family="Consolas, monospace">  "email": "...", "reja": "Pro" }</text>
+
+  <rect x="440" y="394" width="312" height="40" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="596" y="419" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">JSON.parse() → har doim ishlaydi</text>
+
+  <text x="400" y="470" font-size="13" fill="#475569" text-anchor="middle" font-weight="bold">required + additionalProperties:false SHART — ular maydon yetishmasligi yoki ortiqchasini bartaraf qiladi.</text>
+</svg>

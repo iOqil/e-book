@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 560">
+  <title>Faktorial(4) chaqiruvlar steki: chaqiruvlar yig'ilishi (push) va qaytishi (pop)</title>
+  <rect x="0" y="0" width="860" height="560" fill="#f8fafc"/>
+  <text x="430" y="36" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Chaqiruvlar steki — fakt(4)</text>
+  <text x="430" y="60" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Chaqiruvlar pastga yig'iladi (push), baza topilgach yuqoriga qaytadi (pop)</text>
+
+  <!-- PUSH column label -->
+  <text x="215" y="98" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb">1) Yig'ilish (push) →</text>
+  <!-- POP column label -->
+  <text x="645" y="98" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a">2) Qaytish (pop) ↑</text>
+
+  <!-- PUSH frames (top = first call) -->
+  <rect x="90" y="118" width="250" height="44" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="215" y="146" text-anchor="middle" font-family="monospace" font-size="15" fill="#334155">fakt(4) = 4 * fakt(3)</text>
+
+  <rect x="90" y="170" width="250" height="44" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="215" y="198" text-anchor="middle" font-family="monospace" font-size="15" fill="#334155">fakt(3) = 3 * fakt(2)</text>
+
+  <rect x="90" y="222" width="250" height="44" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="215" y="250" text-anchor="middle" font-family="monospace" font-size="15" fill="#334155">fakt(2) = 2 * fakt(1)</text>
+
+  <rect x="90" y="274" width="250" height="44" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="215" y="302" text-anchor="middle" font-family="monospace" font-size="15" fill="#334155">fakt(1) = 1 * fakt(0)</text>
+
+  <rect x="90" y="326" width="250" height="44" rx="8" fill="#fef9c3" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="215" y="354" text-anchor="middle" font-family="monospace" font-size="15" fill="#92400e">fakt(0) = 1  ← BAZA</text>
+
+  <!-- down arrow for push -->
+  <path d="M 60 130 L 60 350" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <polygon points="60,360 54,348 66,348" fill="#2563eb"/>
+
+  <!-- POP frames (return values) -->
+  <rect x="520" y="118" width="250" height="44" rx="8" fill="#ecfdf5" stroke="#16a34a" stroke-width="2"/>
+  <text x="645" y="146" text-anchor="middle" font-family="monospace" font-size="15" fill="#334155">fakt(4) = 4 * 6 = 24</text>
+
+  <rect x="520" y="170" width="250" height="44" rx="8" fill="#ecfdf5" stroke="#16a34a" stroke-width="2"/>
+  <text x="645" y="198" text-anchor="middle" font-family="monospace" font-size="15" fill="#334155">fakt(3) = 3 * 2 = 6</text>
+
+  <rect x="520" y="222" width="250" height="44" rx="8" fill="#ecfdf5" stroke="#16a34a" stroke-width="2"/>
+  <text x="645" y="250" text-anchor="middle" font-family="monospace" font-size="15" fill="#334155">fakt(2) = 2 * 1 = 2</text>
+
+  <rect x="520" y="274" width="250" height="44" rx="8" fill="#ecfdf5" stroke="#16a34a" stroke-width="2"/>
+  <text x="645" y="302" text-anchor="middle" font-family="monospace" font-size="15" fill="#334155">fakt(1) = 1 * 1 = 1</text>
+
+  <rect x="520" y="326" width="250" height="44" rx="8" fill="#fef9c3" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="645" y="354" text-anchor="middle" font-family="monospace" font-size="15" fill="#92400e">fakt(0) = 1  ← qaytadi</text>
+
+  <!-- up arrow for pop -->
+  <path d="M 800 358 L 800 138" fill="none" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="800,128 794,140 806,140" fill="#16a34a"/>
+
+  <!-- bridge arrow from baza push to baza pop -->
+  <path d="M 340 348 C 420 348 440 348 520 348" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6 4"/>
+  <polygon points="520,348 510,343 510,353" fill="#f59e0b"/>
+
+  <!-- bottom note -->
+  <rect x="90" y="404" width="680" height="120" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="430" y="434" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#1e293b">Stek qoidasi: oxirgi kirgan birinchi chiqadi (LIFO)</text>
+  <text x="430" y="462" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">Har chaqiruv o'z natijasini kutib stekda turadi. Baza (fakt(0)=1) topilgach,</text>
+  <text x="430" y="484" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">qaytish boshlanadi va ko'paytmalar pastdan yuqoriga to'planadi.</text>
+  <text x="430" y="510" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#dc2626">Bazasiz: stek to'xtovsiz o'sadi → stack overflow.</text>
+</svg>

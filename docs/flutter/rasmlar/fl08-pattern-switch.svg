@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 480" width="780" height="480" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Sealed Shape ierarxiyasi (Circle, Square, Rectangle) switch ifodasiga oziq beradi; object patternlar har birini ajratadi va kompilyator barcha holatlarni tekshiradi</title>
+  <rect x="0" y="0" width="780" height="480" fill="#f8fafc"/>
+
+  <text x="390" y="34" text-anchor="middle" font-size="21" font-weight="bold" fill="#1e293b">Sealed klass + switch = exhaustive</text>
+  <text x="390" y="56" text-anchor="middle" font-size="14" fill="#475569">Kompilyator barcha holatlar qamralganini tekshiradi</text>
+
+  <!-- sealed parent -->
+  <rect x="300" y="78" width="180" height="56" rx="12" fill="#9333ea"/>
+  <text x="390" y="103" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">sealed Shape</text>
+  <text x="390" y="124" text-anchor="middle" font-size="13" fill="#ffffff">muhrlangan ota-tur</text>
+
+  <!-- lines to subclasses -->
+  <line x1="390" y1="134" x2="390" y2="150" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="135" y1="150" x2="645" y2="150" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="135" y1="150" x2="135" y2="170" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="390" y1="150" x2="390" y2="170" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="645" y1="150" x2="645" y2="170" stroke="#94a3b8" stroke-width="2"/>
+
+  <!-- three subclasses -->
+  <rect x="55" y="172" width="160" height="62" rx="10" fill="#ffffff" stroke="#027dfd" stroke-width="2.5"/>
+  <text x="135" y="197" text-anchor="middle" font-size="15" font-weight="bold" fill="#027dfd">Circle</text>
+  <text x="135" y="219" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">double r</text>
+
+  <rect x="310" y="172" width="160" height="62" rx="10" fill="#ffffff" stroke="#027dfd" stroke-width="2.5"/>
+  <text x="390" y="197" text-anchor="middle" font-size="15" font-weight="bold" fill="#027dfd">Square</text>
+  <text x="390" y="219" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">double side</text>
+
+  <rect x="565" y="172" width="160" height="62" rx="10" fill="#ffffff" stroke="#027dfd" stroke-width="2.5"/>
+  <text x="645" y="197" text-anchor="middle" font-size="15" font-weight="bold" fill="#027dfd">Rectangle</text>
+  <text x="645" y="219" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">double w, h</text>
+
+  <!-- arrows into switch -->
+  <line x1="135" y1="234" x2="135" y2="260" stroke="#475569" stroke-width="2.5"/>
+  <polygon points="129,260 135,272 141,260" fill="#475569"/>
+  <line x1="390" y1="234" x2="390" y2="260" stroke="#475569" stroke-width="2.5"/>
+  <polygon points="384,260 390,272 396,260" fill="#475569"/>
+  <line x1="645" y1="234" x2="645" y2="260" stroke="#475569" stroke-width="2.5"/>
+  <polygon points="639,260 645,272 651,260" fill="#475569"/>
+
+  <!-- switch box -->
+  <rect x="55" y="276" width="670" height="138" rx="12" fill="#ffffff" stroke="#6366f1" stroke-width="2.5"/>
+  <text x="390" y="300" text-anchor="middle" font-size="15" font-weight="bold" fill="#6366f1">switch (shape) &#8212; object patternlar bilan</text>
+
+  <rect x="80" y="316" width="200" height="76" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="180" y="340" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">Circle(:final r)</text>
+  <text x="180" y="362" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#475569">=&gt; pi * r * r</text>
+  <text x="180" y="384" text-anchor="middle" font-size="13" fill="#16a34a">&#10003; qamralgan</text>
+
+  <rect x="290" y="316" width="200" height="76" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="390" y="340" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">Square(:final side)</text>
+  <text x="390" y="362" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#475569">=&gt; side * side</text>
+  <text x="390" y="384" text-anchor="middle" font-size="13" fill="#16a34a">&#10003; qamralgan</text>
+
+  <rect x="500" y="316" width="200" height="76" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="600" y="340" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">Rectangle(:w, :h)</text>
+  <text x="600" y="362" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#475569">=&gt; w * h</text>
+  <text x="600" y="384" text-anchor="middle" font-size="13" fill="#16a34a">&#10003; qamralgan</text>
+
+  <!-- exhaustive badge -->
+  <rect x="230" y="430" width="320" height="38" rx="19" fill="#16a34a"/>
+  <text x="390" y="455" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">&#10003; exhaustive &#8212; kompilyator hammasini tekshiradi</text>
+</svg>

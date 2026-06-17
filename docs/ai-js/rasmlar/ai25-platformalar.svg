@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Deploy variantlari taqqoslangan: Vercel (Next.js + AI SDK, oson, serverless/edge — chat va oddiy chaqiruv uchun), Cloudflare Workers (edge, global, tez, lekin to'liq Node API yo'q — yengil proksi/chat), Node server Render/Railway/VPS (uzoq ishlaydigan agentlar, to'liq Node API, fon ishlari), AWS Lambda (serverless funksiya). Qachon qaysi: chat/bitta chaqiruv vs uzoq agent vs ommaviy.</title>
+  <rect x="0" y="0" width="800" height="520" fill="#f8fafc"/>
+  <text x="400" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Deploy variantlari — qachon qaysi?</text>
+  <text x="400" y="58" font-size="14" fill="#64748b" text-anchor="middle">Hammasida kalit serverda; farq — qulaylik, edge yaqinligi, vaqt chegarasi</text>
+
+  <!-- Vercel -->
+  <rect x="28" y="82" width="368" height="186" rx="12" fill="#e0e7ff" stroke="#6366f1" stroke-width="2.5"/>
+  <text x="48" y="110" font-size="16" font-weight="bold" fill="#6366f1" text-anchor="start">Vercel — eng oson yo'l</text>
+  <text x="48" y="134" font-size="13" fill="#1e293b" text-anchor="start">Next.js + AI SDK uchun birinchi tanlov</text>
+  <text x="48" y="156" font-size="13" fill="#475569" text-anchor="start">• git push → avtomatik deploy</text>
+  <text x="48" y="176" font-size="13" fill="#475569" text-anchor="start">• route → serverless/edge funksiya</text>
+  <text x="48" y="196" font-size="13" fill="#475569" text-anchor="start">• streaming qutidan ishlaydi</text>
+  <text x="48" y="216" font-size="13" fill="#475569" text-anchor="start">• ⚠️ funksiyaga vaqt chegarasi bor</text>
+  <rect x="44" y="230" width="336" height="28" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.2"/>
+  <text x="212" y="249" font-size="13" font-weight="bold" fill="#16a34a" text-anchor="middle">Qachon: chat, bitta chaqiruv, RAG so'rov</text>
+
+  <!-- Cloudflare -->
+  <rect x="404" y="82" width="368" height="186" rx="12" fill="#dbeafe" stroke="#0ea5e9" stroke-width="2.5"/>
+  <text x="424" y="110" font-size="16" font-weight="bold" fill="#0ea5e9" text-anchor="start">Cloudflare Workers — edge</text>
+  <text x="424" y="134" font-size="13" fill="#1e293b" text-anchor="start">Global, foydalanuvchiga yaqin, past kechikish</text>
+  <text x="424" y="156" font-size="13" fill="#475569" text-anchor="start">• dunyo bo'ylab tarqalgan</text>
+  <text x="424" y="176" font-size="13" fill="#475569" text-anchor="start">• juda tez sovuq start</text>
+  <text x="424" y="196" font-size="13" fill="#475569" text-anchor="start">• ⚠️ to'liq Node API yo'q (cheklangan)</text>
+  <text x="424" y="216" font-size="13" fill="#475569" text-anchor="start">• fs, ba'zi paketlar ishlamasligi mumkin</text>
+  <rect x="420" y="230" width="336" height="28" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.2"/>
+  <text x="588" y="249" font-size="13" font-weight="bold" fill="#16a34a" text-anchor="middle">Qachon: yengil chat/proksi route, global</text>
+
+  <!-- Node server -->
+  <rect x="28" y="284" width="368" height="186" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="48" y="312" font-size="16" font-weight="bold" fill="#d97757" text-anchor="start">Node server — uzoq ishlar</text>
+  <text x="48" y="336" font-size="13" fill="#1e293b" text-anchor="start">Express/Fastify — Render, Railway, VPS</text>
+  <text x="48" y="358" font-size="13" fill="#475569" text-anchor="start">• doimo ishlab turadi (vaqt chegarasiz)</text>
+  <text x="48" y="378" font-size="13" fill="#475569" text-anchor="start">• to'liq Node API + fon ishlari/navbat</text>
+  <text x="48" y="398" font-size="13" fill="#475569" text-anchor="start">• uzun agent siklini ko'taradi</text>
+  <text x="48" y="418" font-size="13" fill="#475569" text-anchor="start">• ⚠️ siz boshqarasiz (server doim yoqiq)</text>
+  <rect x="44" y="432" width="336" height="28" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.2"/>
+  <text x="212" y="451" font-size="13" font-weight="bold" fill="#16a34a" text-anchor="middle">Qachon: uzun agentlar, fon ishlari</text>
+
+  <!-- Lambda -->
+  <rect x="404" y="284" width="368" height="186" rx="12" fill="#ffffff" stroke="#9333ea" stroke-width="2.5"/>
+  <text x="424" y="312" font-size="16" font-weight="bold" fill="#9333ea" text-anchor="start">AWS Lambda — serverless</text>
+  <text x="424" y="336" font-size="13" fill="#1e293b" text-anchor="start">Klassik funksiya-as-service (FaaS)</text>
+  <text x="424" y="358" font-size="13" fill="#475569" text-anchor="start">• so'rovga ko'ra ishga tushadi</text>
+  <text x="424" y="378" font-size="13" fill="#475569" text-anchor="start">• AWS ekotizimiga chuqur bog'langan</text>
+  <text x="424" y="398" font-size="13" fill="#475569" text-anchor="start">• ⚠️ funksiyaga vaqt chegarasi (Vercel kabi)</text>
+  <text x="424" y="418" font-size="13" fill="#475569" text-anchor="start">• uzun ish uchun SQS/Step Functions</text>
+  <rect x="420" y="432" width="336" height="28" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.2"/>
+  <text x="588" y="451" font-size="13" font-weight="bold" fill="#16a34a" text-anchor="middle">Qachon: AWS'da bo'lsangiz, qisqa chaqiruv</text>
+
+  <!-- footer -->
+  <rect x="28" y="486" width="744" height="26" rx="8" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="400" y="504" font-size="13" fill="#1e293b" text-anchor="middle">Ommaviy (bulk) ish? → Batches API (24-bob). Uzun ish? → fon navbati + ishchi (worker).</text>
+</svg>

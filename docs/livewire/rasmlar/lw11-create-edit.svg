@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 460" width="760" height="460" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Bitta PostForm forma obyekti ikki rejimda ishlashini ko'rsatuvchi diagramma: chap tomonda CREATE komponenti bo'sh formadan boshlab store va pull bilan yangi yozuv yaratadi, o'ng tomonda EDIT komponenti setPost va fill bilan formani to'ldirib update bilan mavjud yozuvni yangilaydi</title>
+  <rect x="0" y="0" width="760" height="460" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Bitta PostForm — ikki rejim</text>
+  <text x="380" y="58" text-anchor="middle" font-size="14" fill="#475569">Xususiyat va qoidalar bir marta yoziladi, ikki komponent ishlatadi</text>
+
+  <!-- Markazdagi PostForm -->
+  <rect x="280" y="80" width="200" height="74" rx="12" fill="#4f46e5" stroke="#4338ca" stroke-width="2"/>
+  <text x="380" y="110" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">PostForm</text>
+  <text x="380" y="132" text-anchor="middle" font-size="13" fill="#e0e7ff">title · content · qoidalar</text>
+
+  <!-- Chapga o'q -->
+  <line x1="280" y1="117" x2="200" y2="160" stroke="#16a34a" stroke-width="2.5"/>
+  <polygon points="200,160 211,157 206,148" fill="#16a34a"/>
+  <!-- O'ngga o'q -->
+  <line x1="480" y1="117" x2="560" y2="160" stroke="#f59e0b" stroke-width="2.5"/>
+  <polygon points="560,160 554,148 549,157" fill="#f59e0b"/>
+
+  <!-- CHAP: CREATE -->
+  <rect x="30" y="168" width="330" height="252" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <rect x="30" y="168" width="330" height="38" rx="12" fill="#16a34a"/>
+  <text x="195" y="193" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">CREATE komponenti</text>
+
+  <rect x="50" y="222" width="290" height="36" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+  <text x="195" y="245" text-anchor="middle" font-size="14" font-weight="700" fill="#16a34a">1. Bo'sh forma</text>
+
+  <line x1="195" y1="258" x2="195" y2="276" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="195,276 190,268 200,268" fill="#94a3b8"/>
+
+  <rect x="50" y="280" width="290" height="36" rx="8" fill="#f8fafc" stroke="#c7d2fe" stroke-width="1.5"/>
+  <text x="195" y="303" text-anchor="middle" font-size="13" fill="#1e293b">2. validate() — qoidalar tekshir</text>
+
+  <line x1="195" y1="316" x2="195" y2="334" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="195,334 190,326 200,326" fill="#94a3b8"/>
+
+  <rect x="50" y="338" width="290" height="36" rx="8" fill="#f8fafc" stroke="#c7d2fe" stroke-width="1.5"/>
+  <text x="195" y="361" text-anchor="middle" font-size="13" fill="#1e293b">3. pull() — ol va formani tozala</text>
+
+  <rect x="50" y="384" width="290" height="26" rx="6" fill="#dcfce7"/>
+  <text x="195" y="402" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a">Post::create(...) → yangi yozuv</text>
+
+  <!-- O'NG: EDIT -->
+  <rect x="400" y="168" width="330" height="252" rx="12" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="400" y="168" width="330" height="38" rx="12" fill="#f59e0b"/>
+  <text x="565" y="193" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">EDIT komponenti</text>
+
+  <rect x="420" y="222" width="290" height="36" rx="8" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.5"/>
+  <text x="565" y="245" text-anchor="middle" font-size="14" font-weight="700" fill="#b45309">1. setPost() / fill($post)</text>
+
+  <line x1="565" y1="258" x2="565" y2="276" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="565,276 560,268 570,268" fill="#94a3b8"/>
+
+  <rect x="420" y="280" width="290" height="36" rx="8" fill="#f8fafc" stroke="#c7d2fe" stroke-width="1.5"/>
+  <text x="565" y="303" text-anchor="middle" font-size="13" fill="#1e293b">2. foydalanuvchi tahrirlaydi</text>
+
+  <line x1="565" y1="316" x2="565" y2="334" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="565,334 560,326 570,326" fill="#94a3b8"/>
+
+  <rect x="420" y="338" width="290" height="36" rx="8" fill="#f8fafc" stroke="#c7d2fe" stroke-width="1.5"/>
+  <text x="565" y="361" text-anchor="middle" font-size="13" fill="#1e293b">3. validate() — qoidalar tekshir</text>
+
+  <rect x="420" y="384" width="290" height="26" rx="6" fill="#fef3c7"/>
+  <text x="565" y="402" text-anchor="middle" font-size="13" font-weight="700" fill="#b45309">$post-&gt;update(...) → yangilandi</text>
+
+  <text x="380" y="444" text-anchor="middle" font-size="13" fill="#94a3b8">Bo'sh → pull (create) · fill → update (edit). Qoidalar bir marta yozilgan.</text>
+</svg>

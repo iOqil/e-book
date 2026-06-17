@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540">
+  <title>429 Too Many Requests javobi: Retry-After va RateLimit sarlavhalari</title>
+  <rect x="0" y="0" width="900" height="540" fill="#f8fafc"/>
+  <text x="450" y="34" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">Cheklov urganda: 429 javobi qanday gapiradi</text>
+  <text x="450" y="58" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Mijozga "qachon va qancha qolgan" deb halol aytadigan javob</text>
+
+  <!-- Sorov -->
+  <rect x="30" y="84" width="380" height="120" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="50" y="112" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">Mijoz so'rovi (limitdan oshdi)</text>
+  <text x="50" y="140" font-family="monospace" font-size="13" fill="#334155">GET /v1/search?q=api HTTP/1.1</text>
+  <text x="50" y="160" font-family="monospace" font-size="13" fill="#334155">Host: api.example.com</text>
+  <text x="50" y="180" font-family="monospace" font-size="13" fill="#334155">Authorization: Bearer &lt;token&gt;</text>
+
+  <!-- strelka -->
+  <line x1="410" y1="144" x2="470" y2="144" stroke="#64748b" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- 429 javob -->
+  <rect x="480" y="84" width="390" height="120" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="500" y="112" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#dc2626">Status qatori</text>
+  <rect x="500" y="124" width="350" height="34" rx="5" fill="#fef2f2" stroke="#dc2626" stroke-width="1"/>
+  <text x="675" y="146" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#b91c1c">HTTP/1.1 429 Too Many Requests</text>
+  <text x="500" y="182" font-family="Segoe UI" font-size="13" fill="#64748b">RFC 9110 — 4xx mijoz xatosi (RFC 6585)</text>
+
+  <!-- Sarlavhalar -->
+  <rect x="30" y="226" width="840" height="190" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="50" y="254" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">Javob sarlavhalari</text>
+
+  <rect x="50" y="270" width="390" height="56" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1"/>
+  <text x="64" y="292" font-family="monospace" font-size="14" font-weight="bold" fill="#15803d">Retry-After: 30</text>
+  <text x="64" y="314" font-family="Segoe UI" font-size="13" fill="#334155">30 soniyadan keyin urin (RFC 9110, standart)</text>
+
+  <rect x="460" y="270" width="390" height="56" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1"/>
+  <text x="474" y="292" font-family="monospace" font-size="14" font-weight="bold" fill="#2563eb">RateLimit-Limit: 100</text>
+  <text x="474" y="314" font-family="Segoe UI" font-size="13" fill="#334155">Oynadagi umumiy ruxsat (IETF draft)</text>
+
+  <rect x="50" y="338" width="390" height="56" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1"/>
+  <text x="64" y="360" font-family="monospace" font-size="14" font-weight="bold" fill="#2563eb">RateLimit-Remaining: 0</text>
+  <text x="64" y="382" font-family="Segoe UI" font-size="13" fill="#334155">Qolgan so'rov soni — hozir 0</text>
+
+  <rect x="460" y="338" width="390" height="56" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1"/>
+  <text x="474" y="360" font-family="monospace" font-size="14" font-weight="bold" fill="#2563eb">RateLimit-Reset: 30</text>
+  <text x="474" y="382" font-family="Segoe UI" font-size="13" fill="#334155">Oyna tiklanishiga qolgan soniya</text>
+
+  <!-- Pastki izoh -->
+  <rect x="30" y="436" width="840" height="78" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="1"/>
+  <text x="50" y="462" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#b45309">Halollik:</text>
+  <text x="125" y="462" font-family="Segoe UI" font-size="13" fill="#334155">RateLimit-* sarlavhalari hali IETF DRAFT. Ko'p API X-RateLimit-Limit /</text>
+  <text x="50" y="484" font-family="Segoe UI" font-size="13" fill="#334155">X-RateLimit-Remaining / X-RateLimit-Reset de-facto konvensiyasini ishlatadi (X- prefiksli).</text>
+  <text x="50" y="506" font-family="Segoe UI" font-size="13" fill="#dc2626">Faqat Retry-After to'liq standart. Reset uchun Unix-timestamp yoki soniya — tanlovingiz aniq hujjatlansin.</text>
+
+  <defs>
+    <marker id="arr" markerWidth="9" markerHeight="9" refX="5" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+</svg>

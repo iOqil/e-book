@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Vektor baza — embeddinglar saqlanadi va so'rovga eng yaqinlari tez topiladi</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Vektor baza qanday ishlaydi</text>
+  <text x="380" y="60" text-anchor="middle" font-size="14" fill="#475569">Hujjatlar vektor sifatida saqlanadi, so'rov vektoriga eng yaqinlari tez topiladi</text>
+
+  <defs>
+    <marker id="v14a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#6366f1"/>
+    </marker>
+    <marker id="v14ok" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <!-- 1) Hujjatlar -->
+  <rect x="40" y="100" width="170" height="150" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="125" y="124" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">Hujjatlar</text>
+  <text x="125" y="150" text-anchor="middle" font-size="13" fill="#475569">"PHP tili..."</text>
+  <text x="125" y="172" text-anchor="middle" font-size="13" fill="#475569">"Laravel..."</text>
+  <text x="125" y="194" text-anchor="middle" font-size="13" fill="#475569">"PostgreSQL..."</text>
+  <text x="125" y="226" text-anchor="middle" font-size="13" fill="#94a3b8">+ minglab boshqa</text>
+
+  <!-- embedding -> -->
+  <line x1="210" y1="175" x2="258" y2="175" stroke="#6366f1" stroke-width="2" marker-end="url(#v14a)"/>
+  <text x="234" y="166" text-anchor="middle" font-size="13" fill="#7c3aed">embed</text>
+
+  <!-- 2) Vektor baza -->
+  <rect x="262" y="92" width="236" height="206" rx="12" fill="#ede9fe" stroke="#c7d2fe" stroke-width="2"/>
+  <text x="380" y="116" text-anchor="middle" font-size="15" font-weight="700" fill="#4f46e5">Vektor baza (indeksli)</text>
+  <rect x="284" y="132" width="86" height="34" rx="7" fill="#ffffff" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="327" y="154" text-anchor="middle" font-size="13" fill="#475569">[0.1, -0.3, ...]</text>
+  <rect x="390" y="132" width="86" height="34" rx="7" fill="#ffffff" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="433" y="154" text-anchor="middle" font-size="13" fill="#475569">[0.4, 0.2, ...]</text>
+  <rect x="284" y="174" width="86" height="34" rx="7" fill="#ffffff" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="327" y="196" text-anchor="middle" font-size="13" fill="#475569">[-0.2, 0.5, ...]</text>
+  <rect x="390" y="174" width="86" height="34" rx="7" fill="#ffffff" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="433" y="196" text-anchor="middle" font-size="13" fill="#475569">[0.0, -0.1, ...]</text>
+  <text x="380" y="234" text-anchor="middle" font-size="13" fill="#475569">Ma'no jihatdan yaqinlar —</text>
+  <text x="380" y="254" text-anchor="middle" font-size="13" fill="#475569">"fazo"da yaqin turadi</text>
+  <text x="380" y="282" text-anchor="middle" font-size="13" font-weight="700" fill="#4f46e5">indeks: tez topish</text>
+
+  <!-- so'rov -->
+  <rect x="40" y="332" width="170" height="64" rx="10" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="125" y="358" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">So'rov vektori</text>
+  <text x="125" y="380" text-anchor="middle" font-size="13" fill="#475569">"PHP frameworki?"</text>
+
+  <!-- so'rov -> baza -->
+  <line x1="210" y1="350" x2="262" y2="300" stroke="#6366f1" stroke-width="2" marker-end="url(#v14a)"/>
+  <text x="232" y="332" text-anchor="middle" font-size="13" fill="#7c3aed">qidir</text>
+
+  <!-- baza -> javob -->
+  <line x1="498" y1="200" x2="566" y2="200" stroke="#16a34a" stroke-width="2.5" marker-end="url(#v14ok)"/>
+
+  <!-- 3) Eng yaqinlar -->
+  <rect x="570" y="120" width="170" height="160" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="655" y="146" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">Eng yaqin 5 ta</text>
+  <text x="655" y="174" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a">1. Laravel...</text>
+  <text x="655" y="198" text-anchor="middle" font-size="13" fill="#475569">2. PHP tili...</text>
+  <text x="655" y="222" text-anchor="middle" font-size="13" fill="#475569">3. PostgreSQL...</text>
+  <text x="655" y="254" text-anchor="middle" font-size="13" fill="#16a34a">tez — millisoniya!</text>
+</svg>

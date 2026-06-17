@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 600">
+  <title>RFC 9457 Problem Details tuzilishi: standart va kengaytma maydonlar</title>
+  <rect x="0" y="0" width="880" height="600" fill="#f8fafc"/>
+  <text x="440" y="34" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">Problem Details — RFC 9457</text>
+  <text x="440" y="58" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">HTTP API xatolari uchun standart format — media type: application/problem+json</text>
+
+  <!-- Standart maydonlar karta -->
+  <rect x="40" y="86" width="400" height="306" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="240" y="116" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb">Standart maydonlar (hammasi ixtiyoriy)</text>
+
+  <rect x="64" y="134" width="352" height="40" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1"/>
+  <text x="78" y="151" font-family="monospace" font-size="14" font-weight="bold" fill="#1e3a8a">type</text>
+  <text x="78" y="168" font-family="Segoe UI" font-size="13" fill="#334155">URI: muammo turini bildiradi (barqaror)</text>
+
+  <rect x="64" y="180" width="352" height="40" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1"/>
+  <text x="78" y="197" font-family="monospace" font-size="14" font-weight="bold" fill="#1e3a8a">title</text>
+  <text x="78" y="214" font-family="Segoe UI" font-size="13" fill="#334155">Qisqa, inson-o'qiy sarlavha (o'zgarmas)</text>
+
+  <rect x="64" y="226" width="352" height="40" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1"/>
+  <text x="78" y="243" font-family="monospace" font-size="14" font-weight="bold" fill="#1e3a8a">status</text>
+  <text x="78" y="260" font-family="Segoe UI" font-size="13" fill="#334155">HTTP status kodi (masalan 422)</text>
+
+  <rect x="64" y="272" width="352" height="40" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1"/>
+  <text x="78" y="289" font-family="monospace" font-size="14" font-weight="bold" fill="#1e3a8a">detail</text>
+  <text x="78" y="306" font-family="Segoe UI" font-size="13" fill="#334155">Bu aniq holatga xos tushuntirish</text>
+
+  <rect x="64" y="318" width="352" height="40" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1"/>
+  <text x="78" y="335" font-family="monospace" font-size="14" font-weight="bold" fill="#1e3a8a">instance</text>
+  <text x="78" y="352" font-family="Segoe UI" font-size="13" fill="#334155">URI: shu aniq hodisaga havola</text>
+
+  <text x="240" y="380" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">7807 ni almashtirgan (2023) — type=about:blank default</text>
+
+  <!-- Kengaytma maydonlar karta -->
+  <rect x="464" y="86" width="376" height="156" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="652" y="116" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#7c3aed">Kengaytma maydonlar</text>
+  <text x="652" y="140" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Standart 5 maydonga qo'shimcha — o'zingiz qo'shasiz</text>
+  <rect x="488" y="156" width="328" height="34" rx="6" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1"/>
+  <text x="502" y="178" font-family="monospace" font-size="13" fill="#5b21b6">errors[]  trace_id  balance  retry_after</text>
+  <text x="652" y="212" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Mijoz tanimasa e'tiborsiz qoldiradi</text>
+  <text x="652" y="230" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">(forward-compatible)</text>
+
+  <!-- JSON namuna -->
+  <rect x="464" y="262" width="376" height="312" rx="12" fill="#0f172a" stroke="#16a34a" stroke-width="2"/>
+  <text x="488" y="290" font-family="monospace" font-size="14" fill="#16a34a">Content-Type: application/problem+json</text>
+  <text x="488" y="320" font-family="monospace" font-size="14" fill="#e2e8f0">{</text>
+  <text x="504" y="342" font-family="monospace" font-size="14" fill="#93c5fd">"type"</text>
+  <text x="564" y="342" font-family="monospace" font-size="14" fill="#e2e8f0">: "https://api.x.uz/</text>
+  <text x="504" y="362" font-family="monospace" font-size="14" fill="#e2e8f0">         errors/insufficient-funds",</text>
+  <text x="504" y="384" font-family="monospace" font-size="14" fill="#93c5fd">"title"</text>
+  <text x="572" y="384" font-family="monospace" font-size="14" fill="#fcd34d">: "Mablag' yetarli emas",</text>
+  <text x="504" y="406" font-family="monospace" font-size="14" fill="#93c5fd">"status"</text>
+  <text x="580" y="406" font-family="monospace" font-size="14" fill="#fcd34d">: 409,</text>
+  <text x="504" y="428" font-family="monospace" font-size="14" fill="#93c5fd">"detail"</text>
+  <text x="580" y="428" font-family="monospace" font-size="14" fill="#e2e8f0">: "Hisobda 12000,</text>
+  <text x="504" y="448" font-family="monospace" font-size="14" fill="#e2e8f0">          kerak 50000 so'm",</text>
+  <text x="504" y="470" font-family="monospace" font-size="14" fill="#93c5fd">"instance"</text>
+  <text x="596" y="470" font-family="monospace" font-size="14" fill="#e2e8f0">: "/orders/7",</text>
+  <text x="504" y="492" font-family="monospace" font-size="14" fill="#a78bfa">"balance"</text>
+  <text x="588" y="492" font-family="monospace" font-size="14" fill="#fcd34d">: 12000,</text>
+  <text x="504" y="514" font-family="monospace" font-size="14" fill="#a78bfa">"trace_id"</text>
+  <text x="596" y="514" font-family="monospace" font-size="14" fill="#fcd34d">: "req-9f2a"</text>
+  <text x="488" y="536" font-family="monospace" font-size="14" fill="#e2e8f0">}</text>
+  <text x="488" y="560" font-family="monospace" font-size="13" fill="#7c3aed">// violet = kengaytma maydon</text>
+</svg>

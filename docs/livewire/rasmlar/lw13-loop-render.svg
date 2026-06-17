@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Bazadagi postlar to'plami (Collection) @foreach orqali aylanib, har bir post alohida DOM elementiga aylanadi</title>
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Bazadan ekrangacha: ro'yxat oqimi</text>
+  <text x="380" y="58" text-anchor="middle" font-size="14" fill="#475569">Collection &#8594; @foreach &#8594; DOM elementlari</text>
+
+  <!-- 1: DB / Collection -->
+  <rect x="30" y="100" width="200" height="250" rx="10" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="130" y="128" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">1. Collection (DB)</text>
+  <text x="130" y="148" text-anchor="middle" font-size="13" fill="#475569">Post::latest()-&gt;get()</text>
+
+  <rect x="50" y="166" width="160" height="48" rx="6" fill="#eef2ff" stroke="#c7d2fe" stroke-width="1.5"/>
+  <text x="62" y="186" font-size="13" font-weight="700" fill="#1e293b">id: 1</text>
+  <text x="62" y="204" font-size="13" fill="#475569">title: Livewire 4...</text>
+
+  <rect x="50" y="222" width="160" height="48" rx="6" fill="#eef2ff" stroke="#c7d2fe" stroke-width="1.5"/>
+  <text x="62" y="242" font-size="13" font-weight="700" fill="#1e293b">id: 2</text>
+  <text x="62" y="260" font-size="13" fill="#475569">title: Eloquent...</text>
+
+  <rect x="50" y="278" width="160" height="48" rx="6" fill="#eef2ff" stroke="#c7d2fe" stroke-width="1.5"/>
+  <text x="62" y="298" font-size="13" font-weight="700" fill="#1e293b">id: 3</text>
+  <text x="62" y="316" font-size="13" fill="#475569">title: wire:key...</text>
+
+  <!-- 2: @foreach -->
+  <rect x="290" y="180" width="180" height="90" rx="10" fill="#ffffff" stroke="#fb70a9" stroke-width="2"/>
+  <text x="380" y="218" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">2. @foreach</text>
+  <text x="380" y="240" text-anchor="middle" font-size="13" fill="#475569">har postni navbatma-</text>
+  <text x="380" y="258" text-anchor="middle" font-size="13" fill="#475569">navbat aylanadi</text>
+
+  <!-- arrow 1 -> 2 -->
+  <line x1="230" y1="225" x2="286" y2="225" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="286,225 276,220 276,230" fill="#94a3b8"/>
+
+  <!-- 3: DOM elements -->
+  <rect x="530" y="100" width="200" height="250" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="630" y="128" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">3. DOM elementlari</text>
+  <text x="630" y="148" text-anchor="middle" font-size="13" fill="#475569">&lt;article wire:key&gt;</text>
+
+  <rect x="550" y="166" width="160" height="48" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="562" y="186" font-size="13" font-weight="700" fill="#16a34a">post-1</text>
+  <text x="562" y="204" font-size="13" fill="#475569">Livewire 4...</text>
+
+  <rect x="550" y="222" width="160" height="48" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="562" y="242" font-size="13" font-weight="700" fill="#16a34a">post-2</text>
+  <text x="562" y="260" font-size="13" fill="#475569">Eloquent...</text>
+
+  <rect x="550" y="278" width="160" height="48" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="562" y="298" font-size="13" font-weight="700" fill="#16a34a">post-3</text>
+  <text x="562" y="316" font-size="13" fill="#475569">wire:key...</text>
+
+  <!-- arrow 2 -> 3 -->
+  <line x1="470" y1="225" x2="526" y2="225" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="526,225 516,220 516,230" fill="#94a3b8"/>
+
+  <text x="380" y="400" text-anchor="middle" font-size="14" fill="#475569">Har yozuv &#8594; bitta HTML blok. Har blokda noyob wire:key (id) bo'ladi.</text>
+</svg>

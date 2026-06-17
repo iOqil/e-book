@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 360" width="780" height="360" font-family="Segoe UI, system-ui, sans-serif">
+  <title>RAG so'rov oqimi: savol -> embed -> qidiruv -> kontekst+prompt -> Claude -> javob+manba</title>
+  <rect x="0" y="0" width="780" height="360" fill="#f8fafc"/>
+  <text x="390" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">RAG so'rov oqimi</text>
+
+  <defs>
+    <marker id="ra2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#7c3aed"/>
+    </marker>
+  </defs>
+
+  <!-- 1 savol -->
+  <rect x="30" y="80" width="150" height="74" rx="10" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="105" y="108" text-anchor="middle" font-size="14" font-weight="600" fill="#1e293b">1. Savol</text>
+  <text x="105" y="130" text-anchor="middle" font-size="13" fill="#475569">"Kafolat qancha?"</text>
+
+  <!-- 2 embed -->
+  <rect x="30" y="210" width="150" height="74" rx="10" fill="#ffffff" stroke="#a855f7" stroke-width="2"/>
+  <text x="105" y="238" text-anchor="middle" font-size="14" font-weight="600" fill="#1e293b">2. Embed</text>
+  <text x="105" y="260" text-anchor="middle" font-size="13" fill="#475569">vektorga (13-bob)</text>
+
+  <!-- 3 pgvector qidiruv -->
+  <rect x="230" y="210" width="160" height="74" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="310" y="238" text-anchor="middle" font-size="14" font-weight="600" fill="#1e293b">3. pgvector qidiruv</text>
+  <text x="310" y="260" text-anchor="middle" font-size="13" fill="#475569">eng yaqin bo'laklar</text>
+
+  <!-- 4 kontekst+prompt -->
+  <rect x="230" y="80" width="160" height="74" rx="10" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <text x="310" y="108" text-anchor="middle" font-size="14" font-weight="600" fill="#1e293b">4. Kontekst+prompt</text>
+  <text x="310" y="130" text-anchor="middle" font-size="13" fill="#475569">guardrails (23-bob)</text>
+
+  <!-- 5 Claude -->
+  <rect x="440" y="80" width="150" height="74" rx="10" fill="#ffffff" stroke="#d97757" stroke-width="2.5"/>
+  <text x="515" y="108" text-anchor="middle" font-size="14" font-weight="700" fill="#d97757">5. Claude</text>
+  <text x="515" y="130" text-anchor="middle" font-size="13" fill="#475569">kontekstga tayanadi</text>
+
+  <!-- 6 javob+manba -->
+  <rect x="630" y="80" width="130" height="74" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="695" y="108" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">6. Javob</text>
+  <text x="695" y="130" text-anchor="middle" font-size="13" fill="#475569">+ manba [1]</text>
+
+  <!-- arrows -->
+  <line x1="105" y1="154" x2="105" y2="208" stroke="#7c3aed" stroke-width="2" marker-end="url(#ra2)"/>
+  <line x1="180" y1="247" x2="228" y2="247" stroke="#7c3aed" stroke-width="2" marker-end="url(#ra2)"/>
+  <line x1="310" y1="208" x2="310" y2="156" stroke="#7c3aed" stroke-width="2" marker-end="url(#ra2)"/>
+  <line x1="390" y1="117" x2="438" y2="117" stroke="#7c3aed" stroke-width="2" marker-end="url(#ra2)"/>
+  <line x1="590" y1="117" x2="628" y2="117" stroke="#7c3aed" stroke-width="2" marker-end="url(#ra2)"/>
+
+  <text x="390" y="320" text-anchor="middle" font-size="14" fill="#475569">Model "boshidan" emas — sizning hujjatlaringizdan, manba ko'rsatib javob beradi</text>
+  <text x="390" y="344" text-anchor="middle" font-size="13" fill="#94a3b8">Kontekstda javob bo'lmasa: "ma'lumot topilmadi" (hallyutsinatsiyani kamaytirish)</text>
+</svg>

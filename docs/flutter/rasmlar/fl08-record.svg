@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" width="780" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>minMax funksiyasi bitta record (min, max) qaytaradi va u ikki o'zgaruvchiga ajratiladi; klass yozishga hojat yo'q</title>
+  <rect x="0" y="0" width="780" height="470" fill="#f8fafc"/>
+
+  <text x="390" y="34" text-anchor="middle" font-size="21" font-weight="bold" fill="#1e293b">Record: bitta funksiya &#8212; ko'p qiymat</text>
+  <text x="390" y="56" text-anchor="middle" font-size="14" fill="#475569">Ikkita qiymatni qaytarish uchun butun klass yozish shart emas</text>
+
+  <!-- input -->
+  <rect x="40" y="92" width="180" height="56" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="130" y="118" text-anchor="middle" font-size="14" fill="#475569">Kirish ro'yxati</text>
+  <text x="130" y="139" text-anchor="middle" font-family="Consolas, monospace" font-size="14" fill="#1e293b">[7, 2, 9, 4]</text>
+
+  <line x1="220" y1="120" x2="270" y2="120" stroke="#475569" stroke-width="2.5"/>
+  <polygon points="270,114 282,120 270,126" fill="#475569"/>
+
+  <!-- function -->
+  <rect x="284" y="86" width="212" height="68" rx="12" fill="#ffffff" stroke="#027dfd" stroke-width="2.5"/>
+  <text x="390" y="114" text-anchor="middle" font-size="16" font-weight="bold" fill="#027dfd">minMax(...)</text>
+  <text x="390" y="138" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">(int, int) qaytaradi</text>
+
+  <line x1="496" y1="120" x2="546" y2="120" stroke="#475569" stroke-width="2.5"/>
+  <polygon points="546,114 558,120 546,126" fill="#475569"/>
+
+  <!-- the record bundle -->
+  <rect x="560" y="86" width="180" height="68" rx="12" fill="#027dfd"/>
+  <text x="650" y="112" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">RECORD</text>
+  <text x="650" y="137" text-anchor="middle" font-family="Consolas, monospace" font-size="15" font-weight="bold" fill="#ffffff">(2, 9)</text>
+
+  <!-- record contents -->
+  <rect x="232" y="188" width="316" height="92" rx="12" fill="#ffffff" stroke="#6366f1" stroke-width="2.5"/>
+  <text x="390" y="214" text-anchor="middle" font-size="14" font-weight="bold" fill="#6366f1">Bitta paketda ikki maydon</text>
+  <rect x="262" y="230" width="110" height="40" rx="8" fill="#6366f1"/>
+  <text x="317" y="248" text-anchor="middle" font-size="13" fill="#ffffff">.$1 (min)</text>
+  <text x="317" y="266" text-anchor="middle" font-family="Consolas, monospace" font-size="14" font-weight="bold" fill="#ffffff">2</text>
+  <rect x="408" y="230" width="110" height="40" rx="8" fill="#9333ea"/>
+  <text x="463" y="248" text-anchor="middle" font-size="13" fill="#ffffff">.$2 (max)</text>
+  <text x="463" y="266" text-anchor="middle" font-family="Consolas, monospace" font-size="14" font-weight="bold" fill="#ffffff">9</text>
+
+  <!-- destructuring arrows -->
+  <line x1="317" y1="280" x2="317" y2="318" stroke="#475569" stroke-width="2.5"/>
+  <polygon points="311,318 317,330 323,318" fill="#475569"/>
+  <line x1="463" y1="280" x2="463" y2="318" stroke="#475569" stroke-width="2.5"/>
+  <polygon points="457,318 463,330 469,318" fill="#475569"/>
+
+  <text x="390" y="304" text-anchor="middle" font-size="13" font-style="italic" fill="#64748b">destructuring &#8212; ajratib olish</text>
+
+  <!-- destructured variables -->
+  <rect x="232" y="332" width="170" height="58" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="317" y="356" text-anchor="middle" font-family="Consolas, monospace" font-size="14" fill="#1e293b">var (min, max)</text>
+  <text x="317" y="378" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#16a34a">= minMax([...]);</text>
+
+  <rect x="408" y="332" width="170" height="58" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="493" y="356" text-anchor="middle" font-size="13" fill="#475569">min &#8594; 2</text>
+  <text x="493" y="378" text-anchor="middle" font-size="13" fill="#475569">max &#8594; 9</text>
+
+  <!-- contrast badge -->
+  <rect x="40" y="332" width="172" height="58" rx="10" fill="#ffffff" stroke="#ef4444" stroke-width="2"/>
+  <text x="126" y="356" text-anchor="middle" font-size="13" fill="#ef4444">Eski yo'l:</text>
+  <text x="126" y="378" text-anchor="middle" font-size="13" fill="#ef4444">class MinMax {...}</text>
+
+  <text x="390" y="430" text-anchor="middle" font-size="14" font-weight="bold" fill="#16a34a">&#10003; Klass yo'q &#183; tenglik tekin &#183; tip aniq: (int, int)</text>
+  <text x="390" y="454" text-anchor="middle" font-size="13" font-style="italic" fill="#64748b">Record = bir martalik, nomsiz qiymatlar to'plami</text>
+</svg>

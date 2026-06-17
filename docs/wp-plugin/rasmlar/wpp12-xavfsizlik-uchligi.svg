@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420">
+  <title>WordPress plugin xavfsizligining uch ustuni: kirishni sanitize qilish, chiqishni escape qilish va harakatni nonce plus capability bilan himoyalash</title>
+
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+
+  <text x="380" y="38" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Oltin qoida: xavfsizlikning uch ustuni</text>
+  <text x="380" y="62" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">INPUT'ni sanitize, OUTPUT'ni escape, harakatni nonce + capability bilan himoyala</text>
+
+  <!-- 1-ustun: SANITIZE -->
+  <rect x="32" y="92" width="220" height="290" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="142" y="124" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#15803d">1. SANITIZE</text>
+  <text x="142" y="148" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">KIRISH (input)</text>
+  <line x1="56" y1="162" x2="228" y2="162" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="142" y="186" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">$_POST, $_GET, REST,</text>
+  <text x="142" y="205" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">forma, fayl -> tozala</text>
+  <text x="142" y="234" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#15803d">wp_unslash() birinchi</text>
+  <text x="142" y="258" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">sanitize_text_field</text>
+  <text x="142" y="278" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">sanitize_email</text>
+  <text x="142" y="298" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">absint, sanitize_key</text>
+  <text x="142" y="318" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">wp_kses_post (HTML)</text>
+  <text x="142" y="352" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#15803d">himoya: XSS, SQLi</text>
+  <text x="142" y="371" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#15803d">kirish nuqtasida</text>
+
+  <!-- 2-ustun: ESCAPE -->
+  <rect x="270" y="92" width="220" height="290" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="380" y="124" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#1e40af">2. ESCAPE</text>
+  <text x="380" y="148" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">CHIQISH (output)</text>
+  <line x1="294" y1="162" x2="466" y2="162" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="380" y="186" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">ekranga chiqarishdan</text>
+  <text x="380" y="205" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">oldin -> KONTEKST bo'yicha</text>
+  <text x="380" y="234" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">matn -> esc_html</text>
+  <text x="380" y="254" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">atribut -> esc_attr</text>
+  <text x="380" y="274" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">URL -> esc_url</text>
+  <text x="380" y="294" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">JS -> esc_js</text>
+  <text x="380" y="314" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">HTML -> wp_kses_post</text>
+  <text x="380" y="352" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e40af">himoya: XSS</text>
+  <text x="380" y="371" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e40af">chiqish nuqtasida</text>
+
+  <!-- 3-ustun: NONCE + CAPABILITY -->
+  <rect x="508" y="92" width="220" height="290" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="618" y="124" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#b45309">3. NONCE + CAP</text>
+  <text x="618" y="148" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">HARAKAT (action)</text>
+  <line x1="532" y1="162" x2="704" y2="162" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="618" y="186" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">saqlash, o'chirish,</text>
+  <text x="618" y="205" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">o'zgartirish -> himoyala</text>
+  <text x="618" y="234" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">wp_nonce_field</text>
+  <text x="618" y="254" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">wp_verify_nonce</text>
+  <text x="618" y="274" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">check_admin_referer</text>
+  <text x="618" y="294" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#b45309">+ current_user_can</text>
+  <text x="618" y="314" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">(obyekt ID bilan)</text>
+  <text x="618" y="352" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309">himoya: CSRF, IDOR</text>
+  <text x="618" y="371" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309">harakat nuqtasida</text>
+</svg>

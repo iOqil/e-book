@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 560" width="820" height="560">
+  <title>Dependency Rule: bog'liqlik o'qlari faqat ichkariga yo'naladi — tashqi qatlam ichki qatlamga bog'lanadi, hech qachon aksincha emas; ichki qatlam tashqarisi haqida hech narsa bilmaydi</title>
+
+  <rect x="0" y="0" width="820" height="560" fill="#f8fafc"/>
+
+  <text x="410" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="21" font-weight="bold" fill="#1e293b">Dependency Rule — bog'liqlik FAQAT ichkariga</text>
+  <text x="410" y="60" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#64748b">Tashqi qatlam ichkiga bog'lanadi. Ichki qatlam tashqarisi haqida HECH NARSA bilmaydi.</text>
+
+  <!-- Konsentrik zonalar (chap tomonda vizual) -->
+  <rect x="40" y="92" width="320" height="420" rx="14" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="200" y="116" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626">Frameworks &amp; Drivers (DB, web, UI)</text>
+
+  <rect x="72" y="132" width="256" height="348" rx="12" fill="#fef9c3" stroke="#f59e0b" stroke-width="2"/>
+  <text x="200" y="156" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#d97706">Interface Adapters</text>
+
+  <rect x="104" y="172" width="192" height="268" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="200" y="196" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">Use Cases</text>
+
+  <rect x="136" y="212" width="128" height="188" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="200" y="304" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">Entities</text>
+  <text x="200" y="324" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#334155">(markaz)</text>
+
+  <!-- Bog'liqlik o'qlari: tashqaridan ichkariga (pastdan tepaga ko'rsatkichli) -->
+  <line x1="200" y1="498" x2="200" y2="466" stroke="#1e293b" stroke-width="3" marker-end="url(#inarr)"/>
+  <line x1="200" y1="466" x2="200" y2="426" stroke="#1e293b" stroke-width="3" marker-end="url(#inarr)"/>
+  <line x1="200" y1="426" x2="200" y2="402" stroke="#1e293b" stroke-width="3" marker-end="url(#inarr)"/>
+  <text x="210" y="455" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">bog'lanadi</text>
+
+  <!-- O'ng tomon: qoidaning matnli izohi -->
+  <text x="430" y="120" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Qoida bitta jumlada:</text>
+  <rect x="430" y="134" width="350" height="74" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="448" y="160" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#334155">Manba kodidagi bog'liqlik faqat</text>
+  <text x="448" y="180" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">ICHKARIGA</text>
+  <text x="503" y="180" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#334155">— yuqori darajadagi</text>
+  <text x="448" y="200" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#334155">siyosatga — ishora qilishi kerak.</text>
+
+  <!-- RUXSAT -->
+  <rect x="430" y="230" width="350" height="62" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="448" y="254" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">RUXSAT:</text>
+  <text x="448" y="276" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#334155">Controller -&gt; UseCase -&gt; Entity</text>
+
+  <!-- TAQIQ -->
+  <rect x="430" y="304" width="350" height="62" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="448" y="328" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626">TAQIQ:</text>
+  <text x="448" y="350" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#334155">Entity -&gt; DB klassi (ichki tashqarini import qildi)</text>
+
+  <!-- DIP eslatma -->
+  <rect x="430" y="388" width="350" height="92" rx="10" fill="#fef9c3" stroke="#f59e0b" stroke-width="2"/>
+  <text x="448" y="412" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#d97706">Oqim ichkidan tashqariga kerak bo'lsa?</text>
+  <text x="448" y="434" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#334155">Use case DB'ni chaqirishi kerak, lekin unga</text>
+  <text x="448" y="453" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#334155">bog'lanmasligi shart -&gt; PORT (interfeys) ichkarida,</text>
+  <text x="448" y="472" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#334155">implementatsiya tashqarida (DIP — 05-bob).</text>
+
+  <text x="410" y="538" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#64748b">Shu bitta qoida Onion, Clean va Hexagonalni birlashtiradi: biznes mantiq markazda, framework chekkada.</text>
+
+  <defs>
+    <marker id="inarr" markerWidth="14" markerHeight="14" refX="10" refY="6" orient="auto">
+      <path d="M1,1 L11,6 L1,11 Z" fill="#1e293b"/>
+    </marker>
+  </defs>
+</svg>

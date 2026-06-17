@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 460" width="780" height="460" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Semantik qidiruv oqimi: so'rov "ulov" embedding qilinadi, saqlangan hujjat vektorlari bilan kosinus o'xshashlik orqali solishtiriladi, tartiblanadi va eng yaqin "Mashina sotuvi" qaytariladi — umumiy kalit so'z bo'lmasa ham, ma'no bo'yicha topiladi</title>
+  <defs>
+    <marker id="sq" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#6366f1"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="780" height="460" fill="#f8fafc"/>
+  <text x="390" y="32" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Semantik qidiruv — kalit so'z emas, ma'no bo'yicha</text>
+  <text x="390" y="56" font-size="14" fill="#64748b" text-anchor="middle">So'rovni ham hujjatlarni ham bir xil model bilan embedding qilamiz, keyin solishtiramiz.</text>
+
+  <!-- query -->
+  <rect x="40" y="92" width="150" height="50" rx="9" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="115" y="112" font-size="13.5" fill="#475569" text-anchor="middle">So'rov</text>
+  <text x="115" y="132" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">"ulov"</text>
+
+  <line x1="190" y1="117" x2="232" y2="117" stroke="#6366f1" stroke-width="2.5" marker-end="url(#sq)"/>
+
+  <!-- embed -->
+  <rect x="232" y="90" width="120" height="54" rx="9" fill="#d97757" stroke="#d97757" stroke-width="2"/>
+  <text x="292" y="113" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">embed()</text>
+  <text x="292" y="133" font-size="13" fill="#ffffff" text-anchor="middle">so'rov vektori</text>
+
+  <line x1="352" y1="117" x2="394" y2="117" stroke="#6366f1" stroke-width="2.5" marker-end="url(#sq)"/>
+
+  <!-- compare box -->
+  <rect x="394" y="86" width="160" height="62" rx="9" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="474" y="110" font-size="14" font-weight="bold" fill="#d97757" text-anchor="middle">Kosinus</text>
+  <text x="474" y="130" font-size="13" fill="#475569" text-anchor="middle">solishtir + tartibla</text>
+
+  <!-- stored docs -->
+  <rect x="40" y="186" width="320" height="232" rx="12" fill="#ffffff" stroke="#0ea5e9" stroke-width="1.8"/>
+  <text x="200" y="212" font-size="15" font-weight="bold" fill="#0ea5e9" text-anchor="middle">Saqlangan hujjat vektorlari</text>
+  <text x="200" y="232" font-size="13" fill="#64748b" text-anchor="middle">(oldindan embedMany() bilan yasalgan)</text>
+
+  <rect x="60" y="246" width="280" height="38" rx="7" fill="#dbeafe" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="74" y="270" font-size="13.5" fill="#1e293b" text-anchor="start">"Mashina sotuvi e'loni"</text>
+
+  <rect x="60" y="292" width="280" height="38" rx="7" fill="#dbeafe" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="74" y="316" font-size="13.5" fill="#1e293b" text-anchor="start">"Avtomobil ta'mirlash"</text>
+
+  <rect x="60" y="338" width="280" height="38" rx="7" fill="#dbeafe" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="74" y="362" font-size="13.5" fill="#1e293b" text-anchor="start">"Olma narxi bozorda"</text>
+
+  <rect x="60" y="384" width="280" height="26" rx="7" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.2"/>
+  <text x="200" y="402" font-size="13" fill="#64748b" text-anchor="middle">... har birining vektori bor</text>
+
+  <!-- ranked results -->
+  <line x1="474" y1="148" x2="474" y2="186" stroke="#6366f1" stroke-width="2.5" marker-end="url(#sq)"/>
+  <rect x="420" y="186" width="320" height="232" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="1.8"/>
+  <text x="580" y="212" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="middle">Tartiblangan natija</text>
+
+  <rect x="440" y="234" width="280" height="48" rx="7" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="454" y="254" font-size="13.5" font-weight="bold" fill="#1e293b" text-anchor="start">1. "Mashina sotuvi e'loni"</text>
+  <text x="454" y="274" font-size="13" fill="#16a34a" text-anchor="start">cos = 0.83 (eng yaqin)</text>
+
+  <rect x="440" y="290" width="280" height="40" rx="7" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="454" y="310" font-size="13.5" fill="#1e293b" text-anchor="start">2. "Avtomobil ta'mirlash"</text>
+  <text x="454" y="326" font-size="13" fill="#475569" text-anchor="start">cos = 0.71</text>
+
+  <rect x="440" y="338" width="280" height="40" rx="7" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="454" y="358" font-size="13.5" fill="#1e293b" text-anchor="start">3. "Olma narxi bozorda"</text>
+  <text x="454" y="374" font-size="13" fill="#ef4444" text-anchor="start">cos = 0.09 (uzoq)</text>
+
+  <text x="580" y="402" font-size="13" font-weight="bold" fill="#16a34a" text-anchor="middle">"ulov" so'zi matnda yo'q — baribir topildi!</text>
+</svg>

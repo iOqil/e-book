@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 470" font-family="Segoe UI">
+  <title>Trunk-based va Git Flow oddiy taqqoslash diagrammasi</title>
+  <rect x="0" y="0" width="860" height="470" fill="#f8fafc"/>
+
+  <text x="430" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#1e293b">Branch strategiya: trunk-based vs Git Flow</text>
+
+  <!-- TOP: trunk-based -->
+  <text x="40" y="86" font-size="18" font-weight="bold" fill="#16a34a">Trunk-based</text>
+  <text x="40" y="108" font-size="13" fill="#64748b">qisqa branch, tez-tez main'ga qo'shiladi</text>
+
+  <!-- main line -->
+  <line x1="60" y1="150" x2="800" y2="150" stroke="#16a34a" stroke-width="4"/>
+  <text x="60" y="142" font-size="13" font-weight="bold" fill="#166534">main</text>
+
+  <!-- commits on main -->
+  <circle cx="120" cy="150" r="9" fill="#16a34a"/>
+  <circle cx="260" cy="150" r="9" fill="#16a34a"/>
+  <circle cx="400" cy="150" r="9" fill="#16a34a"/>
+  <circle cx="540" cy="150" r="9" fill="#16a34a"/>
+  <circle cx="680" cy="150" r="9" fill="#16a34a"/>
+  <circle cx="780" cy="150" r="9" fill="#16a34a"/>
+
+  <!-- short branches -->
+  <path d="M 260 150 q 30 -34 70 0" fill="none" stroke="#2563eb" stroke-width="3"/>
+  <circle cx="295" cy="125" r="7" fill="#2563eb"/>
+  <path d="M 540 150 q 30 -34 70 0" fill="none" stroke="#2563eb" stroke-width="3"/>
+  <circle cx="575" cy="125" r="7" fill="#2563eb"/>
+  <text x="430" y="196" text-anchor="middle" font-size="13" fill="#2563eb">kichik feature-branch'lar (soatlar) -> darrov merge</text>
+
+  <line x1="40" y1="222" x2="820" y2="222" stroke="#e2e8f0" stroke-width="2"/>
+
+  <!-- BOTTOM: git flow -->
+  <text x="40" y="258" font-size="18" font-weight="bold" fill="#7c3aed">Git Flow</text>
+  <text x="40" y="280" font-size="13" fill="#64748b">ko'p doimiy branch, uzoq yashaydi, rejali reliz</text>
+
+  <!-- main line -->
+  <line x1="60" y1="320" x2="800" y2="320" stroke="#1e293b" stroke-width="4"/>
+  <text x="60" y="312" font-size="13" font-weight="bold" fill="#1e293b">main</text>
+  <circle cx="160" cy="320" r="8" fill="#1e293b"/>
+  <circle cx="640" cy="320" r="8" fill="#1e293b"/>
+
+  <!-- develop line -->
+  <line x1="60" y1="370" x2="800" y2="370" stroke="#7c3aed" stroke-width="4"/>
+  <text x="60" y="392" font-size="13" font-weight="bold" fill="#7c3aed">develop</text>
+  <circle cx="160" cy="370" r="8" fill="#7c3aed"/>
+  <circle cx="400" cy="370" r="8" fill="#7c3aed"/>
+  <circle cx="640" cy="370" r="8" fill="#7c3aed"/>
+
+  <!-- long feature branch -->
+  <path d="M 240 370 C 300 410, 460 410, 520 370" fill="none" stroke="#f59e0b" stroke-width="3"/>
+  <circle cx="320" cy="402" r="7" fill="#f59e0b"/>
+  <circle cx="440" cy="402" r="7" fill="#f59e0b"/>
+  <text x="380" y="438" text-anchor="middle" font-size="13" fill="#f59e0b">uzoq feature/* (haftalar) -> merge do'zaxi xavfi</text>
+
+  <!-- release tie to main -->
+  <path d="M 640 370 q 0 -25 0 -50" fill="none" stroke="#dc2626" stroke-width="3" stroke-dasharray="5 4"/>
+  <text x="700" y="346" font-size="13" fill="#dc2626">release -> main</text>
+</svg>

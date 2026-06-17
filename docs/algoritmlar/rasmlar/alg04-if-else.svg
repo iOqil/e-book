@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 520">
+  <title>Tarmoqlanish blok-sxemasi: qaror rombi, ha va yo'q yo'llari, birlashish</title>
+  <rect x="0" y="0" width="820" height="520" fill="#f8fafc"/>
+  <text x="410" y="38" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">if / else — ikki tarmoqli qaror</text>
+  <text x="410" y="64" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Shart bir martta tekshiriladi, faqat bitta yo'l bajariladi</text>
+
+  <!-- Start -->
+  <rect x="335" y="92" width="150" height="44" rx="22" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="410" y="120" text-anchor="middle" font-family="Segoe UI" font-size="15" fill="#334155">Boshlash</text>
+
+  <!-- Arrow to decision -->
+  <line x1="410" y1="136" x2="410" y2="168" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="410,168 405,158 415,158" fill="#94a3b8"/>
+
+  <!-- Decision diamond -->
+  <polygon points="410,168 530,238 410,308 290,238" fill="#ffffff" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="410" y="232" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">Shart rost?</text>
+  <text x="410" y="254" text-anchor="middle" font-family="monospace" font-size="14" fill="#64748b">son % 2 == 0</text>
+
+  <!-- HA branch (left) -->
+  <line x1="290" y1="238" x2="170" y2="238" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="170,238 180,233 180,243" fill="#16a34a"/>
+  <text x="232" y="228" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">HA</text>
+  <line x1="170" y1="238" x2="170" y2="338" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="170,338 165,328 175,328" fill="#16a34a"/>
+  <rect x="70" y="338" width="200" height="56" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="170" y="365" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">"Juft son" deb chiqar</text>
+  <text x="170" y="385" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">(then bloki)</text>
+
+  <!-- YO'Q branch (right) -->
+  <line x1="530" y1="238" x2="650" y2="238" stroke="#dc2626" stroke-width="2"/>
+  <polygon points="650,238 640,233 640,243" fill="#dc2626"/>
+  <text x="588" y="228" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">YO'Q</text>
+  <line x1="650" y1="238" x2="650" y2="338" stroke="#dc2626" stroke-width="2"/>
+  <polygon points="650,338 645,328 655,328" fill="#dc2626"/>
+  <rect x="550" y="338" width="200" height="56" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="650" y="365" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">"Toq son" deb chiqar</text>
+  <text x="650" y="385" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">(else bloki)</text>
+
+  <!-- Merge -->
+  <line x1="170" y1="394" x2="170" y2="442" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="650" y1="394" x2="650" y2="442" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="170" y1="442" x2="650" y2="442" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="410" y1="442" x2="410" y2="468" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="410,468 405,458 415,458" fill="#94a3b8"/>
+  <rect x="335" y="468" width="150" height="44" rx="22" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="410" y="496" text-anchor="middle" font-family="Segoe UI" font-size="15" fill="#334155">Birlashish (davom)</text>
+</svg>

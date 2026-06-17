@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Indekslash quvuri: hujjat -> chunk -> embed -> vektor baza (metadata bilan)</title>
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">Indekslash quvuri (metadata bilan)</text>
+
+  <defs>
+    <marker id="iq-arr" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#4f46e5"/>
+    </marker>
+  </defs>
+
+  <!-- 1 folder -->
+  <rect x="36" y="86" width="150" height="86" rx="12" fill="#e0f2fe" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="111" y="118" text-anchor="middle" font-size="15" font-weight="700" fill="#0284c7">Hujjat</text>
+  <text x="111" y="140" text-anchor="middle" font-size="13" fill="#475569">qollanma.md</text>
+  <text x="111" y="158" text-anchor="middle" font-size="13" fill="#475569">narxlar.txt ...</text>
+
+  <!-- 2 chunk -->
+  <rect x="232" y="86" width="150" height="86" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="307" y="118" text-anchor="middle" font-size="15" font-weight="700" fill="#b45309">Chunk</text>
+  <text x="307" y="140" text-anchor="middle" font-size="13" fill="#92400e">overlap bilan</text>
+  <text x="307" y="158" text-anchor="middle" font-size="13" fill="#92400e">bo'laklar</text>
+
+  <!-- 3 embed -->
+  <rect x="428" y="86" width="150" height="86" rx="12" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="503" y="118" text-anchor="middle" font-size="15" font-weight="700" fill="#4338ca">Embed</text>
+  <text x="503" y="140" text-anchor="middle" font-size="13" fill="#475569">har chunk -&gt;</text>
+  <text x="503" y="158" text-anchor="middle" font-size="13" fill="#475569">vektor</text>
+
+  <!-- 4 db -->
+  <rect x="600" y="86" width="124" height="86" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="662" y="118" text-anchor="middle" font-size="15" font-weight="700" fill="#166534">Vektor</text>
+  <text x="662" y="138" text-anchor="middle" font-size="15" font-weight="700" fill="#166534">baza</text>
+  <text x="662" y="158" text-anchor="middle" font-size="13" fill="#166534">Chroma</text>
+
+  <line x1="186" y1="129" x2="228" y2="129" stroke="#4f46e5" stroke-width="2.5" marker-end="url(#iq-arr)"/>
+  <line x1="382" y1="129" x2="424" y2="129" stroke="#4f46e5" stroke-width="2.5" marker-end="url(#iq-arr)"/>
+  <line x1="578" y1="129" x2="596" y2="129" stroke="#4f46e5" stroke-width="2.5" marker-end="url(#iq-arr)"/>
+
+  <!-- stored record -->
+  <rect x="120" y="226" width="520" height="148" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <rect x="120" y="226" width="520" height="34" rx="14" fill="#dcfce7"/>
+  <text x="380" y="249" text-anchor="middle" font-size="16" font-weight="700" fill="#166534">Bazaga saqlanadigan har bir yozuv</text>
+
+  <text x="146" y="288" font-size="14" font-family="JetBrains Mono, monospace" fill="#4338ca">id:        "qollanma.md-3"</text>
+  <text x="146" y="312" font-size="14" font-family="JetBrains Mono, monospace" fill="#1e293b">vektor:    [0.12, -0.04, ...]</text>
+  <text x="146" y="336" font-size="14" font-family="JetBrains Mono, monospace" fill="#1e293b">matn:      "chunk asl matni..."</text>
+  <text x="146" y="360" font-size="14" font-family="JetBrains Mono, monospace" fill="#b45309">metadata:  {manba, chunk_raqami}</text>
+
+  <line x1="640" y1="172" x2="470" y2="222" stroke="#16a34a" stroke-width="2.5" stroke-dasharray="6 4" marker-end="url(#iq-arr)"/>
+
+  <text x="380" y="404" text-anchor="middle" font-size="13" fill="#64748b">Metadata so'rov vaqtida "javob qaysi fayldan keldi?" deyishga imkon beradi</text>
+</svg>

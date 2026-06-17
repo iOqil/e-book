@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Props oqimi: ota komponentdan bola komponentga ma'lumot uzatish</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">Props oqimi: yuqoridan pastga</text>
+
+  <!-- Ota komponent -->
+  <rect x="60" y="80" width="280" height="160" rx="14" fill="#ffffff" stroke="#4f46e5" stroke-width="2.5"/>
+  <text x="200" y="112" text-anchor="middle" font-size="17" font-weight="700" fill="#4f46e5">Ota komponent</text>
+  <text x="200" y="138" text-anchor="middle" font-size="14" fill="#475569">&lt;Kartochka</text>
+  <text x="200" y="162" text-anchor="middle" font-size="14" fill="#16a34a">nom="Oqil"</text>
+  <text x="200" y="186" text-anchor="middle" font-size="14" fill="#16a34a">yosh={25}</text>
+  <text x="200" y="210" text-anchor="middle" font-size="14" fill="#16a34a">onBos={...}</text>
+  <text x="200" y="230" text-anchor="middle" font-size="14" fill="#475569">/&gt;</text>
+
+  <!-- Bola komponent -->
+  <rect x="420" y="80" width="280" height="160" rx="14" fill="#ffffff" stroke="#0ea5e9" stroke-width="2.5"/>
+  <text x="560" y="112" text-anchor="middle" font-size="17" font-weight="700" fill="#0ea5e9">Bola komponent</text>
+  <text x="560" y="138" text-anchor="middle" font-size="14" fill="#475569">function Kartochka(</text>
+  <text x="560" y="164" text-anchor="middle" font-size="14" fill="#1e293b">{ nom, yosh, onBos }</text>
+  <text x="560" y="190" text-anchor="middle" font-size="14" fill="#475569">) {'{'} ... {'}'}</text>
+  <text x="560" y="220" text-anchor="middle" font-size="13" fill="#94a3b8">props'ni qabul qiladi</text>
+
+  <!-- Strelka -->
+  <defs>
+    <marker id="ok" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+  <line x1="340" y1="160" x2="414" y2="160" stroke="#f59e0b" stroke-width="3" marker-end="url(#ok)"/>
+  <text x="377" y="148" text-anchor="middle" font-size="14" font-weight="700" fill="#f59e0b">props</text>
+
+  <!-- Pastki izoh -->
+  <rect x="60" y="290" width="640" height="120" rx="12" fill="#ffffff" stroke="#bae6fd" stroke-width="2"/>
+  <text x="380" y="320" text-anchor="middle" font-size="16" font-weight="700" fill="#1e293b">Props = komponentga tashqaridan beriladigan sozlama</text>
+  <text x="380" y="348" text-anchor="middle" font-size="14" fill="#475569">Funksiya argumentlari kabi: bir xil komponent, har xil ma'lumot bilan ishlaydi.</text>
+  <text x="380" y="372" text-anchor="middle" font-size="14" fill="#475569">Bola props'ni faqat O'QIYDI — o'zgartira olmaydi (read-only).</text>
+  <text x="380" y="396" text-anchor="middle" font-size="14" fill="#475569">Statik qiymat tirnoqda ("Oqil"), dinamik qiymat {'{ }'} ichida ({25}).</text>
+</svg>

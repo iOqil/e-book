@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 450" width="760" height="450">
+  <title>block.json maydonlari register_block_type build chaqiruvi orqali oqiladi va WordPress asetlarni avtomatik enqueue qiladi</title>
+  <defs>
+    <marker id="j-arr" markerWidth="13" markerHeight="13" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="450" fill="#f8fafc"/>
+
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">block.json — markaziy manba</text>
+  <text x="380" y="56" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">bitta fayl JS va PHP tomonni birlashtiradi</text>
+
+  <!-- block.json box -->
+  <rect x="40" y="84" width="320" height="300" rx="10" fill="#fff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="200" y="110" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">block.json (apiVersion 3)</text>
+
+  <text x="58" y="140" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">"apiVersion": 3</text>
+  <text x="58" y="164" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">"name": "oqil/kitoblar-royxati"</text>
+  <text x="58" y="188" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">"title", "category", "icon"</text>
+  <text x="58" y="212" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">"description"</text>
+  <text x="58" y="236" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">"attributes": { ... }</text>
+  <text x="58" y="260" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">"supports": { ... }</text>
+  <text x="58" y="288" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">"editorScript": "file:./index.js"</text>
+  <text x="58" y="312" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">"editorStyle": "file:./index.css"</text>
+  <text x="58" y="336" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">"style": "file:./style-index.css"</text>
+  <text x="58" y="360" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#7c3aed">"render": "file:./render.php"</text>
+
+  <!-- register_block_type -->
+  <rect x="430" y="120" width="290" height="80" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="575" y="150" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">register_block_type(</text>
+  <text x="575" y="172" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">__DIR__ . '/build' )</text>
+  <text x="575" y="192" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">init hook'da (PHP)</text>
+
+  <line x1="360" y1="200" x2="428" y2="160" stroke="#475569" stroke-width="2" marker-end="url(#j-arr)"/>
+  <text x="395" y="200" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">o'qiydi</text>
+
+  <!-- auto enqueue -->
+  <rect x="430" y="232" width="290" height="152" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="575" y="262" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">WordPress avtomatik qiladi:</text>
+  <text x="448" y="290" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">blokni ro'yxatga oladi</text>
+  <text x="448" y="314" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">editorScript'ni muharrirda enqueue</text>
+  <text x="448" y="338" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">style'ni front + muharrirda enqueue</text>
+  <text x="448" y="362" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">index.asset.php deps'ni o'qiydi</text>
+
+  <line x1="575" y1="200" x2="575" y2="230" stroke="#475569" stroke-width="2" marker-end="url(#j-arr)"/>
+
+  <text x="380" y="420" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Qo'lda wp_enqueue_script yozish SHART EMAS — block.json hammasini hal qiladi.</text>
+</svg>

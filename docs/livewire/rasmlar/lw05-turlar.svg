@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Property uchun ruxsat etilgan turlar yashil ustunda (string, int, float, bool, array, null, Collection, Model, Carbon, Stringable) va ruxsat etilmagan oddiy obyektlar qizil ustunda xato beradi</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Public property uchun qaysi turlar mumkin?</text>
+
+  <!-- YASHIL ustun -->
+  <rect x="40" y="64" width="340" height="336" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <rect x="40" y="64" width="340" height="44" rx="14" fill="#16a34a"/>
+  <text x="210" y="92" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">Mumkin (sinxronlanadi)</text>
+
+  <text x="64" y="138" font-size="14" fill="#15803d">Skalar turlar:</text>
+  <text x="76" y="164" font-size="14" font-weight="700" fill="#1e293b">string &#183; int &#183; float</text>
+  <text x="76" y="190" font-size="14" font-weight="700" fill="#1e293b">bool &#183; array &#183; null</text>
+
+  <line x1="64" y1="210" x2="356" y2="210" stroke="#dcfce7" stroke-width="2"/>
+
+  <text x="64" y="240" font-size="14" fill="#15803d">Livewire qo'llaydigan obyektlar:</text>
+  <text x="76" y="266" font-size="14" font-weight="700" fill="#1e293b">Eloquent Model</text>
+  <text x="76" y="292" font-size="14" font-weight="700" fill="#1e293b">Collection</text>
+  <text x="76" y="318" font-size="14" font-weight="700" fill="#1e293b">Carbon (sana/vaqt)</text>
+  <text x="76" y="344" font-size="14" font-weight="700" fill="#1e293b">Stringable</text>
+  <text x="64" y="378" font-size="13" fill="#16a34a">Livewire bularni avtomatik saqlab/tiklaydi.</text>
+
+  <!-- QIZIL ustun -->
+  <rect x="400" y="64" width="320" height="336" rx="14" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <rect x="400" y="64" width="320" height="44" rx="14" fill="#dc2626"/>
+  <text x="560" y="92" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">Mumkin emas (XATO)</text>
+
+  <text x="424" y="138" font-size="14" fill="#b91c1c">Oddiy PHP obyektlari:</text>
+  <text x="436" y="164" font-size="14" font-weight="700" fill="#1e293b">new PDO(...)</text>
+  <text x="436" y="190" font-size="14" font-weight="700" fill="#1e293b">o'zingiz yozgan klass</text>
+  <text x="436" y="216" font-size="14" font-weight="700" fill="#1e293b">resurs (fayl, ulanish)</text>
+  <text x="436" y="242" font-size="14" font-weight="700" fill="#1e293b">closure (anonim funksiya)</text>
+
+  <line x1="424" y1="262" x2="696" y2="262" stroke="#fee2e2" stroke-width="2"/>
+
+  <text x="424" y="292" font-size="13" fill="#b91c1c">Bularni public qilsangiz, Livewire</text>
+  <text x="424" y="312" font-size="13" fill="#b91c1c">snapshotga sig'dira olmaydi va</text>
+  <text x="424" y="332" font-size="13" fill="#b91c1c">xato (exception) chiqaradi.</text>
+
+  <rect x="424" y="350" width="272" height="34" rx="8" fill="#fef2f2" stroke="#fecaca"/>
+  <text x="560" y="372" text-anchor="middle" font-size="13" fill="#dc2626">Yechim: protected qiling yoki ID saqlang</text>
+</svg>

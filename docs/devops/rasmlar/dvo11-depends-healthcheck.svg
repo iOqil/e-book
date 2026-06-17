@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420">
+  <title>depends_on va condition service_healthy: avval db va cache healthcheck'dan o'tib healthy bo'ladi, keyingina web ishga tushadi degan ishga tushish tartibi</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">depends_on + service_healthy: to'g'ri tartib</text>
+
+  <defs>
+    <marker id="dhok" markerWidth="11" markerHeight="11" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+    <marker id="dhwait" markerWidth="11" markerHeight="11" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+
+  <!-- vaqt o'qi -->
+  <text x="380" y="62" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">vaqt  →</text>
+  <line x1="60" y1="74" x2="700" y2="74" stroke="#94a3b8" stroke-width="2"/>
+  <path d="M700 74 L692 70 L692 78 Z" fill="#94a3b8"/>
+
+  <!-- 1: db boshlanadi -->
+  <rect x="60" y="96" width="200" height="120" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="160" y="122" text-anchor="middle" font-family="Consolas, monospace" font-size="15" font-weight="bold" fill="#166534">db boshlanadi</text>
+  <text x="160" y="146" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">postgres init...</text>
+  <rect x="78" y="158" width="164" height="44" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="160" y="178" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#b45309">healthcheck:</text>
+  <text x="160" y="196" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#b45309">pg_isready</text>
+
+  <!-- 2: cache boshlanadi -->
+  <rect x="60" y="232" width="200" height="120" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="160" y="258" text-anchor="middle" font-family="Consolas, monospace" font-size="15" font-weight="bold" fill="#991b1b">cache boshlanadi</text>
+  <text x="160" y="282" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">redis init...</text>
+  <rect x="78" y="294" width="164" height="44" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="160" y="314" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#b45309">healthcheck:</text>
+  <text x="160" y="332" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#b45309">redis-cli ping</text>
+
+  <!-- 3: healthy bayrog'i -->
+  <rect x="300" y="148" width="170" height="60" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="385" y="174" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#166534">db: healthy ✓</text>
+  <text x="385" y="196" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">ulanishga tayyor</text>
+
+  <rect x="300" y="262" width="170" height="60" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="385" y="288" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#991b1b">cache: healthy ✓</text>
+  <text x="385" y="310" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">PONG qaytdi</text>
+
+  <line x1="260" y1="178" x2="296" y2="178" stroke="#16a34a" stroke-width="3" marker-end="url(#dhok)"/>
+  <line x1="260" y1="292" x2="296" y2="292" stroke="#16a34a" stroke-width="3" marker-end="url(#dhok)"/>
+
+  <!-- 4: web ishga tushadi -->
+  <rect x="510" y="178" width="200" height="114" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="610" y="208" text-anchor="middle" font-family="Consolas, monospace" font-size="16" font-weight="bold" fill="#1e40af">web ishga tushadi</text>
+  <text x="610" y="232" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">ikkalasi healthy bo'lgach</text>
+  <text x="610" y="254" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#475569">db'ga, cache'ga ulanadi</text>
+  <text x="610" y="276" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">xato yo'q ✓</text>
+
+  <path d="M470 178 C 490 200, 490 220, 508 232" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#dhok)"/>
+  <path d="M470 292 C 490 270, 490 250, 508 236" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#dhok)"/>
+
+  <!-- pastki izoh -->
+  <rect x="40" y="368" width="680" height="40" rx="9" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="380" y="386" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#7c3aed">depends_on: { db: { condition: service_healthy }, cache: { condition: service_healthy } }</text>
+  <text x="380" y="403" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">healthcheck'siz: web faqat "boshlandi"ni kutadi, "tayyor"ligini emas — xato berishi mumkin</text>
+</svg>

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Koordinator-ishchilar naqshi: koordinator (Opus, kuchli model) maqsadni kichik vazifalarga BO'LADI -> N ta ishchi agent (parallel, arzon Haiku model) har biri bitta kichik vazifani bajaradi -> koordinator (Opus) ishchilar natijalarini bitta yakuniy javobga JAMLAYDI. Kichik vazifalarni model belgilaydi (dinamik), lekin bo'l->bajar->jamla tuzilishini siz kod bilan boshqarasiz. Ishchilar parallel (Promise.all) va arzon modelda — narxni tejaydi.</title>
+  <defs>
+    <marker id="o21a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#9333ea"/>
+    </marker>
+    <marker id="o21g" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="800" height="500" fill="#f8fafc"/>
+  <text x="400" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Koordinator-ishchilar — bo'l, bajar, jamla</text>
+  <text x="400" y="58" font-size="14" fill="#64748b" text-anchor="middle">Koordinator vazifani bo'ladi, ishchilar parallel bajaradi, koordinator yakuniy javobga jamlaydi</text>
+
+  <!-- Goal -->
+  <rect x="40" y="92" width="150" height="74" rx="12" fill="#dbeafe" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="115" y="124" font-size="15" font-weight="bold" fill="#0ea5e9" text-anchor="middle">Maqsad</text>
+  <text x="115" y="146" font-size="13" fill="#475569" text-anchor="middle">murakkab</text>
+  <text x="115" y="162" font-size="13" fill="#475569" text-anchor="middle">savol / vazifa</text>
+  <line x1="190" y1="129" x2="246" y2="129" stroke="#9333ea" stroke-width="2.5" marker-end="url(#o21a)"/>
+
+  <!-- Coordinator: split -->
+  <rect x="250" y="92" width="200" height="74" rx="12" fill="#e0e7ff" stroke="#9333ea" stroke-width="2.5"/>
+  <text x="350" y="118" font-size="15" font-weight="bold" fill="#9333ea" text-anchor="middle">1. KOORDINATOR bo'ladi</text>
+  <text x="350" y="140" font-size="13" fill="#475569" text-anchor="middle">vazifani 3 kichik vazifaga</text>
+  <text x="350" y="158" font-size="13" fill="#64748b" text-anchor="middle">(Opus — kuchli model)</text>
+
+  <!-- arrows to workers -->
+  <line x1="350" y1="166" x2="200" y2="212" stroke="#9333ea" stroke-width="2.5" marker-end="url(#o21a)"/>
+  <line x1="350" y1="166" x2="400" y2="212" stroke="#9333ea" stroke-width="2.5" marker-end="url(#o21a)"/>
+  <line x1="350" y1="166" x2="600" y2="212" stroke="#9333ea" stroke-width="2.5" marker-end="url(#o21a)"/>
+
+  <!-- parallel band -->
+  <rect x="40" y="216" width="720" height="150" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="400" y="240" font-size="14" font-weight="bold" fill="#f59e0b" text-anchor="middle">2. ISHCHILAR — PARALLEL (Promise.all), arzon model (Haiku)</text>
+
+  <rect x="64" y="254" width="200" height="96" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="164" y="282" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Ishchi 1</text>
+  <text x="164" y="306" font-size="13" fill="#475569" text-anchor="middle">kichik vazifa A</text>
+  <text x="164" y="326" font-size="13" fill="#475569" text-anchor="middle">ni o'rganadi</text>
+  <text x="164" y="344" font-size="13" fill="#d97757" text-anchor="middle">generateText (Haiku)</text>
+
+  <rect x="300" y="254" width="200" height="96" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="400" y="282" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Ishchi 2</text>
+  <text x="400" y="306" font-size="13" fill="#475569" text-anchor="middle">kichik vazifa B</text>
+  <text x="400" y="326" font-size="13" fill="#475569" text-anchor="middle">ni o'rganadi</text>
+  <text x="400" y="344" font-size="13" fill="#d97757" text-anchor="middle">generateText (Haiku)</text>
+
+  <rect x="536" y="254" width="200" height="96" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="636" y="282" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Ishchi 3</text>
+  <text x="636" y="306" font-size="13" fill="#475569" text-anchor="middle">kichik vazifa C</text>
+  <text x="636" y="326" font-size="13" fill="#475569" text-anchor="middle">ni o'rganadi</text>
+  <text x="636" y="344" font-size="13" fill="#d97757" text-anchor="middle">generateText (Haiku)</text>
+
+  <!-- arrows to synthesize -->
+  <line x1="164" y1="366" x2="330" y2="406" stroke="#16a34a" stroke-width="2.5" marker-end="url(#o21g)"/>
+  <line x1="400" y1="366" x2="400" y2="406" stroke="#16a34a" stroke-width="2.5" marker-end="url(#o21g)"/>
+  <line x1="636" y1="366" x2="470" y2="406" stroke="#16a34a" stroke-width="2.5" marker-end="url(#o21g)"/>
+  <text x="250" y="392" font-size="13" fill="#16a34a" text-anchor="middle">topilmalar</text>
+
+  <!-- Coordinator: synthesize -->
+  <rect x="240" y="410" width="320" height="60" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="400" y="434" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="middle">3. KOORDINATOR jamlaydi (Opus)</text>
+  <text x="400" y="456" font-size="13" fill="#475569" text-anchor="middle">topilmalardan bitta manbali yakuniy javob</text>
+
+  <!-- side note -->
+  <rect x="584" y="410" width="176" height="60" rx="10" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="672" y="432" font-size="13" font-weight="bold" fill="#6366f1" text-anchor="middle">Tuzilishni SIZ</text>
+  <text x="672" y="450" font-size="13" fill="#475569" text-anchor="middle">boshqarasiz; kichik</text>
+  <text x="672" y="466" font-size="13" fill="#475569" text-anchor="middle">vazifani model bo'ladi</text>
+</svg>

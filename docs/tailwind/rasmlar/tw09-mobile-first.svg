@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 470" width="800" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Mobile-first breakpoint chizig'i: base, sm, md, lg, xl, 2xl prefikslari "shu nuqtadan O'NGGA" qo'llanadi; text-sm md:text-lg misoli turli kengliklarda qanday hal bo'lishi</title>
+  <rect x="0" y="0" width="800" height="470" fill="#f8fafc"/>
+
+  <text x="400" y="38" text-anchor="middle" font-size="21" font-weight="bold" fill="#1e293b">Mobile-first: prefiks "shu nuqtadan O'NGGA" qo'llanadi</text>
+  <text x="400" y="62" text-anchor="middle" font-size="14" fill="#475569">Prefikssiz = HAMMA kenglik · md: = 768px va undan kattalarda</text>
+
+  <!-- Asosiy o'q -->
+  <line x1="70" y1="120" x2="740" y2="120" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="740,120 728,114 728,126" fill="#94a3b8"/>
+  <text x="744" y="124" font-size="13" fill="#64748b">px</text>
+
+  <!-- Breakpoint nuqtalari: base 70, sm 200, md 330, lg 460, xl 590, 2xl 700 -->
+  <!-- base -->
+  <circle cx="70" cy="120" r="6" fill="#4f46e5"/>
+  <text x="70" y="100" text-anchor="middle" font-size="14" font-weight="bold" fill="#4f46e5">base</text>
+  <text x="70" y="146" text-anchor="middle" font-size="13" fill="#64748b">0</text>
+  <!-- sm -->
+  <circle cx="200" cy="120" r="6" fill="#4f46e5"/>
+  <text x="200" y="100" text-anchor="middle" font-size="14" font-weight="bold" fill="#4f46e5">sm:</text>
+  <text x="200" y="146" text-anchor="middle" font-size="13" fill="#64748b">640</text>
+  <!-- md -->
+  <circle cx="330" cy="120" r="6" fill="#4f46e5"/>
+  <text x="330" y="100" text-anchor="middle" font-size="14" font-weight="bold" fill="#4f46e5">md:</text>
+  <text x="330" y="146" text-anchor="middle" font-size="13" fill="#64748b">768</text>
+  <!-- lg -->
+  <circle cx="460" cy="120" r="6" fill="#4f46e5"/>
+  <text x="460" y="100" text-anchor="middle" font-size="14" font-weight="bold" fill="#4f46e5">lg:</text>
+  <text x="460" y="146" text-anchor="middle" font-size="13" fill="#64748b">1024</text>
+  <!-- xl -->
+  <circle cx="590" cy="120" r="6" fill="#4f46e5"/>
+  <text x="590" y="100" text-anchor="middle" font-size="14" font-weight="bold" fill="#4f46e5">xl:</text>
+  <text x="590" y="146" text-anchor="middle" font-size="13" fill="#64748b">1280</text>
+  <!-- 2xl -->
+  <circle cx="700" cy="120" r="6" fill="#4f46e5"/>
+  <text x="700" y="100" text-anchor="middle" font-size="14" font-weight="bold" fill="#4f46e5">2xl:</text>
+  <text x="700" y="146" text-anchor="middle" font-size="13" fill="#64748b">1536</text>
+
+  <!-- "shu nuqtadan o'ngga" strelkalari -->
+  <line x1="330" y1="172" x2="730" y2="172" stroke="#0ea5e9" stroke-width="2.5"/>
+  <polygon points="730,172 718,166 718,178" fill="#0ea5e9"/>
+  <text x="334" y="166" font-size="13" font-weight="bold" fill="#0284c7">md: shu yerdan o'ngga TA'SIR qiladi &#8594;</text>
+
+  <!-- Misol blok -->
+  <rect x="70" y="210" width="660" height="220" rx="10" fill="#ffffff" stroke="#c7d2fe" stroke-width="1.5"/>
+  <text x="90" y="240" font-size="15" font-weight="bold" fill="#1e293b">Misol:</text>
+  <rect x="150" y="224" width="270" height="26" rx="5" fill="#eef2ff" stroke="#c7d2fe" stroke-width="1"/>
+  <text x="160" y="242" font-size="14" fill="#4f46e5">class="text-sm md:text-lg"</text>
+
+  <!-- ikki ssenariy -->
+  <!-- tor ekran -->
+  <rect x="90" y="270" width="290" height="140" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+  <text x="235" y="296" text-anchor="middle" font-size="14" font-weight="bold" fill="#475569">Ekran 500px (md dan kichik)</text>
+  <text x="235" y="324" text-anchor="middle" font-size="13" fill="#64748b">md: hali yoqilmagan &#8594; faqat asos</text>
+  <rect x="130" y="338" width="210" height="50" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="235" y="368" text-anchor="middle" font-size="14" fill="#1e293b">text-sm yutadi</text>
+
+  <!-- keng ekran -->
+  <rect x="420" y="270" width="290" height="140" rx="8" fill="#eef2ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="565" y="296" text-anchor="middle" font-size="14" font-weight="bold" fill="#4f46e5">Ekran 900px (md dan katta)</text>
+  <text x="565" y="324" text-anchor="middle" font-size="13" fill="#475569">md: yoqildi &#8594; asosni qoplaydi</text>
+  <rect x="460" y="332" width="210" height="62" rx="6" fill="#ffffff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="565" y="370" text-anchor="middle" font-size="17" font-weight="bold" fill="#1e293b">md:text-lg yutadi</text>
+
+  <text x="400" y="452" text-anchor="middle" font-size="13" fill="#64748b">Avval kichik ekranni yozing (asos), keyin kattalar uchun ustiga qatlam qo'shing</text>
+</svg>

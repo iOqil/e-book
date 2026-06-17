@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 500">
+  <title>Queue (navbat): enqueue orqadan element qo'shadi, dequeue oldindan element oladi — FIFO tartibi, odamlar navbati analogiyasi</title>
+  <rect x="0" y="0" width="880" height="500" fill="#f8fafc"/>
+  <text x="440" y="36" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Queue (navbat) — FIFO: birinchi kirgan birinchi chiqadi</text>
+  <text x="440" y="62" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">enqueue orqaga qo'shadi (rear), dequeue oldindan oladi (front)</text>
+
+  <!-- main queue boxes -->
+  <text x="120" y="150" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">front (bosh)</text>
+  <text x="760" y="150" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">rear (oxir)</text>
+
+  <rect x="190" y="170" width="100" height="60" rx="6" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="240" y="206" text-anchor="middle" font-family="monospace" font-size="16" fill="#2563eb">A</text>
+  <rect x="300" y="170" width="100" height="60" rx="6" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="350" y="206" text-anchor="middle" font-family="monospace" font-size="16" fill="#2563eb">B</text>
+  <rect x="410" y="170" width="100" height="60" rx="6" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="460" y="206" text-anchor="middle" font-family="monospace" font-size="16" fill="#2563eb">C</text>
+  <rect x="520" y="170" width="100" height="60" rx="6" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="570" y="206" text-anchor="middle" font-family="monospace" font-size="16" fill="#2563eb">D</text>
+  <rect x="630" y="170" width="100" height="60" rx="6" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="680" y="206" text-anchor="middle" font-family="monospace" font-size="16" fill="#2563eb">E</text>
+
+  <!-- dequeue arrow (leaving front) -->
+  <line x1="190" y1="200" x2="100" y2="200" stroke="#dc2626" stroke-width="3" marker-end="url(#arrR2)"/>
+  <text x="130" y="255" text-anchor="middle" font-family="monospace" font-size="14" fill="#dc2626">dequeue() = A</text>
+  <text x="130" y="275" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">birinchi chiqadi</text>
+
+  <!-- enqueue arrow (entering rear) -->
+  <line x1="840" y1="200" x2="745" y2="200" stroke="#16a34a" stroke-width="3" marker-end="url(#arrG2)"/>
+  <text x="800" y="255" text-anchor="middle" font-family="monospace" font-size="14" fill="#16a34a">enqueue(F)</text>
+  <text x="800" y="275" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">oxiriga qo'shiladi</text>
+
+  <!-- yo'nalish -->
+  <text x="460" y="260" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">harakat yo'nalishi: chapdan o'ngga (kelgan tartibda chiqadi)</text>
+
+  <!-- analogiya -->
+  <rect x="120" y="300" width="640" height="56" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="440" y="324" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">Analogiya: kassadagi navbat</text>
+  <text x="440" y="346" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Birinchi kelgan odam birinchi xizmat oladi; yangi kelgan odam navbat oxiriga turadi</text>
+
+  <!-- O(1) izoh -->
+  <text x="440" y="396" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#16a34a">FIFO = First In, First Out</text>
+  <text x="440" y="422" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">enqueue · dequeue · front — to'g'ri implementatsiyada (doiraviy bufer / ro'yxat) O(1)</text>
+  <text x="440" y="448" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">Diqqat: sodda massivda dequeue hamma elementni suradi — O(n). Doiraviy bufer buni hal qiladi.</text>
+
+  <defs>
+    <marker id="arrR2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#dc2626"/>
+    </marker>
+    <marker id="arrG2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+</svg>

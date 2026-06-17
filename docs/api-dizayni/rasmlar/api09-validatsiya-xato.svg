@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560">
+  <title>Validatsiya xatosi javobi: bir nechta maydon xatosi 422 bilan</title>
+  <rect x="0" y="0" width="880" height="560" fill="#f8fafc"/>
+  <text x="440" y="34" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">Validatsiya xatosi — hammasini birato'la qaytaring</text>
+  <text x="440" y="58" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Bir nechta maydon xato bo'lsa, ularni bittalab emas, ro'yxat qilib bering</text>
+
+  <!-- So'rov karta -->
+  <rect x="40" y="86" width="300" height="200" rx="12" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="190" y="114" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#b45309">Yuborilgan so'rov (xato)</text>
+  <text x="64" y="142" font-family="monospace" font-size="14" fill="#334155">POST /v1/users</text>
+  <text x="64" y="168" font-family="monospace" font-size="14" fill="#334155">{</text>
+  <text x="80" y="190" font-family="monospace" font-size="14" fill="#dc2626">"email": "salom",</text>
+  <text x="80" y="212" font-family="monospace" font-size="14" fill="#dc2626">"age": -5,</text>
+  <text x="80" y="234" font-family="monospace" font-size="14" fill="#dc2626">"password": "123"</text>
+  <text x="64" y="256" font-family="monospace" font-size="14" fill="#334155">}</text>
+  <text x="190" y="278" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">3 ta maydon noto'g'ri</text>
+
+  <!-- O'q -->
+  <defs>
+    <marker id="va" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <line x1="344" y1="186" x2="394" y2="186" stroke="#64748b" stroke-width="2.5" marker-end="url(#va)"/>
+  <text x="369" y="176" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">422</text>
+
+  <!-- Javob karta -->
+  <rect x="400" y="86" width="440" height="280" rx="12" fill="#0f172a" stroke="#dc2626" stroke-width="2"/>
+  <text x="424" y="114" font-family="monospace" font-size="14" fill="#fca5a5">HTTP/1.1 422 Unprocessable Content</text>
+  <text x="424" y="134" font-family="monospace" font-size="14" fill="#94a3b8">Content-Type: application/problem+json</text>
+  <text x="424" y="160" font-family="monospace" font-size="14" fill="#e2e8f0">{</text>
+  <text x="440" y="182" font-family="monospace" font-size="14" fill="#93c5fd">"title"</text>
+  <text x="508" y="182" font-family="monospace" font-size="14" fill="#fcd34d">: "Validatsiya muvaffaqiyatsiz",</text>
+  <text x="440" y="204" font-family="monospace" font-size="14" fill="#93c5fd">"status"</text>
+  <text x="516" y="204" font-family="monospace" font-size="14" fill="#fcd34d">: 422,</text>
+  <text x="440" y="226" font-family="monospace" font-size="14" fill="#a78bfa">"errors"</text>
+  <text x="508" y="226" font-family="monospace" font-size="14" fill="#e2e8f0">: [</text>
+  <text x="456" y="248" font-family="monospace" font-size="13" fill="#e2e8f0">{"field":"email","code":"INVALID",</text>
+  <text x="472" y="266" font-family="monospace" font-size="13" fill="#e2e8f0">"message":"Yaroqli email emas"},</text>
+  <text x="456" y="288" font-family="monospace" font-size="13" fill="#e2e8f0">{"field":"age","code":"MIN",</text>
+  <text x="472" y="306" font-family="monospace" font-size="13" fill="#e2e8f0">"message":"Manfiy bo'lmasin"},</text>
+  <text x="456" y="328" font-family="monospace" font-size="13" fill="#e2e8f0">{"field":"password","code":"TOO_SHORT"}</text>
+  <text x="440" y="350" font-family="monospace" font-size="14" fill="#e2e8f0">]</text>
+  <text x="424" y="362" font-family="monospace" font-size="14" fill="#e2e8f0">}</text>
+
+  <!-- Pastki tushuntirish -->
+  <rect x="40" y="396" width="800" height="140" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="440" y="424" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">Nega bu yaxshi?</text>
+  <text x="64" y="452" font-family="Segoe UI" font-size="13" fill="#334155">1. Har bir xato uchun: field (qaysi maydon) + code (barqaror mashina-kod) + message (inson uchun).</text>
+  <text x="64" y="476" font-family="Segoe UI" font-size="13" fill="#334155">2. Hammasi bitta javobda — foydalanuvchi formani 3 marta yubormaydi (bittalab xato berish yomon DX).</text>
+  <text x="64" y="500" font-family="Segoe UI" font-size="13" fill="#334155">3. errors[] = RFC 9457 kengaytma maydoni. Mijoz mantiqi message matniga emas, code'ga tayanadi.</text>
+  <text x="64" y="524" font-family="Segoe UI" font-size="13" fill="#64748b">422 = sintaksis to'g'ri (valid JSON), lekin semantik qoidalar buzilgan. Buzilgan JSON bo'lsa -&gt; 400.</text>
+</svg>

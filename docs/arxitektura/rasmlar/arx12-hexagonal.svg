@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 560" width="820" height="560">
+  <title>Hexagonal arxitektura: markazda domen (biznes mantiq), olti burchak chetlarida portlar (interfeyslar), tashqarida adapterlar (infratuzilma); barcha bog'liqlik o'qlari ICHKARIGA, markazga ishora qiladi</title>
+
+  <rect x="0" y="0" width="820" height="560" fill="#f8fafc"/>
+
+  <text x="410" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Hexagonal (Ports &amp; Adapters) — biznes mantiq markazda</text>
+
+  <!-- ===== TASHQI ADAPTERLAR (infratuzilma) ===== -->
+  <!-- chap (driving) -->
+  <rect x="40" y="150" width="120" height="46" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="100" y="170" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">REST API</text>
+  <text x="100" y="187" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">adapter</text>
+
+  <rect x="40" y="360" width="120" height="46" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="100" y="380" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">CLI / Test</text>
+  <text x="100" y="397" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">adapter</text>
+
+  <!-- o'ng (driven) -->
+  <rect x="660" y="150" width="120" height="46" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="720" y="170" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">PostgreSQL</text>
+  <text x="720" y="187" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">adapter</text>
+
+  <rect x="660" y="360" width="120" height="46" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="720" y="380" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">SMTP email</text>
+  <text x="720" y="397" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">adapter</text>
+
+  <!-- ===== OLTI BURCHAK (markaz = domen) ===== -->
+  <polygon points="410,120 540,200 540,360 410,440 280,360 280,200" fill="#fff7ed" stroke="#f59e0b" stroke-width="2.5"/>
+  <!-- ichki domen yadrosi -->
+  <polygon points="410,180 480,222 480,338 410,380 340,338 340,222" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="410" y="272" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#92400e">DOMEN</text>
+  <text x="410" y="294" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#92400e">biznes mantiq</text>
+  <text x="410" y="312" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309">use-case + entity</text>
+
+  <!-- PORTLAR (chetda, kichik to'rtburchaklar) -->
+  <rect x="250" y="208" width="70" height="34" rx="6" fill="#ffffff" stroke="#2563eb" stroke-width="2" stroke-dasharray="6 3"/>
+  <text x="285" y="229" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#2563eb">port</text>
+
+  <rect x="250" y="318" width="70" height="34" rx="6" fill="#ffffff" stroke="#2563eb" stroke-width="2" stroke-dasharray="6 3"/>
+  <text x="285" y="339" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#2563eb">port</text>
+
+  <rect x="500" y="208" width="70" height="34" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="2" stroke-dasharray="6 3"/>
+  <text x="535" y="229" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#16a34a">port</text>
+
+  <rect x="500" y="318" width="70" height="34" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="2" stroke-dasharray="6 3"/>
+  <text x="535" y="339" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#16a34a">port</text>
+
+  <!-- ===== O'QLAR: HAMMASI ICHKARIGA (markazga) ===== -->
+  <!-- chap adapterlar -> port (driving: tashqi biznesni chaqiradi) -->
+  <line x1="160" y1="173" x2="248" y2="220" stroke="#2563eb" stroke-width="2.5" marker-end="url(#bluearr)"/>
+  <line x1="160" y1="383" x2="248" y2="338" stroke="#2563eb" stroke-width="2.5" marker-end="url(#bluearr)"/>
+  <!-- o'ng adapterlar -> port (driven: adapter portni IMPLEMENTS qiladi, o'q ichkariga) -->
+  <line x1="660" y1="173" x2="572" y2="220" stroke="#16a34a" stroke-width="2.5" marker-end="url(#greenarr)"/>
+  <line x1="660" y1="383" x2="572" y2="338" stroke="#16a34a" stroke-width="2.5" marker-end="url(#greenarr)"/>
+
+  <!-- yo'nalish belgisi -->
+  <text x="205" y="135" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#2563eb">driving (chap)</text>
+  <text x="205" y="151" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#64748b">tashqi -&gt; biznes</text>
+
+  <text x="615" y="135" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">driven (o'ng)</text>
+  <text x="615" y="151" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#64748b">biznes -&gt; tashqi</text>
+
+  <!-- KEY xulosa -->
+  <rect x="200" y="470" width="420" height="64" rx="10" fill="#fef9c3" stroke="#f59e0b" stroke-width="2"/>
+  <text x="410" y="494" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#b45309">KEY: barcha o'qlar ICHKARIGA, markazga ishora qiladi</text>
+  <text x="410" y="514" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#92400e">Domen tashqi dunyoni BILMAYDI — faqat portlar (interfeys) orqali gaplashadi</text>
+  <text x="410" y="530" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#64748b">Port = interfeys (biznes belgilaydi) · Adapter = implementatsiya (infratuzilma) · DIP, 05-bob</text>
+
+  <defs>
+    <marker id="bluearr" markerWidth="13" markerHeight="13" refX="9" refY="5" orient="auto">
+      <path d="M1,1 L10,5 L1,9 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="greenarr" markerWidth="13" markerHeight="13" refX="9" refY="5" orient="auto">
+      <path d="M1,1 L10,5 L1,9 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Streaming va oddiy (block) javobni vaqt o'qida taqqoslash</title>
+  <rect x="0" y="0" width="760" height="400" fill="#f8fafc"/>
+  <text x="380" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">Streaming vs oddiy javob: foydalanuvchi qachon ko'radi?</text>
+
+  <defs>
+    <marker id="sv-arr" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <!-- Oddiy (block) -->
+  <text x="40" y="92" font-size="16" font-weight="700" fill="#dc2626">Oddiy (block): hammasi tayyor bo'lguncha kutadi</text>
+  <line x1="40" y1="150" x2="720" y2="150" stroke="#64748b" stroke-width="2" marker-end="url(#sv-arr)"/>
+  <text x="710" y="174" text-anchor="end" font-size="13" fill="#64748b">vaqt</text>
+  <!-- waiting bar -->
+  <rect x="40" y="118" width="500" height="26" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="290" y="136" text-anchor="middle" font-size="13" fill="#b91c1c">bo'sh ekran — foydalanuvchi kutadi...</text>
+  <rect x="540" y="118" width="140" height="26" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="610" y="136" text-anchor="middle" font-size="13" fill="#166534">butun javob</text>
+  <line x1="540" y1="110" x2="540" y2="186" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="540" y="204" text-anchor="middle" font-size="13" font-weight="700" fill="#dc2626">birinchi belgi shu yerda (kech!)</text>
+
+  <!-- Streaming -->
+  <text x="40" y="262" font-size="16" font-weight="700" fill="#16a34a">Streaming: belgilar darrov, token-token oqib keladi</text>
+  <line x1="40" y1="320" x2="720" y2="320" stroke="#64748b" stroke-width="2" marker-end="url(#sv-arr)"/>
+  <text x="710" y="344" text-anchor="end" font-size="13" fill="#64748b">vaqt</text>
+  <!-- chunk bars -->
+  <rect x="40" y="288" width="60" height="26" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <rect x="105" y="288" width="60" height="26" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <rect x="170" y="288" width="60" height="26" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <rect x="235" y="288" width="60" height="26" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <rect x="300" y="288" width="60" height="26" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <rect x="365" y="288" width="60" height="26" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <rect x="430" y="288" width="60" height="26" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <rect x="495" y="288" width="60" height="26" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <rect x="560" y="288" width="60" height="26" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="330" y="306" text-anchor="middle" font-size="13" fill="#166534">chunk · chunk · chunk · chunk ...</text>
+  <line x1="100" y1="280" x2="100" y2="356" stroke="#16a34a" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="100" y="374" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a">birinchi belgi shu yerda (tez!)</text>
+</svg>

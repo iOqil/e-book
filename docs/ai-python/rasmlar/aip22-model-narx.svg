@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Modellar narx taqqoslashi: arzon mini va kuchli model, vazifaga moslash</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">Vazifani modelga moslang</text>
+  <text x="380" y="62" text-anchor="middle" font-size="14" fill="#64748b">narx (million output token uchun, MISOL qiymatlar)</text>
+
+  <!-- Bars: baseline y for bars bottom = 320 -->
+  <!-- axis -->
+  <line x1="120" y1="320" x2="700" y2="320" stroke="#cbd5e1" stroke-width="2"/>
+
+  <!-- Bar 1: flash (cheap) -->
+  <rect x="150" y="296" width="90" height="24" rx="4" fill="#16a34a"/>
+  <text x="195" y="312" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">$0.40</text>
+  <text x="195" y="342" text-anchor="middle" font-size="14" font-weight="700" fill="#166534">gemini-flash</text>
+  <text x="195" y="362" text-anchor="middle" font-size="13" fill="#64748b">mini toifa</text>
+
+  <!-- Bar 2: gpt-mini (cheap) -->
+  <rect x="290" y="284" width="90" height="36" rx="4" fill="#16a34a"/>
+  <text x="335" y="306" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">$0.60</text>
+  <text x="335" y="342" text-anchor="middle" font-size="14" font-weight="700" fill="#166534">gpt-mini</text>
+  <text x="335" y="362" text-anchor="middle" font-size="13" fill="#64748b">mini toifa</text>
+
+  <!-- Bar 3: haiku -->
+  <rect x="430" y="92" width="90" height="228" rx="4" fill="#f59e0b"/>
+  <text x="475" y="112" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">$4.00</text>
+  <text x="475" y="342" text-anchor="middle" font-size="14" font-weight="700" fill="#b45309">haiku</text>
+  <text x="475" y="362" text-anchor="middle" font-size="13" fill="#64748b">o'rta</text>
+
+  <!-- Bar 4: gpt strong (expensive) -->
+  <rect x="570" y="92" width="90" height="228" rx="4" fill="#dc2626"/>
+  <text x="615" y="112" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">$10.0</text>
+  <text x="615" y="342" text-anchor="middle" font-size="14" font-weight="700" fill="#dc2626">gpt kuchli</text>
+  <text x="615" y="362" text-anchor="middle" font-size="13" fill="#64748b">murakkab</text>
+
+  <!-- guidance boxes -->
+  <rect x="40" y="384" width="340" height="44" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="60" y="404" font-size="14" font-weight="700" fill="#166534">Oddiy vazifa -> arzon model</text>
+  <text x="60" y="422" font-size="13" fill="#166534">tasnif, qisqa javob, format -> mini/flash</text>
+
+  <rect x="400" y="384" width="320" height="44" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="420" y="404" font-size="14" font-weight="700" fill="#dc2626">Murakkab vazifa -> kuchli model</text>
+  <text x="420" y="422" font-size="13" fill="#991b1b">chuqur fikrlash, ko'p qadam -> pro/opus</text>
+</svg>

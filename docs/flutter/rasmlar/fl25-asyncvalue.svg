@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" width="800" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>AsyncValue uchta holati: bitta async provayder .when bilan loading (aylanuvchi spinner), error (xato xabari) va data (foydalanuvchilar ro'yxati) UI'larini boshqaradi — FutureBuilder'ga o'xshash, lekin yanada toza</title>
+  <defs>
+    <marker id="fl25avA" markerWidth="12" markerHeight="12" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="800" height="440" fill="#f8fafc"/>
+  <text x="400" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">AsyncValue — uchta holat, bitta .when</text>
+  <text x="400" y="58" text-anchor="middle" font-size="14" fill="#475569">async provayder har bir holat uchun mos UI ni qaytaradi (FutureBuilder'ga o'xshash)</text>
+
+  <!-- Source provider -->
+  <rect x="280" y="84" width="240" height="60" rx="12" fill="#ffffff" stroke="#027dfd" stroke-width="2.5"/>
+  <text x="400" y="110" text-anchor="middle" font-size="15" font-weight="700" fill="#027dfd">AsyncValue&lt;List&lt;User&gt;&gt;</text>
+  <text x="400" y="132" text-anchor="middle" font-size="13" fill="#64748b">ref.watch(usersProvider).when( ... )</text>
+
+  <!-- branches -->
+  <path d="M350 144 L200 196" stroke="#475569" stroke-width="2.2" fill="none" marker-end="url(#fl25avA)"/>
+  <path d="M400 144 L400 196" stroke="#475569" stroke-width="2.2" fill="none" marker-end="url(#fl25avA)"/>
+  <path d="M450 144 L600 196" stroke="#475569" stroke-width="2.2" fill="none" marker-end="url(#fl25avA)"/>
+
+  <!-- State 1: loading -->
+  <rect x="40" y="208" width="220" height="190" rx="14" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="150" y="236" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">loading:</text>
+  <text x="150" y="256" text-anchor="middle" font-size="13" fill="#64748b">ma'lumot hali kelmadi</text>
+  <circle cx="150" cy="312" r="26" fill="none" stroke="#f59e0b" stroke-width="5" stroke-dasharray="90 50"/>
+  <text x="150" y="372" text-anchor="middle" font-size="13" fill="#f59e0b">CircularProgressIndicator</text>
+
+  <!-- State 2: error -->
+  <rect x="290" y="208" width="220" height="190" rx="14" fill="#ffffff" stroke="#ef4444" stroke-width="2.5"/>
+  <text x="400" y="236" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">error: (e, st)</text>
+  <text x="400" y="256" text-anchor="middle" font-size="13" fill="#64748b">xato yuz berdi</text>
+  <circle cx="400" cy="312" r="26" fill="#ef4444"/>
+  <text x="400" y="321" text-anchor="middle" font-size="28" font-weight="700" fill="#ffffff">!</text>
+  <text x="400" y="372" text-anchor="middle" font-size="13" fill="#ef4444">xabar + "Qayta urinish"</text>
+
+  <!-- State 3: data -->
+  <rect x="540" y="208" width="220" height="190" rx="14" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="650" y="236" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">data: (users)</text>
+  <text x="650" y="256" text-anchor="middle" font-size="13" fill="#64748b">ma'lumot tayyor</text>
+  <rect x="566" y="276" width="168" height="22" rx="5" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <rect x="566" y="304" width="168" height="22" rx="5" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <rect x="566" y="332" width="168" height="22" rx="5" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="650" y="384" text-anchor="middle" font-size="13" fill="#16a34a">ListView — User ro'yxati</text>
+
+  <text x="400" y="426" text-anchor="middle" font-size="13" fill="#94a3b8">.when har safar joriy holatga qarab shu uchtadan birini chizadi — null tekshiruvi shart emas</text>
+</svg>

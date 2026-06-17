@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400">
+  <title>wp_schedule_event oqimi: timestamp va recurrence bilan event rejalanadi, recurrence interval jadvalini belgilaydi, hook nomiga add_action bilan callback ulanadi va har interval kelganda action callback ishga tushadi</title>
+  <rect x="0" y="0" width="760" height="400" fill="#f8fafc"/>
+  <text x="380" y="34" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Rejalashtirilgan vazifa: rejadan bajarishgacha</text>
+
+  <!-- Step 1: schedule -->
+  <rect x="40" y="70" width="300" height="92" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="190" y="96" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e40af" text-anchor="middle">1. Rejalash (aktivatsiyada)</text>
+  <text x="190" y="122" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">wp_schedule_event(</text>
+  <text x="190" y="140" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">time(), 'daily', $hook )</text>
+  <text x="190" y="157" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">wp_next_scheduled bilan dublikatsiz</text>
+
+  <!-- arrow down to recurrence -->
+  <path d="M190 162 L190 196" stroke="#94a3b8" stroke-width="2"/>
+  <path d="M190 196 l-5 -10 l10 0 z" fill="#94a3b8"/>
+
+  <!-- Step 2: recurrence table -->
+  <rect x="40" y="196" width="300" height="120" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="190" y="220" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">2. recurrence intervalni belgilaydi</text>
+  <text x="65" y="246" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">hourly</text>
+  <text x="200" y="246" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">twicedaily</text>
+  <text x="65" y="270" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">daily</text>
+  <text x="200" y="270" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">weekly</text>
+  <text x="65" y="298" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#7c3aed">o'z intervali: cron_schedules filteri</text>
+
+  <!-- arrow right from step1 to add_action -->
+  <path d="M340 116 L430 116" stroke="#16a34a" stroke-width="2"/>
+  <path d="M430 116 l-10 -5 l0 10 z" fill="#16a34a"/>
+
+  <!-- Step 3: add_action -->
+  <rect x="430" y="70" width="290" height="92" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="575" y="96" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="middle">3. Ulash (HAR yuklanishda)</text>
+  <text x="575" y="122" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">add_action( $hook,</text>
+  <text x="575" y="140" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">$callback )</text>
+  <text x="575" y="157" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">hook nomi = reja nomi bilan bir xil</text>
+
+  <!-- arrow down to execution -->
+  <path d="M575 162 L575 256" stroke="#16a34a" stroke-width="2"/>
+  <path d="M575 256 l-5 -10 l10 0 z" fill="#16a34a"/>
+  <text x="660" y="212" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">interval kelganda</text>
+
+  <!-- Step 4: action runs -->
+  <rect x="430" y="256" width="290" height="80" rx="10" fill="#16a34a"/>
+  <text x="575" y="284" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">4. do_action( $hook )</text>
+  <text x="575" y="308" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dcfce7" text-anchor="middle">WordPress callback'ni chaqiradi</text>
+  <text x="575" y="326" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dcfce7" text-anchor="middle">-> har interval qaytariladi</text>
+
+  <!-- recurrence feeds the loop hint -->
+  <path d="M340 256 C380 256 390 300 430 300" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6 4" fill="none"/>
+  <path d="M430 300 l-10 -5 l0 10 z" fill="#f59e0b"/>
+  <text x="370" y="350" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#f59e0b" text-anchor="middle">interval takror takror</text>
+</svg>

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 540">
+  <title>BST da qiymat qidirish yo'li: ildizdan boshlab har bir tugunda taqqoslab chap yoki o'ng tomonga harakatlanamiz, balandlikka mutanosib O(h) qadam</title>
+  <rect x="0" y="0" width="860" height="540" fill="#f8fafc"/>
+  <text x="430" y="36" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">40 ni qidirish yo'li</text>
+  <text x="430" y="62" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Har tugunda taqqosla: kichik bo'lsa chapga, katta bo'lsa o'ngga</text>
+
+  <!-- all edges (gray) -->
+  <g stroke="#cbd5e1" stroke-width="2">
+    <line x1="430" y1="118" x2="280" y2="208"/>
+    <line x1="430" y1="118" x2="600" y2="208"/>
+    <line x1="280" y1="218" x2="190" y2="308"/>
+    <line x1="280" y1="218" x2="370" y2="308"/>
+    <line x1="600" y1="218" x2="690" y2="308"/>
+    <line x1="190" y1="318" x2="130" y2="398"/>
+    <line x1="190" y1="318" x2="250" y2="398"/>
+  </g>
+
+  <!-- highlighted path edges (blue) -->
+  <g stroke="#2563eb" stroke-width="4">
+    <line x1="430" y1="118" x2="280" y2="208"/>
+    <line x1="280" y1="218" x2="370" y2="308"/>
+  </g>
+
+  <!-- nodes -->
+  <!-- 50 root: visited -->
+  <circle cx="430" cy="108" r="28" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+  <text x="430" y="114" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#1e293b">50</text>
+  <text x="492" y="100" font-family="monospace" font-size="13" fill="#2563eb">40 &lt; 50 → chap</text>
+
+  <!-- 30: visited -->
+  <circle cx="280" cy="208" r="28" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+  <text x="280" y="214" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#1e293b">30</text>
+  <text x="312" y="200" font-family="monospace" font-size="13" fill="#2563eb">40 &gt; 30 → o'ng</text>
+
+  <!-- 70: not visited -->
+  <circle cx="600" cy="208" r="28" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="600" y="214" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#94a3b8">70</text>
+
+  <!-- 20 -->
+  <circle cx="190" cy="308" r="26" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="190" y="314" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#94a3b8">20</text>
+
+  <!-- 40: FOUND -->
+  <circle cx="370" cy="308" r="26" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+  <text x="370" y="314" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#1e293b">40</text>
+  <text x="402" y="306" font-family="monospace" font-size="13" font-weight="bold" fill="#16a34a">topildi!</text>
+
+  <!-- 80 -->
+  <circle cx="690" cy="308" r="26" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="690" y="314" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#94a3b8">80</text>
+
+  <!-- 10 -->
+  <circle cx="130" cy="408" r="24" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="130" y="414" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#94a3b8">10</text>
+  <!-- 25 -->
+  <circle cx="250" cy="408" r="24" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="250" y="414" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#94a3b8">25</text>
+
+  <!-- steps box -->
+  <rect x="120" y="448" width="620" height="74" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="140" y="472" font-family="monospace" font-size="13" fill="#334155">1) 50: 40 &lt; 50 → chapga</text>
+  <text x="430" y="472" font-family="monospace" font-size="13" fill="#334155">2) 30: 40 &gt; 30 → o'ngga</text>
+  <text x="140" y="496" font-family="monospace" font-size="13" fill="#16a34a">3) 40: teng → TOPILDI (3 taqqoslash)</text>
+  <text x="430" y="496" font-family="monospace" font-size="13" fill="#64748b">Qadamlar soni ≤ balandlik h = O(h)</text>
+</svg>

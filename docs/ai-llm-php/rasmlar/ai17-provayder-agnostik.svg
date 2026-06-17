@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Bitta kod abstraksiya orqali ko'p provayderga ulanadi</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Provayder-agnostiklik</text>
+  <text x="380" y="60" text-anchor="middle" font-size="14" fill="#475569">bitta kod → abstraksiya → ko'p provayder</text>
+
+  <!-- Bitta kod -->
+  <rect x="50" y="160" width="170" height="100" rx="12" fill="#ffffff" stroke="#4f46e5" stroke-width="2.5"/>
+  <text x="135" y="200" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">Sizning kodingiz</text>
+  <text x="135" y="224" text-anchor="middle" font-size="13" fill="#475569">sora('savol')</text>
+  <text x="135" y="244" text-anchor="middle" font-size="13" fill="#94a3b8">o'zgarmaydi</text>
+
+  <!-- O'q -->
+  <line x1="220" y1="210" x2="288" y2="210" stroke="#7c3aed" stroke-width="2.5"/>
+  <polygon points="288,204 300,210 288,216" fill="#7c3aed"/>
+
+  <!-- Abstraksiya (rozetka) -->
+  <rect x="300" y="150" width="160" height="120" rx="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="380" y="194" text-anchor="middle" font-size="15" font-weight="700" fill="#7c3aed">Abstraksiya</text>
+  <text x="380" y="216" text-anchor="middle" font-size="13" fill="#475569">(framework qatlami)</text>
+  <text x="380" y="240" text-anchor="middle" font-size="13" fill="#94a3b8">"rozetka" — standart</text>
+
+  <!-- Tarmoq o'qlari abstraksiyadan provayderlarga -->
+  <line x1="460" y1="180" x2="556" y2="110" stroke="#a855f7" stroke-width="2"/>
+  <polygon points="551,104 562,106 555,116" fill="#a855f7"/>
+  <line x1="460" y1="200" x2="556" y2="173" stroke="#a855f7" stroke-width="2"/>
+  <polygon points="551,167 562,171 553,180" fill="#a855f7"/>
+  <line x1="460" y1="220" x2="556" y2="237" stroke="#a855f7" stroke-width="2"/>
+  <polygon points="551,231 562,235 553,244" fill="#a855f7"/>
+  <line x1="460" y1="240" x2="556" y2="300" stroke="#a855f7" stroke-width="2"/>
+  <polygon points="551,294 562,298 553,307" fill="#a855f7"/>
+
+  <!-- Provayderlar -->
+  <rect x="566" y="88" width="160" height="44" rx="9" fill="#ffffff" stroke="#d97757" stroke-width="2"/>
+  <text x="646" y="115" text-anchor="middle" font-size="14" font-weight="600" fill="#1e293b">Anthropic (Claude)</text>
+
+  <rect x="566" y="152" width="160" height="44" rx="9" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="646" y="179" text-anchor="middle" font-size="14" font-weight="600" fill="#1e293b">OpenAI (GPT)</text>
+
+  <rect x="566" y="216" width="160" height="44" rx="9" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="646" y="243" text-anchor="middle" font-size="14" font-weight="600" fill="#1e293b">Gemini</text>
+
+  <rect x="566" y="280" width="160" height="44" rx="9" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <text x="646" y="307" text-anchor="middle" font-size="14" font-weight="600" fill="#1e293b">Ollama (lokal)</text>
+
+  <!-- Pastki izoh -->
+  <rect x="50" y="356" width="676" height="58" rx="10" fill="#ffffff" stroke="#ddd6fe" stroke-width="1.5"/>
+  <text x="388" y="382" text-anchor="middle" font-size="14" fill="#475569">Provayderni almashtirish = bir qator (sozlama). Kod, mantiq, RAG — o'zgarmaydi.</text>
+  <text x="388" y="404" text-anchor="middle" font-size="13" fill="#94a3b8">Foydasi: narx · sifat · mavjudlik bo'yicha erkin tanlash</text>
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 480" width="780" height="480" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Bir xil ekran (sozlama qatori — switch va tugma) ikki dizayn tilida: chapda Material (Google/Android, Flutter standarti) ko'rinishi, o'ngda Cupertino (Apple/iOS) ko'rinishi. Flutter ikkalasini ham beradi.</title>
+  <rect x="0" y="0" width="780" height="480" fill="#f8fafc"/>
+  <text x="390" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Ikki dizayn tili — bir xil ekran</text>
+  <text x="390" y="58" text-anchor="middle" font-size="14" fill="#475569">Flutter ikkalasini ham beradi: Material (Android) va Cupertino (iOS)</text>
+
+  <!-- ===== MATERIAL phone ===== -->
+  <text x="195" y="92" text-anchor="middle" font-size="17" font-weight="700" fill="#027dfd">Material — Google / Android</text>
+  <rect x="80" y="108" width="230" height="330" rx="22" fill="#ffffff" stroke="#94a3b8" stroke-width="2.5"/>
+  <!-- material AppBar: flat, left title -->
+  <rect x="80" y="108" width="230" height="52" rx="22" fill="#4f46e5"/>
+  <rect x="80" y="138" width="230" height="22" fill="#4f46e5"/>
+  <text x="98" y="141" font-size="14" font-weight="700" fill="#ffffff">Sozlamalar</text>
+  <text x="125" y="186" font-size="13" fill="#475569">MaterialApp · Scaffold · AppBar</text>
+  <!-- settings row with Material Switch -->
+  <text x="100" y="232" font-size="14" fill="#1e293b">Bildirishnoma</text>
+  <rect x="232" y="220" width="52" height="26" rx="13" fill="#4f46e5"/>
+  <circle cx="271" cy="233" r="10" fill="#ffffff"/>
+  <text x="100" y="262" font-size="13" fill="#64748b">Switch (to'rtburchak yo'lak)</text>
+  <!-- Material ElevatedButton: rounded rect, filled -->
+  <rect x="100" y="300" width="190" height="44" rx="22" fill="#4f46e5"/>
+  <text x="195" y="328" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">Saqlash</text>
+  <text x="195" y="372" text-anchor="middle" font-size="13" fill="#64748b">ElevatedButton — to'la, ko'tarilgan</text>
+  <text x="195" y="410" text-anchor="middle" font-size="13" font-weight="700" fill="#027dfd">odatda barcha platformada shu</text>
+
+  <!-- ===== CUPERTINO phone ===== -->
+  <text x="585" y="92" text-anchor="middle" font-size="17" font-weight="700" fill="#0ea5e9">Cupertino — Apple / iOS</text>
+  <rect x="470" y="108" width="230" height="330" rx="22" fill="#ffffff" stroke="#94a3b8" stroke-width="2.5"/>
+  <!-- cupertino NavBar: centered title, thin border -->
+  <rect x="470" y="108" width="230" height="52" rx="22" fill="#f8fafc"/>
+  <rect x="470" y="138" width="230" height="22" fill="#f8fafc"/>
+  <line x1="470" y1="160" x2="700" y2="160" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="585" y="141" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Sozlamalar</text>
+  <text x="500" y="186" font-size="13" fill="#475569">CupertinoApp · PageScaffold · NavBar</text>
+  <!-- settings row with Cupertino Switch (greener, rounder) -->
+  <text x="490" y="232" font-size="14" fill="#1e293b">Bildirishnoma</text>
+  <rect x="622" y="218" width="56" height="30" rx="15" fill="#16a34a"/>
+  <circle cx="663" cy="233" r="12" fill="#ffffff"/>
+  <text x="490" y="262" font-size="13" fill="#64748b">CupertinoSwitch (yumaloqroq)</text>
+  <!-- CupertinoButton.filled: softer rounded -->
+  <rect x="490" y="300" width="190" height="44" rx="10" fill="#0ea5e9"/>
+  <text x="585" y="328" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">Saqlash</text>
+  <text x="585" y="372" text-anchor="middle" font-size="13" fill="#64748b">CupertinoButton — yassi, iOS uslubi</text>
+  <text x="585" y="410" text-anchor="middle" font-size="13" font-weight="700" fill="#0ea5e9">faqat iOS hissi kerak bo'lsa</text>
+
+  <text x="390" y="456" text-anchor="middle" font-size="13" fill="#475569">Adaptiv: Switch.adaptive — Platform.isIOS ga qarab o'zi mos ko'rinishni tanlaydi</text>
+</svg>

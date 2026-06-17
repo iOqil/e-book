@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560">
+  <title>SSE oqim formati: text/event-stream, data, event, id va avtomatik qayta ulanish</title>
+  <rect x="0" y="0" width="900" height="560" fill="#f8fafc"/>
+  <text x="450" y="34" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">SSE oqim formati va qayta ulanish</text>
+  <text x="450" y="58" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Content-Type: text/event-stream — matnli, qatorlar bilan ajratilgan hodisalar</text>
+
+  <!-- Stream card -->
+  <rect x="30" y="84" width="500" height="430" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="280" y="112" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#6d28d9">Server -> mijoz oqimi (ochiq HTTP javob)</text>
+
+  <!-- event 1 -->
+  <rect x="52" y="128" width="456" height="92" rx="8" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1"/>
+  <text x="68" y="152" font-family="monospace" font-size="14" fill="#6d28d9">event: price</text>
+  <text x="68" y="174" font-family="monospace" font-size="14" fill="#334155">data: {"pair":"BTC","px":64210}</text>
+  <text x="68" y="196" font-family="monospace" font-size="14" fill="#16a34a">id: 1042</text>
+  <text x="490" y="214" text-anchor="end" font-family="Segoe UI" font-size="13" fill="#64748b">bo'sh qator = hodisa tugadi</text>
+
+  <!-- event 2 -->
+  <rect x="52" y="232" width="456" height="70" rx="8" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1"/>
+  <text x="68" y="256" font-family="monospace" font-size="14" fill="#6d28d9">event: price</text>
+  <text x="68" y="278" font-family="monospace" font-size="14" fill="#334155">data: {"pair":"BTC","px":64255}</text>
+  <text x="68" y="296" font-family="monospace" font-size="13" fill="#16a34a">id: 1043</text>
+
+  <!-- retry -->
+  <rect x="52" y="314" width="456" height="48" rx="8" fill="#fffbeb" stroke="#f59e0b" stroke-width="1"/>
+  <text x="68" y="338" font-family="monospace" font-size="14" fill="#b45309">retry: 5000</text>
+  <text x="490" y="344" text-anchor="end" font-family="Segoe UI" font-size="13" fill="#64748b">qayta-ulanish kechikishi (ms)</text>
+
+  <!-- field legend -->
+  <text x="68" y="392" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">Maydonlar:</text>
+  <text x="68" y="416" font-family="Segoe UI" font-size="13" fill="#334155">data: — hodisa tanasi (asosiy)</text>
+  <text x="68" y="438" font-family="Segoe UI" font-size="13" fill="#334155">event: — hodisa turi (ixtiyoriy nom)</text>
+  <text x="68" y="460" font-family="Segoe UI" font-size="13" fill="#334155">id: — hodisa raqami (qayta-ulanish uchun)</text>
+  <text x="68" y="482" font-family="Segoe UI" font-size="13" fill="#334155">retry: — qayta-ulanish kechikishi</text>
+  <text x="68" y="504" font-family="Segoe UI" font-size="13" fill="#64748b">: bilan boshlangan qator = izoh/heartbeat</text>
+
+  <!-- Reconnect panel -->
+  <rect x="556" y="84" width="316" height="430" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="714" y="112" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#15803d">Avtomatik qayta ulanish</text>
+
+  <rect x="576" y="132" width="276" height="78" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1"/>
+  <text x="714" y="156" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#15803d">1) Ulanish uzildi</text>
+  <text x="714" y="178" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Brauzer (EventSource) retry</text>
+  <text x="714" y="196" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">vaqtidan keyin o'zi ulanadi</text>
+
+  <rect x="576" y="222" width="276" height="98" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1"/>
+  <text x="714" y="246" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#15803d">2) Last-Event-ID yuboriladi</text>
+  <text x="714" y="268" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">Last-Event-ID: 1043</text>
+  <text x="714" y="290" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">oxirgi olingan id sarlavhada</text>
+  <text x="714" y="308" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">avtomatik qaytariladi</text>
+
+  <rect x="576" y="332" width="276" height="78" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1"/>
+  <text x="714" y="356" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#15803d">3) Server qoldiqdan davom</text>
+  <text x="714" y="378" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">id 1043 dan keyingilarni</text>
+  <text x="714" y="396" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">yuboradi — hodisa yo'qolmaydi</text>
+
+  <rect x="576" y="430" width="276" height="66" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1"/>
+  <text x="714" y="454" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#1d4ed8">Hammasi HTTP ustida</text>
+  <text x="714" y="476" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Yangi protokol shart emas —</text>
+  <text x="714" y="492" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">proxy, auth, kesh tanish</text>
+</svg>

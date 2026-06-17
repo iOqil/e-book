@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 470">
+  <title>gRPC steki: yuqorida gRPC qatlam, ostida Protocol Buffers serializatsiya va HTTP/2 transport</title>
+  <rect x="0" y="0" width="860" height="470" fill="#f8fafc"/>
+  <text x="430" y="34" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">gRPC steki — uch qatlam</text>
+  <text x="430" y="58" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Har qatlam ostidagiga tayanadi</text>
+
+  <!-- Layer 1: gRPC -->
+  <rect x="180" y="86" width="500" height="92" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="430" y="120" text-anchor="middle" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#2563eb">gRPC</text>
+  <text x="430" y="146" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">RPC freymvork: service/metod, 4 chaqiruv turi,</text>
+  <text x="430" y="165" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">deadline, metadata, status kodlari</text>
+
+  <line x1="430" y1="178" x2="430" y2="206" stroke="#94a3b8" stroke-width="2" marker-end="url(#sgray)"/>
+
+  <!-- Layer 2: Protobuf -->
+  <rect x="180" y="206" width="500" height="92" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="430" y="240" text-anchor="middle" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#7c3aed">Protocol Buffers (serializatsiya)</text>
+  <text x="430" y="266" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">.proto shartnoma -&gt; ixcham ikkilik (binary)</text>
+  <text x="430" y="285" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">xabarni baytga aylantirish va qayta o'qish</text>
+
+  <line x1="430" y1="298" x2="430" y2="326" stroke="#94a3b8" stroke-width="2" marker-end="url(#sgray)"/>
+
+  <!-- Layer 3: HTTP/2 -->
+  <rect x="180" y="326" width="500" height="92" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="430" y="360" text-anchor="middle" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#16a34a">HTTP/2 (transport, RFC 9113)</text>
+  <text x="430" y="386" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">multiplexing, ikkilik freym, header siqish,</text>
+  <text x="430" y="405" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">uzun yashaydigan oqim (streaming)</text>
+
+  <!-- Side labels -->
+  <text x="90" y="136" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">nima</text>
+  <text x="90" y="256" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">qanday</text>
+  <text x="90" y="376" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">qayerda</text>
+  <text x="770" y="136" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#2563eb">API</text>
+  <text x="770" y="256" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#7c3aed">format</text>
+  <text x="770" y="376" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">tarmoq</text>
+
+  <text x="430" y="448" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">HTTP/2 ga tayangani uchun streaming va multiplexing tabiiy; brauzerda esa gRPC-Web/proxy kerak</text>
+
+  <defs>
+    <marker id="sgray" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#94a3b8"/></marker>
+  </defs>
+</svg>

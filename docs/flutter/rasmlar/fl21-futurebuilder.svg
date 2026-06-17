@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 430" width="800" height="430" font-family="Segoe UI, system-ui, sans-serif">
+  <title>FutureBuilder uchta holatni boshqaradi: bitta Future yuklanmoqda holatida aylanuvchi spinner, xato holatida xabar, ma'lumot kelganda ro'yxat ko'rsatadi — bitta Future uchta mumkin UI ni boshqaradi</title>
+  <defs>
+    <marker id="fl21fbA" markerWidth="12" markerHeight="12" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="800" height="430" fill="#f8fafc"/>
+  <text x="400" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">FutureBuilder — uchta holat</text>
+  <text x="400" y="58" text-anchor="middle" font-size="14" fill="#475569">bitta Future uchta mumkin UI ni boshqaradi</text>
+
+  <!-- Source future -->
+  <rect x="300" y="84" width="200" height="58" rx="12" fill="#ffffff" stroke="#027dfd" stroke-width="2.5"/>
+  <text x="400" y="110" text-anchor="middle" font-size="15" font-weight="700" fill="#027dfd">Future&lt;List&lt;User&gt;&gt;</text>
+  <text x="400" y="131" text-anchor="middle" font-size="13" fill="#64748b">snapshot — joriy holat</text>
+
+  <!-- branches -->
+  <path d="M360 142 L200 188" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#fl21fbA)"/>
+  <path d="M400 142 L400 188" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#fl21fbA)"/>
+  <path d="M440 142 L600 188" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#fl21fbA)"/>
+
+  <!-- State 1: waiting -->
+  <rect x="40" y="200" width="220" height="180" rx="14" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="150" y="228" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">1. Yuklanmoqda</text>
+  <text x="150" y="248" text-anchor="middle" font-size="13" fill="#64748b">connectionState == waiting</text>
+  <circle cx="150" cy="300" r="26" fill="none" stroke="#f59e0b" stroke-width="5" stroke-dasharray="90 50"/>
+  <text x="150" y="356" text-anchor="middle" font-size="13" fill="#f59e0b">CircularProgressIndicator</text>
+
+  <!-- State 2: error -->
+  <rect x="290" y="200" width="220" height="180" rx="14" fill="#ffffff" stroke="#ef4444" stroke-width="2.5"/>
+  <text x="400" y="228" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">2. Xato</text>
+  <text x="400" y="248" text-anchor="middle" font-size="13" fill="#64748b">snapshot.hasError</text>
+  <circle cx="400" cy="300" r="26" fill="#ef4444"/>
+  <text x="400" y="309" text-anchor="middle" font-size="28" font-weight="700" fill="#ffffff">!</text>
+  <text x="400" y="356" text-anchor="middle" font-size="13" fill="#ef4444">xabar + "Qayta urinish"</text>
+
+  <!-- State 3: data -->
+  <rect x="540" y="200" width="220" height="180" rx="14" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="650" y="228" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">3. Ma'lumot tayyor</text>
+  <text x="650" y="248" text-anchor="middle" font-size="13" fill="#64748b">snapshot.hasData</text>
+  <rect x="566" y="266" width="168" height="22" rx="5" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <rect x="566" y="294" width="168" height="22" rx="5" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <rect x="566" y="322" width="168" height="22" rx="5" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="650" y="368" text-anchor="middle" font-size="13" fill="#16a34a">ListView — User ro'yxati</text>
+
+  <text x="400" y="410" text-anchor="middle" font-size="13" fill="#94a3b8">builder har safar snapshot holatiga qarab shu uchtadan birini chizadi</text>
+</svg>

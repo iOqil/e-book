@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" width="800" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Matn toshib ketishini boshqarish: to'liq matn, truncate (bir qator), line-clamp-2 (ikki qator)</title>
+  <rect x="0" y="0" width="800" height="440" fill="#f8fafc"/>
+
+  <text x="30" y="40" font-size="22" fill="#1e293b" font-weight="bold">truncate va line-clamp — toshgan matnni kesish</text>
+  <text x="30" y="66" font-size="15" fill="#475569">Bir xil uzun matn, uchta karta — har biri toshib ketishni boshqacha hal qiladi</text>
+
+  <!-- CARD 1: full text -->
+  <rect x="30" y="92" width="232" height="290" rx="10" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="50" y="122" font-size="15" fill="#64748b" font-weight="bold">1) To'liq matn</text>
+  <text x="50" y="144" font-size="13" fill="#16a34a">klass yo'q</text>
+  <line x1="50" y1="156" x2="242" y2="156" stroke="#94a3b8" stroke-dasharray="3 3"/>
+  <text x="50" y="182" font-size="14" fill="#1e293b">Tailwind utility-first</text>
+  <text x="50" y="204" font-size="14" fill="#1e293b">CSS freymvork bo'lib,</text>
+  <text x="50" y="226" font-size="14" fill="#1e293b">to'g'ridan-to'g'ri HTML</text>
+  <text x="50" y="248" font-size="14" fill="#1e293b">ichida dizayn qilishga</text>
+  <text x="50" y="270" font-size="14" fill="#1e293b">imkon beradi va juda</text>
+  <text x="50" y="292" font-size="14" fill="#1e293b">tez ishlatiladi.</text>
+  <text x="50" y="356" font-size="13" fill="#64748b">Hamma narsa ko'rinadi —</text>
+  <text x="50" y="372" font-size="13" fill="#64748b">karta cho'ziladi</text>
+
+  <!-- CARD 2: truncate -->
+  <rect x="284" y="92" width="232" height="290" rx="10" fill="#ffffff" stroke="#4f46e5"/>
+  <text x="304" y="122" font-size="15" fill="#64748b" font-weight="bold">2) truncate</text>
+  <text x="304" y="144" font-size="13" fill="#4f46e5">bir qator + …</text>
+  <line x1="304" y1="156" x2="496" y2="156" stroke="#94a3b8" stroke-dasharray="3 3"/>
+  <rect x="304" y="170" width="192" height="26" rx="4" fill="#eef2ff"/>
+  <text x="312" y="188" font-size="14" fill="#1e293b">Tailwind utility-fir…</text>
+  <text x="304" y="234" font-size="13" fill="#64748b">Bir qatorga sig'maganda</text>
+  <text x="304" y="252" font-size="13" fill="#64748b">qolgani kesiladi, oxiriga</text>
+  <text x="304" y="270" font-size="13" fill="#64748b">… qo'yiladi.</text>
+  <text x="304" y="320" font-size="13" fill="#ef4444" font-weight="bold">Diqqat: eni cheklangan</text>
+  <text x="304" y="338" font-size="13" fill="#ef4444" font-weight="bold">bo'lishi shart!</text>
+
+  <!-- CARD 3: line-clamp-2 -->
+  <rect x="538" y="92" width="232" height="290" rx="10" fill="#ffffff" stroke="#0ea5e9"/>
+  <text x="558" y="122" font-size="15" fill="#64748b" font-weight="bold">3) line-clamp-2</text>
+  <text x="558" y="144" font-size="13" fill="#0ea5e9">ikki qator + …</text>
+  <line x1="558" y1="156" x2="750" y2="156" stroke="#94a3b8" stroke-dasharray="3 3"/>
+  <rect x="558" y="170" width="192" height="50" rx="4" fill="#e0f2fe"/>
+  <text x="566" y="190" font-size="14" fill="#1e293b">Tailwind utility-first</text>
+  <text x="566" y="210" font-size="14" fill="#1e293b">CSS freymvork bo'lib, …</text>
+  <text x="558" y="252" font-size="13" fill="#64748b">Belgilangan qator</text>
+  <text x="558" y="270" font-size="13" fill="#64748b">sonidan keyin kesiladi.</text>
+  <text x="558" y="320" font-size="13" fill="#16a34a" font-weight="bold">Karta balandligi</text>
+  <text x="558" y="338" font-size="13" fill="#16a34a" font-weight="bold">bashorat qilinadi</text>
+
+  <!-- bottom note -->
+  <text x="30" y="416" font-size="14" fill="#64748b">truncate = 1 qator (overflow + nowrap + ellipsis birga); line-clamp-N = N qator. Ikkalasi ham toshganni … bilan yashiradi</text>
+</svg>

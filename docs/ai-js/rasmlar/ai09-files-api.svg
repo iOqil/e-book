@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Files API: PDF ni BIR MARTA yuklaysiz va file_id olasiz, so'ng o'sha file_id ni ko'plab xabarlarda (Q1, Q2, Q3) qayta yuklamasdan ishlatasiz. Pastda solishtirma: fayl har safar qayta yuborilsa, har so'rovda qaytadan jo'natiladi (qimmat va sekin).</title>
+  <defs>
+    <marker id="a9c" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+    <marker id="a9d" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#ef4444"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="800" height="500" fill="#f8fafc"/>
+  <text x="400" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Files API — bir marta yukla, ko'p marta ishlat</text>
+  <text x="400" y="58" font-size="14" fill="#64748b" text-anchor="middle">Katta PDF/hujjatni qayta-qayta jo'natmaslik uchun: bir marta yuklab, file_id orqali murojaat</text>
+
+  <!-- YAXSHI block -->
+  <text x="62" y="92" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="start">✅ Files API bilan</text>
+
+  <!-- upload once -->
+  <rect x="40" y="104" width="180" height="86" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="130" y="130" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">1. BIR MARTA yukla</text>
+  <text x="130" y="154" font-size="13" fill="#475569" text-anchor="middle" font-family="Consolas, monospace">beta.files.upload</text>
+  <text x="130" y="174" font-size="13" fill="#475569" text-anchor="middle">shartnoma.pdf (4 MB)</text>
+
+  <line x1="220" y1="147" x2="266" y2="147" stroke="#16a34a" stroke-width="2.5" marker-end="url(#a9c)"/>
+
+  <!-- file_id -->
+  <rect x="270" y="116" width="150" height="60" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="345" y="142" font-size="14" font-weight="bold" fill="#f59e0b" text-anchor="middle">file_id olasiz</text>
+  <text x="345" y="162" font-size="13" fill="#475569" text-anchor="middle" font-family="Consolas, monospace">"file_abc123"</text>
+
+  <!-- three questions reuse the id -->
+  <line x1="345" y1="176" x2="345" y2="212" stroke="#16a34a" stroke-width="2"/>
+  <line x1="160" y1="212" x2="540" y2="212" stroke="#16a34a" stroke-width="2"/>
+  <line x1="160" y1="212" x2="160" y2="234" stroke="#16a34a" stroke-width="2" marker-end="url(#a9c)"/>
+  <line x1="345" y1="212" x2="345" y2="234" stroke="#16a34a" stroke-width="2" marker-end="url(#a9c)"/>
+  <line x1="540" y1="212" x2="540" y2="234" stroke="#16a34a" stroke-width="2" marker-end="url(#a9c)"/>
+
+  <rect x="80" y="238" width="160" height="72" rx="10" fill="#dbeafe" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="160" y="262" font-size="13.5" font-weight="bold" fill="#0ea5e9" text-anchor="middle">Q1: "Muddat qachon?"</text>
+  <text x="160" y="284" font-size="13" fill="#475569" text-anchor="middle">file_id ni ko'rsatadi</text>
+  <text x="160" y="302" font-size="13" fill="#64748b" text-anchor="middle">(qayta yuklash YO'Q)</text>
+
+  <rect x="265" y="238" width="160" height="72" rx="10" fill="#dbeafe" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="345" y="262" font-size="13.5" font-weight="bold" fill="#0ea5e9" text-anchor="middle">Q2: "Jarima bormi?"</text>
+  <text x="345" y="284" font-size="13" fill="#475569" text-anchor="middle">file_id ni ko'rsatadi</text>
+  <text x="345" y="302" font-size="13" fill="#64748b" text-anchor="middle">(qayta yuklash YO'Q)</text>
+
+  <rect x="460" y="238" width="160" height="72" rx="10" fill="#dbeafe" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="540" y="262" font-size="13.5" font-weight="bold" fill="#0ea5e9" text-anchor="middle">Q3: "Kim imzolagan?"</text>
+  <text x="540" y="284" font-size="13" fill="#475569" text-anchor="middle">file_id ni ko'rsatadi</text>
+  <text x="540" y="302" font-size="13" fill="#64748b" text-anchor="middle">(qayta yuklash YO'Q)</text>
+
+  <text x="690" y="276" font-size="13" fill="#16a34a" text-anchor="middle" font-weight="bold">Bir marta</text>
+  <text x="690" y="294" font-size="13" fill="#16a34a" text-anchor="middle" font-weight="bold">yuklash —</text>
+  <text x="690" y="312" font-size="13" fill="#16a34a" text-anchor="middle" font-weight="bold">arzon, tez</text>
+
+  <!-- divider -->
+  <line x1="40" y1="340" x2="760" y2="340" stroke="#94a3b8" stroke-width="1" stroke-dasharray="6,4"/>
+
+  <!-- YOMON block -->
+  <text x="62" y="368" font-size="15" font-weight="bold" fill="#ef4444" text-anchor="start">❌ Faylni har safar qayta yuborish</text>
+
+  <rect x="80" y="382" width="160" height="58" rx="10" fill="#ffffff" stroke="#ef4444" stroke-width="2"/>
+  <text x="160" y="406" font-size="13.5" font-weight="bold" fill="#ef4444" text-anchor="middle">Q1 + butun PDF</text>
+  <text x="160" y="426" font-size="13" fill="#475569" text-anchor="middle">4 MB qaytadan</text>
+
+  <rect x="265" y="382" width="160" height="58" rx="10" fill="#ffffff" stroke="#ef4444" stroke-width="2"/>
+  <text x="345" y="406" font-size="13.5" font-weight="bold" fill="#ef4444" text-anchor="middle">Q2 + butun PDF</text>
+  <text x="345" y="426" font-size="13" fill="#475569" text-anchor="middle">4 MB yana</text>
+
+  <rect x="460" y="382" width="160" height="58" rx="10" fill="#ffffff" stroke="#ef4444" stroke-width="2"/>
+  <text x="540" y="406" font-size="13.5" font-weight="bold" fill="#ef4444" text-anchor="middle">Q3 + butun PDF</text>
+  <text x="540" y="426" font-size="13" fill="#475569" text-anchor="middle">4 MB yana</text>
+
+  <text x="690" y="406" font-size="13" fill="#ef4444" text-anchor="middle" font-weight="bold">Har safar</text>
+  <text x="690" y="424" font-size="13" fill="#ef4444" text-anchor="middle" font-weight="bold">qaytadan!</text>
+
+  <!-- footer -->
+  <rect x="40" y="456" width="720" height="34" rx="8" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="400" y="478" font-size="13.5" fill="#1e293b" text-anchor="middle">Files API: fayl ≤ 500 MB, o'chirilguncha saqlanadi, saqlash bepul (ishlatilganda input token sifatida hisoblanadi).</text>
+</svg>

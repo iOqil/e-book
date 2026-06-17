@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" width="760" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Baholash usullari: aniq mos, qoida/kalit so'z, o'xshashlik, LLM-judge</title>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Baholash usullari (eval)</text>
+  <text x="380" y="60" text-anchor="middle" font-size="14" fill="#475569">oddiydan kuchligacha — har biri o'z o'rniga</text>
+
+  <!-- 1. Aniq mos -->
+  <rect x="36" y="86" width="345" height="166" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <circle cx="68" cy="118" r="16" fill="#16a34a"/>
+  <text x="68" y="124" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">1</text>
+  <text x="96" y="116" font-size="16" font-weight="700" fill="#1e293b">Aniq mos</text>
+  <text x="96" y="138" font-size="13" fill="#475569">javob == kutilgan</text>
+  <text x="60" y="170" font-size="13" fill="#475569">Qachon: klassifikatsiya</text>
+  <text x="60" y="190" font-size="13" fill="#475569">(yopiq to'plam: ijobiy/salbiy)</text>
+  <rect x="60" y="204" width="297" height="32" rx="7" fill="#f0fdf4"/>
+  <text x="70" y="225" font-size="13" fill="#16a34a">"ijobiy" === "ijobiy"  arzon · tez</text>
+
+  <!-- 2. Qoida / kalit so'z -->
+  <rect x="397" y="86" width="327" height="166" rx="12" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <circle cx="429" cy="118" r="16" fill="#4f46e5"/>
+  <text x="429" y="124" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">2</text>
+  <text x="457" y="116" font-size="16" font-weight="700" fill="#1e293b">Qoida / kalit so'z</text>
+  <text x="457" y="138" font-size="13" fill="#475569">kerakli narsa bormi?</text>
+  <text x="421" y="170" font-size="13" fill="#475569">Qachon: erkin javobda muhim</text>
+  <text x="421" y="190" font-size="13" fill="#475569">so'z/shart borligini tekshirish</text>
+  <rect x="421" y="204" width="282" height="32" rx="7" fill="#eef2ff"/>
+  <text x="431" y="225" font-size="13" fill="#4f46e5">"14 kun" va "chek" bormi?</text>
+
+  <!-- 3. O'xshashlik -->
+  <rect x="36" y="266" width="345" height="166" rx="12" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <circle cx="68" cy="298" r="16" fill="#6366f1"/>
+  <text x="68" y="304" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">3</text>
+  <text x="96" y="296" font-size="16" font-weight="700" fill="#1e293b">O'xshashlik (embedding)</text>
+  <text x="96" y="318" font-size="13" fill="#475569">ma'no yaqinmi? (13-bob)</text>
+  <text x="60" y="350" font-size="13" fill="#475569">Qachon: "bir ma'no, boshqa so'z"</text>
+  <text x="60" y="370" font-size="13" fill="#475569">vektor -> kosinus o'xshashlik</text>
+  <rect x="60" y="384" width="297" height="32" rx="7" fill="#eef2ff"/>
+  <text x="70" y="405" font-size="13" fill="#6366f1">"Yo'q" ~ "Mavjud emas"  &gt;= 0.85</text>
+
+  <!-- 4. LLM-judge -->
+  <rect x="397" y="266" width="327" height="166" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="2.5"/>
+  <circle cx="429" cy="298" r="16" fill="#7c3aed"/>
+  <text x="429" y="304" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">4</text>
+  <text x="457" y="296" font-size="16" font-weight="700" fill="#7c3aed">LLM-as-judge</text>
+  <text x="457" y="318" font-size="13" fill="#475569">AI javobni AI baholaydi</text>
+  <text x="421" y="350" font-size="13" fill="#475569">Qachon: SIFAT (foydali, ohang,</text>
+  <text x="421" y="370" font-size="13" fill="#475569">to'liqlik) — eng kuchli, ehtiyot</text>
+  <rect x="421" y="384" width="282" height="32" rx="7" fill="#f5f3ff"/>
+  <text x="431" y="405" font-size="13" fill="#7c3aed">mezon -> ball (1..10) + sabab</text>
+
+  <text x="380" y="456" text-anchor="middle" font-size="13" fill="#94a3b8">Yuqoriga: kuchliroq, ammo sekinroq/qimmatroq</text>
+</svg>

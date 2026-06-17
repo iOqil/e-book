@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" width="780" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Bir xil ekran ikki mavzuda: chapda yorug' (light) mavzu, o'ngda qorong'i (dark) mavzu. themeMode: ThemeMode.system tizim sozlamasiga qarab birini tanlaydi; theme va darkTheme'da sirt (surface) va matn ranglari juftlanadi.</title>
+  <rect x="0" y="0" width="780" height="470" fill="#f8fafc"/>
+  <text x="390" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Bitta ekran — ikki mavzu</text>
+  <text x="390" y="58" text-anchor="middle" font-size="14" fill="#475569">themeMode: ThemeMode.system — tizim qorong'i bo'lsa, ilova ham qorong'i bo'ladi</text>
+
+  <!-- ===== LIGHT phone ===== -->
+  <text x="195" y="92" text-anchor="middle" font-size="17" font-weight="700" fill="#027dfd">theme (yorug')</text>
+  <rect x="95" y="108" width="200" height="320" rx="20" fill="#ffffff" stroke="#94a3b8" stroke-width="2.5"/>
+  <!-- app bar -->
+  <rect x="95" y="108" width="200" height="48" rx="20" fill="#4f46e5"/>
+  <rect x="95" y="136" width="200" height="20" fill="#4f46e5"/>
+  <text x="195" y="138" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">Profil</text>
+  <!-- surface body -->
+  <rect x="111" y="172" width="168" height="58" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="125" y="196" font-size="13" font-weight="700" fill="#1e293b">Sarlavha</text>
+  <text x="125" y="216" font-size="13" fill="#475569">tana matni</text>
+  <!-- button -->
+  <rect x="111" y="246" width="120" height="36" rx="18" fill="#4f46e5"/>
+  <text x="171" y="269" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">Tugma</text>
+  <!-- switch on -->
+  <rect x="225" y="300" width="46" height="24" rx="12" fill="#4f46e5"/>
+  <circle cx="259" cy="312" r="9" fill="#ffffff"/>
+  <text x="125" y="318" font-size="13" fill="#1e293b">Bildirishnoma</text>
+  <text x="195" y="370" text-anchor="middle" font-size="13" fill="#64748b">surface: oq · onSurface: qora</text>
+  <text x="195" y="392" text-anchor="middle" font-size="13" fill="#64748b">Brightness.light</text>
+
+  <!-- ===== DARK phone ===== -->
+  <text x="585" y="92" text-anchor="middle" font-size="17" font-weight="700" fill="#6366f1">darkTheme (qorong'i)</text>
+  <rect x="485" y="108" width="200" height="320" rx="20" fill="#1e293b" stroke="#475569" stroke-width="2.5"/>
+  <!-- app bar -->
+  <rect x="485" y="108" width="200" height="48" rx="20" fill="#6366f1"/>
+  <rect x="485" y="136" width="200" height="20" fill="#6366f1"/>
+  <text x="585" y="138" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">Profil</text>
+  <!-- surface body -->
+  <rect x="501" y="172" width="168" height="58" rx="10" fill="#475569" stroke="#64748b" stroke-width="1.5"/>
+  <text x="515" y="196" font-size="13" font-weight="700" fill="#ffffff">Sarlavha</text>
+  <text x="515" y="216" font-size="13" fill="#dbeafe">tana matni</text>
+  <!-- button -->
+  <rect x="501" y="246" width="120" height="36" rx="18" fill="#6366f1"/>
+  <text x="561" y="269" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">Tugma</text>
+  <!-- switch on -->
+  <rect x="615" y="300" width="46" height="24" rx="12" fill="#6366f1"/>
+  <circle cx="649" cy="312" r="9" fill="#ffffff"/>
+  <text x="515" y="318" font-size="13" fill="#ffffff">Bildirishnoma</text>
+  <text x="585" y="370" text-anchor="middle" font-size="13" fill="#94a3b8">surface: to'q · onSurface: oq</text>
+  <text x="585" y="392" text-anchor="middle" font-size="13" fill="#94a3b8">Brightness.dark</text>
+
+  <!-- connector -->
+  <line x1="295" y1="250" x2="485" y2="250" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6 5"/>
+  <text x="390" y="242" text-anchor="middle" font-size="13" font-weight="700" fill="#475569">bir xil kod</text>
+
+  <text x="390" y="448" text-anchor="middle" font-size="13" fill="#475569">Theme.of(context) ranglardan o'qiysiz — qattiq rang yozmaysiz, shuning uchun ikkala mavzu ham to'g'ri ko'rinadi</text>
+</svg>

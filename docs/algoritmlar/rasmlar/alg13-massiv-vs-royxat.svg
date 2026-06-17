@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 440">
+  <title>Massiv va bog'langan ro'yxat trade-off jadvali: indeks bo'yicha kirish, boshiga qo'shish, xotira va kesh-do'stlik bo'yicha taqqoslash</title>
+  <rect x="0" y="0" width="880" height="440" fill="#f8fafc"/>
+  <text x="440" y="36" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Massiv vs bog'langan ro'yxat: trade-off</text>
+  <text x="440" y="62" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Yashil = yutadi, qizil = yutqazadi</text>
+
+  <!-- header row -->
+  <rect x="40" y="86" width="360" height="44" rx="6" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="1.5"/>
+  <rect x="400" y="86" width="240" height="44" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <rect x="640" y="86" width="200" height="44" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="220" y="114" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">Mezon</text>
+  <text x="520" y="114" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">Massiv</text>
+  <text x="740" y="114" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">Bog'langan ro'yxat</text>
+
+  <!-- row 1: random access -->
+  <rect x="40" y="134" width="360" height="44" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <rect x="400" y="134" width="240" height="44" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <rect x="640" y="134" width="200" height="44" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="58" y="162" font-family="Segoe UI" font-size="14" fill="#334155">Indeks bo'yicha kirish a[i]</text>
+  <text x="520" y="162" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#16a34a">O(1)</text>
+  <text x="740" y="162" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#dc2626">O(n)</text>
+
+  <!-- row 2: insert front -->
+  <rect x="40" y="182" width="360" height="44" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <rect x="400" y="182" width="240" height="44" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <rect x="640" y="182" width="200" height="44" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="58" y="210" font-family="Segoe UI" font-size="14" fill="#334155">Boshiga qo'shish/o'chirish</text>
+  <text x="520" y="210" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#dc2626">O(n)</text>
+  <text x="740" y="210" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#16a34a">O(1)</text>
+
+  <!-- row 3: memory -->
+  <rect x="40" y="230" width="360" height="44" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <rect x="400" y="230" width="240" height="44" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <rect x="640" y="230" width="200" height="44" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="58" y="258" font-family="Segoe UI" font-size="14" fill="#334155">Element uchun xotira</text>
+  <text x="520" y="258" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">faqat qiymat</text>
+  <text x="740" y="258" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">qiymat + ko'rsatkich</text>
+
+  <!-- row 4: cache locality -->
+  <rect x="40" y="278" width="360" height="44" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <rect x="400" y="278" width="240" height="44" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <rect x="640" y="278" width="200" height="44" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="58" y="306" font-family="Segoe UI" font-size="14" fill="#334155">Kesh-do'stlik (lokallik)</text>
+  <text x="520" y="306" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">uzluksiz, yuqori</text>
+  <text x="740" y="306" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">tarqoq, past</text>
+
+  <!-- row 5: o'sish -->
+  <rect x="40" y="326" width="360" height="44" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <rect x="400" y="326" width="240" height="44" rx="6" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.5"/>
+  <rect x="640" y="326" width="200" height="44" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="58" y="354" font-family="Segoe UI" font-size="14" fill="#334155">Hajmni oshirish</text>
+  <text x="520" y="354" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#f59e0b">ba'zan nusxalash</text>
+  <text x="740" y="354" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">tugun ulash</text>
+
+  <!-- bottom note -->
+  <rect x="120" y="388" width="640" height="40" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="440" y="413" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">Ko'p tasodifiy kirish -&gt; massiv; ko'p boshiga qo'shish/o'chirish -&gt; ro'yxat</text>
+</svg>

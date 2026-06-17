@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420">
+  <title>Kesh oqimi: job boshida kesh kaliti hashFiles bilan hisoblanadi va tiklashga urinadi; cache hit bo'lsa bog'liqliklar keshdan tez tiklanadi, cache miss bo'lsa npm ci internetdan to'liq yuklab keyin keshni saqlaydi</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="38" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Bog'liqliklar keshi: hit va miss</text>
+
+  <!-- restore step -->
+  <rect x="250" y="64" width="260" height="64" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="380" y="89" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Keshni tiklash (restore)</text>
+  <text x="380" y="112" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e40af">key: hashFiles(package-lock.json)</text>
+
+  <!-- decision diamond-ish -->
+  <polygon points="380,150 470,196 380,242 290,196" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="380" y="192" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#92400e">kalit topildimi?</text>
+  <text x="380" y="212" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#92400e">(hit / miss)</text>
+
+  <!-- arrow down from restore to diamond -->
+  <line x1="380" y1="128" x2="380" y2="148" stroke="#2563eb" stroke-width="3" marker-end="url(#arr3)"/>
+
+  <!-- HIT branch (left, green) -->
+  <line x1="290" y1="196" x2="170" y2="196" stroke="#16a34a" stroke-width="3" marker-end="url(#arrG)"/>
+  <text x="225" y="186" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#166534">HIT</text>
+  <rect x="40" y="252" width="220" height="80" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="150" y="280" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">npm ci (tez)</text>
+  <text x="150" y="304" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#166534">bog'liqliklar keshdan</text>
+  <text x="150" y="322" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#166534">tiklandi, qayta saqlash yo'q</text>
+  <line x1="170" y1="196" x2="150" y2="250" stroke="#16a34a" stroke-width="3" marker-end="url(#arrG)"/>
+
+  <!-- MISS branch (right, blue) -->
+  <line x1="470" y1="196" x2="590" y2="196" stroke="#2563eb" stroke-width="3" marker-end="url(#arr3)"/>
+  <text x="535" y="186" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e40af">MISS</text>
+  <rect x="500" y="252" width="240" height="80" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="620" y="280" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">npm ci (to'liq yuklash)</text>
+  <text x="620" y="304" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">internetdan o'rnatadi,</text>
+  <text x="620" y="322" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">so'ng keshni saqlaydi (save)</text>
+  <line x1="590" y1="196" x2="620" y2="250" stroke="#2563eb" stroke-width="3" marker-end="url(#arr3)"/>
+
+  <!-- save back arrow -->
+  <line x1="620" y1="332" x2="620" y2="360" stroke="#94a3b8" stroke-width="2.5" stroke-dasharray="6 4" marker-end="url(#arrGy)"/>
+  <text x="620" y="382" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">kesh saqlandi &#8594; keyingi run HIT bo'ladi</text>
+
+  <text x="200" y="372" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#166534">Lock fayli o'zgarmasa &#8594; har run tezroq</text>
+
+  <defs>
+    <marker id="arr3" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrG" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+    <marker id="arrGy" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+</svg>

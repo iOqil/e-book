@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 470">
+  <title>XY muammosi: asl X muammo yashiringan, faqat Y yechim so'ralmoqda, natijada aylanma suhbat</title>
+  <rect width="860" height="470" fill="#f8fafc"/>
+  <text x="430" y="38" font-family="Segoe UI" font-size="22" font-weight="700" fill="#1e293b" text-anchor="middle">XY muammosi</text>
+  <text x="430" y="62" font-family="Segoe UI" font-size="14" fill="#64748b" text-anchor="middle">Asl muammoni (X) yashirib, taxmin qilingan yechimni (Y) so'rash</text>
+
+  <!-- X box (hidden problem) -->
+  <rect x="40" y="100" width="230" height="120" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="155" y="130" font-family="Segoe UI" font-size="17" font-weight="700" fill="#7c3aed" text-anchor="middle">X — asl muammo</text>
+  <text x="155" y="158" font-family="Segoe UI" font-size="14" fill="#334155" text-anchor="middle">"Fayl nomidan oxirgi</text>
+  <text x="155" y="178" font-family="Segoe UI" font-size="14" fill="#334155" text-anchor="middle">3 belgini olmoqchiman"</text>
+  <text x="155" y="204" font-family="Segoe UI" font-size="13" fill="#dc2626" text-anchor="middle">(yashirilgan)</text>
+
+  <!-- Y box (assumed solution) -->
+  <rect x="40" y="270" width="230" height="120" rx="12" fill="#fff7ed" stroke="#f59e0b" stroke-width="2"/>
+  <text x="155" y="300" font-family="Segoe UI" font-size="17" font-weight="700" fill="#b45309" text-anchor="middle">Y — taxminiy yechim</text>
+  <text x="155" y="328" font-family="Segoe UI" font-size="14" fill="#334155" text-anchor="middle">"Stringning oxirgi</text>
+  <text x="155" y="348" font-family="Segoe UI" font-size="14" fill="#334155" text-anchor="middle">belgisini qanday</text>
+  <text x="155" y="368" font-family="Segoe UI" font-size="14" fill="#334155" text-anchor="middle">o'chiraman?"</text>
+
+  <!-- arrow X to Y -->
+  <line x1="155" y1="220" x2="155" y2="268" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5 4"/>
+  <polygon points="155,270 150,260 160,260" fill="#94a3b8"/>
+  <text x="170" y="250" font-family="Segoe UI" font-size="13" fill="#64748b">taxmin</text>
+
+  <!-- loop on the right -->
+  <text x="370" y="300" font-family="Segoe UI" font-size="14" fill="#64748b">faqat Y so'raladi &#8594;</text>
+
+  <rect x="500" y="120" width="320" height="230" rx="12" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="660" y="150" font-family="Segoe UI" font-size="17" font-weight="700" fill="#dc2626" text-anchor="middle">&#10060; Aylanma suhbat</text>
+
+  <text x="524" y="184" font-family="Segoe UI" font-size="14" fill="#334155">Q: Oxirgi belgini qanday o'chiraman?</text>
+  <text x="524" y="212" font-family="Segoe UI" font-size="14" fill="#334155">A: substr(0, len-1) bilan...</text>
+  <text x="524" y="240" font-family="Segoe UI" font-size="14" fill="#334155">Q: Ishlamadi, ko'p belgi kerak edi...</text>
+  <text x="524" y="268" font-family="Segoe UI" font-size="14" fill="#334155">A: Unda regex bilan...</text>
+  <text x="524" y="296" font-family="Segoe UI" font-size="14" fill="#334155">Q: Yo'q, aslida kengaytma kerak edi</text>
+  <text x="524" y="328" font-family="Segoe UI" font-size="14" font-weight="700" fill="#dc2626">...30 daqiqa, hali yechim yo'q</text>
+
+  <!-- fix arrow -->
+  <line x1="155" y1="390" x2="155" y2="430" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="155,432 150,422 160,422" fill="#16a34a"/>
+  <rect x="290" y="400" width="530" height="50" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="555" y="431" font-family="Segoe UI" font-size="15" font-weight="700" fill="#16a34a" text-anchor="middle">&#9989; Yechim: X ni ham ayting &#8212; "men aslida kengaytmani olmoqchiman"</text>
+  <text x="222" y="425" font-family="Segoe UI" font-size="13" fill="#16a34a">X ni</text>
+  <text x="210" y="442" font-family="Segoe UI" font-size="13" fill="#16a34a">ochish</text>
+</svg>

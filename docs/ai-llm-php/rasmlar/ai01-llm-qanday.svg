@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" width="760" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>LLM qanday ishlaydi: matndan tokenga, tokendan keyingi token bashoratiga</title>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">LLM qanday "o'ylaydi"</text>
+  <text x="380" y="60" text-anchor="middle" font-size="14" fill="#475569">Matn → tokenlar → model → keyingi tokenni bashorat qiladi</text>
+
+  <!-- 1. Matn -->
+  <rect x="40" y="90" width="200" height="80" rx="10" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <text x="140" y="118" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">1. Matn kiradi</text>
+  <text x="140" y="144" text-anchor="middle" font-size="14" fill="#475569">"Osmon rangi"</text>
+
+  <!-- arrow -->
+  <line x1="240" y1="130" x2="290" y2="130" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="290,130 280,125 280,135" fill="#94a3b8"/>
+
+  <!-- 2. Tokenlar -->
+  <rect x="290" y="90" width="240" height="80" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="410" y="116" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">2. Tokenlarga bo'linadi</text>
+  <rect x="306" y="130" width="78" height="26" rx="5" fill="#ede9fe" stroke="#c7d2fe" stroke-width="1"/>
+  <text x="345" y="148" text-anchor="middle" font-size="13" fill="#4f46e5">Osmon</text>
+  <rect x="392" y="130" width="58" height="26" rx="5" fill="#ede9fe" stroke="#c7d2fe" stroke-width="1"/>
+  <text x="421" y="148" text-anchor="middle" font-size="13" fill="#4f46e5">rang</text>
+  <rect x="458" y="130" width="58" height="26" rx="5" fill="#ede9fe" stroke="#c7d2fe" stroke-width="1"/>
+  <text x="487" y="148" text-anchor="middle" font-size="13" fill="#4f46e5">i</text>
+
+  <!-- arrow -->
+  <line x1="530" y1="130" x2="580" y2="130" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="580,130 570,125 570,135" fill="#94a3b8"/>
+
+  <!-- 3. Model -->
+  <rect x="580" y="90" width="150" height="80" rx="10" fill="#7c3aed" stroke="#6d28d9" stroke-width="2"/>
+  <text x="655" y="120" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">3. Model</text>
+  <text x="655" y="144" text-anchor="middle" font-size="13" fill="#ede9fe">(LLM)</text>
+
+  <!-- arrow down from model -->
+  <line x1="655" y1="170" x2="655" y2="210" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="655,210 650,200 660,200" fill="#94a3b8"/>
+
+  <!-- 4. Ehtimolliklar -->
+  <rect x="270" y="210" width="420" height="150" rx="10" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="480" y="236" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">4. Keyingi token uchun ehtimollik hisoblaydi</text>
+
+  <!-- bars -->
+  <text x="300" y="272" font-size="14" fill="#475569">ko'k</text>
+  <rect x="345" y="261" width="260" height="16" rx="4" fill="#16a34a"/>
+  <text x="615" y="274" font-size="13" fill="#16a34a">82%</text>
+
+  <text x="300" y="300" font-size="14" fill="#475569">moviy</text>
+  <rect x="345" y="289" width="90" height="16" rx="4" fill="#a855f7"/>
+  <text x="445" y="302" font-size="13" fill="#7c3aed">11%</text>
+
+  <text x="300" y="328" font-size="14" fill="#475569">qora</text>
+  <rect x="345" y="317" width="40" height="16" rx="4" fill="#c7d2fe"/>
+  <text x="395" y="330" font-size="13" fill="#94a3b8">4%</text>
+
+  <text x="300" y="349" font-size="13" fill="#94a3b8">...boshqalar (kichik ehtimol)</text>
+
+  <!-- arrow to result -->
+  <line x1="270" y1="285" x2="225" y2="285" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="225,285 235,280 235,290" fill="#94a3b8"/>
+
+  <!-- 5. Tanlangan token -->
+  <rect x="40" y="250" width="170" height="70" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="125" y="278" text-anchor="middle" font-size="14" font-weight="700" fill="#166534">5. Eng mosini tanlaydi</text>
+  <text x="125" y="302" text-anchor="middle" font-size="15" font-weight="700" fill="#16a34a">"ko'k"</text>
+
+  <!-- loop arrow -->
+  <path d="M 125 320 Q 125 410 410 410 Q 700 410 700 175" fill="none" stroke="#d97757" stroke-width="2" stroke-dasharray="6 4"/>
+  <polygon points="700,175 695,187 705,187" fill="#d97757"/>
+  <text x="410" y="436" text-anchor="middle" font-size="14" font-weight="700" fill="#d97757">6. Sikl takrorlanadi — keyingi token, yana keyingisi...</text>
+</svg>

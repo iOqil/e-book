@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 520">
+  <title>NP-qiyin masala bilan ishlash: aniq kichik n, approksimatsiya, heuristika, parametrlangan yondashuvlar</title>
+  <rect x="0" y="0" width="880" height="520" fill="#f8fafc"/>
+  <text x="440" y="38" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">NP-qiyin masala bilan amalda ishlash</text>
+  <text x="440" y="64" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">"NP-qiyin" taslim bo'lish degani emas — 4 yo'l bor (TSP misolida)</text>
+
+  <!-- (1) Aniq -->
+  <rect x="40" y="100" width="385" height="180" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="62" y="132" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a">(1) Aniq (brute force / backtracking / DP)</text>
+  <text x="62" y="160" font-family="Segoe UI" font-size="13" fill="#334155">Optimal javobni topadi.</text>
+  <text x="62" y="182" font-family="Segoe UI" font-size="13" fill="#334155">Narx: eksponensial / faktorial (O(n!)).</text>
+  <text x="62" y="208" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">Qachon: n kichik (taxminan n &#8804; 12).</text>
+  <text x="62" y="236" font-family="monospace" font-size="13" fill="#64748b">TSP n=5  -&gt;  uzunlik 51 (aniq)</text>
+  <text x="62" y="260" font-family="monospace" font-size="13" fill="#64748b">TSP n=20 -&gt;  ~771 yil!</text>
+
+  <!-- (2) Approksimatsiya -->
+  <rect x="455" y="100" width="385" height="180" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="477" y="132" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb">(2) Approksimatsiya</text>
+  <text x="477" y="160" font-family="Segoe UI" font-size="13" fill="#334155">Optimalga yaqin, polinomial vaqtda.</text>
+  <text x="477" y="186" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb">KAFOLAT bor (isbotlangan nisbat).</text>
+  <text x="477" y="212" font-family="Segoe UI" font-size="13" fill="#334155">Masalan Christofides: optimaldan</text>
+  <text x="477" y="232" font-family="Segoe UI" font-size="13" fill="#334155">ko'pi bilan 1.5 baravar uzun, O(n^3).</text>
+  <text x="477" y="262" font-family="Segoe UI" font-size="13" fill="#64748b">Tezlik + kafolat, aniqlik evaziga.</text>
+
+  <!-- (3) Heuristika -->
+  <rect x="40" y="300" width="385" height="180" rx="12" fill="#ffffff" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="62" y="332" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#d97706">(3) Heuristika</text>
+  <text x="62" y="360" font-family="Segoe UI" font-size="13" fill="#334155">Amalda yaxshi javob, tez.</text>
+  <text x="62" y="386" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">KAFOLAT YO'Q (faqat kuzatuv).</text>
+  <text x="62" y="412" font-family="Segoe UI" font-size="13" fill="#334155">Greedy yaqin qo'shni, lokal qidiruv,</text>
+  <text x="62" y="432" font-family="Segoe UI" font-size="13" fill="#334155">genetik, simulated annealing.</text>
+  <text x="62" y="460" font-family="monospace" font-size="13" fill="#64748b">yaqin qo'shni -&gt; 54 (optimal 51)</text>
+
+  <!-- (4) Parametrlangan -->
+  <rect x="455" y="300" width="385" height="180" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="477" y="332" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#7c3aed">(4) Parametrlangan / maxsus holat</text>
+  <text x="477" y="360" font-family="Segoe UI" font-size="13" fill="#334155">Kichik parametr k bo'yicha tez:</text>
+  <text x="477" y="380" font-family="monospace" font-size="13" fill="#64748b">O(2^k &#183; n), k kichik bo'lsa amaliy.</text>
+  <text x="477" y="408" font-family="Segoe UI" font-size="13" fill="#334155">Maxsus tuzilish P da bo'lishi mumkin:</text>
+  <text x="477" y="430" font-family="Segoe UI" font-size="13" fill="#334155">daraxt grafida, 2-SAT polinomial.</text>
+  <text x="477" y="460" font-family="Segoe UI" font-size="13" fill="#64748b">Masalaning tuzilishidan foydalan.</text>
+</svg>

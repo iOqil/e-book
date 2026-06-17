@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 540">
+  <title>Hanoy minorasi: n diskni A dan C ga, B yordamchi ustun orqali ko'chirish</title>
+  <rect x="0" y="0" width="880" height="540" fill="#f8fafc"/>
+  <text x="440" y="36" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Hanoy minorasi — rekursiv g'oya</text>
+  <text x="440" y="60" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Maqsad: barcha disklarni A dan C ga ko'chirish (B yordamchi). Katta disk kichigi ustiga qo'yilmaydi.</text>
+
+  <!-- Boshlang'ich holat panel -->
+  <text x="220" y="98" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb">Boshlang'ich holat</text>
+
+  <!-- pegs base -->
+  <rect x="40" y="270" width="360" height="12" rx="4" fill="#94a3b8"/>
+  <rect x="95" y="150" width="8" height="120" fill="#cbd5e1"/>
+  <rect x="216" y="150" width="8" height="120" fill="#cbd5e1"/>
+  <rect x="337" y="150" width="8" height="120" fill="#cbd5e1"/>
+  <text x="99" y="300" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#334155">A</text>
+  <text x="220" y="300" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#334155">B</text>
+  <text x="341" y="300" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#334155">C</text>
+
+  <!-- disks on A (3 disks) -->
+  <rect x="63" y="246" width="72" height="20" rx="6" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/>
+  <text x="99" y="261" text-anchor="middle" font-family="monospace" font-size="13" fill="#1e3a8a">3</text>
+  <rect x="71" y="222" width="56" height="20" rx="6" fill="#86efac" stroke="#16a34a" stroke-width="2"/>
+  <text x="99" y="237" text-anchor="middle" font-family="monospace" font-size="13" fill="#166534">2</text>
+  <rect x="79" y="198" width="40" height="20" rx="6" fill="#fcd34d" stroke="#f59e0b" stroke-width="2"/>
+  <text x="99" y="213" text-anchor="middle" font-family="monospace" font-size="13" fill="#92400e">1</text>
+
+  <!-- Yakuniy holat panel -->
+  <text x="660" y="98" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a">Yakuniy holat</text>
+  <rect x="480" y="270" width="360" height="12" rx="4" fill="#94a3b8"/>
+  <rect x="535" y="150" width="8" height="120" fill="#cbd5e1"/>
+  <rect x="656" y="150" width="8" height="120" fill="#cbd5e1"/>
+  <rect x="777" y="150" width="8" height="120" fill="#cbd5e1"/>
+  <text x="539" y="300" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#334155">A</text>
+  <text x="660" y="300" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#334155">B</text>
+  <text x="781" y="300" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#334155">C</text>
+
+  <!-- disks on C -->
+  <rect x="745" y="246" width="72" height="20" rx="6" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/>
+  <text x="781" y="261" text-anchor="middle" font-family="monospace" font-size="13" fill="#1e3a8a">3</text>
+  <rect x="753" y="222" width="56" height="20" rx="6" fill="#86efac" stroke="#16a34a" stroke-width="2"/>
+  <text x="781" y="237" text-anchor="middle" font-family="monospace" font-size="13" fill="#166534">2</text>
+  <rect x="761" y="198" width="40" height="20" rx="6" fill="#fcd34d" stroke="#f59e0b" stroke-width="2"/>
+  <text x="781" y="213" text-anchor="middle" font-family="monospace" font-size="13" fill="#92400e">1</text>
+
+  <!-- big arrow between -->
+  <path d="M 410 215 L 470 215" fill="none" stroke="#7c3aed" stroke-width="3"/>
+  <polygon points="478,215 466,209 466,221" fill="#7c3aed"/>
+
+  <!-- Rekursiv g'oya panel -->
+  <rect x="40" y="330" width="800" height="180" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="440" y="360" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#5b21b6">Rekursiv g'oya: hanoy(n, A, B, C)</text>
+
+  <text x="70" y="392" font-family="Segoe UI" font-size="14" fill="#334155">1-qadam:  yuqori n-1 diskni  A → B  ko'chir  (C yordamchi)  —  rekursiv chaqiruv</text>
+  <text x="70" y="420" font-family="Segoe UI" font-size="14" fill="#334155">2-qadam:  eng katta diskni (n)  A → C  ko'chir  —  bitta oddiy harakat</text>
+  <text x="70" y="448" font-family="Segoe UI" font-size="14" fill="#334155">3-qadam:  n-1 diskni  B → C  ko'chir  (A yordamchi)  —  rekursiv chaqiruv</text>
+
+  <text x="70" y="484" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">Baza:</text>
+  <text x="120" y="484" font-family="Segoe UI" font-size="14" fill="#334155">n = 1 bo'lsa, diskni to'g'ridan-to'g'ri A → C ko'chir.</text>
+  <text x="470" y="484" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">Jami ko'chirishlar: 2^n - 1</text>
+</svg>

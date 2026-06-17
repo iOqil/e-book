@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 540">
+  <title>Input validatsiya va injection himoyasi: ishonchsiz kirish, validatsiya va sanitizatsiya, xavfsiz qayta ishlash</title>
+  <rect x="0" y="0" width="880" height="540" fill="#f8fafc"/>
+  <text x="440" y="34" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">Input validatsiya — ishonchsiz kirishni darvozada to'sish</text>
+  <text x="440" y="58" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Hamma tashqi kirish ishonchsiz: tekshir, tozala, faqat keyin qayta ishla</text>
+
+  <!-- 1: Ishonchsiz kirish -->
+  <rect x="40" y="90" width="220" height="150" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="150" y="118" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#dc2626">1. Ishonchsiz kirish</text>
+  <text x="60" y="146" font-family="Segoe UI" font-size="13" fill="#334155">Body, query, sarlavha,</text>
+  <text x="60" y="166" font-family="Segoe UI" font-size="13" fill="#334155">path, fayl, cookie...</text>
+  <rect x="60" y="180" width="180" height="46" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1"/>
+  <text x="70" y="200" font-family="monospace" font-size="13" fill="#991b1b">name = "'; DROP TABLE--"</text>
+  <text x="70" y="219" font-family="monospace" font-size="13" fill="#991b1b">age  = "abc"</text>
+
+  <!-- arrow -->
+  <line x1="262" y1="165" x2="316" y2="165" stroke="#64748b" stroke-width="2.5"/>
+  <polygon points="316,165 304,159 304,171" fill="#64748b"/>
+
+  <!-- 2: Validatsiya / sanitizatsiya -->
+  <rect x="320" y="90" width="240" height="150" rx="12" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="440" y="118" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#d97706">2. Validatsiya darvozasi</text>
+  <text x="338" y="144" font-family="Segoe UI" font-size="13" fill="#334155">Tip / uzunlik / format / chegara</text>
+  <rect x="338" y="156" width="204" height="26" rx="6" fill="#fffbeb" stroke="#16a34a" stroke-width="1"/>
+  <text x="348" y="174" font-family="Segoe UI" font-size="13" fill="#166534">Allow-list (ruxsat ro'yxati)</text>
+  <text x="338" y="200" font-family="Segoe UI" font-size="13" fill="#334155">Parametrlangan so'rov (prepared)</text>
+  <text x="338" y="222" font-family="Segoe UI" font-size="13" fill="#64748b">Mos kelmasa — 422 bilan rad et</text>
+
+  <!-- arrow -->
+  <line x1="562" y1="165" x2="616" y2="165" stroke="#64748b" stroke-width="2.5"/>
+  <polygon points="616,165 604,159 604,171" fill="#64748b"/>
+
+  <!-- 3: Xavfsiz ishlov -->
+  <rect x="620" y="90" width="220" height="150" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="730" y="118" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">3. Xavfsiz ishlov</text>
+  <text x="640" y="146" font-family="Segoe UI" font-size="13" fill="#334155">Faqat tekshirilgan,</text>
+  <text x="640" y="166" font-family="Segoe UI" font-size="13" fill="#334155">tozalangan ma'lumot</text>
+  <rect x="640" y="180" width="180" height="46" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1"/>
+  <text x="650" y="200" font-family="monospace" font-size="13" fill="#166534">name = "Olim"</text>
+  <text x="650" y="219" font-family="monospace" font-size="13" fill="#166534">age  = 30</text>
+
+  <!-- Allow-list vs deny-list taqqoslash -->
+  <rect x="40" y="270" width="390" height="170" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="235" y="298" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">Allow-list (tavsiya)</text>
+  <text x="60" y="324" font-family="Segoe UI" font-size="13" fill="#334155">"Faqat shu ruxsat etilgan qiymatlar"</text>
+  <text x="60" y="348" font-family="Segoe UI" font-size="13" fill="#334155">Yangi hujum usuli paydo bo'lsa ham</text>
+  <text x="60" y="368" font-family="Segoe UI" font-size="13" fill="#334155">ro'yxatda yo'q — avtomatik rad etiladi.</text>
+  <rect x="60" y="384" width="350" height="40" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1"/>
+  <text x="70" y="409" font-family="monospace" font-size="13" fill="#166534">role in {"user","admin","guest"} ?</text>
+
+  <rect x="450" y="270" width="390" height="170" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="645" y="298" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#dc2626">Deny-list (kuchsiz)</text>
+  <text x="470" y="324" font-family="Segoe UI" font-size="13" fill="#334155">"Mana bu yomon qiymatlarni to's"</text>
+  <text x="470" y="348" font-family="Segoe UI" font-size="13" fill="#334155">Hujumchi ro'yxatda yo'q yangi</text>
+  <text x="470" y="368" font-family="Segoe UI" font-size="13" fill="#334155">variant topadi — doimo bir qadam orqada.</text>
+  <rect x="470" y="384" width="350" height="40" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1"/>
+  <text x="480" y="409" font-family="monospace" font-size="13" fill="#991b1b">if contains("DROP") ... // yetarli emas</text>
+
+  <text x="440" y="480" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155" font-weight="bold">Qoida: ruxsat berilgan narsani ta'rifla (allow-list), taqiqlangan hammasini emas (deny-list).</text>
+  <text x="440" y="508" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Injection (SQL/NoSQL/command) himoyasi: parametrlangan so'rov + qat'iy validatsiya birga.</text>
+</svg>

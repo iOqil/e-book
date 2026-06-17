@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 470" width="800" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>setState sikli: foydalanuvchi tugmani bosadi -> callback holatni o'zgartiradi va setState chaqiradi -> Flutter qayta qurishni rejalashtiradi -> build yangi holat bilan ishlaydi -> UI yangilanadi (counter 0 dan 1 ga).</title>
+  <rect x="0" y="0" width="800" height="470" fill="#f8fafc"/>
+  <text x="400" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">setState sikli: tegish dan yangi UI gacha</text>
+  <text x="400" y="58" text-anchor="middle" font-size="14" fill="#475569">Siz holatni o'zgartirasiz + setState aytadi "meni qayta qur" — qolganini Flutter qiladi</text>
+
+  <!-- Step 1: user taps -->
+  <rect x="40" y="92" width="200" height="92" rx="14" fill="#ffffff" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="140" y="120" text-anchor="middle" font-size="15" font-weight="700" fill="#f59e0b">1. Foydalanuvchi tegadi</text>
+  <text x="140" y="146" text-anchor="middle" font-size="13" fill="#475569">tugmani bosadi</text>
+  <text x="140" y="166" text-anchor="middle" font-size="13" fill="#64748b">onPressed: ...</text>
+
+  <line x1="240" y1="138" x2="318" y2="138" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="318,138 306,132 306,144" fill="#94a3b8"/>
+
+  <!-- Step 2: callback + setState -->
+  <rect x="320" y="92" width="220" height="92" rx="14" fill="#027dfd"/>
+  <text x="430" y="118" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">2. setState(...)</text>
+  <text x="430" y="142" text-anchor="middle" font-size="13" fill="#ffffff">callback holatni o'zgartiradi:</text>
+  <text x="430" y="164" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">setState(() { count++; });</text>
+
+  <line x1="540" y1="138" x2="618" y2="138" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="618,138 606,132 606,144" fill="#94a3b8"/>
+
+  <!-- Step 3: Flutter schedules rebuild -->
+  <rect x="560" y="92" width="200" height="92" rx="14" fill="#ffffff" stroke="#6366f1" stroke-width="2.5"/>
+  <text x="660" y="120" text-anchor="middle" font-size="15" font-weight="700" fill="#6366f1">3. Flutter</text>
+  <text x="660" y="146" text-anchor="middle" font-size="13" fill="#475569">qayta qurishni</text>
+  <text x="660" y="166" text-anchor="middle" font-size="13" fill="#64748b">rejalashtiradi</text>
+
+  <!-- arrow down from step 3 -->
+  <line x1="660" y1="184" x2="660" y2="232" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="660,232 654,220 666,220" fill="#94a3b8"/>
+
+  <!-- Step 4: build runs -->
+  <rect x="560" y="234" width="200" height="92" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="660" y="262" text-anchor="middle" font-size="15" font-weight="700" fill="#16a34a">4. build() yuradi</text>
+  <text x="660" y="288" text-anchor="middle" font-size="13" fill="#475569">yangi holat bilan</text>
+  <text x="660" y="308" text-anchor="middle" font-size="13" fill="#64748b">Text('$count')</text>
+
+  <line x1="560" y1="280" x2="482" y2="280" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="482,280 494,274 494,286" fill="#94a3b8"/>
+
+  <!-- Step 5: UI updates -->
+  <rect x="280" y="234" width="200" height="92" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="380" y="262" text-anchor="middle" font-size="15" font-weight="700" fill="#16a34a">5. UI yangilanadi</text>
+  <text x="380" y="288" text-anchor="middle" font-size="13" fill="#475569">ekranda yangi qiymat</text>
+  <text x="380" y="308" text-anchor="middle" font-size="13" fill="#64748b">foydalanuvchi ko'radi</text>
+
+  <!-- loop back arrow to step 1 -->
+  <line x1="280" y1="280" x2="140" y2="280" stroke="#6366f1" stroke-width="2.5"/>
+  <line x1="140" y1="280" x2="140" y2="184" stroke="#6366f1" stroke-width="2.5"/>
+  <polygon points="140,184 134,196 146,196" fill="#6366f1"/>
+  <text x="200" y="300" text-anchor="middle" font-size="13" font-weight="700" fill="#6366f1">sikl yana boshlanadi</text>
+
+  <!-- counter visual 0 -> 1 -->
+  <rect x="40" y="356" width="350" height="94" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="215" y="382" text-anchor="middle" font-size="14" font-weight="700" fill="#16a34a">Natija: counter 0 -> 1</text>
+  <rect x="70" y="396" width="90" height="40" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="115" y="423" text-anchor="middle" font-size="18" font-weight="700" fill="#1e293b">0</text>
+  <line x1="172" y1="416" x2="218" y2="416" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="218,416 206,410 206,422" fill="#94a3b8"/>
+  <text x="195" y="404" text-anchor="middle" font-size="13" fill="#475569">tegish</text>
+  <rect x="230" y="396" width="90" height="40" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="275" y="423" text-anchor="middle" font-size="18" font-weight="700" fill="#16a34a">1</text>
+
+  <!-- warning box -->
+  <rect x="410" y="356" width="350" height="94" rx="14" fill="#ffffff" stroke="#ef4444" stroke-width="2"/>
+  <text x="430" y="382" font-size="14" font-weight="700" fill="#ef4444">setState SIZ — UI yangilanmaydi</text>
+  <text x="430" y="408" font-size="13" fill="#475569">count++ ni setState'siz yozsangiz,</text>
+  <text x="430" y="430" font-size="13" fill="#475569">Flutter qayta qurmaydi — ekran qotadi.</text>
+</svg>

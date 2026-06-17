@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440">
+  <title>Docker volume turlari: named volume Docker boshqaradigan papkaga, bind mount host'ning aniq papkasiga, tmpfs esa host operativ xotirasiga bog'lanadi</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Volume turlari: ma'lumot qayerda yashaydi</text>
+
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- Konteyner qatori -->
+  <text x="380" y="62" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#475569">Konteyner (o'tkinchi) ichidagi papka</text>
+
+  <!-- 1: named volume container -->
+  <rect x="40" y="78" width="200" height="56" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="140" y="102" text-anchor="middle" font-family="Consolas, monospace" font-size="13.5" fill="#1e40af">/var/lib/postgresql</text>
+  <text x="140" y="122" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">postgres konteyner</text>
+
+  <!-- 2: bind mount container -->
+  <rect x="280" y="78" width="200" height="56" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="102" text-anchor="middle" font-family="Consolas, monospace" font-size="13.5" fill="#1e40af">/app</text>
+  <text x="380" y="122" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">dev konteyner</text>
+
+  <!-- 3: tmpfs container -->
+  <rect x="520" y="78" width="200" height="56" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="620" y="102" text-anchor="middle" font-family="Consolas, monospace" font-size="13.5" fill="#1e40af">/app/cache</text>
+  <text x="620" y="122" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">vaqtinchalik konteyner</text>
+
+  <!-- Strelka labels (mount turi) -->
+  <line x1="140" y1="134" x2="140" y2="210" stroke="#475569" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="140" y="158" text-anchor="middle" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#16a34a">-v name:/path</text>
+  <text x="140" y="176" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">named volume</text>
+
+  <line x1="380" y1="134" x2="380" y2="210" stroke="#475569" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="380" y="158" text-anchor="middle" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#f59e0b">-v /host:/path</text>
+  <text x="380" y="176" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309">bind mount</text>
+
+  <line x1="620" y1="134" x2="620" y2="210" stroke="#475569" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="620" y="158" text-anchor="middle" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#dc2626">--tmpfs /path</text>
+  <text x="620" y="176" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">tmpfs</text>
+
+  <!-- Host fayl tizimi qutisi -->
+  <rect x="30" y="215" width="460" height="170" rx="12" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="260" y="238" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Host disk (doimiy fayl tizimi)</text>
+
+  <!-- named volume target -->
+  <rect x="50" y="252" width="200" height="116" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="150" y="278" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#166534">Docker boshqaradi</text>
+  <text x="150" y="300" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#166534">/var/lib/docker/</text>
+  <text x="150" y="318" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#166534">volumes/name/_data</text>
+  <text x="150" y="344" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">afzal yo'l (DB uchun)</text>
+
+  <!-- bind mount target -->
+  <rect x="270" y="252" width="200" height="116" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="370" y="278" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#b45309">Siz tanlaysiz</text>
+  <text x="370" y="300" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#b45309">/home/oqil/kod</text>
+  <text x="370" y="324" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">aniq host papkasi</text>
+  <text x="370" y="344" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">dev uchun qulay</text>
+
+  <!-- Host RAM qutisi (tmpfs) -->
+  <rect x="510" y="215" width="220" height="170" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="620" y="238" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#991b1b">Host xotira (RAM)</text>
+  <text x="620" y="282" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#dc2626">diskka YOZILMAYDI</text>
+  <text x="620" y="306" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tez, lekin doimiy emas</text>
+  <text x="620" y="330" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">konteyner o'chsa</text>
+  <text x="620" y="348" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">ma'lumot yo'qoladi</text>
+
+  <text x="380" y="416" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">Named volume va bind mount diskda saqlanadi (doimiy); tmpfs faqat RAM'da (o'tkinchi)</text>
+</svg>

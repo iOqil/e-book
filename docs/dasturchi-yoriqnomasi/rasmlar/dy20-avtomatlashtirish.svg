@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 470" font-family="Segoe UI">
+  <title>Uch marta qo'lda bo'lsa skript yoz: qo'lda doimiy vs avtomatlashtirilgan vaqt sarmoyasi grafigi</title>
+  <rect x="0" y="0" width="840" height="470" fill="#f8fafc"/>
+  <text x="420" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#1e293b">Uch marta qo'lda qilsang — skript yoz</text>
+
+  <!-- Decision rule on the left -->
+  <text x="60" y="78" font-size="15" font-weight="bold" fill="#334155">Qaror qoidasi:</text>
+  <rect x="60" y="92" width="200" height="42" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="160" y="112" text-anchor="middle" font-size="14" fill="#334155">1-marta: qo'lda qil</text>
+  <text x="160" y="128" text-anchor="middle" font-size="13" fill="#64748b">(o'rgan)</text>
+  <rect x="60" y="142" width="200" height="42" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="160" y="162" text-anchor="middle" font-size="14" fill="#334155">2-marta: e'tibor ber</text>
+  <text x="160" y="178" text-anchor="middle" font-size="13" fill="#64748b">(naqsh seziladi)</text>
+  <rect x="60" y="192" width="200" height="42" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="160" y="212" text-anchor="middle" font-size="14" font-weight="bold" fill="#16a34a">3-marta: skript yoz</text>
+  <text x="160" y="228" text-anchor="middle" font-size="13" fill="#64748b">(avtomatlashtir)</text>
+
+  <!-- Chart: cumulative time -->
+  <text x="555" y="78" text-anchor="middle" font-size="15" font-weight="bold" fill="#334155">Jami sarflangan vaqt (takror soni bo'yicha)</text>
+
+  <!-- axes -->
+  <line x1="350" y1="400" x2="800" y2="400" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="350" y1="100" x2="350" y2="400" stroke="#94a3b8" stroke-width="2"/>
+  <text x="575" y="438" text-anchor="middle" font-size="14" fill="#64748b">takror soni →</text>
+  <text x="330" y="250" text-anchor="middle" font-size="14" fill="#64748b" transform="rotate(-90 330 250)">jami vaqt →</text>
+
+  <!-- x ticks -->
+  <text x="380" y="420" text-anchor="middle" font-size="13" fill="#64748b">1</text>
+  <text x="450" y="420" text-anchor="middle" font-size="13" fill="#64748b">3</text>
+  <text x="520" y="420" text-anchor="middle" font-size="13" fill="#64748b">5</text>
+  <text x="660" y="420" text-anchor="middle" font-size="13" fill="#64748b">10</text>
+  <text x="790" y="420" text-anchor="middle" font-size="13" fill="#64748b">15</text>
+
+  <!-- Manual line: linear steep (each repeat costs same) -->
+  <polyline points="380,388 450,344 520,300 660,212 790,124" fill="none" stroke="#dc2626" stroke-width="3"/>
+  <circle cx="380" cy="388" r="4" fill="#dc2626"/>
+  <circle cx="450" cy="344" r="4" fill="#dc2626"/>
+  <circle cx="790" cy="124" r="4" fill="#dc2626"/>
+  <text x="660" y="150" font-size="14" font-weight="bold" fill="#dc2626">Qo'lda: doimiy o'sadi</text>
+
+  <!-- Automated line: high upfront then flat -->
+  <polyline points="380,388 420,250 450,310 520,322 660,330 790,336" fill="none" stroke="#16a34a" stroke-width="3"/>
+  <circle cx="420" cy="250" r="4" fill="#16a34a"/>
+  <circle cx="790" cy="336" r="4" fill="#16a34a"/>
+  <text x="430" y="240" font-size="14" font-weight="bold" fill="#16a34a">Skript: oldindan narx, keyin tekis</text>
+
+  <!-- break-even marker -->
+  <line x1="520" y1="100" x2="520" y2="400" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 4"/>
+  <text x="520" y="116" text-anchor="middle" font-size="13" fill="#7c3aed">qaytim nuqtasi</text>
+
+  <text x="575" y="462" text-anchor="middle" font-size="13" fill="#64748b">Skript boshda qimmat, keyin deyarli bepul; qo'lda har safar yangi narx.</text>
+</svg>

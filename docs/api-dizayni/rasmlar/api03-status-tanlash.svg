@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 600">
+  <title>To'g'ri HTTP status kodni tanlash blok-sxemasi</title>
+  <rect x="0" y="0" width="880" height="600" fill="#f8fafc"/>
+  <text x="440" y="34" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">To'g'ri status kodni tanlash — blok-sxema</text>
+  <text x="440" y="58" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Avval natija: muvaffaqiyatmi yoki xato? Keyin kim aybdor?</text>
+
+  <defs>
+    <marker id="ar3" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <!-- Start -->
+  <rect x="340" y="80" width="200" height="56" rx="28" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="440" y="105" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#7c3aed">So'rovga javob</text>
+  <text x="440" y="125" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">natija qanday?</text>
+
+  <!-- branch line -->
+  <line x1="440" y1="136" x2="440" y2="160" stroke="#64748b" stroke-width="2"/>
+  <line x1="180" y1="160" x2="700" y2="160" stroke="#64748b" stroke-width="2"/>
+  <line x1="180" y1="160" x2="180" y2="184" stroke="#64748b" stroke-width="2" marker-end="url(#ar3)"/>
+  <line x1="440" y1="160" x2="440" y2="184" stroke="#64748b" stroke-width="2" marker-end="url(#ar3)"/>
+  <line x1="700" y1="160" x2="700" y2="184" stroke="#64748b" stroke-width="2" marker-end="url(#ar3)"/>
+
+  <!-- Success branch -->
+  <rect x="60" y="188" width="240" height="120" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="180" y="214" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">Muvaffaqiyat (2xx)</text>
+  <text x="78" y="240" font-family="monospace" font-size="13" fill="#334155">Yangi resurs yaratildi?</text>
+  <text x="98" y="260" font-family="monospace" font-size="13" fill="#16a34a">-&gt; 201 + Location</text>
+  <text x="78" y="282" font-family="monospace" font-size="13" fill="#334155">Body qaytmaydi (DELETE)?</text>
+  <text x="98" y="302" font-family="monospace" font-size="13" fill="#16a34a">-&gt; 204 No Content</text>
+
+  <!-- Client error branch -->
+  <rect x="320" y="188" width="240" height="120" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="440" y="214" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#b45309">Mijoz xatosi (4xx)</text>
+  <text x="338" y="240" font-family="monospace" font-size="13" fill="#334155">Sintaksis/JSON buzuq?</text>
+  <text x="358" y="260" font-family="monospace" font-size="13" fill="#b45309">-&gt; 400</text>
+  <text x="338" y="282" font-family="monospace" font-size="13" fill="#334155">Semantik validatsiya?</text>
+  <text x="358" y="302" font-family="monospace" font-size="13" fill="#b45309">-&gt; 422</text>
+
+  <!-- Server error branch -->
+  <rect x="580" y="188" width="240" height="120" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="700" y="214" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#dc2626">Server xatosi (5xx)</text>
+  <text x="598" y="240" font-family="monospace" font-size="13" fill="#334155">Kutilmagan istisno?</text>
+  <text x="618" y="260" font-family="monospace" font-size="13" fill="#dc2626">-&gt; 500</text>
+  <text x="598" y="282" font-family="monospace" font-size="13" fill="#334155">Vaqtincha band/ta'mir?</text>
+  <text x="618" y="302" font-family="monospace" font-size="13" fill="#dc2626">-&gt; 503 + Retry-After</text>
+
+  <!-- Auth sub-decision -->
+  <rect x="240" y="346" width="400" height="56" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="440" y="372" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#7c3aed">Auth bilan bog'liq 4xx?</text>
+  <text x="440" y="392" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">kirish/ruxsat masalasi bo'lsa</text>
+  <line x1="440" y1="308" x2="440" y2="344" stroke="#64748b" stroke-width="2" marker-end="url(#ar3)"/>
+
+  <line x1="440" y1="402" x2="440" y2="424" stroke="#64748b" stroke-width="2"/>
+  <line x1="200" y1="424" x2="680" y2="424" stroke="#64748b" stroke-width="2"/>
+  <line x1="200" y1="424" x2="200" y2="448" stroke="#64748b" stroke-width="2" marker-end="url(#ar3)"/>
+  <line x1="440" y1="424" x2="440" y2="448" stroke="#64748b" stroke-width="2" marker-end="url(#ar3)"/>
+  <line x1="680" y1="424" x2="680" y2="448" stroke="#64748b" stroke-width="2" marker-end="url(#ar3)"/>
+
+  <rect x="90" y="452" width="220" height="56" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="200" y="478" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#b45309">401</text>
+  <text x="200" y="498" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">login yo'q/noto'g'ri</text>
+
+  <rect x="330" y="452" width="220" height="56" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="440" y="478" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#b45309">403</text>
+  <text x="440" y="498" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">login bor, ruxsat yo'q</text>
+
+  <rect x="570" y="452" width="220" height="56" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="680" y="478" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#b45309">429</text>
+  <text x="680" y="498" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">juda ko'p so'rov</text>
+
+  <rect x="60" y="532" width="760" height="48" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="440" y="561" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Qoida: status kod = mashina uchun signal; tafsilot esa xato body (RFC 9457 Problem Details) ichida.</text>
+</svg>

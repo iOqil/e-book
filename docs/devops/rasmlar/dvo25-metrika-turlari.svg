@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400">
+  <title>Prometheus metrika turlari: counter faqat o'sib boradi (zinapoyaga o'xshab), gauge ko'tarilib-tushadi (tebranadi), histogram esa kuzatishlarni bucketlarga (oraliqlarga) taqsimlaydi</title>
+  <rect x="0" y="0" width="760" height="400" fill="#f8fafc"/>
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Metrika turlari: counter, gauge, histogram</text>
+
+  <!-- ===== COUNTER ===== -->
+  <rect x="24" y="56" width="226" height="300" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="137" y="82" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#166534">counter</text>
+  <text x="137" y="102" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">FAQAT o'sadi</text>
+  <!-- axes -->
+  <line x1="56" y1="300" x2="232" y2="300" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="56" y1="130" x2="56" y2="300" stroke="#94a3b8" stroke-width="1.5"/>
+  <!-- monotonic step line -->
+  <polyline points="56,290 88,290 88,266 120,266 120,232 152,232 152,210 184,210 184,176 216,176 216,150" fill="none" stroke="#16a34a" stroke-width="3"/>
+  <text x="137" y="328" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#475569">http_requests_total</text>
+  <text x="137" y="347" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#166534">so'rovlar soni, xatolar soni</text>
+
+  <!-- ===== GAUGE ===== -->
+  <rect x="266" y="56" width="226" height="300" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="379" y="82" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e40af">gauge</text>
+  <text x="379" y="102" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">ko'tariladi va tushadi</text>
+  <line x1="298" y1="300" x2="474" y2="300" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="298" y1="130" x2="298" y2="300" stroke="#94a3b8" stroke-width="1.5"/>
+  <!-- oscillating line -->
+  <polyline points="298,250 322,200 346,230 370,160 394,210 418,170 442,240 466,190" fill="none" stroke="#2563eb" stroke-width="3"/>
+  <text x="379" y="328" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#475569">node_memory_*, temperature</text>
+  <text x="379" y="347" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e40af">joriy qiymat (RAM, CPU%)</text>
+
+  <!-- ===== HISTOGRAM ===== -->
+  <rect x="508" y="56" width="228" height="300" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="622" y="82" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b45309">histogram</text>
+  <text x="622" y="102" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">bucketlarga taqsimlash</text>
+  <line x1="540" y1="300" x2="722" y2="300" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="540" y1="130" x2="540" y2="300" stroke="#94a3b8" stroke-width="1.5"/>
+  <!-- bars (buckets) -->
+  <rect x="552" y="200" width="34" height="100" fill="#f59e0b"/>
+  <rect x="592" y="150" width="34" height="150" fill="#f59e0b"/>
+  <rect x="632" y="186" width="34" height="114" fill="#f59e0b"/>
+  <rect x="672" y="246" width="34" height="54" fill="#f59e0b"/>
+  <text x="569" y="316" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309">&lt;0.1s</text>
+  <text x="609" y="316" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309">&lt;0.3s</text>
+  <text x="649" y="316" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309">&lt;1s</text>
+  <text x="689" y="316" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309">&lt;5s</text>
+  <text x="622" y="347" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309">javob vaqti taqsimoti (le bucket)</text>
+
+  <text x="380" y="384" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">summary histogramga o'xshaydi, lekin kvantillarni (p50/p95/p99) ilova tomonida hisoblaydi</text>
+</svg>

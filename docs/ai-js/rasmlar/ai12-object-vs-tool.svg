@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" width="800" height="460" font-family="Segoe UI, system-ui, sans-serif">
+  <title>generateObject vs tools: generateObject bitta strukturali javob beradi (model harakat qilmaydi, faqat matnni shaklga soladi) — ajratish, klassifikatsiya, generatsiya uchun. tools esa modelga harakat qildiradi / ma'lumot oldiradi (qidiruv, hisob, baza) — bir necha qadamda. Faqat ma'lumot kerakmi -> generateObject; harakat yoki tashqi ma'lumot kerakmi -> tools.</title>
+  <defs>
+    <marker id="o12" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="800" height="460" fill="#f8fafc"/>
+  <text x="400" y="32" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">generateObject vs tools — qaysi birini qachon?</text>
+  <text x="400" y="56" font-size="14" fill="#64748b" text-anchor="middle">Bitta strukturali JAVOB kerakmi, yoki model HARAKAT qilishi kerakmi?</text>
+
+  <!-- decision node -->
+  <rect x="300" y="80" width="200" height="52" rx="12" fill="#1e293b"/>
+  <text x="400" y="104" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Sizga nima kerak?</text>
+  <text x="400" y="124" font-size="13" fill="#94a3b8" text-anchor="middle">ma'lumot? yoki harakat?</text>
+
+  <!-- arrow left -->
+  <line x1="340" y1="132" x2="220" y2="172" stroke="#64748b" stroke-width="2" marker-end="url(#o12)"/>
+  <text x="235" y="156" font-size="13" font-weight="bold" fill="#9333ea" text-anchor="middle">faqat ma'lumot</text>
+  <!-- arrow right -->
+  <line x1="460" y1="132" x2="580" y2="172" stroke="#64748b" stroke-width="2" marker-end="url(#o12)"/>
+  <text x="565" y="156" font-size="13" font-weight="bold" fill="#f59e0b" text-anchor="middle">harakat / tashqi data</text>
+
+  <!-- LEFT: generateObject -->
+  <rect x="40" y="176" width="320" height="208" rx="14" fill="#e0e7ff" stroke="#9333ea" stroke-width="2.5"/>
+  <text x="200" y="204" font-size="16" font-weight="bold" fill="#9333ea" text-anchor="middle">generateObject</text>
+  <text x="200" y="226" font-size="13" fill="#475569" text-anchor="middle">bitta strukturali javob, harakat yo'q</text>
+
+  <line x1="60" y1="240" x2="340" y2="240" stroke="#9333ea" stroke-width="1"/>
+  <text x="60" y="266" font-size="13" fill="#1e293b" text-anchor="start">• matndan ma'lumot ajratish (lead)</text>
+  <text x="60" y="290" font-size="13" fill="#1e293b" text-anchor="start">• klassifikatsiya (enum: kayfiyat)</text>
+  <text x="60" y="314" font-size="13" fill="#1e293b" text-anchor="start">• ro'yxat generatsiya (z.array)</text>
+  <text x="60" y="338" font-size="13" fill="#1e293b" text-anchor="start">• ichma-ich obyekt to'ldirish</text>
+  <rect x="60" y="352" width="280" height="22" rx="6" fill="#ffffff" stroke="#9333ea" stroke-width="1.2"/>
+  <text x="200" y="368" font-size="13" fill="#9333ea" text-anchor="middle">model tashqariga chiqmaydi — bir martalik</text>
+
+  <!-- RIGHT: tools -->
+  <rect x="440" y="176" width="320" height="208" rx="14" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="600" y="204" font-size="16" font-weight="bold" fill="#f59e0b" text-anchor="middle">tools (generateText)</text>
+  <text x="600" y="226" font-size="13" fill="#475569" text-anchor="middle">model harakat qiladi / data oladi</text>
+
+  <line x1="460" y1="240" x2="740" y2="240" stroke="#f59e0b" stroke-width="1"/>
+  <text x="460" y="266" font-size="13" fill="#1e293b" text-anchor="start">• real vaqt ma'lumot (ob-havo, narx)</text>
+  <text x="460" y="290" font-size="13" fill="#1e293b" text-anchor="start">• bazadan qidirish (search)</text>
+  <text x="460" y="314" font-size="13" fill="#1e293b" text-anchor="start">• aniq hisob (calculator)</text>
+  <text x="460" y="338" font-size="13" fill="#1e293b" text-anchor="start">• ko'p qadamli zanjir (stopWhen)</text>
+  <rect x="460" y="352" width="280" height="22" rx="6" fill="#ffffff" stroke="#f59e0b" stroke-width="1.2"/>
+  <text x="600" y="368" font-size="13" fill="#f59e0b" text-anchor="middle">SDK siklni aylantiradi — qadam-qadam</text>
+
+  <!-- footer note -->
+  <rect x="40" y="404" width="720" height="40" rx="10" fill="#dbeafe" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="400" y="429" font-size="13.5" fill="#1e293b" text-anchor="middle">Ikkovi birga ham ishlaydi: tool gener qiladi, generateObject yakuniy javobni shaklga soladi.</text>
+</svg>

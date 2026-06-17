@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560">
+  <title>Load balancer mijoz so'rovlarini bir nechta instance'ga taqsimlaydi, health check bilan nosog'lom instance'ni chiqarib tashlaydi, L4 va L7 farqi va algoritmlar</title>
+  <rect x="0" y="0" width="880" height="560" fill="#f8fafc"/>
+  <text x="440" y="34" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Load balancer: so'rovlarni instance'larga taqsimlash</text>
+
+  <!-- clients -->
+  <rect x="30" y="80" width="120" height="44" rx="6" fill="#ffffff" stroke="#64748b" stroke-width="1.5"/>
+  <text x="90" y="107" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#1e293b">Mijoz 1</text>
+  <rect x="30" y="150" width="120" height="44" rx="6" fill="#ffffff" stroke="#64748b" stroke-width="1.5"/>
+  <text x="90" y="177" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#1e293b">Mijoz 2</text>
+  <rect x="30" y="220" width="120" height="44" rx="6" fill="#ffffff" stroke="#64748b" stroke-width="1.5"/>
+  <text x="90" y="247" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#1e293b">Mijoz 3</text>
+
+  <!-- arrows clients -> LB -->
+  <line x1="150" y1="102" x2="270" y2="160" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="150" y1="172" x2="270" y2="175" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="150" y1="242" x2="270" y2="195" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Load balancer -->
+  <rect x="272" y="120" width="160" height="120" rx="10" fill="#2563eb" stroke="#1e40af" stroke-width="2"/>
+  <text x="352" y="155" text-anchor="middle" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#ffffff">Load</text>
+  <text x="352" y="178" text-anchor="middle" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#ffffff">Balancer</text>
+  <text x="352" y="205" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dbeafe">algoritm + health</text>
+  <text x="352" y="223" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dbeafe">check</text>
+
+  <!-- arrows LB -> instances -->
+  <line x1="432" y1="150" x2="600" y2="110" stroke="#16a34a" stroke-width="2.5" marker-end="url(#ar2)"/>
+  <line x1="432" y1="180" x2="600" y2="195" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="6 5" marker-end="url(#arx)"/>
+  <line x1="432" y1="210" x2="600" y2="280" stroke="#16a34a" stroke-width="2.5" marker-end="url(#ar2)"/>
+
+  <!-- instances -->
+  <rect x="600" y="85" width="190" height="56" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="640" y="110" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">A</text>
+  <text x="640" y="128" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">sog'lom</text>
+  <text x="715" y="119" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">instance</text>
+
+  <rect x="600" y="170" width="190" height="56" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="640" y="195" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">B</text>
+  <text x="640" y="213" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">NOSOG'LOM</text>
+  <text x="730" y="204" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">chiqarib tashlandi</text>
+
+  <rect x="600" y="255" width="190" height="56" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="640" y="280" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">C</text>
+  <text x="640" y="298" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">sog'lom</text>
+  <text x="715" y="289" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">instance</text>
+
+  <!-- health check note -->
+  <text x="695" y="335" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Health check: davriy "tirikmisan?" so'rovi</text>
+  <text x="695" y="351" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">javob bermasa -> trafikdan chiqarish</text>
+
+  <!-- L4 vs L7 -->
+  <rect x="30" y="360" width="400" height="170" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="230" y="384" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">L4 (transport) va L7 (ilova)</text>
+  <text x="48" y="410" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#2563eb">L4 - paket darajasi (TCP/UDP):</text>
+  <text x="48" y="430" font-family="Segoe UI" font-size="13" fill="#334155">IP/port bo'yicha yo'naltiradi, tezroq,</text>
+  <text x="48" y="448" font-family="Segoe UI" font-size="13" fill="#334155">mazmunni ko'rmaydi (URL/header bilmas)</text>
+  <text x="48" y="476" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#16a34a">L7 - so'rov darajasi (HTTP):</text>
+  <text x="48" y="496" font-family="Segoe UI" font-size="13" fill="#334155">URL/header/cookie ko'radi -> aqlli</text>
+  <text x="48" y="514" font-family="Segoe UI" font-size="13" fill="#334155">marshrut (/api -> X, /img -> Y), TLS</text>
+
+  <!-- algorithms -->
+  <rect x="450" y="360" width="400" height="170" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="650" y="384" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">Taqsimlash algoritmlari</text>
+  <text x="468" y="410" font-family="Segoe UI" font-size="13" fill="#334155"><tspan font-weight="bold" fill="#2563eb">Round-robin:</tspan> navbat bilan aylanma</text>
+  <text x="468" y="432" font-family="Segoe UI" font-size="13" fill="#334155"><tspan font-weight="bold" fill="#2563eb">Least-conn:</tspan> eng kam band instance'ga</text>
+  <text x="468" y="454" font-family="Segoe UI" font-size="13" fill="#334155"><tspan font-weight="bold" fill="#2563eb">IP-hash:</tspan> bir IP doim bitta instance'ga</text>
+  <text x="468" y="476" font-family="Segoe UI" font-size="13" fill="#334155"><tspan font-weight="bold" fill="#2563eb">Weighted:</tspan> kuchliroq mashina ko'proq</text>
+  <text x="468" y="506" font-family="Segoe UI" font-size="13" fill="#64748b">Sticky session: bir mijoz bir instance'da</text>
+  <text x="468" y="522" font-family="Segoe UI" font-size="13" fill="#64748b">qoladi - ko'pincha qochiladi (stateless afzal)</text>
+
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/></marker>
+    <marker id="ar2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/></marker>
+    <marker id="arx" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#dc2626"/></marker>
+  </defs>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 480">
+  <title>Tez fikr-mulohaza tamoyili: CI'da test piramidasi pastdan yuqoriga ishlaydi — ko'p va tez unit testlar oldin, kamroq va sekin integratsiya keyin, eng kam va eng sekin E2E oxirida; maqsad dasturchiga 10 daqiqa ichida javob qaytarish</title>
+  <rect x="0" y="0" width="820" height="480" fill="#f8fafc"/>
+  <text x="410" y="38" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Tez fikr-mulohaza: piramida CI'da</text>
+  <text x="410" y="64" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Tez testlar OLDIN, sekinlari KEYIN — dasturchi tez javob olsin</text>
+
+  <!-- pyramid: bottom wide (unit) -> top narrow (e2e) -->
+  <!-- E2E top -->
+  <polygon points="410,100 480,160 340,160" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="410" y="138" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#991b1b">E2E</text>
+
+  <!-- integration middle -->
+  <polygon points="340,162 480,162 540,242 280,242" fill="#fef9c3" stroke="#f59e0b" stroke-width="2"/>
+  <text x="410" y="208" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#92400e">integratsiya</text>
+
+  <!-- unit bottom -->
+  <polygon points="280,244 540,244 610,330 210,330" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="410" y="294" text-anchor="middle" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#166534">unit (ko'p va tez)</text>
+
+  <!-- order arrow: runs bottom to top -->
+  <line x1="660" y1="320" x2="660" y2="120" stroke="#2563eb" stroke-width="3"/>
+  <polygon points="654,128 660,112 666,128" fill="#2563eb"/>
+  <text x="690" y="320" font-family="Segoe UI" font-size="13" fill="#16a34a">1) tez</text>
+  <text x="690" y="245" font-family="Segoe UI" font-size="13" fill="#92400e">2) sekinroq</text>
+  <text x="690" y="135" font-family="Segoe UI" font-size="13" fill="#dc2626">3) eng sekin</text>
+  <text x="700" y="220" font-family="Segoe UI" font-size="13" fill="#64748b" transform="rotate(-90 700 220)">CI ishga tushirish tartibi</text>
+
+  <!-- left labels: speed -->
+  <text x="180" y="294" text-anchor="end" font-family="Segoe UI" font-size="13" fill="#166534">millisekund</text>
+  <text x="180" y="208" text-anchor="end" font-family="Segoe UI" font-size="13" fill="#92400e">soniya</text>
+  <text x="180" y="138" text-anchor="end" font-family="Segoe UI" font-size="13" fill="#991b1b">daqiqa</text>
+
+  <!-- 10-minute rule box -->
+  <rect x="120" y="362" width="580" height="92" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="410" y="392" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#1e3a8a">10 daqiqa qoidasi</text>
+  <text x="410" y="418" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#1e293b">Asosiy test bosqichi ~10 daqiqadan oshmasin: aks holda dasturchi kutmay,</text>
+  <text x="410" y="440" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#1e293b">kontekstni unutadi. Sekin E2E'ni keyinroqqa yoki kechki ishga ajrating.</text>
+</svg>

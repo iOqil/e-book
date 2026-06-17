@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 470">
+  <title>Bitta xato uch darajada qanday tutilishini ko'rsatuvchi diagramma: unit test xatoni aniq funksiyada, integratsiya modullar oralig'ida, E2E faqat butun tizim chiqishida ko'rsatadi</title>
+  <rect x="0" y="0" width="820" height="470" fill="#f8fafc"/>
+  <text x="410" y="38" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Bitta xato — qaysi daraja qayerda tutadi</text>
+  <text x="410" y="62" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Xato chuqurda: chegirma_narx ichida (100 + foiz)</text>
+
+  <!-- the buggy unit at left -->
+  <rect x="40" y="200" width="150" height="64" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="115" y="228" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#991b1b">chegirma_narx</text>
+  <text x="115" y="250" text-anchor="middle" font-family="monospace" font-size="13" fill="#dc2626">XATO bu yerda</text>
+
+  <!-- chain to the right -->
+  <rect x="240" y="200" width="120" height="64" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="300" y="237" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">Savat.jami</text>
+  <rect x="410" y="200" width="120" height="64" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="470" y="237" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">Buyurtma</text>
+  <rect x="580" y="200" width="160" height="64" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="660" y="237" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">UI / chek (ekran)</text>
+
+  <line x1="190" y1="232" x2="238" y2="232" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="238,232 230,228 230,236" fill="#94a3b8"/>
+  <line x1="360" y1="232" x2="408" y2="232" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="408,232 400,228 400,236" fill="#94a3b8"/>
+  <line x1="530" y1="232" x2="578" y2="232" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="578,232 570,228 570,236" fill="#94a3b8"/>
+
+  <!-- UNIT scope -->
+  <rect x="28" y="120" width="174" height="160" rx="12" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-dasharray="6 4"/>
+  <text x="115" y="142" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">UNIT</text>
+  <text x="115" y="305" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#166534">120 != 80 — aniq nuqta</text>
+
+  <!-- INTEGRATION scope -->
+  <rect x="228" y="160" width="314" height="130" rx="12" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-dasharray="6 4"/>
+  <text x="385" y="182" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#d97706">INTEGRATSIYA</text>
+  <text x="385" y="315" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#92400e">270 != 230 — "qayerdadir" noto'g'ri</text>
+
+  <!-- E2E scope -->
+  <rect x="568" y="178" width="184" height="112" rx="12" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="6 4"/>
+  <text x="660" y="200" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">E2E</text>
+  <text x="660" y="330" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#991b1b">"chek summasi xato" — uzoq qidiruv</text>
+
+  <text x="410" y="420" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#1e293b">Daraja qancha past bo'lsa, xato shuncha aniq lokalizatsiya qilinadi</text>
+  <text x="410" y="445" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Yuqori daraja yiqilsa — sabab pastdagi birlikda bo'lishi mumkin</text>
+</svg>

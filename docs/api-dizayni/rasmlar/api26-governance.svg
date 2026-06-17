@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500">
+  <title>API governance: standartlar, style guide, review va linting izchil API'larga olib keladi</title>
+  <rect x="0" y="0" width="900" height="500" fill="#f8fafc"/>
+  <text x="450" y="34" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">API governance — izchillik mexanizmi</text>
+  <text x="450" y="58" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Ko'p jamoa, ko'p API → bir xil qoidalar → tashkilot bo'ylab izchil API'lar</text>
+
+  <!-- Muammo (chap) -->
+  <rect x="40" y="92" width="200" height="320" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="140" y="118" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#b91c1c">Governance YO'Q</text>
+  <text x="140" y="140" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">har jamoa boshqacha</text>
+  <text x="58" y="172" font-family="monospace" font-size="13" fill="#334155">A: /getUsers</text>
+  <text x="58" y="200" font-family="monospace" font-size="13" fill="#334155">B: /users/list</text>
+  <text x="58" y="228" font-family="monospace" font-size="13" fill="#334155">C: /api/user_all</text>
+  <text x="58" y="266" font-family="Segoe UI" font-size="13" fill="#dc2626">• xato shakli har xil</text>
+  <text x="58" y="292" font-family="Segoe UI" font-size="13" fill="#dc2626">• pagination har xil</text>
+  <text x="58" y="318" font-family="Segoe UI" font-size="13" fill="#dc2626">• auth har xil</text>
+  <text x="58" y="344" font-family="Segoe UI" font-size="13" fill="#dc2626">• versiyalash har xil</text>
+  <text x="140" y="386" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#b91c1c">mijoz har safar</text>
+  <text x="140" y="404" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#b91c1c">qaytadan o'rganadi</text>
+
+  <!-- Strelka -->
+  <line x1="248" y1="252" x2="318" y2="252" stroke="#2563eb" stroke-width="3"/>
+  <polygon points="318,252 304,245 304,259" fill="#2563eb"/>
+
+  <!-- 4 mexanizm (markaz) -->
+  <rect x="326" y="92" width="240" height="74" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="446" y="118" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#7c3aed">1. Dizayn standartlari</text>
+  <text x="446" y="140" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">nomlash, xato, pagination,</text>
+  <text x="446" y="157" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">auth, versiyalash qoidalari</text>
+
+  <rect x="326" y="178" width="240" height="60" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="446" y="204" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">2. Style guide</text>
+  <text x="446" y="226" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">yozma, umumiy qo'llanma</text>
+
+  <rect x="326" y="250" width="240" height="60" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="446" y="276" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#b45309">3. Design review</text>
+  <text x="446" y="298" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">odam ko'rib chiqadi (nashr oldidan)</text>
+
+  <rect x="326" y="322" width="240" height="74" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="446" y="348" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#15803d">4. Avtomatik linting</text>
+  <text x="446" y="370" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">Spectral — OpenAPI spec'ni</text>
+  <text x="446" y="387" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">CI'da qoidalarga tekshiradi</text>
+
+  <!-- Strelka -->
+  <line x1="574" y1="252" x2="644" y2="252" stroke="#16a34a" stroke-width="3"/>
+  <polygon points="644,252 630,245 630,259" fill="#16a34a"/>
+
+  <!-- Natija (o'ng) -->
+  <rect x="652" y="92" width="210" height="320" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="757" y="118" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#15803d">Izchil API'lar</text>
+  <text x="757" y="140" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">bir xil "his"</text>
+  <text x="670" y="172" font-family="monospace" font-size="13" fill="#334155">A: /v1/users</text>
+  <text x="670" y="200" font-family="monospace" font-size="13" fill="#334155">B: /v1/orders</text>
+  <text x="670" y="228" font-family="monospace" font-size="13" fill="#334155">C: /v1/products</text>
+  <text x="670" y="266" font-family="Segoe UI" font-size="13" fill="#16a34a">• bitta xato formati</text>
+  <text x="670" y="292" font-family="Segoe UI" font-size="13" fill="#16a34a">• bitta pagination</text>
+  <text x="670" y="318" font-family="Segoe UI" font-size="13" fill="#16a34a">• bitta auth sxemasi</text>
+  <text x="670" y="344" font-family="Segoe UI" font-size="13" fill="#16a34a">• bitta versiyalash</text>
+  <text x="757" y="386" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#15803d">bir marta o'rgan,</text>
+  <text x="757" y="404" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#15803d">hammasini bil</text>
+
+  <!-- Pastki izoh -->
+  <rect x="40" y="430" width="822" height="56" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="451" y="453" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#7c3aed">Trade-off: markazlashgan (qattiq qoida) ↔ federatsiyalashgan (jamoa erkinligi)</text>
+  <text x="451" y="475" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Kichik jamoa = yengil; katta tashkilot = zarur. Ortiqcha governance ham sekinlashtiradi.</text>
+</svg>

@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 470">
+  <title>Package-by-layer (qatlam bo'yicha) va package-by-feature (xususiyat bo'yicha) tuzilmalarini yonma-yon taqqoslash</title>
+  <rect width="860" height="470" fill="#f8fafc"/>
+  <text x="430" y="34" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Package-by-layer  vs  Package-by-feature</text>
+
+  <!-- LEFT: package-by-layer -->
+  <text x="215" y="66" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#dc2626" text-anchor="middle">Package-by-layer (texnik qatlam)</text>
+
+  <!-- controllers -->
+  <rect x="40" y="84" width="350" height="62" rx="6" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="52" y="104" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#334155">controllers/</text>
+  <text x="62" y="124" font-family="Segoe UI" font-size="13" fill="#64748b">OrderCtrl  UserCtrl  ProductCtrl</text>
+  <text x="62" y="140" font-family="Segoe UI" font-size="13" fill="#64748b">PaymentCtrl  CartCtrl ...</text>
+
+  <!-- services -->
+  <rect x="40" y="154" width="350" height="62" rx="6" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="52" y="174" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#334155">services/</text>
+  <text x="62" y="194" font-family="Segoe UI" font-size="13" fill="#64748b">OrderSvc  UserSvc  ProductSvc</text>
+  <text x="62" y="210" font-family="Segoe UI" font-size="13" fill="#64748b">PaymentSvc  CartSvc ...</text>
+
+  <!-- repos -->
+  <rect x="40" y="224" width="350" height="62" rx="6" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="52" y="244" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#334155">repositories/</text>
+  <text x="62" y="264" font-family="Segoe UI" font-size="13" fill="#64748b">OrderRepo  UserRepo  ProductRepo</text>
+  <text x="62" y="280" font-family="Segoe UI" font-size="13" fill="#64748b">PaymentRepo  CartRepo ...</text>
+
+  <!-- problem note left -->
+  <rect x="40" y="312" width="350" height="118" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-dasharray="4 3"/>
+  <text x="56" y="334" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#dc2626">Muammo: bitta xususiyatni (Order)</text>
+  <text x="56" y="352" font-family="Segoe UI" font-size="13" fill="#334155">o'zgartirish uchun 3 ta papkaga</text>
+  <text x="56" y="370" font-family="Segoe UI" font-size="13" fill="#334155">kirish kerak. Xususiyatlar bir-biriga</text>
+  <text x="56" y="388" font-family="Segoe UI" font-size="13" fill="#334155">sochilgan -> coupling ko'rinmaydi.</text>
+  <text x="56" y="412" font-family="Segoe UI" font-size="13" fill="#64748b" font-style="italic">Qatlam = chegara, xususiyat emas.</text>
+
+  <!-- divider -->
+  <line x1="430" y1="60" x2="430" y2="430" stroke="#cbd5e1" stroke-width="2"/>
+
+  <!-- RIGHT: package-by-feature -->
+  <text x="645" y="66" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a" text-anchor="middle">Package-by-feature (xususiyat)</text>
+
+  <!-- orders module -->
+  <rect x="470" y="84" width="350" height="92" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="484" y="104" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">orders/</text>
+  <text x="494" y="124" font-family="Segoe UI" font-size="13" fill="#334155">index.ts  (public API)</text>
+  <line x1="484" y1="132" x2="806" y2="132" stroke="#e2e8f0"/>
+  <text x="494" y="150" font-family="Segoe UI" font-size="13" fill="#64748b">internal: OrderCtrl  OrderSvc</text>
+  <text x="494" y="168" font-family="Segoe UI" font-size="13" fill="#64748b">internal: OrderRepo  OrderEntity</text>
+
+  <!-- users module -->
+  <rect x="470" y="186" width="350" height="68" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="484" y="206" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">users/</text>
+  <text x="494" y="226" font-family="Segoe UI" font-size="13" fill="#334155">index.ts  (public API)</text>
+  <text x="494" y="244" font-family="Segoe UI" font-size="13" fill="#64748b">internal: UserCtrl  UserSvc  UserRepo</text>
+
+  <!-- products module -->
+  <rect x="470" y="264" width="350" height="46" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="484" y="284" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">products/</text>
+  <text x="494" y="302" font-family="Segoe UI" font-size="13" fill="#64748b">index.ts + internal: Ctrl  Svc  Repo</text>
+
+  <!-- benefit note right -->
+  <rect x="470" y="324" width="350" height="106" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-dasharray="4 3"/>
+  <text x="486" y="346" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#16a34a">Foyda: bir xususiyat = bir papka.</text>
+  <text x="486" y="364" font-family="Segoe UI" font-size="13" fill="#334155">O'zgarish bir joyda. Chegara aniq:</text>
+  <text x="486" y="382" font-family="Segoe UI" font-size="13" fill="#334155">internal yashirin, faqat index ko'rinadi.</text>
+  <text x="486" y="406" font-family="Segoe UI" font-size="13" fill="#64748b" font-style="italic">"Screaming architecture" — papka</text>
+  <text x="486" y="423" font-family="Segoe UI" font-size="13" fill="#64748b" font-style="italic">nomi tizim NIMA qilishini aytadi.</text>
+
+  <text x="430" y="458" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">Feature bo'yicha tashkil = past coupling, baland cohesion (xususiyat ichida jipslik)</text>
+</svg>

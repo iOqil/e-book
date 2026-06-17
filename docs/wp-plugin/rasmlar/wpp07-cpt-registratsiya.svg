@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440">
+  <title>register_post_type funksiyasi init hook'ida args massivini olib admin menyu va tahrirlash ekranini hosil qiladi</title>
+  <defs>
+    <marker id="r-arr" markerWidth="13" markerHeight="13" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">CPT registratsiya oqimi</text>
+  <text x="380" y="54" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">init hook → register_post_type(args) → admin tajribasi</text>
+
+  <!-- init hook -->
+  <rect x="40" y="84" width="200" height="56" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="140" y="110" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">init hook</text>
+  <text x="140" y="130" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e40af">add_action('init', ...)</text>
+
+  <line x1="240" y1="112" x2="288" y2="112" stroke="#475569" stroke-width="2" marker-end="url(#r-arr)"/>
+
+  <!-- register_post_type -->
+  <rect x="290" y="80" width="200" height="64" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="390" y="106" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">register_post_type(</text>
+  <text x="390" y="126" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">'kitob', $args )</text>
+
+  <!-- args box -->
+  <rect x="290" y="172" width="430" height="200" rx="10" fill="#fff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="505" y="196" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">$args — xatti-harakatni boshqaradi</text>
+
+  <text x="306" y="222" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">labels        — barcha admin matnlar</text>
+  <text x="306" y="244" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">public: true  — frontend + admin UI</text>
+  <text x="306" y="266" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">show_in_rest: true — blok muharriri!</text>
+  <text x="306" y="288" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">supports      — title, editor, thumbnail</text>
+  <text x="306" y="310" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">menu_icon     — dashicons-book</text>
+  <text x="306" y="332" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">has_archive + rewrite['slug']</text>
+  <text x="306" y="354" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">capability_type — kim kira oladi</text>
+
+  <line x1="390" y1="144" x2="390" y2="170" stroke="#475569" stroke-width="2" marker-end="url(#r-arr)"/>
+
+  <!-- WordPress hosil qiladi (left bottom) -->
+  <line x1="140" y1="140" x2="140" y2="230" stroke="#475569" stroke-width="2"/>
+  <line x1="140" y1="230" x2="288" y2="230" stroke="#475569" stroke-width="2" marker-end="url(#r-arr)"/>
+
+  <text x="140" y="186" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">WordPress shularni</text>
+  <text x="140" y="204" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">o'qib hosil qiladi:</text>
+
+  <!-- Natija: admin menyu + edit ekran -->
+  <rect x="40" y="250" width="220" height="56" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="150" y="276" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">Admin menyu: "Kitoblar"</text>
+  <text x="150" y="296" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">kitob ikonkasi bilan</text>
+
+  <rect x="40" y="318" width="220" height="56" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="150" y="344" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">Tahrirlash ekrani</text>
+  <text x="150" y="364" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">title + editor + muqova</text>
+
+  <line x1="150" y1="306" x2="150" y2="316" stroke="#475569" stroke-width="2" marker-end="url(#r-arr)"/>
+
+  <text x="380" y="412" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">register_post_type FAQAT init da chaqiriladi — aktivatsiyada emas, har so'rovda emas.</text>
+</svg>

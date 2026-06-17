@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 520">
+  <title>Performance test turlari: load testda yuk barqaror, stressda asta oshib sinish nuqtasiga yetadi, spikeda keskin sakraydi, soakda uzoq vaqt past yukda turadi (xotira oqishini topish uchun)</title>
+  <rect x="0" y="0" width="820" height="520" fill="#f8fafc"/>
+  <text x="410" y="38" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Yuk test turlari: yuk vaqt bo'yicha</text>
+  <text x="410" y="64" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Har bir tur boshqa savolga javob beradi (o'q: yuk / vaqt)</text>
+
+  <!-- LOAD -->
+  <rect x="40" y="90" width="350" height="180" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="215" y="116" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb">Load (yuk)</text>
+  <line x1="70" y1="240" x2="360" y2="240" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="70" y1="140" x2="70" y2="240" stroke="#94a3b8" stroke-width="1.5"/>
+  <polyline points="70,235 110,170 350,170" fill="none" stroke="#2563eb" stroke-width="3"/>
+  <text x="215" y="258" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Kutilgan yuk ostida barqaror xulq</text>
+
+  <!-- STRESS -->
+  <rect x="430" y="90" width="350" height="180" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="605" y="116" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#dc2626">Stress</text>
+  <line x1="460" y1="240" x2="750" y2="240" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="460" y1="140" x2="460" y2="240" stroke="#94a3b8" stroke-width="1.5"/>
+  <polyline points="460,238 700,150" fill="none" stroke="#dc2626" stroke-width="3"/>
+  <circle cx="700" cy="150" r="6" fill="#dc2626"/>
+  <text x="712" y="146" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#dc2626">sinish</text>
+  <text x="605" y="258" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Chegaradan oshir: qachon sinadi?</text>
+
+  <!-- SPIKE -->
+  <rect x="40" y="300" width="350" height="180" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="215" y="326" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#b45309">Spike (sakrash)</text>
+  <line x1="70" y1="450" x2="360" y2="450" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="70" y1="350" x2="70" y2="450" stroke="#94a3b8" stroke-width="1.5"/>
+  <polyline points="70,440 160,440 165,360 215,360 220,440 360,440" fill="none" stroke="#f59e0b" stroke-width="3"/>
+  <text x="215" y="468" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Keskin sakrash (masalan, reklama)</text>
+
+  <!-- SOAK -->
+  <rect x="430" y="300" width="350" height="180" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="605" y="326" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#7c3aed">Soak (chidamlilik)</text>
+  <line x1="460" y1="450" x2="750" y2="450" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="460" y1="350" x2="460" y2="450" stroke="#94a3b8" stroke-width="1.5"/>
+  <polyline points="460,410 750,410" fill="none" stroke="#7c3aed" stroke-width="3"/>
+  <polyline points="460,440 750,392" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="5 4"/>
+  <text x="608" y="384" font-family="Segoe UI" font-size="13" fill="#dc2626">xotira asta o'sadi (leak)</text>
+  <text x="605" y="468" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Uzoq vaqt: xotira oqishini top</text>
+</svg>

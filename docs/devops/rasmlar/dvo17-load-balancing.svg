@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420">
+  <title>Load balancing: Nginx upstream blok kelgan so'rovlarni round-robin algoritmi bilan navbatma-navbat uchta ilova instansiga (app1, app2, app3) taqsimlaydi; har instansda max_fails va fail_timeout bilan sog'liq nazorati bor</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Load balancing: upstream round-robin</text>
+
+  <!-- incoming requests -->
+  <rect x="30" y="150" width="140" height="120" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="100" y="186" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">So'rovlar</text>
+  <text x="100" y="212" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#475569">1, 2, 3,</text>
+  <text x="100" y="232" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#475569">4, 5, 6 ...</text>
+
+  <!-- nginx upstream -->
+  <rect x="250" y="140" width="180" height="140" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="340" y="174" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Nginx</text>
+  <text x="340" y="198" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#166534">upstream</text>
+  <text x="340" y="220" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">navbatma-navbat</text>
+  <text x="340" y="240" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">taqsimlaydi</text>
+  <text x="340" y="262" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#475569">(round-robin)</text>
+
+  <line x1="170" y1="210" x2="248" y2="210" stroke="#2563eb" stroke-width="3" marker-end="url(#blue)"/>
+
+  <!-- three app instances -->
+  <rect x="540" y="70" width="190" height="76" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="635" y="100" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">app1:3000</text>
+  <text x="635" y="124" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">so'rov 1, 4 ...</text>
+
+  <rect x="540" y="172" width="190" height="76" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="635" y="202" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">app2:3000</text>
+  <text x="635" y="226" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">so'rov 2, 5 ...</text>
+
+  <rect x="540" y="274" width="190" height="76" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="635" y="304" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">app3:3000</text>
+  <text x="635" y="328" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">so'rov 3, 6 ...</text>
+
+  <!-- arrows nginx -> apps -->
+  <line x1="430" y1="195" x2="538" y2="108" stroke="#16a34a" stroke-width="2.5" marker-end="url(#green)"/>
+  <line x1="430" y1="210" x2="538" y2="210" stroke="#16a34a" stroke-width="2.5" marker-end="url(#green)"/>
+  <line x1="430" y1="225" x2="538" y2="312" stroke="#16a34a" stroke-width="2.5" marker-end="url(#green)"/>
+
+  <!-- health note -->
+  <rect x="180" y="356" width="400" height="46" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="380" y="384" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">Bir instans qulasa (max_fails/fail_timeout) - qolganlarga yo'naladi</text>
+
+  <defs>
+    <marker id="blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="green" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+</svg>

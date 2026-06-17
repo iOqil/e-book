@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" width="800" height="460" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Chapdan: bir xil uzun klass qatori 4 ta kartaga nusxa-ko'chirilgan (takrorlanish); o'ngdan: klasslar bitta Card komponentida yashab, sikl orqali 4 marta render qilingan (bitta manba)</title>
+  <rect x="0" y="0" width="800" height="460" fill="#f8fafc"/>
+
+  <text x="400" y="34" text-anchor="middle" font-size="21" font-weight="bold" fill="#1e293b">Takrorlanish → komponent</text>
+  <text x="400" y="58" text-anchor="middle" font-size="14" fill="#475569">Klasslar 4 marta nusxalanadimi, yoki bitta joyda turib 4 marta ishlatiladimi?</text>
+
+  <!-- CHAP: copy-paste -->
+  <text x="200" y="92" text-anchor="middle" font-size="15" font-weight="bold" fill="#ef4444">❌ Nusxa-ko'chirish</text>
+
+  <!-- 4 ta karta, har birida bir xil uzun klass -->
+  <rect x="40" y="106" width="320" height="62" rx="8" fill="#ffffff" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="56" y="130" font-size="13" fill="#475569">&lt;div class=</text>
+  <text x="56" y="150" font-size="13" fill="#ef4444">"rounded-xl bg-white p-6 shadow-md"&gt;</text>
+
+  <rect x="40" y="178" width="320" height="62" rx="8" fill="#ffffff" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="56" y="202" font-size="13" fill="#475569">&lt;div class=</text>
+  <text x="56" y="222" font-size="13" fill="#ef4444">"rounded-xl bg-white p-6 shadow-md"&gt;</text>
+
+  <rect x="40" y="250" width="320" height="62" rx="8" fill="#ffffff" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="56" y="274" font-size="13" fill="#475569">&lt;div class=</text>
+  <text x="56" y="294" font-size="13" fill="#ef4444">"rounded-xl bg-white p-6 shadow-md"&gt;</text>
+
+  <rect x="40" y="322" width="320" height="62" rx="8" fill="#ffffff" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="56" y="346" font-size="13" fill="#475569">&lt;div class=</text>
+  <text x="56" y="366" font-size="13" fill="#ef4444">"rounded-xl bg-white p-6 shadow-md"&gt;</text>
+
+  <text x="200" y="412" text-anchor="middle" font-size="13" fill="#64748b">Klass 4 ta manbada — bittasini o'zgartirsangiz,</text>
+  <text x="200" y="430" text-anchor="middle" font-size="13" fill="#64748b">qolgan 3 tasini qo'lda topib tuzatasiz</text>
+
+  <!-- o'rtadagi strelka -->
+  <line x1="380" y1="245" x2="430" y2="245" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="430,245 416,239 416,251" fill="#94a3b8"/>
+
+  <!-- O'NG: bitta komponent + sikl -->
+  <text x="600" y="92" text-anchor="middle" font-size="15" font-weight="bold" fill="#16a34a">✅ Bitta komponent</text>
+
+  <!-- komponent ta'rifi: klass shu yerda yashaydi -->
+  <rect x="450" y="106" width="320" height="92" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="466" y="130" font-size="13" font-weight="bold" fill="#16a34a">Card.jsx — klass FAQAT shu yerda</text>
+  <text x="466" y="152" font-size="13" fill="#1e293b">function Card({ children }) {</text>
+  <text x="480" y="172" font-size="13" fill="#16a34a">return &lt;div className="rounded-xl</text>
+  <text x="480" y="190" font-size="13" fill="#16a34a">bg-white p-6 shadow-md"&gt;...&lt;/div&gt;</text>
+
+  <!-- sikl -->
+  <rect x="450" y="212" width="320" height="44" rx="8" fill="#eef2ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="466" y="240" font-size="13" fill="#4f46e5">users.map(u =&gt; &lt;Card key={u.id}&gt;...&lt;/Card&gt;)</text>
+
+  <!-- 4 ta render natijasi (kichik kartalar) -->
+  <rect x="450" y="276" width="150" height="48" rx="8" fill="#ffffff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="525" y="305" text-anchor="middle" font-size="13" fill="#1e293b">&lt;Card /&gt; #1</text>
+  <rect x="620" y="276" width="150" height="48" rx="8" fill="#ffffff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="695" y="305" text-anchor="middle" font-size="13" fill="#1e293b">&lt;Card /&gt; #2</text>
+  <rect x="450" y="336" width="150" height="48" rx="8" fill="#ffffff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="525" y="365" text-anchor="middle" font-size="13" fill="#1e293b">&lt;Card /&gt; #3</text>
+  <rect x="620" y="336" width="150" height="48" rx="8" fill="#ffffff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="695" y="365" text-anchor="middle" font-size="13" fill="#1e293b">&lt;Card /&gt; #4</text>
+
+  <text x="610" y="412" text-anchor="middle" font-size="13" fill="#64748b">Klass bitta manbada — 4 marta ishlatiladi.</text>
+  <text x="610" y="430" text-anchor="middle" font-size="13" fill="#64748b">O'zgartirsangiz — hammasi birga yangilanadi</text>
+
+  <text x="400" y="452" text-anchor="middle" font-size="13" font-weight="bold" fill="#475569">To'g'ri yechim — @apply emas, komponent (yoki sikl)</text>
+</svg>

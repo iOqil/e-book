@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560">
+  <title>API anti-naqshlari galereyasi: fe'lli URL, hammasi 200, chunked GET, ichki tuzilma oshkor, e'lonsiz breaking o'zgarish</title>
+  <rect x="0" y="0" width="880" height="560" fill="#f8fafc"/>
+  <text x="440" y="36" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">Anti-naqshlar galereyasi</text>
+  <text x="440" y="60" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Chap = yomon (qizil) · O'ng = to'g'risi (yashil)</text>
+
+  <!-- 1. Verb URL -->
+  <rect x="36" y="84" width="404" height="86" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="52" y="110" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">1. Fe'lli URL</text>
+  <text x="52" y="134" font-family="monospace" font-size="13" fill="#991b1b">POST /getUser</text>
+  <text x="52" y="154" font-family="monospace" font-size="13" fill="#991b1b">POST /createOrder</text>
+  <rect x="448" y="84" width="396" height="86" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="464" y="110" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">To'g'risi: ot + metod</text>
+  <text x="464" y="134" font-family="monospace" font-size="13" fill="#166534">GET /users/42</text>
+  <text x="464" y="154" font-family="monospace" font-size="13" fill="#166534">POST /orders</text>
+
+  <!-- 2. Always 200 -->
+  <rect x="36" y="178" width="404" height="86" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="52" y="204" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">2. Hammasi 200, body'da xato</text>
+  <text x="52" y="228" font-family="monospace" font-size="13" fill="#991b1b">200 OK</text>
+  <text x="52" y="248" font-family="monospace" font-size="13" fill="#991b1b">{"success": false, "error": ...}</text>
+  <rect x="448" y="178" width="396" height="86" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="464" y="204" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">To'g'risi: status + problem+json</text>
+  <text x="464" y="228" font-family="monospace" font-size="13" fill="#166534">422 Unprocessable Content</text>
+  <text x="464" y="248" font-family="monospace" font-size="13" fill="#166534">{"type":..., "title":..., "status":422}</text>
+
+  <!-- 3. Mutating GET -->
+  <rect x="36" y="272" width="404" height="86" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="52" y="298" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">3. GET o'zgartiradi (safe buziladi)</text>
+  <text x="52" y="322" font-family="monospace" font-size="13" fill="#991b1b">GET /orders/42/delete</text>
+  <text x="52" y="342" font-family="monospace" font-size="13" fill="#991b1b">GET /transfer?to=5&amp;sum=100</text>
+  <rect x="448" y="272" width="396" height="86" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="464" y="298" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">To'g'risi: o'zgartirish = POST/DELETE</text>
+  <text x="464" y="322" font-family="monospace" font-size="13" fill="#166534">DELETE /orders/42</text>
+  <text x="464" y="342" font-family="monospace" font-size="13" fill="#166534">POST /transfers</text>
+
+  <!-- 4. Leaky internals -->
+  <rect x="36" y="366" width="404" height="86" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="52" y="392" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">4. Ichki tuzilma oshkor</text>
+  <text x="52" y="416" font-family="monospace" font-size="13" fill="#991b1b">{"usr_tbl_id": 7, "pwd_hash":...,</text>
+  <text x="52" y="436" font-family="monospace" font-size="13" fill="#991b1b"> "_internal_flag": 1}</text>
+  <rect x="448" y="366" width="396" height="86" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="464" y="392" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">To'g'risi: barqaror tashqi model</text>
+  <text x="464" y="416" font-family="monospace" font-size="13" fill="#166534">{"id": 7, "name": "Ali",</text>
+  <text x="464" y="436" font-family="monospace" font-size="13" fill="#166534"> "created_at": "2026-..."}</text>
+
+  <!-- 5. Silent breaking -->
+  <rect x="36" y="460" width="404" height="86" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="52" y="486" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">5. E'lonsiz breaking o'zgarish</text>
+  <text x="52" y="510" font-family="Segoe UI" font-size="13" fill="#991b1b">Maydon o'chirildi / tip o'zgardi —</text>
+  <text x="52" y="530" font-family="Segoe UI" font-size="13" fill="#991b1b">mijozlar to'satdan sinadi</text>
+  <rect x="448" y="460" width="396" height="86" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="464" y="486" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">To'g'risi: yangi versiya + Sunset</text>
+  <text x="464" y="510" font-family="Segoe UI" font-size="13" fill="#166534">/v2 + Deprecation/Sunset header,</text>
+  <text x="464" y="530" font-family="Segoe UI" font-size="13" fill="#166534">migratsiya muddati e'lon qilinadi</text>
+</svg>

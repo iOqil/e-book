@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 500">
+  <title>Cache-aside (lazy loading) oqimi: ilova keshni so'raydi; HIT bo'lsa darhol qaytadi, MISS bo'lsa ilova DB-dan o'qib keshga yozadi va keyin qaytaradi</title>
+  <rect x="0" y="0" width="880" height="500" fill="#f8fafc"/>
+  <text x="440" y="34" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b" text-anchor="middle">Cache-aside (lazy loading): ilova keshni O'ZI boshqaradi</text>
+  <text x="440" y="58" font-family="Segoe UI" font-size="14" fill="#64748b" text-anchor="middle">Eng keng tarqalgan strategiya. Kesh "o'tib ketiladigan yon" — app uni chetlab o'tib DB-ga ham bora oladi</text>
+
+  <defs>
+    <marker id="ar20a" markerWidth="10" markerHeight="10" refX="8" refY="3.2" orient="auto">
+      <path d="M0,0 L8,3.2 L0,6.4 Z" fill="#334155"/>
+    </marker>
+    <marker id="ar20g" markerWidth="10" markerHeight="10" refX="8" refY="3.2" orient="auto">
+      <path d="M0,0 L8,3.2 L0,6.4 Z" fill="#16a34a"/>
+    </marker>
+    <marker id="ar20r" markerWidth="10" markerHeight="10" refX="8" refY="3.2" orient="auto">
+      <path d="M0,0 L8,3.2 L0,6.4 Z" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+  <!-- aktorlar -->
+  <rect x="40" y="100" width="150" height="74" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="115" y="134" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb" text-anchor="middle">Ilova</text>
+  <text x="115" y="156" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">(application kod)</text>
+
+  <rect x="365" y="100" width="150" height="74" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="440" y="134" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#b45309" text-anchor="middle">Kesh</text>
+  <text x="440" y="156" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">(Redis / Map)</text>
+
+  <rect x="690" y="100" width="150" height="74" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="765" y="134" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#dc2626" text-anchor="middle">DB</text>
+  <text x="765" y="156" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">(source of truth)</text>
+
+  <!-- 1: app -> kesh: o'qish so'rovi -->
+  <line x1="190" y1="210" x2="363" y2="210" stroke="#334155" stroke-width="2" marker-end="url(#ar20a)"/>
+  <text x="276" y="200" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">1. get(key)?</text>
+
+  <!-- HIT yo'li -->
+  <rect x="365" y="240" width="150" height="46" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="440" y="262" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#15803d" text-anchor="middle">HIT (topildi)</text>
+  <text x="440" y="280" font-family="Segoe UI" font-size="13" fill="#15803d" text-anchor="middle">keshda bor</text>
+  <line x1="365" y1="263" x2="195" y2="263" stroke="#16a34a" stroke-width="2" marker-end="url(#ar20g)"/>
+  <text x="276" y="253" font-family="Segoe UI" font-size="13" fill="#15803d" text-anchor="middle">2a. darhol qaytadi (tez)</text>
+
+  <!-- MISS yo'li -->
+  <rect x="365" y="320" width="150" height="46" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="440" y="342" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#b91c1c" text-anchor="middle">MISS (yo'q)</text>
+  <text x="440" y="360" font-family="Segoe UI" font-size="13" fill="#b91c1c" text-anchor="middle">keshda yo'q</text>
+
+  <!-- 2b: kesh -> app: miss xabari (qaytib) -->
+  <line x1="365" y1="343" x2="195" y2="343" stroke="#dc2626" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#ar20r)"/>
+  <text x="276" y="333" font-family="Segoe UI" font-size="13" fill="#b91c1c" text-anchor="middle">2b. null</text>
+
+  <!-- 3: app -> DB: sekin o'qish -->
+  <line x1="190" y1="400" x2="688" y2="400" stroke="#dc2626" stroke-width="2" marker-end="url(#ar20r)"/>
+  <text x="430" y="390" font-family="Segoe UI" font-size="13" fill="#b91c1c" text-anchor="middle">3. SELECT ... (sekin DB-o'qish)</text>
+
+  <!-- 4: DB -> app: ma'lumot -->
+  <line x1="688" y1="430" x2="192" y2="430" stroke="#334155" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#ar20a)"/>
+  <text x="430" y="450" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">4. ma'lumot qaytadi</text>
+
+  <!-- 5: app -> kesh: keshga yoz (TTL bilan) -->
+  <line x1="190" y1="478" x2="363" y2="478" stroke="#16a34a" stroke-width="2" marker-end="url(#ar20g)"/>
+  <text x="276" y="472" font-family="Segoe UI" font-size="13" fill="#15803d" text-anchor="middle">5. set(key, val, TTL)</text>
+
+  <!-- vertikal yo'naltiruvchi chiziqlar (lifeline) -->
+  <line x1="115" y1="174" x2="115" y2="488" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="3,4"/>
+  <line x1="440" y1="174" x2="440" y2="240" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="3,4"/>
+  <line x1="440" y1="366" x2="440" y2="488" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="3,4"/>
+  <line x1="765" y1="174" x2="765" y2="430" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="3,4"/>
+
+  <text x="525" y="478" font-family="Segoe UI" font-size="13" fill="#64748b">keyingi so'rov endi HIT bo'ladi</text>
+</svg>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420">
+  <title>@wordpress/data store Redux uslubida ishlaydi: useSelect store dan ma'lumotni o'qiydi, komponent uni ko'rsatadi, useDispatch action yuborib store ni yangilaydi va o'zgarish UI ga qaytadi</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">@wordpress/data: useSelect o'qiydi, useDispatch yozadi</text>
+
+  <!-- store -->
+  <rect x="270" y="70" width="220" height="100" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="380" y="98" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#7c3aed">Store (markaziy holat)</text>
+  <text x="380" y="122" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">'core' · 'core/editor'</text>
+  <text x="380" y="142" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">'core/block-editor'</text>
+  <text x="380" y="160" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">postni, meta'ni, bloklarni saqlaydi</text>
+
+  <!-- useSelect (read) -->
+  <rect x="40" y="250" width="300" height="120" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="190" y="278" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e40af">useSelect — O'QISH</text>
+  <text x="60" y="304" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">const meta = useSelect(</text>
+  <text x="60" y="324" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">  ( select ) =&gt; select( 'core/editor' )</text>
+  <text x="60" y="344" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">    .getEditedPostAttribute('meta'),</text>
+  <text x="60" y="362" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">  [] ); // selector chaqiradi</text>
+
+  <!-- useDispatch (write) -->
+  <rect x="420" y="250" width="300" height="120" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="570" y="278" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">useDispatch — YOZISH</text>
+  <text x="440" y="304" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">const { editPost } =</text>
+  <text x="440" y="324" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">  useDispatch( 'core/editor' );</text>
+  <text x="440" y="346" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">editPost( { meta: {...} } );</text>
+  <text x="440" y="364" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">// action yuboradi</text>
+
+  <!-- arrows store -> useSelect -->
+  <line x1="290" y1="170" x2="190" y2="248" stroke="#2563eb" stroke-width="2.5"/>
+  <polygon points="190,248 191,234 201,242" fill="#2563eb"/>
+  <text x="200" y="212" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">o'qiydi</text>
+
+  <!-- arrow useDispatch -> store -->
+  <line x1="570" y1="248" x2="470" y2="170" stroke="#16a34a" stroke-width="2.5"/>
+  <polygon points="470,170 480,180 466,182" fill="#16a34a"/>
+  <text x="565" y="212" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">yangilaydi</text>
+
+  <!-- reactivity loop -->
+  <rect x="180" y="386" width="400" height="26" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="380" y="404" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Store o'zgarsa, useSelect avtomatik qayta ishga tushadi (reaktiv)</text>
+</svg>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" width="780" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>So'rov-javob oqimi: Node ilovangiz client.messages.create chaqiradi, Anthropic API javob obyektini qaytaradi, ilovangiz content[0].text ni o'qiydi</title>
+  <defs>
+    <marker id="arrI" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#6366f1"/>
+    </marker>
+    <marker id="arrG" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="780" height="470" fill="#f8fafc"/>
+  <text x="390" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Bitta chaqiruv: so'rov ketadi, javob keladi</text>
+  <text x="390" y="58" font-size="14" fill="#64748b" text-anchor="middle">Bu oddiy HTTP so'rovi — SDK uni siz uchun yuboradi</text>
+
+  <!-- Node app -->
+  <rect x="40" y="92" width="220" height="120" rx="12" fill="#dbeafe" stroke="#0ea5e9" stroke-width="2.5"/>
+  <text x="150" y="120" font-size="16" font-weight="bold" fill="#1e293b" text-anchor="middle">Sizning Node ilovangiz</text>
+  <text x="150" y="143" font-size="13" fill="#475569" text-anchor="middle">app.js</text>
+  <text x="150" y="170" font-size="13" fill="#0ea5e9" text-anchor="middle" font-family="Consolas, monospace">await client</text>
+  <text x="150" y="190" font-size="13" fill="#0ea5e9" text-anchor="middle" font-family="Consolas, monospace">.messages.create()</text>
+
+  <!-- Anthropic API -->
+  <rect x="520" y="92" width="220" height="120" rx="12" fill="#fef3c7" stroke="#d97757" stroke-width="2.5"/>
+  <text x="630" y="120" font-size="16" font-weight="bold" fill="#1e293b" text-anchor="middle">Anthropic API</text>
+  <text x="630" y="143" font-size="13" fill="#475569" text-anchor="middle">claude-opus-4-8</text>
+  <text x="630" y="172" font-size="13" fill="#475569" text-anchor="middle">modelni ishga soladi,</text>
+  <text x="630" y="191" font-size="13" fill="#475569" text-anchor="middle">javob matnini hosil qiladi</text>
+
+  <!-- request arrow -->
+  <line x1="262" y1="128" x2="518" y2="128" stroke="#6366f1" stroke-width="2.5" marker-end="url(#arrI)"/>
+  <text x="390" y="118" font-size="13" font-weight="bold" fill="#6366f1" text-anchor="middle">SO'ROV (request)</text>
+  <text x="390" y="148" font-size="13" fill="#475569" text-anchor="middle" font-family="Consolas, monospace">{ model, max_tokens, messages }</text>
+
+  <!-- response arrow -->
+  <line x1="518" y1="184" x2="262" y2="184" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arrG)"/>
+  <text x="390" y="206" font-size="13" font-weight="bold" fill="#16a34a" text-anchor="middle">JAVOB (response)</text>
+
+  <!-- response object -->
+  <rect x="180" y="246" width="420" height="138" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="390" y="272" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">msg — javob obyekti</text>
+  <text x="200" y="300" font-size="13.5" fill="#1e293b" text-anchor="start" font-family="Consolas, monospace">content: [ { type: "text", text: "..." } ]</text>
+  <text x="200" y="326" font-size="13.5" fill="#1e293b" text-anchor="start" font-family="Consolas, monospace">stop_reason: "end_turn"</text>
+  <text x="200" y="352" font-size="13.5" fill="#1e293b" text-anchor="start" font-family="Consolas, monospace">usage: { input_tokens, output_tokens }</text>
+  <text x="390" y="374" font-size="13" fill="#475569" text-anchor="middle">content — MASSIV, satr emas!</text>
+
+  <!-- read arrow -->
+  <line x1="270" y1="384" x2="200" y2="424" stroke="#16a34a" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arrG)"/>
+
+  <!-- app reads -->
+  <rect x="200" y="426" width="380" height="32" rx="8" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="390" y="447" font-size="13.5" fill="#1e293b" text-anchor="middle" font-family="Consolas, monospace">console.log(msg.content[0].text)</text>
+</svg>

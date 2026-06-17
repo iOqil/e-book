@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 520">
+  <title>Bir tomonga egilgan (skewed) daraxt O(n) vs balanslangan daraxt O(log n)</title>
+  <rect x="0" y="0" width="880" height="520" fill="#f8fafc"/>
+  <text x="440" y="34" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Egilgan daraxt vs balanslangan daraxt</text>
+  <text x="440" y="58" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Bir xil 7 ta kalit, lekin balandlik (va shu sabab tezlik) tubdan farq qiladi</text>
+
+  <!-- divider -->
+  <line x1="440" y1="80" x2="440" y2="470" stroke="#e2e8f0" stroke-width="2" stroke-dasharray="6 5"/>
+
+  <!-- LEFT: skewed -->
+  <text x="220" y="98" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#dc2626">Egilgan (skewed) — "tayoq"</text>
+
+  <line x1="150" y1="135" x2="205" y2="185" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="205" y1="185" x2="260" y2="235" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="260" y1="235" x2="315" y2="285" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="315" y1="285" x2="370" y2="335" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="370" y1="335" x2="425" y2="385" stroke="#94a3b8" stroke-width="2"/>
+
+  <circle cx="150" cy="135" r="22" fill="#ffffff" stroke="#dc2626" stroke-width="3"/>
+  <text x="150" y="141" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#1e293b">10</text>
+  <circle cx="205" cy="185" r="22" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="205" y="191" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#1e293b">20</text>
+  <circle cx="260" cy="235" r="22" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="260" y="241" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#1e293b">30</text>
+  <circle cx="315" cy="285" r="22" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="315" y="291" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#1e293b">40</text>
+  <circle cx="370" cy="335" r="22" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="370" y="341" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#1e293b">50</text>
+  <circle cx="425" cy="385" r="22" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="425" y="391" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#1e293b">60</text>
+
+  <text x="150" y="105" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">ildiz</text>
+  <text x="100" y="430" font-family="Segoe UI" font-size="14" fill="#dc2626" font-weight="bold">balandlik = 5</text>
+  <text x="100" y="450" font-family="monospace" font-size="14" fill="#dc2626">qidiruv: O(n)</text>
+
+  <!-- RIGHT: balanced -->
+  <text x="660" y="98" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a">Balanslangan</text>
+
+  <line x1="660" y1="135" x2="585" y2="205" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="660" y1="135" x2="735" y2="205" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="585" y1="205" x2="540" y2="275" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="585" y1="205" x2="630" y2="275" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="735" y1="205" x2="690" y2="275" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="735" y1="205" x2="780" y2="275" stroke="#94a3b8" stroke-width="2"/>
+
+  <circle cx="660" cy="135" r="22" fill="#ffffff" stroke="#16a34a" stroke-width="3"/>
+  <text x="660" y="141" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#1e293b">40</text>
+  <circle cx="585" cy="205" r="22" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="585" y="211" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#1e293b">20</text>
+  <circle cx="735" cy="205" r="22" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="735" y="211" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#1e293b">60</text>
+  <circle cx="540" cy="275" r="22" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="540" y="281" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#1e293b">10</text>
+  <circle cx="630" cy="275" r="22" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="630" y="281" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#1e293b">30</text>
+  <circle cx="690" cy="275" r="22" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="690" y="281" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#1e293b">50</text>
+  <circle cx="780" cy="275" r="22" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="780" y="281" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#1e293b">70</text>
+
+  <text x="660" y="105" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">ildiz</text>
+  <text x="540" y="335" font-family="Segoe UI" font-size="14" fill="#16a34a" font-weight="bold">balandlik = 2</text>
+  <text x="540" y="355" font-family="monospace" font-size="14" fill="#16a34a">qidiruv: O(log n)</text>
+
+  <!-- bottom comparison bar -->
+  <rect x="60" y="478" width="760" height="32" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="440" y="499" text-anchor="middle" font-family="monospace" font-size="14" fill="#2563eb">n = 1 000 000 da: tayoq ~1 000 000 qadam,  balanslangan ~20 qadam  ->  50 000 barobar tez</text>
+</svg>

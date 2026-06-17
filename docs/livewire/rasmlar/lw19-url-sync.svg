@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Livewire xususiyati va URL query string o'rtasidagi ikki tomonlama sinxronlash</title>
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="38" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">#[Url] — xususiyat va URL bir-biriga bog'lanadi</text>
+
+  <!-- Chap blok: Komponent xususiyati -->
+  <rect x="40" y="80" width="290" height="180" rx="12" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="185" y="112" text-anchor="middle" font-size="16" font-weight="700" fill="#4f46e5">Komponent xususiyati</text>
+  <rect x="64" y="132" width="242" height="44" rx="8" fill="#eef2ff" stroke="#c7d2fe" stroke-width="1.5"/>
+  <text x="80" y="160" font-size="14" fill="#1e293b" font-family="Consolas, monospace">#[Url] public $search</text>
+  <rect x="64" y="190" width="242" height="50" rx="8" fill="#f8fafc" stroke="#c7d2fe" stroke-width="1.5"/>
+  <text x="185" y="213" text-anchor="middle" font-size="13" fill="#475569">qiymat = "laptop"</text>
+  <text x="185" y="231" text-anchor="middle" font-size="13" fill="#94a3b8">(serverda saqlanadi)</text>
+
+  <!-- O'ng blok: URL query string -->
+  <rect x="430" y="80" width="290" height="180" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="575" y="112" text-anchor="middle" font-size="16" font-weight="700" fill="#16a34a">Brauzer manzili (URL)</text>
+  <rect x="454" y="132" width="242" height="44" rx="8" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+  <text x="470" y="160" font-size="13" fill="#1e293b" font-family="Consolas, monospace">/katalog?search=laptop</text>
+  <rect x="454" y="190" width="242" height="50" rx="8" fill="#f8fafc" stroke="#bbf7d0" stroke-width="1.5"/>
+  <text x="575" y="213" text-anchor="middle" font-size="13" fill="#475569">query string = "laptop"</text>
+  <text x="575" y="231" text-anchor="middle" font-size="13" fill="#94a3b8">(ko'rinadi, ulashiladi)</text>
+
+  <!-- Strelkalar: ikki tomonlama -->
+  <defs>
+    <marker id="arrR" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4f46e5"/>
+    </marker>
+    <marker id="arrL" markerWidth="11" markerHeight="11" refX="2" refY="5" orient="auto">
+      <path d="M10,0 L0,5 L10,10 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+  <line x1="332" y1="150" x2="426" y2="150" stroke="#4f46e5" stroke-width="2.5" marker-end="url(#arrR)"/>
+  <text x="379" y="142" text-anchor="middle" font-size="13" fill="#4f46e5">o'zgartirsangiz</text>
+  <line x1="426" y1="195" x2="332" y2="195" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arrL)"/>
+  <text x="379" y="214" text-anchor="middle" font-size="13" fill="#16a34a">URL'dan o'qiladi</text>
+
+  <!-- Pastki natija qatori -->
+  <rect x="40" y="300" width="680" height="100" rx="12" fill="#ffffff" stroke="#c7d2fe" stroke-width="1.5"/>
+  <text x="380" y="328" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">Natija: holat URL'ga "yozilgan" — manzilning bir qismi</text>
+  <text x="380" y="356" text-anchor="middle" font-size="14" fill="#475569">Havolani ulashsangiz yoki sahifani yangilasangiz — qidiruv, filtr, sahifa</text>
+  <text x="380" y="378" text-anchor="middle" font-size="14" fill="#475569">o'sha holatda ochiladi. Brauzerning "orqaga" tugmasi ham ishlaydi.</text>
+</svg>

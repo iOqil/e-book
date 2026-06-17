@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400">
+  <title>Docker CLI client REST API orqali Docker daemon'ga buyruq yuboradi, daemon esa image'lar, container'lar va registry bilan ishlaydi degan Docker arxitekturasi diagrammasi</title>
+  <rect x="0" y="0" width="760" height="400" fill="#f8fafc"/>
+  <defs>
+    <marker id="arrow06ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrow06pl" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#7c3aed"/>
+    </marker>
+  </defs>
+
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="700" fill="#1e293b">Docker arxitekturasi</text>
+
+  <!-- CLIENT -->
+  <g font-family="Segoe UI, system-ui, sans-serif">
+    <rect x="30" y="130" width="170" height="110" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="115" y="160" text-anchor="middle" font-size="15" font-weight="700" fill="#1e40af">Docker CLI</text>
+    <text x="115" y="180" text-anchor="middle" font-size="13" fill="#475569">(client)</text>
+    <rect x="50" y="195" width="130" height="30" rx="4" fill="#fff" stroke="#2563eb" stroke-width="1.2"/>
+    <text x="115" y="215" text-anchor="middle" font-size="13" fill="#1e293b">docker run ...</text>
+  </g>
+
+  <!-- arrow CLI -> daemon (REST API) -->
+  <line x1="200" y1="185" x2="288" y2="185" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrow06ar)"/>
+  <text x="244" y="172" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="600" fill="#1e40af">REST API</text>
+
+  <!-- DAEMON (DOCKER HOST) -->
+  <g font-family="Segoe UI, system-ui, sans-serif">
+    <rect x="295" y="80" width="240" height="240" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+    <text x="415" y="108" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">Docker daemon (dockerd)</text>
+    <text x="415" y="127" text-anchor="middle" font-size="13" fill="#475569">asl ish shu yerda bajariladi</text>
+
+    <!-- Images -->
+    <rect x="315" y="142" width="200" height="48" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="415" y="162" text-anchor="middle" font-size="14" font-weight="600" fill="#1e40af">Images</text>
+    <text x="415" y="180" text-anchor="middle" font-size="13" fill="#475569">o'zgarmas shablonlar</text>
+
+    <!-- Containers -->
+    <rect x="315" y="200" width="200" height="48" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+    <text x="415" y="220" text-anchor="middle" font-size="14" font-weight="600" fill="#16a34a">Containers</text>
+    <text x="415" y="238" text-anchor="middle" font-size="13" fill="#475569">ishlaydigan nusxalar</text>
+
+    <text x="415" y="276" text-anchor="middle" font-size="13" fill="#475569">image'larni quradi/saqlaydi,</text>
+    <text x="415" y="294" text-anchor="middle" font-size="13" fill="#475569">container'larni boshqaradi</text>
+  </g>
+
+  <!-- arrow daemon -> registry (pull) -->
+  <line x1="535" y1="185" x2="623" y2="185" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#arrow06pl)"/>
+  <text x="579" y="172" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="600" fill="#7c3aed">pull</text>
+
+  <!-- REGISTRY -->
+  <g font-family="Segoe UI, system-ui, sans-serif">
+    <rect x="630" y="130" width="110" height="110" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+    <text x="685" y="170" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Registry</text>
+    <text x="685" y="192" text-anchor="middle" font-size="13" fill="#475569">Docker Hub</text>
+    <text x="685" y="210" text-anchor="middle" font-size="13" fill="#475569">GHCR</text>
+  </g>
+
+  <!-- bottom note -->
+  <rect x="30" y="346" width="710" height="40" rx="8" fill="#fff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="385" y="371" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">CLI faqat so'rov yuboradi; daemon image/container bilan ishlaydi va kerak bo'lsa registry'dan tortadi.</text>
+</svg>

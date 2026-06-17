@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="760" height="380" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Matn embedding model orqali raqamlar vektoriga va ma'no fazosidagi nuqtaga aylanadi</title>
+  <rect x="0" y="0" width="760" height="380" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Embedding: matndan ma'no vektoriga</text>
+
+  <!-- 1. Matn -->
+  <rect x="30" y="90" width="150" height="80" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="105" y="120" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Matn</text>
+  <text x="105" y="145" text-anchor="middle" font-size="13" fill="#475569">"Yaxshi mashina"</text>
+
+  <!-- arrow -->
+  <line x1="184" y1="130" x2="222" y2="130" stroke="#94a3b8" stroke-width="2" marker-end="url(#a13)"/>
+
+  <!-- 2. Embedding model -->
+  <rect x="226" y="84" width="160" height="92" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="306" y="120" text-anchor="middle" font-size="14" font-weight="700" fill="#4f46e5">Embedding</text>
+  <text x="306" y="140" text-anchor="middle" font-size="14" font-weight="700" fill="#4f46e5">modeli</text>
+  <text x="306" y="160" text-anchor="middle" font-size="13" fill="#475569">(Voyage / OpenAI)</text>
+
+  <!-- arrow -->
+  <line x1="390" y1="130" x2="428" y2="130" stroke="#94a3b8" stroke-width="2" marker-end="url(#a13)"/>
+
+  <!-- 3. Vektor -->
+  <rect x="432" y="90" width="298" height="80" rx="10" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="581" y="116" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Vektor (raqamlar ro'yxati)</text>
+  <text x="581" y="142" text-anchor="middle" font-size="14" fill="#475569" font-family="monospace">[0.12, -0.85, 0.34, ... ]</text>
+  <text x="581" y="160" text-anchor="middle" font-size="13" fill="#94a3b8">masalan 1024 o'lcham</text>
+
+  <!-- arrow down to space -->
+  <line x1="581" y1="172" x2="581" y2="208" stroke="#94a3b8" stroke-width="2" marker-end="url(#a13)"/>
+
+  <!-- 4. Ma'no fazosi -->
+  <text x="380" y="240" text-anchor="middle" font-size="15" font-weight="700" fill="#475569">Ma'no fazosi: har matn — bitta nuqta</text>
+  <rect x="180" y="252" width="400" height="108" rx="10" fill="#ffffff" stroke="#ddd6fe" stroke-width="2"/>
+  <line x1="210" y1="345" x2="555" y2="345" stroke="#c7d2fe" stroke-width="1.5"/>
+  <line x1="220" y1="262" x2="220" y2="350" stroke="#c7d2fe" stroke-width="1.5"/>
+  <!-- points -->
+  <circle cx="300" cy="300" r="7" fill="#7c3aed"/>
+  <text x="300" y="288" text-anchor="middle" font-size="13" fill="#1e293b">mashina</text>
+  <circle cx="330" cy="312" r="7" fill="#a855f7"/>
+  <text x="372" y="328" text-anchor="middle" font-size="13" fill="#1e293b">avtomobil</text>
+  <circle cx="495" cy="285" r="7" fill="#16a34a"/>
+  <text x="495" y="273" text-anchor="middle" font-size="13" fill="#1e293b">olma</text>
+
+  <defs>
+    <marker id="a13" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+</svg>

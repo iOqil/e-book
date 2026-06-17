@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 470" width="800" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>API kalit xavfsizligi. Noto'g'ri: API kalit brauzer/frontend fetch kodida — sahifa manbasini ochgan har kim kalitni ko'radi va o'g'irlaydi. To'g'ri: kalit serverda env o'zgaruvchisida; brauzer -> sizning serveringiz -> Anthropic; kalit hech qachon brauzerga chiqmaydi. Server chegarasi kalitni himoya qiladi.</title>
+  <defs>
+    <marker id="ks_g" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+    <marker id="ks_r" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#ef4444"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="800" height="470" fill="#f8fafc"/>
+  <text x="400" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">API kalit — server chegarasidan o'tmasin</text>
+  <text x="400" y="58" font-size="14" fill="#64748b" text-anchor="middle">Brauzer kodi hammaga ko'rinadi; kalit faqat serverda turishi shart</text>
+
+  <!-- WRONG -->
+  <rect x="30" y="80" width="350" height="350" rx="14" fill="#fef3c7" stroke="#ef4444" stroke-width="2.5"/>
+  <text x="205" y="110" font-size="17" font-weight="bold" fill="#ef4444" text-anchor="middle">❌ Noto'g'ri — kalit brauzerda</text>
+
+  <rect x="56" y="128" width="298" height="40" rx="9" fill="#dbeafe" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="205" y="153" font-size="14" font-weight="bold" fill="#0ea5e9" text-anchor="middle">Brauzer (frontend)</text>
+
+  <rect x="56" y="178" width="298" height="86" rx="9" fill="#ffffff" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="70" y="201" font-size="13" fill="#ef4444" text-anchor="start" font-family="Consolas, monospace">fetch("api.anthropic.com", {</text>
+  <text x="70" y="223" font-size="13" fill="#ef4444" text-anchor="start" font-family="Consolas, monospace">  headers: { "x-api-key":</text>
+  <text x="70" y="245" font-size="13" fill="#ef4444" text-anchor="start" font-family="Consolas, monospace">    "sk-ant-abc123" } })</text>
+
+  <line x1="205" y1="270" x2="205" y2="300" stroke="#ef4444" stroke-width="2.5" marker-end="url(#ks_r)"/>
+
+  <rect x="56" y="306" width="298" height="58" rx="9" fill="#ffffff" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="205" y="330" font-size="13" fill="#475569" text-anchor="middle">DevTools → Network → kalit ko'rinadi.</text>
+  <text x="205" y="350" font-size="13" fill="#475569" text-anchor="middle">Har kim uni nusxalab oladi.</text>
+
+  <text x="205" y="394" font-size="22" font-weight="bold" fill="#ef4444" text-anchor="middle">✗ O'g'irlanadi</text>
+  <text x="205" y="418" font-size="13" fill="#64748b" text-anchor="middle">Pulingizni begona sarflaydi → darhol bekor qiling</text>
+
+  <!-- RIGHT -->
+  <rect x="420" y="80" width="350" height="350" rx="14" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="595" y="110" font-size="17" font-weight="bold" fill="#16a34a" text-anchor="middle">✅ To'g'ri — kalit serverda</text>
+
+  <rect x="446" y="128" width="298" height="40" rx="9" fill="#dbeafe" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="595" y="153" font-size="14" font-weight="bold" fill="#0ea5e9" text-anchor="middle">Brauzer (kalitsiz)</text>
+  <line x1="595" y1="168" x2="595" y2="190" stroke="#16a34a" stroke-width="2.5" marker-end="url(#ks_g)"/>
+  <text x="688" y="184" font-size="13" fill="#16a34a" text-anchor="middle">POST</text>
+
+  <rect x="446" y="196" width="298" height="86" rx="9" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="595" y="219" font-size="14" font-weight="bold" fill="#6366f1" text-anchor="middle">Sizning serveringiz</text>
+  <text x="595" y="241" font-size="13" fill="#475569" text-anchor="middle" font-family="Consolas, monospace">/api/chat</text>
+  <rect x="470" y="250" width="250" height="26" rx="7" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="595" y="268" font-size="13" font-weight="bold" fill="#1e293b" text-anchor="middle">🔑 process.env.ANTHROPIC_API_KEY</text>
+
+  <line x1="595" y1="282" x2="595" y2="304" stroke="#16a34a" stroke-width="2.5" marker-end="url(#ks_g)"/>
+
+  <rect x="446" y="310" width="298" height="44" rx="9" fill="#ffffff" stroke="#d97757" stroke-width="1.5"/>
+  <text x="595" y="337" font-size="14" font-weight="bold" fill="#d97757" text-anchor="middle">Anthropic — claude-opus-4-8</text>
+
+  <text x="595" y="392" font-size="22" font-weight="bold" fill="#16a34a" text-anchor="middle">✓ Xavfsiz</text>
+  <text x="595" y="416" font-size="13" fill="#64748b" text-anchor="middle">Kalit brauzerga hech qachon chiqmaydi (13-bob)</text>
+</svg>

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 470" width="800" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Rate limit: daqiqasiga so'rov va token "chelagi" to'ladi; chegaradan oshsa 429 + retry-after qaytadi; SDK avtomatik backoff bilan qayta urinadi</title>
+  <defs>
+    <marker id="ar14c" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#d97757"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="800" height="470" fill="#f8fafc"/>
+  <text x="400" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Rate limit — daqiqalik "chelak" to'ladi</text>
+  <text x="400" y="58" font-size="14" fill="#64748b" text-anchor="middle">Har daqiqa cheklangan kvota: RPM (so'rov), ITPM/OTPM (token). To'lsa — 429</text>
+
+  <!-- bucket 1: RPM nearly full -->
+  <rect x="70" y="100" width="150" height="200" rx="10" fill="#ffffff" stroke="#475569" stroke-width="2"/>
+  <rect x="74" y="170" width="142" height="126" rx="6" fill="#dbeafe"/>
+  <text x="145" y="92" font-size="14" font-weight="bold" fill="#0ea5e9" text-anchor="middle">RPM chelagi</text>
+  <text x="145" y="200" font-size="13" fill="#1e293b" text-anchor="middle">so'rovlar /</text>
+  <text x="145" y="220" font-size="13" fill="#1e293b" text-anchor="middle">daqiqa</text>
+  <text x="145" y="252" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">80%</text>
+  <text x="145" y="320" font-size="13" fill="#64748b" text-anchor="middle">to'lyapti...</text>
+
+  <!-- bucket 2: TPM overflowing -->
+  <rect x="250" y="100" width="150" height="200" rx="10" fill="#ffffff" stroke="#ef4444" stroke-width="2.5"/>
+  <rect x="254" y="108" width="142" height="188" rx="6" fill="#fef3c7"/>
+  <text x="325" y="92" font-size="14" font-weight="bold" fill="#f59e0b" text-anchor="middle">ITPM chelagi</text>
+  <text x="325" y="200" font-size="13" fill="#1e293b" text-anchor="middle">tokenlar /</text>
+  <text x="325" y="220" font-size="13" fill="#1e293b" text-anchor="middle">daqiqa</text>
+  <text x="325" y="252" font-size="14" font-weight="bold" fill="#ef4444" text-anchor="middle">TO'LDI!</text>
+  <text x="325" y="320" font-size="13" fill="#ef4444" text-anchor="middle">oshib ketdi</text>
+
+  <!-- arrow to 429 -->
+  <line x1="404" y1="200" x2="448" y2="200" stroke="#d97757" stroke-width="2.5" marker-end="url(#ar14c)"/>
+
+  <!-- 429 response -->
+  <rect x="452" y="140" width="290" height="120" rx="12" fill="#ef4444" stroke="#475569" stroke-width="2"/>
+  <text x="597" y="172" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">429</text>
+  <text x="597" y="196" font-size="14" fill="#ffffff" text-anchor="middle">rate_limit_error</text>
+  <text x="597" y="226" font-size="13" fill="#fef3c7" text-anchor="middle" font-family="Consolas, monospace">retry-after: 30</text>
+  <text x="597" y="246" font-size="13" fill="#fef3c7" text-anchor="middle">(necha soniya kutish)</text>
+
+  <!-- SDK backoff row -->
+  <text x="400" y="338" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">SDK avtomatik qayta urinadi (eksponensial backoff)</text>
+  <rect x="120" y="352" width="120" height="40" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="180" y="377" font-size="13" fill="#1e293b" text-anchor="middle">kut 1s</text>
+  <rect x="280" y="352" width="120" height="40" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="340" y="377" font-size="13" fill="#1e293b" text-anchor="middle">kut 2s</text>
+  <rect x="440" y="352" width="120" height="40" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="500" y="377" font-size="13" fill="#1e293b" text-anchor="middle">kut 4s</text>
+  <rect x="600" y="352" width="120" height="40" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="660" y="377" font-size="13" fill="#16a34a" text-anchor="middle" font-weight="bold">✓ muvaffaq</text>
+  <line x1="240" y1="372" x2="276" y2="372" stroke="#16a34a" stroke-width="2" marker-end="url(#ar14c)"/>
+  <line x1="400" y1="372" x2="436" y2="372" stroke="#16a34a" stroke-width="2" marker-end="url(#ar14c)"/>
+  <line x1="560" y1="372" x2="596" y2="372" stroke="#16a34a" stroke-width="2" marker-end="url(#ar14c)"/>
+
+  <!-- footer -->
+  <rect x="40" y="416" width="720" height="40" rx="9" fill="#dbeafe" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="400" y="434" font-size="13.5" fill="#1e293b" text-anchor="middle">Aniq raqamlar tier'ga bog'liq (konsolda tekshiring). Atrofida loyihalang: navbat, batch, backoff.</text>
+  <text x="400" y="452" font-size="13" fill="#475569" text-anchor="middle">Tier ko'tarilsa — limitlar ham oshadi</text>
+</svg>

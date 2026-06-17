@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 540" width="800" height="540" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Batch API oqimi: N so'rov (custom_id bilan) -> create -> asinxron ishlash (1 soatgacha, 50% narx) -> processing_status ni poll qilish -> ended -> natijalarni custom_id bo'yicha moslab o'qish. Pastda N ta jonli chaqiruv bilan solishtirma (to'liq narx, lekin darhol).</title>
+  <defs>
+    <marker id="b24a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#6366f1"/>
+    </marker>
+    <marker id="b24g" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+    <marker id="b24s" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="800" height="540" fill="#f8fafc"/>
+  <text x="400" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Batch API oqimi — ko'p so'rov, asinxron, 50% arzon</text>
+  <text x="400" y="58" font-size="14" fill="#64748b" text-anchor="middle">Kechikishga sezgir EMAS ish uchun: ming-minglab so'rovni fonda ishla</text>
+
+  <!-- Step 1: create with N requests -->
+  <rect x="36" y="84" width="170" height="96" rx="10" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="121" y="110" font-size="14" font-weight="bold" fill="#6366f1" text-anchor="middle">1) batches.create</text>
+  <text x="121" y="132" font-size="13" fill="#475569" text-anchor="middle">N so'rov massivi</text>
+  <text x="121" y="152" font-size="13" fill="#475569" text-anchor="middle" font-family="Consolas, monospace">custom_id: "req-0"</text>
+  <text x="121" y="170" font-size="13" fill="#475569" text-anchor="middle" font-family="Consolas, monospace">"req-1" ... "req-N"</text>
+
+  <line x1="206" y1="132" x2="248" y2="132" stroke="#6366f1" stroke-width="2.5" marker-end="url(#b24a)"/>
+
+  <!-- Step 2: async processing -->
+  <rect x="250" y="84" width="190" height="96" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="345" y="110" font-size="14" font-weight="bold" fill="#f59e0b" text-anchor="middle">2) asinxron ishlash</text>
+  <text x="345" y="132" font-size="13" fill="#475569" text-anchor="middle">fonda, navbatda</text>
+  <text x="345" y="152" font-size="13" font-weight="bold" fill="#d97757" text-anchor="middle">narx = 50% (yarmi!)</text>
+  <text x="345" y="170" font-size="13" fill="#475569" text-anchor="middle">odatda &lt;1 soat, maks 24s</text>
+
+  <line x1="440" y1="132" x2="482" y2="132" stroke="#6366f1" stroke-width="2.5" marker-end="url(#b24a)"/>
+
+  <!-- Step 3: poll -->
+  <rect x="484" y="84" width="186" height="96" rx="10" fill="#dbeafe" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="577" y="110" font-size="14" font-weight="bold" fill="#0ea5e9" text-anchor="middle">3) poll (retrieve)</text>
+  <text x="577" y="132" font-size="13" fill="#475569" text-anchor="middle" font-family="Consolas, monospace">processing_status</text>
+  <text x="577" y="152" font-size="13" fill="#475569" text-anchor="middle">tekshir, kut, takror</text>
+  <text x="577" y="170" font-size="13" fill="#475569" text-anchor="middle">"in_progress" ...</text>
+
+  <!-- poll loop arrow -->
+  <path d="M 577 84 C 577 66, 484 66, 484 84" fill="none" stroke="#0ea5e9" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#b24a)"/>
+  <text x="530" y="60" font-size="13" fill="#0ea5e9" text-anchor="middle">"ended" bo'lguncha qayta</text>
+
+  <line x1="670" y1="132" x2="712" y2="132" stroke="#16a34a" stroke-width="2.5" marker-end="url(#b24g)"/>
+  <text x="730" y="118" font-size="13" font-weight="bold" fill="#16a34a" text-anchor="middle">ended</text>
+  <text x="730" y="136" font-size="13" fill="#16a34a" text-anchor="middle">✅</text>
+
+  <!-- down arrow to results -->
+  <line x1="730" y1="148" x2="730" y2="208" stroke="#16a34a" stroke-width="2.5"/>
+  <line x1="730" y1="208" x2="450" y2="208" stroke="#16a34a" stroke-width="2.5"/>
+  <line x1="450" y1="208" x2="450" y2="224" stroke="#16a34a" stroke-width="2.5" marker-end="url(#b24g)"/>
+
+  <!-- Step 4: results -->
+  <rect x="160" y="228" width="580" height="92" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="180" y="254" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="start">4) batches.results(id) — natijalarni o'qib chiq</text>
+  <text x="180" y="278" font-size="13" fill="#475569" text-anchor="start" font-family="Consolas, monospace">r.custom_id  →  qaysi so'rov ekanini moslab beradi</text>
+  <text x="180" y="300" font-size="13" fill="#475569" text-anchor="start" font-family="Consolas, monospace">r.result.type: "succeeded" | "errored" | ...  (har biri alohida)</text>
+
+  <!-- divider -->
+  <line x1="36" y1="350" x2="764" y2="350" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="400" y="376" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">Solishtirma — qachon batch, qachon jonli chaqiruv?</text>
+
+  <!-- batch box -->
+  <rect x="36" y="392" width="352" height="120" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="212" y="418" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">Batch API</text>
+  <text x="56" y="442" font-size="13" fill="#475569" text-anchor="start">narx: 50% (yarmi) — KATTA tejov</text>
+  <text x="56" y="464" font-size="13" fill="#475569" text-anchor="start">tezlik: asinxron (1 soatgacha)</text>
+  <text x="56" y="486" font-size="13" fill="#475569" text-anchor="start">to'g'ri: bulk, tungi ishlov, klassifikatsiya</text>
+  <text x="56" y="506" font-size="13" font-weight="bold" fill="#16a34a" text-anchor="start">✅ kechikish muhim EMAS bo'lsa</text>
+
+  <!-- live box -->
+  <rect x="412" y="392" width="352" height="120" rx="10" fill="#ffffff" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="588" y="418" font-size="14" font-weight="bold" fill="#0ea5e9" text-anchor="middle">N ta jonli chaqiruv</text>
+  <text x="432" y="442" font-size="13" fill="#475569" text-anchor="start">narx: 100% (to'liq)</text>
+  <text x="432" y="464" font-size="13" fill="#475569" text-anchor="start">tezlik: darhol (real-vaqt)</text>
+  <text x="432" y="486" font-size="13" fill="#475569" text-anchor="start">to'g'ri: jonli chat, foydalanuvchi kutadi</text>
+  <text x="432" y="506" font-size="13" font-weight="bold" fill="#0ea5e9" text-anchor="start">✅ javob TEZ kerak bo'lsa</text>
+</svg>

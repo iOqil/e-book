@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Kvantizatsiya: model hajmi va RAM kamayadi, sifat biroz yo'qoladi</title>
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">Kvantizatsiya — savdolashuv</text>
+  <text x="380" y="64" text-anchor="middle" font-size="14" fill="#64748b">aniqlikni kamaytirib, hajm va RAM'ni yutamiz</text>
+
+  <!-- Full precision -->
+  <rect x="40" y="96" width="200" height="290" rx="14" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <rect x="40" y="96" width="200" height="42" rx="14" fill="#eef2ff"/>
+  <text x="140" y="124" text-anchor="middle" font-size="16" font-weight="700" fill="#4338ca">To'liq (FP16)</text>
+  <rect x="80" y="158" width="120" height="120" rx="8" fill="#c7d2fe"/>
+  <text x="140" y="224" text-anchor="middle" font-size="15" font-weight="700" fill="#3730a3">~16 GB</text>
+  <text x="140" y="312" text-anchor="middle" font-size="14" fill="#1e293b">sifat: eng yuqori</text>
+  <text x="140" y="338" text-anchor="middle" font-size="14" fill="#dc2626">RAM: ko'p kerak</text>
+  <text x="140" y="364" text-anchor="middle" font-size="14" fill="#b45309">tezlik: sekinroq</text>
+
+  <!-- Q8 -->
+  <rect x="280" y="96" width="200" height="290" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <rect x="280" y="96" width="200" height="42" rx="14" fill="#dcfce7"/>
+  <text x="380" y="124" text-anchor="middle" font-size="16" font-weight="700" fill="#166534">Q8 / Q4</text>
+  <rect x="320" y="188" width="120" height="90" rx="8" fill="#86efac"/>
+  <text x="380" y="240" text-anchor="middle" font-size="15" font-weight="700" fill="#166534">~4-8 GB</text>
+  <text x="380" y="312" text-anchor="middle" font-size="14" fill="#16a34a">sifat: deyarli teng</text>
+  <text x="380" y="338" text-anchor="middle" font-size="14" fill="#16a34a">RAM: kamroq</text>
+  <text x="380" y="364" text-anchor="middle" font-size="14" fill="#16a34a">tezlik: tezroq</text>
+
+  <!-- Q2 -->
+  <rect x="520" y="96" width="200" height="290" rx="14" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="520" y="96" width="200" height="42" rx="14" fill="#fef3c7"/>
+  <text x="620" y="124" text-anchor="middle" font-size="16" font-weight="700" fill="#b45309">Juda past (Q2)</text>
+  <rect x="560" y="218" width="120" height="60" rx="8" fill="#fcd34d"/>
+  <text x="620" y="256" text-anchor="middle" font-size="15" font-weight="700" fill="#b45309">~2 GB</text>
+  <text x="620" y="312" text-anchor="middle" font-size="14" fill="#dc2626">sifat: sezilarli tushadi</text>
+  <text x="620" y="338" text-anchor="middle" font-size="14" fill="#16a34a">RAM: eng kam</text>
+  <text x="620" y="364" text-anchor="middle" font-size="14" fill="#16a34a">tezlik: eng tez</text>
+
+  <defs>
+    <marker id="kv" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <line x1="244" y1="222" x2="276" y2="222" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#kv)"/>
+  <line x1="484" y1="222" x2="516" y2="222" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#kv)"/>
+
+  <text x="380" y="414" text-anchor="middle" font-size="14" fill="#64748b">Amaliy tanlov ko'pincha Q4 — sifatni deyarli saqlab, oddiy kompyuterga sig'adi</text>
+</svg>

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 470">
+  <title>Bitta yiqilish sababi: ko'p assertli test vs fokuslangan testlar</title>
+  <rect x="0" y="0" width="840" height="470" fill="#f8fafc"/>
+  <text x="420" y="40" text-anchor="middle" font-family="Segoe UI" font-size="23" font-weight="bold" fill="#1e293b">"Bitta yiqilish sababi" tamoyili</text>
+  <text x="420" y="66" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Test yiqilganda — nima buzilganini darrov bilish kerak</text>
+
+  <!-- BAD side -->
+  <text x="220" y="108" text-anchor="middle" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#dc2626">Yomon: 1 test, 3 assert</text>
+
+  <rect x="50" y="128" width="340" height="252" rx="12" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="72" y="160" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">test_foydalanuvchi_hammasi</text>
+
+  <rect x="72" y="178" width="296" height="40" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="86" y="203" font-family="Segoe UI" font-size="13" fill="#1e293b">assert ism == "Ali"</text>
+  <text x="350" y="203" text-anchor="end" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">FAIL</text>
+
+  <rect x="72" y="226" width="296" height="40" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="5 4"/>
+  <text x="86" y="251" font-family="Segoe UI" font-size="13" fill="#94a3b8">assert yosh == 25</text>
+  <text x="350" y="251" text-anchor="end" font-family="Segoe UI" font-size="13" fill="#94a3b8">o'tkazib yuborildi</text>
+
+  <rect x="72" y="274" width="296" height="40" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="5 4"/>
+  <text x="86" y="299" font-family="Segoe UI" font-size="13" fill="#94a3b8">assert voyaga_yetgan</text>
+  <text x="350" y="299" text-anchor="end" font-family="Segoe UI" font-size="13" fill="#94a3b8">o'tkazib yuborildi</text>
+
+  <text x="220" y="346" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">Birinchi assert to'xtatadi —</text>
+  <text x="220" y="366" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">qolgan 2 tasi haqida hech narsa bilmaymiz</text>
+
+  <!-- GOOD side -->
+  <text x="620" y="108" text-anchor="middle" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#16a34a">Yaxshi: 3 fokuslangan test</text>
+
+  <rect x="450" y="128" width="340" height="64" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="470" y="156" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#1e293b">test_ism_tozalanadi</text>
+  <text x="470" y="178" font-family="Segoe UI" font-size="13" fill="#475569">assert ism == "Ali"</text>
+  <text x="770" y="166" text-anchor="end" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">FAIL</text>
+
+  <rect x="450" y="204" width="340" height="64" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="470" y="232" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#1e293b">test_yosh_saqlanadi</text>
+  <text x="470" y="254" font-family="Segoe UI" font-size="13" fill="#475569">assert yosh == 25</text>
+  <text x="770" y="242" text-anchor="end" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">PASS</text>
+
+  <rect x="450" y="280" width="340" height="64" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="470" y="308" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#1e293b">test_voyaga_yetgan</text>
+  <text x="470" y="330" font-family="Segoe UI" font-size="13" fill="#475569">assert voyaga_yetgan</text>
+  <text x="770" y="318" text-anchor="end" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">PASS</text>
+
+  <text x="620" y="366" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">Faqat ism buzilgan — nomidanoq aniq</text>
+
+  <rect x="120" y="406" width="600" height="44" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="420" y="433" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">Har test bitta xulqni tekshirsin — yiqilish sababi nomidan o'qilsin</text>
+</svg>

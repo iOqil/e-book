@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440">
+  <title>TLS handshake bosqichlari: klient ClientHello yuboradi, server ServerHello bilan birga sertifikatni qaytaradi, kalit almashinuvi bo'lib seans kalitiga kelishiladi, so'ng ikki tomon shifrlangan kanalda gaplashadi</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">TLS handshake</text>
+
+  <!-- ustunlar -->
+  <rect x="60" y="60" width="200" height="48" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="160" y="90" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e40af">Klient (brauzer)</text>
+
+  <rect x="500" y="60" width="200" height="48" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="600" y="90" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#166534">Server (example.uz)</text>
+
+  <!-- vertikal yo'llar -->
+  <line x1="160" y1="108" x2="160" y2="400" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5 5"/>
+  <line x1="600" y1="108" x2="600" y2="400" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5 5"/>
+
+  <!-- 1: ClientHello -->
+  <text x="380" y="140" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#1e40af">1. ClientHello</text>
+  <line x1="160" y1="152" x2="598" y2="152" stroke="#2563eb" stroke-width="3" marker-end="url(#arrB)"/>
+  <text x="380" y="170" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">qo'llab-quvvatlanadigan TLS versiya va shifrlar</text>
+
+  <!-- 2: ServerHello + sertifikat -->
+  <text x="380" y="206" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#166534">2. ServerHello + sertifikat</text>
+  <line x1="600" y1="218" x2="162" y2="218" stroke="#16a34a" stroke-width="3" marker-end="url(#arrG)"/>
+  <text x="380" y="236" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">public kalit + CA imzosi (brauzer tekshiradi)</text>
+
+  <!-- 3: kalit almashinuvi -->
+  <text x="380" y="272" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#b45309">3. Kalit almashinuvi</text>
+  <line x1="160" y1="284" x2="598" y2="284" stroke="#f59e0b" stroke-width="3" marker-end="url(#arrA)"/>
+  <text x="380" y="302" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">yagona seans kaliti (simmetrik) kelishiladi</text>
+
+  <!-- 4: shifrlangan kanal -->
+  <rect x="100" y="330" width="560" height="56" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="380" y="354" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#166534">4. Shifrlangan kanal ochildi</text>
+  <text x="380" y="375" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#166534">endi butun HTTP trafik seans kaliti bilan shifrlanadi</text>
+
+  <text x="380" y="418" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">HTTPS = HTTP over TLS &#8226; port 443</text>
+
+  <defs>
+    <marker id="arrB" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrG" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+    <marker id="arrA" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+</svg>

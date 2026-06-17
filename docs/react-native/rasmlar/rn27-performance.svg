@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" width="760" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Performance strategiyalari: FlatList, React.memo, expo-image, Hermes va New Architecture</title>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">Silliq ilova uchun 5 strategiya</text>
+  <text x="380" y="62" text-anchor="middle" font-size="14" fill="#475569">Maqsad: har kadr ~16 ms ichida — 60 fps</text>
+
+  <!-- 1. FlatList -->
+  <rect x="40" y="90" width="220" height="110" rx="12" fill="#ffffff" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="150" y="118" text-anchor="middle" font-size="16" font-weight="700" fill="#0ea5e9">1. FlatList</text>
+  <text x="150" y="142" text-anchor="middle" font-size="13" fill="#475569">faqat ko'rinadiganini</text>
+  <text x="150" y="160" text-anchor="middle" font-size="13" fill="#475569">render qiladi</text>
+  <text x="150" y="184" text-anchor="middle" font-size="13" fill="#94a3b8">getItemLayout, windowSize</text>
+
+  <!-- 2. memo -->
+  <rect x="280" y="90" width="200" height="110" rx="12" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <text x="380" y="118" text-anchor="middle" font-size="16" font-weight="700" fill="#6366f1">2. React.memo</text>
+  <text x="380" y="142" text-anchor="middle" font-size="13" fill="#475569">keraksiz qayta</text>
+  <text x="380" y="160" text-anchor="middle" font-size="13" fill="#475569">render'ni to'xtatadi</text>
+  <text x="380" y="184" text-anchor="middle" font-size="13" fill="#94a3b8">useCallback, selektor</text>
+
+  <!-- 3. expo-image -->
+  <rect x="500" y="90" width="220" height="110" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="610" y="118" text-anchor="middle" font-size="16" font-weight="700" fill="#16a34a">3. expo-image</text>
+  <text x="610" y="142" text-anchor="middle" font-size="13" fill="#475569">rasmni keshlaydi,</text>
+  <text x="610" y="160" text-anchor="middle" font-size="13" fill="#475569">lazy yuklaydi</text>
+  <text x="610" y="184" text-anchor="middle" font-size="13" fill="#94a3b8">to'g'ri o'lcham, WebP</text>
+
+  <!-- 4. Hermes -->
+  <rect x="120" y="230" width="240" height="110" rx="12" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="240" y="258" text-anchor="middle" font-size="16" font-weight="700" fill="#f59e0b">4. Hermes dvigatel</text>
+  <text x="240" y="282" text-anchor="middle" font-size="13" fill="#475569">bytecode — tez ishga</text>
+  <text x="240" y="300" text-anchor="middle" font-size="13" fill="#475569">tushish, kam xotira</text>
+  <text x="240" y="324" text-anchor="middle" font-size="13" fill="#94a3b8">default yoniq</text>
+
+  <!-- 5. New Architecture -->
+  <rect x="400" y="230" width="240" height="110" rx="12" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="520" y="258" text-anchor="middle" font-size="16" font-weight="700" fill="#4f46e5">5. New Architecture</text>
+  <text x="520" y="282" text-anchor="middle" font-size="13" fill="#475569">Fabric + TurboModules</text>
+  <text x="520" y="300" text-anchor="middle" font-size="13" fill="#475569">+ JSI: JS&#8596;native tezroq</text>
+  <text x="520" y="324" text-anchor="middle" font-size="13" fill="#94a3b8">default yoniq</text>
+
+  <!-- Result bar -->
+  <rect x="120" y="375" width="520" height="62" rx="12" fill="#0ea5e9"/>
+  <text x="380" y="404" text-anchor="middle" font-size="17" font-weight="700" fill="#ffffff">Natija: silliq, tez, batareya-tejamkor ilova</text>
+  <text x="380" y="426" text-anchor="middle" font-size="13" fill="#e0f2fe">Avval o'lchang (DevTools Profiler), keyin optimallashtiring</text>
+</svg>

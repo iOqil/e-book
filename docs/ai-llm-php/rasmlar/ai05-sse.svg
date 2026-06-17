@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400" font-family="Segoe UI, system-ui, sans-serif">
+  <title>PHP SSE endpoint -> brauzer EventSource -> jonli matn</title>
+  <rect x="0" y="0" width="760" height="400" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">Brauzerga jonli oqim: SSE</text>
+
+  <defs>
+    <marker id="arrp" markerWidth="11" markerHeight="11" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L9,4 L0,8 Z" fill="#7c3aed"/>
+    </marker>
+  </defs>
+
+  <!-- PHP SSE endpoint -->
+  <rect x="40" y="80" width="300" height="250" rx="12" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="190" y="108" text-anchor="middle" font-size="16" font-weight="700" fill="#4f46e5">PHP SSE endpoint (stream.php)</text>
+
+  <rect x="62" y="124" width="256" height="58" rx="8" fill="#f5f3ff" stroke="#c7d2fe" stroke-width="1.5"/>
+  <text x="190" y="146" text-anchor="middle" font-size="13" fill="#475569">header('Content-Type:</text>
+  <text x="190" y="164" text-anchor="middle" font-size="13" fill="#475569">text/event-stream')</text>
+  <text x="190" y="180" text-anchor="middle" font-size="13" fill="#94a3b8">+ Cache-Control: no-cache</text>
+
+  <rect x="62" y="192" width="256" height="48" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="190" y="214" text-anchor="middle" font-size="13" fill="#1e293b">createStream(...) — token</text>
+  <text x="190" y="232" text-anchor="middle" font-size="13" fill="#475569">foreach: text_delta olamiz</text>
+
+  <rect x="62" y="250" width="256" height="58" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="190" y="272" text-anchor="middle" font-size="13" font-weight="600" fill="#1e293b">echo "data: {$matn}\n\n";</text>
+  <text x="190" y="292" text-anchor="middle" font-size="13" fill="#16a34a">ob_flush(); flush();</text>
+
+  <!-- strelka -->
+  <line x1="340" y1="205" x2="425" y2="205" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#arrp)"/>
+  <text x="383" y="195" text-anchor="middle" font-size="13" fill="#7c3aed">data:</text>
+  <text x="383" y="226" text-anchor="middle" font-size="13" fill="#94a3b8">bo'lak-bo'lak</text>
+
+  <!-- Brauzer -->
+  <rect x="430" y="80" width="300" height="250" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="580" y="108" text-anchor="middle" font-size="16" font-weight="700" fill="#7c3aed">Brauzer (frontend)</text>
+
+  <rect x="452" y="124" width="256" height="48" rx="8" fill="#f5f3ff" stroke="#c7d2fe" stroke-width="1.5"/>
+  <text x="580" y="146" text-anchor="middle" font-size="13" fill="#1e293b">new EventSource('stream.php')</text>
+  <text x="580" y="164" text-anchor="middle" font-size="13" fill="#94a3b8">oqimga ulanadi</text>
+
+  <rect x="452" y="182" width="256" height="48" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="580" y="204" text-anchor="middle" font-size="13" fill="#1e293b">manba.onmessage = (e) =&gt; ...</text>
+  <text x="580" y="222" text-anchor="middle" font-size="13" fill="#475569">e.data — matn bo'lagi</text>
+
+  <rect x="452" y="240" width="256" height="68" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="580" y="264" text-anchor="middle" font-size="13" fill="#1e293b">div.textContent += e.data</text>
+  <text x="580" y="286" text-anchor="middle" font-size="14" font-weight="600" fill="#16a34a">Jonli matn ekranda</text>
+
+  <text x="380" y="362" text-anchor="middle" font-size="14" fill="#475569">SSE = bir tomonlama: server doim uzatadi, brauzer faqat tinglaydi</text>
+  <text x="380" y="384" text-anchor="middle" font-size="13" fill="#94a3b8">tugagach: echo "event: done" -&gt; brauzer manba.close()</text>
+</svg>

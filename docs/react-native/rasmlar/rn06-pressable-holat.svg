@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Pressable bosilganda {pressed} orqali stil o'zgarishi</title>
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">Pressable: bosilganda stil o'zgaradi</text>
+  <text x="380" y="64" text-anchor="middle" font-size="14" fill="#475569">style={'{'}({pressed}) =&gt; [...]{'}'} — pressed true bo'lsa boshqa stil</text>
+
+  <!-- Normal holat -->
+  <rect x="60" y="100" width="270" height="220" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="195" y="132" text-anchor="middle" font-size="17" font-weight="700" fill="#475569">Oddiy holat</text>
+  <text x="195" y="156" text-anchor="middle" font-size="13" fill="#94a3b8">pressed = false</text>
+  <rect x="105" y="186" width="180" height="58" rx="12" fill="#4f46e5"/>
+  <text x="195" y="222" text-anchor="middle" font-size="17" font-weight="600" fill="#ffffff">Yuborish</text>
+  <text x="195" y="282" text-anchor="middle" font-size="13" fill="#475569">to'liq rang, katta o'lcham</text>
+  <text x="195" y="302" text-anchor="middle" font-size="13" font-family="Consolas, monospace" fill="#94a3b8">backgroundColor: '#4f46e5'</text>
+
+  <!-- O'q -->
+  <path d="M 345 210 L 425 210" stroke="#0ea5e9" stroke-width="3" fill="none" marker-end="url(#kok)"/>
+  <text x="385" y="198" text-anchor="middle" font-size="13" font-weight="600" fill="#0284c7">barmoq</text>
+  <text x="385" y="232" text-anchor="middle" font-size="13" font-weight="600" fill="#0284c7">bosadi</text>
+
+  <!-- Bosilgan holat -->
+  <rect x="440" y="100" width="270" height="220" rx="14" fill="#ffffff" stroke="#0ea5e9" stroke-width="2.5"/>
+  <text x="575" y="132" text-anchor="middle" font-size="17" font-weight="700" fill="#0284c7">Bosilgan holat</text>
+  <text x="575" y="156" text-anchor="middle" font-size="13" fill="#16a34a">pressed = true</text>
+  <rect x="488" y="188" width="174" height="54" rx="12" fill="#4338ca" opacity="0.92"/>
+  <text x="575" y="222" text-anchor="middle" font-size="16" font-weight="600" fill="#ffffff">Yuborish</text>
+  <!-- barmoq belgisi -->
+  <circle cx="620" cy="215" r="16" fill="#1e293b" opacity="0.18"/>
+  <text x="575" y="282" text-anchor="middle" font-size="13" fill="#475569">to'qroq rang, biroz kichik</text>
+  <text x="575" y="302" text-anchor="middle" font-size="13" font-family="Consolas, monospace" fill="#94a3b8">backgroundColor: '#4338ca'</text>
+
+  <!-- Kod tushuntirish -->
+  <rect x="60" y="344" width="650" height="64" rx="12" fill="#1e293b"/>
+  <text x="82" y="372" font-size="14" font-family="Consolas, monospace" fill="#e2e8f0">style={'{'}({ pressed }) =&gt; [styles.tugma, pressed &amp;&amp; styles.tugmaBosilgan]{'}'}</text>
+  <text x="82" y="396" font-size="13" font-family="Consolas, monospace" fill="#94a3b8">// pressed true bo'lganda tugmaBosilgan stili qo'shiladi</text>
+
+  <defs>
+    <marker id="kok" markerWidth="11" markerHeight="11" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L9,3 L0,6 Z" fill="#0ea5e9"/>
+    </marker>
+  </defs>
+</svg>

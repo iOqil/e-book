@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" width="760" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Livewire tezligini oshirish strategiyalari</title>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">Tezlikni oshirish: so'rovlarni kamaytir va yengillashtir</text>
+
+  <!-- Two pillars header -->
+  <rect x="40" y="62" width="340" height="40" rx="8" fill="#eef2ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="210" y="88" text-anchor="middle" font-size="16" font-weight="700" fill="#4f46e5">1. So'rovlar SONINI kamaytir</text>
+
+  <rect x="380" y="62" width="340" height="40" rx="8" fill="#eef2ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="550" y="88" text-anchor="middle" font-size="16" font-weight="700" fill="#4f46e5">2. Har so'rovni YENGILLASHTIR</text>
+
+  <!-- Left column cards -->
+  <rect x="40" y="118" width="340" height="74" rx="10" fill="#ffffff" stroke="#c7d2fe" stroke-width="2"/>
+  <text x="60" y="146" font-size="15" font-weight="700" fill="#1e293b">Deferred binding</text>
+  <text x="60" y="168" font-size="13" fill="#475569">wire:model (standart) — har harfda emas,</text>
+  <text x="60" y="184" font-size="13" fill="#475569">keyingi action'da bir martada yuboradi</text>
+
+  <rect x="40" y="200" width="340" height="74" rx="10" fill="#ffffff" stroke="#c7d2fe" stroke-width="2"/>
+  <text x="60" y="228" font-size="15" font-weight="700" fill="#1e293b">.live.debounce</text>
+  <text x="60" y="250" font-size="13" fill="#475569">real-time kerak bo'lsa — yozish to'xtaganda</text>
+  <text x="60" y="266" font-size="13" fill="#475569">yubor, o'nlab so'rov o'rniga bitta</text>
+
+  <rect x="40" y="282" width="340" height="74" rx="10" fill="#ffffff" stroke="#c7d2fe" stroke-width="2"/>
+  <text x="60" y="310" font-size="15" font-weight="700" fill="#1e293b">wire:navigate</text>
+  <text x="60" y="332" font-size="13" fill="#475569">SPA-uslub o'tish — butun sahifa qayta</text>
+  <text x="60" y="348" font-size="13" fill="#475569">yuklanmaydi, faqat kerakli qism almashadi</text>
+
+  <!-- Right column cards -->
+  <rect x="380" y="118" width="340" height="74" rx="10" fill="#ffffff" stroke="#c7d2fe" stroke-width="2"/>
+  <text x="400" y="146" font-size="15" font-weight="700" fill="#1e293b">#[Computed] kesh</text>
+  <text x="400" y="168" font-size="13" fill="#475569">og'ir DB so'rovi bir so'rov ichida bir marta,</text>
+  <text x="400" y="184" font-size="13" fill="#475569">persist bilan so'rovlar orasida ham saqlanadi</text>
+
+  <rect x="380" y="200" width="340" height="74" rx="10" fill="#ffffff" stroke="#c7d2fe" stroke-width="2"/>
+  <text x="400" y="228" font-size="15" font-weight="700" fill="#1e293b">paginate()</text>
+  <text x="400" y="250" font-size="13" fill="#475569">minglab qatorni birdan emas, bir sahifaga</text>
+  <text x="400" y="266" font-size="13" fill="#475569">sig'adigan miqdorni (masalan, 15 ta) yuklaydi</text>
+
+  <rect x="380" y="282" width="340" height="74" rx="10" fill="#ffffff" stroke="#c7d2fe" stroke-width="2"/>
+  <text x="400" y="310" font-size="15" font-weight="700" fill="#1e293b">lazy yuklash</text>
+  <text x="400" y="332" font-size="13" fill="#475569">og'ir komponent sahifa ochilgach keyin</text>
+  <text x="400" y="348" font-size="13" fill="#475569">yuklanadi — sahifa darhol ko'rinadi</text>
+
+  <!-- Bottom result bar -->
+  <rect x="40" y="382" width="680" height="58" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="380" y="408" text-anchor="middle" font-size="16" font-weight="700" fill="#16a34a">Natija: kam so'rov + yengil so'rov = tez ilova</text>
+  <text x="380" y="430" text-anchor="middle" font-size="13" fill="#475569">eng keng tarqalgan xato — ortiqcha .live; eng kuchli yechim — computed va eager loading</text>
+</svg>

@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 600">
+  <title>KMP: prefiks-funksiya (LPS) jadvali va mos kelmaganda namunani aqlli siljitish</title>
+  <rect x="0" y="0" width="880" height="600" fill="#f8fafc"/>
+  <text x="440" y="34" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">KMP: prefiks-funksiya bilan aqlli siljish</text>
+  <text x="440" y="58" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">P = "ABABC" — LPS[i] = eng uzun "prefiks=suffiks" uzunligi</text>
+
+  <!-- LPS table title -->
+  <text x="60" y="100" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#334155">1) Prefiks-funksiya (LPS) jadvali</text>
+
+  <!-- pattern cells -->
+  <g font-family="monospace" font-size="18" font-weight="bold">
+    <rect x="120" y="116" width="54" height="44" fill="#ffffff" stroke="#2563eb" stroke-width="2"/><text x="147" y="145" text-anchor="middle" fill="#1e293b">A</text>
+    <rect x="174" y="116" width="54" height="44" fill="#ffffff" stroke="#2563eb" stroke-width="2"/><text x="201" y="145" text-anchor="middle" fill="#1e293b">B</text>
+    <rect x="228" y="116" width="54" height="44" fill="#ffffff" stroke="#2563eb" stroke-width="2"/><text x="255" y="145" text-anchor="middle" fill="#1e293b">A</text>
+    <rect x="282" y="116" width="54" height="44" fill="#ffffff" stroke="#2563eb" stroke-width="2"/><text x="309" y="145" text-anchor="middle" fill="#1e293b">B</text>
+    <rect x="336" y="116" width="54" height="44" fill="#ffffff" stroke="#2563eb" stroke-width="2"/><text x="363" y="145" text-anchor="middle" fill="#1e293b">C</text>
+  </g>
+  <!-- index row -->
+  <text x="78" y="145" font-family="Segoe UI" font-size="13" fill="#64748b">indeks</text>
+  <g font-family="monospace" font-size="13" fill="#94a3b8">
+    <text x="147" y="178" text-anchor="middle">0</text>
+    <text x="201" y="178" text-anchor="middle">1</text>
+    <text x="255" y="178" text-anchor="middle">2</text>
+    <text x="309" y="178" text-anchor="middle">3</text>
+    <text x="363" y="178" text-anchor="middle">4</text>
+  </g>
+
+  <!-- LPS row -->
+  <text x="78" y="215" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#7c3aed">LPS</text>
+  <g font-family="monospace" font-size="18" font-weight="bold">
+    <rect x="120" y="192" width="54" height="40" fill="#f3e8ff" stroke="#7c3aed" stroke-width="2"/><text x="147" y="219" text-anchor="middle" fill="#6b21a8">0</text>
+    <rect x="174" y="192" width="54" height="40" fill="#f3e8ff" stroke="#7c3aed" stroke-width="2"/><text x="201" y="219" text-anchor="middle" fill="#6b21a8">0</text>
+    <rect x="228" y="192" width="54" height="40" fill="#f3e8ff" stroke="#7c3aed" stroke-width="2"/><text x="255" y="219" text-anchor="middle" fill="#6b21a8">1</text>
+    <rect x="282" y="192" width="54" height="40" fill="#f3e8ff" stroke="#7c3aed" stroke-width="2"/><text x="309" y="219" text-anchor="middle" fill="#6b21a8">2</text>
+    <rect x="336" y="192" width="54" height="40" fill="#f3e8ff" stroke="#7c3aed" stroke-width="2"/><text x="363" y="219" text-anchor="middle" fill="#6b21a8">0</text>
+  </g>
+
+  <!-- explanation of LPS[3]=2 -->
+  <rect x="430" y="116" width="420" height="118" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="448" y="142" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#7c3aed">LPS[3] = 2 nimani anglatadi?</text>
+  <text x="448" y="166" font-family="monospace" font-size="13" fill="#334155">"ABAB" — boshi va oxiri "AB" mos keladi.</text>
+  <text x="448" y="188" font-family="Segoe UI" font-size="13" fill="#334155">Eng uzun shunday prefiks (= suffiks) uzunligi = 2.</text>
+  <text x="448" y="212" font-family="Segoe UI" font-size="13" fill="#334155">Demak mos kelmaganda 2 ta belgini qayta</text>
+  <text x="448" y="230" font-family="Segoe UI" font-size="13" fill="#334155">tekshirmasdan o'tib ketsa bo'ladi.</text>
+
+  <!-- divider -->
+  <line x1="60" y1="262" x2="820" y2="262" stroke="#e2e8f0" stroke-width="2"/>
+
+  <!-- step 2: smart shift -->
+  <text x="60" y="294" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#334155">2) Mos kelmaganda aqlli siljish (orqaga qaytmaymiz)</text>
+
+  <!-- text -->
+  <text x="60" y="338" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#334155">Matn T:</text>
+  <g font-family="monospace" font-size="17" font-weight="bold">
+    <rect x="140" y="318" width="44" height="40" fill="#ffffff" stroke="#334155" stroke-width="2"/><text x="162" y="345" text-anchor="middle" fill="#1e293b">A</text>
+    <rect x="184" y="318" width="44" height="40" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><text x="206" y="345" text-anchor="middle" fill="#166534">B</text>
+    <rect x="228" y="318" width="44" height="40" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><text x="250" y="345" text-anchor="middle" fill="#166534">A</text>
+    <rect x="272" y="318" width="44" height="40" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><text x="294" y="345" text-anchor="middle" fill="#166534">B</text>
+    <rect x="316" y="318" width="44" height="40" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/><text x="338" y="345" text-anchor="middle" fill="#dc2626">D</text>
+    <rect x="360" y="318" width="44" height="40" fill="#ffffff" stroke="#334155" stroke-width="2"/><text x="382" y="345" text-anchor="middle" fill="#1e293b">...</text>
+  </g>
+
+  <!-- pattern aligned -->
+  <text x="60" y="394" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#334155">Namuna P:</text>
+  <g font-family="monospace" font-size="17" font-weight="bold">
+    <rect x="140" y="374" width="44" height="40" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><text x="162" y="401" text-anchor="middle" fill="#166534">A</text>
+    <rect x="184" y="374" width="44" height="40" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><text x="206" y="401" text-anchor="middle" fill="#166534">B</text>
+    <rect x="228" y="374" width="44" height="40" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><text x="250" y="401" text-anchor="middle" fill="#166534">A</text>
+    <rect x="272" y="374" width="44" height="40" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><text x="294" y="401" text-anchor="middle" fill="#166534">B</text>
+    <rect x="316" y="374" width="44" height="40" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/><text x="338" y="401" text-anchor="middle" fill="#dc2626">C</text>
+  </g>
+  <text x="412" y="398" font-family="Segoe UI" font-size="13" fill="#dc2626" font-weight="bold">← C ≠ D, 4 belgi mos kelgan edi</text>
+
+  <!-- arrow down -->
+  <line x1="280" y1="424" x2="280" y2="452" stroke="#7c3aed" stroke-width="2" marker-end="url(#ar)"/>
+  <defs><marker id="ar" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#7c3aed"/></marker></defs>
+
+  <!-- pattern after smart shift: LPS[3]=2, jump pattern so "AB" aligns -->
+  <text x="60" y="486" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#7c3aed">Siljishdan keyin:</text>
+  <g font-family="monospace" font-size="17" font-weight="bold">
+    <rect x="228" y="466" width="44" height="40" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/><text x="250" y="493" text-anchor="middle" fill="#1e40af">A</text>
+    <rect x="272" y="466" width="44" height="40" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/><text x="294" y="493" text-anchor="middle" fill="#1e40af">B</text>
+    <rect x="316" y="466" width="44" height="40" fill="#ffffff" stroke="#334155" stroke-width="2"/><text x="338" y="493" text-anchor="middle" fill="#1e293b">A</text>
+    <rect x="360" y="466" width="44" height="40" fill="#ffffff" stroke="#334155" stroke-width="2"/><text x="382" y="493" text-anchor="middle" fill="#1e293b">B</text>
+    <rect x="404" y="466" width="44" height="40" fill="#ffffff" stroke="#334155" stroke-width="2"/><text x="426" y="493" text-anchor="middle" fill="#1e293b">C</text>
+  </g>
+  <text x="468" y="490" font-family="Segoe UI" font-size="13" fill="#7c3aed">"AB" allaqachon mos — qayta tekshirmaymiz</text>
+
+  <!-- key complexity -->
+  <rect x="60" y="528" width="760" height="56" rx="12" fill="#ecfdf5" stroke="#16a34a" stroke-width="2"/>
+  <text x="440" y="552" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#166534">T dagi indeks HECH QACHON orqaga qaytmaydi → har belgi bir marta ko'riladi</text>
+  <text x="440" y="574" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#166534">LPS qurish O(m) + qidiruv O(n) = jami O(n + m)</text>
+</svg>

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 580">
+  <title>ADR (Architecture Decision Record) shabloni: Sarlavha, Status, Kontekst, Qaror, Oqibatlar bo'limlari va status hayot-sikli</title>
+  <rect x="0" y="0" width="880" height="580" fill="#f8fafc"/>
+  <text x="440" y="34" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">ADR shabloni: bitta sahifa, bitta qaror</text>
+
+  <!-- the card -->
+  <rect x="40" y="60" width="500" height="478" rx="12" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+
+  <!-- header -->
+  <rect x="40" y="60" width="500" height="56" rx="12" fill="#2563eb"/>
+  <rect x="40" y="96" width="500" height="20" fill="#2563eb"/>
+  <text x="64" y="86" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#ffffff">ADR-0007: REST vs gRPC tanlovi</text>
+  <text x="64" y="108" font-family="Segoe UI" font-size="13" fill="#dbeafe">qisqa, harakatli sarlavha - qaror nimaligini aytadi</text>
+
+  <!-- status -->
+  <rect x="64" y="132" width="452" height="40" rx="6" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="78" y="157" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#166534">Status:</text>
+  <text x="150" y="157" font-family="Segoe UI" font-size="14" fill="#334155">Qabul qilingan  -  Sana: 2026-06-14  -  Muallif: jamoa</text>
+
+  <!-- Kontekst -->
+  <rect x="64" y="186" width="452" height="78" rx="6" fill="#eff6ff" stroke="#2563eb"/>
+  <text x="78" y="208" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">1. Kontekst</text>
+  <text x="78" y="230" font-family="Segoe UI" font-size="13" fill="#475569">Qanday muammo/kuch bizni qaror qabul qilishga</text>
+  <text x="78" y="250" font-family="Segoe UI" font-size="13" fill="#475569">majbur qiladi? (faktlar, cheklovlar - yechimsiz)</text>
+
+  <!-- Qaror -->
+  <rect x="64" y="278" width="452" height="78" rx="6" fill="#fefce8" stroke="#f59e0b"/>
+  <text x="78" y="300" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#b45309">2. Qaror</text>
+  <text x="78" y="322" font-family="Segoe UI" font-size="13" fill="#475569">Biz NIMA qilamiz? ("Biz ... tanlaymiz, chunki ...")</text>
+  <text x="78" y="342" font-family="Segoe UI" font-size="13" fill="#475569">Faol ohang, bitta aniq yo'nalish.</text>
+
+  <!-- Oqibatlar -->
+  <rect x="64" y="370" width="452" height="100" rx="6" fill="#f1f5f9" stroke="#64748b"/>
+  <text x="78" y="392" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#334155">3. Oqibatlar</text>
+  <text x="78" y="414" font-family="Segoe UI" font-size="13" fill="#16a34a">(+) ijobiy: nimani yutamiz (oson debug, past narx)</text>
+  <text x="78" y="434" font-family="Segoe UI" font-size="13" fill="#dc2626">(-) salbiy: nimani yo'qotamiz (sekinroq, zaif kontrakt)</text>
+  <text x="78" y="454" font-family="Segoe UI" font-size="13" fill="#64748b">(~) neytral: keyin qayta ko'rib chiqiladigan joylar</text>
+
+  <text x="64" y="500" font-family="Segoe UI" font-size="13" font-style="italic" fill="#64748b">Saqlash: repo'da docs/adr/0007-rest-vs-grpc.md</text>
+  <text x="64" y="522" font-family="Segoe UI" font-size="13" font-style="italic" fill="#64748b">git tarixida - immutable (o'zgartirmaymiz, yangisini yozamiz)</text>
+
+  <!-- status lifecycle -->
+  <text x="710" y="86" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#1e293b">Status hayot-sikli</text>
+
+  <rect x="640" y="110" width="140" height="40" rx="20" fill="#fef9c3" stroke="#f59e0b"/>
+  <text x="710" y="135" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">Taklif</text>
+  <line x1="710" y1="150" x2="710" y2="178" stroke="#94a3b8" stroke-width="2" marker-end="url(#aar)"/>
+
+  <rect x="640" y="180" width="140" height="40" rx="20" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="710" y="205" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">Qabul qilingan</text>
+  <line x1="710" y1="220" x2="710" y2="248" stroke="#94a3b8" stroke-width="2" marker-end="url(#aar)"/>
+
+  <rect x="640" y="250" width="140" height="40" rx="20" fill="#e2e8f0" stroke="#64748b"/>
+  <text x="710" y="275" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">Almashtirilgan</text>
+
+  <!-- rad etilgan branch -->
+  <line x1="640" y1="200" x2="600" y2="200" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="600" y1="200" x2="600" y2="320" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="616" y="300" width="124" height="38" rx="19" fill="#fee2e2" stroke="#dc2626"/>
+  <text x="678" y="324" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Rad etilgan</text>
+  <line x1="600" y1="319" x2="614" y2="319" stroke="#94a3b8" stroke-width="2" marker-end="url(#aar)"/>
+
+  <text x="640" y="372" font-family="Segoe UI" font-size="13" fill="#64748b">Qaror "Almashtirilgan"</text>
+  <text x="640" y="392" font-family="Segoe UI" font-size="13" fill="#64748b">bo'lsa - eski ADR o'chmaydi;</text>
+  <text x="640" y="412" font-family="Segoe UI" font-size="13" fill="#64748b">yangisi (ADR-0015) unga</text>
+  <text x="640" y="432" font-family="Segoe UI" font-size="13" fill="#64748b">ishora qiladi. Tarix saqlanadi.</text>
+
+  <defs>
+    <marker id="aar" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#94a3b8"/></marker>
+  </defs>
+</svg>

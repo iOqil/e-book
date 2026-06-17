@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440">
+  <title>Strategy pattern: kontekst bitta interfeysga bog'lanadi, algoritmlar almashtiriladi</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="34" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Strategy: algoritmni tashqaridan ulash</text>
+  <text x="380" y="58" font-family="Segoe UI" font-size="14" fill="#64748b" text-anchor="middle">Kontekst konkret algoritmni bilmaydi — faqat interfeysni biladi (DIP + OCP)</text>
+
+  <defs>
+    <marker id="s-ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#334155"/>
+    </marker>
+    <marker id="s-hollow" markerWidth="14" markerHeight="14" refX="12" refY="5" orient="auto">
+      <path d="M1,1 L12,5 L1,9 Z" fill="#f8fafc" stroke="#334155" stroke-width="1"/>
+    </marker>
+  </defs>
+
+  <!-- Kontekst -->
+  <rect x="60" y="120" width="220" height="110" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="170" y="148" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb" text-anchor="middle">Savatcha (kontekst)</text>
+  <line x1="60" y1="160" x2="280" y2="160" stroke="#94a3b8" stroke-width="1"/>
+  <text x="78" y="184" font-family="Segoe UI" font-size="13" fill="#334155">- strategiya: NarxStrategiyasi</text>
+  <text x="78" y="208" font-family="Segoe UI" font-size="13" fill="#334155">+ yakuniyNarx(asosiy)</text>
+
+  <!-- Interfeys -->
+  <rect x="430" y="120" width="270" height="80" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="565" y="148" font-family="Segoe UI" font-size="14" font-style="italic" fill="#16a34a" text-anchor="middle">&lt;&lt;interface&gt;&gt; NarxStrategiyasi</text>
+  <line x1="430" y1="160" x2="700" y2="160" stroke="#94a3b8" stroke-width="1"/>
+  <text x="448" y="184" font-family="Segoe UI" font-size="13" fill="#334155">+ hisobla(asosiy): number</text>
+
+  <!-- Kontekst -> interfeys (bog'lanish) -->
+  <line x1="280" y1="160" x2="430" y2="160" stroke="#334155" stroke-width="2" marker-end="url(#s-ar)"/>
+  <text x="355" y="150" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">ishlatadi</text>
+
+  <!-- Konkret strategiyalar -->
+  <rect x="430" y="270" width="200" height="48" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="530" y="300" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">ChegirmasizNarx</text>
+
+  <rect x="430" y="330" width="200" height="48" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="530" y="360" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">FoizChegirma(foiz)</text>
+
+  <rect x="430" y="390" width="200" height="40" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="530" y="415" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">VipNarx (cap bilan)</text>
+
+  <!-- amalga oshiradi (hollow arrow) -->
+  <line x1="530" y1="270" x2="565" y2="200" stroke="#334155" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#s-hollow)"/>
+  <line x1="530" y1="330" x2="565" y2="202" stroke="#334155" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#s-hollow)"/>
+  <line x1="530" y1="390" x2="568" y2="203" stroke="#334155" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#s-hollow)"/>
+  <text x="648" y="300" font-family="Segoe UI" font-size="13" font-style="italic" fill="#64748b">amalga</text>
+  <text x="648" y="318" font-family="Segoe UI" font-size="13" font-style="italic" fill="#64748b">oshiradi</text>
+
+  <!-- Pastki izoh -->
+  <rect x="60" y="270" width="320" height="160" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="220" y="296" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#f59e0b" text-anchor="middle">Yangi narx qoidasi qo'shish</text>
+  <text x="78" y="324" font-family="Segoe UI" font-size="13" fill="#334155">Yangi sinf yoz, interfeysni amalga oshir.</text>
+  <text x="78" y="348" font-family="Segoe UI" font-size="13" fill="#16a34a">+ Savatcha kodi O'ZGARMAYDI (OCP).</text>
+  <text x="78" y="372" font-family="Segoe UI" font-size="13" fill="#dc2626">Aksincha: if/else daraxti har</text>
+  <text x="78" y="392" font-family="Segoe UI" font-size="13" fill="#dc2626">yangi qoidada Savatcha'ni tahrirlar edi.</text>
+  <text x="78" y="416" font-family="Segoe UI" font-size="13" font-style="italic" fill="#64748b">Algoritm = almashtiriladigan obyekt.</text>
+</svg>

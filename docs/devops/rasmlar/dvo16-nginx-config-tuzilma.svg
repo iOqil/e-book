@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 460" width="760" height="460">
+  <title>Nginx konfiguratsiya tuzilishi: nginx.conf asosiy fayl ichidagi http konteksti conf.d papkasidagi va sites-enabled dagi sayt fayllarini include qiladi, har bir sayt faylida server bloki, server ichida esa location bloklari joylashadi</title>
+  <rect x="0" y="0" width="760" height="460" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Nginx konfiguratsiya tuzilishi</text>
+
+  <!-- nginx.conf asosiy -->
+  <rect x="250" y="56" width="260" height="64" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="380" y="83" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e40af">/etc/nginx/nginx.conf</text>
+  <text x="380" y="105" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">asosiy fayl — http { } va include</text>
+
+  <!-- strelka pastga http -->
+  <line x1="380" y1="120" x2="380" y2="142" stroke="#94a3b8" stroke-width="2" marker-end="url(#a16)"/>
+
+  <!-- http konteksti -->
+  <rect x="200" y="144" width="360" height="42" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="380" y="170" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#92400e">http { ... include conf.d/*.conf; include sites-enabled/*; }</text>
+
+  <!-- ikki tarmoqqa strelka -->
+  <line x1="300" y1="186" x2="200" y2="222" stroke="#2563eb" stroke-width="2" marker-end="url(#b16)"/>
+  <line x1="460" y1="186" x2="560" y2="222" stroke="#2563eb" stroke-width="2" marker-end="url(#b16)"/>
+
+  <!-- conf.d -->
+  <rect x="60" y="224" width="280" height="58" rx="9" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="200" y="249" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#15803d">conf.d/*.conf</text>
+  <text x="200" y="270" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">sodda: .conf fayllar avtomatik</text>
+
+  <!-- sites-available + enabled -->
+  <rect x="420" y="224" width="280" height="58" rx="9" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="560" y="249" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#5b21b6">sites-available + sites-enabled</text>
+  <text x="560" y="270" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Debian/Ubuntu: symlink bilan yoqish</text>
+
+  <!-- birlashish strelkalari server'ga -->
+  <line x1="200" y1="282" x2="320" y2="320" stroke="#94a3b8" stroke-width="2" marker-end="url(#a16)"/>
+  <line x1="560" y1="282" x2="440" y2="320" stroke="#94a3b8" stroke-width="2" marker-end="url(#a16)"/>
+
+  <!-- server bloki -->
+  <rect x="190" y="322" width="380" height="118" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="380" y="347" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e40af">server { listen 80; server_name ...; }</text>
+
+  <!-- location bloklari -->
+  <rect x="210" y="360" width="160" height="64" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="290" y="384" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#15803d">location / { }</text>
+  <text x="290" y="406" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">try_files ...</text>
+
+  <rect x="390" y="360" width="160" height="64" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="470" y="384" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#15803d">location /static/ { }</text>
+  <text x="470" y="406" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">expires 30d</text>
+
+  <defs>
+    <marker id="a16" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#94a3b8"/>
+    </marker>
+    <marker id="b16" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#2563eb"/>
+    </marker>
+  </defs>
+</svg>

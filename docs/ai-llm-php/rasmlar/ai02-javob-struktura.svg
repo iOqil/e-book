@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" width="760" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>$message obyekti tuzilishi: content bloklari, stopReason va usage</title>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Javob obyekti: $message</text>
+  <text x="380" y="60" text-anchor="middle" font-size="14" fill="#475569">Matndan tashqari ko'p foydali ma'lumot</text>
+
+  <!-- root object -->
+  <rect x="40" y="85" width="680" height="48" rx="10" fill="#7c3aed" stroke="#6d28d9" stroke-width="2"/>
+  <text x="380" y="115" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">$message  (Anthropic\Messages\Message)</text>
+
+  <!-- content -->
+  <rect x="40" y="160" width="350" height="190" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="60" y="187" font-size="15" font-weight="700" fill="#7c3aed">-&gt;content  (bloklar massivi)</text>
+
+  <rect x="60" y="200" width="310" height="60" rx="8" fill="#ede9fe" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="75" y="223" font-size="13" font-weight="700" fill="#4f46e5">[0]  type === 'text'</text>
+  <text x="75" y="245" font-size="13" fill="#475569">-&gt;text = "Salom! Men Claude..."</text>
+
+  <rect x="60" y="270" width="310" height="60" rx="8" fill="#f8fafc" stroke="#c7d2fe" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="75" y="293" font-size="13" font-weight="700" fill="#94a3b8">[1]  boshqa blok (ixtiyoriy)</text>
+  <text x="75" y="315" font-size="13" fill="#94a3b8">masalan tool_use (9-bob)</text>
+
+  <text x="60" y="346" font-size="13" fill="#475569">Shuning uchun content[0] yoki foreach</text>
+
+  <!-- stopReason -->
+  <rect x="410" y="160" width="310" height="80" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="430" y="187" font-size="15" font-weight="700" fill="#1e293b">-&gt;stopReason</text>
+  <text x="430" y="210" font-size="13" fill="#475569">nega to'xtadi: "end_turn"</text>
+  <text x="430" y="230" font-size="13" fill="#475569">yoki "max_tokens" (uzilgan)</text>
+
+  <!-- usage -->
+  <rect x="410" y="250" width="310" height="100" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="430" y="277" font-size="15" font-weight="700" fill="#16a34a">-&gt;usage  (xarajat)</text>
+  <text x="430" y="300" font-size="13" fill="#475569">-&gt;inputTokens = 38</text>
+  <text x="430" y="320" font-size="13" fill="#475569">-&gt;outputTokens = 52</text>
+  <text x="430" y="342" font-size="13" fill="#94a3b8">narx shu raqamlarga bog'liq</text>
+
+  <!-- connectors -->
+  <line x1="200" y1="133" x2="200" y2="158" stroke="#7c3aed" stroke-width="2"/>
+  <polygon points="200,158 195,148 205,148" fill="#7c3aed"/>
+  <line x1="560" y1="133" x2="560" y2="158" stroke="#f59e0b" stroke-width="2"/>
+  <polygon points="560,158 555,148 565,148" fill="#f59e0b"/>
+
+  <!-- footer -->
+  <rect x="40" y="370" width="680" height="80" rx="10" fill="#ede9fe" stroke="#ddd6fe" stroke-width="1.5"/>
+  <text x="60" y="396" font-size="14" font-weight="700" fill="#1e293b">Yodda tuting:</text>
+  <text x="60" y="419" font-size="13" fill="#475569">• content — har doim massiv (bloklar). Oddiy javobda bitta matn bloki: content[0]-&gt;text.</text>
+  <text x="60" y="440" font-size="13" fill="#475569">• stopReason === 'max_tokens' bo'lsa javob uzilgan — maxTokens ni oshiring.</text>
+</svg>

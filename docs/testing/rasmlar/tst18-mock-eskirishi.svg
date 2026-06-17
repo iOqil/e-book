@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 470">
+  <title>Mock eskirishi muammosi va kontrakt himoyasi</title>
+  <rect x="0" y="0" width="820" height="470" fill="#f8fafc"/>
+  <text x="410" y="40" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Mock eskirishi vs kontrakt himoyasi</text>
+  <text x="410" y="66" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Provider o'zgardi, mock o'zgarmadi -> yashil test, lekin ishlab chiqarishda yiqiladi</text>
+
+  <!-- LEFT: mock approach (problem) -->
+  <rect x="40" y="100" width="350" height="320" rx="12" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="215" y="132" text-anchor="middle" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#dc2626">Faqat mock — xavf</text>
+
+  <rect x="70" y="155" width="130" height="60" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="135" y="182" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#1e293b">Consumer</text>
+  <text x="135" y="202" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">mock: narx</text>
+
+  <rect x="230" y="155" width="130" height="60" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="295" y="182" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#1e293b">Provider</text>
+  <text x="295" y="202" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">endi: price</text>
+
+  <text x="215" y="255" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#16a34a">Test: YASHIL (PASS)</text>
+  <text x="215" y="282" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">mock hali "narx" qaytaradi</text>
+  <text x="215" y="320" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#dc2626" font-weight="bold">Ishlab chiqarish: YIQILADI</text>
+  <text x="215" y="346" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">real javobda "narx" yo'q</text>
+  <text x="215" y="384" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">= yolg'on ishonch</text>
+
+  <!-- RIGHT: contract approach (safe) -->
+  <rect x="430" y="100" width="350" height="320" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="605" y="132" text-anchor="middle" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#16a34a">Kontrakt — himoya</text>
+
+  <rect x="460" y="155" width="130" height="60" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="525" y="182" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#1e293b">Consumer</text>
+  <text x="525" y="202" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">kontrakt: narx</text>
+
+  <rect x="620" y="155" width="130" height="60" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="685" y="182" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#1e293b">Provider</text>
+  <text x="685" y="202" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">endi: price</text>
+
+  <text x="605" y="255" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#dc2626">Provider testi: QIZIL (FAIL)</text>
+  <text x="605" y="282" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">kontrakt "narx" kutadi</text>
+  <text x="605" y="320" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#16a34a" font-weight="bold">CI'da darrov tutiladi</text>
+  <text x="605" y="346" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">buzilish merge bo'lmaydi</text>
+  <text x="605" y="384" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">= haqiqiy ishonch</text>
+
+  <text x="410" y="450" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">Mock = consumer taxmini; kontrakt = ikki tomon kelishgan yagona haqiqat.</text>
+</svg>

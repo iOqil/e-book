@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430">
+  <title>Liveness va readiness probe farqi: readiness probe muvaffaqiyatsiz bo'lsa pod tirik qoladi lekin Service uni endpoint'lardan olib tashlaydi va trafik to'xtaydi; liveness probe muvaffaqiyatsiz bo'lsa kubelet pod'ni o'ldirib qayta ishga tushiradi (restart)</title>
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Liveness vs readiness probe</text>
+
+  <!-- ===== READINESS column (left) ===== -->
+  <rect x="24" y="56" width="344" height="338" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="196" y="84" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#166534">readinessProbe fail</text>
+  <text x="196" y="104" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">"trafikka tayyormi?" -&gt; YO'Q</text>
+
+  <!-- service -->
+  <rect x="64" y="124" width="264" height="48" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="196" y="153" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e40af">Service (trafik)</text>
+
+  <!-- arrow to pod, crossed -->
+  <line x1="196" y1="172" x2="196" y2="208" stroke="#dc2626" stroke-width="2.5" marker-end="url(#parr-r)"/>
+  <line x1="180" y1="182" x2="212" y2="198" stroke="#dc2626" stroke-width="3"/>
+  <line x1="212" y1="182" x2="180" y2="198" stroke="#dc2626" stroke-width="3"/>
+  <text x="262" y="195" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">trafik to'xtaydi</text>
+
+  <!-- pod (alive) -->
+  <rect x="84" y="212" width="224" height="78" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="196" y="240" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#166534">Pod TIRIK qoladi</text>
+  <text x="196" y="262" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">restart YO'Q — pod o'chmaydi</text>
+  <text x="196" y="280" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">faqat endpoint'dan chiqariladi</text>
+
+  <rect x="64" y="312" width="264" height="62" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="196" y="336" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#166534">Tayyor bo'lganda (DB ulandi) yana</text>
+  <text x="196" y="356" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#166534">endpoint'ga qaytadi, trafik tiklanadi</text>
+
+  <!-- ===== LIVENESS column (right) ===== -->
+  <rect x="392" y="56" width="344" height="338" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="564" y="84" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">livenessProbe fail</text>
+  <text x="564" y="104" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">"tirikmi?" -&gt; YO'Q (osilib qoldi)</text>
+
+  <!-- kubelet -->
+  <rect x="432" y="124" width="264" height="48" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="564" y="153" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#5b21b6">kubelet (probe)</text>
+
+  <line x1="564" y1="172" x2="564" y2="208" stroke="#dc2626" stroke-width="2.5" marker-end="url(#parr-l)"/>
+  <text x="630" y="195" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">o'ldiradi</text>
+
+  <!-- pod (killed) -->
+  <rect x="452" y="212" width="224" height="78" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="564" y="240" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">Pod O'LDIRILADI</text>
+  <text x="564" y="262" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">kubelet konteynerni to'xtatadi</text>
+  <text x="564" y="280" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">va qaytadan ko'taradi</text>
+
+  <rect x="432" y="312" width="264" height="62" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="564" y="336" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#166534">RESTART -&gt; toza yangi konteyner</text>
+  <text x="564" y="356" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#166534">osilib qolgan jarayon davolanadi</text>
+
+  <defs>
+    <marker id="parr-r" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#dc2626"/></marker>
+    <marker id="parr-l" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#dc2626"/></marker>
+  </defs>
+</svg>

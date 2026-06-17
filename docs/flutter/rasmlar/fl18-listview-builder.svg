@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" width="780" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>ListView.builder dangasa (lazy) rendering: 10000 elementli ro'yxatdan faqat ekranda ko'rinadigan (viewport ichidagi) elementlar quriladi, qolganlari xotirada yo'q</title>
+  <rect x="0" y="0" width="780" height="470" fill="#f8fafc"/>
+  <text x="390" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">ListView.builder — faqat ko'rinadiganini quradi</text>
+  <text x="390" y="58" text-anchor="middle" font-size="14" fill="#475569">10 000 ta element bo'lsa ham, Flutter ekrandagi 6-7 tasini quradi, xolos</text>
+
+  <!-- Left: full data list 1..10000 -->
+  <text x="175" y="92" text-anchor="middle" font-size="14" font-weight="700" fill="#475569">Ma'lumotlar: itemCount = 10000</text>
+
+  <!-- data rows -->
+  <rect x="70" y="104" width="210" height="30" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="175" y="124" text-anchor="middle" font-size="13" fill="#94a3b8">index 0</text>
+  <rect x="70" y="138" width="210" height="30" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="175" y="158" text-anchor="middle" font-size="13" fill="#94a3b8">index 1</text>
+
+  <!-- visible window highlighted -->
+  <rect x="64" y="176" width="222" height="150" rx="10" fill="#dbeafe" stroke="#027dfd" stroke-width="2.5"/>
+  <rect x="74" y="184" width="202" height="30" rx="6" fill="#ffffff" stroke="#027dfd" stroke-width="1.5"/>
+  <text x="175" y="204" text-anchor="middle" font-size="13" fill="#1e293b">index 42</text>
+  <rect x="74" y="218" width="202" height="30" rx="6" fill="#ffffff" stroke="#027dfd" stroke-width="1.5"/>
+  <text x="175" y="238" text-anchor="middle" font-size="13" fill="#1e293b">index 43</text>
+  <rect x="74" y="252" width="202" height="30" rx="6" fill="#ffffff" stroke="#027dfd" stroke-width="1.5"/>
+  <text x="175" y="272" text-anchor="middle" font-size="13" fill="#1e293b">index 44</text>
+  <rect x="74" y="286" width="202" height="30" rx="6" fill="#ffffff" stroke="#027dfd" stroke-width="1.5"/>
+  <text x="175" y="306" text-anchor="middle" font-size="13" fill="#1e293b">index 45</text>
+
+  <!-- below -->
+  <rect x="70" y="334" width="210" height="30" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="175" y="354" text-anchor="middle" font-size="13" fill="#94a3b8">index 46</text>
+  <text x="175" y="388" text-anchor="middle" font-size="14" fill="#94a3b8">... index 9999 gacha</text>
+
+  <!-- viewport label -->
+  <text x="175" y="416" text-anchor="middle" font-size="13" font-weight="700" fill="#027dfd">ekran oynasi (viewport)</text>
+  <text x="175" y="436" text-anchor="middle" font-size="13" fill="#64748b">faqat ko'rinadigan element = QURILADI</text>
+
+  <!-- arrow to builder -->
+  <line x1="296" y1="251" x2="372" y2="251" stroke="#027dfd" stroke-width="3"/>
+  <polygon points="372,245 388,251 372,257" fill="#027dfd"/>
+  <text x="338" y="240" text-anchor="middle" font-size="13" fill="#475569">faqat 42..45</text>
+
+  <!-- builder box -->
+  <rect x="396" y="200" width="190" height="100" rx="12" fill="#6366f1"/>
+  <text x="491" y="234" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">itemBuilder</text>
+  <text x="491" y="258" text-anchor="middle" font-size="13" fill="#e0e7ff">(context, index)</text>
+  <text x="491" y="280" text-anchor="middle" font-size="13" fill="#e0e7ff">=&gt; Widget</text>
+
+  <!-- arrow to built widgets -->
+  <line x1="586" y1="251" x2="640" y2="251" stroke="#16a34a" stroke-width="3"/>
+  <polygon points="640,245 656,251 640,257" fill="#16a34a"/>
+
+  <!-- built widgets stack -->
+  <rect x="660" y="186" width="100" height="30" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="710" y="206" text-anchor="middle" font-size="13" fill="#16a34a">widget 42</text>
+  <rect x="660" y="220" width="100" height="30" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="710" y="240" text-anchor="middle" font-size="13" fill="#16a34a">widget 43</text>
+  <rect x="660" y="254" width="100" height="30" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="710" y="274" text-anchor="middle" font-size="13" fill="#16a34a">widget 44</text>
+  <rect x="660" y="288" width="100" height="30" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="710" y="308" text-anchor="middle" font-size="13" fill="#16a34a">widget 45</text>
+  <text x="710" y="340" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a">qurilgan widgetlar</text>
+  <text x="710" y="360" text-anchor="middle" font-size="13" fill="#64748b">qolgani — qurilmaydi</text>
+
+  <text x="390" y="462" text-anchor="middle" font-size="13" fill="#94a3b8">Scroll qilganingizda oyna pastga suriladi: yangi indekslar quriladi, ko'rinmay qolgani tashlanadi. Mana shu — tezlik siri.</text>
+</svg>

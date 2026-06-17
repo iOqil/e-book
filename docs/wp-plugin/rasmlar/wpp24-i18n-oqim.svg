@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420">
+  <title>i18n oqimi: manba koddagi tarjima funksiyasidan make-pot orqali pot shablon, tarjimon po fayl yaratadi, mo ga kompilyatsiya qilinadi va saytda tarjima korinadi</title>
+  <defs>
+    <marker id="o-arr" markerWidth="13" markerHeight="13" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">i18n oqimi: koddan saytdagi tarjimagacha</text>
+  <text x="380" y="56" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">text domain = plugin slug (kitoblar-katalogi)</text>
+
+  <!-- 1: source code -->
+  <rect x="30" y="86" width="200" height="92" rx="10" fill="#fff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="130" y="112" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">1. Manba kod</text>
+  <text x="130" y="138" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">__('Kitoblar',</text>
+  <text x="130" y="158" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">'kitoblar-katalogi')</text>
+
+  <!-- 2: pot -->
+  <rect x="285" y="86" width="190" height="92" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="380" y="112" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">2. .pot shablon</text>
+  <text x="380" y="138" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">msgid "Kitoblar"</text>
+  <text x="380" y="158" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">msgstr ""  (bo'sh)</text>
+
+  <!-- 3: po -->
+  <rect x="530" y="86" width="200" height="92" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="630" y="112" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e40af">3. .po tarjima</text>
+  <text x="630" y="138" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">msgid "Kitoblar"</text>
+  <text x="630" y="158" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">msgstr "Books"</text>
+
+  <!-- arrows row 1 -->
+  <line x1="230" y1="132" x2="283" y2="132" stroke="#475569" stroke-width="2" marker-end="url(#o-arr)"/>
+  <text x="256" y="122" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">make-pot</text>
+  <line x1="475" y1="132" x2="528" y2="132" stroke="#475569" stroke-width="2" marker-end="url(#o-arr)"/>
+  <text x="501" y="122" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tarjimon</text>
+
+  <!-- down arrow from po to mo -->
+  <line x1="630" y1="178" x2="630" y2="222" stroke="#475569" stroke-width="2" marker-end="url(#o-arr)"/>
+  <text x="700" y="204" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Poedit</text>
+
+  <!-- 4: mo -->
+  <rect x="530" y="230" width="200" height="86" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="630" y="256" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">4. .mo (binar)</text>
+  <text x="630" y="282" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">kompilyatsiya</text>
+  <text x="630" y="302" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">WordPress o'qiydi</text>
+
+  <!-- arrow mo to site -->
+  <line x1="528" y1="273" x2="475" y2="273" stroke="#16a34a" stroke-width="2" marker-end="url(#o-arr)"/>
+
+  <!-- 5: site -->
+  <rect x="285" y="230" width="190" height="86" rx="10" fill="#fff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="380" y="256" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">5. Saytda</text>
+  <text x="380" y="282" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">"Books" ko'rinadi</text>
+  <text x="380" y="302" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">joriy til bo'yicha</text>
+
+  <text x="380" y="360" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Fayl nomi: kitoblar-katalogi-{locale}.mo  (masalan -de_DE.mo)</text>
+  <text x="380" y="388" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Kod bir marta yoziladi; tillar cheksiz qo'shiladi.</text>
+</svg>

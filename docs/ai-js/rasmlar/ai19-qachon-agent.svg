@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" width="800" height="560" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Qachon agent qurish kerak — Anthropic'ning 4 mezoni: Murakkablik (ko'p qadam, oldindan to'liq yozib bo'lmaydi), Qiymat (yuqori narx/kechikishga arziydi), Imkoniyat (model buni uddalaydi), Xato narxi (xatoni ushlab/orqaga qaytarib bo'ladi). HAMMASI ha bo'lsa -> agent. Bittasi yo'q bo'lsa -> oddiy bitta chaqiruv yoki qattiq workflow. SODDADAN BOSHLANG — ko'p vazifaga agent kerak emas.</title>
+  <defs>
+    <marker id="q19g" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+    <marker id="q19r" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#ef4444"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="800" height="560" fill="#f8fafc"/>
+  <text x="400" y="32" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Qachon agent qurish kerak? — 4 mezon</text>
+
+  <!-- Start simple banner -->
+  <rect x="150" y="48" width="500" height="38" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="400" y="73" font-size="15" font-weight="bold" fill="#d97757" text-anchor="middle">SODDADAN BOSHLANG — ko'p vazifaga agent KERAK EMAS</text>
+
+  <!-- 4 criteria boxes -->
+  <rect x="40" y="104" width="172" height="96" rx="10" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="126" y="130" font-size="15" font-weight="bold" fill="#6366f1" text-anchor="middle">1. Murakkablik</text>
+  <text x="126" y="154" font-size="13" fill="#475569" text-anchor="middle">Haqiqatan ko'p</text>
+  <text x="126" y="172" font-size="13" fill="#475569" text-anchor="middle">qadamli, oldindan</text>
+  <text x="126" y="190" font-size="13" fill="#475569" text-anchor="middle">to'liq yozib bo'lmaydi?</text>
+
+  <rect x="228" y="104" width="172" height="96" rx="10" fill="#dbeafe" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="314" y="130" font-size="15" font-weight="bold" fill="#0ea5e9" text-anchor="middle">2. Qiymat</text>
+  <text x="314" y="154" font-size="13" fill="#475569" text-anchor="middle">Natija yuqori narx</text>
+  <text x="314" y="172" font-size="13" fill="#475569" text-anchor="middle">va kechikishga</text>
+  <text x="314" y="190" font-size="13" fill="#475569" text-anchor="middle">arziydimi?</text>
+
+  <rect x="416" y="104" width="172" height="96" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="502" y="130" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="middle">3. Imkoniyat</text>
+  <text x="502" y="154" font-size="13" fill="#475569" text-anchor="middle">Model buni</text>
+  <text x="502" y="172" font-size="13" fill="#475569" text-anchor="middle">amalda</text>
+  <text x="502" y="190" font-size="13" fill="#475569" text-anchor="middle">uddalaydimi?</text>
+
+  <rect x="604" y="104" width="172" height="96" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="690" y="130" font-size="15" font-weight="bold" fill="#f59e0b" text-anchor="middle">4. Xato narxi</text>
+  <text x="690" y="154" font-size="13" fill="#475569" text-anchor="middle">Xatoni ushlab</text>
+  <text x="690" y="172" font-size="13" fill="#475569" text-anchor="middle">/orqaga qaytarib</text>
+  <text x="690" y="190" font-size="13" fill="#475569" text-anchor="middle">bo'ladimi?</text>
+
+  <!-- AND gate / decision -->
+  <line x1="126" y1="200" x2="380" y2="234" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="314" y1="200" x2="390" y2="232" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="502" y1="200" x2="410" y2="232" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="690" y1="200" x2="420" y2="234" stroke="#94a3b8" stroke-width="2"/>
+
+  <rect x="300" y="234" width="200" height="44" rx="22" fill="#1e293b"/>
+  <text x="400" y="262" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">Hammasi "HA" mi?</text>
+
+  <!-- YES branch -->
+  <line x1="340" y1="278" x2="200" y2="318" stroke="#16a34a" stroke-width="2.5" marker-end="url(#q19g)"/>
+  <text x="232" y="300" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">HA (hammasi)</text>
+
+  <rect x="64" y="322" width="296" height="78" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="212" y="350" font-size="16" font-weight="bold" fill="#16a34a" text-anchor="middle">AGENT QUR</text>
+  <text x="212" y="374" font-size="13" fill="#475569" text-anchor="middle">model o'zi qadam tanlaydi,</text>
+  <text x="212" y="392" font-size="13" fill="#475569" text-anchor="middle">asboblar + stopWhen bilan</text>
+
+  <!-- NO branch -->
+  <line x1="460" y1="278" x2="600" y2="318" stroke="#ef4444" stroke-width="2.5" marker-end="url(#q19r)"/>
+  <text x="572" y="300" font-size="14" font-weight="bold" fill="#ef4444" text-anchor="middle">Bittasi YO'Q</text>
+
+  <rect x="440" y="322" width="296" height="78" rx="12" fill="#ffffff" stroke="#ef4444" stroke-width="2"/>
+  <text x="588" y="350" font-size="16" font-weight="bold" fill="#ef4444" text-anchor="middle">SODDA QILING</text>
+  <text x="588" y="374" font-size="13" fill="#475569" text-anchor="middle">bitta chaqiruv yoki</text>
+  <text x="588" y="392" font-size="13" fill="#475569" text-anchor="middle">qattiq workflow yetarli</text>
+
+  <!-- examples -->
+  <rect x="64" y="416" width="296" height="120" rx="10" fill="#f8fafc" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="212" y="440" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">Agentga arziydi</text>
+  <text x="212" y="464" font-size="13" fill="#475569" text-anchor="middle">"Mavzuni o'rganib,</text>
+  <text x="212" y="482" font-size="13" fill="#475569" text-anchor="middle">manbalarni topib,</text>
+  <text x="212" y="500" font-size="13" fill="#475569" text-anchor="middle">hisobot yoz"</text>
+  <text x="212" y="522" font-size="13" fill="#64748b" text-anchor="middle">ko'p qadam, oldindan noma'lum</text>
+
+  <rect x="440" y="416" width="296" height="120" rx="10" fill="#f8fafc" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="588" y="440" font-size="14" font-weight="bold" fill="#ef4444" text-anchor="middle">Agent KERAK EMAS</text>
+  <text x="588" y="464" font-size="13" fill="#475569" text-anchor="middle">"Bu PDF'dan</text>
+  <text x="588" y="482" font-size="13" fill="#475569" text-anchor="middle">sarlavhani ajrat"</text>
+  <text x="588" y="500" font-size="13" fill="#475569" text-anchor="middle">-> bitta chaqiruv</text>
+  <text x="588" y="522" font-size="13" fill="#64748b" text-anchor="middle">bir qadam, aniq, oldindan yozsa bo'ladi</text>
+</svg>

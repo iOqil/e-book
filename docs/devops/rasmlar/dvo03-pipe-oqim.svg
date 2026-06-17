@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 400" width="740" height="400">
+  <title>Pipe va qayta yo'naltirish oqimi: cmd1 stdout chiqishi pipe orqali cmd2 ga uzatiladi, cmd2 natijasi faylga yo'naltiriladi, stderr esa alohida oqim</title>
+  <rect x="0" y="0" width="740" height="400" fill="#f8fafc"/>
+  <text x="370" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Pipe va qayta yo'naltirish: ma'lumot oqimi</text>
+  <text x="370" y="58" text-anchor="middle" font-family="Consolas, monospace" font-size="14" fill="#475569">cat log.txt | grep ERROR &gt; xatolar.txt</text>
+
+  <defs>
+    <marker id="ok" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="err" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+  <!-- cmd1 -->
+  <rect x="40" y="110" width="150" height="70" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="115" y="142" text-anchor="middle" font-family="Consolas, monospace" font-size="15" font-weight="bold" fill="#1e40af">cat log.txt</text>
+  <text x="115" y="164" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">1-buyruq</text>
+
+  <!-- pipe arrow -->
+  <line x1="190" y1="145" x2="290" y2="145" stroke="#2563eb" stroke-width="3" marker-end="url(#ok)"/>
+  <text x="240" y="135" text-anchor="middle" font-family="Consolas, monospace" font-size="15" font-weight="bold" fill="#16a34a">|</text>
+  <text x="240" y="171" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">stdout (1)</text>
+
+  <!-- cmd2 -->
+  <rect x="295" y="110" width="160" height="70" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="375" y="142" text-anchor="middle" font-family="Consolas, monospace" font-size="15" font-weight="bold" fill="#1e40af">grep ERROR</text>
+  <text x="375" y="164" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">2-buyruq</text>
+
+  <!-- redirect arrow -->
+  <line x1="455" y1="145" x2="560" y2="145" stroke="#2563eb" stroke-width="3" marker-end="url(#ok)"/>
+  <text x="507" y="135" text-anchor="middle" font-family="Consolas, monospace" font-size="15" font-weight="bold" fill="#f59e0b">&gt;</text>
+  <text x="507" y="171" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">stdout (1)</text>
+
+  <!-- file -->
+  <rect x="565" y="110" width="140" height="70" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="635" y="142" text-anchor="middle" font-family="Consolas, monospace" font-size="14" font-weight="bold" fill="#166534">xatolar.txt</text>
+  <text x="635" y="164" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">faylga yozildi</text>
+
+  <!-- stderr stream -->
+  <line x1="375" y1="180" x2="375" y2="265" stroke="#dc2626" stroke-width="3" stroke-dasharray="6 4" marker-end="url(#err)"/>
+  <rect x="295" y="270" width="160" height="56" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="375" y="295" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#dc2626">stderr (2)</text>
+  <text x="375" y="314" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">ekranga ketadi</text>
+
+  <text x="120" y="298" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">2&gt;&amp;1: stderr ni</text>
+  <text x="120" y="316" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">stdout ga qo'shadi</text>
+
+  <text x="370" y="368" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">stdout (1) faylga oqadi; stderr (2) alohida &#8212; uni ko'rsangiz xato bor</text>
+</svg>

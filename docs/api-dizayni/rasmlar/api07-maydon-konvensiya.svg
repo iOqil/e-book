@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560">
+  <title>Maydon nomi konvensiyalari va format qoidalari</title>
+  <rect x="0" y="0" width="900" height="560" fill="#f8fafc"/>
+  <text x="450" y="34" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">Maydon konvensiyalari</text>
+  <text x="450" y="58" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Nom uslubi, sana, null vs maydon yo'qligi</text>
+
+  <!-- snake vs camel -->
+  <rect x="36" y="80" width="400" height="180" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="236" y="106" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb">Kalit uslubi: BITTASINI tanlang</text>
+  <rect x="56" y="122" width="175" height="120" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1"/>
+  <text x="143" y="146" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb">snake_case</text>
+  <text x="70" y="172" font-family="monospace" font-size="13" fill="#334155">created_at</text>
+  <text x="70" y="194" font-family="monospace" font-size="13" fill="#334155">is_published</text>
+  <text x="70" y="216" font-family="monospace" font-size="13" fill="#334155">price_cents</text>
+  <text x="70" y="236" font-family="Segoe UI" font-size="13" fill="#64748b">ko'p backend</text>
+  <rect x="241" y="122" width="175" height="120" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1"/>
+  <text x="328" y="146" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">camelCase</text>
+  <text x="255" y="172" font-family="monospace" font-size="13" fill="#334155">createdAt</text>
+  <text x="255" y="194" font-family="monospace" font-size="13" fill="#334155">isPublished</text>
+  <text x="255" y="216" font-family="monospace" font-size="13" fill="#334155">priceCents</text>
+  <text x="255" y="236" font-family="Segoe UI" font-size="13" fill="#64748b">JS-do'st</text>
+
+  <!-- formats -->
+  <rect x="466" y="80" width="400" height="180" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="666" y="106" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#f59e0b">Format qoidalari</text>
+  <text x="486" y="138" font-family="Segoe UI" font-size="13" fill="#16a34a">Sana: ISO 8601 / RFC 3339, UTC</text>
+  <text x="500" y="160" font-family="monospace" font-size="13" fill="#334155">"2026-06-16T10:30:00Z"</text>
+  <text x="486" y="190" font-family="Segoe UI" font-size="13" fill="#16a34a">Pul: integer tiyin (FLOAT EMAS)</text>
+  <text x="500" y="212" font-family="monospace" font-size="13" fill="#334155">"price_cents": 49900</text>
+  <text x="486" y="242" font-family="Segoe UI" font-size="13" fill="#16a34a">Boolean nomi: is_active, has_x</text>
+
+  <!-- null vs absent -->
+  <rect x="36" y="280" width="830" height="230" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="451" y="306" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#dc2626">null vs maydon YO'QLIGI — semantik farq</text>
+
+  <rect x="56" y="324" width="380" height="160" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1"/>
+  <text x="246" y="348" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">null = ma'lum, qiymat YO'Q</text>
+  <text x="70" y="374" font-family="monospace" font-size="13" fill="#334155">{</text>
+  <text x="86" y="396" font-family="monospace" font-size="13" fill="#334155">"id": "u_7",</text>
+  <text x="86" y="418" font-family="monospace" font-size="13" fill="#dc2626">"deleted_at": null</text>
+  <text x="70" y="440" font-family="monospace" font-size="13" fill="#334155">}</text>
+  <text x="70" y="468" font-family="Segoe UI" font-size="13" fill="#64748b">"o'chirilmagan" deb aniq aytadi</text>
+
+  <rect x="466" y="324" width="380" height="160" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1"/>
+  <text x="656" y="348" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">yo'q = noma'lum / qo'llanmaydi</text>
+  <text x="480" y="374" font-family="monospace" font-size="13" fill="#334155">{</text>
+  <text x="496" y="396" font-family="monospace" font-size="13" fill="#334155">"id": "u_7"</text>
+  <text x="480" y="418" font-family="monospace" font-size="13" fill="#334155">}</text>
+  <text x="480" y="448" font-family="Segoe UI" font-size="13" fill="#64748b">deleted_at umuman yo'q:</text>
+  <text x="480" y="470" font-family="Segoe UI" font-size="13" fill="#64748b">"bu kontekstga tegishli emas"</text>
+
+  <text x="451" y="534" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">Tanlovingizni hujjatlang va butun API bo'ylab izchil qo'llang</text>
+</svg>

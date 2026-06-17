@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 470" font-family="Segoe UI">
+  <title>Kod o'zgardi lekin izoh eski qoldi: yolg'on va xavfli izoh</title>
+  <rect x="0" y="0" width="880" height="470" fill="#f8fafc"/>
+
+  <text x="440" y="36" text-anchor="middle" font-size="22" font-weight="bold" fill="#1e293b">Eskirgan izoh — yolg'on izoh</text>
+  <text x="440" y="60" text-anchor="middle" font-size="14" fill="#64748b">Kod o'zgaradi, izoh unutiladi — endi izoh aldaydi</text>
+
+  <!-- Step 1: kecha -->
+  <rect x="40" y="92" width="360" height="150" rx="12" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="220" y="120" text-anchor="middle" font-size="15" font-weight="bold" fill="#64748b">Kecha: izoh = kod</text>
+  <rect x="60" y="136" width="320" height="90" rx="8" fill="#f1f5f9"/>
+  <text x="76" y="164" font-size="13" fill="#16a34a" font-family="monospace">// Chegirma: 10%</text>
+  <text x="76" y="190" font-size="13" fill="#334155" font-family="monospace">narx = narx * 0.90;</text>
+  <text x="220" y="216" text-anchor="middle" font-size="13" fill="#16a34a">Izoh rost — bir-biriga mos</text>
+
+  <!-- arrow -->
+  <line x1="400" y1="167" x2="478" y2="167" stroke="#dc2626" stroke-width="2.5"/>
+  <polygon points="486,167 476,162 476,172" fill="#dc2626"/>
+  <text x="440" y="156" text-anchor="middle" font-size="13" fill="#dc2626">kod</text>
+  <text x="442" y="190" text-anchor="middle" font-size="13" fill="#dc2626">o'zgardi</text>
+
+  <!-- Step 2: bugun -->
+  <rect x="488" y="92" width="360" height="150" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="668" y="120" text-anchor="middle" font-size="15" font-weight="bold" fill="#dc2626">Bugun: izoh yolg'on</text>
+  <rect x="508" y="136" width="320" height="90" rx="8" fill="#fef2f2"/>
+  <text x="524" y="164" font-size="13" fill="#dc2626" font-family="monospace">// Chegirma: 10%</text>
+  <text x="524" y="190" font-size="13" fill="#334155" font-family="monospace">narx = narx * 0.75;</text>
+  <text x="668" y="216" text-anchor="middle" font-size="13" fill="#dc2626">Izoh 10% deydi, kod 25% qiladi</text>
+
+  <!-- Why dangerous -->
+  <rect x="40" y="266" width="808" height="170" rx="12" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="444" y="296" text-anchor="middle" font-size="16" font-weight="bold" fill="#b45309">Nega bu izohsizdan ham yomon?</text>
+
+  <text x="70" y="332" font-size="14" fill="#334155">1.  O'quvchi izohga ishonadi — kodni o'qimaydi, xato xulosa chiqaradi.</text>
+  <text x="70" y="362" font-size="14" fill="#334155">2.  Debugging paytida izoh chalg'itadi: "10% ekan-ku" deb noto'g'ri yo'ldan boradi.</text>
+  <text x="70" y="392" font-size="14" fill="#334155">3.  Ishonch yo'qoladi: bitta yolg'on izoh barcha izohlarga shubha tug'diradi.</text>
+  <text x="70" y="422" font-size="14" fill="#334155">Yechim:  izohni kod bilan birga yangila — yoki kerakmasa, butunlay o'chir.</text>
+</svg>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470">
+  <title>Factory Method: Creator obyekt yaratishni pastki sinflarga (factory method) topshiradi, biznes mantiq konkret klassdan ajraladi</title>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="34" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Factory Method</text>
+  <text x="380" y="56" font-family="Segoe UI" font-size="14" fill="#64748b" text-anchor="middle">yaratishni pastki sinflarga topshir — biznes mantiq konkret klassni bilmaydi</text>
+
+  <!-- Creator (abstract) -->
+  <rect x="60" y="90" width="280" height="120" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="200" y="116" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb" text-anchor="middle">TolovServisi (abstract)</text>
+  <line x1="60" y1="126" x2="340" y2="126" stroke="#94a3b8" stroke-width="1"/>
+  <text x="78" y="150" font-family="Segoe UI" font-size="13" fill="#334155">+ amalgaOshir(summa)</text>
+  <text x="78" y="172" font-family="Segoe UI" font-size="13" fill="#64748b">  -> yaratProvayder().tola(...)</text>
+  <text x="78" y="198" font-family="Segoe UI" font-size="13" font-style="italic" fill="#dc2626"># yaratProvayder()  «factory method»</text>
+
+  <!-- Product interface -->
+  <rect x="430" y="90" width="270" height="80" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="565" y="116" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="middle">«interface» TolovProvayderi</text>
+  <line x1="430" y1="126" x2="700" y2="126" stroke="#94a3b8" stroke-width="1"/>
+  <text x="448" y="152" font-family="Segoe UI" font-size="13" fill="#334155">+ tola(summa): TolovNatijasi</text>
+
+  <!-- Creator -> Product (dependency, dashed) -->
+  <line x1="340" y1="130" x2="426" y2="130" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#oarr)"/>
+  <text x="383" y="122" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">yaratadi</text>
+
+  <!-- Concrete creators -->
+  <rect x="40" y="280" width="200" height="70" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="140" y="306" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">PaymeServisi</text>
+  <text x="140" y="330" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">yaratProvayder()=Payme</text>
+
+  <rect x="270" y="280" width="200" height="70" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="370" y="306" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">ClickServisi</text>
+  <text x="370" y="330" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">yaratProvayder()=Click</text>
+
+  <!-- inheritance to abstract creator (hollow triangle, arrow to parent) -->
+  <line x1="140" y1="280" x2="180" y2="212" stroke="#2563eb" stroke-width="2" marker-end="url(#tri)"/>
+  <line x1="370" y1="280" x2="240" y2="212" stroke="#2563eb" stroke-width="2" marker-end="url(#tri)"/>
+
+  <!-- Concrete products -->
+  <rect x="500" y="280" width="120" height="70" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="560" y="320" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Payme</text>
+  <rect x="640" y="280" width="100" height="70" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="690" y="320" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Click</text>
+  <line x1="560" y1="280" x2="565" y2="172" stroke="#16a34a" stroke-width="2" marker-end="url(#tri2)"/>
+  <line x1="690" y1="280" x2="585" y2="172" stroke="#16a34a" stroke-width="2" marker-end="url(#tri2)"/>
+
+  <!-- note -->
+  <rect x="40" y="395" width="680" height="55" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1"/>
+  <text x="60" y="419" font-family="Segoe UI" font-size="13" fill="#334155">Yangi provayder (masalan Uzum) qo'shsangiz: yangi sinf qo'shasiz — amalgaOshir() ga TEGMAYSIZ.</text>
+  <text x="60" y="439" font-family="Segoe UI" font-size="13" fill="#334155">Bu OCP (Open/Closed): kengaytirishga ochiq, o'zgartirishga yopiq.</text>
+
+  <defs>
+    <marker id="oarr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,1 L9,5 L0,9" fill="none" stroke="#94a3b8" stroke-width="2"/></marker>
+    <marker id="tri" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M1,1 L13,7 L1,13 Z" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/></marker>
+    <marker id="tri2" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M1,1 L13,7 L1,13 Z" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/></marker>
+  </defs>
+</svg>

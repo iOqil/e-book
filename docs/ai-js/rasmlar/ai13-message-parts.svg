@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 470" width="800" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>UIMessage parts massivi: bitta xabar bir nechta bo'lakdan iborat — matn bo'lak(lar)i va ixtiyoriy vosita (tool) bo'lagi. Ular birgalikda bitta chat pufakchasi sifatida chiziladi. Eski v4 dagi yagona content string usuli bilan taqqoslang.</title>
+  <defs>
+    <marker id="p13a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#6366f1"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="800" height="470" fill="#f8fafc"/>
+  <text x="400" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">UIMessage.parts — bitta xabar, bir nechta bo'lak</text>
+  <text x="400" y="58" font-size="14" fill="#64748b" text-anchor="middle">v6 da xabar yagona matn emas; siz parts massivini chizasiz</text>
+
+  <!-- OLD way -->
+  <text x="40" y="96" font-size="15" font-weight="bold" fill="#ef4444" text-anchor="start">Eski usul (v4 shakli)</text>
+  <rect x="40" y="108" width="330" height="70" rx="10" fill="#ffffff" stroke="#ef4444" stroke-width="2"/>
+  <text x="60" y="134" font-size="13.5" fill="#1e293b" text-anchor="start">message.content = "Salom, men..."</text>
+  <text x="60" y="158" font-size="13" fill="#64748b" text-anchor="start">bitta string — faqat matn sig'adi</text>
+
+  <!-- arrow to new -->
+  <text x="400" y="150" font-size="22" fill="#64748b" text-anchor="middle">→</text>
+
+  <!-- NEW: parts array -->
+  <text x="430" y="96" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="start">v6 usuli: parts massivi</text>
+  <rect x="430" y="108" width="330" height="70" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="450" y="134" font-size="13.5" fill="#1e293b" text-anchor="start">message.parts = [ ... ]</text>
+  <text x="450" y="158" font-size="13" fill="#64748b" text-anchor="start">matn + vosita bo'laklari aralash</text>
+
+  <!-- parts breakdown -->
+  <text x="40" y="218" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="start">parts ichi:</text>
+
+  <!-- text part 1 -->
+  <rect x="40" y="232" width="220" height="78" rx="10" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="150" y="258" font-size="13.5" font-weight="bold" fill="#6366f1" text-anchor="middle">{ type: "text" }</text>
+  <text x="150" y="280" font-size="13" fill="#1e293b" text-anchor="middle">"Toshkentdagi ob-havoni</text>
+  <text x="150" y="298" font-size="13" fill="#1e293b" text-anchor="middle">tekshiraman..."</text>
+
+  <!-- tool part -->
+  <rect x="290" y="232" width="220" height="78" rx="10" fill="#fef3c7" stroke="#d97757" stroke-width="2"/>
+  <text x="400" y="258" font-size="13.5" font-weight="bold" fill="#d97757" text-anchor="middle">{ type: "tool-..." }</text>
+  <text x="400" y="280" font-size="13" fill="#1e293b" text-anchor="middle">ob_havo vositasi</text>
+  <text x="400" y="298" font-size="13" fill="#475569" text-anchor="middle">chaqirildi → natija</text>
+
+  <!-- text part 2 -->
+  <rect x="540" y="232" width="220" height="78" rx="10" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="650" y="258" font-size="13.5" font-weight="bold" fill="#6366f1" text-anchor="middle">{ type: "text" }</text>
+  <text x="650" y="280" font-size="13" fill="#1e293b" text-anchor="middle">"Toshkentda +28°C,</text>
+  <text x="650" y="298" font-size="13" fill="#1e293b" text-anchor="middle">ochiq havo."</text>
+
+  <!-- arrows down to bubble -->
+  <line x1="150" y1="310" x2="320" y2="352" stroke="#6366f1" stroke-width="2" marker-end="url(#p13a)"/>
+  <line x1="400" y1="310" x2="400" y2="352" stroke="#6366f1" stroke-width="2" marker-end="url(#p13a)"/>
+  <line x1="650" y1="310" x2="480" y2="352" stroke="#6366f1" stroke-width="2" marker-end="url(#p13a)"/>
+
+  <!-- rendered bubble -->
+  <text x="400" y="346" font-size="13.5" fill="#64748b" text-anchor="middle">parts.map(...) → bitta chat pufakchasi:</text>
+  <rect x="120" y="358" width="560" height="92" rx="16" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <text x="146" y="384" font-size="13.5" fill="#1e293b" text-anchor="start">Toshkentdagi ob-havoni tekshiraman...</text>
+  <rect x="146" y="396" width="300" height="26" rx="13" fill="#fef3c7" stroke="#d97757" stroke-width="1.5"/>
+  <text x="296" y="413" font-size="13" fill="#1e293b" text-anchor="middle">🔧 ob_havo chaqirilmoqda...</text>
+  <text x="146" y="440" font-size="13.5" fill="#1e293b" text-anchor="start">Toshkentda +28°C, ochiq havo.</text>
+</svg>

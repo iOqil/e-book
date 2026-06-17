@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 500" font-family="Segoe UI">
+  <title>Stack-trace anatomiyasi: qaysi qatorni o'qish va asl sabab qayerda</title>
+  <rect x="0" y="0" width="860" height="500" fill="#f8fafc"/>
+
+  <text x="430" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#1e293b">Stack-trace anatomiyasi</text>
+  <text x="430" y="62" text-anchor="middle" font-size="14" fill="#64748b">Birinchi qatorni emas - eng yaqin O'Z kodingizni va asl sababni o'qing</text>
+
+  <!-- Trace panel -->
+  <rect x="50" y="86" width="520" height="384" rx="12" fill="#1e293b"/>
+
+  <!-- xato turi va xabar -->
+  <rect x="66" y="102" width="488" height="50" rx="6" fill="#7f1d1d"/>
+  <text x="80" y="124" font-size="14" fill="#fecaca" font-family="Consolas, monospace">ValueError: nomzod ro'yxati bo'sh</text>
+  <text x="80" y="144" font-size="13" fill="#fca5a5" font-family="Consolas, monospace">divide_total: nolga bo'lish mumkin emas</text>
+
+  <text x="80" y="178" font-size="13" fill="#cbd5e1" font-family="Consolas, monospace">Traceback (oxirgi chaqiruv pastda):</text>
+
+  <!-- frame: kutubxona (eng yuqori, e'tibordan chetda) -->
+  <text x="80" y="206" font-size="13" fill="#64748b" font-family="Consolas, monospace">File "framework/router.py", line 88</text>
+  <text x="98" y="224" font-size="13" fill="#475569" font-family="Consolas, monospace">handler(request)</text>
+
+  <!-- frame: o'z kodingiz (yashil) -->
+  <rect x="66" y="238" width="488" height="58" rx="6" fill="#14532d"/>
+  <text x="80" y="260" font-size="13" fill="#bbf7d0" font-family="Consolas, monospace">File "app/hisobot.py", line 42, in hisobla</text>
+  <text x="98" y="278" font-size="13" fill="#86efac" font-family="Consolas, monospace">return divide_total(soni, len(nomzodlar))</text>
+
+  <!-- frame: xato otilgan joy (qizil) -->
+  <rect x="66" y="304" width="488" height="58" rx="6" fill="#7f1d1d"/>
+  <text x="80" y="326" font-size="13" fill="#fecaca" font-family="Consolas, monospace">File "app/util.py", line 9, in divide_total</text>
+  <text x="98" y="344" font-size="13" fill="#fca5a5" font-family="Consolas, monospace">return summa / soni   # soni = 0</text>
+
+  <text x="80" y="392" font-size="13" fill="#94a3b8" font-family="Consolas, monospace">Bo'shliq: nomzodlar yuklanmagan,</text>
+  <text x="80" y="410" font-size="13" fill="#94a3b8" font-family="Consolas, monospace">len() = 0 -> divide_total nolga bo'ldi.</text>
+
+  <text x="80" y="446" font-size="13" fill="#fde68a" font-family="Consolas, monospace">Asl sabab: nomzodlar ro'yxati hisobla'da</text>
+  <text x="80" y="464" font-size="13" fill="#fde68a" font-family="Consolas, monospace">bo'sh kelgan - tekshiruv yo'q edi.</text>
+
+  <!-- Right-side annotations -->
+  <defs>
+    <marker id="aa" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0 0 L8 3 L0 6 Z" fill="#dc2626"/>
+    </marker>
+    <marker id="ab" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0 0 L8 3 L0 6 Z" fill="#16a34a"/>
+    </marker>
+    <marker id="ac" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0 0 L8 3 L0 6 Z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+
+  <rect x="600" y="100" width="230" height="74" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="615" y="124" font-size="14" font-weight="bold" fill="#dc2626">1) Xato turi + xabar</text>
+  <text x="615" y="146" font-size="13" fill="#334155">NIMA buzildi. O'qing,</text>
+  <text x="615" y="164" font-size="13" fill="#334155">lekin tugatish bu emas.</text>
+  <line x1="600" y1="127" x2="556" y2="127" stroke="#dc2626" stroke-width="2" marker-end="url(#aa)"/>
+
+  <rect x="600" y="232" width="230" height="74" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="615" y="256" font-size="14" font-weight="bold" fill="#16a34a">2) Sizning kodingiz</text>
+  <text x="615" y="278" font-size="13" fill="#334155">Bu yerdan boshlang -</text>
+  <text x="615" y="296" font-size="13" fill="#334155">o'zgartira oladigan joy.</text>
+  <line x1="600" y1="267" x2="556" y2="267" stroke="#16a34a" stroke-width="2" marker-end="url(#ab)"/>
+
+  <rect x="600" y="364" width="230" height="92" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="615" y="388" font-size="14" font-weight="bold" fill="#f59e0b">3) Asl sabab</text>
+  <text x="615" y="410" font-size="13" fill="#334155">Otilgan joy belgi xolos.</text>
+  <text x="615" y="428" font-size="13" fill="#334155">Sabab odatda yuqorida:</text>
+  <text x="615" y="446" font-size="13" fill="#334155">"qayerdan 0 keldi?"</text>
+  <line x1="600" y1="333" x2="556" y2="333" stroke="#f59e0b" stroke-width="2" marker-end="url(#ac)"/>
+</svg>

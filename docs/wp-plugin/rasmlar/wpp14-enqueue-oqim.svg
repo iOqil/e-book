@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440">
+  <title>Skript ulash oqimi: avval wp_register_script bilan ro'yxatga olinadi, keyin to'g'ri hook ichida wp_enqueue_script chaqiriladi, va WordPress skriptni bog'liqliklari bilan tartib bo'yicha sahifaga qo'shadi</title>
+  <defs>
+    <marker id="eq-arrow" markerWidth="12" markerHeight="12" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Skript va stillarni ulash oqimi</text>
+  <text x="380" y="56" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">register (ixtiyoriy) -&gt; to'g'ri hook ichida enqueue -&gt; WP sahifaga qo'shadi</text>
+
+  <!-- Step 1: register -->
+  <rect x="40" y="90" width="320" height="92" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="60" y="118" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#7c3aed">1. Ro'yxatga ol (ixtiyoriy)</text>
+  <text x="60" y="142" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">wp_register_script( handle, src, deps, ver )</text>
+  <text x="60" y="164" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Faqat tanishtiradi, hali yuklamaydi</text>
+
+  <!-- Step 2: enqueue inside hook -->
+  <rect x="400" y="90" width="320" height="92" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="420" y="118" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e40af">2. To'g'ri hook ichida enqueue</text>
+  <text x="420" y="142" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">add_action( 'wp_enqueue_scripts', ... )</text>
+  <text x="420" y="164" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">wp_enqueue_script( handle )  // navbatga qo'yadi</text>
+
+  <line x1="360" y1="136" x2="398" y2="136" stroke="#94a3b8" stroke-width="2" marker-end="url(#eq-arrow)"/>
+
+  <!-- Step 3: WP assembles -->
+  <rect x="120" y="220" width="520" height="92" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="140" y="248" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">3. WordPress sahifaga qo'shadi</text>
+  <text x="140" y="272" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Bog'liqlik tartibi (deps) -&gt; versiya (?ver=) -&gt; dublikat YO'Q</text>
+  <text x="140" y="294" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">wp_head() / wp_footer() ichida bitta to'g'ri &lt;script&gt; / &lt;link&gt;</text>
+
+  <line x1="500" y1="184" x2="430" y2="218" stroke="#94a3b8" stroke-width="2" marker-end="url(#eq-arrow)"/>
+
+  <!-- output line -->
+  <rect x="120" y="338" width="520" height="58" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="140" y="362" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#b45309">Natija (HTML chiqishi):</text>
+  <text x="140" y="384" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">&lt;link rel="stylesheet" ...&gt;  va  &lt;script src="..." defer&gt;&lt;/script&gt;</text>
+
+  <line x1="380" y1="314" x2="380" y2="336" stroke="#94a3b8" stroke-width="2" marker-end="url(#eq-arrow)"/>
+
+  <text x="380" y="424" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">To'g'ridan &lt;script&gt; tashlamang: bog'liqlik/versiya/dublikat nazorati yo'qoladi.</text>
+</svg>

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 470">
+  <title>Zanjir usuli (separate chaining): bitta bucketga tushgan kalitlar bog'langan ro'yxat bo'lib saqlanadi</title>
+  <rect x="0" y="0" width="880" height="470" fill="#f8fafc"/>
+  <text x="440" y="36" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Kolliziyani yechish: zanjir usuli (chaining)</text>
+  <text x="440" y="62" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Bir indeksga ikki kalit tushsa, ular o'sha bucketdagi bog'langan ro'yxatga qo'shiladi</text>
+
+  <!-- bucket massivi -->
+  <g font-family="monospace" font-size="14">
+    <rect x="60" y="110" width="120" height="36" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="72" y="133" fill="#64748b">[0]</text>
+    <rect x="60" y="146" width="120" height="36" fill="#fef9c3" stroke="#f59e0b" stroke-width="2"/>
+    <text x="72" y="169" fill="#64748b">[1]</text>
+    <rect x="60" y="182" width="120" height="36" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="72" y="205" fill="#64748b">[2]</text>
+    <rect x="60" y="218" width="120" height="36" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="72" y="241" fill="#64748b">[3]</text>
+    <rect x="60" y="254" width="120" height="36" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="72" y="277" fill="#64748b">[4]</text>
+    <rect x="60" y="290" width="120" height="36" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+    <text x="72" y="313" fill="#64748b">[5]</text>
+  </g>
+  <text x="120" y="100" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">buckets</text>
+
+  <!-- chain for [1]: bitta tugun -->
+  <line x1="180" y1="164" x2="240" y2="164" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="240" y="146" width="110" height="36" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="295" y="169" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">("nok",5)</text>
+
+  <!-- chain for [3]: ikki tugun (kolliziya) -->
+  <line x1="180" y1="236" x2="240" y2="236" stroke="#2563eb" stroke-width="2"/>
+  <rect x="240" y="218" width="120" height="36" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="300" y="241" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">("uzum",12)</text>
+  <line x1="360" y1="236" x2="410" y2="236" stroke="#2563eb" stroke-width="2"/>
+  <polygon points="410,236 401,231 401,241" fill="#2563eb"/>
+  <rect x="410" y="218" width="120" height="36" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="470" y="241" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">("anor",8)</text>
+  <text x="470" y="278" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626" font-weight="bold">kolliziya! ikkalasi ham [3]</text>
+
+  <!-- chain for [5] -->
+  <line x1="180" y1="308" x2="240" y2="308" stroke="#16a34a" stroke-width="2"/>
+  <rect x="240" y="290" width="120" height="36" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="300" y="313" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">("olma",3)</text>
+
+  <!-- explanation box -->
+  <rect x="40" y="360" width="800" height="92" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="60" y="386" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">Qidiruv: avval bucket indeksini hisoblaymiz, keyin zanjirni yuramiz</text>
+  <text x="60" y="410" font-family="Segoe UI" font-size="14" fill="#334155">O'rtacha zanjir uzunligi = load factor a = n/m. Yaxshi hashda a kichik -> qidiruv O(1).</text>
+  <text x="60" y="432" font-family="Segoe UI" font-size="14" fill="#334155">Eng yomon holatda hamma kalit bitta bucketda -> zanjir n uzun -> qidiruv O(n).</text>
+</svg>

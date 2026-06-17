@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420">
+  <title>CSRF hujumi va nonce himoyasi: soxta sayt foydalanuvchi cookie'si bilan yashirin so'rov yuboradi, nonce token mos kelmagani uchun server so'rovni rad etadi; haqiqiy forma to'g'ri nonce bilan kelganda esa harakat bajariladi</title>
+
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+
+  <text x="380" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Nonce CSRF hujumini qanday to'sadi</text>
+
+  <!-- server (markaz o'ng) -->
+  <rect x="540" y="150" width="190" height="120" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="635" y="182" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e40af">Sizning sayt</text>
+  <text x="635" y="208" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">handler tekshiradi:</text>
+  <text x="635" y="230" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e40af">wp_verify_nonce()</text>
+  <text x="635" y="252" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">+ current_user_can()</text>
+
+  <!-- HAQIQIY FORMA (yuqori chap) -->
+  <rect x="30" y="80" width="270" height="92" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="165" y="106" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#15803d">Haqiqiy forma (sizning sayt)</text>
+  <text x="165" y="130" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">wp_nonce_field('kitkat_ochir')</text>
+  <text x="165" y="152" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#15803d">so'rov + TO'G'RI token</text>
+
+  <!-- chiziq: haqiqiy -> server -->
+  <line x1="300" y1="126" x2="538" y2="180" stroke="#16a34a" stroke-width="3" marker-end="url(#arrG)"/>
+
+  <!-- SOXTA SAYT (past chap) -->
+  <rect x="30" y="248" width="270" height="100" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="6 4"/>
+  <text x="165" y="276" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b91c1c">Soxta sayt (CSRF)</text>
+  <text x="165" y="300" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">yashirin so'rov yuboradi,</text>
+  <text x="165" y="320" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">cookie avtomatik biriktiriladi</text>
+  <text x="165" y="340" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#b91c1c">token YO'Q / noto'g'ri</text>
+
+  <!-- chiziq: soxta -> server -->
+  <line x1="300" y1="292" x2="538" y2="240" stroke="#dc2626" stroke-width="3" stroke-dasharray="6 4" marker-end="url(#arrR)"/>
+
+  <!-- natija: qabul (yuqori o'ng) -->
+  <rect x="540" y="300" width="190" height="46" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="635" y="320" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#15803d">token mos -> QABUL</text>
+  <text x="635" y="339" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">harakat bajariladi</text>
+
+  <!-- natija: rad (past) -->
+  <rect x="540" y="354" width="190" height="50" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="635" y="376" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#b91c1c">token mos emas -> RAD</text>
+  <text x="635" y="395" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">die / return</text>
+
+  <!-- server -> natija strelkalari -->
+  <line x1="635" y1="270" x2="635" y2="298" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arrG)"/>
+  <line x1="600" y1="270" x2="560" y2="352" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arrR)"/>
+
+  <!-- izoh pastda -->
+  <text x="380" y="404" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Soxta sayt amaldagi nonce'ni bila olmaydi: u har foydalanuvchi/harakatga noyob va vaqt bilan cheklangan</text>
+
+  <defs>
+    <marker id="arrG" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/></marker>
+    <marker id="arrR" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L8,3 L0,6 Z" fill="#dc2626"/></marker>
+  </defs>
+</svg>

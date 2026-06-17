@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" width="780" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Action va Filter farqi: action ish bajaradi, filter qiymatni o'zgartirib qaytaradi</title>
+  <rect x="0" y="0" width="780" height="470" fill="#f8fafc"/>
+  <text x="390" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Action vs Filter: ikki xil hook</text>
+
+  <!-- ACTION column -->
+  <rect x="40" y="62" width="330" height="358" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
+  <rect x="40" y="62" width="330" height="40" rx="12" fill="#2563eb"/>
+  <text x="205" y="89" text-anchor="middle" font-size="17" font-weight="700" fill="#ffffff">ACTION (do_action)</text>
+  <text x="205" y="126" text-anchor="middle" font-size="14" font-weight="700" fill="#2563eb">"Bir ish BAJAR"</text>
+  <text x="205" y="148" text-anchor="middle" font-size="13" fill="#475569">qiymat QAYTARMAYDI</text>
+
+  <!-- action flow -->
+  <rect x="64" y="166" width="282" height="40" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="205" y="191" text-anchor="middle" font-size="13" fill="#1e293b">do_action('wp_head')</text>
+
+  <line x1="205" y1="206" x2="205" y2="234" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="205,242 200,232 210,232" fill="#94a3b8"/>
+
+  <rect x="64" y="244" width="282" height="62" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="205" y="268" text-anchor="middle" font-size="13" fill="#1e293b">ulangan funksiyalar ISHLAYDI:</text>
+  <text x="205" y="290" text-anchor="middle" font-size="13" fill="#475569">CSS chiqar, meta qo'sh, log yoz...</text>
+
+  <line x1="205" y1="306" x2="205" y2="334" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="205,342 200,332 210,332" fill="#94a3b8"/>
+
+  <rect x="64" y="344" width="282" height="38" rx="8" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="205" y="368" text-anchor="middle" font-size="13" fill="#475569">davom etadi (hech narsa qaytmaydi)</text>
+
+  <text x="205" y="404" text-anchor="middle" font-size="13" font-weight="700" fill="#2563eb">add_action('wp_head', 'func');</text>
+
+  <!-- FILTER column -->
+  <rect x="410" y="62" width="330" height="358" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <rect x="410" y="62" width="330" height="40" rx="12" fill="#16a34a"/>
+  <text x="575" y="89" text-anchor="middle" font-size="17" font-weight="700" fill="#ffffff">FILTER (apply_filters)</text>
+  <text x="575" y="126" text-anchor="middle" font-size="14" font-weight="700" fill="#16a34a">"Qiymatni O'ZGARTIR"</text>
+  <text x="575" y="148" text-anchor="middle" font-size="13" fill="#475569">o'zgartirib QAYTARADI</text>
+
+  <rect x="434" y="166" width="282" height="40" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="575" y="191" text-anchor="middle" font-size="13" fill="#1e293b">apply_filters('the_title', 'Salom')</text>
+
+  <line x1="575" y1="206" x2="575" y2="234" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="575,242 570,232 580,232" fill="#94a3b8"/>
+
+  <rect x="434" y="244" width="282" height="62" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="575" y="268" text-anchor="middle" font-size="13" fill="#1e293b">funksiya qiymatni OLADI,</text>
+  <text x="575" y="290" text-anchor="middle" font-size="13" fill="#475569">o'zgartiradi va RETURN qiladi</text>
+
+  <line x1="575" y1="306" x2="575" y2="334" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="575,342 570,332 580,332" fill="#94a3b8"/>
+
+  <rect x="434" y="344" width="282" height="38" rx="8" fill="#bbf7d0" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="575" y="368" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a">natija: 'Salom | Mening saytim'</text>
+
+  <text x="575" y="404" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a">add_filter('the_title', 'func');</text>
+
+  <!-- center reminder -->
+  <text x="390" y="444" text-anchor="middle" font-size="14" font-weight="700" fill="#dc2626">Eslab qoling: filter HAR DOIM qiymat return qilishi SHART (aks holda kontent yo'qoladi)</text>
+</svg>

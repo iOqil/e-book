@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 480">
+  <title>Yuk oshganda throughput avval ortadi, keyin to'yinish nuqtasida tekislanadi va tushadi; latency esa to'yinishdan keyin keskin ko'tariladi</title>
+  <rect x="0" y="0" width="820" height="480" fill="#f8fafc"/>
+  <text x="410" y="38" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">To'yinish nuqtasi (saturation)</text>
+  <text x="410" y="64" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Yuk oshganda: throughput va latency nima qiladi</text>
+
+  <!-- O'qlar -->
+  <line x1="90" y1="380" x2="760" y2="380" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="90" y1="100" x2="90" y2="380" stroke="#94a3b8" stroke-width="2"/>
+  <text x="425" y="418" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">bir vaqtdagi foydalanuvchilar (yuk) &#8594;</text>
+
+  <!-- To'yinish vertikal chizig'i -->
+  <line x1="430" y1="100" x2="430" y2="380" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5 5"/>
+  <text x="430" y="96" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#1e293b">to'yinish nuqtasi</text>
+
+  <!-- Throughput egri chizig'i (ko'k): ortadi, tekislanadi, tushadi -->
+  <path d="M 90 360 Q 280 180 430 175 Q 560 172 760 230" fill="none" stroke="#2563eb" stroke-width="3.5"/>
+  <text x="200" y="250" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb">throughput (RPS)</text>
+  <text x="600" y="200" font-family="Segoe UI" font-size="13" fill="#2563eb">tushishni boshlaydi</text>
+
+  <!-- Latency egri chizig'i (qizil): tekis, keyin keskin ko'tariladi -->
+  <path d="M 90 350 L 430 340 Q 560 330 640 220 Q 700 150 750 120" fill="none" stroke="#dc2626" stroke-width="3.5"/>
+  <text x="150" y="335" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">latency (p95)</text>
+  <text x="650" y="170" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">keskin oshadi</text>
+
+  <!-- Zonalar -->
+  <text x="255" y="370" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">sog'lom zona</text>
+  <text x="600" y="370" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">o'ta yuklangan zona</text>
+
+  <text x="410" y="452" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">To'yinishdan keyin yuk qo'shsangiz: throughput tushadi, latency portlaydi</text>
+</svg>

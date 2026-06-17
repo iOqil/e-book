@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" width="760" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Production checklisti: env/secrets, logging, narx kuzatuv, rate limit, fallback, monitoring, versiyalash</title>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Production checklisti</text>
+  <text x="380" y="60" text-anchor="middle" font-size="14" fill="#475569">Productionga chiqishdan oldin har bandni belgilang</text>
+
+  <!-- Chap ustun -->
+  <g>
+    <rect x="36" y="86" width="345" height="52" rx="9" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+    <text x="62" y="118" font-size="18" fill="#16a34a">✓</text>
+    <text x="86" y="111" font-size="14" font-weight="700" fill="#1e293b">Env / secrets</text>
+    <text x="86" y="129" font-size="13" fill="#475569">kalit kodda emas, secrets manager</text>
+
+    <rect x="36" y="148" width="345" height="52" rx="9" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+    <text x="62" y="180" font-size="18" fill="#16a34a">✓</text>
+    <text x="86" y="173" font-size="14" font-weight="700" fill="#1e293b">Logging</text>
+    <text x="86" y="191" font-size="13" fill="#475569">strukturali, maxfiyni maskala</text>
+
+    <rect x="36" y="210" width="345" height="52" rx="9" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+    <text x="62" y="242" font-size="18" fill="#16a34a">✓</text>
+    <text x="86" y="235" font-size="14" font-weight="700" fill="#1e293b">Narx kuzatuv</text>
+    <text x="86" y="253" font-size="13" fill="#475569">har so'rov narxi DB + byudjet</text>
+
+    <rect x="36" y="272" width="345" height="52" rx="9" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+    <text x="62" y="304" font-size="18" fill="#16a34a">✓</text>
+    <text x="86" y="297" font-size="14" font-weight="700" fill="#1e293b">Rate limit / queue</text>
+    <text x="86" y="315" font-size="13" fill="#475569">navbat, per-user limit, backoff</text>
+  </g>
+
+  <!-- O'ng ustun -->
+  <g>
+    <rect x="396" y="86" width="328" height="52" rx="9" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+    <text x="422" y="118" font-size="18" fill="#16a34a">✓</text>
+    <text x="446" y="111" font-size="14" font-weight="700" fill="#1e293b">Fallback / barqarorlik</text>
+    <text x="446" y="129" font-size="13" fill="#475569">zaxira model, graceful degradation</text>
+
+    <rect x="396" y="148" width="328" height="52" rx="9" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+    <text x="422" y="180" font-size="18" fill="#16a34a">✓</text>
+    <text x="446" y="173" font-size="14" font-weight="700" fill="#1e293b">Monitoring / alert</text>
+    <text x="446" y="191" font-size="13" fill="#475569">xato, kechikish, anomaliya</text>
+
+    <rect x="396" y="210" width="328" height="52" rx="9" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+    <text x="422" y="242" font-size="18" fill="#16a34a">✓</text>
+    <text x="446" y="235" font-size="14" font-weight="700" fill="#1e293b">Versiyalash</text>
+    <text x="446" y="253" font-size="13" fill="#475569">prompt + model versiya, rollback</text>
+
+    <rect x="396" y="272" width="328" height="52" rx="9" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+    <text x="422" y="304" font-size="18" fill="#16a34a">✓</text>
+    <text x="446" y="297" font-size="14" font-weight="700" fill="#1e293b">Xavfsizlik (20-bob)</text>
+    <text x="446" y="315" font-size="13" fill="#475569">injection, PII, chiqishni filtrlash</text>
+  </g>
+
+  <!-- pastki banner -->
+  <rect x="36" y="346" width="688" height="96" rx="10" fill="#ede9fe" stroke="#c7d2fe" stroke-width="2"/>
+  <text x="380" y="378" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">Sinov mashinasi vs yo'ldagi mashina</text>
+  <text x="380" y="404" text-anchor="middle" font-size="14" fill="#475569">Lokalda ishlashi yetarli emas — production real foydalanuvchi, pul va yuklamaga bardosh berishi kerak.</text>
+  <text x="380" y="426" text-anchor="middle" font-size="13" fill="#94a3b8">Hammasi bitta ProductionAiService o'ramiga jamlanadi.</text>
+</svg>

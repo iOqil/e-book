@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Xato turi bo'yicha qaror daraxti: qayta urinishga arziydimi</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">Xato keldi — qayta urinishga arziydimi?</text>
+
+  <defs>
+    <marker id="ar-red" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#dc2626"/>
+    </marker>
+    <marker id="ar-grn" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <!-- Root -->
+  <rect x="290" y="62" width="180" height="56" rx="12" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="380" y="86" text-anchor="middle" font-size="15" font-weight="700" fill="#4338ca">Xato turi qanday?</text>
+  <text x="380" y="106" text-anchor="middle" font-size="13" fill="#475569">(tipli istisno)</text>
+
+  <!-- Left branch line -->
+  <line x1="320" y1="118" x2="200" y2="156" stroke="#dc2626" stroke-width="2.5" marker-end="url(#ar-red)"/>
+  <!-- Right branch line -->
+  <line x1="440" y1="118" x2="560" y2="156" stroke="#16a34a" stroke-width="2.5" marker-end="url(#ar-grn)"/>
+
+  <!-- LEFT: permanent -->
+  <rect x="40" y="160" width="300" height="58" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="190" y="184" text-anchor="middle" font-size="15" font-weight="700" fill="#dc2626">Doimiy xato</text>
+  <text x="190" y="205" text-anchor="middle" font-size="13" fill="#475569">sabab tuzatilmaguncha takrorlanadi</text>
+
+  <rect x="40" y="234" width="300" height="120" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="60" y="262" font-size="14" fill="#1e293b">• 401 AuthenticationError — kalit</text>
+  <text x="60" y="290" font-size="14" fill="#1e293b">• 400 BadRequestError — so'rov</text>
+  <text x="60" y="318" font-size="14" fill="#1e293b">• 404 NotFoundError — model nomi</text>
+  <text x="60" y="344" font-size="13" fill="#64748b">403 PermissionDeniedError — ruxsat</text>
+
+  <rect x="70" y="378" width="240" height="40" rx="10" fill="#dc2626"/>
+  <text x="190" y="403" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">QAYTA URINMANG — TUZATING</text>
+
+  <!-- RIGHT: transient -->
+  <rect x="420" y="160" width="300" height="58" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="570" y="184" text-anchor="middle" font-size="15" font-weight="700" fill="#166534">Vaqtinchalik xato</text>
+  <text x="570" y="205" text-anchor="middle" font-size="13" fill="#475569">bir oz kutsa — o'tib ketadi</text>
+
+  <rect x="420" y="234" width="300" height="120" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="440" y="262" font-size="14" fill="#1e293b">• 429 RateLimitError — limit</text>
+  <text x="440" y="290" font-size="14" fill="#1e293b">• APITimeoutError — javob kelmadi</text>
+  <text x="440" y="318" font-size="14" fill="#1e293b">• APIConnectionError — tarmoq</text>
+  <text x="440" y="344" font-size="13" fill="#64748b">5xx APIStatusError — server nosoz</text>
+
+  <rect x="450" y="378" width="240" height="40" rx="10" fill="#16a34a"/>
+  <text x="570" y="403" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">KUTIB QAYTA URING (backoff)</text>
+</svg>

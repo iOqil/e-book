@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Queue bilan asinxron AI: foydalanuvchi kutmaydi, sekin so'rov fonda bajariladi</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Asinxron AI: foydalanuvchi kutmaydi</text>
+
+  <!-- Yuqori yo'lak: tez javob -->
+  <text x="40" y="84" font-size="14" font-weight="700" fill="#16a34a">1. Tez javob (darhol)</text>
+
+  <rect x="40" y="96" width="150" height="58" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="115" y="122" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Foydalanuvchi</text>
+  <text x="115" y="140" text-anchor="middle" font-size="13" fill="#64748b">so'rov yuboradi</text>
+
+  <rect x="250" y="96" width="160" height="58" rx="10" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="330" y="122" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Controller</text>
+  <text x="330" y="140" text-anchor="middle" font-size="13" fill="#475569">Job-ni dispatch qiladi</text>
+
+  <rect x="470" y="96" width="160" height="58" rx="10" fill="#ecfdf5" stroke="#16a34a" stroke-width="2"/>
+  <text x="550" y="122" text-anchor="middle" font-size="14" font-weight="700" fill="#16a34a">Darhol javob</text>
+  <text x="550" y="140" text-anchor="middle" font-size="13" fill="#475569">"qabul qilindi"</text>
+
+  <defs>
+    <marker id="arrG" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#16a34a"/>
+    </marker>
+    <marker id="arrO" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+  <line x1="190" y1="125" x2="246" y2="125" stroke="#16a34a" stroke-width="2" marker-end="url(#arrG)"/>
+  <line x1="410" y1="125" x2="466" y2="125" stroke="#16a34a" stroke-width="2" marker-end="url(#arrG)"/>
+
+  <!-- ajratuvchi -->
+  <line x1="40" y1="190" x2="720" y2="190" stroke="#e2e8f0" stroke-width="1.5" stroke-dasharray="4 4"/>
+
+  <!-- Pastki yo'lak: fonda -->
+  <text x="40" y="222" font-size="14" font-weight="700" fill="#b45309">2. Fonda (sekin — foydalanuvchi kutmaydi)</text>
+
+  <rect x="40" y="238" width="150" height="62" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="115" y="264" text-anchor="middle" font-size="14" font-weight="700" fill="#b45309">Queue</text>
+  <text x="115" y="282" text-anchor="middle" font-size="13" fill="#475569">Job navbatda turadi</text>
+
+  <rect x="250" y="238" width="160" height="62" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="330" y="264" text-anchor="middle" font-size="14" font-weight="700" fill="#7c3aed">Worker + AiService</text>
+  <text x="330" y="282" text-anchor="middle" font-size="13" fill="#475569">Claude'ga so'rov</text>
+
+  <rect x="470" y="238" width="160" height="62" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="550" y="264" text-anchor="middle" font-size="14" font-weight="700" fill="#16a34a">Natija saqlanadi</text>
+  <text x="550" y="282" text-anchor="middle" font-size="13" fill="#475569">DB + broadcast</text>
+
+  <line x1="190" y1="269" x2="246" y2="269" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrO)"/>
+  <line x1="410" y1="269" x2="466" y2="269" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrO)"/>
+
+  <!-- dispatch ko'prik -->
+  <line x1="330" y1="154" x2="115" y2="234" stroke="#f59e0b" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arrO)"/>
+  <text x="150" y="200" font-size="13" fill="#b45309">dispatch()</text>
+
+  <!-- natija foydalanuvchiga -->
+  <line x1="550" y1="300" x2="550" y2="340" stroke="#16a34a" stroke-width="2" marker-end="url(#arrG)"/>
+  <rect x="455" y="342" width="190" height="46" rx="10" fill="#ecfdf5" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="550" y="370" text-anchor="middle" font-size="13" fill="#16a34a">tayyor bo'lganda ko'rsatiladi</text>
+
+  <text x="380" y="408" text-anchor="middle" font-size="13" fill="#94a3b8">Foydalanuvchi 30 soniya kutib o'tirmaydi — javob darhol, AI ishi fonda</text>
+</svg>

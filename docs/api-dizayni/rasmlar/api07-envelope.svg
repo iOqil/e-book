@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540">
+  <title>Envelope vs bare javob ikki yondashuv</title>
+  <rect x="0" y="0" width="900" height="540" fill="#f8fafc"/>
+  <text x="450" y="34" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">Envelope vs Bare javob</text>
+  <text x="450" y="58" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Resursni o'rashmi yoki to'g'ridan-to'g'ri berishmi?</text>
+
+  <!-- ENVELOPE card -->
+  <rect x="36" y="80" width="400" height="400" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="236" y="108" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#7c3aed">ENVELOPE (o'rovchi)</text>
+  <text x="236" y="130" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">data + meta + links uchun joy</text>
+
+  <rect x="56" y="146" width="360" height="240" rx="6" fill="#faf5ff" stroke="#7c3aed" stroke-width="1"/>
+  <text x="70" y="170" font-family="monospace" font-size="13" fill="#334155">{</text>
+  <text x="86" y="192" font-family="monospace" font-size="13" fill="#7c3aed">"data": {</text>
+  <text x="102" y="214" font-family="monospace" font-size="13" fill="#16a34a">"id": "book_1001",</text>
+  <text x="102" y="236" font-family="monospace" font-size="13" fill="#16a34a">"title": "Yangi kitob"</text>
+  <text x="86" y="258" font-family="monospace" font-size="13" fill="#7c3aed">},</text>
+  <text x="86" y="280" font-family="monospace" font-size="13" fill="#2563eb">"meta": {</text>
+  <text x="102" y="302" font-family="monospace" font-size="13" fill="#334155">"request_id": "req_9f"</text>
+  <text x="86" y="324" font-family="monospace" font-size="13" fill="#2563eb">},</text>
+  <text x="86" y="346" font-family="monospace" font-size="13" fill="#f59e0b">"links": { "self": "/v1/books/1001" }</text>
+  <text x="70" y="368" font-family="monospace" font-size="13" fill="#334155">}</text>
+
+  <text x="56" y="416" font-family="Segoe UI" font-size="13" fill="#16a34a">+ pagination, meta, links uchun joy</text>
+  <text x="56" y="440" font-family="Segoe UI" font-size="13" fill="#16a34a">+ ro'yxat javoblari uchun qulay</text>
+  <text x="56" y="464" font-family="Segoe UI" font-size="13" fill="#dc2626">- qo'shimcha "data" bosqichi</text>
+
+  <!-- BARE card -->
+  <rect x="466" y="80" width="400" height="400" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="666" y="108" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb">BARE (to'g'ridan-to'g'ri)</text>
+  <text x="666" y="130" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">resurs ildizda, o'rovsiz</text>
+
+  <rect x="486" y="146" width="360" height="240" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1"/>
+  <text x="500" y="170" font-family="monospace" font-size="13" fill="#334155">{</text>
+  <text x="516" y="192" font-family="monospace" font-size="13" fill="#16a34a">"id": "book_1001",</text>
+  <text x="516" y="214" font-family="monospace" font-size="13" fill="#16a34a">"title": "Yangi kitob",</text>
+  <text x="516" y="236" font-family="monospace" font-size="13" fill="#16a34a">"price_cents": 49900,</text>
+  <text x="516" y="258" font-family="monospace" font-size="13" fill="#16a34a">"is_published": false</text>
+  <text x="500" y="280" font-family="monospace" font-size="13" fill="#334155">}</text>
+  <text x="516" y="324" font-family="Segoe UI" font-size="13" fill="#64748b">maydonlar to'g'ridan-to'g'ri</text>
+  <text x="516" y="346" font-family="Segoe UI" font-size="13" fill="#64748b">ildiz obyektda</text>
+
+  <text x="486" y="416" font-family="Segoe UI" font-size="13" fill="#16a34a">+ sodda, o'qish oson</text>
+  <text x="486" y="440" font-family="Segoe UI" font-size="13" fill="#16a34a">+ kam yozish, kam ichma-ichlik</text>
+  <text x="486" y="464" font-family="Segoe UI" font-size="13" fill="#dc2626">- metadata uchun joy yo'q</text>
+
+  <text x="450" y="510" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#1e293b">Qoida: bittasini tanlang va BUTUN API bo'ylab izchil saqlang</text>
+</svg>

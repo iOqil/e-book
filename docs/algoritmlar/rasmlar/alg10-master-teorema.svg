@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 620">
+  <title>Master teorema uch holati: n darajada log b asosida a kattaligini f(n) bilan solishtirish; qaysi taraf katta bo'lsa, o'sha javobni belgilaydi</title>
+  <rect x="0" y="0" width="880" height="620" fill="#f8fafc"/>
+  <text x="440" y="36" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Master teorema:  T(n) = a·T(n/b) + f(n)</text>
+  <text x="440" y="62" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Shartlar:  a ≥ 1,  b &gt; 1,  f(n) musbat.  Solishtiruvchi kattalik:</text>
+  <text x="440" y="92" text-anchor="middle" font-family="monospace" font-size="18" font-weight="bold" fill="#7c3aed">d = log_b a    →    barglar ishi ≈ n^d</text>
+
+  <!-- center divider concept -->
+  <text x="440" y="124" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">f(n) ni  n^d  bilan taqqoslang — qaysi biri hukmron bo'lsa, javob shuni belgilaydi:</text>
+
+  <!-- CASE 1 -->
+  <rect x="30" y="150" width="265" height="200" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="162" y="180" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb">Holat 1 — barglar yengadi</text>
+  <text x="162" y="210" text-anchor="middle" font-family="monospace" font-size="14" fill="#334155">f(n) = O(n^(d−ε))</text>
+  <text x="162" y="234" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">f kichik: ε&gt;0 darajaga kichik</text>
+  <line x1="55" y1="250" x2="270" y2="250" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="162" y="278" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#16a34a">T(n) = Θ(n^d)</text>
+  <text x="162" y="308" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Misol: 4T(n/2)+n</text>
+  <text x="162" y="328" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">d=2 &gt; 1 → Θ(n²)</text>
+
+  <!-- CASE 2 -->
+  <rect x="307" y="150" width="265" height="200" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="439" y="180" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a">Holat 2 — barobar</text>
+  <text x="439" y="210" text-anchor="middle" font-family="monospace" font-size="14" fill="#334155">f(n) = Θ(n^d)</text>
+  <text x="439" y="234" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">f va barglar bir xil tartibda</text>
+  <line x1="332" y1="250" x2="547" y2="250" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="439" y="278" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#16a34a">T(n) = Θ(n^d · log n)</text>
+  <text x="439" y="308" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Misol: 2T(n/2)+n</text>
+  <text x="439" y="328" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">d=1 → Θ(n log n)</text>
+
+  <!-- CASE 3 -->
+  <rect x="584" y="150" width="266" height="200" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="717" y="180" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#dc2626">Holat 3 — ildiz yengadi</text>
+  <text x="717" y="210" text-anchor="middle" font-family="monospace" font-size="14" fill="#334155">f(n) = Ω(n^(d+ε))</text>
+  <text x="717" y="234" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">f katta + muntazamlik sharti</text>
+  <line x1="609" y1="250" x2="824" y2="250" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="717" y="278" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#16a34a">T(n) = Θ(f(n))</text>
+  <text x="717" y="308" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Misol: 2T(n/2)+n²</text>
+  <text x="717" y="328" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">d=1 &lt; 2 → Θ(n²)</text>
+
+  <!-- balance scale metaphor -->
+  <text x="440" y="392" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">Tarozi intuitsiyasi: n^d  ⚖  f(n)</text>
+
+  <!-- left pan: leaves -->
+  <line x1="440" y1="408" x2="440" y2="470" stroke="#334155" stroke-width="2"/>
+  <line x1="280" y1="420" x2="600" y2="420" stroke="#334155" stroke-width="2"/>
+  <circle cx="440" cy="406" r="5" fill="#7c3aed"/>
+  <line x1="280" y1="420" x2="280" y2="450" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="600" y1="420" x2="600" y2="450" stroke="#94a3b8" stroke-width="1.5"/>
+  <rect x="240" y="450" width="80" height="34" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="280" y="472" text-anchor="middle" font-family="monospace" font-size="14" fill="#7c3aed">n^d</text>
+  <rect x="560" y="450" width="80" height="34" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="600" y="472" text-anchor="middle" font-family="monospace" font-size="14" fill="#dc2626">f(n)</text>
+  <text x="280" y="504" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">barglar (chap)</text>
+  <text x="600" y="504" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">ildiz ishi (o'ng)</text>
+
+  <!-- bottom summary -->
+  <rect x="120" y="530" width="640" height="70" rx="12" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="440" y="556" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">Chap og'ir → Θ(n^d).   Muvozanat → Θ(n^d·log n).   O'ng og'ir → Θ(f(n)).</text>
+  <text x="440" y="582" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#92400e">Diqqat: ε &gt; 0 BO'SHLIQ shart. Agar farq faqat log darajada bo'lsa — teorema qo'llanmaydi.</text>
+</svg>

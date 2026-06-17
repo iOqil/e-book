@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 480" width="780" height="480">
+  <title>To'g'ridan-to'g'ri script teg (yomon) vs wp_enqueue_script (yaxshi) taqqoslash</title>
+  <rect width="780" height="480" fill="#f8fafc"/>
+  <text x="390" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Qo'lda &lt;script&gt; vs enqueue</text>
+
+  <!-- BAD column -->
+  <rect x="30" y="60" width="350" height="390" rx="12" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <rect x="30" y="60" width="350" height="46" rx="12" fill="#dc2626"/>
+  <text x="205" y="90" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#ffffff">YOMON: header.php ichida qo'lda</text>
+
+  <rect x="48" y="122" width="314" height="76" rx="8" fill="#1e293b"/>
+  <text x="62" y="148" font-family="Consolas, monospace" font-size="13" fill="#e2e8f0">&lt;link rel="stylesheet"</text>
+  <text x="62" y="166" font-family="Consolas, monospace" font-size="13" fill="#e2e8f0">  href="main.css"&gt;</text>
+  <text x="62" y="188" font-family="Consolas, monospace" font-size="13" fill="#e2e8f0">&lt;script src="app.js"&gt;&lt;/script&gt;</text>
+
+  <text x="62" y="232" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#991b1b">&#10007; Dublikat: 2 plagin bir kutubxonani</text>
+  <text x="80" y="252" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#991b1b">2 marta yuklaydi</text>
+  <text x="62" y="282" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#991b1b">&#10007; Dependency yo'q: jquery'ni qo'lda</text>
+  <text x="80" y="302" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#991b1b">to'g'ri tartibda qo'yish kerak</text>
+  <text x="62" y="332" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#991b1b">&#10007; Kesh-buzish yo'q: brauzer eski</text>
+  <text x="80" y="352" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#991b1b">faylni ko'rsatadi</text>
+  <text x="62" y="382" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#991b1b">&#10007; Plagin konflikti: o'chirib/sozlab</text>
+  <text x="80" y="402" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#991b1b">bo'lmaydi</text>
+  <text x="62" y="432" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#991b1b">&#10007; Shartli yuklash qiyin</text>
+
+  <!-- GOOD column -->
+  <rect x="400" y="60" width="350" height="390" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <rect x="400" y="60" width="350" height="46" rx="12" fill="#16a34a"/>
+  <text x="575" y="90" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#ffffff">YAXSHI: functions.php enqueue</text>
+
+  <rect x="418" y="122" width="314" height="76" rx="8" fill="#1e293b"/>
+  <text x="432" y="148" font-family="Consolas, monospace" font-size="13" fill="#93c5fd">wp_enqueue_script('app',</text>
+  <text x="432" y="166" font-family="Consolas, monospace" font-size="13" fill="#e2e8f0">  $url, array('jquery'),</text>
+  <text x="432" y="186" font-family="Consolas, monospace" font-size="13" fill="#e2e8f0">  $ver, array('in_footer'=&gt;true));</text>
+
+  <text x="432" y="232" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#166534">&#10003; Dublikat yo'q: handle bo'yicha</text>
+  <text x="450" y="252" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#166534">bir marta yuklanadi</text>
+  <text x="432" y="282" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#166534">&#10003; Dependency avtomatik tartiblanadi</text>
+  <text x="432" y="312" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#166534">&#10003; Versiya -> ?ver=12 kesh-buzish</text>
+  <text x="432" y="342" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#166534">&#10003; Boshqalar dequeue/sozlay oladi</text>
+  <text x="432" y="372" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#166534">&#10003; in_footer / defer / async qo'llab</text>
+  <text x="432" y="402" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#166534">&#10003; Shartli yuklash oson (is_page...)</text>
+  <text x="432" y="432" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#166534">&#10003; localize bilan PHP -&gt; JS data</text>
+</svg>

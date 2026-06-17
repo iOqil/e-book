@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 440" width="780" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Flow promotion: String? qiymat if (x != null) blokiga kirganda String ga ko'tariladi; blokdan tashqarida yana nullable qoladi</title>
+  <rect x="0" y="0" width="780" height="440" fill="#f8fafc"/>
+  <text x="390" y="36" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Flow promotion — Dart "biladi"</text>
+  <text x="390" y="60" text-anchor="middle" font-size="14" fill="#475569">if tekshiruvi ichida tip avtomatik "ko'tariladi"</text>
+
+  <!-- start: String? value -->
+  <rect x="40" y="92" width="150" height="74" rx="12" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="115" y="122" text-anchor="middle" font-size="16" font-weight="700" fill="#1e293b">String? ism</text>
+  <text x="115" y="146" text-anchor="middle" font-size="13" fill="#f59e0b">null bo'lishi mumkin</text>
+
+  <!-- arrow -->
+  <line x1="190" y1="129" x2="246" y2="129" stroke="#64748b" stroke-width="2"/>
+  <polygon points="246,124 256,129 246,134" fill="#64748b"/>
+
+  <!-- if gate -->
+  <rect x="258" y="100" width="200" height="58" rx="10" fill="#027dfd"/>
+  <text x="358" y="126" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">if (ism != null)</text>
+  <text x="358" y="146" text-anchor="middle" font-size="13" fill="#ffffff">tekshiruv darvozasi</text>
+
+  <!-- arrow into block -->
+  <line x1="358" y1="158" x2="358" y2="196" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="353,196 358,206 363,196" fill="#16a34a"/>
+
+  <!-- inside block: promoted to String -->
+  <rect x="208" y="208" width="364" height="150" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <rect x="208" y="208" width="364" height="36" rx="12" fill="#16a34a"/>
+  <text x="390" y="232" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">{ blok ICHIDA }</text>
+  <text x="390" y="272" text-anchor="middle" font-size="15" fill="#475569">tip ko'tarildi:</text>
+  <text x="390" y="300" text-anchor="middle" font-size="18" font-weight="700" fill="#16a34a">String?  &#8594;  String</text>
+  <rect x="248" y="316" width="284" height="30" rx="7" fill="#f8fafc"/>
+  <text x="390" y="336" text-anchor="middle" font-size="14" fill="#1e293b">ism.length  &#10003;  ( ! kerak emas )</text>
+
+  <!-- outside block: still nullable -->
+  <rect x="600" y="208" width="156" height="150" rx="12" fill="#ffffff" stroke="#f59e0b" stroke-width="2" stroke-dasharray="7 5"/>
+  <text x="678" y="244" text-anchor="middle" font-size="14" font-weight="700" fill="#475569">blokdan</text>
+  <text x="678" y="264" text-anchor="middle" font-size="14" font-weight="700" fill="#475569">TASHQARIDA</text>
+  <text x="678" y="298" text-anchor="middle" font-size="16" font-weight="700" fill="#f59e0b">String?</text>
+  <text x="678" y="324" text-anchor="middle" font-size="13" fill="#64748b">yana nullable</text>
+  <text x="678" y="344" text-anchor="middle" font-size="13" fill="#ef4444">ism.length &#10007;</text>
+
+  <!-- connector from if to outside -->
+  <line x1="458" y1="129" x2="600" y2="129" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5 4"/>
+  <line x1="678" y1="129" x2="678" y2="208" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5 4"/>
+  <polygon points="673,208 678,218 683,208" fill="#94a3b8"/>
+
+  <text x="390" y="404" text-anchor="middle" font-size="13" fill="#94a3b8">Dart kod oqimini o'qiydi: agar null bo'lmasa, ichkarida u aniq String — shuning uchun ! yozish shart emas</text>
+</svg>

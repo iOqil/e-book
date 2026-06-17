@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Reanimated oqimi: useSharedValue qiymatni saqlaydi, withTiming o'zgartiradi, useAnimatedStyle stilga bog'laydi, Animated.View ko'rsatadi</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="38" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Reanimated — animatsiya oqimi</text>
+
+  <!-- 1. useSharedValue -->
+  <rect x="40" y="80" width="320" height="92" rx="12" fill="#ffffff" stroke="#0ea5e9" stroke-width="2.5"/>
+  <text x="200" y="110" text-anchor="middle" font-size="16" font-weight="700" fill="#0ea5e9">1. useSharedValue(0)</text>
+  <text x="200" y="134" text-anchor="middle" font-size="13" fill="#475569">animatsiya qiymati (lift tugmasi)</text>
+  <text x="200" y="156" text-anchor="middle" font-size="13" fill="#94a3b8">.value bilan o'qiladi / yoziladi</text>
+
+  <!-- 2. withTiming -->
+  <rect x="400" y="80" width="320" height="92" rx="12" fill="#ffffff" stroke="#4f46e5" stroke-width="2.5"/>
+  <text x="560" y="110" text-anchor="middle" font-size="16" font-weight="700" fill="#4f46e5">2. withTiming / withSpring</text>
+  <text x="560" y="134" text-anchor="middle" font-size="13" fill="#475569">qiymatni QANDAY o'zgartirish</text>
+  <text x="560" y="156" text-anchor="middle" font-size="13" fill="#94a3b8">tekis-yumshoq / prujinadek</text>
+
+  <!-- strelka 1->2 -->
+  <line x1="360" y1="126" x2="396" y2="126" stroke="#475569" stroke-width="2.5"/>
+  <polygon points="396,126 384,120 384,132" fill="#475569"/>
+
+  <!-- 3. useAnimatedStyle -->
+  <rect x="220" y="220" width="320" height="92" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="380" y="250" text-anchor="middle" font-size="16" font-weight="700" fill="#16a34a">3. useAnimatedStyle(() =&gt; ...)</text>
+  <text x="380" y="274" text-anchor="middle" font-size="13" fill="#475569">qiymatni STILGA bog'laydi (worklet)</text>
+  <text x="380" y="296" text-anchor="middle" font-size="13" fill="#94a3b8">opacity / transform / scale</text>
+
+  <!-- strelka 2->3 -->
+  <line x1="560" y1="172" x2="440" y2="216" stroke="#475569" stroke-width="2.5"/>
+  <polygon points="440,216 455,213 449,201" fill="#475569"/>
+
+  <!-- 4. Animated.View -->
+  <rect x="270" y="344" width="220" height="56" rx="12" fill="#eef2ff" stroke="#6366f1" stroke-width="2.5"/>
+  <text x="380" y="370" text-anchor="middle" font-size="16" font-weight="700" fill="#4f46e5">4. &lt;Animated.View&gt;</text>
+  <text x="380" y="390" text-anchor="middle" font-size="13" fill="#475569">ekranda silliq ko'rsatadi</text>
+
+  <!-- strelka 3->4 -->
+  <line x1="380" y1="312" x2="380" y2="340" stroke="#475569" stroke-width="2.5"/>
+  <polygon points="380,340 374,328 386,328" fill="#475569"/>
+</svg>

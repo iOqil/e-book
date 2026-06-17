@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" width="760" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Agent sikli: o'yla, harakat (tool), kuzat, takror — maqsadga yetilgancha</title>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Agent sikli (loop)</text>
+  <text x="380" y="60" text-anchor="middle" font-size="14" fill="#475569">Maqsadga yetilgancha takrorlanadi — yo'lni model boshqaradi</text>
+
+  <defs>
+    <marker id="arr11a" markerWidth="11" markerHeight="11" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 Z" fill="#6366f1"/>
+    </marker>
+  </defs>
+
+  <!-- Maqsad (kirish) -->
+  <rect x="280" y="86" width="200" height="52" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="380" y="110" text-anchor="middle" font-size="15" font-weight="700" fill="#4f46e5">MAQSAD beriladi</text>
+  <text x="380" y="129" text-anchor="middle" font-size="13" fill="#475569">"hisobot tayyorla"</text>
+  <line x1="380" y1="138" x2="380" y2="168" stroke="#6366f1" stroke-width="2" marker-end="url(#arr11a)"/>
+
+  <!-- O'YLA -->
+  <rect x="300" y="172" width="160" height="62" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="380" y="200" text-anchor="middle" font-size="16" font-weight="700" fill="#1e293b">1. O'YLA</text>
+  <text x="380" y="221" text-anchor="middle" font-size="13" fill="#475569">keyingi qadam nima?</text>
+
+  <!-- O'yla -> Harakat (o'ngga, pastga) -->
+  <line x1="460" y1="203" x2="560" y2="203" stroke="#6366f1" stroke-width="2"/>
+  <line x1="560" y1="203" x2="560" y2="280" stroke="#6366f1" stroke-width="2" marker-end="url(#arr11a)"/>
+
+  <!-- HARAKAT -->
+  <rect x="480" y="284" width="160" height="62" rx="12" fill="#ffffff" stroke="#4f46e5" stroke-width="2.5"/>
+  <text x="560" y="312" text-anchor="middle" font-size="16" font-weight="700" fill="#1e293b">2. HARAKAT</text>
+  <text x="560" y="333" text-anchor="middle" font-size="13" fill="#475569">tool chaqir</text>
+
+  <!-- Harakat -> Kuzat (chapga) -->
+  <line x1="480" y1="315" x2="320" y2="315" stroke="#6366f1" stroke-width="2" marker-end="url(#arr11a)"/>
+
+  <!-- KUZAT -->
+  <rect x="120" y="284" width="160" height="62" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="200" y="312" text-anchor="middle" font-size="16" font-weight="700" fill="#1e293b">3. KUZAT</text>
+  <text x="200" y="333" text-anchor="middle" font-size="13" fill="#475569">natijani ko'r</text>
+
+  <!-- Kuzat -> O'yla (yuqoriga, o'ngga) — sikl yopiladi -->
+  <line x1="200" y1="284" x2="200" y2="203" stroke="#6366f1" stroke-width="2"/>
+  <line x1="200" y1="203" x2="298" y2="203" stroke="#6366f1" stroke-width="2" marker-end="url(#arr11a)"/>
+  <text x="232" y="244" text-anchor="middle" font-size="13" font-style="italic" fill="#7c3aed">takror</text>
+
+  <!-- O'yla -> Maqsad bajarildi (tool kerak emas) -->
+  <line x1="380" y1="234" x2="380" y2="384" stroke="#16a34a" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arr11a)"/>
+  <text x="398" y="312" font-size="13" fill="#16a34a">tool kerak emas</text>
+
+  <!-- Maqsad bajarildi (chiqish) -->
+  <rect x="280" y="388" width="200" height="52" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="380" y="412" text-anchor="middle" font-size="15" font-weight="700" fill="#16a34a">MAQSADGA YETILDI</text>
+  <text x="380" y="431" text-anchor="middle" font-size="13" fill="#475569">yakuniy javob</text>
+
+  <!-- Chegara eslatmasi -->
+  <rect x="600" y="388" width="148" height="52" rx="8" fill="#fef9c3" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="674" y="410" text-anchor="middle" font-size="13" font-weight="700" fill="#475569">max-qadam</text>
+  <text x="674" y="429" text-anchor="middle" font-size="13" fill="#475569">cheksiz emas!</text>
+</svg>

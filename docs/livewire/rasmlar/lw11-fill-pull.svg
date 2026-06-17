@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Form Object metodlarining oqimini ko'rsatuvchi diagramma: fill metodi mavjud modeldan forma obyektini to'ldiradi, validate metodi qoidalarni tekshiradi, pull metodi esa qiymatlarni bazaga beradi va shu zahoti forma obyektini tozalaydi</title>
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">fill / validate / pull oqimi</text>
+  <text x="380" y="58" text-anchor="middle" font-size="14" fill="#475569">Ma'lumot model va forma o'rtasida qanday harakat qiladi</text>
+
+  <!-- Markazdagi Form Object -->
+  <rect x="290" y="160" width="180" height="110" rx="12" fill="#ffffff" stroke="#4f46e5" stroke-width="2.5"/>
+  <rect x="290" y="160" width="180" height="34" rx="12" fill="#4f46e5"/>
+  <text x="380" y="183" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">Form Object</text>
+  <text x="380" y="222" text-anchor="middle" font-size="13" fill="#1e293b">title = "..."</text>
+  <text x="380" y="244" text-anchor="middle" font-size="13" fill="#1e293b">content = "..."</text>
+
+  <!-- CHAP: Model (manba) -->
+  <rect x="40" y="160" width="170" height="80" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="125" y="190" text-anchor="middle" font-size="15" font-weight="700" fill="#16a34a">Model (Post)</text>
+  <text x="125" y="214" text-anchor="middle" font-size="13" fill="#475569">bazadagi mavjud</text>
+  <text x="125" y="230" text-anchor="middle" font-size="13" fill="#475569">yozuv</text>
+
+  <!-- fill o'qi: Model -> Form -->
+  <line x1="212" y1="195" x2="286" y2="195" stroke="#16a34a" stroke-width="3"/>
+  <polygon points="286,195 276,189 276,201" fill="#16a34a"/>
+  <rect x="218" y="168" width="60" height="22" rx="11" fill="#16a34a"/>
+  <text x="248" y="184" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">fill()</text>
+  <text x="248" y="222" text-anchor="middle" font-size="13" fill="#16a34a">model → forma</text>
+
+  <!-- validate (forma ustida) -->
+  <rect x="300" y="100" width="160" height="40" rx="20" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="380" y="125" text-anchor="middle" font-size="14" font-weight="700" fill="#b45309">validate()</text>
+  <line x1="380" y1="142" x2="380" y2="158" stroke="#f59e0b" stroke-width="2.5" stroke-dasharray="4 3"/>
+  <polygon points="380,158 375,150 385,150" fill="#f59e0b"/>
+  <text x="600" y="125" text-anchor="middle" font-size="13" fill="#94a3b8">qoidalarni tekshiradi;</text>
+  <text x="600" y="142" text-anchor="middle" font-size="13" fill="#94a3b8">xato bo'lsa to'xtaydi</text>
+
+  <!-- pull o'qi: Form -> DB -->
+  <line x1="474" y1="195" x2="548" y2="195" stroke="#dc2626" stroke-width="3"/>
+  <polygon points="548,195 538,189 538,201" fill="#dc2626"/>
+  <rect x="478" y="168" width="66" height="22" rx="11" fill="#dc2626"/>
+  <text x="511" y="184" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">pull()</text>
+  <text x="511" y="222" text-anchor="middle" font-size="13" fill="#dc2626">forma → DB</text>
+
+  <!-- O'NG: DB -->
+  <rect x="550" y="160" width="170" height="80" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="635" y="190" text-anchor="middle" font-size="15" font-weight="700" fill="#dc2626">Ma'lumotlar bazasi</text>
+  <text x="635" y="214" text-anchor="middle" font-size="13" fill="#475569">create / update</text>
+  <text x="635" y="230" text-anchor="middle" font-size="13" fill="#475569">qiymatlar yoziladi</text>
+
+  <!-- pull tozalash effekti -->
+  <line x1="380" y1="272" x2="380" y2="312" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="380,312 375,304 385,304" fill="#94a3b8"/>
+  <rect x="250" y="316" width="260" height="44" rx="10" fill="#eef2ff" stroke="#c7d2fe" stroke-width="1.5"/>
+  <text x="380" y="338" text-anchor="middle" font-size="13" font-weight="700" fill="#4f46e5">pull() shu zahoti formani TOZALAYDI</text>
+  <text x="380" y="354" text-anchor="middle" font-size="13" fill="#475569">title = "" · content = ""  (reset)</text>
+
+  <text x="380" y="396" text-anchor="middle" font-size="13" fill="#475569">all() — qiymatlarni oladi, lekin TOZALAMAYDI · only([...]) — faqat tanlangan ustunlar</text>
+  <text x="380" y="416" text-anchor="middle" font-size="13" fill="#94a3b8">Eslang: pull() = "ol-da, tozala". Yaratishda alohida reset() shart emas.</text>
+</svg>

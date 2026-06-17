@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 540" width="800" height="540" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Jim keshbuzar: prompt boshida Date.now() yoki UUID har so'rovda prefiks baytlarini o'zgartiradi -> kesh PROMAH (cache_read = 0). Yechim: o'zgaruvchan qismni prompt OXIRIGA ko'chiring; barqaror prefiks o'zgarmaydi -> kesh ishlaydi.</title>
+  <defs>
+    <marker id="i15r" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#ef4444"/>
+    </marker>
+    <marker id="i15g" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="800" height="540" fill="#f8fafc"/>
+  <text x="400" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Jim keshbuzar — va uni qanday tuzatish</text>
+  <text x="400" y="58" font-size="14" fill="#64748b" text-anchor="middle">Prefiksning BIR bayti o'zgarsa, undan keyingi hammasi keshni yo'qotadi.</text>
+
+  <!-- BEFORE -->
+  <text x="62" y="92" font-size="15" font-weight="bold" fill="#ef4444" text-anchor="start">❌ Noto'g'ri — o'zgaruvchan narsa OLDINDA</text>
+
+  <rect x="40" y="104" width="200" height="74" rx="10" fill="#ffffff" stroke="#ef4444" stroke-width="2"/>
+  <text x="140" y="128" font-size="13" font-weight="bold" fill="#ef4444" text-anchor="middle">system boshida:</text>
+  <text x="140" y="150" font-size="13" fill="#475569" text-anchor="middle" font-family="Consolas, monospace">Date.now()</text>
+  <text x="140" y="168" font-size="13" fill="#64748b" text-anchor="middle">har so'rovda boshqa</text>
+
+  <line x1="240" y1="141" x2="286" y2="141" stroke="#ef4444" stroke-width="2.5" marker-end="url(#i15r)"/>
+
+  <rect x="290" y="104" width="220" height="74" rx="10" fill="#ffffff" stroke="#ef4444" stroke-width="2"/>
+  <text x="400" y="128" font-size="13" font-weight="bold" fill="#ef4444" text-anchor="middle">prefiks baytlari o'zgaradi</text>
+  <text x="400" y="150" font-size="13" fill="#475569" text-anchor="middle">har so'rov — yangi prefiks</text>
+  <text x="400" y="168" font-size="13" fill="#64748b" text-anchor="middle">eski kesh topilmaydi</text>
+
+  <line x1="510" y1="141" x2="556" y2="141" stroke="#ef4444" stroke-width="2.5" marker-end="url(#i15r)"/>
+
+  <rect x="560" y="104" width="200" height="74" rx="10" fill="#fef3c7" stroke="#ef4444" stroke-width="2"/>
+  <text x="660" y="130" font-size="14" font-weight="bold" fill="#ef4444" text-anchor="middle">kesh PROMAH</text>
+  <text x="660" y="152" font-size="13" fill="#475569" text-anchor="middle" font-family="Consolas, monospace">cache_read = 0</text>
+  <text x="660" y="170" font-size="13" fill="#64748b" text-anchor="middle">har safar to'liq narx</text>
+
+  <text x="400" y="208" font-size="13" fill="#64748b" text-anchor="middle" font-style="italic">Xuddi shu: UUID, tartibsiz JSON.stringify, har so'rovda o'zgaruvchi tool to'plami, foydalanuvchi ID si oldinda.</text>
+
+  <!-- divider -->
+  <line x1="40" y1="232" x2="760" y2="232" stroke="#94a3b8" stroke-width="1" stroke-dasharray="6,4"/>
+
+  <!-- AFTER -->
+  <text x="62" y="266" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="start">✅ To'g'ri — o'zgaruvchan narsa OXIRIDA</text>
+
+  <rect x="40" y="282" width="380" height="80" rx="10" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="230" y="306" font-size="14" font-weight="bold" fill="#6366f1" text-anchor="middle">BARQAROR prefiks (muzlatilgan)</text>
+  <text x="230" y="330" font-size="13" fill="#475569" text-anchor="middle">tools + system + hujjat — har so'rovda bir xil</text>
+  <text x="230" y="350" font-size="13" fill="#64748b" text-anchor="middle">timestamp/ID/savol bu yerda YO'Q</text>
+
+  <line x1="420" y1="322" x2="430" y2="322" stroke="#16a34a" stroke-width="2" stroke-dasharray="4,3"/>
+  <line x1="430" y1="290" x2="430" y2="354" stroke="#d97757" stroke-width="3" stroke-dasharray="6,4"/>
+  <text x="430" y="378" font-size="13" font-weight="bold" fill="#d97757" text-anchor="middle">breakpoint</text>
+
+  <rect x="442" y="282" width="160" height="80" rx="10" fill="#ffffff" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="522" y="308" font-size="13" font-weight="bold" fill="#0ea5e9" text-anchor="middle">O'ZGARUVCHAN</text>
+  <text x="522" y="330" font-size="13" fill="#475569" text-anchor="middle">timestamp,</text>
+  <text x="522" y="348" font-size="13" fill="#475569" text-anchor="middle">savol — oxirda</text>
+
+  <line x1="602" y1="322" x2="624" y2="322" stroke="#16a34a" stroke-width="2.5" marker-end="url(#i15g)"/>
+
+  <rect x="628" y="282" width="132" height="80" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="694" y="312" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">kesh ISHLAYDI</text>
+  <text x="694" y="334" font-size="13" fill="#475569" text-anchor="middle" font-family="Consolas, monospace">cache_read</text>
+  <text x="694" y="352" font-size="13" fill="#16a34a" text-anchor="middle" font-weight="bold">&gt; 0 ✓</text>
+
+  <!-- fix list -->
+  <rect x="40" y="392" width="720" height="124" rx="10" fill="#dbeafe" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="60" y="416" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="start">Tuzatish qoidalari:</text>
+  <text x="60" y="442" font-size="13" fill="#475569" text-anchor="start">• O'zgaruvchan baytlarni (vaqt, UUID, savol) prompt OXIRIGA — breakpointdan keyin — ko'chiring.</text>
+  <text x="60" y="466" font-size="13" fill="#475569" text-anchor="start">• JSON ni barqaror tartibda bering: JSON.stringify(obj, Object.keys(obj).sort()).</text>
+  <text x="60" y="490" font-size="13" fill="#475569" text-anchor="start">• system promptni muzlating; tool to'plamini va modelni suhbat o'rtasida o'zgartirmang.</text>
+  <text x="60" y="510" font-size="13" fill="#64748b" text-anchor="start">Tekshirish: ikki bir xil so'rovda cache_read 0 bo'lsa — prefiksda jim keshbuzar bor.</text>
+</svg>

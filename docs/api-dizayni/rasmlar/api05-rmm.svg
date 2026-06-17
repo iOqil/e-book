@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560">
+  <title>Richardson Maturity Model: L0 dan L3 gacha zinapoya</title>
+  <rect x="0" y="0" width="880" height="560" fill="#f8fafc"/>
+  <text x="440" y="34" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">Richardson Maturity Model — REST yetuklik zinapoyasi</text>
+  <text x="440" y="58" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Har bir zina REST tamoyiliga bir qadam yaqinlashtiradi</text>
+
+  <!-- L0 -->
+  <rect x="40" y="430" width="800" height="82" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="70" y="462" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#dc2626">L0 — Botqoq (RPC-over-HTTP)</text>
+  <text x="70" y="486" font-family="Segoe UI" font-size="14" fill="#334155">Bitta endpoint, hamma narsa POST. HTTP faqat "tunnel".</text>
+  <text x="70" y="506" font-family="monospace" font-size="13" fill="#64748b">POST /api  {"method": "getOrder", "id": 42}  (masalan SOAP)</text>
+
+  <!-- L1 -->
+  <rect x="40" y="332" width="800" height="82" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="70" y="364" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#b45309">L1 — Resurslar</text>
+  <text x="70" y="388" font-family="Segoe UI" font-size="14" fill="#334155">Ko'p URI bor (har ob'ekt o'z manzili), lekin fe'llar hali yo'q.</text>
+  <text x="70" y="408" font-family="monospace" font-size="13" fill="#64748b">POST /orders/42  ·  POST /orders/42/cancel</text>
+
+  <!-- L2 -->
+  <rect x="40" y="234" width="800" height="82" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="70" y="266" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#16a34a">L2 — HTTP fe'llar + status kodlar</text>
+  <text x="70" y="290" font-family="Segoe UI" font-size="14" fill="#334155">GET/POST/PUT/DELETE to'g'ri; 200/201/404/409 to'g'ri. Ko'p "REST" API shu yerda.</text>
+  <text x="70" y="310" font-family="monospace" font-size="13" fill="#15803d">GET /orders/42  ->  200 OK   ·   DELETE /orders/42  ->  204</text>
+
+  <!-- L3 -->
+  <rect x="40" y="136" width="800" height="82" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="70" y="168" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#2563eb">L3 — HATEOAS (gipermedia)</text>
+  <text x="70" y="192" font-family="Segoe UI" font-size="14" fill="#334155">Javob ichida keyingi mumkin amallarning havolalari (links). "Glory of REST".</text>
+  <text x="70" y="212" font-family="monospace" font-size="13" fill="#1d4ed8">"_links": { "cancel": "/orders/42/cancel", "pay": "/orders/42/pay" }</text>
+
+  <!-- arrow up -->
+  <line x1="440" y1="430" x2="440" y2="118" stroke="#7c3aed" stroke-width="2" stroke-dasharray="5 4"/>
+  <polygon points="440,108 433,124 447,124" fill="#7c3aed"/>
+  <text x="455" y="100" font-family="Segoe UI" font-size="13" fill="#7c3aed">yetuklik ortadi</text>
+</svg>

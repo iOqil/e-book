@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 520" width="780" height="520">
+  <title>block.json asosiy maydonlari: apiVersion, name, attributes, supports, editorScript, render</title>
+  <rect width="780" height="520" fill="#f8fafc"/>
+  <text x="390" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">block.json — blokning "pasporti"</text>
+
+  <!-- center file box -->
+  <rect x="300" y="56" width="180" height="46" rx="8" fill="#21759b"/>
+  <text x="390" y="85" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">block.json</text>
+
+  <g stroke="#94a3b8" stroke-width="2" fill="none">
+    <path d="M390 102 L390 118 L130 118 L130 140"/>
+    <path d="M390 118 L390 140"/>
+    <path d="M390 118 L650 118 L650 140"/>
+    <path d="M390 102 L390 320 L130 320 L130 342"/>
+    <path d="M390 320 L390 342"/>
+    <path d="M390 320 L650 320 L650 342"/>
+  </g>
+
+  <!-- Row 1 -->
+  <rect x="20" y="140" width="220" height="150" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="130" y="166" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">apiVersion</text>
+  <g font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">
+    <text x="36" y="190">3 = zamonaviy API</text>
+    <text x="36" y="212">(iframe editor)</text>
+    <text x="36" y="244" font-weight="bold" fill="#2563eb">name</text>
+    <text x="36" y="266">"namespace/slug"</text>
+    <text x="36" y="284">global noyob bo'lsin</text>
+  </g>
+
+  <rect x="280" y="140" width="220" height="150" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="390" y="166" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">attributes</text>
+  <g font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">
+    <text x="296" y="190">blok ma'lumotlari</text>
+    <text x="296" y="210">{ type, default,</text>
+    <text x="296" y="230">  source, selector }</text>
+    <text x="296" y="262" font-weight="bold" fill="#16a34a">supports</text>
+    <text x="296" y="284">color, spacing, html...</text>
+  </g>
+
+  <rect x="540" y="140" width="220" height="150" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="650" y="166" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#d97706">title / category</text>
+  <g font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">
+    <text x="556" y="190">inserter'da ko'rinadi</text>
+    <text x="556" y="212">icon, description</text>
+    <text x="556" y="244" font-weight="bold" fill="#d97706">textdomain</text>
+    <text x="556" y="266">tarjima uchun</text>
+    <text x="556" y="284">(i18n, 28-bob)</text>
+  </g>
+
+  <!-- Row 2 -->
+  <rect x="20" y="342" width="220" height="140" rx="8" fill="#e2e8f0" stroke="#475569" stroke-width="2"/>
+  <text x="130" y="368" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#475569">editorScript</text>
+  <g font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">
+    <text x="36" y="392">"file:./index.js"</text>
+    <text x="36" y="412">editor JS (edit/save)</text>
+    <text x="36" y="444" font-weight="bold" fill="#475569">viewScript</text>
+    <text x="36" y="466">frontend JS (ixtiyoriy)</text>
+  </g>
+
+  <rect x="280" y="342" width="220" height="140" rx="8" fill="#e2e8f0" stroke="#475569" stroke-width="2"/>
+  <text x="390" y="368" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#475569">style / editorStyle</text>
+  <g font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">
+    <text x="296" y="392">style = front + editor</text>
+    <text x="296" y="412">editorStyle = faqat</text>
+    <text x="296" y="430">editorda</text>
+    <text x="296" y="462">"file:./style-index.css"</text>
+  </g>
+
+  <rect x="540" y="342" width="220" height="140" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="650" y="368" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">render</text>
+  <g font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">
+    <text x="556" y="392">"file:./render.php"</text>
+    <text x="556" y="412">dinamik blok uchun</text>
+    <text x="556" y="430">(PHP serverda chizadi,</text>
+    <text x="556" y="448">24-bob)</text>
+    <text x="556" y="470">statik blokda kerakmas</text>
+  </g>
+
+  <text x="390" y="506" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">block.json — bitta haqiqat manbai: editor, frontend va PHP shu fayldan o'qiydi.</text>
+</svg>

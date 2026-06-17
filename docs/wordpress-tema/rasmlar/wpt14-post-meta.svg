@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Post meta saqlash va o'qish: update_post_meta / get_post_meta va register_post_meta</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="32" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">Post meta: kalit -&gt; qiymat juftliklari</text>
+
+  <!-- Post box -->
+  <rect x="40" y="60" width="220" height="180" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="150" y="86" text-anchor="middle" font-size="16" font-weight="bold" fill="#2563eb">Post (ID = 1)</text>
+  <line x1="56" y1="98" x2="244" y2="98" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="56" y="122" font-size="14" fill="#475569">post_title</text>
+  <text x="56" y="146" font-size="14" fill="#475569">post_content</text>
+  <text x="56" y="170" font-size="13" fill="#94a3b8">--- meta (qo'shimcha) ---</text>
+  <text x="56" y="194" font-size="14" fill="#16a34a">narx = "100"</text>
+  <text x="56" y="216" font-size="14" fill="#16a34a">muallif = "Oqil"</text>
+
+  <!-- wp_postmeta table -->
+  <rect x="500" y="60" width="220" height="180" rx="10" fill="#ffffff" stroke="#475569" stroke-width="2"/>
+  <text x="610" y="86" text-anchor="middle" font-size="15" font-weight="bold" fill="#475569">wp_postmeta jadvali</text>
+  <line x1="516" y1="98" x2="704" y2="98" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="516" y="122" font-size="13" fill="#475569">post_id | meta_key | meta_value</text>
+  <text x="516" y="148" font-size="13" fill="#1e293b">1 | narx | 100</text>
+  <text x="516" y="172" font-size="13" fill="#1e293b">1 | muallif | Oqil</text>
+  <text x="516" y="208" font-size="13" fill="#94a3b8">DB ichida shunday</text>
+  <text x="516" y="226" font-size="13" fill="#94a3b8">saqlanadi</text>
+
+  <!-- arrows between post and table -->
+  <line x1="262" y1="120" x2="498" y2="120" stroke="#16a34a" stroke-width="2.5" marker-end="url(#ag)"/>
+  <text x="380" y="112" text-anchor="middle" font-size="13" fill="#16a34a">update_post_meta(1,'narx','100')</text>
+  <line x1="498" y1="170" x2="262" y2="170" stroke="#2563eb" stroke-width="2.5" marker-end="url(#ab)"/>
+  <text x="380" y="190" text-anchor="middle" font-size="13" fill="#2563eb">get_post_meta(1,'narx',true)</text>
+
+  <!-- register_post_meta box -->
+  <rect x="40" y="280" width="680" height="130" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="380" y="306" text-anchor="middle" font-size="16" font-weight="bold" fill="#d97706">register_post_meta() — meta'ni rasmiy ro'yxatdan o'tkazish</text>
+  <text x="60" y="334" font-size="14" fill="#1e293b">show_in_rest = true  -&gt;  blok editor / block bindings ko'radi</text>
+  <text x="60" y="358" font-size="14" fill="#1e293b">type, single  -&gt;  ma'lumot turi va bitta/ko'p qiymat</text>
+  <text x="60" y="382" font-size="14" fill="#1e293b">sanitize_callback  -&gt;  kirishni tozalaydi   |   auth_callback  -&gt;  yozishga ruxsat</text>
+
+  <defs>
+    <marker id="ag" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#16a34a"/></marker>
+    <marker id="ab" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#2563eb"/></marker>
+  </defs>
+</svg>

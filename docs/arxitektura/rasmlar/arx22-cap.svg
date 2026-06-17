@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 600">
+  <title>CAP teoremasi uchburchagi: Consistency, Availability, Partition tolerance. Tarmoq partitsiyasi muqarrar, shuning uchun real tanlov partitsiya paytida CP yoki AP. "CA tizim" amalda mavjud emas.</title>
+  <rect x="0" y="0" width="880" height="600" fill="#f8fafc"/>
+  <text x="440" y="36" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">CAP teoremasi (Eric Brewer, 2000) - impossibility teoremasi</text>
+  <text x="440" y="60" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Partitsiya (P) BO'LGANDA hech bir distributed baza C va A ni bir vaqtda kafolatlay olmaydi</text>
+
+  <!-- Triangle -->
+  <polygon points="440,110 200,440 680,440" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+
+  <!-- C vertex (top) -->
+  <circle cx="440" cy="110" r="46" fill="#2563eb"/>
+  <text x="440" y="106" text-anchor="middle" font-family="Segoe UI" font-size="26" font-weight="bold" fill="#ffffff">C</text>
+  <text x="440" y="128" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#ffffff">Consistency</text>
+  <text x="440" y="80" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">replikalar bir xil</text>
+
+  <!-- A vertex (bottom-left) -->
+  <circle cx="200" cy="440" r="46" fill="#16a34a"/>
+  <text x="200" y="436" text-anchor="middle" font-family="Segoe UI" font-size="26" font-weight="bold" fill="#ffffff">A</text>
+  <text x="200" y="458" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#ffffff">Availability</text>
+  <text x="200" y="506" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">har so'rovga javob</text>
+
+  <!-- P vertex (bottom-right) -->
+  <circle cx="680" cy="440" r="46" fill="#dc2626"/>
+  <text x="680" y="436" text-anchor="middle" font-family="Segoe UI" font-size="26" font-weight="bold" fill="#ffffff">P</text>
+  <text x="680" y="458" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#ffffff">Partition tol.</text>
+  <text x="680" y="506" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">tarmoq buzilsa ham ishlash</text>
+
+  <!-- Edge labels: real choices -->
+  <rect x="270" y="244" width="116" height="40" rx="8" fill="#2563eb" opacity="0.12"/>
+  <text x="328" y="262" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb">CP</text>
+  <text x="328" y="278" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">C + P (A dan voz)</text>
+
+  <rect x="498" y="244" width="116" height="40" rx="8" fill="#16a34a" opacity="0.12"/>
+  <text x="556" y="262" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">AP</text>
+  <text x="556" y="278" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">A + P (C dan voz)</text>
+
+  <!-- CA edge crossed out -->
+  <rect x="324" y="404" width="232" height="40" rx="8" fill="#fee2e2"/>
+  <text x="440" y="423" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">CA = amalda yo'q</text>
+  <text x="440" y="439" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">P dan voz kechib bo'lmaydi</text>
+  <line x1="334" y1="412" x2="546" y2="436" stroke="#dc2626" stroke-width="2"/>
+
+  <!-- Bottom clarification banner -->
+  <rect x="60" y="534" width="760" height="50" rx="10" fill="#fef9c3" stroke="#f59e0b" stroke-width="2"/>
+  <text x="440" y="555" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#b45309">MUHIM: distributed tizimda P MUQARRAR (tarmoq buziladi).</text>
+  <text x="440" y="574" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Real tanlov "3 tadan 2 tasi" emas - partitsiya PAYTIDA C vs A. "CA tizim" - chalg'ituvchi soddalashtirish.</text>
+</svg>

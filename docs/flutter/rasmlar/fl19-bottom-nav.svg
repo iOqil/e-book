@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Material 3 NavigationBar bilan ilova qobig'i: pastdagi 3 ta bo'lim (Home, Search, Profile) currentIndex orqali tananing qaysi ekran ko'rsatilishini almashtiradi; tanlangan bo'lim ajratib ko'rsatilgan</title>
+  <rect x="0" y="0" width="760" height="480" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Ilova qobig'i — pastki NavigationBar (Material 3)</text>
+  <text x="380" y="58" text-anchor="middle" font-size="14" fill="#475569">currentIndex tananing (body) qaysi ekran ekanini belgilaydi</text>
+
+  <!-- Phone frame -->
+  <rect x="250" y="84" width="260" height="372" rx="26" fill="#ffffff" stroke="#1e293b" stroke-width="3"/>
+
+  <!-- AppBar -->
+  <rect x="250" y="84" width="260" height="46" rx="26" fill="#027dfd"/>
+  <rect x="250" y="108" width="260" height="22" fill="#027dfd"/>
+  <text x="380" y="114" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">Home</text>
+
+  <!-- Body -->
+  <rect x="262" y="142" width="236" height="248" rx="10" fill="#dbeafe"/>
+  <text x="380" y="258" text-anchor="middle" font-size="17" font-weight="700" fill="#0553b1">Home ekrani</text>
+  <text x="380" y="284" text-anchor="middle" font-size="13" fill="#475569">index = 0 bo'lgani uchun</text>
+  <text x="380" y="302" text-anchor="middle" font-size="13" fill="#475569">shu sahifa ko'rinadi</text>
+
+  <!-- NavigationBar -->
+  <rect x="250" y="398" width="260" height="58" rx="0" fill="#e0e7ff"/>
+  <line x1="250" y1="398" x2="510" y2="398" stroke="#94a3b8" stroke-width="1.5"/>
+
+  <!-- Home destination (selected) -->
+  <rect x="262" y="406" width="70" height="30" rx="15" fill="#027dfd"/>
+  <circle cx="297" cy="421" r="7" fill="#ffffff"/>
+  <text x="297" y="450" text-anchor="middle" font-size="13" font-weight="700" fill="#027dfd">Home</text>
+
+  <!-- Search -->
+  <circle cx="380" cy="421" r="7" fill="none" stroke="#64748b" stroke-width="2"/>
+  <text x="380" y="450" text-anchor="middle" font-size="13" fill="#64748b">Search</text>
+
+  <!-- Profile -->
+  <circle cx="463" cy="421" r="7" fill="none" stroke="#64748b" stroke-width="2"/>
+  <text x="463" y="450" text-anchor="middle" font-size="13" fill="#64748b">Profile</text>
+
+  <!-- Index mapping panel -->
+  <rect x="40" y="160" width="180" height="200" rx="14" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="130" y="186" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">index -> ekran</text>
+  <rect x="56" y="200" width="148" height="38" rx="9" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="130" y="224" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a">0 = Home (faol)</text>
+  <text x="130" y="262" text-anchor="middle" font-size="13" fill="#475569">1 = Search</text>
+  <text x="130" y="294" text-anchor="middle" font-size="13" fill="#475569">2 = Profile</text>
+  <text x="130" y="332" text-anchor="middle" font-size="13" fill="#64748b">tanlasangiz index</text>
+  <text x="130" y="350" text-anchor="middle" font-size="13" fill="#64748b">o'zgaradi</text>
+
+  <!-- Right note panel -->
+  <rect x="540" y="160" width="186" height="200" rx="14" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="633" y="186" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">IndexedStack</text>
+  <text x="633" y="214" text-anchor="middle" font-size="13" fill="#475569">3 ta sahifani</text>
+  <text x="633" y="232" text-anchor="middle" font-size="13" fill="#475569">xotirada saqlaydi,</text>
+  <text x="633" y="250" text-anchor="middle" font-size="13" fill="#475569">faqat birini</text>
+  <text x="633" y="268" text-anchor="middle" font-size="13" fill="#475569">ko'rsatadi</text>
+  <text x="633" y="300" text-anchor="middle" font-size="13" fill="#16a34a">holat saqlanadi:</text>
+  <text x="633" y="320" text-anchor="middle" font-size="13" fill="#475569">scroll, kiritilgan</text>
+  <text x="633" y="338" text-anchor="middle" font-size="13" fill="#475569">matn yo'qolmaydi</text>
+
+  <!-- arrows from index panel to phone, and phone to note -->
+  <line x1="220" y1="220" x2="248" y2="220" stroke="#16a34a" stroke-width="2.5"/>
+  <polygon points="248,220 234,213 234,227" fill="#16a34a"/>
+  <line x1="512" y1="260" x2="538" y2="260" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="538,260 524,253 524,267" fill="#94a3b8"/>
+
+  <text x="380" y="474" text-anchor="middle" font-size="13" fill="#94a3b8">Bu navigatsiya emas — stek o'zgarmaydi; faqat ko'rsatilayotgan sahifa almashadi.</text>
+</svg>

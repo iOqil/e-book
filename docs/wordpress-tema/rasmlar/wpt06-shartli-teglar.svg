@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 560" width="780" height="560" font-family="Segoe UI, system-ui, sans-serif">
+  <title>WordPress shartli teglar xaritasi: qaysi sahifada qaysi is_* teg rost bo'ladi</title>
+  <rect x="0" y="0" width="780" height="560" fill="#f8fafc"/>
+  <text x="390" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Shartli teglar xaritasi</text>
+  <text x="390" y="56" text-anchor="middle" font-size="14" fill="#475569">"Hozir qanday sahifadamiz?" — is_* teglar shu savolga rost/yolg'on javob beradi</text>
+
+  <!-- markaz: SO'ROV -->
+  <rect x="300" y="78" width="180" height="56" rx="12" fill="#21759b"/>
+  <text x="390" y="103" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">Kelgan so'rov</text>
+  <text x="390" y="123" text-anchor="middle" font-size="13" fill="#dbeafe">(joriy sahifa turi)</text>
+
+  <!-- BIR YOZUV (singular) -->
+  <rect x="40" y="170" width="340" height="160" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <rect x="40" y="170" width="340" height="36" rx="12" fill="#2563eb"/>
+  <text x="210" y="194" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">Bitta yozuv — is_singular()</text>
+  <text x="58" y="230" font-size="14" fill="#1e293b"><tspan font-weight="700" fill="#2563eb">is_single()</tspan> — bitta blog post / CPT</text>
+  <text x="58" y="256" font-size="14" fill="#1e293b"><tspan font-weight="700" fill="#2563eb">is_page()</tspan> — bitta statik sahifa (page)</text>
+  <text x="58" y="282" font-size="14" fill="#1e293b"><tspan font-weight="700" fill="#2563eb">is_singular('book')</tspan> — bitta 'book' CPT</text>
+  <text x="58" y="312" font-size="13" fill="#475569">is_singular() = is_single() YOKI is_page() YOKI CPT</text>
+
+  <!-- RO'YXAT (archive) -->
+  <rect x="400" y="170" width="340" height="160" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <rect x="400" y="170" width="340" height="36" rx="12" fill="#16a34a"/>
+  <text x="570" y="194" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">Yozuvlar ro'yxati — is_archive()</text>
+  <text x="418" y="230" font-size="14" fill="#1e293b"><tspan font-weight="700" fill="#16a34a">is_category()</tspan> — rukn (kategoriya) arxivi</text>
+  <text x="418" y="256" font-size="14" fill="#1e293b"><tspan font-weight="700" fill="#16a34a">is_tag()</tspan> — teg arxivi</text>
+  <text x="418" y="282" font-size="14" fill="#1e293b"><tspan font-weight="700" fill="#16a34a">is_author()</tspan> · <tspan font-weight="700" fill="#16a34a">is_date()</tspan> — muallif / sana</text>
+  <text x="418" y="312" font-size="13" fill="#475569">is_archive() = category/tag/author/date/CPT arxivi</text>
+
+  <!-- BOSH SAHIFA -->
+  <rect x="40" y="356" width="340" height="120" rx="12" fill="#ffffff" stroke="#d97706" stroke-width="2"/>
+  <rect x="40" y="356" width="340" height="36" rx="12" fill="#d97706"/>
+  <text x="210" y="380" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">Bosh sahifa — ehtiyot bo'ling!</text>
+  <text x="58" y="416" font-size="14" fill="#1e293b"><tspan font-weight="700" fill="#d97706">is_front_page()</tspan> — saytning eng old sahifasi</text>
+  <text x="58" y="442" font-size="14" fill="#1e293b"><tspan font-weight="700" fill="#d97706">is_home()</tspan> — blog postlar ro'yxati sahifasi</text>
+  <text x="58" y="466" font-size="13" fill="#dc2626">Sozlamaga qarab ikkalasi bir xil YOKI boshqa sahifa!</text>
+
+  <!-- MAXSUS -->
+  <rect x="400" y="356" width="340" height="120" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <rect x="400" y="356" width="340" height="36" rx="12" fill="#dc2626"/>
+  <text x="570" y="380" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">Maxsus holatlar</text>
+  <text x="418" y="416" font-size="14" fill="#1e293b"><tspan font-weight="700" fill="#dc2626">is_search()</tspan> — qidiruv natijalari sahifasi</text>
+  <text x="418" y="442" font-size="14" fill="#1e293b"><tspan font-weight="700" fill="#dc2626">is_404()</tspan> — topilmadi (sahifa yo'q)</text>
+  <text x="418" y="466" font-size="14" fill="#1e293b"><tspan font-weight="700" fill="#dc2626">is_admin()</tspan> — admin panel (frontend EMAS)</text>
+
+  <!-- chiziqlar -->
+  <line x1="300" y1="120" x2="210" y2="170" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="480" y1="120" x2="570" y2="170" stroke="#94a3b8" stroke-width="2"/>
+
+  <text x="390" y="510" text-anchor="middle" font-size="13" fill="#475569" font-weight="700">Eslatma: shartli teglar FAQAT 'template_redirect' dan keyin (the_loop ichida/shablonda) ishonchli ishlaydi</text>
+  <text x="390" y="538" text-anchor="middle" font-size="13" fill="#94a3b8">functions.php ning yuqorisida (init dan oldin) chaqirsangiz — natija noto'g'ri bo'ladi</text>
+</svg>

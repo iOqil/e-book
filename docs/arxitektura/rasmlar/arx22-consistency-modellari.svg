@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560">
+  <title>Consistency modellari spektri: kuchli (linearizability) dan eventual gacha. Strong, sequential, causal, eventual; va read-your-writes, monotonic reads/writes sessiya kafolatlari. Chapdan o'ngga: ko'proq kafolat lekin sekinroq; o'ngdan chapga: tezroq lekin kamroq kafolat.</title>
+  <rect x="0" y="0" width="900" height="560" fill="#f8fafc"/>
+  <text x="450" y="36" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Consistency modellari spektri</text>
+
+  <!-- Gradient arrow bar -->
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2563eb"/>
+      <stop offset="1" stop-color="#f59e0b"/>
+    </linearGradient>
+    <marker id="arrR" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <text x="120" y="84" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">KUCHLI (strong)</text>
+  <text x="120" y="104" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">ko'proq kafolat, sekinroq</text>
+  <text x="780" y="84" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#b45309">EVENTUAL</text>
+  <text x="780" y="104" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">kamroq kafolat, tezroq</text>
+
+  <rect x="60" y="120" width="780" height="14" rx="7" fill="url(#grad)"/>
+
+  <!-- Four model boxes -->
+  <!-- Strong / Linearizability -->
+  <rect x="60" y="158" width="180" height="120" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="150" y="184" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">Linearizability</text>
+  <text x="150" y="202" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">(strong / linear)</text>
+  <text x="150" y="226" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">har o'qish eng so'nggi</text>
+  <text x="150" y="242" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">yozuvni ko'radi; tizim</text>
+  <text x="150" y="258" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">bitta nusxadek tuyuladi</text>
+
+  <!-- Sequential -->
+  <rect x="262" y="158" width="180" height="120" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="352" y="184" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#7c3aed">Sequential</text>
+  <text x="352" y="208" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">hammaga operatsiyalar</text>
+  <text x="352" y="224" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">bir xil tartibda; lekin</text>
+  <text x="352" y="240" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">"global vaqt" shart emas</text>
+
+  <!-- Causal -->
+  <rect x="464" y="158" width="180" height="120" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="554" y="184" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">Causal</text>
+  <text x="554" y="208" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">sababiy bog'liq amallar</text>
+  <text x="554" y="224" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">to'g'ri tartibda; o'zaro</text>
+  <text x="554" y="240" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">bog'liqsizlari erkin</text>
+
+  <!-- Eventual -->
+  <rect x="666" y="158" width="180" height="120" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="756" y="184" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#b45309">Eventual</text>
+  <text x="756" y="208" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">yangi yozuv bo'lmasa,</text>
+  <text x="756" y="224" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">replikalar oxir-oqibat</text>
+  <text x="756" y="240" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">bir xilga yetib oladi</text>
+
+  <!-- Session guarantees -->
+  <rect x="60" y="318" width="780" height="150" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="450" y="344" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">Sessiya kafolatlari (eventual ustiga qo'shiladigan amaliy "yumshoq" kafolatlar)</text>
+
+  <rect x="84" y="362" width="232" height="88" rx="8" fill="#f8fafc" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="200" y="386" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">Read-your-writes</text>
+  <text x="200" y="410" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">o'z yozuvingizni darhol</text>
+  <text x="200" y="426" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">o'qiy olasiz (izoh yozdim</text>
+  <text x="200" y="442" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">- darhol ko'rinadi)</text>
+
+  <rect x="334" y="362" width="232" height="88" rx="8" fill="#f8fafc" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="450" y="386" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">Monotonic reads</text>
+  <text x="450" y="410" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">vaqt orqaga ketmaydi:</text>
+  <text x="450" y="426" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">ko'rgan ma'lumotingiz</text>
+  <text x="450" y="442" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">keyin "yo'qolmaydi"</text>
+
+  <rect x="584" y="362" width="232" height="88" rx="8" fill="#f8fafc" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="700" y="386" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">Monotonic writes</text>
+  <text x="700" y="410" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">bir mijozning yozuvlari</text>
+  <text x="700" y="426" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">yuborilgan tartibda</text>
+  <text x="700" y="442" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">qo'llaniladi</text>
+
+  <text x="450" y="502" text-anchor="middle" font-family="Segoe UI" font-size="13" font-style="italic" fill="#64748b">Spektr "yaxshi/yomon" emas: kuchli kafolat = qulaylik + xavfsizlik, lekin latency va mavjudlik narxi bilan keladi.</text>
+  <text x="450" y="528" text-anchor="middle" font-family="Segoe UI" font-size="13" font-style="italic" fill="#64748b">Tanlov - ma'lumotning har bo'lagi uchun alohida trade-off.</text>
+</svg>

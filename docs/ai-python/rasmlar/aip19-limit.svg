@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 460" width="760" height="460" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Agent xavfsizlik chegaralari: qadam limiti, xavfli tool uchun inson tasdig'i, argument validatsiya</title>
+  <rect x="0" y="0" width="760" height="460" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">Xavfsizlik chegaralari: agentni jilovlash</text>
+
+  <defs>
+    <marker id="a19s-r" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#dc2626"/>
+    </marker>
+    <marker id="a19s-g" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#16a34a"/>
+    </marker>
+    <marker id="a19s-i" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#4f46e5"/>
+    </marker>
+  </defs>
+
+  <!-- 1. step limit -->
+  <rect x="30" y="70" width="220" height="150" rx="14" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="30" y="70" width="220" height="38" rx="14" fill="#fef3c7"/>
+  <text x="140" y="95" text-anchor="middle" font-size="15" font-weight="700" fill="#b45309">1. Qadam limiti</text>
+  <text x="140" y="136" text-anchor="middle" font-size="13" fill="#475569">while qadam &lt; maks:</text>
+  <text x="140" y="160" text-anchor="middle" font-size="13" fill="#92400e">model takror tool</text>
+  <text x="140" y="178" text-anchor="middle" font-size="13" fill="#92400e">chaqiraversa ham</text>
+  <text x="140" y="200" text-anchor="middle" font-size="13" font-weight="700" fill="#b45309">cheksiz loop yo'q</text>
+
+  <!-- 2. confirmation -->
+  <rect x="270" y="70" width="220" height="150" rx="14" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <rect x="270" y="70" width="220" height="38" rx="14" fill="#fee2e2"/>
+  <text x="380" y="95" text-anchor="middle" font-size="15" font-weight="700" fill="#dc2626">2. Inson tasdig'i</text>
+  <text x="380" y="136" text-anchor="middle" font-size="13" fill="#475569">xavfli tool oldidan</text>
+  <text x="380" y="160" text-anchor="middle" font-size="13" fill="#475569">(o'chir, to'lov, email):</text>
+  <text x="380" y="184" text-anchor="middle" font-size="13" font-weight="700" fill="#dc2626">"Bajaraymi? (ha/yo'q)"</text>
+  <text x="380" y="206" text-anchor="middle" font-size="13" fill="#64748b">human-in-the-loop</text>
+
+  <!-- 3. validation -->
+  <rect x="510" y="70" width="220" height="150" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <rect x="510" y="70" width="220" height="38" rx="14" fill="#dcfce7"/>
+  <text x="620" y="95" text-anchor="middle" font-size="15" font-weight="700" fill="#166534">3. Argument validatsiya</text>
+  <text x="620" y="136" text-anchor="middle" font-size="13" fill="#475569">model args'ni TO'QIYDI</text>
+  <text x="620" y="158" text-anchor="middle" font-size="13" fill="#475569">= ishonchsiz kirish</text>
+  <text x="620" y="182" text-anchor="middle" font-size="13" font-weight="700" fill="#166534">tekshir: tur, chegara,</text>
+  <text x="620" y="200" text-anchor="middle" font-size="13" font-weight="700" fill="#166534">oq ro'yxat</text>
+
+  <!-- flow: a tool_call enters a gate -->
+  <rect x="60" y="268" width="160" height="50" rx="12" fill="#f3e8ff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="140" y="292" text-anchor="middle" font-size="14" font-weight="700" fill="#7c3aed">tool_call</text>
+  <text x="140" y="310" text-anchor="middle" font-size="13" fill="#475569">model so'radi</text>
+
+  <!-- gate diamond -->
+  <polygon points="380,256 500,310 380,364 260,310" fill="#fff" stroke="#dc2626" stroke-width="2"/>
+  <text x="380" y="305" text-anchor="middle" font-size="14" font-weight="700" fill="#dc2626">darvoza:</text>
+  <text x="380" y="324" text-anchor="middle" font-size="13" fill="#b91c1c">xavfsizmi?</text>
+  <line x1="220" y1="293" x2="256" y2="300" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#a19s-i)"/>
+
+  <!-- pass -> execute -->
+  <text x="540" y="300" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a">o'tdi</text>
+  <line x1="500" y1="310" x2="556" y2="310" stroke="#16a34a" stroke-width="2.5" marker-end="url(#a19s-g)"/>
+  <rect x="560" y="284" width="160" height="52" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="640" y="308" text-anchor="middle" font-size="14" font-weight="700" fill="#166534">Bajar</text>
+  <text x="640" y="326" text-anchor="middle" font-size="13" fill="#166534">natija -> xotira</text>
+
+  <!-- block -> rejected -->
+  <text x="380" y="392" text-anchor="middle" font-size="13" font-weight="700" fill="#dc2626">rad / tasdiq yo'q</text>
+  <line x1="380" y1="364" x2="380" y2="402" stroke="#dc2626" stroke-width="2.5" marker-end="url(#a19s-r)"/>
+  <rect x="280" y="406" width="200" height="44" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="380" y="433" text-anchor="middle" font-size="14" font-weight="700" fill="#dc2626">{"xato": "rad etildi"}</text>
+
+  <text x="640" y="372" text-anchor="middle" font-size="13" fill="#64748b">Uch chegara birga =</text>
+  <text x="640" y="390" text-anchor="middle" font-size="13" fill="#64748b">ishonchli agent</text>
+</svg>

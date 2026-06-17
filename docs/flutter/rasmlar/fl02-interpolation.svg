@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420" font-family="Segoe UI, system-ui, sans-serif">
+  <title>String interpolation: shablon ichidagi $ism va ${yil} qiymatlar bilan almashib, tayyor matn hosil bo'ladi</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">String interpolation — qiymatni matnga joylash</text>
+  <text x="380" y="58" text-anchor="middle" font-size="14" fill="#475569">$ — bitta o'zgaruvchi uchun, ${...} — ifoda (hisob-kitob) uchun</text>
+
+  <!-- Qiymat qutilari -->
+  <rect x="40" y="96" width="150" height="64" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="115" y="120" text-anchor="middle" font-size="13" fill="#475569">ism (String)</text>
+  <text x="115" y="146" text-anchor="middle" font-size="17" font-weight="700" fill="#16a34a">'Ali'</text>
+
+  <rect x="40" y="184" width="150" height="64" rx="10" fill="#ffffff" stroke="#027dfd" stroke-width="2"/>
+  <text x="115" y="208" text-anchor="middle" font-size="13" fill="#475569">yil (int)</text>
+  <text x="115" y="234" text-anchor="middle" font-size="17" font-weight="700" fill="#027dfd">25</text>
+
+  <!-- Shablon -->
+  <text x="240" y="118" font-size="14" font-weight="700" fill="#1e293b">Shablon (yoziladigan kod):</text>
+  <rect x="240" y="130" width="490" height="50" rx="10" fill="#0f172a"/>
+  <text x="258" y="161" font-size="15" font-family="Consolas, monospace" fill="#e2e8f0">'Salom, </text>
+  <text x="328" y="161" font-size="15" font-weight="700" font-family="Consolas, monospace" fill="#4ade80">$ism</text>
+  <text x="370" y="161" font-size="15" font-family="Consolas, monospace" fill="#e2e8f0">! Yoshing </text>
+  <text x="462" y="161" font-size="15" font-weight="700" font-family="Consolas, monospace" fill="#60a5fa">${yil}</text>
+  <text x="516" y="161" font-size="15" font-family="Consolas, monospace" fill="#e2e8f0">.'</text>
+
+  <!-- Strelkalar: qiymatdan shablonga -->
+  <line x1="190" y1="128" x2="334" y2="148" stroke="#16a34a" stroke-width="2" stroke-dasharray="5 4"/>
+  <polygon points="334,148 324,143 326,152" fill="#16a34a"/>
+  <line x1="190" y1="216" x2="478" y2="170" stroke="#027dfd" stroke-width="2" stroke-dasharray="5 4"/>
+  <polygon points="478,170 467,168 472,177" fill="#027dfd"/>
+
+  <!-- Pastga strelka -->
+  <line x1="485" y1="190" x2="485" y2="232" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="485,232 480,222 490,222" fill="#94a3b8"/>
+  <text x="500" y="216" font-size="13" fill="#64748b">almashtiriladi</text>
+
+  <!-- Natija -->
+  <text x="240" y="262" font-size="14" font-weight="700" fill="#1e293b">Natija (ekranda):</text>
+  <rect x="240" y="274" width="490" height="56" rx="10" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <text x="270" y="309" font-size="17" font-weight="700" fill="#1e293b">Salom, <tspan fill="#16a34a">Ali</tspan>! Yoshing <tspan fill="#027dfd">25</tspan>.</text>
+
+  <!-- Pastki misol: ${a + b} -->
+  <rect x="40" y="352" width="690" height="48" rx="10" fill="#eef2ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="60" y="382" font-size="14" fill="#475569">${ } ichida hisoblash ham mumkin:  </text>
+  <text x="350" y="382" font-size="14" font-weight="700" font-family="Consolas, monospace" fill="#4f46e5">'Jami: ${2 + 3}'</text>
+  <text x="540" y="382" font-size="14" fill="#475569">&#8594;  Jami: 5</text>
+</svg>

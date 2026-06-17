@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Amaliy naqsh: TaskForm save metodida dispatch('task-created') qiladi, TaskList esa #[On('task-created')] orqali eshitib ro'yxatni yangilaydi</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Naqsh: forma saqladi, ro'yxat o'zi yangilandi</text>
+
+  <!-- TaskForm qutisi -->
+  <rect x="36" y="64" width="320" height="300" rx="12" fill="#ffffff" stroke="#4f46e5" stroke-width="2.5"/>
+  <rect x="36" y="64" width="320" height="38" rx="12" fill="#4f46e5"/>
+  <text x="196" y="89" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">TaskForm (yuboruvchi)</text>
+
+  <rect x="58" y="120" width="276" height="30" rx="6" fill="#f1f5f9" stroke="#cbd5e1"/>
+  <text x="196" y="140" text-anchor="middle" font-size="13" fill="#475569">input wire:model="title"</text>
+  <rect x="58" y="158" width="276" height="28" rx="6" fill="#eef2ff" stroke="#c7d2fe"/>
+  <text x="196" y="177" text-anchor="middle" font-size="13" fill="#4f46e5">form wire:submit="save"</text>
+
+  <text x="58" y="214" font-size="14" font-weight="700" fill="#1e293b">save() metodi:</text>
+  <rect x="58" y="224" width="276" height="36" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="68" y="246" font-size="13" fill="#475569">Task::create([...]);</text>
+  <rect x="58" y="266" width="276" height="40" rx="6" fill="#fdf2f8" stroke="#fb70a9" stroke-width="2"/>
+  <text x="196" y="291" text-anchor="middle" font-size="13" fill="#be185d">dispatch('task-created', title: ...)</text>
+  <rect x="58" y="312" width="276" height="34" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="68" y="334" font-size="13" fill="#475569">$this-&gt;title = '';  // tozalash</text>
+
+  <!-- O'rtadagi event strelkasi -->
+  <line x1="356" y1="286" x2="402" y2="286" stroke="#fb70a9" stroke-width="3"/>
+  <polygon points="404,286 390,279 390,293" fill="#fb70a9"/>
+  <rect x="360" y="234" width="40" height="40" rx="20" fill="#fb70a9"/>
+  <text x="380" y="252" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">📡</text>
+  <text x="380" y="268" text-anchor="middle" font-size="13" fill="#ffffff">EFIR</text>
+
+  <!-- TaskList qutisi -->
+  <rect x="404" y="64" width="320" height="300" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <rect x="404" y="64" width="320" height="38" rx="12" fill="#16a34a"/>
+  <text x="564" y="89" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">TaskList (tinglovchi)</text>
+
+  <rect x="426" y="120" width="276" height="40" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="564" y="145" text-anchor="middle" font-size="13" fill="#16a34a">#[On('task-created')]</text>
+  <rect x="426" y="166" width="276" height="34" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="564" y="188" text-anchor="middle" font-size="13" fill="#475569">public function addTask($title)</text>
+  <rect x="426" y="206" width="276" height="34" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="564" y="228" text-anchor="middle" font-size="13" fill="#475569">$this-&gt;tasks[] = $title;</text>
+
+  <text x="564" y="266" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Ro'yxat darhol yangilanadi:</text>
+  <rect x="446" y="278" width="236" height="24" rx="5" fill="#f0fdf4" stroke="#bbf7d0"/>
+  <text x="564" y="294" text-anchor="middle" font-size="13" fill="#16a34a">• Sut sotib olish (yangi!)</text>
+  <rect x="446" y="306" width="236" height="24" rx="5" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="564" y="322" text-anchor="middle" font-size="13" fill="#475569">• Non olish</text>
+  <rect x="446" y="334" width="236" height="22" rx="5" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="564" y="349" text-anchor="middle" font-size="13" fill="#475569">• Kitob o'qish</text>
+
+  <text x="380" y="398" text-anchor="middle" font-size="14" fill="#475569">Forma TaskList haqida hech narsa bilmaydi — faqat 'task-created' xabarini chiqaradi.</text>
+  <text x="380" y="422" text-anchor="middle" font-size="13" fill="#94a3b8">Sahifa qayta yuklanmaydi. F5 bosish shart emas.</text>
+</svg>

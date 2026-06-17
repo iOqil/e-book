@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 520">
+  <title>Ikki o'zgaruvchini almashtirish: vaqtinchalik idish orqali, uch qadam</title>
+  <rect x="0" y="0" width="820" height="520" fill="#f8fafc"/>
+  <text x="410" y="38" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Almashtirish (swap) — uchinchi idish hiylasi</text>
+  <text x="410" y="64" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">a = "olma", b = "anor" qiymatlarini joyini almashtiramiz</text>
+
+  <!-- column headers -->
+  <text x="150" y="104" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#2563eb">a</text>
+  <text x="410" y="104" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#16a34a">b</text>
+  <text x="670" y="104" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#7c3aed">temp</text>
+
+  <!-- Row 0: boshlang'ich -->
+  <text x="40" y="150" font-family="Segoe UI" font-size="14" fill="#64748b">Boshida</text>
+  <rect x="90" y="124" width="120" height="46" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="150" y="153" text-anchor="middle" font-family="monospace" font-size="15" fill="#334155">olma</text>
+  <rect x="350" y="124" width="120" height="46" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="410" y="153" text-anchor="middle" font-family="monospace" font-size="15" fill="#334155">anor</text>
+  <rect x="610" y="124" width="120" height="46" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="5 4"/>
+  <text x="670" y="153" text-anchor="middle" font-family="monospace" font-size="15" fill="#94a3b8">bo'sh</text>
+
+  <!-- Step 1: temp <- a -->
+  <text x="40" y="220" font-family="Segoe UI" font-size="14" fill="#64748b">1-qadam</text>
+  <text x="40" y="240" font-family="monospace" font-size="13" fill="#7c3aed">temp&lt;-a</text>
+  <rect x="90" y="196" width="120" height="46" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="150" y="225" text-anchor="middle" font-family="monospace" font-size="15" fill="#334155">olma</text>
+  <rect x="350" y="196" width="120" height="46" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="410" y="225" text-anchor="middle" font-family="monospace" font-size="15" fill="#334155">anor</text>
+  <rect x="610" y="196" width="120" height="46" rx="8" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="670" y="225" text-anchor="middle" font-family="monospace" font-size="15" fill="#334155">olma</text>
+  <path d="M 215 219 C 400 175 470 175 605 219" fill="none" stroke="#7c3aed" stroke-width="2"/>
+  <polygon points="605,219 597,213 599,222" fill="#7c3aed"/>
+
+  <!-- Step 2: a <- b -->
+  <text x="40" y="292" font-family="Segoe UI" font-size="14" fill="#64748b">2-qadam</text>
+  <text x="40" y="312" font-family="monospace" font-size="13" fill="#2563eb">a&lt;-b</text>
+  <rect x="90" y="268" width="120" height="46" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="150" y="297" text-anchor="middle" font-family="monospace" font-size="15" fill="#334155">anor</text>
+  <rect x="350" y="268" width="120" height="46" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="410" y="297" text-anchor="middle" font-family="monospace" font-size="15" fill="#334155">anor</text>
+  <rect x="610" y="268" width="120" height="46" rx="8" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="670" y="297" text-anchor="middle" font-family="monospace" font-size="15" fill="#334155">olma</text>
+  <path d="M 345 291 C 280 291 280 291 215 291" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <polygon points="215,291 223,285 223,297" fill="#2563eb"/>
+
+  <!-- Step 3: b <- temp -->
+  <text x="40" y="364" font-family="Segoe UI" font-size="14" fill="#64748b">3-qadam</text>
+  <text x="40" y="384" font-family="monospace" font-size="13" fill="#16a34a">b&lt;-temp</text>
+  <rect x="90" y="340" width="120" height="46" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="150" y="369" text-anchor="middle" font-family="monospace" font-size="15" fill="#334155">anor</text>
+  <rect x="350" y="340" width="120" height="46" rx="8" fill="#ecfdf5" stroke="#16a34a" stroke-width="2"/>
+  <text x="410" y="369" text-anchor="middle" font-family="monospace" font-size="15" fill="#334155">olma</text>
+  <rect x="610" y="340" width="120" height="46" rx="8" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="670" y="369" text-anchor="middle" font-family="monospace" font-size="15" fill="#334155">olma</text>
+  <path d="M 605 363 C 540 363 540 363 475 363" fill="none" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="475,363 483,357 483,369" fill="#16a34a"/>
+
+  <!-- Result -->
+  <rect x="90" y="416" width="640" height="78" rx="12" fill="#ecfdf5" stroke="#16a34a" stroke-width="2"/>
+  <text x="410" y="448" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#166534">Natija: a = anor,  b = olma  — almashdi!</text>
+  <text x="410" y="476" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">temp bo'lmasa, 2-qadamda "olma" o'chib ketardi va qaytmas edi.</text>
+</svg>

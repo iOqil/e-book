@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 500" width="760" height="500" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Turli HTML input turlari (matn, email, raqam, select, radio, ko'p checkbox, bitta checkbox, textarea) va ularning wire:model orqali mos keladigan komponent xususiyatlariga (string, int, array, bool) bog'lanishi</title>
+  <rect x="0" y="0" width="760" height="500" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Input turlari va wire:model bog'lanishi</text>
+  <text x="380" y="58" text-anchor="middle" font-size="14" fill="#475569">Har input chap tomonda, bog'langan xususiyat o'ng tomonda</text>
+
+  <!-- Ustun sarlavhalari -->
+  <rect x="30" y="78" width="350" height="34" rx="8" fill="#4f46e5"/>
+  <text x="205" y="101" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">HTML input (Blade)</text>
+  <rect x="430" y="78" width="300" height="34" rx="8" fill="#fb70a9"/>
+  <text x="580" y="101" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">Komponent xususiyati (PHP)</text>
+
+  <!-- Qator generatori: 6 ta qator -->
+  <!-- 1 text -->
+  <rect x="30" y="122" width="350" height="42" rx="8" fill="#ffffff" stroke="#c7d2fe" stroke-width="1.5"/>
+  <text x="44" y="148" font-size="13" fill="#1e293b">&lt;input type="text" wire:model="ism"&gt;</text>
+  <line x1="380" y1="143" x2="426" y2="143" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="426,143 416,138 416,148" fill="#94a3b8"/>
+  <rect x="430" y="122" width="300" height="42" rx="8" fill="#ffffff" stroke="#c7d2fe" stroke-width="1.5"/>
+  <text x="444" y="148" font-size="13" fill="#475569">public string $ism = '';</text>
+
+  <!-- 2 email -->
+  <rect x="30" y="172" width="350" height="42" rx="8" fill="#ffffff" stroke="#c7d2fe" stroke-width="1.5"/>
+  <text x="44" y="198" font-size="13" fill="#1e293b">&lt;input type="email" wire:model="email"&gt;</text>
+  <line x1="380" y1="193" x2="426" y2="193" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="426,193 416,188 416,198" fill="#94a3b8"/>
+  <rect x="430" y="172" width="300" height="42" rx="8" fill="#ffffff" stroke="#c7d2fe" stroke-width="1.5"/>
+  <text x="444" y="198" font-size="13" fill="#475569">public string $email = '';</text>
+
+  <!-- 3 number -->
+  <rect x="30" y="222" width="350" height="42" rx="8" fill="#ffffff" stroke="#c7d2fe" stroke-width="1.5"/>
+  <text x="44" y="248" font-size="13" fill="#1e293b">&lt;input type="number" wire:model.number="yosh"&gt;</text>
+  <line x1="380" y1="243" x2="426" y2="243" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="426,243 416,238 416,248" fill="#94a3b8"/>
+  <rect x="430" y="222" width="300" height="42" rx="8" fill="#ffffff" stroke="#c7d2fe" stroke-width="1.5"/>
+  <text x="444" y="248" font-size="13" fill="#475569">public ?int $yosh = null;</text>
+
+  <!-- 4 select / radio -->
+  <rect x="30" y="272" width="350" height="42" rx="8" fill="#ffffff" stroke="#c7d2fe" stroke-width="1.5"/>
+  <text x="44" y="291" font-size="13" fill="#1e293b">&lt;select wire:model="shahar"&gt; ...</text>
+  <text x="44" y="308" font-size="13" fill="#1e293b">&lt;input type="radio" wire:model="jins"&gt;</text>
+  <line x1="380" y1="293" x2="426" y2="293" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="426,293 416,288 416,298" fill="#94a3b8"/>
+  <rect x="430" y="272" width="300" height="42" rx="8" fill="#ffffff" stroke="#c7d2fe" stroke-width="1.5"/>
+  <text x="444" y="291" font-size="13" fill="#475569">public string $shahar = '';</text>
+  <text x="444" y="308" font-size="13" fill="#475569">public string $jins = '';</text>
+
+  <!-- 5 checkbox massiv -->
+  <rect x="30" y="322" width="350" height="42" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="44" y="341" font-size="13" fill="#1e293b">&lt;input type="checkbox" value="kod"</text>
+  <text x="44" y="358" font-size="13" fill="#1e293b">  wire:model="qiziqishlar"&gt;  (KO'P)</text>
+  <line x1="380" y1="343" x2="426" y2="343" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="426,343 416,338 416,348" fill="#16a34a"/>
+  <rect x="430" y="322" width="300" height="42" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="444" y="348" font-size="13" fill="#16a34a">public array $qiziqishlar = [];</text>
+
+  <!-- 6 checkbox bool -->
+  <rect x="30" y="372" width="350" height="42" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="44" y="391" font-size="13" fill="#1e293b">&lt;input type="checkbox"</text>
+  <text x="44" y="408" font-size="13" fill="#1e293b">  wire:model="rozilik"&gt;  (BITTA)</text>
+  <line x1="380" y1="393" x2="426" y2="393" stroke="#f59e0b" stroke-width="2"/>
+  <polygon points="426,393 416,388 416,398" fill="#f59e0b"/>
+  <rect x="430" y="372" width="300" height="42" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="444" y="398" font-size="13" fill="#f59e0b">public bool $rozilik = false;</text>
+
+  <!-- 7 textarea -->
+  <rect x="30" y="422" width="350" height="42" rx="8" fill="#ffffff" stroke="#c7d2fe" stroke-width="1.5"/>
+  <text x="44" y="448" font-size="13" fill="#1e293b">&lt;textarea wire:model="xabar"&gt;</text>
+  <line x1="380" y1="443" x2="426" y2="443" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="426,443 416,438 416,448" fill="#94a3b8"/>
+  <rect x="430" y="422" width="300" height="42" rx="8" fill="#ffffff" stroke="#c7d2fe" stroke-width="1.5"/>
+  <text x="444" y="448" font-size="13" fill="#475569">public string $xabar = '';</text>
+
+  <text x="380" y="488" text-anchor="middle" font-size="13" fill="#94a3b8">Diqqat: ko'p checkbox = array (yashil), bitta checkbox = bool (sariq) — bu farqni eslab qoling.</text>
+</svg>

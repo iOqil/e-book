@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 560">
+  <title>SQL (relyatsion) va NoSQL oilalari: document, key-value, column-family, graph — har biri qachon ishlatiladi</title>
+  <rect x="0" y="0" width="860" height="560" fill="#f8fafc"/>
+  <text x="430" y="34" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Ma'lumotlar bazasi oilalari: qachon qaysi</text>
+
+  <!-- SQL block -->
+  <rect x="30" y="58" width="380" height="190" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <rect x="30" y="58" width="380" height="34" rx="10" fill="#2563eb"/>
+  <text x="220" y="81" text-anchor="middle" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#ffffff">Relyatsion (SQL)</text>
+  <text x="50" y="116" font-family="Segoe UI" font-size="14" fill="#334155">Tuzilma: jadval + qat'iy sxema</text>
+  <text x="50" y="138" font-family="Segoe UI" font-size="14" fill="#334155">Bog'lash: JOIN, chet kalit (FK)</text>
+  <text x="50" y="160" font-family="Segoe UI" font-size="14" fill="#334155">Kafolat: odatda ACID tranzaksiya</text>
+  <text x="50" y="182" font-family="Segoe UI" font-size="14" fill="#334155">Misol: PostgreSQL, MySQL</text>
+  <text x="50" y="210" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#16a34a">Qachon: aniq munosabatlar,</text>
+  <text x="50" y="230" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#16a34a">murakkab so'rov, kuchli yaxlitlik</text>
+
+  <!-- NoSQL umbrella -->
+  <rect x="450" y="58" width="380" height="190" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="450" y="58" width="380" height="34" rx="10" fill="#f59e0b"/>
+  <text x="640" y="81" text-anchor="middle" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#1e293b">NoSQL (bir necha oila)</text>
+  <text x="470" y="116" font-family="Segoe UI" font-size="14" fill="#334155">Tuzilma: moslashuvchan / sxemasiz</text>
+  <text x="470" y="138" font-family="Segoe UI" font-size="14" fill="#334155">Masshtab: gorizontal (sharding) oson</text>
+  <text x="470" y="160" font-family="Segoe UI" font-size="14" fill="#334155">Kafolat: ko'pincha BASE / sozlanadi</text>
+  <text x="470" y="182" font-family="Segoe UI" font-size="14" fill="#334155">"Bitta tur emas" - 4 oila quyida</text>
+  <text x="470" y="210" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#16a34a">Qachon: access pattern aniq,</text>
+  <text x="470" y="230" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#16a34a">katta masshtab, moslashuvchanlik</text>
+
+  <!-- 4 families -->
+  <!-- Document -->
+  <rect x="30" y="278" width="195" height="240" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <rect x="30" y="278" width="195" height="30" rx="10" fill="#e0e7ff"/>
+  <text x="127" y="299" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">Document</text>
+  <text x="45" y="328" font-family="Segoe UI" font-size="13" fill="#64748b">Misol: MongoDB</text>
+  <text x="45" y="352" font-family="Segoe UI" font-size="13" fill="#334155">Birlik: JSON-hujjat</text>
+  <text x="45" y="374" font-family="Segoe UI" font-size="13" fill="#334155">(o'z-ichiga ichki</text>
+  <text x="45" y="392" font-family="Segoe UI" font-size="13" fill="#334155">obyektlar joylanadi)</text>
+  <line x1="45" y1="408" x2="210" y2="408" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="45" y="432" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#16a34a">Qachon:</text>
+  <text x="45" y="452" font-family="Segoe UI" font-size="13" fill="#334155">o'zgaruvchan shakl,</text>
+  <text x="45" y="470" font-family="Segoe UI" font-size="13" fill="#334155">"butun obyekt" bilan</text>
+  <text x="45" y="488" font-family="Segoe UI" font-size="13" fill="#334155">o'qiladi (profil,</text>
+  <text x="45" y="506" font-family="Segoe UI" font-size="13" fill="#334155">katalog, content)</text>
+
+  <!-- Key-Value -->
+  <rect x="237" y="278" width="195" height="240" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <rect x="237" y="278" width="195" height="30" rx="10" fill="#dcfce7"/>
+  <text x="334" y="299" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">Key-Value</text>
+  <text x="252" y="328" font-family="Segoe UI" font-size="13" fill="#64748b">Misol: Redis</text>
+  <text x="252" y="352" font-family="Segoe UI" font-size="13" fill="#334155">Birlik: kalit -&gt; qiymat</text>
+  <text x="252" y="374" font-family="Segoe UI" font-size="13" fill="#334155">Eng sodda model,</text>
+  <text x="252" y="392" font-family="Segoe UI" font-size="13" fill="#334155">juda tez (xotirada)</text>
+  <line x1="252" y1="408" x2="417" y2="408" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="252" y="432" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#16a34a">Qachon:</text>
+  <text x="252" y="452" font-family="Segoe UI" font-size="13" fill="#334155">cache, sessiya,</text>
+  <text x="252" y="470" font-family="Segoe UI" font-size="13" fill="#334155">rate-limit, navbat,</text>
+  <text x="252" y="488" font-family="Segoe UI" font-size="13" fill="#334155">kalit bo'yicha tez</text>
+  <text x="252" y="506" font-family="Segoe UI" font-size="13" fill="#334155">qidiruv</text>
+
+  <!-- Column-family -->
+  <rect x="444" y="278" width="195" height="240" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <rect x="444" y="278" width="195" height="30" rx="10" fill="#fef3c7"/>
+  <text x="541" y="299" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">Column-family</text>
+  <text x="459" y="328" font-family="Segoe UI" font-size="13" fill="#64748b">Misol: Cassandra</text>
+  <text x="459" y="352" font-family="Segoe UI" font-size="13" fill="#334155">Birlik: kalit bo'yicha</text>
+  <text x="459" y="374" font-family="Segoe UI" font-size="13" fill="#334155">qatorlar, keng ustun</text>
+  <text x="459" y="392" font-family="Segoe UI" font-size="13" fill="#334155">to'plami</text>
+  <line x1="459" y1="408" x2="624" y2="408" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="459" y="432" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#16a34a">Qachon:</text>
+  <text x="459" y="452" font-family="Segoe UI" font-size="13" fill="#334155">juda katta yozuv</text>
+  <text x="459" y="470" font-family="Segoe UI" font-size="13" fill="#334155">oqimi, vaqt-qatorlar,</text>
+  <text x="459" y="488" font-family="Segoe UI" font-size="13" fill="#334155">loglar, gorizontal</text>
+  <text x="459" y="506" font-family="Segoe UI" font-size="13" fill="#334155">masshtab</text>
+
+  <!-- Graph -->
+  <rect x="651" y="278" width="179" height="240" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <rect x="651" y="278" width="179" height="30" rx="10" fill="#fee2e2"/>
+  <text x="740" y="299" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">Graph</text>
+  <text x="666" y="328" font-family="Segoe UI" font-size="13" fill="#64748b">Misol: Neo4j</text>
+  <text x="666" y="352" font-family="Segoe UI" font-size="13" fill="#334155">Birlik: tugun +</text>
+  <text x="666" y="374" font-family="Segoe UI" font-size="13" fill="#334155">bog'lanish (qirra)</text>
+  <text x="666" y="392" font-family="Segoe UI" font-size="13" fill="#334155">birinchi darajali</text>
+  <line x1="666" y1="408" x2="815" y2="408" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="666" y="432" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#16a34a">Qachon:</text>
+  <text x="666" y="452" font-family="Segoe UI" font-size="13" fill="#334155">chuqur bog'lanishlar,</text>
+  <text x="666" y="470" font-family="Segoe UI" font-size="13" fill="#334155">ijtimoiy tarmoq,</text>
+  <text x="666" y="488" font-family="Segoe UI" font-size="13" fill="#334155">tavsiya, yo'l topish,</text>
+  <text x="666" y="506" font-family="Segoe UI" font-size="13" fill="#334155">firibgarlik tahlili</text>
+
+  <text x="430" y="546" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">"NoSQL" - bitta texnologiya emas: har oila boshqa muammoni hal qiladi. Tanlov = access pattern + trade-off.</text>
+</svg>

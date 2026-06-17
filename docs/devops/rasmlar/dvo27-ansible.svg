@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430">
+  <title>Ansible ishlash sxemasi: control node (sizning mashinangiz) playbook va inventory bilan SSH orqali bir nechta serverga (web1, web2, db1) ulanadi va task'larni har birida idempotent tarzda bajaradi, natijada hammasi bir xil holatga keladi</title>
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Ansible: control node -&gt; SSH -&gt; ko'p server</text>
+
+  <!-- control node -->
+  <rect x="28" y="120" width="200" height="190" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="128" y="148" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e40af">Control node</text>
+  <text x="128" y="167" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(noutbuk / CI runner)</text>
+
+  <rect x="48" y="182" width="160" height="52" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="128" y="203" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#1e293b">playbook (site.yml)</text>
+  <text x="128" y="223" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">apt, user, service...</text>
+
+  <rect x="48" y="244" width="160" height="50" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="128" y="265" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#1e293b">inventory</text>
+  <text x="128" y="285" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">[web] web1 web2 [db] db1</text>
+
+  <!-- SSH strelkalar -->
+  <line x1="228" y1="165" x2="496" y2="115" stroke="#16a34a" stroke-width="2.5" marker-end="url(#a)"/>
+  <line x1="228" y1="215" x2="496" y2="215" stroke="#16a34a" stroke-width="2.5" marker-end="url(#a)"/>
+  <line x1="228" y1="265" x2="496" y2="315" stroke="#16a34a" stroke-width="2.5" marker-end="url(#a)"/>
+  <text x="358" y="135" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#16a34a">SSH</text>
+  <text x="362" y="205" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#16a34a">SSH (agentsiz)</text>
+  <text x="358" y="300" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#16a34a">SSH</text>
+
+  <!-- serverlar -->
+  <rect x="500" y="84" width="232" height="62" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="520" y="108" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#166534">web1</text>
+  <text x="520" y="130" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">apt ok, user ok, docker ok</text>
+
+  <rect x="500" y="184" width="232" height="62" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="520" y="208" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#166534">web2</text>
+  <text x="520" y="230" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">apt ok, user ok, docker ok</text>
+
+  <rect x="500" y="284" width="232" height="62" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="520" y="308" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#166534">db1</text>
+  <text x="520" y="330" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">apt ok, user ok</text>
+
+  <!-- idempotent izoh -->
+  <rect x="28" y="356" width="704" height="52" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="380" y="379" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#92400e">Idempotent: playbook'ni qayta ishlatsang ham faqat KERAKLI o'zgarish qo'llanadi</text>
+  <text x="380" y="399" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">allaqachon to'g'ri sozlangan task -&gt; "ok" (changed=0); yo'q narsa -&gt; "changed"</text>
+
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L9,4 L0,8 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+</svg>

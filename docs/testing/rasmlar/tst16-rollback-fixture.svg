@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 430">
+  <title>Tranzaksiya-rollback fixture hayot sikli: setup BEGIN, test, teardown ROLLBACK</title>
+  <rect x="0" y="0" width="820" height="430" fill="#f8fafc"/>
+  <text x="410" y="38" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Tranzaksiya-rollback fixture hayot sikli</text>
+  <text x="410" y="64" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">yield ikki qismni ajratadi: oldin = setup, keyin = teardown</text>
+
+  <!-- 1. BEGIN -->
+  <rect x="50" y="110" width="190" height="130" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="145" y="142" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a">1. Setup</text>
+  <text x="145" y="172" text-anchor="middle" font-family="Segoe UI" font-size="15" fill="#1e293b">BEGIN</text>
+  <text x="145" y="196" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#475569">tranzaksiya ochiladi</text>
+  <text x="145" y="218" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#475569">DB toza holatda</text>
+
+  <!-- arrow -->
+  <line x1="240" y1="175" x2="305" y2="175" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="305,168 320,175 305,182" fill="#94a3b8"/>
+
+  <!-- 2. test -->
+  <rect x="320" y="110" width="190" height="130" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="415" y="142" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb">2. Test ishlaydi</text>
+  <text x="415" y="172" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#1e293b">INSERT / UPDATE</text>
+  <text x="415" y="194" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#1e293b">SELECT / assert</text>
+  <text x="415" y="218" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#475569">yield ulanish</text>
+
+  <!-- arrow -->
+  <line x1="510" y1="175" x2="575" y2="175" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="575,168 590,175 575,182" fill="#94a3b8"/>
+
+  <!-- 3. ROLLBACK -->
+  <rect x="590" y="110" width="190" height="130" rx="12" fill="#fef9f3" stroke="#f59e0b" stroke-width="2"/>
+  <text x="685" y="142" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#f59e0b">3. Teardown</text>
+  <text x="685" y="172" text-anchor="middle" font-family="Segoe UI" font-size="15" fill="#1e293b">ROLLBACK</text>
+  <text x="685" y="196" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#475569">hammasi bekor</text>
+  <text x="685" y="218" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#475569">diskka yozilmaydi</text>
+
+  <!-- loop back arrow -->
+  <path d="M 685 240 L 685 290 L 145 290 L 145 240" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-dasharray="6 5"/>
+  <polygon points="138,255 145,240 152,255" fill="#16a34a"/>
+  <text x="415" y="282" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">DB testdan oldingi (toza) holatga qaytadi</text>
+
+  <!-- result band -->
+  <rect x="120" y="330" width="580" height="56" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="410" y="356" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">Har test mustaqil -> tartibga befarq (FIRST: Independent)</text>
+  <text x="410" y="378" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Keyingi test yana toza DB'dan boshlanadi</text>
+</svg>

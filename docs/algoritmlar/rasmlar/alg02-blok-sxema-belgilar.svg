@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 470" width="820" height="470">
+  <title>Blok-sxema standart belgilari: terminal, jarayon, qaror, kirish/chiqish, oqim</title>
+  <rect x="0" y="0" width="820" height="470" fill="#f8fafc"/>
+  <text x="410" y="34" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b" text-anchor="middle">Blok-sxema belgilari (legend)</text>
+  <text x="410" y="58" font-family="Segoe UI" font-size="14" fill="#64748b" text-anchor="middle">Har bir shakl bitta ma'noni bildiradi — oqim yuqoridan pastga, strelka bo'ylab</text>
+
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#334155"/>
+    </marker>
+  </defs>
+
+  <!-- Terminal (oval) -->
+  <ellipse cx="150" cy="120" rx="80" ry="30" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="150" y="126" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="middle">Boshla / Tugat</text>
+  <text x="320" y="110" font-family="Segoe UI" font-size="14" fill="#334155">Terminal — oval.</text>
+  <text x="320" y="132" font-family="Segoe UI" font-size="14" fill="#64748b">Algoritmning boshi va oxiri.</text>
+
+  <!-- Kirish/chiqish (parallelogramm) -->
+  <polygon points="95,185 235,185 205,245 65,245" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="150" y="221" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#7c3aed" text-anchor="middle">Kirish a, b</text>
+  <text x="320" y="206" font-family="Segoe UI" font-size="14" fill="#334155">Kirish / chiqish — parallelogramm.</text>
+  <text x="320" y="228" font-family="Segoe UI" font-size="14" fill="#64748b">Ma'lumot o'qish yoki natija chiqarish.</text>
+
+  <!-- Jarayon (to'rtburchak) -->
+  <rect x="75" y="285" width="150" height="56" rx="4" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="150" y="319" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb" text-anchor="middle">s = a + b</text>
+  <text x="320" y="304" font-family="Segoe UI" font-size="14" fill="#334155">Jarayon — to'rtburchak.</text>
+  <text x="320" y="326" font-family="Segoe UI" font-size="14" fill="#64748b">Hisoblash, qiymat berish amali.</text>
+
+  <!-- Qaror (romb) -->
+  <polygon points="150,375 230,415 150,455 70,415" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="150" y="420" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#f59e0b" text-anchor="middle">a &gt; b ?</text>
+  <text x="320" y="400" font-family="Segoe UI" font-size="14" fill="#334155">Qaror — romb.</text>
+  <text x="320" y="422" font-family="Segoe UI" font-size="14" fill="#64748b">Shart: ha / yo'q tarmoqqa ajraladi.</text>
+
+  <!-- Oqim strelkalari panel -->
+  <rect x="565" y="285" width="220" height="170" rx="10" fill="#ffffff" stroke="#64748b" stroke-width="2"/>
+  <text x="675" y="312" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#334155" text-anchor="middle">Oqim chizig'i</text>
+  <line x1="675" y1="328" x2="675" y2="378" stroke="#334155" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="675" y="405" font-family="Segoe UI" font-size="14" fill="#64748b" text-anchor="middle">Strelka qadamlar</text>
+  <text x="675" y="426" font-family="Segoe UI" font-size="14" fill="#64748b" text-anchor="middle">ketma-ketligini</text>
+  <text x="675" y="447" font-family="Segoe UI" font-size="14" fill="#64748b" text-anchor="middle">ko'rsatadi</text>
+</svg>

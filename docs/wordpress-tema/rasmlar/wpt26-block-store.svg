@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 470" width="820" height="470">
+  <title>Klassik WooCommerce: PHP shablonlar va hook'lar orqali render; block-based store: Cart va Checkout WooCommerce bloklari block tema ichida tahrirlanadi</title>
+  <rect width="820" height="470" fill="#f8fafc"/>
+  <text x="410" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Klassik shablon  vs  Block-based store</text>
+
+  <!-- LEFT: classic -->
+  <rect x="30" y="56" width="370" height="380" rx="12" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="30" y="56" width="370" height="40" rx="12" fill="#475569"/>
+  <text x="215" y="82" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">Klassik (PHP shablon)</text>
+
+  <rect x="52" y="112" width="326" height="44" rx="8" fill="#fff7ed" stroke="#d97706" stroke-width="1.5"/>
+  <text x="215" y="139" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#92400e">woocommerce/cart/cart.php</text>
+
+  <rect x="52" y="166" width="326" height="44" rx="8" fill="#fff7ed" stroke="#d97706" stroke-width="1.5"/>
+  <text x="215" y="193" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#92400e">woocommerce/checkout/form-checkout.php</text>
+
+  <rect x="52" y="220" width="326" height="44" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="215" y="241" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e3a8a">hook'lar bilan boshqariladi</text>
+  <text x="215" y="258" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#475569">add_action / remove_action</text>
+
+  <text x="215" y="296" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#475569">Tahrir = PHP + CSS kod</text>
+  <text x="215" y="320" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Dasturchi shablon override qiladi</text>
+
+  <rect x="52" y="344" width="326" height="76" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="215" y="368" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#166534">Mos: klassik tema</text>
+  <text x="215" y="389" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">to'liq nazorat, ko'p kod,</text>
+  <text x="215" y="408" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">qo'lda yangilash kerak</text>
+
+  <!-- RIGHT: block -->
+  <rect x="420" y="56" width="370" height="380" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
+  <rect x="420" y="56" width="370" height="40" rx="12" fill="#21759b"/>
+  <text x="605" y="82" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">Block-based store (WC 8+)</text>
+
+  <rect x="442" y="112" width="326" height="44" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="605" y="139" text-anchor="middle" font-family="Consolas, monospace" font-size="14" font-weight="bold" fill="#166534">wp:woocommerce/cart</text>
+
+  <rect x="442" y="166" width="326" height="44" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="605" y="193" text-anchor="middle" font-family="Consolas, monospace" font-size="14" font-weight="bold" fill="#166534">wp:woocommerce/checkout</text>
+
+  <rect x="442" y="220" width="326" height="44" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="605" y="241" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e3a8a">wp:woocommerce/product-collection</text>
+  <text x="605" y="258" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#475569">+ mini-cart, breadcrumbs ...</text>
+
+  <text x="605" y="296" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">Tahrir = Site Editor (bloklar)</text>
+  <text x="605" y="320" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">kodsiz, vizual, theme.json uslub</text>
+
+  <rect x="442" y="344" width="326" height="76" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="605" y="368" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#166534">Mos: block tema (FSE)</text>
+  <text x="605" y="389" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">zamonaviy, tezroq, kamroq</text>
+  <text x="605" y="408" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">shablon override kerak</text>
+
+  <text x="410" y="458" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Ikkalasi ham bir saytda yonma-yon ishlay oladi (hybrid)</text>
+</svg>

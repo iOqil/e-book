@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 510">
+  <title>Webhook xavfsizligi: provayder payload'ni sir kalit bilan HMAC imzolaydi, mijoz imzoni qayta hisoblab tekshiradi va soxta so'rovni rad etadi</title>
+  <rect x="0" y="0" width="880" height="510" fill="#f8fafc"/>
+  <text x="440" y="34" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">Webhook xavfsizligi — HMAC imzo bilan</text>
+  <text x="440" y="58" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Mijoz qanday biladi so'rov HAQIQATAN provayderdanmi? Umumiy sir + imzo bilan</text>
+
+  <!-- provayder bloki -->
+  <rect x="40" y="86" width="360" height="200" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="220" y="112" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a">Provayder (yuboruvchi)</text>
+  <rect x="60" y="126" width="320" height="34" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.2"/>
+  <text x="74" y="148" font-family="monospace" font-size="13" fill="#166534">payload = {"event":"payment.ok"}</text>
+  <rect x="60" y="166" width="320" height="34" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.2"/>
+  <text x="74" y="188" font-family="monospace" font-size="13" fill="#166534">sir = "whsec_..." (faqat ikkovida)</text>
+  <rect x="60" y="206" width="320" height="58" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="74" y="228" font-family="monospace" font-size="13" fill="#14532d">imzo = HMAC-SHA256(sir,</text>
+  <text x="74" y="246" font-family="monospace" font-size="13" fill="#14532d">           timestamp + "." + payload)</text>
+
+  <!-- mijoz bloki -->
+  <rect x="480" y="86" width="360" height="200" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="660" y="112" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb">Mijoz (qabul qiluvchi)</text>
+  <rect x="500" y="126" width="320" height="34" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.2"/>
+  <text x="514" y="148" font-family="monospace" font-size="13" fill="#1e3a8a">o'zidagi sir bilan QAYTA hisoblaydi</text>
+  <rect x="500" y="166" width="320" height="34" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.2"/>
+  <text x="514" y="188" font-family="monospace" font-size="13" fill="#1e3a8a">kelgan imzo == hisoblangan imzo?</text>
+  <rect x="500" y="206" width="320" height="58" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.2"/>
+  <text x="514" y="228" font-family="monospace" font-size="13" fill="#1e3a8a">timestamp yangimi? (+/- 5 daqiqa)</text>
+  <text x="514" y="246" font-family="monospace" font-size="13" fill="#1e3a8a">-> replay hujumini to'sadi</text>
+
+  <!-- imzolangan so'rov o'qi -->
+  <line x1="400" y1="200" x2="478" y2="200" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#ar2)"/>
+  <text x="440" y="192" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#7c3aed">HTTPS</text>
+
+  <!-- pastki so'rov bloki -->
+  <rect x="40" y="306" width="800" height="86" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="1.8"/>
+  <text x="60" y="330" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#5b21b6">Tarmoq orqali ketadigan POST so'rovi:</text>
+  <text x="60" y="354" font-family="monospace" font-size="13" fill="#334155">POST /hooks   Webhook-Timestamp: 1718524800</text>
+  <text x="60" y="376" font-family="monospace" font-size="13" fill="#334155">Webhook-Signature: v1,3a8f...   |   {"event":"payment.ok", ...}</text>
+
+  <!-- natija -->
+  <rect x="40" y="416" width="390" height="64" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="1.8"/>
+  <text x="235" y="442" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#166534">Imzo mos -> HAQIQIY</text>
+  <text x="235" y="464" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#166534">qabul qilinadi, 200 OK qaytadi</text>
+
+  <rect x="450" y="416" width="390" height="64" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="1.8"/>
+  <text x="645" y="442" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#b91c1c">Imzo mos emas -> SOXTA</text>
+  <text x="645" y="464" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#b91c1c">rad etiladi (sirni bilmagan)</text>
+
+  <defs>
+    <marker id="ar2" markerWidth="10" markerHeight="10" refX="7" refY="3.4" orient="auto"><path d="M0,0 L7,3.4 L0,6.8 Z" fill="#7c3aed"/></marker>
+  </defs>
+</svg>

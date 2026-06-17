@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 470">
+  <title>patch qayerda: nom e'lon qilingan emas, ishlatilgan joyda almashtiriladi</title>
+  <rect x="0" y="0" width="820" height="470" fill="#f8fafc"/>
+  <text x="410" y="38" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">patch QAYERDA qilinadi?</text>
+  <text x="410" y="64" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Nomni u ISHLATILGAN modulda almashtiring, e'lon qilingan modulda emas</text>
+
+  <!-- tarmoq moduli -->
+  <rect x="40" y="100" width="220" height="90" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="150" y="128" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#1e293b">tarmoq.py</text>
+  <text x="150" y="152" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#475569">def get(url): ...</text>
+  <text x="150" y="176" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">(e'lon qilingan joy)</text>
+
+  <!-- obhavo moduli -->
+  <rect x="560" y="100" width="220" height="90" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="670" y="128" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#1e293b">obhavo.py</text>
+  <text x="670" y="152" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#475569">from tarmoq import get</text>
+  <text x="670" y="176" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">(ishlatilgan joy)</text>
+
+  <!-- import strelka -->
+  <line x1="260" y1="145" x2="556" y2="145" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6 5"/>
+  <polygon points="556,145 544,139 544,151" fill="#94a3b8"/>
+  <text x="408" y="135" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">import (nusxa nomi)</text>
+
+  <!-- NOTO'G'RI patch -->
+  <rect x="40" y="240" width="350" height="120" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="215" y="268" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#dc2626">NOTO'G'RI</text>
+  <text x="215" y="296" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#1e293b">patch("tarmoq.get")</text>
+  <text x="215" y="322" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#475569">obhavo o'z lokal nusxasini ishlatadi</text>
+  <text x="215" y="344" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">-> patch ta'sir qilmaydi, kod yiqiladi</text>
+
+  <!-- TO'G'RI patch -->
+  <rect x="430" y="240" width="350" height="120" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="605" y="268" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a">TO'G'RI</text>
+  <text x="605" y="296" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#1e293b">patch("obhavo.get")</text>
+  <text x="605" y="322" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#475569">aynan obhavo ishlatadigan nom</text>
+  <text x="605" y="344" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">-> mock o'rnatiladi, test ishlaydi</text>
+
+  <!-- qoida -->
+  <rect x="120" y="392" width="580" height="50" rx="10" fill="#fef9f3" stroke="#f59e0b" stroke-width="2"/>
+  <text x="410" y="423" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">Qoida: nom QAYERDA qidiriladi — o'sha yerda patch qiling</text>
+</svg>

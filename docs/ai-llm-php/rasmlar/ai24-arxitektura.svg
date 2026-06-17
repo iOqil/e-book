@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 520" width="780" height="520" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Bilim bazasi yordamchisi — to'liq ilova arxitekturasi</title>
+  <rect x="0" y="0" width="780" height="520" fill="#f8fafc"/>
+  <text x="390" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Bilim bazasi yordamchisi — arxitektura</text>
+
+  <!-- Foydalanuvchi -->
+  <rect x="40" y="70" width="170" height="64" rx="10" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="125" y="98" text-anchor="middle" font-size="15" font-weight="600" fill="#1e293b">Foydalanuvchi</text>
+  <text x="125" y="118" text-anchor="middle" font-size="13" fill="#475569">savol beradi</text>
+
+  <!-- UI -->
+  <rect x="40" y="170" width="170" height="74" rx="10" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <text x="125" y="198" text-anchor="middle" font-size="15" font-weight="600" fill="#1e293b">UI qatlam</text>
+  <text x="125" y="218" text-anchor="middle" font-size="13" fill="#475569">CLI / SSE web</text>
+  <text x="125" y="234" text-anchor="middle" font-size="13" fill="#94a3b8">(5-bob streaming)</text>
+
+  <!-- AiService -->
+  <rect x="290" y="120" width="210" height="180" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="395" y="148" text-anchor="middle" font-size="16" font-weight="700" fill="#7c3aed">AiService (yadro)</text>
+  <line x1="306" y1="160" x2="484" y2="160" stroke="#ddd6fe" stroke-width="1.5"/>
+  <text x="306" y="183" font-size="13" fill="#475569">• Suhbat tarixi (4-bob)</text>
+  <text x="306" y="206" font-size="13" fill="#475569">• Xavfsizlik (20-bob)</text>
+  <text x="306" y="229" font-size="13" fill="#475569">• Retry/fallback (8-bob)</text>
+  <text x="306" y="252" font-size="13" fill="#475569">• Kesh/narx (16-bob)</text>
+  <text x="306" y="275" font-size="13" fill="#475569">• Log/kuzatuv (22-bob)</text>
+
+  <!-- RAG qidiruv -->
+  <rect x="560" y="80" width="180" height="64" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="650" y="106" text-anchor="middle" font-size="14" font-weight="600" fill="#1e293b">RAG qidiruv</text>
+  <text x="650" y="126" text-anchor="middle" font-size="13" fill="#475569">13-15-bob</text>
+
+  <!-- Tool -->
+  <rect x="560" y="168" width="180" height="64" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="650" y="194" text-anchor="middle" font-size="14" font-weight="600" fill="#1e293b">Toollar</text>
+  <text x="650" y="214" text-anchor="middle" font-size="13" fill="#475569">9-10-bob</text>
+
+  <!-- Claude -->
+  <rect x="560" y="256" width="180" height="64" rx="10" fill="#ffffff" stroke="#d97757" stroke-width="2.5"/>
+  <text x="650" y="282" text-anchor="middle" font-size="14" font-weight="700" fill="#d97757">Claude API</text>
+  <text x="650" y="302" text-anchor="middle" font-size="13" fill="#475569">opus / sonnet / haiku</text>
+
+  <!-- pgvector DB -->
+  <rect x="560" y="356" width="180" height="74" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="650" y="384" text-anchor="middle" font-size="14" font-weight="600" fill="#1e293b">pgvector baza</text>
+  <text x="650" y="404" text-anchor="middle" font-size="13" fill="#475569">bo'lak + vektor</text>
+  <text x="650" y="420" text-anchor="middle" font-size="13" fill="#94a3b8">(14-bob)</text>
+
+  <!-- Embedding xizmati -->
+  <rect x="290" y="356" width="210" height="74" rx="10" fill="#ffffff" stroke="#a855f7" stroke-width="2"/>
+  <text x="395" y="384" text-anchor="middle" font-size="14" font-weight="600" fill="#1e293b">Embedding xizmati</text>
+  <text x="395" y="404" text-anchor="middle" font-size="13" fill="#475569">Voyage / OpenAI</text>
+  <text x="395" y="420" text-anchor="middle" font-size="13" fill="#94a3b8">(13-bob, Claude'da yo'q)</text>
+
+  <!-- arrows -->
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <line x1="125" y1="134" x2="125" y2="168" stroke="#64748b" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="210" y1="206" x2="288" y2="206" stroke="#64748b" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="500" y1="150" x2="558" y2="120" stroke="#64748b" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="500" y1="200" x2="558" y2="200" stroke="#64748b" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="500" y1="252" x2="558" y2="282" stroke="#64748b" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="395" y1="300" x2="395" y2="354" stroke="#64748b" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="500" y1="393" x2="558" y2="393" stroke="#64748b" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="650" y1="356" x2="650" y2="234" stroke="#16a34a" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#ar)"/>
+
+  <text x="390" y="470" text-anchor="middle" font-size="14" fill="#475569">Foydalanuvchi savoli -&gt; UI -&gt; AiService -&gt; (RAG qidiruv + tool + Claude) -&gt; javob + manba</text>
+  <text x="390" y="496" text-anchor="middle" font-size="13" fill="#94a3b8">Har komponent o'z bobidan — kapston ularni birlashtiradi</text>
+</svg>

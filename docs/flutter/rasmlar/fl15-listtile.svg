@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 410" width="780" height="410" font-family="Segoe UI, system-ui, sans-serif">
+  <title>ListTile anatomiyasi: chap tomonda leading (ikonka/avatar), markazda title (sarlavha) va subtitle (tagsarlavha), o'ng tomonda trailing (switch yoki o'q-belgi), butun satr onTap bilan bosiladi — sozlamalar ekranidagi standart ro'yxat satri</title>
+  <rect x="0" y="0" width="780" height="410" fill="#f8fafc"/>
+  <text x="390" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">ListTile anatomiyasi — ro'yxat va sozlamalar satri</text>
+  <text x="390" y="58" text-anchor="middle" font-size="14" fill="#475569">Ro'yxatlar va sozlamalar uchun eng ko'p ishlatiladigan tayyor satr widget.</text>
+
+  <!-- The tile -->
+  <rect x="90" y="120" width="600" height="92" rx="12" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+
+  <!-- leading: avatar -->
+  <circle cx="146" cy="166" r="24" fill="#dbeafe" stroke="#027dfd" stroke-width="2"/>
+  <text x="146" y="173" text-anchor="middle" font-size="18" fill="#0553b1">&#128276;</text>
+
+  <!-- title -->
+  <text x="196" y="160" text-anchor="start" font-size="16" font-weight="700" fill="#1e293b">Bildirishnomalar</text>
+  <!-- subtitle -->
+  <text x="196" y="186" text-anchor="start" font-size="14" fill="#64748b">Yangiliklar va eslatmalar</text>
+
+  <!-- trailing: switch -->
+  <rect x="600" y="154" width="56" height="26" rx="13" fill="#027dfd"/>
+  <circle cx="643" cy="167" r="11" fill="#ffffff"/>
+
+  <!-- ===== labels with leader lines ===== -->
+  <!-- leading -->
+  <text x="146" y="270" text-anchor="middle" font-size="14" font-weight="700" fill="#027dfd">leading</text>
+  <text x="146" y="288" text-anchor="middle" font-size="13" fill="#475569">ikonka / avatar</text>
+  <line x1="146" y1="252" x2="146" y2="192" stroke="#027dfd" stroke-width="1.5"/>
+
+  <!-- title -->
+  <text x="300" y="270" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">title</text>
+  <text x="300" y="288" text-anchor="middle" font-size="13" fill="#475569">asosiy matn</text>
+  <line x1="300" y1="252" x2="270" y2="166" stroke="#94a3b8" stroke-width="1.5"/>
+
+  <!-- subtitle -->
+  <text x="450" y="270" text-anchor="middle" font-size="14" font-weight="700" fill="#64748b">subtitle</text>
+  <text x="450" y="288" text-anchor="middle" font-size="13" fill="#475569">qo'shimcha matn</text>
+  <line x1="450" y1="252" x2="320" y2="190" stroke="#94a3b8" stroke-width="1.5"/>
+
+  <!-- trailing -->
+  <text x="628" y="270" text-anchor="middle" font-size="14" font-weight="700" fill="#16a34a">trailing</text>
+  <text x="628" y="288" text-anchor="middle" font-size="13" fill="#475569">switch / o'q-belgi</text>
+  <line x1="628" y1="252" x2="628" y2="186" stroke="#16a34a" stroke-width="1.5"/>
+
+  <!-- onTap banner -->
+  <rect x="90" y="320" width="600" height="56" rx="12" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="390" y="345" text-anchor="middle" font-size="15" font-weight="700" fill="#6366f1">onTap: () { ... }</text>
+  <text x="390" y="366" text-anchor="middle" font-size="13" fill="#475569">Butun satr bosiladigan bo'ladi — foydalanuvchi satrning istalgan joyiga teginsa ishlaydi.</text>
+</svg>

@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560">
+  <title>Bitta binar daraxtda pre-order, in-order va post-order tashrif tartibi raqamlangan</title>
+  <rect x="0" y="0" width="880" height="560" fill="#f8fafc"/>
+  <text x="440" y="34" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">DFS traversal: pre / in / post-order</text>
+  <text x="440" y="58" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Bir xil daraxt, uch xil tartib. Faqat ildiz qachon ko'rilishi farq qiladi.</text>
+
+  <!-- three small trees side by side -->
+  <!-- helper note about structure -->
+  <text x="146" y="92" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">pre-order</text>
+  <text x="146" y="110" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">ildiz - chap - o'ng</text>
+  <text x="440" y="92" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">in-order</text>
+  <text x="440" y="110" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">chap - ildiz - o'ng</text>
+  <text x="734" y="92" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#dc2626">post-order</text>
+  <text x="734" y="110" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">chap - o'ng - ildiz</text>
+
+  <!-- ===== TREE 1 : pre-order ===== -->
+  <g>
+    <line x1="146" y1="150" x2="96" y2="230" stroke="#94a3b8" stroke-width="2"/>
+    <line x1="146" y1="150" x2="196" y2="230" stroke="#94a3b8" stroke-width="2"/>
+    <line x1="96" y1="230" x2="56" y2="310" stroke="#94a3b8" stroke-width="2"/>
+    <line x1="96" y1="230" x2="136" y2="310" stroke="#94a3b8" stroke-width="2"/>
+    <!-- F root -->
+    <circle cx="146" cy="150" r="22" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+    <text x="146" y="156" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#1e293b">F</text>
+    <text x="146" y="130" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#2563eb" font-weight="bold">1</text>
+    <!-- B -->
+    <circle cx="96" cy="230" r="22" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+    <text x="96" y="236" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#1e293b">B</text>
+    <text x="72" y="222" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#2563eb" font-weight="bold">2</text>
+    <!-- A -->
+    <circle cx="56" cy="310" r="22" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+    <text x="56" y="316" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#1e293b">A</text>
+    <text x="56" y="354" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#2563eb" font-weight="bold">3</text>
+    <!-- D -->
+    <circle cx="136" cy="310" r="22" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+    <text x="136" y="316" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#1e293b">D</text>
+    <text x="136" y="354" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#2563eb" font-weight="bold">4</text>
+    <!-- G -->
+    <circle cx="196" cy="230" r="22" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+    <text x="196" y="236" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#1e293b">G</text>
+    <text x="220" y="222" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#2563eb" font-weight="bold">5</text>
+  </g>
+
+  <!-- ===== TREE 2 : in-order ===== -->
+  <g>
+    <line x1="440" y1="150" x2="390" y2="230" stroke="#94a3b8" stroke-width="2"/>
+    <line x1="440" y1="150" x2="490" y2="230" stroke="#94a3b8" stroke-width="2"/>
+    <line x1="390" y1="230" x2="350" y2="310" stroke="#94a3b8" stroke-width="2"/>
+    <line x1="390" y1="230" x2="430" y2="310" stroke="#94a3b8" stroke-width="2"/>
+    <circle cx="440" cy="150" r="22" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+    <text x="440" y="156" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#1e293b">F</text>
+    <text x="440" y="130" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a" font-weight="bold">4</text>
+    <circle cx="390" cy="230" r="22" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+    <text x="390" y="236" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#1e293b">B</text>
+    <text x="366" y="222" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a" font-weight="bold">2</text>
+    <circle cx="350" cy="310" r="22" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+    <text x="350" y="316" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#1e293b">A</text>
+    <text x="350" y="354" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a" font-weight="bold">1</text>
+    <circle cx="430" cy="310" r="22" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+    <text x="430" y="316" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#1e293b">D</text>
+    <text x="430" y="354" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a" font-weight="bold">3</text>
+    <circle cx="490" cy="230" r="22" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+    <text x="490" y="236" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#1e293b">G</text>
+    <text x="514" y="222" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a" font-weight="bold">5</text>
+  </g>
+
+  <!-- ===== TREE 3 : post-order ===== -->
+  <g>
+    <line x1="734" y1="150" x2="684" y2="230" stroke="#94a3b8" stroke-width="2"/>
+    <line x1="734" y1="150" x2="784" y2="230" stroke="#94a3b8" stroke-width="2"/>
+    <line x1="684" y1="230" x2="644" y2="310" stroke="#94a3b8" stroke-width="2"/>
+    <line x1="684" y1="230" x2="724" y2="310" stroke="#94a3b8" stroke-width="2"/>
+    <circle cx="734" cy="150" r="22" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5"/>
+    <text x="734" y="156" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#1e293b">F</text>
+    <text x="734" y="130" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626" font-weight="bold">5</text>
+    <circle cx="684" cy="230" r="22" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5"/>
+    <text x="684" y="236" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#1e293b">B</text>
+    <text x="660" y="222" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626" font-weight="bold">3</text>
+    <circle cx="644" cy="310" r="22" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5"/>
+    <text x="644" y="316" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#1e293b">A</text>
+    <text x="644" y="354" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626" font-weight="bold">1</text>
+    <circle cx="724" cy="310" r="22" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5"/>
+    <text x="724" y="316" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#1e293b">D</text>
+    <text x="724" y="354" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626" font-weight="bold">2</text>
+    <circle cx="784" cy="230" r="22" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5"/>
+    <text x="784" y="236" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#1e293b">G</text>
+    <text x="808" y="222" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626" font-weight="bold">4</text>
+  </g>
+
+  <!-- result rows -->
+  <rect x="40" y="410" width="800" height="44" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="56" y="437" font-family="monospace" font-size="14" fill="#2563eb">pre-order : F  B  A  D  G        (har tugunda: O'ZI -> chap qism-daraxt -> o'ng qism-daraxt)</text>
+
+  <rect x="40" y="460" width="800" height="44" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="56" y="487" font-family="monospace" font-size="14" fill="#16a34a">in-order  : A  B  D  F  G        (chap qism-daraxt -> O'ZI -> o'ng qism-daraxt)</text>
+
+  <rect x="40" y="510" width="800" height="44" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="56" y="537" font-family="monospace" font-size="14" fill="#dc2626">post-order: A  D  B  G  F        (chap qism-daraxt -> o'ng qism-daraxt -> O'ZI)</text>
+</svg>

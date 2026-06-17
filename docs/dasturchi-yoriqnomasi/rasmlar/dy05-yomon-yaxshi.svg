@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 470" font-family="Segoe UI">
+  <title>Bir xil mantiq: yomon nomlangan kod va yaxshi nomlangan kod yonma-yon</title>
+  <rect x="0" y="0" width="880" height="470" fill="#f8fafc"/>
+
+  <text x="440" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#1e293b">Bir xil mantiq, ikki xil nom</text>
+  <text x="440" y="62" text-anchor="middle" font-size="14" fill="#64748b">Kod ishlaydi, lekin qaysi birini olti oydan keyin tushunasiz?</text>
+
+  <!-- YOMON -->
+  <rect x="40" y="92" width="380" height="330" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="230" y="124" text-anchor="middle" font-size="18" font-weight="bold" fill="#dc2626">YOMON nomlash</text>
+
+  <rect x="64" y="146" width="332" height="240" rx="8" fill="#fef2f2"/>
+  <text x="80" y="174" font-size="14" fill="#334155" font-family="monospace">function p(l, r) {</text>
+  <text x="80" y="200" font-size="14" fill="#334155" font-family="monospace">  let t = 0;</text>
+  <text x="80" y="226" font-size="14" fill="#334155" font-family="monospace">  for (x of l) {</text>
+  <text x="80" y="252" font-size="14" fill="#334155" font-family="monospace">    if (x.f) t += x.p * r;</text>
+  <text x="80" y="278" font-size="14" fill="#334155" font-family="monospace">  }</text>
+  <text x="80" y="304" font-size="14" fill="#334155" font-family="monospace">  return t;</text>
+  <text x="80" y="330" font-size="14" fill="#334155" font-family="monospace">}</text>
+
+  <text x="230" y="410" text-anchor="middle" font-size="13" fill="#dc2626">p? l? r? f? Har qatorda taxmin qilasiz</text>
+
+  <!-- YAXSHI -->
+  <rect x="460" y="92" width="380" height="330" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="650" y="124" text-anchor="middle" font-size="18" font-weight="bold" fill="#16a34a">YAXSHI nomlash</text>
+
+  <rect x="484" y="146" width="332" height="240" rx="8" fill="#f0fdf4"/>
+  <text x="500" y="174" font-size="13" fill="#334155" font-family="monospace">function jamiNarx(mahsulotlar,</text>
+  <text x="500" y="192" font-size="13" fill="#334155" font-family="monospace">                 chegirmaKoef) {</text>
+  <text x="500" y="218" font-size="13" fill="#334155" font-family="monospace">  let jami = 0;</text>
+  <text x="500" y="244" font-size="13" fill="#334155" font-family="monospace">  for (m of mahsulotlar) {</text>
+  <text x="500" y="270" font-size="13" fill="#334155" font-family="monospace">    if (m.faol)</text>
+  <text x="500" y="296" font-size="13" fill="#334155" font-family="monospace">      jami += m.narx * chegirmaKoef;</text>
+  <text x="500" y="322" font-size="13" fill="#334155" font-family="monospace">  }</text>
+  <text x="500" y="348" font-size="13" fill="#334155" font-family="monospace">  return jami;</text>
+
+  <text x="650" y="410" text-anchor="middle" font-size="13" fill="#16a34a">Izohsiz ham nima qilishi tushunarli</text>
+
+  <!-- arrow between -->
+  <text x="440" y="262" text-anchor="middle" font-size="22" fill="#94a3b8">=</text>
+</svg>

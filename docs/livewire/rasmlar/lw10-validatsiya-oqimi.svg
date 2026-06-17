@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Validatsiya oqimi: foydalanuvchi ma'lumotni kiritadi, validate() qoidalarni tekshiradi; o'tsa bazaga saqlanadi, o'tmasa amal to'xtaydi va xato xabarlari formada ko'rsatiladi</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">validate() — qoidalar darvozasi</text>
+  <text x="380" y="58" text-anchor="middle" font-size="14" fill="#475569">Faqat to'g'ri ma'lumotgina darvozadan o'tadi</text>
+
+  <!-- 1: kiritish -->
+  <rect x="30" y="92" width="210" height="86" rx="10" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <circle cx="56" cy="118" r="13" fill="#4f46e5"/>
+  <text x="56" y="123" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">1</text>
+  <text x="146" y="122" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">Foydalanuvchi kiritadi</text>
+  <text x="135" y="148" text-anchor="middle" font-size="13" fill="#475569">wire:model qiymatni</text>
+  <text x="135" y="166" text-anchor="middle" font-size="13" fill="#475569">xususiyatga bog'laydi</text>
+
+  <!-- 2: validate (markaz, darvoza) -->
+  <rect x="290" y="92" width="180" height="86" rx="10" fill="#eef2ff" stroke="#4f46e5" stroke-width="2.5"/>
+  <circle cx="316" cy="118" r="13" fill="#4f46e5"/>
+  <text x="316" y="123" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">2</text>
+  <text x="392" y="122" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">$this-&gt;validate()</text>
+  <text x="380" y="148" text-anchor="middle" font-size="13" fill="#475569">#[Validate] qoidalari</text>
+  <text x="380" y="166" text-anchor="middle" font-size="13" fill="#475569">serverda tekshiriladi</text>
+
+  <!-- 1->2 strelka -->
+  <line x1="240" y1="135" x2="286" y2="135" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="286,135 276,130 276,140" fill="#94a3b8"/>
+
+  <!-- ramka: tekshiruv natijasi -->
+  <text x="600" y="120" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Natija?</text>
+
+  <!-- o'tdi yo'nalishi (yuqori, yashil) -->
+  <line x1="470" y1="120" x2="528" y2="92" stroke="#16a34a" stroke-width="2.5"/>
+  <polygon points="528,92 516,93 521,103" fill="#16a34a"/>
+  <text x="500" y="92" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a">o'tdi</text>
+
+  <!-- o'tmadi yo'nalishi (past, qizil) -->
+  <line x1="470" y1="150" x2="528" y2="178" stroke="#dc2626" stroke-width="2.5"/>
+  <polygon points="528,178 521,167 516,177" fill="#dc2626"/>
+  <text x="500" y="178" text-anchor="middle" font-size="13" font-weight="700" fill="#dc2626">o'tmadi</text>
+
+  <!-- 3a: saqlash (yashil tarmoq) -->
+  <rect x="540" y="206" width="190" height="76" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="635" y="232" text-anchor="middle" font-size="15" font-weight="700" fill="#16a34a">Bazaga saqlanadi</text>
+  <text x="635" y="256" text-anchor="middle" font-size="13" fill="#475569">Post::create([...])</text>
+  <text x="635" y="274" text-anchor="middle" font-size="13" fill="#475569">keyin reset() + xabar</text>
+  <!-- o'tdi -> saqlash -->
+  <line x1="600" y1="100" x2="635" y2="202" stroke="#16a34a" stroke-width="2.5"/>
+  <polygon points="635,202 630,191 640,191" fill="#16a34a"/>
+
+  <!-- DB ikonka -->
+  <ellipse cx="635" cy="320" rx="46" ry="13" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <path d="M589 320 v26 a46 13 0 0 0 92 0 v-26" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <ellipse cx="635" cy="320" rx="46" ry="13" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="635" y="356" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a">yangi yozuv</text>
+  <line x1="635" y1="282" x2="635" y2="304" stroke="#16a34a" stroke-width="2.5"/>
+  <polygon points="635,304 630,294 640,294" fill="#16a34a"/>
+
+  <!-- 3b: to'xtaydi + xato (qizil tarmoq) -->
+  <rect x="290" y="232" width="220" height="80" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="400" y="258" text-anchor="middle" font-size="15" font-weight="700" fill="#dc2626">Amal TO'XTAYDI</text>
+  <text x="400" y="282" text-anchor="middle" font-size="13" fill="#475569">saqlash kodi ishlamaydi —</text>
+  <text x="400" y="300" text-anchor="middle" font-size="13" fill="#475569">noto'g'ri ma'lumot kirmaydi</text>
+  <!-- o'tmadi -> to'xtaydi -->
+  <line x1="500" y1="195" x2="430" y2="228" stroke="#dc2626" stroke-width="2.5"/>
+  <polygon points="430,228 442,226 437,236" fill="#dc2626"/>
+
+  <!-- xato formada -->
+  <rect x="290" y="340" width="220" height="64" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="400" y="366" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">@error formada ko'rinadi</text>
+  <text x="400" y="388" text-anchor="middle" font-size="13" fill="#dc2626">"Sarlavha kiritilishi shart"</text>
+  <line x1="400" y1="312" x2="400" y2="336" stroke="#dc2626" stroke-width="2.5"/>
+  <polygon points="400,336 395,326 405,326" fill="#dc2626"/>
+
+  <text x="180" y="372" text-anchor="middle" font-size="13" fill="#94a3b8">Tekshiruv HAR DOIM serverda —</text>
+  <text x="180" y="392" text-anchor="middle" font-size="13" fill="#94a3b8">HTML required faqat qulaylik.</text>
+</svg>

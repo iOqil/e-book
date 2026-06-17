@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430">
+  <title>Blok uch qismdan iborat: attributes ma'lumot, edit muharrir UI komponenti va save yoki dynamic render chiqishi</title>
+  <defs>
+    <marker id="a-arr" markerWidth="13" markerHeight="13" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Blok = attributes + edit + save (yoki render)</text>
+  <text x="380" y="56" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Gutenberg blokining uchta asosiy qismi</text>
+
+  <!-- attributes -->
+  <rect x="280" y="84" width="200" height="74" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="380" y="112" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">attributes</text>
+  <text x="380" y="134" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">blokning ma'lumoti</text>
+  <text x="380" y="151" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(matn, son, tanlov)</text>
+
+  <line x1="320" y1="158" x2="180" y2="208" stroke="#475569" stroke-width="2" marker-end="url(#a-arr)"/>
+  <line x1="440" y1="158" x2="580" y2="208" stroke="#475569" stroke-width="2" marker-end="url(#a-arr)"/>
+
+  <!-- edit -->
+  <rect x="50" y="212" width="270" height="120" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="185" y="240" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">edit (muharrir ichida)</text>
+  <text x="185" y="263" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e40af">React komponenti</text>
+  <text x="185" y="283" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">muallif ko'radigan va</text>
+  <text x="185" y="301" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tahrirlaydigan ko'rinish</text>
+  <text x="185" y="321" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(useBlockProps)</text>
+
+  <!-- save / render -->
+  <rect x="440" y="212" width="270" height="120" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="575" y="240" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">save / render (chiqish)</text>
+  <text x="575" y="263" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">save: post HTML'ga</text>
+  <text x="575" y="281" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">yoziladigan static markup</text>
+  <text x="575" y="304" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">render: PHP server-render</text>
+  <text x="575" y="322" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(dynamic blok, 21-bob)</text>
+
+  <!-- frontend result -->
+  <rect x="245" y="362" width="270" height="48" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="380" y="391" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#7c3aed">Frontend: tashrifchi ko'rgan natija</text>
+
+  <line x1="185" y1="332" x2="320" y2="372" stroke="#475569" stroke-width="2" marker-end="url(#a-arr)"/>
+  <line x1="575" y1="332" x2="440" y2="372" stroke="#475569" stroke-width="2" marker-end="url(#a-arr)"/>
+</svg>

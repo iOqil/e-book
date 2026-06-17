@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Keshni usage orqali tekshirish: birinchi chaqiruvda cache_creation_input_tokens > 0 (yozildi); keyingi chaqiruvlarda cache_read_input_tokens > 0 (arzon o'qish, ishladi); agar takror so'rovlarda cache_read 0 bo'lib qolsa -> prefiksda jim keshbuzar bor (ogohlantirish).</title>
+  <defs>
+    <marker id="u15a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="800" height="500" fill="#f8fafc"/>
+  <text x="400" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Kesh ishlayaptimi? — usage maydonini o'qing</text>
+  <text x="400" y="58" font-size="14" fill="#64748b" text-anchor="middle">Har javobda msg.usage uchta maydon qaytaradi — ularni log qiling.</text>
+
+  <!-- call 1 -->
+  <rect x="40" y="84" width="340" height="130" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="60" y="110" font-size="15" font-weight="bold" fill="#f59e0b" text-anchor="start">1-chaqiruv (yangi prefiks)</text>
+  <text x="60" y="138" font-size="13" fill="#1e293b" text-anchor="start" font-family="Consolas, monospace">cache_creation_input_tokens</text>
+  <text x="350" y="138" font-size="13" font-weight="bold" fill="#f59e0b" text-anchor="end">&gt; 0 ✓ yozildi</text>
+  <text x="60" y="164" font-size="13" fill="#1e293b" text-anchor="start" font-family="Consolas, monospace">cache_read_input_tokens</text>
+  <text x="350" y="164" font-size="13" fill="#64748b" text-anchor="end">0 (hali kesh yo'q)</text>
+  <text x="60" y="190" font-size="13" fill="#1e293b" text-anchor="start" font-family="Consolas, monospace">input_tokens</text>
+  <text x="350" y="190" font-size="13" fill="#64748b" text-anchor="end">savol (keshlanmagan)</text>
+
+  <line x1="390" y1="149" x2="418" y2="149" stroke="#64748b" stroke-width="2.5" marker-end="url(#u15a)"/>
+
+  <!-- call 2..N -->
+  <rect x="420" y="84" width="340" height="130" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="440" y="110" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="start">2..N-chaqiruv (bir xil prefiks)</text>
+  <text x="440" y="138" font-size="13" fill="#1e293b" text-anchor="start" font-family="Consolas, monospace">cache_creation...</text>
+  <text x="740" y="138" font-size="13" fill="#64748b" text-anchor="end">0 (qayta yozilmadi)</text>
+  <text x="440" y="164" font-size="13" fill="#1e293b" text-anchor="start" font-family="Consolas, monospace">cache_read...</text>
+  <text x="740" y="164" font-size="13" font-weight="bold" fill="#16a34a" text-anchor="end">&gt; 0 ✓ o'qildi</text>
+  <text x="440" y="190" font-size="13" fill="#1e293b" text-anchor="start" font-family="Consolas, monospace">input_tokens</text>
+  <text x="740" y="190" font-size="13" fill="#64748b" text-anchor="end">faqat yangi savol</text>
+
+  <!-- success summary -->
+  <rect x="40" y="238" width="720" height="56" rx="10" fill="#dbeafe" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="60" y="262" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="start">✅ cache_read &gt; 0 takror so'rovlarda — kesh ishlayapti, ~0.1× narxda o'qiyapsiz.</text>
+  <text x="60" y="284" font-size="13" fill="#475569" text-anchor="start" font-family="Consolas, monospace">jami prompt = input_tokens + cache_creation_input_tokens + cache_read_input_tokens</text>
+
+  <!-- warning -->
+  <rect x="40" y="312" width="720" height="78" rx="10" fill="#ffffff" stroke="#ef4444" stroke-width="2"/>
+  <text x="60" y="338" font-size="15" font-weight="bold" fill="#ef4444" text-anchor="start">⚠️ cache_read takrorlarda ham 0 bo'lib qolsa</text>
+  <text x="60" y="362" font-size="13" fill="#475569" text-anchor="start">Prefiksda jim keshbuzar bor: Date.now()/UUID, tartibsiz JSON, o'zgaruvchi tool to'plami,</text>
+  <text x="60" y="382" font-size="13" fill="#475569" text-anchor="start">yoki prefiks juda qisqa (Opus 4.8 da minimum ≈ 4096 token — bundan kichigi jim keshlanmaydi).</text>
+
+  <!-- code hint -->
+  <rect x="40" y="408" width="720" height="76" rx="10" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="60" y="432" font-size="14" font-weight="bold" fill="#6366f1" text-anchor="start">Log qilish:</text>
+  <text x="60" y="456" font-size="13" fill="#1e293b" text-anchor="start" font-family="Consolas, monospace">console.log(msg.usage.cache_creation_input_tokens,</text>
+  <text x="76" y="476" font-size="13" fill="#1e293b" text-anchor="start" font-family="Consolas, monospace">msg.usage.cache_read_input_tokens);</text>
+</svg>

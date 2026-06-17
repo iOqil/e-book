@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Sxema-klassdan outputConfig formatigacha va parsed obyektgacha bo'lgan oqim</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Kafolatlangan strukturali chiqish oqimi</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#7c3aed"/>
+    </marker>
+  </defs>
+
+  <!-- 1: Klass -->
+  <rect x="40" y="80" width="220" height="150" rx="10" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="150" y="106" text-anchor="middle" font-size="15" font-weight="700" fill="#4f46e5">1. Sxema klass</text>
+  <text x="56" y="132" font-size="13" fill="#475569">class Maqola implements</text>
+  <text x="56" y="150" font-size="13" fill="#475569">  StructuredOutputModel {</text>
+  <text x="56" y="170" font-size="13" fill="#1e293b">  public string $sarlavha;</text>
+  <text x="56" y="190" font-size="13" fill="#1e293b">  public string $xulosa;</text>
+  <text x="56" y="210" font-size="13" fill="#1e293b">  public array $teglar;</text>
+  <text x="56" y="226" font-size="13" fill="#475569">}</text>
+
+  <!-- 2: outputConfig -->
+  <rect x="300" y="100" width="160" height="110" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="380" y="128" text-anchor="middle" font-size="15" font-weight="700" fill="#7c3aed">2. So'rov</text>
+  <text x="380" y="154" text-anchor="middle" font-size="13" fill="#475569">outputConfig:</text>
+  <text x="380" y="174" text-anchor="middle" font-size="13" fill="#1e293b">['format' =&gt;</text>
+  <text x="380" y="192" text-anchor="middle" font-size="13" fill="#1e293b">Maqola::class]</text>
+
+  <!-- 3: Model -->
+  <rect x="500" y="100" width="220" height="110" rx="10" fill="#ede9fe" stroke="#a855f7" stroke-width="2"/>
+  <text x="610" y="132" text-anchor="middle" font-size="15" font-weight="700" fill="#7c3aed">3. Model (Claude)</text>
+  <text x="610" y="160" text-anchor="middle" font-size="13" fill="#475569">SDK sxemani yuboradi;</text>
+  <text x="610" y="180" text-anchor="middle" font-size="13" fill="#475569">model AYNAN mos</text>
+  <text x="610" y="198" text-anchor="middle" font-size="13" fill="#475569">JSON qaytaradi</text>
+
+  <!-- 4: parsed -->
+  <rect x="270" y="290" width="220" height="120" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="380" y="318" text-anchor="middle" font-size="15" font-weight="700" fill="#16a34a">4. ->parsed obyekt</text>
+  <text x="286" y="344" font-size="13" fill="#475569">$m = $message-&gt;content[0]</text>
+  <text x="286" y="362" font-size="13" fill="#475569">           -&gt;parsed;</text>
+  <text x="286" y="386" font-size="13" fill="#1e293b">echo $m-&gt;sarlavha;</text>
+  <text x="286" y="404" font-size="13" fill="#16a34a">validatsiyalangan, tayyor</text>
+
+  <!-- strelkalar -->
+  <line x1="260" y1="155" x2="296" y2="155" stroke="#7c3aed" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="460" y1="155" x2="496" y2="155" stroke="#7c3aed" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M610,210 L610,260 L380,260 L380,286" fill="none" stroke="#7c3aed" stroke-width="2" marker-end="url(#arrow)"/>
+</svg>

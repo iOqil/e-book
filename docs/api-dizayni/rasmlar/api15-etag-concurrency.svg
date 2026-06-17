@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560">
+  <title>Optimistik parallellik: GET ETag, keyin PUT If-Match; o'zgargan bo'lsa 412 Precondition Failed</title>
+  <rect x="0" y="0" width="880" height="560" fill="#f8fafc"/>
+  <text x="440" y="34" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">Optimistik parallellik — ETag + If-Match</text>
+  <text x="440" y="58" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Ikki mijoz bir resursni o'zgartirsa, kechikkani 412 oladi (lost update oldini olinadi)</text>
+
+  <!-- ustun sarlavhalari -->
+  <text x="130" y="92" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">Mijoz A</text>
+  <text x="440" y="92" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">Server (resurs v1)</text>
+  <text x="750" y="92" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#dc2626">Mijoz B</text>
+
+  <line x1="130" y1="104" x2="130" y2="520" stroke="#cbd5e1" stroke-width="2"/>
+  <line x1="440" y1="104" x2="440" y2="520" stroke="#cbd5e1" stroke-width="2"/>
+  <line x1="750" y1="104" x2="750" y2="520" stroke="#cbd5e1" stroke-width="2"/>
+
+  <!-- A GET -->
+  <line x1="130" y1="130" x2="435" y2="130" stroke="#2563eb" stroke-width="2" marker-end="url(#aB)"/>
+  <text x="282" y="122" text-anchor="middle" font-family="monospace" font-size="13" fill="#2563eb">GET /docs/7</text>
+  <line x1="435" y1="158" x2="130" y2="158" stroke="#16a34a" stroke-width="2" marker-end="url(#aG)"/>
+  <text x="282" y="150" text-anchor="middle" font-family="monospace" font-size="13" fill="#16a34a">200  ETag: "v1"</text>
+
+  <!-- B GET -->
+  <line x1="750" y1="130" x2="445" y2="130" stroke="#dc2626" stroke-width="2" marker-end="url(#aR)"/>
+  <text x="598" y="122" text-anchor="middle" font-family="monospace" font-size="13" fill="#dc2626">GET /docs/7</text>
+  <line x1="445" y1="186" x2="750" y2="186" stroke="#16a34a" stroke-width="2" marker-end="url(#aG)"/>
+  <text x="598" y="178" text-anchor="middle" font-family="monospace" font-size="13" fill="#16a34a">200  ETag: "v1"</text>
+
+  <text x="440" y="216" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Ikkalasi ham "v1" ni qo'lida tutadi</text>
+
+  <!-- A PUT If-Match v1 -->
+  <rect x="20" y="234" width="230" height="44" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="34" y="254" font-family="monospace" font-size="13" fill="#1e3a8a">PUT /docs/7</text>
+  <text x="34" y="271" font-family="monospace" font-size="13" fill="#1e3a8a">If-Match: "v1"</text>
+  <line x1="130" y1="296" x2="435" y2="296" stroke="#2563eb" stroke-width="2" marker-end="url(#aB)"/>
+  <text x="282" y="288" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#2563eb">A birinchi yozadi</text>
+
+  <!-- server: mos keladi -->
+  <rect x="320" y="312" width="240" height="34" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="440" y="334" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#166534">"v1" == joriy -> yangilanadi (v2)</text>
+
+  <line x1="435" y1="368" x2="130" y2="368" stroke="#16a34a" stroke-width="2" marker-end="url(#aG)"/>
+  <text x="282" y="360" text-anchor="middle" font-family="monospace" font-size="13" fill="#16a34a">200  ETag: "v2"</text>
+
+  <line x1="20" y1="390" x2="860" y2="390" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="5 4"/>
+
+  <!-- B PUT If-Match v1 (eskirgan) -->
+  <rect x="630" y="404" width="230" height="44" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="644" y="424" font-family="monospace" font-size="13" fill="#b91c1c">PUT /docs/7</text>
+  <text x="644" y="441" font-family="monospace" font-size="13" fill="#b91c1c">If-Match: "v1"  (eski!)</text>
+  <line x1="750" y1="466" x2="445" y2="466" stroke="#dc2626" stroke-width="2" marker-end="url(#aR)"/>
+  <text x="598" y="458" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">B kechikib yozadi</text>
+
+  <!-- server: mos kelmaydi -->
+  <rect x="300" y="482" width="280" height="34" rx="6" fill="#fef9c3" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="440" y="504" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#b45309">"v1" != joriy "v2" -> RAD etiladi</text>
+
+  <line x1="445" y1="536" x2="750" y2="536" stroke="#dc2626" stroke-width="2" marker-end="url(#aR)"/>
+  <text x="598" y="528" text-anchor="middle" font-family="monospace" font-size="13" fill="#dc2626">412 Precondition Failed</text>
+
+  <defs>
+    <marker id="aB" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto"><path d="M0,0 L7,3.2 L0,6.4 Z" fill="#2563eb"/></marker>
+    <marker id="aG" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto"><path d="M0,0 L7,3.2 L0,6.4 Z" fill="#16a34a"/></marker>
+    <marker id="aR" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto"><path d="M0,0 L7,3.2 L0,6.4 Z" fill="#dc2626"/></marker>
+  </defs>
+</svg>

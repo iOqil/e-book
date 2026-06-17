@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 600" width="820" height="600" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Hujjat-yordamchi ilovaning arxitekturasi. Offline shox (indekslash, 17/18-bob): hujjatlar -> chunk -> embed (Anthropic emas) -> vektor baza. Jonli yo'l: brauzer (useChat, 13-bob) -> Next.js route (kalit serverda, 22-bob) -> RAG retrieve top-k -> kontekst + cached system + tools -> Claude streamText (claude-opus-4-8) -> oqimli grounded javob brauzerga qaytadi.</title>
+  <defs>
+    <marker id="a26a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#6366f1"/>
+    </marker>
+    <marker id="a26b" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#0ea5e9"/>
+    </marker>
+    <marker id="a26c" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="820" height="600" fill="#f8fafc"/>
+  <text x="410" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Hujjat-yordamchi — to'liq ilova arxitekturasi</text>
+  <text x="410" y="58" font-size="14" fill="#64748b" text-anchor="middle">Brauzer -> sizning serveringiz -> Claude; kalit hech qachon brauzerga chiqmaydi</text>
+
+  <!-- OFFLINE BRANCH: indexing -->
+  <rect x="24" y="80" width="772" height="118" rx="12" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="44" y="106" font-size="15" font-weight="bold" fill="#6366f1" text-anchor="start">OFFLINE shox — indekslash (bir marta, 17/18-bob)</text>
+
+  <rect x="44" y="120" width="150" height="62" rx="9" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <text x="119" y="146" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Hujjatlar</text>
+  <text x="119" y="168" font-size="13" fill="#64748b" text-anchor="middle">KB, docs, FAQ</text>
+
+  <line x1="194" y1="151" x2="226" y2="151" stroke="#6366f1" stroke-width="2.5" marker-end="url(#a26a)"/>
+
+  <rect x="230" y="120" width="140" height="62" rx="9" fill="#dbeafe" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="300" y="146" font-size="14" font-weight="bold" fill="#0ea5e9" text-anchor="middle">chunk</text>
+  <text x="300" y="168" font-size="13" fill="#64748b" text-anchor="middle">~200-800 token</text>
+
+  <line x1="370" y1="151" x2="402" y2="151" stroke="#6366f1" stroke-width="2.5" marker-end="url(#a26a)"/>
+
+  <rect x="406" y="120" width="150" height="62" rx="9" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="481" y="146" font-size="14" font-weight="bold" fill="#f59e0b" text-anchor="middle">embed</text>
+  <text x="481" y="168" font-size="13" fill="#64748b" text-anchor="middle">Anthropic EMAS</text>
+
+  <line x1="556" y1="151" x2="588" y2="151" stroke="#6366f1" stroke-width="2.5" marker-end="url(#a26a)"/>
+
+  <rect x="592" y="120" width="184" height="62" rx="9" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="684" y="146" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">vektor baza</text>
+  <text x="684" y="168" font-size="13" fill="#64748b" text-anchor="middle">xotira / pgvector</text>
+
+  <!-- index feeds retrieve -->
+  <line x1="684" y1="198" x2="684" y2="404" stroke="#16a34a" stroke-width="2.5" stroke-dasharray="6 5" marker-end="url(#a26c)"/>
+  <text x="700" y="300" font-size="13" fill="#16a34a" text-anchor="start">indeks</text>
+
+  <!-- LIVE PATH -->
+  <!-- browser -->
+  <rect x="40" y="244" width="180" height="92" rx="11" fill="#ffffff" stroke="#0ea5e9" stroke-width="2.5"/>
+  <text x="130" y="272" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">Brauzer</text>
+  <text x="130" y="294" font-size="13" fill="#475569" text-anchor="middle">useChat (13-bob)</text>
+  <text x="130" y="314" font-size="13" fill="#64748b" text-anchor="middle">chat UI, parts</text>
+
+  <line x1="220" y1="290" x2="266" y2="290" stroke="#0ea5e9" stroke-width="2.5" marker-end="url(#a26b)"/>
+  <text x="243" y="282" font-size="13" fill="#0ea5e9" text-anchor="middle">POST</text>
+
+  <!-- server route -->
+  <rect x="270" y="222" width="506" height="296" rx="12" fill="#dbeafe" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="290" y="247" font-size="15" font-weight="bold" fill="#0ea5e9" text-anchor="start">Next.js route — SERVER (kalit shu yerda, 22-bob)</text>
+
+  <rect x="290" y="262" width="150" height="74" rx="9" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="365" y="288" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">RAG retrieve</text>
+  <text x="365" y="308" font-size="13" fill="#475569" text-anchor="middle">top-k bo'lak</text>
+  <text x="365" y="326" font-size="13" fill="#64748b" text-anchor="middle">(18-bob)</text>
+
+  <line x1="440" y1="299" x2="474" y2="299" stroke="#0ea5e9" stroke-width="2.5" marker-end="url(#a26b)"/>
+
+  <rect x="478" y="262" width="166" height="74" rx="9" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="561" y="285" font-size="14" font-weight="bold" fill="#6366f1" text-anchor="middle">prompt qurish</text>
+  <text x="561" y="305" font-size="13" fill="#475569" text-anchor="middle">&lt;context&gt; + cached</text>
+  <text x="561" y="323" font-size="13" fill="#64748b" text-anchor="middle">system (15-bob)</text>
+
+  <rect x="290" y="352" width="150" height="74" rx="9" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="365" y="378" font-size="14" font-weight="bold" fill="#f59e0b" text-anchor="middle">tools (12-bob)</text>
+  <text x="365" y="398" font-size="13" fill="#475569" text-anchor="middle">searchKB,</text>
+  <text x="365" y="416" font-size="13" fill="#64748b" text-anchor="middle">calculator</text>
+
+  <line x1="561" y1="336" x2="561" y2="356" stroke="#6366f1" stroke-width="2.5" marker-end="url(#a26a)"/>
+
+  <rect x="478" y="352" width="166" height="74" rx="9" fill="#ffffff" stroke="#d97757" stroke-width="2.5"/>
+  <text x="561" y="378" font-size="14" font-weight="bold" fill="#d97757" text-anchor="middle">Claude</text>
+  <text x="561" y="398" font-size="13" fill="#475569" text-anchor="middle">streamText</text>
+  <text x="561" y="416" font-size="13" fill="#64748b" text-anchor="middle">claude-opus-4-8</text>
+
+  <line x1="440" y1="389" x2="474" y2="389" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#a26a)"/>
+
+  <!-- claude streamed answer back -->
+  <rect x="478" y="446" width="278" height="56" rx="9" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="617" y="470" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">oqimli grounded javob</text>
+  <text x="617" y="490" font-size="13" fill="#64748b" text-anchor="middle">manba bilan, token-token</text>
+  <line x1="561" y1="426" x2="561" y2="444" stroke="#16a34a" stroke-width="2.5" marker-end="url(#a26c)"/>
+
+  <!-- stream back to browser -->
+  <path d="M478,474 L240,474 L240,336" fill="none" stroke="#16a34a" stroke-width="2.5" marker-end="url(#a26c)"/>
+  <text x="350" y="492" font-size="13" fill="#16a34a" text-anchor="middle">oqim brauzerga qaytadi</text>
+
+  <rect x="24" y="534" width="772" height="46" rx="9" fill="#fef3c7"/>
+  <text x="410" y="556" font-size="13.5" fill="#1e293b" text-anchor="middle">Qurish tartibi: indeks (17/18) -> route + RAG (13/18) -> system + caching (05/15/22) -> tools (12) -> UI (13) -> ishonchlilik (16/14) -> deploy (25).</text>
+  <text x="410" y="574" font-size="13" fill="#475569" text-anchor="middle">Kalit faqat serverda; RAG hujjatlari ishonchsiz ma'lumot sifatida &lt;context&gt; ichida o'raladi (22-bob).</text>
+</svg>

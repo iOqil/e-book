@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 560">
+  <title>Ko'p tarmoqli qaror: baho -> harf, zinapoyali if-elif-else</title>
+  <rect x="0" y="0" width="840" height="560" fill="#f8fafc"/>
+  <text x="420" y="38" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">if / elif / else — zinapoya (baho -&gt; harf)</text>
+  <text x="420" y="64" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Shartlar yuqoridan pastga tekshiriladi; birinchi rost shart yutadi</text>
+
+  <!-- Row 1: ball >= 90 -->
+  <polygon points="160,100 280,140 160,180 40,140" fill="#ffffff" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="160" y="146" text-anchor="middle" font-family="monospace" font-size="14" fill="#1e293b">ball &gt;= 90 ?</text>
+  <text x="300" y="134" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">HA</text>
+  <rect x="560" y="116" width="220" height="48" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="670" y="146" text-anchor="middle" font-family="Segoe UI" font-size="15" fill="#334155">"A" — a'lo (5)</text>
+  <line x1="280" y1="140" x2="560" y2="140" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="560,140 550,135 550,145" fill="#16a34a"/>
+
+  <!-- arrow down YO'Q -->
+  <text x="118" y="200" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#dc2626">YO'Q</text>
+  <line x1="160" y1="180" x2="160" y2="210" stroke="#dc2626" stroke-width="2"/>
+  <polygon points="160,210 155,200 165,200" fill="#dc2626"/>
+
+  <!-- Row 2: ball >= 70 -->
+  <polygon points="160,210 280,250 160,290 40,250" fill="#ffffff" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="160" y="256" text-anchor="middle" font-family="monospace" font-size="14" fill="#1e293b">ball &gt;= 70 ?</text>
+  <text x="300" y="244" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">HA</text>
+  <rect x="560" y="226" width="220" height="48" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="670" y="256" text-anchor="middle" font-family="Segoe UI" font-size="15" fill="#334155">"B" — yaxshi (4)</text>
+  <line x1="280" y1="250" x2="560" y2="250" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="560,250 550,245 550,255" fill="#16a34a"/>
+
+  <text x="118" y="310" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#dc2626">YO'Q</text>
+  <line x1="160" y1="290" x2="160" y2="320" stroke="#dc2626" stroke-width="2"/>
+  <polygon points="160,320 155,310 165,310" fill="#dc2626"/>
+
+  <!-- Row 3: ball >= 60 -->
+  <polygon points="160,320 280,360 160,400 40,360" fill="#ffffff" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="160" y="366" text-anchor="middle" font-family="monospace" font-size="14" fill="#1e293b">ball &gt;= 60 ?</text>
+  <text x="300" y="354" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">HA</text>
+  <rect x="560" y="336" width="220" height="48" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="670" y="366" text-anchor="middle" font-family="Segoe UI" font-size="15" fill="#334155">"C" — qoniqarli (3)</text>
+  <line x1="280" y1="360" x2="560" y2="360" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="560,360 550,355 550,365" fill="#16a34a"/>
+
+  <text x="118" y="420" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#dc2626">YO'Q</text>
+  <line x1="160" y1="400" x2="160" y2="430" stroke="#dc2626" stroke-width="2"/>
+  <polygon points="160,430 155,420 165,420" fill="#dc2626"/>
+
+  <!-- else -->
+  <rect x="100" y="430" width="120" height="48" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="160" y="460" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#dc2626">else</text>
+  <line x1="220" y1="454" x2="560" y2="454" stroke="#dc2626" stroke-width="2"/>
+  <polygon points="560,454 550,449 550,459" fill="#dc2626"/>
+  <rect x="560" y="430" width="220" height="48" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="670" y="460" text-anchor="middle" font-family="Segoe UI" font-size="15" fill="#334155">"F" — qoldi (2)</text>
+
+  <!-- note -->
+  <rect x="40" y="504" width="760" height="40" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="60" y="529" font-family="Segoe UI" font-size="14" fill="#334155">Diqqat: tartib muhim. Agar "&gt;= 60" ni eng tepaga qo'ysangiz, 95 ball ham "C" oladi — har doim eng tor shartdan boshlang.</text>
+</svg>

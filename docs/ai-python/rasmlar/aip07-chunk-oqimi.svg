@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Streaming oqimi: model -> chunk -> delta -> ekranga, ketma-ket</title>
+  <rect x="0" y="0" width="760" height="400" fill="#f8fafc"/>
+  <text x="380" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">Oqim yo'li: model -> chunk -> delta -> ekran</text>
+
+  <defs>
+    <marker id="co-arr" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#4f46e5"/>
+    </marker>
+  </defs>
+
+  <!-- Model -->
+  <rect x="40" y="150" width="150" height="100" rx="14" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="115" y="195" text-anchor="middle" font-size="17" font-weight="700" fill="#4338ca">Model</text>
+  <text x="115" y="222" text-anchor="middle" font-size="13" fill="#475569">javobni oqim</text>
+  <text x="115" y="240" text-anchor="middle" font-size="13" fill="#475569">qilib jo'natadi</text>
+
+  <!-- Chunk -->
+  <rect x="270" y="150" width="150" height="100" rx="14" fill="#ffffff" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="345" y="188" text-anchor="middle" font-size="16" font-weight="700" fill="#0284c7">chunk</text>
+  <text x="345" y="214" text-anchor="middle" font-size="13" font-family="JetBrains Mono, monospace" fill="#1e293b">.choices[0]</text>
+  <text x="345" y="234" text-anchor="middle" font-size="13" font-family="JetBrains Mono, monospace" fill="#1e293b">.delta</text>
+
+  <!-- Delta -->
+  <rect x="500" y="150" width="150" height="100" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="575" y="188" text-anchor="middle" font-size="16" font-weight="700" fill="#166534">delta.content</text>
+  <text x="575" y="214" text-anchor="middle" font-size="13" fill="#1e293b">matn bo'lagi</text>
+  <text x="575" y="234" text-anchor="middle" font-size="13" fill="#dc2626">(None bo'lishi mumkin!)</text>
+
+  <!-- Arrows row -->
+  <line x1="190" y1="200" x2="266" y2="200" stroke="#4f46e5" stroke-width="3" marker-end="url(#co-arr)"/>
+  <line x1="420" y1="200" x2="496" y2="200" stroke="#4f46e5" stroke-width="3" marker-end="url(#co-arr)"/>
+
+  <!-- Loop label over chunk -->
+  <text x="345" y="115" text-anchor="middle" font-size="13" font-weight="700" fill="#7c3aed">for chunk in stream:  (sikl har bir chunk uchun)</text>
+  <path d="M270 130 Q345 95 420 130" fill="none" stroke="#7c3aed" stroke-width="2" stroke-dasharray="5 4"/>
+
+  <!-- Screen -->
+  <rect x="230" y="300" width="300" height="70" rx="12" fill="#1e293b"/>
+  <text x="380" y="332" text-anchor="middle" font-size="15" font-family="JetBrains Mono, monospace" fill="#dcfce7">print(delta, end="", flush=True)</text>
+  <text x="380" y="356" text-anchor="middle" font-size="13" fill="#94a3b8">ekranda matn token-token paydo bo'ladi</text>
+  <line x1="575" y1="250" x2="575" y2="320" stroke="#16a34a" stroke-width="3"/>
+  <line x1="575" y1="320" x2="534" y2="320" stroke="#16a34a" stroke-width="3" marker-end="url(#co-arr)"/>
+</svg>

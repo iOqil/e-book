@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 430" width="780" height="430" font-family="Segoe UI, system-ui, sans-serif">
+  <title>ChangeNotifier reaktiv aylanasi: widget context.watch bilan modelni kuzatadi, foydalanuvchi tugmani bosadi, context.read().addItem() chaqiriladi, model holatini o'zgartirib notifyListeners() chaqiradi, kuzatuvchi widgetlar yangi holat bilan qaytadan quriladi</title>
+  <defs>
+    <marker id="fl24c" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#027dfd"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="780" height="430" fill="#f8fafc"/>
+  <text x="390" y="32" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Reaktiv aylana: watch &#8594; read &#8594; notify &#8594; rebuild</text>
+  <text x="390" y="56" text-anchor="middle" font-size="14" fill="#475569">harakatdan keyin model xabar beradi, kuzatayotgan UI o'zi yangilanadi</text>
+
+  <!-- Step 1: watch -->
+  <rect x="60" y="100" width="220" height="78" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="170" y="128" text-anchor="middle" font-size="15" font-weight="700" fill="#16a34a">1. UI kuzatadi</text>
+  <text x="170" y="151" text-anchor="middle" font-size="13" fill="#1e293b">context.watch&lt;CartModel&gt;()</text>
+  <text x="170" y="170" text-anchor="middle" font-size="13" fill="#475569">build ichida — qayta quriladi</text>
+
+  <!-- Step 2: user taps + read -->
+  <rect x="500" y="100" width="220" height="78" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="610" y="128" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">2. Foydalanuvchi bosadi</text>
+  <text x="610" y="151" text-anchor="middle" font-size="13" fill="#1e293b">context.read&lt;CartModel&gt;()</text>
+  <text x="610" y="170" text-anchor="middle" font-size="13" fill="#475569">.addItem() — callback'da</text>
+
+  <!-- Step 3: model mutates + notify -->
+  <rect x="500" y="252" width="220" height="86" rx="12" fill="#dbeafe" stroke="#027dfd" stroke-width="2.5"/>
+  <text x="610" y="280" text-anchor="middle" font-size="15" font-weight="700" fill="#0553b1">3. Model o'zgaradi</text>
+  <text x="610" y="303" text-anchor="middle" font-size="13" fill="#1e293b">items.add(...)</text>
+  <text x="610" y="324" text-anchor="middle" font-size="13" fill="#027dfd">notifyListeners()</text>
+
+  <!-- Step 4: rebuild -->
+  <rect x="60" y="252" width="220" height="86" rx="12" fill="#e0e7ff" stroke="#6366f1" stroke-width="2.5"/>
+  <text x="170" y="280" text-anchor="middle" font-size="15" font-weight="700" fill="#6366f1">4. UI qayta quriladi</text>
+  <text x="170" y="303" text-anchor="middle" font-size="13" fill="#1e293b">badge: 1 &#8594; 2</text>
+  <text x="170" y="324" text-anchor="middle" font-size="13" fill="#475569">yangi holat ekranda</text>
+
+  <!-- arrows forming the loop -->
+  <!-- 1 -> 2 -->
+  <path d="M280 139 L496 139" stroke="#027dfd" stroke-width="2.5" fill="none" marker-end="url(#fl24c)"/>
+  <text x="388" y="130" text-anchor="middle" font-size="13" fill="#64748b">tugma bosildi</text>
+  <!-- 2 -> 3 -->
+  <path d="M610 178 L610 248" stroke="#027dfd" stroke-width="2.5" fill="none" marker-end="url(#fl24c)"/>
+  <text x="650" y="218" text-anchor="middle" font-size="13" fill="#64748b">metod chaqirildi</text>
+  <!-- 3 -> 4 -->
+  <path d="M500 295 L284 295" stroke="#027dfd" stroke-width="2.5" fill="none" marker-end="url(#fl24c)"/>
+  <text x="392" y="286" text-anchor="middle" font-size="13" fill="#64748b">xabar (notify)</text>
+  <!-- 4 -> 1 (close loop) -->
+  <path d="M170 252 L170 182" stroke="#16a34a" stroke-width="2.5" fill="none" marker-end="url(#fl24c)"/>
+  <text x="130" y="218" text-anchor="middle" font-size="13" fill="#16a34a">yangi build</text>
+
+  <text x="390" y="392" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">watch = o'qiydi va qayta quriladi &#183; read = o'qiydi, lekin qayta qurmaydi</text>
+  <text x="390" y="414" text-anchor="middle" font-size="13" fill="#94a3b8">setState() yo'q — model xabar beradi, Provider kuzatuvchilarni yangilaydi.</text>
+</svg>

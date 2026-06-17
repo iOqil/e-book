@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430">
+  <title>Settings API oqimi: register_setting va section va field admin_init da ro'yxatga olinadi, sahifa renderlanadi, forma submit qilinadi, sanitize_callback tozalaydi va options jadvalga saqlanadi</title>
+  <defs>
+    <marker id="sa-arrow" markerWidth="12" markerHeight="12" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/>
+    </marker>
+    <marker id="sa-arrow-g" markerWidth="12" markerHeight="12" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Settings API oqimi</text>
+  <text x="380" y="54" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Ro'yxatga olish, ko'rsatish va xavfsiz saqlash — uch bosqich</text>
+
+  <!-- 1. admin_init: register -->
+  <rect x="30" y="80" width="230" height="150" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="145" y="106" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">1. admin_init hook</text>
+  <text x="145" y="130" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">register_setting()</text>
+  <text x="145" y="152" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">add_settings_section()</text>
+  <text x="145" y="174" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">add_settings_field()</text>
+  <text x="145" y="200" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">WordPress'ga sozlamani</text>
+  <text x="145" y="218" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">"tanitamiz".</text>
+
+  <!-- 2. render page -->
+  <rect x="290" y="80" width="230" height="150" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="405" y="106" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b45309">2. Sahifa render</text>
+  <text x="405" y="130" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">&lt;form action="options.php"&gt;</text>
+  <text x="405" y="152" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">settings_fields()</text>
+  <text x="405" y="174" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">do_settings_sections()</text>
+  <text x="405" y="196" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">submit_button()</text>
+  <text x="405" y="218" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Forma + nonce avtomatik.</text>
+
+  <!-- 3. submit + sanitize -->
+  <rect x="550" y="80" width="180" height="150" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="640" y="106" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#7c3aed">3. Submit</text>
+  <text x="640" y="130" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">options.php</text>
+  <text x="640" y="150" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">nonce'ni tekshiradi,</text>
+  <text x="640" y="168" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">ruxsatni tekshiradi,</text>
+  <text x="640" y="186" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">sanitize_callback'ni</text>
+  <text x="640" y="204" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">chaqiradi.</text>
+
+  <!-- arrows top row -->
+  <line x1="260" y1="155" x2="288" y2="155" stroke="#2563eb" stroke-width="2.5" marker-end="url(#sa-arrow)"/>
+  <line x1="520" y1="155" x2="548" y2="155" stroke="#2563eb" stroke-width="2.5" marker-end="url(#sa-arrow)"/>
+
+  <!-- 4. sanitize box -->
+  <rect x="430" y="280" width="300" height="110" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="580" y="306" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">4. sanitize_callback()</text>
+  <text x="580" y="330" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">absint() / sanitize_text_field()</text>
+  <text x="580" y="350" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">allowlist tekshiruvi</text>
+  <text x="580" y="372" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Tozalangan qiymat qaytadi.</text>
+
+  <!-- 5. options table -->
+  <rect x="30" y="280" width="300" height="110" rx="10" fill="#fff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="180" y="306" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">5. wp_options jadval</text>
+  <text x="180" y="330" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">update_option() (avtomatik)</text>
+  <text x="180" y="352" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">get_option() bilan o'qiladi.</text>
+  <text x="180" y="374" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-style="italic" fill="#16a34a">Faqat TOZALANGAN qiymat saqlanadi</text>
+
+  <!-- arrow submit -> sanitize -->
+  <line x1="640" y1="230" x2="600" y2="278" stroke="#16a34a" stroke-width="2.5" marker-end="url(#sa-arrow-g)"/>
+  <!-- arrow sanitize -> options -->
+  <line x1="428" y1="335" x2="332" y2="335" stroke="#16a34a" stroke-width="2.5" marker-end="url(#sa-arrow-g)"/>
+
+  <text x="380" y="416" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">$_POST'ni qo'lda ushlamaysiz — Settings API nonce, ruxsat va tozalashni o'zi bajaradi.</text>
+</svg>

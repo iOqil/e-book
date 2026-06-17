@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420">
+  <title>Enqueue hook'lari: wp_enqueue_scripts frontendda, admin_enqueue_scripts admin sahifalarida (hook_suffix bilan shartli), enqueue_block_editor_assets blok muharririda, login_enqueue_scripts login sahifasida ishlaydi</title>
+
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Qaysi hook qayerda enqueue qiladi</text>
+  <text x="380" y="56" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Asset'ni kerakli kontekstda yuklash uchun to'g'ri hook'ni tanlang</text>
+
+  <!-- Frontend -->
+  <rect x="40" y="86" width="340" height="140" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="60" y="114" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e40af">Frontend (sayt yuzasi)</text>
+  <text x="60" y="140" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">wp_enqueue_scripts</text>
+  <text x="60" y="162" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Tashrifchi ko'radigan sahifalar.</text>
+  <text x="60" y="182" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Skript ham, stil ham SHU yerda.</text>
+  <text x="60" y="208" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">Shartli: is_singular('kitob') va h.k.</text>
+
+  <!-- Admin -->
+  <rect x="400" y="86" width="320" height="140" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="420" y="114" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b45309">Admin (wp-admin)</text>
+  <text x="420" y="140" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">admin_enqueue_scripts</text>
+  <text x="420" y="162" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Argument: $hook_suffix.</text>
+  <text x="420" y="182" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">U bilan FAQAT o'z sahifangizda</text>
+  <text x="420" y="202" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">enqueue qiling (boshqani sindirmang).</text>
+
+  <!-- Block editor -->
+  <rect x="40" y="248" width="340" height="130" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="60" y="276" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Blok muharriri (Gutenberg)</text>
+  <text x="60" y="302" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">enqueue_block_editor_assets</text>
+  <text x="60" y="324" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Faqat muharrir ekranida (edit JS).</text>
+  <text x="60" y="346" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">19-23 boblar: bloklar shu yerda.</text>
+
+  <!-- Login -->
+  <rect x="400" y="248" width="320" height="130" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="420" y="276" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#7c3aed">Login sahifasi</text>
+  <text x="420" y="302" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">login_enqueue_scripts</text>
+  <text x="420" y="324" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">wp-login.php ko'rinishi.</text>
+  <text x="420" y="346" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Logotip/brending uchun kam ishlatiladi.</text>
+
+  <text x="380" y="404" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">init yoki plugins_loaded ichida enqueue QILMANG — juda erta, asset registratsiyasi tayyor emas.</text>
+</svg>

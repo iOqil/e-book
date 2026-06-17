@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Props drilling muammosi va useContext yechimi taqqoslangan</title>
+  <rect x="0" y="0" width="760" height="480" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">Props drilling va useContext</text>
+
+  <!-- LEFT: props drilling -->
+  <rect x="30" y="58" width="340" height="396" rx="14" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="200" y="86" text-anchor="middle" font-size="16" font-weight="700" fill="#dc2626">Props drilling (muammo)</text>
+
+  <rect x="120" y="100" width="160" height="42" rx="9" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="200" y="126" text-anchor="middle" font-size="13" fill="#1e293b">Ilova (tema bor)</text>
+
+  <line x1="200" y1="142" x2="200" y2="170" stroke="#dc2626" stroke-width="2" marker-end="url(#d1)"/>
+  <text x="248" y="160" text-anchor="middle" font-size="13" fill="#dc2626">tema=...</text>
+
+  <rect x="120" y="170" width="160" height="42" rx="9" fill="#fef2f2" stroke="#fca5a5" stroke-width="1.5"/>
+  <text x="200" y="196" text-anchor="middle" font-size="13" fill="#475569">Sahifa (kerakmas)</text>
+
+  <line x1="200" y1="212" x2="200" y2="240" stroke="#dc2626" stroke-width="2" marker-end="url(#d1)"/>
+  <text x="248" y="230" text-anchor="middle" font-size="13" fill="#dc2626">tema=...</text>
+
+  <rect x="120" y="240" width="160" height="42" rx="9" fill="#fef2f2" stroke="#fca5a5" stroke-width="1.5"/>
+  <text x="200" y="266" text-anchor="middle" font-size="13" fill="#475569">Panel (kerakmas)</text>
+
+  <line x1="200" y1="282" x2="200" y2="310" stroke="#dc2626" stroke-width="2" marker-end="url(#d1)"/>
+  <text x="248" y="300" text-anchor="middle" font-size="13" fill="#dc2626">tema=...</text>
+
+  <rect x="120" y="310" width="160" height="42" rx="9" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="200" y="336" text-anchor="middle" font-size="13" fill="#1e293b">Tugma (tema ishlatadi)</text>
+
+  <text x="200" y="384" text-anchor="middle" font-size="13" fill="#475569">Tema har qavatdan o'tib o'tadi —</text>
+  <text x="200" y="403" text-anchor="middle" font-size="13" fill="#475569">o'rtadagilarga kerak bo'lmasa ham.</text>
+  <text x="200" y="426" text-anchor="middle" font-size="13" font-weight="700" fill="#dc2626">Ko'p qavat = zerikarli va xatoga moyil</text>
+
+  <!-- RIGHT: useContext -->
+  <rect x="390" y="58" width="340" height="396" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="560" y="86" text-anchor="middle" font-size="16" font-weight="700" fill="#16a34a">useContext (yechim)</text>
+
+  <rect x="430" y="100" width="260" height="252" rx="11" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="560" y="120" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a">&lt;TemaProvider value={tema}&gt;</text>
+
+  <rect x="470" y="136" width="180" height="40" rx="9" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="560" y="161" text-anchor="middle" font-size="13" fill="#1e293b">Sahifa</text>
+
+  <rect x="470" y="196" width="180" height="40" rx="9" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="560" y="221" text-anchor="middle" font-size="13" fill="#1e293b">Panel</text>
+
+  <rect x="470" y="256" width="180" height="40" rx="9" fill="#bbf7d0" stroke="#16a34a" stroke-width="2"/>
+  <text x="560" y="281" text-anchor="middle" font-size="13" fill="#1e293b">Tugma — useTema()</text>
+
+  <!-- direct line from provider to consumer -->
+  <path d="M 442 130 Q 412 270 466 276" fill="none" stroke="#16a34a" stroke-width="2.5" marker-end="url(#g1)"/>
+  <text x="418" y="320" text-anchor="middle" font-size="13" fill="#16a34a">to'g'ridan-to'g'ri</text>
+
+  <text x="560" y="384" text-anchor="middle" font-size="13" fill="#475569">Provider qiymatni e'lon qiladi.</text>
+  <text x="560" y="403" text-anchor="middle" font-size="13" fill="#475569">Istalgan chuqurdagi bola uni</text>
+  <text x="560" y="422" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a">useContext bilan to'g'ridan oladi</text>
+
+  <defs>
+    <marker id="d1" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#dc2626"/>
+    </marker>
+    <marker id="g1" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+</svg>

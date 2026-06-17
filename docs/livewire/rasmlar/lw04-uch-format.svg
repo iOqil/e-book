@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 500" width="760" height="500" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Livewire 4 komponentining uch formati: SFC, MFC va Klass — fayl tuzilishi va qachon ishlatish bo'yicha taqqoslash</title>
+  <rect x="0" y="0" width="760" height="500" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Uch format: SFC vs MFC vs Klass</text>
+
+  <!-- SFC ustun -->
+  <rect x="24" y="58" width="226" height="396" rx="12" fill="#ffffff" stroke="#4f46e5" stroke-width="3"/>
+  <rect x="24" y="58" width="226" height="44" rx="12" fill="#4f46e5"/>
+  <text x="137" y="87" text-anchor="middle" font-size="17" font-weight="700" fill="#ffffff">SFC (default)</text>
+  <text x="44" y="128" font-size="13" font-weight="700" fill="#475569">Bitta fayl:</text>
+  <rect x="40" y="138" width="194" height="92" rx="8" fill="#eef2ff" stroke="#c7d2fe" stroke-width="1.5"/>
+  <text x="52" y="160" font-size="13" fill="#4f46e5">components/</text>
+  <text x="62" y="180" font-size="13" font-weight="700" fill="#1e293b">&#9889;counter.blade.php</text>
+  <text x="62" y="202" font-size="13" fill="#475569">&lt;?php ... ?&gt; (xulq)</text>
+  <text x="62" y="220" font-size="13" fill="#475569">&lt;div&gt; ... (ko'rinish)</text>
+  <text x="44" y="262" font-size="13" font-weight="700" fill="#16a34a">Qachon:</text>
+  <text x="44" y="284" font-size="13" fill="#1e293b">Aksariyat hollarda.</text>
+  <text x="44" y="304" font-size="13" fill="#1e293b">Kichik/o'rta komponent,</text>
+  <text x="44" y="322" font-size="13" fill="#1e293b">tez yaratish.</text>
+  <text x="44" y="356" font-size="13" font-weight="700" fill="#475569">Buyruq:</text>
+  <text x="44" y="378" font-size="13" fill="#1e293b">make:livewire counter</text>
+  <rect x="40" y="404" width="194" height="34" rx="8" fill="#16a34a"/>
+  <text x="137" y="426" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">Eng ko'p ishlatiladi</text>
+
+  <!-- MFC ustun -->
+  <rect x="267" y="58" width="226" height="396" rx="12" fill="#ffffff" stroke="#fb70a9" stroke-width="2"/>
+  <rect x="267" y="58" width="226" height="44" rx="12" fill="#fb70a9"/>
+  <text x="380" y="87" text-anchor="middle" font-size="17" font-weight="700" fill="#ffffff">MFC (--mfc)</text>
+  <text x="287" y="128" font-size="13" font-weight="700" fill="#475569">Papka, ko'p fayl:</text>
+  <rect x="283" y="138" width="194" height="92" rx="8" fill="#fdf2f8" stroke="#f9a8d4" stroke-width="1.5"/>
+  <text x="295" y="158" font-size="13" font-weight="700" fill="#1e293b">&#9889;create-post/</text>
+  <text x="305" y="176" font-size="13" fill="#475569">create-post.php</text>
+  <text x="305" y="192" font-size="13" fill="#475569">create-post.blade.php</text>
+  <text x="305" y="208" font-size="13" fill="#94a3b8">.js .css .test.php</text>
+  <text x="305" y="224" font-size="13" fill="#94a3b8">(ixtiyoriy)</text>
+  <text x="287" y="262" font-size="13" font-weight="700" fill="#16a34a">Qachon:</text>
+  <text x="287" y="284" font-size="13" fill="#1e293b">Katta komponent;</text>
+  <text x="287" y="304" font-size="13" fill="#1e293b">alohida JS / CSS /</text>
+  <text x="287" y="322" font-size="13" fill="#1e293b">test fayli kerak.</text>
+  <text x="287" y="356" font-size="13" font-weight="700" fill="#475569">Buyruq:</text>
+  <text x="287" y="378" font-size="13" fill="#1e293b">make:livewire x --mfc</text>
+  <rect x="283" y="404" width="194" height="34" rx="8" fill="#f59e0b"/>
+  <text x="380" y="426" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">Murakkab komponent</text>
+
+  <!-- Klass ustun -->
+  <rect x="510" y="58" width="226" height="396" rx="12" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="510" y="58" width="226" height="44" rx="12" fill="#94a3b8"/>
+  <text x="623" y="87" text-anchor="middle" font-size="17" font-weight="700" fill="#ffffff">Klass (--class)</text>
+  <text x="530" y="128" font-size="13" font-weight="700" fill="#475569">Ikki ajratilgan fayl:</text>
+  <rect x="526" y="138" width="194" height="92" rx="8" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="538" y="158" font-size="13" fill="#475569">app/Livewire/</text>
+  <text x="548" y="176" font-size="13" font-weight="700" fill="#1e293b">ClassPost.php</text>
+  <text x="538" y="200" font-size="13" fill="#475569">views/livewire/</text>
+  <text x="548" y="218" font-size="13" font-weight="700" fill="#1e293b">class-post.blade.php</text>
+  <text x="530" y="262" font-size="13" font-weight="700" fill="#16a34a">Qachon:</text>
+  <text x="530" y="284" font-size="13" fill="#1e293b">Eski v3 uslubi;</text>
+  <text x="530" y="304" font-size="13" fill="#1e293b">jamoa shu uslubda</text>
+  <text x="530" y="322" font-size="13" fill="#1e293b">davom etsa.</text>
+  <text x="530" y="356" font-size="13" font-weight="700" fill="#475569">Buyruq:</text>
+  <text x="530" y="378" font-size="13" fill="#1e293b">make:livewire X --class</text>
+  <rect x="526" y="404" width="194" height="34" rx="8" fill="#94a3b8"/>
+  <text x="623" y="426" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">Eski / maxsus hollar</text>
+
+  <text x="380" y="484" text-anchor="middle" font-size="13" fill="#94a3b8">Uchovi ham bir xil ishlaydi — farqi faqat fayllar qanday tashkil etilishida</text>
+</svg>

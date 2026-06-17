@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 520">
+  <title>Massiv va dinamik massiv amallarining murakkabligi jadvali: kirish, qidiruv, oxiriga va boshiga qo'shish, o'chirish</title>
+  <rect x="0" y="0" width="860" height="520" fill="#f8fafc"/>
+  <text x="430" y="40" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Massiv amallari murakkabligi</text>
+  <text x="430" y="66" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Yashil — tez (O(1)); qizil — sekin (O(n)); ko'k — saralangan massivda binar qidiruv</text>
+
+  <!-- header row -->
+  <rect x="40" y="90" width="380" height="44" fill="#1e293b"/>
+  <rect x="420" y="90" width="200" height="44" fill="#1e293b"/>
+  <rect x="620" y="90" width="200" height="44" fill="#1e293b"/>
+  <text x="60"  y="118" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#ffffff">Amal</text>
+  <text x="520" y="118" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#ffffff">Murakkablik</text>
+  <text x="720" y="118" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#ffffff">Sabab</text>
+
+  <!-- row 1: access/update -->
+  <rect x="40" y="134" width="380" height="44" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="420" y="134" width="200" height="44" fill="#dcfce7" stroke="#e2e8f0"/>
+  <rect x="620" y="134" width="200" height="44" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="60"  y="162" font-family="Segoe UI" font-size="14" fill="#334155">Kirish / o'zgartirish a[i]</text>
+  <text x="520" y="162" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#16a34a">O(1)</text>
+  <text x="720" y="162" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">manzil hisobi</text>
+
+  <!-- row 2: search unsorted -->
+  <rect x="40" y="178" width="380" height="44" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="420" y="178" width="200" height="44" fill="#fee2e2" stroke="#e2e8f0"/>
+  <rect x="620" y="178" width="200" height="44" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="60"  y="206" font-family="Segoe UI" font-size="14" fill="#334155">Qidiruv (saralanmagan)</text>
+  <text x="520" y="206" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#dc2626">O(n)</text>
+  <text x="720" y="206" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">hammasini ko'rish</text>
+
+  <!-- row 3: search sorted -->
+  <rect x="40" y="222" width="380" height="44" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="420" y="222" width="200" height="44" fill="#dbeafe" stroke="#e2e8f0"/>
+  <rect x="620" y="222" width="200" height="44" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="60"  y="250" font-family="Segoe UI" font-size="14" fill="#334155">Qidiruv (saralangan, binar)</text>
+  <text x="520" y="250" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#2563eb">O(log n)</text>
+  <text x="720" y="250" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">yarmini tashlash</text>
+
+  <!-- row 4: append end -->
+  <rect x="40" y="266" width="380" height="44" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="420" y="266" width="200" height="44" fill="#dcfce7" stroke="#e2e8f0"/>
+  <rect x="620" y="266" width="200" height="44" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="60"  y="294" font-family="Segoe UI" font-size="14" fill="#334155">Oxiriga qo'shish (append)</text>
+  <text x="520" y="294" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#16a34a">O(1)*</text>
+  <text x="720" y="294" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">amortized</text>
+
+  <!-- row 5: insert front -->
+  <rect x="40" y="310" width="380" height="44" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="420" y="310" width="200" height="44" fill="#fee2e2" stroke="#e2e8f0"/>
+  <rect x="620" y="310" width="200" height="44" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="60"  y="338" font-family="Segoe UI" font-size="14" fill="#334155">Boshiga/o'rtaga qo'shish</text>
+  <text x="520" y="338" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#dc2626">O(n)</text>
+  <text x="720" y="338" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">siljitish kerak</text>
+
+  <!-- row 6: delete end -->
+  <rect x="40" y="354" width="380" height="44" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="420" y="354" width="200" height="44" fill="#dcfce7" stroke="#e2e8f0"/>
+  <rect x="620" y="354" width="200" height="44" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="60"  y="382" font-family="Segoe UI" font-size="14" fill="#334155">Oxiridan o'chirish (pop)</text>
+  <text x="520" y="382" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#16a34a">O(1)</text>
+  <text x="720" y="382" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">siljitish yo'q</text>
+
+  <!-- row 7: delete front -->
+  <rect x="40" y="398" width="380" height="44" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="420" y="398" width="200" height="44" fill="#fee2e2" stroke="#e2e8f0"/>
+  <rect x="620" y="398" width="200" height="44" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="60"  y="426" font-family="Segoe UI" font-size="14" fill="#334155">Boshidan/o'rtadan o'chirish</text>
+  <text x="520" y="426" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#dc2626">O(n)</text>
+  <text x="720" y="426" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">bo'shliqni yopish</text>
+
+  <text x="430" y="478" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">* amortized O(1): odatda arzon, lekin sig'im to'lganda bitta append O(n) bo'lib ketadi</text>
+  <text x="430" y="500" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Massivning kuchi — tasodifiy kirish; zaifligi — o'rta/bosh tomonida o'zgartirish</text>
+</svg>

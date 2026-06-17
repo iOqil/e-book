@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 440" width="780" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>divide va border farqi: border butun kartani o'raydi, divide-y esa faqat qatorlar orasiga ingichka chiziq qo'yadi</title>
+  <rect x="0" y="0" width="780" height="440" fill="#f8fafc"/>
+
+  <text x="390" y="36" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">divide (orasida) va border (atrofida) farqi</text>
+
+  <!-- the card -->
+  <text x="120" y="78" font-size="14" fill="#64748b">class = "border border-gray-200 divide-y divide-gray-200 rounded-lg"</text>
+
+  <!-- outer border (whole card) -->
+  <rect x="120" y="96" width="420" height="272" rx="12" fill="#ffffff" stroke="#4f46e5" stroke-width="3"/>
+
+  <!-- row 1 -->
+  <text x="150" y="138" font-size="15" fill="#1e293b">Foydalanuvchilar</text>
+  <text x="510" y="138" text-anchor="end" font-size="15" font-weight="bold" fill="#1e293b">1 248</text>
+  <!-- divider 1 -->
+  <line x1="120" y1="164" x2="540" y2="164" stroke="#0ea5e9" stroke-width="2"/>
+
+  <!-- row 2 -->
+  <text x="150" y="206" font-size="15" fill="#1e293b">Faol obunalar</text>
+  <text x="510" y="206" text-anchor="end" font-size="15" font-weight="bold" fill="#1e293b">312</text>
+  <line x1="120" y1="232" x2="540" y2="232" stroke="#0ea5e9" stroke-width="2"/>
+
+  <!-- row 3 -->
+  <text x="150" y="274" font-size="15" fill="#1e293b">Bugungi daromad</text>
+  <text x="510" y="274" text-anchor="end" font-size="15" font-weight="bold" fill="#1e293b">$ 4.9k</text>
+  <line x1="120" y1="300" x2="540" y2="300" stroke="#0ea5e9" stroke-width="2"/>
+
+  <!-- row 4 (last - no divider below) -->
+  <text x="150" y="342" font-size="15" fill="#1e293b">Qaytarilgan</text>
+  <text x="510" y="342" text-anchor="end" font-size="15" font-weight="bold" fill="#1e293b">7</text>
+
+  <!-- annotations -->
+  <!-- border arrow -->
+  <line x1="600" y1="120" x2="544" y2="120" stroke="#4f46e5" stroke-width="2"/>
+  <polygon points="540,120 550,115 550,125" fill="#4f46e5"/>
+  <rect x="600" y="100" width="160" height="56" rx="8" fill="#eef2ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="680" y="124" text-anchor="middle" font-size="14" font-weight="bold" fill="#4f46e5">border</text>
+  <text x="680" y="144" text-anchor="middle" font-size="13" fill="#475569">butun atrofida</text>
+
+  <!-- divide arrow -->
+  <line x1="600" y1="232" x2="544" y2="232" stroke="#0ea5e9" stroke-width="2"/>
+  <polygon points="540,232 550,227 550,237" fill="#0ea5e9"/>
+  <rect x="600" y="208" width="170" height="74" rx="8" fill="#e0f2fe" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="685" y="232" text-anchor="middle" font-size="14" font-weight="bold" fill="#0ea5e9">divide-y</text>
+  <text x="685" y="252" text-anchor="middle" font-size="13" fill="#475569">faqat qatorlar</text>
+  <text x="685" y="270" text-anchor="middle" font-size="13" fill="#475569">ORASIDA</text>
+
+  <!-- last row note -->
+  <rect x="600" y="318" width="170" height="50" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="685" y="340" text-anchor="middle" font-size="13" fill="#16a34a">oxirgi qatorda</text>
+  <text x="685" y="358" text-anchor="middle" font-size="13" fill="#16a34a">past chiziq yo'q</text>
+
+  <line x1="120" y1="392" x2="660" y2="392" stroke="#94a3b8" stroke-width="1" stroke-dasharray="5 4"/>
+  <text x="390" y="418" text-anchor="middle" font-size="14" fill="#475569">v4: divide va border'da rangni o'zingiz bering (divide-gray-200) — aks holda currentColor</text>
+</svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 480">
+  <title>Eng yomon holat narxi har amalda sakraydi (spike), amortizatsiyalangan narx esa tekis o'rtacha chiziq bo'lib qoladi</title>
+  <rect x="0" y="0" width="880" height="480" fill="#f8fafc"/>
+  <text x="440" y="36" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Worst-case sakrash vs amortized tekis narx</text>
+  <text x="440" y="62" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Bir amal qimmat bo'lsa ham, ketma-ketlik bo'yicha o'rtacha narx kichik va tekis</text>
+
+  <!-- axes -->
+  <line x1="80" y1="100" x2="80" y2="380" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="80" y1="380" x2="820" y2="380" stroke="#94a3b8" stroke-width="2"/>
+  <text x="64" y="240" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b" transform="rotate(-90 64 240)">amal narxi</text>
+  <text x="440" y="408" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">amallar ketma-ketligi (i) →</text>
+
+  <!-- amortized flat line -->
+  <line x1="80" y1="345" x2="820" y2="345" stroke="#16a34a" stroke-width="3" stroke-dasharray="2 0"/>
+  <text x="828" y="349" font-family="Segoe UI" font-size="13" fill="#16a34a">amortized = O(1)</text>
+
+  <!-- worst-case spiky line (red) -->
+  <polyline fill="none" stroke="#dc2626" stroke-width="2.5"
+    points="90,360 130,360 170,300 210,360 250,360 290,360 330,210 370,360 410,360 450,360 490,360 530,360 570,360 610,360 650,120 690,360 730,360 770,360 810,360"/>
+  <text x="350" y="200" font-family="Segoe UI" font-size="13" fill="#dc2626" font-weight="bold">qimmat amal (ikkilantirish) → spike</text>
+
+  <!-- markers on spikes -->
+  <circle cx="170" cy="300" r="4" fill="#dc2626"/>
+  <circle cx="330" cy="210" r="4" fill="#dc2626"/>
+  <circle cx="650" cy="120" r="4" fill="#dc2626"/>
+
+  <!-- legend box -->
+  <rect x="540" y="110" width="270" height="78" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <line x1="558" y1="135" x2="588" y2="135" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="598" y="140" font-family="Segoe UI" font-size="13" fill="#334155">haqiqiy narx (worst-case)</text>
+  <line x1="558" y1="165" x2="588" y2="165" stroke="#16a34a" stroke-width="3"/>
+  <text x="598" y="170" font-family="Segoe UI" font-size="13" fill="#334155">amortizatsiyalangan narx</text>
+
+  <!-- bottom note -->
+  <rect x="120" y="420" width="640" height="44" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="440" y="447" text-anchor="middle" font-family="monospace" font-size="14" fill="#16a34a">amortized narx = (n amalning jami haqiqiy narxi) / n</text>
+</svg>

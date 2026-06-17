@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 560">
+  <title>OpenAPI hujjat tuzilishi: openapi, info, servers, paths, components, security</title>
+  <rect x="0" y="0" width="860" height="560" fill="#f8fafc"/>
+  <text x="430" y="34" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b" text-anchor="middle">OpenAPI hujjat tuzilishi (yuqori darajadagi maydonlar)</text>
+
+  <!-- root document card -->
+  <rect x="30" y="58" width="800" height="64" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="50" y="86" font-family="monospace" font-size="15" font-weight="bold" fill="#2563eb">openapi: "3.1.0"</text>
+  <text x="50" y="108" font-family="Segoe UI" font-size="13" fill="#64748b">Ildiz hujjat — versiya satri qaysi spetsifikatsiya qoidasi amalda ekanini bildiradi</text>
+
+  <!-- info -->
+  <rect x="30" y="138" width="255" height="110" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="48" y="164" font-family="monospace" font-size="15" font-weight="bold" fill="#16a34a">info</text>
+  <text x="48" y="188" font-family="monospace" font-size="13" fill="#334155">title</text>
+  <text x="48" y="208" font-family="monospace" font-size="13" fill="#334155">version</text>
+  <text x="48" y="228" font-family="monospace" font-size="13" fill="#334155">description</text>
+
+  <!-- servers -->
+  <rect x="303" y="138" width="255" height="110" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="321" y="164" font-family="monospace" font-size="15" font-weight="bold" fill="#f59e0b">servers</text>
+  <text x="321" y="188" font-family="monospace" font-size="13" fill="#334155">- url: /v1 (prod)</text>
+  <text x="321" y="208" font-family="monospace" font-size="13" fill="#334155">- url: staging URL</text>
+  <text x="321" y="228" font-family="Segoe UI" font-size="13" fill="#64748b">bazaviy manzillar</text>
+
+  <!-- security -->
+  <rect x="576" y="138" width="254" height="110" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="594" y="164" font-family="monospace" font-size="15" font-weight="bold" fill="#dc2626">security</text>
+  <text x="594" y="188" font-family="Segoe UI" font-size="13" fill="#334155">global talab:</text>
+  <text x="594" y="208" font-family="monospace" font-size="13" fill="#334155">- bearerAuth: []</text>
+  <text x="594" y="228" font-family="Segoe UI" font-size="13" fill="#64748b">qaysi sxema kerak</text>
+
+  <!-- paths -->
+  <rect x="30" y="266" width="385" height="266" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="48" y="292" font-family="monospace" font-size="15" font-weight="bold" fill="#7c3aed">paths</text>
+  <text x="48" y="312" font-family="Segoe UI" font-size="13" fill="#64748b">har URL -> operatsiyalar</text>
+
+  <rect x="48" y="324" width="349" height="92" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="62" y="346" font-family="monospace" font-size="13" fill="#1e293b">/orders:</text>
+  <text x="78" y="366" font-family="monospace" font-size="13" fill="#16a34a">get:</text>
+  <text x="150" y="366" font-family="Segoe UI" font-size="13" fill="#64748b">ro'yxat</text>
+  <text x="78" y="386" font-family="monospace" font-size="13" fill="#2563eb">post:</text>
+  <text x="150" y="386" font-family="Segoe UI" font-size="13" fill="#64748b">yaratish</text>
+  <text x="62" y="406" font-family="monospace" font-size="13" fill="#1e293b">/orders/{id}: get, patch, delete</text>
+
+  <rect x="48" y="424" width="349" height="92" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="62" y="446" font-family="Segoe UI" font-size="13" fill="#334155">Operatsiya ichida:</text>
+  <text x="62" y="466" font-family="monospace" font-size="13" fill="#334155">parameters · requestBody</text>
+  <text x="62" y="486" font-family="monospace" font-size="13" fill="#334155">responses (status -> schema)</text>
+  <text x="62" y="506" font-family="monospace" font-size="13" fill="#334155">security · tags</text>
+
+  <!-- components -->
+  <rect x="433" y="266" width="397" height="266" rx="10" fill="#ffffff" stroke="#0891b2" stroke-width="2"/>
+  <text x="451" y="292" font-family="monospace" font-size="15" font-weight="bold" fill="#0891b2">components</text>
+  <text x="451" y="312" font-family="Segoe UI" font-size="13" fill="#64748b">qayta ishlatiluvchi qismlar — $ref bilan ulanadi</text>
+
+  <rect x="451" y="324" width="361" height="40" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="465" y="349" font-family="monospace" font-size="13" fill="#1e293b">schemas: Order, OrderInput, Problem</text>
+
+  <rect x="451" y="372" width="361" height="40" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="465" y="397" font-family="monospace" font-size="13" fill="#1e293b">responses: NotFound, RateLimited</text>
+
+  <rect x="451" y="420" width="361" height="40" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="465" y="445" font-family="monospace" font-size="13" fill="#1e293b">parameters: PageParam, LimitParam</text>
+
+  <rect x="451" y="468" width="361" height="48" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="465" y="491" font-family="monospace" font-size="13" fill="#1e293b">securitySchemes: bearerAuth,</text>
+  <text x="465" y="509" font-family="monospace" font-size="13" fill="#1e293b">apiKeyAuth, oauth2</text>
+
+  <text x="430" y="552" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">paths "nima qiladi"ni, components "qanday shaklda"ni ta'riflaydi; security "kim kira oladi"ni bog'laydi</text>
+</svg>

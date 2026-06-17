@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440">
+  <title>Qo'lda deployning olti og'rig'i va har birini yechadigan keyingi bob: terminal yopilsa to'xtash systemd bilan, menda ishlaydi Docker bilan, ochiq port Nginx bilan, HTTPS yo'qligi Let's Encrypt bilan, qo'lda yangilash CI/CD bilan, qayta tiklash IaC bilan hal qilinadi</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Og'riqlar -> yechimlar xaritasi</text>
+
+  <!-- sarlavhalar -->
+  <text x="220" y="68" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">Qo'lda deploy muammosi</text>
+  <text x="600" y="68" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Yechim (bob)</text>
+
+  <!-- qator shabloni: 6 ta -->
+  <!-- 1 -->
+  <rect x="30" y="82" width="380" height="46" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="48" y="110" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">1. Terminal yopilsa ilova to'xtaydi</text>
+  <line x1="410" y1="105" x2="466" y2="105" stroke="#94a3b8" stroke-width="2" marker-end="url(#a2)"/>
+  <rect x="470" y="82" width="260" height="46" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="488" y="110" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#166534">systemd service (19-bob)</text>
+
+  <!-- 2 -->
+  <rect x="30" y="138" width="380" height="46" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="48" y="166" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">2. "Menda ishlaydi" — versiya farqi</text>
+  <line x1="410" y1="161" x2="466" y2="161" stroke="#94a3b8" stroke-width="2" marker-end="url(#a2)"/>
+  <rect x="470" y="138" width="260" height="46" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="488" y="166" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#166534">Docker (06-11-boblar)</text>
+
+  <!-- 3 -->
+  <rect x="30" y="194" width="380" height="46" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="48" y="222" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">3. Ochiq port :3000 — xunuk va xavfli</text>
+  <line x1="410" y1="217" x2="466" y2="217" stroke="#94a3b8" stroke-width="2" marker-end="url(#a2)"/>
+  <rect x="470" y="194" width="260" height="46" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="488" y="222" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#166534">Nginx reverse proxy (16-17)</text>
+
+  <!-- 4 -->
+  <rect x="30" y="250" width="380" height="46" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="48" y="278" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">4. HTTPS yo'q — trafik ochiq</text>
+  <line x1="410" y1="273" x2="466" y2="273" stroke="#94a3b8" stroke-width="2" marker-end="url(#a2)"/>
+  <rect x="470" y="250" width="260" height="46" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="488" y="278" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#166534">Let's Encrypt (18-bob)</text>
+
+  <!-- 5 -->
+  <rect x="30" y="306" width="380" height="46" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="48" y="334" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">5. Har yangilash qo'lda + downtime</text>
+  <line x1="410" y1="329" x2="466" y2="329" stroke="#94a3b8" stroke-width="2" marker-end="url(#a2)"/>
+  <rect x="470" y="306" width="260" height="46" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="488" y="334" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#166534">CI/CD (12-15-boblar)</text>
+
+  <!-- 6 -->
+  <rect x="30" y="362" width="380" height="46" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="48" y="390" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#1e293b">6. Qayta tiklash butunlay qo'lda</text>
+  <line x1="410" y1="385" x2="466" y2="385" stroke="#94a3b8" stroke-width="2" marker-end="url(#a2)"/>
+  <rect x="470" y="362" width="260" height="46" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="488" y="390" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#166534">IaC: Ansible/Terraform (27)</text>
+
+  <defs>
+    <marker id="a2" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+</svg>

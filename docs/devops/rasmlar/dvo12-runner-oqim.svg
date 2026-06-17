@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420">
+  <title>GitHub Actions runner oqimi: git push qilinadi, GitHub triggerni sezadi, toza runner ajratiladi, step'lar ketma-ket bajariladi va oxirida muvaffaqiyat yoki xato belgisi qo'yiladi</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">push'dan natijagacha: runner oqimi</text>
+
+  <!-- 1. push -->
+  <rect x="30" y="70" width="180" height="74" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="120" y="100" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e40af">1. git push</text>
+  <text x="120" y="124" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">dasturchi kod yuboradi</text>
+
+  <!-- arrow -->
+  <line x1="210" y1="107" x2="278" y2="107" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#str)"/>
+
+  <!-- 2. GitHub sezadi -->
+  <rect x="280" y="70" width="200" height="74" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="380" y="100" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#92400e">2. GitHub triggerni sezadi</text>
+  <text x="380" y="124" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">on: push mos keldi</text>
+
+  <!-- arrow -->
+  <line x1="480" y1="107" x2="548" y2="107" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#str)"/>
+
+  <!-- 3. runner -->
+  <rect x="550" y="70" width="180" height="74" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="640" y="100" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#5b21b6">3. Runner ajratiladi</text>
+  <text x="640" y="124" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">toza ubuntu-latest VM</text>
+
+  <!-- pastga arrow -->
+  <line x1="640" y1="144" x2="640" y2="178" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#str)"/>
+
+  <!-- 4. steps konteyner -->
+  <rect x="120" y="180" width="610" height="150" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="138" y="204" font-family="Segoe UI, system-ui, sans-serif" font-size="14.5" font-weight="bold" fill="#1e293b">4. Step'lar ketma-ket bajariladi (runner ichida)</text>
+
+  <rect x="138" y="216" width="270" height="34" rx="6" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="152" y="238" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">checkout@v6 (kod yuklanadi)</text>
+  <line x1="408" y1="233" x2="438" y2="233" stroke="#94a3b8" stroke-width="2" marker-end="url(#str)"/>
+  <rect x="440" y="216" width="270" height="34" rx="6" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="454" y="238" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">setup-node@v6 (Node o'rnatish)</text>
+
+  <rect x="138" y="262" width="270" height="34" rx="6" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="152" y="284" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">run: npm ci</text>
+  <line x1="408" y1="279" x2="438" y2="279" stroke="#94a3b8" stroke-width="2" marker-end="url(#str)"/>
+  <rect x="440" y="262" width="270" height="34" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="454" y="284" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#166534">run: npm test</text>
+
+  <text x="138" y="320" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Bir step yiqilsa, keyingilari ishga tushmaydi (default)</text>
+
+  <!-- 5. natija -->
+  <line x1="425" y1="330" x2="425" y2="356" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#str)"/>
+  <rect x="150" y="360" width="260" height="46" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="280" y="389" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#166534">5a. Hammasi o'tdi -> yashil belgi</text>
+  <rect x="440" y="360" width="260" height="46" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="570" y="389" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">5b. Yiqildi -> qizil belgi + xat</text>
+
+  <defs>
+    <marker id="str" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" font-family="Segoe UI, system-ui, sans-serif">
+  <title>State hayot davri: createState -> initState (sozlash) -> didChangeDependencies -> build -> (setState yoki didUpdateWidget -> build) qayta-qayta -> dispose (tozalash). Har bir bosqich nima uchun ekani izohlangan.</title>
+  <rect x="0" y="0" width="800" height="500" fill="#f8fafc"/>
+  <text x="400" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">State hayot davri (lifecycle)</text>
+  <text x="400" y="58" text-anchor="middle" font-size="14" fill="#475569">Tug'ilish -> yashash (qayta-qayta build) -> o'lish (tozalash)</text>
+
+  <!-- 1. createState -->
+  <rect x="40" y="92" width="200" height="76" rx="14" fill="#ffffff" stroke="#6366f1" stroke-width="2.5"/>
+  <text x="140" y="120" text-anchor="middle" font-size="15" font-weight="700" fill="#6366f1">createState()</text>
+  <text x="140" y="144" text-anchor="middle" font-size="13" fill="#475569">State obyektini</text>
+  <text x="140" y="162" text-anchor="middle" font-size="13" fill="#64748b">yaratadi (bir marta)</text>
+
+  <line x1="240" y1="130" x2="288" y2="130" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="288,130 276,124 276,136" fill="#94a3b8"/>
+
+  <!-- 2. initState -->
+  <rect x="290" y="92" width="220" height="76" rx="14" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="400" y="120" text-anchor="middle" font-size="15" font-weight="700" fill="#16a34a">initState()  — SOZLASH</text>
+  <text x="400" y="144" text-anchor="middle" font-size="13" fill="#475569">bir marta: kontroller yaratish,</text>
+  <text x="400" y="162" text-anchor="middle" font-size="13" fill="#64748b">obuna, boshlang'ich qiymat</text>
+
+  <line x1="510" y1="130" x2="558" y2="130" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="558,130 546,124 546,136" fill="#94a3b8"/>
+
+  <!-- 3. didChangeDependencies -->
+  <rect x="560" y="92" width="200" height="76" rx="14" fill="#ffffff" stroke="#475569" stroke-width="2.5"/>
+  <text x="660" y="118" text-anchor="middle" font-size="14" font-weight="700" fill="#475569">didChange-</text>
+  <text x="660" y="136" text-anchor="middle" font-size="14" font-weight="700" fill="#475569">Dependencies()</text>
+  <text x="660" y="158" text-anchor="middle" font-size="13" fill="#64748b">context'ga bog'liq sozlash</text>
+
+  <!-- arrow down to build -->
+  <line x1="660" y1="168" x2="660" y2="208" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="660,208 654,196 666,196" fill="#94a3b8"/>
+
+  <!-- 4. build (central) -->
+  <rect x="280" y="210" width="240" height="92" rx="14" fill="#027dfd"/>
+  <text x="400" y="240" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">build(context)</text>
+  <text x="400" y="266" text-anchor="middle" font-size="13" fill="#ffffff">UI'ni quradi — HAR safar</text>
+  <text x="400" y="286" text-anchor="middle" font-size="13" fill="#ffffff">holat o'zgarganda qayta yuradi</text>
+
+  <!-- arrow from didChangeDependencies to build -->
+  <line x1="660" y1="256" x2="522" y2="256" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="522,256 534,250 534,262" fill="#94a3b8"/>
+
+  <!-- rebuild loop: setState / didUpdateWidget -->
+  <rect x="80" y="210" width="170" height="92" rx="14" fill="#ffffff" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="165" y="236" text-anchor="middle" font-size="14" font-weight="700" fill="#f59e0b">setState() yoki</text>
+  <text x="165" y="256" text-anchor="middle" font-size="14" font-weight="700" fill="#f59e0b">didUpdateWidget()</text>
+  <text x="165" y="280" text-anchor="middle" font-size="13" fill="#64748b">qayta qurishni boshlaydi</text>
+
+  <line x1="250" y1="240" x2="278" y2="240" stroke="#f59e0b" stroke-width="2.5"/>
+  <polygon points="278,240 266,234 266,246" fill="#f59e0b"/>
+  <!-- loop back from build to setState -->
+  <path d="M280 280 C250 320, 180 320, 165 304" stroke="#f59e0b" stroke-width="2.5" fill="none"/>
+  <polygon points="165,304 159,316 171,313" fill="#f59e0b"/>
+  <text x="225" y="338" text-anchor="middle" font-size="13" font-weight="700" fill="#f59e0b">bu sikl ko'p marta takrorlanadi</text>
+
+  <!-- arrow down to dispose -->
+  <line x1="400" y1="302" x2="400" y2="376" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="400,376 394,364 406,364" fill="#94a3b8"/>
+  <text x="470" y="345" text-anchor="middle" font-size="13" fill="#64748b">widget daraxtdan olib tashlanganda</text>
+
+  <!-- 5. dispose -->
+  <rect x="280" y="378" width="240" height="76" rx="14" fill="#ffffff" stroke="#ef4444" stroke-width="2.5"/>
+  <text x="400" y="406" text-anchor="middle" font-size="15" font-weight="700" fill="#ef4444">dispose()  — TOZALASH</text>
+  <text x="400" y="430" text-anchor="middle" font-size="13" fill="#475569">kontrollerni dispose qiling,</text>
+  <text x="400" y="448" text-anchor="middle" font-size="13" fill="#64748b">obunani bekor qiling (xotira oqimi yo'q)</text>
+
+  <!-- side note -->
+  <rect x="560" y="378" width="200" height="76" rx="14" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="660" y="402" text-anchor="middle" font-size="13" font-weight="700" fill="#1e293b">mounted</text>
+  <text x="570" y="424" font-size="13" fill="#64748b">async'dan keyin setState</text>
+  <text x="570" y="444" font-size="13" fill="#64748b">oldidan tekshiring</text>
+</svg>

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Livewire 3 .blur, Livewire 4 .blur va Livewire 4 .live.blur farqi: v4 da .blur o'z-o'zidan serverga bormaydi, server bilan bog'lash uchun .live qo'shish kerak</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">.blur — v3 va v4 farqi</text>
+  <text x="380" y="57" text-anchor="middle" font-size="13" fill="#475569">Input fokusdan chiqqanda (blur) nima bo'ladi?</text>
+
+  <!-- Ustun 1: v3 .blur -->
+  <rect x="24" y="80" width="226" height="270" rx="12" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="24" y="80" width="226" height="44" rx="12" fill="#94a3b8"/>
+  <text x="137" y="108" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">Livewire 3</text>
+  <rect x="44" y="138" width="186" height="30" rx="7" fill="#f1f5f9" stroke="#cbd5e1"/>
+  <text x="137" y="158" text-anchor="middle" font-size="13" fill="#1e293b">wire:model.blur</text>
+
+  <text x="137" y="196" text-anchor="middle" font-size="13" fill="#475569">Blur bo'lganda:</text>
+  <rect x="44" y="210" width="186" height="40" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="137" y="234" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a">serverga so'rov KETADI</text>
+  <text x="137" y="286" text-anchor="middle" font-size="13" fill="#475569">.blur = "blur'da</text>
+  <text x="137" y="304" text-anchor="middle" font-size="13" fill="#475569">serverga yubor"</text>
+  <circle cx="137" cy="330" r="11" fill="#16a34a"/>
+  <text x="137" y="335" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">&#10003;</text>
+
+  <!-- Ustun 2: v4 .blur -->
+  <rect x="267" y="80" width="226" height="270" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <rect x="267" y="80" width="226" height="44" rx="12" fill="#dc2626"/>
+  <text x="380" y="108" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">Livewire 4</text>
+  <rect x="287" y="138" width="186" height="30" rx="7" fill="#fef2f2" stroke="#fecaca"/>
+  <text x="380" y="158" text-anchor="middle" font-size="13" fill="#1e293b">wire:model.blur</text>
+
+  <text x="380" y="196" text-anchor="middle" font-size="13" fill="#475569">Blur bo'lganda:</text>
+  <rect x="287" y="210" width="186" height="40" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="380" y="228" text-anchor="middle" font-size="13" font-weight="700" fill="#dc2626">so'rov KETMAYDI</text>
+  <text x="380" y="244" text-anchor="middle" font-size="13" fill="#dc2626">(deferred qoladi)</text>
+  <text x="380" y="286" text-anchor="middle" font-size="13" fill="#475569">.blur = faqat client-</text>
+  <text x="380" y="304" text-anchor="middle" font-size="13" fill="#475569">side VAQTNI belgilaydi</text>
+  <circle cx="380" cy="330" r="11" fill="#dc2626"/>
+  <text x="380" y="335" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">&#10007;</text>
+
+  <!-- Ustun 3: v4 .live.blur -->
+  <rect x="510" y="80" width="226" height="270" rx="12" fill="#ffffff" stroke="#4f46e5" stroke-width="3"/>
+  <rect x="510" y="80" width="226" height="44" rx="12" fill="#4f46e5"/>
+  <text x="623" y="108" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">Livewire 4 — to'g'ri</text>
+  <rect x="530" y="138" width="186" height="30" rx="7" fill="#eef2ff" stroke="#c7d2fe"/>
+  <text x="623" y="158" text-anchor="middle" font-size="13" fill="#1e293b">wire:model.live.blur</text>
+
+  <text x="623" y="196" text-anchor="middle" font-size="13" fill="#475569">Blur bo'lganda:</text>
+  <rect x="530" y="210" width="186" height="40" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="623" y="234" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a">serverga so'rov KETADI</text>
+  <text x="623" y="286" text-anchor="middle" font-size="13" fill="#475569">.live = "serverga yubor"</text>
+  <text x="623" y="304" text-anchor="middle" font-size="13" fill="#475569">.blur = "blur'da"</text>
+  <circle cx="623" cy="330" r="11" fill="#16a34a"/>
+  <text x="623" y="335" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">&#10003;</text>
+
+  <!-- Pastki ogohlantirish -->
+  <rect x="24" y="372" width="712" height="50" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="44" y="396" font-size="14" font-weight="700" fill="#b45309">Ogohlantirish:</text>
+  <text x="148" y="396" font-size="13" fill="#1e293b">v3 ning wire:model.blur ekvivalenti — v4 da wire:model.live.blur.</text>
+  <text x="44" y="414" font-size="13" fill="#475569">v4 da serverga darhol yuborish uchun HAR DOIM .live kerak; .blur faqat vaqtni boshqaradi.</text>
+</svg>

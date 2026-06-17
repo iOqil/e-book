@@ -8,181 +8,424 @@ hide:
 
 # Oqil E-kitoblar
 
-<p class="hero-sub">Dasturlash bo'yicha o'zbekcha qo'llanmalar — mutlaqo boshlovchidan ekspertgacha. Har bir tushuncha SVG diagrammalar va ishlab tekshirilgan kod bilan.</p>
+<p class="hero-sub">Dasturlash bo'yicha o'zbekcha qo'llanmalar — mutlaqo boshlovchidan ekspertgacha. Har bir tushuncha amaliy misol va ishlab tekshirilgan kod bilan.</p>
 
 [🗺️ Qayerdan boshlash? (Yo'l xaritasi)](roadmap.md){ .md-button .md-button--primary }
 [HTML & CSS dan boshlash](html-css/README.md){ .md-button }
 [GitHub](https://github.com/iOqil/e-book){ .md-button }
 
 <div class="hero-stats">
-  <div class="stat"><b>20</b><span>kitob</span></div>
-  <div class="stat"><b>1163</b><span>diagramma</span></div>
-  <div class="stat"><b>475+</b><span>bob</span></div>
-  <div class="stat"><b>4900+</b><span>masala</span></div>
+  <div class="stat"><b>34</b><span>kitob</span></div>
+  <div class="stat"><b>790+</b><span>bob</span></div>
+  <div class="stat"><b>7100+</b><span>masala</span></div>
 </div>
 
 </section>
 
+## 🎨 Frontend
+
 <div class="grid cards" markdown>
 
--   🎨 **1. HTML & CSS**
+-   🎨 **HTML & CSS**
 
     ---
 
-    Web sahifa qurish — box model, flexbox, grid, responsive. 22 bob · 86 diagramma.
+    Veb sahifa qurish: HTML struktura, CSS, flexbox, grid, responsive dizayn.
+
+    **22 bob · 180+ masala**
 
     [Boshlash →](html-css/README.md)
 
--   🟨 **2. JavaScript**
+-   💨 **Tailwind CSS**
 
     ---
 
-    Tildan brauzergacha. Event loop, closure, prototype, async. 8 qism · 36 diagramma.
+    Utility-first CSS (v4): `@theme` dizayn tizimi, responsive, dark mode, container queries — tez va izchil UI.
 
-    [Boshlash →](js/javascript-qollanma-1-qism.md)
+    **26 bob · 160+ masala**
 
--   ⚛️ **3. React**
+    [Boshlash →](tailwind/README.md)
 
-    ---
-
-    Hooks, render sikli, Server Components. useState/useEffect, re-render. 23 diagramma.
-
-    [Boshlash →](react/README.md)
-
--   ▲ **4. Next.js**
+-   🟨 **JavaScript**
 
     ---
 
-    App Router, Server/Client Components, caching, streaming. 5 fayl · 19 diagramma.
+    Til asoslaridan brauzergacha: DOM, async/await, event loop, closure, prototip.
 
-    [Boshlash →](nextjs/README.md)
+    **8 qism · 130+ masala**
 
--   💚 **5. Vue & Nuxt**
+    [Boshlash →](js/README.md)
 
-    ---
-
-    Reaktivlik, komponentlar, Nuxt SSR. props/emits, lifecycle. 10 bob · 31 diagramma.
-
-    [Boshlash →](vue/README.md)
-
--   🗄️ **6. SQL & MySQL**
+-   🔷 **TypeScript**
 
     ---
 
-    Noldan amaliy: SELECT, JOIN, GROUP BY, indeks, tranzaksiya, VIEW, procedure, trigger, cursor. 28 bob · 83 diagramma · 560 masala.
+    JavaScript'ga tip xavfsizligi: interface, generics, narrowing, utility types.
 
-    [Boshlash →](sql/README.md)
-
--   🐘 **7. PHP**
-
-    ---
-
-    Asoslardan OOP, baza va MVC'gacha. So'rov lifecycle, PDO, xavfsizlik. 21 diagramma.
-
-    [Boshlash →](php/README.md)
-
--   🐍 **8. Python**
-
-    ---
-
-    Sintaksisdan web/baza/async'gacha. Reference model, LEGB, generator. 15 bob · 47 diagramma.
-
-    [Boshlash →](python/README.md)
-
--   🧩 **9. 1000 masala**
-
-    ---
-
-    JS / PHP / Python yechimlari. Saralash, daraxt, graf, DP — algoritm diagrammalari. 34 diagramma.
-
-    [Boshlash →](1000-masala/README.md)
-
--   🐙 **10. Git & GitHub**
-
-    ---
-
-    Versiya nazorati 0 dan ekspertgacha: commit, branch, merge, rebase, PR, GitHub Actions. 24 bob · 74 diagramma · 480 mashq.
-
-    [Boshlash →](git-github/README.md)
-
--   🔷 **11. TypeScript**
-
-    ---
-
-    JavaScript'ga tip xavfsizligi: interface, generics, narrowing, utility & mapped types, tsconfig. 24 bob · 77 diagramma · 480 mashq.
+    **24 bob · 480 masala**
 
     [Boshlash →](typescript/README.md)
 
--   🔺 **12. Laravel**
+-   ⚛️ **React**
 
     ---
 
-    PHP'ning eng mashhur frameworki (Laravel 13): routing, Eloquent ORM, Blade, auth, API/Sanctum, queue, testing, deploy. 24 bob · 74 diagramma · 480 mashq.
+    Komponentli interfeyslar: hooks, state, useEffect, routing, performance.
 
-    [Boshlash →](laravel/README.md)
+    **13 daraja · 200+ masala**
 
--   🔐 **13. PHP Expert**
+    [Boshlash →](react/README.md)
 
-    ---
-
-    Junior PHP'dan **0 dan senior gacha** to'liq trek: ekspert REST API, RBAC/JWT, PHP 8.4 tip tizimi (property hooks, readonly VO, Reflection/FFI), **o'z mini-frameworkingizni** qurish (PSR-7/15/11, router, Twig), fayllar/formatlar (Excel/PDF/bulut), sifat-muhandislik (SOLID, GoF patterns, PHPUnit/Pest, PHPStan), arxitektura (hexagonal/DDD/CQRS), performance (OPcache/JIT/Redis), async (Fibers/ReactPHP) va production (queue/observability/Docker) + yakuniy kapston. Kod real PHP 8.4 da ishga tushirib tekshirilgan. To'liq **30 bob · 60 diagramma**.
-
-    [Boshlash →](php-expert/README.md)
-
--   🟢 **14. Node.js**
+-   ▲ **Next.js**
 
     ---
 
-    JavaScript bilan **0 dan backend dasturchigacha**: event loop, asinxronlik, streamlar, native HTTP, Express, **4 xil DB** (SQLite, MySQL, Prisma, MongoDB), JWT auth/RBAC, real-time (Socket.io), testlash (Vitest/supertest), production (Docker/cluster/pino), TypeScript va to'liq REST API kapston. Kod real Node 24 + jonli MySQL da ishga tushirib tekshirilgan. 26 bob · 52 diagramma.
+    React'ni production'ga: App Router, Server Components, SSR, caching.
+
+    **20 bob · 60+ masala**
+
+    [Boshlash →](nextjs/README.md)
+
+-   💚 **Vue & Nuxt**
+
+    ---
+
+    Vue 3 reaktivlik va komponentlar; Nuxt bilan SSR va Nuxt UI.
+
+    **10 bob · 40+ masala**
+
+    [Boshlash →](vue/README.md)
+
+</div>
+
+## 📱 Mobil
+
+<div class="grid cards" markdown>
+
+-   📱 **Flutter & Dart**
+
+    ---
+
+    Bitta kod bazasidan Android va iOS ilova: Dart tili 0 dan, widgetlar, state management (Riverpod/Bloc), API, do'konga joylash.
+
+    **30 bob · 250+ masala**
+
+    [Boshlash →](flutter/README.md)
+
+-   ⚛️ **React Native**
+
+    ---
+
+    React bilan iOS va Android: Expo, komponentlar, navigatsiya, native API (kamera/GPS/push), animatsiya, App Store/Play Store. New Architecture.
+
+    **28 bob · 140+ masala**
+
+    [Boshlash →](react-native/README.md)
+
+</div>
+
+## 🟢 Node.js (JavaScript backend)
+
+<div class="grid cards" markdown>
+
+-   🟢 **Node.js**
+
+    ---
+
+    JavaScript bilan backend: Express, SQLite/MySQL/Prisma/MongoDB, JWT, real-time, Docker.
+
+    **26 bob · 100+ masala**
 
     [Boshlash →](nodejs/README.md)
 
--   🟩 **15. Django**
+-   🤖 **Telegram bot (grammY)**
 
     ---
 
-    Python bilan **full-stack veb-dasturlash**: MTV arxitektura, ORM va migratsiya, model munosabatlari, admin panel, formalar, class-based views, autentifikatsiya, **Django REST Framework** (serializers, ViewSets, JWT, filtrlash/paginatsiya), signallar, keshlash, async/Celery, testlash (pytest-django), xavfsizlik va deployment + yakuniy kapston loyiha. Kod real Django 6.0 da ishga tushirib tekshirilgan. 25 bob · 76 diagramma.
+    JavaScript/grammY bilan bot: handlerlar, conversations, to'lov, Mini App, clicker.
 
-    [Boshlash →](django/README.md)
-
--   🖥️ **16. NativePHP (Desktop va Mobil)**
-
-    ---
-
-    PHP/Laravel bilan **desktop (Windows/macOS/Linux) va mobil (iOS/Android)** ilovalar: NativePHP arxitekturasi (webview + bundled/on-device PHP), oyna boshqaruvi, menyu/tray, native bildirishnoma/dialog, lokal SQLite, mobil qurilma imkoniyatlari (kamera, GPS, biometrika, push), testlash, build va app store deploy + cross-platform kapston. Laravel bilimini nazarda tutadi. Laravel/PHP kodi tekshirilgan; GUI/qurilma/build bloklari illustrativ (halol belgilangan). 18 bob · 55 diagramma.
-
-    [Boshlash →](nativephp/README.md)
-
--   🤖 **17. Telegram bot (Python aiogram)**
-
-    ---
-
-    Python va **aiogram 3.x** bilan Telegram bot: echo botdan boshlab handler/Router, filtrlar, klaviaturalar, callback, **FSM**, middleware, DB, to'lovlar/Stars, webhook, testlash, deploy + kapston bot; so'ng **real amaliyot** — guruh/kanal boshqaruvi, moderatsiya, **majburiy obuna**, Telegram **Mini App** (Web App + initData xavfsizligi + backend) va **Hamster uslubidagi clicker o'yin** kapstoni. Python bilimini nazarda tutadi. Bot mantig'i (handler/FSM/middleware/initData/anti-cheat) offline tekshirilgan; jonli yuborish/polling/webhook BotFather token + internet talab qiladi (illustrativ). 26 bob · 80 diagramma.
-
-    [Boshlash →](tgbot-python/README.md)
-
--   🐘 **18. Telegram bot (PHP / Nutgram)**
-
-    ---
-
-    PHP va **Nutgram** bilan Telegram bot: echo botdan handler/routing, filtrlar, klaviaturalar, callback, **conversations (FSM)**, middleware, DB (PDO), to'lovlar/Stars, webhook, testlash (FakeNutgram), deploy + kapston bot; so'ng **real amaliyot** — guruh/kanal, moderatsiya, **majburiy obuna**, Telegram **Mini App** (Web App + initData + backend) va **Hamster uslubidagi clicker o'yin** kapstoni. PHP bilimini nazarda tutadi. Bot mantig'i (handler/conversation/middleware/initData/anti-cheat) `FakeNutgram` bilan offline tekshirilgan; jonli polling/yuborish/webhook BotFather token + internet talab qiladi (illustrativ). 26 bob · 78 diagramma.
-
-    [Boshlash →](tgbot-php/README.md)
-
--   🟨 **19. Telegram bot (JavaScript / grammY)**
-
-    ---
-
-    JavaScript (Node.js, ESM) va **grammY** bilan Telegram bot: echo botdan boshlab handler/Composer, **filter query**'lar, klaviaturalar, callback, **conversations (suhbat)**, middleware, sessiya/DB (better-sqlite3), to'lovlar/Stars, webhook, testlash (Vitest), deploy + kapston bot; so'ng **real amaliyot** — guruh/kanal boshqaruvi, moderatsiya, **majburiy obuna**, Telegram **Mini App** (Web App + initData xavfsizligi + backend) va **Hamster uslubidagi clicker o'yin** kapstoni. JS/Node bilimini nazarda tutadi. Bot mantig'i (handler/conversation/middleware/sessiya/initData/anti-cheat) `bot.handleUpdate` + transformer bilan offline tekshirilgan; jonli polling/yuborish/webhook BotFather token + internet talab qiladi (illustrativ). 26 bob · 78 diagramma.
+    **26 bob · 100+ masala**
 
     [Boshlash →](tgbot-js/README.md)
 
--   📐 **20. Ma'lumotlar bazasi dizayni**
+</div>
+
+## 🐘 PHP
+
+<div class="grid cards" markdown>
+
+-   🐘 **PHP**
 
     ---
 
-    PostgreSQL 18 bilan ma'lumotlar bazasini **to'g'ri loyihalash**: talab tahlili, ER-modellashtirish, normalizatsiya (1NF–BCNF/4NF), kalit/constraint dizayni, PostgreSQL boy turlari (JSONB/range/generated), indeks strategiyasi, EXPLAIN performans, tranzaksiya/izolyatsiya, daraxt/graf, temporal/RLS, **NoSQL** modellashtirish, **analitik ombor** (star/SCD), **partitioning/sharding** va migratsiya + yakuniy loyiha. SQL kitobiga tayanadi; sintaksis emas — **dizayn qarori**. Hamma DDL real PostgreSQL 18.4 da ishga tushirib tekshirilgan. 24 bob · 72 diagramma · 330+ masala.
+    Noldan PHP: sintaksis, OOP, ma'lumotlar bazasi (PDO), web va xavfsizlik.
+
+    **48 bob · 200+ masala**
+
+    [Boshlash →](php/README.md)
+
+-   🔐 **PHP Expert**
+
+    ---
+
+    Junior'dan senior'gacha: PHP 8.4 tip tizimi, o'z framework, SOLID, DDD, async.
+
+    **30 bob · 200+ masala**
+
+    [Boshlash →](php-expert/README.md)
+
+-   🔺 **Laravel**
+
+    ---
+
+    PHP'ning eng mashhur frameworki: routing, Eloquent ORM, Blade, auth, API, queue.
+
+    **24 bob · 480 masala**
+
+    [Boshlash →](laravel/README.md)
+
+-   ⚡ **Laravel Livewire**
+
+    ---
+
+    PHP bilan reaktiv UI — JavaScript yozmasdan: komponentlar, formalar, CRUD, real-vaqt. Livewire 4.
+
+    **26 bob · 130+ masala**
+
+    [Boshlash →](livewire/README.md)
+
+-   🖥️ **NativePHP**
+
+    ---
+
+    PHP/Laravel bilan desktop (Win/macOS/Linux) va mobil ilovalar: oyna, native API, build.
+
+    **18 bob · 100+ masala**
+
+    [Boshlash →](nativephp/README.md)
+
+-   🤖 **Telegram bot (Nutgram)**
+
+    ---
+
+    PHP/Nutgram bilan bot: conversations, middleware, to'lov, Mini App, clicker.
+
+    **26 bob · 100+ masala**
+
+    [Boshlash →](tgbot-php/README.md)
+
+-   🖌️ **WordPress tema**
+
+    ---
+
+    Klassik va block (FSE) temalar, custom bloklar (React/JSX), WooCommerce.
+
+    **30 bob · 390+ masala**
+
+    [Boshlash →](wordpress-tema/README.md)
+
+-   🔌 **WordPress plagin**
+
+    ---
+
+    WordPress plagin yaratish: hooks, custom post type, shortcode, REST API, xavfsizlik.
+
+    **30 bob · 250+ masala**
+
+    [Boshlash →](wp-plugin/README.md)
+
+</div>
+
+## 🐍 Python
+
+<div class="grid cards" markdown>
+
+-   🐍 **Python**
+
+    ---
+
+    Noldan Python: sintaksis, OOP, fayllar, async, web va ma'lumotlar bazasi.
+
+    **19 bob · 130+ masala**
+
+    [Boshlash →](python/README.md)
+
+-   🟩 **Django**
+
+    ---
+
+    Python bilan full-stack: MTV, ORM, admin, DRF (REST API), auth, deploy.
+
+    **25 bob · 130+ masala**
+
+    [Boshlash →](django/README.md)
+
+-   🤖 **Telegram bot (aiogram)**
+
+    ---
+
+    Python/aiogram bilan bot: FSM, middleware, to'lov, Mini App, clicker.
+
+    **26 bob · 100+ masala**
+
+    [Boshlash →](tgbot-python/README.md)
+
+</div>
+
+## 🤖 AI / LLM integratsiyasi
+
+<div class="grid cards" markdown>
+
+-   🤖 **AI/LLM integratsiyasi (JS)**
+
+    ---
+
+    Claude'ni ilovaga ulash: Anthropic SDK + Vercel AI SDK, streaming, tool use, RAG, agentlar, MCP, production.
+
+    **26 bob · 230+ masala**
+
+    [Boshlash →](ai-js/README.md)
+
+-   🤖 **AI/LLM integratsiyasi (PHP)**
+
+    ---
+
+    Claude'ni PHP ilovaga ulash: Anthropic SDK, streaming, tool use, RAG, vektor bazalar, agentlar, MCP, production.
+
+    **24 bob · 120+ masala**
+
+    [Boshlash →](ai-llm-php/README.md)
+
+-   🤖 **AI/LLM integratsiyasi (Python)**
+
+    ---
+
+    LLM'ni Python ilovaga ulash (ko'p provayderli): OpenAI/Claude/Gemini/Ollama, streaming, tool calling, RAG, agentlar, MCP, FastAPI deploy.
+
+    **28 bob · 140+ masala**
+
+    [Boshlash →](ai-python/README.md)
+
+</div>
+
+## 🗄️ Ma'lumotlar bazasi
+
+<div class="grid cards" markdown>
+
+-   🗄️ **SQL & MySQL**
+
+    ---
+
+    Noldan SQL: SELECT, JOIN, GROUP BY, indeks, tranzaksiya, procedure, trigger.
+
+    **28 bob · 560 masala**
+
+    [Boshlash →](sql/README.md)
+
+-   📐 **Ma'lumotlar bazasi dizayni**
+
+    ---
+
+    Bazani loyihalash (PostgreSQL): ER, normalizatsiya, indeks, NoSQL, masshtab.
+
+    **24 bob · 320+ masala**
 
     [Boshlash →](db-dizayni/README.md)
+
+</div>
+
+## 🧩 Asboblar va amaliyot
+
+<div class="grid cards" markdown>
+
+-   🐙 **Git & GitHub**
+
+    ---
+
+    Versiya nazorati: commit, branch, merge, rebase, Pull Request, GitHub Actions.
+
+    **24 bob · 480 masala**
+
+    [Boshlash →](git-github/README.md)
+
+-   🚀 **DevOps & Deployment**
+
+    ---
+
+    Deploy va infratuzilma: Linux, Docker, CI/CD, Nginx, Kubernetes, monitoring.
+
+    **28 bob · 160+ masala**
+
+    [Boshlash →](devops/README.md)
+
+-   🏛️ **Dasturlash arxitekturasi**
+
+    ---
+
+    Til-mustaqil dizayn: SOLID, patterns, hexagonal, DDD, mikroservis, masshtab.
+
+    **26 bob · 130+ masala**
+
+    [Boshlash →](arxitektura/README.md)
+
+-   🧭 **Dasturchi yo'riqnomasi**
+
+    ---
+
+    Kod yozuvchidan professionalgacha: tafakkur, toza kod, debugging, code review, jamoa/Agile, kommunikatsiya, karyera, intervyu, frilans, burnout.
+
+    **29 bob · 230+ mashq**
+
+    [Boshlash →](dasturchi-yoriqnomasi/README.md)
+
+-   🤝 **Soft & Hard skills**
+
+    ---
+
+    Til-mustaqil professional ko'nikmalar: o'sish mentaliteti, vaqt boshqaruvi, muloqot, feedback (SBI), jamoa va psixologik xavfsizlik, debugging, baholash, intervyu (STAR), maosh muzokarasi, karyera o'sishi.
+
+    **30 bob · 180+ mashq**
+
+    [Boshlash →](soft-hard-skills/README.md)
+
+-   🧠 **Algoritmlar va ma'lumotlar strukturalari**
+
+    ---
+
+    Til-mustaqil nazariya: chiziqli/rekursiv algoritmlar, Big-O, ma'lumot strukturalari, DP, greedy, graf, P/NP.
+
+    **33 bob · 290+ masala**
+
+    [Boshlash →](algoritmlar/README.md)
+
+-   🔌 **API dizayni**
+
+    ---
+
+    Til-mustaqil: HTTP, REST, status kodlari, resurs/URI, xato (RFC 9457), auth (OAuth/JWT), OWASP, versiyalash, GraphQL, gRPC, webhook, OpenAPI.
+
+    **28 bob · 250+ masala**
+
+    [Boshlash →](api-dizayni/README.md)
+
+-   ✅ **Dasturiy ta'minotni testlash**
+
+    ---
+
+    Til-mustaqil: test piramidasi, unit/integratsiya/E2E, mock va stub, TDD, BDD, coverage, property-based, mutation, CI, flaky testlar.
+
+    **30 bob · 240+ masala**
+
+    [Boshlash →](testing/README.md)
+
+-   🧩 **1000 masala**
+
+    ---
+
+    JS/PHP/Python'da amaliy masalalar: algoritmlar, ma'lumot strukturalari, intervyu.
+
+    **40 bo'lim · 1000 masala**
+
+    [Boshlash →](1000-masala/README.md)
 
 </div>

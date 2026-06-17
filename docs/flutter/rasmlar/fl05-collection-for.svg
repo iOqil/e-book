@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <title>List literal ichidagi collection-for: [for (var n in [1,2,3]) n*n] ro'yxat hosil qiladi [1,4,9], va shu naqsh Flutter children'ga ko'prik bo'ladi</title>
+  <rect x="0" y="0" width="800" height="450" fill="#f8fafc"/>
+  <text x="400" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="21" font-weight="bold" fill="#1e293b">collection-for: ro'yxat ICHIDA sikl</text>
+  <text x="400" y="56" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Ma'lumotdan to'g'ridan-to'g'ri ro'yxat quriladi &#8212; bo'sh ro'yxat + .add() shart emas</text>
+
+  <!-- source data -->
+  <text x="120" y="104" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#475569">Manba</text>
+  <g font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#ffffff">
+    <rect x="64" y="118" width="44" height="44" rx="6" fill="#94a3b8"/><text x="86" y="147" text-anchor="middle">1</text>
+    <rect x="110" y="118" width="44" height="44" rx="6" fill="#94a3b8"/><text x="132" y="147" text-anchor="middle">2</text>
+    <rect x="156" y="118" width="44" height="44" rx="6" fill="#94a3b8"/><text x="178" y="147" text-anchor="middle">3</text>
+  </g>
+  <text x="132" y="182" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">[1, 2, 3]</text>
+
+  <!-- the literal box -->
+  <rect x="250" y="96" width="300" height="86" rx="10" fill="#1e293b"/>
+  <text x="400" y="130" text-anchor="middle" font-family="Consolas, monospace" font-size="16" fill="#ffffff">[ <tspan fill="#f59e0b">for</tspan> (<tspan fill="#6366f1">var n</tspan> <tspan fill="#f59e0b">in</tspan> nums)</text>
+  <text x="400" y="158" text-anchor="middle" font-family="Consolas, monospace" font-size="16" fill="#ffffff">    n * n ]</text>
+
+  <!-- arrow source -> literal -->
+  <line x1="206" y1="140" x2="244" y2="140" stroke="#475569" stroke-width="3"/>
+  <polygon points="244,133 258,140 244,147" fill="#475569"/>
+
+  <!-- arrow literal -> result -->
+  <line x1="554" y1="140" x2="592" y2="140" stroke="#16a34a" stroke-width="3"/>
+  <polygon points="592,133 606,140 592,147" fill="#16a34a"/>
+
+  <!-- result -->
+  <text x="690" y="104" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">Natija</text>
+  <g font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#ffffff">
+    <rect x="612" y="118" width="44" height="44" rx="6" fill="#16a34a"/><text x="634" y="147" text-anchor="middle">1</text>
+    <rect x="658" y="118" width="44" height="44" rx="6" fill="#16a34a"/><text x="680" y="147" text-anchor="middle">4</text>
+    <rect x="704" y="118" width="44" height="44" rx="6" fill="#16a34a"/><text x="726" y="147" text-anchor="middle">9</text>
+  </g>
+  <text x="680" y="182" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">[1, 4, 9]</text>
+
+  <!-- divider -->
+  <line x1="40" y1="214" x2="760" y2="214" stroke="#94a3b8" stroke-width="1" stroke-dasharray="5 4"/>
+  <text x="400" y="240" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#027dfd">&#8595; Aynan shu naqsh keyinroq Flutter'da ekranni quradi &#8595;</text>
+
+  <!-- Flutter teaser code -->
+  <rect x="80" y="258" width="640" height="130" rx="10" fill="#1e293b"/>
+  <text x="100" y="288" font-family="Consolas, monospace" font-size="15" fill="#ffffff">children: [</text>
+  <text x="124" y="312" font-family="Consolas, monospace" font-size="15" fill="#ffffff">Text('Sarlavha'),</text>
+  <text x="124" y="336" font-family="Consolas, monospace" font-size="15" fill="#ffffff"><tspan fill="#f59e0b">if</tspan> (kirgan) LogoutTugma(),  <tspan fill="#64748b">// shart bo'lsa qo'shadi</tspan></text>
+  <text x="124" y="360" font-family="Consolas, monospace" font-size="15" fill="#ffffff"><tspan fill="#f59e0b">for</tspan> (<tspan fill="#6366f1">var m</tspan> <tspan fill="#f59e0b">in</tspan> mahsulotlar) MahsulotKarta(m),</text>
+  <text x="100" y="384" font-family="Consolas, monospace" font-size="15" fill="#ffffff">]</text>
+
+  <text x="400" y="416" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Ma'lumotlar ro'yxati &#8594; ekrandagi widget'lar ro'yxati &#8212; bitta qatorda.</text>
+  <text x="400" y="438" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#64748b" font-style="italic">collection-for / collection-if &#8212; Flutter UI yozishning eng ko'p ishlatiladigan vositasi.</text>
+</svg>

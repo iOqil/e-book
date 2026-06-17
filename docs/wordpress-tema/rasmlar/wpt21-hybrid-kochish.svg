@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 460" width="780" height="460" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Klassik temadan to'liq block temaga bosqichma-bosqich ko'chish: klassik -&gt; hybrid -&gt; block</title>
+  <rect x="0" y="0" width="780" height="460" fill="#f8fafc"/>
+  <text x="390" y="32" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">Klassik -&gt; Hybrid -&gt; To'liq block: bosqichma-bosqich ko'chish</text>
+
+  <!-- Stage 1: Classic -->
+  <rect x="24" y="62" width="226" height="330" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="1.8"/>
+  <text x="137" y="90" text-anchor="middle" font-size="16" font-weight="bold" fill="#991b1b">1. Klassik tema</text>
+  <text x="137" y="112" text-anchor="middle" font-size="13" fill="#475569">PHP shablonlar</text>
+  <rect x="44" y="128" width="186" height="30" rx="5" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="54" y="148" font-size="13" fill="#1e293b">index.php, single.php</text>
+  <rect x="44" y="164" width="186" height="30" rx="5" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="54" y="184" font-size="13" fill="#1e293b">header.php, footer.php</text>
+  <rect x="44" y="200" width="186" height="30" rx="5" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="54" y="220" font-size="13" fill="#1e293b">functions.php + hooks</text>
+  <rect x="44" y="236" width="186" height="30" rx="5" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="54" y="256" font-size="13" fill="#1e293b">style.css (qo'lda CSS)</text>
+  <text x="137" y="300" text-anchor="middle" font-size="13" fill="#991b1b">is_block_theme: false</text>
+  <text x="137" y="338" text-anchor="middle" font-size="13" fill="#475569">Site Editor: YO'Q</text>
+  <text x="137" y="362" text-anchor="middle" font-size="13" fill="#475569">Customizer bilan sozlash</text>
+
+  <!-- arrow 1->2 -->
+  <path d="M 256 227 L 296 227" stroke="#475569" stroke-width="3" fill="none" marker-end="url(#a2)"/>
+  <text x="276" y="216" text-anchor="middle" font-size="13" fill="#475569">+theme.json</text>
+
+  <!-- Stage 2: Hybrid -->
+  <rect x="302" y="62" width="226" height="330" rx="12" fill="#fef3c7" stroke="#d97706" stroke-width="1.8"/>
+  <text x="415" y="90" text-anchor="middle" font-size="16" font-weight="bold" fill="#92400e">2. Hybrid tema</text>
+  <text x="415" y="112" text-anchor="middle" font-size="13" fill="#475569">klassik + block aralash</text>
+  <rect x="322" y="128" width="186" height="30" rx="5" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="332" y="148" font-size="13" fill="#1e293b">index.php (hali klassik)</text>
+  <rect x="322" y="164" width="186" height="30" rx="5" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="332" y="184" font-size="13" fill="#1e3a8a">theme.json (YANGI)</text>
+  <rect x="322" y="200" width="186" height="30" rx="5" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="332" y="220" font-size="13" fill="#1e3a8a">editor-styles (block editor)</text>
+  <rect x="322" y="236" width="186" height="30" rx="5" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="332" y="256" font-size="13" fill="#1e293b">functions.php (PHP mantiq)</text>
+  <text x="415" y="300" text-anchor="middle" font-size="13" fill="#92400e">is_block_theme: false</text>
+  <text x="415" y="338" text-anchor="middle" font-size="13" fill="#475569">Global Styles ishlaydi</text>
+  <text x="415" y="362" text-anchor="middle" font-size="13" fill="#475569">templates/ birma-bir qo'shiladi</text>
+
+  <!-- arrow 2->3 -->
+  <path d="M 534 227 L 574 227" stroke="#475569" stroke-width="3" fill="none" marker-end="url(#a2)"/>
+  <text x="554" y="216" text-anchor="middle" font-size="13" fill="#475569">+templates/</text>
+
+  <!-- Stage 3: Block -->
+  <rect x="580" y="62" width="226" height="330" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="1.8"/>
+  <text x="693" y="90" text-anchor="middle" font-size="16" font-weight="bold" fill="#166534">3. To'liq block tema</text>
+  <text x="693" y="112" text-anchor="middle" font-size="13" fill="#475569">FSE</text>
+  <rect x="600" y="128" width="186" height="30" rx="5" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="610" y="148" font-size="13" fill="#1e293b">templates/index.html</text>
+  <rect x="600" y="164" width="186" height="30" rx="5" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="610" y="184" font-size="13" fill="#1e293b">parts/header.html</text>
+  <rect x="600" y="200" width="186" height="30" rx="5" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="610" y="220" font-size="13" fill="#1e293b">theme.json (to'liq)</text>
+  <rect x="600" y="236" width="186" height="30" rx="5" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="610" y="256" font-size="13" fill="#1e293b">functions.php (ixtiyoriy)</text>
+  <text x="693" y="300" text-anchor="middle" font-size="13" fill="#166534">is_block_theme: true</text>
+  <text x="693" y="338" text-anchor="middle" font-size="13" fill="#475569">Site Editor: TO'LIQ</text>
+  <text x="693" y="362" text-anchor="middle" font-size="13" fill="#475569">PHP shablon endi kerak emas</text>
+
+  <text x="390" y="424" text-anchor="middle" font-size="14" fill="#475569">Kalit fakt: templates/index.html paydo bo'lganda WordPress temani BLOCK deb belgilaydi.</text>
+  <text x="390" y="446" text-anchor="middle" font-size="14" fill="#475569">theme.json o'zi temani block qilmaydi -- u faqat dizayn tizimini ulaydi.</text>
+
+  <defs>
+    <marker id="a2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+</svg>

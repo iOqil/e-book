@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 480" width="820" height="480">
+  <title>REST, gRPC va GraphQL uchta yondashuvni taqqoslash: format, kontrakt, kuchli tomon va qachon ishlatish</title>
+  <rect x="0" y="0" width="820" height="480" fill="#f8fafc"/>
+  <text x="410" y="32" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">REST · gRPC · GraphQL</text>
+  <text x="410" y="56" font-family="Segoe UI" font-size="14" fill="#64748b" text-anchor="middle">Uchovi ham aloqa usuli — har biri boshqa muammoni yaxshi hal qiladi (trade-off)</text>
+
+  <!-- ===== REST ===== -->
+  <rect x="24" y="80" width="250" height="372" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <rect x="24" y="80" width="250" height="44" rx="12" fill="#2563eb"/>
+  <text x="149" y="109" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">REST</text>
+
+  <text x="40" y="150" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#334155">Format:</text>
+  <text x="110" y="150" font-family="Segoe UI" font-size="13" fill="#334155">JSON (matn)</text>
+  <text x="40" y="176" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#334155">Model:</text>
+  <text x="110" y="176" font-family="Segoe UI" font-size="13" fill="#334155">resurs + HTTP fe'l</text>
+  <text x="40" y="200" font-family="Segoe UI" font-size="13" fill="#64748b">GET/POST/PUT/DELETE</text>
+  <text x="40" y="224" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#334155">Kontrakt:</text>
+  <text x="120" y="224" font-family="Segoe UI" font-size="13" fill="#334155">OpenAPI</text>
+
+  <text x="40" y="258" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#16a34a">Kuchli:</text>
+  <text x="40" y="280" font-family="Segoe UI" font-size="13" fill="#16a34a">+ Universal, brauzer/cache</text>
+  <text x="40" y="300" font-family="Segoe UI" font-size="13" fill="#16a34a">+ Sodda, hamma biladi</text>
+  <text x="40" y="320" font-family="Segoe UI" font-size="13" fill="#16a34a">+ HTTP standartlari</text>
+
+  <text x="40" y="350" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#dc2626">Zaif:</text>
+  <text x="40" y="372" font-family="Segoe UI" font-size="13" fill="#dc2626">- Over/under-fetching</text>
+  <text x="40" y="392" font-family="Segoe UI" font-size="13" fill="#dc2626">- Ko'p endpoint</text>
+
+  <rect x="40" y="408" width="218" height="34" rx="6" fill="#dbeafe"/>
+  <text x="149" y="430" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#1e3a8a" text-anchor="middle">Qachon: ommaviy API, web</text>
+
+  <!-- ===== gRPC ===== -->
+  <rect x="286" y="80" width="250" height="372" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <rect x="286" y="80" width="250" height="44" rx="12" fill="#16a34a"/>
+  <text x="411" y="109" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">gRPC</text>
+
+  <text x="302" y="150" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#334155">Format:</text>
+  <text x="372" y="150" font-family="Segoe UI" font-size="13" fill="#334155">Protobuf (binar)</text>
+  <text x="302" y="176" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#334155">Model:</text>
+  <text x="372" y="176" font-family="Segoe UI" font-size="13" fill="#334155">RPC (metod chaqir)</text>
+  <text x="302" y="200" font-family="Segoe UI" font-size="13" fill="#64748b">HTTP/2, stream</text>
+  <text x="302" y="224" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#334155">Kontrakt:</text>
+  <text x="382" y="224" font-family="Segoe UI" font-size="13" fill="#334155">.proto fayl</text>
+
+  <text x="302" y="258" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#16a34a">Kuchli:</text>
+  <text x="302" y="280" font-family="Segoe UI" font-size="13" fill="#16a34a">+ Tez, ixcham (binar)</text>
+  <text x="302" y="300" font-family="Segoe UI" font-size="13" fill="#16a34a">+ Ikki tomonlama stream</text>
+  <text x="302" y="320" font-family="Segoe UI" font-size="13" fill="#16a34a">+ Qat'iy tipli kontrakt</text>
+
+  <text x="302" y="350" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#dc2626">Zaif:</text>
+  <text x="302" y="372" font-family="Segoe UI" font-size="13" fill="#dc2626">- Brauzerda qiyin</text>
+  <text x="302" y="392" font-family="Segoe UI" font-size="13" fill="#dc2626">- Binar = o'qish qiyin</text>
+
+  <rect x="302" y="408" width="218" height="34" rx="6" fill="#dcfce7"/>
+  <text x="411" y="430" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#14532d" text-anchor="middle">Qachon: ichki servislar, tez</text>
+
+  <!-- ===== GraphQL ===== -->
+  <rect x="548" y="80" width="250" height="372" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <rect x="548" y="80" width="250" height="44" rx="12" fill="#dc2626"/>
+  <text x="673" y="109" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">GraphQL</text>
+
+  <text x="564" y="150" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#334155">Format:</text>
+  <text x="634" y="150" font-family="Segoe UI" font-size="13" fill="#334155">JSON, so'rov tili</text>
+  <text x="564" y="176" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#334155">Model:</text>
+  <text x="634" y="176" font-family="Segoe UI" font-size="13" fill="#334155">bitta endpoint</text>
+  <text x="564" y="200" font-family="Segoe UI" font-size="13" fill="#64748b">klient maydon so'raydi</text>
+  <text x="564" y="224" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#334155">Kontrakt:</text>
+  <text x="644" y="224" font-family="Segoe UI" font-size="13" fill="#334155">SDL sxema</text>
+
+  <text x="564" y="258" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#16a34a">Kuchli:</text>
+  <text x="564" y="280" font-family="Segoe UI" font-size="13" fill="#16a34a">+ Kerakli maydonni oladi</text>
+  <text x="564" y="300" font-family="Segoe UI" font-size="13" fill="#16a34a">+ Over/under-fetch yo'q</text>
+  <text x="564" y="320" font-family="Segoe UI" font-size="13" fill="#16a34a">+ Mobil/murakkab UI qulay</text>
+
+  <text x="564" y="350" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#dc2626">Zaif:</text>
+  <text x="564" y="372" font-family="Segoe UI" font-size="13" fill="#dc2626">- Murakkab; cache qiyin</text>
+  <text x="564" y="392" font-family="Segoe UI" font-size="13" fill="#dc2626">- N+1, server yuki</text>
+
+  <rect x="564" y="408" width="218" height="34" rx="6" fill="#fee2e2"/>
+  <text x="673" y="430" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#7f1d1d" text-anchor="middle">Qachon: ko'p-klient, moslashuv</text>
+</svg>

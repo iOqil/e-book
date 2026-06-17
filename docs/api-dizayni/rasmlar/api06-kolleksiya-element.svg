@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560">
+  <title>Kolleksiya, element va ichki resurs daraxti metodlar bilan</title>
+  <rect x="0" y="0" width="880" height="560" fill="#f8fafc"/>
+  <text x="440" y="36" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">Kolleksiya · element · ichki resurs</text>
+  <text x="440" y="60" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Har bir daraja o'z URI'siga va o'z standart metodlariga ega</text>
+
+  <!-- Kolleksiya -->
+  <rect x="60" y="92" width="760" height="120" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="84" y="122" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb">Kolleksiya (ko'plik ot)</text>
+  <text x="84" y="148" font-family="monospace" font-size="16" fill="#1d4ed8">/orders</text>
+  <text x="84" y="176" font-family="Segoe UI" font-size="13" fill="#334155">Ko'p elementni boshqaradi: ro'yxat olish va yangi element yaratish.</text>
+  <text x="84" y="198" font-family="monospace" font-size="13" fill="#16a34a">GET /orders</text>
+  <text x="280" y="198" font-family="Segoe UI" font-size="13" fill="#64748b">ro'yxat (200)</text>
+  <text x="440" y="198" font-family="monospace" font-size="13" fill="#16a34a">POST /orders</text>
+  <text x="640" y="198" font-family="Segoe UI" font-size="13" fill="#64748b">yaratish (201 + Location)</text>
+
+  <!-- vertikal ulagich -->
+  <line x1="120" y1="212" x2="120" y2="252" stroke="#94a3b8" stroke-width="2"/>
+
+  <!-- Element -->
+  <rect x="60" y="252" width="760" height="120" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="84" y="282" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a">Element (yagona, ID bilan)</text>
+  <text x="84" y="308" font-family="monospace" font-size="16" fill="#15803d">/orders/42</text>
+  <text x="84" y="336" font-family="Segoe UI" font-size="13" fill="#334155">Bitta konkret resursni o'qish, almashtirish, qisman yangilash, o'chirish.</text>
+  <text x="84" y="358" font-family="monospace" font-size="13" fill="#2563eb">GET</text>
+  <text x="140" y="358" font-family="monospace" font-size="13" fill="#7c3aed">PUT</text>
+  <text x="196" y="358" font-family="monospace" font-size="13" fill="#f59e0b">PATCH</text>
+  <text x="276" y="358" font-family="monospace" font-size="13" fill="#dc2626">DELETE</text>
+  <text x="380" y="358" font-family="Segoe UI" font-size="13" fill="#64748b">/orders/42  (200 · 200 · 200 · 204)</text>
+
+  <!-- vertikal ulagich -->
+  <line x1="120" y1="372" x2="120" y2="412" stroke="#94a3b8" stroke-width="2"/>
+
+  <!-- Ichki resurs -->
+  <rect x="60" y="412" width="760" height="120" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="84" y="442" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#7c3aed">Ichki (nested) resurs</text>
+  <text x="84" y="468" font-family="monospace" font-size="16" fill="#6d28d9">/orders/42/items</text>
+  <text x="84" y="496" font-family="Segoe UI" font-size="13" fill="#334155">42-buyurtmaga tegishli qatorlar — egalik munosabatini ifodalaydi.</text>
+  <text x="84" y="518" font-family="monospace" font-size="13" fill="#16a34a">GET /orders/42/items</text>
+  <text x="320" y="518" font-family="monospace" font-size="13" fill="#16a34a">POST /orders/42/items</text>
+  <text x="600" y="518" font-family="Segoe UI" font-size="13" fill="#64748b">2 darajadan chuqur ketmang</text>
+</svg>

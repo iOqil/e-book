@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 500" width="760" height="500" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Test piramidasi: pastda ko'p unit test, o'rtada komponent testlar (React Native uchun eng foydali qatlam), tepada kam E2E test</title>
+  <rect x="0" y="0" width="760" height="500" fill="#f8fafc"/>
+  <text x="380" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">Test piramidasi</text>
+  <text x="380" y="62" text-anchor="middle" font-size="14" fill="#475569">Pastdan tepaga: kamroq, lekin ishonchliroq</text>
+
+  <!-- E2E - tepa -->
+  <polygon points="380,90 300,170 460,170" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="380" y="135" text-anchor="middle" font-size="17" font-weight="700" fill="#dc2626">E2E</text>
+  <text x="380" y="158" text-anchor="middle" font-size="13" fill="#475569">to'liq oqim · kam</text>
+
+  <!-- Komponent - o'rta (urg'u) -->
+  <polygon points="300,176 460,176 540,300 220,300" fill="#e0e7ff" stroke="#4f46e5" stroke-width="2.5"/>
+  <text x="380" y="228" text-anchor="middle" font-size="18" font-weight="700" fill="#4f46e5">Komponent</text>
+  <text x="380" y="252" text-anchor="middle" font-size="13" fill="#475569">render + interaksiya</text>
+  <text x="380" y="282" text-anchor="middle" font-size="13" font-weight="700" fill="#4f46e5">RN'da eng foydali</text>
+
+  <!-- Unit - past -->
+  <polygon points="220,306 540,306 620,430 140,430" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="380" y="358" text-anchor="middle" font-size="18" font-weight="700" fill="#16a34a">Unit</text>
+  <text x="380" y="382" text-anchor="middle" font-size="13" fill="#475569">funksiya · hook</text>
+  <text x="380" y="412" text-anchor="middle" font-size="13" fill="#475569">eng tez · eng ko'p</text>
+
+  <!-- O'qlar: tezlik va ishonchlilik -->
+  <line x1="80" y1="430" x2="80" y2="100" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="80,94 74,106 86,106" fill="#94a3b8"/>
+  <text x="68" y="270" text-anchor="middle" font-size="13" fill="#475569" transform="rotate(-90 68 270)">ishonchliroq, lekin sekinroq</text>
+
+  <line x1="680" y1="100" x2="680" y2="430" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="680,436 674,424 686,424" fill="#94a3b8"/>
+  <text x="694" y="270" text-anchor="middle" font-size="13" fill="#475569" transform="rotate(90 694 270)">tezroq, soni ko'proq</text>
+
+  <!-- pastki izoh -->
+  <text x="380" y="468" text-anchor="middle" font-size="14" fill="#475569">Tavsiya: ko'p unit + komponent, kamroq E2E (Maestro / Detox)</text>
+</svg>

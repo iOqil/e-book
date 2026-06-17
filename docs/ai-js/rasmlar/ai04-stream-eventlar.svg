@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Stream event ketma-ketligi: message_start, content_block_start, ko'p marta content_block_delta (matn bo'laklari), content_block_stop, message_delta (usage), message_stop; .on text har delta'da, .finalMessage oxirida ishlaydi</title>
+  <defs>
+    <marker id="ar4e" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#6366f1"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="800" height="500" fill="#f8fafc"/>
+  <text x="400" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Bitta stream — event'lar ketma-ketligi</text>
+  <text x="400" y="58" font-size="14" fill="#64748b" text-anchor="middle">Yuqorida xom event'lar oqadi · pastda SDK helper'lari nimani ushlaydi</text>
+
+  <!-- raw events row -->
+  <text x="40" y="92" font-size="14" font-weight="bold" fill="#475569" text-anchor="start">Xom event oqimi (for await ... of stream)</text>
+
+  <!-- message_start -->
+  <rect x="40" y="104" width="130" height="46" rx="8" fill="#dbeafe" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="105" y="124" font-size="13" font-weight="bold" fill="#1e293b" text-anchor="middle">message_start</text>
+  <text x="105" y="142" font-size="13" fill="#475569" text-anchor="middle">boshlandi</text>
+  <line x1="172" y1="127" x2="186" y2="127" stroke="#6366f1" stroke-width="2" marker-end="url(#ar4e)"/>
+
+  <!-- content_block_start -->
+  <rect x="190" y="104" width="148" height="46" rx="8" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="264" y="124" font-size="13" font-weight="bold" fill="#1e293b" text-anchor="middle">content_block_start</text>
+  <text x="264" y="142" font-size="13" fill="#475569" text-anchor="middle">type: "text"</text>
+  <line x1="340" y1="127" x2="354" y2="127" stroke="#6366f1" stroke-width="2" marker-end="url(#ar4e)"/>
+
+  <!-- content_block_delta xN -->
+  <rect x="358" y="98" width="190" height="58" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="453" y="118" font-size="13" font-weight="bold" fill="#1e293b" text-anchor="middle">content_block_delta</text>
+  <text x="453" y="136" font-size="13" fill="#475569" text-anchor="middle">delta.text — matn bo'lagi</text>
+  <text x="453" y="151" font-size="13" fill="#d97757" text-anchor="middle">× ko'p marta (takrorlanadi)</text>
+  <line x1="550" y1="127" x2="564" y2="127" stroke="#6366f1" stroke-width="2" marker-end="url(#ar4e)"/>
+
+  <!-- content_block_stop -->
+  <rect x="568" y="104" width="146" height="46" rx="8" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="641" y="124" font-size="13" font-weight="bold" fill="#1e293b" text-anchor="middle">content_block_stop</text>
+  <text x="641" y="142" font-size="13" fill="#475569" text-anchor="middle">blok tugadi</text>
+
+  <!-- second raw row -->
+  <!-- message_delta -->
+  <rect x="190" y="186" width="148" height="46" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="264" y="206" font-size="13" font-weight="bold" fill="#1e293b" text-anchor="middle">message_delta</text>
+  <text x="264" y="224" font-size="13" fill="#475569" text-anchor="middle">usage, stop_reason</text>
+  <line x1="340" y1="209" x2="354" y2="209" stroke="#6366f1" stroke-width="2" marker-end="url(#ar4e)"/>
+  <!-- message_stop -->
+  <rect x="358" y="186" width="148" height="46" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="432" y="206" font-size="13" font-weight="bold" fill="#1e293b" text-anchor="middle">message_stop</text>
+  <text x="432" y="224" font-size="13" fill="#475569" text-anchor="middle">hammasi tugadi</text>
+  <!-- elbow from content_block_stop to message_delta -->
+  <path d="M641,152 L641,170 L264,170 L264,184" fill="none" stroke="#6366f1" stroke-width="2" marker-end="url(#ar4e)"/>
+
+  <!-- divider -->
+  <line x1="40" y1="262" x2="760" y2="262" stroke="#94a3b8" stroke-width="1" stroke-dasharray="6,5"/>
+
+  <!-- helper layer -->
+  <text x="40" y="294" font-size="14" font-weight="bold" fill="#475569" text-anchor="start">SDK helper'lari (client.messages.stream())</text>
+
+  <!-- on text fires per delta -->
+  <rect x="358" y="312" width="190" height="56" rx="10" fill="#ffffff" stroke="#d97757" stroke-width="2.5"/>
+  <text x="453" y="335" font-size="13.5" font-weight="bold" fill="#d97757" text-anchor="middle" font-family="Consolas, monospace">.on("text", delta =&gt; ...)</text>
+  <text x="453" y="356" font-size="13" fill="#475569" text-anchor="middle">har delta'da ishga tushadi</text>
+  <!-- dashed up to delta box -->
+  <line x1="453" y1="310" x2="453" y2="158" stroke="#d97757" stroke-width="2" stroke-dasharray="5,4"/>
+
+  <!-- finalMessage at end -->
+  <rect x="568" y="312" width="192" height="56" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="664" y="335" font-size="13.5" font-weight="bold" fill="#16a34a" text-anchor="middle" font-family="Consolas, monospace">await .finalMessage()</text>
+  <text x="664" y="356" font-size="13" fill="#475569" text-anchor="middle">oxirda to'liq Message</text>
+  <line x1="664" y1="310" x2="432" y2="234" stroke="#16a34a" stroke-width="2" stroke-dasharray="5,4"/>
+
+  <!-- bottom note -->
+  <rect x="40" y="404" width="720" height="76" rx="10" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="400" y="430" font-size="13.5" fill="#1e293b" text-anchor="middle">Siz odatda xom event'larni qo'lda ushlamaysiz. <tspan font-weight="bold" fill="#d97757">.on("text")</tspan> jonli chiqishni beradi,</text>
+  <text x="400" y="452" font-size="13.5" fill="#1e293b" text-anchor="middle"><tspan font-weight="bold" fill="#16a34a">.finalMessage()</tspan> esa oxirida yig'ilgan to'liq javobni (usage bilan) qaytaradi —</text>
+  <text x="400" y="472" font-size="13.5" fill="#475569" text-anchor="middle">ikkalasining eng yaxshisi: ham jonli, ham yakuniy.</text>
+</svg>

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 320" width="760" height="320">
+  <title>Job bog'liqligi grafi: needs orqali lint jobi muvaffaqiyatli tugamasa test boshlanmaydi, test tugamasa build boshlanmaydi va artifact yuklanadi; biror bosqich qulasa keyingilari o'tkazib yuboriladi</title>
+  <rect x="0" y="0" width="760" height="320" fill="#f8fafc"/>
+  <text x="380" y="38" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">needs: lint &#8594; test &#8594; build zanjiri</text>
+
+  <!-- lint -->
+  <rect x="40" y="110" width="180" height="90" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="130" y="142" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">lint</text>
+  <text x="130" y="166" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">kod uslubini</text>
+  <text x="130" y="184" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tekshiradi</text>
+
+  <!-- test -->
+  <rect x="290" y="110" width="180" height="90" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="380" y="142" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">test</text>
+  <text x="380" y="166" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">avtomatik</text>
+  <text x="380" y="184" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">testlar</text>
+
+  <!-- build -->
+  <rect x="540" y="110" width="180" height="90" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="630" y="142" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">build</text>
+  <text x="630" y="166" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#166534">quradi +</text>
+  <text x="630" y="184" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#166534">artifact saqlaydi</text>
+
+  <!-- arrows with needs labels -->
+  <line x1="220" y1="155" x2="288" y2="155" stroke="#1e293b" stroke-width="3" marker-end="url(#arr2)"/>
+  <rect x="223" y="116" width="64" height="24" rx="5" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="255" y="133" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#92400e">needs</text>
+
+  <line x1="470" y1="155" x2="538" y2="155" stroke="#1e293b" stroke-width="3" marker-end="url(#arr2)"/>
+  <rect x="473" y="116" width="64" height="24" rx="5" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="505" y="133" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#92400e">needs</text>
+
+  <text x="380" y="248" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Ketma-ket: oldingisi muvaffaqiyatli tugamasa, keyingisi boshlanmaydi.</text>
+  <text x="380" y="284" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#dc2626">lint qulasa &#10005; &#8594; test va build umuman ishga tushmaydi (vaqt tejaladi)</text>
+
+  <defs>
+    <marker id="arr2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#1e293b"/>
+    </marker>
+  </defs>
+</svg>

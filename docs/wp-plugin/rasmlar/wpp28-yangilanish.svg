@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430">
+  <title>Plugin yangilanish mexanizmi: wordpress.org version check API yangi versiyani aniqlaydi, admin panelida yangilash bildirishnomasi chiqadi, o'z-hostlangan plugin esa Update URI va filter orqali yangilanadi</title>
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Plugin yangilanish mexanizmi</text>
+
+  <!-- Path A: wordpress.org -->
+  <text x="200" y="64" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e40af">A) wordpress.org katalogi (avtomatik)</text>
+
+  <rect x="40" y="80" width="320" height="56" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="200" y="104" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">WP sayt har ~12 soatda tekshiradi</text>
+  <text x="200" y="124" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">wp_update_plugins() cron</text>
+
+  <line x1="200" y1="136" x2="200" y2="156" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="200,156 194,146 206,146" fill="#94a3b8"/>
+
+  <rect x="40" y="158" width="320" height="56" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="200" y="182" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">api.wordpress.org: Stable tag = 1.2.0?</text>
+  <text x="200" y="202" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">o'rnatilgan 1.1.0 dan yangi -> ha</text>
+
+  <line x1="200" y1="214" x2="200" y2="234" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="200,234 194,224 206,224" fill="#94a3b8"/>
+
+  <rect x="40" y="236" width="320" height="56" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="200" y="260" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">Admin: "Yangilash mavjud" bildirishnoma</text>
+  <text x="200" y="280" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">bir tugma -> yangilanadi (yoki auto)</text>
+
+  <!-- divider -->
+  <line x1="385" y1="56" x2="385" y2="300" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="5 5"/>
+
+  <!-- Path B: self-hosted -->
+  <text x="565" y="64" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#7c3aed">B) O'z-hostlangan (premium)</text>
+
+  <rect x="405" y="80" width="320" height="56" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="565" y="104" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">Header: Update URI: updates.ioqil.uz</text>
+  <text x="565" y="124" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(WP 5.8+)</text>
+
+  <line x1="565" y1="136" x2="565" y2="156" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="565,156 559,146 571,146" fill="#94a3b8"/>
+
+  <rect x="405" y="158" width="320" height="56" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="565" y="180" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">filter: update_plugins_updates.ioqil.uz</text>
+  <text x="565" y="200" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">o'z server json: version, package</text>
+
+  <line x1="565" y1="214" x2="565" y2="234" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="565,234 559,224 571,224" fill="#94a3b8"/>
+
+  <rect x="405" y="236" width="320" height="56" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="565" y="260" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">Admin: bir xil yangilash UI</text>
+  <text x="565" y="280" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">ZIP o'z serveringizdan tortiladi</text>
+
+  <!-- bottom note -->
+  <rect x="40" y="320" width="685" height="86" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="60" y="346" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Asosiy:</text>
+  <text x="60" y="370" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">- Yangilanish "salom" beradigan narsa: plugin header Version + readme Stable tag o'sishi.</text>
+  <text x="60" y="392" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">- Update URI'ni wordpress.org dan boshqa host'ga qo'ysangiz, katalog yangilanishi O'CHADI (to'qnashuv yo'q).</text>
+</svg>

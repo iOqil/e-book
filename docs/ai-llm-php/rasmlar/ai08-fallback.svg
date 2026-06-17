@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Fallback model — asosiy model ishlamasa boshqasiga o'tish</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Fallback model — zaxira modelga o'tish</text>
+  <text x="380" y="60" text-anchor="middle" font-size="14" fill="#475569">Asosiy model xato bersa, navbatdagi modelni sinaymiz — ilova qulamasligi uchun</text>
+
+  <defs>
+    <marker id="arr2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#6366f1"/>
+    </marker>
+    <marker id="arrok" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <!-- So'rov -->
+  <rect x="60" y="100" width="150" height="64" rx="10" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="135" y="128" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">So'rov</text>
+  <text x="135" y="149" text-anchor="middle" font-size="13" fill="#475569">"savolga javob ber"</text>
+
+  <!-- Opus -->
+  <line x1="210" y1="132" x2="258" y2="132" stroke="#6366f1" stroke-width="2" marker-end="url(#arr2)"/>
+  <rect x="262" y="100" width="180" height="64" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="352" y="126" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">Opus 4.8</text>
+  <text x="352" y="148" text-anchor="middle" font-size="13" fill="#dc2626">529 — yuklangan</text>
+
+  <!-- Opus -> Sonnet (pastga) -->
+  <line x1="352" y1="164" x2="352" y2="200" stroke="#6366f1" stroke-width="2" marker-end="url(#arr2)"/>
+  <text x="372" y="186" font-size="13" fill="#dc2626">xato -> keyingisi</text>
+
+  <!-- Sonnet -->
+  <rect x="262" y="200" width="180" height="64" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="352" y="226" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">Sonnet 4.6</text>
+  <text x="352" y="248" text-anchor="middle" font-size="13" fill="#dc2626">429 — rate limit</text>
+
+  <!-- Sonnet -> Haiku (pastga) -->
+  <line x1="352" y1="264" x2="352" y2="300" stroke="#6366f1" stroke-width="2" marker-end="url(#arr2)"/>
+  <text x="372" y="286" font-size="13" fill="#dc2626">xato -> keyingisi</text>
+
+  <!-- Haiku -->
+  <rect x="262" y="300" width="180" height="64" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="352" y="326" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">Haiku 4.5</text>
+  <text x="352" y="348" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a">ishladi!</text>
+
+  <!-- Haiku -> Javob -->
+  <line x1="442" y1="332" x2="528" y2="332" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arrok)"/>
+  <rect x="532" y="300" width="170" height="64" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="617" y="328" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Javob</text>
+  <text x="617" y="349" text-anchor="middle" font-size="13" fill="#16a34a">foydalanuvchiga</text>
+
+  <!-- Izoh -->
+  <rect x="492" y="100" width="220" height="150" rx="10" fill="#ede9fe" stroke="#c7d2fe" stroke-width="1.5"/>
+  <text x="512" y="126" font-size="14" font-weight="700" fill="#4f46e5">Tartib (kuchli -> tez/arzon):</text>
+  <text x="512" y="152" font-size="13" fill="#475569">1. Opus — eng aqlli</text>
+  <text x="512" y="174" font-size="13" fill="#475569">2. Sonnet — balans</text>
+  <text x="512" y="196" font-size="13" fill="#475569">3. Haiku — eng tez/arzon</text>
+  <text x="512" y="224" font-size="13" fill="#475569">Yomonroq javob — umuman</text>
+  <text x="512" y="242" font-size="13" fill="#475569">javobsizdan ko'ra yaxshi.</text>
+</svg>

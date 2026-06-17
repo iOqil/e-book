@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Dastaklarni birlashtirish: bulk pipeline = Batch (50%) + Haiku (arzon model) + keshlangan system prompt -> sodda Opus-per-call-jonliga nisbatan ~10x arzonroq. Tejov bosqichma-bosqich kamayadigan stack bar bilan.</title>
+  <rect x="0" y="0" width="800" height="500" fill="#f8fafc"/>
+  <text x="400" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Dastaklarni birlashtir — tejov ustma-ust qo'shiladi</text>
+  <text x="400" y="58" font-size="14" fill="#64748b" text-anchor="middle">Bulk pipeline: har dastak narxni yana bo'ladi → birgalikda ~10× arzon</text>
+
+  <!-- Baseline bar -->
+  <text x="40" y="100" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="start">Sodda: Opus, jonli, har so'rov alohida</text>
+  <rect x="40" y="110" width="680" height="40" rx="6" fill="#ef4444"/>
+  <text x="380" y="135" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">100% narx (taglik)</text>
+
+  <!-- Step 1: Haiku -->
+  <text x="40" y="184" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="start">+ To'g'ri model (Haiku) — oddiy ish uchun Opus shart emas</text>
+  <rect x="40" y="194" width="170" height="40" rx="6" fill="#f59e0b"/>
+  <text x="125" y="219" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">~25%</text>
+  <rect x="210" y="194" width="510" height="40" rx="6" fill="#e0e7ff"/>
+  <text x="465" y="219" font-size="13" fill="#64748b" text-anchor="middle">tejaldi (arzonroq model)</text>
+
+  <!-- Step 2: + caching -->
+  <text x="40" y="268" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="start">+ Keshlangan system prompt — umumiy prefiks ~0.1× (15-bob)</text>
+  <rect x="40" y="278" width="100" height="40" rx="6" fill="#0ea5e9"/>
+  <text x="90" y="303" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">~14%</text>
+  <rect x="140" y="278" width="580" height="40" rx="6" fill="#e0e7ff"/>
+  <text x="430" y="303" font-size="13" fill="#64748b" text-anchor="middle">yana tejaldi (takror prefiks deyarli tekin)</text>
+
+  <!-- Step 3: + batch -->
+  <text x="40" y="352" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="start">+ Batch API — qolganini yana yarmiga bo'ladi (50%)</text>
+  <rect x="40" y="362" width="56" height="40" rx="6" fill="#16a34a"/>
+  <text x="68" y="387" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">~7%</text>
+  <rect x="96" y="362" width="624" height="40" rx="6" fill="#dcfce7"/>
+  <text x="408" y="387" font-size="13" fill="#475569" text-anchor="middle">yakuniy narx ≈ taglikning 10 dan 1 qismi</text>
+
+  <!-- result callout -->
+  <rect x="40" y="426" width="680" height="54" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="380" y="450" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="middle">Natija: ~10× arzonroq — kechikishga sezgir emas bulk ish uchun</text>
+  <text x="380" y="471" font-size="13" fill="#475569" text-anchor="middle">Batch (50%) × Haiku × kesh — dastaklar KO'PAYTMA bo'lib ishlaydi, jamlama emas</text>
+</svg>

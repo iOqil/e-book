@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440">
+  <title>Prometheus PULL modeli: belgilangan interval bilan node_exporter, cAdvisor va ilovaning /metrics endpointidan o'zi metrikalarni so'rab oladi va o'zining vaqt-qatori bazasiga (TSDB) yozadi</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Prometheus PULL qiladi: /metrics dan scrape</text>
+
+  <defs>
+    <marker id="psarr" markerWidth="11" markerHeight="11" refX="9" refY="3.2" orient="auto">
+      <path d="M0,0 L9,3.2 L0,6.4 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="pswr" markerWidth="11" markerHeight="11" refX="9" refY="3.2" orient="auto">
+      <path d="M0,0 L9,3.2 L0,6.4 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <!-- target: node_exporter -->
+  <rect x="30" y="74" width="210" height="78" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="135" y="100" text-anchor="middle" font-family="Consolas, monospace" font-size="14.5" font-weight="bold" fill="#166534">node_exporter</text>
+  <text x="135" y="120" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">server CPU / RAM / disk</text>
+  <text x="135" y="140" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#475569">:9100/metrics</text>
+
+  <!-- target: cAdvisor -->
+  <rect x="30" y="171" width="210" height="78" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="135" y="197" text-anchor="middle" font-family="Consolas, monospace" font-size="14.5" font-weight="bold" fill="#1e40af">cAdvisor</text>
+  <text x="135" y="217" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">konteyner metrikasi</text>
+  <text x="135" y="237" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#475569">:8080/metrics</text>
+
+  <!-- target: ilova -->
+  <rect x="30" y="268" width="210" height="78" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="135" y="294" text-anchor="middle" font-family="Consolas, monospace" font-size="14.5" font-weight="bold" fill="#b45309">ilova (Node/Express)</text>
+  <text x="135" y="314" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">o'z client kutubxonasi</text>
+  <text x="135" y="334" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#475569">:3000/metrics</text>
+
+  <!-- Prometheus box -->
+  <rect x="430" y="120" width="220" height="180" rx="14" fill="#ede9fe" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="540" y="150" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#6d28d9">Prometheus</text>
+  <text x="540" y="174" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">scrape_interval: 15s</text>
+  <rect x="456" y="194" width="168" height="86" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="540" y="220" text-anchor="middle" font-family="Consolas, monospace" font-size="14" font-weight="bold" fill="#6d28d9">TSDB</text>
+  <text x="540" y="242" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">vaqt-qatori bazasi</text>
+  <text x="540" y="263" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(metrika + vaqt belgisi)</text>
+
+  <!-- PULL arrows: Prometheus -> targets (so'rov) -->
+  <line x1="430" y1="135" x2="244" y2="108" stroke="#2563eb" stroke-width="3" marker-end="url(#psarr)"/>
+  <line x1="430" y1="200" x2="244" y2="206" stroke="#2563eb" stroke-width="3" marker-end="url(#psarr)"/>
+  <line x1="430" y1="270" x2="244" y2="305" stroke="#2563eb" stroke-width="3" marker-end="url(#psarr)"/>
+  <text x="300" y="86" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e40af">HTTP GET /metrics</text>
+  <text x="335" y="190" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e40af">(Prometheus so'rov yuboradi)</text>
+
+  <text x="320" y="378" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">Ilova metrikani O'ZI yubormaydi — Prometheus uni SO'RAB OLADI (pull)</text>
+  <text x="540" y="340" text-anchor="middle" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#16a34a">PromQL: up, rate(...)</text>
+  <text x="540" y="362" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">so'rovlar TSDB ustida ishlaydi</text>
+
+  <text x="380" y="412" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#1e293b">Har "scrape" maqsadi = bitta job; nishon (target) = host:port + /metrics yo'li</text>
+</svg>

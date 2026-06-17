@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430">
+  <title>User-defined bridge tarmog'idagi ichki DNS: app konteyner db konteynerni IP emas, nom orqali topadi, default bridge'da esa nom yechilmaydi</title>
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">User-defined bridge: nom bilan ichki DNS</text>
+
+  <defs>
+    <marker id="ndns" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="nbad" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+  <!-- TO'G'RI: user-defined bridge -->
+  <rect x="30" y="56" width="700" height="222" rx="14" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="50" y="82" font-family="Consolas, monospace" font-size="14" font-weight="bold" fill="#1e40af">docker network create mreja</text>
+  <text x="710" y="82" text-anchor="end" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#16a34a">user-defined bridge — DNS bor</text>
+
+  <!-- app container -->
+  <rect x="70" y="118" width="180" height="84" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="160" y="146" text-anchor="middle" font-family="Consolas, monospace" font-size="15" font-weight="bold" fill="#1e40af">app</text>
+  <text x="160" y="168" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">ilova konteyner</text>
+  <text x="160" y="188" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#475569">172.19.0.3</text>
+
+  <!-- DNS box in middle -->
+  <rect x="300" y="124" width="160" height="72" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="380" y="150" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#7c3aed">Docker ichki DNS</text>
+  <text x="380" y="172" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#475569">db -&gt; 172.19.0.2</text>
+  <text x="380" y="190" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">nomni IP'ga yechadi</text>
+
+  <!-- db container -->
+  <rect x="510" y="118" width="180" height="84" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="600" y="146" text-anchor="middle" font-family="Consolas, monospace" font-size="15" font-weight="bold" fill="#166534">db</text>
+  <text x="600" y="168" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">postgres konteyner</text>
+  <text x="600" y="188" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#475569">172.19.0.2</text>
+
+  <!-- arrows -->
+  <line x1="250" y1="160" x2="296" y2="160" stroke="#2563eb" stroke-width="3" marker-end="url(#ndns)"/>
+  <line x1="460" y1="160" x2="506" y2="160" stroke="#2563eb" stroke-width="3" marker-end="url(#ndns)"/>
+
+  <text x="380" y="236" text-anchor="middle" font-family="Consolas, monospace" font-size="13.5" font-weight="bold" fill="#16a34a">app ulanadi:  postgres://db:5432   (IP emas, NOM)</text>
+  <text x="380" y="258" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">db qayta yaratilib IP o'zgarsa ham, nom o'zgarmaydi — kod buzilmaydi</text>
+
+  <!-- NOTO'G'RI: default bridge -->
+  <rect x="30" y="296" width="700" height="92" rx="14" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="50" y="322" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#991b1b">Default bridge (--network bermasangiz)</text>
+
+  <rect x="70" y="332" width="150" height="44" rx="9" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="145" y="359" text-anchor="middle" font-family="Consolas, monospace" font-size="14" font-weight="bold" fill="#991b1b">app</text>
+
+  <line x1="220" y1="354" x2="496" y2="354" stroke="#dc2626" stroke-width="3" stroke-dasharray="7 5" marker-end="url(#nbad)"/>
+  <text x="358" y="346" text-anchor="middle" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#dc2626">ping db</text>
+  <text x="358" y="372" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">XATO: nom yechilmaydi (DNS yo'q)</text>
+
+  <rect x="500" y="332" width="150" height="44" rx="9" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="575" y="359" text-anchor="middle" font-family="Consolas, monospace" font-size="14" font-weight="bold" fill="#991b1b">db</text>
+
+  <text x="380" y="414" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">Ko'p-konteynerli ilova uchun har doim user-defined bridge yarating</text>
+</svg>

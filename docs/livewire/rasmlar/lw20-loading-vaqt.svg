@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420" font-family="Segoe UI, system-ui, sans-serif">
+  <title>So'rov vaqt o'qida: tugma bosildi, loading indikatori ko'rinadi, server javob qaytaradi, indikator yana yashirinadi</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">wire:loading: kutish lahzasi vaqt o'qida</text>
+  <text x="380" y="58" text-anchor="middle" font-size="14" fill="#475569">indikator faqat so'rov davom etayotganda ko'rinadi</text>
+
+  <!-- vaqt o'qi -->
+  <line x1="60" y1="150" x2="700" y2="150" stroke="#94a3b8" stroke-width="3"/>
+  <polygon points="700,150 688,144 688,156" fill="#94a3b8"/>
+  <text x="690" y="178" text-anchor="end" font-size="13" fill="#94a3b8">vaqt</text>
+
+  <!-- 1: bosildi -->
+  <line x1="150" y1="118" x2="150" y2="182" stroke="#4f46e5" stroke-width="2.5"/>
+  <circle cx="150" cy="150" r="9" fill="#4f46e5"/>
+  <rect x="70" y="80" width="160" height="34" rx="8" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="150" y="102" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Tugma bosildi</text>
+
+  <!-- loading oraliq (150 dan 540 gacha) -->
+  <rect x="150" y="135" width="390" height="30" rx="6" fill="#eef2ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="345" y="155" text-anchor="middle" font-size="14" font-weight="700" fill="#4f46e5">so'rov serverda — indikator KO'RINADI</text>
+
+  <!-- 2: javob qaytdi -->
+  <line x1="540" y1="118" x2="540" y2="182" stroke="#16a34a" stroke-width="2.5"/>
+  <circle cx="540" cy="150" r="9" fill="#16a34a"/>
+  <rect x="460" y="80" width="160" height="34" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="540" y="102" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Javob qaytdi</text>
+
+  <!-- pastki uch holat: oldin / davomida / keyin -->
+  <rect x="60" y="240" width="200" height="120" rx="10" fill="#ffffff" stroke="#c7d2fe" stroke-width="2"/>
+  <text x="160" y="268" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">Oldin</text>
+  <rect x="84" y="284" width="152" height="30" rx="6" fill="#f1f5f9"/>
+  <text x="160" y="304" text-anchor="middle" font-size="13" fill="#94a3b8">indikator: yashirin</text>
+  <text x="160" y="338" text-anchor="middle" font-size="13" fill="#475569">display: none</text>
+
+  <rect x="280" y="240" width="200" height="120" rx="10" fill="#eef2ff" stroke="#6366f1" stroke-width="2.5"/>
+  <text x="380" y="268" text-anchor="middle" font-size="15" font-weight="700" fill="#4f46e5">Davomida</text>
+  <rect x="304" y="284" width="152" height="30" rx="6" fill="#ffffff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="380" y="304" text-anchor="middle" font-size="13" fill="#4f46e5">Yuklanmoqda...</text>
+  <text x="380" y="338" text-anchor="middle" font-size="13" fill="#475569">indikator: KO'RINADI</text>
+
+  <rect x="500" y="240" width="200" height="120" rx="10" fill="#ffffff" stroke="#c7d2fe" stroke-width="2"/>
+  <text x="600" y="268" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">Keyin</text>
+  <rect x="524" y="284" width="152" height="30" rx="6" fill="#f0fdf4"/>
+  <text x="600" y="304" text-anchor="middle" font-size="13" fill="#16a34a">natija ko'rindi</text>
+  <text x="600" y="338" text-anchor="middle" font-size="13" fill="#475569">indikator: yana yashirin</text>
+
+  <!-- bog'lovchi chiziqlar vaqt o'qidan pastki qutilarga -->
+  <line x1="150" y1="165" x2="160" y2="240" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <line x1="345" y1="165" x2="380" y2="240" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <line x1="540" y1="165" x2="600" y2="240" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4 3"/>
+
+  <text x="380" y="394" text-anchor="middle" font-size="13" fill="#475569">Bitta atribut — wire:loading — shu uch holatni avtomatik boshqaradi. Kod yozish shart emas.</text>
+</svg>

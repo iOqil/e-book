@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 470" width="860" height="470">
+  <title>Accessibility: semantik HTML + skip-link + ARIA + kontrast + focus</title>
+  <rect x="0" y="0" width="860" height="470" fill="#f8fafc"/>
+  <text x="430" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Accessibility (a11y) ustunlari</text>
+
+  <!-- Skip link bar -->
+  <rect x="30" y="56" width="800" height="34" rx="6" fill="#2563eb"/>
+  <text x="48" y="78" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Tab -&gt; .skip-link: "Asosiy kontentga o'tish" (fokusda ko'rinadi, sichqonchada yashirin)</text>
+
+  <!-- Semantic HTML page mockup -->
+  <rect x="30" y="100" width="500" height="320" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="280" y="124" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Semantik HTML5 struktura</text>
+
+  <!-- header -->
+  <rect x="50" y="136" width="460" height="48" rx="4" fill="#e2e8f0" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="62" y="156" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">&lt;header&gt;</text>
+  <text x="62" y="176" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">&lt;nav aria-label="Asosiy"&gt; ... &lt;/nav&gt;</text>
+
+  <!-- main + aside -->
+  <rect x="50" y="192" width="300" height="160" rx="4" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="62" y="212" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">&lt;main id="primary"&gt;</text>
+  <rect x="64" y="222" width="272" height="116" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+  <text x="76" y="242" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">&lt;article&gt;</text>
+  <text x="88" y="264" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">&lt;h1&gt;Sarlavha&lt;/h1&gt;</text>
+  <text x="88" y="286" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">&lt;p&gt;Matn...&lt;/p&gt;</text>
+  <text x="88" y="308" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">&lt;a aria-current="page"&gt;</text>
+  <text x="76" y="330" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">&lt;/article&gt;</text>
+
+  <rect x="358" y="192" width="152" height="160" rx="4" fill="#fffbeb" stroke="#d97706" stroke-width="1.5"/>
+  <text x="370" y="212" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#d97706">&lt;aside&gt;</text>
+  <text x="370" y="234" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Yon panel</text>
+
+  <!-- footer -->
+  <rect x="50" y="360" width="460" height="44" rx="4" fill="#e2e8f0" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="62" y="386" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">&lt;footer&gt;</text>
+
+  <!-- Right column: pillars -->
+  <!-- Focus -->
+  <rect x="552" y="100" width="278" height="74" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="3" stroke-dasharray="6 3"/>
+  <text x="568" y="124" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Fokus ko'rinishi</text>
+  <text x="568" y="146" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Klaviatura bilan yurganda</text>
+  <text x="568" y="164" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">:focus konturi ko'rinsin</text>
+
+  <!-- Contrast -->
+  <rect x="552" y="184" width="278" height="92" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="568" y="208" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Rang kontrast (WCAG AA)</text>
+  <rect x="568" y="218" width="120" height="44" rx="4" fill="#1e293b"/>
+  <text x="628" y="245" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#ffffff">4.5:1 OK</text>
+  <rect x="700" y="218" width="120" height="44" rx="4" fill="#e2e8f0"/>
+  <text x="760" y="245" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#cbd5e1">2:1 yomon</text>
+
+  <!-- screen-reader-text -->
+  <rect x="552" y="286" width="278" height="80" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="568" y="310" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">.screen-reader-text</text>
+  <text x="568" y="332" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Ekranda yashirin, lekin</text>
+  <text x="568" y="350" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">skrinriderga o'qiladi</text>
+
+  <!-- ARIA -->
+  <rect x="552" y="376" width="278" height="44" rx="8" fill="#2563eb"/>
+  <text x="691" y="403" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#ffffff">ARIA: aria-label, role, aria-current</text>
+
+  <!-- footer note -->
+  <text x="430" y="446" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Maqsad: sichqonchasiz (klaviatura) va ko'rmaydigan foydalanuvchi ham saytdan to'liq foydalana olsin.</text>
+  <text x="430" y="464" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">"accessibility-ready" tegi — WordPress.org katalogida a11y standartini bildiradi.</text>
+</svg>

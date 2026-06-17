@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" width="760" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Modal naqshi: fixed inset-0 bg-black/50 backdrop va markazlashtirilgan dialog oynasi, klasslar bilan izohlangan</title>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+
+  <text x="380" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">Modal naqshi: backdrop + markazdagi oyna</text>
+
+  <!-- viewport frame -->
+  <rect x="40" y="60" width="420" height="360" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="56" y="82" font-size="13" fill="#94a3b8">viewport — orqa sahifa (kontent)</text>
+
+  <!-- dimmed backdrop -->
+  <rect x="40" y="92" width="420" height="328" rx="0" fill="#1e293b" opacity="0.5"/>
+  <rect x="40" y="92" width="420" height="0" fill="#1e293b"/>
+
+  <!-- backdrop label -->
+  <text x="250" y="118" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">fixed inset-0 bg-black/50</text>
+  <text x="250" y="140" text-anchor="middle" font-size="13" fill="#ffffff">butun ekranni qoplaydi · z-40</text>
+
+  <!-- dialog box centered -->
+  <rect x="130" y="200" width="240" height="150" rx="12" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <text x="250" y="234" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e293b">Dialog oynasi</text>
+  <line x1="150" y1="248" x2="350" y2="248" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 4"/>
+  <text x="250" y="274" text-anchor="middle" font-size="13" fill="#475569">Markazda turadi, z-50</text>
+  <rect x="270" y="300" width="80" height="32" rx="6" fill="#6366f1"/>
+  <text x="310" y="321" text-anchor="middle" font-size="13" fill="#ffffff">OK</text>
+  <rect x="170" y="300" width="80" height="32" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="210" y="321" text-anchor="middle" font-size="13" fill="#475569">Bekor</text>
+
+  <!-- annotations on the right -->
+  <text x="500" y="92" font-size="15" font-weight="bold" fill="#4f46e5">Klasslar</text>
+
+  <text x="500" y="124" font-size="13" font-weight="bold" fill="#0ea5e9">Backdrop (qatlam)</text>
+  <text x="500" y="146" font-size="13" fill="#1e293b">fixed inset-0</text>
+  <text x="500" y="166" font-size="13" fill="#475569">→ to'rt tomon ham 0, ekranni to'ldiradi</text>
+  <text x="500" y="186" font-size="13" fill="#1e293b">bg-black/50  z-40</text>
+  <text x="500" y="206" font-size="13" fill="#475569">→ 50% shaffof qora pardasi</text>
+
+  <text x="500" y="246" font-size="13" font-weight="bold" fill="#4f46e5">Markazlash (oyna)</text>
+  <text x="500" y="268" font-size="13" fill="#1e293b">absolute top-1/2 left-1/2</text>
+  <text x="500" y="288" font-size="13" fill="#1e293b">-translate-x-1/2</text>
+  <text x="500" y="308" font-size="13" fill="#1e293b">-translate-y-1/2  z-50</text>
+  <text x="500" y="328" font-size="13" fill="#475569">yoki: inset-0 grid place-items-center</text>
+
+  <text x="500" y="368" font-size="13" font-weight="bold" fill="#16a34a">Scroll xavfsizligi</text>
+  <text x="500" y="390" font-size="13" fill="#1e293b">overscroll-contain</text>
+  <text x="500" y="410" font-size="13" fill="#475569">→ skroll orqa sahifaga "oqib" ketmaydi</text>
+
+  <text x="380" y="452" text-anchor="middle" font-size="13" fill="#64748b">z-50 (oyna) &gt; z-40 (backdrop) &gt; sahifa — qatlam tartibi muhim</text>
+</svg>

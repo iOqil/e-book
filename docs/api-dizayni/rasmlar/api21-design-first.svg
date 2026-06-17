@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 520">
+  <title>Design-first oqimi: OpenAPI spetsifikatsiya bitta manba sifatida</title>
+  <rect x="0" y="0" width="860" height="520" fill="#f8fafc"/>
+  <text x="430" y="34" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b" text-anchor="middle">Design-first: bitta spetsifikatsiya, ko'p natija</text>
+  <text x="430" y="58" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">Avval shartnomani yozamiz; keyin har bir vosita o'sha bitta manbadan oziqlanadi</text>
+
+  <!-- central source of truth -->
+  <rect x="320" y="90" width="220" height="86" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="3"/>
+  <text x="430" y="124" font-family="monospace" font-size="16" font-weight="bold" fill="#2563eb" text-anchor="middle">openapi.yaml</text>
+  <text x="430" y="148" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">manba-haqiqat</text>
+  <text x="430" y="166" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">(source of truth)</text>
+
+  <!-- arrows down to outputs -->
+  <line x1="430" y1="176" x2="430" y2="210" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="120" y1="210" x2="740" y2="210" stroke="#94a3b8" stroke-width="2"/>
+
+  <!-- output 1: mock -->
+  <line x1="120" y1="210" x2="120" y2="240" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="40" y="240" width="160" height="96" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="120" y="268" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="middle">Mock server</text>
+  <text x="120" y="292" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">soxta javoblar —</text>
+  <text x="120" y="310" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">backend tayyor</text>
+  <text x="120" y="328" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">bo'lmasdan test</text>
+
+  <!-- output 2: codegen -->
+  <line x1="275" y1="210" x2="275" y2="240" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="215" y="240" width="160" height="96" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="295" y="268" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#7c3aed" text-anchor="middle">Kod generatsiya</text>
+  <text x="295" y="292" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">mijoz SDK,</text>
+  <text x="295" y="310" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">server skelet,</text>
+  <text x="295" y="328" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">tip ta'riflari</text>
+
+  <!-- output 3: docs -->
+  <line x1="430" y1="210" x2="430" y2="240" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="390" y="240" width="160" height="96" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="470" y="268" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#f59e0b" text-anchor="middle">Hujjat</text>
+  <text x="470" y="292" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">interaktiv UI</text>
+  <text x="470" y="310" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">(Swagger UI,</text>
+  <text x="470" y="328" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">Redoc)</text>
+
+  <!-- output 4: tests -->
+  <line x1="585" y1="210" x2="585" y2="240" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="565" y="240" width="160" height="96" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="645" y="268" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#dc2626" text-anchor="middle">Test va lint</text>
+  <text x="645" y="292" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">contract test,</text>
+  <text x="645" y="310" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">Spectral lint,</text>
+  <text x="645" y="328" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">validatsiya</text>
+
+  <!-- output 5: validation gateway hint -->
+  <line x1="740" y1="210" x2="740" y2="240" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="730" y="240" width="120" height="96" rx="10" fill="#ffffff" stroke="#0891b2" stroke-width="2"/>
+  <text x="790" y="268" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#0891b2" text-anchor="middle">Gateway</text>
+  <text x="790" y="292" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">so'rov/javob</text>
+  <text x="790" y="310" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">spec'ga mos</text>
+  <text x="790" y="328" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">validatsiya</text>
+
+  <!-- code-first contrast -->
+  <rect x="40" y="370" width="810" height="120" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="60" y="396" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">Code-first (qarama-qarshi yondashuv)</text>
+  <text x="60" y="420" font-family="Segoe UI" font-size="13" fill="#334155">Kod -> annotatsiya -> spec generatsiya qilinadi. Tezroq boshlash, lekin shartnoma koddan keyin keladi:</text>
+  <text x="60" y="442" font-family="Segoe UI" font-size="13" fill="#334155">dizayn xatosi kech bilinadi, parallel ish qiyin, frontend backend'ni kutadi.</text>
+  <text x="60" y="466" font-family="Segoe UI" font-size="13" fill="#64748b">Tanlov = trade-off: kichik/ichki API uchun code-first ham yetadi; ko'p-mijozli public API uchun design-first kuchliroq.</text>
+</svg>

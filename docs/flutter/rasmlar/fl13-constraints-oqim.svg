@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 500" width="780" height="500" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Flutter layout algoritmi: ota widget bolaga cheklovlarni (min/max) PASTGA uzatadi, bola shu cheklov ichida o'lchamini tanlab YUQORIGA qaytaradi, so'ng ota bolani joylashtiradi</title>
+  <defs>
+    <marker id="fl13down" markerWidth="13" markerHeight="13" refX="5" refY="9" orient="auto">
+      <path d="M0,0 L10,0 L5,9 z" fill="#027dfd"/>
+    </marker>
+    <marker id="fl13upg" markerWidth="13" markerHeight="13" refX="5" refY="0" orient="auto">
+      <path d="M0,9 L5,0 L10,9 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="780" height="500" fill="#f8fafc"/>
+  <text x="390" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Flutter layout qoidasi — eng muhim tushuncha</text>
+  <text x="390" y="58" text-anchor="middle" font-size="15" fill="#475569">"Cheklov pastga tushadi · o'lcham yuqoriga ko'tariladi · joyni ota belgilaydi"</text>
+
+  <!-- legend -->
+  <rect x="540" y="78" width="18" height="14" rx="3" fill="#027dfd"/>
+  <text x="566" y="90" font-size="13" fill="#0553b1">cheklov (min/max) ↓</text>
+  <rect x="540" y="100" width="18" height="14" rx="3" fill="#16a34a"/>
+  <text x="566" y="112" font-size="13" fill="#16a34a">o'lcham ↑</text>
+
+  <!-- ===== Tree of 3 nodes (left column) ===== -->
+  <!-- Node A: parent -->
+  <rect x="120" y="100" width="220" height="64" rx="12" fill="#027dfd"/>
+  <text x="230" y="128" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">Ota: Center</text>
+  <text x="230" y="150" text-anchor="middle" font-size="13" fill="#dbeafe">ekran: 360 x 640</text>
+
+  <!-- Node B: middle -->
+  <rect x="120" y="232" width="220" height="64" rx="12" fill="#6366f1"/>
+  <text x="230" y="260" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">Padding(16)</text>
+  <text x="230" y="282" text-anchor="middle" font-size="13" fill="#e0e7ff">cheklovni 16px toraytiradi</text>
+
+  <!-- Node C: child leaf -->
+  <rect x="120" y="364" width="220" height="64" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="230" y="392" text-anchor="middle" font-size="16" font-weight="700" fill="#16a34a">Bola: Text</text>
+  <text x="230" y="414" text-anchor="middle" font-size="13" fill="#475569">tabiiy o'lcham: 180 x 24</text>
+
+  <!-- down arrows (left side of nodes) -->
+  <line x1="150" y1="168" x2="150" y2="228" stroke="#027dfd" stroke-width="3" marker-end="url(#fl13down)"/>
+  <line x1="150" y1="300" x2="150" y2="360" stroke="#027dfd" stroke-width="3" marker-end="url(#fl13down)"/>
+  <!-- up arrows (right side of nodes) -->
+  <line x1="310" y1="360" x2="310" y2="300" stroke="#16a34a" stroke-width="3" marker-end="url(#fl13upg)"/>
+  <line x1="310" y1="228" x2="310" y2="168" stroke="#16a34a" stroke-width="3" marker-end="url(#fl13upg)"/>
+
+  <!-- ===== Step explanations (right column) ===== -->
+  <!-- step 1 -->
+  <rect x="400" y="150" width="350" height="58" rx="10" fill="#dbeafe" stroke="#027dfd" stroke-width="2"/>
+  <text x="416" y="174" font-size="14" font-weight="700" fill="#0553b1">1 ↓ Ota cheklov beradi</text>
+  <text x="416" y="196" font-size="13" fill="#475569">"eni 0..360, bo'yi 0..640 oralig'ida bo'l"</text>
+
+  <!-- step 2 -->
+  <rect x="400" y="240" width="350" height="58" rx="10" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="416" y="264" font-size="14" font-weight="700" fill="#6366f1">2 ↓ Padding toraytiradi</text>
+  <text x="416" y="286" font-size="13" fill="#475569">bolaga: "eni 0..328" (har tomondan 16 ayirib)</text>
+
+  <!-- step 3 -->
+  <rect x="400" y="330" width="350" height="58" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="416" y="354" font-size="14" font-weight="700" fill="#16a34a">3 ↑ Bola o'lchamini tanlaydi</text>
+  <text x="416" y="376" font-size="13" fill="#475569">Text: "menga 180 x 24 yetarli" — yuqoriga qaytaradi</text>
+
+  <!-- step 4 -->
+  <rect x="400" y="420" width="350" height="58" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="416" y="444" font-size="14" font-weight="700" fill="#f59e0b">4 Ota joyni belgilaydi</text>
+  <text x="416" y="466" font-size="13" fill="#475569">Center bolani aniq markazga qo'yadi</text>
+
+  <text x="230" y="466" text-anchor="middle" font-size="13" fill="#94a3b8">Shuning uchun ba'zan Container(width:100)</text>
+  <text x="230" y="484" text-anchor="middle" font-size="13" fill="#94a3b8">e'tiborga olinmaydi — ota cheklovi kuchliroq</text>
+</svg>

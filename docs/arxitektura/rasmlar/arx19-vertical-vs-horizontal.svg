@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 540">
+  <title>Vertikal masshtablash (scale up - kuchliroq mashina) va gorizontal masshtablash (scale out - ko'proq mashina) taqqoslash, har birining chegarasi va narxi</title>
+  <rect x="0" y="0" width="860" height="540" fill="#f8fafc"/>
+  <text x="430" y="34" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Vertikal (scale up) va gorizontal (scale out) masshtablash</text>
+
+  <!-- VERTICAL -->
+  <rect x="30" y="58" width="380" height="412" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <rect x="30" y="58" width="380" height="34" rx="10" fill="#2563eb"/>
+  <text x="220" y="81" text-anchor="middle" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#ffffff">Vertikal: scale UP (kuchliroq mashina)</text>
+
+  <!-- small server growing to big -->
+  <rect x="70" y="120" width="60" height="50" rx="5" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="100" y="150" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#1e293b">2 CPU</text>
+  <text x="160" y="150" font-family="Segoe UI" font-size="20" fill="#64748b">-&gt;</text>
+  <rect x="200" y="105" width="100" height="80" rx="5" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/>
+  <text x="250" y="140" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#1e293b">16 CPU</text>
+  <text x="250" y="162" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#1e293b">128 GB</text>
+  <text x="340" y="150" font-family="Segoe UI" font-size="20" fill="#64748b">...</text>
+
+  <text x="50" y="218" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">Yaxshi:</text>
+  <text x="50" y="240" font-family="Segoe UI" font-size="13" fill="#334155">- Sodda: kod o'zgarmaydi</text>
+  <text x="50" y="262" font-family="Segoe UI" font-size="13" fill="#334155">- Holatli (stateful) tizimga oson</text>
+  <text x="50" y="284" font-family="Segoe UI" font-size="13" fill="#334155">- Tarmoq murakkabligi yo'q</text>
+
+  <text x="50" y="316" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">Chegara va narx:</text>
+  <text x="50" y="338" font-family="Segoe UI" font-size="13" fill="#334155">- Fizik shift (eng katta mashina bor)</text>
+  <text x="50" y="360" font-family="Segoe UI" font-size="13" fill="#334155">- Narx CHIZIQSIZ oshadi (2x quvvat</text>
+  <text x="66" y="378" font-family="Segoe UI" font-size="13" fill="#334155">  &gt; 2x narx)</text>
+  <text x="50" y="400" font-family="Segoe UI" font-size="13" fill="#334155">- Bitta nuqta = bitta nosozlik manbai</text>
+  <text x="50" y="422" font-family="Segoe UI" font-size="13" fill="#334155">- Yangilashda to'xtatish kerak bo'lishi</text>
+  <text x="66" y="440" font-family="Segoe UI" font-size="13" fill="#334155">  mumkin (downtime)</text>
+
+  <!-- HORIZONTAL -->
+  <rect x="450" y="58" width="380" height="412" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <rect x="450" y="58" width="380" height="34" rx="10" fill="#16a34a"/>
+  <text x="640" y="81" text-anchor="middle" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#ffffff">Gorizontal: scale OUT (ko'proq mashina)</text>
+
+  <!-- many identical servers -->
+  <rect x="478" y="110" width="56" height="44" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="506" y="137" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">node</text>
+  <rect x="546" y="110" width="56" height="44" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="574" y="137" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">node</text>
+  <rect x="614" y="110" width="56" height="44" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="642" y="137" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">node</text>
+  <rect x="682" y="110" width="56" height="44" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="710" y="137" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">node</text>
+  <text x="748" y="137" font-family="Segoe UI" font-size="18" fill="#64748b">+</text>
+
+  <text x="470" y="218" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">Yaxshi:</text>
+  <text x="470" y="240" font-family="Segoe UI" font-size="13" fill="#334155">- Deyarli chegarasiz o'sish</text>
+  <text x="470" y="262" font-family="Segoe UI" font-size="13" fill="#334155">- Arzon, oddiy mashinalar</text>
+  <text x="470" y="284" font-family="Segoe UI" font-size="13" fill="#334155">- Bittasi yiqilsa, boshqalar ishlaydi</text>
+  <text x="486" y="302" font-family="Segoe UI" font-size="13" fill="#334155">  (toqatlilik / resilience)</text>
+
+  <text x="470" y="334" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">Chegara va narx:</text>
+  <text x="470" y="356" font-family="Segoe UI" font-size="13" fill="#334155">- Servis STATELESS bo'lishi SHART</text>
+  <text x="470" y="378" font-family="Segoe UI" font-size="13" fill="#334155">- Load balancer kerak</text>
+  <text x="470" y="400" font-family="Segoe UI" font-size="13" fill="#334155">- Tarmoq murakkabligi (8 fallacy)</text>
+  <text x="470" y="422" font-family="Segoe UI" font-size="13" fill="#334155">- Tarqoq holat: kesh, sessiya, DB</text>
+
+  <text x="430" y="500" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#1e293b">Trade-off: vertikal = sodda, lekin chegarali; gorizontal = arzon va toqatli, lekin murakkab.</text>
+  <text x="430" y="522" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Ko'p tizim vertikal boshlaydi, masshtab talab qilganda gorizontalga o'tadi (avval stateless qilib).</text>
+</svg>

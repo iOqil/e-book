@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420">
+  <title>Terraform ishlash oqimi: HCL fayllar (.tf) dan terraform init provider'ni yuklaydi, terraform plan joriy holat bilan farqni hisoblaydi, terraform apply cloud API orqali resurs yaratadi va natija terraform.tfstate state fayliga yoziladi</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Terraform oqimi: HCL -&gt; plan -&gt; apply -&gt; cloud</text>
+
+  <!-- HCL fayllar -->
+  <rect x="28" y="70" width="150" height="120" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="103" y="96" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#7c3aed">HCL (.tf)</text>
+  <text x="103" y="120" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">provider</text>
+  <text x="103" y="140" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">resource</text>
+  <text x="103" y="160" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">variable</text>
+  <text x="103" y="180" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">output</text>
+
+  <!-- init -->
+  <line x1="178" y1="130" x2="214" y2="130" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+  <rect x="216" y="98" width="138" height="64" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="285" y="125" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e40af">init</text>
+  <text x="285" y="146" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">provider'ni yuklash</text>
+
+  <!-- plan -->
+  <line x1="354" y1="130" x2="390" y2="130" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+  <rect x="392" y="98" width="150" height="64" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="467" y="125" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#92400e">plan</text>
+  <text x="467" y="146" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">farqni hisoblaydi (+/~/-)</text>
+
+  <!-- apply -->
+  <line x1="542" y1="130" x2="578" y2="130" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+  <rect x="580" y="98" width="150" height="64" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="655" y="125" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#166534">apply</text>
+  <text x="655" y="146" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">resursni yaratadi</text>
+
+  <!-- plan -> state o'qish -->
+  <line x1="467" y1="162" x2="467" y2="250" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#a)"/>
+  <text x="540" y="208" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">joriy holatni o'qiydi</text>
+
+  <!-- apply -> cloud -->
+  <line x1="655" y1="162" x2="655" y2="280" stroke="#16a34a" stroke-width="2.5" marker-end="url(#ag)"/>
+  <text x="690" y="225" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">cloud API</text>
+
+  <!-- state fayl -->
+  <rect x="330" y="256" width="270" height="70" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="465" y="284" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#7c3aed">terraform.tfstate (state)</text>
+  <text x="465" y="306" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">yaratilgan resurslarning joriy holati</text>
+
+  <!-- apply -> state yozish -->
+  <line x1="655" y1="290" x2="602" y2="290" stroke="#7c3aed" stroke-width="2" marker-end="url(#ap)"/>
+
+  <!-- cloud resurs -->
+  <rect x="600" y="280" width="132" height="92" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="666" y="306" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#166534">Cloud</text>
+  <text x="666" y="328" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">VPS (droplet)</text>
+  <text x="666" y="348" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">+ tarmoq (VPC)</text>
+
+  <!-- pastki izoh -->
+  <rect x="28" y="344" width="290" height="48" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="173" y="366" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#92400e">plan = xavfsizlik bosqichi</text>
+  <text x="173" y="385" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">apply'dan oldin nima bo'lishini ko'rsatadi</text>
+
+  <defs>
+    <marker id="a" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#94a3b8"/>
+    </marker>
+    <marker id="ag" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L9,4 L0,8 Z" fill="#16a34a"/>
+    </marker>
+    <marker id="ap" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#7c3aed"/>
+    </marker>
+  </defs>
+</svg>

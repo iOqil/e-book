@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" width="760" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Hisoblagich komponentining uch qismi: property, action va Blade ko'rinishi</title>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">Hisoblagich komponentining uch qismi</text>
+  <text x="380" y="60" text-anchor="middle" font-size="14" fill="#475569">bitta SFC fayl ichida: miya + xulq + yuz</text>
+
+  <!-- PROPERTY box -->
+  <rect x="40" y="92" width="320" height="120" rx="12" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <rect x="40" y="92" width="320" height="30" rx="12" fill="#eef2ff"/>
+  <rect x="40" y="110" width="320" height="12" fill="#eef2ff"/>
+  <text x="56" y="113" font-size="15" font-weight="700" fill="#4f46e5">1. PROPERTY — xotira</text>
+  <text x="56" y="148" font-size="14" fill="#1e293b" font-family="Consolas, monospace">public int $count = 0;</text>
+  <text x="56" y="174" font-size="13" fill="#475569">Komponent eslab turadigan qiymat.</text>
+  <text x="56" y="194" font-size="13" fill="#475569">Faqat public bo'lsa frontend ko'radi.</text>
+
+  <!-- ACTION box -->
+  <rect x="400" y="92" width="320" height="120" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <rect x="400" y="92" width="320" height="30" rx="12" fill="#ecfdf5"/>
+  <rect x="400" y="110" width="320" height="12" fill="#ecfdf5"/>
+  <text x="416" y="113" font-size="15" font-weight="700" fill="#16a34a">2. ACTION — amal</text>
+  <text x="416" y="148" font-size="14" fill="#1e293b" font-family="Consolas, monospace">function increment() {</text>
+  <text x="416" y="170" font-size="14" fill="#1e293b" font-family="Consolas, monospace">  $this-&gt;count++;</text>
+  <text x="416" y="192" font-size="14" fill="#1e293b" font-family="Consolas, monospace">}</text>
+
+  <!-- VIEW box -->
+  <rect x="170" y="262" width="420" height="150" rx="12" fill="#ffffff" stroke="#fb70a9" stroke-width="2"/>
+  <rect x="170" y="262" width="420" height="30" rx="12" fill="#fef0f6"/>
+  <rect x="170" y="280" width="420" height="12" fill="#fef0f6"/>
+  <text x="186" y="283" font-size="15" font-weight="700" fill="#be3a76">3. BLADE — ko'rinish (yuz)</text>
+  <text x="186" y="318" font-size="14" fill="#1e293b" font-family="Consolas, monospace">&lt;h1&gt;Hisob: {{ $count }}&lt;/h1&gt;</text>
+  <text x="186" y="342" font-size="14" fill="#1e293b" font-family="Consolas, monospace">&lt;button wire:click="increment"&gt;+&lt;/button&gt;</text>
+  <text x="186" y="366" font-size="14" fill="#1e293b" font-family="Consolas, monospace">&lt;button wire:click="decrement"&gt;-&lt;/button&gt;</text>
+  <text x="186" y="394" font-size="13" fill="#475569">Bitta ildiz &lt;div&gt; ichida bo'lishi SHART.</text>
+
+  <!-- arrows: property -> view (display) -->
+  <line x1="200" y1="212" x2="270" y2="258" stroke="#4f46e5" stroke-width="2" marker-end="url(#arrI)"/>
+  <text x="150" y="244" font-size="13" fill="#4f46e5">$count ko'rsatiladi</text>
+
+  <!-- arrows: view -> action (click) -->
+  <line x1="560" y1="212" x2="490" y2="258" stroke="#16a34a" stroke-width="2" marker-end="url(#arrG)"/>
+  <text x="540" y="244" font-size="13" fill="#16a34a">wire:click chaqiradi</text>
+
+  <!-- arrow: action -> property (mutate) -->
+  <line x1="400" y1="152" x2="362" y2="152" stroke="#16a34a" stroke-width="2" marker-end="url(#arrG)"/>
+  <text x="372" y="80" text-anchor="middle" font-size="13" fill="#16a34a">amal qiymatni o'zgartiradi</text>
+
+  <text x="380" y="446" text-anchor="middle" font-size="13" fill="#94a3b8">Uchovi birgalikda: bosish -&gt; amal -&gt; xotira o'zgaradi -&gt; ko'rinish yangilanadi</text>
+
+  <defs>
+    <marker id="arrI" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#4f46e5"/></marker>
+    <marker id="arrG" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#16a34a"/></marker>
+  </defs>
+</svg>

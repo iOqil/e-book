@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 540">
+  <title>Polyglot persistence: bitta e-commerce tizimda har vazifa uchun mos ma'lumotlar bazasi tanlanadi</title>
+  <rect x="0" y="0" width="860" height="540" fill="#f8fafc"/>
+  <text x="430" y="34" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Polyglot persistence: har vazifaga mos DB</text>
+  <text x="430" y="58" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">E-commerce tizimi - bitta ilova, lekin saqlash bir xil emas</text>
+
+  <!-- App node -->
+  <rect x="330" y="80" width="200" height="56" rx="10" fill="#1e293b"/>
+  <text x="430" y="106" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#ffffff">E-commerce backend</text>
+  <text x="430" y="125" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#cbd5e1">(har vazifa - mos do'kon)</text>
+
+  <!-- connectors -->
+  <line x1="380" y1="136" x2="115" y2="220" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="410" y1="136" x2="300" y2="220" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="450" y1="136" x2="500" y2="220" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="480" y1="136" x2="690" y2="220" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="430" y1="136" x2="430" y2="360" stroke="#94a3b8" stroke-width="2"/>
+
+  <!-- DB 1: Orders -> SQL -->
+  <rect x="20" y="220" width="190" height="120" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="115" y="246" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">Buyurtma + to'lov</text>
+  <text x="115" y="272" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">PostgreSQL (SQL)</text>
+  <text x="115" y="296" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">pul + ACID kerak;</text>
+  <text x="115" y="314" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">kuchli yaxlitlik,</text>
+  <text x="115" y="332" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">tranzaksiya</text>
+
+  <!-- DB 2: Catalog -> Document -->
+  <rect x="222" y="220" width="190" height="120" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="317" y="246" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#7c3aed">Mahsulot katalogi</text>
+  <text x="317" y="272" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">MongoDB (document)</text>
+  <text x="317" y="296" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">har mahsulot</text>
+  <text x="317" y="314" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">turli atributli;</text>
+  <text x="317" y="332" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">moslashuvchan shakl</text>
+
+  <!-- DB 3: Cart/session -> Key-Value -->
+  <rect x="424" y="220" width="190" height="120" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="519" y="246" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">Savat + sessiya</text>
+  <text x="519" y="272" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">Redis (key-value)</text>
+  <text x="519" y="296" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">juda tez o'qish;</text>
+  <text x="519" y="314" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">vaqtinchalik,</text>
+  <text x="519" y="332" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">TTL bilan o'chadi</text>
+
+  <!-- DB 4: Search -> column/search -->
+  <rect x="626" y="220" width="190" height="120" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="721" y="246" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#b45309">Qidiruv + loglar</text>
+  <text x="721" y="272" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">Elasticsearch</text>
+  <text x="721" y="296" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">to'liq matnli</text>
+  <text x="721" y="314" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">qidiruv, analitika,</text>
+  <text x="721" y="332" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">log indeksi</text>
+
+  <!-- DB 5: Recommendations -> Graph -->
+  <rect x="330" y="360" width="200" height="120" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="430" y="386" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#dc2626">Tavsiya / "do'st"</text>
+  <text x="430" y="412" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">Neo4j (graph)</text>
+  <text x="430" y="436" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">"buni olganlar yana</text>
+  <text x="430" y="454" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">nimani oldi" - chuqur</text>
+  <text x="430" y="472" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">bog'lanish bo'ylab</text>
+
+  <!-- trade-off note -->
+  <rect x="20" y="498" width="820" height="32" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="430" y="519" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#991b1b">Trade-off: har yangi DB = yangi operatsion yuk (backup, monitoring, jamoa tajribasi). Ko'p &gt; har doim yaxshi emas.</text>
+</svg>

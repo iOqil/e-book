@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="760" height="380">
+  <title>Rollback jarayoni: v2 versiya production ga deploy boladi va qulaydi, compose faylida image teg v2 dan oldingi sog'lom v1 ga o'zgartiriladi, docker compose up bilan v1 qayta ko'tariladi va ilova tiklanadi</title>
+  <rect x="0" y="0" width="760" height="380" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Rollback: oldingi immutable tegga qaytish</text>
+
+  <!-- 1: v2 deploy -->
+  <rect x="40" y="80" width="200" height="86" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="140" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e40af">1. v2 deploy</text>
+  <text x="140" y="130" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">image: sha-bbb2222</text>
+  <text x="140" y="151" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">up -d</text>
+
+  <line x1="240" y1="123" x2="296" y2="123" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#strel)"/>
+
+  <!-- 2: quladi -->
+  <rect x="300" y="80" width="200" height="86" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="400" y="108" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b91c1c">2. v2 qulaydi</text>
+  <text x="400" y="130" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">healthcheck FAIL</text>
+  <text x="400" y="151" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b91c1c">sayt ishlamaydi</text>
+
+  <!-- 2 -> 3 (pastga) -->
+  <line x1="400" y1="166" x2="400" y2="214" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#strel)"/>
+  <text x="400" y="194" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b91c1c">rollback!</text>
+
+  <!-- 3: tegni oldingiga -->
+  <rect x="300" y="220" width="200" height="86" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="400" y="248" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#92400e">3. tegni almashtirish</text>
+  <text x="400" y="270" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">IMAGE_TAG=sha-aaa1111</text>
+  <text x="400" y="291" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(oldingi sog'lom v1)</text>
+
+  <line x1="300" y1="263" x2="244" y2="263" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#strel)"/>
+
+  <!-- 4: v1 tiklandi -->
+  <rect x="40" y="220" width="200" height="86" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="140" y="248" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#166534">4. v1 tiklandi</text>
+  <text x="140" y="270" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">compose up -d</text>
+  <text x="140" y="291" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">ilova ishlaydi</text>
+
+  <text x="380" y="346" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">Immutable teg (sha/semver) tufayli v1 hali ham aniq, o'zgarmas image — qayta build kerak emas</text>
+
+  <defs>
+    <marker id="strel" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 400">
+  <title>Page Object Model: testlar sahifa-obyekt orqali UI bilan gaplashadi; UI o'zgarsa faqat sahifa-obyektdagi lokatorlar tuzatiladi, testlarga tegilmaydi</title>
+  <rect x="0" y="0" width="820" height="400" fill="#f8fafc"/>
+  <text x="410" y="38" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Page Object — o'zgarish izolyatsiyasi</text>
+  <text x="410" y="64" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Lokatorlar bir joyda; UI o'zgarsa, faqat shu joy tuzatiladi</text>
+
+  <!-- Testlar -->
+  <rect x="50" y="120" width="180" height="160" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="140" y="150" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#1e40af">Testlar</text>
+  <text x="140" y="178" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e40af">sahifa.kir("ali",..)</text>
+  <text x="140" y="200" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e40af">sahifa.boshqaruvdami()</text>
+  <text x="140" y="228" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">selektor YO'Q —</text>
+  <text x="140" y="248" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">faqat amal "tili"</text>
+
+  <!-- Page Object -->
+  <rect x="320" y="120" width="180" height="160" rx="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="410" y="150" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#5b21b6">LoginSahifa</text>
+  <text x="410" y="176" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#5b21b6">LOGIN = "#login"</text>
+  <text x="410" y="196" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#5b21b6">KIRISH = "#kirish"</text>
+  <text x="410" y="222" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#5b21b6">kir(), och()</text>
+  <text x="410" y="248" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#7c3aed">lokatorlar shu yerda</text>
+
+  <!-- UI -->
+  <rect x="590" y="120" width="180" height="160" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="680" y="150" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#166534">Real UI</text>
+  <text x="680" y="178" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#166534">HTML maydonlar</text>
+  <text x="680" y="200" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#166534">tugmalar, matn</text>
+  <text x="680" y="228" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">tez-tez o'zgaradi</text>
+
+  <!-- Strelkalar -->
+  <line x1="230" y1="200" x2="316" y2="200" stroke="#64748b" stroke-width="2"/>
+  <polygon points="320,200 308,194 308,206" fill="#64748b"/>
+  <line x1="500" y1="200" x2="586" y2="200" stroke="#64748b" stroke-width="2"/>
+  <polygon points="590,200 578,194 578,206" fill="#64748b"/>
+
+  <!-- O'zgarish izolyatsiyasi izohi -->
+  <rect x="320" y="310" width="450" height="60" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="545" y="335" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#92400e">UI o'zgardi? Tuzatish faqat shu yerda</text>
+  <text x="545" y="357" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#92400e">100 ta test o'zgarmaydi — bitta lokator tuzatiladi</text>
+  <line x1="410" y1="280" x2="430" y2="306" stroke="#f59e0b" stroke-width="2" stroke-dasharray="5 4"/>
+</svg>

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 460" width="760" height="460" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Livewire test oqimi: test bilan komponentni ishga tushirish, set bilan holat, call bilan metod, assert bilan tekshirish; yashil o'tdi, qizil yiqildi</title>
+  <rect x="0" y="0" width="760" height="460" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Livewire test oqimi: test → set → call → assert</text>
+
+  <!-- 1: test() -->
+  <rect x="30" y="70" width="160" height="78" rx="11" fill="#ffffff" stroke="#4f46e5" stroke-width="2.5"/>
+  <text x="110" y="100" text-anchor="middle" font-size="14" font-weight="700" fill="#4f46e5">1. test()</text>
+  <text x="110" y="122" text-anchor="middle" font-size="13" fill="#475569">komponentni</text>
+  <text x="110" y="139" text-anchor="middle" font-size="13" fill="#475569">trenajyorda ishga tushir</text>
+
+  <!-- arrow -->
+  <line x1="190" y1="109" x2="222" y2="109" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="224,109 210,103 210,115" fill="#94a3b8"/>
+
+  <!-- 2: set() -->
+  <rect x="226" y="70" width="160" height="78" rx="11" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <text x="306" y="100" text-anchor="middle" font-size="14" font-weight="700" fill="#6366f1">2. set()</text>
+  <text x="306" y="122" text-anchor="middle" font-size="13" fill="#475569">holatni o'rnat</text>
+  <text x="306" y="139" text-anchor="middle" font-size="13" fill="#475569">(maydon to'ldirish)</text>
+
+  <!-- arrow -->
+  <line x1="386" y1="109" x2="418" y2="109" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="420,109 406,103 406,115" fill="#94a3b8"/>
+
+  <!-- 3: call() -->
+  <rect x="422" y="70" width="160" height="78" rx="11" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <text x="502" y="100" text-anchor="middle" font-size="14" font-weight="700" fill="#6366f1">3. call()</text>
+  <text x="502" y="122" text-anchor="middle" font-size="13" fill="#475569">metod chaqir</text>
+  <text x="502" y="139" text-anchor="middle" font-size="13" fill="#475569">(tugma bosish)</text>
+
+  <!-- arrow -->
+  <line x1="582" y1="109" x2="614" y2="109" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="616,109 602,103 602,115" fill="#94a3b8"/>
+
+  <!-- 4: assert -->
+  <rect x="618" y="70" width="118" height="78" rx="11" fill="#eef2ff" stroke="#4f46e5" stroke-width="2.5"/>
+  <text x="677" y="100" text-anchor="middle" font-size="14" font-weight="700" fill="#4f46e5">4. assert</text>
+  <text x="677" y="122" text-anchor="middle" font-size="13" fill="#475569">natijani</text>
+  <text x="677" y="139" text-anchor="middle" font-size="13" fill="#475569">tekshir</text>
+
+  <!-- branch from assert -->
+  <line x1="677" y1="148" x2="677" y2="190" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="677,192 671,178 683,178" fill="#94a3b8"/>
+  <text x="677" y="212" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Natija ikki yo'l</text>
+
+  <!-- two outcomes -->
+  <line x1="677" y1="220" x2="250" y2="262" stroke="#16a34a" stroke-width="2.5"/>
+  <polygon points="248,262 263,260 257,271" fill="#16a34a"/>
+  <line x1="677" y1="220" x2="560" y2="262" stroke="#dc2626" stroke-width="2.5"/>
+  <polygon points="558,262 573,260 567,271" fill="#dc2626"/>
+
+  <!-- GREEN: passed -->
+  <rect x="60" y="262" width="320" height="74" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2.5"/>
+  <circle cx="96" cy="299" r="16" fill="#16a34a"/>
+  <path d="M 88 299 l 6 6 l 12 -13" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="220" y="293" text-anchor="middle" font-size="15" font-weight="700" fill="#16a34a">YASHIL — o'tdi (passed)</text>
+  <text x="220" y="316" text-anchor="middle" font-size="13" fill="#475569">kutilgan = haqiqiy. Kod to'g'ri ishlaydi.</text>
+
+  <!-- RED: failed -->
+  <rect x="400" y="262" width="320" height="74" rx="12" fill="#fef2f2" stroke="#dc2626" stroke-width="2.5"/>
+  <circle cx="436" cy="299" r="16" fill="#dc2626"/>
+  <path d="M 430 293 l 12 12 M 442 293 l -12 12" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+  <text x="566" y="293" text-anchor="middle" font-size="15" font-weight="700" fill="#dc2626">QIZIL — yiqildi (failed)</text>
+  <text x="566" y="316" text-anchor="middle" font-size="13" fill="#475569">kutilgan ≠ haqiqiy. Xato bor!</text>
+
+  <!-- example chain -->
+  <rect x="30" y="362" width="700" height="74" rx="11" fill="#ffffff" stroke="#c7d2fe" stroke-width="2"/>
+  <text x="50" y="386" font-size="13" font-weight="700" fill="#1e293b">Misol zanjir (fluent — ravon):</text>
+  <text x="50" y="409" font-size="13" fill="#4f46e5">Livewire::test('counter')-&gt;set('count', 5)-&gt;call('increment')</text>
+  <text x="50" y="428" font-size="13" fill="#16a34a">    -&gt;assertSee('Hisob: 6');   // → yashil</text>
+</svg>

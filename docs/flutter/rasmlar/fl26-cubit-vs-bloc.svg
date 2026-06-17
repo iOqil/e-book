@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 440" width="780" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Cubit metod chaqirib state emit qiladi, event yo'q; Bloc esa event qo'shadi, ishlovchi uni qabul qiladi va state emit qiladi - sodda va oshkora yondashuvlar taqqoslangan</title>
+  <rect x="0" y="0" width="780" height="440" fill="#f8fafc"/>
+
+  <text x="390" y="34" text-anchor="middle" font-size="21" font-weight="bold" fill="#1e293b">Cubit vs Bloc</text>
+  <text x="390" y="56" text-anchor="middle" font-size="14" fill="#475569">Soddalik &#8596; oshkoralik (kuzatiluvchanlik)</text>
+
+  <!-- divider -->
+  <line x1="390" y1="80" x2="390" y2="400" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="6 5"/>
+
+  <!-- ===== CUBIT (left) ===== -->
+  <rect x="40" y="84" width="310" height="46" rx="12" fill="#0ea5e9"/>
+  <text x="195" y="106" text-anchor="middle" font-size="17" font-weight="bold" fill="#ffffff">Cubit</text>
+  <text x="195" y="124" text-anchor="middle" font-size="13" fill="#ffffff">sodda &#8212; event yo'q</text>
+
+  <rect x="62" y="148" width="266" height="58" rx="10" fill="#ffffff" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="195" y="172" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e293b">Widget</text>
+  <text x="195" y="194" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#475569">cubit.increment()</text>
+
+  <line x1="195" y1="206" x2="195" y2="232" stroke="#0ea5e9" stroke-width="3"/>
+  <polygon points="189,232 195,244 201,232" fill="#0ea5e9"/>
+  <text x="280" y="226" text-anchor="middle" font-size="13" fill="#0ea5e9">metod</text>
+
+  <rect x="62" y="246" width="266" height="64" rx="10" fill="#dbeafe" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="195" y="270" text-anchor="middle" font-size="14" font-weight="bold" fill="#0553b1">Cubit metodi</text>
+  <text x="195" y="293" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">emit(state + 1)</text>
+
+  <line x1="195" y1="310" x2="195" y2="336" stroke="#16a34a" stroke-width="3"/>
+  <polygon points="189,336 195,348 201,336" fill="#16a34a"/>
+
+  <rect x="62" y="350" width="266" height="40" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="195" y="375" text-anchor="middle" font-size="14" font-weight="bold" fill="#16a34a">yangi State &#8594; UI</text>
+
+  <!-- ===== BLOC (right) ===== -->
+  <rect x="430" y="84" width="310" height="46" rx="12" fill="#6366f1"/>
+  <text x="585" y="106" text-anchor="middle" font-size="17" font-weight="bold" fill="#ffffff">Bloc</text>
+  <text x="585" y="124" text-anchor="middle" font-size="13" fill="#ffffff">oshkora &#8212; event bilan</text>
+
+  <rect x="452" y="148" width="266" height="58" rx="10" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <text x="585" y="172" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e293b">Widget</text>
+  <text x="585" y="194" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#475569">bloc.add(Increment())</text>
+
+  <line x1="585" y1="206" x2="585" y2="232" stroke="#f59e0b" stroke-width="3"/>
+  <polygon points="579,232 585,244 591,232" fill="#f59e0b"/>
+  <text x="660" y="226" text-anchor="middle" font-size="13" fill="#f59e0b">Event</text>
+
+  <rect x="452" y="246" width="266" height="64" rx="10" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="585" y="270" text-anchor="middle" font-size="14" font-weight="bold" fill="#6366f1">on&lt;Increment&gt; ishlovchisi</text>
+  <text x="585" y="293" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">emit(state + 1)</text>
+
+  <line x1="585" y1="310" x2="585" y2="336" stroke="#16a34a" stroke-width="3"/>
+  <polygon points="579,336 585,348 591,336" fill="#16a34a"/>
+
+  <rect x="452" y="350" width="266" height="40" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="585" y="375" text-anchor="middle" font-size="14" font-weight="bold" fill="#16a34a">yangi State &#8594; UI</text>
+
+  <!-- bottom hint -->
+  <text x="195" y="420" text-anchor="middle" font-size="13" fill="#64748b">oddiy holat uchun</text>
+  <text x="585" y="420" text-anchor="middle" font-size="13" fill="#64748b">murakkab / kuzatiladigan oqim uchun</text>
+</svg>

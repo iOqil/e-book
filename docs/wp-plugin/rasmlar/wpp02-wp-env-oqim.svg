@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="760" height="380">
+  <title>wp-env start buyrug'i ishlash oqimi: .wp-env.json o'qiladi, Docker WordPress va MySQL konteynerlarini ko'taradi, brauzerda localhost:8888 saytni ochasiz, kodingiz konteynerga ulanadi</title>
+
+  <rect x="0" y="0" width="760" height="380" fill="#f8fafc"/>
+
+  <text x="380" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">wp-env start: nima yuz beradi</text>
+
+  <!-- 1 buyruq -->
+  <rect x="28" y="74" width="200" height="92" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="128" y="104" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">1. Terminal</text>
+  <text x="128" y="128" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">npx wp-env start</text>
+  <text x="128" y="150" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">.wp-env.json o'qiladi</text>
+
+  <!-- o'q 1->2 -->
+  <line x1="228" y1="120" x2="288" y2="120" stroke="#94a3b8" stroke-width="3" marker-end="url(#arr)"/>
+
+  <!-- 2 docker -->
+  <rect x="288" y="62" width="240" height="200" rx="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="408" y="90" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#7c3aed">2. Docker konteynerlar</text>
+
+  <rect x="312" y="106" width="192" height="58" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="408" y="130" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">WordPress (PHP+Apache)</text>
+  <text x="408" y="151" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">WP 7.0 + sizning plugin</text>
+
+  <rect x="312" y="176" width="192" height="58" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="408" y="200" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">MySQL (ma'lumotlar bazasi)</text>
+  <text x="408" y="221" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">avtomatik sozlanadi</text>
+
+  <!-- o'q 2->3 -->
+  <line x1="528" y1="120" x2="588" y2="120" stroke="#94a3b8" stroke-width="3" marker-end="url(#arr)"/>
+
+  <!-- 3 brauzer -->
+  <rect x="588" y="74" width="156" height="92" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="666" y="104" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">3. Brauzer</text>
+  <text x="666" y="128" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">localhost:8888</text>
+  <text x="666" y="150" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">/wp-admin</text>
+
+  <!-- kod papka -> docker (mount) -->
+  <rect x="288" y="290" width="240" height="62" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="408" y="316" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309">Plugin papkangiz (lokal disk)</text>
+  <text x="408" y="338" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">"plugins": ["."] orqali ulanadi (mount)</text>
+  <line x1="408" y1="290" x2="408" y2="234" stroke="#f59e0b" stroke-width="3" marker-end="url(#arrY)"/>
+  <text x="540" y="278" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309">kod o'zgarsa — darhol konteynerda</text>
+
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/>
+    </marker>
+    <marker id="arrY" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+
+  <text x="380" y="372" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">wp-env stop — to'xtatadi, wp-env destroy — butunlay o'chiradi (jonli saytingizga ta'sir qilmaydi)</text>
+</svg>

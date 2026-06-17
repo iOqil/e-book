@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Forma oqimi: maydonlar -> holat -> validatsiya -> xato yoki submit</title>
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Forma oqimi: kiritishdan yuborishgacha</text>
+
+  <!-- 1. Maydonlar -->
+  <rect x="40" y="70" width="200" height="120" rx="12" fill="#ffffff" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="140" y="96" text-anchor="middle" font-size="15" font-weight="700" fill="#0ea5e9">1. Maydonlar (UI)</text>
+  <rect x="60" y="110" width="160" height="22" rx="5" fill="#f1f5f9" stroke="#cbd5e1"/>
+  <text x="68" y="125" font-size="13" fill="#94a3b8">Email</text>
+  <rect x="60" y="138" width="160" height="22" rx="5" fill="#f1f5f9" stroke="#cbd5e1"/>
+  <text x="68" y="153" font-size="13" fill="#94a3b8">Parol</text>
+  <rect x="60" y="166" width="160" height="22" rx="5" fill="#f1f5f9" stroke="#cbd5e1"/>
+  <text x="68" y="181" font-size="13" fill="#94a3b8">Parol tasdiq</text>
+
+  <!-- arrow -->
+  <text x="262" y="125" text-anchor="middle" font-size="13" fill="#475569">onChangeText</text>
+  <path d="M250 135 L300 135" stroke="#475569" stroke-width="2" marker-end="url(#ok)"/>
+
+  <!-- 2. Holat -->
+  <rect x="310" y="80" width="180" height="100" rx="12" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="400" y="106" text-anchor="middle" font-size="15" font-weight="700" fill="#4f46e5">2. Holat (state)</text>
+  <text x="400" y="130" text-anchor="middle" font-size="13" fill="#475569">useState yoki</text>
+  <text x="400" y="148" text-anchor="middle" font-size="13" fill="#475569">react-hook-form</text>
+  <text x="400" y="166" text-anchor="middle" font-size="13" fill="#94a3b8">qiymatni saqlaydi</text>
+
+  <!-- arrow down to validation -->
+  <text x="510" y="125" text-anchor="middle" font-size="13" fill="#475569">submit / blur</text>
+  <path d="M500 130 L560 130" stroke="#475569" stroke-width="2" marker-end="url(#ok)"/>
+
+  <!-- 3. Validatsiya -->
+  <rect x="570" y="80" width="160" height="100" rx="12" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="650" y="106" text-anchor="middle" font-size="15" font-weight="700" fill="#f59e0b">3. Validatsiya</text>
+  <text x="650" y="130" text-anchor="middle" font-size="13" fill="#475569">qoidalarni</text>
+  <text x="650" y="148" text-anchor="middle" font-size="13" fill="#475569">tekshiradi</text>
+  <text x="650" y="166" text-anchor="middle" font-size="13" fill="#94a3b8">(bo'sh? format?)</text>
+
+  <!-- branch -->
+  <path d="M650 180 L650 220" stroke="#475569" stroke-width="2"/>
+  <path d="M650 220 L300 220 L300 250" stroke="#dc2626" stroke-width="2" marker-end="url(#okr)"/>
+  <path d="M650 220 L650 250" stroke="#16a34a" stroke-width="2" marker-end="url(#okg)"/>
+
+  <!-- xato branch -->
+  <rect x="170" y="258" width="260" height="120" rx="12" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="300" y="284" text-anchor="middle" font-size="15" font-weight="700" fill="#dc2626">Xato bor</text>
+  <text x="300" y="308" text-anchor="middle" font-size="13" fill="#475569">errors holatiga yoziladi</text>
+  <text x="300" y="330" text-anchor="middle" font-size="13" fill="#475569">maydon ostida qizil</text>
+  <text x="300" y="348" text-anchor="middle" font-size="13" fill="#475569">xabar ko'rsatiladi</text>
+  <text x="300" y="368" text-anchor="middle" font-size="13" fill="#dc2626">yuborilmaydi &#8594; tuzating</text>
+
+  <!-- success branch -->
+  <rect x="540" y="258" width="200" height="120" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="640" y="284" text-anchor="middle" font-size="15" font-weight="700" fill="#16a34a">Hammasi to'g'ri</text>
+  <text x="640" y="308" text-anchor="middle" font-size="13" fill="#475569">handleSubmit ishlaydi</text>
+  <text x="640" y="330" text-anchor="middle" font-size="13" fill="#475569">API'ga yuboriladi</text>
+  <text x="640" y="352" text-anchor="middle" font-size="13" fill="#475569">tugma bloklanadi (spinner)</text>
+  <text x="640" y="372" text-anchor="middle" font-size="13" fill="#16a34a">muvaffaqiyat xabari</text>
+
+  <text x="430" y="240" text-anchor="middle" font-size="13" fill="#dc2626">xato</text>
+  <text x="665" y="240" text-anchor="middle" font-size="13" fill="#16a34a">o'tdi</text>
+
+  <defs>
+    <marker id="ok" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0 L8 3 L0 6 Z" fill="#475569"/></marker>
+    <marker id="okr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0 L8 3 L0 6 Z" fill="#dc2626"/></marker>
+    <marker id="okg" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0 L8 3 L0 6 Z" fill="#16a34a"/></marker>
+  </defs>
+</svg>

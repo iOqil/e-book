@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 500">
+  <title>Bog'liq testlar tartib o'zgarganda yiqiladi (umumiy holat tuzog'i)</title>
+  <rect x="0" y="0" width="840" height="500" fill="#f8fafc"/>
+  <text x="420" y="40" text-anchor="middle" font-family="Segoe UI" font-size="23" font-weight="bold" fill="#1e293b">Umumiy holatga tayangan testlar — tartibga qul</text>
+  <text x="420" y="66" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Bir xil testlar, faqat ishga tushish tartibi boshqacha</text>
+
+  <!-- shared state box -->
+  <rect x="330" y="92" width="180" height="44" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="420" y="113" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">umumiy global "savat"</text>
+  <text x="420" y="130" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">ikkala test ham unga tegadi</text>
+
+  <!-- LEFT: tartib A -->
+  <text x="210" y="178" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#1e293b">Tartib A: qosh -&gt; bosh</text>
+
+  <rect x="80" y="196" width="260" height="64" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="210" y="222" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">test_qoshilsin</text>
+  <text x="210" y="244" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">savatga "non" qo'shdi  -&gt;  PASS</text>
+
+  <line x1="210" y1="260" x2="210" y2="288" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="210,296 205,286 215,286" fill="#94a3b8"/>
+
+  <rect x="80" y="296" width="260" height="74" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="210" y="322" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">test_boshlanishda_bosh</text>
+  <text x="210" y="344" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">savat allaqachon to'la (1 ta)</text>
+  <text x="210" y="362" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">FAIL</text>
+
+  <!-- RIGHT: tartib B -->
+  <text x="630" y="178" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#1e293b">Tartib B: bosh -&gt; qosh</text>
+
+  <rect x="500" y="196" width="260" height="64" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="630" y="222" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">test_boshlanishda_bosh</text>
+  <text x="630" y="244" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">savat hali bo'sh  -&gt;  PASS</text>
+
+  <line x1="630" y1="260" x2="630" y2="288" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="630,296 625,286 635,286" fill="#94a3b8"/>
+
+  <rect x="500" y="296" width="260" height="74" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="630" y="322" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">test_qoshilsin</text>
+  <text x="630" y="344" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">savatga "non" qo'shdi</text>
+  <text x="630" y="362" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">PASS</text>
+
+  <!-- verdict -->
+  <rect x="120" y="408" width="600" height="60" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="420" y="434" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">Bir xil kod, ikki xil natija — chunki testlar bir-biriga bog'liq.</text>
+  <text x="420" y="456" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#475569">Mustaqil test: har biri o'z holatini O'ZI tayyorlaydi, tartib ahamiyatsiz.</text>
+</svg>

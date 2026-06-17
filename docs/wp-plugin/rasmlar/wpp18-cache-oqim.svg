@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400">
+  <title>Tashqi API keshlash oqimi: so'rov keladi, get_transient bormi tekshiriladi, ha bo'lsa keshdan tez qaytadi, yo'q bo'lsa wp_remote_get bajariladi va natija set_transient bilan keshga yoziladi</title>
+  <rect x="0" y="0" width="760" height="400" fill="#f8fafc"/>
+  <text x="380" y="34" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Tashqi API natijasini keshlash</text>
+
+  <!-- Step 1: request -->
+  <rect x="40" y="74" width="180" height="56" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="130" y="98" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">So'rov keladi</text>
+  <text x="130" y="118" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">"Kitob narxi?"</text>
+
+  <path d="M220 102 L298 102" stroke="#94a3b8" stroke-width="2"/>
+  <path d="M298 102 l-10 -5 l0 10 z" fill="#94a3b8"/>
+
+  <!-- Decision: get_transient -->
+  <path d="M388 56 L470 102 L388 148 L306 102 Z" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="388" y="98" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">get_transient</text>
+  <text x="388" y="116" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="middle">bormi?</text>
+
+  <!-- HIT branch (right) -->
+  <path d="M470 102 L560 102" stroke="#16a34a" stroke-width="2"/>
+  <path d="M560 102 l-10 -5 l0 10 z" fill="#16a34a"/>
+  <text x="515" y="92" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a" text-anchor="middle">HA (HIT)</text>
+  <rect x="560" y="74" width="170" height="56" rx="10" fill="#16a34a"/>
+  <text x="645" y="99" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Keshdan qaytar</text>
+  <text x="645" y="118" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dcfce7" text-anchor="middle">tez, API'siz</text>
+
+  <!-- MISS branch (down) -->
+  <path d="M388 148 L388 200" stroke="#dc2626" stroke-width="2"/>
+  <path d="M388 200 l-5 -10 l10 0 z" fill="#dc2626"/>
+  <text x="430" y="180" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626" text-anchor="middle">YO'Q (MISS)</text>
+
+  <rect x="268" y="200" width="240" height="58" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="388" y="225" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e40af" text-anchor="middle">wp_remote_get</text>
+  <text x="388" y="245" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">tashqi API (sekin)</text>
+
+  <path d="M388 258 L388 296" stroke="#94a3b8" stroke-width="2"/>
+  <path d="M388 296 l-5 -10 l10 0 z" fill="#94a3b8"/>
+
+  <rect x="248" y="296" width="280" height="58" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="388" y="321" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">set_transient( natija, 6 soat )</text>
+  <text x="388" y="341" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">va natijani qaytar</text>
+
+  <!-- next request hint -->
+  <path d="M248 325 C140 325 128 190 128 126" stroke="#7c3aed" stroke-width="2" stroke-dasharray="6 4" fill="none"/>
+  <path d="M128 126 l-5 10 l10 0 z" fill="#7c3aed"/>
+  <text x="116" y="240" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#7c3aed" text-anchor="middle" transform="rotate(-90 116 240)">keyingi so'rov endi HIT</text>
+</svg>

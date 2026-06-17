@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430" font-family="Segoe UI, system-ui, sans-serif">
+  <title>#[Reactive] siz bola eski qoladi, #[Reactive] bilan bola yangilanadi</title>
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">#[Reactive]: ota o'zgarsa, bola yangilanadimi?</text>
+
+  <!-- LEFT: without Reactive -->
+  <rect x="24" y="58" width="344" height="332" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="196" y="86" text-anchor="middle" font-size="16" font-weight="700" fill="#dc2626">#[Reactive] SIZ (default)</text>
+
+  <rect x="56" y="104" width="280" height="58" rx="9" fill="#f8fafc" stroke="#4f46e5" stroke-width="2"/>
+  <text x="196" y="128" text-anchor="middle" font-size="14" font-weight="700" fill="#4f46e5">Ota: matn = "Yangi nom"</text>
+  <text x="196" y="150" text-anchor="middle" font-size="13" fill="#16a34a">o'zgardi va qayta render bo'ldi</text>
+
+  <path d="M196 162 L196 196" fill="none" stroke="#94a3b8" stroke-width="2.5" stroke-dasharray="5 4"/>
+  <text x="232" y="184" font-size="13" fill="#dc2626">props o'tmaydi</text>
+
+  <rect x="56" y="196" width="280" height="58" rx="9" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="196" y="220" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Bola: matn = "Eski nom"</text>
+  <text x="196" y="242" text-anchor="middle" font-size="13" fill="#dc2626">ESKI qoldi — yangilanmadi</text>
+
+  <rect x="56" y="280" width="280" height="88" rx="9" fill="#f8fafc" stroke="#c7d2fe" stroke-width="1.5"/>
+  <text x="196" y="306" text-anchor="middle" font-size="13" fill="#475569">Bola bir marta props oldi,</text>
+  <text x="196" y="326" text-anchor="middle" font-size="13" fill="#475569">keyin mustaqil yashaydi.</text>
+  <text x="196" y="350" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a">Bu — tezlik uchun!</text>
+
+  <!-- RIGHT: with Reactive -->
+  <rect x="392" y="58" width="344" height="332" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="564" y="86" text-anchor="middle" font-size="16" font-weight="700" fill="#16a34a">#[Reactive] BILAN</text>
+
+  <rect x="424" y="104" width="280" height="58" rx="9" fill="#f8fafc" stroke="#4f46e5" stroke-width="2"/>
+  <text x="564" y="128" text-anchor="middle" font-size="14" font-weight="700" fill="#4f46e5">Ota: matn = "Yangi nom"</text>
+  <text x="564" y="150" text-anchor="middle" font-size="13" fill="#16a34a">o'zgardi va qayta render bo'ldi</text>
+
+  <path d="M564 162 L564 196" fill="none" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="600" y="184" font-size="13" fill="#16a34a">props oqadi</text>
+
+  <rect x="424" y="196" width="280" height="58" rx="9" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="564" y="220" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Bola: matn = "Yangi nom"</text>
+  <text x="564" y="242" text-anchor="middle" font-size="13" fill="#16a34a">YANGILANDI — ota bilan birga</text>
+
+  <rect x="424" y="280" width="280" height="88" rx="9" fill="#f8fafc" stroke="#c7d2fe" stroke-width="1.5"/>
+  <text x="564" y="304" text-anchor="middle" font-size="13" fill="#1e293b" font-weight="700">#[Reactive]</text>
+  <text x="564" y="326" text-anchor="middle" font-size="13" fill="#475569">public $matn;</text>
+  <text x="564" y="350" text-anchor="middle" font-size="13" fill="#475569">prop bolada faqat O'QISH uchun</text>
+</svg>

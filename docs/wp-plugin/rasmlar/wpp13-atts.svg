@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420">
+  <title>Foydalanuvchi bergan atributlar va default qiymatlar shortcode_atts orqali birlashib, yetishmagan kalitlar default bilan to'ldirilgan va begona kalitlar tashlangan yagona massivga aylanadi</title>
+  <defs>
+    <marker id="a-arr" markerWidth="13" markerHeight="13" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">shortcode_atts: default + foydalanuvchi</text>
+  <text x="380" y="54" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">birlashtirish — natija har doim e'lon qilingan kalitlarga ega massiv</text>
+
+  <!-- defaults box -->
+  <rect x="36" y="84" width="296" height="150" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="184" y="110" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">$pairs — default'lar</text>
+  <text x="56" y="138" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">'janr'   =&gt; ''</text>
+  <text x="56" y="162" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">'soni'   =&gt; 10</text>
+  <text x="56" y="186" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">'tartib' =&gt; 'date'</text>
+  <text x="56" y="216" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">siz qo'llab-quvvatlaydigan kalitlar</text>
+
+  <!-- user box -->
+  <rect x="36" y="248" width="296" height="140" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="184" y="274" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">$atts — foydalanuvchi</text>
+  <text x="56" y="302" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">'janr' =&gt; 'ilmiy'</text>
+  <text x="56" y="326" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">'soni' =&gt; '5'</text>
+  <text x="56" y="350" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">'rang' =&gt; 'qizil'  (begona)</text>
+  <text x="56" y="375" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">[kitoblar janr="ilmiy" soni="5"]</text>
+
+  <!-- arrows to merge -->
+  <line x1="332" y1="159" x2="408" y2="200" stroke="#475569" stroke-width="2" marker-end="url(#a-arr)"/>
+  <line x1="332" y1="318" x2="408" y2="248" stroke="#475569" stroke-width="2" marker-end="url(#a-arr)"/>
+
+  <!-- shortcode_atts node -->
+  <rect x="412" y="196" width="180" height="56" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="502" y="220" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#7c3aed">shortcode_atts()</text>
+  <text x="502" y="240" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">birlashtiradi</text>
+
+  <line x1="592" y1="224" x2="636" y2="224" stroke="#475569" stroke-width="2" marker-end="url(#a-arr)"/>
+
+  <!-- result box -->
+  <rect x="500" y="84" width="224" height="96" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="612" y="110" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">$a — natija massiv</text>
+  <text x="520" y="134" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">'janr'   =&gt; 'ilmiy'</text>
+  <text x="520" y="156" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">'soni'   =&gt; '5'</text>
+  <text x="520" y="174" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">'tartib' =&gt; 'date' (default)</text>
+
+  <line x1="636" y1="200" x2="636" y2="182" stroke="#475569" stroke-width="2" marker-end="url(#a-arr)"/>
+
+  <!-- note box -->
+  <rect x="372" y="270" width="352" height="118" rx="10" fill="#fff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="392" y="296" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">Keyin: sanitize (o'zingiz)</text>
+  <text x="392" y="320" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">sanitize_key($a['janr'])  → toza slug</text>
+  <text x="392" y="342" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">absint($a['soni'])  → 5 (butun son)</text>
+  <text x="392" y="366" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">'rang' tashlandi — default'da yo'q edi</text>
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440">
+  <title>Keshlash qatlamlari: so'rov avval object cache, so'ng transient, eng oxirida ma'lumotlar bazasiga tushadi; qaysidir qatlamda topilsa pastga tushmaydi</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="34" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Keshlash qatlamlari (tepada topilsa to'xtaydi)</text>
+
+  <!-- Request -->
+  <rect x="280" y="58" width="200" height="48" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="88" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b" text-anchor="middle">So'rov: "kerakli ma'lumot"</text>
+
+  <!-- arrow down -->
+  <path d="M380 106 L380 132" stroke="#94a3b8" stroke-width="2"/>
+  <path d="M380 132 l-5 -10 l10 0 z" fill="#94a3b8"/>
+
+  <!-- Layer 1: object cache -->
+  <rect x="150" y="132" width="460" height="62" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="170" y="158" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">1. Object cache</text>
+  <text x="170" y="180" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">wp_cache_get() — eng tez (xotira: Redis/Memcached)</text>
+  <rect x="470" y="146" width="124" height="34" rx="16" fill="#16a34a"/>
+  <text x="532" y="168" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">topildi → qaytar</text>
+
+  <!-- arrow down (miss) -->
+  <path d="M380 194 L380 218" stroke="#dc2626" stroke-width="2"/>
+  <path d="M380 218 l-5 -10 l10 0 z" fill="#dc2626"/>
+  <text x="412" y="212" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">MISS</text>
+
+  <!-- Layer 2: transient -->
+  <rect x="150" y="218" width="460" height="62" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="170" y="244" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">2. Transient</text>
+  <text x="170" y="266" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">get_transient() — muddatli, doimiy (10-bob)</text>
+  <rect x="470" y="232" width="124" height="34" rx="16" fill="#f59e0b"/>
+  <text x="532" y="254" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">topildi → qaytar</text>
+
+  <!-- arrow down (miss) -->
+  <path d="M380 280 L380 304" stroke="#dc2626" stroke-width="2"/>
+  <path d="M380 304 l-5 -10 l10 0 z" fill="#dc2626"/>
+  <text x="412" y="298" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">MISS</text>
+
+  <!-- Layer 3: DB -->
+  <rect x="150" y="304" width="460" height="62" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="170" y="330" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">3. Ma'lumotlar bazasi</text>
+  <text x="170" y="352" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">WP_Query / $wpdb — eng sekin, eng oxirgi chora</text>
+  <rect x="470" y="318" width="124" height="34" rx="16" fill="#dc2626"/>
+  <text x="532" y="340" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">hisobla → keshla</text>
+
+  <text x="380" y="396" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">Qancha tepada topsangiz — shuncha tez. Maqsad: DB qatlamiga kamroq tushish.</text>
+  <text x="380" y="420" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Object cache persistent backend bo'lmasa, faqat shu so'rov davomida saqlaydi.</text>
+</svg>

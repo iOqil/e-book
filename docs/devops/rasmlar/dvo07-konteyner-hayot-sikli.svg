@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420">
+  <title>Konteyner hayot sikli holat diagrammasi: created, running, paused, stopped (exited) va removed holatlari hamda ular orasidagi run, stop, start, pause, rm o'tishlari</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Konteyner hayot sikli</text>
+
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- created -->
+  <rect x="40" y="90" width="150" height="70" rx="10" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <text x="115" y="122" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">created</text>
+  <text x="115" y="143" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">yaratilgan</text>
+
+  <!-- running -->
+  <rect x="300" y="90" width="160" height="70" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="380" y="122" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#166534">running</text>
+  <text x="380" y="143" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#166534">ishlamoqda</text>
+
+  <!-- paused -->
+  <rect x="570" y="90" width="150" height="70" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="645" y="122" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#b45309">paused</text>
+  <text x="645" y="143" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309">to'xtatib turilgan</text>
+
+  <!-- stopped -->
+  <rect x="300" y="250" width="160" height="70" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="280" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e40af">stopped</text>
+  <text x="380" y="301" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e40af">exited &#8212; to'xtagan</text>
+
+  <!-- removed -->
+  <rect x="40" y="250" width="150" height="70" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="115" y="280" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">removed</text>
+  <text x="115" y="301" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">o'chirilgan</text>
+
+  <!-- created -> running (run / start) -->
+  <line x1="190" y1="125" x2="298" y2="125" stroke="#475569" stroke-width="2.5" marker-end="url(#a)"/>
+  <text x="244" y="116" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#166534">run / start</text>
+
+  <!-- running -> paused (pause) -->
+  <line x1="460" y1="115" x2="568" y2="115" stroke="#475569" stroke-width="2.5" marker-end="url(#a)"/>
+  <text x="514" y="106" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#b45309">pause</text>
+  <!-- paused -> running (unpause) -->
+  <line x1="568" y1="138" x2="462" y2="138" stroke="#475569" stroke-width="2.5" marker-end="url(#a)"/>
+  <text x="514" y="156" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#475569">unpause</text>
+
+  <!-- running -> stopped (stop) -->
+  <line x1="368" y1="160" x2="368" y2="248" stroke="#475569" stroke-width="2.5" marker-end="url(#a)"/>
+  <text x="320" y="208" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#2563eb">stop</text>
+  <!-- stopped -> running (start) -->
+  <line x1="392" y1="248" x2="392" y2="162" stroke="#475569" stroke-width="2.5" marker-end="url(#a)"/>
+  <text x="430" y="208" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#166534">start</text>
+
+  <!-- stopped -> removed (rm) -->
+  <line x1="300" y1="285" x2="192" y2="285" stroke="#dc2626" stroke-width="2.5" marker-end="url(#a)"/>
+  <text x="246" y="276" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#dc2626">rm</text>
+
+  <!-- running -> removed (rm -f) curved -->
+  <path d="M 300 140 Q 150 200 115 248" fill="none" stroke="#dc2626" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#a)"/>
+  <text x="150" y="205" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#dc2626">rm -f</text>
+
+  <text x="380" y="370" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#475569">docker run yangi konteyner yaratib darrov ishga tushiradi (created &#8594; running)</text>
+  <text x="380" y="392" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">stop = to'xtatadi (ma'lumot qoladi), rm = butunlay o'chiradi; rm -f ishlab turganini ham majburan o'chiradi</text>
+</svg>

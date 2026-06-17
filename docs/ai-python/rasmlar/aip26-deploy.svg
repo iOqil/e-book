@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 410" width="760" height="410" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Deploy topologiyasi: konteyner, worker'lar, .env sirlar va masshtab</title>
+  <rect x="0" y="0" width="760" height="410" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">Deploy topologiyasi</text>
+
+  <defs>
+    <marker id="d26" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#4f46e5"/>
+    </marker>
+  </defs>
+
+  <!-- Internet -->
+  <rect x="30" y="150" width="130" height="100" rx="14" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+  <text x="95" y="190" text-anchor="middle" font-size="16" font-weight="700" fill="#0284c7">Internet</text>
+  <text x="95" y="216" text-anchor="middle" font-size="14" fill="#475569">mijozlar</text>
+  <text x="95" y="236" text-anchor="middle" font-size="14" fill="#475569">(ko'p so'rov)</text>
+
+  <!-- Container box -->
+  <rect x="210" y="80" width="320" height="280" rx="16" fill="#ffffff" stroke="#4f46e5" stroke-width="2.5" stroke-dasharray="7 5"/>
+  <text x="370" y="108" text-anchor="middle" font-size="16" font-weight="700" fill="#4338ca">Docker konteyner</text>
+
+  <!-- uvicorn / gunicorn master -->
+  <rect x="236" y="124" width="268" height="50" rx="10" fill="#eef2ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="370" y="146" text-anchor="middle" font-size="14" font-weight="700" fill="#4338ca">uvicorn / gunicorn (master)</text>
+  <text x="370" y="166" text-anchor="middle" font-size="13" fill="#64748b">so'rovlarni worker'larga taqsimlaydi</text>
+
+  <!-- workers -->
+  <rect x="236" y="190" width="80" height="70" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="276" y="218" text-anchor="middle" font-size="14" font-weight="700" fill="#166534">worker 1</text>
+  <text x="276" y="240" text-anchor="middle" font-size="13" fill="#166534">async</text>
+
+  <rect x="330" y="190" width="80" height="70" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="370" y="218" text-anchor="middle" font-size="14" font-weight="700" fill="#166534">worker 2</text>
+  <text x="370" y="240" text-anchor="middle" font-size="13" fill="#166534">async</text>
+
+  <rect x="424" y="190" width="80" height="70" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="464" y="218" text-anchor="middle" font-size="14" font-weight="700" fill="#166534">worker N</text>
+  <text x="464" y="240" text-anchor="middle" font-size="13" fill="#166534">async</text>
+
+  <!-- secrets -->
+  <rect x="236" y="284" width="268" height="56" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="370" y="308" text-anchor="middle" font-size="14" font-weight="700" fill="#b45309">Sirlar (env / secret manager)</text>
+  <text x="370" y="328" text-anchor="middle" font-size="13" fill="#b45309">OPENAI_API_KEY — kodda EMAS</text>
+
+  <!-- Provider -->
+  <rect x="590" y="150" width="140" height="100" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="660" y="190" text-anchor="middle" font-size="16" font-weight="700" fill="#166534">LLM</text>
+  <text x="660" y="216" text-anchor="middle" font-size="14" fill="#475569">provayder</text>
+  <text x="660" y="236" text-anchor="middle" font-size="14" fill="#475569">API</text>
+
+  <!-- arrows -->
+  <line x1="162" y1="200" x2="206" y2="200" stroke="#4f46e5" stroke-width="3" marker-end="url(#d26)"/>
+  <line x1="534" y1="200" x2="586" y2="200" stroke="#4f46e5" stroke-width="3" marker-end="url(#d26)"/>
+
+  <text x="380" y="392" text-anchor="middle" font-size="15" fill="#64748b">Masshtab = ko'proq worker / ko'proq konteyner; og'ir ish -> queue (navbat)</text>
+</svg>

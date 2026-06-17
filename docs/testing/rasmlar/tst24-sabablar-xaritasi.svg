@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 500">
+  <title>Flaky testlarning olti asosiy sababi: vaqt va sana, test tartibi va umumiy holat, seedsiz tasodif, asinxronlik va race condition, tashqi bog'liqlik, resurs to'qnashuvi</title>
+  <rect x="0" y="0" width="820" height="500" fill="#f8fafc"/>
+  <text x="410" y="40" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Flaky sabablari xaritasi</text>
+  <text x="410" y="66" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Hammasining ildizi bitta: nodeterminizm (oldindan aytib bo'lmaslik)</text>
+
+  <!-- Markaz -->
+  <ellipse cx="410" cy="250" rx="92" ry="56" fill="#1e293b"/>
+  <text x="410" y="245" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#ffffff">FLAKY</text>
+  <text x="410" y="267" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#cbd5e1">nondeterminizm</text>
+
+  <!-- 1. Vaqt -->
+  <line x1="318" y1="225" x2="180" y2="150" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="40" y="110" width="200" height="70" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="140" y="138" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e40af">Vaqt / sana</text>
+  <text x="140" y="160" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e40af">now(), timeout, zona</text>
+
+  <!-- 2. Tartib / holat -->
+  <line x1="318" y1="250" x2="180" y2="250" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="40" y="215" width="200" height="70" rx="10" fill="#faf5ff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="140" y="243" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#6b21a8">Tartib / umumiy holat</text>
+  <text x="140" y="265" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#6b21a8">global, DB qoldig'i, kesh</text>
+
+  <!-- 3. Tasodif -->
+  <line x1="318" y1="275" x2="180" y2="350" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="40" y="320" width="200" height="70" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="140" y="348" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#92400e">Tasodif</text>
+  <text x="140" y="370" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#92400e">seedsiz random</text>
+
+  <!-- 4. Async -->
+  <line x1="502" y1="225" x2="640" y2="150" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="580" y="110" width="200" height="70" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="680" y="138" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#991b1b">Async / race</text>
+  <text x="680" y="160" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#991b1b">sleep, parallel, kutmaslik</text>
+
+  <!-- 5. Tashqi -->
+  <line x1="502" y1="250" x2="640" y2="250" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="580" y="215" width="200" height="70" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="680" y="243" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#166534">Tashqi bog'liqlik</text>
+  <text x="680" y="265" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#166534">tarmoq, 3-tomon API</text>
+
+  <!-- 6. Resurs -->
+  <line x1="502" y1="275" x2="640" y2="350" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="580" y="320" width="200" height="70" rx="10" fill="#f1f5f9" stroke="#64748b" stroke-width="2"/>
+  <text x="680" y="348" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#334155">Resurs</text>
+  <text x="680" y="370" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">port, qulf, float, xotira</text>
+
+  <text x="410" y="455" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">Yechim har doim bir xil yo'nalishda: nodeterminizmni boshqar — muzlat, izolyatsiya qil, seed ber, kutib tur</text>
+  <text x="410" y="480" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Vaqt/tasodif/I-O ildizini 09-bobda batafsil ko'rgansiz</text>
+</svg>

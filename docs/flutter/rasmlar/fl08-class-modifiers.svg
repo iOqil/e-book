@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 430" width="780" height="430" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Class modifierlar imkoniyatlar matritsasi: base, interface, final va sealed uchun extends, implements va nusxa yaratish mumkinmi degan taqqoslash jadvali</title>
+  <rect x="0" y="0" width="780" height="430" fill="#f8fafc"/>
+
+  <text x="390" y="34" text-anchor="middle" font-size="21" font-weight="bold" fill="#1e293b">Class modifierlar &#8212; imkoniyatlar matritsasi</text>
+  <text x="390" y="56" text-anchor="middle" font-size="14" fill="#475569">Har bir modifikator klassdan qanday foydalanishga ruxsat berishini ko'rsatadi</text>
+
+  <!-- header row -->
+  <rect x="40" y="76" width="180" height="48" rx="8" fill="#1e293b"/>
+  <text x="130" y="105" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">modifikator</text>
+
+  <rect x="228" y="76" width="170" height="48" rx="8" fill="#475569"/>
+  <text x="313" y="98" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">extends</text>
+  <text x="313" y="116" text-anchor="middle" font-size="13" fill="#ffffff">(meros)</text>
+
+  <rect x="406" y="76" width="170" height="48" rx="8" fill="#475569"/>
+  <text x="491" y="98" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">implements</text>
+  <text x="491" y="116" text-anchor="middle" font-size="13" fill="#ffffff">(amalga oshirish)</text>
+
+  <rect x="584" y="76" width="156" height="48" rx="8" fill="#475569"/>
+  <text x="662" y="98" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">nusxa yaratish</text>
+  <text x="662" y="116" text-anchor="middle" font-size="13" fill="#ffffff">(instantiate)</text>
+
+  <!-- base row -->
+  <rect x="40" y="132" width="180" height="60" rx="8" fill="#ffffff" stroke="#027dfd" stroke-width="2"/>
+  <text x="130" y="160" text-anchor="middle" font-family="Consolas, monospace" font-size="15" font-weight="bold" fill="#027dfd">base</text>
+  <text x="130" y="180" text-anchor="middle" font-size="13" fill="#64748b">faqat kengaytirilsin</text>
+  <rect x="228" y="132" width="170" height="60" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="313" y="170" text-anchor="middle" font-size="18" font-weight="bold" fill="#16a34a">&#10003; ha</text>
+  <rect x="406" y="132" width="170" height="60" rx="8" fill="#ffffff" stroke="#ef4444" stroke-width="2"/>
+  <text x="491" y="170" text-anchor="middle" font-size="18" font-weight="bold" fill="#ef4444">&#10007; yo'q</text>
+  <rect x="584" y="132" width="156" height="60" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="662" y="170" text-anchor="middle" font-size="18" font-weight="bold" fill="#16a34a">&#10003; ha</text>
+
+  <!-- interface row -->
+  <rect x="40" y="198" width="180" height="60" rx="8" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <text x="130" y="226" text-anchor="middle" font-family="Consolas, monospace" font-size="15" font-weight="bold" fill="#6366f1">interface</text>
+  <text x="130" y="246" text-anchor="middle" font-size="13" fill="#64748b">faqat shartnoma</text>
+  <rect x="228" y="198" width="170" height="60" rx="8" fill="#ffffff" stroke="#ef4444" stroke-width="2"/>
+  <text x="313" y="236" text-anchor="middle" font-size="18" font-weight="bold" fill="#ef4444">&#10007; yo'q</text>
+  <rect x="406" y="198" width="170" height="60" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="491" y="236" text-anchor="middle" font-size="18" font-weight="bold" fill="#16a34a">&#10003; ha</text>
+  <rect x="584" y="198" width="156" height="60" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="662" y="236" text-anchor="middle" font-size="18" font-weight="bold" fill="#16a34a">&#10003; ha</text>
+
+  <!-- final row -->
+  <rect x="40" y="264" width="180" height="60" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="130" y="292" text-anchor="middle" font-family="Consolas, monospace" font-size="15" font-weight="bold" fill="#f59e0b">final</text>
+  <text x="130" y="312" text-anchor="middle" font-size="13" fill="#64748b">butunlay yopiq</text>
+  <rect x="228" y="264" width="170" height="60" rx="8" fill="#ffffff" stroke="#ef4444" stroke-width="2"/>
+  <text x="313" y="302" text-anchor="middle" font-size="18" font-weight="bold" fill="#ef4444">&#10007; yo'q</text>
+  <rect x="406" y="264" width="170" height="60" rx="8" fill="#ffffff" stroke="#ef4444" stroke-width="2"/>
+  <text x="491" y="302" text-anchor="middle" font-size="18" font-weight="bold" fill="#ef4444">&#10007; yo'q</text>
+  <rect x="584" y="264" width="156" height="60" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="662" y="302" text-anchor="middle" font-size="18" font-weight="bold" fill="#16a34a">&#10003; ha</text>
+
+  <!-- sealed row -->
+  <rect x="40" y="330" width="180" height="60" rx="8" fill="#ffffff" stroke="#9333ea" stroke-width="2"/>
+  <text x="130" y="358" text-anchor="middle" font-family="Consolas, monospace" font-size="15" font-weight="bold" fill="#9333ea">sealed</text>
+  <text x="130" y="378" text-anchor="middle" font-size="13" fill="#64748b">exhaustive switch</text>
+  <rect x="228" y="330" width="170" height="60" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="313" y="360" text-anchor="middle" font-size="14" font-weight="bold" fill="#f59e0b">&#10003; faqat</text>
+  <text x="313" y="380" text-anchor="middle" font-size="13" fill="#f59e0b">shu faylda</text>
+  <rect x="406" y="330" width="170" height="60" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="491" y="360" text-anchor="middle" font-size="14" font-weight="bold" fill="#f59e0b">&#10003; faqat</text>
+  <text x="491" y="380" text-anchor="middle" font-size="13" fill="#f59e0b">shu faylda</text>
+  <rect x="584" y="330" width="156" height="60" rx="8" fill="#ffffff" stroke="#ef4444" stroke-width="2"/>
+  <text x="662" y="368" text-anchor="middle" font-size="18" font-weight="bold" fill="#ef4444">&#10007; yo'q</text>
+
+  <text x="390" y="416" text-anchor="middle" font-size="13" font-style="italic" fill="#64748b">Modifikatorsiz oddiy klass: uchchalasiga ham &#10003; ruxsat</text>
+</svg>

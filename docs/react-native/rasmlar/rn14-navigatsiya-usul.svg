@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Ekranlar orasida o'tishning ikki usuli: Link deklarativ va useRouter imperativ</title>
+  <rect x="0" y="0" width="760" height="480" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">Ekranga o'tishning ikki usuli</text>
+  <text x="380" y="60" text-anchor="middle" font-size="14" fill="#475569">Ikkalasi bir natija beradi — qaysi birini ishlatish vaziyatga bog'liq</text>
+
+  <!-- Chap quti: Link -->
+  <rect x="40" y="86" width="330" height="320" rx="14" fill="#ffffff" stroke="#0ea5e9" stroke-width="2.5"/>
+  <rect x="40" y="86" width="330" height="46" rx="14" fill="#e0f2fe"/>
+  <rect x="40" y="110" width="330" height="22" fill="#e0f2fe"/>
+  <text x="205" y="116" text-anchor="middle" font-size="17" font-weight="700" fill="#0369a1">1. Link &#8212; deklarativ</text>
+
+  <text x="60" y="160" font-size="14" fill="#475569">"Havola" komponenti (web &#8249;a&#8250; kabi)</text>
+
+  <!-- kod -->
+  <rect x="60" y="178" width="290" height="78" rx="8" fill="#0f172a"/>
+  <text x="74" y="202" font-size="13" fill="#7dd3fc" font-family="Consolas, monospace">&#8249;Link href="/profil"&#8250;</text>
+  <text x="74" y="222" font-size="13" fill="#e2e8f0" font-family="Consolas, monospace">  Profilga o'tish</text>
+  <text x="74" y="242" font-size="13" fill="#7dd3fc" font-family="Consolas, monospace">&#8249;/Link&#8250;</text>
+
+  <text x="60" y="284" font-size="14" font-weight="700" fill="#16a34a">Qachon:</text>
+  <text x="60" y="306" font-size="13" fill="#475569">statik, oldindan ma'lum o'tish</text>
+  <text x="60" y="326" font-size="13" fill="#475569">(menyu, tugma &#8594; aniq ekran)</text>
+  <text x="60" y="350" font-size="13" fill="#475569">asChild bilan Pressable'ga</text>
+  <text x="60" y="370" font-size="13" fill="#475569">aylanadi</text>
+  <text x="60" y="394" font-size="13" fill="#0ea5e9">+ oddiy, o'qiladi</text>
+
+  <!-- O'ng quti: useRouter -->
+  <rect x="390" y="86" width="330" height="320" rx="14" fill="#ffffff" stroke="#4f46e5" stroke-width="2.5"/>
+  <rect x="390" y="86" width="330" height="46" rx="14" fill="#ede9fe"/>
+  <rect x="390" y="110" width="330" height="22" fill="#ede9fe"/>
+  <text x="555" y="116" text-anchor="middle" font-size="17" font-weight="700" fill="#4f46e5">2. useRouter &#8212; imperativ</text>
+
+  <text x="410" y="160" font-size="14" fill="#475569">Kod ichida buyruq bilan o'tish</text>
+
+  <!-- kod -->
+  <rect x="410" y="178" width="290" height="78" rx="8" fill="#0f172a"/>
+  <text x="424" y="202" font-size="13" fill="#e2e8f0" font-family="Consolas, monospace">const router =</text>
+  <text x="424" y="222" font-size="13" fill="#c4b5fd" font-family="Consolas, monospace">  useRouter();</text>
+  <text x="424" y="242" font-size="13" fill="#c4b5fd" font-family="Consolas, monospace">router.push('/profil')</text>
+
+  <text x="410" y="284" font-size="14" font-weight="700" fill="#16a34a">Qachon:</text>
+  <text x="410" y="306" font-size="13" fill="#475569">mantiq ichida, shartdan keyin</text>
+  <text x="410" y="326" font-size="13" fill="#475569">(forma saqlash, tekshiruvdan keyin)</text>
+  <text x="410" y="350" font-size="13" fill="#475569">push (yangi) / replace (almashtir)</text>
+  <text x="410" y="370" font-size="13" fill="#475569">/ back (orqaga)</text>
+  <text x="410" y="394" font-size="13" fill="#4f46e5">+ moslashuvchan</text>
+
+  <!-- Pastki natija -->
+  <rect x="200" y="426" width="360" height="40" rx="20" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="380" y="451" text-anchor="middle" font-size="14" font-weight="700" fill="#15803d">Natija: yangi ekran ochiladi</text>
+</svg>

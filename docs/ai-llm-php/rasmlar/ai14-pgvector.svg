@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430" font-family="Segoe UI, system-ui, sans-serif">
+  <title>pgvector — PostgreSQL jadvali (matn + vector ustun) va kosinus o'xshashlik so'rovi</title>
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">pgvector — bitta jadval, bitta SQL</text>
+  <text x="380" y="60" text-anchor="middle" font-size="14" fill="#475569">Matn, metama'lumot va embedding vektori — hammasi PostgreSQL jadvalida</text>
+
+  <defs>
+    <marker id="pg14a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <!-- Jadval -->
+  <rect x="40" y="92" width="420" height="232" rx="10" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="60" y="118" font-size="15" font-weight="700" fill="#4f46e5">JADVAL: hujjatlar</text>
+
+  <!-- sarlavha qatori -->
+  <rect x="56" y="130" width="60" height="32" fill="#ede9fe" stroke="#c7d2fe" stroke-width="1"/>
+  <text x="86" y="151" text-anchor="middle" font-size="13" font-weight="700" fill="#1e293b">id</text>
+  <rect x="116" y="130" width="150" height="32" fill="#ede9fe" stroke="#c7d2fe" stroke-width="1"/>
+  <text x="191" y="151" text-anchor="middle" font-size="13" font-weight="700" fill="#1e293b">matn (TEXT)</text>
+  <rect x="266" y="130" width="178" height="32" fill="#ede9fe" stroke="#c7d2fe" stroke-width="1"/>
+  <text x="355" y="151" text-anchor="middle" font-size="13" font-weight="700" fill="#7c3aed">embedding vector(1024)</text>
+
+  <!-- qator 1 -->
+  <rect x="56" y="162" width="60" height="34" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="86" y="184" text-anchor="middle" font-size="13" fill="#475569">1</text>
+  <rect x="116" y="162" width="150" height="34" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="191" y="184" text-anchor="middle" font-size="13" fill="#475569">"PHP tili..."</text>
+  <rect x="266" y="162" width="178" height="34" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="355" y="184" text-anchor="middle" font-size="13" fill="#475569">[0.12, -0.03, 0.41, ...]</text>
+
+  <!-- qator 2 -->
+  <rect x="56" y="196" width="60" height="34" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="86" y="218" text-anchor="middle" font-size="13" fill="#475569">2</text>
+  <rect x="116" y="196" width="150" height="34" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="191" y="218" text-anchor="middle" font-size="13" fill="#475569">"Laravel..."</text>
+  <rect x="266" y="196" width="178" height="34" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="355" y="218" text-anchor="middle" font-size="13" fill="#475569">[0.40, 0.22, -0.10, ...]</text>
+
+  <!-- qator 3 -->
+  <rect x="56" y="230" width="60" height="34" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="86" y="252" text-anchor="middle" font-size="13" fill="#475569">3</text>
+  <rect x="116" y="230" width="150" height="34" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="191" y="252" text-anchor="middle" font-size="13" fill="#475569">"PostgreSQL..."</text>
+  <rect x="266" y="230" width="178" height="34" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="355" y="252" text-anchor="middle" font-size="13" fill="#475569">[-0.20, 0.50, 0.07, ...]</text>
+
+  <text x="60" y="294" font-size="13" fill="#94a3b8">CREATE EXTENSION vector;  ->  vector(N) ustun turi</text>
+  <text x="60" y="314" font-size="13" fill="#94a3b8">N = embedding modelining o'lchamiga aniq mos kelsin</text>
+
+  <!-- O'xshashlik so'rovi -->
+  <rect x="488" y="92" width="252" height="232" rx="10" fill="#1e293b" stroke="#4f46e5" stroke-width="2"/>
+  <text x="508" y="118" font-size="15" font-weight="700" fill="#a855f7">O'xshashlik so'rovi (SQL)</text>
+  <text x="508" y="148" font-size="13" fill="#e2e8f0" font-family="Consolas, monospace">SELECT matn,</text>
+  <text x="508" y="170" font-size="13" fill="#e2e8f0" font-family="Consolas, monospace">  embedding</text>
+  <text x="588" y="170" font-size="13" font-weight="700" fill="#f59e0b" font-family="Consolas, monospace">&lt;=&gt;</text>
+  <text x="626" y="170" font-size="13" fill="#e2e8f0" font-family="Consolas, monospace">:savol</text>
+  <text x="508" y="192" font-size="13" fill="#e2e8f0" font-family="Consolas, monospace">FROM hujjatlar</text>
+  <text x="508" y="214" font-size="13" fill="#e2e8f0" font-family="Consolas, monospace">ORDER BY embedding</text>
+  <text x="508" y="236" font-size="13" font-weight="700" fill="#f59e0b" font-family="Consolas, monospace">  &lt;=&gt;</text>
+  <text x="546" y="236" font-size="13" fill="#e2e8f0" font-family="Consolas, monospace">:savol</text>
+  <text x="508" y="258" font-size="13" fill="#e2e8f0" font-family="Consolas, monospace">LIMIT 5;</text>
+  <text x="508" y="290" font-size="13" fill="#f59e0b" font-family="Consolas, monospace">&lt;=&gt;</text>
+  <text x="540" y="290" font-size="13" fill="#cbd5e1">kosinus masofa</text>
+  <text x="508" y="310" font-size="13" fill="#94a3b8">(kichik = yaqinroq)</text>
+
+  <!-- natija -->
+  <line x1="380" y1="324" x2="380" y2="362" stroke="#16a34a" stroke-width="2.5" marker-end="url(#pg14a)"/>
+  <rect x="170" y="370" width="420" height="46" rx="9" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="380" y="399" text-anchor="middle" font-size="14" font-weight="700" fill="#16a34a">Eng yaqin 5 hujjat — ma'no bo'yicha, tez</text>
+</svg>

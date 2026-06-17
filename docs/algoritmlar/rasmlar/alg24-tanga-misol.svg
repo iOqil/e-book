@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 500">
+  <title>Tanga qaytish misoli: greedy oddiy tanga tizimida to'g'ri ishlaydi, lekin 1, 3, 4 tizimida 6 uchun noto'g'ri javob beradi</title>
+  <rect x="0" y="0" width="860" height="500" fill="#f8fafc"/>
+  <text x="430" y="38" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Tanga qaytish: greedy qachon ishlaydi, qachon yo'q</text>
+
+  <!-- LEFT: ishlaydi -->
+  <rect x="30" y="70" width="380" height="380" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="220" y="100" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a">Tizim {1, 5, 10, 25} — TO'G'RI</text>
+  <text x="220" y="124" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">30 tiyin qaytarish kerak</text>
+
+  <text x="60" y="160" font-family="Segoe UI" font-size="14" fill="#334155">Greedy: har safar eng katta sig'adigan tanga</text>
+
+  <rect x="60" y="178" width="300" height="30" rx="5" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.2"/>
+  <text x="70" y="198" font-family="monospace" font-size="13" fill="#334155">30 → 25 ol (qoldi 5)</text>
+  <rect x="60" y="214" width="300" height="30" rx="5" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.2"/>
+  <text x="70" y="234" font-family="monospace" font-size="13" fill="#334155">5 → 5 ol (qoldi 0)</text>
+
+  <text x="60" y="278" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">Greedy: 25 + 5 = 2 tanga</text>
+  <text x="60" y="304" font-family="Segoe UI" font-size="14" fill="#334155">Optimal: 25 + 5 = 2 tanga</text>
+
+  <rect x="60" y="330" width="300" height="44" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="210" y="358" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">Greedy = Optimal ✓</text>
+
+  <text x="220" y="410" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Kanonik tizimda greedy har doim</text>
+  <text x="220" y="430" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">eng kam tangani beradi</text>
+
+  <!-- RIGHT: ishlamaydi -->
+  <rect x="450" y="70" width="380" height="380" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="640" y="100" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#dc2626">Tizim {1, 3, 4} — NOTO'G'RI</text>
+  <text x="640" y="124" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">6 tiyin qaytarish kerak</text>
+
+  <text x="480" y="160" font-family="Segoe UI" font-size="14" fill="#334155">Greedy: har safar eng katta sig'adigan tanga</text>
+
+  <rect x="480" y="178" width="300" height="30" rx="5" fill="#fef2f2" stroke="#dc2626" stroke-width="1.2"/>
+  <text x="490" y="198" font-family="monospace" font-size="13" fill="#334155">6 → 4 ol (qoldi 2)</text>
+  <rect x="480" y="214" width="300" height="30" rx="5" fill="#fef2f2" stroke="#dc2626" stroke-width="1.2"/>
+  <text x="490" y="234" font-family="monospace" font-size="13" fill="#334155">2 → 1 ol (qoldi 1)</text>
+  <rect x="480" y="250" width="300" height="30" rx="5" fill="#fef2f2" stroke="#dc2626" stroke-width="1.2"/>
+  <text x="490" y="270" font-family="monospace" font-size="13" fill="#334155">1 → 1 ol (qoldi 0)</text>
+
+  <text x="480" y="312" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">Greedy: 4 + 1 + 1 = 3 tanga</text>
+  <text x="480" y="338" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">Optimal: 3 + 3 = 2 tanga</text>
+
+  <rect x="480" y="356" width="300" height="44" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="630" y="384" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#dc2626">Greedy &gt; Optimal ✗</text>
+
+  <text x="640" y="430" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Greedy 4 ni olib, optimal 3+3 ni boy berdi</text>
+
+  <text x="430" y="478" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#334155">Xulosa: greedy faqat tizim "kanonik" bo'lsa to'g'ri — har doim isbotlash yoki kontr-misol qidirish shart.</text>
+</svg>

@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 470" width="800" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>useChat hayot sikli: foydalanuvchi yozadi, sendMessage chaqiriladi, route'ga so'rov ketadi, server oqimli UIMessage parts qaytaradi, messages massivi yangilanadi, assistant pufakchasi token-token to'ladi. Bu reaktiv halqa har yangi token kelganda takrorlanadi.</title>
+  <defs>
+    <marker id="u13a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#6366f1"/>
+    </marker>
+    <marker id="u13g" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="800" height="470" fill="#f8fafc"/>
+  <text x="400" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">useChat reaktiv halqasi — pufakcha token-token to'ladi</text>
+  <text x="400" y="58" font-size="14" fill="#64748b" text-anchor="middle">Siz holatni qo'lda boshqarmaysiz: hook messages'ni o'zi yangilaydi, React qayta chizadi</text>
+
+  <!-- step 1 -->
+  <rect x="40" y="92" width="200" height="64" rx="10" fill="#dbeafe" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="140" y="120" font-size="13.5" font-weight="bold" fill="#0ea5e9" text-anchor="middle">1. Foydalanuvchi yozadi</text>
+  <text x="140" y="140" font-size="13" fill="#475569" text-anchor="middle">va formani yuboradi</text>
+
+  <!-- step 2 -->
+  <rect x="300" y="92" width="200" height="64" rx="10" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="400" y="120" font-size="13.5" font-weight="bold" fill="#6366f1" text-anchor="middle">2. sendMessage(...)</text>
+  <text x="400" y="140" font-size="13" fill="#475569" text-anchor="middle">{ text: kiritilgan }</text>
+
+  <!-- step 3 -->
+  <rect x="560" y="92" width="200" height="64" rx="10" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="660" y="120" font-size="13.5" font-weight="bold" fill="#6366f1" text-anchor="middle">3. POST /api/chat</text>
+  <text x="660" y="140" font-size="13" fill="#475569" text-anchor="middle">serverga so'rov</text>
+
+  <!-- step 4 -->
+  <rect x="560" y="216" width="200" height="64" rx="10" fill="#fef3c7" stroke="#d97757" stroke-width="2"/>
+  <text x="660" y="244" font-size="13.5" font-weight="bold" fill="#d97757" text-anchor="middle">4. Server oqim qaytaradi</text>
+  <text x="660" y="264" font-size="13" fill="#475569" text-anchor="middle">UIMessage parts</text>
+
+  <!-- step 5 -->
+  <rect x="300" y="216" width="200" height="64" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="400" y="244" font-size="13.5" font-weight="bold" fill="#16a34a" text-anchor="middle">5. messages yangilanadi</text>
+  <text x="400" y="264" font-size="13" fill="#475569" text-anchor="middle">hook holatni o'zgartiradi</text>
+
+  <!-- step 6 -->
+  <rect x="40" y="216" width="200" height="64" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="140" y="240" font-size="13.5" font-weight="bold" fill="#16a34a" text-anchor="middle">6. Pufakcha to'ladi</text>
+  <text x="140" y="260" font-size="13" fill="#475569" text-anchor="middle">React qayta chizadi</text>
+
+  <!-- arrows top row -->
+  <line x1="240" y1="124" x2="296" y2="124" stroke="#6366f1" stroke-width="2.5" marker-end="url(#u13a)"/>
+  <line x1="500" y1="124" x2="556" y2="124" stroke="#6366f1" stroke-width="2.5" marker-end="url(#u13a)"/>
+  <!-- down -->
+  <line x1="660" y1="156" x2="660" y2="212" stroke="#6366f1" stroke-width="2.5" marker-end="url(#u13a)"/>
+  <!-- bottom row (return) -->
+  <line x1="560" y1="248" x2="504" y2="248" stroke="#16a34a" stroke-width="2.5" marker-end="url(#u13g)"/>
+  <line x1="300" y1="248" x2="244" y2="248" stroke="#16a34a" stroke-width="2.5" marker-end="url(#u13g)"/>
+
+  <!-- reactive loop note -->
+  <rect x="280" y="312" width="240" height="42" rx="10" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="400" y="338" font-size="13.5" font-weight="bold" fill="#6366f1" text-anchor="middle">↻ har yangi token = 4→5→6 takror</text>
+  <line x1="140" y1="280" x2="280" y2="330" stroke="#6366f1" stroke-width="2" stroke-dasharray="6,5" marker-end="url(#u13a)"/>
+  <line x1="520" y1="330" x2="660" y2="280" stroke="#6366f1" stroke-width="2" stroke-dasharray="6,5" marker-end="url(#u13a)"/>
+
+  <!-- bubble fill demo -->
+  <rect x="40" y="378" width="720" height="74" rx="12" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="60" y="402" font-size="13" fill="#64748b" text-anchor="start">Assistant pufakchasi vaqt o'tib:</text>
+  <rect x="60" y="414" width="120" height="26" rx="13" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="120" y="431" font-size="13" fill="#1e293b" text-anchor="middle">Salom</text>
+  <rect x="200" y="414" width="200" height="26" rx="13" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="300" y="431" font-size="13" fill="#1e293b" text-anchor="middle">Salom, men sizga</text>
+  <rect x="420" y="414" width="320" height="26" rx="13" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="580" y="431" font-size="13" fill="#1e293b" text-anchor="middle">Salom, men sizga yordam beraman.</text>
+</svg>

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 540" width="800" height="540" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Top-k qidiruv: savol vektori barcha bo'lak vektorlari bilan cosine o'xshashligi orqali solishtiriladi. Eng yaqin 3 ta bo'lak (yuqori cosine ball) tanlanadi va prompt kontekstiga qo'yiladi; uzoq (past balli) bo'laklar e'tiborga olinmaydi.</title>
+  <defs>
+    <marker id="t18a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="800" height="540" fill="#f8fafc"/>
+  <text x="400" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Top-k retrieval — eng yaqin bo'laklarni tanlash</text>
+  <text x="400" y="58" font-size="14" fill="#64748b" text-anchor="middle">Savol vektori har bir bo'lak vektoriga cosine o'xshashligi bilan solishtiriladi</text>
+
+  <!-- question vector -->
+  <rect x="40" y="96" width="170" height="80" rx="10" fill="#dbeafe" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="125" y="124" font-size="14" font-weight="bold" fill="#0ea5e9" text-anchor="middle">Savol vektori</text>
+  <text x="125" y="148" font-size="13" fill="#475569" text-anchor="middle">"Qaytarish muddati?"</text>
+  <text x="125" y="166" font-size="13" fill="#64748b" text-anchor="middle">[0.21, -0.08, ...]</text>
+
+  <text x="125" y="206" font-size="13" fill="#475569" text-anchor="middle">cosine bilan</text>
+  <text x="125" y="224" font-size="13" fill="#475569" text-anchor="middle">solishtir ↓</text>
+
+  <!-- chunks column -->
+  <text x="400" y="92" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Bazadagi barcha bo'laklar (cosine ball)</text>
+
+  <!-- chunk 1 - top -->
+  <line x1="210" y1="136" x2="328" y2="128" stroke="#16a34a" stroke-width="3" marker-end="url(#t18a)"/>
+  <rect x="332" y="104" width="300" height="46" rx="9" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="352" y="132" font-size="13.5" fill="#1e293b" text-anchor="start">"Tovarni 14 kun ichida qaytarish mumkin"</text>
+  <rect x="642" y="108" width="68" height="38" rx="8" fill="#16a34a"/>
+  <text x="676" y="132" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">0.91</text>
+
+  <!-- chunk 2 - top -->
+  <line x1="210" y1="148" x2="328" y2="176" stroke="#16a34a" stroke-width="3" marker-end="url(#t18a)"/>
+  <rect x="332" y="158" width="300" height="46" rx="9" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="352" y="186" font-size="13.5" fill="#1e293b" text-anchor="start">"Pul 3 ish kunida qaytariladi"</text>
+  <rect x="642" y="162" width="68" height="38" rx="8" fill="#16a34a"/>
+  <text x="676" y="186" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">0.84</text>
+
+  <!-- chunk 3 - top -->
+  <line x1="210" y1="156" x2="328" y2="230" stroke="#16a34a" stroke-width="3" marker-end="url(#t18a)"/>
+  <rect x="332" y="212" width="300" height="46" rx="9" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="352" y="240" font-size="13.5" fill="#1e293b" text-anchor="start">"Chek bilan kassaga murojaat qiling"</text>
+  <rect x="642" y="216" width="68" height="38" rx="8" fill="#16a34a"/>
+  <text x="676" y="240" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">0.78</text>
+
+  <!-- chunk 4 - far -->
+  <rect x="332" y="270" width="300" height="44" rx="9" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <text x="352" y="297" font-size="13.5" fill="#64748b" text-anchor="start">"Yetkazib berish bepul (50$ dan)"</text>
+  <rect x="642" y="274" width="68" height="36" rx="8" fill="#94a3b8"/>
+  <text x="676" y="297" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">0.31</text>
+
+  <!-- chunk 5 - far -->
+  <rect x="332" y="324" width="300" height="44" rx="9" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <text x="352" y="351" font-size="13.5" fill="#64748b" text-anchor="start">"Ish vaqti: 9:00 dan 18:00 gacha"</text>
+  <rect x="642" y="328" width="68" height="36" rx="8" fill="#94a3b8"/>
+  <text x="676" y="351" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">0.12</text>
+
+  <text x="482" y="394" font-size="13" fill="#64748b" text-anchor="middle">↑ uzoq bo'laklar (past ball) — E'TIBORGA OLINMAYDI</text>
+
+  <!-- selected -> context -->
+  <rect x="40" y="420" width="720" height="58" rx="10" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="400" y="446" font-size="14" font-weight="bold" fill="#6366f1" text-anchor="middle">top-k = 3 ta eng yaqin bo'lak prompt KONTEKSTIga qo'yiladi</text>
+  <text x="400" y="468" font-size="13" fill="#475569" text-anchor="middle">&lt;context&gt; bo'lak1 (0.91) + bo'lak2 (0.84) + bo'lak3 (0.78) &lt;/context&gt; + savol -> Claude</text>
+
+  <rect x="40" y="494" width="720" height="32" rx="8" fill="#fef3c7"/>
+  <text x="400" y="515" font-size="13.5" fill="#1e293b" text-anchor="middle">k juda kichik = kerakli ma'lumot tushib qoladi · k juda katta = shovqin + qimmat. 3-5 yaxshi boshlanish.</text>
+</svg>

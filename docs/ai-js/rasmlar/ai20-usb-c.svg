@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520" font-family="Segoe UI, system-ui, sans-serif">
+  <title>MCP — "AI uchun USB-C": bitta standart protokol. Ko'plab MCP serverlar (GitHub, Postgres, fayl tizimi, Slack) ko'plab MCP klientlarga (sizning ilovangiz, Claude Desktop, Claude Code) bir xil ulagich orqali ulanadi — har bir ilova uchun alohida moslama kod yozish o'rniga.</title>
+  <rect x="0" y="0" width="800" height="520" fill="#f8fafc"/>
+  <text x="400" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">MCP — "AI uchun USB-C"</text>
+  <text x="400" y="58" font-size="14" fill="#64748b" text-anchor="middle">Bitta standart ulagich — har bir ilova uchun alohida kabel emas.</text>
+
+  <!-- LEFT: messy alternative -->
+  <text x="200" y="92" font-size="15" font-weight="bold" fill="#ef4444" text-anchor="middle">MCP'siz: har ilova alohida kod</text>
+  <!-- apps -->
+  <rect x="60" y="108" width="120" height="34" rx="8" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="120" y="130" font-size="13" fill="#1e293b" text-anchor="middle">Ilova A</text>
+  <rect x="60" y="232" width="120" height="34" rx="8" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="120" y="254" font-size="13" fill="#1e293b" text-anchor="middle">Ilova B</text>
+  <!-- tools -->
+  <rect x="240" y="108" width="100" height="30" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="290" y="128" font-size="13" fill="#1e293b" text-anchor="middle">GitHub</text>
+  <rect x="240" y="170" width="100" height="30" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="290" y="190" font-size="13" fill="#1e293b" text-anchor="middle">Postgres</text>
+  <rect x="240" y="232" width="100" height="30" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="290" y="252" font-size="13" fill="#1e293b" text-anchor="middle">Slack</text>
+  <!-- tangled lines -->
+  <line x1="180" y1="125" x2="240" y2="123" stroke="#ef4444" stroke-width="1.5"/>
+  <line x1="180" y1="125" x2="240" y2="185" stroke="#ef4444" stroke-width="1.5"/>
+  <line x1="180" y1="125" x2="240" y2="247" stroke="#ef4444" stroke-width="1.5"/>
+  <line x1="180" y1="249" x2="240" y2="123" stroke="#ef4444" stroke-width="1.5"/>
+  <line x1="180" y1="249" x2="240" y2="185" stroke="#ef4444" stroke-width="1.5"/>
+  <line x1="180" y1="249" x2="240" y2="247" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="200" y="300" font-size="13" fill="#ef4444" text-anchor="middle">Har ulanish = qayta yozilgan kod</text>
+
+  <!-- divider -->
+  <line x1="400" y1="100" x2="400" y2="320" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5,4"/>
+
+  <!-- RIGHT: MCP standard -->
+  <text x="600" y="92" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="middle">MCP bilan: bitta standart</text>
+  <!-- clients -->
+  <rect x="440" y="108" width="120" height="30" rx="8" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="500" y="128" font-size="13" fill="#1e293b" text-anchor="middle">Sizning ilova</text>
+  <rect x="440" y="148" width="120" height="30" rx="8" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="500" y="168" font-size="13" fill="#1e293b" text-anchor="middle">Claude Desktop</text>
+  <rect x="440" y="188" width="120" height="30" rx="8" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="500" y="208" font-size="13" fill="#1e293b" text-anchor="middle">Claude Code</text>
+  <!-- MCP hub -->
+  <rect x="588" y="138" width="36" height="50" rx="8" fill="#d97757" stroke="#1e293b" stroke-width="2"/>
+  <text x="606" y="168" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">MCP</text>
+  <!-- servers -->
+  <rect x="660" y="108" width="100" height="30" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="710" y="128" font-size="13" fill="#1e293b" text-anchor="middle">GitHub</text>
+  <rect x="660" y="148" width="100" height="30" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="710" y="168" font-size="13" fill="#1e293b" text-anchor="middle">Postgres</text>
+  <rect x="660" y="188" width="100" height="30" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="710" y="208" font-size="13" fill="#1e293b" text-anchor="middle">Slack</text>
+  <!-- clean lines to hub -->
+  <line x1="560" y1="123" x2="588" y2="158" stroke="#16a34a" stroke-width="1.5"/>
+  <line x1="560" y1="163" x2="588" y2="163" stroke="#16a34a" stroke-width="1.5"/>
+  <line x1="560" y1="203" x2="588" y2="168" stroke="#16a34a" stroke-width="1.5"/>
+  <line x1="624" y1="158" x2="660" y2="123" stroke="#16a34a" stroke-width="1.5"/>
+  <line x1="624" y1="163" x2="660" y2="163" stroke="#16a34a" stroke-width="1.5"/>
+  <line x1="624" y1="168" x2="660" y2="203" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="600" y="300" font-size="13" fill="#16a34a" text-anchor="middle">Bir marta server — barcha klient ishlatadi</text>
+
+  <!-- footer callout -->
+  <rect x="60" y="340" width="680" height="68" rx="10" fill="#dbeafe" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="400" y="366" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Asosiy g'oya: MCP — ochiq standart (Anthropic yaratgan).</text>
+  <text x="400" y="388" font-size="13.5" fill="#475569" text-anchor="middle">Vositani BIR MARTA "MCP server" sifatida ochasiz — keyin ISTALGAN MCP klient uni ishlatadi.</text>
+
+  <!-- bottom note -->
+  <text x="400" y="440" font-size="13" fill="#64748b" text-anchor="middle">Yuzlab tayyor MCP serverlar mavjud: GitHub, Postgres, fayl tizimi, Slack, web...</text>
+  <text x="400" y="464" font-size="13" fill="#64748b" text-anchor="middle">Endi integratsiyani har safar noldan yozish shart emas.</text>
+</svg>

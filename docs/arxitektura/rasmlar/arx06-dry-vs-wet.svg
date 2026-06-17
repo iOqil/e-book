@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420">
+  <title>To'g'ri DRY (bitta bilim, bitta manba) vs barvaqt/xato abstraksiya (tasodifiy o'xshashlikni majburan birlashtirish)</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">DRY: bilim takrori — ha, lekin har takror emas</text>
+
+  <!-- CHAP: TO'G'RI DRY -->
+  <rect x="24" y="56" width="340" height="324" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="194" y="84" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">To'g'ri DRY — bitta bilim</text>
+  <text x="194" y="106" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">QQS stavkasi = bitta biznes-qaror</text>
+
+  <!-- yagona manba -->
+  <rect x="124" y="124" width="140" height="46" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="194" y="152" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#14532d">QQS_STAVKA = 0.12</text>
+
+  <!-- iste'molchilar -->
+  <rect x="48" y="244" width="120" height="40" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="108" y="269" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">jamiHisobla()</text>
+  <rect x="220" y="244" width="120" height="40" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="280" y="269" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">chekChizish()</text>
+
+  <line x1="180" y1="170" x2="120" y2="240" stroke="#16a34a" stroke-width="2"/>
+  <line x1="208" y1="170" x2="268" y2="240" stroke="#16a34a" stroke-width="2"/>
+
+  <text x="194" y="320" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#334155">Stavka o'zgarsa — bitta joyni</text>
+  <text x="194" y="340" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#334155">o'zgartirasiz, hammasi to'g'ri qoladi.</text>
+  <text x="194" y="366" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a">Bilim bir joyda yashaydi.</text>
+
+  <!-- O'NG: XATO ABSTRAKSIYA -->
+  <rect x="396" y="56" width="340" height="324" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="566" y="84" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#dc2626">Xato (barvaqt) abstraksiya</text>
+  <text x="566" y="106" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tasodifan o'xshash, lekin har xil sabab</text>
+
+  <!-- majburan birlashtirilgan modul -->
+  <rect x="496" y="124" width="140" height="46" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="566" y="146" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#7f1d1d">chegirma(narx, koeff,</text>
+  <text x="566" y="162" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#7f1d1d">tur, flag, ...)</text>
+
+  <!-- iste'molchilar har xil sabab -->
+  <rect x="420" y="244" width="120" height="40" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="480" y="263" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">xodimChegirma</text>
+  <text x="480" y="278" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#64748b">(HR qarori)</text>
+  <rect x="592" y="244" width="120" height="40" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="652" y="263" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">bayramChegirma</text>
+  <text x="652" y="278" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#64748b">(marketing qarori)</text>
+
+  <line x1="552" y1="170" x2="492" y2="240" stroke="#dc2626" stroke-width="2" stroke-dasharray="5 4"/>
+  <line x1="580" y1="170" x2="640" y2="240" stroke="#dc2626" stroke-width="2" stroke-dasharray="5 4"/>
+
+  <text x="566" y="320" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#334155">HR qoidasi o'zgarsa — funksiyaga flag</text>
+  <text x="566" y="340" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#334155">qo'shasiz, marketing kodi ham buziladi.</text>
+  <text x="566" y="366" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626">Ikki sabab bir joyda qamoqda.</text>
+
+  <!-- pastki xulosa -->
+  <text x="380" y="408" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">"Duplication is far cheaper than the wrong abstraction" — Sandi Metz</text>
+</svg>

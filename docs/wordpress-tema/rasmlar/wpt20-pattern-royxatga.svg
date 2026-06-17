@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 460" width="760" height="460" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Pattern ro'yxatga olishning ikki usuli: avtomatik (patterns/ papka) vs register_block_pattern</title>
+  <rect width="760" height="460" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">Pattern'ni ro'yxatga olishning 2 usuli</text>
+
+  <!-- Usul 1: avtomatik -->
+  <rect x="30" y="60" width="340" height="360" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="200" y="90" text-anchor="middle" font-size="17" font-weight="bold" fill="#16a34a">1) Avtomatik (tavsiya etiladi)</text>
+  <text x="200" y="112" text-anchor="middle" font-size="13" fill="#475569">WP 6.0+ standarti</text>
+
+  <rect x="54" y="130" width="292" height="92" rx="6" fill="#ffffff" stroke="#16a34a"/>
+  <text x="70" y="154" font-size="14" font-weight="bold" fill="#1e293b">PHP fayl yaratasiz:</text>
+  <text x="70" y="178" font-size="13" fill="#1e293b">tema/</text>
+  <text x="86" y="198" font-size="13" fill="#1e293b">patterns/</text>
+  <text x="102" y="218" font-size="13" fill="#16a34a">cta-hero.php</text>
+
+  <text x="200" y="246" text-anchor="middle" font-size="22" fill="#16a34a">&#x2193;</text>
+
+  <rect x="54" y="256" width="292" height="62" rx="6" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="200" y="282" text-anchor="middle" font-size="13" fill="#1e293b">WordPress papkani SKANER qiladi</text>
+  <text x="200" y="304" text-anchor="middle" font-size="13" fill="#1e293b">header izohni o'qiydi</text>
+
+  <text x="200" y="342" text-anchor="middle" font-size="22" fill="#16a34a">&#x2193;</text>
+
+  <rect x="54" y="352" width="292" height="48" rx="6" fill="#16a34a"/>
+  <text x="200" y="382" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">Inserter'da tayyor</text>
+
+  <!-- Usul 2: dasturiy -->
+  <rect x="390" y="60" width="340" height="360" rx="10" fill="#e2e8f0" stroke="#2563eb" stroke-width="2"/>
+  <text x="560" y="90" text-anchor="middle" font-size="17" font-weight="bold" fill="#2563eb">2) Dasturiy (eski / dinamik)</text>
+  <text x="560" y="112" text-anchor="middle" font-size="13" fill="#475569">register_block_pattern()</text>
+
+  <rect x="414" y="130" width="292" height="130" rx="6" fill="#1e293b"/>
+  <text x="428" y="154" font-size="13" fill="#dcfce7">add_action('init', function(){</text>
+  <text x="428" y="176" font-size="13" fill="#ffffff">  register_block_pattern(</text>
+  <text x="428" y="198" font-size="13" fill="#f59e0b">    'tema/cta-hero',</text>
+  <text x="428" y="220" font-size="13" fill="#ffffff">    [ 'title' =&gt; ...,</text>
+  <text x="428" y="240" font-size="13" fill="#ffffff">      'content' =&gt; '...markup' ]</text>
+  <text x="428" y="256" font-size="13" fill="#ffffff">  ); });</text>
+
+  <text x="560" y="286" text-anchor="middle" font-size="22" fill="#2563eb">&#x2193;</text>
+
+  <rect x="414" y="296" width="292" height="56" rx="6" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="560" y="320" text-anchor="middle" font-size="13" fill="#1e293b">Markup'ni kod ichida saqlaysiz</text>
+  <text x="560" y="340" text-anchor="middle" font-size="13" fill="#475569">+ register_block_pattern_category()</text>
+
+  <rect x="414" y="364" width="292" height="44" rx="6" fill="#fef3c7" stroke="#d97706"/>
+  <text x="560" y="391" text-anchor="middle" font-size="13" fill="#92400e">Qachon: shartli/dinamik pattern</text>
+</svg>

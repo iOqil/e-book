@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 480">
+  <title>RAM (Random Access Machine) modeli: protsessor va xotira yacheykalari, har bir asosiy amal bir birlik vaqt</title>
+  <rect x="0" y="0" width="820" height="480" fill="#f8fafc"/>
+  <text x="410" y="38" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">RAM modeli (Random Access Machine)</text>
+  <text x="410" y="63" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Soddalashtirilgan hisoblash modeli: har bir asosiy amal = 1 birlik vaqt</text>
+
+  <!-- Processor -->
+  <rect x="60" y="110" width="220" height="190" rx="14" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="170" y="140" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb">Protsessor</text>
+  <line x1="80" y1="152" x2="260" y2="152" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="80" y="178" font-family="Segoe UI" font-size="14" fill="#334155">Bitta amal bajaradi:</text>
+  <text x="80" y="204" font-family="monospace" font-size="14" fill="#16a34a">qiymat berish  → 1</text>
+  <text x="80" y="228" font-family="monospace" font-size="14" fill="#16a34a">taqqoslash     → 1</text>
+  <text x="80" y="252" font-family="monospace" font-size="14" fill="#16a34a">+ - * / amal   → 1</text>
+  <text x="80" y="276" font-family="monospace" font-size="14" fill="#16a34a">a[i] ga kirish → 1</text>
+
+  <!-- Bus / arrow -->
+  <line x1="280" y1="205" x2="420" y2="205" stroke="#7c3aed" stroke-width="3"/>
+  <polygon points="420,205 408,199 408,211" fill="#7c3aed"/>
+  <line x1="420" y1="225" x2="280" y2="225" stroke="#7c3aed" stroke-width="3"/>
+  <polygon points="280,225 292,219 292,231" fill="#7c3aed"/>
+  <text x="350" y="195" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#7c3aed">istalgan yacheykaga</text>
+  <text x="350" y="248" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#7c3aed">teng narxda kirish</text>
+
+  <!-- Memory -->
+  <text x="600" y="100" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#1e293b">Xotira (cheksiz yacheykalar)</text>
+  <g font-family="monospace" font-size="14">
+    <rect x="430" y="118" width="80" height="40" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="470" y="143" text-anchor="middle" fill="#334155">42</text>
+    <rect x="510" y="118" width="80" height="40" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="550" y="143" text-anchor="middle" fill="#334155">7</text>
+    <rect x="590" y="118" width="80" height="40" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="630" y="143" text-anchor="middle" fill="#334155">99</text>
+    <rect x="670" y="118" width="80" height="40" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="710" y="143" text-anchor="middle" fill="#334155">15</text>
+
+    <rect x="430" y="158" width="80" height="40" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="470" y="183" text-anchor="middle" fill="#334155">3</text>
+    <rect x="510" y="158" width="80" height="40" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="550" y="183" text-anchor="middle" fill="#334155">88</text>
+    <rect x="590" y="158" width="80" height="40" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="630" y="183" text-anchor="middle" fill="#334155">21</text>
+    <rect x="670" y="158" width="80" height="40" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="710" y="183" text-anchor="middle" fill="#334155">6</text>
+
+    <rect x="430" y="198" width="80" height="40" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="470" y="223" text-anchor="middle" fill="#334155">54</text>
+    <rect x="510" y="198" width="80" height="40" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="550" y="223" text-anchor="middle" fill="#334155">12</text>
+    <rect x="590" y="198" width="80" height="40" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="630" y="223" text-anchor="middle" fill="#334155">77</text>
+    <rect x="670" y="198" width="80" height="40" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="710" y="223" text-anchor="middle" fill="#334155">30</text>
+  </g>
+  <text x="600" y="262" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Har bir yacheyka manzili bilan; kirish vaqti bir xil (random access)</text>
+
+  <!-- Assumptions panel -->
+  <rect x="60" y="320" width="700" height="140" rx="12" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="80" y="350" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#f59e0b">Model nimani soddalashtiradi</text>
+  <text x="80" y="378" font-family="Segoe UI" font-size="14" fill="#334155">• Har bir oddiy amal bir xil — 1 birlik — vaqt oladi (real protsessorda bo'lish qo'shishdan sekinroq).</text>
+  <text x="80" y="402" font-family="Segoe UI" font-size="14" fill="#334155">• Istalgan xotira yacheykasiga kirish bir xil narx (real mashinada kesh/RAM/disk farqi bor).</text>
+  <text x="80" y="426" font-family="Segoe UI" font-size="14" fill="#334155">• Bitta son bitta yacheykaga sig'adi (arbitrar uzunlikdagi sonlar hisobga olinmaydi).</text>
+  <text x="80" y="450" font-family="Segoe UI" font-size="14" fill="#334155">Bu noaniqliklar konstanta omil; o'sish TARTIBI uchun model to'g'ri va juda foydali.</text>
+</svg>

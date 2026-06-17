@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 620">
+  <title>OAuth 2.1 Authorization Code + PKCE oqimi: mijoz, auth server, resource server ketma-ketligi</title>
+  <rect x="0" y="0" width="920" height="620" fill="#f8fafc"/>
+  <text x="460" y="32" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">Authorization Code + PKCE oqimi</text>
+  <text x="460" y="56" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Foydalanuvchi-mijozlar uchun standart (OAuth 2.1 da PKCE majburiy)</text>
+
+  <defs>
+    <marker id="arf" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- lifelines / actors -->
+  <rect x="40" y="80" width="170" height="46" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="125" y="103" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb">Mijoz (app)</text>
+  <text x="125" y="120" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">+ foydalanuvchi</text>
+  <line x1="125" y1="126" x2="125" y2="576" stroke="#cbd5e1" stroke-width="1.5"/>
+
+  <rect x="385" y="80" width="170" height="46" rx="8" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="470" y="103" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#7c3aed">Auth server</text>
+  <text x="470" y="120" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">(ruxsat beruvchi)</text>
+  <line x1="470" y1="126" x2="470" y2="576" stroke="#cbd5e1" stroke-width="1.5"/>
+
+  <rect x="720" y="80" width="170" height="46" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="805" y="103" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">Resource server</text>
+  <text x="805" y="120" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">(API)</text>
+  <line x1="805" y1="126" x2="805" y2="576" stroke="#cbd5e1" stroke-width="1.5"/>
+
+  <!-- step 1: generate code_verifier/challenge -->
+  <rect x="40" y="148" width="170" height="44" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="125" y="168" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">0. code_verifier</text>
+  <text x="125" y="185" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">-> challenge (hash)</text>
+
+  <!-- step 2: redirect to auth with challenge -->
+  <line x1="125" y1="212" x2="470" y2="212" stroke="#475569" stroke-width="2" marker-end="url(#arf)"/>
+  <text x="297" y="206" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">1. /authorize?...&amp;code_challenge=...</text>
+
+  <!-- step 3: user logs in / consents -->
+  <rect x="385" y="226" width="170" height="44" rx="8" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="470" y="246" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">2. Login + rozilik</text>
+  <text x="470" y="263" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">(foydalanuvchi)</text>
+
+  <!-- step 4: redirect back with code -->
+  <line x1="470" y1="292" x2="125" y2="292" stroke="#475569" stroke-width="2" marker-end="url(#arf)"/>
+  <text x="297" y="286" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">3. redirect: ?code=AUTH_CODE</text>
+
+  <!-- step 5: exchange code + verifier for token -->
+  <line x1="125" y1="328" x2="470" y2="328" stroke="#475569" stroke-width="2" marker-end="url(#arf)"/>
+  <text x="297" y="322" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">4. POST /token: code + code_verifier</text>
+
+  <!-- step 6: auth verifies challenge==hash(verifier) -->
+  <rect x="385" y="342" width="170" height="44" rx="8" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="470" y="362" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">5. hash(verifier)</text>
+  <text x="470" y="379" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">== challenge ?</text>
+
+  <!-- step 7: return tokens -->
+  <line x1="470" y1="406" x2="125" y2="406" stroke="#16a34a" stroke-width="2" marker-end="url(#arf)"/>
+  <text x="297" y="400" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">6. access_token + refresh_token</text>
+
+  <!-- step 8: call API with bearer -->
+  <line x1="125" y1="450" x2="805" y2="450" stroke="#475569" stroke-width="2" marker-end="url(#arf)"/>
+  <text x="450" y="444" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">7. GET /me  Authorization: Bearer access_token</text>
+
+  <!-- step 9: validate + respond -->
+  <rect x="720" y="464" width="170" height="44" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="805" y="484" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#1e293b">8. tokenni tekshir</text>
+  <text x="805" y="501" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">(imzo/scope)</text>
+
+  <line x1="805" y1="528" x2="125" y2="528" stroke="#16a34a" stroke-width="2" marker-end="url(#arf)"/>
+  <text x="450" y="522" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">9. 200 OK + himoyalangan ma'lumot</text>
+
+  <!-- PKCE note -->
+  <rect x="40" y="548" width="850" height="56" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="465" y="571" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#b45309">PKCE nima beradi:</text>
+  <text x="465" y="592" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">code_verifier faqat mijozda. O'g'irlangan AUTH_CODE verifiersiz tokenga almashtirilmaydi.</text>
+</svg>

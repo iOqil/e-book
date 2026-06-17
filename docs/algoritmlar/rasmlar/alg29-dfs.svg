@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 500">
+  <title>DFS iloji boricha chuqurga kiradi, tupikka yetganda stek (yoki rekursiya) yordamida orqaga qaytadi va boshqa shoxni tekshiradi</title>
+  <rect x="0" y="0" width="860" height="500" fill="#f8fafc"/>
+  <text x="430" y="36" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">DFS — chuqurlik bo'yicha kezish</text>
+  <text x="430" y="60" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Boshlanish: A. Iloji boricha chuqurga; tupikda orqaga qaytadi</text>
+
+  <!-- edges -->
+  <g stroke="#94a3b8" stroke-width="2">
+    <line x1="200" y1="120" x2="140" y2="210"/>
+    <line x1="200" y1="120" x2="320" y2="210"/>
+    <line x1="140" y1="210" x2="140" y2="310"/>
+    <line x1="320" y1="210" x2="320" y2="310"/>
+  </g>
+
+  <!-- forward (chuqurga) arrows -->
+  <g stroke="#2563eb" stroke-width="2.5" fill="none" marker-end="url(#blue)">
+    <path d="M 178 138 L 158 192"/>
+    <path d="M 140 238 L 140 282"/>
+  </g>
+  <!-- backtrack arrows -->
+  <g stroke="#dc2626" stroke-width="2" stroke-dasharray="5 4" fill="none" marker-end="url(#red)">
+    <path d="M 165 300 L 195 150"/>
+    <path d="M 222 132 L 300 196"/>
+  </g>
+  <defs>
+    <marker id="blue" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#2563eb"/></marker>
+    <marker id="red" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#dc2626"/></marker>
+  </defs>
+
+  <!-- nodes -->
+  <g font-family="Segoe UI" font-size="16" font-weight="bold" text-anchor="middle">
+    <circle cx="200" cy="110" r="26" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+    <text x="200" y="116" fill="#1e40af">A</text>
+    <circle cx="140" cy="210" r="26" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+    <text x="140" y="216" fill="#1e40af">B</text>
+    <circle cx="320" cy="210" r="26" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+    <text x="320" y="216" fill="#1e40af">C</text>
+    <circle cx="140" cy="310" r="26" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5"/>
+    <text x="140" y="316" fill="#b91c1c">D</text>
+    <circle cx="320" cy="310" r="26" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5"/>
+    <text x="320" y="316" fill="#b91c1c">E</text>
+  </g>
+
+  <!-- legend -->
+  <line x1="120" y1="380" x2="160" y2="380" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="168" y="385" font-family="Segoe UI" font-size="13" fill="#334155">chuqurga kirish</text>
+  <line x1="120" y1="408" x2="160" y2="408" stroke="#dc2626" stroke-width="2" stroke-dasharray="5 4"/>
+  <text x="168" y="413" font-family="Segoe UI" font-size="13" fill="#334155">orqaga qaytish (backtrack)</text>
+  <circle cx="135" cy="436" r="9" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="168" y="441" font-family="Segoe UI" font-size="13" fill="#334155">tupik (qo'shnisiz yoki hammasi ko'rilgan)</text>
+
+  <!-- stack panel -->
+  <text x="560" y="105" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#1e293b">Rekursiya steki (eng chuqur nuqta)</text>
+  <g font-family="monospace" font-size="14" text-anchor="middle">
+    <rect x="560" y="120" width="120" height="36" rx="4" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+    <text x="620" y="144" fill="#b91c1c">kir(D) &lt;- tepa</text>
+    <rect x="560" y="158" width="120" height="36" rx="4" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="620" y="182" fill="#334155">kir(B)</text>
+    <rect x="560" y="196" width="120" height="36" rx="4" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="620" y="220" fill="#334155">kir(A)</text>
+  </g>
+  <text x="700" y="144" font-family="Segoe UI" font-size="13" fill="#64748b">D tupik: pop -&gt; B ga qaytadi</text>
+
+  <rect x="560" y="255" width="240" height="100" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="575" y="280" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#1e293b">Tashrif tartibi</text>
+  <text x="575" y="308" font-family="monospace" font-size="15" fill="#2563eb">A B D C E</text>
+  <text x="575" y="336" font-family="Segoe UI" font-size="13" fill="#64748b">Bir shox to'liq, keyin keyingisi.</text>
+
+  <text x="430" y="470" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#7c3aed">Murakkablik: O(V + E)</text>
+</svg>

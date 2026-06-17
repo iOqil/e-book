@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" width="760" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>ScrollView hamma elementni darhol render qiladi, FlatList esa faqat ekranda ko'rinadiganni — kam element uchun ScrollView, ko'p element uchun FlatList</title>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">ScrollView va FlatList: qachon qaysi?</text>
+
+  <!-- Left: ScrollView -->
+  <rect x="40" y="62" width="320" height="350" rx="14" fill="#ffffff" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="200" y="90" text-anchor="middle" font-size="17" font-weight="700" fill="#0ea5e9">ScrollView</text>
+  <text x="200" y="112" text-anchor="middle" font-size="13" fill="#475569">Hamma elementni DARHOL render qiladi</text>
+
+  <!-- phone frame -->
+  <rect x="120" y="128" width="160" height="220" rx="18" fill="#f8fafc" stroke="#bae6fd" stroke-width="2"/>
+  <!-- visible window -->
+  <rect x="132" y="142" width="136" height="120" rx="6" fill="#e0f2fe" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="200" y="138" text-anchor="middle" font-size="13" fill="#94a3b8">ekran (ko'rinadi)</text>
+  <!-- rendered items inside window -->
+  <rect x="140" y="150" width="120" height="22" rx="4" fill="#0ea5e9"/>
+  <rect x="140" y="178" width="120" height="22" rx="4" fill="#0ea5e9"/>
+  <rect x="140" y="206" width="120" height="22" rx="4" fill="#0ea5e9"/>
+  <rect x="140" y="234" width="120" height="22" rx="4" fill="#0ea5e9"/>
+  <!-- off-screen but STILL rendered -->
+  <rect x="140" y="270" width="120" height="20" rx="4" fill="#0ea5e9" opacity="0.55"/>
+  <rect x="140" y="296" width="120" height="20" rx="4" fill="#0ea5e9" opacity="0.55"/>
+  <rect x="140" y="322" width="120" height="20" rx="4" fill="#0ea5e9" opacity="0.55"/>
+  <text x="200" y="368" text-anchor="middle" font-size="13" fill="#dc2626">ekrandan tashqari ham render!</text>
+
+  <text x="200" y="392" text-anchor="middle" font-size="13" font-weight="600" fill="#16a34a">Kam / aniq element uchun</text>
+
+  <!-- Right: FlatList -->
+  <rect x="400" y="62" width="320" height="350" rx="14" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="560" y="90" text-anchor="middle" font-size="17" font-weight="700" fill="#4f46e5">FlatList</text>
+  <text x="560" y="112" text-anchor="middle" font-size="13" fill="#475569">FAQAT ko'rinadiganni render qiladi</text>
+
+  <rect x="480" y="128" width="160" height="220" rx="18" fill="#f8fafc" stroke="#c7d2fe" stroke-width="2"/>
+  <rect x="492" y="142" width="136" height="120" rx="6" fill="#eef2ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="560" y="138" text-anchor="middle" font-size="13" fill="#94a3b8">ekran (ko'rinadi)</text>
+  <rect x="500" y="150" width="120" height="22" rx="4" fill="#6366f1"/>
+  <rect x="500" y="178" width="120" height="22" rx="4" fill="#6366f1"/>
+  <rect x="500" y="206" width="120" height="22" rx="4" fill="#6366f1"/>
+  <rect x="500" y="234" width="120" height="22" rx="4" fill="#6366f1"/>
+  <!-- off-screen: NOT rendered (dashed empty) -->
+  <rect x="500" y="270" width="120" height="20" rx="4" fill="none" stroke="#c7d2fe" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <rect x="500" y="296" width="120" height="20" rx="4" fill="none" stroke="#c7d2fe" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <rect x="500" y="322" width="120" height="20" rx="4" fill="none" stroke="#c7d2fe" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="560" y="368" text-anchor="middle" font-size="13" fill="#16a34a">tashqaridagilar render qilinmaydi</text>
+
+  <text x="560" y="392" text-anchor="middle" font-size="13" font-weight="600" fill="#16a34a">Ko'p / cheksiz element uchun</text>
+
+  <!-- bottom note -->
+  <rect x="40" y="428" width="680" height="30" rx="8" fill="#fff7ed" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="380" y="448" text-anchor="middle" font-size="13" fill="#92400e">Qoida: element soni oz va aniq bo'lsa ScrollView; uzun yoki cheksiz ro'yxat bo'lsa FlatList (08-bob)</text>
+</svg>

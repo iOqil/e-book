@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 460" width="760" height="460">
+  <title>Blok attributes ning source maydoni: html, attribute, text yoki query bilan qiymat markup dan o'qiladi va save markupiga yoziladi; source bo'lmasa qiymat blok izohida saqlanadi</title>
+  <rect x="0" y="0" width="760" height="460" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">attributes va source: qiymat qayerda yashaydi?</text>
+
+  <!-- block.json attribute box -->
+  <rect x="30" y="58" width="320" height="186" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="190" y="84" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e40af">block.json -&gt; attributes</text>
+  <text x="48" y="110" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">"sarlavha": {</text>
+  <text x="48" y="132" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">  "type": "string",</text>
+  <text x="48" y="154" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">  "source": "html",</text>
+  <text x="48" y="176" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">  "selector": ".kitkat-karta__sarlavha",</text>
+  <text x="48" y="198" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">  "default": ""</text>
+  <text x="48" y="220" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">}</text>
+
+  <!-- source types list -->
+  <rect x="410" y="58" width="320" height="186" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="570" y="84" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">source turlari</text>
+  <text x="428" y="110" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b"><tspan font-weight="bold" fill="#16a34a">html</tspan>  — selector ichidagi HTML</text>
+  <text x="428" y="134" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b"><tspan font-weight="bold" fill="#16a34a">text</tspan>  — selector ichidagi sof matn</text>
+  <text x="428" y="158" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b"><tspan font-weight="bold" fill="#16a34a">attribute</tspan> — HTML atribut qiymati</text>
+  <text x="428" y="182" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b"><tspan font-weight="bold" fill="#16a34a">query</tspan> — bir nechta element massivi</text>
+  <text x="428" y="212" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#7c3aed"><tspan font-weight="bold">(source yo'q)</tspan> — qiymat blok</text>
+  <text x="428" y="230" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#7c3aed">izohida (HTML comment) saqlanadi</text>
+
+  <!-- flow: read from markup -->
+  <rect x="30" y="280" width="700" height="150" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="380" y="306" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">save() markupi  &lt;-&gt;  attributes</text>
+
+  <rect x="55" y="324" width="300" height="86" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="68" y="346" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">YOZISH (save):</text>
+  <text x="68" y="368" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">&lt;h3 class="...__sarlavha"&gt;</text>
+  <text x="68" y="388" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">  PHP asoslari</text>
+  <text x="68" y="404" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">&lt;/h3&gt;</text>
+
+  <rect x="405" y="324" width="300" height="86" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="418" y="346" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">O'QISH (qayta yuklashda):</text>
+  <text x="418" y="368" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">selector + source bo'yicha</text>
+  <text x="418" y="388" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">attributes.sarlavha =</text>
+  <text x="418" y="404" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">"PHP asoslari"</text>
+
+  <line x1="355" y1="367" x2="403" y2="367" stroke="#475569" stroke-width="2"/>
+  <polygon points="403,367 393,362 393,372" fill="#475569"/>
+  <line x1="403" y1="395" x2="355" y2="395" stroke="#475569" stroke-width="2"/>
+  <polygon points="355,395 365,390 365,400" fill="#475569"/>
+</svg>

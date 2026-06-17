@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430">
+  <title>SSH kalit autentifikatsiyasi: private kalit lokal mashinada, public kalit serverda, autentifikatsiya oqimi</title>
+  <rect width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="36" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">SSH kalit autentifikatsiyasi</text>
+
+  <!-- Lokal mashina (chap) -->
+  <rect x="30" y="70" width="290" height="200" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="175" y="100" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e40af" text-anchor="middle">Lokal mashina (siz)</text>
+
+  <rect x="55" y="120" width="240" height="58" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="70" y="143" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#92400e">PRIVATE kalit (sirli)</text>
+  <text x="70" y="166" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#92400e">~/.ssh/id_ed25519</text>
+
+  <rect x="55" y="190" width="240" height="58" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="70" y="213" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e40af">PUBLIC kalit (ochiq)</text>
+  <text x="70" y="236" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e40af">~/.ssh/id_ed25519.pub</text>
+
+  <!-- Server (o'ng) -->
+  <rect x="440" y="70" width="290" height="200" rx="12" fill="#ffffff" stroke="#334155" stroke-width="2"/>
+  <text x="585" y="100" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b" text-anchor="middle">Server (VPS)</text>
+
+  <rect x="465" y="120" width="240" height="78" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="480" y="143" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">PUBLIC kalit nusxasi</text>
+  <text x="480" y="166" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#15803d">~/.ssh/authorized_keys</text>
+  <text x="480" y="186" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#15803d">(ssh-copy-id qo'shadi)</text>
+
+  <text x="585" y="232" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626" text-anchor="middle">Private kalit BU YERDA YO'Q</text>
+  <text x="585" y="252" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">(tarmoqqa hech qachon chiqmaydi)</text>
+
+  <!-- 1) public kalitni ko'chirish -->
+  <line x1="320" y1="219" x2="460" y2="159" stroke="#2563eb" stroke-width="2.5"/>
+  <polygon points="460,159 448,159 455,170" fill="#2563eb"/>
+  <text x="388" y="180" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb" text-anchor="middle">1. public kalitni</text>
+  <text x="388" y="197" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb" text-anchor="middle">serverga qo'yamiz</text>
+
+  <!-- pastki: autentifikatsiya oqimi -->
+  <rect x="30" y="300" width="700" height="106" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="50" y="326" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e40af">Ulanish (ssh deploy@server) — autentifikatsiya oqimi:</text>
+  <text x="50" y="352" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#334155">2. Server: "isbotla" deb tasodifiy savol (challenge) yuboradi.</text>
+  <text x="50" y="374" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#334155">3. Lokal mashina PRIVATE kalit bilan imzo qo'yib javob beradi.</text>
+  <text x="50" y="396" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#16a34a">4. Server PUBLIC kalit bilan tekshiradi -> mos kelsa kirish OK (parolsiz).</text>
+</svg>

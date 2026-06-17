@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430" font-family="Segoe UI, system-ui, sans-serif">
+  <title>mijoz_ol(provayder) factory oqimi: konfiguratsiyadan to'g'ri client tanlanadi</title>
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">mijoz_ol(provayder) — bitta nuqtada tanlash</text>
+
+  <defs>
+    <marker id="fa" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#4f46e5"/>
+    </marker>
+  </defs>
+
+  <!-- .env config -->
+  <rect x="40" y="150" width="180" height="100" rx="12" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="40" y="150" width="180" height="34" rx="12" fill="#fef3c7"/>
+  <text x="130" y="173" text-anchor="middle" font-size="15" font-weight="700" fill="#b45309">.env</text>
+  <text x="130" y="208" text-anchor="middle" font-size="13" font-family="JetBrains Mono, monospace" fill="#1e293b">LLM_PROVIDER</text>
+  <text x="130" y="230" text-anchor="middle" font-size="13" font-family="JetBrains Mono, monospace" fill="#16a34a">= "groq"</text>
+
+  <!-- Factory -->
+  <rect x="290" y="140" width="180" height="120" rx="12" fill="#1e293b"/>
+  <text x="380" y="172" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">mijoz_ol()</text>
+  <text x="380" y="200" text-anchor="middle" font-size="13" fill="#cbd5e1">provayder nomiga</text>
+  <text x="380" y="220" text-anchor="middle" font-size="13" fill="#cbd5e1">qarab base_url +</text>
+  <text x="380" y="240" text-anchor="middle" font-size="13" fill="#cbd5e1">kalit + model</text>
+
+  <line x1="222" y1="200" x2="286" y2="200" stroke="#4f46e5" stroke-width="3" marker-end="url(#fa)"/>
+
+  <!-- Outputs -->
+  <rect x="560" y="70" width="170" height="50" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="645" y="91" text-anchor="middle" font-size="14" font-weight="700" fill="#166534">Groq client</text>
+  <text x="645" y="110" text-anchor="middle" font-size="13" fill="#475569">llama-3.3-70b</text>
+
+  <rect x="560" y="175" width="170" height="50" rx="10" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="645" y="196" text-anchor="middle" font-size="14" font-weight="700" fill="#4338ca">OpenAI client</text>
+  <text x="645" y="215" text-anchor="middle" font-size="13" fill="#475569">gpt-5.4-mini</text>
+
+  <rect x="560" y="280" width="170" height="50" rx="10" fill="#ffffff" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="645" y="301" text-anchor="middle" font-size="14" font-weight="700" fill="#0284c7">Ollama client</text>
+  <text x="645" y="320" text-anchor="middle" font-size="13" fill="#475569">llama3.2 (lokal)</text>
+
+  <line x1="472" y1="185" x2="556" y2="100" stroke="#4f46e5" stroke-width="2.5" marker-end="url(#fa)"/>
+  <line x1="472" y1="200" x2="556" y2="200" stroke="#4f46e5" stroke-width="2.5" marker-end="url(#fa)"/>
+  <line x1="472" y1="215" x2="556" y2="300" stroke="#4f46e5" stroke-width="2.5" marker-end="url(#fa)"/>
+
+  <text x="380" y="380" text-anchor="middle" font-size="14" fill="#64748b">Qolgan kod (client.chat.completions.create) bir xil qoladi</text>
+  <text x="380" y="406" text-anchor="middle" font-size="14" fill="#475569">Provayderni almashtirish = .env'da bitta qatorni o'zgartirish</text>
+</svg>

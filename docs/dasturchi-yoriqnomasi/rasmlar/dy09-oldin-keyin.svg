@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 460" font-family="Segoe UI">
+  <title>Ichma-ich shartlar piramidasi guard clause yordamida yassi tuzilishga aylanadi</title>
+  <rect x="0" y="0" width="880" height="460" fill="#f8fafc"/>
+
+  <text x="440" y="36" text-anchor="middle" font-size="22" font-weight="bold" fill="#1e293b">Ichma-ich shart -&gt; guard clause</text>
+  <text x="440" y="60" text-anchor="middle" font-size="14" fill="#64748b">Chuqur if-piramidasi yassi, oldindan chiqib ketadigan tekshiruvlarga aylanadi</text>
+
+  <!-- BEFORE: pyramid -->
+  <rect x="40" y="86" width="380" height="332" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="230" y="116" text-anchor="middle" font-size="18" font-weight="bold" fill="#dc2626">Oldin: piramida</text>
+
+  <rect x="64" y="138" width="332" height="40" rx="6" fill="#fef2f2"/>
+  <text x="80" y="163" font-size="13" fill="#334155">if (foydalanuvchi != null) {</text>
+
+  <rect x="92" y="184" width="304" height="40" rx="6" fill="#fee2e2"/>
+  <text x="108" y="209" font-size="13" fill="#334155">if (foydalanuvchi.aktiv) {</text>
+
+  <rect x="120" y="230" width="276" height="40" rx="6" fill="#fecaca"/>
+  <text x="136" y="255" font-size="13" fill="#334155">if (foydalanuvchi.haqi &gt; 0) {</text>
+
+  <rect x="148" y="276" width="248" height="40" rx="6" fill="#fca5a5"/>
+  <text x="164" y="301" font-size="13" fill="#1e293b">jarayonniBoshla()</text>
+
+  <text x="164" y="340" font-size="13" fill="#334155">      } } }</text>
+  <text x="230" y="384" text-anchor="middle" font-size="13" fill="#dc2626">Asosiy mantiq 3 qatlam ichida</text>
+  <text x="230" y="404" text-anchor="middle" font-size="13" fill="#dc2626">ko'milgan, o'qish qiyin</text>
+
+  <!-- arrow -->
+  <text x="440" y="258" text-anchor="middle" font-size="34" fill="#16a34a">-&gt;</text>
+
+  <!-- AFTER: flat guards -->
+  <rect x="460" y="86" width="380" height="332" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="650" y="116" text-anchor="middle" font-size="18" font-weight="bold" fill="#16a34a">Keyin: yassi</text>
+
+  <rect x="484" y="138" width="332" height="36" rx="6" fill="#f0fdf4"/>
+  <text x="500" y="161" font-size="13" fill="#334155">if (foydalanuvchi == null) return</text>
+
+  <rect x="484" y="180" width="332" height="36" rx="6" fill="#f0fdf4"/>
+  <text x="500" y="203" font-size="13" fill="#334155">if (!foydalanuvchi.aktiv) return</text>
+
+  <rect x="484" y="222" width="332" height="36" rx="6" fill="#f0fdf4"/>
+  <text x="500" y="245" font-size="13" fill="#334155">if (foydalanuvchi.haqi &lt;= 0) return</text>
+
+  <rect x="484" y="270" width="332" height="40" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="500" y="295" font-size="13" font-weight="bold" fill="#166534">jarayonniBoshla()</text>
+
+  <text x="650" y="356" text-anchor="middle" font-size="13" fill="#16a34a">Avval "yo'q" holatlarni chiqarib tashla,</text>
+  <text x="650" y="376" text-anchor="middle" font-size="13" fill="#16a34a">asosiy mantiq eng tashqi (0-qatlam) darajada</text>
+  <text x="650" y="400" text-anchor="middle" font-size="13" fill="#64748b">ko'z chapdan o'ngga tekis o'qiydi</text>
+</svg>

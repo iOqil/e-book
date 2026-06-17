@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" width="780" height="470">
+  <title>Circuit breaker holat mashinasi: CLOSED, OPEN va HALF_OPEN o'rtasidagi o'tishlar</title>
+  <rect x="0" y="0" width="780" height="470" fill="#f8fafc"/>
+  <text x="390" y="34" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Circuit Breaker: 3 holat mashinasi</text>
+  <text x="390" y="58" font-family="Segoe UI" font-size="14" fill="#64748b" text-anchor="middle">Ketma-ket xato -&gt; ochiladi (darhol rad); kutib, HALF_OPEN'da sinaydi</text>
+
+  <defs>
+    <marker id="cb-blue" markerWidth="11" markerHeight="11" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="cb-red" markerWidth="11" markerHeight="11" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 Z" fill="#dc2626"/>
+    </marker>
+    <marker id="cb-green" markerWidth="11" markerHeight="11" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 Z" fill="#16a34a"/>
+    </marker>
+    <marker id="cb-amber" markerWidth="11" markerHeight="11" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 Z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+
+  <!-- CLOSED -->
+  <circle cx="150" cy="200" r="72" fill="#ffffff" stroke="#16a34a" stroke-width="3"/>
+  <text x="150" y="190" font-family="Segoe UI" font-size="18" font-weight="bold" fill="#16a34a" text-anchor="middle">CLOSED</text>
+  <text x="150" y="212" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">normal</text>
+  <text x="150" y="230" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">so'rov o'tadi</text>
+
+  <!-- OPEN -->
+  <circle cx="630" cy="200" r="72" fill="#ffffff" stroke="#dc2626" stroke-width="3"/>
+  <text x="630" y="190" font-family="Segoe UI" font-size="18" font-weight="bold" fill="#dc2626" text-anchor="middle">OPEN</text>
+  <text x="630" y="212" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">darhol rad</text>
+  <text x="630" y="230" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">(fail fast)</text>
+
+  <!-- HALF_OPEN -->
+  <circle cx="390" cy="370" r="72" fill="#ffffff" stroke="#f59e0b" stroke-width="3"/>
+  <text x="390" y="362" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#f59e0b" text-anchor="middle">HALF_OPEN</text>
+  <text x="390" y="384" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">sinov so'rovi</text>
+  <text x="390" y="402" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">o'tkaziladi</text>
+
+  <!-- CLOSED -> OPEN (ketma-ket xato chegarasi) -->
+  <path d="M212,168 Q390,90 568,168" fill="none" stroke="#dc2626" stroke-width="2.5" marker-end="url(#cb-red)"/>
+  <text x="390" y="108" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#dc2626" text-anchor="middle">N ta ketma-ket xato -&gt; ochiladi</text>
+
+  <!-- OPEN -> HALF_OPEN (timeout kutdi) -->
+  <path d="M583,255 Q510,330 455,345" fill="none" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#cb-amber)"/>
+  <text x="560" y="320" font-family="Segoe UI" font-size="13" fill="#f59e0b" text-anchor="middle">timeout kutdi</text>
+  <text x="560" y="337" font-family="Segoe UI" font-size="13" fill="#f59e0b" text-anchor="middle">-&gt; sinaymiz</text>
+
+  <!-- HALF_OPEN -> CLOSED (sinov OK) -->
+  <path d="M325,345 Q250,330 197,258" fill="none" stroke="#16a34a" stroke-width="2.5" marker-end="url(#cb-green)"/>
+  <text x="210" y="330" font-family="Segoe UI" font-size="13" fill="#16a34a" text-anchor="middle">sinov OK</text>
+  <text x="210" y="347" font-family="Segoe UI" font-size="13" fill="#16a34a" text-anchor="middle">-&gt; tiklandi</text>
+
+  <!-- HALF_OPEN -> OPEN (sinov yiqildi) -->
+  <path d="M455,392 Q560,400 610,268" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="6,4" marker-end="url(#cb-red)"/>
+  <text x="585" y="420" font-family="Segoe UI" font-size="13" fill="#dc2626" text-anchor="middle">sinov yiqildi -&gt; yana OPEN</text>
+
+  <!-- CLOSED self-loop (muvaffaqiyat hisobni nollaydi) -->
+  <path d="M118,138 Q150,100 182,138" fill="none" stroke="#16a34a" stroke-width="2" marker-end="url(#cb-green)"/>
+  <text x="150" y="120" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">OK -&gt; hisob 0</text>
+
+  <!-- Izoh paneli -->
+  <rect x="40" y="440" width="700" height="26" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="54" y="458" font-family="Segoe UI" font-size="13" fill="#334155">OPEN holatda pastki servisga TEGINMAYDI — uni tiklanishga imkon beradi va chaqiruvchini tez xatodan qutqaradi.</text>
+</svg>

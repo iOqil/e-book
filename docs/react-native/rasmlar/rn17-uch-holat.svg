@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" width="760" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Tarmoq so'rovining uch holati: loading (spinner), error (xato), data (ro'yxat)</title>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Har bir so'rovning UCH holati</text>
+  <text x="380" y="60" text-anchor="middle" font-size="14" fill="#475569">Har birini ekranda alohida ko'rsatish — yaxshi UX shu</text>
+
+  <!-- 1. LOADING -->
+  <rect x="40" y="90" width="216" height="320" rx="24" fill="#ffffff" stroke="#f59e0b" stroke-width="2.5"/>
+  <rect x="56" y="114" width="184" height="40" rx="8" fill="#fff7ed"/>
+  <text x="148" y="140" text-anchor="middle" font-size="15" font-weight="700" fill="#b45309">1. Loading (yuklanmoqda)</text>
+  <!-- spinner -->
+  <circle cx="148" cy="250" r="34" fill="none" stroke="#fed7aa" stroke-width="7"/>
+  <path d="M 148 216 A 34 34 0 0 1 182 250" fill="none" stroke="#f59e0b" stroke-width="7" stroke-linecap="round"/>
+  <text x="148" y="318" text-anchor="middle" font-size="13" fill="#475569">ActivityIndicator</text>
+  <text x="148" y="342" text-anchor="middle" font-size="13" fill="#94a3b8">yuklanmoqda = true</text>
+
+  <!-- 2. ERROR -->
+  <rect x="272" y="90" width="216" height="320" rx="24" fill="#ffffff" stroke="#dc2626" stroke-width="2.5"/>
+  <rect x="288" y="114" width="184" height="40" rx="8" fill="#fef2f2"/>
+  <text x="380" y="140" text-anchor="middle" font-size="15" font-weight="700" fill="#b91c1c">2. Error (xato)</text>
+  <circle cx="380" cy="240" r="32" fill="#fef2f2" stroke="#dc2626" stroke-width="3"/>
+  <text x="380" y="252" text-anchor="middle" font-size="34" font-weight="700" fill="#dc2626">!</text>
+  <text x="380" y="312" text-anchor="middle" font-size="13" fill="#475569">"Tarmoq xatosi"</text>
+  <rect x="320" y="328" width="120" height="32" rx="8" fill="#eef2ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="380" y="349" text-anchor="middle" font-size="13" fill="#4f46e5">Qayta urinish</text>
+
+  <!-- 3. DATA -->
+  <rect x="504" y="90" width="216" height="320" rx="24" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <rect x="520" y="114" width="184" height="40" rx="8" fill="#f0fdf4"/>
+  <text x="612" y="140" text-anchor="middle" font-size="15" font-weight="700" fill="#15803d">3. Data (ma'lumot)</text>
+  <rect x="524" y="176" width="176" height="46" rx="8" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+  <text x="540" y="204" font-size="13" fill="#1e293b">Birinchi post</text>
+  <rect x="524" y="232" width="176" height="46" rx="8" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+  <text x="540" y="260" font-size="13" fill="#1e293b">Ikkinchi post</text>
+  <rect x="524" y="288" width="176" height="46" rx="8" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+  <text x="540" y="316" font-size="13" fill="#1e293b">Uchinchi post</text>
+  <text x="612" y="360" text-anchor="middle" font-size="13" fill="#94a3b8">FlatList</text>
+
+  <!-- pastki kod izohi -->
+  <rect x="40" y="426" width="680" height="34" rx="8" fill="#ffffff" stroke="#c7d2fe" stroke-width="1.5"/>
+  <text x="380" y="448" text-anchor="middle" font-size="13" fill="#475569">useState: data (null) · yuklanmoqda (true/false) · xato (null/matn) — uchtasini birga boshqaring</text>
+</svg>

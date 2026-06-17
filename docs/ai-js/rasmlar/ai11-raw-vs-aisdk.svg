@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 470" width="800" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Bir xil vazifa: chapda xom @anthropic-ai/sdk (messages.create, content[0].text o'qish) vs o'ngda Vercel AI SDK (generateText -> { text }). Ergonomika tozaroq, ostidagi chaqiruv bir xil.</title>
+  <defs>
+    <marker id="rv" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="800" height="470" fill="#f8fafc"/>
+  <text x="400" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Bir xil vazifa, ikki yo'l — natija bir xil</text>
+  <text x="400" y="58" font-size="14" fill="#64748b" text-anchor="middle">"Salom"ni so'rab, javob matnini olish</text>
+
+  <!-- LEFT: raw SDK -->
+  <rect x="28" y="80" width="356" height="308" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="206" y="108" font-size="16" font-weight="bold" fill="#d97757" text-anchor="middle">XOM SDK  (@anthropic-ai/sdk)</text>
+  <text x="206" y="129" font-size="13" fill="#94a3b8" text-anchor="middle">to'liq nazorat, bir oz ko'p kod</text>
+
+  <rect x="48" y="144" width="316" height="44" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="206" y="171" font-size="13" fill="#1e293b" text-anchor="middle">await client.messages.create({...})</text>
+
+  <rect x="48" y="198" width="316" height="44" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="206" y="219" font-size="13" fill="#1e293b" text-anchor="middle">javob = content bloklar massivi</text>
+  <text x="206" y="236" font-size="13" fill="#475569" text-anchor="middle">[{ type:"text", text }]</text>
+
+  <rect x="48" y="252" width="316" height="44" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="206" y="279" font-size="13" fill="#1e293b" text-anchor="middle">qo'lda och: msg.content[0].text</text>
+
+  <rect x="48" y="320" width="316" height="50" rx="8" fill="#fef3c7" stroke="#d97757" stroke-width="1.5"/>
+  <text x="206" y="343" font-size="13" fill="#475569" text-anchor="middle">bloklarni o'zingiz ochasiz;</text>
+  <text x="206" y="361" font-size="13" fill="#475569" text-anchor="middle">faqat Claude'ga bog'liq</text>
+
+  <!-- equals -->
+  <line x1="392" y1="234" x2="416" y2="234" stroke="#64748b" stroke-width="2.5" marker-end="url(#rv)"/>
+  <text x="404" y="222" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="middle">=</text>
+
+  <!-- RIGHT: AI SDK -->
+  <rect x="424" y="80" width="348" height="308" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="598" y="108" font-size="16" font-weight="bold" fill="#16a34a" text-anchor="middle">VERCEL AI SDK  (ai)</text>
+  <text x="598" y="129" font-size="13" fill="#94a3b8" text-anchor="middle">tayyor matn, kam kod</text>
+
+  <rect x="444" y="144" width="308" height="44" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="598" y="165" font-size="13" fill="#1e293b" text-anchor="middle">const { text } = await</text>
+  <text x="598" y="182" font-size="13" fill="#475569" text-anchor="middle">generateText({ model, prompt })</text>
+
+  <rect x="444" y="198" width="308" height="44" rx="8" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="598" y="219" font-size="13" font-weight="bold" fill="#6366f1" text-anchor="middle">text — tayyor satr</text>
+  <text x="598" y="236" font-size="13" fill="#475569" text-anchor="middle">blok ochish SHART EMAS</text>
+
+  <rect x="444" y="252" width="308" height="44" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="598" y="279" font-size="13" fill="#1e293b" text-anchor="middle">console.log(text)</text>
+
+  <rect x="444" y="320" width="308" height="50" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="598" y="343" font-size="13" fill="#475569" text-anchor="middle">SDK bloklarni o'zi ochadi;</text>
+  <text x="598" y="361" font-size="13" fill="#475569" text-anchor="middle">provayderni almashtirsa bo'ladi</text>
+
+  <!-- bottom: same call -->
+  <rect x="150" y="408" width="500" height="44" rx="10" fill="#ffffff" stroke="#475569" stroke-width="2"/>
+  <text x="400" y="435" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Ostida: ikkalasi ham bir xil Anthropic API'ni chaqiradi</text>
+</svg>

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 470">
+  <title>Massiv xotirada: uzluksiz yacheykalar va manzil = baza + indeks * element_hajmi formulasi</title>
+  <rect x="0" y="0" width="860" height="470" fill="#f8fafc"/>
+  <text x="430" y="38" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Massiv xotirada uzluksiz joylashadi</text>
+  <text x="430" y="64" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Bir xil tipdagi elementlar yonma-yon — shuning uchun manzilni to'g'ridan-to'g'ri hisoblash mumkin</text>
+
+  <!-- memory cells -->
+  <g font-family="monospace">
+    <!-- cell 0 -->
+    <rect x="80"  y="120" width="100" height="60" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+    <text x="130" y="156" text-anchor="middle" font-size="18" fill="#1e293b">42</text>
+    <!-- cell 1 -->
+    <rect x="180" y="120" width="100" height="60" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+    <text x="230" y="156" text-anchor="middle" font-size="18" fill="#1e293b">17</text>
+    <!-- cell 2 -->
+    <rect x="280" y="120" width="100" height="60" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+    <text x="330" y="156" text-anchor="middle" font-size="18" fill="#1e293b">8</text>
+    <!-- cell 3 (highlighted) -->
+    <rect x="380" y="120" width="100" height="60" fill="#dbeafe" stroke="#16a34a" stroke-width="3"/>
+    <text x="430" y="156" text-anchor="middle" font-size="18" font-weight="bold" fill="#16a34a">99</text>
+    <!-- cell 4 -->
+    <rect x="480" y="120" width="100" height="60" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+    <text x="530" y="156" text-anchor="middle" font-size="18" fill="#1e293b">23</text>
+    <!-- cell 5 -->
+    <rect x="580" y="120" width="100" height="60" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+    <text x="630" y="156" text-anchor="middle" font-size="18" fill="#1e293b">5</text>
+    <!-- cell 6 -->
+    <rect x="680" y="120" width="100" height="60" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+    <text x="730" y="156" text-anchor="middle" font-size="18" fill="#1e293b">61</text>
+  </g>
+
+  <!-- index labels -->
+  <g font-family="monospace" font-size="14" fill="#7c3aed">
+    <text x="130" y="206" text-anchor="middle">indeks 0</text>
+    <text x="230" y="206" text-anchor="middle">indeks 1</text>
+    <text x="330" y="206" text-anchor="middle">indeks 2</text>
+    <text x="430" y="206" text-anchor="middle" font-weight="bold" fill="#16a34a">indeks 3</text>
+    <text x="530" y="206" text-anchor="middle">indeks 4</text>
+    <text x="630" y="206" text-anchor="middle">indeks 5</text>
+    <text x="730" y="206" text-anchor="middle">indeks 6</text>
+  </g>
+
+  <!-- memory address labels -->
+  <g font-family="monospace" font-size="13" fill="#64748b">
+    <text x="130" y="100" text-anchor="middle">1000</text>
+    <text x="230" y="100" text-anchor="middle">1004</text>
+    <text x="330" y="100" text-anchor="middle">1008</text>
+    <text x="430" y="100" text-anchor="middle">1012</text>
+    <text x="530" y="100" text-anchor="middle">1016</text>
+    <text x="630" y="100" text-anchor="middle">1020</text>
+    <text x="730" y="100" text-anchor="middle">1024</text>
+  </g>
+  <text x="430" y="232" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">↑ xotira manzillari (har element 4 bayt)</text>
+
+  <!-- pointer to base -->
+  <text x="130" y="270" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#2563eb">bazaviy manzil = 1000</text>
+
+  <!-- formula box -->
+  <rect x="120" y="300" width="620" height="130" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="430" y="332" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#1e293b">Indekslash O(1) — chunki manzil bir amal bilan hisoblanadi</text>
+  <text x="430" y="366" text-anchor="middle" font-family="monospace" font-size="16" fill="#dc2626">manzil(i) = bazaviy_manzil + i * element_hajmi</text>
+  <text x="430" y="400" text-anchor="middle" font-family="monospace" font-size="15" fill="#16a34a">manzil(3) = 1000 + 3 * 4 = 1012   →   qiymat = 99</text>
+  <text x="430" y="422" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">qidirib yurish shart emas: indeksdan to'g'ridan-to'g'ri manzilga sakraymiz</text>
+</svg>

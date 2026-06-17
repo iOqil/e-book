@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 460" width="780" height="460">
+  <title>Event sourcing: o'zgarmas event log ketma-ket qo'llanib joriy holatni qayta tiklaydi</title>
+  <rect x="0" y="0" width="780" height="460" fill="#f8fafc"/>
+  <text x="390" y="34" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Event sourcing: holat = event'lar ketma-ketligi</text>
+  <text x="390" y="58" font-family="Segoe UI" font-size="14" fill="#64748b" text-anchor="middle">Joriy qoldiqni saqlamaymiz — event'larni qo'llab qayta hisoblaymiz (replay)</text>
+
+  <defs>
+    <marker id="es-ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <!-- Event log title -->
+  <text x="50" y="110" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#dc2626">Event log (faqat qo'shiladi, o'zgarmas)</text>
+
+  <!-- Event chain -->
+  <rect x="50" y="125" width="150" height="56" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="125" y="148" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#334155" text-anchor="middle">ochildi</text>
+  <text x="125" y="168" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">qoldiq = 0</text>
+
+  <rect x="222" y="125" width="150" height="56" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="297" y="148" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#16a34a" text-anchor="middle">kirim +100000</text>
+  <text x="297" y="168" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">qoldiq = 100000</text>
+
+  <rect x="394" y="125" width="150" height="56" rx="8" fill="#ffffff" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="469" y="148" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#dc2626" text-anchor="middle">chiqim -30000</text>
+  <text x="469" y="168" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">qoldiq = 70000</text>
+
+  <rect x="566" y="125" width="150" height="56" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="641" y="148" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#16a34a" text-anchor="middle">kirim +50000</text>
+  <text x="641" y="168" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">qoldiq = 120000</text>
+
+  <!-- Chain arrows -->
+  <line x1="200" y1="153" x2="220" y2="153" stroke="#2563eb" stroke-width="2" marker-end="url(#es-ar)"/>
+  <line x1="372" y1="153" x2="392" y2="153" stroke="#2563eb" stroke-width="2" marker-end="url(#es-ar)"/>
+  <line x1="544" y1="153" x2="564" y2="153" stroke="#2563eb" stroke-width="2" marker-end="url(#es-ar)"/>
+
+  <!-- Replay down to current state -->
+  <line x1="641" y1="181" x2="641" y2="250" stroke="#2563eb" stroke-width="2.5" marker-end="url(#es-ar)"/>
+  <text x="655" y="220" font-family="Segoe UI" font-size="13" fill="#2563eb">replay (fold)</text>
+
+  <!-- Current state -->
+  <rect x="510" y="258" width="260" height="80" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="640" y="288" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb" text-anchor="middle">Joriy holat</text>
+  <text x="640" y="314" font-family="Segoe UI" font-size="14" fill="#334155" text-anchor="middle">qoldiq = 120000</text>
+
+  <!-- Time-travel state -->
+  <rect x="50" y="258" width="280" height="80" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="190" y="284" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#334155" text-anchor="middle">Vaqt sayohati (audit)</text>
+  <text x="190" y="308" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">dastlabki 3 event = 70000</text>
+  <text x="190" y="326" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">istalgan o'tmish holatni tiklaymiz</text>
+  <line x1="469" y1="181" x2="280" y2="256" stroke="#f59e0b" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#es-ar)"/>
+
+  <!-- Note -->
+  <rect x="50" y="368" width="720" height="72" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="66" y="394" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#334155">Foyda</text>
+  <text x="66" y="416" font-family="Segoe UI" font-size="13" fill="#334155">To'liq audit tarixi; har qanday o'tmish holatni tiklash; bug topsang event'larni qayta o'ynat.</text>
+  <text x="66" y="434" font-family="Segoe UI" font-size="13" fill="#64748b">Narxi: log o'sib boradi (snapshot kerak), so'rov murakkab, event sxemasini o'zgartirish qiyin.</text>
+</svg>

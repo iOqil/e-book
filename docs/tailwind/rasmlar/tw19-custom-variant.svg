@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" width="800" height="460" font-family="Segoe UI, system-ui, sans-serif">
+  <title>@custom-variant shart bilan variant prefiksini bog'laydi: media-feature (@media pointer:coarse) → pointer-coarse: prefiks; selektor &amp;:where([data-theme=midnight] *) → theme-midnight: prefiks. Har bir variant istalgan utility oldiga qo'yiladi</title>
+  <rect x="0" y="0" width="800" height="460" fill="#f8fafc"/>
+
+  <text x="400" y="36" text-anchor="middle" font-size="21" font-weight="bold" fill="#1e293b">@custom-variant — shartdan prefiks yasash</text>
+  <text x="400" y="60" text-anchor="middle" font-size="14" fill="#475569">Bir SHARTga nom berasiz; o'sha nom istalgan utility oldiga prefiks bo'lib qo'yiladi</text>
+
+  <!-- ustun sarlavhalari -->
+  <text x="180" y="92" text-anchor="middle" font-size="13" font-weight="bold" fill="#64748b">SHART (e'lon)</text>
+  <text x="470" y="92" text-anchor="middle" font-size="13" font-weight="bold" fill="#64748b">VARIANT PREFIKSI</text>
+  <text x="690" y="92" text-anchor="middle" font-size="13" font-weight="bold" fill="#64748b">ISHLATISH</text>
+
+  <!-- ===== 1-qator: media-feature ===== -->
+  <rect x="30" y="104" width="300" height="120" rx="10" fill="#ffffff" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="46" y="128" font-size="13" font-weight="bold" fill="#0284c7">Media-feature</text>
+  <text x="46" y="156" font-size="13" font-weight="bold" fill="#4f46e5">@custom-variant</text>
+  <text x="46" y="178" font-size="14" fill="#1e293b">pointer-coarse</text>
+  <text x="46" y="204" font-size="13" fill="#16a34a">(@media (pointer: coarse))</text>
+
+  <!-- strelka 1 -->
+  <line x1="330" y1="164" x2="378" y2="164" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="378,164 366,158 366,170" fill="#94a3b8"/>
+
+  <!-- prefiks 1 -->
+  <rect x="382" y="140" width="176" height="48" rx="8" fill="#e0f2fe" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="470" y="170" text-anchor="middle" font-size="16" font-weight="bold" fill="#0284c7">pointer-coarse:</text>
+
+  <!-- strelka 2 -->
+  <line x1="558" y1="164" x2="596" y2="164" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="596,164 584,158 584,170" fill="#94a3b8"/>
+
+  <!-- ishlatish 1 -->
+  <rect x="600" y="138" width="180" height="52" rx="8" fill="#6366f1"/>
+  <text x="690" y="162" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">pointer-coarse:p-4</text>
+  <text x="690" y="181" text-anchor="middle" font-size="13" fill="#e0e7ff">sensorli: katta tugma</text>
+
+  <!-- ===== 2-qator: selektor/atribut ===== -->
+  <rect x="30" y="252" width="300" height="120" rx="10" fill="#ffffff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="46" y="276" font-size="13" font-weight="bold" fill="#4f46e5">Selektor / atribut</text>
+  <text x="46" y="304" font-size="13" font-weight="bold" fill="#4f46e5">@custom-variant</text>
+  <text x="46" y="326" font-size="14" fill="#1e293b">theme-midnight</text>
+  <text x="46" y="352" font-size="13" fill="#16a34a">(&amp;:where([data-theme=midnight] *))</text>
+
+  <!-- strelka 1 -->
+  <line x1="330" y1="312" x2="378" y2="312" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="378,312 366,306 366,318" fill="#94a3b8"/>
+
+  <!-- prefiks 2 -->
+  <rect x="382" y="288" width="176" height="48" rx="8" fill="#eef2ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="470" y="318" text-anchor="middle" font-size="16" font-weight="bold" fill="#4f46e5">theme-midnight:</text>
+
+  <!-- strelka 2 -->
+  <line x1="558" y1="312" x2="596" y2="312" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="596,312 584,306 584,318" fill="#94a3b8"/>
+
+  <!-- ishlatish 2 -->
+  <rect x="600" y="286" width="180" height="52" rx="8" fill="#1e293b"/>
+  <text x="690" y="310" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">theme-midnight:bg-black</text>
+  <text x="690" y="329" text-anchor="middle" font-size="13" fill="#94a3b8">data-theme bo'lsa qora</text>
+
+  <!-- pastki eslatma -->
+  <rect x="120" y="396" width="560" height="48" rx="10" fill="#eef2ff" stroke="#c7d2fe" stroke-width="1"/>
+  <text x="400" y="418" text-anchor="middle" font-size="13" fill="#475569">Selektorli variant <tspan fill="#1e293b" font-weight="bold">&amp;</tspan> va <tspan fill="#1e293b" font-weight="bold">:where()</tspan> talab qiladi — :where() specificity'ni 0 qiladi.</text>
+  <text x="400" y="436" text-anchor="middle" font-size="13" fill="#475569"><tspan fill="#1e293b" font-weight="bold">dark</tspan> ham aslida shunday ustiga-yoziladigan custom variant.</text>
+</svg>

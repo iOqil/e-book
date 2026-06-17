@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 500" width="780" height="500" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Synced (wp_block) vs unsynced pattern va pattern overrides farqi</title>
+  <rect width="780" height="500" fill="#f8fafc"/>
+  <text x="390" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">Synced vs Unsynced + Pattern overrides</text>
+
+  <!-- UNSYNCED -->
+  <rect x="24" y="58" width="232" height="200" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="140" y="84" text-anchor="middle" font-size="16" font-weight="bold" fill="#475569">UNSYNCED (nusxa)</text>
+  <rect x="44" y="98" width="86" height="56" rx="6" fill="#e2e8f0" stroke="#94a3b8"/>
+  <text x="87" y="130" text-anchor="middle" font-size="13" fill="#1e293b">Nusxa A</text>
+  <rect x="150" y="98" width="86" height="56" rx="6" fill="#e2e8f0" stroke="#94a3b8"/>
+  <text x="193" y="130" text-anchor="middle" font-size="13" fill="#1e293b">Nusxa B</text>
+  <text x="140" y="184" text-anchor="middle" font-size="13" fill="#475569">A'ni o'zgartirsang</text>
+  <text x="140" y="204" text-anchor="middle" font-size="13" fill="#475569">B o'zgarmaydi</text>
+  <text x="140" y="234" text-anchor="middle" font-size="13" fill="#16a34a">Erkin, mustaqil</text>
+
+  <!-- SYNCED -->
+  <rect x="274" y="58" width="232" height="200" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="390" y="84" text-anchor="middle" font-size="16" font-weight="bold" fill="#2563eb">SYNCED (wp_block)</text>
+  <rect x="330" y="98" width="120" height="40" rx="6" fill="#2563eb"/>
+  <text x="390" y="123" text-anchor="middle" font-size="13" fill="#ffffff">Yagona manba</text>
+  <line x1="360" y1="138" x2="320" y2="170" stroke="#2563eb" stroke-width="2"/>
+  <line x1="420" y1="138" x2="460" y2="170" stroke="#2563eb" stroke-width="2"/>
+  <rect x="288" y="170" width="76" height="40" rx="6" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="326" y="195" text-anchor="middle" font-size="13" fill="#1e293b">Sahifa 1</text>
+  <rect x="416" y="170" width="76" height="40" rx="6" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="454" y="195" text-anchor="middle" font-size="13" fill="#1e293b">Sahifa 2</text>
+  <text x="390" y="234" text-anchor="middle" font-size="13" fill="#dc2626">Bir joyda o'zgartirsang =</text>
+  <text x="390" y="252" text-anchor="middle" font-size="13" fill="#dc2626">hamma joyda o'zgaradi</text>
+
+  <!-- OVERRIDES -->
+  <rect x="524" y="58" width="232" height="200" rx="10" fill="#ffffff" stroke="#d97706" stroke-width="2"/>
+  <text x="640" y="84" text-anchor="middle" font-size="16" font-weight="bold" fill="#d97706">OVERRIDES (6.6+)</text>
+  <rect x="580" y="98" width="120" height="36" rx="6" fill="#fef3c7" stroke="#d97706"/>
+  <text x="640" y="122" text-anchor="middle" font-size="13" fill="#92400e">Synced shablon</text>
+  <text x="640" y="152" text-anchor="middle" font-size="13" fill="#475569">struktura qulflangan,</text>
+  <text x="640" y="170" text-anchor="middle" font-size="13" fill="#475569">ayrim maydon erkin</text>
+  <rect x="556" y="182" width="76" height="50" rx="6" fill="#fff7ed" stroke="#d97706"/>
+  <text x="594" y="204" text-anchor="middle" font-size="13" fill="#1e293b">Ali</text>
+  <text x="594" y="222" text-anchor="middle" font-size="13" fill="#64748b">CEO</text>
+  <rect x="648" y="182" width="76" height="50" rx="6" fill="#fff7ed" stroke="#d97706"/>
+  <text x="686" y="204" text-anchor="middle" font-size="13" fill="#1e293b">Vali</text>
+  <text x="686" y="222" text-anchor="middle" font-size="13" fill="#64748b">CTO</text>
+
+  <!-- Overrides markup -->
+  <rect x="24" y="284" width="732" height="120" rx="10" fill="#1e293b"/>
+  <text x="44" y="310" font-size="14" font-weight="bold" fill="#f59e0b">Pattern overrides markup (metadata.bindings):</text>
+  <text x="44" y="338" font-size="13" fill="#ffffff">&lt;!-- wp:heading {"metadata":{"name":"Ism",</text>
+  <text x="44" y="360" font-size="13" fill="#86efac">  "bindings":{"content":{"source":"core/pattern-overrides"}}}} --&gt;</text>
+  <text x="44" y="384" font-size="13" fill="#cbd5e1">&lt;h3&gt;Ism Familiya&lt;/h3&gt;  &lt;!-- har nusxada alohida tahrirlanadi --&gt;</text>
+
+  <!-- Xulosa qatori -->
+  <rect x="24" y="420" width="732" height="58" rx="10" fill="#e2e8f0" stroke="#475569"/>
+  <text x="44" y="445" font-size="13" fill="#1e293b"><tspan font-weight="bold">Saqlanishi:</tspan> unsynced = nusxa joyida · synced = wp_block post type (alohida yozuv)</text>
+  <text x="44" y="467" font-size="13" fill="#1e293b"><tspan font-weight="bold">Tanlov:</tspan> bir xil bo'lsin -> synced · har joyda boshqacha -> unsynced · ikkalasi -> overrides</text>
+</svg>

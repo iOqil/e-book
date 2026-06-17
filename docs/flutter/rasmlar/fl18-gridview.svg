@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 480" width="780" height="480" font-family="Segoe UI, system-ui, sans-serif">
+  <title>GridView.builder SliverGridDelegateWithFixedCrossAxisCount bilan: crossAxisCount=2 elementlar ikki ustunli to'rga oqib joylashadi, ustunlararo va qatorlararo bo'shliq hamda childAspectRatio belgilangan</title>
+  <rect x="0" y="0" width="780" height="480" fill="#f8fafc"/>
+  <text x="390" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">GridView — elementlar to'rga oqadi</text>
+  <text x="390" y="58" text-anchor="middle" font-size="14" fill="#475569">SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2)</text>
+
+  <!-- cross axis arrow (horizontal) -->
+  <line x1="120" y1="86" x2="660" y2="86" stroke="#0ea5e9" stroke-width="2"/>
+  <polygon points="660,80 674,86 660,92" fill="#0ea5e9"/>
+  <text x="390" y="80" text-anchor="middle" font-size="13" font-weight="700" fill="#0ea5e9">cross axis &#8594; (kenglik bo'ylab 2 ta ustun)</text>
+
+  <!-- main axis arrow (vertical) -->
+  <line x1="96" y1="104" x2="96" y2="430" stroke="#6366f1" stroke-width="2"/>
+  <polygon points="90,430 96,444 102,430" fill="#6366f1"/>
+  <text x="78" y="270" text-anchor="middle" font-size="13" font-weight="700" fill="#6366f1" transform="rotate(-90 78 270)">main axis &#8595; (scroll yo'nalishi)</text>
+
+  <!-- grid cells: 2 columns x 3 rows -->
+  <!-- row 1 -->
+  <rect x="120" y="104" width="248" height="96" rx="12" fill="#dbeafe" stroke="#027dfd" stroke-width="2"/>
+  <text x="244" y="148" text-anchor="middle" font-size="15" font-weight="700" fill="#0553b1">0</text>
+  <text x="244" y="170" text-anchor="middle" font-size="13" fill="#475569">rasm</text>
+  <rect x="412" y="104" width="248" height="96" rx="12" fill="#dbeafe" stroke="#027dfd" stroke-width="2"/>
+  <text x="536" y="148" text-anchor="middle" font-size="15" font-weight="700" fill="#0553b1">1</text>
+  <text x="536" y="170" text-anchor="middle" font-size="13" fill="#475569">rasm</text>
+
+  <!-- row 2 -->
+  <rect x="120" y="226" width="248" height="96" rx="12" fill="#dbeafe" stroke="#027dfd" stroke-width="2"/>
+  <text x="244" y="270" text-anchor="middle" font-size="15" font-weight="700" fill="#0553b1">2</text>
+  <text x="244" y="292" text-anchor="middle" font-size="13" fill="#475569">rasm</text>
+  <rect x="412" y="226" width="248" height="96" rx="12" fill="#dbeafe" stroke="#027dfd" stroke-width="2"/>
+  <text x="536" y="270" text-anchor="middle" font-size="15" font-weight="700" fill="#0553b1">3</text>
+  <text x="536" y="292" text-anchor="middle" font-size="13" fill="#475569">rasm</text>
+
+  <!-- row 3 -->
+  <rect x="120" y="348" width="248" height="96" rx="12" fill="#dbeafe" stroke="#027dfd" stroke-width="2"/>
+  <text x="244" y="392" text-anchor="middle" font-size="15" font-weight="700" fill="#0553b1">4</text>
+  <text x="244" y="414" text-anchor="middle" font-size="13" fill="#475569">rasm</text>
+  <rect x="412" y="348" width="248" height="96" rx="12" fill="#dbeafe" stroke="#027dfd" stroke-width="2"/>
+  <text x="536" y="392" text-anchor="middle" font-size="15" font-weight="700" fill="#0553b1">5</text>
+  <text x="536" y="414" text-anchor="middle" font-size="13" fill="#475569">rasm</text>
+
+  <!-- crossAxisSpacing label (gap between columns) -->
+  <line x1="368" y1="152" x2="412" y2="152" stroke="#ef4444" stroke-width="2"/>
+  <text x="390" y="226" text-anchor="middle" font-size="13" fill="#ef4444">crossAxisSpacing</text>
+  <line x1="390" y1="200" x2="390" y2="216" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="3 3"/>
+
+  <!-- mainAxisSpacing label (gap between rows) -->
+  <rect x="690" y="200" width="78" height="26" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="729" y="218" text-anchor="middle" font-size="13" fill="#1e293b">qatorlar</text>
+  <text x="729" y="244" text-anchor="middle" font-size="13" fill="#f59e0b">mainAxis-</text>
+  <text x="729" y="262" text-anchor="middle" font-size="13" fill="#f59e0b">Spacing</text>
+  <line x1="668" y1="213" x2="690" y2="213" stroke="#f59e0b" stroke-width="2"/>
+
+  <!-- childAspectRatio -->
+  <text x="729" y="320" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a">childAspect-</text>
+  <text x="729" y="338" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a">Ratio</text>
+  <text x="729" y="358" text-anchor="middle" font-size="13" fill="#64748b">kenglik /</text>
+  <text x="729" y="376" text-anchor="middle" font-size="13" fill="#64748b">balandlik</text>
+
+  <text x="390" y="466" text-anchor="middle" font-size="13" fill="#94a3b8">Har bir element navbati bilan ustunlarga oqadi; 2 ta to'lgach, keyingi qatorga o'tadi. builder bu yerda ham dangasa ishlaydi.</text>
+</svg>

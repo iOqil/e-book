@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560">
+  <title>Bellman-Ford: salbiy qirralar bilan V-1 marta relaxation va salbiy siklni aniqlash; Floyd-Warshall: barcha juftliklar uchun oraliq tugun k ni qo'shib yaxshilash</title>
+  <rect x="0" y="0" width="880" height="560" fill="#f8fafc"/>
+  <text x="440" y="34" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Bellman-Ford va Floyd-Warshall</text>
+  <text x="440" y="58" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Salbiy qirralar bilan ishlaydigan eng qisqa yo'l algoritmlari</text>
+
+  <!-- ===== Chap: Bellman-Ford ===== -->
+  <rect x="24" y="80" width="412" height="450" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="230" y="106" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#dc2626">Bellman-Ford (bitta manba)</text>
+  <text x="230" y="128" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Barcha qirralarni V-1 marta relaxation</text>
+
+  <rect x="44" y="142" width="372" height="86" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="58" y="166" font-family="monospace" font-size="14" fill="#1e293b">takror V-1 marta:</text>
+  <text x="58" y="188" font-family="monospace" font-size="14" fill="#1e293b">  har (u,v,w) qirra uchun:</text>
+  <text x="58" y="210" font-family="monospace" font-size="14" fill="#dc2626">    d[v] = min(d[v], d[u] + w)</text>
+
+  <!-- kichik graf: salbiy qirra -->
+  <text x="230" y="252" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#334155">Salbiy qirra mumkin:</text>
+  <line x1="100" y1="290" x2="190" y2="290" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="220" y1="300" x2="170" y2="350" stroke="#16a34a" stroke-width="2"/>
+  <line x1="100" y1="305" x2="145" y2="350" stroke="#94a3b8" stroke-width="2"/>
+  <text x="145" y="282" text-anchor="middle" font-family="monospace" font-size="14" fill="#334155">4</text>
+  <text x="210" y="332" text-anchor="middle" font-family="monospace" font-size="14" fill="#16a34a">-3</text>
+  <text x="108" y="338" text-anchor="middle" font-family="monospace" font-size="14" fill="#334155">5</text>
+
+  <circle cx="85" cy="295" r="20" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="85" y="300" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">S</text>
+  <circle cx="205" cy="290" r="20" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="205" y="295" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">B</text>
+  <circle cx="160" cy="360" r="20" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="160" y="365" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">C</text>
+
+  <rect x="44" y="396" width="372" height="118" rx="8" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="58" y="420" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#b45309">Salbiy siklni aniqlash</text>
+  <text x="58" y="444" font-family="Segoe UI" font-size="13" fill="#334155">V-1 iteratsiyadan keyin yana bir marta yur.</text>
+  <text x="58" y="466" font-family="Segoe UI" font-size="13" fill="#334155">Agar biror masofa HALI kamaysa — grafda</text>
+  <text x="58" y="488" font-family="Segoe UI" font-size="13" fill="#dc2626">salbiy sikl bor (eng qisqa yo'l aniqlanmaydi).</text>
+  <text x="58" y="508" font-family="monospace" font-size="13" fill="#64748b">Murakkablik: O(V · E)</text>
+
+  <!-- ===== O'ng: Floyd-Warshall ===== -->
+  <rect x="452" y="80" width="404" height="450" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="654" y="106" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#7c3aed">Floyd-Warshall (barcha juftlik)</text>
+  <text x="654" y="128" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Dinamik dasturlash: oraliq tugun k ni qo'shamiz</text>
+
+  <rect x="472" y="142" width="364" height="86" rx="8" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="486" y="166" font-family="monospace" font-size="14" fill="#1e293b">har oraliq k uchun:</text>
+  <text x="486" y="188" font-family="monospace" font-size="14" fill="#1e293b">  har (i, j) juftlik uchun:</text>
+  <text x="486" y="210" font-family="monospace" font-size="13" fill="#7c3aed">    d[i][j]=min(d[i][j], d[i][k]+d[k][j])</text>
+
+  <!-- g'oya: i -> k -> j -->
+  <text x="654" y="256" text-anchor="middle" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#334155">i dan j ga k orqali o'tish:</text>
+  <line x1="530" y1="320" x2="640" y2="320" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5 4"/>
+  <line x1="530" y1="312" x2="650" y2="285" stroke="#16a34a" stroke-width="2"/>
+  <line x1="665" y1="290" x2="765" y2="312" stroke="#16a34a" stroke-width="2"/>
+
+  <circle cx="515" cy="320" r="22" fill="#ede9fe" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="515" y="325" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#7c3aed">i</text>
+  <circle cx="657" cy="280" r="22" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="657" y="285" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">k</text>
+  <circle cx="780" cy="320" r="22" fill="#ede9fe" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="780" y="325" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#7c3aed">j</text>
+  <text x="585" y="345" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">to'g'ridan (eski)</text>
+  <text x="657" y="248" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">k orqali arzonroq bo'lsa — yangila</text>
+
+  <rect x="472" y="396" width="364" height="118" rx="8" fill="#faf5ff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="486" y="420" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#7c3aed">Qachon ishlatamiz</text>
+  <text x="486" y="444" font-family="Segoe UI" font-size="13" fill="#334155">Barcha juftliklar orasidagi masofa kerak bo'lsa,</text>
+  <text x="486" y="466" font-family="Segoe UI" font-size="13" fill="#334155">graf kichik yoki zich bo'lsa. Salbiy qirra mumkin</text>
+  <text x="486" y="488" font-family="Segoe UI" font-size="13" fill="#334155">(salbiy sikl bo'lmasligi sharti bilan).</text>
+  <text x="486" y="508" font-family="monospace" font-size="13" fill="#64748b">Murakkablik: O(V³),  xotira O(V²)</text>
+</svg>

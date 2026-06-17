@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520" font-family="Segoe UI, system-ui, sans-serif">
+  <title>register_post_type anatomiyasi: asosiy argumentlar (slug, supports, public, show_in_rest, has_archive)</title>
+  <rect x="0" y="0" width="800" height="520" fill="#f8fafc"/>
+  <text x="400" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">register_post_type() anatomiyasi</text>
+  <text x="400" y="60" text-anchor="middle" font-size="14" fill="#475569">init hookida chaqiriladi: yangi kontent turini WordPress'ga tanitadi</text>
+
+  <!-- Signature box -->
+  <rect x="180" y="78" width="440" height="46" rx="10" fill="#21759b"/>
+  <text x="400" y="107" text-anchor="middle" font-size="17" font-weight="700" fill="#ffffff">register_post_type( $slug, $args )</text>
+
+  <!-- left: slug -->
+  <line x1="280" y1="124" x2="190" y2="150" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="40" y="150" width="300" height="60" rx="9" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="56" y="174" font-size="15" font-weight="700" fill="#2563eb">$slug (1-argument)</text>
+  <text x="56" y="196" font-size="13" fill="#475569">noyob ID, masalan 'loyiha' (max 20 belgi)</text>
+
+  <!-- right: args -->
+  <line x1="520" y1="124" x2="610" y2="150" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="460" y="150" width="300" height="60" rx="9" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="476" y="174" font-size="15" font-weight="700" fill="#2563eb">$args (2-argument)</text>
+  <text x="476" y="196" font-size="13" fill="#475569">sozlamalar massivi (pastda muhimlari)</text>
+
+  <!-- args grid -->
+  <rect x="40" y="232" width="350" height="74" rx="9" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="56" y="256" font-size="15" font-weight="700" fill="#16a34a">'public' =&gt; true</text>
+  <text x="56" y="278" font-size="13" fill="#475569">saytda ko'rinadi, admin menyu, so'rovlar</text>
+  <text x="56" y="297" font-size="13" fill="#475569">(bir necha sozlamani birdan yoqadi)</text>
+
+  <rect x="410" y="232" width="350" height="74" rx="9" fill="#ffffff" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="426" y="256" font-size="15" font-weight="700" fill="#dc2626">'show_in_rest' =&gt; true</text>
+  <text x="426" y="278" font-size="13" fill="#475569">BLOK EDITOR (Gutenberg) uchun SHART</text>
+  <text x="426" y="297" font-size="13" fill="#475569">unutilsa: eski klassik editor ochiladi</text>
+
+  <rect x="40" y="320" width="350" height="74" rx="9" fill="#ffffff" stroke="#d97706" stroke-width="2.5"/>
+  <text x="56" y="344" font-size="15" font-weight="700" fill="#d97706">'supports' =&gt; array(...)</text>
+  <text x="56" y="366" font-size="13" fill="#475569">'title','editor','thumbnail',</text>
+  <text x="56" y="385" font-size="13" fill="#475569">'excerpt','custom-fields' ...</text>
+
+  <rect x="410" y="320" width="350" height="74" rx="9" fill="#ffffff" stroke="#475569" stroke-width="2.5"/>
+  <text x="426" y="344" font-size="15" font-weight="700" fill="#475569">'has_archive' =&gt; true</text>
+  <text x="426" y="366" font-size="13" fill="#475569">arxiv sahifasi yoqiladi</text>
+  <text x="426" y="385" font-size="13" fill="#475569">archive-loyiha.php shabloni uchun</text>
+
+  <rect x="40" y="408" width="350" height="74" rx="9" fill="#ffffff" stroke="#94a3b8" stroke-width="2.5"/>
+  <text x="56" y="432" font-size="15" font-weight="700" fill="#475569">'menu_icon' =&gt; 'dashicons-...'</text>
+  <text x="56" y="454" font-size="13" fill="#475569">admin menyu ikonkasi</text>
+  <text x="56" y="473" font-size="13" fill="#475569">'rewrite' =&gt; array('slug'=&gt;'loyihalar')</text>
+
+  <rect x="410" y="408" width="350" height="74" rx="9" fill="#ffffff" stroke="#94a3b8" stroke-width="2.5"/>
+  <text x="426" y="432" font-size="15" font-weight="700" fill="#475569">'hierarchical' =&gt; false</text>
+  <text x="426" y="454" font-size="13" fill="#475569">false = post kabi (tekis)</text>
+  <text x="426" y="473" font-size="13" fill="#475569">true = page kabi (ota-bola daraja)</text>
+
+  <text x="400" y="510" text-anchor="middle" font-size="13" fill="#dc2626">Eslatma: 'public' avtomatik sozlamalarni belgilaydi, lekin show_in_rest'ni ALOHIDA true qiling</text>
+</svg>

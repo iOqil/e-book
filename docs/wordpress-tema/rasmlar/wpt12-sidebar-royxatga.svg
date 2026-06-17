@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420">
+  <title>register_sidebar dan dynamic_sidebar gacha oqim</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="34" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Widget hududi: ro'yxatga olishdan chiqarishgacha</text>
+
+  <!-- Step 1: functions.php -->
+  <rect x="30" y="70" width="300" height="120" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="180" y="96" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb" text-anchor="middle">1. functions.php</text>
+  <text x="48" y="122" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">add_action( 'widgets_init', ... )</text>
+  <text x="48" y="146" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">register_sidebar( array(</text>
+  <text x="62" y="168" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">'id' =&gt; 'sidebar-1' ...</text>
+
+  <!-- Step 2: Admin -->
+  <rect x="430" y="70" width="300" height="120" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="580" y="96" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="middle">2. Admin panel</text>
+  <text x="448" y="122" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Ko'rinish &gt; Widgetlar</text>
+  <text x="448" y="146" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">Foydalanuvchi widget</text>
+  <text x="448" y="168" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">qo'shadi (DB ga saqlanadi)</text>
+
+  <!-- arrow 1 -> 2 -->
+  <line x1="330" y1="130" x2="430" y2="130" stroke="#94a3b8" stroke-width="3" marker-end="url(#arr)"/>
+
+  <!-- Step 3: template -->
+  <rect x="30" y="240" width="300" height="140" rx="10" fill="#ffffff" stroke="#d97706" stroke-width="2"/>
+  <text x="180" y="266" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#d97706" text-anchor="middle">3. sidebar.php (shablon)</text>
+  <text x="48" y="292" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">if ( is_active_sidebar(</text>
+  <text x="62" y="312" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">'sidebar-1' ) ) {</text>
+  <text x="62" y="336" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b">dynamic_sidebar(</text>
+  <text x="76" y="356" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">'sidebar-1' );</text>
+
+  <!-- Step 4: HTML -->
+  <rect x="430" y="240" width="300" height="140" rx="10" fill="#ffffff" stroke="#475569" stroke-width="2"/>
+  <text x="580" y="266" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#475569" text-anchor="middle">4. Brauzerda HTML</text>
+  <text x="448" y="292" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">before_widget -&gt;</text>
+  <text x="448" y="314" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">&lt;section class="widget"&gt;</text>
+  <text x="448" y="336" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">  &lt;h2&gt;Sarlavha&lt;/h2&gt; ...</text>
+  <text x="448" y="358" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">&lt;- after_widget</text>
+
+  <!-- arrows down and across -->
+  <line x1="580" y1="190" x2="580" y2="240" stroke="#94a3b8" stroke-width="3" marker-end="url(#arr)"/>
+  <line x1="180" y1="190" x2="180" y2="240" stroke="#94a3b8" stroke-width="3" marker-end="url(#arr)"/>
+  <line x1="330" y1="310" x2="430" y2="310" stroke="#94a3b8" stroke-width="3" marker-end="url(#arr)"/>
+
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+</svg>

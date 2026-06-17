@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 500" width="760" height="500" font-family="Segoe UI, system-ui, sans-serif">
+  <title>0 dan agent loop: model chaqir -> tool_calls bormi -> bajar -> takror -> yakuniy javob</title>
+  <rect x="0" y="0" width="760" height="500" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">Agent loop: bitta while, xotira bilan</text>
+
+  <defs>
+    <marker id="a19l-i" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#4f46e5"/>
+    </marker>
+    <marker id="a19l-g" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#16a34a"/>
+    </marker>
+    <marker id="a19l-y" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#b45309"/>
+    </marker>
+  </defs>
+
+  <!-- memory column -->
+  <rect x="560" y="66" width="178" height="318" rx="14" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+  <rect x="560" y="66" width="178" height="36" rx="14" fill="#e0f2fe"/>
+  <text x="649" y="90" text-anchor="middle" font-size="15" font-weight="700" fill="#0284c7">messages (xotira)</text>
+  <text x="578" y="130" font-size="13" fill="#475569">system</text>
+  <text x="578" y="156" font-size="13" fill="#475569">user: savol</text>
+  <text x="578" y="182" font-size="13" fill="#4338ca">assistant: tool_calls</text>
+  <text x="578" y="208" font-size="13" fill="#166534">tool: natija</text>
+  <text x="578" y="234" font-size="13" fill="#4338ca">assistant: tool_calls</text>
+  <text x="578" y="260" font-size="13" fill="#166534">tool: natija</text>
+  <text x="578" y="286" font-size="13" fill="#475569">assistant: matn</text>
+  <text x="649" y="330" text-anchor="middle" font-size="13" fill="#64748b">har qadam shu</text>
+  <text x="649" y="348" text-anchor="middle" font-size="13" fill="#64748b">ro'yxatga o'sadi</text>
+  <text x="649" y="370" text-anchor="middle" font-size="13" font-weight="700" fill="#0284c7">= agent xotirasi</text>
+
+  <!-- user start -->
+  <rect x="180" y="62" width="190" height="44" rx="10" fill="#e0f2fe" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="275" y="89" text-anchor="middle" font-size="14" font-weight="700" fill="#0284c7">savol -> messages</text>
+  <line x1="275" y1="106" x2="275" y2="130" stroke="#0ea5e9" stroke-width="2.5" marker-end="url(#a19l-i)"/>
+
+  <!-- model -->
+  <rect x="165" y="134" width="220" height="58" rx="12" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="275" y="159" text-anchor="middle" font-size="16" font-weight="700" fill="#4338ca">Modelni chaqir</text>
+  <text x="275" y="180" text-anchor="middle" font-size="13" fill="#475569">create(messages, tools)</text>
+
+  <line x1="275" y1="192" x2="275" y2="216" stroke="#4f46e5" stroke-width="2.5" marker-end="url(#a19l-i)"/>
+
+  <!-- decision -->
+  <polygon points="275,220 395,266 275,312 155,266" fill="#fff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="275" y="261" text-anchor="middle" font-size="14" font-weight="700" fill="#b45309">tool_calls</text>
+  <text x="275" y="281" text-anchor="middle" font-size="14" font-weight="700" fill="#b45309">bormi?</text>
+
+  <!-- YES -> execute -->
+  <text x="437" y="256" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a">HA</text>
+  <line x1="395" y1="266" x2="430" y2="266" stroke="#16a34a" stroke-width="2.5" marker-end="url(#a19l-g)"/>
+  <rect x="435" y="234" width="115" height="66" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="492" y="258" text-anchor="middle" font-size="14" font-weight="700" fill="#166534">Toollarni</text>
+  <text x="492" y="276" text-anchor="middle" font-size="14" font-weight="700" fill="#166534">bajar</text>
+  <text x="492" y="293" text-anchor="middle" font-size="13" fill="#166534">natija -> xotira</text>
+
+  <!-- loop back -->
+  <path d="M492,234 C492,150 430,150 388,160" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-dasharray="6 4" marker-end="url(#a19l-g)"/>
+  <text x="445" y="138" text-anchor="middle" font-size="13" fill="#166534">takror (sikl)</text>
+
+  <!-- NO -> final -->
+  <text x="115" y="256" text-anchor="middle" font-size="13" font-weight="700" fill="#4338ca">YO'Q</text>
+  <line x1="155" y1="266" x2="120" y2="266" stroke="#4f46e5" stroke-width="2.5" marker-end="url(#a19l-i)"/>
+  <rect x="20" y="240" width="95" height="52" rx="12" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="67" y="264" text-anchor="middle" font-size="14" font-weight="700" fill="#4338ca">Yakuniy</text>
+  <text x="67" y="282" text-anchor="middle" font-size="14" font-weight="700" fill="#4338ca">javob</text>
+
+  <!-- step limit -->
+  <rect x="165" y="340" width="220" height="50" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="275" y="364" text-anchor="middle" font-size="14" font-weight="700" fill="#b45309">qadam &lt; maks_qadam ?</text>
+  <text x="275" y="382" text-anchor="middle" font-size="13" fill="#92400e">cheksiz siklga to'siq</text>
+  <line x1="275" y1="312" x2="275" y2="336" stroke="#b45309" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#a19l-y)"/>
+
+  <!-- bottom note -->
+  <rect x="40" y="420" width="680" height="58" rx="12" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="380" y="445" text-anchor="middle" font-size="14" font-weight="700" fill="#4338ca">Yadro: model -> tool -> natija -> model -> ... -> yakuniy javob</text>
+  <text x="380" y="466" text-anchor="middle" font-size="13" fill="#64748b">To'xtash: tool_calls yo'q (yakuniy matn) YOKI qadam limitiga yetildi</text>
+</svg>

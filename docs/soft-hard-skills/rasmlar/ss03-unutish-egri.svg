@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 520">
+  <title>Unutish egri chizigi: takrorsiz tushuvchi xotira va oraliqli takror bilan kotariladigan arra tishi</title>
+  <rect x="0" y="0" width="820" height="520" fill="#f8fafc"/>
+  <text x="410" y="42" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Unutish egri chizig'i va oraliqli takror</text>
+  <text x="410" y="68" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Ebbinghaus: takrorsiz bilim tez unutiladi</text>
+
+  <!-- axes -->
+  <line x1="90" y1="120" x2="90" y2="430" stroke="#334155" stroke-width="2"/>
+  <line x1="90" y1="430" x2="760" y2="430" stroke="#334155" stroke-width="2"/>
+  <text x="60" y="120" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b" transform="rotate(-90 60 275)">Esda saqlash</text>
+  <text x="425" y="465" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">Vaqt (kunlar)</text>
+
+  <!-- 100% marker -->
+  <line x1="86" y1="140" x2="94" y2="140" stroke="#334155" stroke-width="2"/>
+  <text x="78" y="145" text-anchor="end" font-family="Segoe UI" font-size="13" fill="#64748b">100%</text>
+
+  <!-- forgetting curve (no review) - steep decay -->
+  <path d="M 90 140 Q 150 320 240 380 Q 360 420 760 425" fill="none" stroke="#dc2626" stroke-width="3"/>
+  <text x="470" y="408" font-family="Segoe UI" font-size="13" fill="#dc2626">Takrorsiz: tez unutiladi</text>
+
+  <!-- spaced repetition - sawtooth, each peak higher retained -->
+  <path d="M 90 140 L 150 250 L 200 145 L 290 215 L 350 150 L 470 195 L 540 160 L 700 178"
+        fill="none" stroke="#16a34a" stroke-width="3"/>
+  <!-- review markers (dots at troughs/peaks) -->
+  <circle cx="150" cy="250" r="5" fill="#16a34a"/>
+  <circle cx="290" cy="215" r="5" fill="#16a34a"/>
+  <circle cx="470" cy="195" r="5" fill="#16a34a"/>
+  <circle cx="700" cy="178" r="5" fill="#16a34a"/>
+  <text x="200" y="125" font-family="Segoe UI" font-size="13" fill="#16a34a">Oraliqli takror: egri yassilashadi</text>
+
+  <!-- review labels under x-axis -->
+  <line x1="150" y1="426" x2="150" y2="434" stroke="#334155" stroke-width="2"/>
+  <line x1="290" y1="426" x2="290" y2="434" stroke="#334155" stroke-width="2"/>
+  <line x1="470" y1="426" x2="470" y2="434" stroke="#334155" stroke-width="2"/>
+  <line x1="700" y1="426" x2="700" y2="434" stroke="#334155" stroke-width="2"/>
+  <text x="150" y="452" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">1-takror</text>
+  <text x="290" y="452" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">2-takror</text>
+  <text x="470" y="452" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">3-takror</text>
+  <text x="700" y="452" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">4-takror</text>
+
+  <!-- legend -->
+  <rect x="540" y="120" width="200" height="60" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <line x1="556" y1="142" x2="586" y2="142" stroke="#dc2626" stroke-width="3"/>
+  <text x="594" y="147" font-family="Segoe UI" font-size="13" fill="#334155">Takror yo'q</text>
+  <line x1="556" y1="166" x2="586" y2="166" stroke="#16a34a" stroke-width="3"/>
+  <text x="594" y="171" font-family="Segoe UI" font-size="13" fill="#334155">Oraliqli takror</text>
+</svg>

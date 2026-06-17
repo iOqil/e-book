@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420">
+  <title>admin-ajax va REST API taqqoslash: admin-ajax.php bitta URL va action parametri bilan, REST esa toza kitkat slash v1 slash favorites URL, HTTP metodlar, schema va permission_callback bilan ishlaydi</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">admin-ajax.php vs REST API</text>
+
+  <!-- left: admin-ajax -->
+  <rect x="30" y="60" width="340" height="330" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="200" y="90" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#92590a">admin-ajax.php (klassik)</text>
+
+  <rect x="50" y="106" width="300" height="44" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="200" y="126" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">Bitta URL:</text>
+  <text x="200" y="143" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">admin-ajax.php?action=...</text>
+
+  <text x="50" y="178" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">• Marshrut: action parametri</text>
+  <text x="50" y="204" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">• Metod: odatda har doim POST</text>
+  <text x="50" y="230" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">• Schema yo'q (qo'lda tekshirish)</text>
+  <text x="50" y="256" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">• Ruxsat: handler ichida qo'lda</text>
+  <text x="50" y="282" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">• Keshlash qiyin</text>
+
+  <rect x="50" y="306" width="300" height="66" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="200" y="328" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#15803d">Mos: ichki admin amali,</text>
+  <text x="200" y="348" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">mavjud kod, sodda bir martalik</text>
+  <text x="200" y="366" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">tugma</text>
+
+  <!-- right: REST -->
+  <rect x="390" y="60" width="340" height="330" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="560" y="90" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#1e40af">REST API (zamonaviy, 16-bob)</text>
+
+  <rect x="410" y="106" width="300" height="44" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="560" y="126" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e293b">Toza URL:</text>
+  <text x="560" y="143" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">/kitkat/v1/favorites</text>
+
+  <text x="410" y="178" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">• Marshrut: URL yo'li + metod</text>
+  <text x="410" y="204" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">• Metod: GET / POST / DELETE</text>
+  <text x="410" y="230" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">• args schema (auto validatsiya)</text>
+  <text x="410" y="256" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">• permission_callback (majburiy)</text>
+  <text x="410" y="282" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">• GET so'rovni kesh qilsa bo'ladi</text>
+
+  <rect x="410" y="306" width="300" height="66" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="560" y="328" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#15803d">Mos: yangi loyiha, ommaviy</text>
+  <text x="560" y="348" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">API, mobil/SPA mijoz —</text>
+  <text x="560" y="366" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">standart tanlov</text>
+</svg>

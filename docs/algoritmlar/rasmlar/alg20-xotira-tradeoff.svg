@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 520">
+  <title>Trie va hash jadval trade-off: prefiks qidiruv, xotira va tartiblangan yurish bo'yicha taqqoslash</title>
+  <rect x="0" y="0" width="860" height="520" fill="#f8fafc"/>
+  <text x="430" y="34" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Trie vs Hash jadval: trade-off</text>
+  <text x="430" y="58" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Har biri boshqa narsada kuchli — vazifaga qarab tanlang</text>
+
+  <!-- table header -->
+  <rect x="40" y="86" width="340" height="44" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="210" y="114" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#1e40af">Mezon</text>
+
+  <rect x="392" y="86" width="220" height="44" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="502" y="114" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#6d28d9">Trie</text>
+
+  <rect x="624" y="86" width="196" height="44" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="722" y="114" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#92400e">Hash jadval</text>
+
+  <!-- row 1: exact lookup -->
+  <rect x="40" y="138" width="340" height="50" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="56" y="168" font-family="Segoe UI" font-size="14" fill="#334155">Aniq kalit qidiruv</text>
+  <rect x="392" y="138" width="220" height="50" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="502" y="162" text-anchor="middle" font-family="monospace" font-size="14" fill="#334155">O(L)</text>
+  <text x="502" y="180" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">yaxshi</text>
+  <rect x="624" y="138" width="196" height="50" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="722" y="162" text-anchor="middle" font-family="monospace" font-size="14" fill="#166534">O(1) o'rtacha</text>
+  <text x="722" y="180" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a" font-weight="bold">★ tezroq</text>
+
+  <!-- row 2: prefix search -->
+  <rect x="40" y="194" width="340" height="50" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="56" y="218" font-family="Segoe UI" font-size="14" fill="#334155">Prefiks qidiruv</text>
+  <text x="56" y="236" font-family="Segoe UI" font-size="13" fill="#64748b">("ol..." bilan boshlanuvchilar)</text>
+  <rect x="392" y="194" width="220" height="50" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="502" y="218" text-anchor="middle" font-family="monospace" font-size="14" fill="#166534">O(p + natija)</text>
+  <text x="502" y="236" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a" font-weight="bold">★ tabiiy</text>
+  <rect x="624" y="194" width="196" height="50" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="722" y="218" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#b91c1c" font-weight="bold">imkonsiz</text>
+  <text x="722" y="236" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">(hammasini skan)</text>
+
+  <!-- row 3: sorted traversal -->
+  <rect x="40" y="250" width="340" height="50" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="56" y="274" font-family="Segoe UI" font-size="14" fill="#334155">Tartiblangan yurish</text>
+  <text x="56" y="292" font-family="Segoe UI" font-size="13" fill="#64748b">(alifbo bo'yicha chiqarish)</text>
+  <rect x="392" y="250" width="220" height="50" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="502" y="280" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#166534" font-weight="bold">★ bepul (DFS)</text>
+  <rect x="624" y="250" width="196" height="50" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="722" y="280" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#b91c1c">tartibsiz</text>
+
+  <!-- row 4: memory -->
+  <rect x="40" y="306" width="340" height="50" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="56" y="336" font-family="Segoe UI" font-size="14" fill="#334155">Xotira sarfi</text>
+  <rect x="392" y="306" width="220" height="50" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="502" y="330" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#b91c1c">ko'proq</text>
+  <text x="502" y="348" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">(har belgi tugun + bola)</text>
+  <rect x="624" y="306" width="196" height="50" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="722" y="336" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#166534" font-weight="bold">★ ixchamroq</text>
+
+  <!-- row 5: worst case -->
+  <rect x="40" y="362" width="340" height="50" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="56" y="392" font-family="Segoe UI" font-size="14" fill="#334155">Eng yomon narx kalitga</text>
+  <rect x="392" y="362" width="220" height="50" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="502" y="386" text-anchor="middle" font-family="monospace" font-size="14" fill="#166534">O(L) kafolatli</text>
+  <text x="502" y="404" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#16a34a">(to'qnashuv yo'q)</text>
+  <rect x="624" y="362" width="196" height="50" rx="8" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="722" y="386" text-anchor="middle" font-family="monospace" font-size="14" fill="#92400e">O(n) yomon</text>
+  <text x="722" y="404" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#92400e">(to'qnashuvlar)</text>
+
+  <!-- verdict box -->
+  <rect x="40" y="430" width="780" height="64" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="56" y="456" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#2563eb">Qachon nima:</text>
+  <text x="56" y="478" font-family="Segoe UI" font-size="13" fill="#334155">Faqat aniq kalit -> hash. Prefiks / avtoto'ldirish / tartiblangan ro'yxat / "L-kafolat" kerak bo'lsa -> trie.</text>
+</svg>

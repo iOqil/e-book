@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Ruxsat (permission) so'rash oqimi: ilova so'raydi, foydalanuvchi beradi yoki rad etadi, natijada imkoniyat ishlaydi yoki ishlamaydi</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Ruxsat so'rash oqimi</text>
+  <text x="380" y="60" text-anchor="middle" font-size="14" fill="#475569">Native imkoniyatdan oldin foydalanuvchidan ruxsat olish shart</text>
+
+  <!-- Step 1: ilova so'raydi -->
+  <rect x="280" y="84" width="200" height="74" rx="12" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="380" y="116" text-anchor="middle" font-size="15" font-weight="700" fill="#4f46e5">Ilova ruxsat so'raydi</text>
+  <text x="380" y="140" text-anchor="middle" font-size="13" fill="#475569">requestCameraPermissionsAsync()</text>
+
+  <!-- arrow down -->
+  <line x1="380" y1="158" x2="380" y2="186" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="380,192 374,182 386,182" fill="#94a3b8"/>
+
+  <!-- Step 2: tizim dialogi -->
+  <rect x="260" y="192" width="240" height="64" rx="12" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="380" y="220" text-anchor="middle" font-size="14" font-weight="700" fill="#b45309">Tizim dialogi chiqadi</text>
+  <text x="380" y="242" text-anchor="middle" font-size="13" fill="#475569">"Kameraga ruxsat berasizmi?"</text>
+
+  <!-- branch arrows -->
+  <line x1="340" y1="256" x2="210" y2="300" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="206,302 216,298 213,309" fill="#16a34a"/>
+  <text x="245" y="282" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a">Berdi</text>
+
+  <line x1="420" y1="256" x2="552" y2="300" stroke="#dc2626" stroke-width="2"/>
+  <polygon points="556,302 545,298 549,309" fill="#dc2626"/>
+  <text x="518" y="282" text-anchor="middle" font-size="13" font-weight="700" fill="#dc2626">Rad etdi</text>
+
+  <!-- granted -->
+  <rect x="70" y="306" width="280" height="100" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="210" y="336" text-anchor="middle" font-size="15" font-weight="700" fill="#16a34a">status: granted</text>
+  <text x="210" y="362" text-anchor="middle" font-size="13" fill="#475569">Kamera ochiladi, surat olinadi.</text>
+  <text x="210" y="384" text-anchor="middle" font-size="13" fill="#475569">Imkoniyat ISHLAYDI.</text>
+
+  <!-- denied -->
+  <rect x="410" y="306" width="280" height="100" rx="12" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="550" y="336" text-anchor="middle" font-size="15" font-weight="700" fill="#dc2626">status: denied</text>
+  <text x="550" y="362" text-anchor="middle" font-size="13" fill="#475569">Tushuntirish ko'rsating, sozlamaga</text>
+  <text x="550" y="384" text-anchor="middle" font-size="13" fill="#475569">yo'naltiring. Imkoniyat ISHLAMAYDI.</text>
+</svg>

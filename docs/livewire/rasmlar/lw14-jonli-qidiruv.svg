@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" width="760" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Jonli qidiruv oqimi: foydalanuvchi yozadi, debounce 300ms kutadi, updatingSearch resetPage qiladi, where bilan baza filtrlanadi va natija ko'rsatiladi</title>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Jonli qidiruv: yozishdan natijagacha</text>
+  <text x="380" y="58" text-anchor="middle" font-size="14" fill="#475569">wire:model.live.debounce.300ms="search"</text>
+
+  <!-- 1: yozish -->
+  <rect x="30" y="86" width="200" height="92" rx="10" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <circle cx="56" cy="112" r="13" fill="#4f46e5"/>
+  <text x="56" y="117" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">1</text>
+  <text x="142" y="116" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">Foydalanuvchi yozadi</text>
+  <text x="130" y="142" text-anchor="middle" font-size="13" fill="#475569">"L" "a" "r" "a" "v" ...</text>
+  <text x="130" y="160" text-anchor="middle" font-size="13" fill="#475569">har harf bir hodisa</text>
+
+  <!-- 2: debounce -->
+  <rect x="280" y="86" width="200" height="92" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <circle cx="306" cy="112" r="13" fill="#f59e0b"/>
+  <text x="306" y="117" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">2</text>
+  <text x="392" y="116" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">debounce 300ms</text>
+  <text x="380" y="142" text-anchor="middle" font-size="13" fill="#475569">yozish to'xtaguncha kutadi</text>
+  <text x="380" y="160" text-anchor="middle" font-size="13" fill="#dc2626">7 ta emas, 1 ta so'rov</text>
+
+  <!-- 3: updatingSearch -->
+  <rect x="530" y="86" width="200" height="92" rx="10" fill="#ffffff" stroke="#fb70a9" stroke-width="2"/>
+  <circle cx="556" cy="112" r="13" fill="#fb70a9"/>
+  <text x="556" y="117" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">3</text>
+  <text x="642" y="116" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">updatingSearch()</text>
+  <text x="630" y="142" text-anchor="middle" font-size="13" fill="#475569">resetPage()</text>
+  <text x="630" y="160" text-anchor="middle" font-size="13" fill="#475569">-&gt; 1-sahifaga qaytadi</text>
+
+  <!-- strelkalar 1->2->3 -->
+  <line x1="230" y1="132" x2="276" y2="132" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="276,132 266,127 266,137" fill="#94a3b8"/>
+  <line x1="480" y1="132" x2="526" y2="132" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="526,132 516,127 516,137" fill="#94a3b8"/>
+
+  <!-- 4: where -->
+  <rect x="530" y="232" width="200" height="92" rx="10" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <circle cx="556" cy="258" r="13" fill="#4f46e5"/>
+  <text x="556" y="263" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">4</text>
+  <text x="642" y="262" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">render() filtrlaydi</text>
+  <text x="630" y="288" text-anchor="middle" font-size="13" fill="#475569">where('title','like',</text>
+  <text x="630" y="306" text-anchor="middle" font-size="13" fill="#475569">"%search%")</text>
+
+  <!-- 3->4 strelka -->
+  <line x1="630" y1="178" x2="630" y2="226" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="630,226 625,216 635,216" fill="#94a3b8"/>
+
+  <!-- 5: natija -->
+  <rect x="280" y="232" width="200" height="92" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <circle cx="306" cy="258" r="13" fill="#16a34a"/>
+  <text x="306" y="263" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">5</text>
+  <text x="392" y="262" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">Natija ko'rinadi</text>
+  <text x="380" y="288" text-anchor="middle" font-size="13" fill="#475569">mos yozuvlar, 1-sahifadan</text>
+  <text x="380" y="306" text-anchor="middle" font-size="13" fill="#475569">sahifa qayta yuklanmaydi</text>
+
+  <!-- 4->5 strelka -->
+  <line x1="530" y1="278" x2="484" y2="278" stroke="#94a3b8" stroke-width="2.5"/>
+  <polygon points="484,278 494,273 494,283" fill="#94a3b8"/>
+
+  <!-- pastki ogohlantirish -->
+  <rect x="30" y="356" width="700" height="86" rx="10" fill="#fff7ed" stroke="#f59e0b" stroke-width="2"/>
+  <text x="380" y="384" text-anchor="middle" font-size="15" font-weight="700" fill="#dc2626">resetPage() ni unutmang!</text>
+  <text x="380" y="408" text-anchor="middle" font-size="13" fill="#475569">5-sahifada turib qidirsangiz, natija 2 sahifada bo'lsa — ekran bo'sh ko'rinadi.</text>
+  <text x="380" y="428" text-anchor="middle" font-size="13" fill="#475569">updatingSearch() -> resetPage() har doim 1-sahifaga qaytaradi va natija ko'rinadi.</text>
+</svg>

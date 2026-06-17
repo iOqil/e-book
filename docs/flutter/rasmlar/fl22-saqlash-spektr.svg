@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 470" width="800" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Mahalliy saqlash spektri: shared_preferences (kalit-qiymat, kichik) -> File (bitta blob/JSON) -> sqflite/drift (relyatsion, ko'p ma'lumot) -> flutter_secure_storage (shifrlangan sirlar) — har biri qachon ishlatiladi</title>
+  <rect x="0" y="0" width="800" height="470" fill="#f8fafc"/>
+  <text x="400" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">Mahalliy saqlash spektri — qaysi birini tanlash?</text>
+  <text x="400" y="60" text-anchor="middle" font-size="14" fill="#475569">Chapdan o'ngga: ma'lumot kichik va soddadan katta va tuzilmaliga qarab</text>
+
+  <!-- spectrum arrow under cards -->
+  <line x1="60" y1="120" x2="720" y2="120" stroke="#94a3b8" stroke-width="3"/>
+  <polygon points="720,120 706,113 706,127" fill="#94a3b8"/>
+  <text x="70" y="108" font-size="13" fill="#64748b">kichik / sodda</text>
+  <text x="730" y="124" font-size="13" fill="#64748b" text-anchor="end">katta / tuzilmali</text>
+
+  <!-- Card 1: shared_preferences -->
+  <rect x="40" y="140" width="170" height="250" rx="14" fill="#dbeafe" stroke="#027dfd" stroke-width="2.5"/>
+  <text x="125" y="170" text-anchor="middle" font-size="15" font-weight="700" fill="#0553b1">shared_preferences</text>
+  <text x="125" y="192" text-anchor="middle" font-size="13" fill="#475569">kalit -&gt; qiymat</text>
+  <line x1="60" y1="206" x2="190" y2="206" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="125" y="232" text-anchor="middle" font-size="13" font-weight="700" fill="#1e293b">Qachon?</text>
+  <text x="125" y="256" text-anchor="middle" font-size="13" fill="#475569">kichik sozlamalar,</text>
+  <text x="125" y="274" text-anchor="middle" font-size="13" fill="#475569">bayroqlar (flag),</text>
+  <text x="125" y="292" text-anchor="middle" font-size="13" fill="#475569">til, dark-mode,</text>
+  <text x="125" y="310" text-anchor="middle" font-size="13" fill="#475569">oddiy token</text>
+  <text x="125" y="346" text-anchor="middle" font-size="13" font-weight="700" fill="#ef4444">Emas:</text>
+  <text x="125" y="368" text-anchor="middle" font-size="13" fill="#64748b">ko'p / bog'liq</text>
+  <text x="125" y="384" text-anchor="middle" font-size="13" fill="#64748b">ma'lumot</text>
+
+  <!-- Card 2: File -->
+  <rect x="225" y="140" width="170" height="250" rx="14" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="310" y="170" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">File (path_provider)</text>
+  <text x="310" y="192" text-anchor="middle" font-size="13" fill="#475569">bitta blok / fayl</text>
+  <line x1="245" y1="206" x2="375" y2="206" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="310" y="232" text-anchor="middle" font-size="13" font-weight="700" fill="#1e293b">Qachon?</text>
+  <text x="310" y="256" text-anchor="middle" font-size="13" fill="#475569">JSON keshi,</text>
+  <text x="310" y="274" text-anchor="middle" font-size="13" fill="#475569">eksport / import,</text>
+  <text x="310" y="292" text-anchor="middle" font-size="13" fill="#475569">rasm, log fayli</text>
+  <text x="310" y="346" text-anchor="middle" font-size="13" font-weight="700" fill="#ef4444">Emas:</text>
+  <text x="310" y="368" text-anchor="middle" font-size="13" fill="#64748b">qidirish / saralash</text>
+  <text x="310" y="384" text-anchor="middle" font-size="13" fill="#64748b">kerak bo'lsa</text>
+
+  <!-- Card 3: sqflite / drift -->
+  <rect x="410" y="140" width="170" height="250" rx="14" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="495" y="170" text-anchor="middle" font-size="15" font-weight="700" fill="#16a34a">sqflite / drift</text>
+  <text x="495" y="192" text-anchor="middle" font-size="13" fill="#475569">relyatsion (SQL)</text>
+  <line x1="430" y1="206" x2="560" y2="206" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="495" y="232" text-anchor="middle" font-size="13" font-weight="700" fill="#1e293b">Qachon?</text>
+  <text x="495" y="256" text-anchor="middle" font-size="13" fill="#475569">ko'p yozuv,</text>
+  <text x="495" y="274" text-anchor="middle" font-size="13" fill="#475569">jadval / qatorlar,</text>
+  <text x="495" y="292" text-anchor="middle" font-size="13" fill="#475569">qidirish, saralash,</text>
+  <text x="495" y="310" text-anchor="middle" font-size="13" fill="#475569">to-do / xabarlar</text>
+  <text x="495" y="346" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a">drift:</text>
+  <text x="495" y="368" text-anchor="middle" font-size="13" fill="#64748b">tipli + stream,</text>
+  <text x="495" y="384" text-anchor="middle" font-size="13" fill="#64748b">jiddiy ilova uchun</text>
+
+  <!-- Card 4: secure_storage -->
+  <rect x="595" y="140" width="170" height="250" rx="14" fill="#e0e7ff" stroke="#6366f1" stroke-width="2.5"/>
+  <text x="680" y="170" text-anchor="middle" font-size="14" font-weight="700" fill="#6366f1">secure_storage</text>
+  <text x="680" y="192" text-anchor="middle" font-size="13" fill="#475569">shifrlangan sirlar</text>
+  <line x1="615" y1="206" x2="745" y2="206" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="680" y="232" text-anchor="middle" font-size="13" font-weight="700" fill="#1e293b">Qachon?</text>
+  <text x="680" y="256" text-anchor="middle" font-size="13" fill="#475569">maxfiy token,</text>
+  <text x="680" y="274" text-anchor="middle" font-size="13" fill="#475569">parol, kalit,</text>
+  <text x="680" y="292" text-anchor="middle" font-size="13" fill="#475569">refresh-token</text>
+  <text x="680" y="346" text-anchor="middle" font-size="13" font-weight="700" fill="#ef4444">Emas:</text>
+  <text x="680" y="368" text-anchor="middle" font-size="13" fill="#64748b">oddiy sozlama</text>
+  <text x="680" y="384" text-anchor="middle" font-size="13" fill="#64748b">(sekinroq)</text>
+
+  <!-- Footer note -->
+  <rect x="40" y="412" width="725" height="42" rx="10" fill="#ffffff" stroke="#027dfd" stroke-width="1.5"/>
+  <text x="402" y="438" text-anchor="middle" font-size="14" fill="#0553b1">Qoida: kichik sozlama -&gt; prefs · tuzilmali/ko'p -&gt; sqflite/drift · maxfiy -&gt; secure_storage · katta blok -&gt; File</text>
+</svg>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 450" width="760" height="450">
+  <title>WP admin menyusi ierarxiyasi: add_menu_page top-level menyu yaratadi, add_submenu_page uning ostiga submenyu qo'shadi, add_options_page esa Sozlamalar menyusi ostiga element qo'yadi</title>
+  <defs>
+    <marker id="am-arrow" markerWidth="12" markerHeight="12" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="450" fill="#f8fafc"/>
+
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">WP admin menyusi ierarxiyasi</text>
+  <text x="380" y="54" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#475569">Qaysi funksiya menyuda qaerga element qo'yadi</text>
+
+  <!-- Left: admin sidebar mock -->
+  <rect x="30" y="80" width="250" height="340" rx="10" fill="#1e293b"/>
+  <text x="155" y="106" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dbeafe">WP admin yon menyu</text>
+
+  <text x="52" y="140" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#e2e8f0">Boshqaruv paneli</text>
+  <text x="52" y="166" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#e2e8f0">Yozuvlar</text>
+  <text x="52" y="192" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#e2e8f0">Media</text>
+
+  <!-- top-level: Kitoblar -->
+  <rect x="44" y="206" width="222" height="92" rx="6" fill="#2563eb"/>
+  <text x="60" y="228" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Kitoblar (top-level)</text>
+  <text x="74" y="252" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dbeafe">Barcha kitoblar</text>
+  <text x="74" y="274" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dbeafe">Sozlamalar</text>
+  <text x="74" y="292" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dbeafe">(submenyular)</text>
+
+  <text x="52" y="326" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#e2e8f0">Ko'rinish</text>
+  <text x="52" y="352" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#e2e8f0">Plugin'lar</text>
+
+  <!-- Sozlamalar with submenu -->
+  <rect x="44" y="364" width="222" height="46" rx="6" fill="#334155"/>
+  <text x="60" y="386" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Sozlamalar</text>
+  <text x="74" y="404" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#cbd5e1">Kitoblar katalogi</text>
+
+  <!-- Right: function boxes -->
+  <rect x="330" y="206" width="400" height="56" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="346" y="230" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">add_menu_page()</text>
+  <text x="346" y="251" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Yangi top-level menyu + ikona + pozitsiya</text>
+
+  <rect x="330" y="276" width="400" height="56" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="346" y="300" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">add_submenu_page()</text>
+  <text x="346" y="321" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">parent_slug ostiga submenyu (1-argument!)</text>
+
+  <rect x="330" y="354" width="400" height="56" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="346" y="378" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309">add_options_page()</text>
+  <text x="346" y="399" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">"Sozlamalar" ostiga element (qisqa yo'l)</text>
+
+  <!-- connecting arrows from boxes to sidebar -->
+  <line x1="328" y1="234" x2="268" y2="234" stroke="#94a3b8" stroke-width="2" marker-end="url(#am-arrow)"/>
+  <line x1="328" y1="304" x2="268" y2="262" stroke="#94a3b8" stroke-width="2" marker-end="url(#am-arrow)"/>
+  <line x1="328" y1="382" x2="268" y2="392" stroke="#94a3b8" stroke-width="2" marker-end="url(#am-arrow)"/>
+
+  <text x="380" y="436" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Barchasi admin_menu hook'ida chaqiriladi. capability ('manage_options') har birida shart.</text>
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Modellar landshafti: bulutli va lokal provayderlar, markazda OpenAI-mos SDK</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">Bitta SDK -> ko'p provayder</text>
+
+  <!-- Cloud column -->
+  <rect x="30" y="64" width="230" height="320" rx="14" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <rect x="30" y="64" width="230" height="44" rx="14" fill="#eef2ff"/>
+  <text x="145" y="93" text-anchor="middle" font-size="17" font-weight="700" fill="#4338ca">Bulutli (API, to'lovli)</text>
+  <text x="145" y="142" text-anchor="middle" font-size="15" fill="#1e293b">OpenAI — GPT</text>
+  <text x="145" y="176" text-anchor="middle" font-size="15" fill="#1e293b">Anthropic — Claude</text>
+  <text x="145" y="210" text-anchor="middle" font-size="15" fill="#1e293b">Google — Gemini</text>
+  <text x="145" y="244" text-anchor="middle" font-size="15" fill="#16a34a">Groq (tez, bepul)</text>
+  <text x="145" y="278" text-anchor="middle" font-size="15" fill="#16a34a">DeepSeek (arzon)</text>
+  <text x="145" y="312" text-anchor="middle" font-size="15" fill="#1e293b">OpenRouter</text>
+  <text x="145" y="352" text-anchor="middle" font-size="13" fill="#64748b">model ularning serverida</text>
+
+  <!-- Local column -->
+  <rect x="500" y="64" width="230" height="320" rx="14" fill="#ffffff" stroke="#0ea5e9" stroke-width="2"/>
+  <rect x="500" y="64" width="230" height="44" rx="14" fill="#e0f2fe"/>
+  <text x="615" y="93" text-anchor="middle" font-size="17" font-weight="700" fill="#0284c7">Lokal (bepul, maxfiy)</text>
+  <text x="615" y="148" text-anchor="middle" font-size="15" font-weight="600" fill="#1e293b">Ollama</text>
+  <text x="615" y="184" text-anchor="middle" font-size="15" fill="#475569">Llama, Qwen,</text>
+  <text x="615" y="208" text-anchor="middle" font-size="15" fill="#475569">Mistral, Gemma</text>
+  <text x="615" y="256" text-anchor="middle" font-size="14" fill="#16a34a">internet kerak emas</text>
+  <text x="615" y="284" text-anchor="middle" font-size="14" fill="#16a34a">to'lov yo'q</text>
+  <text x="615" y="312" text-anchor="middle" font-size="14" fill="#16a34a">ma'lumot chiqmaydi</text>
+  <text x="615" y="352" text-anchor="middle" font-size="13" fill="#64748b">model sizning mashinangizda</text>
+
+  <!-- Center SDK -->
+  <rect x="290" y="180" width="180" height="90" rx="14" fill="#1e293b"/>
+  <text x="380" y="214" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">OpenAI-mos SDK</text>
+  <text x="380" y="240" text-anchor="middle" font-size="14" fill="#cbd5e1">bitta kod,</text>
+  <text x="380" y="258" text-anchor="middle" font-size="14" fill="#cbd5e1">base_url almashadi</text>
+
+  <defs>
+    <marker id="ls" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <line x1="288" y1="225" x2="264" y2="225" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#ls)"/>
+  <line x1="472" y1="225" x2="496" y2="225" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#ls)"/>
+
+  <text x="380" y="404" text-anchor="middle" font-size="14" fill="#64748b">Claude va Gemini'ning o'z native SDK'lari ham bor — ularni ham o'rganamiz</text>
+</svg>

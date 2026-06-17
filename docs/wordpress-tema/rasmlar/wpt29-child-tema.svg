@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 480" width="820" height="480" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Parent va child tema: Template header bilan bog'lanish va parent stilini ulash</title>
+  <rect x="0" y="0" width="820" height="480" fill="#f8fafc"/>
+  <text x="410" y="36" font-size="22" font-weight="bold" fill="#1e293b" text-anchor="middle">Child (bola) tema parentga tayanadi</text>
+
+  <!-- Parent theme box -->
+  <rect x="40" y="70" width="300" height="200" rx="12" fill="#ffffff" stroke="#475569" stroke-width="2"/>
+  <rect x="40" y="70" width="300" height="40" rx="12" fill="#475569"/>
+  <text x="190" y="96" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">PARENT tema (kitob/)</text>
+  <text x="60" y="136" font-size="14" fill="#1e293b">style.css</text>
+  <text x="60" y="160" font-size="14" fill="#1e293b">functions.php</text>
+  <text x="60" y="184" font-size="14" fill="#1e293b">index.php, single.php, page.php</text>
+  <text x="60" y="208" font-size="14" fill="#1e293b">header.php, footer.php</text>
+  <text x="60" y="232" font-size="14" fill="#1e293b">template-parts/, assets/</text>
+  <text x="60" y="256" font-size="13" fill="#94a3b8">to'liq tema (yangilanadi)</text>
+
+  <!-- Child theme box -->
+  <rect x="480" y="70" width="300" height="200" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <rect x="480" y="70" width="300" height="40" rx="12" fill="#16a34a"/>
+  <text x="630" y="96" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">CHILD tema (kitob-child/)</text>
+  <rect x="498" y="124" width="264" height="44" rx="6" fill="#dcfce7"/>
+  <text x="510" y="143" font-size="13" fill="#16a34a" font-weight="bold">style.css</text>
+  <text x="510" y="161" font-size="13" fill="#1e293b">  Template: kitob  &#8592; bog'lovchi</text>
+  <text x="500" y="192" font-size="14" fill="#1e293b">functions.php (enqueue)</text>
+  <text x="500" y="216" font-size="14" fill="#1e293b">single.php (override - ixtiyoriy)</text>
+  <text x="500" y="248" font-size="13" fill="#94a3b8">faqat o'zgargan qism</text>
+
+  <!-- Template arrow -->
+  <path d="M480 158 L350 158" stroke="#16a34a" stroke-width="2.5" marker-end="url(#g)"/>
+  <text x="415" y="150" font-size="13" fill="#16a34a" text-anchor="middle" font-weight="bold">Template:</text>
+
+  <!-- Enqueue order panel -->
+  <rect x="40" y="300" width="740" height="150" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="60" y="328" font-size="16" font-weight="bold" fill="#2563eb">functions.php: stilni to'g'ri ulash tartibi</text>
+
+  <rect x="60" y="344" width="320" height="42" rx="6" fill="#dbeafe"/>
+  <text x="72" y="362" font-size="13" fill="#2563eb" font-weight="bold">1) parent style.css</text>
+  <text x="72" y="380" font-size="13" fill="#1e293b">get_template_directory_uri()</text>
+
+  <path d="M384 365 L416 365" stroke="#475569" stroke-width="2" marker-end="url(#b)"/>
+
+  <rect x="420" y="344" width="340" height="42" rx="6" fill="#dcfce7"/>
+  <text x="432" y="362" font-size="13" fill="#16a34a" font-weight="bold">2) child style.css (parentga bog'liq)</text>
+  <text x="432" y="380" font-size="13" fill="#1e293b">get_stylesheet_uri(), array(parent)</text>
+
+  <rect x="60" y="398" width="700" height="38" rx="6" fill="#fee2e2"/>
+  <text x="410" y="422" font-size="13" fill="#dc2626" text-anchor="middle" font-weight="bold">@import ISHLATMA (eskirgan, sekin) - wp_enqueue_style + dependency ishlating</text>
+
+  <defs>
+    <marker id="g" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto">
+      <path d="M0 0 L8 4 L0 8 z" fill="#16a34a"/>
+    </marker>
+    <marker id="b" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+      <path d="M0 0 L8 4 L0 8 z" fill="#475569"/>
+    </marker>
+  </defs>
+</svg>

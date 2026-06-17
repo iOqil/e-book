@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 600">
+  <title>ACID va BASE taqqoslash, hamda ACID-dagi C (yaxlitlik qoidalari) CAP-dagi C (replikalar bir xil) emas degan aniqlashtirish</title>
+  <rect x="0" y="0" width="860" height="600" fill="#f8fafc"/>
+  <text x="430" y="34" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">ACID va BASE - ikki uchi bir spektr</text>
+
+  <!-- ACID column -->
+  <rect x="30" y="56" width="385" height="300" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <rect x="30" y="56" width="385" height="36" rx="10" fill="#2563eb"/>
+  <text x="222" y="81" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="bold" fill="#ffffff">ACID (odatda relyatsion)</text>
+
+  <text x="48" y="122" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">A - Atomicity (atomarlik)</text>
+  <text x="48" y="142" font-family="Segoe UI" font-size="13" fill="#334155">hammasi yoki hech nima; yarim bajarilmaydi</text>
+
+  <text x="48" y="172" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">C - Consistency (yaxlitlik)</text>
+  <text x="48" y="192" font-family="Segoe UI" font-size="13" fill="#334155">tranzaksiya yaxlitlik qoidalarini buzmaydi</text>
+  <text x="48" y="210" font-family="Segoe UI" font-size="13" fill="#334155">(FK, CHECK, unikal) - baza qoidaga sodiq</text>
+
+  <text x="48" y="240" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">I - Isolation (izolyatsiya)</text>
+  <text x="48" y="260" font-family="Segoe UI" font-size="13" fill="#334155">parallel tranzaksiyalar bir-birini buzmaydi</text>
+
+  <text x="48" y="290" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">D - Durability (mustahkamlik)</text>
+  <text x="48" y="310" font-family="Segoe UI" font-size="13" fill="#334155">commit bo'lgach, nosozlikdan keyin ham qoladi</text>
+
+  <text x="48" y="340" font-family="Segoe UI" font-size="13" font-style="italic" fill="#16a34a">Urg'u: to'g'rilik &gt; doimiy mavjudlik</text>
+
+  <!-- BASE column -->
+  <rect x="445" y="56" width="385" height="300" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="445" y="56" width="385" height="36" rx="10" fill="#f59e0b"/>
+  <text x="637" y="81" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="bold" fill="#1e293b">BASE (ko'p NoSQL)</text>
+
+  <text x="463" y="122" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#b45309">BA - Basically Available</text>
+  <text x="463" y="142" font-family="Segoe UI" font-size="13" fill="#334155">tizim deyarli doim javob beradi</text>
+  <text x="463" y="160" font-family="Segoe UI" font-size="13" fill="#334155">(eski qiymat bo'lsa ham)</text>
+
+  <text x="463" y="190" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#b45309">S - Soft state (yumshoq holat)</text>
+  <text x="463" y="210" font-family="Segoe UI" font-size="13" fill="#334155">holat kirish bo'lmasa ham vaqtida o'zgarishi</text>
+  <text x="463" y="228" font-family="Segoe UI" font-size="13" fill="#334155">mumkin (replikatsiya sodir bo'layapti)</text>
+
+  <text x="463" y="258" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#b45309">E - Eventual consistency</text>
+  <text x="463" y="278" font-family="Segoe UI" font-size="13" fill="#334155">yangi yozuv bo'lmasa, replikalar oxir-oqibat</text>
+  <text x="463" y="296" font-family="Segoe UI" font-size="13" fill="#334155">bir xil qiymatga yetib oladi</text>
+
+  <text x="463" y="340" font-family="Segoe UI" font-size="13" font-style="italic" fill="#16a34a">Urg'u: doimiy mavjudlik &gt; lahzali to'g'rilik</text>
+
+  <!-- Critical clarification box -->
+  <rect x="30" y="378" width="800" height="196" rx="10" fill="#fef9c3" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="430" y="406" text-anchor="middle" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#dc2626">DIQQAT: ikki xil "C" ni adashtirmang</text>
+
+  <!-- ACID C -->
+  <rect x="52" y="424" width="370" height="130" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="237" y="448" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">ACID-dagi C = yaxlitlik qoidalari</text>
+  <text x="68" y="476" font-family="Segoe UI" font-size="13" fill="#334155">Bitta baza ichida: tranzaksiya yaxlitlik</text>
+  <text x="68" y="496" font-family="Segoe UI" font-size="13" fill="#334155">cheklovlarini (FK, CHECK, unikal) buzmaydi.</text>
+  <text x="68" y="522" font-family="Segoe UI" font-size="13" fill="#334155">Misol: hisob balansi hech qachon manfiy</text>
+  <text x="68" y="540" font-family="Segoe UI" font-size="13" fill="#334155">bo'lmasligi qoidasi.</text>
+
+  <!-- CAP C -->
+  <rect x="438" y="424" width="370" height="130" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="623" y="448" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">CAP-dagi C = replikalar bir xil</text>
+  <text x="454" y="476" font-family="Segoe UI" font-size="13" fill="#334155">Tarqoq tizimda: har bir o'qish eng so'nggi</text>
+  <text x="454" y="496" font-family="Segoe UI" font-size="13" fill="#334155">yozuvni ko'radi (barcha nusxalar mos).</text>
+  <text x="454" y="522" font-family="Segoe UI" font-size="13" fill="#334155">Misol: 3 ta replika ham bir vaqtning o'zida</text>
+  <text x="454" y="540" font-family="Segoe UI" font-size="13" fill="#334155">aynan bitta qiymatni qaytaradi. (-&gt; 22-bob)</text>
+</svg>

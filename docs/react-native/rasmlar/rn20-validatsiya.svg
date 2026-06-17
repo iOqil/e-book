@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Har bir maydon validatsiyasi: kiritildi -> qoida tekshiriladi -> xato yoki o'tdi</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Har bir maydon o'z qoidasidan o'tadi</text>
+
+  <!-- column headers -->
+  <text x="130" y="74" text-anchor="middle" font-size="14" font-weight="700" fill="#475569">Kiritildi</text>
+  <text x="380" y="74" text-anchor="middle" font-size="14" font-weight="700" fill="#475569">Qoida tekshiriladi</text>
+  <text x="650" y="74" text-anchor="middle" font-size="14" font-weight="700" fill="#475569">Natija</text>
+
+  <!-- Row 1: email valid -->
+  <rect x="40" y="92" width="180" height="56" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="130" y="116" text-anchor="middle" font-size="13" fill="#1e293b">"ali@mail.uz"</text>
+  <text x="130" y="136" text-anchor="middle" font-size="13" fill="#94a3b8">email maydoni</text>
+  <path d="M222 120 L300 120" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+  <rect x="302" y="96" width="156" height="48" rx="8" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="380" y="116" text-anchor="middle" font-size="13" fill="#475569">format to'g'rimi?</text>
+  <text x="380" y="134" text-anchor="middle" font-size="13" fill="#94a3b8">@ va . bormi</text>
+  <path d="M460 120 L548 120" stroke="#16a34a" stroke-width="2" marker-end="url(#g)"/>
+  <rect x="550" y="96" width="170" height="48" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="635" y="125" text-anchor="middle" font-size="14" font-weight="700" fill="#16a34a">O'tdi — xato yo'q</text>
+
+  <!-- Row 2: parol short -->
+  <rect x="40" y="166" width="180" height="56" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="130" y="190" text-anchor="middle" font-size="13" fill="#1e293b">"123"</text>
+  <text x="130" y="210" text-anchor="middle" font-size="13" fill="#94a3b8">parol maydoni</text>
+  <path d="M222 194 L300 194" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+  <rect x="302" y="170" width="156" height="48" rx="8" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="380" y="190" text-anchor="middle" font-size="13" fill="#475569">uzunligi &#8805; 6 ?</text>
+  <text x="380" y="208" text-anchor="middle" font-size="13" fill="#dc2626">3 belgi — qisqa</text>
+  <path d="M460 194 L548 194" stroke="#dc2626" stroke-width="2" marker-end="url(#r)"/>
+  <rect x="550" y="170" width="170" height="48" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="635" y="190" text-anchor="middle" font-size="13" font-weight="700" fill="#dc2626">Xato</text>
+  <text x="635" y="208" text-anchor="middle" font-size="13" fill="#475569">maydon ostida</text>
+
+  <!-- Row 3: parol tasdiq mos emas -->
+  <rect x="40" y="240" width="180" height="56" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="130" y="264" text-anchor="middle" font-size="13" fill="#1e293b">"parol99"</text>
+  <text x="130" y="284" text-anchor="middle" font-size="13" fill="#94a3b8">parol tasdiq</text>
+  <path d="M222 268 L300 268" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+  <rect x="302" y="244" width="156" height="48" rx="8" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="380" y="264" text-anchor="middle" font-size="13" fill="#475569">parolga teng?</text>
+  <text x="380" y="282" text-anchor="middle" font-size="13" fill="#dc2626">mos kelmadi</text>
+  <path d="M460 268 L548 268" stroke="#dc2626" stroke-width="2" marker-end="url(#r)"/>
+  <rect x="550" y="244" width="170" height="48" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="635" y="264" text-anchor="middle" font-size="13" font-weight="700" fill="#dc2626">Xato</text>
+  <text x="635" y="282" text-anchor="middle" font-size="13" fill="#475569">"parollar mos emas"</text>
+
+  <!-- bottom: when to show -->
+  <rect x="40" y="320" width="680" height="96" rx="12" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="380" y="346" text-anchor="middle" font-size="15" font-weight="700" fill="#4f46e5">Xatoni QACHON ko'rsatish kerak?</text>
+  <text x="380" y="372" text-anchor="middle" font-size="14" fill="#dc2626">Yozayotganda EMAS — bu foydalanuvchini bezovta qiladi</text>
+  <text x="380" y="396" text-anchor="middle" font-size="14" fill="#16a34a">Maydondan chiqqanda (blur) yoki "Yuborish" bosilganda — to'g'ri vaqt</text>
+
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0 L8 3 L0 6 Z" fill="#475569"/></marker>
+    <marker id="g" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0 L8 3 L0 6 Z" fill="#16a34a"/></marker>
+    <marker id="r" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0 L8 3 L0 6 Z" fill="#dc2626"/></marker>
+  </defs>
+</svg>

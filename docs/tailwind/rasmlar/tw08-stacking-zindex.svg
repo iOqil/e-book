@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="800" height="480" font-family="Segoe UI, system-ui, sans-serif">
+  <title>z-index va stacking context: qatlamlangan kartalar z-10/z-20/z-30, hamda alohida stacking context ichidagi yuqori z-index baribir tashqaridagidan past turishi va isolate yordamida tartibga solish</title>
+  <rect x="0" y="0" width="800" height="480" fill="#f8fafc"/>
+
+  <text x="400" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">z-index va stacking context</text>
+
+  <!-- LEFT: simple z stacking -->
+  <text x="40" y="72" font-size="15" font-weight="bold" fill="#4f46e5">1. Bitta kontekstda: katta z = ustda</text>
+  <rect x="40" y="86" width="120" height="120" rx="10" fill="#e0f2fe" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="56" y="106" font-size="13" fill="#0ea5e9">z-10</text>
+  <rect x="90" y="120" width="120" height="120" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="106" y="140" font-size="13" fill="#16a34a">z-20</text>
+  <rect x="140" y="154" width="120" height="120" rx="10" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="156" y="174" font-size="13" fill="#4f46e5">z-30</text>
+  <text x="40" y="300" font-size="13" fill="#475569">Bir xil kontekst ichida raqam katta —</text>
+  <text x="40" y="320" font-size="13" fill="#475569">element shuncha tepada turadi.</text>
+
+  <!-- RIGHT: two separate contexts -->
+  <text x="440" y="72" font-size="15" font-weight="bold" fill="#ef4444">2. Ikki alohida kontekst: raqam aldaydi</text>
+
+  <!-- context A -->
+  <rect x="440" y="88" width="160" height="150" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="452" y="108" font-size="13" fill="#64748b">Ota A (relative z-10)</text>
+  <rect x="456" y="120" width="120" height="96" rx="8" fill="#fee2e2" stroke="#ef4444" stroke-width="2"/>
+  <text x="468" y="142" font-size="13" fill="#ef4444">bola z-[999]</text>
+  <text x="468" y="180" font-size="13" fill="#ef4444">"eng tepada</text>
+  <text x="468" y="198" font-size="13" fill="#ef4444">bo'laman!"</text>
+
+  <!-- context B -->
+  <rect x="620" y="150" width="150" height="150" rx="10" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="632" y="170" font-size="13" fill="#4f46e5">Ota B (relative z-20)</text>
+  <text x="632" y="206" font-size="13" fill="#4f46e5">z-20 &gt; z-10</text>
+  <text x="632" y="226" font-size="13" fill="#4f46e5">→ B butunlay</text>
+  <text x="632" y="246" font-size="13" fill="#4f46e5">A ustida</text>
+
+  <text x="440" y="328" font-size="13" fill="#475569">z-[999] faqat OTA A ichida kuchli. A'ning o'zi</text>
+  <text x="440" y="348" font-size="13" fill="#475569">z-10 bo'lgani uchun, butun A z-20'li B ostida qoladi.</text>
+
+  <!-- isolate callout -->
+  <rect x="40" y="370" width="720" height="86" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="60" y="396" font-size="15" font-weight="bold" fill="#f59e0b">isolate yechimi</text>
+  <text x="60" y="420" font-size="13" fill="#1e293b">Ota'ga isolate (isolation: isolate) bering — u yangi stacking context yaratadi, lekin z-index bermaydi.</text>
+  <text x="60" y="442" font-size="13" fill="#475569">Endi bolalaringizning z-* qiymatlari faqat shu konteyner ichida raqobat qiladi — tashqi z-index "urushi" tugaydi.</text>
+</svg>

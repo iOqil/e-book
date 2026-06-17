@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 440" width="780" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Chapda FutureBuilder: bitta qiymat keladi va UI bir marta yakuniy holatga keladi. O'ngda StreamBuilder: ketma-ket qiymatlar keladi va UI qayta-qayta yangilanadi</title>
+  <defs>
+    <marker id="fl23fvA" markerWidth="12" markerHeight="12" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="780" height="440" fill="#f8fafc"/>
+
+  <text x="390" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">FutureBuilder vs StreamBuilder</text>
+  <text x="390" y="56" text-anchor="middle" font-size="14" fill="#475569">bitta qiymat → UI bir marta · ko'p qiymat → UI qayta-qayta</text>
+
+  <line x1="390" y1="80" x2="390" y2="420" stroke="#94a3b8" stroke-width="1" stroke-dasharray="5 4"/>
+
+  <!-- ===== FutureBuilder (chap) ===== -->
+  <text x="195" y="108" text-anchor="middle" font-size="16" font-weight="bold" fill="#027dfd">FutureBuilder&lt;T&gt;</text>
+  <text x="195" y="130" text-anchor="middle" font-size="13" fill="#64748b">manba bir marta natija beradi</text>
+
+  <!-- vaqt o'qi -->
+  <line x1="48" y1="180" x2="342" y2="180" stroke="#94a3b8" stroke-width="2" marker-end="url(#fl23fvA)"/>
+  <text x="330" y="200" text-anchor="middle" font-size="13" fill="#64748b">vaqt</text>
+
+  <text x="120" y="166" text-anchor="middle" font-size="13" fill="#64748b">. . . kutish . . .</text>
+  <circle cx="255" cy="180" r="22" fill="#027dfd"/>
+  <text x="255" y="186" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">42</text>
+  <text x="255" y="220" text-anchor="middle" font-size="13" fill="#027dfd">bitta qiymat</text>
+
+  <!-- UI: yuklanmoqda -> yakuniy -->
+  <rect x="60" y="248" width="110" height="118" rx="12" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <circle cx="115" cy="296" r="16" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="18 10"/>
+  <text x="115" y="340" text-anchor="middle" font-size="13" fill="#64748b">yuklanmoqda</text>
+
+  <text x="190" y="312" text-anchor="middle" font-size="20" fill="#475569">→</text>
+
+  <rect x="210" y="248" width="110" height="118" rx="12" fill="#ffffff" stroke="#027dfd" stroke-width="2.5"/>
+  <rect x="224" y="266" width="82" height="34" rx="7" fill="#dbeafe"/>
+  <text x="265" y="289" text-anchor="middle" font-size="17" font-weight="bold" fill="#0553b1">42</text>
+  <text x="265" y="340" text-anchor="middle" font-size="13" fill="#027dfd">yakuniy holat</text>
+
+  <text x="195" y="398" text-anchor="middle" font-size="14" fill="#475569">UI bir marta tayyor bo'ladi</text>
+  <text x="195" y="416" text-anchor="middle" font-size="13" fill="#64748b">API so'rovi · fayl o'qish</text>
+
+  <!-- ===== StreamBuilder (o'ng) ===== -->
+  <text x="585" y="108" text-anchor="middle" font-size="16" font-weight="bold" fill="#16a34a">StreamBuilder&lt;T&gt;</text>
+  <text x="585" y="130" text-anchor="middle" font-size="13" fill="#64748b">manba vaqt o'tib ko'p qiymat beradi</text>
+
+  <!-- vaqt o'qi -->
+  <line x1="438" y1="180" x2="742" y2="180" stroke="#94a3b8" stroke-width="2" marker-end="url(#fl23fvA)"/>
+  <text x="728" y="200" text-anchor="middle" font-size="13" fill="#64748b">vaqt</text>
+
+  <circle cx="500" cy="180" r="20" fill="#16a34a"/>
+  <text x="500" y="186" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">1</text>
+  <circle cx="580" cy="180" r="20" fill="#16a34a"/>
+  <text x="580" y="186" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">2</text>
+  <circle cx="660" cy="180" r="20" fill="#16a34a"/>
+  <text x="660" y="186" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">3</text>
+  <text x="585" y="220" text-anchor="middle" font-size="13" fill="#16a34a">ketma-ket qiymatlar</text>
+
+  <!-- UI: 1 -> 2 -> 3, qayta-qayta -->
+  <rect x="448" y="248" width="80" height="118" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <rect x="460" y="266" width="56" height="34" rx="7" fill="#dcfce7"/>
+  <text x="488" y="289" text-anchor="middle" font-size="17" font-weight="bold" fill="#16a34a">1</text>
+
+  <text x="540" y="312" text-anchor="middle" font-size="18" fill="#475569">→</text>
+
+  <rect x="552" y="248" width="80" height="118" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <rect x="564" y="266" width="56" height="34" rx="7" fill="#dcfce7"/>
+  <text x="592" y="289" text-anchor="middle" font-size="17" font-weight="bold" fill="#16a34a">2</text>
+
+  <text x="644" y="312" text-anchor="middle" font-size="18" fill="#475569">→</text>
+
+  <rect x="656" y="248" width="80" height="118" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <rect x="668" y="266" width="56" height="34" rx="7" fill="#dcfce7"/>
+  <text x="696" y="289" text-anchor="middle" font-size="17" font-weight="bold" fill="#16a34a">3</text>
+
+  <text x="592" y="340" text-anchor="middle" font-size="13" fill="#16a34a">har qiymatda qayta chiziladi</text>
+
+  <text x="585" y="398" text-anchor="middle" font-size="14" fill="#475569">UI qayta-qayta yangilanadi</text>
+  <text x="585" y="416" text-anchor="middle" font-size="13" fill="#64748b">soat · chat · sensor · jonli baza</text>
+</svg>

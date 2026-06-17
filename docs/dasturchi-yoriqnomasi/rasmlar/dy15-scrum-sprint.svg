@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 520" font-family="Segoe UI">
+  <title>Bitta Scrum sprint sikli: sprint planning, kunlik ish va daily standup, sprint review, retrospective va keyingi sprintga qaytish</title>
+  <rect x="0" y="0" width="880" height="520" fill="#f8fafc"/>
+
+  <text x="440" y="36" text-anchor="middle" font-size="22" font-weight="bold" fill="#1e293b">Bitta sprint sikli (vaqt qutisi, 1-4 hafta)</text>
+  <text x="440" y="60" text-anchor="middle" font-size="14" fill="#64748b">Planning -&gt; kunlik ish + standup -&gt; review -&gt; retro -&gt; keyingi sprint</text>
+
+  <!-- backlog box left -->
+  <rect x="30" y="120" width="140" height="90" rx="8" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="100" y="148" text-anchor="middle" font-size="14" font-weight="bold" fill="#334155">Product</text>
+  <text x="100" y="168" text-anchor="middle" font-size="14" font-weight="bold" fill="#334155">backlog</text>
+  <text x="100" y="192" text-anchor="middle" font-size="13" fill="#64748b">prioritlangan</text>
+
+  <!-- arrow into planning -->
+  <line x1="170" y1="165" x2="220" y2="165" stroke="#1e293b" stroke-width="2"/>
+  <polygon points="220,165 210,160 210,170" fill="#1e293b"/>
+
+  <!-- 1 Planning -->
+  <rect x="220" y="120" width="170" height="90" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="305" y="146" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e40af">1. Sprint planning</text>
+  <text x="305" y="168" text-anchor="middle" font-size="13" fill="#334155">Nimani olamiz?</text>
+  <text x="305" y="186" text-anchor="middle" font-size="13" fill="#334155">Sprint backlog tuziladi</text>
+
+  <!-- arrow planning -> daily work -->
+  <line x1="390" y1="165" x2="450" y2="165" stroke="#1e293b" stroke-width="2"/>
+  <polygon points="450,165 440,160 440,170" fill="#1e293b"/>
+
+  <!-- 2 Daily work + standup -->
+  <rect x="450" y="110" width="200" height="120" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="550" y="136" text-anchor="middle" font-size="14" font-weight="bold" fill="#166534">2. Kunlik ish</text>
+  <text x="550" y="158" text-anchor="middle" font-size="13" fill="#334155">kod, test, hamkorlik</text>
+  <!-- inner daily standup loop -->
+  <circle cx="550" cy="190" r="26" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="550" y="186" text-anchor="middle" font-size="13" fill="#166534">daily</text>
+  <text x="550" y="202" text-anchor="middle" font-size="13" fill="#166534">standup</text>
+  <path d="M 524 190 A 26 26 0 1 1 528 205" fill="none" stroke="#16a34a" stroke-width="2"/>
+  <polygon points="528,205 520,201 531,196" fill="#16a34a"/>
+
+  <!-- arrow daily -> review (down) -->
+  <line x1="550" y1="230" x2="550" y2="290" stroke="#1e293b" stroke-width="2"/>
+  <polygon points="550,290 545,280 555,280" fill="#1e293b"/>
+
+  <!-- 3 Review -->
+  <rect x="450" y="290" width="200" height="90" rx="8" fill="#faf5ff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="550" y="316" text-anchor="middle" font-size="14" font-weight="bold" fill="#6b21a8">3. Sprint review</text>
+  <text x="550" y="338" text-anchor="middle" font-size="13" fill="#334155">ishlaydigan increment</text>
+  <text x="550" y="356" text-anchor="middle" font-size="13" fill="#334155">ko'rsatiladi, fikr olinadi</text>
+
+  <!-- arrow review -> retro (left) -->
+  <line x1="450" y1="335" x2="390" y2="335" stroke="#1e293b" stroke-width="2"/>
+  <polygon points="390,335 400,330 400,340" fill="#1e293b"/>
+
+  <!-- 4 Retro -->
+  <rect x="220" y="290" width="170" height="90" rx="8" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="305" y="316" text-anchor="middle" font-size="14" font-weight="bold" fill="#b45309">4. Retrospective</text>
+  <text x="305" y="338" text-anchor="middle" font-size="13" fill="#334155">jarayonni yaxshilash</text>
+  <text x="305" y="356" text-anchor="middle" font-size="13" fill="#334155">(eng qadrli marosim)</text>
+
+  <!-- loop back arrow retro -> planning (up curved) -->
+  <path d="M 220 320 C 150 300, 150 220, 218 175" fill="none" stroke="#2563eb" stroke-width="2" stroke-dasharray="6 4"/>
+  <polygon points="218,175 210,184 222,185" fill="#2563eb"/>
+  <text x="120" y="262" text-anchor="middle" font-size="13" fill="#2563eb">keyingi</text>
+  <text x="120" y="280" text-anchor="middle" font-size="13" fill="#2563eb">sprint</text>
+
+  <!-- roles legend -->
+  <rect x="30" y="420" width="820" height="76" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="50" y="446" font-size="14" font-weight="bold" fill="#1e293b">Rollar:</text>
+  <text x="50" y="470" font-size="13" fill="#334155">Product Owner = nima muhim (prioritet) · Scrum Master = jarayon va blokerlarni ochadi (boshliq emas)</text>
+  <text x="50" y="488" font-size="13" fill="#334155">Jamoa (developers) = qanday qilishni o'zi hal qiladi. Sprint = o'zgarmas vaqt qutisi: ko'lam siljiydi, sana emas.</text>
+</svg>

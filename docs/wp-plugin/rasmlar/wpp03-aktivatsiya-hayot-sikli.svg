@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430">
+  <title>Plugin hayot sikli: aktivatsiya, har so'rovda yuklanish, deaktivatsiya va o'chirish bosqichlari va ularning hook'lari</title>
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Plugin hayot sikli va hook'lar</text>
+
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- 1 Activate -->
+  <rect x="40" y="70" width="160" height="74" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="120" y="98" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#15803d">1. Aktivatsiya</text>
+  <text x="120" y="120" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">BIR MARTA</text>
+  <text x="120" y="137" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">yoqilganda</text>
+
+  <!-- 2 Run each request -->
+  <rect x="300" y="70" width="160" height="74" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="98" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e40af">2. Ishlash</text>
+  <text x="380" y="120" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">HAR so'rovda</text>
+  <text x="380" y="137" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">qayta yuklanadi</text>
+
+  <!-- 3 Deactivate -->
+  <rect x="560" y="70" width="160" height="74" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="640" y="98" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#92400e">3. Deaktivatsiya</text>
+  <text x="640" y="120" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">BIR MARTA</text>
+  <text x="640" y="137" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">o'chirilganda</text>
+
+  <!-- arrows top row -->
+  <line x1="200" y1="107" x2="296" y2="107" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="460" y1="107" x2="556" y2="107" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+  <!-- loop arrow on Run -->
+  <path d="M340 144 q 40 40 80 0" fill="none" stroke="#2563eb" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="380" y="190" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#2563eb">qayta-qayta</text>
+
+  <!-- 4 Uninstall -->
+  <rect x="560" y="250" width="160" height="74" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="640" y="278" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#991b1b">4. O'chirish</text>
+  <text x="640" y="300" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">BIR MARTA</text>
+  <text x="640" y="317" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">butunlay o'chirilganda</text>
+
+  <line x1="640" y1="144" x2="640" y2="246" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="652" y="200" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">keyin "Delete"</text>
+
+  <!-- Hook labels -->
+  <text x="380" y="240" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e293b">Qaysi hook qachon?</text>
+
+  <rect x="40" y="258" width="240" height="40" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="52" y="283" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#15803d">register_activation_hook()</text>
+
+  <rect x="40" y="306" width="240" height="40" rx="6" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="52" y="331" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#92400e">register_deactivation_hook()</text>
+
+  <rect x="40" y="354" width="240" height="40" rx="6" fill="#ffffff" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="52" y="379" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#991b1b">uninstall.php / register_uninstall_hook()</text>
+
+  <text x="300" y="285" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#15803d">jadval yaratish, flush_rewrite_rules</text>
+  <text x="300" y="333" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#92400e">vaqtinchalik tozalash &#8212; MA'LUMOTNI saqla</text>
+  <text x="300" y="381" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#991b1b">option/jadvalni butunlay o'chirish</text>
+
+  <text x="40" y="418" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">Deaktivatsiya = vaqtincha to'xtatish. O'chirish = butunlay olib tashlash.</text>
+</svg>

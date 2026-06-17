@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 540" width="820" height="540">
+  <title>Outbox pattern: DB yozuvi va outbox bitta tranzaksiyada atomik, relay broker'ga yuboradi; Saga: choreography compensating action bilan</title>
+  <rect x="0" y="0" width="820" height="540" fill="#f8fafc"/>
+  <text x="410" y="32" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Outbox pattern va Saga</text>
+
+  <defs>
+    <marker id="os-ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="os-arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+  <!-- ===== OUTBOX (yuqori) ===== -->
+  <text x="36" y="62" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb">1) Outbox pattern — dual-write muammosini hal qiladi</text>
+  <text x="36" y="83" font-family="Segoe UI" font-size="13" fill="#64748b">Muammo: DB'ga yozish va broker'ga yuborish ikki alohida amal — biri yiqilsa nomuvofiqlik. Yechim: ikkalasi BIR tranzaksiyada.</text>
+
+  <!-- DB transaction box -->
+  <rect x="36" y="98" width="300" height="150" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="186" y="122" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#15803d" text-anchor="middle">BITTA DB tranzaksiyasi (atomik)</text>
+  <rect x="56" y="138" width="120" height="46" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="116" y="166" font-family="Segoe UI" font-size="13" fill="#15803d" text-anchor="middle">buyurtma yozuvi</text>
+  <rect x="196" y="138" width="120" height="46" rx="6" fill="#fef9c3" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="256" y="160" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">OUTBOX</text>
+  <text x="256" y="176" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">jadvali</text>
+  <text x="186" y="212" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">COMMIT -> ikkalasi BIRGA saqlanadi</text>
+  <text x="186" y="232" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">(yiqilsa — ikkalasi ham yo'q)</text>
+
+  <!-- relay -->
+  <rect x="400" y="138" width="130" height="46" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="465" y="160" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#2563eb" text-anchor="middle">Relay</text>
+  <text x="465" y="176" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">(jarayon)</text>
+  <line x1="336" y1="161" x2="398" y2="161" stroke="#2563eb" stroke-width="2" marker-end="url(#os-ar)"/>
+  <text x="367" y="153" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">o'qiydi</text>
+
+  <!-- broker -->
+  <rect x="594" y="138" width="170" height="46" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="679" y="160" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#2563eb" text-anchor="middle">Broker / Queue</text>
+  <text x="679" y="176" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">-> consumer'lar</text>
+  <line x1="530" y1="161" x2="592" y2="161" stroke="#2563eb" stroke-width="2" marker-end="url(#os-ar)"/>
+  <text x="561" y="153" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">yuboradi</text>
+  <text x="465" y="216" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">Relay outbox'ni o'qib, broker'ga</text>
+  <text x="465" y="234" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">yuboradi va "yuborildi" deb belgilaydi</text>
+
+  <line x1="40" y1="262" x2="780" y2="262" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="6 4"/>
+
+  <!-- ===== SAGA (pastki) ===== -->
+  <text x="36" y="294" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb">2) Saga — taqsimlangan tranzaksiya (choreography)</text>
+  <text x="36" y="315" font-family="Segoe UI" font-size="13" fill="#64748b">Bir nechta servisda atomiklik yo'q. Saga = ketma-ket lokal qadamlar; biri yiqilsa, oldingilar TESKARI (compensating) qilinadi.</text>
+
+  <!-- forward chain -->
+  <rect x="40" y="338" width="150" height="56" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="115" y="362" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#16a34a" text-anchor="middle">To'lov</text>
+  <text x="115" y="382" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">OK</text>
+
+  <rect x="240" y="338" width="150" height="56" rx="8" fill="#ffffff" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="315" y="362" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#dc2626" text-anchor="middle">Zaxira</text>
+  <text x="315" y="382" font-family="Segoe UI" font-size="13" fill="#dc2626" text-anchor="middle">YIQILDI</text>
+
+  <rect x="440" y="338" width="150" height="56" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="515" y="362" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">Yetkazish</text>
+  <text x="515" y="382" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">(boshlanmadi)</text>
+
+  <line x1="190" y1="366" x2="238" y2="366" stroke="#2563eb" stroke-width="2" marker-end="url(#os-ar)"/>
+  <line x1="390" y1="366" x2="438" y2="366" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4 3"/>
+
+  <!-- compensating arrow back -->
+  <path d="M 300 400 Q 220 450 130 400" fill="none" stroke="#dc2626" stroke-width="2.5" marker-end="url(#os-arr)"/>
+  <text x="215" y="448" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#dc2626" text-anchor="middle">compensating: to'lovni qaytar</text>
+
+  <!-- note: choreography vs orchestration -->
+  <rect x="620" y="338" width="160" height="120" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="700" y="360" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#334155" text-anchor="middle">Ikki uslub</text>
+  <text x="634" y="382" font-family="Segoe UI" font-size="13" fill="#334155">Choreography:</text>
+  <text x="634" y="400" font-family="Segoe UI" font-size="13" fill="#64748b">markazsiz, hodisa-zanjir</text>
+  <text x="634" y="422" font-family="Segoe UI" font-size="13" fill="#334155">Orchestration:</text>
+  <text x="634" y="440" font-family="Segoe UI" font-size="13" fill="#64748b">dirijyor boshqaradi</text>
+
+  <rect x="40" y="478" width="740" height="46" rx="8" fill="#fef9c3" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="410" y="506" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">Saga atomiklikni ALMASHTIRADI: "hammasi yoki hech narsa" o'rniga "yiqilsa orqaga qaytaramiz" (eventual consistency).</text>
+</svg>

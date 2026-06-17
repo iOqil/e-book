@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Bitta checkbox bool qiymat beradi (belgilansa rost, aks holda yolg'on), ko'p checkbox esa bitta massivga faqat belgilangan value qiymatlarini to'playdi degan farqni ko'rsatuvchi taqqoslash diagrammasi</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Checkbox: bitta (bool) vs ko'p (massiv)</text>
+  <text x="380" y="58" text-anchor="middle" font-size="14" fill="#475569">Ikkalasi ham checkbox, lekin xususiyat turi va natija boshqacha</text>
+
+  <!-- CHAP: bitta checkbox = bool -->
+  <rect x="30" y="80" width="340" height="320" rx="12" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="30" y="80" width="340" height="40" rx="12" fill="#f59e0b"/>
+  <text x="200" y="107" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">BITTA checkbox = bool</text>
+
+  <text x="50" y="148" font-size="13" fill="#475569">Xususiyat:</text>
+  <rect x="50" y="158" width="300" height="30" rx="6" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="62" y="178" font-size="13" fill="#1e293b">public bool $rozilik = false;</text>
+
+  <text x="50" y="212" font-size="13" fill="#475569">Blade:</text>
+  <rect x="50" y="222" width="300" height="30" rx="6" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="62" y="242" font-size="13" fill="#1e293b">wire:model="rozilik"  (value yo'q)</text>
+
+  <!-- belgilangan holat -->
+  <rect x="50" y="270" width="20" height="20" rx="4" fill="#16a34a"/>
+  <polyline points="54,280 59,285 67,274" fill="none" stroke="#ffffff" stroke-width="2.5"/>
+  <text x="80" y="285" font-size="14" fill="#1e293b">Roziman</text>
+
+  <text x="50" y="322" font-size="13" fill="#475569">Natija ($rozilik):</text>
+  <rect x="50" y="332" width="300" height="46" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="200" y="361" text-anchor="middle" font-size="16" font-weight="700" fill="#16a34a">true</text>
+
+  <!-- O'NG: ko'p checkbox = massiv -->
+  <rect x="390" y="80" width="340" height="320" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <rect x="390" y="80" width="340" height="40" rx="12" fill="#16a34a"/>
+  <text x="560" y="107" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">KO'P checkbox = massiv</text>
+
+  <text x="410" y="148" font-size="13" fill="#475569">Xususiyat:</text>
+  <rect x="410" y="158" width="300" height="30" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="422" y="178" font-size="13" fill="#1e293b">public array $qiziqishlar = [];</text>
+
+  <text x="410" y="212" font-size="13" fill="#475569">Blade (har birida value!):</text>
+
+  <!-- variant 1 belgilangan -->
+  <rect x="410" y="222" width="20" height="20" rx="4" fill="#16a34a"/>
+  <polyline points="414,232 419,237 427,226" fill="none" stroke="#ffffff" stroke-width="2.5"/>
+  <text x="440" y="237" font-size="13" fill="#1e293b">value="kod"  (Dasturlash)</text>
+
+  <!-- variant 2 belgilanmagan -->
+  <rect x="410" y="250" width="20" height="20" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="440" y="265" font-size="13" fill="#94a3b8">value="dizayn"  (Dizayn)</text>
+
+  <!-- variant 3 belgilangan -->
+  <rect x="410" y="278" width="20" height="20" rx="4" fill="#16a34a"/>
+  <polyline points="414,288 419,293 427,282" fill="none" stroke="#ffffff" stroke-width="2.5"/>
+  <text x="440" y="293" font-size="13" fill="#1e293b">value="marketing"  (Marketing)</text>
+
+  <text x="410" y="322" font-size="13" fill="#475569">Natija ($qiziqishlar):</text>
+  <rect x="410" y="332" width="300" height="46" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="560" y="361" text-anchor="middle" font-size="15" font-weight="700" fill="#16a34a">['kod', 'marketing']</text>
+
+  <text x="380" y="424" text-anchor="middle" font-size="13" fill="#94a3b8">Faqat belgilangan value massivga tushadi. Belgilanmagani (dizayn) tushmaydi.</text>
+</svg>

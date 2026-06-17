@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 430" width="780" height="430" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Flex o'qlari: flex-row da main o'q gorizontal, cross o'q vertikal; flex-col da o'qlar almashadi</title>
+  <rect x="0" y="0" width="780" height="430" fill="#f8fafc"/>
+
+  <text x="390" y="38" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">Flex ikki o'qi: yo'nalish o'qlarni almashtiradi</text>
+
+  <!-- ===== LEFT: flex-row ===== -->
+  <text x="225" y="76" text-anchor="middle" font-size="16" font-weight="bold" fill="#4f46e5">flex flex-row  (standart)</text>
+
+  <!-- container -->
+  <rect x="70" y="96" width="310" height="150" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+
+  <!-- items in a row -->
+  <rect x="92" y="128" width="70" height="86" rx="8" fill="#eef2ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="127" y="178" text-anchor="middle" font-size="18" font-weight="bold" fill="#4f46e5">A</text>
+  <rect x="172" y="128" width="70" height="86" rx="8" fill="#eef2ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="207" y="178" text-anchor="middle" font-size="18" font-weight="bold" fill="#4f46e5">B</text>
+  <rect x="252" y="128" width="70" height="86" rx="8" fill="#eef2ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="287" y="178" text-anchor="middle" font-size="18" font-weight="bold" fill="#4f46e5">C</text>
+
+  <!-- main axis: horizontal -->
+  <line x1="92" y1="276" x2="352" y2="276" stroke="#0ea5e9" stroke-width="3"/>
+  <polygon points="364,276 350,270 350,282" fill="#0ea5e9"/>
+  <text x="222" y="300" text-anchor="middle" font-size="15" font-weight="bold" fill="#0ea5e9">main o'q (justify-*)</text>
+
+  <!-- cross axis: vertical -->
+  <line x1="48" y1="96" x2="48" y2="232" stroke="#f59e0b" stroke-width="3"/>
+  <polygon points="48,244 42,230 54,230" fill="#f59e0b"/>
+  <text x="40" y="180" text-anchor="middle" font-size="15" font-weight="bold" fill="#f59e0b" transform="rotate(-90 40 180)">cross o'q (items-*)</text>
+
+  <text x="225" y="350" text-anchor="middle" font-size="14" fill="#475569">Elementlar main o'q (gorizontal) bo'ylab teriladi.</text>
+  <text x="225" y="372" text-anchor="middle" font-size="14" fill="#475569">justify-* = main, items-* = cross.</text>
+
+  <!-- divider -->
+  <line x1="400" y1="96" x2="400" y2="372" stroke="#94a3b8" stroke-width="1" stroke-dasharray="5 4"/>
+
+  <!-- ===== RIGHT: flex-col ===== -->
+  <text x="565" y="76" text-anchor="middle" font-size="16" font-weight="bold" fill="#4f46e5">flex flex-col</text>
+
+  <!-- container -->
+  <rect x="490" y="96" width="200" height="218" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+
+  <!-- items in a column -->
+  <rect x="540" y="112" width="100" height="56" rx="8" fill="#e0f2fe" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="590" y="146" text-anchor="middle" font-size="18" font-weight="bold" fill="#0ea5e9">A</text>
+  <rect x="540" y="178" width="100" height="56" rx="8" fill="#e0f2fe" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="590" y="212" text-anchor="middle" font-size="18" font-weight="bold" fill="#0ea5e9">B</text>
+  <rect x="540" y="244" width="100" height="56" rx="8" fill="#e0f2fe" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="590" y="278" text-anchor="middle" font-size="18" font-weight="bold" fill="#0ea5e9">C</text>
+
+  <!-- main axis: vertical now -->
+  <line x1="510" y1="112" x2="510" y2="300" stroke="#0ea5e9" stroke-width="3"/>
+  <polygon points="510,312 504,298 516,298" fill="#0ea5e9"/>
+  <text x="502" y="206" text-anchor="middle" font-size="15" font-weight="bold" fill="#0ea5e9" transform="rotate(-90 502 206)">main o'q (justify-*)</text>
+
+  <!-- cross axis: horizontal now -->
+  <line x1="540" y1="334" x2="700" y2="334" stroke="#f59e0b" stroke-width="3"/>
+  <polygon points="712,334 698,328 698,340" fill="#f59e0b"/>
+  <text x="600" y="360" text-anchor="middle" font-size="15" font-weight="bold" fill="#f59e0b">cross o'q (items-*)</text>
+
+  <text x="590" y="392" text-anchor="middle" font-size="14" fill="#16a34a">flex-col da main o'q VERTIKAL bo'ldi —</text>
+  <text x="590" y="412" text-anchor="middle" font-size="14" fill="#16a34a">o'qlar o'rin almashdi!</text>
+</svg>

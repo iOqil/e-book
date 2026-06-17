@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560">
+  <title>JWT tuzilishi: header.payload.signature, claims va imzo tekshirish</title>
+  <rect x="0" y="0" width="900" height="560" fill="#f8fafc"/>
+  <text x="450" y="34" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">JWT tuzilishi (RFC 7519)</text>
+  <text x="450" y="58" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Uchta base64url qism, nuqta bilan ajratilgan</text>
+
+  <!-- raw token line -->
+  <rect x="40" y="78" width="820" height="40" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="120" y="103" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#dc2626">eyJhbGci...</text>
+  <text x="215" y="103" text-anchor="middle" font-family="monospace" font-size="14" fill="#64748b">.</text>
+  <text x="370" y="103" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#7c3aed">eyJzdWIi...</text>
+  <text x="525" y="103" text-anchor="middle" font-family="monospace" font-size="14" fill="#64748b">.</text>
+  <text x="700" y="103" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#16a34a">SflKxwRJ...</text>
+
+  <!-- Header -->
+  <rect x="40" y="148" width="250" height="170" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="165" y="176" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#dc2626">1. Header</text>
+  <text x="60" y="206" font-family="monospace" font-size="13" fill="#334155">{</text>
+  <text x="78" y="228" font-family="monospace" font-size="13" fill="#334155">"alg": "RS256",</text>
+  <text x="78" y="250" font-family="monospace" font-size="13" fill="#334155">"typ": "JWT"</text>
+  <text x="60" y="272" font-family="monospace" font-size="13" fill="#334155">}</text>
+  <text x="165" y="300" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">imzo algoritmi</text>
+
+  <!-- Payload -->
+  <rect x="320" y="148" width="260" height="170" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="450" y="176" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#7c3aed">2. Payload (claims)</text>
+  <text x="338" y="204" font-family="monospace" font-size="13" fill="#334155">"iss": "auth.example",</text>
+  <text x="338" y="226" font-family="monospace" font-size="13" fill="#334155">"sub": "user_42",</text>
+  <text x="338" y="248" font-family="monospace" font-size="13" fill="#334155">"aud": "api.example",</text>
+  <text x="338" y="270" font-family="monospace" font-size="13" fill="#334155">"exp": 1735692600,</text>
+  <text x="338" y="292" font-family="monospace" font-size="13" fill="#334155">"iat": 1735689000</text>
+  <text x="450" y="312" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">o'qiladi (shifrlanmagan!)</text>
+
+  <!-- Signature -->
+  <rect x="610" y="148" width="250" height="170" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="735" y="176" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a">3. Signature</text>
+  <text x="735" y="210" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">sign(</text>
+  <text x="735" y="232" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">header + "." + payload,</text>
+  <text x="735" y="254" text-anchor="middle" font-family="monospace" font-size="13" fill="#334155">sir/kalit )</text>
+  <text x="735" y="288" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">faqat server</text>
+  <text x="735" y="307" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">imzolay/tekshira oladi</text>
+
+  <!-- verification box -->
+  <rect x="40" y="346" width="820" height="86" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="450" y="374" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">Imzo tekshirish (stateless)</text>
+  <text x="450" y="400" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Server sir/kalit bilan imzoni qayta hisoblaydi. Mos kelsa -> token haqiqiy, BUZILMAGAN.</text>
+  <text x="450" y="422" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Bazaga bormaydi. Keyin exp (muddat) va aud (manzil) claim'larini ham tekshiradi.</text>
+
+  <!-- warning box -->
+  <rect x="40" y="450" width="820" height="86" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="450" y="478" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#b45309">Diqqat</text>
+  <text x="450" y="504" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">Payload o'qiladi -> sir saqlamang. Bekor qilish (revocation) qiyin -> qisqa muddat + refresh.</text>
+  <text x="450" y="526" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#334155">alg:none va zaif imzoni rad eting: server kutgan algoritmni majburlasin.</text>
+</svg>

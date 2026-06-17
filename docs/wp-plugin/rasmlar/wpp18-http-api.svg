@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430">
+  <title>HTTP API oqimi: wp_remote_get so'rov yuboradi, is_wp_error bilan tarmoq xatosi tekshiriladi, keyin status kodi 200 mi, so'ngra wp_remote_retrieve_body o'qiladi va JSON dekodlanadi</title>
+  <rect x="0" y="0" width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="34" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">HTTP API: so'rov va uch darajali xato tekshiruvi</text>
+
+  <!-- Step 1: wp_remote_get -->
+  <rect x="280" y="58" width="200" height="56" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="82" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#1e40af" text-anchor="middle">wp_remote_get( $url, $args )</text>
+  <text x="380" y="102" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">timeout, headers</text>
+
+  <path d="M380 114 L380 142" stroke="#94a3b8" stroke-width="2"/>
+  <path d="M380 142 l-5 -10 l10 0 z" fill="#94a3b8"/>
+
+  <!-- Decision 1: is_wp_error -->
+  <path d="M380 142 L470 178 L380 214 L290 178 Z" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="380" y="174" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">is_wp_error?</text>
+  <text x="380" y="192" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">tarmoq xatosi</text>
+
+  <!-- HA -> WP_Error -->
+  <path d="M470 178 L590 178" stroke="#dc2626" stroke-width="2"/>
+  <path d="M590 178 l-10 -5 l0 10 z" fill="#dc2626"/>
+  <text x="525" y="168" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626" text-anchor="middle">HA</text>
+  <rect x="590" y="150" width="150" height="56" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="665" y="174" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626" text-anchor="middle">WP_Error</text>
+  <text x="665" y="193" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">qaytar</text>
+
+  <!-- YO'Q (down) -->
+  <path d="M380 214 L380 242" stroke="#16a34a" stroke-width="2"/>
+  <path d="M380 242 l-5 -10 l10 0 z" fill="#16a34a"/>
+  <text x="412" y="234" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a" text-anchor="middle">YO'Q</text>
+
+  <!-- Decision 2: status 200? -->
+  <path d="M380 242 L480 278 L380 314 L280 278 Z" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="380" y="274" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">status kodi</text>
+  <text x="380" y="292" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">== 200?</text>
+
+  <!-- YO'Q -> WP_Error (right) -->
+  <path d="M480 278 L590 278" stroke="#dc2626" stroke-width="2"/>
+  <path d="M590 278 l-10 -5 l0 10 z" fill="#dc2626"/>
+  <text x="535" y="268" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626" text-anchor="middle">YO'Q (404/500)</text>
+  <rect x="590" y="250" width="150" height="56" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="665" y="274" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626" text-anchor="middle">WP_Error</text>
+  <text x="665" y="293" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">status xato</text>
+
+  <!-- HA (down) -->
+  <path d="M380 314 L380 342" stroke="#16a34a" stroke-width="2"/>
+  <path d="M380 342 l-5 -10 l10 0 z" fill="#16a34a"/>
+  <text x="408" y="334" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#16a34a" text-anchor="middle">HA (200)</text>
+
+  <!-- Final: retrieve_body + json -->
+  <rect x="245" y="342" width="270" height="64" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="380" y="367" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">wp_remote_retrieve_body</text>
+  <text x="380" y="388" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">-&gt; json_decode -&gt; toza massiv</text>
+</svg>

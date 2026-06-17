@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 460" font-family="Segoe UI">
+  <title>Bitta funksiyadan boshlab chaqiruvlar zanjirini kuzatish</title>
+  <rect x="0" y="0" width="880" height="460" fill="#f8fafc"/>
+
+  <text x="440" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#1e293b">Ipni tortish: bitta chaqiruvni kuzatish</text>
+  <text x="440" y="68" text-anchor="middle" font-size="14" fill="#64748b">Foydalanuvchi tugmani bosdi. Pul qayerda saqlanadi?</text>
+
+  <!-- Tugun 1: UI -->
+  <rect x="60" y="110" width="200" height="64" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="160" y="138" text-anchor="middle" font-size="15" font-weight="bold" fill="#2563eb">Tugma: handleBuy()</text>
+  <text x="160" y="160" text-anchor="middle" font-size="13" fill="#64748b">UI qatlami</text>
+
+  <!-- Tugun 2: Controller -->
+  <rect x="340" y="110" width="200" height="64" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="440" y="138" text-anchor="middle" font-size="15" font-weight="bold" fill="#7c3aed">createOrder()</text>
+  <text x="440" y="160" text-anchor="middle" font-size="13" fill="#64748b">Controller</text>
+
+  <!-- Tugun 3: Service -->
+  <rect x="620" y="110" width="200" height="64" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="720" y="138" text-anchor="middle" font-size="15" font-weight="bold" fill="#16a34a">chargePayment()</text>
+  <text x="720" y="160" text-anchor="middle" font-size="13" fill="#64748b">Service</text>
+
+  <!-- Tugun 4: Repo -->
+  <rect x="620" y="260" width="200" height="64" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="720" y="288" text-anchor="middle" font-size="15" font-weight="bold" fill="#f59e0b">orderRepo.save()</text>
+  <text x="720" y="310" text-anchor="middle" font-size="13" fill="#64748b">Repository</text>
+
+  <!-- Tugun 5: DB -->
+  <rect x="340" y="260" width="200" height="64" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="440" y="288" text-anchor="middle" font-size="15" font-weight="bold" fill="#dc2626">orders jadvali</text>
+  <text x="440" y="310" text-anchor="middle" font-size="13" fill="#64748b">Ma'lumotlar bazasi = javob!</text>
+
+  <!-- Strelkalar (ip) -->
+  <path d="M260 142 L338 142" stroke="#334155" stroke-width="2.5" marker-end="url(#t)"/>
+  <path d="M540 142 L618 142" stroke="#334155" stroke-width="2.5" marker-end="url(#t)"/>
+  <path d="M720 174 L720 258" stroke="#334155" stroke-width="2.5" marker-end="url(#t)"/>
+  <path d="M620 292 L542 292" stroke="#334155" stroke-width="2.5" marker-end="url(#t)"/>
+
+  <!-- Asbob izohlari -->
+  <rect x="60" y="370" width="760" height="62" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="80" y="398" font-size="14" fill="#334155" font-weight="bold">Har bosqichda asbob:</text>
+  <text x="80" y="420" font-size="13" fill="#64748b">&quot;Go to definition&quot; = keyingi tugunga sakra  &#183;  grep = nomni izla  &#183;  git blame = nega shunday  &#183;  debugger = jonli kuzat</text>
+
+  <defs>
+    <marker id="t" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto">
+      <path d="M0 0 L7 3.5 L0 7 Z" fill="#334155"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400">
+  <title>Certbot oqimi: certbot Let's Encrypt'ga ACME so'rovi yuboradi, Let's Encrypt HTTP-01 challenge bilan domenni tekshiradi, so'ng sertifikat berib, certbot uni nginx config'iga avtomatik o'rnatadi</title>
+  <rect x="0" y="0" width="760" height="400" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Certbot &#8594; Let's Encrypt oqimi</text>
+
+  <!-- certbot quti -->
+  <rect x="40" y="80" width="200" height="100" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="140" y="112" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e40af">Certbot (serverda)</text>
+  <text x="140" y="138" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">certbot --nginx</text>
+  <text x="140" y="158" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">-d example.uz</text>
+
+  <!-- Let's Encrypt quti -->
+  <rect x="520" y="80" width="200" height="100" rx="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="620" y="118" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#6d28d9">Let's Encrypt (CA)</text>
+  <text x="620" y="144" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">ACME server</text>
+  <text x="620" y="164" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">bepul, 90 kun</text>
+
+  <!-- 1: ACME so'rov -->
+  <line x1="240" y1="110" x2="518" y2="110" stroke="#2563eb" stroke-width="3" marker-end="url(#arrB)"/>
+  <text x="380" y="102" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#1e40af">1. ACME so'rov (sertifikat so'raldi)</text>
+
+  <!-- 2: challenge -->
+  <line x1="518" y1="150" x2="242" y2="150" stroke="#7c3aed" stroke-width="3" marker-end="url(#arrP)"/>
+  <text x="380" y="170" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="bold" fill="#6d28d9">2. token ber: HTTP-01 challenge</text>
+
+  <!-- HTTP-01 tekshiruv quti -->
+  <rect x="220" y="220" width="320" height="64" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="380" y="246" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#b45309">3. HTTP-01 tekshiruv (port 80)</text>
+  <text x="380" y="268" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">/.well-known/acme-challenge/&lt;token&gt;</text>
+
+  <line x1="140" y1="180" x2="300" y2="220" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#arrA)"/>
+  <line x1="620" y1="180" x2="460" y2="220" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#arrA)"/>
+
+  <!-- 4: sertifikat -->
+  <rect x="40" y="316" width="320" height="58" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="200" y="340" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#166534">4. sertifikat olindi</text>
+  <text x="200" y="361" text-anchor="middle" font-family="Consolas, monospace" font-size="13" fill="#1e293b">fullchain.pem + privkey.pem</text>
+
+  <!-- 5: nginx'ga o'rnatish -->
+  <rect x="400" y="316" width="320" height="58" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="560" y="340" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" font-weight="bold" fill="#1e40af">5. nginx config'ga avtomatik</text>
+  <text x="560" y="361" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">SSL block + 80&#8594;443 redirect</text>
+
+  <line x1="360" y1="345" x2="398" y2="345" stroke="#16a34a" stroke-width="3" marker-end="url(#arrG)"/>
+
+  <defs>
+    <marker id="arrB" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrP" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#7c3aed"/>
+    </marker>
+    <marker id="arrA" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#f59e0b"/>
+    </marker>
+    <marker id="arrG" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+</svg>

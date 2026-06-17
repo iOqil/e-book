@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" width="800" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Ekranlar orasida ma'lumot oqimi: oldinga konstruktor orqali (DetailPage(item) ga uzatiladi), orqaga await push natijasi sifatida pop(natija) bilan qaytariladi; tanlangan qiymat to'liq aylanib qaytadi</title>
+  <rect x="0" y="0" width="800" height="440" fill="#f8fafc"/>
+  <text x="400" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Ekranlar orasida ma'lumot — borib-kelish</text>
+  <text x="400" y="58" text-anchor="middle" font-size="14" fill="#475569">Oldinga: konstruktor orqali · Orqaga: await push() natijasi (pop bilan)</text>
+
+  <!-- Screen A -->
+  <rect x="70" y="120" width="250" height="200" rx="16" fill="#ffffff" stroke="#027dfd" stroke-width="2.5"/>
+  <rect x="70" y="120" width="250" height="42" rx="16" fill="#027dfd"/>
+  <text x="195" y="147" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">A ekran (ro'yxat)</text>
+  <text x="195" y="190" text-anchor="middle" font-size="14" fill="#1e293b">final natija = await</text>
+  <text x="195" y="212" text-anchor="middle" font-size="14" fill="#1e293b">Navigator.push(...);</text>
+  <text x="195" y="248" text-anchor="middle" font-size="13" fill="#475569">push tugaguncha kutadi,</text>
+  <text x="195" y="268" text-anchor="middle" font-size="13" fill="#475569">keyin "natija" ni oladi</text>
+  <text x="195" y="300" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a">Tanlangan: "Olma"</text>
+
+  <!-- Screen B -->
+  <rect x="480" y="120" width="250" height="200" rx="16" fill="#ffffff" stroke="#6366f1" stroke-width="2.5"/>
+  <rect x="480" y="120" width="250" height="42" rx="16" fill="#6366f1"/>
+  <text x="605" y="147" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">B ekran (tanlovchi)</text>
+  <text x="605" y="190" text-anchor="middle" font-size="14" fill="#1e293b">DetailPage(item: x)</text>
+  <text x="605" y="212" text-anchor="middle" font-size="13" fill="#475569">konstruktordan "x" keldi</text>
+  <text x="605" y="252" text-anchor="middle" font-size="14" fill="#1e293b">Navigator.pop(</text>
+  <text x="605" y="274" text-anchor="middle" font-size="14" fill="#1e293b">context, "Olma");</text>
+  <text x="605" y="304" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a">qiymatni qaytaradi</text>
+
+  <!-- forward arrow (A -> B) via constructor -->
+  <line x1="320" y1="180" x2="478" y2="180" stroke="#16a34a" stroke-width="3"/>
+  <polygon points="478,180 462,172 462,188" fill="#16a34a"/>
+  <text x="399" y="166" text-anchor="middle" font-size="14" font-weight="700" fill="#16a34a">OLDINGA</text>
+  <text x="399" y="206" text-anchor="middle" font-size="13" fill="#475569">push: DetailPage(item)</text>
+
+  <!-- back arrow (B -> A) via pop result -->
+  <line x1="478" y1="270" x2="320" y2="270" stroke="#f59e0b" stroke-width="3"/>
+  <polygon points="320,270 336,262 336,278" fill="#f59e0b"/>
+  <text x="399" y="256" text-anchor="middle" font-size="14" font-weight="700" fill="#f59e0b">ORQAGA</text>
+  <text x="399" y="296" text-anchor="middle" font-size="13" fill="#475569">pop(natija): "Olma"</text>
+
+  <text x="400" y="372" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">To'liq aylanish: A "x" beradi -> B tanlaydi -> A "Olma" ni qabul qiladi</text>
+  <text x="400" y="398" text-anchor="middle" font-size="13" fill="#475569">await bo'lmasa, natija qo'lga kirmaydi — bu eng ko'p uchraydigan xato.</text>
+  <text x="400" y="422" text-anchor="middle" font-size="13" fill="#64748b">Tanlovchi ekran (picker) aynan shunday ishlaydi: tanla -> avtomatik qaytar.</text>
+</svg>

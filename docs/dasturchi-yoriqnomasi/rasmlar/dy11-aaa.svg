@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 520" font-family="Segoe UI">
+  <title>Bitta testning AAA tuzilishi: Arrange tayyorla, Act bajar, Assert tekshir, misol bilan</title>
+  <rect x="0" y="0" width="860" height="520" fill="#f8fafc"/>
+
+  <text x="430" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#1e293b">Bitta testning tuzilishi: AAA</text>
+  <text x="430" y="62" text-anchor="middle" font-size="14" fill="#64748b">Arrange (tayyorla) -- Act (bajar) -- Assert (tekshir)</text>
+
+  <!-- Arrange -->
+  <rect x="60" y="92" width="740" height="110" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="92" y="126" font-size="17" font-weight="bold" fill="#1d4ed8">1. Arrange -- tayyorla</text>
+  <text x="92" y="152" font-size="14" fill="#334155">Kirish ma'lumoti, obyekt va sharoitni qur. Test nimadan boshlanishini belgila.</text>
+  <text x="92" y="184" font-size="14" fill="#1e293b" font-family="monospace">savat = Savat(); savat.qosh("olma", soni=2)</text>
+
+  <line x1="430" y1="206" x2="430" y2="230" stroke="#94a3b8" stroke-width="2" marker-end="url(#a3)"/>
+
+  <!-- Act -->
+  <rect x="60" y="234" width="740" height="100" rx="12" fill="#fff7ed" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="92" y="268" font-size="17" font-weight="bold" fill="#b45309">2. Act -- bajar</text>
+  <text x="92" y="294" font-size="14" fill="#334155">Tekshirilayotgan bitta amalni chaqir -- odatda bitta qator.</text>
+  <text x="92" y="322" font-size="14" fill="#1e293b" font-family="monospace">jami = savat.umumiy_narx()</text>
+
+  <line x1="430" y1="338" x2="430" y2="362" stroke="#94a3b8" stroke-width="2" marker-end="url(#a3)"/>
+
+  <!-- Assert -->
+  <rect x="60" y="366" width="740" height="100" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="92" y="400" font-size="17" font-weight="bold" fill="#166534">3. Assert -- tekshir</text>
+  <text x="92" y="426" font-size="14" fill="#334155">Natija kutilganga mosligini tasdiqla. Test o'zini o'zi tekshiradi.</text>
+  <text x="92" y="454" font-size="14" fill="#1e293b" font-family="monospace">tasdiqla jami == 20000</text>
+
+  <text x="430" y="500" text-anchor="middle" font-size="13" fill="#64748b">Uch qism aniq ajralsa, test o'qiganda o'zini o'zi tushuntiradi -- hujjat kabi</text>
+
+  <defs>
+    <marker id="a3" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+</svg>

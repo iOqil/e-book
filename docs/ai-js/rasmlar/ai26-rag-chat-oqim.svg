@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 580" width="800" height="580" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Bitta so'rovning yo'li (end-to-end). Foydalanuvchi savoli -> RAG retrieve top-k bo'lak -> grounding prompt qurish (cached system + &lt;context&gt;) -> Claude tools bilan, oqimli -> manba keltirilgan oqimli javob chat UI'da. Tools shoxi: searchKnowledgeBase yoki calculator, stopWhen stepCountIs 5.</title>
+  <defs>
+    <marker id="o26a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#0ea5e9"/>
+    </marker>
+    <marker id="o26b" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#d97757"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="800" height="580" fill="#f8fafc"/>
+  <text x="400" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Bitta savolning yo'li — so'rovdan grounded javobgacha</text>
+  <text x="400" y="58" font-size="14" fill="#64748b" text-anchor="middle">Retrieve -> grounding prompt -> Claude (tools, oqim) -> manba bilan javob</text>
+
+  <!-- 1 question -->
+  <rect x="250" y="80" width="300" height="58" rx="10" fill="#ffffff" stroke="#0ea5e9" stroke-width="2.5"/>
+  <text x="400" y="104" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">1. Foydalanuvchi savoli</text>
+  <text x="400" y="126" font-size="13" fill="#64748b" text-anchor="middle">"Tovarni necha kunda qaytarsam bo'ladi?"</text>
+
+  <line x1="400" y1="138" x2="400" y2="166" stroke="#0ea5e9" stroke-width="2.5" marker-end="url(#o26a)"/>
+
+  <!-- 2 retrieve -->
+  <rect x="230" y="170" width="340" height="72" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="400" y="194" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">2. RAG retrieve — top-k bo'lak (18-bob)</text>
+  <text x="400" y="216" font-size="13" fill="#475569" text-anchor="middle">savolni embed -> cosine -> eng yaqin 3-5 bo'lak</text>
+  <text x="400" y="234" font-size="13" fill="#64748b" text-anchor="middle">[qaytarish.md], [tolov.md] ... (manba bilan)</text>
+
+  <line x1="400" y1="242" x2="400" y2="270" stroke="#0ea5e9" stroke-width="2.5" marker-end="url(#o26a)"/>
+
+  <!-- 3 build grounding prompt -->
+  <rect x="210" y="274" width="380" height="90" rx="10" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="400" y="298" font-size="14" font-weight="bold" fill="#6366f1" text-anchor="middle">3. Grounding prompt qurish (05/15/22-bob)</text>
+  <text x="400" y="320" font-size="13" fill="#475569" text-anchor="middle">cached system: "faqat &lt;context&gt; dan, manba keltir, yo'q bo'lsa bilmayman"</text>
+  <text x="400" y="338" font-size="13" fill="#475569" text-anchor="middle">&lt;context&gt; topilgan bo'laklar &lt;/context&gt; — ishonchsiz ma'lumot</text>
+  <text x="400" y="356" font-size="13" fill="#64748b" text-anchor="middle">+ suhbat tarixi + yangi savol</text>
+
+  <line x1="400" y1="364" x2="400" y2="392" stroke="#0ea5e9" stroke-width="2.5" marker-end="url(#o26a)"/>
+
+  <!-- 4 claude with tools -->
+  <rect x="244" y="396" width="312" height="78" rx="10" fill="#ffffff" stroke="#d97757" stroke-width="2.5"/>
+  <text x="400" y="420" font-size="14" font-weight="bold" fill="#d97757" text-anchor="middle">4. Claude — streamText, tools bilan (12-bob)</text>
+  <text x="400" y="442" font-size="13" fill="#475569" text-anchor="middle">claude-opus-4-8 · stopWhen: stepCountIs(5)</text>
+  <text x="400" y="460" font-size="13" fill="#64748b" text-anchor="middle">kerak bo'lsa vositani chaqiradi, keyin javob yozadi</text>
+
+  <!-- tools side branch -->
+  <rect x="600" y="392" width="184" height="86" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="692" y="416" font-size="13.5" font-weight="bold" fill="#f59e0b" text-anchor="middle">tools (12/07-bob)</text>
+  <text x="692" y="438" font-size="13" fill="#475569" text-anchor="middle">searchKnowledgeBase</text>
+  <text x="692" y="456" font-size="13" fill="#475569" text-anchor="middle">calculator</text>
+  <text x="692" y="472" font-size="13" fill="#64748b" text-anchor="middle">inputSchema: z.object</text>
+  <line x1="556" y1="427" x2="596" y2="427" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#o26b)"/>
+  <line x1="596" y1="447" x2="556" y2="447" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#o26b)"/>
+  <text x="576" y="487" font-size="13" fill="#f59e0b" text-anchor="middle">natija</text>
+
+  <line x1="400" y1="474" x2="400" y2="500" stroke="#d97757" stroke-width="2.5" marker-end="url(#o26b)"/>
+
+  <!-- 5 answer in UI -->
+  <rect x="210" y="504" width="380" height="58" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="400" y="528" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">5. Chat UI — manba bilan oqimli javob (13-bob)</text>
+  <text x="400" y="550" font-size="13" fill="#64748b" text-anchor="middle">"14 kun ichida [qaytarish.md]" — token-token, parts</text>
+
+  <!-- left rail labels -->
+  <rect x="20" y="170" width="170" height="392" rx="10" fill="#dbeafe" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="105" y="196" font-size="13.5" font-weight="bold" fill="#0ea5e9" text-anchor="middle">Hammasi serverda</text>
+  <text x="105" y="222" font-size="13" fill="#475569" text-anchor="middle">kalit oshkor emas</text>
+  <text x="105" y="240" font-size="13" fill="#475569" text-anchor="middle">(22-bob)</text>
+  <text x="105" y="276" font-size="13" fill="#475569" text-anchor="middle">RAG hujjati =</text>
+  <text x="105" y="294" font-size="13" fill="#475569" text-anchor="middle">ma'lumot,</text>
+  <text x="105" y="312" font-size="13" fill="#475569" text-anchor="middle">buyruq emas</text>
+  <text x="105" y="348" font-size="13" fill="#475569" text-anchor="middle">xato/retry:</text>
+  <text x="105" y="366" font-size="13" fill="#475569" text-anchor="middle">16-bob</text>
+  <text x="105" y="402" font-size="13" fill="#475569" text-anchor="middle">narx/kesh:</text>
+  <text x="105" y="420" font-size="13" fill="#475569" text-anchor="middle">14/15-bob</text>
+  <text x="105" y="500" font-size="13" fill="#16a34a" text-anchor="middle">yo'q bo'lsa</text>
+  <text x="105" y="518" font-size="13" fill="#16a34a" text-anchor="middle">"bilmayman"</text>
+</svg>

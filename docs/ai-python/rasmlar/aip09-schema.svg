@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400" font-family="Segoe UI, system-ui, sans-serif">
+  <title>json_schema modelni aniq belgilangan shaklga majburlaydi</title>
+  <rect x="0" y="0" width="760" height="400" fill="#f8fafc"/>
+  <text x="380" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">json_schema: modelni aniq shaklga majburlash</text>
+
+  <defs>
+    <marker id="sc-arr" markerWidth="11" markerHeight="11" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#4f46e5"/>
+    </marker>
+  </defs>
+
+  <!-- schema (the mould) -->
+  <rect x="40" y="90" width="220" height="230" rx="14" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <rect x="40" y="90" width="220" height="36" rx="14" fill="#eef2ff"/>
+  <text x="150" y="114" text-anchor="middle" font-size="16" font-weight="700" fill="#4338ca">Sxema (qolip)</text>
+  <text x="58" y="150" font-size="13" font-family="JetBrains Mono, monospace" fill="#1e293b">nom: string</text>
+  <text x="58" y="176" font-size="13" font-family="JetBrains Mono, monospace" fill="#1e293b">narx: number</text>
+  <text x="58" y="202" font-size="13" font-family="JetBrains Mono, monospace" fill="#1e293b">joy: string</text>
+  <text x="58" y="228" font-size="13" font-family="JetBrains Mono, monospace" fill="#1e293b">telefon: string|null</text>
+  <text x="58" y="262" font-size="13" fill="#dc2626">required: barchasi</text>
+  <text x="58" y="290" font-size="13" fill="#64748b">qo'shimcha maydon</text>
+  <text x="58" y="308" font-size="13" fill="#64748b">taqiqlangan</text>
+
+  <!-- model -->
+  <rect x="320" y="150" width="130" height="110" rx="14" fill="#1e293b"/>
+  <text x="385" y="195" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">Model</text>
+  <text x="385" y="222" text-anchor="middle" font-size="13" fill="#cbd5e1">javobni qolipga</text>
+  <text x="385" y="242" text-anchor="middle" font-size="13" fill="#cbd5e1">moslaydi</text>
+
+  <!-- output -->
+  <rect x="510" y="100" width="220" height="100" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <rect x="510" y="100" width="220" height="34" rx="14" fill="#dcfce7"/>
+  <text x="620" y="123" text-anchor="middle" font-size="15" font-weight="700" fill="#166534">Kafolatlangan shakl</text>
+  <text x="528" y="158" font-size="13" font-family="JetBrains Mono, monospace" fill="#16a34a">{"nom":..., "narx":...,</text>
+  <text x="528" y="180" font-size="13" font-family="JetBrains Mono, monospace" fill="#16a34a"> "joy":..., "telefon":...}</text>
+
+  <!-- without schema (contrast) -->
+  <rect x="510" y="230" width="220" height="100" rx="14" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <rect x="510" y="230" width="220" height="34" rx="14" fill="#fee2e2"/>
+  <text x="620" y="253" text-anchor="middle" font-size="15" font-weight="700" fill="#dc2626">Sxemasiz (xavfli)</text>
+  <text x="528" y="288" font-size="13" fill="#1e293b">"Mana sizga JSON:" matni,</text>
+  <text x="528" y="310" font-size="13" fill="#1e293b">yetishmagan maydon, ortiqcha...</text>
+
+  <line x1="262" y1="205" x2="316" y2="205" stroke="#4f46e5" stroke-width="3" marker-end="url(#sc-arr)"/>
+  <line x1="452" y1="180" x2="506" y2="150" stroke="#16a34a" stroke-width="3" marker-end="url(#sc-arr)"/>
+  <line x1="452" y1="230" x2="506" y2="270" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="7 5"/>
+  <text x="478" y="262" font-size="18" fill="#dc2626">✕</text>
+
+  <text x="380" y="362" text-anchor="middle" font-size="14" fill="#475569">Qat'iy sxema bilan model HAR DOIM aynan shu maydon va tiplarda qaytaradi</text>
+  <text x="380" y="388" text-anchor="middle" font-size="13" fill="#64748b">Sxema = quyma qolip: suyuqlik (javob) qaysi shaklda quyilsa, o'sha shaklni oladi</text>
+</svg>

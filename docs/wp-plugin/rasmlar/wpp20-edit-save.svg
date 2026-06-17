@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440">
+  <title>Static blokda edit() funksiyasi muharrir UI ni chizadi, save() esa post_content ga yoziladigan HTML ni qaytaradi; ikkalasining markup tuzilishi mos kelishi shart</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Static blok: edit() va save()</text>
+
+  <!-- edit() panel -->
+  <rect x="30" y="60" width="320" height="300" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="190" y="88" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#1e40af">edit() — muharrirda</text>
+  <text x="190" y="110" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">React komponent, TAHRIRLANADI</text>
+
+  <rect x="55" y="128" width="270" height="64" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="68" y="150" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">RichText (sarlavha) — kursor bilan</text>
+  <text x="68" y="170" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">tahrir qilinadi</text>
+  <text x="68" y="186" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">useBlockProps()</text>
+
+  <rect x="55" y="204" width="270" height="50" rx="6" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="68" y="225" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">InspectorControls (yon panel):</text>
+  <text x="68" y="244" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">TextControl, ToggleControl, rang</text>
+
+  <rect x="55" y="266" width="270" height="76" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="68" y="288" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">attributes — joriy qiymatlar</text>
+  <text x="68" y="308" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">setAttributes — yangilaydi</text>
+  <text x="68" y="330" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(xotirada, hali DB da emas)</text>
+
+  <!-- save() panel -->
+  <rect x="410" y="60" width="320" height="300" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="570" y="88" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="17" font-weight="bold" fill="#16a34a">save() — saqlashda</text>
+  <text x="570" y="110" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">HTML qaytaradi, TAHRIRLANMAYDI</text>
+
+  <rect x="435" y="128" width="270" height="64" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="448" y="150" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">RichText.Content (sarlavha)</text>
+  <text x="448" y="170" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">value={ sarlavha }</text>
+  <text x="448" y="186" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">useBlockProps.save()</text>
+
+  <rect x="435" y="204" width="270" height="138" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="448" y="226" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">post_content ga yoziladi:</text>
+  <text x="448" y="252" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">&lt;div class="kitkat-karta"&gt;</text>
+  <text x="448" y="274" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">  &lt;h3 class="...__sarlavha"&gt;</text>
+  <text x="448" y="296" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">    PHP asoslari&lt;/h3&gt;</text>
+  <text x="448" y="318" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#1e293b">&lt;/div&gt;</text>
+  <text x="448" y="338" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">DB da matn sifatida saqlanadi</text>
+
+  <!-- arrow + warning -->
+  <line x1="350" y1="210" x2="408" y2="210" stroke="#475569" stroke-width="2"/>
+  <polygon points="408,210 398,205 398,215" fill="#475569"/>
+  <rect x="120" y="378" width="520" height="48" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="380" y="400" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">edit va save markupi MOS kelmasa: "block validation" xatosi</text>
+  <text x="380" y="418" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">save() o'zgartirsangiz — eski post deserialize bo'lmaydi</text>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" width="760" height="470" font-family="Segoe UI, system-ui, sans-serif">
+  <title>useMemo qiymatni, useCallback funksiyani keshlaydi va React.memo bilan birga ishlaydi</title>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">Keshlash uchligi: useMemo, useCallback, React.memo</text>
+
+  <!-- useMemo box -->
+  <rect x="40" y="62" width="340" height="160" rx="14" fill="#ffffff" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="210" y="92" text-anchor="middle" font-size="17" font-weight="700" fill="#0ea5e9">useMemo</text>
+  <text x="210" y="114" text-anchor="middle" font-size="14" fill="#475569">QIYMATni (hisob natijasi) keshlaydi</text>
+  <rect x="64" y="128" width="292" height="34" rx="7" fill="#e0f2fe"/>
+  <text x="210" y="150" text-anchor="middle" font-size="13" fill="#1e293b">useMemo(() =&gt; ogirHisob(a), [a])</text>
+  <text x="210" y="184" text-anchor="middle" font-size="13" fill="#475569">deps o'zgarmasa — eski natijani qaytaradi,</text>
+  <text x="210" y="203" text-anchor="middle" font-size="13" fill="#475569">og'ir hisobni QAYTA bajarmaydi</text>
+
+  <!-- useCallback box -->
+  <rect x="40" y="244" width="340" height="160" rx="14" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="210" y="274" text-anchor="middle" font-size="17" font-weight="700" fill="#4f46e5">useCallback</text>
+  <text x="210" y="296" text-anchor="middle" font-size="14" fill="#475569">FUNKSIYAni keshlaydi (barqaror havola)</text>
+  <rect x="64" y="310" width="292" height="34" rx="7" fill="#e0e7ff"/>
+  <text x="210" y="332" text-anchor="middle" font-size="13" fill="#1e293b">useCallback(() =&gt; {...}, [deps])</text>
+  <text x="210" y="366" text-anchor="middle" font-size="13" fill="#475569">deps o'zgarmasa — AYNAN o'sha funksiya,</text>
+  <text x="210" y="385" text-anchor="middle" font-size="13" fill="#475569">har render'da yangidan tug'ilmaydi</text>
+
+  <!-- React.memo box -->
+  <rect x="420" y="120" width="300" height="226" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="570" y="152" text-anchor="middle" font-size="17" font-weight="700" fill="#16a34a">React.memo(Bola)</text>
+  <text x="570" y="176" text-anchor="middle" font-size="14" fill="#475569">komponentni keshlaydi:</text>
+  <text x="570" y="196" text-anchor="middle" font-size="14" fill="#475569">props o'zgarmasa — qayta render YO'Q</text>
+
+  <rect x="446" y="216" width="248" height="46" rx="9" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="570" y="238" text-anchor="middle" font-size="13" fill="#1e293b">props bir xil (barqaror)</text>
+  <text x="570" y="256" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a">render TEJALDI</text>
+
+  <rect x="446" y="276" width="248" height="46" rx="9" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="570" y="298" text-anchor="middle" font-size="13" fill="#1e293b">funksiya-prop har safar yangi bo'lsa,</text>
+  <text x="570" y="316" text-anchor="middle" font-size="13" fill="#b45309">memo befoyda — qayta render</text>
+
+  <!-- arrows: useCallback -> React.memo -->
+  <line x1="380" y1="324" x2="446" y2="290" stroke="#4f46e5" stroke-width="2.5" marker-end="url(#m1)"/>
+  <text x="408" y="296" text-anchor="middle" font-size="13" fill="#4f46e5">barqaror</text>
+  <text x="408" y="310" text-anchor="middle" font-size="13" fill="#4f46e5">funksiya beradi</text>
+
+  <text x="380" y="442" text-anchor="middle" font-size="14" fill="#475569">React.memo + useCallback BIRGA ishlaydi: barqaror funksiya-prop bo'lsa, bola qayta render bo'lmaydi</text>
+  <text x="380" y="461" text-anchor="middle" font-size="13" fill="#94a3b8">Ehtiyot bo'ling: avval o'lchang — har joyga ortiqcha qo'shmang</text>
+
+  <defs>
+    <marker id="m1" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L9,5 L0,10 Z" fill="#4f46e5"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 480" width="780" height="480" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Claude API orqali uzoq MCP serverdan foydalanish (MCP konnektor — eng oddiy yo'l): messages.create ga mcp_servers: [{ type: "url", name, url }] berasiz; Claude o'zi serverga ulanadi, uning vositalarini avtomatik chaqiradi va javob beradi.</title>
+  <defs>
+    <marker id="mc1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="780" height="480" fill="#f8fafc"/>
+  <text x="390" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">MCP konnektor — eng oddiy integratsiya</text>
+  <text x="390" y="58" font-size="14" fill="#64748b" text-anchor="middle">Bitta messages.create chaqiruvi ichida Claude uzoq serverga ulanadi.</text>
+
+  <!-- 1: your code -->
+  <rect x="40" y="90" width="240" height="120" rx="12" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="160" y="116" font-size="15" font-weight="bold" fill="#6366f1" text-anchor="middle">1. Sizning kodingiz</text>
+  <text x="160" y="140" font-size="13" fill="#1e293b" text-anchor="middle">messages.create({</text>
+  <text x="160" y="160" font-size="13" fill="#1e293b" text-anchor="middle">model: "claude-opus-4-8",</text>
+  <text x="160" y="180" font-size="13" fill="#1e293b" text-anchor="middle">mcp_servers: [{ type:"url",</text>
+  <text x="160" y="198" font-size="13" fill="#1e293b" text-anchor="middle">name, url }] })</text>
+
+  <!-- arrow to Claude -->
+  <line x1="280" y1="150" x2="340" y2="150" stroke="#64748b" stroke-width="2" marker-end="url(#mc1)"/>
+
+  <!-- 2: Claude -->
+  <rect x="340" y="90" width="200" height="120" rx="12" fill="#1e293b"/>
+  <text x="440" y="120" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">2. Claude (API)</text>
+  <text x="440" y="148" font-size="13" fill="#94a3b8" text-anchor="middle">serverga avtomatik</text>
+  <text x="440" y="166" font-size="13" fill="#94a3b8" text-anchor="middle">ulanadi va vositalarni</text>
+  <text x="440" y="184" font-size="13" fill="#94a3b8" text-anchor="middle">o'zi chaqiradi</text>
+
+  <!-- arrow to server -->
+  <line x1="540" y1="150" x2="600" y2="150" stroke="#64748b" stroke-width="2" marker-end="url(#mc1)"/>
+  <text x="570" y="140" font-size="13" fill="#64748b" text-anchor="middle">url</text>
+
+  <!-- 3: remote MCP server -->
+  <rect x="600" y="90" width="150" height="120" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="675" y="120" font-size="14" font-weight="bold" fill="#f59e0b" text-anchor="middle">3. Uzoq MCP</text>
+  <text x="675" y="140" font-size="14" font-weight="bold" fill="#f59e0b" text-anchor="middle">server</text>
+  <text x="675" y="166" font-size="13" fill="#475569" text-anchor="middle">masalan: github</text>
+  <text x="675" y="186" font-size="13" fill="#475569" text-anchor="middle">vositalarni ochadi</text>
+
+  <!-- return arrow: server -> claude -->
+  <line x1="600" y1="195" x2="540" y2="195" stroke="#16a34a" stroke-width="2" marker-end="url(#mc1)"/>
+
+  <!-- claude -> answer (down) -->
+  <line x1="440" y1="210" x2="440" y2="270" stroke="#16a34a" stroke-width="2" marker-end="url(#mc1)"/>
+
+  <!-- 4: answer -->
+  <rect x="290" y="274" width="300" height="64" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="440" y="300" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="middle">4. Yakuniy javob</text>
+  <text x="440" y="324" font-size="13" fill="#475569" text-anchor="middle">vosita natijasidan foydalanib qaytadi</text>
+
+  <!-- callout: no manual loop -->
+  <rect x="40" y="370" width="700" height="44" rx="10" fill="#dbeafe" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="390" y="391" font-size="13.5" fill="#1e293b" text-anchor="middle">07-bobdagi qo'lda tool loop SHART EMAS — Claude vositani o'zi chaqiradi va natijani qayta ishlaydi.</text>
+  <text x="390" y="408" font-size="13" fill="#475569" text-anchor="middle">Siz faqat mcp_servers ro'yxatini berasiz.</text>
+
+  <!-- trust warning -->
+  <rect x="40" y="424" width="700" height="40" rx="10" fill="#fef3c7" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="390" y="449" font-size="13" fill="#ef4444" text-anchor="middle">⚠️ Faqat ISHONCHLI serverlarga ulaning — server kuchli amallar bajarishi mumkin (22-bob: xavfsizlik).</text>
+</svg>

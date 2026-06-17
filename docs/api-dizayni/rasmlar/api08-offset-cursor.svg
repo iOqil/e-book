@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560">
+  <title>Offset/limit sahifalash va cursor/keyset sahifalash taqqoslash</title>
+  <rect x="0" y="0" width="880" height="560" fill="#f8fafc"/>
+  <text x="440" y="36" text-anchor="middle" font-family="Segoe UI" font-size="21" font-weight="bold" fill="#1e293b">Offset/limit · va · Cursor/keyset</text>
+  <text x="440" y="60" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Bir xil ro'yxat, ikki xil "keyingi sahifa" strategiyasi</text>
+
+  <!-- OFFSET panel -->
+  <rect x="40" y="88" width="385" height="436" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="64" y="118" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#dc2626">Offset / limit (page-based)</text>
+  <text x="64" y="142" font-family="monospace" font-size="14" fill="#b91c1c">?page=3&amp;per_page=20</text>
+  <text x="64" y="162" font-family="Segoe UI" font-size="13" fill="#64748b">"40 tadan keyingi 20 tani ber" — DB OFFSET 40</text>
+
+  <!-- offset diagram: bar with skipped region -->
+  <rect x="64" y="184" width="320" height="34" rx="4" fill="#fee2e2" stroke="#fca5a5"/>
+  <text x="74" y="206" font-family="monospace" font-size="13" fill="#991b1b">tashlab ketilgan 0..39 (sanaladi!)</text>
+  <rect x="64" y="222" width="120" height="34" rx="4" fill="#dcfce7" stroke="#86efac"/>
+  <text x="74" y="244" font-family="monospace" font-size="13" fill="#166534">40..59</text>
+
+  <text x="64" y="290" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">Muammo: siljish (drift)</text>
+  <text x="64" y="314" font-family="Segoe UI" font-size="13" fill="#334155">2-sahifa o'qilgach yangi qator qo'shilsa —</text>
+  <text x="64" y="334" font-family="Segoe UI" font-size="13" fill="#334155">hamma element bir pozitsiya suriladi:</text>
+  <text x="64" y="356" font-family="monospace" font-size="13" fill="#b91c1c">→ dublikat yoki o'tkazib yuborilgan qator</text>
+
+  <text x="64" y="396" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#dc2626">Muammo: katta offset sekin</text>
+  <text x="64" y="420" font-family="Segoe UI" font-size="13" fill="#334155">OFFSET 1000000 — DB shuncha qatorni</text>
+  <text x="64" y="440" font-family="Segoe UI" font-size="13" fill="#334155">sanab o'tib tashlaydi. O(offset).</text>
+  <text x="64" y="478" font-family="Segoe UI" font-size="13" fill="#16a34a">+ Ixtiyoriy sahifaga sakrash mumkin</text>
+  <text x="64" y="500" font-family="Segoe UI" font-size="13" fill="#16a34a">+ Sodda, jami sahifa sonini ko'rsatadi</text>
+
+  <!-- CURSOR panel -->
+  <rect x="455" y="88" width="385" height="436" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="479" y="118" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a">Cursor / keyset</text>
+  <text x="479" y="142" font-family="monospace" font-size="14" fill="#15803d">?limit=20&amp;after=eyJpZCI6NTl9</text>
+  <text x="479" y="162" font-family="Segoe UI" font-size="13" fill="#64748b">"oxirgi ko'rgan elementdan KEYIN 20 ta"</text>
+
+  <!-- cursor diagram: pointer at boundary -->
+  <rect x="479" y="184" width="120" height="34" rx="4" fill="#dcfce7" stroke="#86efac"/>
+  <text x="489" y="206" font-family="monospace" font-size="13" fill="#166534">...id=59</text>
+  <line x1="599" y1="180" x2="599" y2="262" stroke="#16a34a" stroke-width="2" stroke-dasharray="4 3"/>
+  <text x="605" y="178" font-family="monospace" font-size="13" fill="#15803d">cursor</text>
+  <rect x="600" y="222" width="180" height="34" rx="4" fill="#e0e7ff" stroke="#a5b4fc"/>
+  <text x="610" y="244" font-family="monospace" font-size="13" fill="#3730a3">WHERE id &gt; 59 LIMIT 20</text>
+
+  <text x="479" y="290" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">Barqaror</text>
+  <text x="479" y="314" font-family="Segoe UI" font-size="13" fill="#334155">Cursor pozitsiyaga emas, QIYMATGA bog'liq.</text>
+  <text x="479" y="334" font-family="Segoe UI" font-size="13" fill="#334155">Yangi qator qo'shilsa ham siljish yo'q.</text>
+
+  <text x="479" y="374" font-family="Segoe UI" font-size="14" font-weight="bold" fill="#16a34a">Tez (indeksli)</text>
+  <text x="479" y="398" font-family="Segoe UI" font-size="13" fill="#334155">WHERE id &gt; 59 — indeks bo'yicha sakrash.</text>
+  <text x="479" y="418" font-family="Segoe UI" font-size="13" fill="#334155">Offset hajmidan mustaqil. O(limit).</text>
+
+  <text x="479" y="456" font-family="Segoe UI" font-size="13" fill="#dc2626">− Ixtiyoriy sahifaga sakrab bo'lmaydi</text>
+  <text x="479" y="478" font-family="Segoe UI" font-size="13" fill="#dc2626">− Cursor opaque, barqaror tartib shart</text>
+  <text x="479" y="500" font-family="Segoe UI" font-size="13" fill="#64748b">Cheksiz scroll / katta dataset uchun afzal</text>
+</svg>

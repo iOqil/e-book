@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560" width="880" height="560">
+  <title>Monolit va mikroservis yonma-yon: tuzilma, deploy birligi va ma'lumotlar bazasi taqqoslangan</title>
+  <rect x="0" y="0" width="880" height="560" fill="#f8fafc"/>
+  <text x="440" y="34" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b" text-anchor="middle">Monolit va mikroservis — bir xil tizim, ikki uslub</text>
+  <text x="440" y="58" font-family="Segoe UI" font-size="14" fill="#64748b" text-anchor="middle">Ikkalasi ham to'g'ri tanlov bo'lishi mumkin — kontekstga bog'liq (trade-off)</text>
+
+  <defs>
+    <marker id="m16a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#334155"/>
+    </marker>
+  </defs>
+
+  <!-- ============ CHAP: MONOLIT ============ -->
+  <rect x="30" y="80" width="390" height="450" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="225" y="108" font-family="Segoe UI" font-size="18" font-weight="bold" fill="#2563eb" text-anchor="middle">MONOLIT</text>
+  <text x="225" y="130" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">bitta deploy birligi, bitta jarayon</text>
+
+  <!-- Bitta deploy birligi quti -->
+  <rect x="60" y="148" width="330" height="200" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2" stroke-dasharray="6,4"/>
+  <text x="225" y="170" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#2563eb" text-anchor="middle">1 deploy birligi (1 .jar / 1 image)</text>
+
+  <rect x="80" y="185" width="130" height="46" rx="6" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="145" y="213" font-family="Segoe UI" font-size="13" fill="#1e293b" text-anchor="middle">Buyurtma</text>
+  <rect x="240" y="185" width="130" height="46" rx="6" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="305" y="213" font-family="Segoe UI" font-size="13" fill="#1e293b" text-anchor="middle">To'lov</text>
+  <rect x="80" y="245" width="130" height="46" rx="6" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="145" y="273" font-family="Segoe UI" font-size="13" fill="#1e293b" text-anchor="middle">Ombor</text>
+  <rect x="240" y="245" width="130" height="46" rx="6" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="305" y="273" font-family="Segoe UI" font-size="13" fill="#1e293b" text-anchor="middle">Bildirishnoma</text>
+  <text x="225" y="320" font-family="Segoe UI" font-size="13" font-style="italic" fill="#64748b" text-anchor="middle">aloqa = jarayon ichidagi metod chaqiruvi</text>
+  <text x="225" y="338" font-family="Segoe UI" font-size="13" font-style="italic" fill="#64748b" text-anchor="middle">(sinxron, deyarli bepul, yiqilmaydi)</text>
+
+  <!-- Bitta DB -->
+  <ellipse cx="225" cy="378" rx="60" ry="14" fill="#bfdbfe" stroke="#2563eb"/>
+  <rect x="165" y="378" width="120" height="42" fill="#bfdbfe" stroke="#2563eb"/>
+  <ellipse cx="225" cy="420" rx="60" ry="14" fill="#bfdbfe" stroke="#2563eb"/>
+  <text x="225" y="404" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#1e3a8a" text-anchor="middle">1 umumiy DB</text>
+
+  <text x="225" y="460" font-family="Segoe UI" font-size="13" fill="#16a34a" text-anchor="middle">+ sodda deploy/test/debug, ACID tranzaksiya oson</text>
+  <text x="225" y="480" font-family="Segoe UI" font-size="13" fill="#16a34a" text-anchor="middle">+ kichik jamoa, tez boshlash</text>
+  <text x="225" y="502" font-family="Segoe UI" font-size="13" fill="#dc2626" text-anchor="middle">- katta bo'lganda bitta nuqtada masshtab,</text>
+  <text x="225" y="520" font-family="Segoe UI" font-size="13" fill="#dc2626" text-anchor="middle">deploy sekinlashadi, modullar chigallashishi mumkin</text>
+
+  <!-- ============ O'NG: MIKROSERVIS ============ -->
+  <rect x="460" y="80" width="390" height="450" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="655" y="108" font-family="Segoe UI" font-size="18" font-weight="bold" fill="#16a34a" text-anchor="middle">MIKROSERVISLAR</text>
+  <text x="655" y="130" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">har servis mustaqil deploy, alohida DB</text>
+
+  <!-- 4 ta mustaqil servis, har biri o'z DB bilan -->
+  <!-- Buyurtma -->
+  <rect x="485" y="150" width="160" height="56" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="565" y="174" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#166534" text-anchor="middle">Buyurtma servisi</text>
+  <text x="565" y="194" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">mustaqil deploy</text>
+  <ellipse cx="565" cy="226" rx="34" ry="9" fill="#dcfce7" stroke="#16a34a"/>
+  <rect x="531" y="226" width="68" height="22" fill="#dcfce7" stroke="#16a34a"/>
+  <ellipse cx="565" cy="248" rx="34" ry="9" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="565" y="242" font-family="Segoe UI" font-size="13" fill="#166534" text-anchor="middle">DB</text>
+
+  <!-- To'lov -->
+  <rect x="665" y="150" width="160" height="56" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="745" y="174" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#166534" text-anchor="middle">To'lov servisi</text>
+  <text x="745" y="194" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">o'z texnologiyasi</text>
+  <ellipse cx="745" cy="226" rx="34" ry="9" fill="#dcfce7" stroke="#16a34a"/>
+  <rect x="711" y="226" width="68" height="22" fill="#dcfce7" stroke="#16a34a"/>
+  <ellipse cx="745" cy="248" rx="34" ry="9" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="745" y="242" font-family="Segoe UI" font-size="13" fill="#166534" text-anchor="middle">DB</text>
+
+  <!-- Ombor -->
+  <rect x="485" y="278" width="160" height="56" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="565" y="302" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#166534" text-anchor="middle">Ombor servisi</text>
+  <text x="565" y="322" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">alohida masshtab</text>
+  <ellipse cx="565" cy="354" rx="34" ry="9" fill="#dcfce7" stroke="#16a34a"/>
+  <rect x="531" y="354" width="68" height="22" fill="#dcfce7" stroke="#16a34a"/>
+  <ellipse cx="565" cy="376" rx="34" ry="9" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="565" y="370" font-family="Segoe UI" font-size="13" fill="#166534" text-anchor="middle">DB</text>
+
+  <!-- Bildirishnoma -->
+  <rect x="665" y="278" width="160" height="56" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="745" y="302" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#166534" text-anchor="middle">Bildirishnoma</text>
+  <text x="745" y="322" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">mustaqil jamoa</text>
+  <ellipse cx="745" cy="354" rx="34" ry="9" fill="#dcfce7" stroke="#16a34a"/>
+  <rect x="711" y="354" width="68" height="22" fill="#dcfce7" stroke="#16a34a"/>
+  <ellipse cx="745" cy="376" rx="34" ry="9" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="745" y="370" font-family="Segoe UI" font-size="13" fill="#166534" text-anchor="middle">DB</text>
+
+  <!-- tarmoq aloqasi (o'qlar) -->
+  <line x1="645" y1="178" x2="665" y2="178" stroke="#f59e0b" stroke-width="2" marker-end="url(#m16a)"/>
+  <line x1="565" y1="206" x2="565" y2="278" stroke="#f59e0b" stroke-width="2" marker-end="url(#m16a)"/>
+  <line x1="645" y1="306" x2="665" y2="306" stroke="#f59e0b" stroke-width="2" marker-end="url(#m16a)"/>
+  <text x="655" y="404" font-family="Segoe UI" font-size="13" font-style="italic" fill="#b45309" text-anchor="middle">aloqa = TARMOQ (REST/gRPC/event)</text>
+  <text x="655" y="421" font-family="Segoe UI" font-size="13" font-style="italic" fill="#b45309" text-anchor="middle">kechikadi, yiqilishi mumkin, xavfsizlik kerak</text>
+
+  <text x="655" y="450" font-family="Segoe UI" font-size="13" fill="#16a34a" text-anchor="middle">+ mustaqil deploy/masshtab/jamoa, texnologiya erkin</text>
+  <text x="655" y="470" font-family="Segoe UI" font-size="13" fill="#16a34a" text-anchor="middle">+ bitta servis yiqilsa boshqasi ishlayveradi</text>
+  <text x="655" y="492" font-family="Segoe UI" font-size="13" fill="#dc2626" text-anchor="middle">- distributed murakkablik: tarmoq, consistency,</text>
+  <text x="655" y="510" font-family="Segoe UI" font-size="13" fill="#dc2626" text-anchor="middle">observability, DevOps yetukligi shart (NARX)</text>
+</svg>

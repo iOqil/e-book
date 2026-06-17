@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440">
+  <title>Block markup sintaksisi: wp:group ochuvchi/yopuvchi va wp:post-title self-closing, JSON atribut bilan</title>
+  <rect width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Block markup sintaksisi</text>
+
+  <!-- konteyner blok -->
+  <text x="30" y="68" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">1) Konteyner blok (ochuvchi + yopuvchi)</text>
+
+  <!-- opening comment line -->
+  <rect x="30" y="80" width="700" height="40" rx="6" fill="#e0f2fe" stroke="#2563eb"/>
+  <text x="44" y="105" font-family="Consolas, monospace" font-size="15" fill="#1e293b">&lt;!-- wp:group {"layout":{"type":"constrained"}} --&gt;</text>
+
+  <!-- callouts -->
+  <text x="92" y="138" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">blok nomi</text>
+  <line x1="110" y1="124" x2="110" y2="113" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="330" y="138" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#d97706">JSON atributlar</text>
+  <line x1="360" y1="124" x2="360" y2="113" stroke="#d97706" stroke-width="1.5"/>
+
+  <!-- html in between -->
+  <rect x="60" y="148" width="640" height="34" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-dasharray="4,3"/>
+  <text x="74" y="170" font-family="Consolas, monospace" font-size="14" fill="#475569">&lt;div class="wp-block-group"&gt; ... ichki bloklar ... &lt;/div&gt;</text>
+  <text x="74" y="200" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">(saqlangan HTML — editor buni qayta yaratadi)</text>
+
+  <!-- closing comment -->
+  <rect x="30" y="210" width="700" height="40" rx="6" fill="#e0f2fe" stroke="#2563eb"/>
+  <text x="44" y="235" font-family="Consolas, monospace" font-size="15" fill="#1e293b">&lt;!-- /wp:group --&gt;</text>
+  <text x="92" y="268" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">yopuvchi:  /wp:nom</text>
+  <line x1="100" y1="254" x2="100" y2="243" stroke="#dc2626" stroke-width="1.5"/>
+
+  <!-- self closing -->
+  <text x="30" y="312" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">2) Self-closing blok (ichki HTML yo'q)</text>
+  <rect x="30" y="324" width="700" height="40" rx="6" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="44" y="349" font-family="Consolas, monospace" font-size="15" fill="#1e293b">&lt;!-- wp:post-title {"level":1,"isLink":true} /--&gt;</text>
+  <text x="600" y="382" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">oxiri  /--&gt;</text>
+  <line x1="650" y1="368" x2="650" y2="357" stroke="#16a34a" stroke-width="1.5"/>
+
+  <!-- note -->
+  <rect x="30" y="396" width="700" height="34" rx="6" fill="#fef9c3" stroke="#d97706"/>
+  <text x="44" y="418" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#92400e">Atributlar har doim YAROQLI JSON bo'lishi shart: qo'shtirnoq " (bittalik emas), vergul to'g'ri joyda.</text>
+</svg>

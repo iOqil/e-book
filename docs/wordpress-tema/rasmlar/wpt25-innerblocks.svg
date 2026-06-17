@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440">
+  <title>InnerBlocks: ota blok ichida bola bloklar, template va allowedBlocks bilan</title>
+  <rect width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">InnerBlocks — ota blok ichida bola bloklar</text>
+
+  <!-- Ota blok -->
+  <rect x="40" y="64" width="380" height="336" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="60" y="92" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">Ota blok (kitob/karta-konteyner)</text>
+  <text x="60" y="114" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">&lt;div {...useInnerBlocksProps()} /&gt;</text>
+
+  <!-- Bola bloklar -->
+  <rect x="64" y="132" width="332" height="56" rx="7" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="80" y="156" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#166534">core/heading</text>
+  <text x="80" y="176" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">"Karta sarlavhasi" (template)</text>
+
+  <rect x="64" y="200" width="332" height="56" rx="7" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="80" y="224" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#166534">core/paragraph</text>
+  <text x="80" y="244" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">"Karta matni..." (template)</text>
+
+  <rect x="64" y="268" width="332" height="56" rx="7" fill="#fef9c3" stroke="#d97706" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="80" y="292" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#92400e">+ core/image / core/buttons</text>
+  <text x="80" y="312" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">foydalanuvchi qo'shadi (allowedBlocks)</text>
+
+  <text x="64" y="356" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">templateLock: false  —  qo'shish/o'chirish</text>
+  <text x="64" y="378" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">orientation: 'vertical'</text>
+
+  <!-- O'q -->
+  <line x1="430" y1="232" x2="500" y2="232" stroke="#475569" stroke-width="2.5" marker-end="url(#a25)"/>
+  <defs>
+    <marker id="a25" markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto">
+      <path d="M0,0 L11,5.5 L0,11 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- edit va save -->
+  <rect x="510" y="92" width="220" height="138" rx="9" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="526" y="118" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e40af">edit()</text>
+  <text x="526" y="142" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#334155">useInnerBlocksProps(</text>
+  <text x="526" y="162" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#334155">  blockProps,</text>
+  <text x="526" y="182" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#334155">  { allowedBlocks,</text>
+  <text x="526" y="202" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#334155">    template } )</text>
+
+  <rect x="510" y="250" width="220" height="120" rx="9" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="526" y="276" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#166534">save()</text>
+  <text x="526" y="300" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#334155">useInnerBlocksProps</text>
+  <text x="526" y="320" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#334155">  .save( blockProps )</text>
+  <text x="526" y="346" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">(yoki &lt;InnerBlocks.Content/&gt;)</text>
+
+  <text x="380" y="424" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#64748b">Bola bloklar markupi save'da InnerBlocks.Content o'rniga avtomatik joylanadi</text>
+</svg>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" font-family="Segoe UI, system-ui, sans-serif">
+  <title>LLM-as-judge: baholanadigan chiqish + rubrika (mezon) alohida Claude (sudya) chaqiruviga beriladi, u strukturali { score, passed, reasoning } qaytaradi. AI bilan AI ni baholash; aniq rubrika kerak, bias ni unutmang</title>
+  <defs>
+    <marker id="ar23c" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#d97757"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="800" height="450" fill="#f8fafc"/>
+  <text x="400" y="32" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">LLM-as-judge — AI bilan AI ni baholash</text>
+  <text x="400" y="56" font-size="14" fill="#64748b" text-anchor="middle">Kod qaror qila olmaydigan, subyektiv sifat uchun (foydalilik, ohang, to'g'rilik)</text>
+
+  <!-- input: output to grade -->
+  <rect x="40" y="96" width="220" height="84" rx="10" fill="#dbeafe" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="150" y="122" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Baholanadigan chiqish</text>
+  <text x="150" y="146" font-size="13" fill="#475569" text-anchor="middle">(istalgan modeldan —</text>
+  <text x="150" y="166" font-size="13" fill="#475569" text-anchor="middle">Haiku, Sonnet, Opus...)</text>
+
+  <!-- input: rubric -->
+  <rect x="40" y="208" width="220" height="100" rx="10" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="150" y="234" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Rubrika (mezon)</text>
+  <text x="150" y="258" font-size="13" fill="#475569" text-anchor="middle">"To'g'ri va xushmuomalami?</text>
+  <text x="150" y="278" font-size="13" fill="#475569" text-anchor="middle">0-5 ball ber, sababini</text>
+  <text x="150" y="298" font-size="13" fill="#475569" text-anchor="middle">tushuntir."</text>
+
+  <!-- arrows into judge -->
+  <line x1="260" y1="138" x2="328" y2="178" stroke="#d97757" stroke-width="2.5" marker-end="url(#ar23c)"/>
+  <line x1="260" y1="258" x2="328" y2="222" stroke="#d97757" stroke-width="2.5" marker-end="url(#ar23c)"/>
+
+  <!-- judge (separate Claude) -->
+  <rect x="332" y="148" width="180" height="104" rx="14" fill="#9333ea" stroke="#475569" stroke-width="2"/>
+  <text x="422" y="186" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Sudya (judge)</text>
+  <text x="422" y="210" font-size="14" fill="#ffffff" text-anchor="middle">ALOHIDA Claude</text>
+  <text x="422" y="232" font-size="13" fill="#e0e7ff" text-anchor="middle">messages.parse() — 06-bob</text>
+
+  <!-- arrow to output -->
+  <line x1="512" y1="200" x2="572" y2="200" stroke="#d97757" stroke-width="2.5" marker-end="url(#ar23c)"/>
+
+  <!-- structured result -->
+  <rect x="576" y="138" width="188" height="124" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="670" y="164" font-size="14" font-weight="bold" fill="#16a34a" text-anchor="middle">Strukturali natija</text>
+  <text x="592" y="190" font-size="13" fill="#1e293b" text-anchor="start" font-family="Consolas, monospace">{ score: 4,</text>
+  <text x="592" y="212" font-size="13" fill="#1e293b" text-anchor="start" font-family="Consolas, monospace">  passed: true,</text>
+  <text x="592" y="234" font-size="13" fill="#1e293b" text-anchor="start" font-family="Consolas, monospace">  reasoning: "..." }</text>
+  <text x="670" y="254" font-size="13" fill="#475569" text-anchor="middle">Zod sxema bilan</text>
+
+  <!-- caution box -->
+  <rect x="40" y="334" width="724" height="96" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="402" y="358" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Aniq rubrika tuzing, bias ni unutmang</text>
+  <text x="56" y="382" font-size="13" fill="#1e293b" text-anchor="start">• Mezon noaniq bo'lsa, sudya ham noaniq baho beradi — rubrikani aniq va o'lchovli yozing</text>
+  <text x="56" y="404" font-size="13" fill="#1e293b" text-anchor="start">• Sudya tarafkash bo'lishi mumkin (uzun javobni afzal ko'rish, o'z uslubini yoqtirish)</text>
+  <text x="56" y="424" font-size="13" fill="#1e293b" text-anchor="start">• Ishonch uchun: bir nechta sudyani o'rtalang (ensemble) yoki muhim holatlarni qo'lda tekshiring</text>
+</svg>

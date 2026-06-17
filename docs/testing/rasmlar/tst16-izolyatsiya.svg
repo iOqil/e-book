@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 470">
+  <title>DB izolyatsiya strategiyalari: tranzaksiya-rollback, tozalash, yangi DB</title>
+  <rect x="0" y="0" width="820" height="470" fill="#f8fafc"/>
+  <text x="410" y="38" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">Test izolyatsiyasi: uch strategiya</text>
+  <text x="410" y="64" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Har test toza holatdan boshlasin — aks holda testlar tartibga bog'lanadi</text>
+
+  <!-- Strategiya 1: rollback -->
+  <rect x="40" y="100" width="230" height="320" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="155" y="132" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#16a34a">1. Tranzaksiya + rollback</text>
+  <rect x="70" y="152" width="170" height="38" rx="7" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="155" y="176" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#1e293b">BEGIN (setup)</text>
+  <rect x="70" y="200" width="170" height="38" rx="7" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="155" y="224" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#1e293b">test ishlaydi</text>
+  <rect x="70" y="248" width="170" height="38" rx="7" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="155" y="272" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#1e293b">ROLLBACK (teardown)</text>
+  <text x="155" y="324" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#16a34a">Tezlik: eng tez</text>
+  <text x="155" y="350" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#475569">Diskka yozilmaydi</text>
+  <text x="155" y="372" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">Kod ichida commit bo'lsa</text>
+  <text x="155" y="392" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#dc2626">ishlamaydi</text>
+
+  <!-- Strategiya 2: tozalash -->
+  <rect x="295" y="100" width="230" height="320" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="410" y="132" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#2563eb">2. Tozalash (delete)</text>
+  <rect x="325" y="152" width="170" height="38" rx="7" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="410" y="176" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#1e293b">test ishlaydi</text>
+  <rect x="325" y="200" width="170" height="38" rx="7" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="410" y="224" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#1e293b">DELETE / TRUNCATE</text>
+  <rect x="325" y="248" width="170" height="38" rx="7" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="410" y="272" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#1e293b">jadval bo'sh</text>
+  <text x="410" y="324" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb">Tezlik: o'rta</text>
+  <text x="410" y="350" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#475569">Soddaroq tushuniladi</text>
+  <text x="410" y="372" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#475569">Commit muammosidan xoli</text>
+  <text x="410" y="392" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#475569">Chet kalit tartibiga e'tibor</text>
+
+  <!-- Strategiya 3: yangi DB -->
+  <rect x="550" y="100" width="230" height="320" rx="12" fill="#faf5ff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="665" y="132" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#7c3aed">3. Har test: yangi DB</text>
+  <rect x="580" y="152" width="170" height="38" rx="7" fill="#ffffff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="665" y="176" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#1e293b">yangi DB + migratsiya</text>
+  <rect x="580" y="200" width="170" height="38" rx="7" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="665" y="224" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#1e293b">test ishlaydi</text>
+  <rect x="580" y="248" width="170" height="38" rx="7" fill="#ffffff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="665" y="272" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#1e293b">DB tashlanadi</text>
+  <text x="665" y="324" text-anchor="middle" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#dc2626">Tezlik: sekin</text>
+  <text x="665" y="350" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#475569">Izolyatsiya: eng kuchli</text>
+  <text x="665" y="372" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#475569">Sxema/migratsiya testi</text>
+  <text x="665" y="392" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#475569">uchun ideal</text>
+
+  <text x="410" y="450" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Standart tanlov: tranzaksiya-rollback (eng tez). Commit bo'lsa -> 2 yoki 3</text>
+</svg>

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Model chiqishini xavfsiz qayta ishlash. Xavfli: model chiqishini to'g'ridan-to'g'ri eval() qilish, SQL/shell sifatida ishga tushirish, sanitatsiyasiz HTML chiqarish — bu kod injection, SQL injection va XSS xavfi. Xavfsiz: model chiqishini ishonchsiz kirish deb biling — Zod bilan validatsiya, DB so'rovini parametrlash, render oldidan sanitatsiya, muhim amallarni inson tasdig'i bilan gating.</title>
+  <defs>
+    <marker id="oo_r" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#ef4444"/>
+    </marker>
+    <marker id="oo_g" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="800" height="500" fill="#f8fafc"/>
+  <text x="400" y="34" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Model chiqishi — uni ishonchsiz kirish deb biling</text>
+  <text x="400" y="58" font-size="14" fill="#64748b" text-anchor="middle">Chiqishni ko'r-ko'rona bajarmang; avval tekshiring, parametrlang, sanitatsiya qiling</text>
+
+  <!-- source -->
+  <rect x="310" y="80" width="180" height="56" rx="10" fill="#d97757"/>
+  <text x="400" y="106" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">Model chiqishi</text>
+  <text x="400" y="126" font-size="13" fill="#ffffff" text-anchor="middle">(matn / kod / SQL)</text>
+
+  <line x1="340" y1="136" x2="220" y2="172" stroke="#ef4444" stroke-width="2.5" marker-end="url(#oo_r)"/>
+  <line x1="460" y1="136" x2="580" y2="172" stroke="#16a34a" stroke-width="2.5" marker-end="url(#oo_g)"/>
+
+  <!-- DANGER -->
+  <rect x="30" y="178" width="350" height="296" rx="14" fill="#fef3c7" stroke="#ef4444" stroke-width="2.5"/>
+  <text x="205" y="206" font-size="17" font-weight="bold" fill="#ef4444" text-anchor="middle">☠️ Xavfli — to'g'ridan bajarish</text>
+
+  <rect x="54" y="222" width="302" height="58" rx="9" fill="#ffffff" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="68" y="245" font-size="13" fill="#ef4444" text-anchor="start" font-family="Consolas, monospace">eval(modelKodi)</text>
+  <text x="68" y="267" font-size="13" fill="#475569" text-anchor="start">→ ixtiyoriy kod ishga tushadi</text>
+
+  <rect x="54" y="290" width="302" height="58" rx="9" fill="#ffffff" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="68" y="313" font-size="13" fill="#ef4444" text-anchor="start" font-family="Consolas, monospace">db.query(modelSQL)</text>
+  <text x="68" y="335" font-size="13" fill="#475569" text-anchor="start">→ SQL injection, jadval o'chadi</text>
+
+  <rect x="54" y="358" width="302" height="58" rx="9" fill="#ffffff" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="68" y="381" font-size="13" fill="#ef4444" text-anchor="start" font-family="Consolas, monospace">el.innerHTML = chiqish</text>
+  <text x="68" y="403" font-size="13" fill="#475569" text-anchor="start">→ XSS (zararli skript)</text>
+
+  <text x="205" y="448" font-size="15" font-weight="bold" fill="#ef4444" text-anchor="middle">Chiqishga ishonib bo'lmaydi</text>
+  <text x="205" y="468" font-size="13" fill="#64748b" text-anchor="middle">injection orqali tizimni egallashadi</text>
+
+  <!-- SAFE -->
+  <rect x="420" y="178" width="350" height="296" rx="14" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="595" y="206" font-size="17" font-weight="bold" fill="#16a34a" text-anchor="middle">✅ Xavfsiz — tekshirib ishlat</text>
+
+  <rect x="444" y="222" width="302" height="42" rx="9" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="595" y="248" font-size="13" fill="#1e293b" text-anchor="middle">1. Zod bilan validatsiya (sxema)</text>
+
+  <rect x="444" y="270" width="302" height="42" rx="9" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="595" y="296" font-size="13" fill="#1e293b" text-anchor="middle">2. DB: parametrlash + allowlist</text>
+
+  <rect x="444" y="318" width="302" height="42" rx="9" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="595" y="344" font-size="13" fill="#1e293b" text-anchor="middle">3. Render oldidan sanitatsiya (XSS)</text>
+
+  <rect x="444" y="366" width="302" height="42" rx="9" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="595" y="392" font-size="13" font-weight="bold" fill="#1e293b" text-anchor="middle">4. Muhim amal → inson tasdig'i</text>
+
+  <text x="595" y="438" font-size="15" font-weight="bold" fill="#16a34a" text-anchor="middle">eval() / Function() YO'Q</text>
+  <text x="595" y="458" font-size="13" fill="#64748b" text-anchor="middle">chiqishni user kiritishidek tekshiring</text>
+</svg>

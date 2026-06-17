@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 470" font-family="Segoe UI">
+  <title>Bus factor: bilim bir kishida joylashgan xavfli holat va hujjat orqali tarqatilgan xavfsiz holat taqqoslovi</title>
+  <rect x="0" y="0" width="860" height="470" fill="#f8fafc"/>
+
+  <text x="430" y="36" text-anchor="middle" font-size="22" font-weight="bold" fill="#1e293b">Bus factor: bilim qayerda?</text>
+  <text x="430" y="60" text-anchor="middle" font-size="14" fill="#64748b">"Necha kishi 'g'oyib bo'lsa' loyiha to'xtaydi?"</text>
+
+  <!-- LEFT: risky -->
+  <rect x="40" y="86" width="370" height="340" rx="12" fill="#fef2f2" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="225" y="116" text-anchor="middle" font-size="17" font-weight="bold" fill="#991b1b">Bus factor = 1 (xavfli)</text>
+  <text x="225" y="140" text-anchor="middle" font-size="13" fill="#334155">Bilim faqat bitta kishining boshida</text>
+
+  <!-- one person holding all knowledge -->
+  <circle cx="225" cy="210" r="30" fill="#dc2626"/>
+  <circle cx="225" cy="200" r="11" fill="#fff"/>
+  <path d="M207 230 q18 -20 36 0 z" fill="#fff"/>
+  <text x="225" y="262" text-anchor="middle" font-size="13" font-weight="bold" fill="#991b1b">Aziz (yagona biluvchi)</text>
+
+  <!-- knowledge clouds attached to single person -->
+  <g font-size="13" fill="#1e293b">
+    <rect x="78" y="290" width="130" height="30" rx="8" fill="#fff" stroke="#dc2626" stroke-width="1.5"/>
+    <text x="143" y="310" text-anchor="middle">Deploy jarayoni</text>
+    <rect x="246" y="290" width="130" height="30" rx="8" fill="#fff" stroke="#dc2626" stroke-width="1.5"/>
+    <text x="311" y="310" text-anchor="middle">To'lov mantig'i</text>
+    <rect x="78" y="332" width="130" height="30" rx="8" fill="#fff" stroke="#dc2626" stroke-width="1.5"/>
+    <text x="143" y="352" text-anchor="middle">Server sozlamasi</text>
+    <rect x="246" y="332" width="130" height="30" rx="8" fill="#fff" stroke="#dc2626" stroke-width="1.5"/>
+    <text x="311" y="352" text-anchor="middle">Maxfiy kalitlar</text>
+  </g>
+  <text x="225" y="400" text-anchor="middle" font-size="14" font-weight="bold" fill="#dc2626">Aziz ketsa -> tizim "qora quti"</text>
+
+  <!-- RIGHT: safe -->
+  <rect x="450" y="86" width="370" height="340" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="635" y="116" text-anchor="middle" font-size="17" font-weight="bold" fill="#166534">Hujjatlangan (xavfsiz)</text>
+  <text x="635" y="140" text-anchor="middle" font-size="13" fill="#334155">Bilim yozilgan va tarqatilgan</text>
+
+  <!-- doc store in the middle -->
+  <rect x="585" y="166" width="100" height="74" rx="8" fill="#16a34a"/>
+  <rect x="601" y="182" width="68" height="8" rx="3" fill="#fff"/>
+  <rect x="601" y="196" width="68" height="8" rx="3" fill="#fff"/>
+  <rect x="601" y="210" width="48" height="8" rx="3" fill="#fff"/>
+  <text x="635" y="262" text-anchor="middle" font-size="13" font-weight="bold" fill="#166534">README, runbook, ADR</text>
+
+  <!-- multiple people reading docs -->
+  <g fill="#16a34a">
+    <circle cx="520" cy="320" r="20"/><circle cx="520" cy="313" r="8" fill="#fff"/><path d="M508 334 q12 -13 24 0 z" fill="#fff"/>
+    <circle cx="635" cy="320" r="20"/><circle cx="635" cy="313" r="8" fill="#fff"/><path d="M623 334 q12 -13 24 0 z" fill="#fff"/>
+    <circle cx="750" cy="320" r="20"/><circle cx="750" cy="313" r="8" fill="#fff"/><path d="M738 334 q12 -13 24 0 z" fill="#fff"/>
+  </g>
+  <g stroke="#16a34a" stroke-width="2" fill="none">
+    <path d="M600 230 L535 300"/>
+    <path d="M635 240 L635 300"/>
+    <path d="M670 230 L735 300"/>
+  </g>
+  <text x="635" y="368" text-anchor="middle" font-size="13" fill="#334155">Hamma o'qiy oladi</text>
+  <text x="635" y="400" text-anchor="middle" font-size="14" font-weight="bold" fill="#16a34a">Kimdir ketsa ham -> tizim ochiq</text>
+
+  <text x="430" y="452" text-anchor="middle" font-size="13" fill="#64748b">Hujjat -- bilim qarzini (bus factor) kamaytiruvchi sug'urta.</text>
+</svg>

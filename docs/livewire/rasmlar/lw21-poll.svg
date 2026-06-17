@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>wire:poll: brauzer belgilangan interval bo'yicha (masalan har 2.5 soniyada) serverga so'rov yuborib komponentni avtomatik yangilab turadi</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">wire:poll — belgilangan oraliqda avtomatik yangilanish</text>
+
+  <!-- brauzer -->
+  <rect x="40" y="70" width="240" height="120" rx="12" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="160" y="96" text-anchor="middle" font-size="15" font-weight="700" fill="#4f46e5">Brauzer (komponent)</text>
+  <rect x="60" y="110" width="200" height="30" rx="6" fill="#eef2ff" stroke="#c7d2fe"/>
+  <text x="160" y="130" text-anchor="middle" font-size="13" fill="#4f46e5">wire:poll.2s="refresh"</text>
+  <text x="160" y="162" text-anchor="middle" font-size="13" fill="#475569">Soat: 14:30:05</text>
+  <text x="160" y="180" text-anchor="middle" font-size="13" fill="#94a3b8">soat ichida sanaydi...</text>
+
+  <!-- server -->
+  <rect x="480" y="70" width="240" height="120" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="600" y="96" text-anchor="middle" font-size="15" font-weight="700" fill="#16a34a">Server</text>
+  <text x="600" y="128" text-anchor="middle" font-size="13" fill="#475569">refresh() ishlaydi</text>
+  <text x="600" y="150" text-anchor="middle" font-size="13" fill="#475569">yangi vaqt / yangi son</text>
+  <text x="600" y="172" text-anchor="middle" font-size="13" fill="#475569">qaytaradi (render)</text>
+
+  <!-- so'rov strelka -->
+  <line x1="284" y1="120" x2="474" y2="120" stroke="#f59e0b" stroke-width="2.5"/>
+  <polygon points="476,120 462,114 462,126" fill="#f59e0b"/>
+  <text x="380" y="112" text-anchor="middle" font-size="13" fill="#92400e">so'rov (har 2.5s default)</text>
+
+  <!-- javob strelka -->
+  <line x1="474" y1="150" x2="284" y2="150" stroke="#16a34a" stroke-width="2.5"/>
+  <polygon points="282,150 296,144 296,156" fill="#16a34a"/>
+  <text x="380" y="170" text-anchor="middle" font-size="13" fill="#16a34a">yangilangan HTML</text>
+
+  <!-- vaqt o'qi -->
+  <text x="40" y="232" font-size="14" font-weight="700" fill="#1e293b">Vaqt o'qi:</text>
+  <line x1="40" y1="262" x2="720" y2="262" stroke="#cbd5e1" stroke-width="2"/>
+  <polygon points="722,262 712,257 712,267" fill="#cbd5e1"/>
+
+  <!-- tiklar -->
+  <circle cx="120" cy="262" r="7" fill="#4f46e5"/>
+  <text x="120" y="290" text-anchor="middle" font-size="13" fill="#475569">0s</text>
+  <text x="120" y="240" text-anchor="middle" font-size="13" fill="#4f46e5">so'rov</text>
+
+  <circle cx="270" cy="262" r="7" fill="#4f46e5"/>
+  <text x="270" y="290" text-anchor="middle" font-size="13" fill="#475569">2.5s</text>
+  <text x="270" y="240" text-anchor="middle" font-size="13" fill="#4f46e5">so'rov</text>
+
+  <circle cx="420" cy="262" r="7" fill="#4f46e5"/>
+  <text x="420" y="290" text-anchor="middle" font-size="13" fill="#475569">5s</text>
+  <text x="420" y="240" text-anchor="middle" font-size="13" fill="#4f46e5">so'rov</text>
+
+  <circle cx="570" cy="262" r="7" fill="#4f46e5"/>
+  <text x="570" y="290" text-anchor="middle" font-size="13" fill="#475569">7.5s</text>
+  <text x="570" y="240" text-anchor="middle" font-size="13" fill="#4f46e5">so'rov</text>
+
+  <circle cx="690" cy="262" r="7" fill="#4f46e5"/>
+  <text x="690" y="290" text-anchor="middle" font-size="13" fill="#475569">...</text>
+
+  <!-- modifikatorlar paneli -->
+  <rect x="40" y="316" width="220" height="104" rx="11" fill="#ffffff" stroke="#c7d2fe" stroke-width="2"/>
+  <text x="150" y="340" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Tezlikni boshqarish</text>
+  <text x="58" y="364" font-size="13" fill="#475569">wire:poll  -&gt; har 2.5s (default)</text>
+  <text x="58" y="386" font-size="13" fill="#475569">wire:poll.5s  -&gt; har 5 soniya</text>
+  <text x="58" y="408" font-size="13" fill="#475569">wire:poll.10s -&gt; har 10 soniya</text>
+
+  <rect x="272" y="316" width="230" height="104" rx="11" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="387" y="340" text-anchor="middle" font-size="14" font-weight="700" fill="#16a34a">Tejamkorlik</text>
+  <text x="288" y="364" font-size="13" fill="#475569">.visible  -&gt; faqat ekranda</text>
+  <text x="288" y="386" font-size="13" fill="#475569">ko'rinib turganda so'raydi</text>
+  <text x="288" y="408" font-size="13" fill="#475569">.keep-alive -&gt; tab fonda ham</text>
+
+  <rect x="514" y="316" width="206" height="104" rx="11" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="617" y="340" text-anchor="middle" font-size="14" font-weight="700" fill="#dc2626">Ehtiyot bo'ling</text>
+  <text x="530" y="364" font-size="13" fill="#475569">Juda tez interval =</text>
+  <text x="530" y="386" font-size="13" fill="#475569">serverga ko'p so'rov =</text>
+  <text x="530" y="408" font-size="13" fill="#dc2626">yuklama oshadi</text>
+</svg>

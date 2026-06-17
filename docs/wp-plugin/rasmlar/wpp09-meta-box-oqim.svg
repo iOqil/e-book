@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420">
+  <title>Meta box hayot sikli: add_meta_boxes hook'da add_meta_box chaqiriladi, callback formani chizadi, foydalanuvchi saqlaganda save_post_kitob hook'da update_post_meta meta'ni yozadi</title>
+
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+
+  <text x="380" y="36" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Meta box hayot sikli</text>
+
+  <!-- Chap ustun: KO'RSATISH -->
+  <text x="200" y="68" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#2563eb">Sahifa ochilganda (ko'rsatish)</text>
+
+  <rect x="60" y="84" width="280" height="74" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="200" y="112" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e40af">1. add_meta_boxes hook</text>
+  <text x="200" y="136" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">add_meta_box('kitob_tafsilot', ...)</text>
+
+  <line x1="200" y1="158" x2="200" y2="190" stroke="#2563eb" stroke-width="3" marker-end="url(#arrB)"/>
+
+  <rect x="60" y="190" width="280" height="86" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="200" y="216" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#1e40af">2. callback formani chizadi</text>
+  <text x="200" y="240" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">wp_nonce_field(...) + get_post_meta()</text>
+  <text x="200" y="261" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">input value="<?php esc_attr() ?>"</text>
+
+  <!-- O'ng ustun: SAQLASH -->
+  <text x="560" y="68" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">Saqlash bosilganda</text>
+
+  <rect x="420" y="84" width="280" height="74" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="560" y="112" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#15803d">3. save_post_kitob hook</text>
+  <text x="560" y="136" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">forma $_POST bilan yuboriladi</text>
+
+  <line x1="560" y1="158" x2="560" y2="190" stroke="#16a34a" stroke-width="3" marker-end="url(#arrG)"/>
+
+  <rect x="420" y="190" width="280" height="118" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="560" y="214" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#15803d">4. tekshir + saqla</text>
+  <text x="560" y="237" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">autosave -> nonce -> capability</text>
+  <text x="560" y="258" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">sanitize (wp_unslash + ...)</text>
+  <text x="560" y="285" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#15803d">update_post_meta()</text>
+
+  <!-- ko'prik chapdan o'ngga: foydalanuvchi to'ldiradi -->
+  <line x1="340" y1="233" x2="420" y2="121" stroke="#94a3b8" stroke-width="2.5" stroke-dasharray="6 4" marker-end="url(#arrGr)"/>
+  <text x="380" y="180" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">foydalanuvchi</text>
+  <text x="380" y="197" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">to'ldirib bosadi</text>
+
+  <!-- DB -->
+  <rect x="300" y="338" width="160" height="58" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="380" y="363" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309">wp_postmeta</text>
+  <text x="380" y="384" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#475569">post_id + key + value</text>
+  <line x1="560" y1="308" x2="455" y2="340" stroke="#f59e0b" stroke-width="3" marker-end="url(#arrY)"/>
+  <line x1="200" y1="338" x2="200" y2="276" stroke="#f59e0b" stroke-width="2.5" stroke-dasharray="6 4" marker-end="url(#arrY)"/>
+  <text x="150" y="320" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#b45309">o'qiladi</text>
+
+  <defs>
+    <marker id="arrB" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/></marker>
+    <marker id="arrG" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/></marker>
+    <marker id="arrGr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/></marker>
+    <marker id="arrY" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L8,3 L0,6 Z" fill="#f59e0b"/></marker>
+  </defs>
+</svg>

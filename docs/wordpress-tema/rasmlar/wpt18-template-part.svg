@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430">
+  <title>wp:template-part bloki index.html ichidan parts/header.html faylini chaqiradi</title>
+  <rect width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="32" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">template-part bloki: shablon bo'lakni chaqiradi</text>
+
+  <!-- index.html box -->
+  <rect x="30" y="60" width="320" height="300" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="190" y="86" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">templates/index.html</text>
+
+  <rect x="48" y="100" width="284" height="56" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="60" y="122" font-family="Consolas, monospace" font-size="13" fill="#1e293b">&lt;!-- wp:template-part</text>
+  <text x="60" y="142" font-family="Consolas, monospace" font-size="13" fill="#16a34a">  {"slug":"header","tagName":"header"} /--&gt;</text>
+
+  <rect x="48" y="166" width="284" height="106" rx="6" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="60" y="188" font-family="Consolas, monospace" font-size="13" fill="#475569">&lt;!-- wp:group {"tagName":"main"} --&gt;</text>
+  <text x="74" y="210" font-family="Consolas, monospace" font-size="13" fill="#475569">&lt;!-- wp:query --&gt; ... &lt;!-- /wp:query --&gt;</text>
+  <text x="60" y="232" font-family="Consolas, monospace" font-size="13" fill="#475569">&lt;!-- /wp:group --&gt;</text>
+  <text x="60" y="262" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8">(sahifaning asosiy qismi)</text>
+
+  <rect x="48" y="282" width="284" height="56" rx="6" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+  <text x="60" y="304" font-family="Consolas, monospace" font-size="13" fill="#1e293b">&lt;!-- wp:template-part</text>
+  <text x="60" y="324" font-family="Consolas, monospace" font-size="13" fill="#dc2626">  {"slug":"footer","tagName":"footer"} /--&gt;</text>
+
+  <!-- arrow to header.html -->
+  <path d="M 332 128 C 420 128 420 130 470 130" fill="none" stroke="#16a34a" stroke-width="2.5" marker-end="url(#ah)"/>
+  <text x="360" y="118" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">slug -&gt; fayl</text>
+
+  <!-- header.html box -->
+  <rect x="470" y="96" width="260" height="120" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="600" y="120" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#16a34a">parts/header.html</text>
+  <text x="486" y="146" font-family="Consolas, monospace" font-size="13" fill="#475569">&lt;!-- wp:site-title /--&gt;</text>
+  <text x="486" y="168" font-family="Consolas, monospace" font-size="13" fill="#475569">&lt;!-- wp:navigation /--&gt;</text>
+  <text x="486" y="200" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#16a34a">slug="header" -&gt; .html</text>
+
+  <!-- footer.html box -->
+  <path d="M 332 310 C 420 310 420 300 470 295" fill="none" stroke="#dc2626" stroke-width="2.5" marker-end="url(#ah2)"/>
+  <rect x="470" y="262" width="260" height="76" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="600" y="286" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="bold" fill="#dc2626">parts/footer.html</text>
+  <text x="486" y="312" font-family="Consolas, monospace" font-size="13" fill="#475569">&lt;!-- wp:paragraph /--&gt;</text>
+  <text x="486" y="330" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#dc2626">slug="footer" -&gt; .html</text>
+
+  <!-- note -->
+  <rect x="30" y="378" width="700" height="38" rx="8" fill="#fef9c3" stroke="#d97706"/>
+  <text x="44" y="402" font-family="Segoe UI, system-ui, sans-serif" font-size="13.5" fill="#92400e">tagName="header" -&gt; chiqishda &lt;header&gt; semantik teg; theme.json'dagi area bo'lak turini belgilaydi.</text>
+
+  <defs>
+    <marker id="ah" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/></marker>
+    <marker id="ah2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#dc2626"/></marker>
+  </defs>
+</svg>

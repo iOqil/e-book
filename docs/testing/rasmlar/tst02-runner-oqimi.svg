@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 430">
+  <title>Test runner oqimi: topish, ishga tushirish, hisobot</title>
+  <rect x="0" y="0" width="820" height="430" fill="#f8fafc"/>
+  <text x="410" y="40" text-anchor="middle" font-family="Segoe UI" font-size="22" font-weight="bold" fill="#1e293b">pytest qanday ishlaydi</text>
+  <text x="410" y="66" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#64748b">Topish (discovery) → ishga tushirish → hisobot</text>
+
+  <!-- Step 1: discover -->
+  <rect x="40" y="110" width="220" height="120" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="150" y="148" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="bold" fill="#1e293b">1. Topish</text>
+  <text x="150" y="176" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#475569">test_*.py fayllar</text>
+  <text x="150" y="196" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#475569">test_ funksiyalar</text>
+  <text x="150" y="216" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">avtomat yig'iladi</text>
+
+  <!-- arrow -->
+  <line x1="265" y1="170" x2="305" y2="170" stroke="#94a3b8" stroke-width="3"/>
+  <polygon points="305,162 320,170 305,178" fill="#94a3b8"/>
+
+  <!-- Step 2: run -->
+  <rect x="325" y="110" width="220" height="120" rx="12" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="435" y="148" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="bold" fill="#1e293b">2. Ishga tushirish</text>
+  <text x="435" y="176" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#475569">har testni chaqiradi</text>
+  <text x="435" y="196" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#475569">assert'larni tekshiradi</text>
+  <text x="435" y="216" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#64748b">istisno = yiqilish</text>
+
+  <!-- arrow -->
+  <line x1="550" y1="170" x2="590" y2="170" stroke="#94a3b8" stroke-width="3"/>
+  <polygon points="590,162 605,170 590,178" fill="#94a3b8"/>
+
+  <!-- Step 3: report -->
+  <rect x="610" y="110" width="170" height="120" rx="12" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="695" y="148" text-anchor="middle" font-family="Segoe UI" font-size="18" font-weight="bold" fill="#1e293b">3. Hisobot</text>
+  <text x="695" y="176" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#475569">qisqa xulosa</text>
+  <text x="695" y="196" text-anchor="middle" font-family="Segoe UI" font-size="13" fill="#475569">va sabab</text>
+
+  <!-- outcomes -->
+  <rect x="190" y="300" width="200" height="80" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="290" y="332" text-anchor="middle" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#16a34a">PASSED (yashil)</text>
+  <text x="290" y="358" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#475569">assert to'g'ri keldi</text>
+
+  <rect x="430" y="300" width="200" height="80" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="530" y="332" text-anchor="middle" font-family="Segoe UI" font-size="17" font-weight="bold" fill="#dc2626">FAILED (qizil)</text>
+  <text x="530" y="358" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#475569">assert 4 == 5</text>
+
+  <line x1="695" y1="232" x2="695" y2="270" stroke="#94a3b8" stroke-width="3"/>
+  <line x1="290" y1="270" x2="695" y2="270" stroke="#94a3b8" stroke-width="3"/>
+  <line x1="530" y1="270" x2="530" y2="298" stroke="#94a3b8" stroke-width="3"/>
+  <line x1="290" y1="270" x2="290" y2="298" stroke="#94a3b8" stroke-width="3"/>
+  <polygon points="282,298 290,300 298,298" fill="#94a3b8"/>
+  <polygon points="522,298 530,300 538,298" fill="#94a3b8"/>
+</svg>

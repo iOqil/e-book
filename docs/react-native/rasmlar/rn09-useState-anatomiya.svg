@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420" font-family="Segoe UI, system-ui, sans-serif">
+  <title>useState anatomiyasi: const [qiymat, setQiymat] = useState(boshlangich) qatorining har bir qismi tushuntiriladi</title>
+  <rect x="0" y="0" width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1e293b">useState anatomiyasi</text>
+  <text x="380" y="62" text-anchor="middle" font-size="14" fill="#475569">Bitta qator — uchta vazifa: hozirgi qiymat, o'zgartirgich va boshlang'ich qiymat</text>
+
+  <!-- code line -->
+  <rect x="70" y="92" width="620" height="58" rx="10" fill="#1e293b"/>
+  <text x="92" y="129" font-size="20" font-family="monospace" fill="#e2e8f0">const [</text>
+  <text x="178" y="129" font-size="20" font-family="monospace" fill="#38bdf8" font-weight="700">soni</text>
+  <text x="240" y="129" font-size="20" font-family="monospace" fill="#e2e8f0">, </text>
+  <text x="262" y="129" font-size="20" font-family="monospace" fill="#a78bfa" font-weight="700">setSoni</text>
+  <text x="372" y="129" font-size="20" font-family="monospace" fill="#e2e8f0">] = useState(</text>
+  <text x="560" y="129" font-size="20" font-family="monospace" fill="#4ade80" font-weight="700">0</text>
+  <text x="575" y="129" font-size="20" font-family="monospace" fill="#e2e8f0">);</text>
+
+  <!-- pointers -->
+  <!-- soni -->
+  <line x1="200" y1="156" x2="200" y2="200" stroke="#0ea5e9" stroke-width="2"/>
+  <rect x="70" y="200" width="200" height="84" rx="10" fill="#ffffff" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="170" y="226" text-anchor="middle" font-size="15" font-weight="700" fill="#0284c7">soni — joriy qiymat</text>
+  <text x="170" y="248" text-anchor="middle" font-size="13" fill="#475569">hozirgi holatni o'qiysiz</text>
+  <text x="170" y="268" text-anchor="middle" font-size="13" fill="#475569">(faqat o'qish uchun)</text>
+
+  <!-- setSoni -->
+  <line x1="305" y1="156" x2="380" y2="200" stroke="#6366f1" stroke-width="2"/>
+  <rect x="288" y="200" width="210" height="84" rx="10" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <text x="393" y="226" text-anchor="middle" font-size="15" font-weight="700" fill="#4f46e5">setSoni — o'zgartirgich</text>
+  <text x="393" y="248" text-anchor="middle" font-size="13" fill="#475569">holatni FAQAT shu orqali</text>
+  <text x="393" y="268" text-anchor="middle" font-size="13" fill="#475569">yangilaysiz -> re-render</text>
+
+  <!-- boshlangich -->
+  <line x1="565" y1="156" x2="600" y2="200" stroke="#16a34a" stroke-width="2"/>
+  <rect x="516" y="200" width="174" height="84" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="603" y="226" text-anchor="middle" font-size="15" font-weight="700" fill="#15803d">0 — boshlang'ich</text>
+  <text x="603" y="248" text-anchor="middle" font-size="13" fill="#475569">faqat birinchi</text>
+  <text x="603" y="268" text-anchor="middle" font-size="13" fill="#475569">renderda ishlatiladi</text>
+
+  <!-- note -->
+  <rect x="70" y="312" width="620" height="56" rx="10" fill="#eff6ff" stroke="#bae6fd" stroke-width="1.5"/>
+  <text x="380" y="338" text-anchor="middle" font-size="14" fill="#475569">useState massiv qaytaradi; [ ] bilan ikki qismga ajratamiz (destructuring).</text>
+  <text x="380" y="358" text-anchor="middle" font-size="14" fill="#475569">Nomlarni o'zingiz tanlaysiz, lekin odat: qiymat va set+QiymatNomi.</text>
+
+  <text x="380" y="400" text-anchor="middle" font-size="13" fill="#94a3b8">soni = 5 deb yozish ISHLAMAYDI — har doim setSoni(5) chaqiring</text>
+</svg>

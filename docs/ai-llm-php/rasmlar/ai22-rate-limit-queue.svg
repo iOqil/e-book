@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Yuqori yuklamada so'rovlarni navbatga qo'yish, limit va fallback bilan provayderga urilmaslik</title>
+  <rect x="0" y="0" width="760" height="440" fill="#f8fafc"/>
+  <text x="380" y="36" text-anchor="middle" font-size="21" font-weight="700" fill="#1e293b">Yuqori yuklama: navbat + limit + zaxira</text>
+
+  <defs>
+    <marker id="ar22b" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <!-- Foydalanuvchilar -->
+  <rect x="30" y="120" width="130" height="120" rx="12" fill="#ffffff" stroke="#6366f1" stroke-width="2"/>
+  <text x="95" y="150" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">Ko'p so'rov</text>
+  <text x="95" y="174" text-anchor="middle" font-size="13" fill="#475569">minglab</text>
+  <text x="95" y="194" text-anchor="middle" font-size="13" fill="#475569">foydalanuvchi</text>
+  <text x="95" y="222" text-anchor="middle" font-size="22">👥</text>
+
+  <!-- Queue -->
+  <rect x="210" y="100" width="150" height="160" rx="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="285" y="128" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">Navbat (queue)</text>
+  <rect x="230" y="146" width="110" height="22" rx="4" fill="#ffffff" stroke="#c7d2fe"/>
+  <rect x="230" y="174" width="110" height="22" rx="4" fill="#ffffff" stroke="#c7d2fe"/>
+  <rect x="230" y="202" width="110" height="22" rx="4" fill="#ffffff" stroke="#c7d2fe"/>
+  <text x="285" y="246" text-anchor="middle" font-size="13" fill="#475569">+ per-user limit</text>
+
+  <!-- Worker / limit darvoza -->
+  <rect x="410" y="120" width="130" height="120" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="475" y="150" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">Worker</text>
+  <text x="475" y="176" text-anchor="middle" font-size="13" fill="#475569">tezlikni</text>
+  <text x="475" y="194" text-anchor="middle" font-size="13" fill="#475569">cheklab uzatadi</text>
+  <text x="475" y="222" text-anchor="middle" font-size="13" fill="#475569">+ backoff (429)</text>
+
+  <!-- Provayder -->
+  <rect x="592" y="80" width="140" height="90" rx="12" fill="#ffffff" stroke="#d97757" stroke-width="2"/>
+  <text x="662" y="112" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">Provayder</text>
+  <text x="662" y="134" text-anchor="middle" font-size="13" fill="#16a34a">limitga urilmaydi</text>
+  <text x="662" y="154" text-anchor="middle" font-size="13" fill="#475569">(asosiy model)</text>
+
+  <!-- Fallback -->
+  <rect x="592" y="200" width="140" height="80" rx="12" fill="#fff7ed" stroke="#f59e0b" stroke-width="2"/>
+  <text x="662" y="230" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">Zaxira (fallback)</text>
+  <text x="662" y="252" text-anchor="middle" font-size="13" fill="#475569">ishlamasa: Sonnet /</text>
+  <text x="662" y="270" text-anchor="middle" font-size="13" fill="#475569">boshqa provayder</text>
+
+  <!-- strelkalar -->
+  <line x1="160" y1="180" x2="208" y2="180" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar22b)"/>
+  <line x1="360" y1="180" x2="408" y2="180" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar22b)"/>
+  <line x1="540" y1="160" x2="590" y2="135" stroke="#94a3b8" stroke-width="2" marker-end="url(#ar22b)"/>
+  <line x1="662" y1="170" x2="662" y2="198" stroke="#dc2626" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#ar22b)"/>
+  <text x="698" y="190" font-size="13" fill="#dc2626">xato</text>
+
+  <!-- pastki izoh -->
+  <rect x="30" y="320" width="702" height="92" rx="10" fill="#ffffff" stroke="#ddd6fe" stroke-width="2"/>
+  <text x="381" y="350" text-anchor="middle" font-size="15" font-weight="700" fill="#1e293b">Maqsad: provayder limitiga (429) urilmaslik va ilova qulamasligi</text>
+  <text x="381" y="376" text-anchor="middle" font-size="14" fill="#475569">So'rovni darhol yubormay navbatga qo'y · sekin-asta uzat · 429 da kutib qayta urin</text>
+  <text x="381" y="398" text-anchor="middle" font-size="13" fill="#94a3b8">Asosiy ishlamasa zaxiraga o't — foydalanuvchi xatoni ko'rmasin (graceful degradation).</text>
+</svg>

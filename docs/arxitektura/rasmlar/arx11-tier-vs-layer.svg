@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <title>Tier vs layer: layer mantiqiy kod tashkili, tier fizik deploy birligi</title>
+  <rect x="0" y="0" width="800" height="450" fill="#f8fafc"/>
+  <text x="400" y="34" font-family="Segoe UI" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Layer (qatlam) va Tier (yarus) — farqi</text>
+  <text x="400" y="58" font-family="Segoe UI" font-size="14" fill="#64748b" text-anchor="middle">Layer = MANTIQIY kod tashkili · Tier = FIZIK deploy/mashina birligi</text>
+
+  <!-- CHAP: 3 layer, 1 tier (monolit) -->
+  <text x="200" y="92" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#2563eb" text-anchor="middle">3 layer, 1 tier (monolit)</text>
+
+  <rect x="70" y="106" width="260" height="200" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2.5" stroke-dasharray="7,5"/>
+  <text x="200" y="128" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#2563eb" text-anchor="middle">1 deploy birligi (bitta jarayon)</text>
+
+  <rect x="92" y="142" width="216" height="44" rx="7" fill="#ffffff" stroke="#2563eb" stroke-width="1.8"/>
+  <text x="200" y="169" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">Presentation layer</text>
+
+  <rect x="92" y="194" width="216" height="44" rx="7" fill="#ffffff" stroke="#16a34a" stroke-width="1.8"/>
+  <text x="200" y="221" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">Business layer</text>
+
+  <rect x="92" y="246" width="216" height="44" rx="7" fill="#ffffff" stroke="#f59e0b" stroke-width="1.8"/>
+  <text x="200" y="273" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">Persistence layer</text>
+
+  <text x="200" y="326" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">3 layer bir jarayonda — funksiya</text>
+  <text x="200" y="344" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">chaqiruvi orqali muloqot</text>
+
+  <!-- O'NG: 3 tier (tarmoq bilan ajratilgan) -->
+  <text x="600" y="92" font-family="Segoe UI" font-size="15" font-weight="bold" fill="#dc2626" text-anchor="middle">3 tier (tarmoq orqali)</text>
+
+  <rect x="470" y="106" width="260" height="56" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="600" y="130" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#2563eb" text-anchor="middle">Brauzer / mobil (1-tier)</text>
+  <text x="600" y="150" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">mijoz mashinasi</text>
+
+  <rect x="470" y="200" width="260" height="56" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+  <text x="600" y="224" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#16a34a" text-anchor="middle">Ilova serveri (2-tier)</text>
+  <text x="600" y="244" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">Node / PHP server</text>
+
+  <rect x="470" y="294" width="260" height="56" rx="10" fill="#e2e8f0" stroke="#64748b" stroke-width="2"/>
+  <text x="600" y="318" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#334155" text-anchor="middle">DB server (3-tier)</text>
+  <text x="600" y="338" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">alohida mashina</text>
+
+  <defs>
+    <marker id="t-net" markerWidth="11" markerHeight="11" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L9,3 L0,6 Z" fill="#dc2626"/>
+    </marker>
+  </defs>
+  <line x1="600" y1="162" x2="600" y2="200" stroke="#dc2626" stroke-width="2.5" marker-end="url(#t-net)"/>
+  <line x1="600" y1="256" x2="600" y2="294" stroke="#dc2626" stroke-width="2.5" marker-end="url(#t-net)"/>
+  <text x="690" y="186" font-family="Segoe UI" font-size="13" fill="#dc2626">tarmoq</text>
+  <text x="690" y="280" font-family="Segoe UI" font-size="13" fill="#dc2626">tarmoq</text>
+
+  <text x="600" y="378" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">3 tier alohida mashinada —</text>
+  <text x="600" y="396" font-family="Segoe UI" font-size="13" fill="#64748b" text-anchor="middle">tarmoq so'rovi orqali muloqot</text>
+
+  <!-- Pastki xulosa -->
+  <rect x="70" y="372" width="330" height="58" rx="9" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="235" y="394" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">Layer pastga tushganda tier'ga AYLANISHI</text>
+  <text x="235" y="412" font-family="Segoe UI" font-size="13" fill="#334155" text-anchor="middle">shart EMAS. 3 layer ko'pincha 1 tier'da yashaydi.</text>
+
+  <line x1="430" y1="100" x2="430" y2="360" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="6,5"/>
+</svg>

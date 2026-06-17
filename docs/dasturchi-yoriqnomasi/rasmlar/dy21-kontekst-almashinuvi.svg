@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 480" font-family="Segoe UI">
+  <title>Kontekst almashinuvi narxi: har uzilishdan keyin qayta-fokusga ketgan vaqt yo'qoladi</title>
+  <rect x="0" y="0" width="820" height="480" fill="#f8fafc"/>
+
+  <text x="410" y="36" text-anchor="middle" font-size="22" font-weight="bold" fill="#1e293b">Kontekst almashinuvi narxi</text>
+  <text x="410" y="60" text-anchor="middle" font-size="14" fill="#64748b">Har uzilish faqat o'z vaqtini emas, qayta-fokus vaqtini ham yeydi</text>
+
+  <!-- baseline axis -->
+  <line x1="60" y1="300" x2="780" y2="300" stroke="#94a3b8" stroke-width="2"/>
+  <text x="60" y="320" font-size="13" fill="#64748b">vaqt</text>
+
+  <!-- focus curve concept: ramp up to deep, then drop at interruption -->
+  <!-- block 1 -->
+  <rect x="70" y="170" width="120" height="130" fill="#dcfce7" stroke="#16a34a"/>
+  <path d="M70 300 L70 230 Q130 170 190 170 L190 300 Z" fill="#bbf7d0" stroke="#16a34a" stroke-width="2"/>
+  <text x="130" y="200" text-anchor="middle" font-size="13" fill="#166534">fokus</text>
+  <text x="130" y="218" text-anchor="middle" font-size="13" fill="#166534">o'syapti</text>
+
+  <!-- interruption 1 -->
+  <line x1="190" y1="120" x2="190" y2="300" stroke="#dc2626" stroke-width="2" stroke-dasharray="5 4"/>
+  <text x="190" y="112" text-anchor="middle" font-size="13" fill="#dc2626">uzilish</text>
+
+  <!-- lost re-focus zone 1 -->
+  <rect x="190" y="240" width="90" height="60" fill="#fee2e2" stroke="#dc2626"/>
+  <text x="235" y="266" text-anchor="middle" font-size="13" fill="#b91c1c">qayta</text>
+  <text x="235" y="284" text-anchor="middle" font-size="13" fill="#b91c1c">fokus</text>
+
+  <!-- block 2 (shorter deep, never reaches peak) -->
+  <path d="M280 300 L280 250 Q330 200 360 200 L360 300 Z" fill="#bbf7d0" stroke="#16a34a" stroke-width="2"/>
+
+  <!-- interruption 2 -->
+  <line x1="360" y1="120" x2="360" y2="300" stroke="#dc2626" stroke-width="2" stroke-dasharray="5 4"/>
+  <text x="360" y="112" text-anchor="middle" font-size="13" fill="#dc2626">uzilish</text>
+
+  <!-- lost re-focus zone 2 -->
+  <rect x="360" y="240" width="90" height="60" fill="#fee2e2" stroke="#dc2626"/>
+  <text x="405" y="266" text-anchor="middle" font-size="13" fill="#b91c1c">qayta</text>
+  <text x="405" y="284" text-anchor="middle" font-size="13" fill="#b91c1c">fokus</text>
+
+  <!-- block 3 -->
+  <path d="M450 300 L450 255 Q500 215 530 215 L530 300 Z" fill="#bbf7d0" stroke="#16a34a" stroke-width="2"/>
+
+  <!-- the never-reached deep level -->
+  <line x1="60" y1="170" x2="780" y2="170" stroke="#16a34a" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <text x="770" y="164" text-anchor="end" font-size="13" fill="#166534">chuqur fokus darajasi</text>
+
+  <!-- cost callout -->
+  <rect x="560" y="150" width="220" height="120" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="670" y="180" text-anchor="middle" font-size="15" font-weight="bold" fill="#b45309">Bir uzilish narxi</text>
+  <text x="670" y="208" text-anchor="middle" font-size="14" fill="#92400e">~15-23 daqiqa</text>
+  <text x="670" y="230" text-anchor="middle" font-size="13" fill="#92400e">qayta to'liq fokusga</text>
+  <text x="670" y="250" text-anchor="middle" font-size="13" fill="#92400e">qaytish uchun</text>
+
+  <text x="410" y="360" text-anchor="middle" font-size="14" fill="#334155">Tez-tez uzilgan kunda fokus hech qachon "chuqur" darajaga yetmaydi</text>
+  <text x="410" y="390" text-anchor="middle" font-size="14" fill="#334155">Multitasking = tez almashinuv = har safar qayta-fokus solig'ini to'lash</text>
+  <text x="410" y="420" text-anchor="middle" font-size="13" fill="#64748b">Qizil zona = real ishga ketmagan, faqat tiklanishga ketgan vaqt</text>
+</svg>
